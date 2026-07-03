@@ -1,0 +1,1 @@
+export function PublicSafetyNote(){return <aside className="my-6 rounded-2xl border border-broadway/20 bg-broadway/10 p-4 text-sm"><strong>Public-safety note:</strong> This case study uses approved, public-safe detail only. Sensitive stakeholder, client, legal, credential, health, family, or raw transcript material is excluded.</aside>}

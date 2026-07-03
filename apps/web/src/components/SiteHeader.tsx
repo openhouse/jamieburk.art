@@ -1,0 +1,2 @@
+import Link from 'next/link'; import { nav, site } from '@/data/site';
+export function SiteHeader(){return <header className="border-b border-ink/10 bg-paper/90"><nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-5"><Link href="/" className="font-bold text-ink">{site.name}</Link><div className="flex flex-wrap gap-3">{nav.map(([label,href])=><Link className="rounded px-2 py-1 text-sm hover:bg-broadway/10 focus:outline focus:outline-2 focus:outline-broadway" href={href} key={href}>{label}</Link>)}</div></nav></header>}

@@ -1,0 +1,1 @@
+import Link from 'next/link'; export function ContactCTA(){return <section className="rounded-3xl bg-broadway p-8 text-white"><h2 className="text-3xl font-bold">Need calm structure around messy work?</h2><p className="mt-3">Start with a focused conversation and a useful next step.</p><Link className="btn mt-6 bg-white text-broadway" href="/contact">Contact Jamie</Link></section>}

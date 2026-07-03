@@ -1,0 +1,36 @@
+{
+  "name": "@jamieburk/web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --webpack",
+    "start": "next start",
+    "check": "tsc --noEmit && next build --webpack"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "latest",
+    "@mdx-js/react": "latest",
+    "@next/mdx": "latest",
+    "@types/mdx": "latest",
+    "autoprefixer": "latest",
+    "daisyui": "latest",
+    "gray-matter": "latest",
+    "next": "^16.2.10",
+    "postcss": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "remark-gfm": "latest",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "^16.2.10"
+  }
+}

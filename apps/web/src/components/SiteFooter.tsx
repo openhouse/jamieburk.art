@@ -1,0 +1,1 @@
+import Link from 'next/link'; export function SiteFooter(){return <footer className="mt-20 border-t border-ink/10"><div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-4 py-8 text-sm text-muted"><p>© Jamie Burkart</p><Link href="/colophon">Colophon</Link></div></footer>}

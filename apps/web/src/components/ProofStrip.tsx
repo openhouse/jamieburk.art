@@ -1,0 +1,2 @@
+const proofs=['14+ years creating operating structure','30+ pages of civic campaign-memory infrastructure','2x revenue growth contribution for a legacy e-commerce business','35 city ecosystems reached through WOWList.org','300+ gatherings / 20+ resident artists supported'];
+export function ProofStrip(){return <section aria-label="Proof anchors" className="grid gap-3 md:grid-cols-5">{proofs.map(p=><div className="rounded-2xl bg-surface p-4 text-sm font-semibold shadow-sm" key={p}>{p}</div>)}</section>}
