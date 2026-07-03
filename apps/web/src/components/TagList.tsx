@@ -1,0 +1,1 @@
+export function TagList({ tags }: { tags: string[] }) { return <div className="flex flex-wrap gap-2">{tags.map((tag) => <span className="rounded-full bg-broadway/10 px-3 py-1 text-sm text-broadway" key={tag}>{tag}</span>)}</div>; }

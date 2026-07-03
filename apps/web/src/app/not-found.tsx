@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function NotFound(){return <section className="max-w-2xl"><h1 className="text-5xl font-bold">Page not found</h1><p className="mt-4 text-muted">This page is not part of the V1 proof system.</p><Link className="btn btn-primary mt-6" href="/">Return home</Link></section>}

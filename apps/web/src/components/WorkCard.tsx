@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import { TagList } from './TagList';
+import type { WorkFrontmatter } from '@/lib/types';
+export function WorkCard({ work }: { work: WorkFrontmatter }) { return <article className="card border border-ink/10 bg-surface shadow-sm"><div className="card-body"><p className="text-sm font-semibold text-broadway">{work.role} · {work.years}</p><h2 className="card-title text-2xl">{work.title}</h2><p>{work.summary}</p><TagList tags={work.tags}/><dl className="grid gap-3 text-sm md:grid-cols-2"><div><dt className="font-bold">What was unclear</dt><dd>{work.unclear}</dd></div><div><dt className="font-bold">What became usable</dt><dd>{work.usable}</dd></div></dl><p className="text-sm text-muted">Content state: {work.contentState}</p><div className="card-actions"><Link className="btn btn-primary" href={`/work/${work.slug}`}>Read case study</Link></div></div></article>; }

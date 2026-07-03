@@ -1,0 +1,2 @@
+import { site } from '@/data/site';
+export default function Contact(){return <article className="max-w-3xl"><h1 className="text-5xl font-bold">Contact</h1><p className="mt-5 text-xl text-muted">For project management, product operations, implementation, and handoff work, contact Jamie.</p><p className="mt-6"><a className="btn btn-primary" href={`mailto:${site.email}`}>{site.email}</a></p></article>}

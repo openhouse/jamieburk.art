@@ -1,0 +1,12 @@
+{
+  "name": "jamieburk-art",
+  "private": true,
+  "workspaces": ["apps/web"],
+  "engines": {"node": "26.x", "npm": ">=10"},
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build",
+    "check": "npm --workspace apps/web run check"
+  },
+  "devDependencies": {}
+}

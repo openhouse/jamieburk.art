@@ -1,0 +1,2 @@
+const items=['Clarify ambiguous work','Build usable systems','Coordinate implementation','Leave durable handoffs'];
+export function CapabilityGrid(){return <section className="my-16 grid gap-4 md:grid-cols-4">{items.map(i=><div className="rounded-2xl border border-ink/10 bg-surface p-6" key={i}><h2 className="text-xl font-bold">{i}</h2><p className="mt-3 text-muted">Structured requirements, workflows, documentation, decision trails, and launch support.</p></div>)}</section>}

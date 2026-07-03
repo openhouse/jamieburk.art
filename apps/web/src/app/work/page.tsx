@@ -1,0 +1,2 @@
+import { WorkCard } from '@/components/WorkCard'; import { getAllWork } from '@/lib/content';
+export default function WorkPage(){return <><h1 className="text-5xl font-bold">Selected work</h1><p className="mt-4 max-w-3xl text-xl text-muted">Public-safe proof of turning under-structured work into usable systems.</p><div className="mt-8 grid gap-6 md:grid-cols-2">{getAllWork().map(w=><WorkCard work={w} key={w.slug}/>)}</div></>}
