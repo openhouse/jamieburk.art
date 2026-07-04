@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: false;
+  logs: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "jamie";
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: #eeefec;
+  --color-base-200: #f7f7f4;
+  --color-base-300: #d9d9d6;
+  --color-base-content: #343435;
+  --color-primary: #0b5f81;
+  --color-primary-content: #ffffff;
+  --color-secondary: #018c85;
+  --color-secondary-content: #ffffff;
+  --color-accent: #e9b64e;
+  --color-accent-content: #343435;
+  --color-neutral: #343435;
+  --color-neutral-content: #eeefec;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.5rem;
+}
+
+@import "../styles/tokens.css";
+@import "../styles/jamie-colors.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: "Karla", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+::selection {
+  background: var(--pastel-lemon-yellow);
+  color: var(--color-ink);
+}
+
+.main {
+  max-width: var(--measure-wide);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2.618rem);
+}
+
+.section {
+  padding-block: clamp(2.618rem, 7vw, 6.854rem);
+}
+
+.prose-jamie {
+  max-width: var(--measure);
+}
+
+.prose-jamie > * + * {
+  margin-top: 1rem;
+}
+
+.prose-jamie h2 {
+  margin-top: 2.618rem;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.prose-jamie h3 {
+  margin-top: 1.618rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.prose-jamie p,
+.prose-jamie li {
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.quiet-rule {
+  border-color: color-mix(in srgb, var(--color-line) 65%, transparent);
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 760px) {
+  .case-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
