@@ -1,0 +1,22 @@
+{
+  "name": "jamieburk-art",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": "26.x",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "dev": "npm --workspace apps/web run dev",
+    "build": "npm --workspace apps/web run build",
+    "start": "npm --workspace apps/web run start",
+    "lint": "npm --workspace apps/web run lint",
+    "typecheck": "npm --workspace apps/web run typecheck",
+    "format": "npm --workspace apps/web run format",
+    "test": "npm run typecheck && npm run lint",
+    "dokku:preflight": "npm ci && npm run build"
+  }
+}
