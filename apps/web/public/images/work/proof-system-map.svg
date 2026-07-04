@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1180 260">
+  <title>Proof system map</title>
+  <rect width="1180" height="260" fill="#fffaf2"/>
+  <path d="M40 48h1100M40 130h1100M40 212h1100" stroke="#d9d9d6" stroke-width="1"/>
+  <path d="M250 52c95 0 95 76 190 76s95-76 190-76 95 76 190 76 95-76 190-76" fill="none" stroke="#0b5f81" stroke-width="4"/>
+  <path d="M250 208c95 0 95-76 190-76s95 76 190 76 95-76 190-76 95 76 190 76" fill="none" stroke="#568e62" stroke-width="4"/>
+  <g font-family="Karla, Arial, sans-serif" font-size="16" font-weight="700" fill="#343435">
+    <text x="60" y="59">Ambiguous need</text>
+    <text x="60" y="141">Shared structure</text>
+    <text x="60" y="223">Durable handoff</text>
+  </g>
+  <g>
+    <rect x="245" y="26" width="160" height="52" rx="6" fill="#dcecf2" stroke="#0b5f81"/>
+    <rect x="510" y="104" width="160" height="52" rx="6" fill="#f5e3af" stroke="#e9b64e"/>
+    <rect x="775" y="26" width="160" height="52" rx="6" fill="#e0eee3" stroke="#568e62"/>
+    <rect x="245" y="182" width="160" height="52" rx="6" fill="#ffe2d3" stroke="#ffa77f"/>
+    <rect x="510" y="104" width="160" height="52" rx="6" fill="#f5e3af" stroke="#e9b64e"/>
+    <rect x="775" y="182" width="160" height="52" rx="6" fill="#eed5dc" stroke="#d04667"/>
+  </g>
+  <g font-family="Karla, Arial, sans-serif" font-size="15" font-weight="800" fill="#343435">
+    <text x="266" y="57">Requirements</text>
+    <text x="545" y="135">Decision trail</text>
+    <text x="808" y="57">Public tool</text>
+    <text x="277" y="213">Source map</text>
+    <text x="812" y="213">Onboarding</text>
+  </g>
+</svg>
