@@ -1,0 +1,21 @@
+:root {
+  --phi: 1.61803398875;
+  --phi-inv: 0.61803398875;
+  --color-paper: #eeefec;
+  --color-paper-warm: #f7f4ee;
+  --color-surface: #fffdf8;
+  --color-ink: #343435;
+  --color-muted: #5e5f61;
+  --color-line: #d9d1c7;
+  --color-blue: #0b5f81;
+  --measure: 72ch;
+  --measure-narrow: 58ch;
+  --page-max: 1120px;
+  --case-max: 880px;
+  --space-1: 0.375rem;
+  --space-2: 0.618rem;
+  --space-3: 1rem;
+  --space-4: 1.618rem;
+  --space-5: 2.618rem;
+  --space-6: 4.236rem;
+}
