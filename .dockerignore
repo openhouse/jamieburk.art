@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+apps/site/.next
+apps/site/node_modules
+packages/*/node_modules
+.env*
+.DS_Store
+coverage
+.vscode
