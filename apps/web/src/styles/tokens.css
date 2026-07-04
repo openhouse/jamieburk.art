@@ -1,0 +1,43 @@
+:root {
+  --phi: 1.61803398875;
+  --inv-phi: 0.61803398875;
+  --golden-major: 61.803398875%;
+  --golden-minor: 38.196601125%;
+  --golden-margin: 19.0983005625%;
+  --site-max: 72rem;
+  --measure: 44rem;
+  --font-sans: var(--font-karla), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-bg: #eeefec;
+  --color-surface: #fffdf8;
+  --color-ink: #343435;
+  --color-muted: #5e5f61;
+  --color-line: #d9d9d6;
+  --color-accent: #0b5f81;
+  --color-accent-soft: #e6f1f4;
+  --color-note: #fce1d1;
+  --color-success: #568e62;
+  --color-warning: #fae367;
+  --color-danger: #d45462;
+  --pastel-white: #eeefec;
+  --pastel-black: #343435;
+  --pastel-pale-orange: #fce1d1;
+  --pastel-lemon-yellow: #f7ec86;
+  --pastel-naples-yellow: #fae367;
+  --pastel-pale-green: #beebc7;
+  --pastel-pale-blue: #74c2e5;
+  --pastel-blue: #1098d9;
+  --pastel-cobalt-blue: #0167b2;
+  --pastel-prussian-blue: #014f94;
+  --pastel-green-gray: #568e62;
+  --pastel-blue-green: #018c85;
+  --pastel-crimson-lake: #d45462;
+  --pastel-rose-madder: #d04667;
+  --pastel-violet: #624c7f;
+  --pastel-yellow-ochre: #e9b64e;
+  --pastel-okre: #da8f1f;
+  --pastel-orange: #f77744;
+  --pastel-vandyke-brown: #76533a;
+  --pastel-dark-green: #2b463e;
+}
+

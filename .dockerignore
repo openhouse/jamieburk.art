@@ -1,0 +1,11 @@
+.git
+**/.next
+node_modules
+**/node_modules
+coverage
+*.log
+.env
+.env.*
+Dockerfile
+README.md
+apps/web/.vercel

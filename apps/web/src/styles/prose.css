@@ -1,0 +1,27 @@
+.prose-body {
+  max-width: var(--measure);
+}
+
+.prose-body > * + * {
+  margin-top: 1rem;
+}
+
+.prose-body h2 {
+  margin-top: 2rem;
+}
+
+.prose-body h2:first-child {
+  margin-top: 0;
+}
+
+.prose-list {
+  display: grid;
+  gap: 0.55rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.prose-list li {
+  padding-left: 0.25rem;
+}
+
