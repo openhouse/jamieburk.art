@@ -1,0 +1,11 @@
+{
+  "name": "@jamie-burkart/design-tokens",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./colors": "./src/colors.ts",
+    "./grid": "./src/grid.ts",
+    "./typography": "./src/typography.ts"
+  }
+}
