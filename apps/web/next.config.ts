@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   output: "standalone",
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   reactStrictMode: true,
+  typedRoutes: false,
   poweredByHeader: false,
   transpilePackages: [
     "@jamie-burkart/content-schema",
