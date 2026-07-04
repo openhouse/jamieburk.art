@@ -1,0 +1,11 @@
+{
+  "name": "@jamie/site-content",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/site.ts",
+    "./site": "./src/site.ts",
+    "./types": "./src/types.ts",
+    "./work": "./src/work.ts"
+  }
+}
