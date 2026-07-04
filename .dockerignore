@@ -1,3 +1,4 @@
+.git
 node_modules
 .next
 dist
@@ -9,4 +10,3 @@ coverage
 .DS_Store
 *.log
 npm-debug.log*
-*.tsbuildinfo

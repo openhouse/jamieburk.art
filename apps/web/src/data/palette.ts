@@ -1,0 +1,20 @@
+export const oilPastels = [
+  { name: "Broadway blue", value: "#0b5f81" },
+  { name: "Oil white", value: "#eeefec" },
+  { name: "Pale orange", value: "#fce1d1" },
+  { name: "Lemon yellow", value: "#f7ec86" },
+  { name: "Naples yellow", value: "#fae367" },
+  { name: "Pale green", value: "#beebc7" },
+  { name: "Yellow ochre", value: "#e9b64e" },
+  { name: "Pale blue", value: "#74c2e5" },
+  { name: "Green gray", value: "#568e62" },
+  { name: "Rose madder", value: "#d04667" },
+  { name: "Violet", value: "#624c7f" },
+  { name: "Prussian blue", value: "#014f94" },
+  { name: "Dark gray", value: "#5e5f61" },
+  { name: "Black", value: "#343435" },
+  { name: "Hi blue", value: "#5dd2fd" },
+  { name: "Hi yellow", value: "#fcf939" },
+  { name: "Hi pink", value: "#fe3d89" },
+  { name: "Hi cyan", value: "#00ffe1" }
+];
