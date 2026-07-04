@@ -1,3 +1,5 @@
+.git
+.github
 node_modules
 .next
 dist
@@ -6,8 +8,9 @@ coverage
 .turbo
 .vercel
 .DS_Store
-*.log
 .env
 .env.*
 !.env.example
-tsconfig.tsbuildinfo
+project-overview*
+apps/web/.next
+apps/web/node_modules
