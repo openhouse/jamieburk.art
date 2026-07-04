@@ -1,0 +1,12 @@
+{
+  "name": "@jamie-burkart/content-schema",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./work": "./src/work.ts"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}
