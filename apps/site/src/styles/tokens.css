@@ -1,0 +1,36 @@
+:root {
+  --phi: 1.61803398875;
+  --inv-phi: 0.61803398875;
+  --page-max: 72rem;
+  --measure: 44rem;
+  --measure-wide: 58rem;
+  --gutter: clamp(1rem, 3vw, 2rem);
+  --space-1: 0.382rem;
+  --space-2: 0.618rem;
+  --space-3: 1rem;
+  --space-4: 1.618rem;
+  --space-5: 2.618rem;
+  --space-6: 4.236rem;
+  --color-bg: #eeefec;
+  --color-surface: #fffdf8;
+  --color-ink: #343435;
+  --color-muted: #5e5f61;
+  --color-line: #d8d2c8;
+  --color-accent: #0b5f81;
+  --color-accent-soft: #e6f1f4;
+  --color-warm-note: #efe5d2;
+  --oil-white: #eeefec;
+  --oil-black: #343435;
+  --oil-dark-gray: #5e5f61;
+  --oil-gray: #a2a5a6;
+  --oil-pale-blue: #74c2e5;
+  --oil-blue-green: #018c85;
+  --oil-green-gray: #568e62;
+  --oil-yellow-ochre: #e9b64e;
+  --oil-naples-yellow: #fae367;
+  --oil-crimson-lake: #d45462;
+  --oil-prussian-blue-light: #015482;
+  --oil-prussian-blue: #014f94;
+  --broadway-blue: #0b5f81;
+  --font-karla: "Karla";
+}
