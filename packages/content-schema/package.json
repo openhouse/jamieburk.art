@@ -1,0 +1,11 @@
+{
+  "name": "@jamie/content-schema",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./work": "./src/work.ts"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  }
+}

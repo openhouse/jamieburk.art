@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+@plugin "daisyui" {
+  themes: jamie --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "jamie";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #eeefec;
+  --color-base-200: #e6e1d9;
+  --color-base-300: #d9d9d6;
+  --color-base-content: #343435;
+
+  --color-primary: #0b5f81;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #018c85;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #e9b64e;
+  --color-accent-content: #343435;
+
+  --color-neutral: #343435;
+  --color-neutral-content: #eeefec;
+
+  --color-info: #74c2e5;
+  --color-info-content: #343435;
+
+  --color-success: #1f5c3e;
+  --color-success-content: #ffffff;
+
+  --color-warning: #fcf939;
+  --color-warning-content: #343435;
+
+  --color-error: #d73d36;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.35rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-broadway-blue);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-pale-blue);
+  color: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  translate: 0 -150%;
+}
+
+.skip-link:focus {
+  translate: 0 0;
+}
+
+.container-page {
+  margin-inline: auto;
+  width: min(100% - 2rem, 1180px);
+}
+
+.section-pad {
+  padding-block: clamp(3rem, 7vw, 6.875rem);
+}
+
+.section-rule {
+  border-top: 1px solid var(--color-line);
+}
+
+.measure {
+  max-width: 44rem;
+}
+
+.measure-wide {
+  max-width: 58rem;
+}
+
+.golden-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 4.25rem);
+}
+
+@media (min-width: 860px) {
+  .golden-grid {
+    grid-template-columns: minmax(0, 1.618fr) minmax(16rem, 1fr);
+  }
+}
+
+.editorial-card {
+  background: color-mix(in srgb, var(--color-surface) 86%, var(--color-paper));
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+}
+
+.artifact-panel {
+  min-height: 22rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-broadway-blue) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-clay) 10%, transparent) 1px, transparent 1px),
+    var(--color-surface);
+  background-size: 3.5rem 3.5rem;
+}
+
+.content-flow {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.content-flow h2 {
+  margin-top: 1.5rem;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.content-flow p,
+.content-flow li {
+  color: var(--color-muted);
+  line-height: 1.72;
+}
+
+.content-flow ul {
+  display: grid;
+  gap: 0.45rem;
+  list-style: disc;
+  padding-left: 1.1rem;
+}
+
+.golden-frame {
+  margin-inline: auto;
+  max-width: 760px;
+  width: min(100%, 61.803398875vw);
+}
+
+.phi-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 4.25rem);
+  grid-template-columns: minmax(0, 1.618fr) minmax(16rem, 1fr);
+}
+
+.balanced-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+}
+
+.eyebrow {
+  color: var(--color-broadway-blue);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.surface {
+  background: color-mix(in srgb, var(--color-surface) 86%, var(--color-paper));
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+}
+
+.callout-band {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-pale-green) 30%, transparent), transparent 46%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-pale-blue) 18%, transparent), transparent 70%);
+}
+
+.source-map {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@media (max-width: 800px) {
+  .golden-frame {
+    width: min(100%, 92vw);
+  }
+
+  .phi-grid {
+    grid-template-columns: 1fr;
+  }
+}
