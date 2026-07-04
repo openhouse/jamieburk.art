@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jamie Burkart">
+  <rect width="64" height="64" rx="8" fill="#eeefec"/>
+  <path d="M14 42c7 0 9-4 9-12V17h10v14c0 14-7 20-19 20v-9Z" fill="#0b5f81"/>
+  <path d="M36 17h8c8 0 13 4 13 11 0 4-2 7-5 9l7 14H48l-5-11h-7v11H26V17h10Zm0 8v7h7c2 0 4-1 4-4s-2-3-4-3h-7Z" fill="#343435"/>
+  <path d="M8 8h48v5H8z" fill="#fae367"/>
+</svg>

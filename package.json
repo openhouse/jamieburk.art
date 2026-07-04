@@ -1,0 +1,20 @@
+{
+  "name": "jamie-burkart-portfolio",
+  "private": true,
+  "engines": {
+    "node": ">=26 <27",
+    "npm": ">=11"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@jamieburkart/web",
+    "build": "npm run build --workspace=@jamieburkart/web",
+    "start": "npm run start --workspace=@jamieburkart/web",
+    "lint": "npm run lint --workspace=@jamieburkart/web",
+    "typecheck": "npm run typecheck --workspace=@jamieburkart/web",
+    "format": "npm run format --workspaces --if-present"
+  }
+}

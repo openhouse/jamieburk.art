@@ -1,0 +1,19 @@
+:root {
+  --phi: 1.61803398875;
+  --phi-inverse: 0.61803398875;
+  --phi-complement: 0.38196601125;
+
+  --space-1: 0.382rem;
+  --space-2: 0.618rem;
+  --space-3: 1rem;
+  --space-4: 1.618rem;
+  --space-5: 2.618rem;
+  --space-6: 4.236rem;
+  --space-7: 6.854rem;
+
+  --font-sans: Karla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: Georgia, Cambria, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --page-max: 72rem;
+  --measure: 42rem;
+}
