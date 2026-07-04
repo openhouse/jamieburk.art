@@ -1,0 +1,36 @@
+{
+  "name": "@jamieburk-art/web",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "node .next/standalone/apps/web/server.js",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@mdx-js/loader": "latest",
+    "@mdx-js/react": "latest",
+    "@next/mdx": "latest",
+    "@tailwindcss/postcss": "latest",
+    "@types/mdx": "latest",
+    "daisyui": "latest",
+    "gray-matter": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "prettier": "latest",
+    "typescript": "latest"
+  }
+}
