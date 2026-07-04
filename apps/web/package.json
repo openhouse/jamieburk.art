@@ -1,0 +1,38 @@
+{
+  "name": "@jamie/web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack -H 0.0.0.0",
+    "build": "next build",
+    "postbuild": "mkdir -p .next/standalone/apps/web/.next && cp -R public .next/standalone/apps/web/public && cp -R .next/static .next/standalone/apps/web/.next/static",
+    "start": "node .next/standalone/apps/web/server.js",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@jamie/design-tokens": "*",
+    "@mdx-js/loader": "3.1.1",
+    "@mdx-js/react": "3.1.1",
+    "@next/mdx": "16.2.10",
+    "daisyui": "5.6.11",
+    "gray-matter": "4.0.3",
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "26.1.0",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.10",
+    "prettier": "3.6.2",
+    "tailwindcss": "4.3.2",
+    "typescript": "6.0.3"
+  }
+}

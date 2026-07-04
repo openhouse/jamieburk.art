@@ -1,0 +1,22 @@
+{
+  "name": "jamieburk-art-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": "26.x",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "dev": "npm --workspace @jamie/web run dev",
+    "build": "npm --workspace @jamie/web run build",
+    "start": "npm --workspace @jamie/web run start",
+    "lint": "npm --workspace @jamie/web run lint",
+    "typecheck": "npm --workspace @jamie/web run typecheck",
+    "format": "npm --workspace @jamie/web run format",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  }
+}

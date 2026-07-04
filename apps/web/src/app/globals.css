@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "jamie";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #eeefec;
+  --color-base-200: #fffaf2;
+  --color-base-300: #d9d9d6;
+  --color-base-content: #343435;
+
+  --color-primary: #0b5f81;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #568e62;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #e9b64e;
+  --color-accent-content: #343435;
+
+  --color-neutral: #343435;
+  --color-neutral-content: #eeefec;
+
+  --color-info: #74c2e5;
+  --color-success: #79c039;
+  --color-warning: #ffb101;
+  --color-error: #d45462;
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+:root {
+  --color-paper: #eeefec;
+  --color-surface: #fffaf2;
+  --color-ink: #343435;
+  --color-muted: #5e5f61;
+  --color-line: #d9d9d6;
+  --color-primary: #0b5f81;
+  --color-primary-soft: #dcecf2;
+  --color-ochre: #e9b64e;
+  --color-salmon: #ffa77f;
+  --color-pale-blue: #74c2e5;
+  --color-green-gray: #568e62;
+  --color-rose-madder: #d04667;
+  --font-sans: Karla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: Karla, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 95, 129, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(86, 142, 98, 0.04) 1px, transparent 1px),
+    var(--color-paper);
+  background-size: 48px 48px;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-primary-soft);
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - clamp(2rem, 6vw, 4rem)));
+  margin-inline: auto;
+}
+
+.prose-measure {
+  max-width: 72ch;
+}
+
+.section-y {
+  padding-block: clamp(3.5rem, 8vw, 7rem);
+}
+
+.fine-rule {
+  border-color: color-mix(in srgb, var(--color-line) 76%, var(--color-primary));
+}
+
+.case-body h2 {
+  margin-top: 3rem;
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.case-body h3 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 750;
+}
+
+.case-body p {
+  margin-block: 1rem;
+}
+
+.case-body ul {
+  margin-block: 1rem;
+  padding-left: 1.35rem;
+  list-style: disc;
+}
+
+.case-body li + li {
+  margin-top: 0.35rem;
+}
+
+.case-body strong {
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .site-chrome {
+    display: none;
+  }
+}
