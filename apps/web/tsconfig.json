@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"],
+      "@jamie/content-schema": ["../../packages/content-schema/src"],
+      "@jamie/design-tokens": ["../../packages/design-tokens/src"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "../../packages/content-schema/src/**/*.ts",
+    "../../packages/design-tokens/src/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

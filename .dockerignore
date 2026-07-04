@@ -1,0 +1,12 @@
+.git
+.github
+.next
+node_modules
+apps/*/.next
+apps/*/node_modules
+packages/*/node_modules
+.env
+.env.*
+!.env.example
+.DS_Store
+README.local.md

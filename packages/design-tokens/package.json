@@ -1,0 +1,9 @@
+{
+  "name": "@jamie/design-tokens",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./colors.css": "./src/colors.css"
+  }
+}

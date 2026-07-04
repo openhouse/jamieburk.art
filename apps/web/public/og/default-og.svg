@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jamie Burkart - Technical Project Manager</title>
+  <desc id="desc">Open graph card for Jamie Burkart's portfolio.</desc>
+  <rect width="1200" height="630" fill="#eeefec"/>
+  <path d="M0 0h1200v630H0z" fill="#eeefec"/>
+  <g opacity="0.16" stroke="#0b5f81" stroke-width="2">
+    <path d="M90 120h1020M90 220h1020M90 320h1020M90 420h1020M90 520h1020"/>
+    <path d="M160 70v500M360 70v500M560 70v500M760 70v500M960 70v500"/>
+  </g>
+  <rect x="90" y="90" width="1020" height="450" rx="8" fill="#f7f7f4" stroke="#343435" stroke-opacity="0.28"/>
+  <circle cx="966" cy="162" r="42" fill="#e2aeb4" opacity="0.8"/>
+  <circle cx="1030" cy="214" r="28" fill="#018c85" opacity="0.82"/>
+  <text x="140" y="190" fill="#0b5f81" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Jamie Burkart</text>
+  <text x="140" y="260" fill="#343435" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700">Technical Project Manager</text>
+  <text x="140" y="322" fill="#343435" font-family="Arial, Helvetica, sans-serif" font-size="36">Product Operations &amp; Implementation</text>
+  <text x="140" y="416" fill="#5e5f61" font-family="Arial, Helvetica, sans-serif" font-size="32">I turn under-structured work into usable systems.</text>
+  <g fill="#0b5f81" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">
+    <text x="140" y="488">Clarify</text>
+    <text x="292" y="488">Structure</text>
+    <text x="472" y="488">Build</text>
+    <text x="606" y="488">Document</text>
+    <text x="798" y="488">Transfer</text>
+  </g>
+</svg>

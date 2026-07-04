@@ -1,0 +1,18 @@
+{
+  "name": "jamie-burkart-portfolio",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": ">=26 <27",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @jamie/web dev",
+    "build": "pnpm --filter @jamie/web build",
+    "start": "pnpm --filter @jamie/web start",
+    "lint": "pnpm --filter @jamie/web lint",
+    "typecheck": "pnpm --filter @jamie/web typecheck",
+    "format": "pnpm -r format",
+    "check": "pnpm lint && pnpm typecheck && pnpm build"
+  }
+}
