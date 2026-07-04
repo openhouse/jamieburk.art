@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --ratio-phi: 1.61803398875;
+  --ratio-phi-inv: 0.61803398875;
+  --color-bg: #eeefec;
+  --color-surface: #fffdf8;
+  --color-ink: #343435;
+  --color-muted: #5e5f61;
+  --color-line: #d9d9d6;
+  --color-accent: #0b5f81;
+  --color-accent-soft: #e6f1f4;
+  --color-warm-note: #efe5d2;
+  --color-leaf: #517b5f;
+  --color-clay: #b4684d;
+  --color-plum: #6b5a73;
+  --site-max: 72rem;
+  --content-max: 46rem;
+  --radius-card: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: Karla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.18em;
+}
+
+.site-shell {
+  width: min(100% - 2rem, var(--site-max));
+  margin-inline: auto;
+}
+
+.content-column {
+  width: min(100%, var(--content-max));
+}
+
+.paper-panel {
+  border: 1px solid var(--color-line);
+  background: color-mix(in srgb, var(--color-surface) 92%, white);
+  border-radius: var(--radius-card);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
