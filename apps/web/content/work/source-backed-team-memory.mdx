@@ -1,0 +1,63 @@
+export const metadata = {
+  title: "Source-Backed Team Memory — Human-Reviewed Knowledge Systems",
+  slug: "source-backed-team-memory",
+  summary:
+    "A source-backed team-memory practice for turning meetings, documents, transcripts, and decisions into human-reviewed organizational memory.",
+  role: "Knowledge systems, documentation practice, and human-reviewed AI workflow",
+  dates: "Current focus",
+  context: "Lab note and emerging practice",
+  contentState: "Lab note",
+  featured: true,
+  priority: 7,
+  visibility: "public-safe",
+  accentColor: "#014f94",
+  tags: ["Team memory", "Documentation", "AI workflow", "Sources"],
+  skills: ["source-backed synthesis", "human review", "decision records", "privacy boundaries"],
+  proof: ["meetings, documents, transcripts, and decisions organized into inspectable memory"],
+  publicSafety:
+    "AI drafts. Humans review. Sources remain inspectable. Corrections remain possible. Private material stays private.",
+  known: [
+    "Teams need memory that remains tied to sources.",
+    "AI can draft useful summaries, but human review and correction are required.",
+    "Private material must stay private."
+  ],
+  open: [
+    "Which public demo belongs in V1.",
+    "How much implementation detail should be visible before a consulting scope exists."
+  ],
+  protected: [
+    "Private meeting transcripts and internal documents.",
+    "Client, team, and stakeholder-sensitive materials.",
+    "Any workflow that suggests unreviewed AI output is authoritative."
+  ]
+};
+
+# Source-Backed Team Memory
+
+## One-line summary
+
+A source-backed team-memory practice for turning meetings, documents, transcripts, and decisions into human-reviewed organizational memory.
+
+## Required line
+
+AI drafts. Humans review. Sources remain inspectable. Corrections remain possible. Private material stays private.
+
+## What was unclear
+
+Teams often collect meetings, transcripts, notes, documents, and decisions faster than they can turn them into usable memory. The risk is not only forgetting. The risk is acting on summaries that cannot be inspected, corrected, or bounded.
+
+## What became usable
+
+A practical operating stance for source-backed memory: draft from sources, review with humans, preserve traceability, name uncertainty, and protect private material.
+
+<KnownOpenProtected
+  known={metadata.known}
+  open={metadata.open}
+  protectedItems={metadata.protected}
+/>
+
+<PublicSafetyNote>{metadata.publicSafety}</PublicSafetyNote>
+
+<HandoffSummary>
+  V1 can link this as a lab note. It should feel useful and cautious: enough to show Jamie's method, not so much that it becomes an AI product pitch.
+</HandoffSummary>
