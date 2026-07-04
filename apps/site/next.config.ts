@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(process.cwd(), "../.."),
   poweredByHeader: false,
   reactStrictMode: true,
+  typedRoutes: false,
   images: {
     formats: ["image/avif", "image/webp"]
   }
