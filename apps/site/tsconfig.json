@@ -1,0 +1,39 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "mdx-components.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/components/ArchivedPrototypeNote.tsx",
+    "src/components/ButtonLink.tsx",
+    "src/components/CareNote.tsx",
+    "src/components/CollectiveWorkNote.tsx",
+    "src/components/ContentStateBadge.tsx",
+    "src/components/GoldenFrame.tsx",
+    "src/components/MetadataPanel.tsx",
+    "src/components/ProjectCard.tsx",
+    "src/components/Section.tsx",
+    "src/components/SectionHeading.tsx",
+    "src/components/SourceToMemoryLoop.tsx",
+    "src/data",
+    "src/lib/mdx.ts",
+    "src/lib/work.ts"
+  ]
+}

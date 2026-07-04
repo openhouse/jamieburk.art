@@ -1,0 +1,21 @@
+{
+  "name": "jamie-burkart-portfolio-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/site",
+    "packages/content-schema",
+    "packages/design-tokens"
+  ],
+  "engines": {
+    "node": ">=26 <27"
+  },
+  "scripts": {
+    "dev": "npm run dev -w @jamie/site",
+    "build": "npm run build -w @jamie/site",
+    "start": "npm run start -w @jamie/site",
+    "lint": "npm run lint -w @jamie/site",
+    "typecheck": "npm run typecheck -w @jamie/site",
+    "format": "npm run format -w @jamie/site",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  }
+}

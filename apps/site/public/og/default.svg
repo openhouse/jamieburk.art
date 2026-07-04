@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jamie Burkart portfolio source map</title>
+  <desc id="desc">A Broadway blue source map graphic with connected public-safe proof nodes.</desc>
+  <rect width="1200" height="630" fill="#eeefec"/>
+  <path d="M120 138H620M120 252H830M120 366H680M120 480H930" stroke="#d9d9d6" stroke-width="3"/>
+  <circle cx="120" cy="138" r="24" fill="#0b5f81"/>
+  <circle cx="620" cy="138" r="24" fill="#e9b64e"/>
+  <circle cx="120" cy="252" r="24" fill="#018c85"/>
+  <circle cx="830" cy="252" r="24" fill="#74c2e5"/>
+  <circle cx="120" cy="366" r="24" fill="#e2aeb4"/>
+  <circle cx="680" cy="366" r="24" fill="#1f5c3e"/>
+  <circle cx="120" cy="480" r="24" fill="#0b5f81"/>
+  <circle cx="930" cy="480" r="24" fill="#e9b64e"/>
+  <text x="120" y="112" fill="#0b5f81" font-family="Karla, Arial, sans-serif" font-size="28" font-weight="800">JAMIE BURKART</text>
+  <text x="120" y="595" fill="#343435" font-family="Karla, Arial, sans-serif" font-size="48" font-weight="900">Technical Project Manager</text>
+  <text x="120" y="548" fill="#343435" font-family="Karla, Arial, sans-serif" font-size="24" font-weight="700">Operating structure for complex public-facing teams</text>
+</svg>
