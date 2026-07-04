@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "jamie";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #eeefec;
+  --color-base-200: #fffdf8;
+  --color-base-300: #d8d2c8;
+  --color-base-content: #343435;
+
+  --color-primary: #0b5f81;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #568e62;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #fae367;
+  --color-accent-content: #343435;
+
+  --color-neutral: #343435;
+  --color-neutral-content: #eeefec;
+
+  --color-info: #74c2e5;
+  --color-success: #beebc7;
+  --color-warning: #ffa77f;
+  --color-error: #d73d36;
+
+  --radius-selector: 0.382rem;
+  --radius-field: 0.382rem;
+  --radius-box: 0.618rem;
+  --border: 1px;
+}
+
+@import "../styles/tokens.css";
+@import "../styles/palette.css";
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  min-width: 320px;
+  background:
+    linear-gradient(90deg, rgba(11, 95, 129, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(11, 95, 129, 0.035) 1px, transparent 1px),
+    var(--color-bg);
+  background-size: 3.236rem 3.236rem;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: 0;
+}
+
+::selection {
+  background: var(--color-highlight);
+  color: var(--color-ink);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 3px;
+}
+
+.page-shell {
+  margin-inline: auto;
+  max-width: var(--page-max);
+  padding-inline: clamp(1rem, 4vw, var(--space-6));
+}
+
+.section-band {
+  border-block-start: 1px solid color-mix(in srgb, var(--color-line), transparent 40%);
+  padding-block: clamp(var(--space-5), 7vw, var(--space-7));
+}
+
+.surface {
+  background: color-mix(in srgb, var(--color-surface), transparent 5%);
+  border: 1px solid color-mix(in srgb, var(--color-line), transparent 25%);
+  border-radius: 0.618rem;
+}
+
+.small-caps {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.measure {
+  max-width: var(--measure);
+}
