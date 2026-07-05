@@ -1,6 +1,18 @@
+const defaultSiteUrl = "http://localhost:3000";
+
+function normalizeSiteUrl(url: string | undefined) {
+  return (url?.trim() || defaultSiteUrl).replace(/\/+$/, "");
+}
+
+const robotsPolicy =
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index" ? "index" : "noindex";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  env: process.env.SITE_ENV?.trim() || "development",
+  url: normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
+  robotsPolicy,
+  isIndexable: robotsPolicy === "index",
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
