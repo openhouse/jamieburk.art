@@ -59,7 +59,7 @@
   --color-jb-orange: var(--jb-pale-orange);
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
-  --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html {

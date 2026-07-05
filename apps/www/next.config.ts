@@ -26,6 +26,20 @@ const nextConfig: NextConfig = {
         ]
       }
     ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
+      }
+    ];
   }
 };
 
