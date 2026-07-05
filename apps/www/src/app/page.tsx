@@ -25,7 +25,7 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase text-jb-blue">
               Selected systems
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <h2 className="jb-display mt-3 text-3xl font-bold text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
@@ -50,7 +50,7 @@ export default function HomePage() {
             <p className="text-sm font-semibold uppercase text-jb-blue">
               Operating motif
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <h2 className="jb-display mt-3 text-3xl font-bold text-jb-ink">
               What was unclear becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
@@ -76,7 +76,7 @@ export default function HomePage() {
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+          <h2 className="jb-display mt-3 text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>
         </div>

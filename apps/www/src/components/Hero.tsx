@@ -8,7 +8,7 @@ export function Hero() {
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="jb-display mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
@@ -50,7 +50,7 @@ export function Hero() {
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
                 key={label}
               >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
+                <span className="jb-display text-xs text-jb-blue">0{index + 1}</span>
                 <p className="mt-5">{label}</p>
               </div>
             ))}

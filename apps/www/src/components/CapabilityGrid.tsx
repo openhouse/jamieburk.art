@@ -34,7 +34,9 @@ export function CapabilityGrid() {
         <p className="text-sm font-semibold uppercase text-jb-blue">
           Capabilities
         </p>
-        <h2 className="mt-3 text-3xl font-bold text-jb-ink">What becomes usable</h2>
+        <h2 className="jb-display mt-3 text-3xl font-bold text-jb-ink">
+          What becomes usable
+        </h2>
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {capabilities.map((capability) => (
