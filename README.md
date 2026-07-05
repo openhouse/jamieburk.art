@@ -6,12 +6,16 @@ Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager - Pr
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Docker, Dokku.
 
+Canonical app path: `apps/web`
+
+Canonical workspace package: `@jamieburkart/web`
+
 ## Local Development
 
 ```bash
 nvm install
 nvm use
-npm install
+npm ci
 npm run dev
 ```
 
@@ -37,6 +41,8 @@ git push dokku main
 
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
 
+See `docs/dokku.md` for the one-time Dokku app setup checklist.
+
 ## Content Rules
 
 - Do not publish private emails, raw transcripts, private coalition notes, health or financial details, private correspondence, unapproved photos, private fonts, or credentials.
@@ -48,5 +54,6 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to tha
 
 - Approved public email address.
 - LinkedIn URL and public-ready GitHub URL.
-- Current resume PDF to replace the placeholder file at `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
+- Current resume PDF to replace the placeholder file at `apps/web/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
 - Public-safe screenshots or artifacts for HJE, FairRentNYC / CRS, and CallNYC.
+- Final approval for impact claims marked in the site with `TODO: Jamie approval required before launch.`

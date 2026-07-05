@@ -10,11 +10,11 @@
     "npm": ">=11"
   },
   "scripts": {
-    "dev": "npm run dev -w @jamie-burkart/www",
-    "build": "npm run build -w @jamie-burkart/www",
-    "start": "npm run start -w @jamie-burkart/www",
-    "lint": "npm run lint -w @jamie-burkart/www",
-    "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "dev": "npm run dev --workspace=@jamieburkart/web",
+    "build": "npm run build --workspace=@jamieburkart/web",
+    "start": "npm run start --workspace=@jamieburkart/web",
+    "lint": "npm run lint --workspace=@jamieburkart/web",
+    "typecheck": "npm run typecheck --workspace=@jamieburkart/web",
+    "check": "npm run typecheck && npm run lint && npm run build"
   }
 }
