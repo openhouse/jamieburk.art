@@ -13,11 +13,23 @@ export function createMetadata({
   path = "/"
 }: MetadataInput = {}): Metadata {
   const url = new URL(path, site.url);
+  const isStaging = site.env === "staging";
 
   return {
     metadataBase: new URL(site.url),
     title,
     description,
+    robots: isStaging
+      ? {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false
+          }
+        }
+      : undefined,
     alternates: {
       canonical: url
     },
