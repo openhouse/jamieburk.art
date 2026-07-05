@@ -10,12 +10,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const details = [
-  "Static-first Next.js App Router site with local MDX content",
+  "Built with Next.js App Router, React, TypeScript, MDX, Tailwind CSS, and daisyUI",
+  "Deployed via Dockerfile and Dokku, with staging first at staging.jamieburk.art",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
-  "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
-  "Prepared for Docker / Dokku deployment on a DigitalOcean droplet",
-  "No invasive tracking in V1"
+  "No invasive tracking in V1",
+  "Designed with Broadway blue #0b5f81, Jamie's oil-pastel palette, and golden-ratio layout tendencies",
+  "Accessibility-minded semantic HTML, keyboard focus states, and readable type"
 ];
 
 export default function ColophonPage() {
@@ -29,6 +29,14 @@ export default function ColophonPage() {
           intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
           oil-pastel palette, and a quiet proportional grid derived from his
           print-layout sketchpad.
+        </p>
+        <p className="mt-5 leading-8 text-jb-ink/76">
+          This site uses Karla for body and interface text and Archivo Black for
+          selected display moments. League Gothic is reserved for small label
+          moments. Other typefaces from Jamie&apos;s older design practice - Trade
+          Gothic, Verlag, Gotham Rounded, Risque, and a private Maria handwriting
+          font - are treated as influences only unless licensed and explicitly
+          approved for web use.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

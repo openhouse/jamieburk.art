@@ -47,6 +47,7 @@ export type Artifact = {
 export type WorkMeta = {
   title: string;
   slug: string;
+  href?: string;
   series: string;
   subtitle: string;
   summary: string;

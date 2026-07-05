@@ -7,14 +7,16 @@ import SundayDinner from "@/content/work/196-sunday-dinner.mdx";
 import WOWList from "@/content/work/wowlist.mdx";
 import { workItems, type WorkSlug } from "@/data/work";
 
+export type WorkContentSlug = Exclude<WorkSlug, "source-backed-team-memory">;
+
 export const workContentBySlug = {
-  "196-sunday-dinner": SundayDinner,
+  "196-artists-residency": SundayDinner,
   callnyc: CallNYC,
-  "fair-rent-nyc": FairRentNYC,
+  "fairrentnyc-commercial-rent-stabilization": FairRentNYC,
   "harry-j-epstein": HarryJEpstein,
   "kc-town-hall": KCTownHall,
   wowlist: WOWList
-} satisfies Record<WorkSlug, ComponentType>;
+} satisfies Record<WorkContentSlug, ComponentType>;
 
 export function getWorkBySlug(slug: string) {
   return workItems.find((item) => item.slug === slug);

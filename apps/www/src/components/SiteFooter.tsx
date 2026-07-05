@@ -11,6 +11,11 @@ export function SiteFooter() {
             Technical Project Manager - Product Operations & Implementation.
             Public-safe portfolio, civic notebook, and future living archive.
           </p>
+          {site.environment !== "production" ? (
+            <p className="mt-3 text-xs font-semibold text-jb-blue">
+              Environment: {site.environment}. This preview is noindex and not final.
+            </p>
+          ) : null}
         </div>
         <nav aria-label="Footer navigation">
           <ul className="flex flex-wrap gap-3 text-sm font-medium">

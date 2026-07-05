@@ -5,10 +5,10 @@ export function Hero() {
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="jb-condensed-label text-base font-semibold text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="jb-display mt-5 text-5xl text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
@@ -22,7 +22,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
