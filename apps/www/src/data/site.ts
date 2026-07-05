@@ -1,6 +1,8 @@
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://staging.jamieburk.art",
+  deployEnv: process.env.NEXT_PUBLIC_DEPLOY_ENV || "local",
+  noindex: process.env.NEXT_PUBLIC_NOINDEX === "true",
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
