@@ -37,7 +37,7 @@ export default function WorkPage() {
           if (group === "Source-backed memory / AI lab") {
             return (
               <section key={group}>
-                <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
+                <h2 className="font-display text-3xl font-semibold text-jb-ink">{group}</h2>
                 <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
                   <h3 className="text-2xl font-semibold text-jb-ink">
                     Source-Backed Team Memory / Noting.us
@@ -49,7 +49,8 @@ export default function WorkPage() {
                   </p>
                   <p className="mt-3 text-sm font-semibold text-jb-green">
                     Early research / method / consulting practice. Not a
-                    finished production SaaS.
+                    finished production SaaS, AI replacement for judgment, or
+                    private archive browser.
                   </p>
                   <Link
                     className="mt-5 inline-block font-semibold text-jb-blue hover:text-jb-green"
@@ -66,7 +67,7 @@ export default function WorkPage() {
 
           return (
             <section key={group}>
-              <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
+              <h2 className="font-display text-3xl font-semibold text-jb-ink">{group}</h2>
               <div className="mt-5 grid gap-5 lg:grid-cols-2">
                 {groupedItems.map((item) => (
                   <WorkCard item={item} key={item.slug} />
