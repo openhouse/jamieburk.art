@@ -12,7 +12,7 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I build operating structure for ambiguous public-facing technical work.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
             I help teams turn ambiguous, stakeholder-heavy work into usable
@@ -22,7 +22,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              Download résumé
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

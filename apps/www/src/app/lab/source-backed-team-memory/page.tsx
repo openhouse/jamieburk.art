@@ -26,8 +26,8 @@ export default function SourceBackedTeamMemoryPage() {
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
+            production SaaS, AI oracle, replacement for judgment, private
+            archive browser, or broad-ingestion product.
           </p>
         </div>
         <div className="mt-10 space-y-6">

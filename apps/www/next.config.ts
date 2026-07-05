@@ -2,6 +2,11 @@ import path from "node:path";
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
+const stagingHeaders =
+  process.env.JB_ENV === "staging"
+    ? [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
+    : [];
+
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
@@ -22,7 +27,8 @@ const nextConfig: NextConfig = {
           {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=()"
-          }
+          },
+          ...stagingHeaders
         ]
       }
     ];

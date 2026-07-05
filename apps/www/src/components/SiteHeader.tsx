@@ -3,8 +3,9 @@ import { site } from "@/data/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
+  { href: "/lab/source-backed-team-memory", label: "Lab" },
   { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" },
+  { href: "/resume", label: "Résumé" },
   { href: "/contact", label: "Contact" }
 ] as const;
 
