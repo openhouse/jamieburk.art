@@ -15,11 +15,11 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="jb-frame flex min-h-18 items-center justify-between gap-4 py-3">
-        <Link className="font-semibold text-jb-ink hover:text-jb-blue" href="/">
+        <Link className="font-display font-semibold text-jb-ink hover:text-jb-blue" href="/">
           {site.name}
         </Link>
         <nav aria-label="Primary navigation">
-          <ul className="flex flex-wrap items-center justify-end gap-1 text-sm font-medium sm:gap-2">
+          <ul className="font-condensed flex flex-wrap items-center justify-end gap-1 text-sm font-medium tracking-wide sm:gap-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

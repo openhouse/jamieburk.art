@@ -14,7 +14,7 @@ export function WorkCard({ item }: WorkCardProps) {
       <div className="flex flex-col gap-4">
         <StatusBadge status={item.status} visibility={item.visibility} />
         <div>
-          <h2 className="text-2xl font-semibold text-jb-ink">
+          <h2 className="font-display text-2xl font-semibold text-jb-ink">
             <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
               {item.title}
             </Link>
@@ -24,21 +24,27 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
-            <dt className="font-semibold text-jb-ink">What was unclear</dt>
+            <dt className="font-condensed font-semibold tracking-wide text-jb-ink">
+              What was unclear
+            </dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
           </div>
           <div>
-            <dt className="font-semibold text-jb-ink">What became usable</dt>
+            <dt className="font-condensed font-semibold tracking-wide text-jb-ink">
+              What became usable
+            </dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
           </div>
         </dl>
         <div>
-          <p className="text-sm font-semibold text-jb-ink">Role fit</p>
+          <p className="font-condensed text-sm font-semibold tracking-wide text-jb-ink">
+            Role fit
+          </p>
           <p className="mt-1 text-sm leading-6 text-jb-ink/72">{item.roleFit}</p>
         </div>
         <TagList compact tags={item.tags} />
         <Link
-          className="text-sm font-semibold text-jb-blue hover:text-jb-green"
+          className="font-condensed text-sm font-semibold tracking-wide text-jb-blue hover:text-jb-green"
           href={`/work/${item.slug}` as Route}
         >
           Read case study

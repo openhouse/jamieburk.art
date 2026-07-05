@@ -5,10 +5,10 @@ export function Hero() {
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="font-condensed text-sm font-semibold uppercase tracking-wide text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
@@ -28,7 +28,7 @@ export function Hero() {
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-6 text-sm font-medium text-jb-ink/64">
+          <p className="mt-6 font-condensed text-sm font-medium text-jb-ink/64">
             Brooklyn, NY / Civic technology / Product operations / Knowledge
             systems / Public-facing tools
           </p>
@@ -37,7 +37,7 @@ export function Hero() {
           aria-label="Representative operating-structure diagram"
           className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
         >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
+          <div className="grid grid-cols-2 gap-3 font-condensed text-sm font-semibold text-jb-ink">
             {[
               "Requirements",
               "Workflows",
@@ -50,7 +50,7 @@ export function Hero() {
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
                 key={label}
               >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
+                <span className="text-xs tracking-wide text-jb-blue">0{index + 1}</span>
                 <p className="mt-5">{label}</p>
               </div>
             ))}

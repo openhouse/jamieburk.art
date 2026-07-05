@@ -22,10 +22,10 @@ export default function HomePage() {
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="font-condensed text-sm font-semibold uppercase tracking-wide text-jb-blue">
               Selected systems
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <h2 className="mt-3 font-display text-3xl font-bold text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
@@ -34,7 +34,10 @@ export default function HomePage() {
               decision trails, and durable handoffs.
             </p>
           </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
+          <Link
+            className="font-condensed font-semibold tracking-wide text-jb-blue hover:text-jb-green"
+            href="/work"
+          >
             View all work
           </Link>
         </div>
@@ -47,10 +50,10 @@ export default function HomePage() {
       <section className="bg-jb-warm/80 py-16">
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="font-condensed text-sm font-semibold uppercase tracking-wide text-jb-blue">
               Operating motif
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            <h2 className="mt-3 font-display text-3xl font-bold text-jb-ink">
               What was unclear becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
@@ -65,9 +68,15 @@ export default function HomePage() {
                 className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
                 key={from}
               >
-                <dt className="font-semibold text-jb-ink">{from}</dt>
-                <dd className="hidden text-jb-blue sm:block">to</dd>
-                <dd className="font-semibold text-jb-green">{to}</dd>
+                <dt className="font-condensed font-semibold tracking-wide text-jb-ink">
+                  {from}
+                </dt>
+                <dd className="font-condensed hidden tracking-wide text-jb-blue sm:block">
+                  to
+                </dd>
+                <dd className="font-condensed font-semibold tracking-wide text-jb-green">
+                  {to}
+                </dd>
               </div>
             ))}
           </dl>
@@ -75,8 +84,10 @@ export default function HomePage() {
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
-          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+          <p className="font-condensed text-sm font-semibold uppercase tracking-wide text-jb-blue">
+            How I work
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>
         </div>

@@ -3,7 +3,7 @@ import { JBButton } from "@/components/JBButton";
 export function ContactCTA() {
   return (
     <section className="rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
-      <h2 className="text-2xl font-semibold text-jb-ink">
+      <h2 className="font-display text-2xl font-semibold text-jb-ink">
         Looking for technical project management, product operations,
         implementation, or knowledge-systems support?
       </h2>

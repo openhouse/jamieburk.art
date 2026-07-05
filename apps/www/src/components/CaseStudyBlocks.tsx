@@ -15,13 +15,13 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
 
   return (
     <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
-      <h2 className="text-xl font-semibold" id="at-a-glance">
+      <h2 className="font-display text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="font-condensed text-xs font-semibold uppercase tracking-wide text-jb-paper/70">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +29,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="font-condensed text-xs font-semibold uppercase tracking-wide text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -43,13 +43,13 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
 export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
+      <h2 className="font-display text-2xl font-semibold text-jb-ink" id="artifact-list">
         Primary artifacts
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="font-condensed rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium tracking-wide text-jb-ink"
             key={artifact}
           >
             {artifact}
@@ -63,16 +63,18 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
+      <h2 className="font-display text-2xl font-semibold text-jb-ink" id="artifact-gallery">
         Artifact gallery
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="font-condensed text-xs font-semibold uppercase tracking-wide text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
-            <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
+            <h3 className="mt-10 font-display text-xl font-semibold text-jb-ink">
+              {artifact.title}
+            </h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
           </JBCard>
         ))}
@@ -90,13 +92,15 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
 
   return (
     <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
+      <h2 className="font-display text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
-            <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
+            <h3 className="font-condensed text-lg font-semibold tracking-wide text-jb-blue">
+              {label}
+            </h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
           </JBCard>
         ))}
@@ -122,7 +126,7 @@ function NoteBlock({
 
   return (
     <section className={`rounded-lg border p-5 ${styles}`}>
-      <h2 className="text-xl font-semibold text-jb-ink">{title}</h2>
+      <h2 className="font-display text-xl font-semibold text-jb-ink">{title}</h2>
       <div className="mt-3 text-sm leading-6 text-jb-ink/76">{children}</div>
     </section>
   );
@@ -171,7 +175,7 @@ export function CreditsList({ item }: { item: WorkMeta }) {
   if (!item.credits?.length) return null;
   return (
     <section aria-labelledby="credits-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="credits-list">
+      <h2 className="font-display text-2xl font-semibold text-jb-ink" id="credits-list">
         Credits
       </h2>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-jb-ink/76">

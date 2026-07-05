@@ -56,7 +56,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="font-display text-5xl font-bold text-jb-ink">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -69,7 +69,9 @@ export default function TechnicalOperationsPage() {
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (
           <JBCard key={section.title}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>
+            <h2 className="font-display text-2xl font-semibold text-jb-ink">
+              {section.title}
+            </h2>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
               {section.items.map((item) => (
                 <li className="flex gap-3" key={item}>
