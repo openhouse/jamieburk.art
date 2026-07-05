@@ -24,11 +24,11 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
-            <dt className="font-semibold text-jb-ink">What was unclear</dt>
+            <dt className="font-display font-semibold text-jb-ink">What was unclear</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
           </div>
           <div>
-            <dt className="font-semibold text-jb-ink">What became usable</dt>
+            <dt className="font-display font-semibold text-jb-ink">What became usable</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
           </div>
         </dl>
