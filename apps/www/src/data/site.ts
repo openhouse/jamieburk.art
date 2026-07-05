@@ -1,6 +1,12 @@
+const deployEnv = process.env.NEXT_PUBLIC_DEPLOY_ENV ?? "staging";
+
+const defaultUrl =
+  deployEnv === "production" ? "https://jamieburk.art" : "https://staging.jamieburk.art";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  deployEnv,
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? defaultUrl,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:

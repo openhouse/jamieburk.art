@@ -13,11 +13,16 @@ export function createMetadata({
   path = "/"
 }: MetadataInput = {}): Metadata {
   const url = new URL(path, site.url);
+  const robots =
+    site.deployEnv === "production"
+      ? { index: true, follow: true }
+      : { index: false, follow: false, nocache: true };
 
   return {
     metadataBase: new URL(site.url),
     title,
     description,
+    robots,
     alternates: {
       canonical: url
     },

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Karla } from "next/font/google";
+import { Karla, League_Spartan } from "next/font/google";
+import { EnvironmentBanner } from "@/components/EnvironmentBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { createMetadata } from "@/lib/metadata";
@@ -8,6 +9,12 @@ import "./globals.css";
 const karla = Karla({
   subsets: ["latin"],
   variable: "--font-karla",
+  display: "swap"
+});
+
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-league-spartan",
   display: "swap"
 });
 
@@ -22,8 +29,9 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={karla.variable} lang="en">
+    <html className={`${karla.variable} ${leagueSpartan.variable}`} lang="en">
       <body>
+        <EnvironmentBanner />
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
