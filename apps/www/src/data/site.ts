@@ -1,6 +1,10 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://staging.jamieburk.art";
+const siteIndexable = process.env.SITE_INDEXABLE === "true";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: siteUrl,
+  indexable: siteIndexable,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
