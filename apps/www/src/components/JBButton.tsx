@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Route } from "next";
 import type { ReactNode } from "react";
 
 type JBButtonProps = {
@@ -25,7 +24,7 @@ export function JBButton({
 
   if (href.startsWith("/")) {
     return (
-      <Link className={className} href={href as Route} download={download}>
+      <Link className={className} href={href} download={download}>
         {children}
       </Link>
     );

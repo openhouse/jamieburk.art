@@ -18,6 +18,23 @@ export function createMetadata({
     metadataBase: new URL(site.url),
     title,
     description,
+    robots: site.allowIndexing
+      ? {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true
+          }
+        }
+      : {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false
+          }
+        },
     alternates: {
       canonical: url
     },

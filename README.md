@@ -11,8 +11,16 @@ Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Dock
 ```bash
 nvm install
 nvm use
-npm install
+npm ci
 npm run dev
+```
+
+Useful staging defaults:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
+NEXT_PUBLIC_SITE_ENV=staging
+NEXT_PUBLIC_ALLOW_INDEXING=false
 ```
 
 ## Checks
@@ -27,7 +35,23 @@ npm run build
 
 This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
 
-Target domain: <https://jamieburk.art>
+Staging target domain: <https://staging.jamieburk.art>
+
+Production target domain, after approval: <https://jamieburk.art>
+
+Use separate public URL and indexing settings for staging and production:
+
+```bash
+# staging
+NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
+NEXT_PUBLIC_SITE_ENV=staging
+NEXT_PUBLIC_ALLOW_INDEXING=false
+
+# production
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art
+NEXT_PUBLIC_SITE_ENV=production
+NEXT_PUBLIC_ALLOW_INDEXING=true
+```
 
 Normal deploy after one-time Dokku setup:
 

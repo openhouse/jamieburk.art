@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Route } from "next";
 import { StatusBadge } from "@/components/StatusBadge";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
@@ -15,7 +14,7 @@ export function WorkCard({ item }: WorkCardProps) {
         <StatusBadge status={item.status} visibility={item.visibility} />
         <div>
           <h2 className="text-2xl font-semibold text-jb-ink">
-            <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
+            <Link className="hover:text-jb-blue" href={`/work/${item.slug}`}>
               {item.title}
             </Link>
           </h2>
@@ -39,7 +38,7 @@ export function WorkCard({ item }: WorkCardProps) {
         <TagList compact tags={item.tags} />
         <Link
           className="text-sm font-semibold text-jb-blue hover:text-jb-green"
-          href={`/work/${item.slug}` as Route}
+          href={`/work/${item.slug}`}
         >
           Read case study
         </Link>
