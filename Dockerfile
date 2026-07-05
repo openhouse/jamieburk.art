@@ -13,6 +13,12 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
+ARG NEXT_PUBLIC_SITE_URL
+ARG NEXT_PUBLIC_DEPLOY_ENV
+ARG NEXT_PUBLIC_NOINDEX
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
+ENV NEXT_PUBLIC_NOINDEX=$NEXT_PUBLIC_NOINDEX
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run build -w @jamie-burkart/www

@@ -24,16 +24,16 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
-            <dt className="font-semibold text-jb-ink">What was unclear</dt>
+            <dt className="jb-label text-sm text-jb-ink">What was unclear</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
           </div>
           <div>
-            <dt className="font-semibold text-jb-ink">What became usable</dt>
+            <dt className="jb-label text-sm text-jb-ink">What became usable</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
           </div>
         </dl>
         <div>
-          <p className="text-sm font-semibold text-jb-ink">Role fit</p>
+          <p className="jb-label text-sm text-jb-ink">Role fit</p>
           <p className="mt-1 text-sm leading-6 text-jb-ink/72">{item.roleFit}</p>
         </div>
         <TagList compact tags={item.tags} />
