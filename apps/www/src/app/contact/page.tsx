@@ -10,6 +10,8 @@ export const metadata: Metadata = createMetadata({
   path: "/contact"
 });
 
+const pendingText = "Available on request until public launch.";
+
 export default function ContactPage() {
   return (
     <div className="jb-frame py-12">
@@ -23,7 +25,13 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.emailAddress ? (
+                  <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                    {site.emailLabel}
+                  </a>
+                ) : (
+                  pendingText
+                )}
               </dd>
             </div>
             <div>
@@ -33,13 +41,35 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.linkedinUrl ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.linkedinUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn profile
+                  </a>
+                ) : (
+                  pendingText
+                )}
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                {site.githubUrl ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.githubUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    GitHub profile
+                  </a>
+                ) : (
+                  pendingText
+                )}
               </dd>
             </div>
             <div>

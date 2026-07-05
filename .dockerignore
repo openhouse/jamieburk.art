@@ -14,3 +14,30 @@ npm-debug.log
 .npm-cache
 README.local.md
 *.local
+
+# private / source materials never meant for public images
+/private/
+/private/**
+/archive-private/
+/archive-private/**
+/raw/
+/raw/**
+/transcripts-private/
+/transcripts-private/**
+/legal-review/
+/legal-review/**
+/financial/
+/financial/**
+/health/
+/health/**
+/therapy/
+/therapy/**
+/client-private/
+/client-private/**
+/coalition-private/
+/coalition-private/**
+/residency-private/
+/residency-private/**
+
+# local-only notes
+*.private.*

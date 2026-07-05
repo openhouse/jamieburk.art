@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Karla } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { StagingBanner } from "@/components/StagingBanner";
 import { createMetadata } from "@/lib/metadata";
 import "./globals.css";
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html className={karla.variable} lang="en">
       <body>
+        <StagingBanner />
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />

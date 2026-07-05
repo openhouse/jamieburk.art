@@ -46,6 +46,15 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <div className="mt-6 rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+          <h2 className="text-2xl font-semibold text-jb-ink">For referrers</h2>
+          <p className="mt-3 leading-8 text-jb-ink/78">
+            Jamie Burkart is a technical project manager and implementation lead
+            who helps civic, cultural, small-business, and public-facing teams
+            turn messy work into usable systems: workflows, documentation,
+            decision records, launch support, onboarding, and handoffs.
+          </p>
+        </div>
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

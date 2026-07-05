@@ -22,7 +22,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

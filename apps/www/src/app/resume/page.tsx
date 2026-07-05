@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
-import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -34,16 +33,16 @@ export default function ResumePage() {
             handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href={site.resumePath} download>
-              Download resume PDF
+            <JBButton href="/contact">
+              Request resume PDF
             </JBButton>
-            <JBButton href="/contact" variant="secondary">
-              Contact Jamie
+            <JBButton href="/work" variant="secondary">
+              View selected work
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Public PDF available on request until launch. The approved web
+            resume will replace the staging placeholder after Jamie reviews it.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
