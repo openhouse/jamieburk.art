@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
+import { IS_PRODUCTION } from "@/lib/site-url";
 
 type MetadataInput = {
   title?: string;
@@ -21,6 +22,9 @@ export function createMetadata({
     alternates: {
       canonical: url
     },
+    robots: IS_PRODUCTION
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
     openGraph: {
       title,
       description,

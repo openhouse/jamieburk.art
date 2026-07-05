@@ -5,7 +5,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "Colophon for Jamie Burkart's public-safe portfolio and selected proof site.",
   path: "/colophon"
 });
 
@@ -15,7 +15,9 @@ const details = [
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Prepared for Docker / Dokku deployment on a DigitalOcean droplet",
-  "No invasive tracking in V1"
+  "Staging-first launch flow with noindex safeguards outside production",
+  "No invasive tracking in V1",
+  "No private emails, raw transcripts, private coalition notes, legal-review materials, unapproved photos, credentials, private fonts, or sensitive client/community records are published"
 ];
 
 export default function ColophonPage() {
@@ -24,9 +26,9 @@ export default function ColophonPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
+          This site is built as a small public proof surface. It uses local MDX
+          content, public-safe artifacts, and intentionally limited tracking. The
+          design uses Broadway blue, Jamie&apos;s
           oil-pastel palette, and a quiet proportional grid derived from his
           print-layout sketchpad.
         </p>
