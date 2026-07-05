@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
+import { ROBOTS_INDEXABLE, SITE_URL } from "@/lib/site-url";
 
 type MetadataInput = {
   title?: string;
@@ -12,12 +13,20 @@ export function createMetadata({
   description = site.description,
   path = "/"
 }: MetadataInput = {}): Metadata {
-  const url = new URL(path, site.url);
+  const url = new URL(path, SITE_URL);
 
   return {
-    metadataBase: new URL(site.url),
+    metadataBase: new URL(SITE_URL),
     title,
     description,
+    robots: {
+      index: ROBOTS_INDEXABLE,
+      follow: ROBOTS_INDEXABLE,
+      googleBot: {
+        index: ROBOTS_INDEXABLE,
+        follow: ROBOTS_INDEXABLE
+      }
+    },
     alternates: {
       canonical: url
     },
@@ -29,7 +38,7 @@ export function createMetadata({
       type: "website",
       images: [
         {
-          url: new URL("/opengraph-image", site.url),
+          url: new URL("/opengraph-image", SITE_URL),
           width: 1200,
           height: 630,
           alt: "Jamie Burkart - Technical Project Manager"
@@ -40,7 +49,7 @@ export function createMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [new URL("/opengraph-image", site.url)]
+      images: [new URL("/opengraph-image", SITE_URL)]
     }
   };
 }

@@ -13,16 +13,40 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
+ARG APP_ENV=staging
+ARG SITE_ENV=staging
+ARG NEXT_PUBLIC_DEPLOY_ENV=staging
+ARG SITE_URL=https://staging.jamieburk.art
+ARG NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
+ARG NEXT_PUBLIC_ROBOTS_POLICY=noindex
+ENV APP_ENV=$APP_ENV
+ENV SITE_ENV=$SITE_ENV
+ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
+ENV SITE_URL=$SITE_URL
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run build -w @jamie-burkart/www
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app
+ARG APP_ENV=staging
+ARG SITE_ENV=staging
+ARG NEXT_PUBLIC_DEPLOY_ENV=staging
+ARG SITE_URL=https://staging.jamieburk.art
+ARG NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
+ARG NEXT_PUBLIC_ROBOTS_POLICY=noindex
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
+ENV APP_ENV=$APP_ENV
+ENV SITE_ENV=$SITE_ENV
+ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
+ENV SITE_URL=$SITE_URL
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_ROBOTS_POLICY=$NEXT_PUBLIC_ROBOTS_POLICY
 
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs

@@ -8,7 +8,7 @@ export function Hero() {
           <p className="text-sm font-semibold uppercase text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
