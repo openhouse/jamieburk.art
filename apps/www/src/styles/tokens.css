@@ -1,4 +1,8 @@
 :root {
+  --font-body: var(--font-karla), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-archivo-narrow), var(--font-karla), ui-sans-serif,
+    system-ui, sans-serif;
   --jb-broadway-blue: #0b5f81;
   --jb-oil-white: #eeefec;
   --jb-oil-paper: #f7f4ee;

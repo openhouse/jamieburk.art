@@ -18,6 +18,15 @@ export function createMetadata({
     metadataBase: new URL(site.url),
     title,
     description,
+    robots: site.indexable
+      ? {
+          index: true,
+          follow: true
+        }
+      : {
+          index: false,
+          follow: false
+        },
     alternates: {
       canonical: url
     },

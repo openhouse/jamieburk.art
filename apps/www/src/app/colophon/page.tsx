@@ -12,10 +12,12 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Karla for body/UI copy and Archivo Narrow for display headings and proof labels",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
-  "Prepared for Docker / Dokku deployment on a DigitalOcean droplet",
-  "No invasive tracking in V1"
+  "Designed with Broadway blue, restrained oil-pastel accents, and a quiet golden-ratio layout sensibility",
+  "Prepared for staging-first Docker / Dokku review before production release",
+  "No analytics or invasive tracking in V1",
+  "No private or proprietary font files are shipped"
 ];
 
 export default function ColophonPage() {
@@ -26,9 +28,10 @@ export default function ColophonPage() {
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
           This site is built as a small public proof surface and future living
           notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad.
+          no analytics in V1. The design uses Karla, Archivo Narrow, Broadway
+          blue, Jamie&apos;s oil-pastel palette, and a quiet golden-ratio layout
+          sensibility derived from his print-layout sketchpad. Staging is reviewed
+          before production, and private or proprietary fonts are not shipped.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
