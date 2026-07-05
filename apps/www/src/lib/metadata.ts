@@ -13,6 +13,7 @@ export function createMetadata({
   path = "/"
 }: MetadataInput = {}): Metadata {
   const url = new URL(path, site.url);
+  const noindex = process.env.NEXT_PUBLIC_NOINDEX === "true";
 
   return {
     metadataBase: new URL(site.url),
@@ -41,6 +42,19 @@ export function createMetadata({
       title,
       description,
       images: [new URL("/opengraph-image", site.url)]
-    }
+    },
+    robots: noindex
+      ? {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false
+          }
+        }
+      : {
+          index: true,
+          follow: true
+        }
   };
 }

@@ -22,7 +22,13 @@ const sections = [
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "Planning cycles",
+      "Sprint rituals",
+      "Status reporting",
+      "Launch support",
+      "Post-launch retros"
+    ]
   },
   {
     title: "Documentation and working memory",
@@ -30,24 +36,22 @@ const sections = [
       "Source maps",
       "Public guidance",
       "Resource libraries",
-      "Handbooks / templates",
+      "Handbooks and runbooks",
+      "Onboarding guides",
       "Meeting synthesis",
       "Decision records"
     ]
   },
   {
-    title: "Tools and technical environments",
+    title: "Cross-functional coordination",
     items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
+      "Platforms",
+      "Security",
+      "Legal",
+      "Comms",
+      "Contracts",
+      "Operational metrics",
+      "Recurring blockers"
     ]
   }
 ];
@@ -61,9 +65,9 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          environments, I coordinate delivery, surface risks early, keep work
+          moving from concept through public launch, and leave behind the
+          documentation teams need to operate after handoff.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
