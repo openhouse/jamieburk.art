@@ -5,19 +5,23 @@ export function Hero() {
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="eyebrow text-sm text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="mt-5 font-display text-5xl font-black leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I turn under-structured work into usable systems.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
             I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            systems: clear workflows, documentation, decision trails, launch
+            support, onboarding materials, public-facing tools, and durable
+            handoffs.
+          </p>
+          <p className="mt-4 leading-7 text-jb-ink/70">
+            I create operating structure for complex public-facing teams.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -29,8 +33,7 @@ export function Hero() {
             </JBButton>
           </div>
           <p className="mt-6 text-sm font-medium text-jb-ink/64">
-            Brooklyn, NY / Civic technology / Product operations / Knowledge
-            systems / Public-facing tools
+            Brooklyn, NY / Civic technology / Product operations / Knowledge systems / Public-facing tools
           </p>
         </div>
         <div

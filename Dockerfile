@@ -9,13 +9,13 @@ RUN apt-get update \
 
 FROM base AS deps
 COPY package.json package-lock.json ./
-COPY apps/www/package.json ./apps/www/package.json
+COPY apps/site/package.json ./apps/site/package.json
 RUN npm ci
 
 FROM base AS builder
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
-RUN npm run build -w @jamie-burkart/www
+RUN npm run build -w @jamie/site
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app
@@ -27,13 +27,13 @@ ENV HOSTNAME=0.0.0.0
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs
 
-COPY --from=builder --chown=nextjs:nodejs /repo/apps/www/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /repo/apps/www/public ./apps/www/public
-COPY --from=builder --chown=nextjs:nodejs /repo/apps/www/public ./public
-COPY --from=builder --chown=nextjs:nodejs /repo/apps/www/.next/static ./apps/www/.next/static
-COPY --from=builder --chown=nextjs:nodejs /repo/apps/www/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /repo/apps/site/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /repo/apps/site/public ./apps/site/public
+COPY --from=builder --chown=nextjs:nodejs /repo/apps/site/public ./public
+COPY --from=builder --chown=nextjs:nodejs /repo/apps/site/.next/static ./apps/site/.next/static
+COPY --from=builder --chown=nextjs:nodejs /repo/apps/site/.next/static ./.next/static
 
 USER nextjs
 EXPOSE 3000
 
-CMD ["sh", "-c", "if [ -f apps/www/server.js ]; then node apps/www/server.js; else node server.js; fi"]
+CMD ["sh", "-c", "if [ -f apps/site/server.js ]; then node apps/site/server.js; else node server.js; fi"]

@@ -1,13 +1,13 @@
 {
-  "name": "@jamie-burkart/www",
+  "name": "@jamie/site",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && npm run standalone:assets",
-    "standalone:assets": "sh -c 'if [ -d .next/standalone/apps/www ]; then rm -rf .next/standalone/apps/www/public .next/standalone/apps/www/.next/static && mkdir -p .next/standalone/apps/www/.next && cp -R public .next/standalone/apps/www/public && cp -R .next/static .next/standalone/apps/www/.next/static; fi'",
-    "start": "sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'",
+    "standalone:assets": "sh -c 'if [ -d .next/standalone/apps/site ]; then rm -rf .next/standalone/apps/site/public .next/standalone/apps/site/.next/static && mkdir -p .next/standalone/apps/site/.next && cp -R public .next/standalone/apps/site/public && cp -R .next/static .next/standalone/apps/site/.next/static; fi'",
+    "start": "sh -c 'if [ -f .next/standalone/apps/site/server.js ]; then cd .next/standalone && node apps/site/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run lint && npm run build"
