@@ -145,7 +145,7 @@ const workItemsInput = [
       "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
-      note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
+      note: "Use only public-safe claims and approved screenshots. TODO: Jamie approval required for the 2x revenue-growth contribution wording before launch."
     },
     currentStatus: "Public-safe full case study. Screenshot approvals pending.",
     group: "Operating systems for teams",
@@ -225,7 +225,7 @@ const workItemsInput = [
       "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
-      note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
+      note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated. TODO: Jamie approval required for the 30+ pages campaign-memory claim before launch."
     },
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
@@ -304,7 +304,7 @@ const workItemsInput = [
       "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
-      note: "This page must make the archived and unofficial status visible wherever the project is summarized."
+      note: "This page must make the archived and unofficial status visible wherever the project is summarized. TODO: Jamie approval required for the Politico citation before launch."
     },
     currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
     group: "Civic and public-facing systems",
@@ -358,6 +358,9 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
+    publicSafety: {
+      note: "Historical community-platform summary. TODO: Jamie approval required for the roughly 35 city ecosystems wording before launch."
+    },
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -410,6 +413,9 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
+    publicSafety: {
+      note: "No guest data, attendance lists, private resident details, addresses, or unapproved photos are published. TODO: Jamie approval required for the 300+ gatherings / 20+ resident artists wording before launch."
+    },
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -462,6 +468,9 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+    publicSafety: {
+      note: "No private financial, legal, property, banking, or stakeholder details are published. TODO: Jamie approval required for public-funding and current project-status wording before launch."
+    },
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:
