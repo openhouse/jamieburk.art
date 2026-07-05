@@ -3,19 +3,22 @@
 FROM node:26-bookworm-slim AS base
 WORKDIR /repo
 ENV NEXT_TELEMETRY_DISABLED=1
+ARG PNPM_VERSION=10.18.3
 RUN apt-get update \
   && apt-get install -y --no-install-recommends ca-certificates \
   && rm -rf /var/lib/apt/lists/*
+RUN if command -v corepack >/dev/null 2>&1; then corepack enable; else npm install -g pnpm@${PNPM_VERSION}; fi
 
 FROM base AS deps
-COPY package.json package-lock.json ./
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 COPY apps/www/package.json ./apps/www/package.json
-RUN npm ci
+RUN pnpm install --frozen-lockfile
 
 FROM base AS builder
 COPY --from=deps /repo/node_modules ./node_modules
+COPY --from=deps /repo/apps/www/node_modules ./apps/www/node_modules
 COPY . .
-RUN npm run build -w @jamie-burkart/www
+RUN pnpm --filter @jamie-burkart/www build
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app

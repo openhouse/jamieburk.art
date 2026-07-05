@@ -11,25 +11,43 @@ Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Dock
 ```bash
 nvm install
 nvm use
-npm install
-npm run dev
+corepack enable
+pnpm install
+pnpm dev
 ```
 
 ## Checks
 
 ```bash
-npm run typecheck
-npm run lint
-npm run build
+pnpm typecheck
+pnpm lint
+pnpm build
+pnpm check
+docker build -t jamieburk-art .
+docker run --rm -p 3000:3000 jamieburk-art
 ```
 
 ## Deployment
 
 This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
 
-Target domain: <https://jamieburk.art>
+Production target: <https://jamieburk.art>
+Dokku app: `jamieburk-art`
+Runtime: Node 26
 
-Normal deploy after one-time Dokku setup:
+One-time Dokku remote setup:
+
+```bash
+git remote add dokku dokku@[DROPLET_HOST_OR_IP]:jamieburk-art
+```
+
+Normal deploy from `develop` after one-time Dokku setup:
+
+```bash
+git push dokku develop:main
+```
+
+Or, if deploying from `main`:
 
 ```bash
 git push dokku main
@@ -43,6 +61,7 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to tha
 - Use public-safe summaries, redacted screenshots, representative diagrams, and approved public artifacts.
 - Use precise collective-work language: co-built, stewarded, supported, contributed to.
 - When uncertain, mark: `TODO: Jamie approval required.`
+- Do not commit private fonts or private source materials.
 
 ## Launch Inputs Still Needed
 
