@@ -60,6 +60,8 @@
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-league-spartan), var(--font-karla), ui-sans-serif, system-ui,
+    sans-serif;
 }
 
 html {
@@ -70,12 +72,20 @@ html {
 body {
   min-width: 320px;
   background:
-    linear-gradient(90deg, rgba(11, 95, 129, 0.045) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(118, 83, 58, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
     var(--jb-oil-white);
   background-size: 42px 42px;
   color: var(--jb-oil-ink);
+  font-family: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   font-size: 17px;
+  letter-spacing: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--font-league-spartan), var(--font-karla), ui-sans-serif, system-ui,
+    sans-serif;
   letter-spacing: 0;
 }
 

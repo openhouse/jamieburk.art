@@ -1,6 +1,8 @@
+import { SITE_URL } from "@/lib/site-url";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: SITE_URL,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:

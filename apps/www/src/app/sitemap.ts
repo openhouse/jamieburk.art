@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { site } from "@/data/site";
 import { workItems } from "@/data/work";
+import { SITE_URL } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -16,11 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((route) => ({
-      url: new URL(route, site.url).toString(),
+      url: new URL(route, SITE_URL).toString(),
       lastModified: new Date()
     })),
     ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, site.url).toString(),
+      url: new URL(`/work/${item.slug}`, SITE_URL).toString(),
       lastModified: new Date()
     }))
   ];
