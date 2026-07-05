@@ -11,8 +11,20 @@ Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Dock
 ```bash
 nvm install
 nvm use
-npm install
+npm ci
 npm run dev
+```
+
+Local development defaults to the staging URL:
+
+```txt
+https://staging.jamieburk.art
+```
+
+Override with:
+
+```bash
+APP_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art npm run build
 ```
 
 ## Checks
@@ -27,22 +39,38 @@ npm run build
 
 This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
 
-Target domain: <https://jamieburk.art>
+Deploy and review staging first:
 
-Normal deploy after one-time Dokku setup:
+```txt
+https://staging.jamieburk.art
+```
+
+Production comes later after review:
+
+```txt
+https://jamieburk.art
+```
+
+Staging is reviewable but not indexable. It emits staging canonical URLs, disallows crawlers in `robots.txt`, and sends `X-Robots-Tag: noindex, nofollow` when built with staging env.
+
+See [docs/deployment.md](docs/deployment.md) for Dokku setup, Docker verification, build args, and production promotion notes.
+
+Normal staging deploy after one-time Dokku setup:
 
 ```bash
-git push dokku main
+git push staging HEAD:main
 ```
 
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
 
 ## Content Rules
 
-- Do not publish private emails, raw transcripts, private coalition notes, health or financial details, private correspondence, unapproved photos, private fonts, or credentials.
+- Do not publish private emails, raw transcripts, private coalition notes, health or financial details, private correspondence, private client/community records, unapproved photos, private fonts, or credentials.
 - Use public-safe summaries, redacted screenshots, representative diagrams, and approved public artifacts.
 - Use precise collective-work language: co-built, stewarded, supported, contributed to.
 - When uncertain, mark: `TODO: Jamie approval required.`
+
+See [docs/content-safety.md](docs/content-safety.md) for the fuller public-safety checklist.
 
 ## Launch Inputs Still Needed
 
