@@ -13,15 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/colophon",
     "/lab/source-backed-team-memory"
   ];
+  const workRoutes = workItems.map((item) => item.href ?? `/work/${item.slug}`);
+  const routes = Array.from(new Set([...staticRoutes, ...workRoutes]));
 
-  return [
-    ...staticRoutes.map((route) => ({
+  return routes.map((route) => ({
       url: new URL(route, site.url).toString(),
       lastModified: new Date()
-    })),
-    ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, site.url).toString(),
-      lastModified: new Date()
-    }))
-  ];
+  }));
 }

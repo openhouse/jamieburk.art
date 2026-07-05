@@ -41,6 +41,7 @@ const artifactTypeSchema = z.enum([
 const workMetaSchema = z.object({
   title: z.string(),
   slug: z.string(),
+  href: z.string().optional(),
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
@@ -154,7 +155,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "contributed to 2x revenue growth for a legacy e-commerce business",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -168,7 +169,7 @@ const workItemsInput = [
   },
   {
     title: "FairRentNYC / Commercial Rent Stabilization",
-    slug: "fair-rent-nyc",
+    slug: "fairrentnyc-commercial-rent-stabilization",
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
@@ -379,7 +380,7 @@ const workItemsInput = [
   },
   {
     title: "196 Artists Residency / Sunday Dinner",
-    slug: "196-sunday-dinner",
+    slug: "196-artists-residency",
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
@@ -480,6 +481,80 @@ const workItemsInput = [
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
+  },
+  {
+    title: "Source-Backed Team Memory / Noting.us",
+    slug: "source-backed-team-memory",
+    href: "/lab/source-backed-team-memory",
+    series: "Source-Backed Memory / AI Lab",
+    subtitle: "Decision lineage, onboarding context, and human-correctable AI workflows",
+    summary:
+      "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows for knowledge-heavy teams.",
+    role: "Researcher, Builder & Documentation Systems Lead",
+    years: "2024-Present",
+    status: "Lab / research",
+    featured: false,
+    priority: 7,
+    visibility: "public-safe",
+    whatWasUnclear:
+      "Knowledge-heavy teams often hold decisions, sources, context, and handoff material across scattered tools without a trusted way to recover why something happened.",
+    whatBecameUsable:
+      "A public-safe lab frame for source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    artifactTypes: ["source map", "decision record", "template"],
+    artifacts: [
+      {
+        title: "Source-backed memory frame",
+        description:
+          "A structured way to connect summaries back to source material, decision context, and reviewable human judgment.",
+        type: "source map"
+      },
+      {
+        title: "Decision lineage pattern",
+        description:
+          "Representative operating-memory patterns for preserving the path from context to decision to handoff.",
+        type: "decision record"
+      }
+    ],
+    tags: [
+      "Source-Backed Memory",
+      "Knowledge Systems",
+      "Documentation",
+      "AI Workflows",
+      "Product Operations"
+    ],
+    capabilities: [
+      "Source Mapping",
+      "Decision Records",
+      "Onboarding Context",
+      "Human-Correctable AI",
+      "Documentation Architecture"
+    ],
+    careNote:
+      "Early research / method / consulting practice. Not a finished production SaaS, AI replacement for judgment, or private archive browser.",
+    sourceLayer:
+      "Public-safe research framing, representative workflows, and private source material intentionally omitted.",
+    credits: ["Jamie Burkart"],
+    publicSafety: {
+      note: "Keep this framed as a lab and method surface, not as a production product or claim to automated authority."
+    },
+    currentStatus: "Lab / proof-of-practice. Public-safe framing only.",
+    group: "Source-backed memory / AI lab",
+    roleFit:
+      "Knowledge systems, documentation architecture, product operations, AI-adjacent workflow design, and team onboarding.",
+    evidence: [
+      "Source-backed operating-memory practice",
+      "Decision-lineage and onboarding-context patterns",
+      "Human-correctable AI workflow framing",
+      "Public-safe lab page published separately from work case studies"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie is developing a lab and consulting method around source-backed team memory and human-correctable AI workflows.",
+      open:
+        "Specific demos, client materials, screenshots, and workflow artifacts require approval before publication.",
+      protected:
+        "Private archives, source documents, transcripts, client context, and sensitive team records are omitted."
+    }
   }
 ] satisfies WorkMeta[];
 
@@ -488,11 +563,12 @@ export const workItems = workMetaSchema.array().parse(workItemsInput).sort((a, b
 });
 
 export type WorkSlug =
-  | "196-sunday-dinner"
+  | "196-artists-residency"
   | "callnyc"
-  | "fair-rent-nyc"
+  | "fairrentnyc-commercial-rent-stabilization"
   | "harry-j-epstein"
   | "kc-town-hall"
+  | "source-backed-team-memory"
   | "wowlist";
 
 export const featuredWork = workItems.filter((item) => item.featured);

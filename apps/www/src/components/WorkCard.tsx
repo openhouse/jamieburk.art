@@ -9,13 +9,15 @@ type WorkCardProps = {
 };
 
 export function WorkCard({ item }: WorkCardProps) {
+  const href = item.href ?? `/work/${item.slug}`;
+
   return (
     <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5 shadow-sm">
       <div className="flex flex-col gap-4">
         <StatusBadge status={item.status} visibility={item.visibility} />
         <div>
           <h2 className="text-2xl font-semibold text-jb-ink">
-            <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
+            <Link className="hover:text-jb-blue" href={href as Route}>
               {item.title}
             </Link>
           </h2>
@@ -39,9 +41,9 @@ export function WorkCard({ item }: WorkCardProps) {
         <TagList compact tags={item.tags} />
         <Link
           className="text-sm font-semibold text-jb-blue hover:text-jb-green"
-          href={`/work/${item.slug}` as Route}
+          href={href as Route}
         >
-          Read case study
+          {item.href ? "Read lab page" : "Read case study"}
         </Link>
       </div>
     </article>

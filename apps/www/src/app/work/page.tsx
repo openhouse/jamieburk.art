@@ -34,34 +34,6 @@ export default function WorkPage() {
         {workGroups.map((group) => {
           const groupedItems = workItems.filter((item) => item.group === group);
 
-          if (group === "Source-backed memory / AI lab") {
-            return (
-              <section key={group}>
-                <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
-                <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
-                  <h3 className="text-2xl font-semibold text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
-                  </h3>
-                  <p className="mt-3 leading-7 text-jb-ink/76">
-                    A lab / proof-of-practice exploring source-backed operating
-                    memory, decision lineage, onboarding context, and
-                    human-correctable AI workflows for knowledge-heavy teams.
-                  </p>
-                  <p className="mt-3 text-sm font-semibold text-jb-green">
-                    Early research / method / consulting practice. Not a
-                    finished production SaaS.
-                  </p>
-                  <Link
-                    className="mt-5 inline-block font-semibold text-jb-blue hover:text-jb-green"
-                    href="/lab/source-backed-team-memory"
-                  >
-                    Read lab page
-                  </Link>
-                </div>
-              </section>
-            );
-          }
-
           if (!groupedItems.length) return null;
 
           return (

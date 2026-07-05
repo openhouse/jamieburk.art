@@ -11,4 +11,10 @@
   --jb-pale-orange: #fce1d1;
   --jb-pale-blue: #74c2e5;
   --jb-classic-rose: #e2aeb4;
+  --font-body: var(--font-karla), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: var(--font-archivo-black), var(--font-karla), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-condensed: var(--font-league-gothic), var(--font-karla), ui-sans-serif,
+    system-ui, sans-serif;
 }

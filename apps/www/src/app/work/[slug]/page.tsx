@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CaseStudyLayout } from "@/components/CaseStudyLayout";
-import { workItems, type WorkSlug } from "@/data/work";
+import { workItems } from "@/data/work";
 import { createMetadata } from "@/lib/metadata";
-import { getWorkBySlug, workContentBySlug } from "@/lib/work";
+import {
+  getWorkBySlug,
+  workContentBySlug,
+  type WorkContentSlug
+} from "@/lib/work";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
 export function generateStaticParams() {
-  return workItems.map((item) => ({ slug: item.slug }));
+  return workItems.filter((item) => !item.href).map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const item = getWorkBySlug(slug);
 
-  if (!item) {
+  if (!item || item.href) {
     return createMetadata({ title: "Work Not Found - Jamie Burkart", path: "/work" });
   }
 
@@ -31,9 +35,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function WorkDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const item = getWorkBySlug(slug);
-  const Content = workContentBySlug[slug as WorkSlug];
+  const Content = workContentBySlug[slug as WorkContentSlug];
 
-  if (!item || !Content) {
+  if (!item || item.href || !Content) {
     notFound();
   }
 

@@ -13,11 +13,15 @@ export function createMetadata({
   path = "/"
 }: MetadataInput = {}): Metadata {
   const url = new URL(path, site.url);
+  const robots = site.allowIndexing
+    ? { index: true, follow: true }
+    : { index: false, follow: false };
 
   return {
     metadataBase: new URL(site.url),
     title,
     description,
+    robots,
     alternates: {
       canonical: url
     },
