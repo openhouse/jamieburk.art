@@ -12,10 +12,10 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Contributed to online growth for a legacy e-commerce business",
+  "Built and stewarded civic campaign-memory infrastructure",
+  "Co-built community web systems used across multiple city ecosystems",
+  "Created repeatable hosting and continuity systems for artists and gatherings"
 ];
 
 export default function ResumePage() {
@@ -28,9 +28,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
+            I build operating structure for ambiguous public-facing technical
+            work, turning under-structured efforts into requirements, workflows,
+            documentation, decision trails, launch support, onboarding
+            materials, public-facing tools, source-backed memory, and durable
             handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">

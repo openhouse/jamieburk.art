@@ -41,6 +41,18 @@ export function createMetadata({
       title,
       description,
       images: [new URL("/opengraph-image", site.url)]
-    }
+    },
+    robots: site.isStaging
+      ? {
+          index: false,
+          follow: false,
+          nocache: true,
+          googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true
+          }
+        }
+      : undefined
   };
 }

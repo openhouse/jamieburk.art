@@ -5,19 +5,21 @@ export function Hero() {
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="font-display text-sm font-semibold uppercase text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
           <h1 className="mt-5 text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I build operating structure for ambiguous public-facing technical work.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help civic, cultural, small-business, public-interest, and
+            technical teams turn under-structured work into usable systems:
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding, public-facing tools, source-backed memory, and
+            durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -50,7 +52,7 @@ export function Hero() {
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
                 key={label}
               >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
+                <span className="font-display text-xs text-jb-blue">0{index + 1}</span>
                 <p className="mt-5">{label}</p>
               </div>
             ))}
