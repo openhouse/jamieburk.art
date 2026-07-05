@@ -75,6 +75,7 @@ body {
     var(--jb-oil-white);
   background-size: 42px 42px;
   color: var(--jb-oil-ink);
+  font-family: var(--font-sans);
   font-size: 17px;
   letter-spacing: 0;
 }
