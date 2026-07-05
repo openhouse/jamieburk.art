@@ -18,7 +18,9 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <h1 className="mt-5 text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
             {item.title}
           </h1>
-          <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
+          <p className="font-display mt-3 text-xl font-semibold text-jb-green">
+            {item.subtitle}
+          </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
