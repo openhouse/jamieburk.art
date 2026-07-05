@@ -13,11 +13,20 @@ export function createMetadata({
   path = "/"
 }: MetadataInput = {}): Metadata {
   const url = new URL(path, site.url);
+  const isProduction = site.deployEnv === "production";
 
   return {
     metadataBase: new URL(site.url),
     title,
     description,
+    robots: {
+      index: isProduction,
+      follow: isProduction,
+      googleBot: {
+        index: isProduction,
+        follow: isProduction
+      }
+    },
     alternates: {
       canonical: url
     },

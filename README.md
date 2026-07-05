@@ -25,17 +25,31 @@ npm run build
 
 ## Deployment
 
-This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
+This app deploys to Dokku using Dockerfile deployment and Next.js standalone output. Deploy to staging first, review the public surface, then promote the same commit to production.
 
-Target domain: <https://jamieburk.art>
+Staging app: `jamieburk-art-staging`
 
-Normal deploy after one-time Dokku setup:
+Staging domain: <https://staging.jamieburk.art>
+
+Production app: `jamieburk-art`
+
+Production domains: <https://jamieburk.art> and <https://www.jamieburk.art>
+
+Staging deploy:
 
 ```bash
-git push dokku main
+git push dokku-staging HEAD:main
+```
+
+Production deploy, after staging approval:
+
+```bash
+git push dokku-production HEAD:main
 ```
 
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
+
+See `docs/deployment-dokku.md` for Dokku app setup, domains, config, TLS, and remotes.
 
 ## Content Rules
 
@@ -46,7 +60,7 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to tha
 
 ## Launch Inputs Still Needed
 
+- Launch blocker: replace the placeholder resume PDF at `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf` with Jamie's approved current resume before production.
 - Approved public email address.
 - LinkedIn URL and public-ready GitHub URL.
-- Current resume PDF to replace the placeholder file at `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
 - Public-safe screenshots or artifacts for HJE, FairRentNYC / CRS, and CallNYC.

@@ -172,8 +172,8 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Helped structure and steward shared campaign-memory, documentation, and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    role: "Documentation Systems Steward & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -252,7 +252,7 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Archived civic-data prototype. Not an official or current City Council service. Built to translate constituent-services open data into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",

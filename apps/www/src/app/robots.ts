@@ -2,11 +2,14 @@ import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 
 export default function robots(): MetadataRoute.Robots {
+  const isProduction = site.deployEnv === "production";
+
   return {
     rules: {
       userAgent: "*",
-      allow: "/"
+      allow: isProduction ? "/" : undefined,
+      disallow: isProduction ? undefined : "/"
     },
-    sitemap: `${site.url}/sitemap.xml`
+    sitemap: isProduction ? `${site.url}/sitemap.xml` : undefined
   };
 }
