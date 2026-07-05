@@ -1,6 +1,13 @@
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || "https://staging.jamieburk.art"
+).replace(/\/+$/, "");
+
+const isIndexable = process.env.SITE_INDEXABLE === "true";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: siteUrl,
+  isIndexable,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
@@ -10,3 +17,5 @@ export const site = {
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"
 } as const;
+
+export { isIndexable, siteUrl };
