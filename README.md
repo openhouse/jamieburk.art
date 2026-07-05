@@ -15,12 +15,33 @@ npm install
 npm run dev
 ```
 
+The repo is intentionally npm-based for this baseline. Do not mix pnpm
+commands into the setup unless the package manager is changed in a separate
+normalization pass.
+
+The production build uses Karla via `next/font/google`, so the first build must
+be able to reach Google Fonts.
+
 ## Checks
 
 ```bash
 npm run typecheck
 npm run lint
 npm run build
+```
+
+The root scripts proxy to `apps/www`:
+
+```bash
+npm run typecheck -w @jamie-burkart/www
+npm run lint -w @jamie-burkart/www
+npm run build -w @jamie-burkart/www
+```
+
+Healthcheck:
+
+```bash
+curl http://localhost:3000/api/health
 ```
 
 ## Deployment
@@ -36,6 +57,16 @@ git push dokku main
 ```
 
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
+
+Docker baseline:
+
+```bash
+docker build -t jamie-burkart-portfolio .
+docker run --rm -p 3000:3000 jamie-burkart-portfolio
+```
+
+Before production deploy, verify `/`, `/work`, `/resume`, `/contact`,
+`/lab/source-backed-team-memory`, and `/api/health` in the running container.
 
 ## Content Rules
 

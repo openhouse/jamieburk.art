@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
+import { site } from "@/data/site";
 import type { WorkMeta } from "@/types/work";
 
 type CaseStudyLayoutProps = {
@@ -28,7 +29,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <AtAGlance item={item} />
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
-            <JBButton href="/resume" variant="secondary">
+            <JBButton download href={site.resumePath} variant="secondary">
               Download resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
