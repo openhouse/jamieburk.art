@@ -56,7 +56,8 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <p className="jb-display text-xl text-jb-blue">Proof page</p>
+        <h1 className="mt-3 text-5xl font-bold text-jb-ink">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">

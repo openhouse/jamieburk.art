@@ -21,6 +21,9 @@ export function createMetadata({
     alternates: {
       canonical: url
     },
+    robots: site.allowIndexing
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
     openGraph: {
       title,
       description,

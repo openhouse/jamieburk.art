@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node ../../scripts/check-public-safety.mjs",
     "build": "next build && npm run standalone:assets",
     "standalone:assets": "sh -c 'if [ -d .next/standalone/apps/www ]; then rm -rf .next/standalone/apps/www/public .next/standalone/apps/www/.next/static && mkdir -p .next/standalone/apps/www/.next && cp -R public .next/standalone/apps/www/public && cp -R .next/static .next/standalone/apps/www/.next/static; fi'",
     "start": "sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run lint && npm run build"
+    "check:public-safety": "node ../../scripts/check-public-safety.mjs",
+    "check": "npm run typecheck && npm run lint && npm run check:public-safety && npm run build"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

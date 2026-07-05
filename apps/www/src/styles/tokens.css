@@ -11,4 +11,6 @@
   --jb-pale-orange: #fce1d1;
   --jb-pale-blue: #74c2e5;
   --jb-classic-rose: #e2aeb4;
+  --font-body: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-league-gothic), "Arial Narrow", Impact, sans-serif;
 }
