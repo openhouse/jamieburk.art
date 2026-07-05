@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -52,6 +53,15 @@ const sections = [
   }
 ];
 
+const proofLinks = [
+  { href: "/work/harry-j-epstein", label: "Harry J. Epstein Company" },
+  { href: "/work/fair-rent-nyc", label: "FairRentNYC / CRS" },
+  { href: "/work/callnyc", label: "CallNYC" },
+  { href: "/lab/source-backed-team-memory", label: "Source-Backed Team Memory lab" },
+  { href: "/resume", label: "Resume" },
+  { href: "/contact", label: "Contact" }
+] as const;
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -81,6 +91,20 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-paper p-5">
+        <h2 className="text-2xl font-semibold text-jb-ink">Related proof</h2>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {proofLinks.map((link) => (
+            <Link
+              className="rounded-lg border border-jb-blue/20 bg-jb-warm px-4 py-3 font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+              href={link.href}
+              key={link.href}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
