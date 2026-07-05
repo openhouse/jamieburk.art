@@ -21,7 +21,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="metadata-label text-xs text-jb-paper/70">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +29,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="metadata-label text-xs text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -69,7 +69,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="metadata-label text-xs text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
@@ -77,6 +77,30 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function UsabilityFrame({ item }: { item: WorkMeta }) {
+  const rows = [
+    ["What was unclear", item.whatWasUnclear],
+    ["What became usable", item.whatBecameUsable],
+    ["Role fit", item.roleFit]
+  ] as const;
+
+  return (
+    <section aria-labelledby="usability-frame">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="usability-frame">
+        What was unclear / What became usable
+      </h2>
+      <dl className="mt-5 grid gap-4 md:grid-cols-3">
+        {rows.map(([label, text]) => (
+          <JBCard as="div" key={label}>
+            <dt className="metadata-label text-xs text-jb-blue">{label}</dt>
+            <dd className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</dd>
+          </JBCard>
+        ))}
+      </dl>
     </section>
   );
 }
@@ -101,6 +125,28 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function WhatThisProves({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+
+  return (
+    <section aria-labelledby="what-this-proves">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="what-this-proves">
+        What this proves
+      </h2>
+      <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+        {item.evidence.map((evidence) => (
+          <li
+            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm leading-6 text-jb-ink/76"
+            key={evidence}
+          >
+            {evidence}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
@@ -165,6 +211,41 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
       <p>{item.sourceLayer}</p>
     </NoteBlock>
   );
+}
+
+function sourceTrailFromItem(item: WorkMeta) {
+  if (!item.sourceLayer) return [];
+
+  return item.sourceLayer
+    .split(/,\s+and\s+|,\s+/)
+    .map((source) => source.trim())
+    .filter(Boolean);
+}
+
+export function SourceTrail({ sources }: { sources: string[] }) {
+  if (!sources.length) return null;
+
+  return (
+    <section aria-labelledby="source-trail">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="source-trail">
+        Source trail
+      </h2>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {sources.map((source) => (
+          <li
+            className="rounded-lg border border-jb-green/20 bg-jb-green/[0.07] px-4 py-3 text-sm leading-6 text-jb-ink/76"
+            key={source}
+          >
+            {source}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export function SourceTrailForItem({ item }: { item: WorkMeta }) {
+  return <SourceTrail sources={sourceTrailFromItem(item)} />;
 }
 
 export function CreditsList({ item }: { item: WorkMeta }) {

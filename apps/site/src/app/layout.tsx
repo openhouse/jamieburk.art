@@ -1,15 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Karla } from "next/font/google";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { archivoNarrow, karla, leagueSpartan } from "@/lib/fonts";
 import { createMetadata } from "@/lib/metadata";
 import "./globals.css";
-
-const karla = Karla({
-  subsets: ["latin"],
-  variable: "--font-karla",
-  display: "swap"
-});
 
 export const metadata: Metadata = createMetadata();
 
@@ -22,7 +16,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={karla.variable} lang="en">
+    <html
+      className={`${karla.variable} ${archivoNarrow.variable} ${leagueSpartan.variable}`}
+      data-theme="jamie"
+      lang="en"
+    >
       <body>
         <SiteHeader />
         <main id="main">{children}</main>

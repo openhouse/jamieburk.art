@@ -22,18 +22,36 @@ export function WorkCard({ item }: WorkCardProps) {
           <p className="mt-2 font-medium text-jb-green">{item.subtitle}</p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
         </div>
+        <dl className="grid gap-3 text-sm sm:grid-cols-2">
+          <div>
+            <dt className="metadata-label text-xs text-jb-blue">Role</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/76">{item.role}</dd>
+          </div>
+          <div>
+            <dt className="metadata-label text-xs text-jb-blue">Years</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/76">{item.years}</dd>
+          </div>
+          <div>
+            <dt className="metadata-label text-xs text-jb-blue">Status</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/76">{item.status}</dd>
+          </div>
+          <div>
+            <dt className="metadata-label text-xs text-jb-blue">Visibility</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/76">{item.visibility}</dd>
+          </div>
+        </dl>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
-            <dt className="font-semibold text-jb-ink">What was unclear</dt>
+            <dt className="metadata-label text-xs text-jb-ink">What was unclear</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
           </div>
           <div>
-            <dt className="font-semibold text-jb-ink">What became usable</dt>
+            <dt className="metadata-label text-xs text-jb-ink">What became usable</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
           </div>
         </dl>
         <div>
-          <p className="text-sm font-semibold text-jb-ink">Role fit</p>
+          <p className="metadata-label text-xs text-jb-ink">Role fit</p>
           <p className="mt-1 text-sm leading-6 text-jb-ink/72">{item.roleFit}</p>
         </div>
         <TagList compact tags={item.tags} />

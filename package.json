@@ -1,5 +1,5 @@
 {
-  "name": "jamie-burkart-monorepo",
+  "name": "jamieburk-art-monorepo",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -10,11 +10,11 @@
     "npm": ">=11"
   },
   "scripts": {
-    "dev": "npm run dev -w @jamie-burkart/www",
-    "build": "npm run build -w @jamie-burkart/www",
-    "start": "npm run start -w @jamie-burkart/www",
-    "lint": "npm run lint -w @jamie-burkart/www",
-    "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "dev": "npm run dev -w @jamie/site",
+    "build": "npm run build -w @jamie/site",
+    "start": "npm run start -w @jamie/site",
+    "lint": "npm run lint -w @jamie/site",
+    "typecheck": "npm run typecheck -w @jamie/site",
+    "check": "npm run check -w @jamie/site"
   }
 }

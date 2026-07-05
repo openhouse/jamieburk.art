@@ -1,10 +1,18 @@
 # Jamie Burkart Portfolio
 
-Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.
+Public-safe portfolio for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.
+
+The first launch goal is a small, reviewable site that shows how Jamie turns under-structured civic, cultural, small-business, public-facing, and technical work into usable systems, documentation, tools, workflows, and handoffs.
 
 ## Stack
 
-Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Docker, Dokku.
+- Next.js App Router, React, and TypeScript
+- MDX content with typed metadata helpers
+- Tailwind CSS 4 and daisyUI 5
+- npm workspaces with deployable app at `apps/site`
+- Node 26 via `.nvmrc`
+- Root Dockerfile for Dokku deployment
+- No analytics, CMS, database, search, contact form backend, or AI chatbot in V1
 
 ## Local Development
 
@@ -15,38 +23,67 @@ npm install
 npm run dev
 ```
 
-## Checks
+Workspace commands run against `@jamie/site`:
 
 ```bash
 npm run typecheck
 npm run lint
+npm run check
 npm run build
 ```
 
-## Deployment
+## Content Editing
 
-This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
+Work metadata lives in `apps/site/src/data/work.ts`. Public pages should keep the recurring grammar visible:
 
-Target domain: <https://jamieburk.art>
+- What was unclear?
+- What became usable?
+- What remains protected?
+- What this proves
+- Source trail
 
-Normal deploy after one-time Dokku setup:
+Do not add private sources, raw meeting records, unapproved screenshots, client details, private notes, credentials, protected personal information, or proprietary font files.
 
-```bash
-git push dokku main
+## Resume
+
+The resume route expects the approved PDF here:
+
+```text
+apps/site/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
 ```
 
-The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
+Staging may carry a clearly marked placeholder. Production should not be promoted until the approved PDF is in place.
 
-## Content Rules
+## Public Safety
 
-- Do not publish private emails, raw transcripts, private coalition notes, health or financial details, private correspondence, unapproved photos, private fonts, or credentials.
-- Use public-safe summaries, redacted screenshots, representative diagrams, and approved public artifacts.
-- Use precise collective-work language: co-built, stewarded, supported, contributed to.
-- When uncertain, mark: `TODO: Jamie approval required.`
+Use public-safe wording such as co-built, contributed to, helped structure, supported, public-safe summary, redacted example, representative diagram, approval required, and private material intentionally omitted.
 
-## Launch Inputs Still Needed
+When a fact, image, quote, source, or contact detail is not approved, omit it or mark it as pending in staging. See `docs/CONTENT_SAFETY.md`.
 
-- Approved public email address.
-- LinkedIn URL and public-ready GitHub URL.
-- Current resume PDF to replace the placeholder file at `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
-- Public-safe screenshots or artifacts for HJE, FairRentNYC / CRS, and CallNYC.
+## Staging Deploy
+
+Staging is the first deploy target:
+
+```bash
+dokku apps:create jamieburk-art-staging
+dokku proxy:ports-set jamieburk-art-staging http:80:3000
+dokku domains:set jamieburk-art-staging staging.jamieburk.art
+dokku config:set jamieburk-art-staging NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 NEXT_PUBLIC_DEPLOY_ENV=staging NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_NO_INDEX=true
+git push dokku-staging HEAD:main
+```
+
+Staging is noindexed through `robots.txt`, page metadata, and an `X-Robots-Tag` header.
+
+## Production Deploy
+
+Promote the same reviewed commit only after staging approval:
+
+```bash
+dokku apps:create jamieburk-art
+dokku proxy:ports-set jamieburk-art http:80:3000
+dokku domains:set jamieburk-art jamieburk.art www.jamieburk.art
+dokku config:set jamieburk-art NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 NEXT_PUBLIC_DEPLOY_ENV=production NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_NO_INDEX=false
+git push dokku-production HEAD:main
+```
+
+See `docs/DEPLOYMENT.md` for DNS, HTTPS, Docker, and verification commands.
