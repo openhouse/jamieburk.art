@@ -22,8 +22,10 @@ export default function ContactPage() {
           <dl className="space-y-5">
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+              <dd className="mt-1">
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>

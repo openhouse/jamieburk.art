@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to online growth for a legacy e-commerce business",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -232,7 +232,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "Shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
@@ -331,7 +331,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities and used by DIY arts and music organizers across multiple city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -366,7 +366,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "Used across multiple city ecosystems"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +383,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for recurring gatherings and resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -415,8 +415,8 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Recurring hosted gatherings",
+      "Resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
