@@ -46,6 +46,10 @@
 @import "../styles/tokens.css";
 @import "../styles/phi-grid.css";
 
+:root {
+  --font-karla: Karla;
+}
+
 @theme inline {
   --color-jb-blue: var(--jb-broadway-blue);
   --color-jb-paper: var(--jb-oil-white);

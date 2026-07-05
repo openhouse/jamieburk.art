@@ -12,6 +12,35 @@ const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"]
   },
+  async redirects() {
+    return [
+      {
+        source: "/work/fair-rent-nyc",
+        destination: "/work/fairrentnyc-commercial-rent-stabilization",
+        permanent: true
+      },
+      {
+        source: "/work/fairrentnyc",
+        destination: "/work/fairrentnyc-commercial-rent-stabilization",
+        permanent: true
+      },
+      {
+        source: "/work/nyc-artist-coalition-fair-rent",
+        destination: "/work/fairrentnyc-commercial-rent-stabilization",
+        permanent: true
+      },
+      {
+        source: "/work/196-sunday-dinner",
+        destination: "/work/196-artists-residency",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      }
+    ];
+  },
   async headers() {
     return [
       {

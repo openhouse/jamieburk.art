@@ -1,9 +1,9 @@
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export function GET() {
   return Response.json({
     ok: true,
     service: "jamie-portfolio",
-    site: "jamieburk.art"
+    environment: process.env.NEXT_PUBLIC_ENVIRONMENT ?? "local"
   });
 }

@@ -168,7 +168,7 @@ const workItemsInput = [
   },
   {
     title: "FairRentNYC / Commercial Rent Stabilization",
-    slug: "fair-rent-nyc",
+    slug: "fairrentnyc-commercial-rent-stabilization",
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
@@ -379,7 +379,7 @@ const workItemsInput = [
   },
   {
     title: "196 Artists Residency / Sunday Dinner",
-    slug: "196-sunday-dinner",
+    slug: "196-artists-residency",
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
@@ -488,9 +488,9 @@ export const workItems = workMetaSchema.array().parse(workItemsInput).sort((a, b
 });
 
 export type WorkSlug =
-  | "196-sunday-dinner"
+  | "196-artists-residency"
   | "callnyc"
-  | "fair-rent-nyc"
+  | "fairrentnyc-commercial-rent-stabilization"
   | "harry-j-epstein"
   | "kc-town-hall"
   | "wowlist";

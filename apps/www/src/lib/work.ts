@@ -8,9 +8,9 @@ import WOWList from "@/content/work/wowlist.mdx";
 import { workItems, type WorkSlug } from "@/data/work";
 
 export const workContentBySlug = {
-  "196-sunday-dinner": SundayDinner,
+  "196-artists-residency": SundayDinner,
   callnyc: CallNYC,
-  "fair-rent-nyc": FairRentNYC,
+  "fairrentnyc-commercial-rent-stabilization": FairRentNYC,
   "harry-j-epstein": HarryJEpstein,
   "kc-town-hall": KCTownHall,
   wowlist: WOWList

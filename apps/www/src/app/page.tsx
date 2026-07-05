@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
@@ -13,10 +14,61 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const startHereLinks = [
+  {
+    label: "Technical Operations & Implementation",
+    href: "/work/technical-operations"
+  },
+  {
+    label: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein"
+  },
+  {
+    label: "FairRentNYC / Commercial Rent Stabilization",
+    href: "/work/fairrentnyc-commercial-rent-stabilization"
+  },
+  {
+    label: "CallNYC.org",
+    href: "/work/callnyc"
+  },
+  {
+    label: "Résumé",
+    href: "/resume"
+  }
+] as const;
+
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="bg-jb-paper py-12">
+        <div className="jb-frame grid gap-6 lg:grid-cols-[0.44fr_0.56fr] lg:items-start">
+          <div className="jb-reading">
+            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+              Fast routes through the proof system
+            </h2>
+            <p className="mt-4 leading-8 text-jb-ink/76">
+              The shortest path into the work: role fit first, then operating,
+              civic, prototype, and resume evidence.
+            </p>
+          </div>
+          <nav aria-label="Start here">
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {startHereLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    className="block rounded-lg border border-jb-ink/12 bg-jb-warm p-4 font-semibold text-jb-ink shadow-sm hover:border-jb-blue/45 hover:text-jb-blue"
+                    href={item.href as Route}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </section>
       <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
