@@ -13,14 +13,22 @@ COPY apps/www/package.json ./apps/www/package.json
 RUN npm ci
 
 FROM base AS builder
+ARG NEXT_PUBLIC_SITE_URL=https://jamieburk.art
+ARG NEXT_PUBLIC_DEPLOY_ENV=production
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
 COPY --from=deps /repo/node_modules ./node_modules
 COPY . .
 RUN npm run build -w @jamie-burkart/www
 
 FROM node:26-bookworm-slim AS runner
 WORKDIR /app
+ARG NEXT_PUBLIC_SITE_URL=https://jamieburk.art
+ARG NEXT_PUBLIC_DEPLOY_ENV=production
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_PUBLIC_SITE_URL=$NEXT_PUBLIC_SITE_URL
+ENV NEXT_PUBLIC_DEPLOY_ENV=$NEXT_PUBLIC_DEPLOY_ENV
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 

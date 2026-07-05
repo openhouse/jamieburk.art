@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 import { workItems } from "@/data/work";
 
+export const dynamic = "force-dynamic";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",

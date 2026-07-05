@@ -1,6 +1,12 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://jamieburk.art";
+const deployEnv = process.env.NEXT_PUBLIC_DEPLOY_ENV ?? "development";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: siteUrl,
+  deployEnv,
+  isProduction: deployEnv === "production",
+  isStaging: deployEnv === "staging",
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
