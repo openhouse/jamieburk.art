@@ -31,7 +31,7 @@ export function CapabilityGrid() {
   return (
     <section className="jb-frame py-16">
       <div className="jb-reading">
-        <p className="text-sm font-semibold uppercase text-jb-blue">
+        <p className="jb-display text-xl text-jb-blue">
           Capabilities
         </p>
         <h2 className="mt-3 text-3xl font-bold text-jb-ink">What becomes usable</h2>

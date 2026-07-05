@@ -12,6 +12,7 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Typography uses Karla for the everyday reading voice and League Gothic as a safe open display accent. Proprietary and personal fonts are not distributed unless licensing and permission are explicit.",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Prepared for Docker / Dokku deployment on a DigitalOcean droplet",

@@ -14,7 +14,7 @@ export default function SourceBackedTeamMemoryPage() {
   return (
     <article className="jb-frame py-12">
       <div className="jb-reading">
-        <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
+        <p className="jb-display text-xl text-jb-blue">Lab / method</p>
         <h1 className="mt-3 text-5xl font-bold text-jb-ink">
           Source-Backed Team Memory
         </h1>
@@ -25,9 +25,8 @@ export default function SourceBackedTeamMemoryPage() {
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
+            Lab / method / proof-of-practice, not finished SaaS. AI drafts.
+            Humans review. The shared record remains inspectable and correctable.
           </p>
         </div>
         <div className="mt-10 space-y-6">
