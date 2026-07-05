@@ -1,6 +1,12 @@
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://staging.jamieburk.art";
+const deployEnv = process.env.NEXT_PUBLIC_DEPLOY_ENV ?? "staging";
+const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
+
 export const site = {
   name: "Jamie Burkart",
-  url: "https://jamieburk.art",
+  url: siteUrl,
+  deployEnv,
+  allowIndexing,
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:

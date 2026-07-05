@@ -11,9 +11,11 @@ Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, Dock
 ```bash
 nvm install
 nvm use
-npm install
+npm ci
 npm run dev
 ```
+
+Copy `apps/www/.env.example` to `apps/www/.env.local` for local staging-like defaults.
 
 ## Checks
 
@@ -21,21 +23,28 @@ npm run dev
 npm run typecheck
 npm run lint
 npm run build
+npm run check -w @jamie-burkart/www
 ```
 
 ## Deployment
 
 This app deploys to Dokku using Dockerfile deployment and Next.js standalone output.
 
-Target domain: <https://jamieburk.art>
+Staging target: <https://staging.jamieburk.art>
 
-Normal deploy after one-time Dokku setup:
+Production target, later: <https://jamieburk.art>
+
+Environment is staging-first by default:
 
 ```bash
-git push dokku main
+NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
+NEXT_PUBLIC_DEPLOY_ENV=staging
+NEXT_PUBLIC_ALLOW_INDEXING=false
 ```
 
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to that container.
+
+Set public environment values before the image build so static metadata, sitemap, and robots output match the target. See `docs/deployment.md` for Dokku staging setup, production setup, health checks, and local Docker verification.
 
 ## Content Rules
 

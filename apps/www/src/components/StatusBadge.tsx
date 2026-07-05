@@ -7,7 +7,7 @@ type StatusBadgeProps = {
 
 export function StatusBadge({ status, visibility }: StatusBadgeProps) {
   return (
-    <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase">
+    <div className="font-condensed flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-wide">
       {status ? (
         <span className="rounded-full bg-jb-green px-3 py-1 text-jb-paper">{status}</span>
       ) : null}

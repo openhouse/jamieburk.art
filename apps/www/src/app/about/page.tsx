@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">About</h1>
+        <h1 className="font-display text-5xl font-bold text-jb-ink">About</h1>
         <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
           <p>
             I am Jamie Burkart, a technical project manager and implementation
