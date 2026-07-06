@@ -3,6 +3,9 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+Production indexing is strict opt-in. The app stays noindex unless production
+uses the exact approved URL and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
 ## Dokku Apps
 
 ```txt
@@ -44,6 +47,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SI
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
 
+The app build script currently uses `next build --webpack` because Turbopack
+hung locally during the composite production-readiness verification pass.
+
 Enable TLS after DNS resolves:
 
 ```bash
@@ -61,7 +67,7 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Promote the exact reviewed staging commit, not a moving branch tip.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -92,6 +98,10 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamie
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
 ```
+
+If `www.jamieburk.art` is configured, redirect it to `https://jamieburk.art`
+through Dokku/nginx or the host-aware app redirect. Do not add speculative
+content-route redirects unless the URL has already been shared.
 
 Enable TLS:
 
@@ -137,6 +147,7 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -i http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
 ```
 
 Expected staging behavior:
@@ -145,3 +156,35 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The resume PDF response includes `X-Robots-Tag: noindex, nofollow`.
+- The sitemap does not include the resume PDF.
+
+## Production Dry Run
+
+Before production indexing, run:
+
+```bash
+npm run check
+npm run check:production-readiness
+```
+
+Then build with production values:
+
+```bash
+docker build \
+  --build-arg APP_ENV=production \
+  --build-arg SITE_ENV=production \
+  --build-arg NEXT_PUBLIC_DEPLOY_ENV=production \
+  --build-arg SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_ROBOTS_POLICY=index \
+  -t jamieburk-art:production-test .
+```
+
+Expected production behavior after approval:
+
+- `/api/health` reports production and `robotsIndexable: true`.
+- `/robots.txt` allows `/` and lists the production sitemap.
+- `/sitemap.xml` uses only `https://jamieburk.art` URLs.
+- The resume PDF remains noindex and is not listed in the sitemap.
+- HTML responses do not include noindex headers.
