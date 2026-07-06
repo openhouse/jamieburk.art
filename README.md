@@ -29,7 +29,11 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run safety:production
 ```
+
+`npm run safety:production` is a production release gate. It is expected to
+fail until Jamie approves the public contact values and current resume file.
 
 ## Environment
 
@@ -104,3 +108,4 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run safety:production` passes before production deployment.

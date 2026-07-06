@@ -24,6 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run safety:production`
 
 ## Public-Safety Rules
 

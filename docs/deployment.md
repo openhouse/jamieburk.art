@@ -63,6 +63,15 @@ git push dokku-staging HEAD:main
 Use this only after staging content, accessibility, metadata, and public-safety
 review.
 
+Before any production deploy, run:
+
+```bash
+npm run predeploy:production
+```
+
+The production safety gate must pass with approved contact values and the current
+approved resume file.
+
 ```bash
 dokku apps:create jamieburk-art
 dokku builder:set jamieburk-art selected dockerfile
