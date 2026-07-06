@@ -52,6 +52,15 @@ const sections = [
   }
 ];
 
+const operationsMap = [
+  "Track delivery and surface risks early.",
+  "Build planning rhythms, decision frameworks, and retros.",
+  "Coordinate dependencies across technical and nontechnical teams.",
+  "Write handbooks, runbooks, onboarding guides, and operating documentation people actually use.",
+  "Report status, team health, and operational metrics honestly.",
+  "Improve working systems quarter over quarter without overengineering."
+];
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -66,6 +75,28 @@ export default function TechnicalOperationsPage() {
           documentation systems, launch support, and durable handoffs.
         </p>
       </div>
+      <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-paper p-6">
+        <div className="grid gap-6 lg:grid-cols-[0.4fr_0.6fr]">
+          <div>
+            <h2 className="text-3xl font-bold text-jb-ink">
+              How this maps to team operations
+            </h2>
+            <p className="mt-3 leading-7 text-jb-ink/74">
+              The same pattern shows up across the work: make the delivery
+              system visible, name what needs attention, and leave teams with
+              reusable ways to keep moving.
+            </p>
+          </div>
+          <ul className="grid gap-3 text-jb-ink/76">
+            {operationsMap.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (
           <JBCard key={section.title}>

@@ -41,6 +41,7 @@ const artifactTypeSchema = z.enum([
 const workMetaSchema = z.object({
   title: z.string(),
   slug: z.string(),
+  href: z.string().optional(),
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
