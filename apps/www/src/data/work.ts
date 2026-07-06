@@ -44,6 +44,7 @@ const workMetaSchema = z.object({
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
+  topNotice: z.string().optional(),
   role: z.string(),
   years: z.string(),
   status: workStatusSchema,
@@ -253,6 +254,8 @@ const workItemsInput = [
     subtitle: "Civic data to resident-facing guidance",
     summary:
       "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+    topNotice:
+      "Archived civic-data prototype. Not an official or current City Council service.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",

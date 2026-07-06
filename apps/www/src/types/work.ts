@@ -50,6 +50,7 @@ export type WorkMeta = {
   series: string;
   subtitle: string;
   summary: string;
+  topNotice?: string;
   role: string;
   years: string;
   status: WorkStatus;
