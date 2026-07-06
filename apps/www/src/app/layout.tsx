@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Karla, League_Spartan } from "next/font/google";
+import { Archivo_Narrow, Karla } from "next/font/google";
+import { EnvironmentBanner } from "@/components/EnvironmentBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { createMetadata } from "@/lib/metadata";
@@ -11,11 +12,11 @@ const karla = Karla({
   display: "swap"
 });
 
-const leagueSpartan = League_Spartan({
+const archivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
-  variable: "--font-league-spartan",
+  variable: "--font-archivo-narrow",
   display: "swap",
-  weight: ["600", "700", "800"]
+  weight: ["400", "500", "600", "700"]
 });
 
 export const metadata: Metadata = createMetadata();
@@ -29,9 +30,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={`${karla.variable} ${leagueSpartan.variable}`} lang="en">
+    <html className={`${karla.variable} ${archivoNarrow.variable}`} lang="en">
       <body>
         <SiteHeader />
+        <EnvironmentBanner />
         <main id="main">{children}</main>
         <SiteFooter />
       </body>

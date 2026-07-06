@@ -69,7 +69,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="font-display text-sm font-semibold uppercase text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>

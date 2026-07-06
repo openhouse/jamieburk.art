@@ -145,3 +145,30 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Production Dry Run
+
+Production builds run the public-safety gate before Next.js builds. This should
+fail while approval TODOs, placeholder resume text, unconfirmed contact links,
+private markers, or private/proprietary font files remain.
+
+```bash
+docker build \
+  --build-arg APP_ENV=production \
+  --build-arg SITE_ENV=production \
+  --build-arg NEXT_PUBLIC_DEPLOY_ENV=production \
+  --build-arg SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_ROBOTS_POLICY=index \
+  -t jamieburk-art:production-test .
+```
+
+Expected production behavior after Jamie approvals are resolved:
+
+- canonical URLs use `https://jamieburk.art`;
+- sitemap URLs use `https://jamieburk.art`;
+- robots allows indexing;
+- public HTML pages do not send `X-Robots-Tag: noindex, nofollow`;
+- no staging URLs or localhost URLs appear in generated production metadata;
+- no public approval TODOs or placeholder resume text remain;
+- no private/proprietary font files are committed or served.

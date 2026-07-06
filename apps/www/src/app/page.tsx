@@ -22,7 +22,7 @@ export default function HomePage() {
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="font-display text-base font-semibold uppercase text-jb-blue">
               Selected systems
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
@@ -47,7 +47,7 @@ export default function HomePage() {
       <section className="bg-jb-warm/80 py-16">
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="font-display text-base font-semibold uppercase text-jb-blue">
               Operating motif
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
@@ -75,7 +75,9 @@ export default function HomePage() {
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
+          <p className="font-display text-base font-semibold uppercase text-jb-blue">
+            How I work
+          </p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>
