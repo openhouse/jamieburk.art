@@ -61,7 +61,14 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production indexing is opt-in: both runtime config and Docker build args
+must set `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
+Run the production gate before deploy:
+
+```bash
+npm run check:production
+```
 
 ```bash
 dokku apps:create jamieburk-art
@@ -145,3 +152,8 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+For a production-mode local smoke test, build and run with the production values
+shown above, then verify `/api/health` returns `appEnv=production` and
+`robotsIndexable=true`, `/robots.txt` allows indexing, and sitemap/canonical
+metadata point to `https://jamieburk.art`.

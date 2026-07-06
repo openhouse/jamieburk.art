@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie builds operating structure for
+ambiguous public-facing technical work.
 
 ## Stack
 
@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:production
+npm run predeploy:production
 ```
 
 ## Environment
@@ -56,6 +58,9 @@ NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in: `NEXT_PUBLIC_ROBOTS_POLICY=index` must be set
+alongside the production environment and production URL.
 
 ## Deployment
 
@@ -91,16 +96,17 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, leave a launch-blocking approval note rather than publishing
+  private or unconfirmed material.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the supplied public resume PDF remains approved for download before production.
+- Confirm optional LinkedIn before rendering it.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Run `npm run check:production` before production deploy.
