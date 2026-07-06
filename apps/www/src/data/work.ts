@@ -41,6 +41,7 @@ const artifactTypeSchema = z.enum([
 const workMetaSchema = z.object({
   title: z.string(),
   slug: z.string(),
+  href: z.string().optional(),
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
@@ -142,12 +143,12 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, public-safe summary, resume-backed contribution language, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study. Screenshot approvals pending.",
+    currentStatus: "Public-safe full case study with representative artifacts.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
@@ -161,7 +162,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns remain protected unless separately approved.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -227,7 +228,7 @@ const workItemsInput = [
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary with collaborator-sensitive materials protected.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
@@ -301,12 +302,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, and public-safe artifact review.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
+    currentStatus: "Archived unofficial prototype with public-safe summary.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -314,13 +315,13 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Historical civic-tech demo with external citation review"
     ],
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Archive links, screenshots, and external citations stay protected until they are verified and public-safe.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -356,7 +357,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe summary, historical project context, and aggregate nonpersonal adoption evidence.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -383,7 +384,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for long-running gatherings and resident-artist support.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -408,15 +409,15 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Long-running hosted gatherings",
+      "Resident-artist support systems",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
@@ -460,7 +461,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public-safe summary and protected project materials omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",

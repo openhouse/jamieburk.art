@@ -28,7 +28,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
 npm run check
+npm run preflight:production
 ```
 
 ## Environment
@@ -78,6 +80,8 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to the
 container. See `docs/deployment.md` for the staging and production command
 drafts, Docker build args, and verification checklist.
 
+See `docs/release-checklist.md` for the canonical release checklist.
+
 ## Typeface Policy
 
 Use Karla for body/UI text and League Spartan for display headings. Do not commit
@@ -92,6 +96,10 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+- Keep private review material outside git. Local private folders may exist, but
+  `private/`, `archive-private/`, `raw/`, `transcripts-private/`,
+  `client-private/`, `legal-review/`, and `*.private.*` must not be committed or
+  copied into Docker images.
 
 ## Launch Blockers
 

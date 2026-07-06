@@ -3,6 +3,10 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+The app build currently uses `next build --webpack` because the default Next 16
+build path can remain silent during local production-build verification in this
+repo. Keep this workaround only while it is the verified stable path.
+
 ## Dokku Apps
 
 ```txt
@@ -61,7 +65,8 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production can deploy noindex first; indexing is a separate approval
+gate.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -75,7 +80,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,8 +95,16 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
+
+After Jamie approves indexing, change both runtime config and build args to:
+
+```bash
+NEXT_PUBLIC_ROBOTS_POLICY=index
+```
+
+Then rebuild/redeploy the same reviewed commit.
 
 Enable TLS:
 

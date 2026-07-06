@@ -29,6 +29,12 @@ export default function WorkPage() {
             Source-backed memory lab
           </Link>
         </div>
+        <p className="mt-6 text-sm leading-6 text-jb-ink/70">
+          Known means public-safe and evidence-backed enough to say. Open means
+          a citation, screenshot, collaborator, or wording choice still needs
+          review. Protected means material is intentionally omitted for privacy,
+          consent, law, client trust, civic sensitivity, or community safety.
+        </p>
       </div>
       <div className="mt-12 space-y-14">
         {workGroups.map((group) => {
