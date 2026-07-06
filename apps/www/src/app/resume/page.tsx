@@ -11,11 +11,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "14+ years building operating structure",
+  "Contributed to online growth for a legacy e-commerce business",
+  "Built and stewarded civic campaign-memory infrastructure",
+  "Co-built community web systems across multiple city ecosystems",
+  "Created repeatable hosting and continuity systems for gatherings and artists"
 ];
 
 export default function ResumePage() {
@@ -28,10 +28,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I build operating structure for ambiguous public-facing technical
+            work, turning under-structured work into requirements, workflows,
+            documentation, decision trails, launch support, onboarding
+            materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -41,10 +41,6 @@ export default function ResumePage() {
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
-          </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
