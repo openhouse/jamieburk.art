@@ -4,7 +4,7 @@ Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
 The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+complex public-facing teams, turning under-structured work into usable systems.
 
 ## Stack
 
@@ -29,7 +29,13 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:public-safety
+npm run check:production-readiness
 ```
+
+`apps/www` currently builds with `next build --webpack` because Turbopack hung
+locally during this production-readiness pass before completing the optimized
+production build.
 
 ## Environment
 
@@ -80,8 +86,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows,
+proof labels, and compact public-facing labels. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -91,12 +98,13 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- Keep approval uncertainty in docs, launch checklists, or staging-only review
+  notes. Production pages must not render unresolved approval TODOs.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
+- Confirm the approved resume PDF is current and downloadable.
+- Confirm the public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
@@ -104,3 +112,4 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm the resume PDF is noindex and absent from the sitemap.

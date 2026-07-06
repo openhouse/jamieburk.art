@@ -45,6 +45,7 @@ private fonts, and named stakeholder details that have not been approved.
 3. Make evidence scan quickly while preserving nuance.
 4. Use collective-work language where the work was collaborative.
 5. Leave every page feeling like documentation is care.
+6. Keep production indexing as an explicit approval state, never a default.
 
 ## Accessibility & Inclusion
 

@@ -35,7 +35,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the uncertainty in review notes, docs, or staging-only
+copy. Production pages must not render unresolved approval TODOs.
 
 ## Scope Rules
 
@@ -46,7 +47,8 @@ change for V1.
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.
-Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production later: `jamieburk.art`, indexable only after Jamie approves content
+and `NEXT_PUBLIC_ROBOTS_POLICY=index` is set for the exact reviewed commit.
 
 ## Voice
 
