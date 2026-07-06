@@ -40,7 +40,7 @@ export default function WorkPage() {
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
                 <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
                   <h3 className="text-2xl font-semibold text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Source-Backed Team Memory
                   </h3>
                   <p className="mt-3 leading-7 text-jb-ink/76">
                     A lab / proof-of-practice exploring source-backed operating
