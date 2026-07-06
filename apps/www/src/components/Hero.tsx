@@ -1,28 +1,27 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function Hero() {
   return (
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
-            Technical Project Manager - Product Operations & Implementation
-          </p>
+          <p className="text-sm font-semibold uppercase text-jb-blue">{site.role}</p>
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I turn under-structured work into usable systems for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I create operating structure for complex public-facing teams:
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

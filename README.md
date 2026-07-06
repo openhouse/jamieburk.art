@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns under-structured work into
+usable systems for complex public-facing teams.
 
 ## Stack
 
@@ -42,6 +42,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,8 +57,14 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>
+NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing requires `NEXT_PUBLIC_ROBOTS_POLICY=index`; any missing,
+blank, `noindex`, or unknown value keeps responses non-indexable.
 
 ## Deployment
 
@@ -80,8 +89,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows,
+proof labels, and selected emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -91,16 +101,19 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, leave a launch-blocker note that requires Jamie approval
+  rather than publishing private or unconfirmed material.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Jamie must approve the exact resume PDF before production.
+- Jamie must approve exact public contact presentation before production.
+- Confirm optional LinkedIn and GitHub links, or omit them.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm exact proof metrics or keep softened language.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
+- Confirm production indexing is intentionally enabled with `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm public-safety and production preflight checks pass.

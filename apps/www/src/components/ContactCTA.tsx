@@ -1,4 +1,5 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function ContactCTA() {
   return (
@@ -9,9 +10,11 @@ export function ContactCTA() {
       </h2>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href="/resume" variant="secondary">
-          Download resume
+          View resume
         </JBButton>
-        <JBButton href="/contact">Email Jamie</JBButton>
+        <JBButton href={site.contact.emailHref ?? "/contact"}>
+          {site.contact.emailHref ? "Email Jamie" : "Contact Jamie"}
+        </JBButton>
       </div>
     </section>
   );

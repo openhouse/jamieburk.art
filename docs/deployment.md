@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email-or-blank> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email-or-blank>'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>'
 ```
 
 Enable TLS after DNS resolves:
@@ -63,6 +69,9 @@ git push dokku-staging HEAD:main
 Use this only after staging content, accessibility, metadata, and public-safety
 review.
 
+Production indexing is opt-in: `NEXT_PUBLIC_ROBOTS_POLICY=index` must be present
+at build and runtime before the app emits indexable robots metadata.
+
 ```bash
 dokku apps:create jamieburk-art
 dokku builder:set jamieburk-art selected dockerfile
@@ -76,6 +85,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,6 +103,9 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>'
 ```
 
 Enable TLS:
