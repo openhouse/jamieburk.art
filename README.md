@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns under-structured work into
+usable systems.
 
 ## Stack
 
@@ -29,7 +29,17 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:public-safety
 ```
+
+Before production, run:
+
+```bash
+npm run check:production
+```
+
+Production remains blocked while approved public contact links and the current
+resume PDF are still placeholders.
 
 ## Environment
 
@@ -104,3 +114,4 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run check:production` passes in a production environment.

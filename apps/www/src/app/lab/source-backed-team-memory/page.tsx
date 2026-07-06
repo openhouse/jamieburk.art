@@ -23,12 +23,17 @@ export default function SourceBackedTeamMemoryPage() {
           decision lineage, onboarding context, and human-correctable AI
           workflows for knowledge-heavy teams.
         </p>
+        <p className="mt-5 text-lg font-semibold leading-7 text-jb-green">
+          AI drafts. Humans review. Sources remain inspectable. Corrections
+          remain possible. Private material stays private.
+        </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
-          <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
-          </p>
+          <p className="font-semibold leading-7 text-jb-ink">Lab / proof-of-practice.</p>
+          <ul className="mt-3 space-y-2 leading-7 text-jb-ink/76">
+            <li>Not a finished production SaaS.</li>
+            <li>Not a replacement for judgment.</li>
+            <li>Not a private archive browser.</li>
+          </ul>
         </div>
         <div className="mt-10 space-y-6">
           <SourceBackedMemory />

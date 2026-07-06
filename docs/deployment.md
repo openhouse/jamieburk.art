@@ -3,6 +3,21 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+Production must remain blocked until the launch blockers pass:
+
+```bash
+npm run check:production
+```
+
+The production check fails while shipped app/content/public files still include
+approval TODOs, placeholder contact details, the placeholder resume PDF, private
+or draft work items, private/proprietary font files, or production metadata that
+should not be published yet. Staging can still run with placeholders:
+
+```bash
+npm run check:public-safety
+```
+
 ## Dokku Apps
 
 ```txt
@@ -134,9 +149,10 @@ docker run --rm -p 3000:3000 \
 Verify:
 
 ```bash
-curl -i http://localhost:3000/api/health
-curl -i http://localhost:3000/robots.txt
-curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/
+curl -s http://localhost:3000/robots.txt
+curl -s http://localhost:3000/sitemap.xml | head
+curl -s http://localhost:3000/api/health
 ```
 
 Expected staging behavior:
@@ -145,3 +161,12 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+After deploying staging, verify the public URL too:
+
+```bash
+curl -I https://staging.jamieburk.art/
+curl -s https://staging.jamieburk.art/robots.txt
+curl -s https://staging.jamieburk.art/sitemap.xml | head
+curl -s https://staging.jamieburk.art/api/health
+```
