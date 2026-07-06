@@ -14,3 +14,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.private.*
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
+supporting-materials/
+job-hunt/
+Jamie Projects History/
+screenshots-private/
+private-screenshots/
+raw-otter/

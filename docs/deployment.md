@@ -145,3 +145,5 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The standalone resume PDF remains noindexed; `/resume` is the search-facing
+  resume surface after production approval.
