@@ -39,9 +39,9 @@ typography:
     lineHeight: 1.65
     letterSpacing: "0"
   label:
-    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Oswald, Arial Narrow, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.2
     letterSpacing: "0"
 rounded:
@@ -146,13 +146,16 @@ for focus, selection, and occasional proof, not as a general accent wash.
 
 ## 3. Typography
 
-**Display Font:** League Spartan with Karla and system sans fallbacks.
+**Display Font:** League Spartan with Karla and system sans fallbacks, reserved
+for rare display or Open Graph treatment.
 **Body Font:** Karla with system sans fallbacks.
-**Label/Mono Font:** Karla; there is no mono system in the current site.
+**Label/Metadata Font:** Oswald with Arial Narrow and system sans fallbacks.
 
-**Character:** The pairing is practical and public-facing. League Spartan gives
-headings a sturdy placard quality; Karla keeps long summaries readable,
-approachable, and unshowy.
+**Character:** The pairing is practical and public-facing. Karla keeps long
+summaries readable, approachable, and unshowy; Oswald gives labels, navigation,
+metadata, and compact civic emphasis a clear operating-system voice without
+using private or proprietary font files. League Spartan remains available only
+for rare display or Open Graph treatment.
 
 ### Hierarchy
 
@@ -165,7 +168,7 @@ approachable, and unshowy.
 - **Body** (400, 17px, generous line-height): Project summaries, notes, care
   language, and MDX case-study prose. Keep reading measures near 65-75
   characters.
-- **Label** (700, 0.875rem): Status, navigation, and compact metadata.
+- **Label** (600, 0.875rem): Status, navigation, and compact metadata.
 
 ### Named Rules
 

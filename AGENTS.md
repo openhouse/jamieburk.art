@@ -52,3 +52,9 @@ Production later: `jamieburk.art`, indexable only after Jamie approves content.
 
 Precise, warm, modular, ethically grounded. Documentation is care. Do not
 overclaim.
+
+## Typeface Policy
+
+V1 uses Karla for body/UI text and Oswald for labels/metadata. League Spartan may
+be used only for rare display or Open Graph treatment. Do not commit or serve
+private, proprietary, or unlicensed font files.

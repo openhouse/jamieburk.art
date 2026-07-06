@@ -80,8 +80,10 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+V1 uses Karla for body/UI text and Oswald for labels, metadata, navigation, and
+compact civic emphasis. League Spartan may be used only for rare display or Open
+Graph treatment. Do not commit or serve private, proprietary, or unlicensed font
+files.
 
 ## Content Rules
 

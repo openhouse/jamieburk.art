@@ -30,6 +30,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="hover:text-jb-blue" href="/lab/source-backed-team-memory">
+                Lab
+              </Link>
+            </li>
+            <li>
               <Link className="hover:text-jb-blue" href="/colophon">
                 Colophon
               </Link>
