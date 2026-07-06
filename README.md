@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns under-structured work into
+usable systems for complex public-facing teams.
 
 ## Stack
 
@@ -80,8 +80,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows,
+proof labels, and selected emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -96,11 +97,12 @@ or serve private, proprietary, or unlicensed font files.
 ## Launch Blockers
 
 - Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm public contact presentation remains approved.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
+- Confirm sitemap is fixed and verified on staging.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm no visible unapproved TODOs remain.

@@ -60,8 +60,8 @@
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-league-spartan), var(--font-karla), ui-sans-serif, system-ui,
-    sans-serif;
+  --font-display: var(--font-archivo-narrow), var(--font-karla), ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 html {
@@ -84,8 +84,8 @@ body {
 
 h1,
 h2 {
-  font-family: var(--font-league-spartan), var(--font-karla), ui-sans-serif, system-ui,
-    sans-serif;
+  font-family: var(--font-archivo-narrow), var(--font-karla), ui-sans-serif,
+    system-ui, sans-serif;
   letter-spacing: 0;
 }
 
