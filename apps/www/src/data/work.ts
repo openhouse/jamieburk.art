@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to online and e-commerce growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -172,7 +172,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Helped structure and steward shared campaign documentation and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -182,11 +182,11 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign documentation.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
-        title: "Campaign-memory spine",
+        title: "Campaign documentation spine",
         description:
           "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
         type: "meeting memory"
@@ -232,14 +232,14 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "Shared campaign documentation and coordination infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie helped structure and steward public-safe campaign documentation, coordination documents, source maps, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -331,7 +331,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities for city-based arts and music communities.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -366,7 +366,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "City-based arts and music communities reached"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +383,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for recurring gatherings and resident-artist support.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -415,8 +415,8 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Recurring gathering systems",
+      "Resident-artist support systems",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
@@ -435,7 +435,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -467,7 +467,7 @@ const workItemsInput = [
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
-      "Redevelopment planning",
+      "Redevelopment planning support",
       "Public-benefit documentation",
       "Historic preservation context",
       "Funding process support"

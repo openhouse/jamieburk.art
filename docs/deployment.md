@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL= \
+  NEXT_PUBLIC_LINKEDIN_URL= \
+  NEXT_PUBLIC_GITHUB_URL= \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL='
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL='
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL='
 ```
 
 Enable TLS after DNS resolves:
@@ -76,6 +82,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,6 +100,9 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>'
 ```
 
 Enable TLS:
@@ -145,3 +157,14 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Rollback
+
+Keep the previous approved SHA/release available.
+
+If production has an issue:
+
+1. Set `NEXT_PUBLIC_ROBOTS_POLICY=noindex` immediately if privacy or indexing is involved.
+2. Redeploy the previous approved SHA or roll back the Dokku release.
+3. Verify `/`, `/robots.txt`, `/sitemap.xml`, `/api/health`, `/resume`, and `/contact`.
+4. Record the issue and fix in launch notes.

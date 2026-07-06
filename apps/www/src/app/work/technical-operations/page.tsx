@@ -16,7 +16,7 @@ const sections = [
     title: "Operating systems built",
     items: [
       "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "FairRentNYC / NYC Artist Coalition shared campaign documentation",
       "196 / Sunday Dinner onboarding and continuity systems"
     ]
   },
