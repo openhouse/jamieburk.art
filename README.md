@@ -57,6 +57,9 @@ NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
 
+Production indexing requires `NEXT_PUBLIC_ROBOTS_POLICY=index`; any missing or
+non-index value keeps responses non-indexable.
+
 ## Deployment
 
 This app deploys to Dokku using Dockerfile deployment and Next.js standalone
@@ -80,8 +83,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings, proof
+labels, section eyebrows, and compact metadata. Do not commit or serve private,
+proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -95,9 +99,8 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the supplied public resume PDF remains approved for download before production.
+- Confirm optional LinkedIn and GitHub links before rendering them.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.

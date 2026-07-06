@@ -11,7 +11,7 @@ export function Hero() {
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
-          <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
+          <p className="hero-role mt-6 text-2xl font-semibold leading-snug text-jb-green">
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
@@ -22,7 +22,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
