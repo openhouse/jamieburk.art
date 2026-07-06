@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight
 ```
 
 ## Environment
@@ -37,8 +39,6 @@ Staging is the first deployment target and is non-indexable by default:
 
 ```bash
 APP_ENV=staging
-SITE_ENV=staging
-NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
@@ -49,13 +49,16 @@ Production should only be enabled after staging review:
 
 ```bash
 APP_ENV=production
-SITE_ENV=production
-NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in. Missing, misspelled, or non-`index`
+`NEXT_PUBLIC_ROBOTS_POLICY` values keep the site noindexed. Avoid new uses of
+`SITE_ENV`, `NEXT_PUBLIC_DEPLOY_ENV`, `SITE_INDEXABLE`, or
+`NEXT_PUBLIC_NO_INDEX`.
 
 ## Deployment
 
@@ -80,8 +83,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, section
+eyebrows, proof labels, and compact metadata. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -92,15 +96,21 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+- Keep private source materials outside the repo and Docker build context:
+  `private/`, `archive-private/`, `raw/`, `transcripts-private/`,
+  `client-private/`, and `legal-review/` are ignored.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Confirm the approved resume PDF remains the exact intended public artifact.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
+- Confirm production indexing is explicitly opted in.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run public-safety`, `npm run preflight`, and production-mode
+  `npm run check:production` pass.
