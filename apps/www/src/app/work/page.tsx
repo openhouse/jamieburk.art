@@ -17,9 +17,10 @@ export default function WorkPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: under-structured situations
-          becoming usable systems, public-facing tools, documentation, decision
-          trails, and durable handoffs.
+          These case studies show a recurring pattern: ambiguous,
+          resource-constrained, cross-functional work becoming usable systems,
+          public-facing tools, documentation, decision trails, and durable
+          handoffs.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
@@ -40,12 +41,13 @@ export default function WorkPage() {
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
                 <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
                   <h3 className="text-2xl font-semibold text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Source-Backed Team Memory
                   </h3>
                   <p className="mt-3 leading-7 text-jb-ink/76">
-                    A lab / proof-of-practice exploring source-backed operating
-                    memory, decision lineage, onboarding context, and
-                    human-correctable AI workflows for knowledge-heavy teams.
+                    A practical team-memory workflow for preserving decisions,
+                    meeting context, open questions, source trails, and
+                    onboarding knowledge without turning private archives into
+                    an unsafe browsing surface.
                   </p>
                   <p className="mt-3 text-sm font-semibold text-jb-green">
                     Early research / method / consulting practice. Not a

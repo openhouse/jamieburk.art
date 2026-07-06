@@ -20,10 +20,10 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
-            tools, cultural infrastructure, coalition work, and knowledge
-            systems.
+            My work sits where requirements, workflows, decision records, and
+            handoffs are not yet clear: civic technology, small-business
+            operations, public-facing tools, cultural infrastructure, coalition
+            work, and knowledge systems.
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify

@@ -38,6 +38,7 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <TagList compact tags={item.tags} />
         <Link
+          aria-label={`Read case study: ${item.title}`}
           className="text-sm font-semibold text-jb-blue hover:text-jb-green"
           href={`/work/${item.slug}` as Route}
         >
