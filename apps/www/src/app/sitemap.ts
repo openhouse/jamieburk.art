@@ -10,8 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/resume",
     "/about",
     "/contact",
-    "/colophon",
-    "/lab/source-backed-team-memory"
+    "/colophon"
   ];
 
   return [
