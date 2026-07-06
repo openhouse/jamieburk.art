@@ -29,6 +29,14 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:routes -- http://localhost:3000
+```
+
+Production preflight is intentionally stricter and should be run with production
+environment variables after the final resume and contact details are approved:
+
+```bash
+npm run preflight:production
 ```
 
 ## Environment
@@ -42,6 +50,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,8 +65,14 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+`NEXT_PUBLIC_CONTACT_EMAIL` is required for production. LinkedIn and GitHub are
+optional; when they are unset in production, the contact page omits those rows.
 
 ## Deployment
 
@@ -95,12 +112,55 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Replace placeholder resume PDF.
 - Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm LinkedIn and GitHub or omit them.
+- Confirm proof metrics.
+- Confirm public-safe screenshots/artifacts.
 - Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
+- Confirm sitemap and noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+
+## Production Safety Gates
+
+The production preflight script checks the obvious launch blockers before a
+production deploy:
+
+- production deployment environment
+- canonical site URL set to `https://jamieburk.art`
+- `NEXT_PUBLIC_ROBOTS_POLICY=index`
+- approved public email configured
+- no unguarded approval TODOs in production-facing app files
+- placeholder resume PDF removed
+- no committed private/proprietary font files
+- no committed `.env` files except `.env.example`
+
+The route check script accepts a base URL:
+
+```bash
+npm run check:routes -- https://staging.jamieburk.art
+```
+
+Expected staging behavior:
+
+- `/robots.txt` disallows `/`
+- `/api/health` reports staging and `robotsIndexable: false`
+- HTML responses include `X-Robots-Tag: noindex, nofollow`
+- `/sitemap.xml` returns XML using `https://staging.jamieburk.art` URLs
+
+Expected production behavior after approval:
+
+- `/robots.txt` allows `/`
+- `/sitemap.xml` returns production canonical URLs
+- HTML responses do not include the noindex header
+
+## Accessibility QA Notes
+
+- Skip link exists and becomes visible on focus.
+- Global `:focus-visible` styles are present for keyboard navigation.
+- Reduced-motion preferences are respected in global CSS.
+- Route QA now covers the primary public pages and metadata endpoints.
+- Before production approval, run a browser pass at 320px, 375px, 768px, and
+  desktop widths for heading order, one H1 per page, link clarity, contrast, and
+  keyboard-only navigation.

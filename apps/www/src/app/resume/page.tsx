@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
+import { JAMIE_APPROVAL_TODO } from "@/lib/public-safety";
+import { IS_PRODUCTION } from "@/lib/site-url";
 
 export const metadata: Metadata = createMetadata({
   title: "Resume - Jamie Burkart",
@@ -41,10 +43,12 @@ export default function ResumePage() {
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
-          </p>
+          {!IS_PRODUCTION ? (
+            <p className="mt-4 text-sm text-jb-ink/62">
+              {JAMIE_APPROVAL_TODO} Replace the placeholder PDF with the current
+              approved resume.
+            </p>
+          ) : null}
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
