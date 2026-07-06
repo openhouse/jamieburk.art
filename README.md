@@ -29,7 +29,14 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:content
+npm run check:production
 ```
+
+`check:content` scans public routes, content, data, metadata-adjacent source,
+and public assets for production blockers. It warns in staging mode and fails in
+production mode. `check:production` runs the production content gate and then the
+full app check.
 
 ## Environment
 
@@ -80,8 +87,12 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows,
+proof labels, and compact public-grotesque emphasis. The site uses
+`next/font/google`. Do not commit or serve private, proprietary, or unlicensed
+font files.
+
+See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -104,3 +115,4 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Clear `npm run check:production`.
