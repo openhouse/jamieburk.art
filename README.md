@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight:staging
+npm run preflight:production
 ```
 
 ## Environment
@@ -42,6 +45,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,8 +60,14 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in: production becomes indexable only when the app is
+running as production and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Deployment
 
@@ -80,8 +92,10 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose/cards and Oswald for labels, metadata, eyebrows, and
+navigation. League Spartan is reserved for rare generated Open Graph or display
+material only. Do not commit or serve private, proprietary, or unlicensed font
+files.
 
 ## Content Rules
 
@@ -95,12 +109,12 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Approved resume PDF is missing or contains placeholder text.
+- Public email is missing from the contact source of truth.
+- Production indexing is enabled without Jamie approval.
+- Public-safety scan fails.
+- Screenshots, artifacts, exact proof metrics, collaborator names, photos, or
+  quotes are unapproved.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
