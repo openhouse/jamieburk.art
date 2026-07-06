@@ -140,7 +140,7 @@ const workItemsInput = [
     ],
     links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
     careNote:
-      "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
+      "No private analytics dashboards, revenue details, credentials, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
       "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],

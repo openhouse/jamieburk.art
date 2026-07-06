@@ -134,9 +134,11 @@ docker run --rm -p 3000:3000 \
 Verify:
 
 ```bash
+npm run prelaunch
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/opengraph-image
 ```
 
 Expected staging behavior:
@@ -144,4 +146,5 @@ Expected staging behavior:
 - `/api/health` returns the current environment, site URL, and robots state.
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
+- `/opengraph-image` returns an image response using the configured site URL.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
