@@ -109,6 +109,17 @@ git push dokku-production HEAD:main
 
 ## Local Docker Verification
 
+Run the production-readiness safety check before staging deploys and again
+before production promotion:
+
+```bash
+npm run prelaunch
+```
+
+The check scans production-facing app source and public files for obvious launch
+blockers, including unresolved Jamie-approval markers, placeholder résumé text,
+private/draft flags, raw transcript references, and secret-like terms.
+
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
