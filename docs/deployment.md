@@ -63,6 +63,9 @@ git push dokku-staging HEAD:main
 Use this only after staging content, accessibility, metadata, and public-safety
 review.
 
+Production indexing is opt-in: `NEXT_PUBLIC_ROBOTS_POLICY=index` must be present
+at build and runtime before the app emits indexable robots metadata.
+
 ```bash
 dokku apps:create jamieburk-art
 dokku builder:set jamieburk-art selected dockerfile
