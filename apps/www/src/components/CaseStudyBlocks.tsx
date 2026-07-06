@@ -18,18 +18,18 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+      <dl className="mt-5 grid gap-4">
         {rows.map(([label, value]) => (
-          <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+          <div className="min-w-0" key={label}>
+            <dt className="font-display text-xs font-semibold uppercase text-jb-paper/70">
               {label}
             </dt>
-            <dd className="mt-1 leading-6">{value}</dd>
+            <dd className="mt-1 break-words leading-6">{value}</dd>
           </div>
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="font-display text-xs font-semibold uppercase text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -69,7 +69,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="font-display text-xs font-semibold uppercase text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>

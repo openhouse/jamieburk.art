@@ -31,9 +31,9 @@ dokku config:set jamieburk-art-staging \
   HOSTNAME=0.0.0.0
 ```
 
-The app reads URL and robots settings during build for metadata, sitemap, and
-robots output. If Dokku does not expose config values during Docker build, add
-matching build args:
+The app reads URL and robots settings during build for page metadata. Robots
+and sitemap routes also read runtime environment values. If Dokku does not
+expose config values during Docker build, add matching build args:
 
 ```bash
 dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
@@ -109,6 +109,13 @@ git push dokku-production HEAD:main
 
 ## Local Docker Verification
 
+Before any Docker dry run, verify the staging-safe checks:
+
+```bash
+npm run check
+npm run check:content
+```
+
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
@@ -145,3 +152,50 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Production Dry Run
+
+Do not deploy production until Jamie confirms the release checklist. The
+production gate should be run before building a production image:
+
+```bash
+npm run check:production
+```
+
+That command is expected to fail while approval TODOs, placeholder resume text,
+or protected-material markers remain in public content.
+
+When the gate passes, build a production test image:
+
+```bash
+docker build \
+  --build-arg APP_ENV=production \
+  --build-arg SITE_ENV=production \
+  --build-arg NEXT_PUBLIC_DEPLOY_ENV=production \
+  --build-arg SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_ROBOTS_POLICY=index \
+  -t jamieburk-art:production-test .
+```
+
+```bash
+docker run --rm -p 3000:3000 \
+  -e APP_ENV=production \
+  -e SITE_ENV=production \
+  -e NEXT_PUBLIC_DEPLOY_ENV=production \
+  -e SITE_URL=https://jamieburk.art \
+  -e NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+  -e NEXT_PUBLIC_ROBOTS_POLICY=index \
+  jamieburk-art:production-test
+```
+
+Open the container through `http://localhost:3000`, but keep canonical metadata
+configured for `https://jamieburk.art`. Expected production behavior:
+
+- canonical URLs use `https://jamieburk.art`;
+- sitemap URLs use `https://jamieburk.art`;
+- robots allows indexing;
+- public HTML does not receive `X-Robots-Tag: noindex, nofollow`;
+- no staging or localhost URLs appear in generated metadata;
+- no unresolved approval TODOs, placeholder resume text, or private font files
+  are present.
