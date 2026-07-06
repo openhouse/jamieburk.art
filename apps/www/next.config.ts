@@ -51,6 +51,16 @@ const nextConfig: NextConfig = {
         headers: globalHeaders
       }
     ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      }
+    ];
   }
 };
 

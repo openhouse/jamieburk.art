@@ -107,6 +107,22 @@ git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
 git push dokku-production HEAD:main
 ```
 
+## Production Domain Behavior
+
+Canonical: `https://jamieburk.art`.
+
+`www.jamieburk.art` is configured in Next.js to permanently redirect to the same
+path on `https://jamieburk.art`. Keep the Dokku domain attached so the request
+reaches the app, then verify after DNS and TLS are live:
+
+```bash
+curl -I https://www.jamieburk.art/
+curl -I https://www.jamieburk.art/work
+```
+
+Expected result: `308` or `301` redirect to the matching `https://jamieburk.art`
+URL.
+
 ## Local Docker Verification
 
 ```bash
