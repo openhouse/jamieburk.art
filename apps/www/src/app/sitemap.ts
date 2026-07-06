@@ -14,13 +14,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/lab/source-backed-team-memory"
   ];
 
+  const canonicalWorkItems = workItems.filter(
+    (item) =>
+      item.visibility !== "private" &&
+      item.status !== "Draft" &&
+      item.approval === "approved"
+  );
+
   return [
     ...staticRoutes.map((route) => ({
       url: new URL(route, SITE_URL).toString(),
       lastModified: new Date()
     })),
-    ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, SITE_URL).toString(),
+    ...canonicalWorkItems.map((item) => ({
+      url: new URL(item.href ?? `/work/${item.slug}`, SITE_URL).toString(),
       lastModified: new Date()
     }))
   ];

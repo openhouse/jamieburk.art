@@ -13,6 +13,12 @@ export type WorkStatus =
   | "Public-safe summary only"
   | "Draft";
 
+export type ApprovalStatus =
+  | "approved"
+  | "needs-review"
+  | "staging-only"
+  | "do-not-publish";
+
 export type ArtifactType =
   | "website"
   | "workflow"
@@ -53,6 +59,10 @@ export type WorkMeta = {
   role: string;
   years: string;
   status: WorkStatus;
+  approval: ApprovalStatus;
+  reviewOwner: string;
+  lastReviewed: string;
+  href?: string;
   featured: boolean;
   priority: number;
   visibility: Visibility;

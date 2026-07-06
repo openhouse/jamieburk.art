@@ -145,3 +145,75 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Redirect Verification
+
+These route variants should permanently redirect to canonical routes:
+
+```bash
+curl -I https://staging.jamieburk.art/work/fairrentnyc-commercial-rent-stabilization
+curl -I https://staging.jamieburk.art/work/fairrentnyc
+curl -I https://staging.jamieburk.art/work/nyc-artist-coalition-fair-rent
+curl -I https://staging.jamieburk.art/work/196-artists-residency
+curl -I https://staging.jamieburk.art/work/source-backed-team-memory
+```
+
+Expected destinations:
+
+```txt
+/work/fair-rent-nyc
+/work/fair-rent-nyc
+/work/fair-rent-nyc
+/work/196-sunday-dinner
+/lab/source-backed-team-memory
+```
+
+## Production Verification
+
+After production deploy and before announcing the site, verify:
+
+```bash
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -I https://jamieburk.art/work/fairrentnyc-commercial-rent-stabilization
+curl -I https://jamieburk.art/work/196-artists-residency
+curl -I https://jamieburk.art/work/source-backed-team-memory
+```
+
+Expected production behavior after explicit approval:
+
+- `/api/health` reports `appEnv: "production"`, `siteUrl: "https://jamieburk.art"`, and `robotsIndexable: true`.
+- `/robots.txt` allows `/` and advertises `https://jamieburk.art/sitemap.xml`.
+- `/sitemap.xml` contains only canonical production URLs.
+- Canonical and OpenGraph URLs never point to staging.
+
+## www Handling
+
+Preferred production behavior:
+
+```txt
+www.jamieburk.art -> jamieburk.art
+```
+
+Use Dokku/nginx domain configuration for the redirect when possible. If proxy
+configuration cannot enforce it, add and test an app-level host redirect before
+production launch. Production metadata must canonicalize to the apex domain,
+never `www`.
+
+## Rollback
+
+Record the reviewed release SHA before promotion. If production needs to roll
+back:
+
+```bash
+dokku releases jamieburk-art
+dokku releases:rollback jamieburk-art <version>
+dokku logs jamieburk-art -t
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+```
+
+Rollback is not complete until health, robots, sitemap, and key canonical routes
+match the expected public-safety posture.
