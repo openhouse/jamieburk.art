@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who turns
+under-structured work into usable systems for complex public-facing teams.
 
 ## Current Canonical App
 
@@ -36,6 +36,10 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+Never put private source archives in this repo or Docker context. AI coding
+agents may not invent claims, links, citations, collaborator approvals, or proof
+metrics.
 
 ## Scope Rules
 

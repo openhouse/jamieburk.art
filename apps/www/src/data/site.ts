@@ -6,9 +6,24 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
-  emailLabel: "Public email pending confirmation",
-  emailHref: "/contact",
+    "Brooklyn-based technical project manager turning under-structured work into usable systems for complex public-facing teams.",
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
-  location: "Brooklyn, NY"
+  location: "Brooklyn, NY",
+  contactLinks: [
+    {
+      label: "Public email",
+      value: "jamie.burkart@gmail.com",
+      href: "mailto:jamie.burkart@gmail.com"
+    },
+    {
+      label: "LinkedIn",
+      value: "linkedin.com/in/jamie-burkart",
+      href: "https://linkedin.com/in/jamie-burkart"
+    },
+    {
+      label: "GitHub",
+      value: "github.com/openhouse",
+      href: "https://github.com/openhouse"
+    }
+  ]
 } as const;
