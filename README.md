@@ -91,7 +91,8 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, leave a launch-blocker note that requires Jamie approval
+  rather than publishing private or unconfirmed material.
 
 ## Launch Blockers
 

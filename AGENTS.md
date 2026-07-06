@@ -35,7 +35,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, leave a launch-blocker note that requires Jamie approval instead
+of publishing private or unconfirmed material.
 
 ## Scope Rules
 
