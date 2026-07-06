@@ -137,6 +137,7 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+npm run prelaunch
 ```
 
 Expected staging behavior:
@@ -145,3 +146,47 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Staging Verification
+
+Run these after staging deploys:
+
+```bash
+curl -i https://staging.jamieburk.art/robots.txt
+curl -i https://staging.jamieburk.art/sitemap.xml
+curl -i https://staging.jamieburk.art/api/health
+curl -I https://staging.jamieburk.art/opengraph-image
+npm run prelaunch
+```
+
+Expected staging behavior:
+
+- `/robots.txt` disallows all indexing.
+- `/api/health` reports `appEnv` as `staging`.
+- `/api/health` reports `siteUrl` as `https://staging.jamieburk.art`.
+- `/api/health` reports `robotsIndexable` as `false`.
+- `/sitemap.xml` uses staging URLs.
+- OpenGraph responses resolve from staging URLs and include noindex headers.
+
+## Production Verification
+
+Run these only after Jamie has approved the patched staging commit for
+production:
+
+```bash
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -i https://jamieburk.art/api/health
+curl -I https://jamieburk.art/opengraph-image
+npm run prelaunch
+```
+
+Expected production behavior:
+
+- `/robots.txt` allows indexing.
+- `/robots.txt` includes `Sitemap: https://jamieburk.art/sitemap.xml`.
+- `/api/health` reports `appEnv` as `production`.
+- `/api/health` reports `siteUrl` as `https://jamieburk.art`.
+- `/api/health` reports `robotsIndexable` as `true`.
+- `/sitemap.xml` uses production URLs.
+- OpenGraph and canonical URLs point to `https://jamieburk.art`.
