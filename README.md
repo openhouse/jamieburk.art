@@ -9,7 +9,10 @@ complex public-facing teams.
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
-workspaces, Docker, and Dokku. The canonical app is `apps/www`.
+workspaces, Dockerfile deployment, and Dokku. The canonical app is `apps/www`.
+
+Earlier specs considered pnpm and `apps/web`. Scaffold A uses npm workspaces
+and `apps/www`; those are accepted for V1 to avoid churn.
 
 ## Local Development
 
@@ -74,14 +77,19 @@ Production later:
 jamieburk-art -> jamieburk.art
 ```
 
+Production should only be promoted after Jamie approves content and metadata.
+The canonical production URL is `https://jamieburk.art`; `www.jamieburk.art`
+should redirect to `https://jamieburk.art`.
+
 The app serves on port `3000`; Dokku/nginx should proxy the public domain to the
 container. See `docs/deployment.md` for the staging and production command
 drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose text and Archivo Narrow for selected display, proof,
+and label text. Do not commit or serve private, proprietary, or unlicensed font
+files.
 
 ## Content Rules
 
@@ -95,11 +103,10 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Final Jamie approval of the public resume PDF before production.
+- Confirm LinkedIn URL if it should be added; omit it until approved.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm exact proof metrics or keep softened contribution language.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
