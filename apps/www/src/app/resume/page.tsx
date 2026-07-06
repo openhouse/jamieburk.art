@@ -12,10 +12,10 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Contributed to 2x revenue growth while helping an 80+ year-old legacy industrial business adapt to e-commerce",
+  "Helped structure and steward shared, public-safe campaign memory and follow-up infrastructure",
+  "Co-built a community calendar platform used across roughly 35 city scenes/ecosystems",
+  "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems"
 ];
 
 export default function ResumePage() {
@@ -42,8 +42,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Current public resume PDF with selectable text and Jamie-approved
+            contact details. The PDF is kept out of search indexing for V1.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

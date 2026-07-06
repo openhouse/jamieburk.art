@@ -1,9 +1,9 @@
 const proofItems = [
-  "14+ years building operating structure",
-  "2x revenue growth contribution for legacy e-commerce business",
-  "30+ pages of civic campaign-memory infrastructure",
-  "35 city ecosystems reached through WOWList.org",
-  "300+ hosted gatherings / 20+ resident artists supported"
+  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
+  "Contributed to 2x revenue growth while helping a legacy e-commerce business modernize",
+  "Structured shared civic campaign memory, source maps, decision records, and follow-up systems",
+  "Co-built community web systems used across roughly 35 city scenes/ecosystems",
+  "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems"
 ];
 
 export function ProofStrip() {

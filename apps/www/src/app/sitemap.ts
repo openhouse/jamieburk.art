@@ -3,6 +3,10 @@ import { workItems } from "@/data/work";
 import { SITE_URL } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const sitemapWorkItems = workItems.filter((item) => {
+    return item.visibility !== "private" && item.status !== "Draft";
+  });
+
   const staticRoutes = [
     "/",
     "/work",
@@ -19,8 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: new URL(route, SITE_URL).toString(),
       lastModified: new Date()
     })),
-    ...workItems.map((item) => ({
-      url: new URL(`/work/${item.slug}`, SITE_URL).toString(),
+    ...sitemapWorkItems.map((item) => ({
+      url: new URL(item.href ?? `/work/${item.slug}`, SITE_URL).toString(),
       lastModified: new Date()
     }))
   ];
