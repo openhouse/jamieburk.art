@@ -1,14 +1,15 @@
-import { SITE_URL } from "@/lib/site-url";
+import { CONTACT, SITE_URL } from "@/lib/site-url";
 
 export const site = {
   name: "Jamie Burkart",
   url: SITE_URL,
+  role: "Technical Project Manager - Product Operations & Implementation",
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
-  emailLabel: "Public email pending confirmation",
-  emailHref: "/contact",
+    "Brooklyn-based technical project manager who turns under-structured work into usable systems across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
+  contact: CONTACT,
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+  resumeUpdated: "June 11, 2026",
   location: "Brooklyn, NY"
 } as const;

@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to a period of 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -163,7 +163,7 @@ const workItemsInput = [
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, access secrets, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
