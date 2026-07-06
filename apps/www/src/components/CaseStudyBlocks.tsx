@@ -33,7 +33,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
           Tags
         </p>
         <div className="mt-3">
-          <TagList compact tags={item.tags} />
+          <TagList compact tags={item.tags} tone="dark" />
         </div>
       </div>
     </section>
