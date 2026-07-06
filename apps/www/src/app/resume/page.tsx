@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
+  "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
   "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
   "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
@@ -34,17 +34,21 @@ export default function ResumePage() {
             handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href={site.resumePath} download>
-              Download resume PDF
-            </JBButton>
+            {site.resumePdfAvailable ? (
+              <JBButton href={site.resumePath} download>
+                Download resume PDF
+              </JBButton>
+            ) : null}
             <JBButton href="/contact" variant="secondary">
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
-          </p>
+          {!site.resumePdfAvailable ? (
+            <p className="mt-4 text-sm text-jb-ink/62">
+              Public PDF download is held until an approved resume file is
+              available. For a current copy, email Jamie.
+            </p>
+          ) : null}
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>

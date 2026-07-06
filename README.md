@@ -80,7 +80,7 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
+Use Karla for body/UI text and Archivo Narrow for display headings. Do not commit
 or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
@@ -95,7 +95,7 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Add an approved resume PDF before enabling public PDF download.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.

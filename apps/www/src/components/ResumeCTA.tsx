@@ -2,6 +2,9 @@ import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 
 export function ResumeCTA() {
+  const resumeHref = site.resumePdfAvailable ? site.resumePath : "/resume";
+  const resumeLabel = site.resumePdfAvailable ? "Download resume PDF" : "View resume";
+
   return (
     <section className="rounded-lg border border-jb-blue/25 bg-jb-blue p-6 text-jb-paper">
       <h2 className="text-2xl font-semibold">Resume</h2>
@@ -10,8 +13,8 @@ export function ResumeCTA() {
         documentation systems, civic technology, and public-facing tools.
       </p>
       <div className="mt-5">
-        <JBButton href={site.resumePath} variant="secondary" download>
-          Download resume PDF
+        <JBButton href={resumeHref} variant="secondary" download={site.resumePdfAvailable}>
+          {resumeLabel}
         </JBButton>
       </div>
     </section>
