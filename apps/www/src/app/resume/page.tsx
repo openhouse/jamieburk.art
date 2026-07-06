@@ -11,11 +11,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
+  "Long-running operating-structure work across civic, cultural, small-business, and technical environments",
   "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
+  "Built and stewarded shared civic campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Created repeatable hosting and continuity systems for gatherings and resident-artist support"
 ];
 
 export default function ResumePage() {
@@ -42,8 +42,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Public resume PDF for Technical Project Manager, Product Operations
+            & Implementation roles.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

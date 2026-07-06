@@ -95,9 +95,9 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Re-confirm resume PDF currency before production if Jamie supplies a newer file.
+- Public email defaults to `jamie.burkart@gmail.com` unless Jamie supplies a different approved address.
+- Add LinkedIn and GitHub links only after Jamie approves the exact public-ready URLs.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
