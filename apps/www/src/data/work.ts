@@ -163,7 +163,7 @@ const workItemsInput = [
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, access secrets, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
@@ -220,7 +220,7 @@ const workItemsInput = [
       "Decision Records"
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. This page does not publish nonpublic notes, protected review materials, named stakeholder context, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
       "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
@@ -243,7 +243,7 @@ const workItemsInput = [
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Nonpublic coalition notes, protected review materials, named stakeholder context, raw strategy context, nonpublic correspondence, and unapproved quotes are omitted."
     }
   },
   {

@@ -137,6 +137,7 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+npm run check:content
 ```
 
 Expected staging behavior:
@@ -145,3 +146,36 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The page chrome includes `Staging review - not indexed` outside production.
+
+## Production Dry Run
+
+Production is blocked until Jamie approves launch content and the production
+gate clears.
+
+```bash
+npm run check:production
+```
+
+Then build locally with production values:
+
+```bash
+docker build \
+  --build-arg APP_ENV=production \
+  --build-arg SITE_ENV=production \
+  --build-arg NEXT_PUBLIC_DEPLOY_ENV=production \
+  --build-arg SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+  --build-arg NEXT_PUBLIC_ROBOTS_POLICY=index \
+  -t jamieburk-art:production-test .
+```
+
+Expected production behavior:
+
+- Canonical URLs use `https://jamieburk.art`.
+- Sitemap URLs use `https://jamieburk.art`.
+- `/robots.txt` allows indexing.
+- Public HTML pages do not receive `X-Robots-Tag: noindex, nofollow`.
+- No staging or localhost URL is used for production metadata.
+- No unresolved approval TODOs, placeholder resume notes, draft/private content
+  states, private-material markers, or private font files are present.

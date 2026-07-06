@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
+import { IS_PRODUCTION } from "@/lib/site-url";
 
 const navItems = [
   { href: "/work", label: "Work" },
@@ -11,6 +12,13 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-jb-ink/10 bg-jb-paper/92 backdrop-blur">
+      {!IS_PRODUCTION ? (
+        <div className="border-b border-jb-paper/15 bg-jb-blue text-jb-paper">
+          <div className="jb-frame py-1.5 text-xs font-semibold">
+            Staging review - not indexed
+          </div>
+        </div>
+      ) : null}
       <a className="skip-link btn btn-primary rounded-lg" href="#main">
         Skip to content
       </a>
