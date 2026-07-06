@@ -29,7 +29,14 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight
 ```
+
+`npm run public-safety` scans the shipped app source and public assets for
+launch blockers such as visible approval TODOs, placeholder resume text, private
+font references, raw transcript markers, credential-looking strings, and local
+private-file paths. Run it before production promotion.
 
 ## Environment
 
@@ -95,9 +102,8 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the approved resume PDF is still current.
+- Confirm public email, LinkedIn, and GitHub links remain approved.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.

@@ -9,28 +9,29 @@ export function SiteFooter() {
           <p className="font-semibold text-jb-ink">{site.name}</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-jb-ink/70">
             Technical Project Manager - Product Operations & Implementation.
-            Public-safe portfolio, civic notebook, and future living archive.
+            Public-safe, referral-ready proof site for selected professional
+            work.
           </p>
         </div>
         <nav aria-label="Footer navigation">
           <ul className="flex flex-wrap gap-3 text-sm font-medium">
             <li>
-              <Link className="hover:text-jb-blue" href="/work">
+              <Link className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue" href="/work">
                 Work
               </Link>
             </li>
             <li>
-              <Link className="hover:text-jb-blue" href="/resume">
+              <Link className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue" href="/resume">
                 Resume
               </Link>
             </li>
             <li>
-              <Link className="hover:text-jb-blue" href="/contact">
+              <Link className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue" href="/contact">
                 Contact
               </Link>
             </li>
             <li>
-              <Link className="hover:text-jb-blue" href="/colophon">
+              <Link className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue" href="/colophon">
                 Colophon
               </Link>
             </li>
