@@ -1,4 +1,5 @@
 const proofItems = [
+  // Launch blocker: confirm every metric with Jamie before production indexing.
   "14+ years building operating structure",
   "2x revenue growth contribution for legacy e-commerce business",
   "30+ pages of civic campaign-memory infrastructure",
