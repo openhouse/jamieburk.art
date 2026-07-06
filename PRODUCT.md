@@ -9,8 +9,8 @@ brand
 Hiring managers, product and operations leaders, civic technology teams,
 implementation teams, collaborators, and trusted reviewers who need to quickly
 understand Jamie Burkart's professional shape. They arrive with limited time
-and need credible, public-safe evidence that Jamie can create operating
-structure for complex public-facing work.
+and need credible, public-safe evidence that Jamie can build operating
+structure for ambiguous public-facing technical work.
 
 ## Product Purpose
 
