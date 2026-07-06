@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
 
 Enable TLS after DNS resolves:
@@ -76,6 +82,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,7 +100,14 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
+
+Production canonical URL is the apex domain. `www.jamieburk.art` may be attached
+for user convenience, but it must redirect to `https://jamieburk.art` before
+production approval. Verify with `curl -I https://www.jamieburk.art`.
 
 Enable TLS:
 
@@ -117,6 +133,9 @@ docker build \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  --build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  --build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  --build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   -t jamieburk-art:staging-test .
 ```
 
@@ -128,6 +147,9 @@ docker run --rm -p 3000:3000 \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  -e NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  -e NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   jamieburk-art:staging-test
 ```
 
@@ -137,6 +159,8 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I http://localhost:3000/work/source-backed-team-memory
 ```
 
 Expected staging behavior:
@@ -145,3 +169,50 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The resume PDF includes `X-Robots-Tag: noindex, nofollow`.
+- Legacy routes return temporary redirects to the canonical V1 routes.
+
+## Required Local Preflights
+
+```bash
+npm run preflight:staging
+npm run preflight:production
+```
+
+Production preflight must pass before pushing to the production Dokku remote.
+Production indexing remains opt-in and requires `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
+## Node Fallback
+
+Node 26 is the V1 target and the Dockerfile source of truth. If Dokku cannot
+build the Node 26 image, do not silently deploy a different runtime. Create a
+small rollback/fallback branch that changes the Docker image and `engines` field
+to Node 24, run the full preflight and Docker smoke tests, and merge only after
+the fallback build is proven.
+
+## Rollback
+
+Keep the last known-good production commit SHA with the deployment note. If a
+production smoke test fails after deploy, redeploy that known-good commit to the
+production Dokku remote and rerun the smoke tests before reopening traffic:
+
+```bash
+git push dokku-production <known-good-sha>:main --force-with-lease
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -I https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+```
+
+## Production Smoke Tests
+
+After production deploy, verify:
+
+- `https://jamieburk.art/api/health`
+- `https://jamieburk.art/robots.txt`
+- `https://jamieburk.art/sitemap.xml`
+- `https://jamieburk.art/work/technical-operations`
+- `https://jamieburk.art/work/fair-rent-nyc`
+- `https://jamieburk.art/lab/source-backed-team-memory`
+- `https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`
+- `https://www.jamieburk.art` redirects to `https://jamieburk.art`

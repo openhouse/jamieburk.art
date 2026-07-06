@@ -21,7 +21,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="jb-meta-label text-xs text-jb-paper/70">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +29,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="jb-meta-label text-xs text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -69,7 +69,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="jb-meta-label text-xs text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
@@ -96,7 +96,7 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
-            <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
+            <h3 className="jb-meta-label text-lg text-jb-blue">{label}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
           </JBCard>
         ))}

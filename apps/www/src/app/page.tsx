@@ -13,16 +13,62 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const startHereLinks = [
+  {
+    href: "/work/technical-operations",
+    label: "Technical Operations & Implementation"
+  },
+  {
+    href: "/work/harry-j-epstein",
+    label: "Harry J. Epstein Company"
+  },
+  {
+    href: "/work/fair-rent-nyc",
+    label: "FairRentNYC / Commercial Rent Stabilization"
+  },
+  {
+    href: "/work/callnyc",
+    label: "CallNYC.org"
+  },
+  {
+    href: "/resume",
+    label: "Resume"
+  }
+] as const;
+
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="border-y border-jb-ink/10 bg-jb-paper">
+        <div className="jb-frame grid gap-5 py-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-start">
+          <div className="jb-reading">
+            <h2 className="text-2xl font-bold text-jb-ink">Start here</h2>
+            <p className="mt-2 leading-7 text-jb-ink/74">
+              New to my work? These pages give the quickest route through role
+              fit, proof, and contact.
+            </p>
+          </div>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {startHereLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  className="block rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 font-semibold text-jb-blue hover:border-jb-blue/35 hover:text-jb-green"
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="jb-eyebrow text-sm text-jb-blue">
               Selected systems
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
@@ -47,7 +93,7 @@ export default function HomePage() {
       <section className="bg-jb-warm/80 py-16">
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="jb-eyebrow text-sm text-jb-blue">
               Operating motif
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
@@ -75,7 +121,7 @@ export default function HomePage() {
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
+          <p className="jb-eyebrow text-sm text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>
