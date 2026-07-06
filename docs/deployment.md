@@ -145,3 +145,39 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Staging Verification
+
+After deploying staging, verify the public URLs:
+
+```bash
+curl -I https://staging.jamieburk.art/
+curl -s https://staging.jamieburk.art/robots.txt
+curl -s https://staging.jamieburk.art/sitemap.xml | head
+curl -s https://staging.jamieburk.art/api/health
+```
+
+Expected staging behavior:
+
+- `robots.txt` disallows `/`.
+- Headers include `X-Robots-Tag: noindex, nofollow` where configured.
+- Sitemap URLs use `https://staging.jamieburk.art`.
+- The health endpoint reports staging / non-indexable state.
+
+## Production Gate
+
+Before production promotion, run:
+
+```bash
+npm run check:production
+```
+
+Expected production behavior after blockers are resolved:
+
+- No placeholder resume PDF.
+- No unresolved contact placeholders.
+- No `TODO: Jamie approval required` markers in shipped app/content/public files.
+- No private/proprietary font files are committed or served.
+- No private or draft work items are published.
+- Production metadata points to `https://jamieburk.art`.
+- Production robots policy is indexable.
