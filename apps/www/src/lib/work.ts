@@ -10,7 +10,7 @@ import { workItems, type WorkSlug } from "@/data/work";
 export const workContentBySlug = {
   "196-sunday-dinner": SundayDinner,
   callnyc: CallNYC,
-  "fair-rent-nyc": FairRentNYC,
+  "fairrentnyc-commercial-rent-stabilization": FairRentNYC,
   "harry-j-epstein": HarryJEpstein,
   "kc-town-hall": KCTownHall,
   wowlist: WOWList
