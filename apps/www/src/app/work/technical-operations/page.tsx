@@ -65,6 +65,25 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding materials,
           documentation systems, launch support, and durable handoffs.
         </p>
+        <section className="mt-8 border-y border-jb-ink/12 py-6">
+          <h2 className="text-3xl font-bold text-jb-ink">
+            Why this maps to Technical Operations
+          </h2>
+          <div className="mt-4 space-y-4 leading-8 text-jb-ink/76">
+            <p>
+              Technical Operations work is the operating backbone of a team: how
+              work is planned, tracked, documented, reported, onboarded, handed
+              off, and improved over time.
+            </p>
+            <p>
+              Across civic, cultural, small-business, and public-facing technical
+              environments, I have built the structures teams need to keep work
+              moving: planning rhythms, decision records, action trackers,
+              onboarding paths, runbooks, stakeholder updates, launch support,
+              and durable handoffs.
+            </p>
+          </div>
+        </section>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (
