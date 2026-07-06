@@ -100,6 +100,23 @@ dokku letsencrypt:set jamieburk-art email <approved-email>
 dokku letsencrypt:enable jamieburk-art
 ```
 
+Production should not be released until Jamie approves the reviewed commit.
+Before release, confirm these production values are present:
+
+```txt
+APP_ENV=production
+SITE_ENV=production
+NEXT_PUBLIC_DEPLOY_ENV=production
+SITE_URL=https://jamieburk.art
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art
+NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_TELEMETRY_DISABLED=1
+```
+
+Production should allow indexing, use `https://jamieburk.art` for canonical
+URLs and sitemap entries, serve TLS, and intentionally redirect or handle
+`www.jamieburk.art`.
+
 Local remote:
 
 ```bash
