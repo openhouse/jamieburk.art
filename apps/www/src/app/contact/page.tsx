@@ -22,8 +22,13 @@ export default function ContactPage() {
           <dl className="space-y-5">
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+              <dd className="mt-1">
+                <a
+                  className="break-words font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.emailHref}
+                >
+                  {site.email}
+                </a>
               </dd>
             </div>
             <div>
@@ -31,15 +36,14 @@ export default function ContactPage() {
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
             <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+              <dd className="mt-1">
+                <a
+                  className="break-words font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubUrl}
+                >
+                  github.com/openhouse
+                </a>
               </dd>
             </div>
             <div>
@@ -51,6 +55,12 @@ export default function ContactPage() {
               </dd>
             </div>
           </dl>
+          <p className="mt-6 border-t border-jb-ink/12 pt-5 leading-7 text-jb-ink/76">
+            Best-fit conversations: technical project management, product
+            operations, implementation, business analysis, civic technology,
+            documentation systems, knowledge systems, public-facing tools, and
+            source-backed team memory.
+          </p>
         </div>
       </div>
     </div>
