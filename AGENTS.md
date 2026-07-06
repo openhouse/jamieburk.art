@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run public-safety`
+- `npm run preflight`
+- `npm run check:production`
 
 ## Public-Safety Rules
 
@@ -36,6 +39,12 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+Private source materials must stay outside the repo and Docker context. The
+following local folders are reserved for non-public material and ignored:
+`private/`, `archive-private/`, `raw/`, `transcripts-private/`,
+`client-private/`, and `legal-review/`. Public pages should not show approval
+TODOs; keep unresolved approval work in docs, issues, or launch checklists.
 
 ## Scope Rules
 

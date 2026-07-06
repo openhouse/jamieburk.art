@@ -13,7 +13,7 @@ const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Karla for body/UI text and League Spartan for display headings",
+  "Karla for body/UI text and Archivo Narrow for display headings, proof labels, and compact metadata",
   "No private or proprietary font files are committed or served",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Staging-first Docker / Dokku deployment with staging noindex by default",
@@ -32,7 +32,8 @@ export default function ColophonPage() {
           oil-pastel palette, and a quiet proportional grid derived from his
           print-layout sketchpad. Staging is reviewable but not indexable, and
           production should only become indexable after content and metadata
-          review.
+          review. Known / Open / Protected states mark what is public-safe,
+          what needs approval, and what is intentionally omitted.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

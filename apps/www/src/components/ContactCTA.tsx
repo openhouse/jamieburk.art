@@ -11,7 +11,7 @@ export function ContactCTA() {
         <JBButton href="/resume" variant="secondary">
           Download resume
         </JBButton>
-        <JBButton href="/contact">Email Jamie</JBButton>
+        <JBButton href="/contact">Contact Jamie</JBButton>
       </div>
     </section>
   );

@@ -16,12 +16,12 @@ colors:
   classic-rose: "#e2aeb4"
 typography:
   display:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Archivo Narrow, Karla, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 700
     lineHeight: 1.02
     letterSpacing: "0"
   headline:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Archivo Narrow, Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.875rem"
     fontWeight: 700
     lineHeight: 1.2
@@ -39,7 +39,7 @@ typography:
     lineHeight: 1.65
     letterSpacing: "0"
   label:
-    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Archivo Narrow, Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
     fontWeight: 700
     lineHeight: 1.2
@@ -146,13 +146,13 @@ for focus, selection, and occasional proof, not as a general accent wash.
 
 ## 3. Typography
 
-**Display Font:** League Spartan with Karla and system sans fallbacks.
+**Display Font:** Archivo Narrow with Karla and system sans fallbacks.
 **Body Font:** Karla with system sans fallbacks.
-**Label/Mono Font:** Karla; there is no mono system in the current site.
+**Label/Metadata Font:** Archivo Narrow with Karla and system sans fallbacks.
 
-**Character:** The pairing is practical and public-facing. League Spartan gives
-headings a sturdy placard quality; Karla keeps long summaries readable,
-approachable, and unshowy.
+**Character:** The pairing is practical and public-facing. Archivo Narrow gives
+display, proof labels, and compact metadata a civic-notice register; Karla keeps
+long summaries readable, approachable, and unshowy.
 
 ### Hierarchy
 
@@ -165,7 +165,8 @@ approachable, and unshowy.
 - **Body** (400, 17px, generous line-height): Project summaries, notes, care
   language, and MDX case-study prose. Keep reading measures near 65-75
   characters.
-- **Label** (700, 0.875rem): Status, navigation, and compact metadata.
+- **Label** (700, 0.875rem): Status, navigation, proof labels, and compact
+  metadata.
 
 ### Named Rules
 
@@ -255,6 +256,8 @@ notes, and credits. Preserve that information architecture wherever possible.
   legal-review materials, private correspondence, internal analytics,
   client-private material, unapproved photos, private fonts, or named
   stakeholder details without approval.
+- **Don't** use Oswald, private handwriting fonts, or proprietary font files in
+  V1.
 - **Don't** use gradient text, glassmorphism, giant hero metrics, decorative
   side-stripe borders, or endlessly repeated icon-card grids.
 - **Don't** over-round cards or panels beyond the existing 0.5rem card radius.

@@ -9,6 +9,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default function Image() {
+  const displayFont = "Archivo Narrow, Arial Narrow, sans-serif";
+
   return new ImageResponse(
     (
       <div
@@ -18,7 +20,7 @@ export default function Image() {
           color: "#343435",
           display: "flex",
           flexDirection: "column",
-          fontFamily: "sans-serif",
+          fontFamily: "Karla, sans-serif",
           height: "100%",
           justifyContent: "center",
           padding: "76px",
@@ -33,10 +35,10 @@ export default function Image() {
             width: "100%"
           }}
         />
-        <div style={{ color: "#0b5f81", fontSize: 34, fontWeight: 700 }}>
+        <div style={{ color: "#0b5f81", fontFamily: displayFont, fontSize: 34, fontWeight: 700 }}>
           Technical Project Manager - Product Operations & Implementation
         </div>
-        <div style={{ fontSize: 88, fontWeight: 800, marginTop: 24 }}>
+        <div style={{ fontFamily: displayFont, fontSize: 88, fontWeight: 800, marginTop: 24 }}>
           Jamie Burkart
         </div>
         <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>

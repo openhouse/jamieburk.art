@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to a period of 2x online/e-commerce revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -172,7 +172,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Built and stewarded shared civic campaign documentation and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -232,7 +232,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "30+ pages of shared civic campaign documentation",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
@@ -366,7 +366,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "Roughly 35 city-based arts and music communities reached"
     ],
     knownOpenProtected: {
       known:
@@ -410,7 +410,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
-    currentStatus: "Public-safe summary only.",
+    currentStatus: "Summary-only public-safe proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
