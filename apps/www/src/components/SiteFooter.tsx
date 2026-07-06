@@ -8,8 +8,9 @@ export function SiteFooter() {
         <div>
           <p className="font-semibold text-jb-ink">{site.name}</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-jb-ink/70">
-            Technical Project Manager - Product Operations & Implementation.
-            Public-safe portfolio, civic notebook, and future living archive.
+            Technical Project Manager — Product Operations & Implementation.
+            Public-safe selected proof site for operating, civic, and
+            knowledge-systems work.
           </p>
         </div>
         <nav aria-label="Footer navigation">
@@ -17,6 +18,11 @@ export function SiteFooter() {
             <li>
               <Link className="hover:text-jb-blue" href="/work">
                 Work
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:text-jb-blue" href="/work/technical-operations">
+                Technical Ops
               </Link>
             </li>
             <li>

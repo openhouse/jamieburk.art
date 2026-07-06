@@ -11,6 +11,9 @@ complex public-facing teams.
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
 workspaces, Docker, and Dokku. The canonical app is `apps/www`.
 
+Earlier specs considered pnpm and `apps/web`. Scaffold A uses npm workspaces and
+`apps/www`; those are accepted for V1 to avoid churn.
+
 ## Local Development
 
 ```bash
@@ -43,6 +46,9 @@ SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
+NODE_ENV=production
+PORT=3000
+HOSTNAME=0.0.0.0
 ```
 
 Production should only be enabled after staging review:
@@ -55,6 +61,9 @@ SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
+NODE_ENV=production
+PORT=3000
+HOSTNAME=0.0.0.0
 ```
 
 ## Deployment
@@ -78,10 +87,14 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to the
 container. See `docs/deployment.md` for the staging and production command
 drafts, Docker build args, and verification checklist.
 
+Canonical production domain: `https://jamieburk.art`. Requests to
+`www.jamieburk.art` should redirect to `https://jamieburk.art`.
+
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display, labels, proof
+surfaces, and civic-notice moments. Do not commit or serve private, proprietary,
+or unlicensed font files.
 
 ## Content Rules
 
@@ -95,12 +108,13 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Final Jamie approval of resume PDF content before production.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm production DNS, TLS, Dokku env, and `www` redirect behavior.
+
+See `docs/production-checklist.md` for the production-readiness checklist.
