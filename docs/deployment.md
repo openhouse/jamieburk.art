@@ -3,6 +3,9 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+Production promotion is blocked until `npm run check:production` passes and
+Jamie approves the exact commit SHA in writing.
+
 ## Dokku Apps
 
 ```txt
@@ -20,28 +23,30 @@ dokku proxy:ports-set jamieburk-art-staging http:80:3000
 
 dokku config:set jamieburk-art-staging \
   APP_ENV=staging \
-  SITE_ENV=staging \
-  NEXT_PUBLIC_DEPLOY_ENV=staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL= \
+  NEXT_PUBLIC_LINKEDIN_URL= \
+  NEXT_PUBLIC_GITHUB_URL= \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
   HOSTNAME=0.0.0.0
 ```
 
-The app reads URL and robots settings during build for metadata, sitemap, and
-robots output. If Dokku does not expose config values during Docker build, add
-matching build args:
+The app reads URL, robots, and public contact settings during build for
+metadata, sitemap, robots output, and contact rendering. Add matching build args
+for Dockerfile builds:
 
 ```bash
-dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV'
+dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL'
 ```
 
 Enable TLS after DNS resolves:
@@ -71,26 +76,28 @@ dokku proxy:ports-set jamieburk-art http:80:3000
 
 dokku config:set jamieburk-art \
   APP_ENV=production \
-  SITE_ENV=production \
-  NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
   HOSTNAME=0.0.0.0
 ```
 
-If staging required build args, add production build args too:
+Add production build args too:
 
 ```bash
-dokku docker-options:add jamieburk-art build '--build-arg APP_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg APP_ENV'
+dokku docker-options:add jamieburk-art build '--build-arg SITE_URL'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL'
 ```
 
 Enable TLS:
@@ -104,7 +111,7 @@ Local remote:
 
 ```bash
 git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
-git push dokku-production HEAD:main
+git push dokku-production <approved-sha>:main
 ```
 
 ## Local Docker Verification
@@ -112,31 +119,34 @@ git push dokku-production HEAD:main
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
-  --build-arg SITE_ENV=staging \
-  --build-arg NEXT_PUBLIC_DEPLOY_ENV=staging \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  --build-arg NEXT_PUBLIC_CONTACT_EMAIL= \
+  --build-arg NEXT_PUBLIC_LINKEDIN_URL= \
+  --build-arg NEXT_PUBLIC_GITHUB_URL= \
   -t jamieburk-art:staging-test .
 ```
 
 ```bash
 docker run --rm -p 3000:3000 \
   -e APP_ENV=staging \
-  -e SITE_ENV=staging \
-  -e NEXT_PUBLIC_DEPLOY_ENV=staging \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL= \
+  -e NEXT_PUBLIC_LINKEDIN_URL= \
+  -e NEXT_PUBLIC_GITHUB_URL= \
   jamieburk-art:staging-test
 ```
 
 Verify:
 
 ```bash
-curl -i http://localhost:3000/api/health
-curl -i http://localhost:3000/robots.txt
-curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/
+curl -I http://localhost:3000/robots.txt
+curl -s http://localhost:3000/sitemap.xml
+curl -s http://localhost:3000/api/health
 ```
 
 Expected staging behavior:
@@ -145,3 +155,26 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Production Smoke Test
+
+Do not run production promotion until Jamie explicitly approves the commit.
+After promotion, verify:
+
+```bash
+curl -I https://jamieburk.art/
+curl -I https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I https://jamieburk.art/robots.txt
+curl -I https://jamieburk.art/sitemap.xml
+curl -s https://jamieburk.art/api/health
+```
+
+Expected production behavior:
+
+- Homepage returns 200.
+- Resume PDF returns 200.
+- Robots allows approved public routes.
+- Sitemap and canonicals use `https://jamieburk.art`.
+- Public pages do not emit noindex headers.
+- Contact links work.
+- No visible placeholders or unapproved TODOs are present.
