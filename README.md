@@ -3,7 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
+The site should make this believable: Jamie turns under-structured work into
+usable systems. Supporting sentence: Jamie creates operating structure for
 complex public-facing teams.
 
 ## Stack
@@ -29,7 +30,13 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:public-safety
+npm run check:production
 ```
+
+`npm run check` is the normal local/staging gate. `npm run check:production` is
+the production gate and is expected to fail until approved launch inputs are in
+place.
 
 ## Environment
 
@@ -37,11 +44,12 @@ Staging is the first deployment target and is non-indexable by default:
 
 ```bash
 APP_ENV=staging
-SITE_ENV=staging
-NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -49,13 +57,17 @@ Production should only be enabled after staging review:
 
 ```bash
 APP_ENV=production
-SITE_ENV=production
-NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>
+NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+`SITE_ENV` and `NEXT_PUBLIC_DEPLOY_ENV` are compatibility aliases only. Do not
+add alternate indexing booleans.
 
 ## Deployment
 
@@ -80,8 +92,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows,
+proof labels, and compact metadata. Do not commit or serve private, proprietary,
+or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -91,16 +104,19 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, leave a launch-blocker note that requires Jamie approval rather
+  than publishing private or unconfirmed material.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the final resume PDF before production.
+- Confirm public email and provide it through `NEXT_PUBLIC_CONTACT_EMAIL`.
+- Confirm LinkedIn and GitHub links or omit them.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Clear `npm run check:production`.
+- Jamie must approve the exact commit in writing before production promotion.
