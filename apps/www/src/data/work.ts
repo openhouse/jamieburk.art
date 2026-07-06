@@ -280,8 +280,15 @@ const workItemsInput = [
       {
         title: "Archived press note",
         description:
-          "External coverage can be linked after Jamie confirms the correct Politico New York citation.",
+          "Politico New York covered the archived civic-data prototype in March 2016.",
         type: "press"
+      }
+    ],
+    links: [
+      { label: "Archived CallNYC site", url: "https://callnyc.org" },
+      {
+        label: "Politico New York citation",
+        url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
       }
     ],
     tags: [
@@ -301,12 +308,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and public Politico New York citation.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
+    currentStatus: "Archived prototype. Public-safe screenshots pending approval.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -314,13 +321,13 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Historical civic-tech demo with public Politico New York citation"
     ],
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Public-safe screenshots still need Jamie approval before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
