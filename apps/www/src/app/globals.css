@@ -60,6 +60,7 @@
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-league-spartan), var(--font-karla), ui-sans-serif, system-ui,
     sans-serif;
 }
@@ -138,4 +139,19 @@ h2 {
     linear-gradient(225deg, rgba(252, 225, 209, 0.55), transparent 45%),
     linear-gradient(0deg, rgba(247, 236, 134, 0.24), transparent 58%),
     #f7f4ee;
+}
+
+.jb-label,
+.jb-eyebrow,
+.jb-meta-label {
+  font-family: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.jb-display-condensed {
+  font-family: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
 }
