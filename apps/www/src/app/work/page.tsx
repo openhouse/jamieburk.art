@@ -22,10 +22,16 @@ export default function WorkPage() {
           trails, and durable handoffs.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-          <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
+          <Link
+            className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
+            href="/work/technical-operations"
+          >
             Technical Operations proof page
           </Link>
-          <Link className="text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
+          <Link
+            className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
+            href="/lab/source-backed-team-memory"
+          >
             Source-backed memory lab
           </Link>
         </div>

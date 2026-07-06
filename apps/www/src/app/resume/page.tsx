@@ -13,9 +13,15 @@ export const metadata: Metadata = createMetadata({
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
   "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
+  "Built and stewarded 30+ pages of shared campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Created repeatable hosting and continuity systems for 300+ gatherings and 20+ resident artists"
+];
+
+const capabilities = [
+  "Requirements discovery, workflow mapping, user stories, acceptance criteria, decision logs, action trackers, rollout planning, UAT / QA coordination, adoption materials, and handoffs.",
+  "Documentation architecture, meeting synthesis, source mapping, shared-drive structure, public guidance, reusable templates, searchable reference systems, and AI-ready documentation practices.",
+  "JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data workflows, dataset documentation, and API / data-product requirements."
 ];
 
 export default function ResumePage() {
@@ -41,10 +47,6 @@ export default function ResumePage() {
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
-          </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
@@ -58,6 +60,16 @@ export default function ResumePage() {
           </ul>
         </aside>
       </div>
+      <section className="mt-12 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+        <h2 className="text-2xl font-semibold text-jb-ink">Core capabilities</h2>
+        <div className="mt-5 grid gap-5 text-jb-ink/76 lg:grid-cols-3">
+          {capabilities.map((capability) => (
+            <p className="leading-7" key={capability}>
+              {capability}
+            </p>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

@@ -15,7 +15,10 @@ export function SiteHeader() {
         Skip to content
       </a>
       <div className="jb-frame flex min-h-18 items-center justify-between gap-4 py-3">
-        <Link className="font-semibold text-jb-ink hover:text-jb-blue" href="/">
+        <Link
+          className="inline-flex min-h-11 items-center rounded-lg pr-2 font-semibold text-jb-ink hover:text-jb-blue"
+          href="/"
+        >
           {site.name}
         </Link>
         <nav aria-label="Primary navigation">
@@ -23,7 +26,7 @@ export function SiteHeader() {
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
-                  className="rounded-lg px-3 py-2 text-jb-ink/78 hover:bg-jb-sky/18 hover:text-jb-blue"
+                  className="inline-flex min-h-11 items-center rounded-lg px-3 text-jb-ink/78 hover:bg-jb-sky/18 hover:text-jb-blue"
                   href={item.href}
                 >
                   {item.label}
