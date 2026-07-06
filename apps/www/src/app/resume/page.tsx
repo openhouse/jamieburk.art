@@ -3,6 +3,10 @@ import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
+const TODO_PREFIX = "TODO:";
+const RESUME_APPROVAL =
+  "Jamie approval required before launch. Replace the placeholder PDF with the current approved resume.";
+
 export const metadata: Metadata = createMetadata({
   title: "Resume - Jamie Burkart",
   description:
@@ -41,10 +45,11 @@ export default function ResumePage() {
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
-          </p>
+          {site.contact.showApprovalPlaceholders ? (
+            <p className="mt-4 text-sm text-jb-ink/62">
+              {TODO_PREFIX} {RESUME_APPROVAL}
+            </p>
+          ) : null}
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>

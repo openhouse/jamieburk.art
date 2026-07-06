@@ -29,6 +29,20 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:routes -- https://staging.jamieburk.art
+```
+
+Before production, run the preflight with production environment values:
+
+```bash
+APP_ENV=production \
+SITE_ENV=production \
+NEXT_PUBLIC_DEPLOY_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=index \
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+npm run preflight:production
 ```
 
 ## Environment
@@ -42,6 +56,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,6 +71,9 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-or-blank>
+NEXT_PUBLIC_GITHUB_URL=<approved-github-or-blank>
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -95,12 +115,40 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Replace placeholder resume PDF.
 - Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm LinkedIn and GitHub or omit them.
+- Confirm proof metrics.
+- Confirm public-safe screenshots/artifacts.
 - Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
+- Confirm sitemap and noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+
+## Staging Verification
+
+Use these checks against staging after deployment:
+
+```bash
+curl -i https://staging.jamieburk.art/robots.txt
+curl -i https://staging.jamieburk.art/sitemap.xml
+curl -I https://staging.jamieburk.art/
+curl -s https://staging.jamieburk.art/api/health | jq
+npm run check:routes -- https://staging.jamieburk.art
+```
+
+Expected staging behavior:
+
+- `robots.txt` disallows `/`.
+- `/api/health` reports staging and `robotsIndexable: false`.
+- HTML responses include `X-Robots-Tag: noindex, nofollow`.
+- `sitemap.xml` returns valid XML with `https://staging.jamieburk.art` URLs.
+- The staging banner appears on rendered pages.
+
+## Manual QA Notes
+
+Before approving production, check mobile widths at `320px`, `375px`, and
+`768px`, plus desktop. Confirm keyboard-only navigation, skip-link visibility on
+focus, focus states on links and buttons, one H1 per page, heading order, color
+contrast on buttons/tags/proof strips/cards, reduced-motion behavior, and clear
+link text.

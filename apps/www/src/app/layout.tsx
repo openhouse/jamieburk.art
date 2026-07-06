@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Karla, League_Spartan } from "next/font/google";
+import { EnvironmentBanner } from "@/components/EnvironmentBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { createMetadata } from "@/lib/metadata";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html className={`${karla.variable} ${leagueSpartan.variable}`} lang="en">
       <body>
+        <EnvironmentBanner />
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
