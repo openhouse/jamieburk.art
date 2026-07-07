@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofItems } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -18,6 +19,16 @@ const sections = [
       "HJE implementation and handoff systems",
       "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
       "196 / Sunday Dinner onboarding and continuity systems"
+    ]
+  },
+  {
+    title: "Campaign web infrastructure",
+    items: [
+      "Public campaign sites",
+      "Action pages",
+      "Resource libraries",
+      "Advocacy flows",
+      "Public-safe archives"
     ]
   },
   {
@@ -67,6 +78,17 @@ export default function TechnicalOperationsPage() {
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <JBCard>
+          <h2 className="text-2xl font-semibold text-jb-ink">Proof bank projection</h2>
+          <ul className="mt-5 space-y-3 text-jb-ink/76">
+            {technicalOperationsProofItems.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </JBCard>
         {sections.map((section) => (
           <JBCard key={section.title}>
             <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>

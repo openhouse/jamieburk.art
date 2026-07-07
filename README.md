@@ -6,6 +6,11 @@ Product Operations & Implementation.
 The site should make this believable: Jamie creates operating structure for
 complex public-facing teams.
 
+The Knowledge Bank layer is the public-safe source of truth for professional
+claims, proof points, approval states, content-safety boundaries, launch
+blockers, and production-readiness decisions. Start with
+`docs/knowledge-bank.md`.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -28,6 +33,7 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
 npm run check
 ```
 
@@ -54,6 +60,7 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved public email>
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -80,7 +87,7 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
+Use Karla for body/UI text and Archivo Narrow for display headings. Do not commit
 or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
@@ -91,11 +98,13 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, move the issue to `docs/launch-blockers.md` or
+  `docs/public-claims-inventory.md`; do not publish unresolved TODOs in public
+  UI.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Jamie approves the exact resume PDF before production.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
@@ -104,3 +113,6 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+
+See `docs/launch-blockers.md` and `docs/production-readiness.md` for the full
+gate.
