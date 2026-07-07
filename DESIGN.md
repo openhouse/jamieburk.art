@@ -230,9 +230,10 @@ app shell.
 
 ### Signature Component
 
-The case-study model is the signature system: status, visibility, what was
-unclear, what became usable, artifacts, source layer, known/open/protected, care
-notes, and credits. Preserve that information architecture wherever possible.
+The case-study and proof-bank model is the signature system: status,
+visibility, what was unclear, what became usable, artifacts, source layer,
+known/open/protected, care notes, proof IDs, and credits. Preserve that
+information architecture wherever possible.
 
 ## 6. Do's and Don'ts
 

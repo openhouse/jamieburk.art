@@ -67,6 +67,7 @@ export type WorkMeta = {
   sourceLayer?: string;
   credits?: string[];
   publicSafety?: { note: string };
+  proofBankIds?: string[];
   currentStatus: string;
   group:
     | "Operating systems for teams"

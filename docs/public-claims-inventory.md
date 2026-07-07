@@ -1,0 +1,39 @@
+# Public Claims Inventory
+
+This register tracks public-facing metrics, role claims, and sensitive wording
+choices. Use softened claims for V1 unless exact numbers or specific authorship
+claims are explicitly approved.
+
+Statuses:
+
+- `approved`: safe for V1 public use.
+- `softened for V1`: publish the fallback wording; keep the stronger claim here.
+- `needs Jamie approval`: do not publish prominently until approved.
+- `do not publish`: keep out of the site.
+- `future V1.1`: revisit after launch.
+
+| Claim | Where it appears | Status | Support level | Approved wording | Fallback wording | Non-public notes | Approval owner |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Jamie is a Technical Project Manager - Product Operations & Implementation lead. | Hero, metadata, resume, Technical Operations page | approved | Approved positioning and cross-project pattern | Technical Project Manager - Product Operations & Implementation | n/a | Keep examples nearby so the title does not float. | Jamie |
+| Jamie builds operating structure for ambiguous public-facing technical work. | Hero, homepage, Technical Operations page | approved | Cross-project pattern | I build operating structure for ambiguous public-facing technical work. | n/a | Primary V1 thesis. | Jamie |
+| 14+ years building operating structure. | Homepage proof strip, resume page | approved | Resume chronology and project history | 14+ years building operating structure | 14+ years creating operating structure for complex public-facing work | Do not imply one uninterrupted formal role. | Jamie |
+| HJE core e-commerce and operating systems. | Homepage, HJE case study, Technical Operations page | approved | Resume, public website context, public-safe summary | Built e-commerce, catalog, and checkout systems for HJE. | Built and stewarded core e-commerce systems for a legacy industrial business. | No dashboards, customer data, or vendor terms. | Jamie |
+| HJE 2x revenue-growth contribution. | Claim bank only for V1 | softened for V1 | Resume-backed but sensitive business-impact claim | Do not use as headline V1 proof. | Contributed to online growth for a legacy e-commerce business. | Avoid sole-causality and detailed financial disclosure. | Jamie |
+| Commercial Rent Stabilization campaign-memory infrastructure. | Homepage, FairRentNYC page, Technical Operations page, Lab page | approved | Public-safe running-minutes summary and coalition documentation architecture | Built civic campaign-memory infrastructure. | Built and stewarded shared campaign-memory and coordination infrastructure. | Use collective-work language. | Jamie |
+| CRS 30+ pages / 34-page running-minutes record. | Claim bank only for V1 | softened for V1 | Private source, public-safe summary | Do not use as homepage V1 proof. | Built civic campaign-memory infrastructure. | Exact page counts can distract from role fit and expose source questions. | Jamie |
+| NYC Artist Coalition co-founding member. | FairRentNYC page and Technical Operations page only if needed | needs Jamie approval | Public-safe current role summary and archival context | Co-founding member of NYC Artist Coalition; wording remains collective. | Supported NYC Artist Coalition cultural-space advocacy with public-safe documentation and campaign infrastructure. | Do not imply formal title, sole leadership, or spokesperson role without approval. | Jamie |
+| NAC visual identity and public campaign websites. | Claim bank only for V1 | needs Jamie approval | Composite-family claim plus local site archives | Do not publish as a headline until approved. | Public campaign surfaces supported cultural-space advocacy. | Separate website authorship from campaign outcomes. | Jamie |
+| NAC campaign outcomes: Cabaret Law repeal, Office of Nightlife, M.A.R.C.H. transparency, FairRentNYC. | Claim bank and future civic narrative | future V1.1 | Public campaign pages and public press sources | NAC participated in broader public advocacy ecosystems. | Cultural-space advocacy moved through public campaigns around safety, support, enforcement, and affordability. | Requires citation review and collective attribution. | Jamie and editorial reviewer |
+| CallNYC archived civic-data prototype. | CallNYC page, Technical Operations page | approved | Public project context and press context | Built an archived civic-data prototype that translated constituent-services open data into resident-facing guidance. | n/a | Archived and unofficial status must remain visible. | Jamie |
+| CallNYC Politico New York coverage. | CallNYC page metadata or evidence bullet | approved | Public-safe press citation from composite family | Covered by Politico New York in March 2016. | Public press coverage in 2016. | Do not call coverage an endorsement. | Jamie |
+| WOWList co-built community-calendar platform. | Homepage, WOWList page, Technical Operations page, resume | approved | Project history and public-safe summary | Co-built community web systems across multiple city ecosystems. | Co-built a community-calendar platform for organizers and users. | Credit collaborators only when approved. | Jamie |
+| WOWList exact aggregate metrics. | Claim bank only for V1 | needs Jamie approval | Local archive aggregate analysis | Do not use exact counts as prominent V1 proof. | Co-built community web systems across multiple city ecosystems. | Raw user/community records stay offline. | Jamie |
+| Sunday Dinner / 196 repeatable participation infrastructure. | Homepage, Sunday Dinner page, resume | approved | Approved resume and public-safe summary | Created repeatable hosting and continuity systems. | Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems. | Keep participant-level records offline. | Jamie |
+| Sunday Dinner 300+ gatherings / 20+ resident artists. | Claim bank only for V1 | needs Jamie approval | Candidate aggregate from private records | Do not use exact counts as prominent V1 proof. | Created repeatable hosting and continuity systems for gatherings and artist support. | Consent and aggregate basis need approval. | Jamie |
+| KC Town Hall adaptive reuse documentation. | KC Town Hall page, Technical Operations page | approved | Public-safe summary and resume | Supported adaptive reuse planning and public-benefit documentation. | Supported long-horizon civic / public-benefit coordination. | Keep "supported" for V1. | Jamie |
+| KC Town Hall $490,539 public-funding recommendation. | Claim bank only for V1 | needs Jamie approval | Public record surfaced by composite family | Do not use exact number prominently in V1. | Public-benefit documentation for adaptive reuse planning. | Say recommendation, not disbursement, if approved later. | Jamie |
+| Source-Backed Team Memory lab. | Lab page, Technical Operations page | approved | Proposal/spec summaries and current lab framing | Source-backed team-memory lab with human review, governance, evals, and privacy boundaries. | n/a | Not production SaaS. | Jamie |
+| AI Evals for Engineers & PMs. | Technical Operations page, resume | approved | Certificate supplied by Jamie | AI evals and error analysis; source-grounding, attribution, and privacy-boundary evals. | Completed AI Evals for Engineers & PMs through Maven. | Do not overstate credential. | Jamie |
+| LinkedIn URL. | Contact page | needs Jamie approval | Not supplied in this branch | Omit LinkedIn row. | n/a | No visible TODO rows. | Jamie |
+| Public email. | Contact page, ContactCTA, site data | approved | User-provided default in instructions | jamie.burkart@gmail.com | n/a | One-click contact path required. | Jamie |
+| Phone number. | Resume PDF only | needs Jamie approval | Previous instruction asked for resume with phone number | Do not show phone number on website outside approved PDF. | n/a | PDF remains noindexed by default. | Jamie |

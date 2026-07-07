@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight:staging
+npm run preflight:production
 ```
 
 ## Environment
@@ -85,6 +88,11 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
+- Treat `docs/proofs-bank.md` as the public-safe knowledge bank for professional
+  accomplishment claims. Use `docs/public-claims-inventory.md` to track exact
+  metrics, sensitive role claims, fallback wording, and approval owners.
+- Website copy should project selected claims from the knowledge bank for
+  clarity, audience, and purpose.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
@@ -93,14 +101,23 @@ or serve private, proprietary, or unlicensed font files.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
+## V1 Scope
+
+Keep the first public version focused. Do not add a CMS, database, auth, search,
+analytics, AI chatbot, archive browser, private document browser, full photo
+archive, heavy animation, or major framework change without explicit approval.
+
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Confirm the approved resume PDF remains current and phone-in-PDF behavior is
+  approved.
 - Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm optional LinkedIn before adding it to the UI.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run public-safety`, `npm run preflight:staging`, and
+  `npm run preflight:production` pass before production deploy.
