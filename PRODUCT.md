@@ -33,7 +33,7 @@ than flashy, inflated, or self-mythologizing.
 Do not make the site feel like a generic SaaS landing page, a private archive
 browser, a consultant hype funnel, a heavy animated portfolio, or a decorative
 AI-generated template. Avoid inflated claims, unapproved metrics, raw
-transcripts, private coalition notes, legal-review materials, private
+transcripts, private coalition notes, legal review materials, private
 correspondence, internal analytics, client-private material, unapproved photos,
 private fonts, and named stakeholder details that have not been approved.
 

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { ProofBankProjection } from "@/components/ProofBankProjection";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
@@ -18,6 +19,7 @@ export default function HomePage() {
     <>
       <Hero />
       <ProofStrip />
+      <ProofBankProjection />
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
