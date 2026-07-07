@@ -6,7 +6,7 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager building operating structure for ambiguous public-facing technical work across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
+    "Brooklyn-based technical project manager building the operating backbone for public-facing technical delivery across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
   role: "Technical Project Manager - Product Operations & Implementation",
   emailLabel: "jamie.burkart@gmail.com",
   emailHref: "mailto:jamie.burkart@gmail.com",

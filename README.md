@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie builds operating structure for
-ambiguous public-facing technical work.
+The site should make this believable: Jamie builds the operating backbone teams
+need to move public-facing technical work from ambiguity to launch.
 
 ## Stack
 

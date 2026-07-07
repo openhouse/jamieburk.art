@@ -59,10 +59,10 @@ export default function ContactPage() {
           </dl>
           <p className="mt-6 border-t border-jb-ink/12 pt-5 leading-7 text-jb-ink/76">
             <span className="font-semibold text-jb-ink">Best-fit conversations:</span>{" "}
-            technical project management, product operations, implementation,
-            business analysis, civic technology, documentation systems,
-            knowledge systems, public-facing tools, and source-backed team
-            memory.
+            technical operations, technical project management, product
+            operations, implementation, public-facing technical delivery,
+            civic technology, documentation systems, knowledge systems,
+            public-facing tools, and source-backed team memory.
           </p>
         </div>
       </div>

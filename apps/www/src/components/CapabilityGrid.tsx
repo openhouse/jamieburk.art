@@ -3,11 +3,11 @@ import { JBCard } from "@/components/JBCard";
 const capabilities = [
   {
     title: "Technical project management",
-    text: "Requirements, workflows, status rhythms, risk notes, implementation plans, QA/UAT support, and handoffs."
+    text: "Requirements, workflows, status rhythms, risk notes, implementation plans, quality checks, user-acceptance support, and handoffs."
   },
   {
     title: "Product operations",
-    text: "Planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory."
+    text: "Planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory that survives handoff."
   },
   {
     title: "Knowledge systems & documentation",
@@ -15,7 +15,7 @@ const capabilities = [
   },
   {
     title: "Civic technology & open data",
-    text: "Public-facing tools, data translation, policy explainers, campaign hubs, and resident/community guidance."
+    text: "Public-facing tools, public-data translation, policy explainers, campaign hubs, and resident or community guidance."
   },
   {
     title: "Web systems & public-facing tools",

@@ -4,7 +4,8 @@
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
 Technical Project Manager - Product Operations & Implementation lead who builds
-operating structure for ambiguous public-facing technical work.
+the operating backbone teams need to move public-facing technical work from
+ambiguity to launch.
 
 ## Current Canonical App
 

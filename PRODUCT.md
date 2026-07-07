@@ -10,17 +10,18 @@ Hiring managers, product and operations leaders, civic technology teams,
 implementation teams, collaborators, and trusted reviewers who need to quickly
 understand Jamie Burkart's professional shape. They arrive with limited time
 and need credible, public-safe evidence that Jamie can build operating
-structure for ambiguous public-facing technical work.
+backbone for public-facing technical delivery.
 
 ## Product Purpose
 
 This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
-stakeholder-heavy work becomes usable systems: requirements, workflows,
-documentation, decision trails, launch support, onboarding, and durable
-handoffs. Success means a reviewer can understand Jamie's role fit, trust the
-evidence, and know what to do next without exposing private or sensitive
-materials.
+Operations & Implementation lead. It should show how Jamie coordinates
+delivery, surfaces risks early, documents decisions, onboards contributors,
+reports clearly, and turns stakeholder-heavy work into usable systems:
+requirements, workflows, documentation, decision trails, launch support, and
+durable handoffs. Success means a reviewer can understand Jamie's role fit,
+trust the evidence, and know what to do next without exposing private or
+sensitive materials.
 
 ## Brand Personality
 

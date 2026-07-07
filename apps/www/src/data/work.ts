@@ -339,7 +339,7 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed practical, low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +347,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A practical, low-overhead distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],

@@ -28,10 +28,9 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I build operating structure for ambiguous public-facing technical
-            work, turning under-structured work into requirements, workflows,
-            documentation, decision trails, launch support, onboarding
-            materials, and durable handoffs.
+            I build the operating backbone teams need to coordinate delivery,
+            surface risks early, onboard contributors, document decisions,
+            report clearly, and keep public-facing technical work moving.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>

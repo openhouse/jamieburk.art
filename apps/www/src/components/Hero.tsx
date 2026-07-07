@@ -12,12 +12,13 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I build operating structure for ambiguous public-facing technical work.
+            I build the operating backbone teams need to move public-facing
+            technical work from ambiguity to launch.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I coordinate delivery, surface risks early, document decisions,
+            onboard contributors, report clearly, and leave behind handbooks,
+            runbooks, source maps, and handoffs people can actually use.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -39,18 +40,18 @@ export function Hero() {
         >
           <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
             {[
-              "Requirements",
-              "Workflows",
-              "Decision Trails",
-              "Launch Support",
+              "Delivery Coordination",
+              "Risk Surfacing",
+              "Decision Records",
+              "Status Reporting",
               "Onboarding",
               "Handoffs"
-            ].map((label, index) => (
+            ].map((label) => (
               <div
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
                 key={label}
               >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
+                <span aria-hidden="true" className="block h-2 w-8 rounded-full bg-jb-ochre" />
                 <p className="mt-5">{label}</p>
               </div>
             ))}
