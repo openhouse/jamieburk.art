@@ -22,13 +22,24 @@ workspaces, Dockerfile, Dokku.
 - `npm run dev`
 - `npm run typecheck`
 - `npm run lint`
+- `npm run public-safety`
+- `npm run check:routes`
+- `npm run preflight:staging`
 - `npm run build`
 - `npm run check`
+
+## Chad Lens
+
+Minimize the reader's burden. Use action verbs. Name the purpose: toward what
+end? Show what became usable. Avoid insider terms unless they are explained. Do
+not let tool lists make Jamie disappear. Use careful collective-work language.
+Do not publish unapproved claims, metrics, contact details, screenshots, quotes,
+or private materials.
 
 ## Public-Safety Rules
 
 Do not publish private emails, raw transcripts, private coalition notes,
-legal-review materials, health/financial details, private correspondence,
+legal review materials, health/financial details, private correspondence,
 unapproved photos, private fonts, credentials, private stakeholder lists,
 internal analytics, client-private materials, or raw community records.
 
@@ -36,6 +47,10 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+Keep public claims in `docs/proofs-bank/`. The proofs bank is public-safe; it is
+not the raw evidence archive. Use `docs/chad-lens.md` before strengthening public
+copy.
 
 ## Scope Rules
 

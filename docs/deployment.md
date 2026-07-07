@@ -20,11 +20,10 @@ dokku proxy:ports-set jamieburk-art-staging http:80:3000
 
 dokku config:set jamieburk-art-staging \
   APP_ENV=staging \
-  SITE_ENV=staging \
-  NEXT_PUBLIC_DEPLOY_ENV=staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email-if-approved> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -37,11 +36,10 @@ matching build args:
 
 ```bash
 dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=staging'
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email-if-approved>'
 ```
 
 Enable TLS after DNS resolves:
@@ -71,25 +69,31 @@ dokku proxy:ports-set jamieburk-art http:80:3000
 
 dokku config:set jamieburk-art \
   APP_ENV=production \
-  SITE_ENV=production \
-  NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
   HOSTNAME=0.0.0.0
 ```
 
+`www.jamieburk.art` is configured on the production app and should redirect to
+`https://jamieburk.art`.
+
 If staging required build args, add production build args too:
 
 ```bash
 dokku docker-options:add jamieburk-art build '--build-arg APP_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+```
+
+Production indexing is a later explicit change after final approval:
+
+```bash
+dokku config:set jamieburk-art NEXT_PUBLIC_ROBOTS_POLICY=index
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
 ```
 
@@ -112,8 +116,6 @@ git push dokku-production HEAD:main
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
-  --build-arg SITE_ENV=staging \
-  --build-arg NEXT_PUBLIC_DEPLOY_ENV=staging \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
@@ -123,8 +125,6 @@ docker build \
 ```bash
 docker run --rm -p 3000:3000 \
   -e APP_ENV=staging \
-  -e SITE_ENV=staging \
-  -e NEXT_PUBLIC_DEPLOY_ENV=staging \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
@@ -145,3 +145,17 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Rollback
+
+If privacy, contact, resume, robots, sitemap, or content issues appear, set
+production robots policy back to `noindex` if indexing risk exists, redeploy the
+previous known-good SHA or Dokku release, then verify:
+
+```bash
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -i https://jamieburk.art/resume
+curl -i https://jamieburk.art/contact
+```
