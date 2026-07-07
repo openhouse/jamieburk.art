@@ -135,10 +135,9 @@ docker run --rm -p 3000:3000 \
   jamieburk-art:staging-test
 ```
 
-Verify:
+Verify the running staging-style container:
 
 ```bash
-npm run check:production
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
@@ -155,7 +154,8 @@ Expected staging behavior:
 - The resume PDF downloads and sends `X-Robots-Tag: noindex`.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
 
-Production deployment should happen only after staging review,
-`npm run check:production`, Node 26 checks, Docker build/run verification,
-sitemap/robots/canonical/OpenGraph verification, and Jamie approval of the exact
-commit SHA. Promote an exact reviewed commit, not a moving branch tip.
+Production deployment should happen only after staging review, Node 26 checks,
+`npm run safety:production`, `npm run check:production`, Docker build/run
+verification, sitemap/robots/canonical/OpenGraph verification, and Jamie
+approval of the exact commit SHA. Promote an exact reviewed commit, not a moving
+branch tip.

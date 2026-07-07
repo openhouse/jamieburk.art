@@ -29,9 +29,9 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I build operating structure for ambiguous public-facing technical
-            work. I turn under-structured work into requirements, workflows,
+            work, turning loosely defined needs into requirements, workflows,
             documentation, decision trails, launch support, onboarding materials,
-            and durable handoffs.
+            stakeholder updates, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>

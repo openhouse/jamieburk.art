@@ -13,26 +13,43 @@ export const metadata: Metadata = createMetadata({
 
 const sections = [
   {
-    title: "Operating systems built",
+    title: "Delivery coordination",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "Planning rhythms and action trackers",
+      "Cross-functional coordination across technical and nontechnical stakeholders",
+      "Risk surfacing before launch or handoff",
+      "Stakeholder updates that make status, blockers, and next steps clear"
     ]
   },
   {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    title: "Operating documentation",
+    items: [
+      "Decision records and source maps",
+      "Handbooks, runbooks, templates, and reusable checklists",
+      "Public guidance and internal working memory",
+      "Documentation systems that survive beyond a meeting or launch"
+    ]
   },
   {
-    title: "Documentation and working memory",
+    title: "Onboarding and handoff",
     items: [
-      "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
-      "Meeting synthesis",
-      "Decision records"
+      "Contributor onboarding materials",
+      "Resident-artist and community continuity systems",
+      "Implementation notes for legacy business workflows",
+      "Durable handoffs for future maintainers and operators"
+    ]
+  },
+  {
+    title: "Public-facing launch support",
+    items: ["CallNYC", "WOWList", "HJE e-commerce", "Public-safe coalition materials"]
+  },
+  {
+    title: "Source-backed team memory",
+    items: [
+      "Structured meeting memory",
+      "Synthesized decisions and open questions",
+      "Human-reviewed AI-assisted notes",
+      "Privacy and trust checks before anything becomes shared memory"
     ]
   },
   {
@@ -56,14 +73,15 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
           environments, I build the operating backbone teams need to move:
           planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          stakeholder updates, documentation systems, launch support, and durable
+          handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">

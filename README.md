@@ -29,6 +29,7 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run safety:production
 npm run check:production
 ```
 
@@ -106,4 +107,5 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
-- Confirm `npm run check:production` passes before production deploy.
+- Confirm Node 26, `npm run safety:production`, and `npm run check:production`
+  pass before production deploy.

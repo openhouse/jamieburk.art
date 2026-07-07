@@ -20,7 +20,7 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
+            My work sits where systems are ambiguous and the stakes are
             human: civic technology, small-business operations, public-facing
             tools, cultural infrastructure, coalition work, and knowledge
             systems.
@@ -31,6 +31,11 @@ export default function AboutPage() {
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
+          </p>
+          <p>
+            I build the operating backbone teams need to coordinate delivery,
+            surface risks early, onboard contributors, document decisions, report
+            clearly, and keep public-facing technical work moving.
           </p>
           <p>
             I make messy public systems easier to enter, remember, and repair.

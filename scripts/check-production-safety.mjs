@@ -36,6 +36,7 @@ const textExtensions = new Set([
 
 const blockers = [];
 const warnings = [];
+const productionMode = process.argv.includes("--production");
 
 const productionBlockers = [
   {
@@ -46,6 +47,7 @@ const productionBlockers = [
     label: "placeholder resume language",
     pattern: /Placeholder resume PDF|Replace with approved current resume|replace the placeholder\s+PDF/i
   },
+  { label: "unapproved LinkedIn surface", pattern: /LinkedIn/i },
   { label: "private visibility", pattern: /visibility:\s*["']?private["']?/i },
   { label: "draft status", pattern: /status:\s*["']?Draft["']?/ },
   { label: "do-not-publish marker", pattern: /DO NOT PUBLISH/i },
@@ -54,10 +56,16 @@ const productionBlockers = [
   { label: "private-data marker", pattern: /PRIVATE_DATA/i },
   { label: "raw Otter marker", pattern: /raw\s+Otter/i },
   { label: "private transcript marker", pattern: /private\s+transcript/i },
+  { label: "corrected working transcript marker", pattern: /Corrected Working Transcript/i },
+  { label: "Jonathan Marmor transcript marker", pattern: /Jonathan Marmor transcript/i },
   {
     label: "private transcript filename",
     pattern:
       /2025-12-08-Call with Jonathan Marmor_otter\.ai|2025-12-11-Call with Jonathan Marmor_otter\.ai|What is WOW List__otter_ai_transcript/i
+  },
+  {
+    label: "known private source path",
+    pattern: /supporting-materials|Jamie Projects History|job-hunt/i
   },
   {
     label: "credential-looking token",
@@ -131,6 +139,29 @@ function addBlocker(filePath, label, detail = "") {
   blockers.push(`${filePath}: ${label}${detail ? ` (${detail})` : ""}`);
 }
 
+if (productionMode) {
+  const nodeMajor = Number(process.versions.node.split(".")[0]);
+  if (nodeMajor !== 26) addBlocker("environment", "Node 26 is required for production verification");
+  if (process.env.APP_ENV !== "production") {
+    addBlocker("environment", "APP_ENV must be production for production verification");
+  }
+  if (process.env.SITE_ENV !== "production") {
+    addBlocker("environment", "SITE_ENV must be production for production verification");
+  }
+  if (process.env.NEXT_PUBLIC_DEPLOY_ENV !== "production") {
+    addBlocker("environment", "NEXT_PUBLIC_DEPLOY_ENV must be production");
+  }
+  if (process.env.SITE_URL !== "https://jamieburk.art") {
+    addBlocker("environment", "SITE_URL must be https://jamieburk.art");
+  }
+  if (process.env.NEXT_PUBLIC_SITE_URL !== "https://jamieburk.art") {
+    addBlocker("environment", "NEXT_PUBLIC_SITE_URL must be https://jamieburk.art");
+  }
+  if (process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
+    addBlocker("environment", "NEXT_PUBLIC_ROBOTS_POLICY must be index");
+  }
+}
+
 for (const scanPath of productionFacingPaths) {
   for (const filePath of walk(scanPath)) {
     if (!isTextFile(filePath)) continue;
@@ -183,6 +214,19 @@ if (!exists(resumeRelativePath)) {
   }
 }
 
+const siteDataPath = "apps/www/src/data/site.ts";
+if (!exists(siteDataPath)) {
+  addBlocker(siteDataPath, "site data file is missing");
+} else {
+  const siteData = readText(path.join(root, siteDataPath));
+  if (!siteData.includes('emailLabel: "jamie.burkart@gmail.com"')) {
+    addBlocker(siteDataPath, "approved public email label is missing");
+  }
+  if (!siteData.includes('emailHref: "mailto:jamie.burkart@gmail.com"')) {
+    addBlocker(siteDataPath, "approved public email href is missing");
+  }
+}
+
 let trackedFiles = [];
 try {
   trackedFiles = execFileSync("git", ["ls-files"], {
@@ -197,6 +241,15 @@ try {
 
 for (const file of trackedFiles) {
   const ext = path.extname(file).toLowerCase();
+
+  if (
+    /(^|\/)(private|archive-private|raw|transcripts-private|client-private|legal-review)(\/|$)/.test(
+      file
+    ) ||
+    /\bprivate\b|\braw\b|\blegal-review\b|\bclient-private\b/i.test(path.basename(file))
+  ) {
+    addBlocker(file, "tracked private/raw/legal-review/client-private path");
+  }
 
   if (file.match(/(^|\/)\.env(\.|$)/) && file !== ".env.example") {
     addBlocker(file, "tracked environment file");
