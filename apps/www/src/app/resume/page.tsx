@@ -13,9 +13,9 @@ export const metadata: Metadata = createMetadata({
 const highlights = [
   "14+ years creating operating structure across civic, cultural, small-business, and technical environments",
   "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
-  "Helped structure shared civic campaign documentation and source maps",
-  "Co-built community web systems with multi-city publishing workflows",
-  "Built repeatable hosting, onboarding, and continuity systems for long-running cultural work"
+  "Built 30+ pages of shared civic campaign memory and source maps",
+  "Co-built WOWList for 35+ city scenes, with 1,800+ users and 16,000+ posts/events in local archive analysis",
+  "Documented 300+ gatherings and supported 20+ resident artists through repeatable hosting and continuity systems"
 ];
 
 export default function ResumePage() {
