@@ -26,6 +26,7 @@ Every proof should answer five questions:
 | --- | --- | --- | --- |
 | Overall role | 14+ years building operating structure across civic, cultural, small-business, and technical environments. | Homepage, resume, role-fit pages. | Do not imply one continuous formal employment role. |
 | Harry J. Epstein Company | Helped translate an 80+ year-old industrial supply business into searchable e-commerce, dealer-aware checkout, content, analytics, marketing, and operational workflows, contributing to 2x revenue growth. | HJE case study, homepage, resume. | Use contribution language; do not publish dashboards, customer data, detailed revenue, vendor terms, or credentials. |
+| NYC Artist Coalition public web | Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces. | FairRentNYC / CRS case study, Technical Operations page. | Website authorship is Jamie's direct contribution; campaign accomplishments remain collective. Do not imply Jamie solely led NAC, owned the campaigns, authored every policy position, or controlled partner decisions. |
 | Commercial Rent Stabilization | Helped structure and steward 30+ pages of shared campaign-memory infrastructure, including running minutes, decision records, action trackers, source maps, and policy question logs. | CRS case study, homepage, Technical Operations page. | Use collective-work language; do not publish private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, or unapproved quotes. |
 | WOWList.org | Co-built a Python/Django, PostgreSQL/PostGIS, and Ember community event-calendar platform that grew to 1,800+ users, 16,000+ posts/events, and 35+ active city scenes. | WOWList page, homepage, resume. | Do not call city activity official chapters; do not publish private user data, organizer contact lists, raw records, IP/geolocation fields, or unapproved community artifacts. |
 | 196 / Sunday Dinner | Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists. | Sunday Dinner page, homepage, resume. | Do not publish guest lists, attendance records, private addresses, private messages, or unapproved photos. |
@@ -46,6 +47,8 @@ copy without an approved public source package:
   vendor terms, internal operations, or credentials.
 - Any CRS claim that makes Jamie the campaign lead rather than a documentation
   systems lead and coalition-operations support contributor.
+- Any NAC web claim that converts Jamie's website authorship into sole ownership
+  of coalition campaigns, policy positions, or partner decisions.
 - Any WOWList claim that treats geocoded coverage as official local chapters.
 
 ## Update Rules

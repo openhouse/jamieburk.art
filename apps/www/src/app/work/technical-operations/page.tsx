@@ -69,6 +69,14 @@ const proofMap = [
       "Made assumptions, dependencies, decisions, open questions, and stakeholder next steps visible before they became blockers."
   },
   {
+    need: "Build public-facing civic web infrastructure",
+    evidence: [
+      { label: "FairRentNYC / CRS", href: "/work/fair-rent-nyc" }
+    ],
+    line:
+      "Built public campaign websites, explainers, calls to action, reference materials, and issue context for NYC Artist Coalition advocacy."
+  },
+  {
     need: "Write operating documentation people use",
     evidence: [
       { label: "FairRentNYC / CRS", href: "/work/fair-rent-nyc" },

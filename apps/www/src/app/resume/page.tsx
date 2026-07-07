@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
   "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Helped structure and steward 30+ pages of civic campaign-memory infrastructure",
+  "Built public campaign websites and helped steward 30+ pages of civic campaign memory",
   "Co-built community web systems that reached 35+ active city scenes",
   "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
 ];

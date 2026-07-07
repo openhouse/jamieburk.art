@@ -3,6 +3,7 @@ export type ProofStrength = "strong-public-safe" | "approval-gated";
 export type ProofCategory =
   | "role-positioning"
   | "technical-operations"
+  | "coalition-public-web"
   | "civic-documentation"
   | "community-platform"
   | "participation-infrastructure"
@@ -66,10 +67,27 @@ export const proofsBank = [
     featuredOrder: 2
   },
   {
+    id: "nac-public-web-infrastructure",
+    title: "NYC Artist Coalition public web infrastructure",
+    category: "coalition-public-web",
+    shortClaim: "Built public campaign websites for NYC Artist Coalition advocacy",
+    canonicalClaim:
+      "Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+    strength: "strong-public-safe",
+    basis:
+      "Jamie-authored public campaign websites and public-safe coalition project history.",
+    websiteUse: "FairRentNYC / CRS case study and Technical Operations proof map.",
+    boundaries: [
+      "Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.",
+      "Do not imply Jamie solely led NAC, owned the campaigns, authored every policy position, or controlled partner decisions."
+    ],
+    projectSlugs: ["fair-rent-nyc"]
+  },
+  {
     id: "crs-campaign-memory",
     title: "Commercial Rent Stabilization campaign-memory infrastructure",
     category: "civic-documentation",
-    shortClaim: "30+ pages of civic campaign-memory infrastructure",
+    shortClaim: "Built public campaign websites + 30+ pages of civic campaign memory",
     canonicalClaim:
       "Helped structure and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory infrastructure, including running minutes, decision records, action trackers, source maps, and policy question logs.",
     strength: "strong-public-safe",

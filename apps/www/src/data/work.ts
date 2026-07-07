@@ -170,21 +170,27 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "Public web, coalition memory, and civic documentation systems",
     summary:
-      "Helped structure and steward shared campaign-memory and coordination infrastructure to help collaborators preserve decisions, organize policy and data questions, coordinate next steps, and turn complex Commercial Rent Stabilization work into usable materials.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Built public campaign websites for NYC Artist Coalition advocacy and helped structure shared campaign-memory systems for Commercial Rent Stabilization work.",
+    role: "Public Web Infrastructure, Documentation Systems & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved many stakeholders, public/private source materials, public web surfaces, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Public campaign websites, issue explainers, calls to action, reference libraries, bill-tracking surfaces, running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
+      {
+        title: "Public campaign websites",
+        description:
+          "Public web surfaces for NYC Artist Coalition advocacy, including campaign explainers, calls to action, reference materials, and issue context.",
+        type: "website"
+      },
       {
         title: "Campaign-memory spine",
         description:
@@ -209,6 +215,7 @@ const workItemsInput = [
       "Knowledge Systems",
       "Documentation",
       "Product Operations",
+      "Public Web Infrastructure",
       "Source-Backed Memory",
       "Public-Facing Tools"
     ],
@@ -216,13 +223,14 @@ const workItemsInput = [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
+      "Public Web Infrastructure",
       "Public Guidance",
       "Decision Records"
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Jamie-authored public campaign websites, public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -230,8 +238,10 @@ const workItemsInput = [
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
-      "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+      "Civic delivery, public web infrastructure, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "Public campaign websites built for NYC Artist Coalition advocacy",
+      "FairRentNYC, Talks Not Raids, Let NYC Dance, and NYC Artist Coalition public web surfaces",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
@@ -239,7 +249,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie built public campaign websites for NYC Artist Coalition advocacy and helped structure public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
