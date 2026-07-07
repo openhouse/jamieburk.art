@@ -1,0 +1,233 @@
+[
+  {
+    "id": "positioning-operating-structure",
+    "status": "approved-public",
+    "publicWording": "I create operating structure for complex public-facing teams.",
+    "plainLanguageWording": "I turn ambiguous, loosely defined work into usable systems.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/", "/about", "/resume", "/work/technical-operations"],
+    "riskLevel": "low",
+    "chadLens": "Clear, role-relevant, and easy for hiring readers to understand.",
+    "notes": "Core positioning line. Do not weaken the role-specific frame."
+  },
+  {
+    "id": "technical-operations-role-fit",
+    "status": "approved-summary",
+    "publicWording": "Jamie helps teams clarify requirements, map workflows, maintain decision records, coordinate launch support, prepare onboarding materials, and leave behind durable handoffs.",
+    "plainLanguageWording": "Jamie makes complicated work easier to continue.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/", "/about", "/work/technical-operations"],
+    "riskLevel": "low",
+    "chadLens": "Names concrete operating behaviors instead of abstract virtue.",
+    "notes": "Good cross-site summary for technical operations and product operations."
+  },
+  {
+    "id": "ai-evals-training",
+    "status": "approved-summary",
+    "publicWording": "Completed AI Evals for Engineers & PMs through Maven.",
+    "plainLanguageWording": "Added practical AI-evaluation training to the source-backed knowledge-systems toolkit.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": [],
+    "riskLevel": "low",
+    "chadLens": "Useful supporting proof for AI-readiness, but not central enough for homepage V1.",
+    "notes": "Do not present as a degree, certification, or production AI deployment claim."
+  },
+  {
+    "id": "experience-14-years-operating-structure",
+    "status": "approved-summary",
+    "publicWording": "14+ years building operating structure across public-facing work",
+    "plainLanguageWording": "More than 14 years turning public-facing work into usable systems.",
+    "sourceClass": "approved-resume",
+    "usedOn": ["/"],
+    "riskLevel": "low",
+    "chadLens": "Useful proof-strip claim when tied to operating structure.",
+    "notes": "Do not imply 14+ years in one formal job title."
+  },
+  {
+    "id": "hje-operating-surface",
+    "status": "approved-summary",
+    "publicWording": "Helped an 80+ year-old industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    "plainLanguageWording": "Helped a legacy business make its operating knowledge usable on the web.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/", "/work/harry-j-epstein"],
+    "riskLevel": "medium",
+    "chadLens": "Shows implementation, operations, and business analysis without overclaiming ownership.",
+    "notes": "Do not publish dashboards, revenue details, customer data, vendor terms, passwords, or private operating materials."
+  },
+  {
+    "id": "hje-revenue-growth-2x",
+    "status": "candidate-needs-approval",
+    "publicWording": "Contributed to 2x revenue growth.",
+    "plainLanguageWording": "Contributed to measurable business growth.",
+    "sourceClass": "approved-resume",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Strong metric, but should stay out of homepage proof modules until final metric approval.",
+    "notes": "Use contribution language only. Do not claim sole causation."
+  },
+  {
+    "id": "hje-homepage-safe-proof",
+    "status": "approved-summary",
+    "publicWording": "E-commerce, analytics, content, and operations work for a legacy industrial business",
+    "plainLanguageWording": "Legacy business operations made more usable online.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/"],
+    "riskLevel": "low",
+    "chadLens": "Strong enough for homepage proof without leaning on unapproved revenue metrics.",
+    "notes": "Use instead of exact 2x claim until production approval."
+  },
+  {
+    "id": "fairrent-campaign-memory",
+    "status": "approved-summary",
+    "publicWording": "Helped build and steward shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    "plainLanguageWording": "Helped collaborators remember decisions, track next steps, and turn complex civic work into usable materials.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/work/fair-rent-nyc"],
+    "riskLevel": "medium",
+    "chadLens": "Keeps collective-work language while making Jamie's operating contribution visible.",
+    "notes": "Avoid led the movement, owned the bill, or official legal analysis."
+  },
+  {
+    "id": "fairrent-homepage-safe-proof",
+    "status": "approved-summary",
+    "publicWording": "Helped structure shared civic campaign memory and public-data framing",
+    "plainLanguageWording": "Helped civic collaborators keep complex work usable and reviewable.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/"],
+    "riskLevel": "low",
+    "chadLens": "Safer homepage version of the active civic-work claim.",
+    "notes": "Does not expose active private coalition context."
+  },
+  {
+    "id": "nac-public-web-infrastructure",
+    "status": "approved-summary",
+    "publicWording": "Built public campaign websites and information surfaces for NYC Artist Coalition advocacy.",
+    "plainLanguageWording": "Helped make cultural-space advocacy easier to find, understand, and act on.",
+    "sourceClass": "public-url",
+    "usedOn": ["/work/fair-rent-nyc", "/work/technical-operations"],
+    "riskLevel": "medium",
+    "chadLens": "Names Jamie's direct web/systems work while leaving campaign outcomes collective.",
+    "notes": "Public campaign surfaces include NYC Artist Coalition, Fair Rent NYC, Talks Not Raids, Let NYC Dance, and Save NYC Spaces. Do not convert website authorship into sole ownership of campaigns or policy positions."
+  },
+  {
+    "id": "fairrent-thirty-pages-memory",
+    "status": "candidate-needs-approval",
+    "publicWording": "30+ pages of civic campaign-memory infrastructure.",
+    "plainLanguageWording": "A substantial body of shared civic working memory.",
+    "sourceClass": "private-source-not-committed",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Useful metric after final approval, but not required for reader comprehension.",
+    "notes": "Do not commit the active running-minutes artifact."
+  },
+  {
+    "id": "callnyc-archived-prototype",
+    "status": "approved-summary",
+    "publicWording": "Built an archived civic-data prototype translating constituent-services open data into resident-facing guidance.",
+    "plainLanguageWording": "Turned civic data into a prototype residents could browse.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/work/callnyc"],
+    "riskLevel": "medium",
+    "chadLens": "Good civic-tech proof when archived and unofficial status is visible.",
+    "notes": "Always include: Archived prototype. Not an official or current City Council service."
+  },
+  {
+    "id": "wowlist-platform",
+    "status": "approved-summary",
+    "publicWording": "Co-built a Python / Django + Ember.js community-calendar platform organized around keyword communities and public event distribution.",
+    "plainLanguageWording": "Co-built a community calendar that helped local organizers publish and distribute events.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/", "/work/wowlist"],
+    "riskLevel": "medium",
+    "chadLens": "Connects technical implementation to community and product operations.",
+    "notes": "Use local calendar organizers or community calendar editors instead of relying only on maintainers."
+  },
+  {
+    "id": "wowlist-thirty-five-ecosystems",
+    "status": "candidate-needs-approval",
+    "publicWording": "Roughly 35 city ecosystems reached through WOWList.org.",
+    "plainLanguageWording": "Used across many local scenes.",
+    "sourceClass": "private-source-not-committed",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Strong metric after source-backed approval; unnecessary for V1 homepage.",
+    "notes": "Do not say official city chapters or active today."
+  },
+  {
+    "id": "wowlist-aggregate-archive-counts",
+    "status": "candidate-needs-approval",
+    "publicWording": "Local archive analysis supports 1,800+ users, 16,000+ events/posts, 23,000+ lists/tags, 28,000+ list follows, and 20,000+ saved/starred events by July 2017.",
+    "plainLanguageWording": "The platform reached meaningful community scale, but the raw archive stays private.",
+    "sourceClass": "private-source-not-committed",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Strong product-operations and community-platform signal after approval.",
+    "notes": "Publish only rounded aggregate counts. Do not publish user emails, raw rows, calendar IDs, media, hashes, geolocation records, or private organizer/contact data."
+  },
+  {
+    "id": "sunday-dinner-systems",
+    "status": "approved-summary",
+    "publicWording": "Built participation systems for recurring gatherings and artist-residency work",
+    "plainLanguageWording": "Made a long-running community practice easier to host, document, and continue.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/", "/work/196-sunday-dinner"],
+    "riskLevel": "medium",
+    "chadLens": "Frames community work as operations, onboarding, and continuity without publishing private community records.",
+    "notes": "Keep summary-only unless participants, photos, quotes, and artifacts are approved."
+  },
+  {
+    "id": "sunday-dinner-metrics",
+    "status": "candidate-needs-approval",
+    "publicWording": "300+ gatherings and 20+ resident artists.",
+    "plainLanguageWording": "A long-running community practice and artist residency.",
+    "sourceClass": "private-source-not-committed",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Strong scale signal, but exact public wording needs approval.",
+    "notes": "Do not publish guest lists, attendance records, resident details, private photos, or private community notes."
+  },
+  {
+    "id": "kc-town-hall-adaptive-reuse",
+    "status": "approved-summary",
+    "publicWording": "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building.",
+    "plainLanguageWording": "Helped make a complex building project easier to describe, review, and continue.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/work/kc-town-hall"],
+    "riskLevel": "medium",
+    "chadLens": "Use supported unless stronger role language is approved.",
+    "notes": "Keep private financial, legal, property, banking, and stakeholder details offline."
+  },
+  {
+    "id": "kc-town-hall-funding",
+    "status": "candidate-needs-approval",
+    "publicWording": "KC Town Hall received a $490,539 public-funding recommendation.",
+    "plainLanguageWording": "The project had public funding context.",
+    "sourceClass": "public-record",
+    "usedOn": [],
+    "riskLevel": "medium",
+    "chadLens": "Only use after exact public-record wording is confirmed.",
+    "notes": "Do not say Jamie secured the funding alone."
+  },
+  {
+    "id": "source-backed-team-memory",
+    "status": "approved-summary",
+    "publicWording": "Research and consulting method for keeping team answers tied to source material, decisions, context, and explicit uncertainty.",
+    "plainLanguageWording": "A practical way for teams to remember what happened, why, and what still needs review.",
+    "sourceClass": "public-safe-summary",
+    "usedOn": ["/lab/source-backed-team-memory", "/work/technical-operations"],
+    "riskLevel": "medium",
+    "chadLens": "Connects AI-readiness to technical project management, decision memory, and human review.",
+    "notes": "Early research / method / consulting practice. Not finished production SaaS, AI replacement for judgment, or private archive browser."
+  },
+  {
+    "id": "protected-private-evidence",
+    "status": "protected-do-not-publish",
+    "publicWording": "Private source materials are available as public proof.",
+    "plainLanguageWording": "Protected evidence stays protected.",
+    "sourceClass": "protected-do-not-publish",
+    "usedOn": [],
+    "riskLevel": "high",
+    "chadLens": "Protected absences preserve trust.",
+    "notes": "Do not publish private emails, raw transcripts, private coalition notes, legal-review materials, raw community records, private analytics, stakeholder lists, or private client material."
+  }
+]

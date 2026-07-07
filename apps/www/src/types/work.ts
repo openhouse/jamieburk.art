@@ -76,5 +76,6 @@ export type WorkMeta = {
     | "Archived prototypes and older platforms";
   roleFit: string;
   evidence: string[];
+  claimIds?: string[];
   knownOpenProtected: KnownOpenProtected;
 };
