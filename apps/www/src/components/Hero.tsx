@@ -5,21 +5,21 @@ export function Hero() {
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="break-words text-xs font-semibold uppercase leading-6 text-jb-blue sm:text-sm">
             Technical Project Manager - Product Operations & Implementation
           </p>
-          <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
+          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
             Jamie Burkart
           </h1>
-          <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+          <p className="mt-6 break-words text-xl font-semibold leading-snug text-jb-green sm:text-2xl">
+            I build operating structure for ambiguous public-facing technical work.
           </p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">
+          <p className="mt-5 text-lg leading-8 text-jb-ink/78 sm:text-xl">
             I help teams turn ambiguous, stakeholder-heavy work into usable
             systems: requirements, workflows, documentation, decision trails,
             launch support, onboarding, and durable handoffs.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
               Download resume
@@ -37,7 +37,7 @@ export function Hero() {
           aria-label="Representative operating-structure diagram"
           className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
         >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
+          <div className="grid gap-3 text-sm font-semibold text-jb-ink sm:grid-cols-2">
             {[
               "Requirements",
               "Workflows",
