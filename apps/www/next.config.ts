@@ -9,29 +9,39 @@ const appEnv =
   process.env.SITE_ENV ??
   process.env.NEXT_PUBLIC_DEPLOY_ENV ??
   "staging";
+const siteEnv = process.env.SITE_ENV ?? appEnv;
+const deployEnv = process.env.NEXT_PUBLIC_DEPLOY_ENV ?? siteEnv;
 
 const siteUrl = stripTrailingSlash(
   process.env.SITE_URL ??
     process.env.NEXT_PUBLIC_SITE_URL ??
-    (appEnv === "production"
+    (siteEnv === "production"
       ? "https://jamieburk.art"
       : "https://staging.jamieburk.art")
 );
+const publicSiteUrl = stripTrailingSlash(process.env.NEXT_PUBLIC_SITE_URL ?? siteUrl);
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  [appEnv, siteEnv, deployEnv].includes("production") &&
+  siteUrl === "https://jamieburk.art" &&
+  publicSiteUrl === "https://jamieburk.art" &&
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
-const globalHeaders = [
+const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()"
-  },
-  ...(robotsIndexable
-    ? []
-    : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }])
+  }
+];
+const globalHeaders = [
+  ...securityHeaders,
+  ...(robotsIndexable ? [] : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }])
+];
+const resumeHeaders = [
+  ...securityHeaders,
+  { key: "X-Robots-Tag", value: "noindex, nofollow" }
 ];
 
 const nextConfig: NextConfig = {
@@ -49,6 +59,55 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*",
+        headers: resumeHeaders
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/fairrentnyc",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/nyc-artist-coalition-fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
+      },
+      {
+        source: "/noting-us",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
+        permanent: true
       }
     ];
   }
