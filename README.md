@@ -25,10 +25,14 @@ Use `.env.example` for local environment defaults.
 ## Checks
 
 ```bash
+npm ci
 npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight:staging
+npm run preflight:production
 ```
 
 ## Environment
@@ -80,8 +84,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, section
+eyebrows, compact proof labels, and metadata. Do not commit or serve private,
+proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -91,11 +96,14 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- Do not render public approval placeholders. If a value or artifact is not
+  approved, hide it from public pages and record the blocker in release docs.
+- Use `docs/proofs-bank/` as the public-safe claim source and
+  `docs/claim-register.md` for exact release wording.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Confirm the resume PDF before production indexing.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.

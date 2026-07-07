@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old legacy industrial business modernize e-commerce, content, analytics, and operational workflow systems.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -138,11 +138,21 @@ const workItemsInput = [
       "Analytics",
       "Public-Facing Web Systems"
     ],
-    links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
+    links: [
+      { label: "Website", url: "https://www.harryepstein.com/" },
+      {
+        label: "2009 online-store coverage",
+        url: "https://toolguyd.com/harry-epstein-launches-new-online-store/"
+      },
+      {
+        label: "KCUR profile",
+        url: "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive"
+      }
+    ],
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, public reporting, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
@@ -154,12 +164,13 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Coverage of the online-store launch noted that previous orders had to be called in",
+      "Public reporting later described online sales as roughly half the business by 2016",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business whose online sales were later publicly described as roughly half the business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -170,25 +181,25 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "NYC Artist Coalition fieldwork and campaign memory systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Helped cultural-space and small-business affordability work become documented, source-backed, consent-aware, and usable across Fair Rent NYC, NYC Artist Coalition, Commercial Rent Stabilization, and aligned partner contexts.",
+    role: "Cultural-Space Fieldworker & Coalition Infrastructure Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved cultural spaces, small businesses, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, consent-aware field follow-up, public-safe explanations, and shared campaign memory.",
+    artifactTypes: ["source map", "meeting memory", "decision record", "public handout", "workflow"],
     artifacts: [
       {
         title: "Campaign-memory spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "A shared documentation structure for meetings, next steps, decision context, public-safe continuity, and no-surprises coordination.",
         type: "meeting memory"
       },
       {
@@ -198,10 +209,10 @@ const workItemsInput = [
         type: "source map"
       },
       {
-        title: "Policy question log",
+        title: "Cultural-space follow-up workflow",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
-        type: "decision record"
+          "A consent-aware fieldwork pattern for moving from events and conversations to clear ownership, source context, and appropriate next steps.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -210,40 +221,50 @@ const workItemsInput = [
       "Documentation",
       "Product Operations",
       "Source-Backed Memory",
-      "Public-Facing Tools"
+      "Public-Facing Tools",
+      "Cultural Infrastructure"
     ],
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
       "Public Guidance",
-      "Decision Records"
+      "Decision Records",
+      "Consent-Aware Follow-Up"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/contact/" },
+      { label: "NYC Artist Coalition priorities", url: "https://nycartc.com/priorities/" },
+      { label: "Let NYC Dance / Cabaret Law repeal", url: "https://nycartc.com/letnycdance/" },
+      { label: "Fair Rent NYC", url: "https://fairrentnyc.nycartc.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
-    credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
+      "Public NYC Artist Coalition and Fair Rent NYC pages, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+    credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Fair Rent NYC collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
-      note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
+      note: "Collective-work language is required: participated in, contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary. Current-work details are time-bound and collaborator/material approvals are still required before adding named private evidence.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "NYC Artist Coalition public mission and priorities around informal and affordable community spaces",
+      "Cabaret Law repeal participation as collective advocacy, not sole-credit proof",
+      "Shared campaign documentation and coordination infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "Public-data framing, consent-aware follow-up, and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie participates as a cultural-space fieldworker and coalition infrastructure support, helping structure public-safe campaign documentation, source maps, data framing, and consent-aware follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which current-work details, specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, unapproved quotes, and venue-level lease or landlord details are omitted."
     }
   },
   {
@@ -278,9 +299,9 @@ const workItemsInput = [
         type: "map"
       },
       {
-        title: "Archived press note",
+        title: "Archived source note",
         description:
-          "External coverage can be linked after Jamie confirms the correct Politico New York citation.",
+          "External coverage and archive links can be added later when exact citations and artifacts are approved.",
         type: "press"
       }
     ],
@@ -331,7 +352,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, with 35+ active city scenes in the public-safe archive summary.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -366,7 +387,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "35+ active city scenes in the public-safe archive summary"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +404,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ recurring gatherings and 20+ resident-artist contexts.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -416,7 +437,7 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "20+ resident-artist contexts",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
@@ -435,7 +456,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Supported adaptive reuse planning and public-benefit documentation for a long-vacant historic building; public records show a $490,539 funding recommendation for the KC Town Hall project.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -445,7 +466,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+      "Planning materials, public-benefit documentation, stakeholder context, and funding-process legibility for an adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -460,7 +481,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public Kansas City legislative record, public-safe summary, and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -470,13 +491,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "Funding process support"
+      "Public record shows a $490,539 Central City Economic Development funding recommendation for the KC Town Hall project"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and public-benefit documentation for a long-vacant historic building; public records show a $490,539 funding recommendation for the KC Town Hall project.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Named partners, exact project status details, and any stronger funding language need approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
