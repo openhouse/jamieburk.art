@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { workEvidenceFor } from "@/data/proofs";
 import type { WorkMeta } from "@/types/work";
 
 const visibilitySchema = z.enum([
@@ -91,7 +92,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Led long-running web, e-commerce, marketing, analytics, content, and operational workflow improvements for an 80+ year-old legacy industrial business.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -101,7 +102,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "Catalog, search, checkout, dealer-aware e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -151,12 +152,7 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
-    evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
-      "Stakeholder translation across technical and nontechnical contexts"
-    ],
+    evidence: workEvidenceFor("harry-j-epstein"),
     knownOpenProtected: {
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
@@ -170,10 +166,10 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "NYC Artist Coalition, coalition memory, and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy, connecting NYC Artist Coalition cultural-space fieldwork with public-safe civic documentation.",
+    role: "Documentation Systems Lead, Coalition Operations Support & NYC Artist Coalition Co-founding Member",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -182,7 +178,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, cultural-space follow-up notes, public-safe explanations, and shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -202,6 +198,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Public-safe role and work-lane map",
+        description:
+          "A bounded framing of Jamie's NYC Artist Coalition role, the coalition's public advocacy context, and current Commercial Rent Stabilization work lanes.",
+        type: "source map"
       }
     ],
     tags: [
@@ -210,19 +212,22 @@ const workItemsInput = [
       "Documentation",
       "Product Operations",
       "Source-Backed Memory",
-      "Public-Facing Tools"
+      "Public-Facing Tools",
+      "NYC Artist Coalition"
     ],
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
       "Public Guidance",
-      "Decision Records"
+      "Decision Records",
+      "Coalition Operations",
+      "Cultural-Space Fieldwork"
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, public NYC Artist Coalition campaign context, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -231,19 +236,14 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
-    evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
-      "Running minutes, decision records, action trackers, and source maps",
-      "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
-    ],
+    evidence: workEvidenceFor("fair-rent-nyc"),
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie is a co-founding member of NYC Artist Coalition and helped structure public-safe campaign memory, coordination documents, source maps, and follow-up systems for Commercial Rent Stabilization work.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which specific public artifacts, collaborators, meeting materials, screenshots, and current strategy details may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, live partner detail, and unapproved quotes are omitted."
     }
   },
   {
@@ -310,12 +310,7 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
-    evidence: [
-      "Built after a New York City Council civic-data hackathon",
-      "Translated CouncilStat / constituent-services open data",
-      "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
-    ],
+    evidence: workEvidenceFor("callnyc"),
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
@@ -356,18 +351,13 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe summary, historical project context, aggregate local-archive analysis, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
-    evidence: [
-      "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
-    ],
+    evidence: workEvidenceFor("wowlist"),
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
@@ -414,12 +404,7 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
-    evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
-      "Onboarding and participation systems",
-      "Recurring operations and continuity structures"
-    ],
+    evidence: workEvidenceFor("196-sunday-dinner"),
     knownOpenProtected: {
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
@@ -466,12 +451,7 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
-    evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
-      "Funding process support"
-    ],
+    evidence: workEvidenceFor("kc-town-hall"),
     knownOpenProtected: {
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",

@@ -61,7 +61,9 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production indexing is opt-in: `APP_ENV=production`,
+`SITE_URL=https://jamieburk.art`, and `NEXT_PUBLIC_ROBOTS_POLICY=index` must all
+be present.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -145,3 +147,23 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Preflight Commands
+
+```bash
+npm run public-safety
+npm run knowledge-bank
+npm run routes
+npm run check
+```
+
+Production preflight is stricter and should fail until the approved resume PDF
+and production contact/indexing approvals are in place:
+
+```bash
+APP_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=index \
+npm run preflight:production
+```

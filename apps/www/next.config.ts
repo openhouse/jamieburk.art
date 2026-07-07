@@ -19,8 +19,9 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -32,6 +33,11 @@ const globalHeaders = [
   ...(robotsIndexable
     ? []
     : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }])
+];
+
+const resumePdfHeaders = [
+  ...globalHeaders.filter((header) => header.key !== "X-Robots-Tag"),
+  { key: "X-Robots-Tag", value: "noindex, nofollow" }
 ];
 
 const nextConfig: NextConfig = {
@@ -47,8 +53,57 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/resume/:path*",
+        headers: resumePdfHeaders
+      },
+      {
         source: "/(.*)",
         headers: globalHeaders
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/work/noting-us",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/work/fairrentnyc",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
+      },
+      {
+        source: "/work/sunday-dinner",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
       }
     ];
   }

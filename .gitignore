@@ -9,6 +9,26 @@ coverage
 .env
 .env.*
 !.env.example
+*.private.*
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
+supporting-materials/
+support-materials-private/
+job-hunt/
+Jamie Projects History/
+screenshots-private/
+private-screenshots/
+raw-otter/
+*.key
+*.pem
+*.ttf
+*.otf
+*.woff
+*.woff2
 .npm-cache
 npm-debug.log*
 yarn-debug.log*
