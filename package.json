@@ -15,6 +15,15 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "public-safety": "node scripts/check-public-safety.mjs",
+    "public-safety:production": "node scripts/check-public-safety.mjs --production",
+    "check:public-safety": "npm run public-safety",
+    "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
+    "routes": "node scripts/check-routes.mjs",
+    "check:routes": "npm run routes",
+    "preflight:staging": "node scripts/preflight-production.mjs --staging",
+    "preflight:production": "node scripts/preflight-production.mjs --production",
+    "check:production": "node scripts/check-knowledge-bank.mjs --production && node scripts/preflight-production.mjs --production",
+    "check": "npm run typecheck && npm run lint && npm run build && npm run public-safety && npm run knowledge-bank"
   }
 }
