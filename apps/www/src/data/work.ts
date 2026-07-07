@@ -138,11 +138,17 @@ const workItemsInput = [
       "Analytics",
       "Public-Facing Web Systems"
     ],
-    links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
+    links: [
+      { label: "Website", url: "https://www.harryepstein.com/" },
+      {
+        label: "KCUR profile",
+        url: "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive"
+      }
+    ],
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, public-safe summary, approved screenshots pending, public reporting on online-sales share, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
@@ -154,7 +160,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to a period of 2x online/e-commerce revenue growth",
+      "Public reporting later described online sales as roughly half the business by 2016",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
