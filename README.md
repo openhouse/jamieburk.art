@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie builds operating structure for
+ambiguous public-facing technical work.
 
 ## Stack
 
@@ -29,6 +29,10 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run knowledge-bank
+npm run preflight:staging
+npm run preflight:production
 ```
 
 ## Environment
@@ -85,22 +89,26 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
+- Claims should project from the public-safe knowledge bank in
+  `apps/www/src/data/proofs.ts`.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- Keep exact metrics, screenshots, photos, quotes, named collaborators, and
+  private-source details approval-gated unless Jamie approves the exact public
+  context.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Public-safety and knowledge-bank checks must pass.
+- Staging review must happen before production.
+- Production indexing must be explicit with `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+- Jamie must approve the exact reviewed commit before production deploy.
+- Exact proof metrics, collaborator names, screenshots, photos, and quotes stay
+  gated unless approved for the specific surface.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.

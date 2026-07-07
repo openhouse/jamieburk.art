@@ -3,6 +3,17 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+Before deployment, run:
+
+```bash
+npm run preflight:staging
+npm run preflight:production
+```
+
+These checks run build verification plus the public-safety and knowledge-bank
+validators. Production remains opt-in for indexing; it requires
+`NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
 ## Dokku Apps
 
 ```txt
