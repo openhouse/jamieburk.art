@@ -37,6 +37,24 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Knowledge Bank
+
+Treat the website as a projection of the public-safe knowledge bank, not as a
+mirror of Jamie's full archive. Keep durable public claims in
+`apps/www/src/data/proofs.ts` and supporting governance in `docs/knowledge-bank.md`
+and `docs/proofs-bank.md`.
+
+Every public claim should make Jamie's role, support level, projection surface,
+and protected boundary clear enough that a future teammate can maintain it.
+
+## Chad Lens
+
+Use `docs/chad-lens.md` when editing resume-facing or portfolio-facing copy.
+Make unusual work institutionally legible without losing purpose, agency, or
+dignity. Prefer accurate verbs like built, co-built, stewarded, synthesized,
+structured, translated, coordinated, documented, maintained, supported,
+contributed to, and helped teams use.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

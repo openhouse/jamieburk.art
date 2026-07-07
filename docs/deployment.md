@@ -61,7 +61,8 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production may launch noindex for final smoke testing; indexing is a
+separate approval step.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -75,7 +76,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,7 +91,7 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
 
 Enable TLS:
@@ -145,3 +146,38 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Preflight Commands
+
+Run these before staging review:
+
+```bash
+npm run typecheck
+npm run lint
+npm run build
+npm run public-safety
+npm run check:routes
+npm run preflight:staging
+```
+
+Run production preflight in noindex soft-launch mode before production smoke
+testing:
+
+```bash
+APP_ENV=production \
+SITE_ENV=production \
+NEXT_PUBLIC_DEPLOY_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+npm run preflight:production
+```
+
+Only after Jamie approves the exact public surface, approved public contact
+values, and approved resume PDF, rerun production preflight with:
+
+```bash
+NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_RESUME_PDF_APPROVED=true
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+```

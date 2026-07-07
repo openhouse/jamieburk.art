@@ -9,9 +9,9 @@ export function ContactCTA() {
       </h2>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href="/resume" variant="secondary">
-          Download resume
+          View resume
         </JBButton>
-        <JBButton href="/contact">Email Jamie</JBButton>
+        <JBButton href="/contact">Contact Jamie</JBButton>
       </div>
     </section>
   );
