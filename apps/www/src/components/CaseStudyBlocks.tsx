@@ -18,7 +18,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+      <dl className="mt-5 grid gap-4">
         {rows.map(([label, value]) => (
           <div key={label}>
             <dt className="jb-meta-label text-xs font-semibold uppercase text-jb-paper/70">

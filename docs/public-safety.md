@@ -34,9 +34,10 @@ Use the Known / Open / Protected model on case studies:
 - Protected: private material that stays outside the repo and off the public
   site.
 
-Maintain stronger claim language in `docs/public-claim-register.md` before it
-appears in app copy. The register can name aggregate facts, source classes, and
-approval boundaries without publishing private source material.
+Maintain stronger claim language in `docs/proofs-bank/` before it appears in
+app copy. The proofs bank can name aggregate facts, source classes, public-safe
+source IDs, wording, and approval boundaries without publishing private source
+material.
 
 Documentation may name protected categories without exposing private details.
 The point is to make the boundary visible, not to publish the source material.

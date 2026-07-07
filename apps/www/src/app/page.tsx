@@ -55,7 +55,9 @@ export default function HomePage() {
             <p className="mt-4 leading-8 text-jb-ink/76">
               These projects show a recurring pattern: complex work with more
               context than structure becoming usable systems, public-facing
-              tools, documentation, decision trails, and durable handoffs.
+              tools, documentation, decision trails, and durable handoffs. Each
+              public case is projected from a public-safe proofs bank, then
+              edited for clarity and role fit.
             </p>
           </div>
           <JBButton href="/work" variant="ghost">

@@ -12,7 +12,8 @@ indexable.
 - Proof-strip language stays contribution-oriented unless exact metrics are
   approved.
 - Case-study claim language has been compared with
-  `docs/public-claim-register.md`.
+  `docs/proofs-bank/sources.md`, `docs/proofs-bank/claims.md`, and
+  `docs/proofs-bank/projection-guide.md`.
 - Case-study screenshots, artifacts, photos, quotes, and collaborator names are
   approved or omitted.
 - Footer and metadata use the direct professional frame, not the V1.1 notebook

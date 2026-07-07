@@ -140,7 +140,7 @@ const workItemsInput = [
     ],
     links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
     careNote:
-      "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
+      "No private analytics dashboards, revenue details, account/security records, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
       "Public website, public reporting, public-safe source package, approved resume claims, screenshots pending, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
@@ -164,7 +164,7 @@ const workItemsInput = [
       open:
         "Specific screenshots, individual legacy-feature authorship, old code, internal workflow diagrams, analytics charts, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, account/security records, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
@@ -245,7 +245,7 @@ const workItemsInput = [
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private correspondence, and unapproved quotes are omitted."
     }
   },
   {
@@ -489,7 +489,7 @@ const workItemsInput = [
       open:
         "Specific public-funding materials, named partners, and project status details need approval.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "Private financial, legal, property, project-finance, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];

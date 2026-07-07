@@ -117,9 +117,9 @@ RISQUE, or Maria unless licensing and permission are explicitly approved.
   verbs like designs, coordinates, synthesizes, translates, documents,
   preserves, supports, and ships, and answer what the work enabled for a team,
   reader, collaborator, or community.
-- Use `docs/public-claim-register.md` as the staging area for source-backed
-  metrics, approval boundaries, and stronger public-safe claim language before
-  moving claims into app copy.
+- Use `docs/proofs-bank/` as the public-safe knowledge base for source-backed
+  metrics, approval boundaries, and stronger claim language before moving
+  claims into app copy.
 - Define insider language near first use. Do not make hiring readers decode
   terms like under-structured, data, tracking, maintainers, minimum viable
   product (MVP), user acceptance testing (UAT), quality assurance (QA), large
@@ -131,7 +131,7 @@ RISQUE, or Maria unless licensing and permission are explicitly approved.
 - Confirm public email and set `NEXT_PUBLIC_CONTACT_EMAIL`.
 - Confirm optional LinkedIn and GitHub links before setting their env vars.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics against `docs/public-claim-register.md`.
+- Confirm exact proof metrics against `docs/proofs-bank/claims.md`.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
