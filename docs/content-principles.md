@@ -16,3 +16,8 @@ Translate insider language.
 Use collective-work language where appropriate.
 Do not publish private materials.
 Do not overclaim.
+
+Use the public proofs bank in `docs/proofs-bank/` as the source-of-truth layer
+for durable accomplishment claims. The website should project selected claims
+from that bank; it should not become a raw archive, private-source browser, or
+complete bibliography.

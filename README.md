@@ -90,6 +90,9 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
+- Treat `docs/proofs-bank/` as the public-safe knowledge base for professional
+  accomplishment claims. Website copy should project selected claims from that
+  bank for clarity, audience, and purpose.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal

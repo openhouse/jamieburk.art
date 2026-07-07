@@ -67,6 +67,7 @@ const workMetaSchema = z.object({
   sourceLayer: z.string().optional(),
   credits: z.array(z.string()).optional(),
   publicSafety: z.object({ note: z.string() }).optional(),
+  proofBankIds: z.array(z.string()).optional(),
   currentStatus: z.string(),
   group: z.enum([
     "Operating systems for teams",
@@ -155,6 +156,7 @@ const workItemsInput = [
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
+    proofBankIds: ["HJE-01", "HJE-02"],
     currentStatus: "Public-safe full case study. Screenshot approvals pending.",
     group: "Operating systems for teams",
     roleFit:
@@ -235,6 +237,7 @@ const workItemsInput = [
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
+    proofBankIds: ["FRNYC-01", "FRNYC-02"],
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
@@ -314,6 +317,7 @@ const workItemsInput = [
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
+    proofBankIds: ["CALL-01", "CALL-02"],
     currentStatus: "Archived prototype. Public-safe screenshots and archive-link approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
@@ -380,6 +384,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, historical project context, local archive aggregate report, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
+    proofBankIds: ["WOW-01", "WOW-02"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -433,6 +438,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
+    proofBankIds: ["ART-01"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -485,6 +491,7 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+    proofBankIds: ["KC-01", "KC-02"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:

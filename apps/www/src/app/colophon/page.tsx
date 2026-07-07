@@ -12,6 +12,7 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Public accomplishment claims are grounded in a repo proofs bank before they become website copy",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -27,8 +28,10 @@ export default function ColophonPage() {
         <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
           This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
+          notebook. It uses local MDX content, a public-safe proofs bank, and
+          intentionally limited tracking. Private archives stay offline; the site
+          projects selected defensible claims for clarity, audience, and purpose.
+          The design uses Broadway blue, Jamie&apos;s
           oil-pastel palette, and a quiet proportional grid derived from his
           print-layout sketchpad. Staging is reviewable but not indexable, and
           production should only become indexable after content and metadata
