@@ -1,11 +1,15 @@
 # Proofs Bank
 
-This repository is public. Treat this proof bank as newspaper-safe source
-material: if a claim, source description, caveat, or collaborator reference
-would be unsafe in a public article, it does not belong here.
+This repository is public. Treat this proof bank as a newspaper-safe internal
+source-of-truth structure: if a claim, source description, caveat, or
+collaborator reference would be unsafe in a public article, it does not belong
+here.
 
 The website is a projection of this bank. The bank keeps the claim discipline;
 the site translates it for hiring managers, collaborators, and referrers.
+
+For machine-readable claim structure, use `docs/proofs-bank.json`. This Markdown
+file explains the public-safe rationale, boundaries, and projection guidance.
 
 ## Claim Rules
 
@@ -290,5 +294,7 @@ Translate proofs into role fit: requirements, delivery coordination,
 documentation architecture, public/private judgment, onboarding, reporting, and
 handoffs.
 
-Proofs page:
-Explain the evidence posture and publish only the curated, public-safe layer.
+Website projection:
+Do not expose the proof bank as a literal public page. Use it to compose the
+homepage, work index, case studies, resume framing, and lab pages with purpose
+and care.

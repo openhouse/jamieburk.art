@@ -22,8 +22,8 @@ export default function WorkPage() {
           trails, and durable handoffs that other people can keep using.
         </p>
         <p className="mt-4 leading-8 text-jb-ink/72">
-          Each page is projected from a public-safe proof bank. The goal is to
-          make the work clear without publishing raw transcripts, private
+          Each page is composed from a public-safe internal proof bank. The goal
+          is to make the work clear without publishing raw transcripts, private
           coalition notes, private community records, internal analytics, or
           unapproved artifacts.
         </p>
@@ -33,12 +33,6 @@ export default function WorkPage() {
             href="/work/technical-operations"
           >
             Technical Operations proof page
-          </Link>
-          <Link
-            className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
-            href="/proofs"
-          >
-            Proof bank
           </Link>
           <Link
             className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"

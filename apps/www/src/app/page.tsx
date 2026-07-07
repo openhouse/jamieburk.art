@@ -38,23 +38,15 @@ export default function HomePage() {
       <Hero />
       <ProofStrip />
       <section className="border-b border-jb-ink/10 bg-jb-warm/70 py-10">
-        <div className="jb-frame grid gap-5 md:grid-cols-[0.72fr_0.28fr] md:items-center">
-          <div>
-            <p className="text-sm font-semibold uppercase text-jb-blue">
-              Evidence posture
-            </p>
-            <p className="mt-3 max-w-4xl text-xl leading-8 text-jb-ink/78">
-              The site is a projection of a public-safe proof bank: strong
-              claims, careful limits, collective credit, and explicit boundaries
-              around what stays private.
-            </p>
-          </div>
-          <Link
-            className="font-semibold text-jb-blue hover:text-jb-green"
-            href="/proofs"
-          >
-            View proof discipline
-          </Link>
+        <div className="jb-frame">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Evidence posture
+          </p>
+          <p className="mt-3 max-w-4xl text-xl leading-8 text-jb-ink/78">
+            The claims here are composed from a public-safe internal proof
+            bank: strong evidence, careful limits, collective credit, and clear
+            boundaries around what stays private.
+          </p>
         </div>
       </section>
       <CapabilityGrid />

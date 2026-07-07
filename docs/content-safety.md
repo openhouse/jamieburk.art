@@ -2,10 +2,12 @@
 
 This portfolio is public-safe by default. It is not a private archive, transcript browser, analytics dump, or source-material repository.
 
-`docs/proofs-bank.md` is the canonical public-safe knowledge base for claims in
-this repo. It may include strong professional claims, aggregate metrics, source
-posture, and publication boundaries. It must not include raw private source
-material.
+`docs/proofs-bank.md` and `docs/proofs-bank.json` are the canonical public-safe
+knowledge base for claims in this repo. They may include strong professional
+claims, aggregate metrics, source posture, relationships, and publication
+boundaries. They must not include raw private source material. The website
+projects from this bank; it should not expose the proof scaffold as a
+visitor-facing page.
 
 ## Rules
 

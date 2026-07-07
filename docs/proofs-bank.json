@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "name": "Public-Safe Proofs Bank",
+    "purpose": "Repo-internal source-of-truth claim graph for Jamie Burkart's professional accomplishments. The website projects from this graph with audience, purpose, and care.",
+    "publicationRule": "This repository is public. Do not include anything here that would create harm, breach trust, or require apology if printed in a newspaper.",
+    "updated": "2026-07-07"
+  },
+  "postures": [
+    {
+      "id": "known",
+      "label": "Known",
+      "definition": "Public-safe and evidence-backed enough to say directly in website copy."
+    },
+    {
+      "id": "open",
+      "label": "Open",
+      "definition": "Potentially useful but requires approval, stronger citation, screenshot review, collaborator confirmation, or tighter wording before publication."
+    },
+    {
+      "id": "protected",
+      "label": "Protected",
+      "definition": "Intentionally omitted because privacy, consent, client trust, law, civic sensitivity, or community safety requires it."
+    }
+  ],
+  "coreClaim": {
+    "id": "core-technical-project-manager",
+    "posture": "known",
+    "claim": "Jamie Burkart is a technical project manager and product operations / implementation lead who builds operating structure for complex public-facing teams.",
+    "projectionUse": [
+      "homepage hero",
+      "resume framing",
+      "technical operations page",
+      "case study introductions"
+    ],
+    "boundaries": [
+      "Do not imply sole authorship of collective civic wins.",
+      "Do not publish private archives as proof.",
+      "Prefer source-backed role language over inflated outcome claims."
+    ]
+  },
+  "entities": [
+    {
+      "id": "nyc-artist-coalition",
+      "name": "NYC Artist Coalition",
+      "type": "collective civic and cultural-space work",
+      "roleClaim": "Jamie is a co-founder and civic-systems / documentation / policy-communications lead for NYC Artist Coalition.",
+      "posture": "known",
+      "evidenceSummary": "Public campaign history supports collective work around Cabaret Law repeal advocacy, Office of Nightlife / SaveNYCSpaces advocacy, M.A.R.C.H. transparency work, and Fair Rent NYC / Commercial Rent Stabilization advocacy.",
+      "websiteProjection": "Use as coalition infrastructure: campaign sites, explainers, testimony support, source maps, meeting memory, action materials, and public-safe language.",
+      "boundaries": [
+        "Use collective-work language.",
+        "Do not claim Jamie alone passed laws, created offices, wrote legal analysis, or owned the movement.",
+        "Do not publish private coalition notes, stakeholder lists, or strategy records."
+      ],
+      "relatedCapabilities": [
+        "civic documentation",
+        "coalition infrastructure",
+        "policy communications",
+        "public/private boundary judgment"
+      ]
+    },
+    {
+      "id": "harry-j-epstein-company",
+      "name": "Harry J. Epstein Company",
+      "type": "private-sector implementation",
+      "roleClaim": "Jamie helped an 80+ year-old industrial business translate paper-and-phone catalog operations into searchable e-commerce, analytics, publishing, product-data, and workflow systems.",
+      "posture": "known",
+      "evidenceSummary": "Public and archival sources support the online-store launch and public features. Resume/source materials support Jamie's implementation role and contribution language around a period of 2x revenue growth.",
+      "websiteProjection": "Use as private-sector technical project management, e-commerce operations, analytics, content, and workflow proof.",
+      "boundaries": [
+        "No private dashboards, customer data, revenue detail, vendor terms, credentials, or internal operating documents.",
+        "Use contribution language for business outcomes."
+      ],
+      "relatedCapabilities": [
+        "legacy operations modernization",
+        "e-commerce implementation",
+        "product data",
+        "workflow documentation"
+      ]
+    },
+    {
+      "id": "fairrentnyc-commercial-rent-stabilization",
+      "name": "FairRentNYC / Commercial Rent Stabilization",
+      "type": "civic documentation and source-backed memory",
+      "roleClaim": "Jamie helped build and steward public-safe campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "posture": "known",
+      "evidenceSummary": "Public-safe records support 30+ pages of running minutes, action trackers, source maps, legal/policy question logs, public-data framing, consent-aware story handling, and follow-up protocols.",
+      "websiteProjection": "Use as civic operations, documentation architecture, public/private boundary, and source-backed memory proof.",
+      "boundaries": [
+        "No private coalition notes, legal-review materials, stakeholder lists, raw strategy documents, private emails, unapproved quotes, or sensitive tenant/business details.",
+        "Use policy-neutral language when describing public-data opportunities."
+      ],
+      "relatedCapabilities": [
+        "source-backed memory",
+        "action tracking",
+        "public-data framing",
+        "campaign operations"
+      ]
+    },
+    {
+      "id": "callnyc",
+      "name": "CallNYC",
+      "type": "open-data civic prototype",
+      "roleClaim": "Jamie built an archived civic-data prototype translating newly released City Council constituent-services open data into resident-facing find-help / next-steps guidance.",
+      "posture": "known",
+      "evidenceSummary": "Archive traces include press/civic-tech references, a public GitHub trace, and CouncilStat release / hackathon context.",
+      "websiteProjection": "Use as open-data translation, resident-facing civic interface, scope-disclaimer, and public-prototype proof.",
+      "boundaries": [
+        "Archived and unofficial only.",
+        "Do not imply current public-service status, official City Council affiliation, legal guidance, or emergency-service guidance."
+      ],
+      "relatedCapabilities": [
+        "open data",
+        "resident-facing guidance",
+        "prototype scoping",
+        "civic interface design"
+      ]
+    },
+    {
+      "id": "wowlist",
+      "name": "WOWList",
+      "type": "full-stack community platform",
+      "roleClaim": "Jamie designed and co-built a Python / Django, PostgreSQL / PostGIS, and Ember.js community-calendar and social discovery platform organized around followable keyword communities.",
+      "posture": "known",
+      "evidenceSummary": "Local aggregate archive analysis shows 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved/starred events, 15,915 synced Google Calendar events, and 35+ active city scenes by July 2017.",
+      "websiteProjection": "Use as full-stack public platform, social product logic, community publishing, event distribution, and product-operations proof.",
+      "boundaries": [
+        "Use aggregate metrics only.",
+        "Do not publish raw user data, emails, contact lists, password/session data, private media, or user-level examples without approval."
+      ],
+      "relatedCapabilities": [
+        "full-stack product work",
+        "community publishing",
+        "event distribution",
+        "geospatial data"
+      ]
+    },
+    {
+      "id": "sunday-dinner-196",
+      "name": "Sunday Dinner / 196 Artists Residency",
+      "type": "participation infrastructure",
+      "roleClaim": "Jamie created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "posture": "known",
+      "evidenceSummary": "Private aggregate records show numbered gatherings through 345 and substantial participation infrastructure.",
+      "websiteProjection": "Use as onboarding, facilitation, hospitality systems, artist support, continuity, and consent-boundary proof.",
+      "boundaries": [
+        "Summary-only.",
+        "No guest lists, attendance records, addresses, phone numbers, private stories, private scores, or unapproved photos."
+      ],
+      "relatedCapabilities": [
+        "onboarding",
+        "facilitation",
+        "participation systems",
+        "continuity"
+      ]
+    },
+    {
+      "id": "source-backed-team-memory",
+      "name": "Source-Backed Team Memory",
+      "type": "AI-assisted documentation method",
+      "roleClaim": "Jamie is developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "posture": "known",
+      "evidenceSummary": "Public-safe lab materials support Known / Open / Protected, decision records, source inventories, transcript-to-minutes workflows, governance policies, eval ideas, human review, and Markdown-first knowledge pages.",
+      "websiteProjection": "Use as a lab / proof-of-practice connecting technical project management, product operations, documentation architecture, AI eval discipline, human review, and governance.",
+      "boundaries": [
+        "Not a finished SaaS, chatbot, private archive browser, surveillance system, legal/medical advice system, or replacement for human judgment."
+      ],
+      "relatedCapabilities": [
+        "documentation architecture",
+        "AI evaluation discipline",
+        "human review",
+        "knowledge governance"
+      ]
+    }
+  ],
+  "projectionRules": [
+    "The website should read as a composed portfolio, not a claims database.",
+    "Use this graph to choose strong, audience-relevant claims, then write them in human language.",
+    "Keep protected details out of both the website and this public repository.",
+    "When a claim is open, either omit it or mark it as a launch blocker outside public-facing copy."
+  ]
+}
