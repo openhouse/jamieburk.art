@@ -49,6 +49,7 @@ const sections = [
       "Structured meeting memory",
       "Synthesized decisions and open questions",
       "Human-reviewed AI-assisted notes",
+      "Source-grounding, attribution, and privacy-boundary evals",
       "Privacy and trust checks before anything becomes shared memory"
     ]
   },
@@ -64,7 +65,8 @@ const sections = [
       "Git / GitHub",
       "Docker / Dokku",
       "QGIS",
-      "Open-data workflows"
+      "Open-data workflows",
+      "AI evals and error analysis"
     ]
   }
 ];
