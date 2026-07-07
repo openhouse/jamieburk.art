@@ -3,8 +3,9 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie turns under-structured work into
-usable systems for complex public-facing teams.
+The site should make this believable: Jamie builds the operating backbone that
+helps complex public-facing teams plan, document, decide, onboard, report, and
+ship.
 
 ## Stack
 
@@ -95,6 +96,8 @@ proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
+- Use `docs/copy-guidelines.md` to keep public copy legible, role-aligned,
+  public-safe, and careful about claims.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal

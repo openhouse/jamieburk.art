@@ -11,12 +11,13 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I turn under-structured work into usable systems for complex public-facing teams.
+            I build the operating backbone that helps complex public-facing teams plan,
+            document, decide, onboard, report, and ship.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I create operating structure for complex public-facing teams:
-            requirements, workflows, documentation, decision trails, launch
-            support, onboarding, and durable handoffs.
+            I help teams turn ambiguous, stakeholder-heavy work into clear
+            requirements, workflows, decision records, status rhythms, runbooks,
+            onboarding materials, launch support, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -28,22 +29,22 @@ export function Hero() {
             </JBButton>
           </div>
           <p className="mt-6 text-sm font-medium text-jb-ink/64">
-            Brooklyn, NY / Civic technology / Product operations / Knowledge
-            systems / Public-facing tools
+            Brooklyn, NY / Technical operations / Product operations / Civic
+            technology / Knowledge systems
           </p>
         </div>
         <div
-          aria-label="Representative operating-structure diagram"
+          aria-label="Representative operating-backbone diagram"
           className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
         >
           <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
             {[
               "Requirements",
               "Workflows",
-              "Decision Trails",
-              "Launch Support",
+              "Decision Records",
+              "Status Rhythms",
               "Onboarding",
-              "Handoffs"
+              "Runbooks"
             ].map((label, index) => (
               <div
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
@@ -55,9 +56,9 @@ export function Hero() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-6 text-jb-ink/68">
-            Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
+            Scattered context becomes shared records, practical guidance,
+            maintainable workflows, and materials people can use after the call,
+            handoff, or launch is over.
           </p>
         </div>
       </div>

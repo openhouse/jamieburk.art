@@ -28,10 +28,10 @@ export default function ResumePage() {
             {site.role}
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I turn under-structured work into usable systems for complex
-            public-facing teams. I create operating structure through
-            requirements, workflows, documentation, decision trails, launch
-            support, onboarding, and durable handoffs.
+            I build the operating backbone complex public-facing teams need to
+            plan, document, decide, onboard, report, and ship: requirements,
+            workflows, decision records, status rhythms, runbooks, launch
+            support, onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>

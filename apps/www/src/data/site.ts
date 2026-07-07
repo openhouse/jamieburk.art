@@ -16,7 +16,7 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager turning under-structured work into usable systems for complex public-facing teams.",
+    "Brooklyn-based technical project manager building the operating backbone public-facing teams need to plan, document, decide, onboard, report, and ship.",
   contact: {
     email: publicEmail,
     emailHref: publicEmail ? `mailto:${publicEmail}` : undefined,
