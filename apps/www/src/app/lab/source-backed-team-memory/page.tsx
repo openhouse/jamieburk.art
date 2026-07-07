@@ -19,15 +19,16 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          A lab / proof-of-practice exploring source-backed operating memory,
-          decision lineage, onboarding context, and human-correctable AI
-          workflows for knowledge-heavy teams.
+          Source-Backed Team Memory is an early lab / proof-of-practice for
+          teams that need operating memory: useful ideas, decision records, open
+          questions, onboarding context, source-linked project notes, and
+          practical next steps.
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
+            AI drafts. Humans review. The shared record remains inspectable and
+            correctable. This is not a finished SaaS product, AI replacement for
+            judgment, or private archive browser.
           </p>
         </div>
         <div className="mt-10 space-y-6">

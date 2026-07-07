@@ -28,7 +28,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
 npm run check
+npm run preflight:production
 ```
 
 ## Environment
@@ -81,10 +83,14 @@ drafts, Docker build args, and verification checklist.
 ## Typeface Policy
 
 Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+or serve private, proprietary, or unlicensed font files. See
+`docs/typefaces.md`.
 
 ## Content Rules
 
+- Treat `docs/proofs-bank.md` as the public-safe source bank for professional
+  accomplishment claims. Site copy should project from that bank rather than
+  inventing proof language in components.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
@@ -95,12 +101,16 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Approved resume PDF before production.
+- Approved public contact path.
+- Hide LinkedIn and GitHub unless exact public URLs are confirmed.
+- Hide screenshots/artifacts unless reviewed for public use.
+- Keep proof metrics aligned with `docs/proofs-bank.md`.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run public-safety` and production preflight pass.
+
+See `docs/release-checklist.md`, `docs/content-safety.md`, and
+`docs/proofs-bank.md`.

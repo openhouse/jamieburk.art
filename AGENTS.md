@@ -37,6 +37,12 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Proof Bank
+
+Use `docs/proofs-bank.md` as the public-safe knowledge base for Jamie's
+professional accomplishment claims. Website copy should project from that bank
+and stay optimized for clarity, audience, and purpose.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
@@ -52,3 +58,22 @@ Production later: `jamieburk.art`, indexable only after Jamie approves content.
 
 Precise, warm, modular, ethically grounded. Documentation is care. Do not
 overclaim.
+
+## Chad Lens for Public Copy
+
+Chad Berkowitz's review standard is the copy standard for professional
+self-representation here.
+
+Before shipping public copy, ask:
+
+1. Is Jamie visible as the actor?
+2. Does the sentence answer "toward what end?"
+3. Is the language legible to a hiring manager or HR reader?
+4. Are specialized terms translated once?
+5. Are acronyms spelled out or avoided?
+6. Are symbols or arrows avoided where words would be clearer?
+7. Are unfamiliar entities defined?
+8. Does the copy protect collective credit and avoid overclaiming?
+9. Does it avoid reducing stewardship, facilitation, convening, coordination, or
+   analysis to mere "tracking"?
+10. Does it make the work impressive without making the reader decode it?

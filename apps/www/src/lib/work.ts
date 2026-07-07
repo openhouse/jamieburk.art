@@ -3,6 +3,7 @@ import CallNYC from "@/content/work/callnyc.mdx";
 import FairRentNYC from "@/content/work/fair-rent-nyc.mdx";
 import HarryJEpstein from "@/content/work/harry-j-epstein.mdx";
 import KCTownHall from "@/content/work/kc-town-hall.mdx";
+import NYCArtistCoalition from "@/content/work/nyc-artist-coalition.mdx";
 import SundayDinner from "@/content/work/196-sunday-dinner.mdx";
 import WOWList from "@/content/work/wowlist.mdx";
 import { workItems, type WorkSlug } from "@/data/work";
@@ -13,6 +14,7 @@ export const workContentBySlug = {
   "fair-rent-nyc": FairRentNYC,
   "harry-j-epstein": HarryJEpstein,
   "kc-town-hall": KCTownHall,
+  "nyc-artist-coalition": NYCArtistCoalition,
   wowlist: WOWList
 } satisfies Record<WorkSlug, ComponentType>;
 
