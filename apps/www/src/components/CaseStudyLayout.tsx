@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
+import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicLinks, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
@@ -26,6 +26,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
+          <PublicLinks item={item} />
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
@@ -38,14 +39,14 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
-        <ArtifactList item={item} />
-        <ArtifactGallery item={item} />
         <KnownOpenProtected item={item} />
         <div className="grid gap-4 md:grid-cols-2">
-          <CareNote item={item} />
           <PublicSafetyNote item={item} />
+          <CareNote item={item} />
           <SourceLayer item={item} />
         </div>
+        <ArtifactList item={item} />
+        <ArtifactGallery item={item} />
         <CreditsList item={item} />
       </div>
     </article>

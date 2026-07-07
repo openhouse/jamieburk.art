@@ -27,7 +27,8 @@ export default function SourceBackedTeamMemoryPage() {
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
             production SaaS, AI replacement for judgment, or private archive
-            browser.
+            browser. AI drafts. Humans review. The shared record remains
+            inspectable and correctable.
           </p>
         </div>
         <div className="mt-10 space-y-6">

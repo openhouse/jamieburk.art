@@ -8,7 +8,7 @@ const appEnv =
   process.env.APP_ENV ??
   process.env.SITE_ENV ??
   process.env.NEXT_PUBLIC_DEPLOY_ENV ??
-  "staging";
+  "development";
 
 const siteUrl = stripTrailingSlash(
   process.env.SITE_URL ??
@@ -19,8 +19,9 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -49,6 +50,47 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, noarchive" },
+          { key: "Cache-Control", value: "public, max-age=3600" }
+        ]
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/work/fair-rent-crs",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/fairrentnyc",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/nyc-artist-coalition-fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
       }
     ];
   }

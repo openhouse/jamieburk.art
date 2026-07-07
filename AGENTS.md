@@ -24,6 +24,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run knowledge-bank`
+- `npm run public-safety`
+- `npm run preflight:staging`
+- `npm run preflight:production`
 
 ## Public-Safety Rules
 
@@ -35,7 +39,32 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+Do not render public approval TODOs on the website. If approval is missing,
+omit the claim or artifact from public pages and record the blocker in docs.
+
+Use `docs/knowledge-bank/` as the public-safe knowledge base for professional
+accomplishment claims. The website is a smaller projection from that source; do
+not strengthen a public claim directly in app copy unless the Knowledge Bank
+already supports the stronger language.
+
+## Chad Lens
+
+Use the Chad Lens when editing resume-facing and portfolio-facing copy:
+
+1. Purpose: say toward what end the work existed and why the system mattered.
+2. Agency: make Jamie visible as the actor with an accurate action verb.
+3. Legibility: make the work understandable to public-sector, HR, recruiter,
+   and technical-operations readers without insider decoding.
+4. Precision: when saying data, systems, documentation, or AI, name the specific
+   work.
+5. Contribution: use stewardship language where appropriate and avoid inflated
+   ownership claims.
+6. Reader burden: make the value understandable on first pass.
+
+Use terms such as `emerging`, `under-structured`, `lightweight`, `tracking`, `data`,
+`AI-ready`, `source-backed`, `Noting.us`, `knowledge graph`, `LLM`,
+`maintainers`, and `builds` with care. Replace or explain them when a busy
+hiring manager would otherwise need Jamie in the room.
 
 ## Scope Rules
 
