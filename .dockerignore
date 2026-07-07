@@ -14,3 +14,18 @@ npm-debug.log
 .npm-cache
 README.local.md
 *.local
+
+# Public-safety: never copy private source material into images.
+archive-private
+client-private
+legal-review
+private
+raw
+transcripts-private
+**/archive-private
+**/client-private
+**/legal-review
+**/private
+**/raw
+**/transcripts-private
+*.private.*

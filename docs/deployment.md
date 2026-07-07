@@ -76,6 +76,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-public-linkedin-url> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-public-github-url> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,6 +94,7 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>'
 ```
 
 Enable TLS:
@@ -137,6 +141,8 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+npm run check:public-safety
+npm run check:routes
 ```
 
 Expected staging behavior:
@@ -145,3 +151,23 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Production Release Gate
+
+Run production checks with the exact production environment before enabling
+indexing:
+
+```bash
+APP_ENV=production \
+SITE_ENV=production \
+NEXT_PUBLIC_DEPLOY_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=index \
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+npm run check:production
+```
+
+The production check should block launch if the placeholder resume PDF remains,
+production contact is missing, private/protected source material is tracked, or
+public-facing approval markers remain.

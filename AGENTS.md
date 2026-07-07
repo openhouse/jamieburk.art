@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:public-safety`
+- `npm run check:routes`
+- `npm run check:production`
 
 ## Public-Safety Rules
 
@@ -36,6 +39,9 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+The knowledge bank lives in `docs/knowledge-bank`. Website copy should project
+from that bank, not expose it as a public `/proofs` page.
 
 ## Scope Rules
 

@@ -28,8 +28,19 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run check:public-safety
+npm run check:routes
 npm run check
 ```
+
+Production release review uses:
+
+```bash
+npm run check:production
+```
+
+`check:production` intentionally fails if launch blockers remain, including the
+placeholder resume PDF or missing production contact email.
 
 ## Environment
 
@@ -54,7 +65,15 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
 NEXT_TELEMETRY_DISABLED=1
+```
+
+Optional public contact links:
+
+```bash
+NEXT_PUBLIC_LINKEDIN_URL=<approved-public-linkedin-url>
+NEXT_PUBLIC_GITHUB_URL=<approved-public-github-url>
 ```
 
 ## Deployment
@@ -80,8 +99,24 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings. Do not
+commit or serve private, proprietary, or unlicensed font files.
+
+## Knowledge Bank
+
+The public-safe knowledge bank lives in `docs/knowledge-bank`. It is the claim
+source for website copy, resume-page summaries, case-study language, and future
+portfolio surfaces.
+
+The site should project from the bank. It should not expose the bank as a
+public `/proofs` page.
+
+Start with:
+
+- `docs/knowledge-bank/README.md`
+- `docs/knowledge-bank/public-claims-inventory.md`
+- `docs/knowledge-bank/proofs-bank.md`
+- `docs/knowledge-bank/approval-status.md`
 
 ## Content Rules
 
@@ -104,3 +139,5 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm production indexing remains exact opt-in through
+  `NEXT_PUBLIC_ROBOTS_POLICY=index`.

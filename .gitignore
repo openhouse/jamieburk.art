@@ -14,3 +14,18 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Public-safety: keep private source material outside the repo.
+archive-private/
+client-private/
+legal-review/
+private/
+raw/
+transcripts-private/
+**/archive-private/
+**/client-private/
+**/legal-review/
+**/private/
+**/raw/
+**/transcripts-private/
+*.private.*
