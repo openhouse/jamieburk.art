@@ -95,6 +95,9 @@ unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
+- Treat `docs/proofs-bank.md` as the public-safe claims ledger. The website
+  should project from that bank for clarity, audience, and purpose; it should
+  not publish private source material to prove a point.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal

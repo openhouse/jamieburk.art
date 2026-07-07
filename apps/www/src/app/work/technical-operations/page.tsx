@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { operationsProofs } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -89,6 +90,39 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-10">
+        <div className="jb-reading">
+          <p className="text-sm font-semibold uppercase text-jb-blue">
+            Defensible proof signals
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+            Evidence that the pattern repeats
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            These proof points are phrased for public use: strong enough to be
+            useful, narrow enough to avoid overstating Jamie&apos;s role or exposing
+            protected material.
+          </p>
+        </div>
+        <div className="mt-6 grid gap-4 lg:grid-cols-2">
+          {operationsProofs.map((proof) => (
+            <JBCard key={proof.id}>
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <h3 className="text-xl font-semibold text-jb-ink">{proof.area}</h3>
+                <span className="rounded-full border border-jb-green/30 px-3 py-1 text-xs font-semibold uppercase text-jb-green">
+                  {proof.status}
+                </span>
+              </div>
+              <p className="mt-4 leading-7 text-jb-ink/78">
+                {proof.publicWording}
+              </p>
+              <p className="mt-4 text-sm leading-6 text-jb-ink/62">
+                {proof.boundary}
+              </p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
       <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-paper p-6">
         <div className="grid gap-6 lg:grid-cols-[0.4fr_0.6fr]">
           <div>
