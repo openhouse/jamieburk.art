@@ -90,18 +90,18 @@ const workItemsInput = [
     slug: "harry-j-epstein",
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
-    summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
     featured: true,
     priority: 1,
     visibility: "public-safe",
+    summary:
+      "Helped translate an 80+ year-old industrial supply business into searchable e-commerce, dealer-aware checkout, content, analytics, marketing, and operational workflows while preserving its public voice.",
     whatWasUnclear:
-      "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
+      "An 80+ year-old industrial supply business had paper-and-phone operations, dealer-pricing practices, customer trust, inventory knowledge, product judgment, and a distinctive public voice that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "Searchable catalog architecture, checkout, dealer-aware access, SEO, analytics, blog publishing, content systems, and operational workflows that contributed to 2x revenue growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -152,8 +152,8 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
+      "Catalog navigation, search, checkout, dealer-pricing, SEO, analytics, and blog systems",
+      "Paper-and-phone operations translated into maintainable e-commerce workflows",
       "Contributed to 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
@@ -170,21 +170,27 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "Public web, coalition memory, and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Built public campaign websites for NYC Artist Coalition advocacy and helped structure shared campaign-memory systems for Commercial Rent Stabilization work.",
+    role: "Public Web Infrastructure, Documentation Systems & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved many stakeholders, public/private source materials, public web surfaces, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Public campaign websites, issue explainers, calls to action, reference libraries, bill-tracking surfaces, running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
+      {
+        title: "Public campaign websites",
+        description:
+          "Public web surfaces for NYC Artist Coalition advocacy, including campaign explainers, calls to action, reference materials, and issue context.",
+        type: "website"
+      },
       {
         title: "Campaign-memory spine",
         description:
@@ -209,6 +215,7 @@ const workItemsInput = [
       "Knowledge Systems",
       "Documentation",
       "Product Operations",
+      "Public Web Infrastructure",
       "Source-Backed Memory",
       "Public-Facing Tools"
     ],
@@ -216,13 +223,14 @@ const workItemsInput = [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
+      "Public Web Infrastructure",
       "Public Guidance",
       "Decision Records"
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Jamie-authored public campaign websites, public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -230,8 +238,10 @@ const workItemsInput = [
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
-      "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+      "Civic delivery, public web infrastructure, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "Public campaign websites built for NYC Artist Coalition advocacy",
+      "FairRentNYC, Talks Not Raids, Let NYC Dance, and NYC Artist Coalition public web surfaces",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
@@ -239,7 +249,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie built public campaign websites for NYC Artist Coalition advocacy and helped structure public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -331,7 +341,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community event-calendar and distribution platform that grew to 1,800+ users, 16,000+ posts/events, and 35+ active city scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,15 +349,15 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed easy-to-adopt ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event publishing, list/tag discovery, follows, saved events, email digests, Google Calendar synchronization, geolocation, and organizer-facing distribution workflows.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -364,9 +374,9 @@ const workItemsInput = [
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
     evidence: [
       "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "1,800+ users and 16,000+ posts/events in archived production data",
+      "35+ active city scenes using a conservative activity threshold",
+      "Email digests, Google Calendar sync, geolocation, follows, and saved events"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +393,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable trust-building and participation infrastructure across 300+ gatherings and 20+ resident artists through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -435,7 +445,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",

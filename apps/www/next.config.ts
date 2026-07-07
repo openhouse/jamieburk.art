@@ -20,7 +20,7 @@ const siteUrl = stripTrailingSlash(
 
 const robotsIndexable =
   (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -47,8 +47,41 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/resume/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
+      },
+      {
         source: "/(.*)",
         headers: globalHeaders
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/fairrentnyc",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/nyc-artist-coalition-fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
       }
     ];
   }

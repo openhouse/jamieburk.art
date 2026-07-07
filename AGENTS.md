@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run public-safety`
+- `npm run preflight:staging`
+- `npm run preflight:production`
 
 ## Public-Safety Rules
 
@@ -37,6 +40,13 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+Before production, remove or resolve production-facing TODO markers. The public
+safety script is the source of truth for automated launch blockers.
+
+Public contact is sourced from `apps/www/src/data/site.ts` and optional
+`NEXT_PUBLIC_CONTACT_*` environment values. Do not publish a phone number on the
+site outside the approved resume PDF.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
@@ -47,8 +57,15 @@ change for V1.
 
 Staging first: `staging.jamieburk.art`, noindex.
 Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production indexing is opt-in and requires both production environment settings
+and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Voice
 
 Precise, warm, modular, ethically grounded. Documentation is care. Do not
 overclaim.
+
+Use `docs/chad-lens.md` for resume-facing and portfolio-facing copy. Public
+pages should make purpose, agency, legibility, precision, and contribution
+explicit enough that a busy hiring reader can understand the work without Jamie
+in the room.

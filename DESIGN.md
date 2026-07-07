@@ -16,12 +16,12 @@ colors:
   classic-rose: "#e2aeb4"
 typography:
   display:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 700
     lineHeight: 1.02
     letterSpacing: "0"
   headline:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.875rem"
     fontWeight: 700
     lineHeight: 1.2
@@ -39,11 +39,11 @@ typography:
     lineHeight: 1.65
     letterSpacing: "0"
   label:
-    fontFamily: "Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Oswald, Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.2
-    letterSpacing: "0"
+    letterSpacing: "0.055em"
 rounded:
   selector: "0.35rem"
   field: "0.35rem"
@@ -146,13 +146,16 @@ for focus, selection, and occasional proof, not as a general accent wash.
 
 ## 3. Typography
 
-**Display Font:** League Spartan with Karla and system sans fallbacks.
+**Display Font:** Karla with system sans fallbacks.
 **Body Font:** Karla with system sans fallbacks.
-**Label/Mono Font:** Karla; there is no mono system in the current site.
+**Label Font:** Oswald with Karla and system sans fallbacks.
+**Rare Display / OG Font:** League Spartan may be used only for Open Graph or
+rare bitmap/display material when it is intentionally generated for that use.
+**Rejected V1 Variant:** Archivo Narrow is not part of the V1 type system.
 
-**Character:** The pairing is practical and public-facing. League Spartan gives
-headings a sturdy placard quality; Karla keeps long summaries readable,
-approachable, and unshowy.
+**Character:** Karla keeps long summaries readable, approachable, and unshowy.
+Oswald gives labels, nav, eyebrows, and compact metadata a sturdy placard
+quality without taking over prose or headings.
 
 ### Hierarchy
 
@@ -165,13 +168,19 @@ approachable, and unshowy.
 - **Body** (400, 17px, generous line-height): Project summaries, notes, care
   language, and MDX case-study prose. Keep reading measures near 65-75
   characters.
-- **Label** (700, 0.875rem): Status, navigation, and compact metadata.
+- **Label** (600, 0.875rem, uppercase, 0.055em tracking): Status, navigation,
+  eyebrows, and compact metadata.
 
 ### Named Rules
 
 **The Plain Evidence Rule.** Use type weight, spacing, and placement before
 inventing visual effects. No gradient text, no ornamental tracking, no clever
 typographic gimmicks.
+
+**The Served Fonts Rule.** DESIGN.md, the colophon, and implementation should
+name the same V1 system: Karla for body/UI/prose/cards and Oswald for
+labels/metadata/eyebrows/nav. Do not describe League Spartan as a live site
+heading font unless the implementation changes.
 
 ## 4. Elevation
 

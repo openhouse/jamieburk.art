@@ -6,6 +6,10 @@ Product Operations & Implementation.
 The site should make this believable: Jamie creates operating structure for
 complex public-facing teams.
 
+Technical Operations is the primary role-fit proof page for V1. Public-facing
+copy should follow the Chad lens: make purpose, agency, reader legibility,
+precision, and contribution explicit without flattening the work.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -29,6 +33,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight:staging
+npm run preflight:production
 ```
 
 ## Environment
@@ -42,6 +49,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,8 +64,14 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in: production becomes indexable only when the app is
+running as production and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Deployment
 
@@ -80,8 +96,21 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose/cards and Oswald for labels, metadata, eyebrows, and
+navigation. League Spartan is reserved for rare generated Open Graph or display
+material only. Do not commit or serve private, proprietary, or unlicensed font
+files.
+
+## Editorial Policy
+
+Use [docs/chad-lens.md](docs/chad-lens.md) when editing resume-facing or
+portfolio-facing copy. Translate insider terms on first use and keep Jamie
+visible as the actor without inflating ownership claims.
+
+Use [docs/proofs-bank.md](docs/proofs-bank.md) and
+`apps/www/src/data/proofs.ts` as the public-safe knowledge base for professional
+claims. The website should project only the clearest subset for its audience and
+purpose.
 
 ## Content Rules
 
@@ -91,16 +120,19 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
+- Treat the proofs bank as public material: no claim, source description, or
+  boundary note should be included if it would be unsafe or unfair in a public
+  newspaper context.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Approved resume PDF is missing or contains placeholder text.
+- Public email is missing from the contact source of truth.
+- Production indexing is enabled without Jamie approval.
+- Public-safety scan fails.
+- Screenshots, artifacts, exact proof metrics, collaborator names, photos, or
+  quotes are unapproved.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
