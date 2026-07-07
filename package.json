@@ -15,6 +15,11 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "public-safety": "node scripts/public-safety.mjs",
+    "route-check": "node scripts/route-check.mjs",
+    "check:routes": "npm run route-check",
+    "production-safety": "node scripts/production-safety.mjs",
+    "check:production": "npm run public-safety -- --production && npm run route-check && npm run production-safety && npm run check",
+    "check": "npm run public-safety && npm run route-check && npm run check -w @jamie-burkart/www"
   }
 }

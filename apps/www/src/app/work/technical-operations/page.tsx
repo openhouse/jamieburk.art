@@ -13,26 +13,30 @@ export const metadata: Metadata = createMetadata({
 
 const sections = [
   {
-    title: "Operating systems built",
+    title: "Operating backbone",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "Clarify ambiguous goals and turn them into working plans",
+      "Coordinate across product, design, engineering, legal, security, comms, contracts, and community stakeholders",
+      "Create decision frameworks, action trackers, status reporting, and escalation paths",
+      "Report honestly on risks, blockers, tradeoffs, and next steps"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "Keep planning cycles and sprint rituals useful",
+      "Surface risks early and unblock the team",
+      "Support user acceptance testing / quality assurance and launch readiness",
+      "Run post-launch retros and improve working systems over time"
+    ]
   },
   {
     title: "Documentation and working memory",
     items: [
-      "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
-      "Meeting synthesis",
-      "Decision records"
+      "Source maps, decision records, public guidance, and resource libraries",
+      "Handbooks, runbooks, onboarding guides, and templates",
+      "Meeting synthesis that preserves what was decided and what remains open",
+      "Durable handoffs so new teammates can enter the work safely"
     ]
   },
   {
@@ -64,6 +68,11 @@ export default function TechnicalOperationsPage() {
           environments, I build the operating backbone teams need to move:
           planning rhythms, decision logs, action trackers, onboarding materials,
           documentation systems, launch support, and durable handoffs.
+        </p>
+        <p className="mt-5 text-lg leading-8 text-jb-ink/72">
+          The through-line is practical: coordinate delivery, keep work on
+          schedule, surface risks before they become surprises, and leave behind
+          working materials a team can use after launch.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
