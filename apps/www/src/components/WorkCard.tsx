@@ -22,7 +22,7 @@ export function WorkCard({ item }: WorkCardProps) {
           <p className="mt-2 font-medium text-jb-green">{item.subtitle}</p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
         </div>
-        <dl className="grid gap-3 text-sm md:grid-cols-2">
+        <dl className="grid gap-3 text-sm md:grid-cols-3">
           <div>
             <dt className="font-semibold text-jb-ink">What was unclear</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
@@ -30,6 +30,10 @@ export function WorkCard({ item }: WorkCardProps) {
           <div>
             <dt className="font-semibold text-jb-ink">What became usable</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
+          </div>
+          <div>
+            <dt className="font-semibold text-jb-ink">Toward what end</dt>
+            <dd className="mt-1 leading-6 text-jb-ink/72">{item.towardWhatEnd}</dd>
           </div>
         </dl>
         <div>

@@ -1,8 +1,8 @@
 const proofItems = [
-  "14+ years building operating structure",
-  "2x revenue growth contribution for legacy e-commerce business",
+  "14+ years creating operating structure",
+  "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
   "30+ pages of civic campaign-memory infrastructure",
-  "35 city ecosystems reached through WOWList.org",
+  "Roughly 35 city ecosystems reached through WOWList.org",
   "300+ hosted gatherings / 20+ resident artists supported"
 ];
 

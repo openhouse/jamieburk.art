@@ -12,9 +12,13 @@
   "scripts": {
     "dev": "npm run dev -w @jamie-burkart/www",
     "build": "npm run build -w @jamie-burkart/www",
+    "build:webpack": "npm run build:webpack -w @jamie-burkart/www",
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "check": "npm run check -w @jamie-burkart/www",
+    "public-safety": "node scripts/public-safety.mjs",
+    "prelaunch": "npm run public-safety && npm run check",
+    "prelaunch:production": "APP_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run public-safety && APP_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check"
   }
 }

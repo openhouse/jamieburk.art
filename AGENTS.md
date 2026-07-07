@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who helps
+teams turn ambiguous, loosely defined work into usable systems.
 
 ## Current Canonical App
 
@@ -24,6 +24,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run public-safety`
+- `npm run prelaunch`
 
 ## Public-Safety Rules
 
@@ -37,6 +39,10 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+Private source material must stay outside the repo. If local working folders are
+needed, use ignored names such as `private/`, `archive-private/`, `raw/`,
+`transcripts-private/`, `client-private/`, and `legal-review/`.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
@@ -46,7 +52,8 @@ change for V1.
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.
-Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production later: `jamieburk.art`, indexable only after Jamie approves content
+and `NEXT_PUBLIC_ROBOTS_POLICY=index` is explicitly configured.
 
 ## Voice
 

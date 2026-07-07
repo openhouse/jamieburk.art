@@ -52,6 +52,7 @@ const workMetaSchema = z.object({
   visibility: visibilitySchema,
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
+  towardWhatEnd: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
   artifacts: z.array(
     z.object({
@@ -102,6 +103,8 @@ const workItemsInput = [
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+    towardWhatEnd:
+      "Help a legacy industrial business grow online without losing the customer trust, voice, and operational knowledge that made it valuable.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -140,7 +143,7 @@ const workItemsInput = [
     ],
     links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
     careNote:
-      "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
+      "No private analytics dashboards, revenue details, credentials, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
       "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
@@ -154,7 +157,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to a period of 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -172,7 +175,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Built campaign-memory infrastructure to help a multi-stakeholder commercial rent stabilization effort preserve decisions, legal/policy questions, public-data framing, and next steps without exposing private coalition material.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -182,7 +185,9 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign-memory infrastructure.",
+    towardWhatEnd:
+      "Help collaborators preserve decisions, legal and policy questions, public-data framing, and next steps without exposing private coalition material.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -220,7 +225,7 @@ const workItemsInput = [
       "Decision Records"
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
       "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
@@ -239,11 +244,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie helped structure and steward public-safe campaign-memory infrastructure, coordination documents, source maps, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
   },
   {
@@ -263,6 +268,8 @@ const workItemsInput = [
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
       "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+    towardWhatEnd:
+      "Help residents move from a civic issue to clearer public-facing guidance about relevant offices, districts, and possible next steps.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -339,15 +346,17 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed small, practical, low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+    towardWhatEnd:
+      "Help local calendar organizers and DIY arts communities distribute events through language their communities already used.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A small, practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -394,6 +403,8 @@ const workItemsInput = [
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+    towardWhatEnd:
+      "Support recurring cultural work with trust-building routines while keeping private community records out of public view.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -446,6 +457,8 @@ const workItemsInput = [
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
       "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+    towardWhatEnd:
+      "Help a long-vacant historic building project make public benefit, preservation, funding, and stakeholder context legible.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {

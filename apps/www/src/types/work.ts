@@ -58,6 +58,7 @@ export type WorkMeta = {
   visibility: Visibility;
   whatWasUnclear: string;
   whatBecameUsable: string;
+  towardWhatEnd: string;
   artifactTypes: ArtifactType[];
   artifacts: Artifact[];
   tags: string[];

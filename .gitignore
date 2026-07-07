@@ -10,6 +10,14 @@ coverage
 .env.*
 !.env.example
 .npm-cache
+*.local
+*.private.*
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
