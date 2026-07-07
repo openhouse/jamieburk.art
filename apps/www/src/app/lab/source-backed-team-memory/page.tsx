@@ -43,7 +43,8 @@ export default function SourceBackedTeamMemoryPage() {
               "Meeting-to-memory workflows",
               "Source-linked summaries",
               "Human-reviewed AI drafts",
-              "Preserving ideas that would otherwise be left on the cutting-room floor"
+              "Eval checklists and review workflows",
+              "Preserving important ideas that would otherwise disappear after meetings"
             ].map((item) => (
               <li className="flex gap-3" key={item}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />

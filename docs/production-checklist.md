@@ -11,6 +11,8 @@ indexable.
 - Optional LinkedIn and GitHub links are approved before their env vars are set.
 - Proof-strip language stays contribution-oriented unless exact metrics are
   approved.
+- Case-study claim language has been compared with
+  `docs/public-claim-register.md`.
 - Case-study screenshots, artifacts, photos, quotes, and collaborator names are
   approved or omitted.
 - Footer and metadata use the direct professional frame, not the V1.1 notebook

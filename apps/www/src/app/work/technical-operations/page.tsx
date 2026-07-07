@@ -15,7 +15,7 @@ const sections = [
   {
     title: "Operating backbone",
     items: [
-      "I turn ambiguous goals and scattered context into planning rhythms, decision records, action trackers, stakeholder updates, and durable handoffs.",
+      "I turn ambiguous goals and scattered context into requirements, user stories, acceptance criteria, planning rhythms, decision records, action trackers, stakeholder updates, and durable handoffs.",
       "I surface risks early by making open questions, dependencies, ownership, and next actions visible.",
       "I treat documentation as operating infrastructure, not clerical aftercare."
     ]
@@ -33,17 +33,17 @@ const sections = [
     items: [
       "I write operating documents teams actually use: handbooks, runbooks, onboarding guides, action trackers, source maps, and weekly updates.",
       "I synthesize meetings into decision records, risk notes, open questions, and stakeholder follow-up.",
-      "I preserve enough context that someone can join later and understand what happened, why it matters, and what comes next."
+      "I preserve enough context that someone can join later and understand what happened, why it matters, what source supports it, and what comes next."
     ]
   },
   {
     title: "Public-facing systems",
     items: [
-      "HJE implementation and e-commerce handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "Harry J. Epstein Company e-commerce and operations handoff systems",
+      "FairRentNYC / NYC Artist Coalition campaign-memory and provenance infrastructure",
       "CallNYC resident-facing open-data guidance",
-      "WOWList community event-listing workflows",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "WOWList followable event-community workflows across 35+ active city scenes",
+      "196 / Sunday Dinner onboarding, hosting, and continuity systems"
     ]
   },
   {
@@ -58,7 +58,8 @@ const sections = [
       "Git / GitHub",
       "Docker / Dokku",
       "QGIS",
-      "Open-data workflows"
+      "Open-data workflows",
+      "AI evals and human-in-the-loop documentation"
     ]
   },
   {
@@ -86,9 +87,10 @@ export default function TechnicalOperationsPage() {
           I build the operating backbone teams need to plan, coordinate,
           document, report, onboard, and ship. Across civic, cultural,
           small-business, and public-facing technical environments, my work
-          turns ambiguous goals and scattered context into planning rhythms,
-          decision records, action trackers, onboarding materials, stakeholder
-          updates, launch support, and durable handoffs.
+          turns ambiguous goals and scattered context into requirements, user
+          stories, acceptance criteria, planning rhythms, decision records,
+          action trackers, onboarding materials, stakeholder updates, launch
+          support, and durable handoffs.
         </p>
         <p className="mt-5 text-lg leading-8 text-jb-ink/72">
           This is public-sector-adjacent civic work, public-facing tools,

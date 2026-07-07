@@ -29,13 +29,14 @@ export default function AboutPage() {
             Across projects, I tend to do the same kind of work: clarify
             ambiguous goals, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
-            interfaces, coordinate implementation, and leave behind handoffs
-            people can use after the meeting or launch is over.
+            interfaces, coordinate implementation, and leave behind source-aware
+            handoffs people can use after the meeting or launch is over.
           </p>
           <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
+            delivery, AI-evaluation-informed documentation, and source-backed
+            knowledge systems.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
