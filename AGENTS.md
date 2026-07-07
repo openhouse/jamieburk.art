@@ -6,6 +6,9 @@ Build and maintain a focused, public-safe portfolio that makes Jamie legible as 
 Technical Project Manager - Product Operations & Implementation lead who creates
 operating structure for complex public-facing teams.
 
+Use Chad's lens for this composite branch: do not make the reader decode Jamie.
+State what Jamie does, for whom, toward what end, and what becomes usable.
+
 ## Current Canonical App
 
 Use `apps/www`. Do not rename it to `apps/site`, `apps/web`, or another path
@@ -35,7 +38,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the material out of the public surface and record the
+approval need in staging QA or launch notes.
 
 ## Scope Rules
 

@@ -22,6 +22,10 @@ handoffs. Success means a reviewer can understand Jamie's role fit, trust the
 evidence, and know what to do next without exposing private or sensitive
 materials.
 
+Composite `+O` editorial lens: do not make the reader decode Jamie. Public copy
+should state what Jamie does, for whom, toward what end, and what becomes
+usable before introducing richer lab, archive, or source-backed language.
+
 ## Brand Personality
 
 Precise, warm, modular, and ethically grounded. The emotional goal is calm

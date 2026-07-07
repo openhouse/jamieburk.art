@@ -20,8 +20,8 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
+            My work sits where the work is ambiguous and high-context, and the
+            stakes are human: civic technology, small-business operations, public-facing
             tools, cultural infrastructure, coalition work, and knowledge
             systems.
           </p>
