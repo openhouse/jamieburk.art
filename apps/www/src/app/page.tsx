@@ -8,6 +8,7 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
+  ["Cultural-space advocacy", "public civic infrastructure"],
   ["Fragmented open-data context", "resident-facing guidance and source maps"],
   ["Legacy operating habits", "maintainable e-commerce workflows"],
   ["Recurring community work", "repeatable onboarding and continuity systems"]

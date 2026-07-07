@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -46,42 +47,8 @@ const operatingAreas = [
   }
 ];
 
-const proofRows = [
-  {
-    need: "Coordinate delivery",
-    proof: "Harry J. Epstein, CallNYC, WOWList, FairRentNYC, and KC Town Hall show delivery across business, civic, community, built-environment, and public-facing technical contexts."
-  },
-  {
-    need: "Build operating processes",
-    proof: "HJE catalog/dealer workflows, 196 / Sunday Dinner continuity, WOWList event workflows, and coalition-memory systems show repeatable process design."
-  },
-  {
-    need: "Unblock recurring problems",
-    proof: "Legacy e-commerce workflows, open-data translation, and meeting-memory systems turned ambiguous work into clearer next steps."
-  },
-  {
-    need: "Coordinate across functions",
-    proof: "Work spans civic partners, small-business stakeholders, technical collaborators, organizers, artists, and public-facing users."
-  },
-  {
-    need: "Onboard and support people",
-    proof: "196 Residency, Sunday Dinner, and source-backed team memory show onboarding, context-setting, source maps, templates, and durable participation support."
-  },
-  {
-    need: "Write operating documentation",
-    proof: "Running minutes, source maps, decision records, legislative provenance materials, public guidance, templates, and handoffs appear across selected systems."
-  },
-  {
-    need: "Report honestly on status",
-    proof: "The Known / Open / Protected pattern separates what is public-safe, what needs approval, and what must remain protected."
-  },
-  {
-    need: "Improve systems over time",
-    proof: "Long-running stewardship across 14+ years shows iteration, maintenance, adoption support, and practical judgment."
-  }
-];
-
 const proofLinks = [
+  ["Public proof bank", "/proofs"],
   ["HJE operations modernization", "/work/harry-j-epstein"],
   ["FairRentNYC campaign memory", "/work/fair-rent-nyc"],
   ["Source-backed team memory", "/lab/source-backed-team-memory"]
@@ -133,7 +100,7 @@ export default function TechnicalOperationsPage() {
             <span>Need</span>
             <span>Proof</span>
           </div>
-          {proofRows.map((row) => (
+          {technicalOperationsProofRows.map((row) => (
             <div
               className="grid gap-2 border-t border-jb-ink/12 px-5 py-4 md:grid-cols-[0.34fr_0.66fr]"
               key={row.need}
@@ -145,7 +112,7 @@ export default function TechnicalOperationsPage() {
         </div>
       </section>
 
-      <section className="mt-12 grid gap-5 lg:grid-cols-3" aria-label="Selected proof links">
+      <section className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4" aria-label="Selected proof links">
         {proofLinks.map(([label, href]) => (
           <Link
             className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5 font-semibold text-jb-blue hover:text-jb-green"

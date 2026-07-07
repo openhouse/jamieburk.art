@@ -56,6 +56,8 @@ npm run check:production
 ## Metrics Approval
 
 - Proof metrics are approved, softened, or removed.
+- `apps/www/src/data/proofs.ts` claims, source-basis notes, confidence labels,
+  visibility labels, public-use rules, and guardrails are approved.
 - Contribution language does not overclaim.
 - Private dashboards, internal revenue details, and customer data remain offline.
 
@@ -96,9 +98,9 @@ npm run check:production
 - Keep previous production SHA available for rollback.
 - Verify all main routes return 200 after deployment:
   `/`, `/work`, `/work/technical-operations`, `/work/harry-j-epstein`,
-  `/work/fair-rent-nyc`, `/work/callnyc`, `/lab/source-backed-team-memory`,
-  `/resume`, `/contact`, `/colophon`, `/robots.txt`, `/sitemap.xml`, and the
-  resume PDF path.
+  `/work/fair-rent-nyc`, `/work/callnyc`, `/proofs`,
+  `/lab/source-backed-team-memory`, `/resume`, `/contact`, `/colophon`,
+  `/robots.txt`, `/sitemap.xml`, and the resume PDF path.
 
 ## Final Jamie Approval
 

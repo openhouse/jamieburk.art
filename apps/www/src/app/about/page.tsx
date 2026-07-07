@@ -36,6 +36,13 @@ export default function AboutPage() {
             operations, product operations, implementation, business analysis,
             civic technology delivery, and source-backed knowledge systems.
           </p>
+          <p>
+            In NYC Artist Coalition / FairRentNYC work, my public-safe role is
+            co-founder and civic-systems, documentation, and policy-communications
+            lead. The work turns cultural-space advocacy into usable civic
+            infrastructure: campaign pages, explainers, source maps, running
+            minutes, action systems, public-data framing, and careful handoffs.
+          </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
