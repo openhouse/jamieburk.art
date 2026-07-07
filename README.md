@@ -6,6 +6,9 @@ Product Operations & Implementation.
 The site should make this believable: Jamie creates operating structure for
 complex public-facing teams.
 
+Composite `+O` editorial lens: do not make the reader decode Jamie. State what
+Jamie does, for whom, toward what end, and what becomes usable.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -29,6 +32,12 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run knowledge-bank
+npm run public-safety
+npm run routes
+npm run preflight:staging
+npm run preflight:production
+npm run check:production
 ```
 
 ## Environment
@@ -43,6 +52,8 @@ SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
+PORT=3000
+HOSTNAME=0.0.0.0
 ```
 
 Production should only be enabled after staging review:
@@ -55,6 +66,8 @@ SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
+PORT=3000
+HOSTNAME=0.0.0.0
 ```
 
 ## Deployment
@@ -80,24 +93,46 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings, compact
+proof labels, and metadata. Do not commit or serve private, proprietary, or
+unlicensed font files. See `docs/typefaces.md`.
+
+## Knowledge Bank
+
+The public site is a selected proof surface. `docs/knowledge-bank/` is the
+public-safe editorial, proof, and approval layer behind it. Before
+strengthening public claims, update the Knowledge Bank and confirm status,
+source class, guardrail, allowed surfaces, and anti-claims.
+
+The public site should project from the bank for clarity, audience, and purpose.
+It should not mirror the bank or publish private source material to prove a
+point.
+
+The older `docs/proofs-bank.md` remains as a compatibility pointer; use
+`docs/knowledge-bank/claims.md` and `docs/knowledge-bank/proofs.md` as the
+canonical claim/proof source.
 
 ## Content Rules
 
+- Treat `docs/knowledge-bank/` as the public-safe claims ledger. The website
+  should project from that bank for clarity, audience, and purpose; it should
+  not publish private source material to prove a point.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, keep material off the public surface and record the approval
+  need in staging QA or launch notes.
+- Use Chad's Lens: purpose, agency, legibility, precision, contribution, and
+  reader burden.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the approved resume PDF remains in place before production.
+- Public email, LinkedIn, and GitHub may be shown only when approved; otherwise
+  omit those rows.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.

@@ -1,6 +1,7 @@
 export type Visibility =
   | "public"
   | "public-safe"
+  | "lab"
   | "redacted"
   | "summary-only"
   | "private";
@@ -12,6 +13,12 @@ export type WorkStatus =
   | "Archived prototype"
   | "Public-safe summary only"
   | "Draft";
+
+export type ApprovalStatus =
+  | "approved"
+  | "needs-review"
+  | "staging-only"
+  | "do-not-publish";
 
 export type ArtifactType =
   | "website"
@@ -50,14 +57,17 @@ export type WorkMeta = {
   series: string;
   subtitle: string;
   summary: string;
+  result: string;
   role: string;
   years: string;
   status: WorkStatus;
+  approval: ApprovalStatus;
   featured: boolean;
   priority: number;
   visibility: Visibility;
   whatWasUnclear: string;
   whatBecameUsable: string;
+  towardWhatEnd: string;
   artifactTypes: ArtifactType[];
   artifacts: Artifact[];
   tags: string[];
