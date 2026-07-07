@@ -10,6 +10,29 @@ export const metadata: Metadata = createMetadata({
   path: "/contact"
 });
 
+type ProfileRow = {
+  label: string;
+  value: string;
+  href: string;
+};
+
+const profileRows = [
+  site.contact.linkedInUrl
+    ? {
+        label: "LinkedIn",
+        value: "linkedin.com/in/jamie-burkart",
+        href: site.contact.linkedInUrl
+      }
+    : null,
+  site.contact.githubUrl
+    ? {
+        label: "GitHub",
+        value: "github.com/openhouse",
+        href: site.contact.githubUrl
+      }
+    : null
+].filter((row): row is ProfileRow => Boolean(row));
+
 export default function ContactPage() {
   return (
     <div className="jb-frame py-12">
@@ -20,28 +43,38 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
-            <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
+            {site.contact.email && site.contact.emailHref ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">Public email</dt>
+                <dd className="mt-1">
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.contact.emailHref}
+                  >
+                    {site.contact.email}
+                  </a>
+                </dd>
+              </div>
+            ) : null}
             <div>
               <dt className="font-semibold text-jb-ink">Location</dt>
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
-            </div>
+            {profileRows.map((row) => (
+              <div key={row.label}>
+                <dt className="font-semibold text-jb-ink">{row.label}</dt>
+                <dd className="mt-1">
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={row.href}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {row.value}
+                  </a>
+                </dd>
+              </div>
+            ))}
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
@@ -52,6 +85,11 @@ export default function ContactPage() {
             </div>
           </dl>
         </div>
+        {!site.contact.email ? (
+          <p className="mt-4 text-sm leading-6 text-jb-ink/62">
+            Public contact details are configured on reviewed deployments.
+          </p>
+        ) : null}
       </div>
     </div>
   );
