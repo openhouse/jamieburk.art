@@ -1,0 +1,167 @@
+[
+  {
+    "id": "career-operating-structure",
+    "project": "Core positioning",
+    "status": "known",
+    "supportLevel": "approved resume plus selected work chronology",
+    "recommendedPublicWording": "Jamie has 14+ years building operating structure across civic, cultural, small-business, and technical environments.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["homepage proof strip", "homepage copy", "about", "resume", "case studies"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Use as professional positioning, not as a credentialed certification."
+  },
+  {
+    "id": "hje-growth-supported",
+    "project": "Harry J. Epstein Company",
+    "status": "softened-for-production",
+    "supportLevel": "approved resume plus HJE public-safe source package",
+    "recommendedPublicWording": "Supported growth for a legacy e-commerce business.",
+    "strongerWordingIfApproved": "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old legacy industrial business adapt to e-commerce.",
+    "allowedSurfaces": ["homepage proof strip", "work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-source", "public-safe-archive-summary"],
+    "guardrail": "Use contribution language. Do not publish dashboards, revenue breakdowns, customer data, credentials, vendor terms, or internal operations."
+  },
+  {
+    "id": "nac-role",
+    "project": "NYC Artist Coalition / FairRentNYC",
+    "status": "use-with-care",
+    "supportLevel": "approved resume plus public NYC Artist Coalition context and public-safe CRS summaries",
+    "recommendedPublicWording": "Jamie co-founded NYC Artist Coalition and helps make NYC Artist Coalition / FairRentNYC work usable through civic systems, coalition operations, documentation, source maps, and policy communications.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["work card", "case study", "about"],
+    "sourceClasses": ["approved-resume", "public-source", "public-safe-archive-summary"],
+    "guardrail": "Do not imply sole leadership, legal authority, official coalition position, or ownership of collective advocacy."
+  },
+  {
+    "id": "nac-public-history",
+    "project": "NYC Artist Coalition",
+    "status": "use-with-care",
+    "supportLevel": "public campaign sites and public-safe coalition summaries",
+    "recommendedPublicWording": "NYC Artist Coalition's public record includes cultural-space advocacy, Let NYC Dance / Cabaret Law repeal work, Save NYC Spaces / Office of Nightlife advocacy, Talks Not Raids / M.A.R.C.H. transparency work, Fair Rent / commercial lease-protection advocacy, and COVID-era relief coordination.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["case study", "internal docs"],
+    "sourceClasses": ["public-source", "public-safe-archive-summary"],
+    "guardrail": "Use coalition language. Do not assign sole credit to Jamie or NYC Artist Coalition for multi-organization public outcomes."
+  },
+  {
+    "id": "crs-campaign-memory",
+    "project": "Commercial Rent Stabilization",
+    "status": "softened-for-production",
+    "supportLevel": "approved resume plus public-safe CRS running-minutes summary",
+    "recommendedPublicWording": "Shared civic campaign-memory infrastructure.",
+    "strongerWordingIfApproved": "Built and stewarded 30+ pages of shared campaign-memory and coordination infrastructure for a 2026 Commercial Rent Stabilization collaboration across Action Lab / Small Business United, Fair Rent NYC, NYC Artist Coalition, and partner networks.",
+    "allowedSurfaces": ["homepage proof strip", "work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Public-safe summary only. Do not publish private coalition notes, stakeholder lists, legal-review material, raw transcripts, private emails, or unapproved quotes."
+  },
+  {
+    "id": "crs-source-map",
+    "project": "Commercial Rent Stabilization",
+    "status": "known",
+    "supportLevel": "approved resume plus public-safe provenance-redline summary",
+    "recommendedPublicWording": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public and advocacy source layers.",
+    "strongerWordingIfApproved": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Jobs Survival Act-derived provisions, and Albany Senate Bill S8319 revisions.",
+    "allowedSurfaces": ["case study", "resume", "technical operations"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Describe as source mapping and provenance work for discussion and review, not legal analysis."
+  },
+  {
+    "id": "crs-public-data",
+    "project": "Commercial Rent Stabilization",
+    "status": "known",
+    "supportLevel": "approved resume plus public-safe data memo summaries",
+    "recommendedPublicWording": "Drafted privacy-preserving commercial vacancy, occupancy, and lease-cost data materials for city-stakeholder conversations.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["case study", "technical operations", "resume"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Do not imply agency adoption. Do not publish raw filings, confidential tenant/property details, or private stakeholder context."
+  },
+  {
+    "id": "callnyc",
+    "project": "CallNYC.org",
+    "status": "known",
+    "supportLevel": "approved resume plus project records and verified Politico New York article archive",
+    "recommendedPublicWording": "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-source", "public-safe-archive-summary"],
+    "guardrail": "Keep archived-prototype and unofficial status visible. Do not imply CallNYC was an official city service."
+  },
+  {
+    "id": "callnyc-politico",
+    "project": "CallNYC.org",
+    "status": "known",
+    "supportLevel": "verified public PDF archive of Politico New York article",
+    "recommendedPublicWording": "CallNYC was covered by Politico New York in Miranda Neubauer's March 14, 2016 article, \"Website provides new information about council members' focus.\"",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["case study", "resume", "internal docs"],
+    "sourceClasses": ["public-source"],
+    "guardrail": "Use as historical press coverage. Keep the project framed as an archived civic-tech prototype, not an official or current service."
+  },
+  {
+    "id": "wowlist-multicity",
+    "project": "WOWList.org",
+    "status": "softened-for-production",
+    "supportLevel": "approved resume plus WOWList public-safe archive summaries",
+    "recommendedPublicWording": "Multi-city community web systems.",
+    "strongerWordingIfApproved": "Co-built WOWList with Richard Caceres, a Python / Django + Ember.js community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+    "allowedSurfaces": ["homepage proof strip", "work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Use rough aggregate adoption wording. Do not publish private user data, organizer contacts, account records, raw database records, or unapproved community materials."
+  },
+  {
+    "id": "wowlist-archive-counts",
+    "project": "WOWList.org",
+    "status": "pending-approval",
+    "supportLevel": "public-safe archive analysis",
+    "recommendedPublicWording": "Local archive analysis supports aggregate product-scale claims.",
+    "strongerWordingIfApproved": "WOWList's July 2017 archive shows 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, and 20,927 saved/starred events.",
+    "allowedSurfaces": ["internal docs"],
+    "sourceClasses": ["public-safe-archive-summary"],
+    "guardrail": "Use only as aggregate archive counts if approved. Never publish raw records, account data, emails, media, or integration identifiers."
+  },
+  {
+    "id": "sunday-dinner-participation",
+    "project": "196 Artists Residency / Sunday Dinner",
+    "status": "softened-for-production",
+    "supportLevel": "approved resume plus Sunday Dinner workbook summary",
+    "recommendedPublicWording": "Long-running gatherings and resident-artist support.",
+    "strongerWordingIfApproved": "Documented 300+ gatherings and supported 20+ resident artists through Sunday Dinner / 196 systems.",
+    "allowedSurfaces": ["homepage proof strip", "work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "guardrail": "Summary-only. Do not publish guest names, attendance records, addresses, phone numbers, emails, private stories, private interiors, or unapproved photos."
+  },
+  {
+    "id": "kc-town-hall-public-benefit",
+    "project": "KC Town Hall LLC",
+    "status": "use-with-care",
+    "supportLevel": "approved resume plus public-funding packet summary",
+    "recommendedPublicWording": "Supported adaptive-reuse planning and public-benefit documentation for a long-vacant historic Kansas City building project.",
+    "strongerWordingIfApproved": "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 square foot historic building into four commercial spaces and three homes, including a $490,539 public funding recommendation.",
+    "allowedSurfaces": ["work card", "case study", "resume"],
+    "sourceClasses": ["approved-resume", "public-record", "public-safe-archive-summary"],
+    "guardrail": "Use recommendation language. Do not imply unrestricted grant receipt or publish private financial, legal, banking, property, or stakeholder details."
+  },
+  {
+    "id": "source-backed-team-memory",
+    "project": "Source-Backed Team Memory",
+    "status": "known",
+    "supportLevel": "public-safe method summaries",
+    "recommendedPublicWording": "A bounded source-backed team-memory method for turning selected meetings, documents, decisions, open questions, and source material into human-reviewed organizational memory.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["lab page", "technical operations", "internal docs"],
+    "sourceClasses": ["public-safe-archive-summary"],
+    "guardrail": "Present as a lab, method, or consulting practice. Do not present as production SaaS, autonomous publication, AI authority, or private archive browser."
+  },
+  {
+    "id": "ai-evals-completion",
+    "project": "Professional development",
+    "status": "known",
+    "supportLevel": "certificate image plus approved resume",
+    "recommendedPublicWording": "Completed AI Evals for Engineers & PMs with Hamel Husain and Shreya Shankar / Maven in 2026.",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["resume", "about", "internal docs"],
+    "sourceClasses": ["certificate", "approved-resume"],
+    "guardrail": "Certificate completion only; not a degree or formal credential beyond completion."
+  }
+]

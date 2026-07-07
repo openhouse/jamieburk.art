@@ -61,9 +61,10 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          environments, I build the operating backbone teams need to stay
+          focused, unblocked, documented, and shipping: planning rhythms,
+          decision logs, action trackers, onboarding materials, documentation
+          systems, launch support, and durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
