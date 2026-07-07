@@ -21,7 +21,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="jb-meta-label text-xs text-jb-paper/70">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +29,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="jb-meta-label text-xs text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -44,7 +44,7 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
+        Representative artifact types
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
@@ -64,12 +64,12 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
+            <p className="jb-meta-label text-xs text-jb-blue">
               {artifact.type} / 0{index + 1}
             </p>
             <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
@@ -93,10 +93,16 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        approval, citation, screenshot, or stronger evidence. Protected is
+        intentionally omitted because privacy, consent, client trust, law, civic
+        sensitivity, or community safety requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
-            <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
+            <h3 className="jb-display-condensed text-lg font-semibold text-jb-blue">{label}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
           </JBCard>
         ))}
@@ -122,7 +128,7 @@ function NoteBlock({
 
   return (
     <section className={`rounded-lg border p-5 ${styles}`}>
-      <h2 className="text-xl font-semibold text-jb-ink">{title}</h2>
+      <h2 className="jb-display-condensed text-xl font-semibold text-jb-ink">{title}</h2>
       <div className="mt-3 text-sm leading-6 text-jb-ink/76">{children}</div>
     </section>
   );

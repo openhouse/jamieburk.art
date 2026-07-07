@@ -15,19 +15,20 @@ export default function SourceBackedTeamMemoryPage() {
     <article className="jb-frame py-12">
       <div className="jb-reading">
         <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
-        <h1 className="mt-3 text-5xl font-bold text-jb-ink">
+        <h1 className="mt-3 text-4xl font-bold text-jb-ink sm:text-5xl">
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          A lab / proof-of-practice exploring source-backed operating memory,
-          decision lineage, onboarding context, and human-correctable AI
-          workflows for knowledge-heavy teams.
+          This method is for knowledge-heavy teams that are moving quickly and
+          losing useful ideas, decisions, open questions, onboarding context, or
+          source material across meetings, documents, chat, and AI summaries.
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
+            The goal is not an omniscient AI layer or a giant
+            knowledge-management platform. The goal is a practical, reviewable
+            structure that reduces context loss without creating a heavy
+            parallel bureaucracy.
           </p>
         </div>
         <div className="mt-10 space-y-6">

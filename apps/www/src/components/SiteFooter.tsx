@@ -8,8 +8,8 @@ export function SiteFooter() {
         <div>
           <p className="font-semibold text-jb-ink">{site.name}</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-jb-ink/70">
-            Technical Project Manager - Product Operations & Implementation.
-            Public-safe portfolio, civic notebook, and future living archive.
+            {site.role}. Public-safe, referral-ready proof site for selected
+            professional work.
           </p>
         </div>
         <nav aria-label="Footer navigation">
