@@ -28,8 +28,28 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
 npm run check
 ```
+
+`npm run check` runs typecheck, lint, build, and the public-safety scanner.
+`npm run preflight:production` checks production environment, indexing,
+redirect, sitemap, resume, and public-safety guardrails without external network
+calls.
+
+## Claim Governance
+
+The website is a projection of the public-safe knowledge bank:
+
+- `docs/proofs-bank.md` is the source bank for professional claims.
+- `docs/claim-register.md` tracks claims currently projected onto the site.
+- `docs/chad-lens.md` defines the hiring-facing copy standard.
+- `docs/content-safety.md` defines what stays out of the repo and public pages.
+- `docs/release-checklist.md` defines staging, production, and indexing gates.
+
+Use Chad's lens before changing public copy: make Jamie visible as the actor,
+answer "toward what end?", define unfamiliar entities, preserve collective
+credit, and avoid overclaiming.
 
 ## Environment
 
@@ -91,16 +111,13 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, keep the material off public pages and track the question in
+  `docs/claim-register.md` or `docs/release-checklist.md`.
 
-## Launch Blockers
+## Release Gates
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+See `docs/release-checklist.md`.
+
+Production remains gated on approved resume exposure, approved contact paths,
+public-safe claims, no visible internal approval notes, no private materials,
+production preflight, and explicit indexing approval.
