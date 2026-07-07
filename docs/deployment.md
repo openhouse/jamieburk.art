@@ -3,6 +3,10 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+The current release-candidate build uses `next build --webpack` because the
+default Turbopack build stalled during local verification while the webpack
+build completed.
+
 ## Dokku Apps
 
 ```txt
@@ -62,6 +66,10 @@ git push dokku-staging HEAD:main
 
 Use this only after staging content, accessibility, metadata, and public-safety
 review.
+
+Production indexing is strict opt-in. The app is indexable only when
+`APP_ENV=production`, `SITE_URL=https://jamieburk.art`, and
+`NEXT_PUBLIC_ROBOTS_POLICY=index` are all present at build and runtime.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -134,6 +142,7 @@ docker run --rm -p 3000:3000 \
 Verify:
 
 ```bash
+npm run public-safety
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
@@ -145,3 +154,10 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- Resume PDF responses should include `X-Robots-Tag: noindex`.
+
+Before production indexing, also run:
+
+```bash
+npm run production-safety
+```

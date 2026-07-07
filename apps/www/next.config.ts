@@ -4,23 +4,39 @@ import createMDX from "@next/mdx";
 
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
+const readEnv = (value: string | undefined) => {
+  const normalized = value?.trim();
+  return normalized ? normalized : undefined;
+};
+
+const parseSiteUrl = (value: string | undefined) => {
+  const normalized = readEnv(value);
+  if (!normalized) return undefined;
+
+  try {
+    return stripTrailingSlash(new URL(normalized).toString());
+  } catch {
+    return undefined;
+  }
+};
+
 const appEnv =
-  process.env.APP_ENV ??
-  process.env.SITE_ENV ??
-  process.env.NEXT_PUBLIC_DEPLOY_ENV ??
+  readEnv(process.env.APP_ENV) ??
+  readEnv(process.env.SITE_ENV) ??
+  readEnv(process.env.NEXT_PUBLIC_DEPLOY_ENV) ??
   "staging";
 
-const siteUrl = stripTrailingSlash(
-  process.env.SITE_URL ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (appEnv === "production"
-      ? "https://jamieburk.art"
-      : "https://staging.jamieburk.art")
-);
+const siteUrl =
+  parseSiteUrl(process.env.SITE_URL) ??
+  parseSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  (appEnv === "production"
+    ? "https://jamieburk.art"
+    : "https://staging.jamieburk.art");
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  readEnv(process.env.NEXT_PUBLIC_ROBOTS_POLICY) === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -46,6 +62,10 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [
+      {
+        source: "/resume/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }]
+      },
       {
         source: "/(.*)",
         headers: globalHeaders

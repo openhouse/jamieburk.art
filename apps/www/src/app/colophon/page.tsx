@@ -5,15 +5,17 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Colophon - Jamie Burkart",
   description:
-    "Colophon for Jamie Burkart's public-safe portfolio and future living notebook.",
+    "Colophon for Jamie Burkart's public-safe proof site and working notebook.",
   path: "/colophon"
 });
 
 const details = [
   "Static-first Next.js App Router site with local MDX content",
+  "Website claims selected from a public-safe proofs bank, then edited for audience and purpose",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Known / Open / Protected boundaries for sensitive civic, community, and client-adjacent work",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Karla for body/UI text and League Spartan for display headings",
+  "Karla for body/UI/prose and Archivo Narrow for display headings and compact proof labels",
   "No private or proprietary font files are committed or served",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Staging-first Docker / Dokku deployment with staging noindex by default",
@@ -26,13 +28,14 @@ export default function ColophonPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Colophon</h1>
         <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-          This site is built as a small public proof surface and future living
-          notebook. It uses local MDX content, public-safe artifacts, and
-          intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad. Staging is reviewable but not indexable, and
-          production should only become indexable after content and metadata
-          review.
+          This site is built as a small public proof surface and working
+          notebook. Its claims are selected from a public-safe proofs bank, then
+          edited for clarity, audience, and purpose. It uses local MDX content,
+          public-safe artifacts, and intentionally limited tracking. The design
+          uses Broadway blue, Jamie&apos;s oil-pastel palette, and a quiet
+          proportional grid derived from his print-layout sketchpad. Staging is
+          reviewable but not indexable, and production should only become
+          indexable after content and metadata review.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

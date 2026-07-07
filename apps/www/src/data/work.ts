@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old legacy industrial tool business adapt paper, phone, catalog, dealer, content, analytics, and e-commerce practices into a maintainable web operating surface.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -101,13 +101,13 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "Improved catalog, search, checkout, account/dealer, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "Catalog-to-checkout workflow map",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
+          "Representative flow for translating inventory knowledge, customer language, dealer/account needs, and order handling into a maintainable online workflow.",
         type: "workflow"
       },
       {
@@ -117,9 +117,9 @@ const workItemsInput = [
         type: "analytics summary"
       },
       {
-        title: "Content and voice system",
+        title: "Content, voice, and provenance system",
         description:
-          "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
+          "Reusable patterns for preserving the company's distinctive public voice across product, marketing, country-of-origin, and support surfaces.",
         type: "template"
       }
     ],
@@ -152,14 +152,15 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
+      "Catalog, search, checkout, account/dealer, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
       "Contributed to 2x revenue growth",
+      "Public-source package documents 2009 online-store launch and later online-sales growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term catalog, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy industrial tool business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -167,28 +168,28 @@ const workItemsInput = [
     }
   },
   {
-    title: "FairRentNYC / Commercial Rent Stabilization",
+    title: "NYC Artist Coalition / FairRentNYC",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "Cultural-space advocacy, coalition memory, and commercial rent stabilization",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
-    years: "2024-Present",
+      "As a NYC Artist Coalition co-founder and civic-systems contributor, helped turn cultural-space advocacy, FairRentNYC, and Commercial Rent Stabilization work into shared memory, source maps, public-data framing, and public-safe coordination systems.",
+    role: "Co-Founder, Civic Systems & Coalition Operations Contributor",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved artists, venues, small-business advocates, public officials, policy questions, public/private source materials, city/state strategy lanes, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Shared operating memory and public-facing civic surfaces: meeting synthesis, action trackers, decision records, source maps, public explainers, call scripts, legal/policy question logs, public-data opportunities, and stakeholder follow-up notes.",
+    artifactTypes: ["source map", "meeting memory", "decision record", "public handout", "script"],
     artifacts: [
       {
         title: "Campaign-memory spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "A shared documentation structure for meeting synthesis, decisions, next steps, source context, city/state lanes, public-data questions, and public-safe continuity.",
         type: "meeting memory"
       },
       {
@@ -200,8 +201,14 @@ const workItemsInput = [
       {
         title: "Policy question log",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
+          "A working list of unresolved legal, policy, city, state, and public-data questions for collaborators to review without treating drafts as final coalition position.",
         type: "decision record"
+      },
+      {
+        title: "Public action pathways",
+        description:
+          "Representative call scripts, QR / signup pathways, public explainers, reference-library structures, and follow-up protocols for cultural-space and small-business advocacy.",
+        type: "script"
       }
     ],
     tags: [
@@ -216,8 +223,14 @@ const workItemsInput = [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
+      "Risk Surfacing",
       "Public Guidance",
       "Decision Records"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "Fair Rent NYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -230,16 +243,18 @@ const workItemsInput = [
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
-      "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+      "Civic delivery, product operations, coalition operations, documentation architecture, source-backed memory, public guidance, public-data translation, and implementation support.",
     evidence: [
+      "NYC Artist Coalition public materials on community-space protection, Cabaret Law repeal, Night Mayor input, M.A.R.C.H. transparency, vacant storefronts, and lease protections",
+      "Fair Rent NYC public reference library, Intro 93 progress, call scripts, and Commercial Rent Stabilization explainers",
       "30+ pages of shared campaign-memory infrastructure",
-      "Running minutes, decision records, action trackers, and source maps",
+      "Meeting synthesis, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "Public-data framing, cultural-space fieldwork, and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie is a NYC Artist Coalition co-founder who has helped structure public-safe campaign memory, coordination documents, source maps, public explainers, call scripts, data-framing materials, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -331,7 +346,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar and social-discovery platform organized around followable keyword communities for DIY arts, music, and local scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,20 +354,31 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed practical, low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event publishing, list/tag discovery, email digest, calendar sync, saved-event, and local distribution workflows for community event stewards.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Archive-scale summary",
+        description:
+          "Local archive analysis supports 1,800+ users, 16,000+ events/posts, 23,000+ lists/tags, 28,000+ list follows, and 35+ active city scenes without publishing raw user records.",
+        type: "analytics summary"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
-    capabilities: ["Django", "Ember.js", "Community Platform Design", "Event Workflows"],
+    capabilities: [
+      "Python / Django",
+      "Ember.js",
+      "Community Platform Design",
+      "Event Workflows"
+    ],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -365,16 +391,19 @@ const workItemsInput = [
     evidence: [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "1,800+ users and 16,000+ events/posts in local archive analysis",
+      "23,000+ lists/tags, 28,000+ list follows, and 20,000+ saved/starred events",
+      "Email digest, media upload, geolocation, and Google Calendar synchronization infrastructure",
+      "Local calendar organizer and community editor workflows",
+      "35+ active city scenes"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar and social-discovery platform organized around followable keyword communities, with archive analysis supporting 1,800+ users, 16,000+ events/posts, and 35+ active city scenes.",
       open:
         "Screenshots, archive links, and precise adoption wording need approval.",
       protected:
-        "Private user data, organizer contact lists, and unapproved community records are not published."
+        "Private user data, organizer contact lists, raw database exports, password hashes, Google Calendar identifiers, user-uploaded media, and unapproved community records are not published."
     }
   },
   {
@@ -383,7 +412,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable trust-building, invitation, onboarding, hosting, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -393,13 +422,13 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "A repeatable trust-building and participation structure that helped artists and guests enter a shared cultural room with clearer invitation, onboarding, hosting, and follow-through.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
         title: "Gathering rhythm",
         description:
-          "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
+          "A representative structure for invitation, welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
       }
     ],
@@ -417,7 +446,7 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
-      "Onboarding and participation systems",
+      "Invitation, onboarding, hosting, and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
@@ -435,7 +464,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Supported adaptive reuse planning and public-benefit documentation for a long-vacant historic building, including public-funding and stakeholder documentation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -445,7 +474,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+      "Planning materials, public-benefit documentation, stakeholder context, and funding-process support for an adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -467,7 +496,7 @@ const workItemsInput = [
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
-      "Redevelopment planning",
+      "Adaptive reuse planning support",
       "Public-benefit documentation",
       "Historic preservation context",
       "Funding process support"

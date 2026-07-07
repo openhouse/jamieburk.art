@@ -16,14 +16,16 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, consulting, or collaboration:
+          For roles, referrals, consulting, or collaboration, use the contact
+          details in the downloadable resume while this page waits for final
+          public-web approval.
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.emailLabel}
               </dd>
             </div>
             <div>
@@ -33,13 +35,13 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                Pending final approval for website display.
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                Pending final approval for website display.
               </dd>
             </div>
             <div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
   "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
+  "Helped build and steward 30+ pages of shared civic campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
   "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
 ];
@@ -29,9 +29,9 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            turning ambiguous, loosely defined work into requirements, workflows,
+            documentation, decision trails, launch support, onboarding materials,
+            public-facing tools, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -42,8 +42,9 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Current downloadable resume PDF is provided for job-search review.
+            The phone number remains inside the PDF only; this web page does not
+            publish it.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
