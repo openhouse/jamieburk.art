@@ -49,14 +49,14 @@ if (env("NEXT_PUBLIC_ROBOTS_POLICY") !== "index") {
   add("NEXT_PUBLIC_ROBOTS_POLICY must be exactly index for production indexing.");
 }
 
-const hasContactPath = Boolean(
-  env("NEXT_PUBLIC_CONTACT_EMAIL") ||
-    env("NEXT_PUBLIC_LINKEDIN_URL") ||
-    env("NEXT_PUBLIC_GITHUB_URL")
-);
+const contactEmail = env("NEXT_PUBLIC_CONTACT_EMAIL");
 
-if (!hasContactPath) {
-  add("At least one approved public contact path must be set for production.");
+if (!contactEmail) {
+  add("NEXT_PUBLIC_CONTACT_EMAIL must be set to an approved public email for production.");
+}
+
+if (/todo|pending|placeholder/i.test(contactEmail)) {
+  add("NEXT_PUBLIC_CONTACT_EMAIL must not be a TODO, pending, or placeholder value.");
 }
 
 const nextConfig = fs.readFileSync(path.join(repoRoot, "apps/www/next.config.ts"), "utf8");
@@ -75,6 +75,10 @@ if (!nextConfig.includes("/work/fairrentnyc-commercial-rent-stabilization")) {
 
 if (!nextConfig.includes("/work/source-backed-team-memory")) {
   add("Source-Backed Team Memory work-to-lab redirect is missing.");
+}
+
+if (!nextConfig.includes("/work/196-artists-residency")) {
+  add("196 legacy redirect is missing.");
 }
 
 if (failures.length) {

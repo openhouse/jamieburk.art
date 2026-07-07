@@ -12,13 +12,18 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I turn under-structured work into usable systems for complex
-            public-facing teams.
+            I turn ambiguous work into usable operating systems.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help teams clarify requirements, coordinate delivery, document
+            decisions, onboard people, report status honestly, and leave behind
+            workflows, runbooks, public-facing tools, and handoffs they can keep
+            using.
+          </p>
+          <p className="mt-4 leading-7 text-jb-ink/72">
+            My work is strongest in under-structured environments: places where
+            the need is real, but requirements, ownership, documentation,
+            planning rhythms, and handoffs are not yet clear.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -41,11 +46,11 @@ export function Hero() {
           <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
             {[
               "Requirements",
-              "Workflows",
-              "Decision Trails",
-              "Launch Support",
-              "Onboarding",
-              "Handoffs"
+              "Planning Rhythms",
+              "Decision Logs",
+              "Risk Notes",
+              "Runbooks",
+              "Durable Handoffs"
             ].map((label, index) => (
               <div
                 className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"

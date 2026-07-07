@@ -5,7 +5,8 @@ Use this as a template. Do not commit checked boxes as proof unless creating a d
 ## Content Approval
 
 - [ ] Jamie approved the final resume PDF.
-- [ ] Jamie approved the public contact path.
+- [ ] Jamie approved the production public email.
+- [ ] Jamie approved optional LinkedIn/GitHub links or confirmed they should be omitted.
 - [ ] Jamie approved proof metrics.
 - [ ] Jamie approved collaborator names and credits.
 - [ ] Jamie approved screenshots, representative artifacts, quotes, and photos.

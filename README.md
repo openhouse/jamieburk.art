@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie turns under-structured work into
-usable systems for complex public-facing teams.
+The site should make this believable: Jamie turns ambiguous work into usable
+operating systems for complex public-facing teams.
 
 ## Stack
 
@@ -121,7 +121,7 @@ or serve private, proprietary, or unlicensed font files. See
 ## Launch Blockers
 
 - Confirm approved resume PDF and last-updated date.
-- Confirm public email, LinkedIn, and GitHub links or omit unapproved rows.
+- Confirm approved public email. Confirm LinkedIn and GitHub links or omit unapproved rows.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.

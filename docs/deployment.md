@@ -205,5 +205,6 @@ Expected production behavior:
 - `/robots.txt` allows indexing and includes the sitemap.
 - Public HTML pages do not receive `X-Robots-Tag: noindex, nofollow`.
 - The resume PDF remains noindex unless Jamie separately approves direct PDF indexing.
+- `NEXT_PUBLIC_CONTACT_EMAIL` is set to Jamie's approved public email.
 - No staging or localhost URL is used for production metadata.
 - No unresolved approval TODOs, placeholder contact labels, draft/private content states, private source paths, or private font files are present.

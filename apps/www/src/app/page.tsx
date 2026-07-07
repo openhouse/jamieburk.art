@@ -8,9 +8,28 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
+  ["Fragmented public information", "civic guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
   ["Recurring community gatherings", "repeatable participation infrastructure"]
+];
+
+const operatingBackbone = [
+  {
+    title: "Coordinate delivery",
+    text: "Keep status visible, surface risks early, and move work from concept through launch."
+  },
+  {
+    title: "Build operating processes",
+    text: "Planning cycles, sprint rituals, decision frameworks, status reporting, and retrospectives."
+  },
+  {
+    title: "Onboard and document",
+    text: "Handbooks, runbooks, onboarding guides, and principles people actually use."
+  },
+  {
+    title: "Report honestly",
+    text: "Clear weekly updates, team-health notes, operational metrics, and visible what is and is not working."
+  }
 ];
 
 export default function HomePage() {
@@ -19,6 +38,41 @@ export default function HomePage() {
       <Hero />
       <ProofStrip />
       <CapabilityGrid />
+      <section className="bg-jb-blue py-16 text-jb-paper">
+        <div className="jb-frame">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+            <div>
+              <p className="font-display text-sm font-semibold uppercase text-jb-paper/72">
+                Opportunity fit
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold">
+                Operating backbone for public-facing technical teams
+              </h2>
+              <p className="mt-4 leading-8 text-jb-paper/78">
+                I build the team practices that help delivery stay visible:
+                planning rhythms, decision logs, action trackers, onboarding
+                guides, stakeholder updates, risk notes, runbooks,
+                retrospectives, and durable handoffs.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {operatingBackbone.map((item) => (
+                <article
+                  className="rounded-lg border border-jb-paper/20 bg-jb-paper/10 p-4"
+                  key={item.title}
+                >
+                  <h3 className="font-display text-xl font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-jb-paper/76">
+                    {item.text}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
@@ -29,9 +83,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
+              These projects show a recurring pattern: ambiguous situations
               becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              decision trails, and durable handoffs that other people can use.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,11 +136,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important but loosely defined. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            adoption, and leave behind materials that make the work easier for
+            the next person to maintain.
           </p>
           <ContactCTA />
         </div>

@@ -128,7 +128,13 @@ function addFinding(kind, filePath, label, match = "") {
   const file = relative(filePath);
   const candidate = `${kind}:${file}:${label}:${match}`;
   const allowed = allowlist.some((entry) => {
-    if (!entry?.pattern || !entry?.reason || !entry?.owner || !entry?.reviewedAt) {
+    if (
+      !entry?.pattern ||
+      !entry?.reason ||
+      !entry?.owner ||
+      !entry?.reviewedAt ||
+      !entry?.reviewBy
+    ) {
       return false;
     }
 

@@ -7,7 +7,7 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager who turns under-structured work into usable systems across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
+    "Brooklyn-based technical project manager who turns ambiguous work into requirements, workflows, documentation, onboarding, launch support, public-facing tools, and durable handoffs.",
   contact: CONTACT,
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   resumeUpdated: "June 11, 2026",

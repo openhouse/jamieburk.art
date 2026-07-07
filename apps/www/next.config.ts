@@ -100,6 +100,11 @@ const nextConfig: NextConfig = {
         source: "/work/source-backed-team-memory",
         destination: "/lab/source-backed-team-memory",
         permanent: true
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
       }
     ];
   }

@@ -76,6 +76,7 @@ const workMetaSchema = z.object({
     "Archived prototypes and older platforms"
   ]),
   roleFit: z.string(),
+  whatThisProves: z.string(),
   evidence: z.array(z.string()),
   knownOpenProtected: z.object({
     known: z.string(),
@@ -151,6 +152,8 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
+    whatThisProves:
+      "Jamie can translate legacy operating knowledge into web, content, analytics, and workflow systems that support growth without exposing private business details.",
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
@@ -231,6 +234,8 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+    whatThisProves:
+      "Jamie can structure high-stakes civic collaboration so collaborators can see decisions, next steps, source trails, open questions, and protected boundaries.",
     evidence: [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
@@ -310,6 +315,8 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
+    whatThisProves:
+      "Jamie can turn public datasets and civic service categories into resident-readable pathways while keeping the prototype's unofficial, historical status clear.",
     evidence: [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
@@ -339,7 +346,7 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed simple, repeatable ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +354,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A low-overhead distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -362,6 +369,8 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
+    whatThisProves:
+      "Jamie can connect community language, publishing workflows, and technical platform logic into a system organizers can actually use.",
     evidence: [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
@@ -414,6 +423,8 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
+    whatThisProves:
+      "Jamie can create repeatable participation systems for complex human environments while protecting private community records and consent boundaries.",
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
@@ -466,6 +477,8 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+    whatThisProves:
+      "Jamie can make long-horizon built-environment work easier to explain, fund, discuss, and continue without publishing private financial or legal context.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
