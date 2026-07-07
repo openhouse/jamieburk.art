@@ -23,6 +23,10 @@ export default function SourceBackedTeamMemoryPage() {
           decision lineage, onboarding context, and human-correctable AI
           workflows for knowledge-heavy teams.
         </p>
+        <p className="mt-5 text-lg font-semibold leading-7 text-jb-green">
+          AI drafts. Humans review. The shared record remains inspectable and
+          correctable.
+        </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
