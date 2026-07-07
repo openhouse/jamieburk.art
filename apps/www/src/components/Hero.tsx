@@ -15,9 +15,9 @@ export function Hero() {
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help emerging, stakeholder-heavy work become usable systems:
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -56,9 +56,9 @@ export function Hero() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-6 text-jb-ink/68">
-            Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
+            Structure grows out of the material: shared records, public
+            guidance, maintainable workflows, and materials people can use
+            after the meeting is over.
           </p>
         </div>
       </div>
