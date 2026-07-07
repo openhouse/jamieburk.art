@@ -29,7 +29,29 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight:staging
+npm run preflight:production
 ```
+
+## Knowledge Bank
+
+This repo includes a public-safe knowledge bank for professional claims:
+
+- `docs/knowledge-bank/`
+- `apps/www/src/data/proofs.ts`
+
+The website is a projection of this bank. Pages select, sequence, and phrase
+claims for specific readers. Do not add stronger claims to app copy without
+first adding a public-safe proof record.
+
+The knowledge bank is not a private archive. Do not commit raw transcripts,
+private coalition notes, legal-review materials, private correspondence,
+client-private material, internal analytics, raw community records, unapproved
+photos, unapproved screenshots, or unapproved quotes.
+
+There is intentionally no public `/proofs` route. The site should remain a
+composed portfolio, not a claims database.
 
 ## Environment
 
@@ -95,7 +117,6 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
