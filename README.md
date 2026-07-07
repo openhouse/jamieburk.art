@@ -93,6 +93,9 @@ or serve private, proprietary, or unlicensed font files.
 - Treat `docs/proofs-bank/` as the public-safe knowledge base for professional
   accomplishment claims. Website copy should project selected claims from that
   bank for clarity, audience, and purpose.
+- Use `docs/proofs-bank/publishing-governance.md` as the public-safety, scope,
+  deployment, and voice standard for moving claims from the proofs bank into the
+  website.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
@@ -100,6 +103,12 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+
+## V1 Scope
+
+Keep the first public version focused. Do not add a CMS, database, auth, search,
+analytics, AI chatbot, archive browser, private document browser, full photo
+archive, heavy animation, or major framework change without explicit approval.
 
 ## Launch Blockers
 

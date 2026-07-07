@@ -27,6 +27,10 @@ Prefer concrete systems, durable artifacts, aggregate counts, public records,
 and careful role language. Avoid causal overclaiming, sole-credit language for
 collective work, and exact metrics that cannot be defended in public.
 
+Use [publishing-governance.md](publishing-governance.md) as the operating
+standard for how claims move from private context to the public proofs bank and
+then into website copy.
+
 ## Source Status
 
 - `Public record`: supported by public press, public government records, public
@@ -43,3 +47,5 @@ collective work, and exact metrics that cannot be defended in public.
 
 - [professional-accomplishments.md](professional-accomplishments.md): current
   public-safe claim ledger.
+- [publishing-governance.md](publishing-governance.md): public-safety, scope,
+  deployment, and voice rules for claim projection.

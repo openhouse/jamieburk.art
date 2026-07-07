@@ -13,6 +13,7 @@ const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
   "Public accomplishment claims are grounded in a repo proofs bank before they become website copy",
+  "Focused V1 scope keeps protected archives offline and avoids CMS, search, analytics, chatbot, and archive-browser surfaces",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -33,9 +34,10 @@ export default function ColophonPage() {
           projects selected defensible claims for clarity, audience, and purpose.
           The design uses Broadway blue, Jamie&apos;s
           oil-pastel palette, and a quiet proportional grid derived from his
-          print-layout sketchpad. Staging is reviewable but not indexable, and
-          production should only become indexable after content and metadata
-          review.
+          print-layout sketchpad. The voice target is precise, warm, modular,
+          and ethically grounded: documentation is care, but not every record
+          belongs online. Staging is reviewable but not indexable, and production
+          should only become indexable after content and metadata review.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
