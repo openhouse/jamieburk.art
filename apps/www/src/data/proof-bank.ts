@@ -1,5 +1,6 @@
 export type ProofArea =
   | "core"
+  | "nac"
   | "hje"
   | "crs"
   | "wowlist"
@@ -30,6 +31,39 @@ export const proofBank: ProofItem[] = [
     siteUse: "Homepage, resume, work index",
     boundary:
       "Do not imply every project was formally titled technical project management."
+  },
+  {
+    id: "nac-civic-systems-role",
+    area: "nac",
+    shortLabel: "NYC Artist Coalition civic systems and policy communications",
+    publicClaim:
+      "Jamie serves as a co-founder and civic systems, documentation, and policy communications lead for NYC Artist Coalition / FairRentNYC.",
+    supportLevel: "resume-backed / archive-backed",
+    siteUse: "Resume, NAC/FairRentNYC case, technical-operations page",
+    boundary:
+      "Use role/function language; do not imply sole ownership of coalition outcomes."
+  },
+  {
+    id: "nac-operating-layer",
+    area: "nac",
+    shortLabel: "Coalition operating memory and follow-through systems",
+    publicClaim:
+      "Jamie helps build and steward coalition operating infrastructure: campaign sites, explainers, testimony support, share kits, call scripts, QR paths, running minutes, source maps, action trackers, public handouts, stakeholder follow-up, and report-back materials.",
+    supportLevel: "resume-backed / archive-backed",
+    siteUse: "NAC/FairRentNYC case and selected proof",
+    boundary:
+      "Keep private contact lists, internal records, strategy notes, and unapproved quotes out of the repo."
+  },
+  {
+    id: "nac-current-workstreams",
+    area: "nac",
+    shortLabel: "CRS, cultural-space affordability, and public-data workstreams",
+    publicClaim:
+      "Current public-safe NAC / FairRentNYC work centers on Commercial Rent Stabilization, cultural-space affordability, storefront stability, public-data framing, legal/policy provenance, source-backed campaign memory, consent-aware base-building, and cultural-space insurance/member support.",
+    supportLevel: "public-source / archive-backed / collaborator-review-needed",
+    siteUse: "NAC/FairRentNYC case and technical-operations page",
+    boundary:
+      "Active work needs date/context discipline and collaborator review before naming private partners or meeting details."
   },
   {
     id: "hje-systems-scope",
@@ -103,8 +137,8 @@ export const proofStripItems = proofBank
   .filter((proof) =>
     [
       "core-operating-structure",
+      "nac-civic-systems-role",
       "hje-systems-scope",
-      "crs-campaign-memory",
       "wowlist-workflows",
       "sd-participation-infrastructure"
     ].includes(proof.id)
@@ -114,6 +148,8 @@ export const proofStripItems = proofBank
 export const resumeProofs = proofBank.filter((proof) =>
   [
     "core-operating-structure",
+    "nac-civic-systems-role",
+    "nac-operating-layer",
     "hje-systems-scope",
     "crs-campaign-memory",
     "wowlist-workflows",

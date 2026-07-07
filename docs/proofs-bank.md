@@ -43,6 +43,22 @@ enough for the public site.
 | `core-tpm-product-ops` | Jamie's work spans requirements, workflow mapping, decision records, action tracking, launch support, onboarding material, stakeholder updates, and durable handoffs. | resume-backed; archive-backed | Capability and technical-operations pages. | Keep the list practical; avoid buzzword inflation. |
 | `core-public-safety` | Jamie uses source-backed, public-safe documentation practices that separate known material, open questions, and protected context. | public-source; archive-backed | Case studies and source-backed memory lab. | Do not present this as a compliance product or legal review system. |
 
+## NYC Artist Coalition
+
+| ID | Public-safe claim | Support level | Site use | Boundary |
+| --- | --- | --- | --- | --- |
+| `nac-civic-systems-role` | Jamie's public-safe role in NYC Artist Coalition / FairRentNYC is co-founder and civic systems, documentation, and policy communications lead. | resume-backed; archive-backed | Resume, NAC/FairRentNYC case, technical-operations page. | Use role/function language; do not imply sole ownership of coalition outcomes. |
+| `nac-operating-layer` | Jamie helps build and steward the coalition operating layer: campaign sites, explainers, testimony support, share kits, call scripts, QR/sign-up paths, running minutes, source maps, action trackers, public handouts, stakeholder follow-up, and report-back materials. | resume-backed; archive-backed | NAC/FairRentNYC case and selected proof. | Keep private contact lists, internal records, strategy notes, and unapproved quotes out of the repo. |
+| `nac-public-record` | NYC Artist Coalition's public record includes community-space advocacy, Cabaret Law repeal ecosystem work, Office of Nightlife advocacy, MARCH transparency, commercial rent stabilization / FairRentNYC, storefront stability, and COVID-era relief coordination. | public-source; resume-backed | NAC/FairRentNYC case and public references. | Phrase as coalition/partner work, not Jamie-only accomplishment. |
+| `nac-current-workstreams` | Current public-safe workstream language: Commercial Rent Stabilization, cultural-space affordability, storefront stability, public-data framing, legal/policy provenance, source-backed campaign memory, consent-aware base-building, and cultural-space insurance/member support. | public-source; archive-backed; collaborator-review-needed | NAC/FairRentNYC case and technical-operations page. | Active work needs date/context discipline and collaborator review before naming private partners or meeting details. |
+
+Public references currently safe to link:
+
+- NYC Artist Coalition official site: <https://nycartc.com/>
+- FairRentNYC: <https://fairrentnyc.nycartc.com/>
+- Let NYC Dance / Cabaret Law repeal: <https://letnycdance.nycartc.com/>
+- Talks Not Raids / MARCH transparency: <https://talksnotraids.com/>
+
 ## Harry J. Epstein Company
 
 | ID | Public-safe claim | Support level | Site use | Boundary |
