@@ -8,7 +8,7 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
+  ["Fragmented public information", "civic guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
@@ -29,9 +29,10 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: loosely defined work
+              where requirements, ownership, documentation, or handoffs are not
+              yet clear becoming usable systems, public-facing tools, decision
+              trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,11 +83,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important but loosely defined. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            adoption, and leave behind materials that make the work easier for
+            the next person to maintain.
           </p>
           <ContactCTA />
         </div>

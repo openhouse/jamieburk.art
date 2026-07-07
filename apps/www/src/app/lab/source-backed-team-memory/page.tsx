@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Source-Backed Team Memory - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "A lab / proof-of-practice for bounded source-backed team-memory sprints, decision records, onboarding context, governance notes, and human-reviewed documentation.",
   path: "/lab/source-backed-team-memory"
 });
 
@@ -19,9 +19,10 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          A lab / proof-of-practice exploring source-backed operating memory,
-          decision lineage, onboarding context, and human-correctable AI
-          workflows for knowledge-heavy teams.
+          Source-Backed Team Memory is a lab / proof-of-practice for turning
+          selected meetings, documents, and product conversations into
+          human-reviewed decision records, onboarding context, open questions,
+          governance notes, and source-linked documentation.
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">

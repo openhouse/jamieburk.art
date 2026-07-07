@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofs } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -11,45 +12,13 @@ export const metadata: Metadata = createMetadata({
   path: "/work/technical-operations"
 });
 
-const sections = [
-  {
-    title: "Operating systems built",
-    items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
-    ]
-  },
-  {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
-  },
-  {
-    title: "Documentation and working memory",
-    items: [
-      "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
-      "Meeting synthesis",
-      "Decision records"
-    ]
-  },
-  {
-    title: "Tools and technical environments",
-    items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
-    ]
-  }
+const roleFit = [
+  "Delivery coordination across concurrent projects",
+  "Planning cycles, meeting rhythms, decision logs, and retrospectives",
+  "Team handbooks, runbooks, onboarding guides, and operating principles",
+  "Cross-functional coordination across product, design, engineering, legal, security, comms, contracts, and leadership",
+  "Honest status reporting, risk surfacing, and operational metrics",
+  "Documentation that people actually use"
 ];
 
 export default function TechnicalOperationsPage() {
@@ -60,27 +29,79 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          I build the operating backbone teams need to plan, decide, document,
+          onboard, report, and ship without losing the context that makes work
+          durable.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {sections.map((section) => (
-          <JBCard key={section.title}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {section.items.map((item) => (
-                <li className="flex gap-3" key={item}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </JBCard>
-        ))}
+        <JBCard>
+          <h2 className="text-2xl font-semibold text-jb-ink">Role fit</h2>
+          <ul className="mt-5 space-y-3 text-jb-ink/76">
+            {roleFit.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </JBCard>
+        <JBCard>
+          <h2 className="text-2xl font-semibold text-jb-ink">Technical environments</h2>
+          <p className="mt-4 leading-7 text-jb-ink/76">
+            JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python
+            / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, open-data
+            workflows, dataset documentation, and data-product requirements.
+          </p>
+        </JBCard>
       </div>
+      <section className="mt-12">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          Proof mapped to operating needs
+        </h2>
+        <div className="mt-5 grid gap-5 lg:grid-cols-2">
+          {technicalOperationsProofs.map((item) => (
+            <JBCard key={item.id}>
+              <p className="font-display text-sm font-bold uppercase text-jb-blue">
+                {item.id} / {item.supportLevel} / {item.approvalStatus}
+              </p>
+              <h3 className="mt-4 text-xl font-semibold text-jb-ink">
+                {item.claim}
+              </h3>
+              <p className="mt-4 leading-7 text-jb-ink/76">{item.proof}</p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
+      <section className="mt-12">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          What this means in practice
+        </h2>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+          {[
+            {
+              title: "Clarify",
+              text:
+                "Translate loosely defined work into requirements, ownership, risks, and next decisions."
+            },
+            {
+              title: "Coordinate",
+              text:
+                "Keep people aligned across product, design, engineering, legal, comms, contracts, leadership, and partners."
+            },
+            {
+              title: "Transfer",
+              text:
+                "Leave behind runbooks, onboarding guides, decision records, status summaries, and handoffs."
+            }
+          ].map((item) => (
+            <JBCard key={item.title}>
+              <h3 className="text-2xl font-semibold text-jb-ink">{item.title}</h3>
+              <p className="mt-4 leading-7 text-jb-ink/76">{item.text}</p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

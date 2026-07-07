@@ -35,7 +35,31 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, move the uncertainty into review notes, claim status, or launch
+blockers. Do not put visible approval TODOs on public pages.
+
+## Chad Lens
+
+Before any public copy ships, ask:
+
+1. Is Jamie visible as the actor?
+2. Does the sentence answer "toward what end?"
+3. Is the language legible to a hiring manager, HR reader, public-sector
+   reviewer, or warm referrer?
+4. Are specialized terms translated once?
+5. Are acronyms spelled out or avoided?
+6. Are arrows and symbols avoided where words are clearer?
+7. Are unfamiliar entities defined?
+8. Does the copy protect collective credit and avoid overclaiming?
+9. Does it avoid reducing stewardship, facilitation, convening, coordination, or
+   analysis to mere tracking?
+10. Does it make the work impressive without making the reader decode it?
+
+Preferred action language: built, structured, translated, coordinated,
+stewarded, facilitated, mapped, documented, synthesized, supported, co-built,
+contributed to, helped make usable.
+
+See `docs/chad-lens.md`.
 
 ## Scope Rules
 
