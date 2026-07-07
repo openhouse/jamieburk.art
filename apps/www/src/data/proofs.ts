@@ -33,6 +33,28 @@ export const proofBank: Proof[] = [
       "Use collective-work language and omit private coalition notes, legal-review materials, stakeholder lists, and unapproved quotes."
   },
   {
+    id: "nyc-artist-coalition-role",
+    area: "NYC Artist Coalition",
+    claim:
+      "Jamie is a co-founding member of NYC Artist Coalition whose current lane connects cultural-space fieldwork, Commercial Rent Stabilization coordination, public-data framing, and consent-aware follow-up.",
+    status: "use-now",
+    publicWording:
+      "Co-founding member of NYC Artist Coalition; supports cultural-space fieldwork, CRS coalition memory, public-data framing, and consent-aware follow-up.",
+    boundary:
+      "Use role and fieldwork language; do not imply sole leadership or publish private venue, lease, landlord, signup, or contact details."
+  },
+  {
+    id: "nyc-artist-coalition-policy-arc",
+    area: "NYC Artist Coalition",
+    claim:
+      "NYC Artist Coalition was part of broader coalitions around cultural-space anti-criminalization, Cabaret Law repeal, nightlife support, anti-MARCH enforcement reform, and commercial-affordability advocacy.",
+    status: "qualified",
+    publicWording:
+      "NYC Artist Coalition helped move cultural-space advocacy from enforcement crisis toward nightlife support, anti-displacement, and fair-rent policy.",
+    boundary:
+      "Use collective-work language and approved public citations before naming exact legal wins in public case-study copy."
+  },
+  {
     id: "wowlist-aggregate-adoption",
     area: "WOWList.org",
     claim:
@@ -89,6 +111,7 @@ export const homepageProofItems = [
 export const operationsProofs = proofBank.filter((proof) => {
   return [
     "commercial-rent-memory",
+    "nyc-artist-coalition-role",
     "wowlist-aggregate-adoption",
     "hje-2x-revenue",
     "sunday-dinner-196",
