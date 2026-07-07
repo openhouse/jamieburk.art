@@ -15,14 +15,18 @@ const sections = [
   {
     title: "Operating systems built",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "HJE catalog, checkout, dealer-pricing, analytics, and handoff systems",
+      "FairRentNYC / NYC Artist Coalition running minutes, action trackers, source maps, and policy-question logs",
+      "196 / Sunday Dinner onboarding, documentation, and continuity systems"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "CallNYC civic-data prototype",
+      "WOWList Python / Django + Ember.js community-calendar platform",
+      "HJE paper-and-phone to e-commerce transition"
+    ]
   },
   {
     title: "Documentation and working memory",
@@ -61,11 +65,24 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          environments, I build the operating backbone teams need to keep work
+          moving: planning rhythms, decision logs, action trackers, onboarding
+          materials, documentation systems, launch support, and durable
+          handoffs.
         </p>
       </div>
+      <section className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
+        <p className="text-sm font-semibold uppercase text-jb-blue">
+          Role alignment: Technical Operations Manager
+        </p>
+        <p className="mt-3 max-w-4xl leading-8 text-jb-ink/76">
+          This work maps directly to technical operations roles that require
+          delivery coordination, risk surfacing, onboarding, team rituals,
+          operating documentation, leadership updates, status reporting,
+          retrospectives, team health signals, operational metrics, and durable
+          handoffs.
+        </p>
+      </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (
           <JBCard key={section.title}>

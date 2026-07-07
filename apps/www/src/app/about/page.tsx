@@ -37,6 +37,11 @@ export default function AboutPage() {
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
           </p>
+          <p>
+            A recurring part of the work is knowing how much of the record to
+            make usable, how much to hold back, and how to leave collaborators
+            with a next step instead of another pile of context.
+          </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">

@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie helps teams turn ambiguous, loosely
+defined work into usable systems.
 
 ## Stack
 
@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run prelaunch
 ```
 
 ## Environment
@@ -37,8 +39,6 @@ Staging is the first deployment target and is non-indexable by default:
 
 ```bash
 APP_ENV=staging
-SITE_ENV=staging
-NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
@@ -49,13 +49,14 @@ Production should only be enabled after staging review:
 
 ```bash
 APP_ENV=production
-SITE_ENV=production
-NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is explicit opt-in. Any missing, blank, or non-`index`
+`NEXT_PUBLIC_ROBOTS_POLICY` value must produce noindex behavior.
 
 ## Deployment
 
@@ -80,8 +81,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, section
+eyebrows, proof labels, and compact metadata. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -91,16 +93,32 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
+- Use `docs/proofs-bank.md` as the public-safe knowledge base of professional
+  accomplishments.
+- Use `docs/claim-register.md` as the exact public wording guide for proof
+  metrics, credit language, and claims that should stay approximate.
 - When uncertain, mark: `TODO: Jamie approval required.`
+
+Keep private source material outside the repo. These folders are ignored in Git
+and Docker build context if they ever appear locally:
+
+```txt
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
+```
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Run `npm run public-safety` and resolve blockers before trusted review.
+- Confirm staging noindex behavior before sharing staging.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm exact proof metrics against `docs/proofs-bank.md` and
+  `docs/claim-register.md`.
 - Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
+- Confirm production indexing is explicitly enabled with `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 - Confirm no private/proprietary fonts are committed or served.

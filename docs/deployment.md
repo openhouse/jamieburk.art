@@ -20,8 +20,6 @@ dokku proxy:ports-set jamieburk-art-staging http:80:3000
 
 dokku config:set jamieburk-art-staging \
   APP_ENV=staging \
-  SITE_ENV=staging \
-  NEXT_PUBLIC_DEPLOY_ENV=staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
@@ -37,8 +35,6 @@ matching build args:
 
 ```bash
 dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=staging'
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
@@ -71,8 +67,6 @@ dokku proxy:ports-set jamieburk-art http:80:3000
 
 dokku config:set jamieburk-art \
   APP_ENV=production \
-  SITE_ENV=production \
-  NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
@@ -86,8 +80,6 @@ If staging required build args, add production build args too:
 
 ```bash
 dokku docker-options:add jamieburk-art build '--build-arg APP_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
@@ -112,8 +104,6 @@ git push dokku-production HEAD:main
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
-  --build-arg SITE_ENV=staging \
-  --build-arg NEXT_PUBLIC_DEPLOY_ENV=staging \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
@@ -123,8 +113,6 @@ docker build \
 ```bash
 docker run --rm -p 3000:3000 \
   -e APP_ENV=staging \
-  -e SITE_ENV=staging \
-  -e NEXT_PUBLIC_DEPLOY_ENV=staging \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
@@ -145,3 +133,18 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Release Phases
+
+1. Staging review: deploy to `staging.jamieburk.art`, keep noindex, run smoke
+   checks, and review content.
+2. Trusted referrer review: share staging only after contact, resume, public
+   TODOs, and public-safety blockers are resolved.
+3. Production release: deploy the reviewed commit to `jamieburk.art` while
+   keeping production noindex if any final concern remains.
+4. Production indexing: set `NEXT_PUBLIC_ROBOTS_POLICY=index` only after Jamie
+   approves the exact public surface.
+
+Rollback path: redeploy the previous known-good SHA or Dokku release, set
+`NEXT_PUBLIC_ROBOTS_POLICY=noindex` if indexing risk is involved, then verify
+`/api/health`, `/robots.txt`, `/sitemap.xml`, `/resume`, and `/contact`.

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { ProofBankProjection } from "@/components/ProofBankProjection";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
@@ -10,7 +11,7 @@ const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
   ["Fragmented public data", "civic guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Documented recurring gatherings", "repeatable participation infrastructure"]
 ];
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
     <>
       <Hero />
       <ProofStrip />
+      <ProofBankProjection />
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -29,9 +31,10 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: ambiguous goals,
+              scattered context, and unclear handoffs becoming usable systems,
+              public-facing tools, documentation, decision records, and durable
+              handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,11 +85,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when the work is important but still loosely
+            defined. I listen across stakeholders, map what is known and
+            unknown, create the workflows or documentation the team needs,
+            support launch or adoption, and leave behind materials that make
+            the work easier to maintain.
           </p>
           <ContactCTA />
         </div>

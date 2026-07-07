@@ -1,10 +1,6 @@
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
-export const APP_ENV =
-  process.env.APP_ENV ??
-  process.env.SITE_ENV ??
-  process.env.NEXT_PUBLIC_DEPLOY_ENV ??
-  "staging";
+export const APP_ENV = process.env.APP_ENV ?? "staging";
 
 export const SITE_URL = stripTrailingSlash(
   process.env.SITE_URL ??
@@ -18,4 +14,4 @@ export const IS_PRODUCTION =
   APP_ENV === "production" || SITE_URL === "https://jamieburk.art";
 
 export const ROBOTS_INDEXABLE =
-  IS_PRODUCTION && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  IS_PRODUCTION && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";

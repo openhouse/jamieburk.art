@@ -20,6 +20,20 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <dl className="mt-8 grid gap-4 rounded-lg border border-jb-ink/12 bg-jb-warm p-5 text-sm md:grid-cols-3">
+            <div>
+              <dt className="font-semibold text-jb-ink">What was unclear</dt>
+              <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">What became usable</dt>
+              <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">Toward what end</dt>
+              <dd className="mt-1 leading-6 text-jb-ink/72">{item.towardWhatEnd}</dd>
+            </div>
+          </dl>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
           </div>
@@ -29,7 +43,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
