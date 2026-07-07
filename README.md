@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie builds operating structure for
+ambiguous public-facing technical work.
 
 ## Stack
 
@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run safety:production
+npm run check:production
 ```
 
 ## Environment
@@ -56,6 +58,9 @@ NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in. `NEXT_PUBLIC_ROBOTS_POLICY=index` must be
+present at build and runtime before the app emits indexable robots metadata.
 
 ## Deployment
 
@@ -85,6 +90,12 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
+- Treat `docs/proofs-bank/` as the public-safe knowledge base for professional
+  accomplishment claims. Website copy should project selected claims from that
+  bank for clarity, audience, and purpose.
+- Use `docs/proofs-bank/publishing-governance.md` as the public-safety, scope,
+  deployment, and voice standard for moving claims from the proofs bank into the
+  website.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
@@ -93,14 +104,20 @@ or serve private, proprietary, or unlicensed font files.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
+## V1 Scope
+
+Keep the first public version focused. Do not add a CMS, database, auth, search,
+analytics, AI chatbot, archive browser, private document browser, full photo
+archive, heavy animation, or major framework change without explicit approval.
+
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the approved resume PDF remains current.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm Node 26, `npm run safety:production`, and `npm run check:production`
+  pass before production deploy.

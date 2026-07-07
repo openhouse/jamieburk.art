@@ -93,6 +93,10 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=h
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
 ```
 
+Production indexing is opt-in. `NEXT_PUBLIC_ROBOTS_POLICY=index` must be present
+at build and runtime before the app emits indexable robots metadata. Missing,
+blank, staging, development, or mistyped values keep the site noindex.
+
 Enable TLS:
 
 ```bash
@@ -131,12 +135,14 @@ docker run --rm -p 3000:3000 \
   jamieburk-art:staging-test
 ```
 
-Verify:
+Verify the running staging-style container:
 
 ```bash
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/opengraph-image
+curl -I http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
 ```
 
 Expected staging behavior:
@@ -144,4 +150,12 @@ Expected staging behavior:
 - `/api/health` returns the current environment, site URL, and robots state.
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
+- `/opengraph-image` resolves using the configured site URL.
+- The resume PDF downloads and sends `X-Robots-Tag: noindex`.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+Production deployment should happen only after staging review, Node 26 checks,
+`npm run safety:production`, `npm run check:production`, Docker build/run
+verification, sitemap/robots/canonical/OpenGraph verification, and Jamie
+approval of the exact commit SHA. Promote an exact reviewed commit, not a moving
+branch tip.
