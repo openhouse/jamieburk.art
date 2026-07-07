@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { resumeProofHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -9,14 +10,6 @@ export const metadata: Metadata = createMetadata({
     "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
   path: "/resume"
 });
-
-const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
-];
 
 export default function ResumePage() {
   return (
@@ -42,14 +35,14 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            The PDF is the downloadable resume artifact. This page keeps a short
+            HTML summary for accessibility and quick review.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
-            {highlights.map((highlight) => (
+            {resumeProofHighlights.map((highlight) => (
               <li className="flex gap-3" key={highlight}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
                 <span>{highlight}</span>
