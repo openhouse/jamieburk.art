@@ -60,11 +60,35 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   );
 }
 
+export function CaseStudyQuestions({ item }: { item: WorkMeta }) {
+  const rows = [
+    ["What was unclear?", item.whatWasUnclear],
+    ["Toward what end?", item.towardWhatEnd],
+    ["What became usable?", item.whatBecameUsable]
+  ] as const;
+
+  return (
+    <section aria-labelledby="case-study-questions">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="case-study-questions">
+        Case-study questions
+      </h2>
+      <div className="mt-5 grid gap-4 md:grid-cols-3">
+        {rows.map(([label, text]) => (
+          <JBCard key={label}>
+            <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
+            <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
+          </JBCard>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (

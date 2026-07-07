@@ -25,8 +25,11 @@ Use `.env.example` for local environment defaults.
 ## Checks
 
 ```bash
+npm ci
 npm run typecheck
 npm run lint
+npm run check:public-safety
+npm run check:routes
 npm run build
 npm run check
 ```
@@ -42,6 +45,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,6 +60,9 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-email>
+NEXT_PUBLIC_LINKEDIN_URL=<approved-url-or-empty>
+NEXT_PUBLIC_GITHUB_URL=<approved-url-or-empty>
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -80,8 +89,10 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, proof
+labels, eyebrows, and compact metadata through `next/font/google`. Do not commit
+or serve private, proprietary, or unlicensed font files. See
+`docs/typefaces.md`.
 
 ## Content Rules
 
@@ -91,12 +102,18 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, use review notes, claim status, and launch blockers rather
+  than visible public-facing TODOs.
+- Maintain `apps/www/src/data/proofs.ts`, `docs/proofs-bank.md`, and
+  `docs/public-claims-inventory.md` as the public-safe knowledge bank for
+  strong professional claims. The website should project that bank for clarity,
+  audience, and purpose rather than expose raw archival material or a public
+  proof-bank browser.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
+- Confirm approved resume PDF and last-updated date.
+- Confirm approved public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.

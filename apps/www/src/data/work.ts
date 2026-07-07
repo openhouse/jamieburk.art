@@ -51,6 +51,7 @@ const workMetaSchema = z.object({
   priority: z.number(),
   visibility: visibilitySchema,
   whatWasUnclear: z.string(),
+  towardWhatEnd: z.string(),
   whatBecameUsable: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
   artifacts: z.array(
@@ -100,6 +101,8 @@ const workItemsInput = [
     visibility: "public-safe",
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
+    towardWhatEnd:
+      "Help the business adapt to online sales while preserving trust, institutional voice, and practical operating knowledge.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
@@ -181,6 +184,8 @@ const workItemsInput = [
     visibility: "public-safe",
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+    towardWhatEnd:
+      "Help collaborators remember, decide, follow up, and communicate without exposing private strategy, legal-review context, or unapproved stakeholder material.",
     whatBecameUsable:
       "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
@@ -261,6 +266,8 @@ const workItemsInput = [
     visibility: "public-safe",
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
+    towardWhatEnd:
+      "Translate open-data context into resident-facing issue pathways while keeping the prototype clearly archived and unofficial.",
     whatBecameUsable:
       "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
     artifactTypes: ["prototype", "guide", "map", "press"],
@@ -339,7 +346,9 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed simple, low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+    towardWhatEnd:
+      "Help local arts and music organizers publish, distribute, and discover events through the language their communities already used.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +356,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A simple, low-overhead distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -392,6 +401,8 @@ const workItemsInput = [
     visibility: "summary-only",
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
+    towardWhatEnd:
+      "Create repeatable participation infrastructure that could welcome people, support resident artists, and preserve continuity without overexposing the community.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
     artifactTypes: ["photo sequence", "workflow", "template"],
@@ -444,6 +455,8 @@ const workItemsInput = [
     visibility: "public-safe",
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+    towardWhatEnd:
+      "Support adaptive-reuse planning and public-benefit documentation while keeping property, legal, financial, and partner-sensitive details bounded.",
     whatBecameUsable:
       "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
