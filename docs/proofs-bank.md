@@ -64,6 +64,10 @@ systems.
 | PB-030 | Built and stewarded Commercial Rent Stabilization campaign-memory infrastructure: running minutes, action trackers, decision records, source maps, legal/policy question logs, public-data framing, and stakeholder next steps. | Shows civic documentation, coalition operations, decision memory, and public/private boundary judgment. | 34-page running-minutes record; public-data memos; provenance/redline materials; approved public resume PDF. | Use collective-work language. Not legal advice. |
 | PB-031 | The CRS work includes 30+ pages of civic campaign-memory infrastructure, including a 34-page running-minutes record. | Concrete proof of documentation scale and continuity. | Running-minutes PDF page count and related public-safe documents. | Use "30+" in summary surfaces and "34-page running-minutes record" in detailed context. |
 | PB-032 | The CRS data work framed a policy-neutral public baseline around commercial vacancy, occupancy, and lease-cost conditions. | Connects civic tech, open data, policy operations, and public-sector data opportunity framing. | Public-data memos and approved source bundle. | Frame as data opportunity / public baseline work, not legal or policy endorsement. |
+| PB-033 | Jamie is a co-founding member of NYC Artist Coalition who supports cultural-space fieldwork, Commercial Rent Stabilization / FairRentNYC campaign infrastructure, public-safe documentation, source mapping, action tracking, and coalition follow-up systems. | Defines Jamie's actual lane inside collective cultural-space advocacy without collapsing NAC, FairRentNYC, SBU, Action Lab, or the broader movement into one person. | Jamie review confirmation; public-safe running minutes; NAC public site; FairRentNYC public site. | Approved as role framing. Do not imply Jamie solely led NAC, FairRentNYC, or CRS. |
+| PB-034 | NYC Artist Coalition has contributed to public campaigns around Cabaret Law repeal / Let NYC Dance, Office of Nightlife and Save NYC Spaces, M.A.R.C.H. transparency / Talks Not Raids, COVID relief coordination, storefront vacancy and commercial-rent advocacy, and FairRentNYC. | Establishes the coalition's civic track record and shows that the CRS work sits in a longer anti-criminalization, access-to-support, and anti-displacement lineage. | NAC public site; Let NYC Dance; Save NYC Spaces; Talks Not Raids; FairRentNYC public pages. | Use collective-work language. Attribute campaign outcomes to coalitions and public processes, not to Jamie alone. |
+| PB-035 | The active NAC / FairRentNYC work centers on Commercial Rent Stabilization, city and state bill pathways, legal/policy routing, consent-aware cultural-space follow-up, public-data framing, signup/data protocols, and public-safe campaign memory. | Shows current work without disclosing private coalition strategy or sensitive venue information. | Running minutes; FairRentNYC reference library; official NY Senate / Assembly bill pages reviewed 2026-07-07. | Treat bill status as time-sensitive. Review before publishing date-specific claims. |
+| PB-036 | Jamie's NAC role can be described as cultural-space fieldworker, coalition-operations support, and documentation systems lead for affordability and anti-displacement work. | Translates volunteer/coalition work into professional operating-system language while preserving the community context. | Running minutes; event-organizer field notes; Jamie review confirmation. | Public pages should say enough to establish role fit, not publish field notes, contacts, venue issues, or unapproved quotes. |
 | PB-040 | Co-built WOWList.org with Richard Caceres: a Python / Django + Ember.js community-calendar platform organized around followable keyword communities. | Shows shipped web platform work and co-credit discipline. | Approved public resume PDF; WOWList source/templates; public-safe WOWList context. | Credit Richard Caceres when naming the project. |
 | PB-041 | WOWList reached roughly 35 city ecosystems through DIY arts and music organizers. | Demonstrates reach without overstating adoption. | Approved public resume PDF; profile export; public-safe WOWList context. | Keep "roughly." Avoid exact-looking adoption claims. |
 | PB-042 | WOWList used shared calendars, hashtag/list publishing patterns, and organizer-facing event workflows. | Shows product model beyond a generic calendar. | WOWList source/templates; public-safe project context. | Approved. |
@@ -100,6 +104,19 @@ Each case-study page should answer:
 
 Use proof claims as supporting structure, not as a trophy wall.
 
+For the FairRentNYC / NYC Artist Coalition page, name the role plainly:
+
+- co-founding member of NYC Artist Coalition;
+- cultural-space fieldwork;
+- FairRentNYC / CRS campaign-memory infrastructure;
+- public-safe documentation, source mapping, action tracking, and follow-up;
+- city/state CRS pathways and public-data framing.
+
+Keep NAC accomplishments collective. The site may mention campaign lineage, but
+should not imply Jamie alone repealed the Cabaret Law, created the Office of
+Nightlife, led Talks Not Raids, or owns the Commercial Rent Stabilization
+movement.
+
 ### Technical Operations Page
 
 Lead with operating usefulness:
@@ -128,6 +145,10 @@ that summary bullets match approved wording and do not drift.
 Avoid these unless Jamie explicitly approves stronger evidence and wording:
 
 - Jamie single-handedly led or owned Commercial Rent Stabilization.
+- Jamie single-handedly led NYC Artist Coalition, FairRentNYC, Let NYC Dance,
+  Save NYC Spaces, Talks Not Raids, or any other coalition campaign.
+- Jamie alone repealed the Cabaret Law, created the Office of Nightlife, or
+  secured M.A.R.C.H. transparency reforms.
 - Jamie provided legal analysis or legal advice.
 - CallNYC is a current or official city service.
 - KC Town Hall received guaranteed funding.
@@ -136,6 +157,19 @@ Avoid these unless Jamie explicitly approves stronger evidence and wording:
   unapproved photos.
 - Source-Backed Team Memory is a finished SaaS product, autonomous archive
   system, broad ingestion system, or replacement for human judgment.
+
+## Public NAC / FairRent Source Links
+
+Public sources reviewed on 2026-07-07:
+
+- NYC Artist Coalition: https://nycartc.com/
+- Let NYC Dance: https://letnycdance.nycartc.com/
+- Save NYC Spaces: https://savenycspaces.nycartc.com/
+- Talks Not Raids: https://talksnotraids.com/
+- FairRentNYC: https://fairrentnyc.nycartc.com/
+- FairRentNYC Reference Library: https://fairrentnyc.nycartc.com/library/
+- NY Senate S8319: https://www.nysenate.gov/legislation/bills/2025/S8319
+- NY Assembly A05568: https://assembly.state.ny.us/leg/?bn=A05568&term=2025&Summary=Y
 
 ## Review Protocol
 

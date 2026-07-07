@@ -21,6 +21,7 @@ export const selectedProofGroups = [
     signal: "Complex public work became shared records and guidance.",
     claims: [
       "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "As a co-founding member of NYC Artist Coalition, supports cultural-space fieldwork, FairRentNYC / CRS campaign infrastructure, and consent-aware follow-up.",
       "Built and stewarded 30+ pages of Commercial Rent Stabilization campaign-memory infrastructure, including a 34-page running-minutes record.",
       "Framed policy-neutral public-data opportunities around commercial vacancy, occupancy, and lease-cost conditions."
     ]
