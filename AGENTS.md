@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who builds
+operating structure for ambiguous public-facing technical work.
 
 ## Current Canonical App
 
@@ -24,8 +24,17 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run public-safety`
+- `npm run knowledge-bank`
+- `npm run preflight:staging`
+- `npm run preflight:production`
 
 ## Public-Safety Rules
+
+Use `apps/www/src/data/proofs.ts` as the public-safe knowledge bank / proofs
+bank. Add or adjust strong professional claims there first, including approval
+status, support level, projection surfaces, role fit, and protected boundaries,
+before projecting them into website copy.
 
 Do not publish private emails, raw transcripts, private coalition notes,
 legal-review materials, health/financial details, private correspondence,
@@ -35,7 +44,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, leave a launch-blocking approval note in docs or data rather
+than publishing private or unconfirmed material on production-facing pages.
 
 ## Scope Rules
 

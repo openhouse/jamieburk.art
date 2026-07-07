@@ -9,8 +9,8 @@ brand
 Hiring managers, product and operations leaders, civic technology teams,
 implementation teams, collaborators, and trusted reviewers who need to quickly
 understand Jamie Burkart's professional shape. They arrive with limited time
-and need credible, public-safe evidence that Jamie can create operating
-structure for complex public-facing work.
+and need credible, public-safe evidence that Jamie can build operating
+structure for ambiguous public-facing technical work.
 
 ## Product Purpose
 
@@ -20,7 +20,9 @@ stakeholder-heavy work becomes usable systems: requirements, workflows,
 documentation, decision trails, launch support, onboarding, and durable
 handoffs. Success means a reviewer can understand Jamie's role fit, trust the
 evidence, and know what to do next without exposing private or sensitive
-materials.
+materials. The knowledge bank / proofs bank is the source of truth for public
+claims, approval status, projection surfaces, role fit, and protected
+boundaries.
 
 ## Brand Personality
 
