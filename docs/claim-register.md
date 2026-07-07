@@ -1,10 +1,12 @@
 # Public Claim Register
 
 This register keeps public portfolio claims accurate, bounded, and easy to review.
-It records approved public wording, the kind of backing reviewed, and the
-publication stance. It does not publish private source material, contact lists,
-raw transcripts, private correspondence, legal-review materials, or internal
-business details.
+It records the exact wording currently approved for public pages and
+resume-adjacent surfaces. The broader public-safe knowledge base lives in
+`docs/proofs-bank.md`.
+
+It does not publish private source material, contact lists, raw transcripts,
+private correspondence, legal-review materials, or internal business details.
 
 ## Current Approved Public Claims
 

@@ -24,6 +24,7 @@
       surfacing, onboarding, documentation, reporting, and durable handoffs.
 - [ ] Source-Backed Team Memory is framed as method, not finished SaaS.
 - [ ] Case-study claims use contribution and collective-work language.
+- [ ] Strong claims are represented in `docs/proofs-bank.md`.
 - [ ] Public claims match `docs/claim-register.md`.
 - [ ] Screenshots, photos, metrics, collaborator names, and credits are approved
       or omitted.
@@ -42,6 +43,7 @@
 - [ ] Jamie approves every public page.
 - [ ] Claims, credits, screenshots, photos, and resume contact details are
       approved.
+- [ ] `docs/proofs-bank.md` is current for the released public story.
 - [ ] `docs/claim-register.md` is current for the released public wording.
 - [ ] Production canonical, OpenGraph, and sitemap URLs point to
       `https://jamieburk.art`.
