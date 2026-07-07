@@ -15,6 +15,9 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "check": "npm run check -w @jamie-burkart/www",
+    "public-safety": "node scripts/check-public-safety.mjs",
+    "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check && npm run public-safety",
+    "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check && APP_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run public-safety -- --production"
   }
 }

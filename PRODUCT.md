@@ -22,6 +22,11 @@ handoffs. Success means a reviewer can understand Jamie's role fit, trust the
 evidence, and know what to do next without exposing private or sensitive
 materials.
 
+The website projects from a small public-safe knowledge bank:
+`docs/proofs-bank.md`, `docs/public-claims-inventory.md`, and the typed
+projection in `apps/www/src/data/proofs.ts`. The product should make proof
+easier to maintain, not expose the private archive.
+
 ## Brand Personality
 
 Precise, warm, modular, and ethically grounded. The emotional goal is calm
@@ -44,7 +49,8 @@ private fonts, and named stakeholder details that have not been approved.
    not through private source dumps.
 3. Make evidence scan quickly while preserving nuance.
 4. Use collective-work language where the work was collaborative.
-5. Leave every page feeling like documentation is care.
+5. Keep exact metrics softened unless explicitly approved.
+6. Leave every page feeling like documentation is care.
 
 ## Accessibility & Inclusion
 
