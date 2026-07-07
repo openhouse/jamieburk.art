@@ -13,30 +13,41 @@ export const metadata: Metadata = createMetadata({
 
 const sections = [
   {
-    title: "Operating systems built",
+    title: "Planning and reporting",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "Planning rhythms",
+      "Project status tracking",
+      "Decision logs",
+      "Risk surfacing",
+      "Honest stakeholder reporting",
+      "Post-launch retros"
     ]
   },
   {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    title: "Delivery and launch support",
+    items: [
+      "Concept through public launch",
+      "Recurring blocker resolution",
+      "Cross-team dependency coordination",
+      "Implementation handoffs",
+      "Public-facing tool support",
+      "Adoption materials"
+    ]
   },
   {
-    title: "Documentation and working memory",
+    title: "Team documentation",
     items: [
+      "Onboarding guides",
+      "Handbooks",
+      "Runbooks",
       "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
       "Meeting synthesis",
-      "Decision records"
+      "Decision records",
+      "Resource libraries"
     ]
   },
   {
-    title: "Tools and technical environments",
+    title: "Technical environments",
     items: [
       "JavaScript / TypeScript",
       "Node.js",
@@ -63,7 +74,8 @@ export default function TechnicalOperationsPage() {
           Across civic, cultural, small-business, and public-facing technical
           environments, I build the operating backbone teams need to move:
           planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          documentation systems, launch support, stakeholder updates, and
+          durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">

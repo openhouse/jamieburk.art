@@ -28,7 +28,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
 npm run check
+npm run preflight:production
 ```
 
 ## Environment
@@ -81,7 +83,8 @@ drafts, Docker build args, and verification checklist.
 ## Typeface Policy
 
 Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+or serve private, proprietary, or unlicensed font files. See
+`docs/typefaces.md`.
 
 ## Content Rules
 
@@ -95,12 +98,15 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
+- Approved resume PDF before production.
+- Approved public contact path.
+- Hide LinkedIn and GitHub unless exact public URLs are confirmed.
+- Hide screenshots/artifacts unless reviewed for public use.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run public-safety` and production preflight pass.
+
+See `docs/release-checklist.md` and `docs/content-safety.md`.

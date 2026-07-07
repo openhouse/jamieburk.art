@@ -29,9 +29,10 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: important work where
+              goals, ownership, workflows, or documentation are not yet clear
+              becoming usable systems, public-facing tools, decision trails, and
+              durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -77,16 +78,16 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Clarify, structure, build, document, and transfer
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when important work lacks clear ownership,
+            workflows, or documentation. I listen across stakeholders, map what
+            is known and unknown, create the working structure the team needs,
+            support launch or adoption, and leave behind materials that make the
+            work easier to maintain.
           </p>
           <ContactCTA />
         </div>
