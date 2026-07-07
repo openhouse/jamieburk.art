@@ -3,6 +3,7 @@ import { site } from "@/data/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
+  { href: "/work/technical-operations", label: "Technical Ops" },
   { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" }
@@ -23,7 +24,7 @@ export function SiteHeader() {
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
-                  className="rounded-lg px-3 py-2 text-jb-ink/78 hover:bg-jb-sky/18 hover:text-jb-blue"
+                  className="rounded-lg px-2 py-2 text-jb-ink/78 hover:bg-jb-sky/18 hover:text-jb-blue sm:px-3"
                   href={item.href}
                 >
                   {item.label}

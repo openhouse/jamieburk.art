@@ -20,10 +20,10 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
-            tools, cultural infrastructure, coalition work, and knowledge
-            systems.
+            My work sits where important systems are still emerging and the
+            stakes are human: civic technology, small-business operations,
+            public-facing tools, cultural infrastructure, coalition work, and
+            knowledge systems.
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
@@ -36,6 +36,12 @@ export default function AboutPage() {
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
+          </p>
+          <p>
+            Structure grows out of the material. My work is to help teams
+            surface what is already emerging and give it resilient form, so
+            transition becomes more navigable, less lonely, and easier to carry
+            forward.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">

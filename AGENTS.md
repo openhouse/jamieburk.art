@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:routes`
+- `npm run check:public-safety`
+- `npm run check:production`
 
 ## Public-Safety Rules
 
@@ -34,6 +37,14 @@ internal analytics, client-private materials, or raw community records.
 
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
+
+Add or revise public professional claims in `docs/proofs-bank/claims.md` before
+projecting them into website copy or structured site data.
+
+Website copy may only project claims marked `approved` or `public-safe`.
+Approval-required metrics, raw transcripts, private coalition context, legal
+review, client-private materials, private stakeholder lists, and unapproved
+screenshots stay out of public pages.
 
 When uncertain, write: `TODO: Jamie approval required.`
 

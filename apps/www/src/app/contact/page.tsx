@@ -11,6 +11,11 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function ContactPage() {
+  const emailLink =
+    site.contact.email && site.contact.emailHref
+      ? { href: site.contact.emailHref, label: site.contact.email }
+      : null;
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -23,25 +28,52 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {emailLink ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={emailLink.href}
+                  >
+                    {emailLink.label}
+                  </a>
+                ) : (
+                  "Email will appear here after launch approval."
+                )}
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">Location</dt>
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
-            </div>
+            {site.contact.linkedinUrl ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">LinkedIn</dt>
+                <dd className="mt-1 text-jb-ink/74">
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.contact.linkedinUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    LinkedIn
+                  </a>
+                </dd>
+              </div>
+            ) : null}
+            {site.contact.githubUrl ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">GitHub</dt>
+                <dd className="mt-1 text-jb-ink/74">
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.contact.githubUrl}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                </dd>
+              </div>
+            ) : null}
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">

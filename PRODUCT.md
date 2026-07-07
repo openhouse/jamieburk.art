@@ -15,12 +15,31 @@ structure for complex public-facing work.
 ## Product Purpose
 
 This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
-stakeholder-heavy work becomes usable systems: requirements, workflows,
+Operations & Implementation lead. It should show how emerging, stakeholder-heavy
+work becomes usable systems: requirements, workflows,
 documentation, decision trails, launch support, onboarding, and durable
 handoffs. Success means a reviewer can understand Jamie's role fit, trust the
 evidence, and know what to do next without exposing private or sensitive
 materials.
+
+The operating thesis is that structure grows out of the material. The site
+should remove shame from the early, groundless state of transformation by
+showing how Jamie helps teams surface what is already emerging and give it
+resilient form.
+
+## Proof Model
+
+Each public work card should answer five questions:
+
+1. What was unclear?
+2. What became usable?
+3. What operating backbone did Jamie help create?
+4. What role fit does this prove?
+5. What visibility or public-safety boundary governs the page?
+
+Public pages project from `docs/proofs-bank/claims.md`. Add or revise public
+claims there first, then use only `approved` or `public-safe` wording in site
+copy and structured work data.
 
 ## Brand Personality
 

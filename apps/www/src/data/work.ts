@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to online growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -167,12 +167,12 @@ const workItemsInput = [
     }
   },
   {
-    title: "FairRentNYC / Commercial Rent Stabilization",
+    title: "FairRentNYC / NYC Artist Coalition / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Helped structure shared civic campaign documentation, source maps, action trackers, open questions, public-data framing, and follow-up infrastructure for Commercial Rent Stabilization and cultural-space affordability work.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -183,7 +183,7 @@ const workItemsInput = [
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
       "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+    artifactTypes: ["source map", "meeting memory", "decision record", "public handout", "website"],
     artifacts: [
       {
         title: "Campaign-memory spine",
@@ -202,6 +202,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Public campaign context",
+        description:
+          "Public-facing campaign pages and public materials kept separate from private notes, raw strategy context, and backend details.",
+        type: "website"
       }
     ],
     tags: [
@@ -219,6 +225,13 @@ const workItemsInput = [
       "Public Guidance",
       "Decision Records"
     ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
+    ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
@@ -232,7 +245,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "Shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
@@ -252,7 +265,7 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built a civic-data prototype translating constituent-services open-data context into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",
@@ -262,7 +275,7 @@ const workItemsInput = [
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
-      "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+      "An archived civic-tech prototype that organized open-data context into issue pathways, district context, and resident-facing guidance.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -286,13 +299,13 @@ const workItemsInput = [
     ],
     tags: [
       "Civic Technology",
-      "Open Data",
+      "Civic Data",
       "Web Systems",
       "Implementation",
       "Public-Facing Tools"
     ],
     capabilities: [
-      "Open Data Translation",
+      "Civic Data Translation",
       "Resident Guidance",
       "Prototype Delivery",
       "Information Architecture",
@@ -301,7 +314,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open-data context, archived project context, public-safe screenshots pending, and press citation pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -312,13 +325,13 @@ const workItemsInput = [
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
       "Built after a New York City Council civic-data hackathon",
-      "Translated CouncilStat / constituent-services open data",
+      "Translated CouncilStat / constituent-services open-data context",
       "Organized public issue pages and resident-facing guidance",
       "Historical civic-tech demo with press citation pending"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
+        "CallNYC translated civic open-data context into issue pathways and resident-facing guidance as an archived prototype.",
       open:
         "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
       protected:
@@ -331,7 +344,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities for DIY arts and music organizers across multiple city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,7 +352,7 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed simple, low-burden ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +360,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A simple distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -366,7 +379,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "Multi-city organizer-facing distribution workflows"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +396,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for long-running gathering and resident-artist infrastructure.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -415,8 +428,8 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Long-running gathering infrastructure",
+      "Resident-artist support systems",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
