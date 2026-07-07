@@ -3,7 +3,7 @@ const proofItems = [
   "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
   "30+ pages of civic campaign-memory infrastructure",
   "Roughly 35 city ecosystems reached through WOWList.org",
-  "300+ documented gatherings / 20+ resident artists supported"
+  "Hosted Sunday Dinner / 300+ documented gatherings"
 ];
 
 export function ProofStrip() {

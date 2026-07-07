@@ -400,7 +400,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems while documenting 300+ gatherings and supporting 20+ resident artists.",
+      "Hosted Sunday Dinner and created repeatable onboarding, facilitation, documentation, and continuity systems while documenting 300+ gatherings and supporting 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -410,7 +410,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for documented gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable hosting and participation infrastructure for gatherings, resident artists, onboarding, facilitation, documentation, and handoffs.",
     towardWhatEnd:
       "Support recurring cultural work with trust-building routines while keeping private community records out of public view.",
     artifactTypes: ["photo sequence", "workflow", "template"],
@@ -434,7 +434,7 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ documented gatherings",
+      "Hosted Sunday Dinner and documented 300+ gatherings",
       "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
