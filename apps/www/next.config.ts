@@ -18,9 +18,10 @@ const siteUrl = stripTrailingSlash(
       : "https://staging.jamieburk.art")
 );
 
-const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+const ROBOTS_INDEXABLE =
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -29,9 +30,14 @@ const globalHeaders = [
     key: "Permissions-Policy",
     value: "camera=(), microphone=(), geolocation=()"
   },
-  ...(robotsIndexable
+  ...(ROBOTS_INDEXABLE
     ? []
     : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }])
+];
+
+const resumePdfHeaders = [
+  ...globalHeaders.filter((header) => header.key !== "X-Robots-Tag"),
+  { key: "X-Robots-Tag", value: "noindex, nofollow" }
 ];
 
 const nextConfig: NextConfig = {
@@ -47,8 +53,56 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        source: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+        headers: resumePdfHeaders
+      },
+      {
         source: "/(.*)",
         headers: globalHeaders
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/noting-us",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
+      },
+      {
+        source: "/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
+      },
+      {
+        source: "/sunday-dinner",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
+      },
+      {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
+        permanent: true
       }
     ];
   }

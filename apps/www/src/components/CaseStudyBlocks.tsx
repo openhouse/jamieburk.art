@@ -33,7 +33,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
           Tags
         </p>
         <div className="mt-3">
-          <TagList compact tags={item.tags} />
+          <TagList compact tags={item.tags} tone="dark" />
         </div>
       </div>
     </section>
@@ -64,7 +64,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -93,6 +93,12 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        approval, citation, screenshot, or stronger evidence. Protected is
+        intentionally omitted because privacy, consent, client trust, law, civic
+        sensitivity, or community safety requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
@@ -163,6 +169,23 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
   return (
     <NoteBlock title="Source layer" tone="green">
       <p>{item.sourceLayer}</p>
+    </NoteBlock>
+  );
+}
+
+export function PublicReferences({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+  return (
+    <NoteBlock title="Public references" tone="blue">
+      <ul className="space-y-2">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a className="font-semibold text-jb-blue hover:text-jb-green" href={link.url}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </NoteBlock>
   );
 }

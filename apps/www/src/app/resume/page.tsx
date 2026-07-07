@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { resumeProofs } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -9,14 +10,6 @@ export const metadata: Metadata = createMetadata({
     "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
   path: "/resume"
 });
-
-const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
-];
 
 export default function ResumePage() {
   return (
@@ -28,10 +21,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I turn emerging work into usable systems for complex public-facing
+            teams, creating operating structure through
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -42,17 +35,16 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Downloadable PDF resume.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-          <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
+          <h2 className="text-2xl font-semibold text-jb-ink">Selected proof</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
-            {highlights.map((highlight) => (
-              <li className="flex gap-3" key={highlight}>
+            {resumeProofs.map((proof) => (
+              <li className="flex gap-3" key={proof.id}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                <span>{highlight}</span>
+                <span>{proof.publicClaim}</span>
               </li>
             ))}
           </ul>
