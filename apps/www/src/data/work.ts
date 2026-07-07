@@ -253,7 +253,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
-      "30+ pages of shared campaign-memory infrastructure",
+      "34-page shared campaign-memory system",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
@@ -357,9 +357,9 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities for arts and music organizers.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities for arts and music organizers, with public-safe aggregate evidence of meaningful historical adoption.",
     result:
-      "Event publishing and community discovery became a reusable keyword-based distribution workflow.",
+      "Event publishing and community discovery became a reusable keyword-based distribution workflow reaching 1,800+ users, 16,000+ event posts, and 35+ city/region scenes by 2017.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -385,11 +385,14 @@ const workItemsInput = [
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: ["Django", "Ember.js", "Community Platform Design", "Event Workflows"],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Use aggregate adoption only; private user records, organizer contact details, private media, and raw archive exports stay offline.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe aggregate archive, historical project context, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
-    currentStatus: "Historical short proof page.",
+    publicSafety: {
+      note: "Do not describe WOWList as active today, an official city-chapter network, a complete archive, or a public data release."
+    },
+    currentStatus: "Historical short proof page with public-safe aggregate metrics.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
@@ -397,11 +400,12 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "1,800+ users and 16,000+ event posts by 2017",
+      "35+ city/region scenes meeting an activity threshold"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar platform organized around followable keyword communities, with public-safe aggregate evidence of 1,800+ users, 16,000+ event posts, and 35+ active city/region scenes by 2017.",
       open:
         "Screenshots, archive links, and precise adoption wording need approval.",
       protected:
@@ -444,7 +448,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Resume-backed summary, structured private records reviewed outside the repo, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -501,7 +505,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public-safe summary, public-funding record summary, and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -511,13 +515,14 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "Funding process support"
+      "Funding process support",
+      "$490,539 public-funding recommendation / authorization path"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building, including public-benefit and funding-process context.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Funding-flow wording, named partners, and current project status details need approval before stronger public claims.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

@@ -41,6 +41,11 @@ docker build \
 
 ## Human QA
 
+- Proofs bank review:
+  - Claims on the site match `docs/proofs-bank.md`.
+  - Strong metrics use the approved public wording.
+  - Qualified claims keep their qualifier.
+  - Held claims do not appear on the public site.
 - Keyboard navigation and visible focus.
 - Mobile layout at 320, 375, 768, and desktop widths.
 - Contrast.

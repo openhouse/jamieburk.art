@@ -82,6 +82,28 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+
+  return (
+    <section aria-labelledby="evidence-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-list">
+        Defensible evidence
+      </h2>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {item.evidence.map((evidence) => (
+          <li
+            className="rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 text-sm font-medium leading-6 text-jb-ink"
+            key={evidence}
+          >
+            {evidence}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   const blocks = [
     ["Known", item.knownOpenProtected.known],
