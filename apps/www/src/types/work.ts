@@ -57,7 +57,9 @@ export type WorkMeta = {
   priority: number;
   visibility: Visibility;
   whatWasUnclear: string;
+  towardWhatEnd: string;
   whatBecameUsable: string;
+  proofBankIds: string[];
   artifactTypes: ArtifactType[];
   artifacts: Artifact[];
   tags: string[];

@@ -10,6 +10,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Context", item.series],
     ["Status", item.status],
     ["Visibility", item.visibility],
+    ["Toward what end", item.towardWhatEnd],
     ["Role fit", item.roleFit]
   ];
 
