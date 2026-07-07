@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run public-safety`
+- `npm run check:routes`
+- `npm run preflight:production`
 
 ## Public-Safety Rules
 
@@ -36,6 +39,29 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+## Chad Lens
+
+Before shipping public copy, make Jamie visible as the actor, explain toward
+what end the work mattered, translate specialized terms once, spell out or avoid
+acronyms, define unfamiliar entities, protect collective credit, and avoid
+making the reader decode why the work is impressive.
+
+Prefer verbs like built, co-built, created, stewarded, synthesized, structured,
+translated, coordinated, documented, maintained, supported, contributed to, and
+helped teams use.
+
+Use care with shorthand such as under-structured, lightweight, tracking, data,
+AI-ready, source-backed, knowledge graph, LLM, maintainers, and builds. Translate
+them into plain language the first time they appear.
+
+## Knowledge Bank
+
+The canonical internal knowledge-bank layer is `docs/knowledge-bank/`. It is a
+public-safe claim governance layer, not a private archive and not a public
+website section. The app may project selected approved wording from
+`apps/www/src/data/proofs.ts`, but do not add `/knowledge-bank`, `/proofs`,
+`/claims`, or `/internal` routes for V1.
 
 ## Scope Rules
 
