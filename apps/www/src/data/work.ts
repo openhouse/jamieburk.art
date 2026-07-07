@@ -280,7 +280,7 @@ const workItemsInput = [
       {
         title: "Archived press note",
         description:
-          "External coverage can be linked after Jamie confirms the correct Politico New York citation.",
+          "Politico New York cited the prototype in March 2016 coverage of Council member focus data.",
         type: "press"
       }
     ],
@@ -298,15 +298,22 @@ const workItemsInput = [
       "Information Architecture",
       "Public Interfaces"
     ],
+    links: [
+      { label: "Archived prototype", url: "https://callnyc.org" },
+      {
+        label: "Politico New York citation",
+        url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+      }
+    ],
     careNote:
-      "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
+      "Archived civic-data prototype. Not an official or current City Council service. Not a legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, public archive link, Politico New York citation, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
+    currentStatus: "Archived prototype. Public archive and citation added. Public-safe screenshots pending.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -314,13 +321,13 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Politico New York, Miranda Neubauer, \"Website provides new information about council members' focus,\" March 14, 2016"
     ],
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Public-safe screenshots and any additional project artifacts need Jamie approval before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }

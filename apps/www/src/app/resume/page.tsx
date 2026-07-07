@@ -25,7 +25,7 @@ export default function ResumePage() {
         <div className="jb-reading">
           <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
           <p className="mt-4 text-2xl font-semibold text-jb-green">
-            Technical Project Manager - Product Operations & Implementation
+            Technical Project Manager &mdash; Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
@@ -42,8 +42,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Production blocker: replace the placeholder PDF with Jamie&apos;s
+            approved final resume before launch.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
@@ -56,6 +56,47 @@ export default function ResumePage() {
               </li>
             ))}
           </ul>
+          <h2 className="mt-8 text-2xl font-semibold text-jb-ink">Contact</h2>
+          <dl className="mt-5 space-y-4 text-sm text-jb-ink/76">
+            <div>
+              <dt className="font-semibold text-jb-ink">Email</dt>
+              <dd className="mt-1">
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                  {site.emailLabel}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">Location</dt>
+              <dd className="mt-1">{site.location}</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
+              <dd className="mt-1">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  LinkedIn
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">GitHub</dt>
+              <dd className="mt-1">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubUrl}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  GitHub
+                </a>
+              </dd>
+            </div>
+          </dl>
         </aside>
       </div>
     </div>
