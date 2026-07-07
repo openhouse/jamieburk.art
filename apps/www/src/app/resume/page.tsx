@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { getProofClaim } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -11,12 +12,12 @@ export const metadata: Metadata = createMetadata({
 });
 
 const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
-];
+  getProofClaim("positioning-operating-structure").publicProjection,
+  getProofClaim("hje-long-term-web-ops").publicProjection,
+  getProofClaim("fairrent-campaign-memory").publicProjection,
+  getProofClaim("wowlist-community-calendar").publicProjection,
+  getProofClaim("sunday-dinner-participation-infrastructure").publicProjection
+].map((item) => item.replace(/\.$/, ""));
 
 export default function ResumePage() {
   return (
@@ -42,8 +43,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Before production indexing, Jamie should approve the exact resume PDF
+            and contact display rules.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

@@ -19,8 +19,9 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -49,6 +50,10 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*.pdf",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }]
       }
     ];
   }
