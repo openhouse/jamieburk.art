@@ -32,6 +32,7 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run knowledge-bank
 npm run public-safety
 npm run check:production
 ```
@@ -93,9 +94,20 @@ Use Karla for body/UI text and Archivo Narrow for display headings, compact
 proof labels, and metadata. Do not commit or serve private, proprietary, or
 unlicensed font files. See `docs/typefaces.md`.
 
+## Knowledge Bank
+
+The public site is a selected proof surface. `docs/knowledge-bank/` is the
+public-safe editorial and proof layer behind it. Before strengthening public
+claims, update the knowledge bank and confirm approval status, source class,
+allowed pages, and anti-claims.
+
+The older `docs/proofs-bank.md` remains as a compatibility pointer; use
+`docs/knowledge-bank/claims.md` and `docs/knowledge-bank/proofs.md` as the
+canonical claim/proof source.
+
 ## Content Rules
 
-- Treat `docs/proofs-bank.md` as the public-safe claims ledger. The website
+- Treat `docs/knowledge-bank/` as the public-safe claims ledger. The website
   should project from that bank for clarity, audience, and purpose; it should
   not publish private source material to prove a point.
 - Do not publish private emails, raw transcripts, private coalition notes,

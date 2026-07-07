@@ -112,6 +112,8 @@ for (const file of textFiles) {
   const text = readText(file);
   const scannerRuleFile = file === "scripts/check-public-safety.mjs";
   const allowlistFile = file === "scripts/public-safety-allowlist.json";
+  const knowledgeBankScannerFile = file === "scripts/check-knowledge-bank.mjs";
+  const knowledgeBankAllowlistFile = file === "scripts/knowledge-bank-allowlist.json";
 
   for (const [label, pattern] of credentialPatterns) {
     if (pattern.test(text)) {
@@ -125,12 +127,20 @@ for (const file of textFiles) {
 
   if (
     !scannerRuleFile &&
+    !knowledgeBankScannerFile &&
     /TODO: Jamie approval required|Public email pending confirmation|LinkedIn pending|GitHub pending/.test(text)
   ) {
     report(isShippedText(file) ? "failure" : "warning", "Visible approval placeholder", file);
   }
 
-  if (!scannerRuleFile && !allowlistFile && /raw transcript/i.test(text) && !isAllowed("raw transcript", file)) {
+  if (
+    !scannerRuleFile &&
+    !allowlistFile &&
+    !knowledgeBankScannerFile &&
+    !knowledgeBankAllowlistFile &&
+    /raw transcript/i.test(text) &&
+    !isAllowed("raw transcript", file)
+  ) {
     report(isShippedText(file) ? "failure" : "warning", "Raw transcript policy/content term", file);
   }
 

@@ -26,6 +26,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run typecheck`
 - `npm run lint`
 - `npm run build`
+- `npm run knowledge-bank`
 - `npm run check`
 
 ## Public-Safety Rules
@@ -40,6 +41,16 @@ artifacts, and careful collective-work language.
 
 When uncertain, keep the material out of the public surface and record the
 approval need in staging QA or launch notes.
+
+## Knowledge Bank Rules
+
+- Public claims should come from `docs/knowledge-bank/claims.md`.
+- Project proof should be summarized in `docs/knowledge-bank/proofs.md`.
+- Protected evidence stays outside the repo.
+- Use Chad's lens: purpose, agency, legibility, precision, contribution, reader
+  burden.
+- Do not add private source material to prove public claims.
+- If a public sentence risks implying an anti-claim, rewrite it or remove it.
 
 ## Scope Rules
 
