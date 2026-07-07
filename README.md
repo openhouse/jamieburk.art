@@ -6,6 +6,9 @@ Product Operations & Implementation.
 The site should make this believable: Jamie creates operating structure for
 complex public-facing teams.
 
+Plain-language translation: Jamie turns ambiguous, loosely defined work into
+usable systems.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -27,9 +30,14 @@ Use `.env.example` for local environment defaults.
 ```bash
 npm run typecheck
 npm run lint
+npm run public-safety
 npm run build
 npm run check
 ```
+
+The app build currently uses `next build --webpack` for release-candidate
+stability; the default Turbopack build stalled during this production-readiness
+pass while the webpack build completed.
 
 ## Environment
 
@@ -80,8 +88,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings and compact
+proof labels. Do not commit or serve private, proprietary, or unlicensed font
+files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -95,12 +104,14 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the resume PDF remains the approved public-download file.
+- Confirm whether the resume PDF should remain noindex in production.
+- Confirm public email for website display.
+- Confirm LinkedIn and GitHub links for website display.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Run `npm run production-safety` and resolve approval blockers before indexing.
