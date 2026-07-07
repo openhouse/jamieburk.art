@@ -5,13 +5,14 @@ stable ID, status, source class, approval owner, allowed pages, and anti-claim.
 
 Statuses:
 
-- `approved`: safe for the listed public pages using the exact public wording or
-  a narrower variant.
-- `needs-review`: supported enough to keep in the bank, but do not strengthen
-  public copy until Jamie or a collaborator approves.
-- `staging-only`: may appear in staging notes or review docs, not production.
-- `do-not-publish`: keep out of public pages.
-- `private`: protected context only; do not commit source evidence.
+- `Ready`: safe for the listed public pages using the exact public wording or a
+  narrower variant.
+- `Careful`: supported and usable only with the listed guardrails intact.
+- `Pending`: supported enough to keep in the bank, but do not strengthen public
+  copy until Jamie, a collaborator, or a citation approves the wording.
+- `Protected`: source context may inform Jamie's confidence, but should not be
+  projected into public copy.
+- `Private`: protected context only; do not commit source evidence.
 
 Page scopes:
 
@@ -39,7 +40,7 @@ public-facing teams.
 **Short wording:** Technical Project Manager - Product Operations &
 Implementation.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** homepage, metadata, resume-page, work-index,
 technical-operations, colophon.
@@ -73,7 +74,7 @@ support, and durable handoffs.
 
 **Short wording:** Ambiguous work into usable systems.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** homepage, work-index, technical-operations, metadata,
 colophon.
@@ -106,7 +107,7 @@ civic, cultural, small-business, and public-facing technical environments.
 
 **Short wording:** 14+ years creating operating structure.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** homepage, resume-page, technical-operations, metadata.
 
@@ -138,7 +139,45 @@ templates, and handoffs.
 
 **Short wording:** Documentation architecture and operating memory.
 
-**Status:** approved.
+**Status:** Ready.
+
+## TECHOPS-001
+
+**Public wording:** Jamie builds the operating backbone teams need to stay
+focused, unblocked, accountable, and able to hand off work: delivery
+coordination, risk surfacing, planning cycles, status reporting, decision
+frameworks, onboarding, runbooks, operating documentation, team-health signals,
+operational metrics, cross-functional dependencies, and durable handoffs.
+
+**Short wording:** Operating backbone for ambiguous public-facing technical
+work.
+
+**Status:** Ready.
+
+**Allowed pages:** technical-operations, homepage, work-index, resume-page,
+metadata.
+
+**Disallowed pages:** none.
+
+**Source class:** approved-resume; public-safe-summary.
+
+**Approval owner:** Jamie.
+
+**Last reviewed:** 2026-07-07.
+
+**Chad lens note:** This is the plainest Technical Operations fit claim. It
+should be supported by concrete project evidence rather than floating as a
+generic leadership statement.
+
+**Toward what end:** Make Jamie credible for product operations, implementation,
+and public-sector technical operations without turning the site into a single
+job application.
+
+**Anti-claim / what not to imply:** Do not imply formal ownership of every team,
+technical stack, or production system named in supporting examples.
+
+**Protected evidence note:** Private team notes, internal status artifacts,
+client-private systems, and unapproved screenshots stay outside the repo.
 
 **Allowed pages:** technical-operations, work-index, case-study-fair-rent,
 lab-source-backed-team-memory, colophon.
@@ -171,7 +210,7 @@ the company's institutional voice.
 
 **Short wording:** Long-term e-commerce and operations modernization.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** case-study-hje, work-index, technical-operations, resume-page.
 
@@ -202,7 +241,7 @@ e-commerce, analytics, marketing, and operations improvements.
 
 **Short wording:** Contributed to 2x revenue growth.
 
-**Status:** approved for contribution language.
+**Status:** Careful.
 
 **Allowed pages:** homepage, case-study-hje, technical-operations, resume-page.
 
@@ -231,7 +270,7 @@ data, and internal analytics stay outside the repo.
 
 **Short wording:** Co-founding NYC Artist Coalition member.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** case-study-fair-rent, technical-operations, work-index.
 
@@ -267,7 +306,46 @@ coordination.
 **Short wording:** Collective cultural-space advocacy across enforcement,
 support, displacement, and fair-rent work.
 
-**Status:** approved with collective-work language.
+**Status:** Careful.
+
+## FAIR-001
+
+**Public wording:** Jamie built and stewarded FairRentNYC / Commercial Rent
+Stabilization campaign-memory and coordination infrastructure: running minutes,
+action tracking, source/provenance maps, open questions, public-data framing,
+and public/private boundaries.
+
+**Short wording:** FairRentNYC / CRS campaign-memory and coordination
+infrastructure.
+
+**Status:** Careful.
+
+**Allowed pages:** case-study-fair-rent, work-index, technical-operations.
+
+**Disallowed pages:** homepage unless reduced to the approved proof-strip
+wording.
+
+**Source class:** public-safe-summary; private-source-outside-repo;
+conversation-summary; public-source.
+
+**Approval owner:** Jamie and collaborator if naming active partners.
+
+**Last reviewed:** 2026-07-07.
+
+**Chad lens note:** The strong claim is the operating system Jamie made usable,
+not ownership of the campaign, law, or coalition position.
+
+**Toward what end:** Keep cultural-space, small-business, public-data, and
+policy collaborators aligned around known facts, open questions, next steps,
+and protected context.
+
+**Anti-claim / what not to imply:** Do not imply Jamie authored official legal
+analysis, owns Commercial Rent Stabilization bill text, speaks for every
+collaborator, or proves rent caused closures.
+
+**Protected evidence note:** Legal-review materials, strategy notes, private
+coalition records, signups, contact lists, venue-specific details, and
+unapproved quotes stay outside the repo.
 
 **Allowed pages:** case-study-fair-rent, work-index.
 
@@ -300,7 +378,7 @@ boundaries.
 
 **Short wording:** 34-page civic campaign-memory system.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** homepage, case-study-fair-rent, technical-operations,
 work-index.
@@ -336,7 +414,7 @@ campaign memory.
 **Short wording:** CRS coordination, provenance, data framing, and field
 follow-up.
 
-**Status:** approved with active-project caution.
+**Status:** Careful.
 
 **Allowed pages:** case-study-fair-rent, technical-operations.
 
@@ -371,7 +449,41 @@ resident-facing "find help / next steps" guidance.
 
 **Short wording:** Archived civic-data prototype for resident-facing guidance.
 
-**Status:** approved.
+**Status:** Ready.
+
+## CALLNYC-001
+
+**Public wording:** CallNYC is an archived civic-data prototype Jamie built
+after a New York City Council civic-data hackathon to translate open
+constituent-services data into resident-facing issue pathways and next-step
+guidance.
+
+**Short wording:** Archived civic-data prototype for resident-facing guidance.
+
+**Status:** Ready.
+
+**Allowed pages:** case-study-callnyc, work-index, technical-operations.
+
+**Disallowed pages:** metadata unless archived status is clear.
+
+**Source class:** approved-resume; public-source; public-safe-summary.
+
+**Approval owner:** Jamie.
+
+**Last reviewed:** 2026-07-07.
+
+**Chad lens note:** Use the archived status every time the claim could otherwise
+read as a current public service.
+
+**Toward what end:** Show civic-data translation, prototyping, and public-facing
+information architecture.
+
+**Anti-claim / what not to imply:** Do not present CallNYC as an official City
+service, current service, legal advice, emergency guidance, or adopted city
+product.
+
+**Protected evidence note:** Do not publish unsupported current-service
+guidance.
 
 **Allowed pages:** case-study-callnyc, work-index, technical-operations.
 
@@ -404,7 +516,7 @@ citation is verified.
 
 **Short wording:** CallNYC press citation pending.
 
-**Status:** needs-review.
+**Status:** Pending.
 
 **Allowed pages:** private-docs-only until citation is confirmed.
 
@@ -434,7 +546,7 @@ keyword communities.
 
 **Short wording:** Co-built a Django + Ember community-calendar platform.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** homepage, case-study-wowlist, work-index,
 technical-operations.
@@ -469,7 +581,7 @@ saved/starred events, and 35+ city/region scenes by 2017.
 **Short wording:** 1,800+ users, 16,000+ event posts, 35+ active city/region
 scenes by 2017.
 
-**Status:** approved for aggregate wording.
+**Status:** Careful.
 
 **Allowed pages:** homepage, case-study-wowlist, work-index,
 technical-operations.
@@ -500,7 +612,7 @@ artists.
 
 **Short wording:** 300+ gatherings and 20+ resident artists.
 
-**Status:** approved for aggregate summary.
+**Status:** Careful.
 
 **Allowed pages:** homepage, case-study-196, work-index, technical-operations.
 
@@ -532,7 +644,7 @@ project.
 
 **Short wording:** Adaptive reuse and public-benefit documentation.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** case-study-kc-town-hall, work-index, technical-operations.
 
@@ -563,7 +675,7 @@ recommendation / authorization path for the KC Town Hall project.
 
 **Short wording:** $490,539 public-funding recommendation.
 
-**Status:** approved for recommendation / authorization language.
+**Status:** Careful.
 
 **Allowed pages:** case-study-kc-town-hall, work-index.
 
@@ -595,7 +707,7 @@ open questions, and human-reviewed AI-assisted documentation.
 
 **Short wording:** Source-backed operating memory lab.
 
-**Status:** approved for lab framing.
+**Status:** Careful.
 
 **Allowed pages:** lab-source-backed-team-memory, technical-operations,
 work-index, colophon.
@@ -630,7 +742,7 @@ inspectable and correctable.
 
 **Short wording:** AI drafts; humans review.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** lab-source-backed-team-memory, technical-operations,
 colophon.
@@ -661,7 +773,7 @@ taught by Hamel Husain and Shreya Shankar.
 
 **Short wording:** Completed AI Evals for Engineers & PMs.
 
-**Status:** approved.
+**Status:** Ready.
 
 **Allowed pages:** resume-page, technical-operations.
 

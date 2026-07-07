@@ -34,6 +34,9 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run public-safety
+npm run routes
+npm run preflight:staging
+npm run preflight:production
 npm run check:production
 ```
 
@@ -97,9 +100,13 @@ unlicensed font files. See `docs/typefaces.md`.
 ## Knowledge Bank
 
 The public site is a selected proof surface. `docs/knowledge-bank/` is the
-public-safe editorial and proof layer behind it. Before strengthening public
-claims, update the knowledge bank and confirm approval status, source class,
-allowed pages, and anti-claims.
+public-safe editorial, proof, and approval layer behind it. Before
+strengthening public claims, update the Knowledge Bank and confirm status,
+source class, guardrail, allowed surfaces, and anti-claims.
+
+The public site should project from the bank for clarity, audience, and purpose.
+It should not mirror the bank or publish private source material to prove a
+point.
 
 The older `docs/proofs-bank.md` remains as a compatibility pointer; use
 `docs/knowledge-bank/claims.md` and `docs/knowledge-bank/proofs.md` as the
@@ -118,6 +125,8 @@ canonical claim/proof source.
   approved public artifacts, and careful collective-work language.
 - When uncertain, keep material off the public surface and record the approval
   need in staging QA or launch notes.
+- Use Chad's Lens: purpose, agency, legibility, precision, contribution, and
+  reader burden.
 
 ## Launch Blockers
 

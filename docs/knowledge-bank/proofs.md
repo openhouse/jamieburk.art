@@ -132,6 +132,45 @@ venue-specific lease/landlord details, insurance details, and story leads.
 **Related site pages:** case-study-fair-rent, work-index,
 technical-operations.
 
+## NYC Artist Coalition
+
+**What was unclear:** Cultural-space advocacy touched many public and private
+lanes at once: decriminalization, nightlife governance, enforcement
+transparency, city-support access, displacement, Fair Rent / Commercial Rent
+Stabilization, and COVID-era relief coordination. The public story could easily
+overstate one person's role or flatten collective work.
+
+**What Jamie did:** Served as a co-founding NYC Artist Coalition member and
+helped structure public-safe cultural-space advocacy context, campaign memory,
+field follow-up, and collective-work explanations.
+
+**What became usable:** A bounded role frame: Jamie as co-founding member,
+documentation systems lead / coalition operations support in current FairRentNYC
+work, and cultural-space fieldworker where active follow-up needs public/private
+boundaries.
+
+**Toward what end:** Make the coalition and cultural-space work legible without
+claiming sole leadership, exposing private strategy, or speaking for every
+collaborator.
+
+**Primary artifacts, public-safe only:** Public campaign surfaces where already
+approved, public-safe summaries, case-study context, and source-class
+descriptions.
+
+**Source class:** approved-public-page; public-source; public-safe-summary;
+conversation-summary; private-source-outside-repo.
+
+**Protected material:** Private coalition notes, strategy context, signups,
+contact lists, venue-specific lease/landlord details, legal-review material,
+unapproved quotes, and internal stakeholder context.
+
+**Allowed public claims:** NAC-001, NAC-002, FAIR-001.
+
+**Related claim IDs:** NAC-001, NAC-002, FAIR-001, CRS-001, CRS-002.
+
+**Related site pages:** case-study-fair-rent, work-index,
+technical-operations.
+
 ## CallNYC
 
 **What was unclear:** Constituent-services data existed, but residents needed a
@@ -281,3 +320,36 @@ materials, private calls, source artifacts, and unapproved team details.
 
 **Related site pages:** lab-source-backed-team-memory, technical-operations,
 work-index, colophon.
+
+## AI Evals / Professional Development
+
+**What was unclear:** AI-related claims can easily become inflated, especially
+when the strongest professional value is not "uses AI" but understands how to
+evaluate AI-assisted work and keep humans responsible for truth.
+
+**What Jamie did:** Completed AI Evals for Engineers & PMs through Maven,
+taught by Hamel Husain and Shreya Shankar, and connected that learning to
+source-backed, human-reviewed documentation practices.
+
+**What became usable:** A modest, defensible AI-readiness proof point tied to
+evaluation literacy, review discipline, and bounded Source-Backed Team Memory
+work.
+
+**Toward what end:** Show that Jamie can help teams use AI-assisted
+documentation carefully without accepting model output as authority.
+
+**Primary artifacts, public-safe only:** Completion certificate and resume-page
+professional-development line where approved.
+
+**Source class:** approved-resume; public-safe-summary.
+
+**Protected material:** None for the supplied completion certificate. Do not
+infer additional credentials, degrees, research claims, or institutional
+endorsements.
+
+**Allowed public claims:** AI-001, SBTM-002.
+
+**Related claim IDs:** AI-001, SBTM-001, SBTM-002.
+
+**Related site pages:** resume-page, technical-operations,
+lab-source-backed-team-memory.

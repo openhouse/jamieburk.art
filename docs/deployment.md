@@ -61,7 +61,7 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, knowledge-bank,
-and public-safety review.
+route, proof-projection, and public-safety review.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -188,3 +188,7 @@ dokku logs jamieburk-art -t
 ```
 
 After rollback, re-run the production verification checks above.
+
+If public-safety, routing, indexing, or content-approval issues appear, restore
+`NEXT_PUBLIC_ROBOTS_POLICY=noindex` while investigating and roll back to the
+last known-good release if the issue is public-facing.

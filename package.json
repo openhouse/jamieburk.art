@@ -18,6 +18,9 @@
     "check": "npm run check -w @jamie-burkart/www",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
-    "check:production": "NODE_ENV=production APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index node scripts/check-knowledge-bank.mjs --production && node scripts/check-public-safety.mjs && npm run check"
+    "routes": "node scripts/check-routes.mjs",
+    "preflight:staging": "sh -c 'export APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex; npm run knowledge-bank && npm run public-safety && npm run routes && npm run check'",
+    "preflight:production": "sh -c 'export NODE_ENV=production APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex; node scripts/preflight-production.mjs && npm run knowledge-bank -- --production && npm run public-safety && npm run routes && npm run check'",
+    "check:production": "sh -c 'export NODE_ENV=production APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index REQUIRE_PRODUCTION_INDEX=1; node scripts/preflight-production.mjs && npm run knowledge-bank -- --production && npm run public-safety && npm run routes && npm run check'"
   }
 }

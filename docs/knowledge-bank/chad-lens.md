@@ -1,9 +1,9 @@
-# Chad Lens
+# Chad Lens: Professional Legibility
 
 Core rule:
 
-> Make the unusual work institutionally legible without losing purpose, agency,
-> or dignity.
+> Make Jamie's unusual work institutionally legible without losing purpose,
+> agency, dignity, or specificity.
 
 Chad's lens is not about making Jamie sound conventional. It is about removing
 reader burden. The reader should not have to decode a civic archive, an artist
@@ -37,6 +37,7 @@ professional value.
 - supported
 - contributed to
 - helped teams use
+- made usable
 
 ## Use With Care
 

@@ -27,6 +27,10 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run knowledge-bank`
+- `npm run public-safety`
+- `npm run routes`
+- `npm run preflight:staging`
+- `npm run preflight:production`
 - `npm run check`
 
 ## Public-Safety Rules
@@ -46,6 +50,8 @@ approval need in staging QA or launch notes.
 
 - Public claims should come from `docs/knowledge-bank/claims.md`.
 - Project proof should be summarized in `docs/knowledge-bank/proofs.md`.
+- Projection rules live in `docs/knowledge-bank/projection-guide.md` and
+  `docs/knowledge-bank/projection-map.md`.
 - Protected evidence stays outside the repo.
 - Use Chad's lens: purpose, agency, legibility, precision, contribution, reader
   burden.

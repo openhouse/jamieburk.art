@@ -8,8 +8,13 @@ The canonical knowledge-bank files are now:
 - `docs/knowledge-bank/claims.md`
 - `docs/knowledge-bank/proofs.md`
 - `docs/knowledge-bank/anti-claims.md`
-- `docs/knowledge-bank/source-policy.md`
+- `docs/knowledge-bank/sources.md`
+- `docs/knowledge-bank/projection-guide.md`
+- `docs/knowledge-bank/projection-map.md`
 - `docs/knowledge-bank/publication-rules.md`
+- `docs/knowledge-bank/launch-blockers.md`
+
+`docs/knowledge-bank/source-policy.md` remains only as a compatibility pointer.
 
 Core rule:
 

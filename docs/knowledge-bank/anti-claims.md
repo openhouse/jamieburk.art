@@ -47,4 +47,4 @@ When a sentence drifts toward an anti-claim:
 2. Add the collective-work qualifier.
 3. Name the artifact Jamie made usable.
 4. Remove the protected detail.
-5. Move the unresolved version to `needs-review` in `claims.md`.
+5. Move the unresolved version to `Pending` in `claims.md`.

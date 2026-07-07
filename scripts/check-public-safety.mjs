@@ -8,8 +8,7 @@ const root = process.cwd();
 const isProduction =
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
-  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
-  process.env.NODE_ENV === "production";
+  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production";
 
 const failures = [];
 const warnings = [];
@@ -181,13 +180,32 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   report("failure", "Production indexing is not explicit opt-in", "apps/www/src/lib/site-url.ts");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
-  report(
-    "failure",
-    "Production env requires NEXT_PUBLIC_ROBOTS_POLICY=index",
-    "",
-    `got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"}`
-  );
+if (isProduction) {
+  const robotsPolicy = process.env.NEXT_PUBLIC_ROBOTS_POLICY;
+  if (!["index", "noindex"].includes(robotsPolicy ?? "")) {
+    report(
+      "failure",
+      "Production env requires explicit NEXT_PUBLIC_ROBOTS_POLICY",
+      "",
+      `got ${robotsPolicy ?? "unset"}`
+    );
+  }
+
+  if (robotsPolicy === "index") {
+    if (
+      process.env.SITE_URL !== "https://jamieburk.art" ||
+      process.env.NEXT_PUBLIC_SITE_URL !== "https://jamieburk.art"
+    ) {
+      report("failure", "Indexable production must use canonical production URLs", "");
+    }
+  } else {
+    report(
+      "warning",
+      "Production URL is in quiet noindex review mode",
+      "",
+      "final indexing still requires NEXT_PUBLIC_ROBOTS_POLICY=index"
+    );
+  }
 }
 
 const workSource = readText("apps/www/src/data/work.ts");

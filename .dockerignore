@@ -19,6 +19,15 @@ transcripts-private/
 client-private/
 legal-review/
 support-materials-private/
+screenshots-private/
+job-hunt-private/
+raw-otter/
+gmail-export/
+drive-export/
+financial/
+health/
+therapy/
+resume-private/
 *.key
 *.pem
 *.ttf

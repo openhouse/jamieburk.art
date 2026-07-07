@@ -11,6 +11,9 @@ npm run lint
 npm run build
 npm run knowledge-bank
 npm run public-safety
+npm run routes
+npm run preflight:staging
+npm run preflight:production
 npm run check:production
 ```
 
@@ -33,6 +36,8 @@ docker build \
 - `/robots.txt` disallows crawling on staging.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
 - `/sitemap.xml` uses staging URLs on staging and canonical production URLs only in production.
+- No public `/proofs`, `/knowledge-bank`, `/proof-bank`, or `/archive-browser`
+  route exists.
 - Redirect variants resolve to canonical routes:
   - `/work/fairrentnyc-commercial-rent-stabilization`
   - `/work/fairrentnyc`

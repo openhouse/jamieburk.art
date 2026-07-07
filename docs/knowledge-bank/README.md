@@ -17,6 +17,7 @@ This is not a source dump.
 This is not a private archive.
 This is not a CMS.
 This is not a legal record.
+This is not a public route.
 
 Protected evidence stays outside the repo.
 
@@ -30,6 +31,9 @@ Use the strongest accurate claim, but keep the verb honest. If the work was
 collective, use collective language. If the evidence is private, summarize the
 source class and keep the protected source outside Git.
 
+If a claim would be unsafe, unfair, embarrassing, or too context-dependent if
+quoted publicly, do not put it on the public site.
+
 ## Files
 
 - `chad-lens.md`: the editorial standard for making unusual work legible.
@@ -38,8 +42,12 @@ source class and keep the protected source outside Git.
 - `proofs.md`: project-by-project proof map organized around what was unclear,
   what Jamie did, what became usable, and toward what end.
 - `anti-claims.md`: claims and implications that must not appear publicly.
-- `source-policy.md`: source classes and source-handling rules.
+- `sources.md`: source classes and source-handling rules.
+- `source-policy.md`: compatibility pointer for older branch names.
+- `projection-guide.md`: how public surfaces project from the bank.
+- `projection-map.md`: claim IDs grouped by public surface.
 - `publication-rules.md`: where claims may appear on the public site.
+- `launch-blockers.md`: unresolved content, approval, and release blockers.
 - `opportunities/`: internal alignment notes for active opportunity contexts.
 - `review-checklist.md`: human review checklist before strengthening public
   claims or promoting production.
@@ -47,11 +55,12 @@ source class and keep the protected source outside Git.
 ## Workflow
 
 1. Add or update the claim in `claims.md`.
-2. Confirm the source class in `source-policy.md`.
+2. Confirm the source class in `sources.md`.
 3. Add project proof context in `proofs.md` when the claim affects a case study.
 4. Check `anti-claims.md` for implications the sentence might accidentally make.
 5. Project only the approved public wording into the website.
-6. Run `npm run knowledge-bank` and `npm run public-safety`.
+6. Run `npm run knowledge-bank`, `npm run public-safety`, and
+   `npm run routes`.
 
 ## Public-Site Projection
 

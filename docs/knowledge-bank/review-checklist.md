@@ -5,7 +5,7 @@ promoting production.
 
 ## Branch And Scope
 
-- [ ] Branch is named `feature/knowledge-bank-O`.
+- [ ] Branch is named `feature/knowledge-bank-composite-O`.
 - [ ] `apps/www` remains canonical.
 - [ ] No `apps/web` or `apps/site` rename.
 - [ ] No CMS, database, auth, analytics, contact form, AI chatbot, or public
@@ -18,8 +18,12 @@ promoting production.
 - [ ] `docs/knowledge-bank/claims.md`
 - [ ] `docs/knowledge-bank/proofs.md`
 - [ ] `docs/knowledge-bank/anti-claims.md`
+- [ ] `docs/knowledge-bank/sources.md`
 - [ ] `docs/knowledge-bank/source-policy.md`
+- [ ] `docs/knowledge-bank/projection-guide.md`
+- [ ] `docs/knowledge-bank/projection-map.md`
 - [ ] `docs/knowledge-bank/publication-rules.md`
+- [ ] `docs/knowledge-bank/launch-blockers.md`
 - [ ] `docs/knowledge-bank/opportunities/oti-technical-operations.md`
 - [ ] `docs/knowledge-bank/opportunities/source-backed-team-memory.md`
 - [ ] `docs/knowledge-bank/review-checklist.md`
@@ -34,8 +38,9 @@ promoting production.
 - [ ] High-impact metrics are present in `claims.md`: 14+ years, 2x revenue,
   34-page campaign memory, WOWList aggregate adoption, 300+ gatherings, 20+
   resident artists, and $490,539 recommendation / authorization language.
-- [ ] Claims marked `do-not-publish` or `private` do not appear in public app
-  content.
+- [ ] Claims marked `Pending`, `Protected`, or `Private` do not appear in
+  public app content.
+- [ ] Claims marked `Careful` keep their guardrails when projected publicly.
 - [ ] Public site copy does not imply any anti-claim.
 
 ## Public Safety
@@ -57,6 +62,7 @@ promoting production.
 - [ ] Private file/font ignores are preserved.
 - [ ] `npm run knowledge-bank` passes.
 - [ ] `npm run public-safety` passes or reports only documented policy warnings.
+- [ ] `npm run routes` passes.
 - [ ] `npm run check:production` passes only in a production-safe env.
 
 ## Human Question

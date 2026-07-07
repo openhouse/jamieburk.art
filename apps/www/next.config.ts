@@ -50,6 +50,10 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, noarchive" }]
       }
     ];
   },

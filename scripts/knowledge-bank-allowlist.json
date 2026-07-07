@@ -1,6 +1,27 @@
 [
   {
     "pattern": "raw transcripts",
+    "file": "AGENTS.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcripts",
+    "file": "README.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcripts",
+    "file": "DESIGN.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcripts",
     "file": "docs/knowledge-bank/anti-claims.md",
     "reason": "Appears in a no-publish anti-claim, not as source content.",
     "reviewedBy": "Jamie",
@@ -10,6 +31,13 @@
     "pattern": "raw transcripts",
     "file": "docs/knowledge-bank/source-policy.md",
     "reason": "Appears in source-handling policy, not as source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcripts",
+    "file": "docs/knowledge-bank/sources.md",
+    "reason": "Appears in a protected-source category list, not as source content.",
     "reviewedBy": "Jamie",
     "reviewedDate": "2026-07-07"
   }
