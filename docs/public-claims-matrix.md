@@ -4,6 +4,10 @@ This document records public-safe claim decisions for the V1 portfolio. It does
 not publish private source files, private records, raw transcripts, contact
 lists, screenshots, or internal materials.
 
+For the durable public-safe knowledge base, see
+[`docs/proofs-bank.md`](./proofs-bank.md). This matrix is the launch QA view;
+the proofs bank is the source-of-truth view for reusable professional claims.
+
 ## Claim Standard
 
 - Known: supported by the current public resume and at least one project-source

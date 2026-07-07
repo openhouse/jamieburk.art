@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
@@ -33,6 +34,13 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
+            In civic work, that has included co-founding NYC Artist Coalition
+            and stewarding coalition operations, policy communications,
+            campaign memory, public-data framing, source maps, action trackers,
+            public handouts, and careful follow-up systems through NYC Artist
+            Coalition / FairRentNYC work.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
@@ -45,6 +53,11 @@ export default function AboutPage() {
             documentation that helps future collaborators safely continue the
             work.
           </p>
+        </div>
+        <div className="mt-6">
+          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/proofs">
+            Read the public-safe proofs
+          </Link>
         </div>
       </div>
       <div className="mt-12 max-w-3xl">

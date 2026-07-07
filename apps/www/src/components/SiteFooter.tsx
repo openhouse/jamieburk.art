@@ -21,6 +21,11 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="hover:text-jb-blue" href="/proofs">
+                Proofs
+              </Link>
+            </li>
+            <li>
               <Link className="hover:text-jb-blue" href="/resume">
                 Resume
               </Link>

@@ -32,12 +32,19 @@ export default function HomePage() {
               These projects show a recurring pattern: ambiguous,
               resource-constrained, cross-functional work becoming usable
               systems, public-facing tools, documentation, decision trails, and
-              durable handoffs.
+              durable handoffs. The selected claims are drawn from a public-safe
+              proofs bank with explicit limits around privacy, consent, and
+              collective work.
             </p>
           </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
-            View all work
-          </Link>
+          <div className="flex flex-wrap gap-4 font-semibold">
+            <Link className="text-jb-blue hover:text-jb-green" href="/work">
+              View all work
+            </Link>
+            <Link className="text-jb-blue hover:text-jb-green" href="/proofs">
+              Read proofs
+            </Link>
+          </div>
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (

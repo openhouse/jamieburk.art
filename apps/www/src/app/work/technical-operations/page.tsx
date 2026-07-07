@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { proofClaims } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -58,6 +59,15 @@ const sections = [
   }
 ];
 
+const operationsProofs = proofClaims.filter((claim) =>
+  [
+    "hje-revenue-growth",
+    "crs-campaign-memory",
+    "crs-source-map",
+    "source-backed-memory"
+  ].includes(claim.id)
+);
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -89,6 +99,31 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-12">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          Selected proof claims
+        </h2>
+        <p className="mt-3 max-w-3xl leading-7 text-jb-ink/72">
+          These are public-safe claims selected from the proofs bank because
+          they map directly to implementation, operations, documentation, and
+          handoff work.
+        </p>
+        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+          {operationsProofs.map((claim) => (
+            <JBCard key={claim.id}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {claim.category}
+              </p>
+              <h3 className="mt-4 text-xl font-semibold text-jb-ink">
+                {claim.short}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/72">
+                {claim.claim}
+              </p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
