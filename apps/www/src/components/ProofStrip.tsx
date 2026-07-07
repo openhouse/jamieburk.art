@@ -1,10 +1,6 @@
-const proofItems = [
-  "14+ years building operating structure",
-  "2x revenue growth contribution for legacy e-commerce business",
-  "30+ pages of civic campaign-memory infrastructure",
-  "35 city ecosystems reached through WOWList.org",
-  "300+ hosted gatherings / 20+ resident artists supported"
-];
+import { getPublicClaim, homepageProofClaimIds } from "@/data/claims";
+
+const proofItems = homepageProofClaimIds.map((id) => getPublicClaim(id).publicWording);
 
 export function ProofStrip() {
   return (

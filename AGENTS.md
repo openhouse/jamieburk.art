@@ -37,6 +37,18 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Chad Lens: Professional Legibility
+
+- Minimize the reader's burden.
+- Translate specialized language for hiring, public-sector, and institutional readers.
+- Use action verbs that show Jamie's agency.
+- Explain each project's purpose: toward what end?
+- Show what became usable.
+- Avoid unsupported ownership claims.
+- Prefer helped / supported / contributed to / co-built where work was collective.
+- Do not let tool lists make Jamie disappear.
+- Do not publish unapproved contact info, metrics, screenshots, collaborator names, quotes, or private materials.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

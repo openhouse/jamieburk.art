@@ -61,7 +61,9 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production indexing also requires `APP_ENV=production`,
+`SITE_URL=https://jamieburk.art`, and `NEXT_PUBLIC_ROBOTS_POLICY=index`; missing
+or unknown values default to noindex.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -108,6 +110,23 @@ git push dokku-production HEAD:main
 ```
 
 ## Local Docker Verification
+
+Run local checks before building Docker images:
+
+```bash
+npm ci
+npm run check
+```
+
+Before production indexing, also run:
+
+```bash
+APP_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=index \
+npm run production-safety
+```
 
 ```bash
 docker build \
