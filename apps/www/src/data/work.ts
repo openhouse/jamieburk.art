@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old legacy industrial tool business adapt paper, phone, catalog, dealer, content, analytics, and e-commerce practices into a maintainable web operating surface.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -101,13 +101,13 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "Improved catalog, search, checkout, account/dealer, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "Catalog-to-checkout workflow map",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
+          "Representative flow for translating inventory knowledge, customer language, dealer/account needs, and order handling into a maintainable online workflow.",
         type: "workflow"
       },
       {
@@ -117,9 +117,9 @@ const workItemsInput = [
         type: "analytics summary"
       },
       {
-        title: "Content and voice system",
+        title: "Content, voice, and provenance system",
         description:
-          "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
+          "Reusable patterns for preserving the company's distinctive public voice across product, marketing, country-of-origin, and support surfaces.",
         type: "template"
       }
     ],
@@ -152,14 +152,15 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
+      "Catalog, search, checkout, account/dealer, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
       "Contributed to 2x revenue growth",
+      "Public-source package documents 2009 online-store launch and later online-sales growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term catalog, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy industrial tool business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -332,7 +333,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar and social-discovery platform organized around followable keyword communities for DIY arts, music, and local scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -342,7 +343,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed practical, low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows for local calendar organizers, community calendar editors, and local event-list stewards.",
+      "A followable keyword-community platform with event publishing, list/tag discovery, email digest, calendar sync, saved-event, and local distribution workflows for community event stewards.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -350,6 +351,12 @@ const workItemsInput = [
         description:
           "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Archive-scale summary",
+        description:
+          "Local archive analysis supports 1,800+ users, 16,000+ events/posts, 23,000+ lists/tags, 28,000+ list follows, and 35+ active city scenes without publishing raw user records.",
+        type: "analytics summary"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -371,16 +378,19 @@ const workItemsInput = [
     evidence: [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
+      "1,800+ users and 16,000+ events/posts in local archive analysis",
+      "23,000+ lists/tags, 28,000+ list follows, and 20,000+ saved/starred events",
+      "Email digest, media upload, geolocation, and Google Calendar synchronization infrastructure",
       "Local calendar organizer and community editor workflows",
-      "Roughly 35 city ecosystems reached"
+      "35+ active city scenes"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar and social-discovery platform organized around followable keyword communities, with archive analysis supporting 1,800+ users, 16,000+ events/posts, and 35+ active city scenes.",
       open:
         "Screenshots, archive links, and precise adoption wording need approval.",
       protected:
-        "Private user data, organizer contact lists, and unapproved community records are not published."
+        "Private user data, organizer contact lists, raw database exports, password hashes, Google Calendar identifiers, user-uploaded media, and unapproved community records are not published."
     }
   },
   {

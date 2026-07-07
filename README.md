@@ -86,6 +86,13 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to the
 container. See `docs/deployment.md` for the staging and production command
 drafts, Docker build args, and verification checklist.
 
+## Claims Inventory
+
+Use `docs/public-claims-inventory.md` as the internal source of truth for public
+claim strength, recommended wording, evidence classes, and protected material.
+Do not turn private source packages, raw transcripts, or raw community records
+into public proof.
+
 ## Typeface Policy
 
 Use Karla for body/UI/prose and Archivo Narrow for display headings and compact
