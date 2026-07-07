@@ -20,10 +20,10 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
-            tools, cultural infrastructure, coalition work, and knowledge
-            systems.
+            My work sits where requirements, workflows, decision records, and
+            handoffs are not yet clear: civic technology, small-business
+            operations, public-facing tools, cultural infrastructure, coalition
+            work, and knowledge systems.
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
@@ -31,6 +31,13 @@ export default function AboutPage() {
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
+          </p>
+          <p>
+            In civic work, that has included co-founding NYC Artist Coalition
+            and stewarding coalition operations, policy communications,
+            campaign memory, public-data framing, source maps, action trackers,
+            public handouts, and careful follow-up systems through NYC Artist
+            Coalition / FairRentNYC work.
           </p>
           <p>
             I am currently focused on technical project management, product

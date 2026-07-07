@@ -12,10 +12,10 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Led Harry J. Epstein web, e-commerce, marketing, analytics, and operations improvements contributing to 2x revenue growth",
+  "Built and stewarded 30+ pages of Commercial Rent Stabilization campaign-memory and coordination infrastructure",
+  "Co-built WOWList, adopted by DIY arts and music organizers across roughly 35 city ecosystems",
+  "Documented 300+ gatherings and supported 20+ resident artists through Sunday Dinner / 196 systems"
 ];
 
 export default function ResumePage() {
@@ -28,10 +28,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I build the operational backbone teams need to stay focused,
+            unblocked, documented, and shipping, turning ambiguous work into
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -42,8 +42,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Current public resume PDF with selectable text. Last updated June
+            11, 2026.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

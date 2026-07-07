@@ -6,6 +6,10 @@ Build and maintain a focused, public-safe portfolio that makes Jamie legible as 
 Technical Project Manager - Product Operations & Implementation lead who creates
 operating structure for complex public-facing teams.
 
+Chad-lens rule: make Jamie legible, action-oriented, and purpose-first. Do not
+make a hiring reader decode what Jamie did, toward what end, for whom, and what
+became usable.
+
 ## Current Canonical App
 
 Use `apps/www`. Do not rename it to `apps/site`, `apps/web`, or another path
@@ -24,6 +28,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:production`
 
 ## Public-Safety Rules
 

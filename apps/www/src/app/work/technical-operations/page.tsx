@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { proofClaims } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -21,8 +22,12 @@ const sections = [
     ]
   },
   {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    title: "Delivery coordination and launch",
+    items: [
+      "Planning cycles and status rhythms",
+      "Cross-team dependencies and risk surfacing",
+      "CallNYC, WOWList, and HJE e-commerce launch support"
+    ]
   },
   {
     title: "Documentation and working memory",
@@ -31,8 +36,10 @@ const sections = [
       "Public guidance",
       "Resource libraries",
       "Handbooks / templates",
+      "Runbooks and operating documentation",
       "Meeting synthesis",
-      "Decision records"
+      "Decision records",
+      "Post-launch retros"
     ]
   },
   {
@@ -52,6 +59,15 @@ const sections = [
   }
 ];
 
+const operationsEvidence = proofClaims.filter((claim) =>
+  [
+    "hje-revenue-growth",
+    "crs-campaign-memory",
+    "crs-source-map",
+    "source-backed-memory"
+  ].includes(claim.id)
+);
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -61,9 +77,11 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          environments, I build the operating backbone teams need to stay
+          focused, unblocked, documented, and shipping: planning rhythms,
+          status reporting, decision logs, action trackers, onboarding guides,
+          handbooks, runbooks, operational metrics, launch support,
+          post-launch retros, and durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -81,6 +99,30 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-12">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          Selected evidence
+        </h2>
+        <p className="mt-3 max-w-3xl leading-7 text-jb-ink/72">
+          These public-safe examples map directly to implementation,
+          operations, documentation, and handoff work.
+        </p>
+        <div className="mt-5 grid gap-4 lg:grid-cols-2">
+          {operationsEvidence.map((claim) => (
+            <JBCard key={claim.id}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {claim.category}
+              </p>
+              <h3 className="mt-4 text-xl font-semibold text-jb-ink">
+                {claim.short}
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/72">
+                {claim.claim}
+              </p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
