@@ -33,6 +33,9 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
+            I make messy public systems easier to enter, remember, and repair.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
