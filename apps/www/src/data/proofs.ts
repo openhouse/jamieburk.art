@@ -27,6 +27,7 @@ const proofSchema = z.object({
   resumeClaim: z.string().optional(),
   status: proofStatusSchema,
   evidenceBasis: z.array(z.string()),
+  publicSources: z.array(z.object({ label: z.string(), url: z.string() })).optional(),
   projectionSurfaces: z.array(proofSurfaceSchema),
   constraints: z.array(z.string()),
   tags: z.array(z.string()),
@@ -111,6 +112,85 @@ const proofBankInput = [
     ],
     tags: ["civic technology", "source maps", "decision records", "coalition operations"],
     priority: 30
+  },
+  {
+    id: "nyc-artist-coalition-civic-systems-role",
+    title: "NYC Artist Coalition Civic Systems Role",
+    projectSlug: "fair-rent-nyc",
+    category: "Civic role proof",
+    claim:
+      "Jamie is a co-founder of NYC Artist Coalition and works as a civic systems, coalition operations, and policy communications lead, helping turn cultural-space advocacy into documentation, public guidance, source-backed campaign memory, and follow-through systems.",
+    resumeClaim:
+      "Co-founder of NYC Artist Coalition; civic systems, coalition operations, and policy communications lead for cultural-space advocacy, public guidance, campaign memory, and follow-through systems.",
+    status: "resume-approved",
+    evidenceBasis: [
+      "Approved public resume PDF dated 2026-06-11.",
+      "Public NYC Artist Coalition and FairRentNYC campaign surfaces support the coalition and issue-area context.",
+      "Public-safe portfolio materials support the civic systems, documentation, and policy communications framing."
+    ],
+    publicSources: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" }
+    ],
+    projectionSurfaces: ["resume-page", "technical-operations-page", "work-case-study"],
+    constraints: [
+      "Do not frame Jamie as the sole leader of NYC Artist Coalition or owner of collective coalition outcomes.",
+      "Do not imply legal counsel, official agency role, or sole authorship of legislation.",
+      "Use operating, documentation, civic systems, campaign memory, and policy communications language."
+    ],
+    tags: ["NYC Artist Coalition", "coalition operations", "policy communications", "civic systems"],
+    priority: 31
+  },
+  {
+    id: "nyc-artist-coalition-public-record",
+    title: "NYC Artist Coalition Public Civic Record",
+    projectSlug: "fair-rent-nyc",
+    category: "Coalition accomplishment proof",
+    claim:
+      "NYC Artist Coalition has participated in public coalition work around informal and affordable community spaces, Cabaret Law repeal and Let NYC Dance, nightlife enforcement transparency and Talks Not Raids, COVID-era relief coordination, commercial lease protections, and FairRentNYC / Commercial Rent Stabilization.",
+    status: "public-safe",
+    evidenceBasis: [
+      "NYC Artist Coalition public site and campaign pages document community-space, commercial rent, MARCH, COVID relief, and lease-protection advocacy.",
+      "Let NYC Dance, Talks Not Raids, and FairRentNYC public campaign sites provide public-safe source anchors.",
+      "This claim describes collective civic participation and public advocacy surfaces, not sole causation."
+    ],
+    publicSources: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" }
+    ],
+    projectionSurfaces: ["work-case-study"],
+    constraints: [
+      "Use collective-work language: participated in, contributed to, supported, helped build public advocacy infrastructure.",
+      "Do not claim NYC Artist Coalition alone repealed the Cabaret Law, created the Office of Nightlife, passed a bill, or secured enforcement changes unless a public source supports that exact claim.",
+      "Do not publish private coalition notes, private stakeholder names, private emails, raw testimony prep, or unapproved quotes."
+    ],
+    tags: ["NYC Artist Coalition", "public advocacy", "cultural spaces", "commercial rent"],
+    priority: 32
+  },
+  {
+    id: "fairrent-current-work",
+    title: "FairRentNYC Current Work",
+    projectSlug: "fair-rent-nyc",
+    category: "Current work proof",
+    claim:
+      "The current public-safe work centers on FairRentNYC / Commercial Rent Stabilization, a policy-neutral public-data baseline for commercial rent and vacancy questions, public reference materials, and coalition-memory systems that separate known public material, open questions, and protected context.",
+    status: "public-safe",
+    evidenceBasis: [
+      "FairRentNYC public reference library and campaign pages support the Commercial Rent Stabilization framing.",
+      "Public-safe policy/data briefs and running-minutes summaries reviewed for source-backed memory, public-data framing, and protected-context boundaries.",
+      "Current website copy treats this as active coalition-support infrastructure, not a published archive of private materials."
+    ],
+    publicSources: [{ label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" }],
+    projectionSurfaces: ["technical-operations-page", "work-case-study"],
+    constraints: [
+      "Do not imply that any agency has adopted the data proposal unless separately confirmed.",
+      "Do not present legal or policy analysis as legal advice.",
+      "Keep live strategy, private records, raw notes, and unreviewed stakeholder materials out of public pages."
+    ],
+    tags: ["FairRentNYC", "Commercial Rent Stabilization", "public data", "source-backed memory"],
+    priority: 33
   },
   {
     id: "fairrent-policy-neutral-data",

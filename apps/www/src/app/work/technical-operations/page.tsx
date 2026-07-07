@@ -52,8 +52,8 @@ const proofExamples = [
     text: "Legacy e-commerce, analytics, marketing, operational workflows, and handoffs for an 80+ year-old business."
   },
   {
-    title: "FairRentNYC / Commercial Rent Stabilization",
-    text: "Coalition memory, meeting synthesis, decision records, source maps, consent-aware follow-up, and public/internal boundaries."
+    title: "NYC Artist Coalition / FairRentNYC",
+    text: "Civic systems, coalition operations, policy communications, campaign memory, source maps, consent-aware follow-up, and public/internal boundaries."
   },
   {
     title: "CallNYC",
