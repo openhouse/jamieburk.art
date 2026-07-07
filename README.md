@@ -90,6 +90,10 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
+- Treat `apps/www/src/data/proofs.ts` as the public-safe proofs bank. Strong
+  professional claims should be added there first with evidence basis,
+  projection surfaces, and constraints; website pages should project from that
+  bank or stay consistent with it.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal

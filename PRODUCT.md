@@ -47,6 +47,14 @@ private fonts, and named stakeholder details that have not been approved.
 4. Use collective-work language where the work was collaborative.
 5. Leave every page feeling like documentation is care.
 
+## Proofs Bank
+
+`apps/www/src/data/proofs.ts` is the public-safe knowledge base for Jamie's
+professional accomplishments. It stores defensible claims, evidence basis,
+projection surfaces, and constraints. Website copy should be a purposeful
+projection of that bank for the audience and page context rather than a direct
+dump of every available fact.
+
 ## Accessibility & Inclusion
 
 Aim for WCAG 2.2 AA or better for text contrast, keyboard navigation, visible

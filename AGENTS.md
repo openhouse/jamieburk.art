@@ -30,6 +30,10 @@ workspaces, Dockerfile, Dokku.
 
 ## Public-Safety Rules
 
+Use `apps/www/src/data/proofs.ts` as the public-safe proofs bank. Add or adjust
+strong professional claims there first, including evidence basis, projection
+surfaces, and constraints, before projecting them into website copy.
+
 Do not publish private emails, raw transcripts, private coalition notes,
 legal-review materials, health/financial details, private correspondence,
 unapproved photos, private fonts, credentials, private stakeholder lists,

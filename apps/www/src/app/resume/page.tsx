@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { resumePageProofs } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -10,14 +11,7 @@ export const metadata: Metadata = createMetadata({
   path: "/resume"
 });
 
-const highlights = [
-  "14+ years building operating structure",
-  "Contributed to online growth for a legacy e-commerce business",
-  "Built and stewarded civic campaign-memory infrastructure",
-  "Co-built community web systems across multiple city ecosystems",
-  "Created repeatable hosting and continuity systems for gatherings and artists",
-  "Completed AI Evals for Engineers & PMs, with practice in annotation workflows, traces, retrieval quality, and human review"
-];
+const highlights = resumePageProofs.map((proof) => proof.resumeClaim ?? proof.claim);
 
 export default function ResumePage() {
   return (
@@ -47,7 +41,7 @@ export default function ResumePage() {
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-          <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
+          <h2 className="text-2xl font-semibold text-jb-ink">Selected proof</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
             {highlights.map((highlight) => (
               <li className="flex gap-3" key={highlight}>
