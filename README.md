@@ -107,6 +107,11 @@ Use [docs/chad-lens.md](docs/chad-lens.md) when editing resume-facing or
 portfolio-facing copy. Translate insider terms on first use and keep Jamie
 visible as the actor without inflating ownership claims.
 
+Use [docs/proofs-bank.md](docs/proofs-bank.md) and
+`apps/www/src/data/proofs.ts` as the public-safe knowledge base for professional
+claims. The website should project only the clearest subset for its audience and
+purpose.
+
 ## Content Rules
 
 - Do not publish private emails, raw transcripts, private coalition notes,
@@ -115,6 +120,9 @@ visible as the actor without inflating ownership claims.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
+- Treat the proofs bank as public material: no claim, source description, or
+  boundary note should be included if it would be unsafe or unfair in a public
+  newspaper context.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
 ## Launch Blockers

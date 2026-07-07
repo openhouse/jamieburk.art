@@ -67,3 +67,10 @@ agency, or dignity.
 
 Would a busy hiring manager understand the work without needing Jamie in the
 room to explain it?
+
+## Proofs Bank Tie-In
+
+Use `docs/proofs-bank.md` and `apps/www/src/data/proofs.ts` as the canonical
+public-safe claim layer. The website can simplify or reorder claims for a
+specific audience, but it should not strengthen them beyond the proofs bank
+without adding a public-safe basis and boundary first.

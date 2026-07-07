@@ -12,6 +12,8 @@ This branch implements the V1 composite bundle from the M review:
   `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
 - One public-safety scanner at `scripts/check-public-safety.mjs`.
 - Chad-lens editorial guidance in `docs/chad-lens.md`.
+- Public-safe proofs bank in `docs/proofs-bank.md` and
+  `apps/www/src/data/proofs.ts`.
 
 ## Merge Strategy
 
@@ -43,6 +45,8 @@ These must pass before production:
   Source-Backed Team Memory, mobile labels, and long-page background grid.
 - Chad-lens review for purpose, agency, legibility, precision, contribution, and
   reader burden.
+- Proofs-bank review for public-safe claim strength, support level, website
+  projection, and explicit non-public boundaries.
 
 Jamie gives final production approval after staging review. A final reviewer
 should inspect the diff before production deploy, with special attention to
@@ -81,6 +85,8 @@ public-safety boundaries, claims, routes, metadata, and contact.
 - Source-Backed Team Memory remains a lab page in V1 and should avoid naming
   private collaborators, pricing, or unapproved client detail.
 - KC Town Hall uses supported/contributed language, not co-led language.
+- Exact KC Town Hall public-funding numbers remain approval-gated until Jamie
+  approves the public source package.
 
 ## Indexing and Routes
 

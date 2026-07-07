@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { proofBankPrinciples } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -142,6 +143,29 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-12 border-y border-jb-ink/10 py-8" aria-labelledby="evidence-posture">
+        <div className="grid gap-6 lg:grid-cols-[0.38fr_0.62fr] lg:items-start">
+          <div className="jb-reading">
+            <p className="jb-eyebrow text-sm text-jb-blue">Evidence posture</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink" id="evidence-posture">
+              Strong claims, clear boundaries
+            </h2>
+            <p className="mt-3 leading-8 text-jb-ink/76">
+              The proof below is intentionally conservative: each claim has to
+              be clear to a hiring reader, accurate about Jamie&apos;s role, and
+              bounded enough to protect private source material.
+            </p>
+          </div>
+          <ul className="grid gap-3">
+            {proofBankPrinciples.map((principle) => (
+              <li className="flex gap-3 rounded-lg border border-jb-ink/12 bg-jb-paper p-4" key={principle}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span className="leading-7 text-jb-ink/76">{principle}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <section className="mt-12" aria-labelledby="role-fit-proof-map">
         <div className="jb-reading">
           <p className="jb-eyebrow text-sm text-jb-blue">Proof map</p>
