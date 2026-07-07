@@ -9,18 +9,19 @@ brand
 Hiring managers, product and operations leaders, civic technology teams,
 implementation teams, collaborators, and trusted reviewers who need to quickly
 understand Jamie Burkart's professional shape. They arrive with limited time
-and need credible, public-safe evidence that Jamie can create operating
-structure for complex public-facing work.
+and need credible, public-safe evidence that Jamie can build operating
+backbone for public-facing technical delivery.
 
 ## Product Purpose
 
 This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
-stakeholder-heavy work becomes usable systems: requirements, workflows,
-documentation, decision trails, launch support, onboarding, and durable
-handoffs. Success means a reviewer can understand Jamie's role fit, trust the
-evidence, and know what to do next without exposing private or sensitive
-materials.
+Operations & Implementation lead. It should show how Jamie coordinates
+delivery, surfaces risks early, documents decisions, onboards contributors,
+reports clearly, and turns stakeholder-heavy work into usable systems:
+requirements, workflows, documentation, decision trails, launch support, and
+durable handoffs. Success means a reviewer can understand Jamie's role fit,
+trust the evidence, and know what to do next without exposing private or
+sensitive materials.
 
 ## Brand Personality
 
@@ -45,6 +46,14 @@ private fonts, and named stakeholder details that have not been approved.
 3. Make evidence scan quickly while preserving nuance.
 4. Use collective-work language where the work was collaborative.
 5. Leave every page feeling like documentation is care.
+
+## Proofs Bank
+
+`apps/www/src/data/proofs.ts` is the public-safe knowledge base for Jamie's
+professional accomplishments. It stores defensible claims, evidence basis,
+projection surfaces, and constraints. Website copy should be a purposeful
+projection of that bank for the audience and page context rather than a direct
+dump of every available fact.
 
 ## Accessibility & Inclusion
 

@@ -21,7 +21,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="text-xs font-semibold uppercase text-jb-paper/85">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +29,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="text-xs font-semibold uppercase text-jb-paper/85">
           Tags
         </p>
         <div className="mt-3">
@@ -99,6 +99,31 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
             <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
           </JBCard>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function PublicLinks({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+
+  return (
+    <section aria-labelledby="public-links">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="public-links">
+        Public source links
+      </h2>
+      <div className="mt-4 flex flex-wrap gap-3">
+        {item.links.map((link) => (
+          <a
+            className="rounded-lg border border-jb-blue/25 bg-jb-paper px-4 py-2 text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+            href={link.url}
+            key={link.url}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {link.label}
+          </a>
         ))}
       </div>
     </section>

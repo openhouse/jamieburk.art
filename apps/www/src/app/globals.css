@@ -70,6 +70,7 @@ html {
 }
 
 body {
+  margin: 0;
   min-width: 320px;
   background:
     linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),

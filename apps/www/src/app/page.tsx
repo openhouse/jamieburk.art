@@ -7,10 +7,10 @@ import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
 
 const transformations = [
-  ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Scattered stakeholder context", "shared decision records people can revisit"],
+  ["Fragmented public data", "resident-facing guidance and source maps"],
+  ["Legacy operations", "maintainable e-commerce workflows and handoffs"],
+  ["Recurring community gatherings", "repeatable onboarding and continuity practices"]
 ];
 
 export default function HomePage() {
@@ -29,9 +29,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: loosely defined,
+              stakeholder-heavy work becoming usable systems, public-facing
+              tools, documentation, decision trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -52,11 +52,11 @@ export default function HomePage() {
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
               What was unclear becomes usable
-            </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+          </h2>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+            The projects differ, but the move is consistent: clarify what is
+              known, surface what needs a decision, protect what should stay
+              private, and leave behind material people can act on.
             </p>
           </div>
           <dl className="grid gap-3">
@@ -82,11 +82,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when the work is important but still loosely
+            defined. I listen across stakeholders, map what is known and
+            unknown, create the workflows or documentation the team needs,
+            support launch or adoption, and leave behind materials that make
+            the work easier to maintain.
           </p>
           <ContactCTA />
         </div>
