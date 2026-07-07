@@ -101,7 +101,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "Improved web, e-commerce, analytics, content, marketing, and operational workflows that contributed to 2x revenue growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -172,7 +172,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Helped structure and steward shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Helped structure and steward shared campaign-memory and coordination infrastructure to help collaborators preserve decisions, organize policy and data questions, coordinate next steps, and turn complex Commercial Rent Stabilization work into usable materials.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -331,7 +331,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community event-calendar and distribution platform adopted by local calendar organizers across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,7 +339,7 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed easy-to-adopt ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +347,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -383,7 +383,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created repeatable trust-building and participation infrastructure across 300+ gatherings and 20+ resident artists through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -435,7 +435,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including materials tied to a $490,539 public funding recommendation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",

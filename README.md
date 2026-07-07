@@ -6,6 +6,10 @@ Product Operations & Implementation.
 The site should make this believable: Jamie creates operating structure for
 complex public-facing teams.
 
+Technical Operations is the primary role-fit proof page for V1. Public-facing
+copy should follow the Chad lens: make purpose, agency, reader legibility,
+precision, and contribution explicit without flattening the work.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -96,6 +100,12 @@ Use Karla for body/UI/prose/cards and Oswald for labels, metadata, eyebrows, and
 navigation. League Spartan is reserved for rare generated Open Graph or display
 material only. Do not commit or serve private, proprietary, or unlicensed font
 files.
+
+## Editorial Policy
+
+Use [docs/chad-lens.md](docs/chad-lens.md) when editing resume-facing or
+portfolio-facing copy. Translate insider terms on first use and keep Jamie
+visible as the actor without inflating ownership claims.
 
 ## Content Rules
 

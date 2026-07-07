@@ -64,3 +64,8 @@ and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 Precise, warm, modular, ethically grounded. Documentation is care. Do not
 overclaim.
+
+Use `docs/chad-lens.md` for resume-facing and portfolio-facing copy. Public
+pages should make purpose, agency, legibility, precision, and contribution
+explicit enough that a busy hiring reader can understand the work without Jamie
+in the room.

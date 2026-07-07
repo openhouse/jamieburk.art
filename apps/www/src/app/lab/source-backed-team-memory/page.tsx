@@ -23,6 +23,13 @@ export default function SourceBackedTeamMemoryPage() {
           decision lineage, onboarding context, and human-correctable AI
           workflows for knowledge-heavy teams.
         </p>
+        <p className="mt-5 leading-8 text-jb-ink/76">
+          I hear this kind of need as operating memory, not more notes: a way
+          for a team to understand what has been decided, why it was decided,
+          what source material supports that understanding, what remains open,
+          and what new collaborators need in order to join the work
+          intelligently.
+        </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
@@ -32,6 +39,12 @@ export default function SourceBackedTeamMemoryPage() {
           <p className="mt-3 leading-7 text-jb-ink/76">
             AI drafts. Humans review. The shared record remains inspectable and
             correctable.
+          </p>
+          <p className="mt-3 leading-7 text-jb-ink/76">
+            The goal is not an omniscient AI layer or a giant
+            knowledge-management platform. The goal is a practical, reviewable
+            structure that reduces context loss without creating a heavy
+            parallel bureaucracy.
           </p>
         </div>
         <div className="mt-10 space-y-6">

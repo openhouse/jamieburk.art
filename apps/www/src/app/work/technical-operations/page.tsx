@@ -14,27 +14,27 @@ export const metadata: Metadata = createMetadata({
 
 const sections = [
   {
-    title: "Operating backbone",
+    title: "Delivery rhythm",
     items: [
-      "Planning cycles, sprint rituals, decision frameworks, status reporting, and post-launch retros",
-      "Recurring blockers identified early enough to change the plan",
-      "Honest reporting up about what is working, what is stuck, and what needs a decision"
+      "Coordinate delivery across concurrent projects from early concept through public launch",
+      "Use planning cycles, sprint rituals, decision frameworks, status reporting, and post-launch retros to keep work visible",
+      "Track status and surface risks early enough for teams to change the plan"
     ]
   },
   {
-    title: "Delivery coordination",
+    title: "Cross-functional unblocking",
     items: [
-      "Concurrent project work kept visible from concept through public launch",
-      "Status, risk, and dependency tracking that helps teams decide what to do next",
-      "Launch support, QA/UAT rhythms, adoption notes, and post-launch handoffs"
+      "Identify recurring blockers before they become accepted background noise",
+      "Coordinate across platform, security, legal, communications, contracts, leadership, and external stakeholders",
+      "Report honestly about what is working, what is stuck, and what needs a decision"
     ]
   },
   {
-    title: "Documentation and working memory",
+    title: "Documentation people use",
     items: [
       "Source maps, decision trails, meeting synthesis, public guidance, and resource libraries",
       "Handbooks, runbooks, templates, and operating documentation people actually use",
-      "Known / open / protected boundaries that make shared records useful without overexposing private context"
+      "Known / open / protected boundaries that keep shared records useful without overexposing private context"
     ]
   },
   {
@@ -44,71 +44,72 @@ const sections = [
       "Durable handoffs that preserve decisions, risks, rituals, and next steps",
       "Team-health and operational signals translated into practical quarter-over-quarter improvements"
     ]
-  },
-  {
-    title: "Cross-functional coordination",
-    items: [
-      "Coordination across platform, security, legal, communications, contracts, leadership, and community contexts",
-      "Shared language between technical and nontechnical stakeholders",
-      "Decision frameworks that make tradeoffs visible without pretending every constraint is equal"
-    ]
-  },
-  {
-    title: "Tools and technical environments",
-    items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
-    ]
   }
 ];
 
 const proofMap = [
   {
-    need: "Delivery coordination",
+    need: "Coordinate delivery across concurrent work",
     evidence: [
       { label: "Harry J. Epstein", href: "/work/harry-j-epstein" },
       { label: "CallNYC", href: "/work/callnyc" },
       { label: "WOWList", href: "/work/wowlist" }
-    ]
+    ],
+    line:
+      "Translated stakeholder needs into requirements, launch plans, public tools, workflow changes, and handoff documentation."
   },
   {
-    need: "Operating documentation",
-    evidence: [
-      { label: "FairRentNYC / CRS", href: "/work/fair-rent-nyc" },
-      { label: "Source-Backed Team Memory", href: "/lab/source-backed-team-memory" }
-    ]
-  },
-  {
-    need: "Onboarding and handoffs",
-    evidence: [
-      { label: "196 / Sunday Dinner", href: "/work/196-sunday-dinner" },
-      { label: "Technical Operations", href: "/work/technical-operations" }
-    ]
-  },
-  {
-    need: "Public-facing launch",
-    evidence: [
-      { label: "CallNYC", href: "/work/callnyc" },
-      { label: "Harry J. Epstein", href: "/work/harry-j-epstein" },
-      { label: "WOWList", href: "/work/wowlist" }
-    ]
-  },
-  {
-    need: "Risk and ambiguity",
+    need: "Surface risks and clarify blockers",
     evidence: [
       { label: "FairRentNYC / CRS", href: "/work/fair-rent-nyc" },
       { label: "KC Town Hall", href: "/work/kc-town-hall" }
-    ]
+    ],
+    line:
+      "Made assumptions, dependencies, decisions, open questions, and stakeholder next steps visible before they became blockers."
+  },
+  {
+    need: "Write operating documentation people use",
+    evidence: [
+      { label: "FairRentNYC / CRS", href: "/work/fair-rent-nyc" },
+      { label: "196 / Sunday Dinner", href: "/work/196-sunday-dinner" },
+      { label: "Source-Backed Team Memory", href: "/lab/source-backed-team-memory" }
+    ],
+    line:
+      "Created decision records, source maps, action trackers, onboarding materials, and continuity documents that help people re-enter the work."
+  },
+  {
+    need: "Onboard people into context",
+    evidence: [
+      { label: "196 / Sunday Dinner", href: "/work/196-sunday-dinner" },
+      { label: "Source-Backed Team Memory", href: "/lab/source-backed-team-memory" }
+    ],
+    line:
+      "Built practical onboarding and memory structures so new participants can understand norms, decisions, and next steps."
+  },
+  {
+    need: "Improve systems without overengineering",
+    evidence: [
+      { label: "196 / Sunday Dinner", href: "/work/196-sunday-dinner" },
+      { label: "Harry J. Epstein", href: "/work/harry-j-epstein" },
+      { label: "CallNYC", href: "/work/callnyc" }
+    ],
+    line:
+      "Started with the smallest useful structure, tested it in real conditions, and left behind maintainable workflows."
   }
 ] as const;
+
+const representativeSystems = [
+  "JavaScript / TypeScript",
+  "Node.js",
+  "React / Next.js",
+  "Ember.js",
+  "Python / Django",
+  "SQL",
+  "Git / GitHub",
+  "Docker / Dokku",
+  "QGIS",
+  "Open-data workflows"
+];
 
 export default function TechnicalOperationsPage() {
   return (
@@ -120,10 +121,10 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I create the operating backbone teams need to keep work
-          moving: planning rhythms, delivery coordination, decision trails,
-          documentation, onboarding, launch support, risk visibility, and durable
-          handoffs.
+          environments, I build the operating backbone teams need to coordinate
+          delivery, track status, surface risks early, document decisions,
+          onboard people, and keep work moving from concept through public
+          launch.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -152,41 +153,59 @@ export default function TechnicalOperationsPage() {
             links route a hiring reader from a role need to public-safe proof.
           </p>
         </div>
-        <div className="mt-6 overflow-x-auto rounded-lg border border-jb-ink/12 bg-jb-paper">
-          <table className="min-w-full text-left">
-            <thead className="border-b border-jb-ink/12 bg-jb-warm">
-              <tr>
-                <th className="jb-meta-label px-4 py-3 text-sm text-jb-blue" scope="col">
-                  Role need
-                </th>
-                <th className="jb-meta-label px-4 py-3 text-sm text-jb-blue" scope="col">
-                  Public-safe evidence
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {proofMap.map((row) => (
-                <tr className="border-b border-jb-ink/10 last:border-b-0" key={row.need}>
-                  <th className="px-4 py-4 font-semibold text-jb-ink" scope="row">
-                    {row.need}
-                  </th>
-                  <td className="px-4 py-4">
-                    <div className="flex flex-wrap gap-2">
-                      {row.evidence.map((item) => (
-                        <Link
-                          className="rounded-full border border-jb-blue/20 px-3 py-1 text-sm font-semibold text-jb-blue hover:border-jb-green/30 hover:text-jb-green"
-                          href={item.href}
-                          key={item.href}
-                        >
-                          {item.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="mt-6 grid gap-3">
+          {proofMap.map((row) => (
+            <div
+              className="grid gap-4 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 lg:grid-cols-[0.8fr_0.9fr_1.3fr]"
+              key={row.need}
+            >
+              <div>
+                <p className="jb-meta-label text-xs text-jb-blue">Role need</p>
+                <h3 className="mt-2 font-semibold text-jb-ink">{row.need}</h3>
+              </div>
+              <div>
+                <p className="jb-meta-label text-xs text-jb-blue">Public-safe evidence</p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {row.evidence.map((item) => (
+                    <Link
+                      className="rounded-full border border-jb-blue/20 px-3 py-1 text-sm font-semibold text-jb-blue hover:border-jb-green/30 hover:text-jb-green"
+                      href={item.href}
+                      key={item.href}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="jb-meta-label text-xs text-jb-blue">Why it matters</p>
+                <p className="mt-2 leading-7 text-jb-ink/76">{row.line}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="mt-12" aria-labelledby="representative-systems">
+        <div className="jb-reading">
+          <p className="jb-eyebrow text-sm text-jb-blue">Representative systems</p>
+          <h2 className="mt-3 text-3xl font-bold text-jb-ink" id="representative-systems">
+            Technical environments I can translate across
+          </h2>
+          <p className="mt-3 leading-8 text-jb-ink/76">
+            The throughline is not one tool. It is comfort with loosely defined
+            operating problems, enough technical fluency to understand the work,
+            and enough restraint to avoid overengineering the fix.
+          </p>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {representativeSystems.map((system) => (
+            <span
+              className="rounded-full border border-jb-ink/12 bg-jb-paper px-3 py-1 text-sm font-semibold text-jb-ink/76"
+              key={system}
+            >
+              {system}
+            </span>
+          ))}
         </div>
       </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">

@@ -17,7 +17,8 @@ export function Hero() {
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
             I help teams turn ambiguous, stakeholder-heavy work into usable
             systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            public tools, launch support, onboarding, source maps, and durable
+            handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>

@@ -11,6 +11,7 @@ This branch implements the V1 composite bundle from the M review:
 - Approved resume PDF committed at
   `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.
 - One public-safety scanner at `scripts/check-public-safety.mjs`.
+- Chad-lens editorial guidance in `docs/chad-lens.md`.
 
 ## Merge Strategy
 
@@ -40,10 +41,33 @@ These must pass before production:
   the resume PDF, and key routes.
 - Manual review of contact, resume, Technical Operations, FairRentNYC,
   Source-Backed Team Memory, mobile labels, and long-page background grid.
+- Chad-lens review for purpose, agency, legibility, precision, contribution, and
+  reader burden.
 
 Jamie gives final production approval after staging review. A final reviewer
 should inspect the diff before production deploy, with special attention to
 public-safety boundaries, claims, routes, metadata, and contact.
+
+## Remaining Launch Blockers
+
+- Jamie approval of public email/contact path.
+- Jamie approval of resume PDF and phone-in-PDF behavior.
+- Jamie approval of proof metrics, especially revenue and public-funding
+  numbers.
+- Collaborator consent for any future names, credits, quotes, screenshots, or
+  photos.
+- Staging smoke tests against the deployed domain.
+- Production smoke tests immediately after deploy.
+- Final Chad-lens editorial review of homepage, Technical Operations,
+  FairRentNYC, Source-Backed Team Memory, and resume page.
+
+## Approval Ownership
+
+- Jamie approves production deploy, public contact, resume artifact, proof
+  metrics, collaborator names, screenshots, quotes, and artifacts.
+- Technical reviewer approves build, Docker, redirects, robots, sitemap,
+  metadata, headers, and rollback readiness.
+- Editorial reviewer approves Chad-lens clarity and claim discipline.
 
 ## Content Decisions
 

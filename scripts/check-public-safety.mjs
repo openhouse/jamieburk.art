@@ -100,16 +100,22 @@ function scanPattern(files, label, pattern) {
 
 function pdftotext(file) {
   try {
-    return execFileSync("pdftotext", [file, "-"], {
+    return {
+      ok: true,
+      text: execFileSync("pdftotext", [file, "-"], {
       cwd: repoRoot,
       encoding: "utf8",
       stdio: ["ignore", "pipe", "ignore"]
-    });
+      })
+    };
   } catch {
     warnings.push(
-      `${relative(file)} - pdftotext unavailable or failed; binary PDF text scan skipped`
+      `${relative(file)} - pdftotext unavailable or failed; using binary string fallback`
     );
-    return "";
+    return {
+      ok: false,
+      text: readFileSync(file).toString("latin1")
+    };
   }
 }
 
@@ -138,8 +144,20 @@ scanPattern(
 
 scanPattern(
   productionTextFiles,
+  "all-caps private/confidential marker appears in production-facing content",
+  /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  productionTextFiles,
   "credential-like value appears in production-facing content",
   /\b(?:sk-proj-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16})\b/
+);
+
+scanPattern(
+  productionTextFiles,
+  "auth/access/bearer/refresh/session token appears in production-facing content",
+  /\b(?:bearer\s+[A-Za-z0-9._-]{20,}|(?:auth|access|refresh|session)[_-]?token\s*[:=]\s*["'][^"'\n]{12,}["'])\b/i
 );
 
 scanPattern(
@@ -181,7 +199,7 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF is unexpectedly small");
   }
 
-  const resumeText = pdftotext(resumePath);
+  const resumeText = pdftotext(resumePath).text;
   if (resumeText) {
     if (!/Jamie\s+Burkart/i.test(resumeText)) {
       addFailure(resumePath, "resume PDF text does not include Jamie Burkart");
