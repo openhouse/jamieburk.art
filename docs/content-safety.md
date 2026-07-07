@@ -2,6 +2,11 @@
 
 This portfolio is public-safe by default. It is not a private archive, transcript browser, analytics dump, or source-material repository.
 
+`docs/proofs-bank.md` is the canonical public-safe knowledge base for claims in
+this repo. It may include strong professional claims, aggregate metrics, source
+posture, and publication boundaries. It must not include raw private source
+material.
+
 ## Rules
 
 - Do not publish private emails, raw transcripts, private coalition notes, legal-review materials, health/financial details, private correspondence, unapproved photos, private fonts, credentials, stakeholder lists, internal analytics, client-private materials, or raw community records.

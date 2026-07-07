@@ -117,6 +117,9 @@ or serve private, proprietary, or unlicensed font files. See
   approved public artifacts, and careful collective-work language.
 - When uncertain, use review notes and launch blockers rather than public-facing
   TODOs.
+- Maintain `docs/proofs-bank.md` as the public-safe knowledge base for strong
+  professional claims. The website should project that bank for clarity,
+  audience, and purpose rather than expose raw archival material.
 
 ## Launch Blockers
 

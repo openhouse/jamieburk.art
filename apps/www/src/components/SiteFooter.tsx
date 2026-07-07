@@ -24,6 +24,14 @@ export function SiteFooter() {
             <li>
               <Link
                 className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue"
+                href="/proofs"
+              >
+                Proofs
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="inline-flex min-h-10 items-center rounded-lg hover:text-jb-blue"
                 href="/resume"
               >
                 Resume

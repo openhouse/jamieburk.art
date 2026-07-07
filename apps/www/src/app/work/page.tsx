@@ -21,12 +21,24 @@ export default function WorkPage() {
           becoming usable systems, public-facing tools, documentation, decision
           trails, and durable handoffs that other people can keep using.
         </p>
+        <p className="mt-4 leading-8 text-jb-ink/72">
+          Each page is projected from a public-safe proof bank. The goal is to
+          make the work clear without publishing raw transcripts, private
+          coalition notes, private community records, internal analytics, or
+          unapproved artifacts.
+        </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link
             className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
             href="/work/technical-operations"
           >
             Technical Operations proof page
+          </Link>
+          <Link
+            className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
+            href="/proofs"
+          >
+            Proof bank
           </Link>
           <Link
             className="inline-flex min-h-10 items-center rounded-lg text-jb-blue hover:text-jb-green"
