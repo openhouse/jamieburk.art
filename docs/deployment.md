@@ -60,8 +60,8 @@ git push dokku-staging HEAD:main
 
 ## Production Setup Draft
 
-Use this only after staging content, accessibility, metadata, and public-safety
-review.
+Use this only after staging content, accessibility, metadata, knowledge-bank,
+and public-safety review.
 
 ```bash
 dokku apps:create jamieburk-art

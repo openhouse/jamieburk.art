@@ -9,6 +9,7 @@ npm ci
 npm run typecheck
 npm run lint
 npm run build
+npm run knowledge-bank
 npm run public-safety
 npm run check:production
 ```
@@ -42,7 +43,7 @@ docker build \
 ## Human QA
 
 - Proofs bank review:
-  - Claims on the site match `docs/proofs-bank.md`.
+  - Claims on the site match `docs/knowledge-bank/claims.md` and `docs/knowledge-bank/proofs.md`.
   - Strong metrics use the approved public wording.
   - Qualified claims keep their qualifier.
   - Held claims do not appear on the public site.

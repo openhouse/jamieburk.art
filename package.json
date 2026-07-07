@@ -16,7 +16,8 @@
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
     "check": "npm run check -w @jamie-burkart/www",
+    "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
-    "check:production": "NODE_ENV=production APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index node scripts/check-public-safety.mjs && npm run check"
+    "check:production": "NODE_ENV=production APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index node scripts/check-knowledge-bank.mjs --production && node scripts/check-public-safety.mjs && npm run check"
   }
 }
