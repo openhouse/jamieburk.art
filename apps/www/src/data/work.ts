@@ -140,7 +140,7 @@ const workItemsInput = [
     ],
     links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
     careNote:
-      "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
+      "No private analytics dashboards, revenue details, customer data, vendor information, access material, or internal operational materials are published.",
     sourceLayer:
       "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to online growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -163,7 +163,7 @@ const workItemsInput = [
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, access material, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
@@ -172,8 +172,8 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Helped build and steward NYC Artist Coalition / FairRentNYC campaign-memory, documentation, and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    role: "NYC Artist Coalition Co-Founding Member; Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -194,7 +194,7 @@ const workItemsInput = [
       {
         title: "Source map",
         description:
-          "A structured way to separate public sources, private notes, open questions, and materials that require review.",
+          "A structured way to separate public sources, protected collaborator context, open questions, and materials that require review.",
         type: "source map"
       },
       {
@@ -219,8 +219,12 @@ const workItemsInput = [
       "Public Guidance",
       "Decision Records"
     ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" }
+    ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. This page does not publish protected collaborator context, review-sensitive materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
       "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
@@ -232,6 +236,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "NYC Artist Coalition co-founding member role with civic systems and documentation lane",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
@@ -239,7 +244,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie is a co-founding member of NYC Artist Coalition and helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

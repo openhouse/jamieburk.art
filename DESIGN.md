@@ -16,12 +16,12 @@ colors:
   classic-rose: "#e2aeb4"
 typography:
   display:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Archivo Narrow, Karla, ui-sans-serif, system-ui, sans-serif"
     fontWeight: 700
     lineHeight: 1.02
     letterSpacing: "0"
   headline:
-    fontFamily: "League Spartan, Karla, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Archivo Narrow, Karla, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.875rem"
     fontWeight: 700
     lineHeight: 1.2
@@ -146,12 +146,12 @@ for focus, selection, and occasional proof, not as a general accent wash.
 
 ## 3. Typography
 
-**Display Font:** League Spartan with Karla and system sans fallbacks.
+**Display Font:** Archivo Narrow with Karla and system sans fallbacks.
 **Body Font:** Karla with system sans fallbacks.
 **Label/Mono Font:** Karla; there is no mono system in the current site.
 
-**Character:** The pairing is practical and public-facing. League Spartan gives
-headings a sturdy placard quality; Karla keeps long summaries readable,
+**Character:** The pairing is practical and public-facing. Archivo Narrow gives
+headings a sturdy condensed placard quality; Karla keeps long summaries readable,
 approachable, and unshowy.
 
 ### Hierarchy
