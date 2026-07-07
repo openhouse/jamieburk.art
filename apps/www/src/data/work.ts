@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Jamie helped an 80+ year-old industrial business adapt to e-commerce by improving public web, analytics, marketing, content, and operational workflows.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -140,7 +140,7 @@ const workItemsInput = [
     ],
     links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
     careNote:
-      "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
+      "No protected analytics dashboards, revenue detail, access secrets, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
       "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
@@ -154,7 +154,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to online growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -163,7 +163,7 @@ const workItemsInput = [
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, access secrets, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
@@ -172,7 +172,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Jamie built and stewarded shared campaign-memory and coordination infrastructure so Commercial Rent Stabilization collaborators could preserve decisions, next steps, source context, and public-safety boundaries.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -180,7 +180,7 @@ const workItemsInput = [
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved many stakeholders, public materials, protected collaborator context, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
       "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
@@ -194,7 +194,7 @@ const workItemsInput = [
       {
         title: "Source map",
         description:
-          "A structured way to separate public sources, private notes, open questions, and materials that require review.",
+          "A structured way to separate public sources, protected collaborator context, open questions, and materials that require review.",
         type: "source map"
       },
       {
@@ -220,7 +220,7 @@ const workItemsInput = [
       "Decision Records"
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. This page does not publish protected collaborator notes, materials requiring legal or policy review, stakeholder rosters, strategy drafts, or unapproved internal materials.",
     sourceLayer:
       "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
@@ -243,7 +243,7 @@ const workItemsInput = [
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Protected coalition notes, materials requiring legal or policy review, stakeholder rosters, strategy context, protected messages, and unapproved quotes are omitted."
     }
   },
   {
@@ -252,7 +252,7 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Jamie built a civic-data prototype that translated constituent-services open data into resident-facing issue pathways, district context, and possible next steps.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",
@@ -331,7 +331,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Jamie co-built a Python / Django and Ember.js community-calendar platform that helped DIY arts and music organizers distribute events through followable keyword communities.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,7 +339,7 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -347,7 +347,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A low-overhead distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -358,6 +358,9 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
+    publicSafety: {
+      note: "Historical proof page. Do not publish private user records, organizer contact rosters, or unapproved community materials."
+    },
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -366,7 +369,7 @@ const workItemsInput = [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "Multiple city ecosystems reached"
     ],
     knownOpenProtected: {
       known:
@@ -383,7 +386,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Jamie created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for recurring gatherings and resident-artist support.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -406,17 +409,20 @@ const workItemsInput = [
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
     capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
     careNote:
-      "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
+      "Summary-only page. Identifying participant records, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
       "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
+    publicSafety: {
+      note: "Summary-only public surface. Participant identities, private records, addresses, and unapproved images remain protected unless Jamie and the relevant people approve publication."
+    },
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "300+ hosted gatherings",
-      "20+ resident artists supported",
+      "Long-running hosted gathering practice",
+      "Resident artists supported over time",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
@@ -426,7 +432,7 @@ const workItemsInput = [
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
-        "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
+        "Identifying participant records, private records, attendance rosters, addresses, and unapproved images are omitted."
     }
   },
   {
@@ -435,7 +441,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Jamie supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -462,6 +468,9 @@ const workItemsInput = [
     sourceLayer:
       "Public-safe summary and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+    publicSafety: {
+      note: "Public-safe short proof page. Legal, property, finance-sensitive, banking, and stakeholder details remain omitted unless explicitly approved."
+    },
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:

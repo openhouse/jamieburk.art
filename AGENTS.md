@@ -24,6 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:production`
 
 ## Public-Safety Rules
 
@@ -35,7 +36,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain in staging-facing public content, write: `TODO: Jamie approval
+required.` Production checks must fail on that marker.
 
 ## Scope Rules
 
@@ -52,3 +54,9 @@ Production later: `jamieburk.art`, indexable only after Jamie approves content.
 
 Precise, warm, modular, ethically grounded. Documentation is care. Do not
 overclaim.
+
+## Editorial Representation Rules
+
+Professional copy should use action verbs, define named projects, avoid
+unexplained acronyms, clarify technical terms, answer toward what end, and make
+Jamie's role visible without overclaiming.

@@ -17,9 +17,9 @@ export default function WorkPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: under-structured situations
-          becoming usable systems, public-facing tools, documentation, decision
-          trails, and durable handoffs.
+          These selected systems show a repeated pattern: ambiguous work
+          becomes clearer, documented, easier to coordinate, safer to hand off,
+          and more usable for the people who need to act.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
@@ -43,13 +43,14 @@ export default function WorkPage() {
                     Source-Backed Team Memory / Noting.us
                   </h3>
                   <p className="mt-3 leading-7 text-jb-ink/76">
-                    A lab / proof-of-practice exploring source-backed operating
-                    memory, decision lineage, onboarding context, and
-                    human-correctable AI workflows for knowledge-heavy teams.
+                    A lab and consulting method for teams that need to preserve
+                    decisions, product context, onboarding knowledge, and useful
+                    ideas without turning private archives into unsafe public
+                    surfaces.
                   </p>
                   <p className="mt-3 text-sm font-semibold text-jb-green">
-                    Early research / method / consulting practice. Not a
-                    finished production SaaS.
+                    AI drafts. Humans review. Sources remain inspectable.
+                    Corrections remain possible. Private material stays private.
                   </p>
                   <Link
                     className="mt-5 inline-block font-semibold text-jb-blue hover:text-jb-green"

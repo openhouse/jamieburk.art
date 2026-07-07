@@ -9,6 +9,17 @@ coverage
 .env
 .env.*
 !.env.example
+private/
+_private/
+archive-private/
+raw-transcripts/
+otter-exports/
+legal-review/
+client-private/
+coalition-private/
+residency-private/
+screenshots-unapproved/
+*.local
 .npm-cache
 npm-debug.log*
 yarn-debug.log*
