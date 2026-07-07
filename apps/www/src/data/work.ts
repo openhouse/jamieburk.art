@@ -76,6 +76,7 @@ const workMetaSchema = z.object({
     "Archived prototypes and older platforms"
   ]),
   roleFit: z.string(),
+  whatThisProves: z.string(),
   evidence: z.array(z.string()),
   knownOpenProtected: z.object({
     known: z.string(),
@@ -91,7 +92,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old industrial business translate paper-and-phone catalog operations into searchable e-commerce, analytics, publishing, and workflow systems.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -101,8 +102,8 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
-    artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
+      "Searchable catalog workflows, checkout and dealer-pricing logic, analytics-informed operations, blog publishing, product data patterns, and public-facing systems that preserved the company's distinctive institutional voice.",
+    artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot", "source map"],
     artifacts: [
       {
         title: "E-commerce workflow map",
@@ -121,6 +122,12 @@ const workItemsInput = [
         description:
           "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
         type: "template"
+      },
+      {
+        title: "Manufacturer source map",
+        description:
+          "Public-safe description of an open-data sourcing map using OSHA / industry data to identify U.S. hand-tool manufacturing facilities.",
+        type: "source map"
       }
     ],
     tags: [
@@ -151,19 +158,22 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
+    whatThisProves:
+      "Jamie can translate legacy operating knowledge into searchable web, content, analytics, and workflow systems that support growth without exposing private business details.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Catalog navigation, search, checkout, dealer login / pricing logic, product data, blog, SEO, and analytics workstreams",
+      "Public reporting corroborates the online store launch and later online-sales significance",
+      "Open-data manufacturer mapping using OSHA / industry data",
+      "Resume-backed contribution to a period of 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, open-data sourcing, and operations improvements for an 80+ year-old legacy business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
-        "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
+        "Private dashboards, access secrets, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
   },
   {
@@ -231,10 +241,13 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+    whatThisProves:
+      "Jamie can structure high-stakes civic collaboration so collaborators can see decisions, next steps, source trails, open questions, and protected boundaries.",
     evidence: [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Legal/policy questions organized for collaborators",
+      "Consent-aware story, signup, and follow-up protocols",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
@@ -252,7 +265,7 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built a civic-data prototype translating newly released City Council constituent-services open data into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",
@@ -301,7 +314,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, public GitHub trace, School of Data mention, press coverage preserved in local archive, screenshots pending, and citation approval pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -310,15 +323,17 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
+    whatThisProves:
+      "Jamie can turn public datasets and civic service categories into resident-readable pathways while keeping the prototype's unofficial, historical status clear.",
     evidence: [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Politico New York / School of Data / GitHub traces preserved in the archive, with public citation approval pending"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
+        "CallNYC translated newly released civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
         "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
       protected:
@@ -331,7 +346,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Designed and co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, with archived aggregate evidence of 1,800+ users, 16,000+ events/posts, and 35+ active city scenes by July 2017.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -339,15 +354,15 @@ const workItemsInput = [
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed simple, repeatable ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event publishing, list/tag discovery, follows, saved events, email digests, Google Calendar sync, and organizer-facing distribution patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A low-overhead distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -362,17 +377,19 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
+    whatThisProves:
+      "Jamie can connect community language, publishing workflows, social product logic, and full-stack platform implementation into a system organizers can actually use.",
     evidence: [
-      "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "Python / Django, PostgreSQL / PostGIS, and Ember.js platform",
+      "Archived aggregate counts: 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, and 20,927 saved/starred events",
+      "Google Calendar synchronization and email digest infrastructure",
+      "35+ active city scenes, using the conservative threshold of 50+ geocoded posts/events"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar and social discovery platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and any user/community-level examples need approval.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -414,8 +431,10 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
+    whatThisProves:
+      "Jamie can create repeatable participation systems for complex human environments while protecting private community records and consent boundaries.",
     evidence: [
-      "300+ hosted gatherings",
+      "300+ documented gatherings, with private spreadsheet evidence showing numbered gatherings through 345",
       "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
@@ -466,6 +485,8 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+    whatThisProves:
+      "Jamie can make long-horizon built-environment work easier to explain, fund, discuss, and continue without publishing private financial or legal context.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",

@@ -36,6 +36,12 @@ export function WorkCard({ item }: WorkCardProps) {
           <p className="text-sm font-semibold text-jb-ink">Role fit</p>
           <p className="mt-1 text-sm leading-6 text-jb-ink/72">{item.roleFit}</p>
         </div>
+        <div>
+          <p className="text-sm font-semibold text-jb-ink">What this proves</p>
+          <p className="mt-1 text-sm leading-6 text-jb-ink/72">
+            {item.whatThisProves}
+          </p>
+        </div>
         <TagList compact tags={item.tags} />
         <Link
           className="text-sm font-semibold text-jb-blue hover:text-jb-green"

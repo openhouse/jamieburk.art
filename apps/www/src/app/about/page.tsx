@@ -20,8 +20,8 @@ export default function AboutPage() {
             lead based in Brooklyn.
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
+            My work sits where the need is real but the structure is still
+            forming: civic technology, small-business operations, public-facing
             tools, cultural infrastructure, coalition work, and knowledge
             systems.
           </p>
@@ -35,7 +35,7 @@ export default function AboutPage() {
           <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
+            delivery, and source-backed knowledge-systems sprints.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">

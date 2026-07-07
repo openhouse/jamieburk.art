@@ -75,6 +75,7 @@ export type WorkMeta = {
     | "Source-backed memory / AI lab"
     | "Archived prototypes and older platforms";
   roleFit: string;
+  whatThisProves: string;
   evidence: string[];
   knownOpenProtected: KnownOpenProtected;
 };

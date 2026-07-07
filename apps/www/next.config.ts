@@ -4,23 +4,45 @@ import createMDX from "@next/mdx";
 
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
-const appEnv =
-  process.env.APP_ENV ??
-  process.env.SITE_ENV ??
-  process.env.NEXT_PUBLIC_DEPLOY_ENV ??
-  "staging";
+const readEnv = (value: string | undefined) => {
+  const normalized = value?.trim();
+  return normalized ? normalized : undefined;
+};
 
-const siteUrl = stripTrailingSlash(
-  process.env.SITE_URL ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (appEnv === "production"
-      ? "https://jamieburk.art"
-      : "https://staging.jamieburk.art")
-);
+const parseSiteUrl = (value: string | undefined) => {
+  const normalized = readEnv(value);
+  if (!normalized) return undefined;
+
+  try {
+    return stripTrailingSlash(new URL(normalized).toString());
+  } catch {
+    return undefined;
+  }
+};
+
+const appEnv =
+  readEnv(process.env.APP_ENV) ??
+  readEnv(process.env.SITE_ENV) ??
+  readEnv(process.env.NEXT_PUBLIC_DEPLOY_ENV) ??
+  "staging";
+const siteEnv = readEnv(process.env.SITE_ENV) ?? appEnv;
+const deployEnv = readEnv(process.env.NEXT_PUBLIC_DEPLOY_ENV) ?? appEnv;
+const siteUrl =
+  parseSiteUrl(process.env.SITE_URL) ??
+  parseSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  (appEnv === "production"
+    ? "https://jamieburk.art"
+    : "https://staging.jamieburk.art");
+const publicSiteUrl = parseSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ?? siteUrl;
+const robotsPolicy = readEnv(process.env.NEXT_PUBLIC_ROBOTS_POLICY) ?? "noindex";
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "noindex";
+  appEnv === "production" &&
+  siteEnv === "production" &&
+  deployEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
+  publicSiteUrl === "https://jamieburk.art" &&
+  robotsPolicy === "index";
 
 const globalHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -32,6 +54,11 @@ const globalHeaders = [
   ...(robotsIndexable
     ? []
     : [{ key: "X-Robots-Tag", value: "noindex, nofollow" }])
+];
+
+const resumePdfHeaders = [
+  { key: "X-Robots-Tag", value: "noindex, nofollow" },
+  { key: "X-Content-Type-Options", value: "nosniff" }
 ];
 
 const nextConfig: NextConfig = {
@@ -49,6 +76,35 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*",
+        headers: resumePdfHeaders
+      }
+    ];
+  },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
+        source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: true
+      },
+      {
+        source: "/work/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: true
+      },
+      {
+        source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: true
       }
     ];
   }

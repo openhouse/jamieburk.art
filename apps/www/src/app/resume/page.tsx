@@ -11,9 +11,10 @@ export const metadata: Metadata = createMetadata({
 });
 
 const highlights = [
-  "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
+  "14+ years turning ambiguous work into usable operating systems across civic, cultural, small-business, and technical environments",
+  "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
   "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
+  "Created planning rhythms, decision records, onboarding materials, and durable handoffs",
   "Co-built community web systems that reached roughly 35 city ecosystems",
   "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
 ];
@@ -28,10 +29,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            Current public resume for Technical Project Manager - Product
+            Operations & Implementation roles. I help teams turn ambiguous work
+            into requirements, workflows, documentation, decision trails, launch
+            support, onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -42,8 +43,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Last updated: {site.resumeUpdated}. The PDF is downloadable from
+            this page and kept out of direct search indexing for V1.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
