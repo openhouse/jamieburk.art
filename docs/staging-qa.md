@@ -46,6 +46,7 @@ docker build \
   - Strong metrics use the approved public wording.
   - Qualified claims keep their qualifier.
   - Held claims do not appear on the public site.
+  - NYC Artist Coalition role/current-work language uses collective-work wording and does not expose private field context, signups, or venue-specific lease/landlord details.
 - Keyboard navigation and visible focus.
 - Mobile layout at 320, 375, 768, and desktop widths.
 - Contrast.
