@@ -176,22 +176,28 @@ const workItemsInput = [
   {
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
-    series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    series: "Civic Campaign Infrastructure",
+    subtitle: "Campaign websites, coalition memory, and civic documentation systems",
     summary:
-      "Built and stewarded a shared operating-memory system for Commercial Rent Stabilization and storefront-stability advocacy, turning meetings, decisions, sources, data asks, and follow-ups into public-safe coordination infrastructure.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Built public campaign web infrastructure and stewarded shared operating memory for NYC Artist Coalition, FairRentNYC, and Commercial Rent Stabilization work.",
+    role: "Campaign Web Infrastructure & Documentation Systems Lead",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved public campaigns, many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, decision records, source and provenance maps, city/state strategy lanes, legal/policy question logs, consent-aware story handling, privacy-preserving public-data proposals, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Public campaign websites, action pages, campaign explainers, running minutes, action trackers, decision records, source and provenance maps, city/state strategy lanes, legal/policy question logs, consent-aware story handling, privacy-preserving public-data proposals, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
+      {
+        title: "Campaign web infrastructure",
+        description:
+          "Public-facing campaign sites and action surfaces that made coalition priorities findable, navigable, and actionable.",
+        type: "website"
+      },
       {
         title: "Campaign-memory spine",
         description:
@@ -213,6 +219,7 @@ const workItemsInput = [
     ],
     tags: [
       "Civic Technology",
+      "Campaign Web Infrastructure",
       "Knowledge Systems",
       "Documentation",
       "Product Operations",
@@ -220,6 +227,8 @@ const workItemsInput = [
       "Public-Facing Tools"
     ],
     capabilities: [
+      "Campaign Websites",
+      "Public Information Architecture",
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
@@ -228,9 +237,9 @@ const workItemsInput = [
       "Decision Records"
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, unapproved internal materials, backend materials, private analytics, or contact lists.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public campaign websites, public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -238,8 +247,9 @@ const workItemsInput = [
     currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
     group: "Civic and public-facing systems",
     roleFit:
-      "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
+      "Civic delivery, campaign web infrastructure, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "Public campaign websites and action surfaces for NYC Artist Coalition and related advocacy efforts",
       "Shared operating-memory and campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, source maps, and open-question registers",
       "City/state strategy lanes and consent-aware story-handling practices",
@@ -248,11 +258,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source/provenance maps, open-question registers, public-data proposals, and follow-up systems.",
+        "Jamie built or materially shaped public-facing campaign web infrastructure and helped structure public-safe campaign memory, coordination documents, source/provenance maps, open-question registers, public-data proposals, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which specific screenshots, collaborators, meeting materials, backend details, and site-specific authorship details may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, backend/admin materials, analytics, contact lists, and unapproved quotes are omitted."
     }
   },
   {

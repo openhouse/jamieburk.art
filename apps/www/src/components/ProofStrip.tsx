@@ -1,7 +1,7 @@
 const proofItems = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
   "Contributed to a period of e-commerce revenue growth for a legacy business",
-  "Built and stewarded shared civic campaign-memory infrastructure",
+  "Built public campaign websites and civic campaign-memory systems",
   "Co-built community web systems for multi-city creative ecosystems",
   "Created repeatable hosting and continuity systems for long-running gatherings and resident-artist support"
 ];

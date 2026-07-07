@@ -2,6 +2,10 @@
 
 This site is a public-safe proof surface, not a private archive. Publish summaries, redacted artifacts, representative diagrams, approved public links, and careful collective-work language.
 
+Use `docs/proofs-bank.md` as the public-safe knowledge base for professional
+claims. The website should project from that bank for clarity, audience, and
+purpose; it should not expose every source, caveat, or protected detail.
+
 ## Safer Publishing Patterns
 
 - Use public-safe summaries instead of raw source material.

@@ -33,6 +33,11 @@ const sections = [
       "Translate dependencies across product, engineering, design, security, legal, communications, contracts, leadership, and external stakeholders."
   },
   {
+    title: "Campaign web infrastructure",
+    text:
+      "Build public campaign sites, action pages, resource libraries, and advocacy flows that make complex civic work findable and actionable."
+  },
+  {
     title: "Onboarding and ramp support",
     text:
       "Write onboarding guides, templates, context pages, and handoff materials so new contributors can ramp quickly."
