@@ -10,7 +10,7 @@ const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
   ["Fragmented public data", "civic guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Documented recurring gatherings", "repeatable participation infrastructure"]
 ];
 
 export default function HomePage() {

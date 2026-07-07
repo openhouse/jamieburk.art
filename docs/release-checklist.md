@@ -24,6 +24,7 @@
       surfacing, onboarding, documentation, reporting, and durable handoffs.
 - [ ] Source-Backed Team Memory is framed as method, not finished SaaS.
 - [ ] Case-study claims use contribution and collective-work language.
+- [ ] Public claims match `docs/claim-register.md`.
 - [ ] Screenshots, photos, metrics, collaborator names, and credits are approved
       or omitted.
 
@@ -41,6 +42,7 @@
 - [ ] Jamie approves every public page.
 - [ ] Claims, credits, screenshots, photos, and resume contact details are
       approved.
+- [ ] `docs/claim-register.md` is current for the released public wording.
 - [ ] Production canonical, OpenGraph, and sitemap URLs point to
       `https://jamieburk.art`.
 - [ ] `NEXT_PUBLIC_ROBOTS_POLICY=index` is explicitly configured.

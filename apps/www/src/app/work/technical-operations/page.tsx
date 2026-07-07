@@ -15,14 +15,18 @@ const sections = [
   {
     title: "Operating systems built",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "HJE catalog, checkout, dealer-pricing, analytics, and handoff systems",
+      "FairRentNYC / NYC Artist Coalition running minutes, action trackers, source maps, and policy-question logs",
+      "196 / Sunday Dinner onboarding, documentation, and continuity systems"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "CallNYC civic-data prototype",
+      "WOWList Python / Django + Ember.js community-calendar platform",
+      "HJE paper-and-phone to e-commerce transition"
+    ]
   },
   {
     title: "Documentation and working memory",

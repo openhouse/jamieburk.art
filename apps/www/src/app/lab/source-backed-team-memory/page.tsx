@@ -27,9 +27,9 @@ export default function SourceBackedTeamMemoryPage() {
           <p className="leading-7 text-jb-ink/76">
             Source-backed team memory turns selected meetings, documents,
             transcripts, and product conversations into human-reviewed decision
-            records, open questions, onboarding context, and practical next
-            steps. AI drafts. Humans review. The shared record remains
-            inspectable and correctable.
+            records, open questions, onboarding context, governance notes, eval
+            checks, and practical next steps. AI drafts. Humans review. The
+            shared record remains inspectable and correctable.
           </p>
         </div>
         <div className="mt-10 space-y-6">

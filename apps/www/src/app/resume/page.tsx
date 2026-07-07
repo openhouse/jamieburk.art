@@ -15,7 +15,7 @@ const highlights = [
   "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
   "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
   "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
+  "Created repeatable hosting and continuity systems while documenting 300+ gatherings and supporting 20+ resident artists"
 ];
 
 export default function ResumePage() {

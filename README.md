@@ -93,6 +93,8 @@ proprietary, or unlicensed font files. See `docs/typefaces.md`.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
+- Use `docs/claim-register.md` as the canonical public wording guide for proof
+  metrics, credit language, and claims that should stay approximate.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
 Keep private source material outside the repo. These folders are ignored in Git
@@ -112,7 +114,7 @@ legal-review/
 - Run `npm run public-safety` and resolve blockers before trusted review.
 - Confirm staging noindex behavior before sharing staging.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm exact proof metrics against `docs/claim-register.md`.
 - Confirm collaborator names, photos, and quotes.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm production indexing is explicitly enabled with `NEXT_PUBLIC_ROBOTS_POLICY=index`.
