@@ -166,6 +166,71 @@ const proofClaimsInput = [
     }
   },
   {
+    id: "nycac-cofounding-cultural-space-fieldwork",
+    workSlug: "fair-rent-nyc",
+    title: "NYC Artist Coalition co-founding and cultural-space fieldwork",
+    claim:
+      "Jamie is a co-founding member of NYC Artist Coalition and supports cultural-space fieldwork, campaign memory, and coalition-operations structure.",
+    detailedClaim:
+      "Jamie's public-safe role is best framed as movement infrastructure: co-founding member, cultural-space fieldworker, documentation systems lead, and coalition-operations support for work that connects artists, venues, small businesses, legal/policy partners, and public-facing civic advocacy.",
+    sourceBasis: ["public-safe narrative review", "firsthand operational record"],
+    sourceNote:
+      "Supported by Jamie-approved role framing, public-safe review of working materials, and firsthand operational record.",
+    publicBoundary:
+      "Do not imply Jamie is the sole leader, sole spokesperson, sole policy author, or sole cause of coalition outcomes.",
+    defensibility: "strong",
+    surfaces: {
+      resume:
+        "Co-founding NYC Artist Coalition member supporting cultural-space fieldwork and coalition operations",
+      workEvidence:
+        "Co-founding NYC Artist Coalition member supporting cultural-space fieldwork, campaign memory, and coalition-operations structure",
+      technicalOperations:
+        "NYC Artist Coalition cultural-space fieldwork and coalition-operations structure"
+    }
+  },
+  {
+    id: "nycac-public-advocacy-lineage",
+    workSlug: "fair-rent-nyc",
+    title: "NYC Artist Coalition public advocacy lineage",
+    claim:
+      "NYC Artist Coalition has participated in public advocacy around DIY and cultural-space safety, Cabaret Law repeal, Office of Nightlife public engagement, MARCH inspection transparency, COVID-era venue survival, and commercial rent stabilization.",
+    detailedClaim:
+      "This claim situates Jamie's current documentation and fieldwork inside NYC Artist Coalition's broader public advocacy history. It should be used as context for collective civic work, not as an individual claim that Jamie personally led every campaign or that the coalition alone caused each public outcome.",
+    sourceBasis: ["public artifact", "public record", "public-safe narrative review"],
+    sourceNote:
+      "Supported by NYC Artist Coalition public materials, public summaries of coalition history, and public-safe narrative review.",
+    publicBoundary:
+      "Use collective-work language. Do not overclaim causation, authorship, or representational authority for Jamie or for NYC Artist Coalition.",
+    defensibility: "bounded",
+    surfaces: {
+      workEvidence:
+        "NYC Artist Coalition context: public advocacy around cultural-space safety, Cabaret Law repeal, Office of Nightlife engagement, MARCH transparency, COVID-era venue survival, and commercial rent stabilization",
+      technicalOperations:
+        "Civic operating context across NYC Artist Coalition public advocacy, nightlife enforcement, cultural-space survival, and commercial rent stabilization"
+    }
+  },
+  {
+    id: "fairrent-current-work-lanes",
+    workSlug: "fair-rent-nyc",
+    title: "Current FairRentNYC / NYC Artist Coalition work lanes",
+    claim:
+      "As of May/June 2026, Jamie's FairRentNYC / NYC Artist Coalition work centers on commercial rent stabilization, public-data framing, legal-question tracking, cultural-space follow-up, and coalition operating structure.",
+    detailedClaim:
+      "The current public-safe work lanes are Commercial Rent Stabilization / Fair Rent NYC, city and state policy alignment, public baseline data for commercial vacancy and lease cost, careful legal-question tracking, cultural-space field follow-up, consent-aware story infrastructure, and low-burden coalition operating structure.",
+    sourceBasis: ["public-safe narrative review", "firsthand operational record"],
+    sourceNote:
+      "Supported by reviewed May/June 2026 running-minute summaries and public-safe current-work framing; sensitive strategy and legal-review materials are withheld.",
+    publicBoundary:
+      "Use date-bound current-work language. Do not publish private partner lists, live strategy, raw notes, legal-review detail, or unapproved meeting context.",
+    defensibility: "bounded",
+    surfaces: {
+      workEvidence:
+        "As of May/June 2026: Commercial Rent Stabilization, public-data framing, legal-question tracking, cultural-space follow-up, and coalition operating structure",
+      technicalOperations:
+        "Current FairRentNYC / NYC Artist Coalition work lanes: CRS documentation, public-data framing, legal-question tracking, cultural-space follow-up, and coalition operations"
+    }
+  },
+  {
     id: "callnyc-civic-data-prototype",
     workSlug: "callnyc",
     title: "CallNYC civic-data prototype",
@@ -331,6 +396,7 @@ const homepageProofClaimIds = [
 const resumeProofClaimIds = [
   "career-operating-structure-14-years",
   "hje-revenue-growth-contribution",
+  "nycac-cofounding-cultural-space-fieldwork",
   "fairrent-campaign-memory-30-pages",
   "wowlist-scale-aggregate",
   "sunday-dinner-participation-infrastructure"
@@ -340,6 +406,8 @@ const technicalOperationsProofClaimIds = [
   "career-operating-structure-14-years",
   "hje-modernization-stewardship",
   "fairrent-campaign-memory-30-pages",
+  "nycac-cofounding-cultural-space-fieldwork",
+  "fairrent-current-work-lanes",
   "wowlist-platform-model",
   "sunday-dinner-participation-infrastructure",
   "kc-town-hall-public-funding",
@@ -351,7 +419,10 @@ const workEvidenceClaimIds: Partial<Record<WorkProofSlug, ProofClaimId[]>> = {
   callnyc: ["callnyc-civic-data-prototype"],
   "fair-rent-nyc": [
     "fairrent-campaign-memory-30-pages",
-    "fairrent-known-open-protected-method"
+    "fairrent-known-open-protected-method",
+    "nycac-cofounding-cultural-space-fieldwork",
+    "nycac-public-advocacy-lineage",
+    "fairrent-current-work-lanes"
   ],
   "harry-j-epstein": [
     "hje-modernization-stewardship",

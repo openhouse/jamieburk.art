@@ -166,10 +166,10 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "NYC Artist Coalition, coalition memory, and civic documentation systems",
     summary:
-      "Built and stewarded 30+ pages of shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Built and stewarded 30+ pages of shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy, connecting NYC Artist Coalition cultural-space fieldwork with public-safe civic documentation.",
+    role: "Documentation Systems Lead, Coalition Operations Support & NYC Artist Coalition Co-founding Member",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -178,7 +178,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data asks, stakeholder follow-up notes, public-safe explanations, and 30+ pages of shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data asks, cultural-space follow-up notes, public-safe explanations, and 30+ pages of shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -198,6 +198,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Public-safe role and work-lane map",
+        description:
+          "A bounded framing of Jamie's NYC Artist Coalition role, the coalition's public advocacy context, and current Commercial Rent Stabilization work lanes.",
+        type: "source map"
       }
     ],
     tags: [
@@ -206,19 +212,22 @@ const workItemsInput = [
       "Documentation",
       "Product Operations",
       "Source-Backed Memory",
-      "Public-Facing Tools"
+      "Public-Facing Tools",
+      "NYC Artist Coalition"
     ],
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
       "Public Guidance",
-      "Decision Records"
+      "Decision Records",
+      "Coalition Operations",
+      "Cultural-Space Fieldwork"
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, public NYC Artist Coalition campaign context, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -230,11 +239,11 @@ const workItemsInput = [
     evidence: workEvidenceFor("fair-rent-nyc"),
     knownOpenProtected: {
       known:
-        "Jamie built and stewarded public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie is a co-founding member of NYC Artist Coalition and built public-safe campaign memory, coordination documents, source maps, and follow-up systems for Commercial Rent Stabilization work.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which specific public artifacts, collaborators, meeting materials, screenshots, and current strategy details may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, live partner detail, and unapproved quotes are omitted."
     }
   },
   {
