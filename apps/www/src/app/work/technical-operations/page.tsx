@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { StartHere } from "@/components/StartHere";
+import { technicalOperationsProofItems } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -11,44 +13,26 @@ export const metadata: Metadata = createMetadata({
   path: "/work/technical-operations"
 });
 
-const sections = [
+const operatingBackbone = [
   {
-    title: "Operating systems built",
-    items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
-    ]
+    title: "Delivery coordination",
+    text:
+      "I clarify scope, surface blockers, track next steps, and coordinate across technical and nontechnical collaborators so delivery does not depend on private memory."
   },
   {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    title: "Planning rhythms and status reporting",
+    text:
+      "I turn recurring questions into planning cadences, status updates, action trackers, decision logs, retrospectives, and review lanes."
   },
   {
-    title: "Documentation and working memory",
-    items: [
-      "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
-      "Meeting synthesis",
-      "Decision records"
-    ]
+    title: "Knowledge systems and handoffs",
+    text:
+      "I create source maps, handbooks, runbooks, onboarding context, public guidance, and continuity materials that help future collaborators safely continue the work."
   },
   {
-    title: "Tools and technical environments",
-    items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
-    ]
+    title: "Risk surfacing",
+    text:
+      "I make boundaries explicit: what is known, what is open, what needs approval, what is protected, and what should not become public."
   }
 ];
 
@@ -56,6 +40,9 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
+        <p className="text-sm font-semibold uppercase text-jb-blue">
+          Role proof
+        </p>
         <h1 className="text-5xl font-bold text-jb-ink">
           Technical Operations & Implementation
         </h1>
@@ -66,21 +53,35 @@ export default function TechnicalOperationsPage() {
           documentation systems, launch support, and durable handoffs.
         </p>
       </div>
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {sections.map((section) => (
-          <JBCard key={section.title}>
-            <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {section.items.map((item) => (
-                <li className="flex gap-3" key={item}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </JBCard>
-        ))}
+      <div className="mt-10">
+        <StartHere />
       </div>
+      <section className="mt-12" aria-labelledby="operating-backbone">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="operating-backbone">
+          Operating backbone
+        </h2>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {operatingBackbone.map((section) => (
+            <JBCard key={section.title}>
+              <h3 className="text-2xl font-semibold text-jb-ink">{section.title}</h3>
+              <p className="mt-4 leading-7 text-jb-ink/76">{section.text}</p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
+      <section className="mt-12" aria-labelledby="proof-items">
+        <h2 className="text-3xl font-semibold text-jb-ink" id="proof-items">
+          Proof by system
+        </h2>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {technicalOperationsProofItems.map((item) => (
+            <JBCard key={item.label}>
+              <h3 className="text-xl font-semibold text-jb-ink">{item.label}</h3>
+              <p className="mt-3 leading-7 text-jb-ink/76">{item.text}</p>
+            </JBCard>
+          ))}
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
