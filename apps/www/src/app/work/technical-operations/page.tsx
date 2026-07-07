@@ -38,18 +38,22 @@ const sections = [
   {
     title: "Tools and technical environments",
     items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
+      "Use web, open-data, and documentation tools to build public-facing systems",
+      "Translate JavaScript / TypeScript, React / Next.js, Python / Django, SQL, Docker, Dokku, Git, and QGIS work into maintainable workflows",
+      "Create source maps, handoff materials, operating records, and implementation documentation for mixed technical and nontechnical teams"
     ]
   }
+];
+
+const operationsMap = [
+  "Coordinate delivery across multiple concurrent projects.",
+  "Track status and surface risks early.",
+  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
+  "Unblock recurring blockers before they become patterns.",
+  "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
+  "Onboard new collaborators with handbooks, runbooks, and operating documentation.",
+  "Report team health, project status, and operational metrics honestly.",
+  "Improve working systems quarter over quarter without overengineering."
 ];
 
 export default function TechnicalOperationsPage() {
@@ -64,6 +68,10 @@ export default function TechnicalOperationsPage() {
           environments, I build the operating backbone teams need to move:
           planning rhythms, decision logs, action trackers, onboarding materials,
           documentation systems, launch support, and durable handoffs.
+        </p>
+        <p className="mt-5 text-xl leading-8 text-jb-ink/76">
+          I build the operating backbone teams need to stay focused, unblocked,
+          accountable, and able to hand off work.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -81,6 +89,28 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-paper p-6">
+        <div className="grid gap-6 lg:grid-cols-[0.4fr_0.6fr]">
+          <div>
+            <h2 className="text-3xl font-bold text-jb-ink">
+              How this maps to team operations
+            </h2>
+            <p className="mt-3 leading-7 text-jb-ink/74">
+              The same pattern shows up across the work: make delivery visible,
+              name what needs attention, and leave teams with reusable ways to
+              keep moving.
+            </p>
+          </div>
+          <ul className="grid gap-3 text-jb-ink/76">
+            {operationsMap.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

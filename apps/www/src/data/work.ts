@@ -4,6 +4,7 @@ import type { WorkMeta } from "@/types/work";
 const visibilitySchema = z.enum([
   "public",
   "public-safe",
+  "lab",
   "redacted",
   "summary-only",
   "private"
@@ -16,6 +17,13 @@ const workStatusSchema = z.enum([
   "Archived prototype",
   "Public-safe summary only",
   "Draft"
+]);
+
+const approvalSchema = z.enum([
+  "approved",
+  "needs-review",
+  "staging-only",
+  "do-not-publish"
 ]);
 
 const artifactTypeSchema = z.enum([
@@ -44,14 +52,17 @@ const workMetaSchema = z.object({
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
+  result: z.string(),
   role: z.string(),
   years: z.string(),
   status: workStatusSchema,
+  approval: approvalSchema,
   featured: z.boolean(),
   priority: z.number(),
   visibility: visibilitySchema,
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
+  towardWhatEnd: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
   artifacts: z.array(
     z.object({
@@ -91,10 +102,13 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Led web, e-commerce, marketing, analytics, and operational workflow improvements for an 80+ year-old legacy industrial business while preserving the company's institutional voice.",
+    result:
+      "Legacy operating knowledge became maintainable e-commerce workflows, public content, and handoff systems.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
+    approval: "approved",
     featured: true,
     priority: 1,
     visibility: "public-safe",
@@ -102,6 +116,8 @@ const workItemsInput = [
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+    towardWhatEnd:
+      "Support a trusted legacy business as it served customers online, improved internal coordination, and kept its public voice intact.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -173,16 +189,21 @@ const workItemsInput = [
     subtitle: "Coalition memory and civic documentation systems",
     summary:
       "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    result:
+      "Meetings, public sources, open questions, and follow-up work became shared memory and actionable workstreams.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
+    approval: "approved",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Meeting synthesis, decision records, action trackers, source maps, legal/policy question logs, stakeholder follow-up, public-data framing, public-safe explanations, and shared campaign memory.",
+    towardWhatEnd:
+      "Help collaborators understand what happened, what needed review, what could be shared publicly, and what should remain protected.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -252,10 +273,13 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
+    result:
+      "Open-data tables became public issue pathways, district context, and clearer resident-facing next steps.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",
+    approval: "approved",
     featured: true,
     priority: 3,
     visibility: "public-safe",
@@ -263,6 +287,8 @@ const workItemsInput = [
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
       "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+    towardWhatEnd:
+      "Make civic information easier for residents to interpret while keeping the archived, unofficial status visible.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -331,23 +357,28 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities for arts and music organizers.",
+    result:
+      "Event publishing and community discovery became a reusable keyword-based distribution workflow.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
+    approval: "approved",
     featured: true,
     priority: 4,
     visibility: "public-safe",
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed practical ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+    towardWhatEnd:
+      "Help organizers and audiences follow local arts and music activity without turning community records into a private data dump.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "A practical distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -384,9 +415,12 @@ const workItemsInput = [
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    result:
+      "Recurring gatherings became repeatable participation infrastructure with onboarding, hospitality, facilitation, and continuity patterns.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
+    approval: "approved",
     featured: true,
     priority: 5,
     visibility: "summary-only",
@@ -394,6 +428,8 @@ const workItemsInput = [
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+    towardWhatEnd:
+      "Support a cultural space where people could enter, contribute, host, continue work, and remain protected from unnecessary exposure.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -436,9 +472,12 @@ const workItemsInput = [
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+    result:
+      "A long-horizon redevelopment effort gained clearer public-benefit framing, funding context, and stakeholder documentation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
+    approval: "approved",
     featured: false,
     priority: 6,
     visibility: "public-safe",
@@ -446,6 +485,8 @@ const workItemsInput = [
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
       "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+    towardWhatEnd:
+      "Make a complex built-environment project easier to explain, review, fund, and continue without publishing private financial or legal detail.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
