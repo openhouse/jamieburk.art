@@ -39,8 +39,8 @@ export default function Image() {
         <div style={{ fontSize: 88, fontWeight: 800, marginTop: 24 }}>
           Jamie Burkart
         </div>
-        <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn under-structured work into usable systems.
+        <div style={{ color: "#1f5c3e", fontSize: 40, fontWeight: 700, marginTop: 28 }}>
+          I turn under-structured work into usable systems for complex public-facing teams.
         </div>
       </div>
     ),
