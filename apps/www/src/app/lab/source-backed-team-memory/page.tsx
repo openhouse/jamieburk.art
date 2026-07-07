@@ -14,7 +14,9 @@ export default function SourceBackedTeamMemoryPage() {
   return (
     <article className="jb-frame py-12">
       <div className="jb-reading">
-        <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
+        <p className="font-display text-base font-semibold uppercase text-jb-blue">
+          Lab / method
+        </p>
         <h1 className="mt-3 text-5xl font-bold text-jb-ink">
           Source-Backed Team Memory
         </h1>

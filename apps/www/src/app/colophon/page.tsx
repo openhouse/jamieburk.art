@@ -13,9 +13,9 @@ const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Karla for body/UI text and League Spartan for display headings",
+  "Karla for body/UI/prose and Archivo Narrow for display headings, eyebrows, proof labels, and compact public-grotesque emphasis",
   "No private or proprietary font files are committed or served",
-  "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
+  "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional layout grid",
   "Staging-first Docker / Dokku deployment with staging noindex by default",
   "No invasive tracking in V1"
 ];
@@ -29,7 +29,7 @@ export default function ColophonPage() {
           This site is built as a small public proof surface and future living
           notebook. It uses local MDX content, public-safe artifacts, and
           intentionally limited tracking. The design uses Broadway blue, Jamie&apos;s
-          oil-pastel palette, and a quiet proportional grid derived from his
+          oil-pastel palette, and a quiet proportional layout grid derived from his
           print-layout sketchpad. Staging is reviewable but not indexable, and
           production should only become indexable after content and metadata
           review.
