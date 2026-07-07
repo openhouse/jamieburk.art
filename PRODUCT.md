@@ -15,12 +15,17 @@ structure for complex public-facing work.
 ## Product Purpose
 
 This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
+Operations & Implementation lead. It should show how emerging,
 stakeholder-heavy work becomes usable systems: requirements, workflows,
 documentation, decision trails, launch support, onboarding, and durable
 handoffs. Success means a reviewer can understand Jamie's role fit, trust the
 evidence, and know what to do next without exposing private or sensitive
 materials.
+
+The website projects from a small public-safe knowledge bank:
+`docs/knowledge-bank/`, `docs/knowledge-bank/claims.json`, and the typed
+projection in `apps/www/src/data/proofs.ts`. The product should make proof
+easier to maintain, not expose the private archive.
 
 ## Brand Personality
 
@@ -44,7 +49,8 @@ private fonts, and named stakeholder details that have not been approved.
    not through private source dumps.
 3. Make evidence scan quickly while preserving nuance.
 4. Use collective-work language where the work was collaborative.
-5. Leave every page feeling like documentation is care.
+5. Keep exact metrics softened unless explicitly approved.
+6. Leave every page feeling like documentation is care.
 
 ## Accessibility & Inclusion
 
