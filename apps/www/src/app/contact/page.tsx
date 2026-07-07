@@ -23,7 +23,9 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -31,15 +33,16 @@ export default function ContactPage() {
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
             <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -52,6 +55,12 @@ export default function ContactPage() {
             </div>
           </dl>
         </div>
+        <p className="mt-6 leading-8 text-jb-ink/76">
+          Best-fit conversations: technical project management, product
+          operations, implementation, business analysis, civic technology,
+          documentation systems, knowledge systems, public-facing tools, and
+          source-backed team memory.
+        </p>
       </div>
     </div>
   );
