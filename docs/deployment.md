@@ -64,6 +64,16 @@ git remote add dokku-staging dokku@<droplet-host-or-ip>:jamieburk-art-staging
 git push dokku-staging HEAD:main
 ```
 
+After deploy:
+
+```bash
+dokku ps:report jamieburk-art-staging
+dokku logs jamieburk-art-staging --tail
+curl -i https://staging.jamieburk.art/api/health
+curl -i https://staging.jamieburk.art/robots.txt
+curl -i https://staging.jamieburk.art/sitemap.xml
+```
+
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
@@ -119,6 +129,14 @@ git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
 git push dokku-production HEAD:main
 ```
 
+The `www.jamieburk.art` host is redirected to the apex by the Next.js route
+rules in V1. If Dokku/nginx later handles the redirect more directly, keep the
+Next redirect until the edge-layer behavior is verified.
+
+Before production deploy, record the previous production SHA. To roll back,
+redeploy that SHA and set `NEXT_PUBLIC_ROBOTS_POLICY=noindex` if public-safety
+or content approval is uncertain.
+
 ## Local Docker Verification
 
 ```bash
@@ -148,6 +166,7 @@ docker run --rm -p 3000:3000 \
 Verify:
 
 ```bash
+curl -i http://localhost:3000/
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml

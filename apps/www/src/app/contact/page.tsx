@@ -36,7 +36,7 @@ export default function ContactPage() {
                     {emailLink.label}
                   </a>
                 ) : (
-                  "Public email is configured in the release environment."
+                  "Email will appear here after launch approval."
                 )}
               </dd>
             </div>

@@ -43,6 +43,10 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+Copy should keep Jamie as an active actor and answer toward what end. Prefer
+plain language before technical specificity, define acronyms on first use, and
+avoid making hiring readers decode insider terms.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

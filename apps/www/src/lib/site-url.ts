@@ -18,6 +18,4 @@ export const IS_PRODUCTION =
   APP_ENV === "production";
 
 export const ROBOTS_INDEXABLE =
-  IS_PRODUCTION &&
-  SITE_URL === "https://jamieburk.art" &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
+  IS_PRODUCTION && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";

@@ -14,7 +14,7 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Jamie turns under-structured work into usable systems for complex public-facing teams.",
+    "Jamie turns complex work with more context than structure into usable systems for public-facing teams.",
   contact: {
     email: contactEmail,
     emailHref: contactEmail ? `mailto:${contactEmail}` : undefined,

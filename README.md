@@ -113,6 +113,14 @@ RISQUE, or Maria unless licensing and permission are explicitly approved.
 - Keep private source folders such as `private/`, `raw/`,
   `archive-private/`, `transcripts-private/`, `client-private/`, and
   `legal-review/` out of the repo.
+- Use active, plain-language copy: put Jamie back into the sentence, prefer
+  verbs like designs, coordinates, synthesizes, translates, documents,
+  preserves, supports, and ships, and answer what the work enabled for a team,
+  reader, collaborator, or community.
+- Define insider language near first use. Do not make hiring readers decode
+  terms like under-structured, data, tracking, maintainers, minimum viable
+  product (MVP), user acceptance testing (UAT), quality assurance (QA), large
+  language model (LLM), or source-backed memory.
 
 ## Launch Blockers
 

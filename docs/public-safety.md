@@ -27,6 +27,16 @@ artifacts, public sources, and careful collective-work language. When a claim is
 collective, use language such as "helped," "supported," "contributed to," or
 "co-built" unless Jamie has explicitly approved stronger wording.
 
+Use the Known / Open / Protected model on case studies:
+
+- Known: approved public claims, public sources, or source-backed summaries.
+- Open: claims, screenshots, names, metrics, or artifacts still awaiting review.
+- Protected: private material that stays outside the repo and off the public
+  site.
+
+Documentation may name protected categories without exposing private details.
+The point is to make the boundary visible, not to publish the source material.
+
 ## Repo Boundaries
 
 The repo ignores these local-only folders:

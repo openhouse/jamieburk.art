@@ -2,26 +2,14 @@ import path from "node:path";
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
-const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
-
 const appEnv =
   process.env.APP_ENV ??
   process.env.SITE_ENV ??
   process.env.NEXT_PUBLIC_DEPLOY_ENV ??
   "staging";
 
-const siteUrl = stripTrailingSlash(
-  process.env.SITE_URL ??
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (appEnv === "production"
-      ? "https://jamieburk.art"
-      : "https://staging.jamieburk.art")
-);
-
 const robotsIndexable =
-  appEnv === "production" &&
-  siteUrl === "https://jamieburk.art" &&
-  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
+  appEnv === "production" && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },

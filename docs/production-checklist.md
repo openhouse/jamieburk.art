@@ -15,6 +15,10 @@ indexable.
   approved or omitted.
 - Footer and metadata use the direct professional frame, not the V1.1 notebook
   frame.
+- Metadata and OpenGraph title, description, URL, and image alt text have been
+  reviewed for the production domain.
+- Source-Backed Team Memory remains a lab / method unless Jamie approves it as
+  an indexable V1 surface.
 
 ## Public Safety
 
@@ -36,9 +40,22 @@ indexable.
 - Docker build completes with staging build args.
 - Docker run serves `/`, `/api/health`, `/robots.txt`, `/sitemap.xml`, and the
   resume PDF.
+- Dokku staging deploy completes and points at the reviewed commit.
 - Staging sends both `robots.txt` disallow and `X-Robots-Tag: noindex, nofollow`.
 - Sitemap uses the expected domain and does not include staging URLs in
   production.
+- Canonical redirects work, including FairRentNYC aliases, 196 Artists
+  Residency, Source-Backed Team Memory, and `www.jamieburk.art` to apex.
+- Production indexing is approved only after Jamie confirms
+  `NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
+## Rollback
+
+- Keep the previous reviewed staging/production commit SHA before deploy.
+- If health, robots, sitemap, contact, or resume checks fail, redeploy the prior
+  SHA and reset `NEXT_PUBLIC_ROBOTS_POLICY=noindex` until the issue is fixed.
+- Do not leave production indexable while public-safety or content approval is
+  uncertain.
 
 ## Accessibility QA
 

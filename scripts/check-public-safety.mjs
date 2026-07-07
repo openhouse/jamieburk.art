@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 
@@ -45,6 +46,9 @@ const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 const publicFacingPattern = /^(apps\/www\/src\/(app|components|content|data)|apps\/www\/public)\//;
 const docsPattern = /^(docs|README\.md|DESIGN\.md|AGENTS\.md)\b/;
 const toolingPattern = /^scripts\//;
+const placeholderResumeHashes = new Set([
+  "c74cf11cb6d57e3483b3731a0b741da7714a6044588f5f901623a08820db40c4"
+]);
 
 const allFiles = [];
 
@@ -92,6 +96,10 @@ function readPdfText(filePath) {
   } catch {
     return readFileSync(filePath).toString("latin1");
   }
+}
+
+function sha256(filePath) {
+  return createHash("sha256").update(readFileSync(filePath)).digest("hex");
 }
 
 function checkPath(filePath) {
@@ -142,6 +150,14 @@ function checkText(filePath, text) {
   if (
     production &&
     publicFacing &&
+    /Public email is configured in the release environment|Replace the placeholder PDF|Placeholder Resume PDF/i.test(text)
+  ) {
+    addBlocker(rel, "placeholder contact or resume copy remains in production-facing files");
+  }
+
+  if (
+    production &&
+    publicFacing &&
     /\b(Trade Gothic|Verlag|Gotham Rounded|FondFont RISQUE|Maria)\b/i.test(text)
   ) {
     addBlocker(rel, "private/proprietary font reference appears in app code or content");
@@ -151,9 +167,10 @@ function checkText(filePath, text) {
     !docs &&
     !toolingPattern.test(rel) &&
     publicFacing &&
-    /\b(raw transcript|private coalition notes|legal-review material)\b/i.test(text)
+    /\b(Known \/ Open \/ Protected|knownOpenProtected|Protected|protect|privacy|legal-review|raw transcript|private coalition|dashboard)\b/i.test(text) &&
+    /\b(private|legal|transcript|dashboard|trust|stakeholder)\b/i.test(text)
   ) {
-    addWarning(rel, "sensitive category wording appears outside docs; confirm it is context, not source material");
+    addWarning(rel, "protected-category wording appears in public-facing files; confirm it is context, not source material");
   }
 }
 
@@ -163,6 +180,10 @@ function checkPdf(filePath) {
 
   if (/Placeholder Resume PDF/i.test(text)) {
     addBlocker(rel, "placeholder resume PDF is still present");
+  }
+
+  if (placeholderResumeHashes.has(sha256(filePath))) {
+    addBlocker(rel, "known placeholder resume PDF hash is still present");
   }
 
   if (rel.startsWith("apps/www/public/") && /\b(raw transcript|legal-review|private coalition)\b/i.test(text)) {
@@ -188,6 +209,8 @@ if (!existsSync(resumePath)) {
   addBlocker("apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "resume PDF is missing");
 } else if (statSync(resumePath).size < 10000) {
   addBlocker("apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "resume PDF still looks like a placeholder");
+} else if (placeholderResumeHashes.has(sha256(resumePath))) {
+  addBlocker("apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf", "resume PDF matches a known placeholder hash");
 }
 
 if (production) {
@@ -197,14 +220,20 @@ if (production) {
   if (process.env.SITE_URL !== "https://jamieburk.art") {
     addBlocker("environment", "SITE_URL must be https://jamieburk.art for production");
   }
-  if (
-    process.env.NEXT_PUBLIC_SITE_URL &&
-    process.env.NEXT_PUBLIC_SITE_URL !== "https://jamieburk.art"
-  ) {
+  if (process.env.NEXT_PUBLIC_SITE_URL !== "https://jamieburk.art") {
     addBlocker("environment", "NEXT_PUBLIC_SITE_URL must be https://jamieburk.art for production");
   }
   if (process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
     addBlocker("environment", "NEXT_PUBLIC_ROBOTS_POLICY must be index for production indexing");
+  }
+
+  const workDataPath = path.join(root, "apps/www/src/data/work.ts");
+  const workData = readFileSync(workDataPath, "utf8");
+  if (/visibility:\s*"private"/.test(workData)) {
+    addBlocker("apps/www/src/data/work.ts", "published work data contains visibility: private");
+  }
+  if (/status:\s*"Draft"/.test(workData)) {
+    addBlocker("apps/www/src/data/work.ts", "published work data contains status: Draft");
   }
 }
 
