@@ -13,41 +13,45 @@ export const metadata: Metadata = createMetadata({
 
 const sections = [
   {
-    title: "Operating systems built",
+    title: "Operating backbone",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "Planning rhythms",
+      "Decision records",
+      "Action trackers",
+      "Risk notes",
+      "Status reporting",
+      "Runbooks and handoff documentation"
     ]
   },
   {
-    title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    title: "Delivery coordination",
+    items: [
+      "Cross-functional coordination",
+      "Launch support",
+      "Quality assurance (QA)",
+      "User acceptance testing (UAT)",
+      "Retros and improvement loops"
+    ]
   },
   {
-    title: "Documentation and working memory",
+    title: "Documentation people use",
     items: [
       "Source maps",
       "Public guidance",
       "Resource libraries",
-      "Handbooks / templates",
+      "Onboarding materials",
       "Meeting synthesis",
-      "Decision records"
+      "Known / Open / Protected boundaries"
     ]
   },
   {
-    title: "Tools and technical environments",
+    title: "Proof clusters",
     items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
+      "HJE e-commerce and operating-workflow systems",
+      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "CallNYC resident-facing civic-data prototype",
+      "WOWList community web systems",
+      "Source-backed team-memory lab / method"
     ]
   }
 ];
@@ -60,10 +64,12 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          I build the operating backbone teams need to plan, coordinate,
+          document, report, onboard, and ship. Across civic, cultural,
+          small-business, and public-facing technical environments, my work
+          turns emerging goals and scattered context into planning rhythms,
+          decision records, action trackers, onboarding materials, stakeholder
+          updates, launch support, and durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">

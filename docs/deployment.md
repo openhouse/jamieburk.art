@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=<optional-staging-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<optional-linkedin-url> \
+  NEXT_PUBLIC_GITHUB_URL=<optional-github-url> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<optional-staging-email>'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=<optional-linkedin-url>'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=<optional-github-url>'
 ```
 
 Enable TLS after DNS resolves:
@@ -76,6 +82,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> \
+  NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-url> \
+  NEXT_PUBLIC_GITHUB_URL=<approved-github-url> \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,6 +100,9 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-url>'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=<approved-github-url>'
 ```
 
 Enable TLS:
@@ -117,6 +129,7 @@ docker build \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  --build-arg NEXT_PUBLIC_CONTACT_EMAIL=review@example.com \
   -t jamieburk-art:staging-test .
 ```
 
@@ -128,6 +141,7 @@ docker run --rm -p 3000:3000 \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL=review@example.com \
   jamieburk-art:staging-test
 ```
 
@@ -137,6 +151,8 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/work/fairrentnyc
+curl -I http://localhost:3000/proofs
 ```
 
 Expected staging behavior:
@@ -145,3 +161,20 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- Legacy FairRentNYC URLs redirect to `/work/fair-rent-nyc`.
+- `/proofs` is not a public route; the proofs bank stays in `docs/`.
+
+## Release Gate
+
+Run before production:
+
+```bash
+npm run check
+npm run check:routes
+npm run check:public-safety
+APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email> npm run check:production
+```
+
+`check:public-safety` and `check:production` should fail while the placeholder
+resume PDF remains. Replace the resume with an approved public PDF before
+production launch.

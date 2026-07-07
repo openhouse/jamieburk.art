@@ -81,6 +81,32 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
+export function PublicLinks({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+
+  return (
+    <section aria-labelledby="public-links">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="public-links">
+        Public links
+      </h2>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a
+              className="block rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+              href={link.url}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   const blocks = [
     ["Known", item.knownOpenProtected.known],

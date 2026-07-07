@@ -8,7 +8,7 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
+  ["Fragmented public-data context", "civic guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
@@ -29,9 +29,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: emerging work becoming
+              usable systems, public-facing tools, documentation, decision
+              trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -48,15 +48,17 @@ export default function HomePage() {
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
             <p className="text-sm font-semibold uppercase text-jb-blue">
-              Operating motif
+              Operating backbone
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+              What is emerging becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+              Across civic, cultural, small-business, and public-facing
+              technical environments, I build the practices that help teams stay
+              oriented: planning rhythms, decision logs, action trackers, risk
+              notes, onboarding materials, stakeholder updates, public guidance,
+              runbooks, and handoff documentation.
             </p>
           </div>
           <dl className="grid gap-3">
@@ -77,14 +79,15 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Surface to Structure to Build to Document to Transfer
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
+            I usually enter when important work is emerging faster than its
+            decisions, ownership, documentation, and handoffs can hold. I listen
+            across stakeholders, map what is known and open, create the
+            workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>
