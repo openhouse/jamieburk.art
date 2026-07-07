@@ -37,6 +37,10 @@ export default function AboutPage() {
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
           </p>
+          <p>
+            I want the work to be clear enough that someone else can enter it
+            safely, continue it responsibly, or decide where it should stop.
+          </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
