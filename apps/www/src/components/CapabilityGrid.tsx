@@ -15,7 +15,7 @@ const capabilities = [
   },
   {
     title: "Civic technology & open data",
-    text: "Public-facing tools, data translation, policy explainers, campaign hubs, and resident/community guidance."
+    text: "Public-facing tools, public-data translation, policy explainers, campaign hubs, and resident/community guidance."
   },
   {
     title: "Web systems & public-facing tools",

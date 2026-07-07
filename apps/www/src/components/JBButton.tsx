@@ -16,11 +16,12 @@ export function JBButton({
   download = false
 }: JBButtonProps) {
   const className = {
-    primary: "btn btn-primary min-h-11 rounded-lg px-5 normal-case tracking-normal",
+    primary:
+      "btn btn-primary min-h-11 max-w-full justify-center whitespace-normal rounded-lg px-5 text-center normal-case tracking-normal",
     secondary:
-      "btn btn-outline min-h-11 rounded-lg border-jb-blue px-5 text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
+      "btn btn-outline min-h-11 max-w-full justify-center whitespace-normal rounded-lg border-jb-blue px-5 text-center text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
     ghost:
-      "btn btn-ghost min-h-11 rounded-lg px-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
+      "btn btn-ghost min-h-11 max-w-full justify-center whitespace-normal rounded-lg px-5 text-center text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
   }[variant];
 
   if (href.startsWith("/")) {

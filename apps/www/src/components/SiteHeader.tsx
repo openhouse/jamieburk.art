@@ -14,12 +14,12 @@ export function SiteHeader() {
       <a className="skip-link btn btn-primary rounded-lg" href="#main">
         Skip to content
       </a>
-      <div className="jb-frame flex min-h-18 items-center justify-between gap-4 py-3">
+      <div className="jb-frame flex min-h-18 flex-wrap items-center justify-between gap-3 py-3">
         <Link className="font-semibold text-jb-ink hover:text-jb-blue" href="/">
           {site.name}
         </Link>
-        <nav aria-label="Primary navigation">
-          <ul className="flex flex-wrap items-center justify-end gap-1 text-sm font-medium sm:gap-2">
+        <nav aria-label="Primary navigation" className="min-w-0">
+          <ul className="flex flex-wrap items-center justify-start gap-1 text-sm font-medium sm:justify-end sm:gap-2">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

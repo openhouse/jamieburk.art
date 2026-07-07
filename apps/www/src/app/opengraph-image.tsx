@@ -34,13 +34,13 @@ export default function Image() {
           }}
         />
         <div style={{ color: "#0b5f81", fontSize: 34, fontWeight: 700 }}>
-          Technical Project Manager - Product Operations & Implementation
+          Technical Project Manager | Product Operations & Implementation
         </div>
         <div style={{ fontSize: 88, fontWeight: 800, marginTop: 24 }}>
           Jamie Burkart
         </div>
         <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn under-structured work into usable systems.
+          I turn loosely defined work into usable systems.
         </div>
       </div>
     ),

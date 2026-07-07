@@ -15,13 +15,13 @@ export default function WorkPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">Selected Work</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: under-structured situations
-          becoming usable systems, public-facing tools, documentation, decision
-          trails, and durable handoffs.
+          These case studies show a recurring pattern: loosely defined,
+          high-stakes work becoming usable systems, public-facing tools,
+          documentation, decision records, and durable handoffs.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
+        <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page
           </Link>
@@ -40,16 +40,18 @@ export default function WorkPage() {
                 <h2 className="text-3xl font-semibold text-jb-ink">{group}</h2>
                 <div className="mt-5 rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
                   <h3 className="text-2xl font-semibold text-jb-ink">
-                    Source-Backed Team Memory / Noting.us
+                    Source-Backed Team Memory
                   </h3>
                   <p className="mt-3 leading-7 text-jb-ink/76">
-                    A lab / proof-of-practice exploring source-backed operating
-                    memory, decision lineage, onboarding context, and
-                    human-correctable AI workflows for knowledge-heavy teams.
+                    A lab / proof-of-practice for knowledge-heavy teams that are
+                    moving quickly and losing useful ideas, decisions, open
+                    questions, onboarding context, or source material across
+                    meetings, documents, chat, and AI summaries.
                   </p>
                   <p className="mt-3 text-sm font-semibold text-jb-green">
                     Early research / method / consulting practice. Not a
-                    finished production SaaS.
+                    finished production SaaS, AI replacement for judgment, or
+                    private archive browser.
                   </p>
                   <Link
                     className="mt-5 inline-block font-semibold text-jb-blue hover:text-jb-green"

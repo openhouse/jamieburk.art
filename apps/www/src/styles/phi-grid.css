@@ -7,12 +7,18 @@
 }
 
 .jb-frame {
+  max-width: 100%;
   width: min(1100px, calc(100vw - 2rem));
   margin-inline: auto;
 }
 
+.jb-frame > * {
+  min-width: 0;
+}
+
 .jb-reading {
   max-width: 72ch;
+  min-width: 0;
 }
 
 .jb-phi-grid {

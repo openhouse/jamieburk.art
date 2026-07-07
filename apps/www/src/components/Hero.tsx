@@ -12,17 +12,17 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I help teams turn loosely defined, high-stakes work into usable
+            systems.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I create the operating structure teams need to plan, decide,
+            document, onboard, report, launch, and hand off the work.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
@@ -41,8 +41,8 @@ export function Hero() {
             {[
               "Requirements",
               "Workflows",
-              "Decision Trails",
-              "Launch Support",
+              "Decision Records",
+              "Status Updates",
               "Onboarding",
               "Handoffs"
             ].map((label, index) => (
@@ -57,8 +57,8 @@ export function Hero() {
           </div>
           <p className="mt-5 text-sm leading-6 text-jb-ink/68">
             Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
+            maintainable workflows, and materials people can use after launch
+            or handoff.
           </p>
         </div>
       </div>
