@@ -12,10 +12,10 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Supported growth for a legacy e-commerce business",
-  "Helped structure shared civic campaign-memory infrastructure",
-  "Co-built multi-city community web systems",
-  "Created repeatable hosting and continuity systems for long-running cultural work"
+  "Led Harry J. Epstein web, e-commerce, marketing, analytics, and operations improvements contributing to 2x revenue growth",
+  "Built and stewarded 30+ pages of Commercial Rent Stabilization campaign-memory and coordination infrastructure",
+  "Co-built WOWList, adopted by DIY arts and music organizers across roughly 35 city ecosystems",
+  "Documented 300+ gatherings and supported 20+ resident artists through Sunday Dinner / 196 systems"
 ];
 
 export default function ResumePage() {
