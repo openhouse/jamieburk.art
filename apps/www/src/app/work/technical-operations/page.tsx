@@ -15,9 +15,9 @@ const sections = [
   {
     title: "Operating systems built",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "HJE e-commerce and operating-workflow systems",
+      "NYC Artist Coalition / FairRentNYC public campaign web and campaign-memory infrastructure",
+      "196 / Sunday Dinner onboarding, facilitation, and continuity systems"
     ]
   },
   {
@@ -32,7 +32,8 @@ const sections = [
       "Resource libraries",
       "Handbooks / templates",
       "Meeting synthesis",
-      "Decision records"
+      "Decision records",
+      "Known / Open / Protected boundaries"
     ]
   },
   {
@@ -47,8 +48,32 @@ const sections = [
       "Git / GitHub",
       "Docker / Dokku",
       "QGIS",
-      "Open-data workflows"
+      "Open-data workflows",
+      "AI evals and human-reviewed documentation workflows"
     ]
+  }
+];
+
+const proofRows = [
+  {
+    label: "Private-sector operations",
+    proof:
+      "Helped a legacy industrial business translate catalog knowledge and operating routines into maintainable e-commerce workflows."
+  },
+  {
+    label: "Civic campaign infrastructure",
+    proof:
+      "Helped build 30+ pages of Commercial Rent Stabilization campaign memory with source maps, action tracking, public-data framing, and protected-source boundaries."
+  },
+  {
+    label: "Coalition public systems",
+    proof:
+      "As a NYC Artist Coalition co-founding member, helped shape public campaign web surfaces and follow-up infrastructure while keeping campaign outcomes collective."
+  },
+  {
+    label: "Source-backed memory",
+    proof:
+      "Developed a lab method for source-linked, human-reviewed team memory with decisions, open questions, onboarding context, governance notes, and eval checks."
   }
 ];
 
@@ -81,6 +106,17 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+        <h2 className="text-2xl font-semibold text-jb-ink">Selected proof</h2>
+        <dl className="mt-5 grid gap-4">
+          {proofRows.map((row) => (
+            <div className="grid gap-2 md:grid-cols-[0.32fr_0.68fr]" key={row.label}>
+              <dt className="font-semibold text-jb-blue">{row.label}</dt>
+              <dd className="leading-7 text-jb-ink/76">{row.proof}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
