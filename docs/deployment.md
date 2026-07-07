@@ -3,6 +3,10 @@
 This site is staging-first. Deploy and review `staging.jamieburk.art` before
 production receives the same reviewed commit.
 
+Production can be deployed with `NEXT_PUBLIC_ROBOTS_POLICY=noindex` for quiet
+review. Final indexing requires Jamie approval and
+`NEXT_PUBLIC_ROBOTS_POLICY=index`.
+
 ## Dokku Apps
 
 ```txt
@@ -62,6 +66,9 @@ git push dokku-staging HEAD:main
 
 Use this only after staging content, accessibility, metadata, and public-safety
 review.
+
+For quiet production review before indexing, use `NEXT_PUBLIC_ROBOTS_POLICY=noindex`.
+For final public indexing, use `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -145,3 +152,4 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- Staging noindex is a review safeguard, not a privacy boundary.

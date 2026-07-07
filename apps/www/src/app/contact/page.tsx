@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
+
+type ContactRow = {
+  label: string;
+  value: ReactNode;
+};
 
 export const metadata: Metadata = createMetadata({
   title: "Contact - Jamie Burkart",
@@ -11,6 +17,63 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function ContactPage() {
+  const contactRows: ContactRow[] = [
+    {
+      label: "Public email",
+      value: site.contact.emailHref ? (
+        <a
+          className="font-semibold text-jb-blue hover:text-jb-green"
+          href={site.contact.emailHref}
+        >
+          {site.contact.emailLabel}
+        </a>
+      ) : (
+        <span>{site.contact.emailLabel}</span>
+      )
+    },
+    { label: "Location", value: <span>{site.location}</span> },
+    {
+      label: "Resume",
+      value: (
+        <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
+          View resume page
+        </Link>
+      )
+    }
+  ];
+
+  if (site.contact.linkedInUrl) {
+    contactRows.splice(2, 0, {
+      label: "LinkedIn",
+      value: (
+        <a
+          className="font-semibold text-jb-blue hover:text-jb-green"
+          href={site.contact.linkedInUrl}
+          rel="noreferrer"
+          target="_blank"
+        >
+          LinkedIn profile
+        </a>
+      )
+    });
+  }
+
+  if (site.contact.githubUrl) {
+    contactRows.splice(site.contact.linkedInUrl ? 3 : 2, 0, {
+      label: "GitHub",
+      value: (
+        <a
+          className="font-semibold text-jb-blue hover:text-jb-green"
+          href={site.contact.githubUrl}
+          rel="noreferrer"
+          target="_blank"
+        >
+          GitHub profile
+        </a>
+      )
+    });
+  }
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -20,36 +83,12 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
-            <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">Location</dt>
-              <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">Resume</dt>
-              <dd className="mt-1">
-                <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
-                  View resume page
-                </Link>
-              </dd>
-            </div>
+            {contactRows.map((row) => (
+              <div key={row.label}>
+                <dt className="font-semibold text-jb-ink">{row.label}</dt>
+                <dd className="mt-1 text-jb-ink/74">{row.value}</dd>
+              </div>
+            ))}
           </dl>
         </div>
       </div>
