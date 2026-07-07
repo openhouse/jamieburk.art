@@ -10,6 +10,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Context", item.series],
     ["Status", item.status],
     ["Visibility", item.visibility],
+    ["Approval", item.approval],
     ["Role fit", item.roleFit]
   ];
 
@@ -64,7 +65,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -77,6 +78,28 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+
+  return (
+    <section aria-labelledby="evidence-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-list">
+        Defensible evidence
+      </h2>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {item.evidence.map((evidence) => (
+          <li
+            className="rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 text-sm font-medium leading-6 text-jb-ink"
+            key={evidence}
+          >
+            {evidence}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

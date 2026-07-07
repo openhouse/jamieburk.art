@@ -60,8 +60,8 @@ git push dokku-staging HEAD:main
 
 ## Production Setup Draft
 
-Use this only after staging content, accessibility, metadata, and public-safety
-review.
+Use this only after staging content, accessibility, metadata, knowledge-bank,
+and public-safety review.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -137,6 +137,9 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/work/fairrentnyc-commercial-rent-stabilization
+curl -I http://localhost:3000/work/196-artists-residency
+curl -I http://localhost:3000/work/source-backed-team-memory
 ```
 
 Expected staging behavior:
@@ -145,3 +148,43 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- Redirect variants point to canonical live routes.
+
+## Production Verification
+
+After production deploy, verify the reviewed SHA/tag and check:
+
+```bash
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -I https://jamieburk.art/work/fairrentnyc-commercial-rent-stabilization
+curl -I https://jamieburk.art/work/196-artists-residency
+curl -I https://jamieburk.art/work/source-backed-team-memory
+curl -I https://www.jamieburk.art
+```
+
+Production should emit indexable robots only when:
+
+```txt
+APP_ENV=production
+SITE_URL=https://jamieburk.art
+NEXT_PUBLIC_ROBOTS_POLICY=index
+```
+
+Prefer Dokku/nginx handling for `www.jamieburk.art` redirecting to
+`jamieburk.art`. If proxy-level redirect is not configured, add and test an
+app-level host redirect before production approval.
+
+## Rollback
+
+Keep the reviewed staging commit SHA in the release notes. If production needs
+to roll back:
+
+```bash
+dokku releases jamieburk-art
+dokku releases:rollback jamieburk-art <version>
+dokku logs jamieburk-art -t
+```
+
+After rollback, re-run the production verification checks above.

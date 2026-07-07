@@ -1,0 +1,16 @@
+[
+  {
+    "pattern": "raw transcripts",
+    "file": "docs/knowledge-bank/anti-claims.md",
+    "reason": "Appears in a no-publish anti-claim, not as source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcripts",
+    "file": "docs/knowledge-bank/source-policy.md",
+    "reason": "Appears in source-handling policy, not as source content.",
+    "reviewedBy": "Jamie",
+    "reviewedDate": "2026-07-07"
+  }
+]

@@ -1,10 +1,12 @@
 ## Context
 
-WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Python / Django and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.
+WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Python / Django, PostgreSQL / PostGIS, and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.
+
+The public-safe aggregate record is stronger than a generic "community web system" claim: by 2017, the archive showed 1,800+ users, 16,000+ event posts, 23,000+ tags/lists, 28,000+ list follows, 20,000+ saved/starred events, and 35+ city/region scenes meeting an activity threshold.
 
 ## What was unclear
 
-Organizers needed lightweight ways to share events without depending on one editorial gatekeeper or a single static calendar. Communities were often organized by interest, place, venue, scene, and informal networks rather than clean institutional categories.
+Organizers needed practical, low-overhead ways to share events without depending on one editorial gatekeeper or a single static calendar. Communities were often organized by interest, place, venue, scene, and informal networks rather than clean institutional categories.
 
 ## What became usable
 
@@ -12,8 +14,12 @@ The platform turned keywords into followable community surfaces. That gave organ
 
 ## What I did
 
-Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform.
+Jamie co-built and supported the product model, event workflows, data structure, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform without treating the underlying community records as publishable portfolio material.
+
+## Public-safety boundary
+
+Only aggregate adoption claims belong on the public site. Private user records, organizer contact details, private media, social-auth records, calendar IDs, and raw archive exports stay offline.
 
 ## Transferable proof
 
-This is product-operations and public-web proof: community vocabulary, user workflows, platform logic, and distribution needs had to become a system that real organizers could use.
+This is product-operations and public-web proof: community vocabulary, user workflows, platform logic, geospatial data, and distribution needs had to become a system that real organizers and audiences could use.
