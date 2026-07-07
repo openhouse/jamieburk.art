@@ -27,6 +27,9 @@ Use `.env.example` for local environment defaults.
 ```bash
 npm run typecheck
 npm run lint
+npm run public-safety
+npm run knowledge-bank
+npm run routes
 npm run build
 npm run check
 ```
@@ -80,7 +83,7 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
+Use Karla for body/UI text and Archivo Narrow for display headings. Do not commit
 or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
@@ -91,11 +94,12 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
+- When uncertain, keep the item in `docs/knowledge-bank/public-claims-inventory.md`
+  as a candidate claim instead of projecting it onto public pages.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Install the exact approved resume PDF before production.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
