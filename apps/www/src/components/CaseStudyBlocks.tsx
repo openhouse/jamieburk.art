@@ -64,8 +64,13 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        Representative artifacts are recreated, redacted, or public-safe
+        examples. They show the shape of the system without exposing private
+        source material.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
@@ -93,6 +98,11 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        Known is public, confirmed, or safe to say. Open remains unresolved,
+        evolving, or pending review. Protected exists but should not be
+        published.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
@@ -101,6 +111,33 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+
+  return (
+    <section aria-labelledby="evidence-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-list">
+        Selected proof
+      </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        These public-safe claims are selected from a maintained proof bank. They
+        are intentionally bounded so the site can show real accomplishments
+        without publishing protected source material.
+      </p>
+      <ul className="mt-5 grid gap-3 md:grid-cols-2">
+        {item.evidence.map((evidence) => (
+          <li
+            className="rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 text-sm leading-6 text-jb-ink/76"
+            key={evidence}
+          >
+            {evidence}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -9,6 +9,8 @@ type WorkCardProps = {
 };
 
 export function WorkCard({ item }: WorkCardProps) {
+  const selectedProof = item.evidence[0];
+
   return (
     <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5 shadow-sm">
       <div className="flex flex-col gap-4">
@@ -22,6 +24,16 @@ export function WorkCard({ item }: WorkCardProps) {
           <p className="mt-2 font-medium text-jb-green">{item.subtitle}</p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
         </div>
+        {selectedProof ? (
+          <div className="border-l-2 border-jb-green pl-3">
+            <p className="text-xs font-semibold uppercase text-jb-blue">
+              Selected proof
+            </p>
+            <p className="mt-1 text-sm leading-6 text-jb-ink/76">
+              {selectedProof}
+            </p>
+          </div>
+        ) : null}
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
             <dt className="font-semibold text-jb-ink">What was unclear</dt>

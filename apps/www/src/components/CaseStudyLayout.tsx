@@ -1,5 +1,16 @@
 import type { ReactNode } from "react";
-import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
+import {
+  AtAGlance,
+  ArtifactGallery,
+  ArtifactList,
+  CareNote,
+  CreditsList,
+  EvidenceList,
+  KnownOpenProtected,
+  PublicSafetyNote,
+  SourceLayer,
+  VisibilityNote
+} from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
@@ -29,7 +40,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
@@ -39,6 +50,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
       </div>
       <div className="mt-14 space-y-12">
         <ArtifactList item={item} />
+        <EvidenceList item={item} />
         <ArtifactGallery item={item} />
         <KnownOpenProtected item={item} />
         <div className="grid gap-4 md:grid-cols-2">

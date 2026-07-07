@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { workItems } from "@/data/work";
 import { SITE_URL } from "@/lib/site-url";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofItems } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -16,7 +17,7 @@ const sections = [
     title: "Operating systems built",
     items: [
       "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "NYC Artist Coalition / FairRentNYC cultural-space fieldwork and campaign-memory infrastructure",
       "196 / Sunday Dinner onboarding and continuity systems"
     ]
   },
@@ -46,7 +47,7 @@ const sections = [
       "SQL",
       "Git / GitHub",
       "Docker / Dokku",
-      "QGIS",
+      "Geographic information system workflows (QGIS)",
       "Open-data workflows"
     ]
   }
@@ -65,8 +66,37 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding materials,
           documentation systems, launch support, and durable handoffs.
         </p>
+        <section className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Why this maps to Technical Operations
+          </h2>
+          <p className="mt-3 leading-8 text-jb-ink/76">
+            I build the practices that help teams stay focused, unblocked,
+            documented, and able to ship: planning rhythms, status updates,
+            decision logs, action trackers, onboarding guides, runbooks,
+            stakeholder updates, retros, and handoffs.
+          </p>
+        </section>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <JBCard className="md:col-span-2">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Selected defensible proof
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+            These claims come from a maintained proof bank and are selected for
+            this role surface. They are written to show scope without exposing
+            protected records.
+          </p>
+          <ul className="mt-5 grid gap-3 md:grid-cols-2">
+            {technicalOperationsProofItems.map((item) => (
+              <li className="flex gap-3 text-jb-ink/76" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </JBCard>
         {sections.map((section) => (
           <JBCard key={section.title}>
             <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>

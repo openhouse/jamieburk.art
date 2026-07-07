@@ -19,7 +19,9 @@ export default function WorkPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           These case studies show a recurring pattern: under-structured situations
           becoming usable systems, public-facing tools, documentation, decision
-          trails, and durable handoffs.
+          trails, and durable handoffs. Each project is presented through a
+          public-safe proof claim, then expanded with role fit, artifacts, and
+          publication boundaries.
         </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
