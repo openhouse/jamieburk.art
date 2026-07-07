@@ -26,8 +26,16 @@ export default function AboutPage() {
             systems.
           </p>
           <p>
+            I make messy public systems easier to enter, remember, and repair.
+          </p>
+          <p>
+            Structure grows out of the material you are working with: the
+            relationships, constraints, records, needs, risks, and emerging
+            patterns already present in the system.
+          </p>
+          <p>
             Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
+            emerging goals, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
