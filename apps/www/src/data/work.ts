@@ -439,7 +439,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes, including a $490,539 public funding recommendation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -449,7 +449,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+      "Planning materials, public-benefit documentation, stakeholder context, and funding-support materials for a proposed four-commercial-space / three-home adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -462,9 +462,9 @@ const workItemsInput = [
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
-      "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
+      "Public-safe short proof page. Approved public-record scale and funding facts are included; private financial, legal, banking, property, and stakeholder details remain omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Current public resume, public-safe summary, and approved public-record facts. Additional public materials remain pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -473,14 +473,17 @@ const workItemsInput = [
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
+      "Approximately 6,500 sq. ft. historic building",
+      "Four commercial spaces and three homes in the proposed reuse plan",
+      "$490,539 public funding recommendation",
       "Historic preservation context",
       "Funding process support"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes, including a $490,539 public funding recommendation.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Named partners, current project status details, and supporting public-funding artifacts need approval before publication.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
