@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
+import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicLinks, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
@@ -36,6 +36,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
+          <PublicLinks item={item} />
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">

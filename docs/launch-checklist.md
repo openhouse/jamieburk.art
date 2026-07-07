@@ -11,6 +11,7 @@
 
 ## Content
 
+- [ ] Proofs bank reviewed for public-safe claim language.
 - [ ] Resume page links to approved PDF.
 - [ ] Resume PDF has selectable text.
 - [ ] Resume PDF contains no home address.

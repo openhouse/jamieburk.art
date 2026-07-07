@@ -17,6 +17,7 @@ Private source materials must live outside this repo.
 ## Allowed Public-Safe Materials
 
 - Public-safe summaries.
+- Proofs-bank claims that have been reviewed for newspaper-safe publication.
 - Representative diagrams.
 - Redacted examples.
 - Approved PDFs and public artifacts.
@@ -26,3 +27,10 @@ Private source materials must live outside this repo.
 ## Review Records
 
 Public-safety findings after a scan should be reviewed in the launch checklist or PR notes. Do not copy private values into logs or comments. If a finding is intentionally allowed, record the reason, owner, and review date.
+
+## Proofs Bank
+
+Use [Proofs Bank](./proofs-bank.md) as the public-safe knowledge base for
+professional accomplishment claims. The website should project selected claims
+from that bank for a specific audience and purpose; the bank itself should not
+contain private source material.

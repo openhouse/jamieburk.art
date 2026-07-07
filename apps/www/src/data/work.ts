@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old legacy industrial business move from phone-and-paper ordering into e-commerce, content, analytics, and operational workflow systems.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -141,6 +141,10 @@ const workItemsInput = [
     links: [
       { label: "Website", url: "https://www.harryepstein.com/" },
       {
+        label: "2009 online-store coverage",
+        url: "https://toolguyd.com/harry-epstein-launches-new-online-store/"
+      },
+      {
         label: "KCUR profile",
         url: "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive"
       }
@@ -160,12 +164,13 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
+      "Coverage of the online-store launch noted that previous orders had to be called in",
       "Public reporting later described online sales as roughly half the business by 2016",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business whose online sales were later reported as roughly half the business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -389,9 +394,9 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems that helped visiting and local artists find a foothold, build community, and participate in New York cultural life.",
+      "Created repeatable hosting, onboarding, RSVP, attendance, facilitation, documentation, and continuity systems that helped visiting and local artists find a foothold in New York cultural life.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "2012-2021",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -399,7 +404,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, hospitality, documentation, facilitation, and continuity handoffs.",
+      "Repeatable participation infrastructure for 300+ dated gatherings, resident artists, onboarding, hospitality, documentation, facilitation, and continuity handoffs.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -414,7 +419,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe aggregate summary from a private RSVP/attendance workbook and Jamie-reviewed private archive evidence. Raw records, names, contact details, and unapproved images are intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -422,15 +427,18 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "Recurring gathering systems",
+      "Private workbook documents 346 unique dated gathering records from 2012 to 2021",
+      "RSVP and attendance fields include yes/no, attended, did not attend, rates, scores, and total possible attendance",
       "Resident-artist support systems",
+      "20+ resident-artist participation supported by Jamie-reviewed private archive evidence",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across 300+ recurring gatherings and resident-artist contexts, supported by aggregate workbook and Jamie-reviewed archive evidence.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, photos, residency artifacts, and any specific attendance examples require consent and approval.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }
@@ -441,8 +449,8 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Translated a long-vacant historic building into a public-benefit redevelopment plan with adaptive reuse, commercial space, homes, funding documentation, and stakeholder coordination.",
-    role: "Project Planning & Documentation Support",
+      "Translated a long-vacant historic building into a public-benefit redevelopment plan; public records show a $490,539 CCED funding recommendation for the KC Town Hall project.",
+    role: "Project Planning & Public-Benefit Documentation Lead",
     years: "2020s",
     status: "Short proof page",
     featured: false,
@@ -451,8 +459,8 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, funding context, and stakeholder coordination materials for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "Planning materials, public-benefit documentation, funding context, and stakeholder coordination materials that supported a public-record funding recommendation.",
+    artifactTypes: ["guide", "source map", "template", "public handout"],
     artifacts: [
       {
         title: "Public-benefit documentation set",
@@ -463,10 +471,16 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      {
+        label: "Kansas City public record",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search="
+      }
+    ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public Kansas City legislative record, public-safe summary, and approved public materials pending.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -476,13 +490,14 @@ const workItemsInput = [
       "Redevelopment planning support",
       "Public-benefit documentation",
       "Historic preservation context",
+      "Public record shows a $490,539 Central City Economic Development funding recommendation for the KC Town Hall project",
       "Funding process support"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and public-benefit documentation for a long-vacant historic building; public records show a $490,539 CCED funding recommendation for the KC Town Hall project.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Named partners beyond public records, project-status details, and private funding materials need approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

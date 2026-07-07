@@ -40,6 +40,32 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   );
 }
 
+export function PublicLinks({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+
+  return (
+    <section aria-labelledby="public-links" className="rounded-lg border border-jb-ink/12 bg-jb-paper p-5">
+      <h2 className="text-xl font-semibold text-jb-ink" id="public-links">
+        Public links
+      </h2>
+      <ul className="mt-4 space-y-3 text-sm font-semibold">
+        {item.links.map((link) => (
+          <li key={`${link.label}-${link.url}`}>
+            <a
+              className="text-jb-blue hover:text-jb-green"
+              href={link.url}
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
