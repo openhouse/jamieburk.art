@@ -15,39 +15,33 @@ const sections = [
   {
     title: "Operating systems built",
     items: [
-      "HJE implementation and handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
-      "196 / Sunday Dinner onboarding and continuity systems"
+      "Jamie structured HJE implementation, content, analytics, and handoff systems for long-term e-commerce operations",
+      "Jamie helped build FairRentNYC campaign-memory infrastructure: running minutes, action trackers, source maps, and follow-up notes",
+      "Jamie helped create 196 / Sunday Dinner onboarding, hosting, facilitation, and continuity systems"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "Translated open civic data into CallNYC issue pathways and resident-facing next steps",
+      "Co-built WOWList event-discovery workflows for organizer publishing and community distribution",
+      "Supported HJE e-commerce releases across product, content, marketing, analytics, and operations"
+    ]
   },
   {
     title: "Documentation and working memory",
     items: [
-      "Source maps",
-      "Public guidance",
-      "Resource libraries",
-      "Handbooks / templates",
-      "Meeting synthesis",
-      "Decision records"
+      "Maintains source maps that separate public evidence, open questions, and protected context",
+      "Writes public guidance, stakeholder updates, resource libraries, handbooks, and reusable templates",
+      "Turns meeting synthesis into decision records, action trackers, retrospectives, and durable handoffs"
     ]
   },
   {
     title: "Tools and technical environments",
     items: [
-      "JavaScript / TypeScript",
-      "Node.js",
-      "React / Next.js",
-      "Ember.js",
-      "Python / Django",
-      "SQL",
-      "Git / GitHub",
-      "Docker / Dokku",
-      "QGIS",
-      "Open-data workflows"
+      "Coordinates work across product, design, engineering, leadership, legal, communications, and external stakeholders",
+      "Works in JavaScript / TypeScript, Node.js, React / Next.js, Ember.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, and open-data workflows",
+      "Uses tools as implementation support: requirements, planning cycles, launch checks, status reporting, onboarding, and measurement"
     ]
   }
 ];
@@ -60,10 +54,10 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          I build the operating backbone teams need to move: planning rhythms,
+          decision logs, action trackers, onboarding materials, documentation
+          systems, risk surfacing, status updates, launch support,
+          retrospectives, and durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
