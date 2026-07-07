@@ -181,25 +181,25 @@ const workItemsInput = [
     title: "FairRentNYC / Commercial Rent Stabilization",
     slug: "fair-rent-nyc",
     series: "Civic Documentation",
-    subtitle: "Coalition memory and civic documentation systems",
+    subtitle: "NYC Artist Coalition fieldwork and campaign memory systems",
     summary:
-      "Helped structure and steward shared campaign documentation and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Helped cultural-space and small-business affordability work become documented, source-backed, consent-aware, and usable across Fair Rent NYC, NYC Artist Coalition, CRS, and aligned partner contexts.",
+    role: "Cultural-Space Fieldworker & Coalition Infrastructure Support",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
     visibility: "public-safe",
     whatWasUnclear:
-      "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
+      "The work involved cultural spaces, small businesses, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, next-step trackers, decision records, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign documentation.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Running minutes, next-step trackers, decision records, source maps, legal/policy question logs, public-data framing, consent-aware field follow-up, public-safe explanations, and shared campaign documentation.",
+    artifactTypes: ["source map", "meeting memory", "decision record", "public handout", "workflow"],
     artifacts: [
       {
         title: "Campaign documentation spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "A shared documentation structure for meetings, next steps, decision context, public-safe continuity, and no-surprises coordination.",
         type: "meeting memory"
       },
       {
@@ -209,10 +209,10 @@ const workItemsInput = [
         type: "source map"
       },
       {
-        title: "Policy question log",
+        title: "Cultural-space follow-up workflow",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
-        type: "decision record"
+          "A consent-aware fieldwork pattern for moving from events and conversations to clear ownership, source context, and appropriate next steps.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -221,40 +221,50 @@ const workItemsInput = [
       "Documentation",
       "Product Operations",
       "Source-Backed Memory",
-      "Public-Facing Tools"
+      "Public-Facing Tools",
+      "Cultural Infrastructure"
     ],
     capabilities: [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
       "Public Guidance",
-      "Decision Records"
+      "Decision Records",
+      "Consent-Aware Follow-Up"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/contact/" },
+      { label: "NYC Artist Coalition priorities", url: "https://nycartc.com/priorities/" },
+      { label: "Let NYC Dance / Cabaret Law repeal", url: "https://nycartc.com/letnycdance/" },
+      { label: "Fair Rent NYC", url: "https://fairrentnyc.nycartc.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
-    credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
+      "Public NYC Artist Coalition and Fair Rent NYC pages, public campaign materials where approved, public-safe meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+    credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Fair Rent NYC collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
-      note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
+      note: "Collective-work language is required: participated in, contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary. Current-work details are time-bound and collaborator/material approvals are still required before adding named private evidence.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "NYC Artist Coalition public mission and priorities around informal and affordable community spaces",
+      "Cabaret Law repeal participation as collective advocacy, not sole-credit proof",
       "Shared campaign documentation and coordination infrastructure",
       "Running minutes, decision records, next-step trackers, and source maps",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "Public-data framing, consent-aware follow-up, and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign documentation, coordination documents, source maps, and follow-up systems.",
+        "Jamie participates as a cultural-space fieldworker and coalition infrastructure support, helping structure public-safe campaign documentation, source maps, data framing, and consent-aware follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which current-work details, specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
-        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
+        "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, unapproved quotes, and venue-level lease or landlord details are omitted."
     }
   },
   {

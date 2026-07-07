@@ -55,6 +55,53 @@ Do not say:
 - "2x revenue" unless Jamie later approves a public-safe source.
 - Internal revenue, customer, dashboard, vendor, or operations details.
 
+## NYC Artist Coalition
+
+Status: Strong for public mission, public advocacy priorities, and careful
+description of Jamie's current lane. Use collective-work language.
+
+Public-safe claim:
+Jamie participates in NYC Artist Coalition work as a cultural-space fieldworker
+and operating-infrastructure steward: helping cultural-space affordability
+concerns become documented, consent-aware, source-backed, and usable inside
+broader Commercial Rent Stabilization coordination.
+
+Evidence basis:
+- NYC Artist Coalition's public website describes the coalition as artists,
+  creative organizations, community leaders, activists, policy makers, and
+  specialists providing mutual support and advocating for informal and
+  affordable community spaces in NYC.
+- Public NYC Artist Coalition priority pages frame the work around preventing
+  criminalization, access to support, affordability, Office of Nightlife
+  accountability, M.A.R.C.H. transparency, commercial lease protections, and
+  Commercial Rent Stabilization.
+- The public Let NYC Dance page says NYC Artist Coalition members identified the
+  Cabaret Law as a major issue shuttering cultural spaces, and that a broader
+  coalition of advocates fought for repeal. Use this as collective advocacy
+  proof, not sole-credit proof.
+- Public-safe running minutes identify Jamie's lane as small-business owner /
+  SBU signer, NYC Artist Coalition cultural-space fieldworker, and Fair Rent
+  NYC / CRS infrastructure and archive support.
+- Current public-safe working records center Jamie's coalition infrastructure
+  work on legal/bill-text alignment support, Comptroller data framing,
+  cultural-space field follow-up, SBU launch media/funnel coordination, and
+  consent-aware follow-up practices.
+
+Website projection:
+Use NYC Artist Coalition as part of the civic operations proof: cultural-space
+fieldwork, consent-aware follow-up, public/private boundaries, source-backed
+campaign memory, and coalition coordination across NAC, Fair Rent NYC, CRS, and
+SBU / Action Lab contexts.
+
+Do not say:
+- Jamie is the sole leader, official spokesperson, or owner of NYC Artist
+  Coalition.
+- NYC Artist Coalition alone repealed the Cabaret Law.
+- Jamie authored legal advice or owned legal strategy.
+- Raw meeting notes, private transcripts, private stakeholder lists, venue-level
+  lease / landlord details, private correspondence, internal strategy, or
+  unapproved quotes.
+
 ## FairRentNYC / Commercial Rent Stabilization
 
 Status: Strong for operations, documentation, source-memory, and public-data
@@ -63,7 +110,9 @@ framing. Use careful collective-work language.
 Public-safe claim:
 Jamie helped structure shared campaign memory, source maps, decision/action
 records, policy questions, public-data framing, and follow-up systems across
-commercial rent stabilization collaboration work.
+Commercial Rent Stabilization collaboration work, including alignment among
+Fair Rent NYC, NYC Artist Coalition, SBU / Action Lab, and other campaign
+partners where appropriate.
 
 Evidence basis:
 - Public-safe running minutes identify the collaboration space and its purpose:
@@ -72,14 +121,17 @@ Evidence basis:
 - Public-safe planning records show Jamie preparing legal/provenance packets,
   tracking state-bill text changes, supporting alignment steps, and refining a
   policy-neutral Comptroller data ask.
+- Public-safe planning records describe current work lanes as legal / bill-text
+  alignment, Comptroller data framing, cultural-space field follow-up, and SBU
+  launch media.
 - Public-safe policy/data handouts frame aggregate commercial vacancy and lease
   cost data without exposing raw filings, tenant names, landlord names, tax
   identifiers, lease records, or confidential microdata.
 
 Website projection:
 Use this as civic operations proof: source-backed documentation, public-data
-translation, cross-organization coordination, and careful public/private
-boundaries.
+translation, cultural-space fieldwork, cross-organization coordination, and
+careful public/private boundaries.
 
 Do not say:
 - Jamie authored legal advice.
