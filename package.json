@@ -15,6 +15,11 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "public-safety": "node scripts/check-public-safety.mjs",
+    "check:public-safety": "npm run public-safety",
+    "check:routes": "node scripts/check-routes.mjs",
+    "preflight:staging": "node scripts/preflight-staging.mjs",
+    "preflight:production": "node scripts/preflight-production.mjs",
+    "check": "npm run typecheck && npm run lint && npm run build && npm run public-safety"
   }
 }

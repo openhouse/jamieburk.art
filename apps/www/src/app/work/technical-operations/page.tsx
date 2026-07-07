@@ -17,12 +17,20 @@ const sections = [
     items: [
       "HJE implementation and handoff systems",
       "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "NAC public campaign websites and reference surfaces",
       "196 / Sunday Dinner onboarding and continuity systems"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: [
+      "CallNYC",
+      "WOWList",
+      "HJE e-commerce",
+      "Campaign website delivery",
+      "Concurrent project tracking",
+      "Risk surfacing and launch readiness"
+    ]
   },
   {
     title: "Documentation and working memory",
@@ -32,7 +40,9 @@ const sections = [
       "Resource libraries",
       "Handbooks / templates",
       "Meeting synthesis",
-      "Decision records"
+      "Decision records",
+      "Runbooks and durable handoffs",
+      "Source-backed team memory"
     ]
   },
   {
@@ -47,7 +57,8 @@ const sections = [
       "Git / GitHub",
       "Docker / Dokku",
       "QGIS",
-      "Open-data workflows"
+      "Open-data workflows",
+      "AI evals and human review"
     ]
   }
 ];
@@ -62,8 +73,9 @@ export default function TechnicalOperationsPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
           environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding materials,
-          documentation systems, launch support, and durable handoffs.
+          planning rhythms, decision logs, action trackers, dependency notes,
+          onboarding materials, documentation systems, launch support, and
+          durable handoffs.
         </p>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
