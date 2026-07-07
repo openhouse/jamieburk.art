@@ -90,18 +90,18 @@ const workItemsInput = [
     slug: "harry-j-epstein",
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
-    summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
     featured: true,
     priority: 1,
     visibility: "public-safe",
+    summary:
+      "Helped translate an 80+ year-old industrial supply business into searchable e-commerce, dealer-aware checkout, content, analytics, marketing, and operational workflows while preserving its public voice.",
     whatWasUnclear:
-      "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
+      "An 80+ year-old industrial supply business had paper-and-phone operations, dealer-pricing practices, customer trust, inventory knowledge, product judgment, and a distinctive public voice that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, content, marketing, and operational workflows that contributed to 2x revenue growth while preserving the company's distinctive institutional voice.",
+      "Searchable catalog architecture, checkout, dealer-aware access, SEO, analytics, blog publishing, content systems, and operational workflows that contributed to 2x revenue growth while preserving the company's distinctive institutional voice.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -152,8 +152,8 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
+      "Catalog navigation, search, checkout, dealer-pricing, SEO, analytics, and blog systems",
+      "Paper-and-phone operations translated into maintainable e-commerce workflows",
       "Contributed to 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
@@ -331,7 +331,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community event-calendar and distribution platform adopted by local calendar organizers across roughly 35 city ecosystems.",
+      "Co-built a Python / Django + Ember.js community event-calendar and distribution platform that grew to 1,800+ users, 16,000+ posts/events, and 35+ active city scenes.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -341,7 +341,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed easy-to-adopt ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event publishing, list/tag discovery, follows, saved events, email digests, Google Calendar synchronization, geolocation, and organizer-facing distribution workflows.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -364,9 +364,9 @@ const workItemsInput = [
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
     evidence: [
       "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Roughly 35 city ecosystems reached"
+      "1,800+ users and 16,000+ posts/events in archived production data",
+      "35+ active city scenes using a conservative activity threshold",
+      "Email digests, Google Calendar sync, geolocation, follows, and saved events"
     ],
     knownOpenProtected: {
       known:
