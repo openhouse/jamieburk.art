@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run knowledge-bank`
+- `npm run public-safety`
+- `npm run check:routes`
 
 ## Public-Safety Rules
 
@@ -36,6 +39,30 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+## Knowledge Bank
+
+Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
+public-safe claim layer.
+
+Website copy should project from the knowledge bank and stay optimized for
+clarity, audience, and purpose.
+
+Do not strengthen a claim in a public page unless the stronger claim exists in
+the bank with source basis, status, guardrail, and public-use boundary.
+
+Every structured claim needs status, support level, evidence class, public
+wording, guardrail, protected boundaries, and last-reviewed date.
+
+The website should read as a composed portfolio, not a claims database.
+
+Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Chad Lens
+
+Minimize the reader's burden. Make Jamie visible as the actor, explain what the
+work made usable, translate specialized language for hiring and public-sector
+readers, and use collective-work language where the work was collective.
 
 ## Scope Rules
 
