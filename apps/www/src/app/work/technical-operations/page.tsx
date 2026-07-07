@@ -17,12 +17,13 @@ const sections = [
     items: [
       "HJE implementation and handoff systems",
       "FairRentNYC / NYC Artist Coalition campaign-memory infrastructure",
+      "NAC public campaign websites and reference surfaces",
       "196 / Sunday Dinner onboarding and continuity systems"
     ]
   },
   {
     title: "Delivery and launch",
-    items: ["CallNYC", "WOWList", "HJE e-commerce"]
+    items: ["CallNYC", "WOWList", "HJE e-commerce", "Campaign website delivery"]
   },
   {
     title: "Documentation and working memory",
@@ -32,7 +33,8 @@ const sections = [
       "Resource libraries",
       "Handbooks / templates",
       "Meeting synthesis",
-      "Decision records"
+      "Decision records",
+      "Source-backed team memory"
     ]
   },
   {
@@ -47,7 +49,8 @@ const sections = [
       "Git / GitHub",
       "Docker / Dokku",
       "QGIS",
-      "Open-data workflows"
+      "Open-data workflows",
+      "AI evals and human review"
     ]
   }
 ];
