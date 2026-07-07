@@ -111,6 +111,47 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   );
 }
 
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+  return (
+    <section aria-labelledby="evidence-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-list">
+        Evidence
+      </h2>
+      <ul className="mt-4 list-disc space-y-2 pl-6 text-sm leading-6 text-jb-ink/76">
+        {item.evidence.map((evidence) => (
+          <li key={evidence}>{evidence}</li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+export function PublicLinks({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+  return (
+    <section aria-labelledby="public-links">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="public-links">
+        Public links
+      </h2>
+      <ul className="mt-4 space-y-2 text-sm leading-6">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a
+              className="font-semibold text-jb-blue hover:text-jb-green"
+              href={link.url}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 function NoteBlock({
   title,
   children,

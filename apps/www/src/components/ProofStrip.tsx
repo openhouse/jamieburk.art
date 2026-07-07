@@ -1,16 +1,10 @@
-const proofItems = [
-  "14+ years creating operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to 2x revenue growth for a legacy e-commerce business",
-  "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
-  "Co-built community web systems that reached roughly 35 city ecosystems",
-  "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists"
-];
+import { homeProofItems } from "@/data/proofs";
 
 export function ProofStrip() {
   return (
     <section aria-label="Selected proof points" className="bg-jb-blue text-jb-paper">
       <div className="jb-frame grid gap-px py-px sm:grid-cols-2 lg:grid-cols-5">
-        {proofItems.map((item) => (
+        {homeProofItems.map((item) => (
           <div className="min-h-32 bg-jb-blue px-5 py-6" key={item}>
             <p className="text-base font-semibold leading-6">{item}</p>
           </div>

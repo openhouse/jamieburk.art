@@ -37,6 +37,12 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Proof Bank
+
+Use `docs/proofs-bank.md` as the public-safe knowledge base for Jamie's
+professional accomplishment claims. Website copy should project from that bank
+and stay optimized for clarity, audience, and purpose.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

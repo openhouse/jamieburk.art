@@ -88,6 +88,9 @@ or serve private, proprietary, or unlicensed font files. See
 
 ## Content Rules
 
+- Treat `docs/proofs-bank.md` as the public-safe source bank for professional
+  accomplishment claims. Site copy should project from that bank rather than
+  inventing proof language in components.
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
   unapproved photos, private fonts, credentials, stakeholder lists, internal
@@ -102,11 +105,12 @@ or serve private, proprietary, or unlicensed font files. See
 - Approved public contact path.
 - Hide LinkedIn and GitHub unless exact public URLs are confirmed.
 - Hide screenshots/artifacts unless reviewed for public use.
-- Confirm exact proof metrics.
+- Keep proof metrics aligned with `docs/proofs-bank.md`.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
 - Confirm `npm run public-safety` and production preflight pass.
 
-See `docs/release-checklist.md` and `docs/content-safety.md`.
+See `docs/release-checklist.md`, `docs/content-safety.md`, and
+`docs/proofs-bank.md`.

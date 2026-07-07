@@ -20,6 +20,7 @@
 - approved resume or resume hidden
 - approved contact path or optional contact rows hidden
 - no visible TODOs
+- site claims aligned with `docs/proofs-bank.md`
 - public-safety production check passes
 - production preflight passes
 - redirects verified
@@ -30,7 +31,7 @@
 ## Required Before Indexing
 
 - Jamie approves exact content
-- claims approved or softened
+- claims approved or softened in `docs/proofs-bank.md`
 - artifacts approved or hidden
 - canonical URLs final
 - robots/indexing intentionally enabled
