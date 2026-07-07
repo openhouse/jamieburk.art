@@ -86,12 +86,20 @@ The app serves on port `3000`; Dokku/nginx should proxy the public domain to the
 container. See `docs/deployment.md` for the staging and production command
 drafts, Docker build args, and verification checklist.
 
+## Professional Proofs Bank
+
+Use `docs/proofs-bank.md` as the public-safe knowledge base for Jamie's
+professional accomplishment claims. It is safe to keep in a public repo: no
+private paths, raw transcripts, private coalition notes, private correspondence,
+client-private material, raw community records, or unapproved personal details.
+The website should be a clear projection of this bank, not a dump of the
+underlying evidence.
+
 ## Claims Inventory
 
-Use `docs/public-claims-inventory.md` as the internal source of truth for public
-claim strength, recommended wording, evidence classes, and protected material.
-Do not turn private source packages, raw transcripts, or raw community records
-into public proof.
+Use `docs/public-claims-inventory.md` as the editorial working inventory for
+recommended wording, approval routing, source classes, and page-specific limits.
+Start from `docs/proofs-bank.md` before strengthening any website claim.
 
 ## Typeface Policy
 

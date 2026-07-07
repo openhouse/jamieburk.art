@@ -1,8 +1,10 @@
 # Public Claims Inventory
 
-Status: source-backed working inventory for the production-readiness branch. This is not a public case-study page.
+Status: editorial working inventory for the production-readiness branch. This is not a public case-study page.
 
-This document records what the site can say without overstating Jamie's role or exposing protected material. It uses archive titles and source classes rather than private local paths. Raw transcripts, private correspondence, private community records, user data, contact lists, dashboards, and legal-review materials remain protected.
+Use `docs/proofs-bank.md` as the public-safe knowledge base of Jamie's professional accomplishments. This document translates that bank into page-specific wording, approval routing, and launch decisions.
+
+It records what the site can say without overstating Jamie's role or exposing protected material. It uses archive titles and source classes rather than private local paths. Raw transcripts, private correspondence, private community records, user data, contact lists, dashboards, and legal-review materials remain protected.
 
 ## Discussion
 
@@ -275,7 +277,8 @@ Should strengthen:
 
 - HJE case page: more concrete implementation nouns.
 - WOWList case page: include archive-scale counts with privacy caveat.
-- Claims inventory should become the internal source of truth for future copy edits.
+- `docs/proofs-bank.md` should become the durable source of truth for professional accomplishment claims.
+- Claims inventory should remain the editorial source of truth for page-specific wording and approval routing.
 
 Should reject:
 

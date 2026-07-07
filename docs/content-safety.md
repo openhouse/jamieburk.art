@@ -6,6 +6,9 @@ artifacts, and careful collective-work language.
 
 ## Publishing Rules
 
+- Treat `docs/proofs-bank.md` as the public-safe knowledge base for professional
+  accomplishment claims. A website claim should trace back to a bank claim or be
+  added to the bank before it appears on a page.
 - Minimize the reader's burden without exposing private context.
 - Use action verbs that show what Jamie clarified, structured, coordinated,
   documented, built, co-built, stewarded, translated, synthesized, maintained,

@@ -21,6 +21,7 @@ Use this checklist before promoting a reviewed staging commit to production.
 - [ ] No phone number appears on website pages.
 - [ ] Public email is approved before website display.
 - [ ] LinkedIn and GitHub URLs are approved before website display.
+- [ ] `docs/proofs-bank.md` has been reviewed as the public-safe source of professional accomplishment claims.
 - [ ] `docs/public-claims-inventory.md` has been reviewed against the final page copy.
 - [ ] Proof metrics are approved or softened.
 - [ ] Collaborator names, photos, quotes, screenshots, and artifacts are approved or omitted.
