@@ -14,3 +14,14 @@ npm-debug.log
 .npm-cache
 README.local.md
 *.local
+*.private.*
+private/
+archive-private/
+raw/
+transcripts-private/
+client-private/
+legal-review/
+support-materials-private/
+supporting-materials/
+*.key
+*.pem
