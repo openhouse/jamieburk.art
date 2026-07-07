@@ -37,6 +37,25 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Knowledge Bank
+
+Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
+public-safe claim layer.
+
+Website copy should project from the knowledge bank and stay optimized for
+clarity, audience, and purpose.
+
+Do not strengthen a claim in a public page unless the stronger claim exists in
+the bank with source basis, status, guardrail, and public-use boundary.
+
+The website should read as a composed portfolio, not a claims database.
+
+## Chad Lens
+
+Minimize the reader's burden. Make Jamie visible as the actor, explain what the
+work made usable, translate specialized language for hiring and public-sector
+readers, and use collective-work language where the work was collective.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

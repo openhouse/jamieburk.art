@@ -1,0 +1,55 @@
+# Production Readiness
+
+This branch adds the knowledge-bank layer from the M-family
+production-readiness review.
+
+It includes:
+
+- Public-safe knowledge bank in `docs/knowledge-bank/`.
+- Structured proof data in `apps/www/src/data/proofs.ts`.
+- Proof projection guidance for homepage, resume, Technical Operations, work
+  cards, case studies, and lab pages.
+- Chad-lens editorial guidance.
+- One public-safety scanner with proof-bank checks.
+- Launch blockers for contact, resume, metrics, collaborator consent,
+  screenshots, and production deploy.
+
+Do not merge donor branches wholesale. This branch hand-composes the strongest
+ideas from the production-readiness-composite family.
+
+## Launch Gates
+
+- [ ] `npm ci`
+- [ ] `npm run typecheck`
+- [ ] `npm run lint`
+- [ ] `npm run build`
+- [ ] `npm run check`
+- [ ] `npm run public-safety`
+- [ ] `npm run preflight:staging`
+- [ ] `npm run preflight:production`
+- [ ] Docker build
+- [ ] Docker run
+- [ ] Route smoke tests
+- [ ] Knowledge-bank review
+- [ ] Chad-lens review
+- [ ] Proof projection review
+- [ ] Jamie final approval
+
+## Manual Review Checklist
+
+- [ ] Every homepage proof claim exists in the knowledge bank.
+- [ ] Every resume-page proof claim exists in the knowledge bank.
+- [ ] Every Technical Operations proof row exists in the knowledge bank.
+- [ ] Work items with strong claims have proofBankIds.
+- [ ] Pending/private claims are not projected onto public pages.
+- [ ] Careful claims include their guardrails.
+- [ ] Metrics are approved or softened.
+- [ ] Collaborator-sensitive claims are approved or omitted.
+- [ ] Source-Backed Team Memory does not expose private collaborator/client
+  context.
+- [ ] Case studies use Known / Open / Protected where needed.
+- [ ] Public-safety scanner passes.
+- [ ] Chad-lens review passes.
+
+Production deploy remains blocked until Jamie explicitly approves the reviewed
+content and release.

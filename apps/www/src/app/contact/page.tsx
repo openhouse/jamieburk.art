@@ -23,7 +23,21 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.hasPublicEmail ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.emailHref}
+                  >
+                    {site.emailLabel}
+                  </a>
+                ) : (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.resumePath}
+                  >
+                    Direct contact details are in the current resume PDF
+                  </a>
+                )}
               </dd>
             </div>
             <div>
@@ -33,13 +47,31 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                {site.linkedinHref ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.linkedinHref}
+                  >
+                    {site.linkedinLabel}
+                  </a>
+                ) : (
+                  "Not published on this site."
+                )}
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                {site.githubHref ? (
+                  <a
+                    className="font-semibold text-jb-blue hover:text-jb-green"
+                    href={site.githubHref}
+                  >
+                    {site.githubLabel}
+                  </a>
+                ) : (
+                  "Not published on this site."
+                )}
               </dd>
             </div>
             <div>

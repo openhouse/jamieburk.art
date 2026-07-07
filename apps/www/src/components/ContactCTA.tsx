@@ -1,4 +1,5 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function ContactCTA() {
   return (
@@ -11,7 +12,9 @@ export function ContactCTA() {
         <JBButton href="/resume" variant="secondary">
           Download resume
         </JBButton>
-        <JBButton href="/contact">Email Jamie</JBButton>
+        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
+          Contact Jamie
+        </JBButton>
       </div>
     </section>
   );
