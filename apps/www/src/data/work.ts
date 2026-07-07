@@ -257,6 +257,98 @@ const workItemsInput = [
     }
   },
   {
+    title: "NYC Artist Coalition Campaign Infrastructure",
+    slug: "nyc-artist-coalition",
+    series: "Civic Campaign Infrastructure",
+    subtitle: "Identity and public campaign websites for cultural-space advocacy",
+    summary:
+      "Co-founded NYC Artist Coalition; designed its visual identity and built public campaign websites for NYCArtC, Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC.",
+    role: "Co-founding Member & Campaign Web Systems Lead",
+    years: "2017-Present",
+    status: "Short proof page",
+    featured: true,
+    priority: 2.5,
+    visibility: "public-safe",
+    whatWasUnclear:
+      "Artist-led and community cultural spaces needed public-facing campaign surfaces that could make safety, enforcement, support, and displacement issues understandable without exposing private coalition context.",
+    whatBecameUsable:
+      "A shared visual identity and a set of public campaign websites with calls to action, coalition framing, press links, public resources, progress markers, and issue explanations.",
+    artifactTypes: ["website", "guide", "public handout", "press"],
+    artifacts: [
+      {
+        title: "Coalition identity and campaign sites",
+        description:
+          "Logo and public web surfaces for NYC Artist Coalition and related campaign efforts.",
+        type: "website"
+      },
+      {
+        title: "Public calls to action",
+        description:
+          "Issue pages that translated cultural-space advocacy into resident-facing and council-facing asks.",
+        type: "guide"
+      },
+      {
+        title: "Campaign reference surfaces",
+        description:
+          "Public links, press references, coalition context, and progress markers that helped supporters understand the work.",
+        type: "public handout"
+      }
+    ],
+    tags: [
+      "Civic Technology",
+      "Campaign Infrastructure",
+      "Information Architecture",
+      "Web Systems",
+      "Cultural Infrastructure",
+      "Public-Facing Tools"
+    ],
+    capabilities: [
+      "Identity Design",
+      "Campaign Websites",
+      "Calls to Action",
+      "Public Guidance",
+      "Coalition Documentation"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
+    ],
+    careNote:
+      "Public-safe summary of collective campaign work. The public sites are shown as campaign infrastructure; private coalition records, CMS/admin details, strategy notes, and unapproved collaborator material stay offline.",
+    sourceLayer:
+      "Public campaign websites, public-safe authorship summary, public campaign materials, and private coalition/source records intentionally omitted.",
+    credits: [
+      "Jamie Burkart",
+      "NYC Artist Coalition collaborators",
+      "Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC campaign collaborators"
+    ],
+    publicSafety: {
+      note: "Use collective-work language for policy outcomes. The individual claim is the identity and website infrastructure, not sole ownership of campaign wins."
+    },
+    currentStatus: "Public-safe short proof page. Private coalition materials are not shown.",
+    group: "Civic and public-facing systems",
+    roleFit:
+      "Civic technology, campaign infrastructure, public-facing web systems, information architecture, documentation, and implementation support.",
+    evidence: [
+      "Co-founded NYC Artist Coalition",
+      "Designed NYC Artist Coalition visual identity",
+      "Built public campaign websites for NYCArtC, Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC",
+      "Translated cultural-space safety, support, enforcement, and displacement issues into public calls to action",
+      "Maintained public-safe boundaries around private coalition context"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie co-founded NYC Artist Coalition, designed its visual identity, and built public campaign websites for NAC and related cultural-space advocacy campaigns.",
+      open:
+        "Screenshots, design source files, CMS records, collaborator names, and detailed build history require separate review before publication.",
+      protected:
+        "Private coalition notes, strategy records, admin credentials, contact lists, raw source files, private correspondence, and unapproved collaborator details are omitted."
+    }
+  },
+  {
     title: "CallNYC.org",
     slug: "callnyc",
     series: "Civic Prototype",
@@ -516,6 +608,7 @@ export type WorkSlug =
   | "fair-rent-nyc"
   | "harry-j-epstein"
   | "kc-town-hall"
+  | "nyc-artist-coalition"
   | "wowlist";
 
 export const featuredWork = workItems.filter((item) => item.featured);

@@ -81,6 +81,41 @@ Avoid: claiming Jamie led the movement, owned the bill, provided legal advice,
 represented a coalition position alone, or published private coalition notes,
 stakeholder lists, legal-review materials, private emails, or unapproved quotes.
 
+### NYC Artist Coalition Campaign Infrastructure
+
+Approved wording:
+
+> Co-founded NYC Artist Coalition; designed its visual identity and built
+> public campaign websites for NYCArtC, Let NYC Dance, Save NYC Spaces, Talks
+> Not Raids, and FairRentNYC, translating cultural-space advocacy into usable
+> public calls to action.
+
+Use for: homepage proof strip, resume page, NYC Artist Coalition proof page,
+technical operations page, civic/public-facing systems positioning.
+
+Evidence basis: Jamie-approved authorship claim, public campaign websites, and
+public NAC / campaign materials. The public sites externally verify the
+artifacts; private admin credentials, source files, strategy notes, and
+coalition records stay offline.
+
+Public sources:
+
+- NYC Artist Coalition  
+  https://nycartc.com/
+- FairRentNYC  
+  https://fairrentnyc.nycartc.com/
+- Talks Not Raids  
+  https://talksnotraids.com/
+- Let NYC Dance  
+  https://letnycdance.nycartc.com/
+- Save NYC Spaces  
+  https://savenycspaces.nycartc.com/
+
+Avoid: claiming Jamie alone won policy outcomes, publishing private coalition
+material, overstating the sites as official government services, or exposing CMS
+admin details, private source files, unapproved collaborator details, contact
+lists, or strategy records.
+
 ### WOWList.org
 
 Approved wording:
@@ -199,9 +234,11 @@ Approved current set:
    for a legacy industrial business.
 3. Built shared civic operating memory: running minutes, source maps, action
    trackers, and review lanes across a commercial-rent campaign.
-4. Co-built a Django / Ember community calendar used across 35+ active city
+4. Designed NYC Artist Coalition's visual identity and built public campaign
+   websites for cultural-space safety, support, and anti-displacement work.
+5. Co-built a Django / Ember community calendar used across 35+ active city
    scenes.
-5. Created repeatable hosting and continuity systems across 300+ gatherings and
+6. Created repeatable hosting and continuity systems across 300+ gatherings and
    20+ resident artists.
 
 ## Chad Lens

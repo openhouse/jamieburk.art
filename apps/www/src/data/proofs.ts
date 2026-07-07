@@ -52,6 +52,26 @@ export const proofClaims: ProofClaim[] = [
     avoid: ["Led the movement", "Owned the bill", "Provided legal advice"]
   },
   {
+    id: "nac-campaign-infrastructure",
+    approvedWording:
+      "Designed NYC Artist Coalition's visual identity and built public campaign websites for cultural-space safety, support, and anti-displacement work",
+    evidenceBasis: [
+      "Jamie-approved authorship claim",
+      "Public NYC Artist Coalition, Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC campaign websites"
+    ],
+    publicSources: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
+    ],
+    avoid: [
+      "Claiming Jamie alone won policy outcomes",
+      "Private coalition records, contact lists, strategy notes, or CMS/admin details"
+    ]
+  },
+  {
     id: "wowlist-active-scenes",
     approvedWording:
       "Co-built a Django / Ember community calendar used across 35+ active city scenes",
@@ -95,6 +115,7 @@ export const homeProofItems = proofClaims
       "operating-structure",
       "hje-revenue-growth",
       "fairrent-operating-memory",
+      "nac-campaign-infrastructure",
       "wowlist-active-scenes",
       "sunday-dinner-196"
     ].includes(claim.id)

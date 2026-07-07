@@ -27,6 +27,7 @@ const sections = [
     title: "Delivery and launch support",
     items: [
       "Concept through public launch",
+      "Campaign website delivery",
       "Recurring blocker resolution",
       "Cross-team dependency coordination",
       "Implementation handoffs",
@@ -43,6 +44,7 @@ const sections = [
       "Source maps",
       "Meeting synthesis",
       "Decision records",
+      "Public campaign references",
       "Resource libraries"
     ]
   },
