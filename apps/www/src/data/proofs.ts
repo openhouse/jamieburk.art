@@ -90,7 +90,7 @@ const proofClaimsInput = [
     short: "CRS legislative source map and provenance redline",
     claim:
       "Jamie created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language from NYC Council Intro 93 through Fair Rent NYC recommendations, SBJSA-derived provisions, and Albany S8319 revisions.",
-    useFor: ["CRS case study", "source-backed memory proof", "technical operations"],
+    useFor: ["CRS case study", "source-backed memory framing", "technical operations"],
     evidenceBasis: ["Current public resume", "legislative provenance redline"],
     limit: "Describe as source mapping and provenance work for discussion/review, not legal analysis.",
     href: "/work/fair-rent-nyc",
@@ -193,20 +193,5 @@ export const proofClaims = proofClaimSchema
   .sort((a, b) => a.priority - b.priority);
 
 export const homepageProofClaims = proofClaims.filter((claim) => claim.homepage);
-
-export const proofCategories = [
-  "Career shape",
-  "Operating systems",
-  "Civic systems",
-  "Community infrastructure",
-  "Professional development"
-] as const;
-
-export const proofPrinciples = [
-  "Known claims are public-safe and evidence-backed enough to say.",
-  "Use-with-care claims need collective language, context, and visible limits.",
-  "Open or protected source material stays out of the public site.",
-  "The website projects selected proof; it does not expose the archive."
-] as const;
 
 export type ProofClaim = z.infer<typeof proofClaimSchema>;

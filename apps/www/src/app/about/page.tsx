@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { createMetadata } from "@/lib/metadata";
@@ -53,11 +52,6 @@ export default function AboutPage() {
             documentation that helps future collaborators safely continue the
             work.
           </p>
-        </div>
-        <div className="mt-6">
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/proofs">
-            Read the public-safe proofs
-          </Link>
         </div>
       </div>
       <div className="mt-12 max-w-3xl">

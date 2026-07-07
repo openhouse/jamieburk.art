@@ -9,7 +9,7 @@ export function ProofStrip() {
         {homepageProofClaims.map((item) => (
           <Link
             className="min-h-32 bg-jb-blue px-5 py-6 transition-colors hover:bg-jb-green focus:bg-jb-green focus:outline-none focus:ring-4 focus:ring-jb-ochre"
-            href={(item.href ?? "/proofs") as Route}
+            href={(item.href ?? "/work") as Route}
             key={item.id}
           >
             <p className="text-xs font-semibold uppercase text-jb-paper/72">

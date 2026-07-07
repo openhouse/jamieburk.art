@@ -11,7 +11,6 @@ const routes = [
   "/work/196-sunday-dinner",
   "/work/kc-town-hall",
   "/lab/source-backed-team-memory",
-  "/proofs",
   "/resume",
   "/about",
   "/contact",

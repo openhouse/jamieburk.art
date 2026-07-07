@@ -59,7 +59,7 @@ const sections = [
   }
 ];
 
-const operationsProofs = proofClaims.filter((claim) =>
+const operationsEvidence = proofClaims.filter((claim) =>
   [
     "hje-revenue-growth",
     "crs-campaign-memory",
@@ -101,15 +101,14 @@ export default function TechnicalOperationsPage() {
       </div>
       <section className="mt-12">
         <h2 className="text-3xl font-semibold text-jb-ink">
-          Selected proof claims
+          Selected evidence
         </h2>
         <p className="mt-3 max-w-3xl leading-7 text-jb-ink/72">
-          These are public-safe claims selected from the proofs bank because
-          they map directly to implementation, operations, documentation, and
-          handoff work.
+          These public-safe examples map directly to implementation,
+          operations, documentation, and handoff work.
         </p>
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
-          {operationsProofs.map((claim) => (
+          {operationsEvidence.map((claim) => (
             <JBCard key={claim.id}>
               <p className="text-xs font-semibold uppercase text-jb-blue">
                 {claim.category}
