@@ -15,6 +15,11 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www"
+    "check": "npm run check -w @jamie-burkart/www && npm run check:knowledge-bank && npm run check:public-safety",
+    "check:knowledge-bank": "node scripts/check-knowledge-bank.mjs",
+    "check:public-safety": "node scripts/check-public-safety.mjs",
+    "check:production-env": "node scripts/check-production-env.mjs",
+    "check:production": "npm run check && npm run check:production-env",
+    "check:routes": "node scripts/check-routes.mjs"
   }
 }
