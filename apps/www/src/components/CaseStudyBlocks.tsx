@@ -124,9 +124,9 @@ export function EvidenceList({ item }: { item: WorkMeta }) {
         Selected proof
       </h2>
       <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
-        These are public-safe claims selected from the repo proof bank. They are
-        intentionally bounded so the site can show real accomplishments without
-        publishing protected source material.
+        These public-safe claims are selected from a maintained proof bank. They
+        are intentionally bounded so the site can show real accomplishments
+        without publishing protected source material.
       </p>
       <ul className="mt-5 grid gap-3 md:grid-cols-2">
         {item.evidence.map((evidence) => (

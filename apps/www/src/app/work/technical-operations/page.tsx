@@ -84,8 +84,8 @@ export default function TechnicalOperationsPage() {
             Selected defensible proof
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
-            These claims come from the repo proof bank and are selected for this
-            role surface. They are written to show scope without exposing
+            These claims come from a maintained proof bank and are selected for
+            this role surface. They are written to show scope without exposing
             protected records.
           </p>
           <ul className="mt-5 grid gap-3 md:grid-cols-2">

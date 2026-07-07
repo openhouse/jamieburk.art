@@ -25,24 +25,28 @@ const defensibilitySchema = z.enum([
   "contextual"
 ]);
 
-const proofClaimSchema = z.object({
-  id: z.string(),
-  workSlug: workProofSlugSchema.optional(),
-  title: z.string(),
-  claim: z.string(),
-  detailedClaim: z.string(),
-  sourceBasis: z.array(sourceBasisSchema).min(1),
-  sourceNote: z.string(),
-  publicBoundary: z.string(),
-  defensibility: defensibilitySchema,
-  surfaces: z.object({
-    homepage: z.string().optional(),
-    resume: z.string().optional(),
-    workEvidence: z.string().optional(),
-    technicalOperations: z.string().optional()
-  }),
-  caution: z.string().optional()
-});
+const proofClaimSchema = z
+  .object({
+    id: z.string(),
+    workSlug: workProofSlugSchema.optional(),
+    title: z.string(),
+    claim: z.string(),
+    detailedClaim: z.string(),
+    sourceBasis: z.array(sourceBasisSchema).min(1),
+    sourceNote: z.string(),
+    publicBoundary: z.string(),
+    defensibility: defensibilitySchema,
+    surfaces: z.object({
+      homepage: z.string().optional(),
+      resume: z.string().optional(),
+      workEvidence: z.string().optional(),
+      technicalOperations: z.string().optional()
+    }),
+    caution: z.string().optional()
+  })
+  .refine((claim) => Object.values(claim.surfaces).some(Boolean), {
+    message: "Every proof claim needs at least one approved website projection."
+  });
 
 type ProofClaimInput = z.input<typeof proofClaimSchema>;
 
