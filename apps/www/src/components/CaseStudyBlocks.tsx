@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
-import { getProofsForWork } from "@/data/proofs";
 import type { WorkMeta } from "@/types/work";
 
 export function AtAGlance({ item }: { item: WorkMeta }) {
@@ -99,67 +98,6 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           <JBCard key={label}>
             <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
-          </JBCard>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export function ProofBankClaims({ item }: { item: WorkMeta }) {
-  const proofs = getProofsForWork(item.slug);
-
-  if (!proofs.length) return null;
-
-  return (
-    <section aria-labelledby="proof-bank-claims">
-      <div className="jb-reading">
-        <p className="text-sm font-semibold uppercase text-jb-blue">
-          Public proof bank
-        </p>
-        <h2 className="mt-2 text-2xl font-semibold text-jb-ink" id="proof-bank-claims">
-          Defensible claims
-        </h2>
-        <p className="mt-3 leading-7 text-jb-ink/74">
-          These claims are intentionally phrased for a public repo and public
-          website. Source files may stay offline; the publishable surface keeps
-          the claim, source basis, confidence level, and usage limits visible.
-        </p>
-      </div>
-      <div className="mt-5 grid gap-4 md:grid-cols-2">
-        {proofs.map((proof) => (
-          <JBCard key={proof.id}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
-              {proof.confidence} confidence / {proof.visibility}
-            </p>
-            <h3 className="mt-3 text-xl font-semibold text-jb-ink">
-              {proof.headline}
-            </h3>
-            <p className="mt-3 leading-7 text-jb-ink/76">{proof.projection.card}</p>
-            <div className="mt-5">
-              <p className="text-sm font-semibold text-jb-ink">Source basis</p>
-              <ul className="mt-2 space-y-2 text-sm leading-6 text-jb-ink/70">
-                {proof.sourceBasis.map((source) => (
-                  <li key={`${proof.id}-${source.label}`}>
-                    {source.url ? (
-                      <a
-                        className="text-jb-blue hover:text-jb-green"
-                        href={source.url}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        {source.label}
-                      </a>
-                    ) : (
-                      source.label
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <p className="mt-4 text-sm leading-6 text-jb-ink/70">
-              <strong>Use rule:</strong> {proof.publicUse}
-            </p>
           </JBCard>
         ))}
       </div>

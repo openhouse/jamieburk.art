@@ -1,17 +1,18 @@
-# Public Proof Bank
+# Internal Proof Knowledge Graph
 
-The public proof bank lives at `apps/www/src/data/proofs.ts`.
+The public-safe proof knowledge graph lives at `apps/www/src/data/proofs.ts`.
 
 Its job is to hold defensible, newspaper-safe claims about Jamie's professional
-work. The website imports from this bank and projects only the claims that fit a
-given page, audience, and purpose.
+work inside the repo. The website is a composed projection of this knowledge:
+each public page should select, sequence, and phrase claims for its audience and
+purpose instead of exposing the graph as an archive, ledger, or route.
 
 ## What Goes In
 
 Each claim needs:
 
 - A concise public claim.
-- A website-ready projection of that claim.
+- Website-ready projections where a claim supports a specific page purpose.
 - Source-basis notes that explain why the claim is defensible.
 - Confidence and visibility labels.
 - Public-use guidance.
@@ -32,6 +33,8 @@ artifacts, and careful collective-work language.
 - Prefer precise role language over inflated ownership language.
 - Use collective credit for coalition, campaign, community, and partner work.
 - Separate what is known from what needs approval.
+- Keep the proof graph repo-internal; do not add a public `/proofs` route
+  without explicit approval.
 - Describe active legal or policy questions as questions unless reviewed.
 - Publish aggregate archive findings only when the underlying records remain
   protected.
@@ -44,6 +47,6 @@ artifacts, and careful collective-work language.
 - Homepage proof strip imports `homepageProofs`.
 - Resume page selected impact imports `resumeProofHighlights`.
 - Technical Operations page imports `technicalOperationsProofRows`.
-- Case-study pages render related proof-bank claims through
-  `ProofBankClaims`.
-- `/proofs` renders the public proof-bank projection.
+- Case studies remain rhetorically composed pages that draw on the same claims
+  through edited summaries, evidence language, Known / Open / Protected notes,
+  and public-safety limits.

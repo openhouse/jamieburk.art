@@ -48,7 +48,6 @@ const operatingAreas = [
 ];
 
 const proofLinks = [
-  ["Public proof bank", "/proofs"],
   ["HJE operations modernization", "/work/harry-j-epstein"],
   ["FairRentNYC campaign memory", "/work/fair-rent-nyc"],
   ["Source-backed team memory", "/lab/source-backed-team-memory"]
@@ -112,7 +111,7 @@ export default function TechnicalOperationsPage() {
         </div>
       </section>
 
-      <section className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4" aria-label="Selected proof links">
+      <section className="mt-12 grid gap-5 lg:grid-cols-3" aria-label="Selected proof links">
         {proofLinks.map(([label, href]) => (
           <Link
             className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5 font-semibold text-jb-blue hover:text-jb-green"

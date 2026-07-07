@@ -98,7 +98,7 @@ npm run check:production
 - Keep previous production SHA available for rollback.
 - Verify all main routes return 200 after deployment:
   `/`, `/work`, `/work/technical-operations`, `/work/harry-j-epstein`,
-  `/work/fair-rent-nyc`, `/work/callnyc`, `/proofs`,
+  `/work/fair-rent-nyc`, `/work/callnyc`,
   `/lab/source-backed-team-memory`, `/resume`, `/contact`, `/colophon`,
   `/robots.txt`, `/sitemap.xml`, and the resume PDF path.
 

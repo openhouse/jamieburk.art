@@ -110,15 +110,18 @@ Jamie's role visible without overclaiming.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
-## Public Proof Bank
+## Internal Proof Knowledge Graph
 
-The public proof bank lives at `apps/www/src/data/proofs.ts`. It is the
-source-of-truth claim layer for Jamie's professional accomplishments: claim,
-source basis, confidence, visibility, public-use guidance, and guardrails.
+The public-safe proof knowledge graph lives at `apps/www/src/data/proofs.ts`.
+It is the repo-internal source-of-truth claim layer for Jamie's professional
+accomplishments: claim, source basis, confidence, visibility, public-use
+guidance, and guardrails.
 
-The website projects that bank through `/proofs`, homepage proof strips, resume
-highlights, technical-operations proof rows, and case-study proof cards. See
-`docs/proofs-bank.md` before adding or changing public claims.
+The website is a composed projection of that graph, optimized for audience,
+purpose, and clarity through homepage proof strips, resume highlights,
+role-specific proof rows, case studies, and supporting pages. The graph itself
+is not exposed as a public route or archive index. See `docs/proofs-bank.md`
+before adding or changing public claims.
 
 ## Launch Blockers
 

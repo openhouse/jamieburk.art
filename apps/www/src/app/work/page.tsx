@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import type { Route } from "next";
 import { WorkCard } from "@/components/WorkCard";
 import { workGroups, workItems } from "@/data/work";
 import { createMetadata } from "@/lib/metadata";
@@ -25,9 +24,6 @@ export default function WorkPage() {
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page
-          </Link>
-          <Link className="text-jb-blue hover:text-jb-green" href={"/proofs" as Route}>
-            Public proof bank
           </Link>
           <Link className="text-jb-blue hover:text-jb-green" href="/lab/source-backed-team-memory">
             Source-backed memory lab

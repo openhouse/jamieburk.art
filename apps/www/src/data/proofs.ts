@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+// Internal public-safe knowledge graph. Pages may import composed projections
+// from this file, but the graph itself is not a public route or archive index.
 const workSlugSchema = z.enum([
   "196-sunday-dinner",
   "callnyc",
@@ -428,7 +430,6 @@ const proofBankInput = [
 export const proofBank = proofSchema.array().parse(proofBankInput);
 
 export type ProofClaim = (typeof proofBank)[number];
-export type ProofDomain = ProofClaim["domain"];
 
 const hasText = (value: string | undefined): value is string => Boolean(value);
 
@@ -450,11 +451,3 @@ export const technicalOperationsProofRows = proofBank
     };
   })
   .filter((row): row is { need: string; proof: string } => Boolean(row));
-
-export const publicProofs = proofBank.filter(
-  (proof) => proof.visibility === "publishable" || proof.visibility === "summary-only"
-);
-
-export function getProofsForWork(slug: string) {
-  return publicProofs.filter((proof) => proof.workSlug === slug);
-}
