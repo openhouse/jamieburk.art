@@ -23,6 +23,7 @@ Best claim IDs:
 - `CORE-002`
 - `CORE-003`
 - `HJE-001`
+- `NAC-006`
 - `CRS-001`
 - `WOW-003`
 - `WOW-004`
@@ -61,6 +62,17 @@ Use case pages for nuance. They can carry:
 - collaboration language;
 - "what this does not claim" language.
 
+For the FairRentNYC / Commercial Rent Stabilization case, use:
+
+- `NAC-001`
+- `NAC-003`
+- `NAC-005`
+- `NAC-006`
+- `CRS-001`
+- `CRS-003`
+- `CRS-006`
+- `CRS-007`
+
 ## Technical Operations Page
 
 Use this page for transferable capabilities:
@@ -84,12 +96,15 @@ Best claim IDs:
 - `CAP-002`
 - `CAP-004`
 - `CAP-005`
+- `NAC-006`
+- `CRS-007`
 
 ## Resume Page
 
 Use concise, employer-legible proof:
 
 - `CORE-002`
+- `NAC-001`
 - `HJE-001`
 - `CRS-001`
 - `WOW-003`

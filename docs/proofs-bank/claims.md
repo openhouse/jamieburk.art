@@ -47,7 +47,22 @@ Primary source IDs: `SRC-RESUME-2026-06-11`, `SRC-HJE-TOOLGUYD-2009`,
 ### FairRentNYC / Commercial Rent Stabilization
 
 Primary source IDs: `SRC-RESUME-2026-06-11`, `SRC-CRS-RUNNING-MINUTES`,
-`SRC-CRS-REDLINE`, `SRC-CRS-DATA-MEMOS`.
+`SRC-CRS-REDLINE`, `SRC-CRS-DATA-MEMOS`, `SRC-NYCAC-HOME`,
+`SRC-NYCAC-PRESS`, `SRC-NYCAC-LET-NYC-DANCE`,
+`SRC-NYCAC-SAVE-NYC-SPACES`, `SRC-NYCAC-TALKS-NOT-RAIDS`,
+`SRC-NYCAC-FAIR-RENT`, `SRC-NYCAC-VACANCY`,
+`SRC-NYCAC-FORUM-TRANSCRIPT`, `SRC-NYCAC-WONDERVILLE-FIELD`.
+
+#### NYC Artist Coalition
+
+| ID | Status | Claim | Evidence basis | Public wording | Guardrail |
+| --- | --- | --- | --- | --- | --- |
+| NAC-001 | Ready | Jamie is a co-founding member of NYC Artist Coalition. | Public-forum transcript summary; public NYCAC context | Jamie is a co-founding member of NYC Artist Coalition. | Do not imply sole founder, current officer title, or formal authority unless separately confirmed. |
+| NAC-002 | Ready | NYC Artist Coalition is an arts/nightlife advocacy coalition concerned with regulation, enforcement, displacement, and support for small, informal, and affordable cultural spaces in New York City. | Public NYCAC site; public press page | NYC Artist Coalition advocates for informal and affordable community spaces, small venues, and cultural workers in New York City. | Keep coalition description broad and public-source based. |
+| NAC-003 | Ready | NYC Artist Coalition's public record includes Let NYC Dance / Cabaret Law repeal work, Save NYC Spaces / Office of Nightlife advocacy, Talks Not Raids / M.A.R.C.H. transparency work, Fair Rent / commercial lease-protection advocacy, and COVID-era relief coordination. | Public NYCAC campaign pages; public press page | NYC Artist Coalition has worked across decriminalization, access to city support, enforcement transparency, cultural-space displacement, Fair Rent / Commercial Rent Stabilization advocacy, and COVID-era relief coordination. | Use "worked across," "helped," "participated in," and "advocated for"; do not assign sole credit for multi-organization wins. |
+| NAC-004 | Ready | NYC Artist Coalition's recurring method is to listen to artists and cultural-space operators, name the public issue, and turn lived conditions into public action. | Public campaign pages; public-safe writer-voice summary | NYC Artist Coalition's recurring method is to listen to artists and cultural-space operators, name the public issue, and turn lived conditions into public action. | Treat this as an interpretive summary, not an official mission statement. |
+| NAC-005 | Ready | Current NYC Artist Coalition-related work includes Commercial Rent Stabilization, cultural-space affordability, rent/lease/insurance fieldwork, city/state alignment, and consent-safe follow-up. | Public forum transcript summary; running-minutes summary; Wonderville field-note summary | Current NYC Artist Coalition-related work includes Commercial Rent Stabilization, cultural-space affordability, rent/lease/insurance fieldwork, city/state alignment, and consent-safe follow-up. | Mark planning work as planning; do not imply final governance decisions or launched events before they happen. |
+| NAC-006 | Ready | Jamie's current NYCAC / Fair Rent role is cultural-space field presence, documentation/provenance steward, public-data translator, and follow-up infrastructure builder. | Running-minutes summary; public forum transcript summary; Wonderville field-note summary | Jamie helps make NYCAC / Fair Rent work usable by stewarding field notes, campaign memory, legislative provenance, public-data framing, and follow-up infrastructure. | Keep contribution-oriented language; do not imply Jamie is the sole public spokesperson, legal advisor, or campaign director. |
 
 | ID | Status | Claim | Evidence basis | Public wording | Guardrail |
 | --- | --- | --- | --- | --- | --- |
@@ -56,6 +71,8 @@ Primary source IDs: `SRC-RESUME-2026-06-11`, `SRC-CRS-RUNNING-MINUTES`,
 | CRS-003 | Ready | Jamie created a legislative provenance redline/source map tracing bill language across Intro 93, Fair Rent NYC recommendations, Small Business Jobs Survival Act-derived provisions, and Albany Senate Bill S8319 revisions. | Approved resume; public-safe archive summary | Jamie created a legislative provenance redline/source map tracing Commercial Rent Stabilization bill language across public and advocacy source layers. | Make clear this is source-memory and review support, not legal advice. |
 | CRS-004 | Ready | Jamie drafted privacy-preserving commercial vacancy, occupancy, and lease-cost data materials. | Approved resume | Jamie drafted privacy-preserving commercial vacancy, occupancy, and lease-cost data materials for city-stakeholder conversations. | Do not imply the data program was adopted by a public agency. |
 | CRS-005 | Ready | Jamie's civic documentation practice includes explicit consent boundaries around stories and public/private materials. | Public-safe archive summary | Jamie built consent-aware story and source boundaries into civic documentation systems. | Do not expose story leads or collaborator lists. |
+| CRS-006 | Ready | Current CRS work seeks alignment across city and state lanes, Small Business United / Action Lab capacity, Fair Rent NYC campaign history, NYC Artist Coalition cultural-space organizing, and longtime coalition partners. | Running-minutes summary | Current Commercial Rent Stabilization work seeks alignment across city and state lanes, Small Business United / Action Lab capacity, Fair Rent NYC campaign history, NYC Artist Coalition cultural-space organizing, and longtime coalition partners. | Use as current-work framing; do not imply final governance structure. |
+| CRS-007 | Ready | Jamie's current CRS work includes running minutes, legal/provenance packets, Comptroller data framing, cultural-space field follow-up, signup/follow-up protocols, and public-safe campaign memory. | Running-minutes summary; public-safe archive summary | Jamie supports current Commercial Rent Stabilization work through running minutes, legal/provenance packets, data framing, cultural-space field follow-up, signup/follow-up protocols, and public-safe campaign memory. | Do not publish private transcripts, legal-review materials, stakeholder lists, or contact records. |
 
 ### CallNYC.org
 

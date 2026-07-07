@@ -40,7 +40,7 @@ const sections = [
     title: "Public-facing systems",
     items: [
       "Harry J. Epstein Company e-commerce and operations handoff systems",
-      "FairRentNYC / NYC Artist Coalition campaign-memory and provenance infrastructure",
+      "NYC Artist Coalition / FairRentNYC campaign memory, legislative provenance, cultural-space field follow-up, and coalition role-mapping infrastructure",
       "CallNYC resident-facing open-data guidance",
       "WOWList followable event-community workflows across 35+ active city scenes",
       "196 / Sunday Dinner onboarding, hosting, and continuity systems"
