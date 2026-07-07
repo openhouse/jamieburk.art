@@ -16,6 +16,9 @@ without explicit approval.
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
 workspaces, Dockerfile, Dokku.
 
+Typography for V1 is Karla plus Archivo Narrow. Do not ship private or
+proprietary font files unless Jamie explicitly approves licensing and use.
+
 ## Commands
 
 - `npm ci`
@@ -24,6 +27,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:public-safety`
+- `npm run check:production`
+- `npm run check:routes`
 
 ## Public-Safety Rules
 
@@ -36,6 +42,10 @@ Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
+
+Copy should keep Jamie as an active actor and answer toward what end. Prefer
+plain language before technical specificity, define acronyms on first use, and
+avoid making hiring readers decode insider terms.
 
 ## Scope Rules
 

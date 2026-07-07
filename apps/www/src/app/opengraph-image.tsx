@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Jamie Burkart - Technical Project Manager";
+export const alt =
+  "Jamie Burkart - Technical Project Manager, Product Operations and Implementation";
 export const size = {
   width: 1200,
   height: 630
@@ -40,7 +41,7 @@ export default function Image() {
           Jamie Burkart
         </div>
         <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn under-structured work into usable systems.
+          I create operating structure for complex public-facing teams.
         </div>
       </div>
     ),

@@ -1,14 +1,14 @@
-import Link from "next/link";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
+import { JBButton } from "@/components/JBButton";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WorkCard } from "@/components/WorkCard";
 import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
+  ["Fragmented public-data requirements", "resident-facing guidance and source maps"],
   ["Legacy operations", "maintainable e-commerce workflows"],
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
@@ -19,6 +19,30 @@ export default function HomePage() {
       <Hero />
       <ProofStrip />
       <CapabilityGrid />
+      <section className="bg-jb-blue py-16 text-jb-paper">
+        <div className="jb-frame grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div>
+            <p className="jb-eyebrow text-sm font-semibold uppercase text-jb-paper/72">
+              Technical operations
+            </p>
+            <h2 className="mt-3 text-3xl font-bold">
+              Operating backbone for complex public-facing work
+            </h2>
+          </div>
+          <div className="space-y-6">
+            <p className="text-xl leading-8 text-jb-paper/84">
+              Across civic, cultural, small-business, and public-facing
+              technical environments, Jamie builds the practices that help
+              teams stay oriented: planning rhythms, decision logs, action
+              trackers, risk notes, onboarding materials, stakeholder updates,
+              public guidance, runbooks, and handoff documentation.
+            </p>
+            <JBButton href="/work/technical-operations" variant="secondary">
+              View Technical Ops proof
+            </JBButton>
+          </div>
+        </div>
+      </section>
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
@@ -29,14 +53,16 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: complex work with more
+              context than structure becoming usable systems, public-facing
+              tools, documentation, decision trails, and durable handoffs. Each
+              public case is projected from a public-safe proofs bank, then
+              edited for clarity and role fit.
             </p>
           </div>
-          <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
+          <JBButton href="/work" variant="ghost">
             View all work
-          </Link>
+          </JBButton>
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
@@ -82,11 +108,12 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when important work has more context than structure:
+            decisions, ownership, documentation, and handoffs are not yet clear
+            enough for a team to use. I listen across stakeholders, map what is
+            known and unknown, create the workflows or documentation the team
+            needs, support launch or adoption, and leave behind materials that
+            make the work easier to maintain.
           </p>
           <ContactCTA />
         </div>

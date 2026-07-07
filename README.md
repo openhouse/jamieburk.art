@@ -11,6 +11,9 @@ complex public-facing teams.
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
 workspaces, Docker, and Dokku. The canonical app is `apps/www`.
 
+npm workspaces are accepted for V1. Earlier pnpm preferences are superseded for
+this scaffold to avoid package-manager churn before launch.
+
 ## Local Development
 
 ```bash
@@ -29,7 +32,14 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:public-safety
+npm run check:routes
+npm run check:production
 ```
+
+`npm run check` runs the app type/lint/build checks and the non-production
+public-safety scan. `npm run check:production` requires production env values,
+then runs safety, route, and build checks.
 
 ## Environment
 
@@ -42,6 +52,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<optional-approved-linkedin-url>
+NEXT_PUBLIC_GITHUB_URL=<optional-approved-github-url>
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -54,6 +67,9 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<optional-approved-linkedin-url>
+NEXT_PUBLIC_GITHUB_URL=<optional-approved-github-url>
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -80,8 +96,10 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for headings, labels, proof
+surfaces, and metadata. Do not commit or serve private, proprietary, or
+unlicensed font files, including Trade Gothic, Verlag, Gotham Rounded, FondFont
+RISQUE, or Maria unless licensing and permission are explicitly approved.
 
 ## Content Rules
 
@@ -92,15 +110,30 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+- Keep private source folders such as `private/`, `raw/`,
+  `archive-private/`, `transcripts-private/`, `client-private/`, and
+  `legal-review/` out of the repo.
+- Use active, plain-language copy: put Jamie back into the sentence, prefer
+  verbs like designs, coordinates, synthesizes, translates, documents,
+  preserves, supports, and ships, and answer what the work enabled for a team,
+  reader, collaborator, or community.
+- Use `docs/proofs-bank/` as the public-safe knowledge base for source-backed
+  metrics, approval boundaries, and stronger claim language before moving
+  claims into app copy.
+- Define insider language near first use. Do not make hiring readers decode
+  terms like under-structured, data, tracking, maintainers, minimum viable
+  product (MVP), user acceptance testing (UAT), quality assurance (QA), large
+  language model (LLM), or source-backed memory.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm the approved resume PDF remains current before production.
+- Confirm public email and set `NEXT_PUBLIC_CONTACT_EMAIL`.
+- Confirm optional LinkedIn and GitHub links before setting their env vars.
 - Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm exact proof metrics against `docs/proofs-bank/claims.md`.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run check:production` passes with production env values.
