@@ -17,7 +17,7 @@ stronger claim language in the knowledge bank.
 | WOWList detailed archive counts | Pending. | Internal docs only. | Requires explicit approval before website use. |
 | Sunday Dinner 300+ / 20+ | Approved in resume; softened on proof strip. | Resume page and case study with care. | Summary-only, no private records. |
 | KC Town Hall public funding recommendation | Use with care. | KC case study and resume page if wording is recommendation-specific. | Do not imply unrestricted grant receipt or solo credit. |
-| CallNYC Politico New York coverage | Pending citation. | Internal docs only. | Exact citation must be verified before linking. |
+| CallNYC Politico New York coverage | Verified public source. | CallNYC case study and resume page. | Miranda Neubauer, "Website provides new information about council members' focus," March 14, 2016. Keep archived/unofficial status visible. |
 | Source-Backed Team Memory | Approved as lab/method framing. | Lab page. | Do not say production SaaS, autonomous AI, or private archive browser. |
 | AI Evals certificate | Approved as completion proof. | Resume/about/internal docs. | Do not inflate beyond course completion. |
 

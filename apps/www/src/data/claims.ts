@@ -121,6 +121,36 @@ const claimsInput = [
     priority: 4
   },
   {
+    id: "callnyc",
+    category: "Civic systems",
+    status: "approved",
+    recommendedPublicWording:
+      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
+    evidenceBasis: [
+      "Approved public resume",
+      "CallNYC project records",
+      "Politico New York article archive"
+    ],
+    guardrail:
+      "Keep archived-prototype and unofficial status visible. Do not imply CallNYC was an official city service.",
+    href: "/work/callnyc",
+    allowedSurfaces: ["work-card", "case-study", "resume-page", "internal-docs"],
+    priority: 4.5
+  },
+  {
+    id: "callnyc-politico",
+    category: "Civic systems",
+    status: "approved",
+    recommendedPublicWording:
+      "CallNYC was covered by Politico New York in Miranda Neubauer's March 14, 2016 article, \"Website provides new information about council members' focus.\"",
+    evidenceBasis: ["Verified public PDF archive of the Politico New York article"],
+    guardrail:
+      "Use as historical press coverage. Keep the project framed as an archived civic-tech prototype, not an official or current service.",
+    href: "/work/callnyc",
+    allowedSurfaces: ["case-study", "resume-page", "internal-docs"],
+    priority: 4.6
+  },
+  {
     id: "wowlist-multicity",
     category: "Community infrastructure",
     status: "softened-for-production",

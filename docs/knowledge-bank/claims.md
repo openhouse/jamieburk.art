@@ -16,6 +16,7 @@ claim.
 | `crs-source-map` | Known | Created a legislative source map and provenance redline tracing CRS bill language across public and advocacy source layers. | More specific bill-lineage wording can be used where approved. | Source mapping and provenance work for discussion/review, not legal analysis. |
 | `crs-public-data` | Known | Drafted privacy-preserving commercial vacancy, occupancy, and lease-cost data materials for city-stakeholder conversations. | None. | Do not imply public-agency adoption or publish raw filings/confidential microdata. |
 | `callnyc` | Known | Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance. | None. | Archived prototype only; not an official city service. |
+| `callnyc-politico` | Known | CallNYC was covered by Politico New York in Miranda Neubauer's March 14, 2016 article, "Website provides new information about council members' focus." | None. | Historical press coverage only; keep archived-prototype and unofficial status visible. |
 | `wowlist-multicity` | Softened for production | Multi-city community web systems. | Roughly 35 city ecosystems and collaborator-specific WOWList wording. | Use rough aggregate language; no private user data, organizer contacts, account records, raw database records, or unapproved community materials. |
 | `sunday-dinner-participation` | Softened for production | Long-running gatherings and resident-artist support. | 300+ gatherings and 20+ resident artists. | Summary-only; no guest names, attendance records, addresses, private stories, contact info, or unapproved photos. |
 | `kc-town-hall-public-benefit` | Use with care | Supported adaptive-reuse planning and public-benefit documentation for a long-vacant historic Kansas City building project. | 6,500 sq. ft., four commercial spaces, three homes, and $490,539 recommendation wording. | Use recommendation language; no private financial, legal, banking, property, or stakeholder details. |
@@ -26,7 +27,6 @@ claim.
 
 | ID | Why open |
 | --- | --- |
-| `callnyc-politico` | Resume-backed, but the exact Politico New York citation should be verified before public linking or prominent press language. |
 | `wowlist-archive-counts` | Aggregate counts are source-backed, but using them publicly should be a deliberate approval decision because they derive from local archive analysis. |
 | HJE feature-level authorship | Strong narrative support exists, but public pages should keep detailed feature authorship representative unless screenshots, code, or collaborator confirmation are approved. |
 | Named active CRS collaborators and quotes | Active coalition context can expose relationship, consent, or strategy details. Use public-safe summaries until collaborator review is complete. |

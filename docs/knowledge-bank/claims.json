@@ -80,23 +80,23 @@
     "id": "callnyc",
     "project": "CallNYC.org",
     "status": "known",
-    "supportLevel": "approved resume plus project records",
+    "supportLevel": "approved resume plus project records and verified Politico New York article archive",
     "recommendedPublicWording": "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
     "strongerWordingIfApproved": null,
     "allowedSurfaces": ["work card", "case study", "resume"],
-    "sourceClasses": ["approved-resume", "public-safe-archive-summary"],
+    "sourceClasses": ["approved-resume", "public-source", "public-safe-archive-summary"],
     "guardrail": "Keep archived-prototype and unofficial status visible. Do not imply CallNYC was an official city service."
   },
   {
     "id": "callnyc-politico",
     "project": "CallNYC.org",
-    "status": "pending-approval",
-    "supportLevel": "resume-backed, exact public citation pending",
-    "recommendedPublicWording": "External coverage can be named after the exact Politico New York citation is confirmed.",
-    "strongerWordingIfApproved": "Covered in Politico New York.",
-    "allowedSurfaces": ["internal docs"],
-    "sourceClasses": ["approved-resume", "pending-public-citation"],
-    "guardrail": "Do not link or name the article prominently until the exact citation is verified."
+    "status": "known",
+    "supportLevel": "verified public PDF archive of Politico New York article",
+    "recommendedPublicWording": "CallNYC was covered by Politico New York in Miranda Neubauer's March 14, 2016 article, \"Website provides new information about council members' focus.\"",
+    "strongerWordingIfApproved": null,
+    "allowedSurfaces": ["case study", "resume", "internal docs"],
+    "sourceClasses": ["public-source"],
+    "guardrail": "Use as historical press coverage. Keep the project framed as an archived civic-tech prototype, not an official or current service."
   },
   {
     "id": "wowlist-multicity",

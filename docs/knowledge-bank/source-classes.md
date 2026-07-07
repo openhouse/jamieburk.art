@@ -32,6 +32,7 @@ public repo into a private archive.
 | Approved 2026 resume PDF | Core role, HJE, CallNYC, NYC Artist Coalition / FairRentNYC, Commercial Rent Stabilization, WOWList, Sunday Dinner, KC Town Hall, AI eval completion. | Current approved PDF only. |
 | AI Evals certificate | AI evaluation literacy and professional development. | Course completion only. |
 | HJE public sources and summaries | Legacy business context, public web transition, e-commerce/operations story. | Do not publish private dashboards, revenue detail, customer data, vendor terms, or credentials. |
+| Politico New York article archive for CallNYC | Public press coverage: Miranda Neubauer, "Website provides new information about council members' focus," March 14, 2016. | Historical coverage only; keep CallNYC framed as an archived civic-tech prototype. |
 | NYC Artist Coalition public campaign surfaces | Public coalition history around cultural-space advocacy, enforcement transparency, Fair Rent, and Commercial Rent Stabilization. | Collective-work language only. |
 | Commercial Rent Stabilization public-safe summaries | Campaign-memory, source maps, policy/data framing, follow-up systems. | No private coalition notes, legal-review context, stakeholder lists, raw transcripts, or unapproved quotes. |
 | WOWList public-safe archive summaries | Product model, technology stack, aggregate adoption, community platform context. | No raw user or organizer records. |
