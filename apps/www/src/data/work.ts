@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped a legacy industrial tool business turn catalog knowledge, phone-order habits, product voice, and operating routines into maintainable e-commerce workflows.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -99,10 +99,10 @@ const workItemsInput = [
     priority: 1,
     visibility: "public-safe",
     whatWasUnclear:
-      "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
+      "A legacy business had public voice, customer trust, inventory knowledge, phone-order habits, dealer relationships, and operating routines that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
-    artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
+      "A more maintainable online operating surface: catalog structure, product information, search and checkout support, analytics, content patterns, and public voice that could carry the company's real-world knowledge.",
+    artifactTypes: ["website", "workflow", "analytics summary", "press", "public-safe screenshot"],
     artifacts: [
       {
         title: "E-commerce workflow map",
@@ -115,6 +115,12 @@ const workItemsInput = [
         description:
           "Impact framed as a contribution to online growth without exposing private dashboards or internal revenue detail.",
         type: "analytics summary"
+      },
+      {
+        title: "Public reporting references",
+        description:
+          "Independent references for the 2009 online-store launch and later reporting that online sales became a major share of the business.",
+        type: "press"
       },
       {
         title: "Content and voice system",
@@ -138,11 +144,22 @@ const workItemsInput = [
       "Analytics",
       "Public-Facing Web Systems"
     ],
-    links: [{ label: "Website", url: "https://www.harryepstein.com/" }],
+    links: [
+      { label: "Harry J. Epstein Company website", url: "https://www.harryepstein.com/" },
+      { label: "ToolGuyd: 2009 online store launch", url: "https://toolguyd.com/harry-epstein-launches-new-online-store/" },
+      {
+        label: "KCUR: 2016 online-sales reporting",
+        url: "https://www.kcur.org/show/central-standard/2016-04-21/how-flying-dolphins-kept-this-old-school-kansas-city-hardware-store-alive"
+      },
+      {
+        label: "The Daily Dispatch blog archive",
+        url: "https://www.harryepstein.com/blogs/the-daily-dispatch-news-from-the-basement-of-the-tool-business"
+      }
+    ],
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, public reporting, public-safe summary, resume-backed role claims, approved screenshots pending, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
@@ -152,14 +169,15 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
+      "Catalog, search, checkout, marketing, content, and analytics systems",
+      "Public reporting documents the 2009 online-store launch and later online-sales growth",
       "Operations workflow improvements and long-term systems stewardship",
       "Contributed to online revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for a legacy industrial business; public references document the 2009 shift toward online ordering and later online-sales growth.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -172,7 +190,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Helped build and steward shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Helped build and steward shared campaign-memory infrastructure for Commercial Rent Stabilization work: running minutes, action tracking, source context, open questions, and public-data framing.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -182,13 +200,13 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal and policy question logs, public-data baseline framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
         title: "Campaign-memory spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "A shared documentation structure for meetings, decisions, open questions, action items, next steps, and public-safe continuity.",
         type: "meeting memory"
       },
       {
@@ -200,7 +218,7 @@ const workItemsInput = [
       {
         title: "Policy question log",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
+          "A working list of unresolved legal, policy, city, state, and public-data questions for collaborators to review.",
         type: "decision record"
       }
     ],
@@ -234,12 +252,13 @@ const workItemsInput = [
     evidence: [
       "Shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Public-data baseline framing and legal/policy provenance support",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie helped structure and steward public-safe campaign memory, coordination documents, running minutes, source maps, open-question lists, public-data framing, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -331,7 +350,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities and supported event discovery across active city scenes.",
+      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, organizer publishing, digest emails, and embeddable calendar workflows.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -341,7 +360,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event distribution workflows, natural-language event entry patterns, digest emails, embeddable calendars, and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -349,10 +368,23 @@ const workItemsInput = [
         description:
           "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Organizer publishing workflow",
+        description:
+          "A publishing pattern for event entry, community tagging, email distribution, and embeddable calendars.",
+        type: "workflow"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
-    capabilities: ["Django", "Ember.js", "Community Platform Design", "Event Workflows"],
+    capabilities: [
+      "Django",
+      "Ember.js",
+      "Community Platform Design",
+      "Event Workflows",
+      "Email Digests",
+      "Embeddable Calendars"
+    ],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -365,7 +397,8 @@ const workItemsInput = [
     evidence: [
       "Python / Django + Ember.js platform",
       "Followable keyword communities",
-      "Organizer-facing distribution workflows",
+      "Organizer-facing publishing and distribution workflows",
+      "Natural-language event entry, digest email, and embeddable calendar patterns",
       "Supported event discovery across active city scenes"
     ],
     knownOpenProtected: {

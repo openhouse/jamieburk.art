@@ -173,6 +173,23 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
   );
 }
 
+export function PublicReferences({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+  return (
+    <NoteBlock title="Public references" tone="blue">
+      <ul className="space-y-2">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a className="font-semibold text-jb-blue hover:text-jb-green" href={link.url}>
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </NoteBlock>
+  );
+}
+
 export function CreditsList({ item }: { item: WorkMeta }) {
   if (!item.credits?.length) return null;
   return (

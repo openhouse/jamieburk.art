@@ -15,8 +15,8 @@ const sections = [
   {
     title: "Operating systems built",
     items: [
-      "Jamie structured HJE implementation, content, analytics, and handoff systems for long-term e-commerce operations",
-      "Jamie helped build FairRentNYC campaign-memory infrastructure: running minutes, action trackers, source maps, and follow-up notes",
+      "Jamie structured HJE catalog, search, checkout, content, analytics, and handoff systems for long-term e-commerce operations",
+      "Jamie helped build FairRentNYC campaign-memory infrastructure: running minutes, action trackers, source maps, open-question lists, and follow-up notes",
       "Jamie helped create 196 / Sunday Dinner onboarding, hosting, facilitation, and continuity systems"
     ]
   },
@@ -24,7 +24,7 @@ const sections = [
     title: "Delivery and launch",
     items: [
       "Translated open civic data into CallNYC issue pathways and resident-facing next steps",
-      "Co-built WOWList event-discovery workflows for organizer publishing and community distribution",
+      "Co-built WOWList organizer publishing, digest email, embeddable calendar, and event-discovery workflows",
       "Supported HJE e-commerce releases across product, content, marketing, analytics, and operations"
     ]
   },

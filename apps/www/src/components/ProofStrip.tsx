@@ -1,8 +1,8 @@
 const proofItems = [
   "Operating structure across public-facing teams",
-  "Online revenue growth support for a legacy e-commerce business",
+  "Catalog, search, checkout, and analytics support for legacy e-commerce",
   "Helped build shared civic campaign-memory infrastructure",
-  "Event discovery across active city scenes",
+  "Organizer publishing and event-discovery workflows",
   "Repeatable hosting and continuity systems"
 ];
 
