@@ -4,11 +4,11 @@ export const site = {
   name: "Jamie Burkart",
   url: SITE_URL,
   title:
-    "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
+    "Jamie Burkart - Technical Project Manager, Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager creating operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
-  emailLabel: "Public email pending confirmation",
-  emailHref: "/contact",
+    "Technical Project Manager - Product Operations & Implementation lead building operating structure for complex public-facing teams.",
+  contactLabel: "Contact details are available in the approved resume PDF",
+  contactHref: "/resume",
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"
 } as const;

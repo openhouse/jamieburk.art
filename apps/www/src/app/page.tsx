@@ -13,10 +13,56 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const startHereLinks = [
+  {
+    href: "/work/technical-operations",
+    label: "Technical Operations & Implementation"
+  },
+  {
+    href: "/work/harry-j-epstein",
+    label: "Harry J. Epstein Company"
+  },
+  {
+    href: "/work/fair-rent-nyc",
+    label: "FairRentNYC / Commercial Rent Stabilization"
+  },
+  {
+    href: "/work/callnyc",
+    label: "CallNYC.org"
+  },
+  {
+    href: "/resume",
+    label: "Resume"
+  }
+] as const;
+
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="border-b border-jb-ink/10 bg-jb-paper">
+        <div className="jb-frame grid gap-5 py-8 lg:grid-cols-[0.36fr_0.64fr] lg:items-start">
+          <div className="jb-reading">
+            <h2 className="text-2xl font-bold text-jb-ink">Start here</h2>
+            <p className="mt-2 leading-7 text-jb-ink/74">
+              New to my work? These pages give the quickest path through the
+              portfolio.
+            </p>
+          </div>
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {startHereLinks.map((item) => (
+              <li key={item.href}>
+                <Link
+                  className="block rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 font-semibold text-jb-blue hover:border-jb-blue/35 hover:text-jb-green"
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
       <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
@@ -29,8 +75,8 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
+              These projects show a recurring pattern: ambiguous, high-context
+              situations becoming usable systems, public-facing tools, documentation,
               decision trails, and durable handoffs.
             </p>
           </div>
@@ -77,12 +123,12 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Clarify the Work, Structure the Process, Build the System, and Document the Handoff
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important but ambiguous. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to

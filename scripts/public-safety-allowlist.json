@@ -1,0 +1,23 @@
+[
+  {
+    "pattern": "raw transcript",
+    "file": "AGENTS.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "owner": "Jamie",
+    "reviewed": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcript",
+    "file": "README.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "owner": "Jamie",
+    "reviewed": "2026-07-07"
+  },
+  {
+    "pattern": "raw transcript",
+    "file": "DESIGN.md",
+    "reason": "No-publish policy sentence, not private source content.",
+    "owner": "Jamie",
+    "reviewed": "2026-07-07"
+  }
+]

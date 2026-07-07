@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Source-Backed Team Memory - Jamie Burkart",
   description:
-    "A lab / proof-of-practice exploring source-backed operating memory, decision lineage, onboarding context, and human-correctable AI workflows.",
+    "A lab / proof-of-practice for source-backed operating memory, decision lineage, onboarding context, and human-reviewed AI-assisted documentation.",
   path: "/lab/source-backed-team-memory"
 });
 
@@ -19,15 +19,19 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          A lab / proof-of-practice exploring source-backed operating memory,
-          decision lineage, onboarding context, and human-correctable AI
-          workflows for knowledge-heavy teams.
+          A lab / proof-of-practice for teams that need operating memory:
+          decision lineage, onboarding context, source-linked notes, open
+          questions, and human-reviewed AI-assisted documentation.
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
             production SaaS, AI replacement for judgment, or private archive
             browser.
+          </p>
+          <p className="mt-3 font-semibold leading-7 text-jb-ink">
+            AI drafts. Humans review. The shared record remains inspectable and
+            correctable.
           </p>
         </div>
         <div className="mt-10 space-y-6">
@@ -37,7 +41,9 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact">
+            Discuss a bounded source-backed memory sprint
+          </JBButton>
         </div>
       </div>
     </article>

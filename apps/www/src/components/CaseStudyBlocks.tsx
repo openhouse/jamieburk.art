@@ -10,6 +10,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Context", item.series],
     ["Status", item.status],
     ["Visibility", item.visibility],
+    ["Approval", item.approval],
     ["Role fit", item.roleFit]
   ];
 
@@ -64,7 +65,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
