@@ -91,7 +91,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Jamie helped an 80+ year-old industrial business adapt to e-commerce by improving public web, analytics, marketing, content, and operational workflows.",
+      "Jamie helped an 80+ year-old Kansas City industrial supply business translate paper, phone, catalog, dealer-pricing, and warehouse practices into searchable e-commerce, content, analytics, and operational workflows.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -101,25 +101,25 @@ const workItemsInput = [
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
-      "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+      "A searchable catalog, cart and checkout flow, dealer-pricing access, product-image workflows, blog publishing, analytics-informed operations, and public web voice that supported online growth while preserving the company's distinctive institutional culture.",
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "E-commerce workflow and catalog map",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
+          "Representative flow for translating inventory knowledge, customer language, search, catalog navigation, cart, checkout, and order handling into maintainable online workflows.",
         type: "workflow"
       },
       {
-        title: "Public-safe analytics summary",
+        title: "Public-safe online growth summary",
         description:
-          "Impact framed as a contribution to online growth without exposing private dashboards or internal revenue detail.",
+          "Impact framed as a contribution to online growth, supported by resume claims and public reporting, without exposing dashboards or internal revenue detail.",
         type: "analytics summary"
       },
       {
-        title: "Content and voice system",
+        title: "Content, voice, and product-image system",
         description:
-          "Reusable patterns for preserving the company's distinctive public voice across product, marketing, and support surfaces.",
+          "Reusable patterns for preserving the company's distinctive public voice across product pages, blog publishing, product photography, marketing, and support surfaces.",
         type: "template"
       }
     ],
@@ -152,14 +152,15 @@ const workItemsInput = [
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
     evidence: [
-      "Web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
+      "Searchable catalog, cart, checkout, search, country-of-origin, and flying-tools feature publicly documented at launch",
+      "Web, e-commerce, marketing, content, analytics, and operational workflow improvements",
+      "Dealer-pricing and catalog workflows translated from in-store practices",
       "Contributed to online growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "Jamie contributed web, e-commerce, analytics, marketing, content, catalog, and operations improvements for an 80+ year-old Kansas City industrial supply business.",
       open:
         "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
       protected:
@@ -172,8 +173,8 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Jamie built and stewarded shared campaign-memory and coordination infrastructure so Commercial Rent Stabilization collaborators could preserve decisions, next steps, source context, and public-safety boundaries.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+      "Jamie built and stewarded campaign-memory, legislative provenance, and public-data materials so Commercial Rent Stabilization collaborators could preserve decisions, source context, open questions, and implementation pathways.",
+    role: "Civic Systems, Documentation & Policy Communications Lead",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -182,7 +183,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public materials, protected collaborator context, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, legislative provenance redlines, policy-neutral open-data briefs, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
     artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -198,9 +199,9 @@ const workItemsInput = [
         type: "source map"
       },
       {
-        title: "Policy question log",
+        title: "Legislative provenance and data-policy materials",
         description:
-          "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
+          "Public-safe materials tracing bill lineage and scoping privacy-preserving commercial vacancy, occupancy, and lease-cost indicator questions.",
         type: "decision record"
       }
     ],
@@ -234,12 +235,13 @@ const workItemsInput = [
     evidence: [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
-      "Legal/policy questions organized for collaborators",
+      "Legislative provenance redline tracing CRS bill language across city, Fair Rent NYC, Small Business Jobs Survival Act lineage, and Albany revisions",
+      "Policy-neutral data materials proposing geography-aggregated vacancy, occupancy, and lease-cost indicators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, legislative provenance materials, data-policy briefs, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -331,9 +333,9 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Jamie co-built a Python / Django and Ember.js community-calendar platform that helped DIY arts and music organizers distribute events through followable keyword communities.",
+      "Jamie co-built a Python / Django and Ember.js community-calendar platform that helped DIY arts and music organizers publish, classify, follow, save, and distribute events through keyword communities.",
     role: "Co-builder & Product Operator",
-    years: "2010s",
+    years: "2014-2022",
     status: "Short proof page",
     featured: true,
     priority: 4,
@@ -341,22 +343,28 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed low-overhead ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A full-stack event-discovery platform with posts/events, tags/lists, follows, saved events, going status, email digests, embeddable calendars, Google Calendar synchronization, and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
         title: "Keyword-community model",
         description:
-          "A low-overhead distribution pattern for followable arts, music, and local-interest communities.",
+          "A low-overhead distribution pattern for followable arts, music, DIY, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Archived production scale summary",
+        description:
+          "Local archive analysis supports public-safe aggregate claims about users, posts/events, lists/tags, follows, saved events, and active city scenes without publishing raw records.",
+        type: "analytics summary"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
     capabilities: ["Django", "Ember.js", "Community Platform Design", "Event Workflows"],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Aggregate archive counts may be used; raw records, user records, private media, and database exports stay offline.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Local archive analysis, public-safe summary, historical project context, transcript context, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     publicSafety: {
       note: "Historical proof page. Do not publish private user records, organizer contact rosters, or unapproved community materials."
@@ -367,17 +375,18 @@ const workItemsInput = [
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
     evidence: [
       "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows",
-      "Multiple city ecosystems reached"
+      "Local archive analysis: 1,846 users and 16,142 posts/events by July 2017",
+      "23,864 lists/tags, 28,837 list follows, and 20,927 saved/starred events in the archived database",
+      "35+ active city scenes using a conservative 50+ geocoded posts/events threshold",
+      "Google Calendar synchronization and email digest infrastructure"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar and social-discovery platform organized around followable keyword communities, with aggregate archive evidence for meaningful production use.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, restored visuals, and exact adoption wording need approval.",
       protected:
-        "Private user data, organizer contact lists, and unapproved community records are not published."
+        "Raw database exports, user records, private media, organizer contact rosters, and unapproved community records are not published."
     }
   },
   {
@@ -386,9 +395,9 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Jamie created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for recurring gatherings and resident-artist support.",
+      "Jamie created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ Sunday Dinner gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
-    years: "2010s",
+    years: "Sunday Dinner: 2012-Present; residency: 2020-Present",
     status: "Short proof page",
     featured: true,
     priority: 5,
@@ -396,7 +405,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable participation infrastructure for gatherings, resident artists, intake, onboarding, scheduling, hospitality, facilitation, documentation, and handoffs.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -421,14 +430,14 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "Long-running hosted gathering practice",
-      "Resident artists supported over time",
-      "Onboarding and participation systems",
+      "300+ gatherings documented",
+      "20+ resident artists supported",
+      "Intake, scheduling, onboarding, hospitality, facilitation, and documentation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across 300+ gatherings and 20+ resident-artist contexts.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -441,9 +450,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Jamie supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Jamie co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes.",
+    role: "Co-founder & Project Manager, Historic Restoration / Mixed-Use Development",
+    years: "2015-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -451,7 +460,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+      "Planning materials, public-benefit documentation, stakeholder context, and funding-process materials for a mixed-use adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -459,6 +468,12 @@ const workItemsInput = [
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
         type: "guide"
+      },
+      {
+        title: "Funding-process support",
+        description:
+          "Public-safe summary of documentation and local funding strategy connected to a $490,539 public funding recommendation.",
+        type: "public handout"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
@@ -479,11 +494,12 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "Funding process support"
+      "Approximately 6,500 sq. ft. long-vacant building planned for four commercial spaces and three homes",
+      "$490,539 public funding recommendation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and documentation for a long-vacant approximately 6,500 sq. ft. historic building and helped secure a $490,539 public funding recommendation.",
       open:
         "Specific public-funding materials, named partners, and project status details need approval.",
       protected:

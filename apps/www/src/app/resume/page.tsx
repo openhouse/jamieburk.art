@@ -12,10 +12,11 @@ export const metadata: Metadata = createMetadata({
 
 const highlights = [
   "14+ years building operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to online growth for a legacy e-commerce business",
-  "Built and stewarded shared civic campaign-memory infrastructure",
-  "Co-built community web systems across multiple city ecosystems",
-  "Created repeatable hosting, onboarding, and continuity systems"
+  "Led legacy e-commerce, marketing, analytics, and operations improvements tied to online growth",
+  "Built 30+ pages of CRS campaign memory plus legislative provenance and public-data materials",
+  "Co-built WOWList across 35+ active city scenes with 1,800+ users and 16,000+ events/posts in local archive analysis",
+  "Created repeatable hosting, onboarding, and continuity systems across 300+ gatherings and 20+ resident artists",
+  "Co-led KC adaptive-reuse planning tied to a $490,539 public funding recommendation"
 ];
 
 export default function ResumePage() {

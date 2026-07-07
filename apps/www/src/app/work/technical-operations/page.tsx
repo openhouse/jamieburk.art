@@ -49,11 +49,11 @@ const operatingAreas = [
 const proofRows = [
   {
     need: "Coordinate delivery",
-    proof: "Harry J. Epstein, CallNYC, WOWList, and FairRentNYC show delivery across business, civic, community, and public-facing technical contexts."
+    proof: "Harry J. Epstein, CallNYC, WOWList, FairRentNYC, and KC Town Hall show delivery across business, civic, community, built-environment, and public-facing technical contexts."
   },
   {
     need: "Build operating processes",
-    proof: "HJE workflows, 196 / Sunday Dinner continuity, and coalition-memory systems show repeatable process design."
+    proof: "HJE catalog/dealer workflows, 196 / Sunday Dinner continuity, WOWList event workflows, and coalition-memory systems show repeatable process design."
   },
   {
     need: "Unblock recurring problems",
@@ -65,11 +65,11 @@ const proofRows = [
   },
   {
     need: "Onboard and support people",
-    proof: "196 Residency, Sunday Dinner, and source-backed team memory show onboarding, context-setting, and durable participation support."
+    proof: "196 Residency, Sunday Dinner, and source-backed team memory show onboarding, context-setting, source maps, templates, and durable participation support."
   },
   {
     need: "Write operating documentation",
-    proof: "Runbooks, source maps, decision records, public guidance, templates, and handoffs appear across selected systems."
+    proof: "Running minutes, source maps, decision records, legislative provenance materials, public guidance, templates, and handoffs appear across selected systems."
   },
   {
     need: "Report honestly on status",
