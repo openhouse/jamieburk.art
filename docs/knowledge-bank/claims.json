@@ -1,0 +1,299 @@
+[
+  {
+    "id": "core-emerging-operating-structure",
+    "projectId": "technical-operations",
+    "claim": "Jamie builds operating structure for emerging public-facing technical work.",
+    "approvedWording": "I build operating structure for emerging public-facing technical work.",
+    "fallbackWording": "I help teams turn public-facing technical work into usable systems.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/about", "/resume", "/work/technical-operations"],
+    "boundaries": [
+      "Use emerging as the public-facing frame; ambiguity may remain an internal diagnosis.",
+      "Do not imply Jamie replaces product, engineering, legal, executive, or community judgment."
+    ]
+  },
+  {
+    "id": "core-14-years-operating-structure",
+    "projectId": "technical-operations",
+    "claim": "Jamie has 14+ years creating operating structure across civic, cultural, small-business, and public-facing technical environments.",
+    "approvedWording": "14+ years creating operating structure.",
+    "fallbackWording": "Long-running work across civic, cultural, small-business, and technical environments.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/resume", "/work/technical-operations"],
+    "boundaries": [
+      "Do not imply one continuous formal employer, agency role, or job title.",
+      "Keep the claim focused on operating structure and implementation."
+    ]
+  },
+  {
+    "id": "core-structure-from-material",
+    "projectId": "technical-operations",
+    "claim": "Jamie's operating structure grows from the material already present in a system: relationships, constraints, records, needs, risks, and emerging patterns.",
+    "approvedWording": "Structure grows out of the material you are working with.",
+    "fallbackWording": "The work starts by noticing the patterns already present.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/about"],
+    "boundaries": [
+      "Use as a principle, not as a replacement for role-fit proof.",
+      "Pair with concrete operating artifacts when used near hiring copy."
+    ]
+  },
+  {
+    "id": "hje-ecommerce-modernization",
+    "projectId": "harry-j-epstein",
+    "claim": "Jamie helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    "approvedWording": "Contributed to online growth for a legacy e-commerce business.",
+    "fallbackWording": "Helped a legacy business make its operating knowledge usable online.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/resume", "/work", "/work/technical-operations", "/work/harry-j-epstein"],
+    "boundaries": [
+      "Use contribution language, not sole-causality language.",
+      "Do not publish private dashboards, customer data, vendor terms, credentials, revenue detail, or proprietary operating rules."
+    ]
+  },
+  {
+    "id": "hje-revenue-growth-2x",
+    "projectId": "harry-j-epstein",
+    "claim": "Candidate exact claim: Jamie contributed to 2x revenue growth through web, e-commerce, analytics, marketing, and operations improvements.",
+    "approvedWording": "Contributed to 2x revenue growth.",
+    "fallbackWording": "Contributed to online growth.",
+    "status": "needs-jamie-approval",
+    "sourceClass": "private-source-not-in-repo",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not project exact revenue wording to website pages until Jamie approves the exact surface.",
+      "Do not imply sole causality or publish underlying financial records."
+    ]
+  },
+  {
+    "id": "fairrent-campaign-memory",
+    "projectId": "fair-rent-nyc",
+    "claim": "Jamie built and stewarded public-safe campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    "approvedWording": "Built and stewarded civic campaign-memory infrastructure.",
+    "fallbackWording": "Helped structure civic campaign memory and public-data framing.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/resume", "/work", "/work/technical-operations", "/work/fair-rent-nyc"],
+    "boundaries": [
+      "Use collective-work language.",
+      "Do not publish private coalition notes, legal-review detail, stakeholder lists, private correspondence, protected source packets, or unapproved quotes.",
+      "Do not present policy analysis as legal advice."
+    ]
+  },
+  {
+    "id": "nyc-artist-coalition-role",
+    "projectId": "fair-rent-nyc",
+    "claim": "Jamie is a co-founder of NYC Artist Coalition and contributes civic systems, coalition operations, public web, documentation, and policy communications work.",
+    "approvedWording": "Co-founder; civic systems, coalition operations, and policy communications lead.",
+    "fallbackWording": "Co-founding NYC Artist Coalition member focused on civic systems and documentation.",
+    "status": "approved",
+    "sourceClass": "public-website",
+    "projectedPages": ["/work/fair-rent-nyc", "/work/technical-operations", "/resume"],
+    "boundaries": [
+      "Do not frame Jamie as sole leader or owner of collective coalition outcomes.",
+      "Do not imply legal counsel, official agency role, or sole authorship of legislation."
+    ]
+  },
+  {
+    "id": "nyc-artist-coalition-public-record",
+    "projectId": "fair-rent-nyc",
+    "claim": "NYC Artist Coalition has participated in public cultural-space advocacy around informal and affordable community spaces, dance and nightlife regulation, enforcement transparency, COVID-era relief coordination, commercial lease protections, and FairRentNYC / Commercial Rent Stabilization.",
+    "approvedWording": "Helped build public advocacy infrastructure for cultural-space stability.",
+    "fallbackWording": "Supported public cultural-space advocacy infrastructure.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-website",
+    "projectedPages": ["/work/fair-rent-nyc"],
+    "boundaries": [
+      "Use collective verbs such as participated in, contributed to, supported, and helped build.",
+      "Do not claim NYC Artist Coalition alone repealed the Cabaret Law, created the Office of Nightlife, passed a bill, or secured enforcement changes."
+    ]
+  },
+  {
+    "id": "fairrent-exact-page-count",
+    "projectId": "fair-rent-nyc",
+    "claim": "Candidate exact claim: Commercial Rent Stabilization campaign-memory materials include 30+ pages and a 34-page running-minutes record.",
+    "approvedWording": "30+ pages of civic campaign-memory infrastructure.",
+    "fallbackWording": "A substantial shared civic campaign-memory system.",
+    "status": "needs-jamie-approval",
+    "sourceClass": "private-source-not-in-repo",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not publish the underlying working records.",
+      "Do not project exact page counts until Jamie approves the exact surface."
+    ]
+  },
+  {
+    "id": "callnyc-open-data-guidance",
+    "projectId": "callnyc",
+    "claim": "Jamie built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
+    "approvedWording": "Translated civic open data into resident-facing guidance.",
+    "fallbackWording": "Built an archived civic-data prototype for resident-facing guidance.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/resume", "/work", "/work/technical-operations", "/work/callnyc"],
+    "boundaries": [
+      "Always identify the work as archived and unofficial.",
+      "Do not imply current city-service status, legal guidance, emergency guidance, or official City Council affiliation."
+    ]
+  },
+  {
+    "id": "callnyc-press-citation",
+    "projectId": "callnyc",
+    "claim": "External coverage of CallNYC may be named after the exact citation is verified.",
+    "approvedWording": "External coverage citation verified.",
+    "fallbackWording": "External coverage citation under review.",
+    "status": "future-v1-1",
+    "sourceClass": "needs-review",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not publish press wording until the exact citation is confirmed.",
+      "Do not imply official adoption or endorsement."
+    ]
+  },
+  {
+    "id": "wowlist-community-platform",
+    "projectId": "wowlist",
+    "claim": "Jamie co-built WOWList, a Python / Django and Ember community-calendar platform used by DIY arts and music organizers across multiple city ecosystems.",
+    "approvedWording": "Co-built community web systems across multiple city ecosystems.",
+    "fallbackWording": "Co-built community calendar and social-discovery systems.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/resume", "/work", "/work/wowlist"],
+    "boundaries": [
+      "Use aggregate adoption language only.",
+      "Do not claim official city chapters or current activity unless separately verified.",
+      "Do not publish user records, organizer contact lists, raw archive exports, IP or location fields, or unapproved artifacts."
+    ]
+  },
+  {
+    "id": "wowlist-aggregate-scale",
+    "projectId": "wowlist",
+    "claim": "Candidate exact claim: public-safe archive summaries support roughly 35 city ecosystems plus larger rounded aggregate counts.",
+    "approvedWording": "Roughly 35 city ecosystems.",
+    "fallbackWording": "Multiple city ecosystems.",
+    "status": "needs-jamie-approval",
+    "sourceClass": "private-source-not-in-repo",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not publish raw rows or user-level records.",
+      "Do not present city activity as official chapters."
+    ]
+  },
+  {
+    "id": "sunday-dinner-participation-infrastructure",
+    "projectId": "196-sunday-dinner",
+    "claim": "Jamie created Sunday Dinner / 196 Artists Residency as human-scale participation infrastructure through invitation, hosting, onboarding, documentation, and follow-through systems.",
+    "approvedWording": "Created repeatable hosting and continuity systems for gatherings and artists.",
+    "fallbackWording": "Built repeatable participation and continuity systems.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/", "/resume", "/work", "/work/196-sunday-dinner"],
+    "boundaries": [
+      "Do not publish names, attendance records, addresses, private messages, or unapproved images.",
+      "Do not turn trust-building community work into spectacle."
+    ]
+  },
+  {
+    "id": "sunday-dinner-exact-counts",
+    "projectId": "196-sunday-dinner",
+    "claim": "Candidate exact claim: Sunday Dinner / 196 records support 300+ documented gatherings and 20+ resident artists.",
+    "approvedWording": "300+ documented gatherings and 20+ resident artists.",
+    "fallbackWording": "A long-running gathering and residency practice.",
+    "status": "needs-jamie-approval",
+    "sourceClass": "private-source-not-in-repo",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not publish underlying community records.",
+      "Do not name participants, addresses, hosts, resident artists, or attendance details without approval."
+    ]
+  },
+  {
+    "id": "kc-town-hall-public-benefit",
+    "projectId": "kc-town-hall",
+    "claim": "Jamie supported adaptive reuse planning and public-benefit documentation for a long-vacant historic building.",
+    "approvedWording": "Supported adaptive reuse planning and public-benefit documentation.",
+    "fallbackWording": "Helped make a complex building project easier to describe, review, and continue.",
+    "status": "softened-for-v1",
+    "sourceClass": "public-record",
+    "projectedPages": ["/resume", "/work", "/work/kc-town-hall"],
+    "boundaries": [
+      "Use supported unless stronger role language is separately approved.",
+      "Do not publish private finance, legal, property, banking, or stakeholder details.",
+      "Do not imply completed redevelopment."
+    ]
+  },
+  {
+    "id": "kc-town-hall-exact-metrics",
+    "projectId": "kc-town-hall",
+    "claim": "Candidate exact claim: KC Town Hall work involved an approximately 6,500 sq. ft. building, four commercial spaces, three homes, and a $490,539 public funding recommendation.",
+    "approvedWording": "$490,539 public funding recommendation.",
+    "fallbackWording": "Public-funding recommendation context.",
+    "status": "needs-jamie-approval",
+    "sourceClass": "public-record",
+    "projectedPages": [],
+    "boundaries": [
+      "Use recommendation or authorization language precisely.",
+      "Do not say Jamie secured funding alone or that funding was disbursed unless separately verified."
+    ]
+  },
+  {
+    "id": "source-backed-team-memory-method",
+    "projectId": "source-backed-team-memory",
+    "claim": "Jamie has developed a bounded source-backed team-memory method for preserving useful ideas, decisions, open questions, onboarding context, source-linked notes, owners, next steps, current status, and human-reviewed AI-assisted documentation.",
+    "approvedWording": "Source-backed team memory with human review, governance, and privacy boundaries.",
+    "fallbackWording": "Bounded method for reviewable operating memory.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/resume", "/work/technical-operations", "/lab/source-backed-team-memory", "/contact"],
+    "boundaries": [
+      "Frame as early method, lab, consulting practice, or proof-of-practice.",
+      "Do not imply finished production SaaS, broad ingestion, a private archive browser, or an AI replacement for judgment."
+    ]
+  },
+  {
+    "id": "source-backed-team-memory-authority-boundary",
+    "projectId": "source-backed-team-memory",
+    "claim": "AI drafts. Humans review. The shared record remains inspectable and correctable.",
+    "approvedWording": "AI drafts. Humans review. The shared record remains inspectable and correctable.",
+    "fallbackWording": "AI-assisted memory remains human-reviewed and correctable.",
+    "status": "approved",
+    "sourceClass": "public-safe-summary-of-private-work",
+    "projectedPages": ["/lab/source-backed-team-memory", "/work/technical-operations"],
+    "boundaries": [
+      "Do not imply automated truth, legal compliance, production security review, or autonomous AI authority.",
+      "Do not publish private source bundles or bot outputs that could be mistaken for human statements."
+    ]
+  },
+  {
+    "id": "ai-evals-professional-development",
+    "projectId": "source-backed-team-memory",
+    "claim": "Jamie completed AI Evals for Engineers & PMs through Maven in 2026, taught by Hamel Husain and Shreya Shankar.",
+    "approvedWording": "Completed AI Evals for Engineers & PMs.",
+    "fallbackWording": "AI evaluation literacy supporting human-reviewed documentation work.",
+    "status": "approved",
+    "sourceClass": "public-artifact",
+    "projectedPages": ["/resume", "/lab/source-backed-team-memory"],
+    "boundaries": [
+      "Use as professional development and method support.",
+      "Do not imply employment, instructor affiliation, degree status, or production AI safety ownership."
+    ]
+  },
+  {
+    "id": "protected-private-evidence",
+    "projectId": "technical-operations",
+    "claim": "Private source material should not be published as proof.",
+    "approvedWording": "Protected evidence stays outside the public repo and deploy.",
+    "fallbackWording": "Protected evidence stays protected.",
+    "status": "do-not-publish",
+    "sourceClass": "private-source-not-in-repo",
+    "projectedPages": [],
+    "boundaries": [
+      "Do not publish private correspondence, protected meeting exports, legal-review files, stakeholder lists, client-private materials, private analytics, community records, credentials, or source bundles.",
+      "Use public-safe summaries and approved artifacts instead."
+    ]
+  }
+]
