@@ -100,6 +100,8 @@ proprietary, or unlicensed font files. See `docs/typefaces.md`.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 - Never put private source archives in this repo or Docker context.
+- Maintain public professional claims in `docs/proofs-bank.md`. The website
+  should project from that public-safe bank, not from private archival material.
 
 ## Launch Blockers
 

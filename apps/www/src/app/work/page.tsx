@@ -21,6 +21,11 @@ export default function WorkPage() {
           becoming usable systems, public-facing tools, documentation, decision
           trails, and durable handoffs.
         </p>
+        <p className="mt-4 text-base leading-7 text-jb-ink/70">
+          The public site is a selective projection of a public-safe proofs bank:
+          claims are phrased as Known / Open / Protected, with stronger private
+          evidence kept out of the repository and out of production pages.
+        </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page

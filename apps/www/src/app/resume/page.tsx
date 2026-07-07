@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { resumeProofs } from "@/data/proof-bank";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -9,14 +10,6 @@ export const metadata: Metadata = createMetadata({
     "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
   path: "/resume"
 });
-
-const highlights = [
-  "Operating-structure work across civic, cultural, small-business, and technical environments",
-  "Supported catalog, search, checkout, content, analytics, and workflow improvements for a legacy e-commerce business",
-  "Helped build and steward shared civic campaign-memory infrastructure",
-  "Co-built community web systems for organizer publishing, keyword-based discovery, digest emails, and embeddable calendars",
-  "Helped create repeatable hosting and continuity systems for recurring gatherings and resident-artist support"
-];
 
 export default function ResumePage() {
   return (
@@ -46,12 +39,12 @@ export default function ResumePage() {
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-          <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
+          <h2 className="text-2xl font-semibold text-jb-ink">Selected proof</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
-            {highlights.map((highlight) => (
-              <li className="flex gap-3" key={highlight}>
+            {resumeProofs.map((proof) => (
+              <li className="flex gap-3" key={proof.id}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                <span>{highlight}</span>
+                <span>{proof.publicClaim}</span>
               </li>
             ))}
           </ul>

@@ -25,6 +25,11 @@ belong in this repo or Docker context.
   approvals, proof metrics, quotes, or source relationships.
 - When approval is missing, write `TODO: Jamie approval required.` in review
   notes or draft content; do not let that marker reach production.
+- Add or revise public professional claims in `docs/proofs-bank.md` before
+  projecting them into website copy or structured site data.
+- Treat the proofs bank as public content. It may summarize stronger private
+  evidence, but it must not store private source material or claims that are not
+  safe for broad public circulation.
 
 ## Project-Specific Limits
 
