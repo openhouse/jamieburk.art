@@ -10,8 +10,8 @@ export function ResumeCTA() {
         documentation systems, civic technology, and public-facing tools.
       </p>
       <div className="mt-5">
-        <JBButton href={site.resumePath} variant="secondary" download>
-          Download resume PDF
+        <JBButton href={site.resumeReady ? site.resumePath : "/resume"} variant="secondary" download={site.resumeReady}>
+          {site.resumeReady ? "Download resume PDF" : "View resume"}
         </JBButton>
       </div>
     </section>

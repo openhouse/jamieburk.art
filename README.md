@@ -4,7 +4,8 @@ Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
 The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+complex public-facing teams, turning emerging or under-structured work into
+usable systems.
 
 ## Stack
 
@@ -28,6 +29,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run public-safety
+npm run check:routes
+npm run preflight:staging
 npm run check
 ```
 
@@ -92,6 +96,10 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+
+See `docs/knowledge-bank/` for the public-safe claim bank, projection map,
+publishing governance, anti-claims, source posture, and launch blockers. There
+is intentionally no public `/proofs` page.
 
 ## Launch Blockers
 
