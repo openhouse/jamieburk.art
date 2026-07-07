@@ -8,9 +8,9 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
+  ["Unclear ownership", "actionable next steps and status rhythms"],
   ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Fragile handoffs", "runbooks, onboarding, and durable transfer"]
 ];
 
 export default function HomePage() {
@@ -29,9 +29,10 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: ambiguous,
+              stakeholder-heavy work becoming usable systems, public-facing
+              tools, documentation, decision records, launch support, and
+              durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -54,9 +55,9 @@ export default function HomePage() {
               What was unclear becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+              The projects differ, but the move is consistent: clarify ownership,
+              preserve decisions, surface risks, protect what should stay private,
+              and leave behind material people can act on.
             </p>
           </div>
           <dl className="grid gap-3">
@@ -77,14 +78,15 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Clarify to Coordinate to Build to Document to Transfer
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
+            I usually enter when the work matters, the stakeholders are many,
+            and the operating system has not yet caught up to the need. I listen
+            across teams, clarify requirements and ownership, create the
+            workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>

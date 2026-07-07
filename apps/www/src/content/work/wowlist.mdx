@@ -1,6 +1,6 @@
 ## Context
 
-WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Python / Django and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.
+WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Python / Django and Ember.js to support event publishing, distribution, discovery, email updates, saved events, and calendar sync across DIY arts, music, and local-interest scenes.
 
 ## What was unclear
 
@@ -8,12 +8,18 @@ Organizers needed lightweight ways to share events without depending on one edit
 
 ## What became usable
 
-The platform turned keywords into followable community surfaces. That gave organizers a way to publish and distribute events around the language their communities already used.
+The platform turned keywords into followable community surfaces. That gave organizers a way to publish and distribute events around the language their communities already used, while giving participants ways to follow lists, save events, mark attendance intent, receive updates, and sync calendars.
 
 ## What I did
 
-Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform.
+Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform: Django/PostgreSQL/PostGIS, Ember.js, event records, list/tag logic, follows, email settings, media handling, and Google Calendar integration.
+
+Public-safe aggregate archive counts show the platform was materially larger than a small experiment by July 2017: 1,800+ users, 16,000+ events/posts, 23,000+ lists/tags, 28,000+ list follows, 20,000+ saved events, 15,000+ calendar-synced events, and 35+ active city/region scenes. Raw user data, organizer contacts, private media, credentials, and individual community records stay offline.
+
+## Outcome / evidence
+
+The evidence is aggregate scale plus product shape: a working community platform with publishing, follow, save, email, media, geolocation, and calendar-sync systems. The numbers are used only as public-safe aggregates. They do not expose who used the platform, what private records contained, or which communities should be named without consent.
 
 ## Transferable proof
 
-This is product-operations and public-web proof: community vocabulary, user workflows, platform logic, and distribution needs had to become a system that real organizers could use.
+This is product-operations and public-web proof: community vocabulary, user workflows, platform logic, and distribution needs had to become a system that real organizers could use across many scenes.
