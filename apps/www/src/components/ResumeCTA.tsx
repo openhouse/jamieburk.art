@@ -1,5 +1,4 @@
 import { JBButton } from "@/components/JBButton";
-import { site } from "@/data/site";
 
 export function ResumeCTA() {
   return (
@@ -10,8 +9,8 @@ export function ResumeCTA() {
         documentation systems, civic technology, and public-facing tools.
       </p>
       <div className="mt-5">
-        <JBButton href={site.resumePath} variant="secondary" download>
-          Download resume PDF
+        <JBButton href="/resume" variant="secondary">
+          View resume
         </JBButton>
       </div>
     </section>

@@ -23,7 +23,30 @@ workspaces, Dockerfile, Dokku.
 - `npm run typecheck`
 - `npm run lint`
 - `npm run build`
+- `npm run public-safety`
+- `npm run preflight:production`
 - `npm run check`
+
+## Proof Bank
+
+Use `docs/proofs-bank.md` as the public-safe knowledge base for Jamie's
+professional accomplishment claims. Website copy should project from that bank
+and stay optimized for clarity, audience, and purpose.
+
+## Chad Lens for Public Copy
+
+Before shipping public copy, ask:
+
+1. Is Jamie visible as the actor?
+2. Does the sentence answer "toward what end?"
+3. Is the language legible to a hiring manager or HR reader?
+4. Are specialized terms translated once?
+5. Are acronyms spelled out or avoided?
+6. Are unfamiliar entities defined?
+7. Does the copy protect collective credit and avoid overclaiming?
+8. Does it avoid reducing stewardship, facilitation, coordination, or analysis
+   to mere "tracking"?
+9. Does it make the work impressive without making the reader decode it?
 
 ## Public-Safety Rules
 
@@ -35,7 +58,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the material off public pages and record the issue in the
+claim register or release checklist.
 
 ## Scope Rules
 

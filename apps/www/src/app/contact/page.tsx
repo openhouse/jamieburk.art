@@ -20,27 +20,19 @@ export default function ContactPage() {
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
-            <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
+            {site.emailLabel && site.emailHref ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">Public email</dt>
+                <dd className="mt-1 text-jb-ink/74">
+                  <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                    {site.emailLabel}
+                  </a>
+                </dd>
+              </div>
+            ) : null}
             <div>
               <dt className="font-semibold text-jb-ink">Location</dt>
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
-              </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
@@ -51,6 +43,10 @@ export default function ContactPage() {
               </dd>
             </div>
           </dl>
+          <p className="mt-5 text-sm leading-6 text-jb-ink/64">
+            Optional contact rows stay hidden until exact public values are
+            approved.
+          </p>
         </div>
       </div>
     </div>
