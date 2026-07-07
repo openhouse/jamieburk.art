@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns under-structured work into
+usable systems for complex public-facing teams.
 
 ## Stack
 
@@ -29,6 +29,8 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run preflight
 ```
 
 ## Environment
@@ -45,7 +47,8 @@ NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
 ```
 
-Production should only be enabled after staging review:
+Production should only be configured after staging review, and should remain
+non-indexable until Jamie explicitly approves promotion:
 
 ```bash
 APP_ENV=production
@@ -53,7 +56,7 @@ SITE_ENV=production
 NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
-NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -80,10 +83,14 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings, proof
+labels, and compact metadata. Do not commit or serve private, proprietary, or
+unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
+
+See `docs/content-safety.md` for the canonical project-specific publication
+rules.
 
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,
@@ -93,14 +100,8 @@ or serve private, proprietary, or unlicensed font files.
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
 
-## Launch Blockers
+## Launch
 
-- Replace placeholder resume PDF before production.
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Use `docs/launch.md` as the canonical staging and production go/no-go checklist.
+Production indexing is opt-in and requires explicit approval before switching
+`NEXT_PUBLIC_ROBOTS_POLICY=index`.

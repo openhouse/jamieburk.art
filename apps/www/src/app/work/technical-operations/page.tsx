@@ -46,7 +46,7 @@ const sections = [
       "SQL",
       "Git / GitHub",
       "Docker / Dokku",
-      "QGIS",
+      "Geographic information system workflows (QGIS)",
       "Open-data workflows"
     ]
   }
@@ -65,6 +65,17 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding materials,
           documentation systems, launch support, and durable handoffs.
         </p>
+        <section className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Why this maps to Technical Operations
+          </h2>
+          <p className="mt-3 leading-8 text-jb-ink/76">
+            I build the practices that help teams stay focused, unblocked,
+            documented, and able to ship: planning rhythms, status updates,
+            decision logs, action trackers, onboarding guides, runbooks,
+            stakeholder updates, retros, and handoffs.
+          </p>
+        </section>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (

@@ -61,7 +61,8 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production can be configured before launch, but indexing must remain
+off until Jamie explicitly approves production promotion.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -75,7 +76,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,8 +91,12 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
+
+After explicit production approval, rebuild with
+`NEXT_PUBLIC_ROBOTS_POLICY=index` and re-verify `/api/health`, `/robots.txt`,
+and `/sitemap.xml` before sharing the production URL broadly.
 
 Enable TLS:
 
@@ -137,6 +142,7 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
 ```
 
 Expected staging behavior:
@@ -145,3 +151,7 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The standalone resume PDF remains noindexed; `/resume` is the search-facing
+  resume surface after production approval.
+- `www.jamieburk.art` should redirect to `https://jamieburk.art` or remain
+  intentionally unserved until the redirect is configured.
