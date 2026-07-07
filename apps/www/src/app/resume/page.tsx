@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { resumeHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -9,14 +10,6 @@ export const metadata: Metadata = createMetadata({
     "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
   path: "/resume"
 });
-
-const highlights = [
-  "14+ years creating operating structure across civic, cultural, small-business, and technical environments",
-  "Contributed to a period of 2x revenue growth for a legacy e-commerce business",
-  "Built 30+ pages of shared civic campaign memory and source maps",
-  "Co-built WOWList for 35+ city scenes, with 1,800+ users and 16,000+ posts/events in local archive analysis",
-  "Documented 300+ gatherings and supported 20+ resident artists through repeatable hosting and continuity systems"
-];
 
 export default function ResumePage() {
   return (
@@ -49,7 +42,7 @@ export default function ResumePage() {
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
-            {highlights.map((highlight) => (
+            {resumeHighlights.map((highlight) => (
               <li className="flex gap-3" key={highlight}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
                 <span>{highlight}</span>

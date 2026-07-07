@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { workEvidenceFor } from "@/data/proofs";
 import type { WorkMeta } from "@/types/work";
 
 const visibilitySchema = z.enum([
@@ -151,12 +152,7 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
-    evidence: [
-      "Catalog, search, checkout, web, e-commerce, marketing, content, and analytics systems",
-      "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to a period of 2x revenue growth",
-      "Stakeholder translation across technical and nontechnical contexts"
-    ],
+    evidence: workEvidenceFor("harry-j-epstein"),
     knownOpenProtected: {
       known:
         "Jamie led long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
@@ -231,12 +227,7 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
-    evidence: [
-      "30+ pages of shared civic campaign documentation and source maps",
-      "Running minutes, decision records, action trackers, and source maps",
-      "Legal/policy questions and city/state strategy lanes organized for collaborators",
-      "Public-data framing and stakeholder next steps"
-    ],
+    evidence: workEvidenceFor("fair-rent-nyc"),
     knownOpenProtected: {
       known:
         "Jamie built and stewarded public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
@@ -310,12 +301,7 @@ const workItemsInput = [
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
-    evidence: [
-      "Built after a New York City Council civic-data hackathon",
-      "Translated CouncilStat / constituent-services open data",
-      "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
-    ],
+    evidence: workEvidenceFor("callnyc"),
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
@@ -362,12 +348,7 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
-    evidence: [
-      "Python / Django + Ember.js platform",
-      "Followable keyword communities",
-      "Organizer-facing distribution workflows, email digests, and calendar integrations",
-      "Local archive analysis supports 35+ active city scenes, 1,800+ users, and 16,000+ posts/events"
-    ],
+    evidence: workEvidenceFor("wowlist"),
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities and used across 35+ city scenes.",
@@ -414,12 +395,7 @@ const workItemsInput = [
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
-    evidence: [
-      "300+ documented gatherings",
-      "20+ resident artists supported",
-      "Onboarding and participation systems",
-      "Recurring operations and continuity structures"
-    ],
+    evidence: workEvidenceFor("196-sunday-dinner"),
     knownOpenProtected: {
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
@@ -466,12 +442,7 @@ const workItemsInput = [
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
-    evidence: [
-      "Co-led redevelopment planning support",
-      "Public-benefit documentation",
-      "Historic preservation context",
-      "$490,539 public funding recommendation documented in approved resume materials"
-    ],
+    evidence: workEvidenceFor("kc-town-hall"),
     knownOpenProtected: {
       known:
         "Jamie co-led adaptive reuse planning and documentation for a long-vacant historic building.",

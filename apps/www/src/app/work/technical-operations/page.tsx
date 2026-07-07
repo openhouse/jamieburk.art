@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofItems } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -78,6 +79,24 @@ export default function TechnicalOperationsPage() {
         </section>
       </div>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <JBCard className="md:col-span-2">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Selected defensible proof
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+            These claims come from the repo proof bank and are selected for this
+            role surface. They are written to show scope without exposing
+            protected records.
+          </p>
+          <ul className="mt-5 grid gap-3 md:grid-cols-2">
+            {technicalOperationsProofItems.map((item) => (
+              <li className="flex gap-3 text-jb-ink/76" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </JBCard>
         {sections.map((section) => (
           <JBCard key={section.title}>
             <h2 className="text-2xl font-semibold text-jb-ink">{section.title}</h2>

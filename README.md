@@ -90,7 +90,8 @@ unlicensed font files. See `docs/typefaces.md`.
 ## Content Rules
 
 See `docs/content-safety.md` for the canonical project-specific publication
-rules.
+rules. See `docs/proofs-bank.md` and `apps/www/src/data/proofs.ts` for the
+public-safe claims bank that drives selected website proof points.
 
 - Do not publish private emails, raw transcripts, private coalition notes,
   legal-review materials, health or financial details, private correspondence,

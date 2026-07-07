@@ -115,6 +115,33 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   );
 }
 
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  if (!item.evidence.length) return null;
+
+  return (
+    <section aria-labelledby="evidence-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-list">
+        Selected proof
+      </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        These are public-safe claims selected from the repo proof bank. They are
+        intentionally bounded so the site can show real accomplishments without
+        publishing protected source material.
+      </p>
+      <ul className="mt-5 grid gap-3 md:grid-cols-2">
+        {item.evidence.map((evidence) => (
+          <li
+            className="rounded-lg border border-jb-ink/12 bg-jb-warm px-4 py-3 text-sm leading-6 text-jb-ink/76"
+            key={evidence}
+          >
+            {evidence}
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 function NoteBlock({
   title,
   children,

@@ -8,6 +8,10 @@ quotes, photos, screenshots, client details, raw transcripts, strategy notes,
 credentials, internal dashboards, or source files. If approval is unclear, omit
 the material.
 
+See `docs/proofs-bank.md` and `apps/www/src/data/proofs.ts` for the public-safe
+claim bank. Site copy should project selected claims from that bank rather than
+inventing unsupported proof language page by page.
+
 ## Default Rules
 
 - Use public-safe summaries instead of raw source material.
