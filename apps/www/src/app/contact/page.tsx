@@ -23,7 +23,9 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.emailHref}>
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -33,13 +35,17 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required before launch.
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.linkedInHref}>
+                  {site.linkedInLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                TODO: Jamie approval required if public-ready.
+                <a className="font-semibold text-jb-blue hover:text-jb-green" href={site.githubHref}>
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>

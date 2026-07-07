@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
+import { site } from "@/data/site";
 import type { WorkMeta } from "@/types/work";
 
 type CaseStudyLayoutProps = {
@@ -31,8 +32,8 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             <JBButton href="/resume" variant="secondary">
               Download resume
             </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
+            <JBButton href={site.emailHref} variant="ghost">
+              Email Jamie
             </JBButton>
           </div>
         </aside>

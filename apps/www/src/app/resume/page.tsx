@@ -6,7 +6,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Resume - Jamie Burkart",
   description:
-    "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
+    "Resume page for Jamie Burkart: Technical Project Manager — Product Operations & Implementation.",
   path: "/resume"
 });
 
@@ -25,25 +25,25 @@ export default function ResumePage() {
         <div className="jb-reading">
           <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
           <p className="mt-4 text-2xl font-semibold text-jb-green">
-            Technical Project Manager - Product Operations & Implementation
+            Technical Project Manager — Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I turn under-structured work into usable systems by creating
+            operating structure for complex public-facing teams: requirements,
+            workflows, documentation, decision trails, launch support, onboarding,
+            and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
               Download resume PDF
             </JBButton>
-            <JBButton href="/contact" variant="secondary">
-              Contact Jamie
+            <JBButton href={site.emailHref} variant="secondary">
+              Email Jamie
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            TODO: Jamie approval required before launch. Replace the placeholder
-            PDF with the current approved resume.
+            Production blocker: replace this placeholder PDF with Jamie&apos;s
+            final approved resume before launch.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
