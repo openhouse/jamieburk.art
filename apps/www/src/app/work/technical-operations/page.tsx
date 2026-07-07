@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProofs } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -53,6 +54,10 @@ const sections = [
 ];
 
 export default function TechnicalOperationsPage() {
+  const proofItems = technicalOperationsProofs
+    .map((proof) => proof.technicalOperationsClaim ?? proof.claim)
+    .slice(0, 6);
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -81,6 +86,17 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <section className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+        <h2 className="text-2xl font-semibold text-jb-ink">Selected proof</h2>
+        <ul className="mt-5 grid gap-4 text-jb-ink/76 md:grid-cols-2">
+          {proofItems.map((item) => (
+            <li className="flex gap-3" key={item}>
+              <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

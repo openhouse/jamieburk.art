@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run public-safety
+npm run check:routes
+npm run preflight:staging
 ```
 
 ## Environment
@@ -55,7 +58,13 @@ SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
+NEXT_PUBLIC_RESUME_PDF_APPROVED=true
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
 ```
+
+Production can be deployed noindex for soft launch review. Indexable production
+requires `NEXT_PUBLIC_ROBOTS_POLICY=index` after Jamie approves the exact public
+surface.
 
 ## Deployment
 
@@ -80,7 +89,7 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
+Use Karla for body/UI text and Archivo Narrow for display headings. Do not commit
 or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
@@ -95,7 +104,7 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Replace placeholder resume PDF before production.
+- Add the exact Jamie-approved resume PDF before indexable production.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
 - Confirm screenshots/artifacts.
