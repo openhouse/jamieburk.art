@@ -37,6 +37,29 @@ artifacts, and careful collective-work language.
 
 When uncertain, write: `TODO: Jamie approval required.`
 
+## Knowledge Bank
+
+Treat `docs/knowledge-bank/` as the public-safe claim-governance layer. Do not
+strengthen a public website claim unless the knowledge bank status, source
+class, and boundary support that wording. The website is a projection from the
+bank, not a private archive or evidence dump.
+
+Before shipping public copy, apply the Chad Lens:
+
+- make Jamie visible as the actor;
+- answer "toward what end?";
+- translate specialized terms once;
+- use words instead of symbols or unexplained shorthand;
+- protect collective credit and avoid unsupported ownership claims;
+- make the work impressive without making the reader decode it.
+
+Prefer action verbs such as clarified, structured, built, co-built, stewarded,
+translated, coordinated, facilitated, documented, implemented, synthesized,
+mapped, supported, maintained, transferred, and improved.
+
+Avoid unsupported hero language such as "single-handedly built," "led the
+movement," "owned the bill," "solved the crisis," or "caused 2x growth."
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
@@ -47,6 +70,8 @@ change for V1.
 
 Staging first: `staging.jamieburk.art`, noindex.
 Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production indexing must remain explicit opt-in: `APP_ENV=production`,
+`SITE_URL=https://jamieburk.art`, and `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Voice
 

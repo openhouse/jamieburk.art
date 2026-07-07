@@ -17,7 +17,7 @@ export default function WorkPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Selected work</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          These case studies show a recurring pattern: under-structured situations
+          These case studies show a recurring pattern: loosely defined situations
           becoming usable systems, public-facing tools, documentation, decision
           trails, and durable handoffs.
         </p>

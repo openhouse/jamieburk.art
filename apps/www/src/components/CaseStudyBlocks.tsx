@@ -44,7 +44,7 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
+        Representative artifact types
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
@@ -64,8 +64,13 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        These cards describe public-safe examples, redrawn structures, or artifact
+        types. They do not imply that private source files, raw notes, or
+        unapproved screenshots are published here.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
           <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
@@ -93,6 +98,12 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/72">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        citation, screenshot, collaborator approval, or stronger review. Protected
+        is intentionally omitted because privacy, consent, client trust, legal
+        sensitivity, civic sensitivity, or community safety requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>

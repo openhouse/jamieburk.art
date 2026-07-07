@@ -25,11 +25,25 @@ Use `.env.example` for local environment defaults.
 ## Checks
 
 ```bash
+npm ci
 npm run typecheck
 npm run lint
+npm run public-safety
+npm run check:knowledge-bank
 npm run build
 npm run check
 ```
+
+## Knowledge Bank
+
+The public site projects from `docs/knowledge-bank/`, which tracks public-safe
+claims, source classes, approval status, boundaries, and page-level projections.
+Do not strengthen website claims without updating the knowledge bank first.
+
+The knowledge bank is not a CMS, private archive, transcript store, or evidence
+room. It contains public-safe summaries and governance notes so future
+contributors can understand what may be said, how strongly it may be said, and
+what must remain protected.
 
 ## Environment
 
@@ -81,7 +95,8 @@ drafts, Docker build args, and verification checklist.
 ## Typeface Policy
 
 Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+or serve private, proprietary, or unlicensed font files. See
+`docs/typefaces.md`.
 
 ## Content Rules
 

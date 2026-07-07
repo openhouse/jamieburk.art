@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBCard } from "@/components/JBCard";
+import { ProofBankProjection } from "@/components/ProofBankProjection";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -41,6 +42,9 @@ export default function ColophonPage() {
             <p className="leading-7 text-jb-ink/76">{detail}</p>
           </JBCard>
         ))}
+      </div>
+      <div className="mt-10">
+        <ProofBankProjection />
       </div>
     </div>
   );
