@@ -11,6 +11,7 @@ const firstSprint = [
   "Onboarding reader for new hires",
   "Human-reviewed AI summary pattern",
   "Privacy / permission boundary map",
+  "Governance / eval policy",
   "Recommendations for what to document next"
 ];
 

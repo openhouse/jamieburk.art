@@ -1,6 +1,6 @@
 ## Context
 
-WOWList.org was a co-built community-calendar platform organized around followable keyword communities. It used Python / Django and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.
+WOWList.org was a co-built community-calendar and social discovery platform organized around followable keyword communities. It used Python / Django, PostgreSQL / PostGIS, and Ember.js to support event distribution and discovery across DIY arts, music, and local-interest scenes.
 
 ## What was unclear
 
@@ -10,10 +10,16 @@ Organizers needed simple, repeatable, low-overhead ways to share events without 
 
 The platform turned keywords into followable community surfaces. That gave organizers a way to publish and distribute events around the language their communities already used.
 
+Local archive analysis supports stronger aggregate claims than a normal prototype would: by the July 2017 database snapshot, the platform had 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved/starred events, and 15,915 synced Google Calendar events. The conservative geography claim is 35+ active city scenes, using a threshold of 50+ geocoded posts/events.
+
 ## What I did
 
-Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform.
+Jamie co-built and supported the product model, event workflows, and public-facing web system. The work connected community organizing patterns to a maintainable technical platform: events/posts, tags/lists, follows, stars, "going" records, mentions, editable event information, email digests, media uploads, generated thumbnails, geolocation, and Google Calendar synchronization.
+
+The archive also sets the boundary. It includes production-style database backups and media, but it is not a complete public archive and it contains private user data. Public portfolio copy should use aggregate metrics and representative diagrams, not raw records, private media, emails, contact lists, or user-level examples without approval.
 
 ## What this proves
 
 This is product-operations and public-web proof: community vocabulary, user workflows, platform logic, and distribution needs had to become a system that real organizers could use.
+
+It also shows full-stack product implementation at meaningful scale. The important claim is not "calendar app." The stronger, more accurate claim is independent social infrastructure for local DIY arts and music scenes, described with aggregate evidence and clear privacy boundaries.

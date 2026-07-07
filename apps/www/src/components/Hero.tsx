@@ -21,9 +21,10 @@ export function Hero() {
             using.
           </p>
           <p className="mt-4 leading-7 text-jb-ink/72">
-            My work is strongest in under-structured environments: places where
-            the need is real, but requirements, ownership, documentation,
-            planning rhythms, and handoffs are not yet clear.
+            My work is strongest in early-stage, cross-functional, or poorly
+            documented environments: places where the need is real, but
+            requirements, ownership, planning rhythms, and handoffs are not yet
+            clear.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>

@@ -73,7 +73,7 @@ const sections = [
 const selectedProof = [
   {
     title: "Harry J. Epstein Company",
-    text: "Jamie helped translate legacy product knowledge, customer language, analytics, marketing, and e-commerce operations into maintainable workflows for an 80+ year-old business."
+    text: "Jamie helped translate paper-and-phone catalog operations into searchable e-commerce, dealer-pricing logic, analytics, publishing, product-data, and workflow systems for an 80+ year-old business."
   },
   {
     title: "FairRentNYC / Commercial Rent Stabilization",
@@ -81,11 +81,11 @@ const selectedProof = [
   },
   {
     title: "CallNYC",
-    text: "Jamie turned constituent-services open data into an archived resident-facing prototype while making the unofficial, historical status clear."
+    text: "Jamie turned newly released City Council constituent-services open data into an archived resident-facing prototype, with press and civic-tech traces preserved in the archive."
   },
   {
     title: "WOWList",
-    text: "Jamie co-built community-calendar workflows around followable keyword communities so organizers could distribute events through language their scenes already used."
+    text: "Jamie designed and co-built a full-stack community-calendar and social discovery platform with aggregate archive evidence of 1,800+ users, 16,000+ events/posts, and 35+ active city scenes."
   },
   {
     title: "196 / Sunday Dinner",
@@ -97,7 +97,7 @@ const selectedProof = [
   },
   {
     title: "Source-Backed Team Memory",
-    text: "Jamie is developing a bounded lab method for preserving decisions, onboarding context, source trails, and open questions with human-reviewed AI drafts and inspectable sources."
+    text: "Jamie is developing a bounded lab method for preserving decisions, onboarding context, source trails, open questions, governance rules, and eval checks with human-reviewed AI drafts."
   }
 ];
 
