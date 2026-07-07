@@ -15,7 +15,8 @@ const highlights = [
   "Contributed to online growth for a legacy e-commerce business",
   "Built and stewarded civic campaign-memory infrastructure",
   "Co-built community web systems across multiple city ecosystems",
-  "Created repeatable hosting and continuity systems for gatherings and artists"
+  "Created repeatable hosting and continuity systems for gatherings and artists",
+  "Completed AI Evals for Engineers & PMs, with practice in annotation workflows, traces, retrieval quality, and human review"
 ];
 
 export default function ResumePage() {

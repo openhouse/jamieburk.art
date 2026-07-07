@@ -32,7 +32,7 @@ const sections = [
     title: "Cross-functional unblocking",
     items: [
       "Translate between technical and nontechnical stakeholders.",
-      "Coordinate across product, design, engineering, legal, communications, contracts, civic partners, and leadership.",
+      "Coordinate across product, design, engineering, security, legal, communications, contracts, civic partners, and leadership.",
       "Escalate clearly when a decision, dependency, or risk needs attention."
     ]
   },
@@ -53,7 +53,7 @@ const proofExamples = [
   },
   {
     title: "FairRentNYC / Commercial Rent Stabilization",
-    text: "Coalition memory, meeting synthesis, decision records, source maps, stakeholder follow-up, and public/internal boundaries."
+    text: "Coalition memory, meeting synthesis, decision records, source maps, consent-aware follow-up, and public/internal boundaries."
   },
   {
     title: "CallNYC",
@@ -65,7 +65,7 @@ const proofExamples = [
   },
   {
     title: "Source-Backed Team Memory",
-    text: "Lab method for decision lineage, onboarding context, and human-reviewed AI-assisted documentation workflows."
+    text: "Lab method for source-to-memory loops, decision lineage, onboarding context, quality-check rubrics, and human-reviewed AI-assisted documentation workflows."
   }
 ];
 
