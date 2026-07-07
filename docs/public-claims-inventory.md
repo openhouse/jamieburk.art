@@ -82,7 +82,7 @@ Do not say:
 
 Recommended public claim:
 
-> Helped build and steward 30+ pages of shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization: running minutes, action trackers, decision records, source maps, legal/policy question logs, public-data opportunities, stakeholder follow-up notes, and public-safe explanations.
+> As a NYC Artist Coalition co-founder and civic-systems / coalition-operations contributor, helped build and steward shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization: running minutes, action trackers, decision records, source maps, legal/policy question logs, public-data opportunities, stakeholder follow-up notes, and public-safe explanations.
 
 Strength: Public-ready with active-project approval.
 
@@ -91,11 +91,38 @@ Source basis:
 - Production resume.
 - Commercial Rent Stabilization Collaboration - Running Minutes, 34-page tagged PDF.
 - Commercial rent public-data and source-mapping materials.
+- Public NYC Artist Coalition pages describing the coalition as artists, creative organizations, community leaders, activists, policy makers, and specialists advocating for informal and affordable community spaces in NYC.
+- Public NYC Artist Coalition / Fair Rent / Talks Not Raids pages documenting public-facing campaign surfaces around Cabaret Law repeal, Night Mayor input, M.A.R.C.H. transparency, vacant storefronts, lease protections, Commercial Rent Stabilization, call scripts, reference libraries, maps, and public explainers.
+
+Jamie role:
+
+> Jamie's role in NYC Artist Coalition is best described as co-founder plus civic-systems / coalition-operations contributor. The practical work is building the operating layer: public explainers, source maps, running minutes, action trackers, call scripts, QR / signup pathways, follow-up systems, provenance review, public-data framing, and public-safe materials that let collaborators remember, explain, and act.
+
+Strength: Public-ready with Jamie approval; active-project pages still need collaborator review if naming collaborators or implying coalition-wide position.
+
+NYC Artist Coalition accomplishments:
+
+- Helped make cultural-space displacement, criminalization, enforcement pressure, lease instability, vacant storefronts, and small-space affordability legible as public civic issues.
+- Participated in the broader advocacy ecology around Cabaret Law repeal, including public-facing materials, factsheets, maps, letters, calls to action, and coalition visibility. Use collective language; the public page itself credits a coalition of advocates.
+- Created public input and advocacy surfaces around the first NYC Nightlife Mayor / Office of Nightlife conversation, including the "Save NYC Spaces" frame.
+- Built public campaign surfaces around M.A.R.C.H. transparency / Talks Not Raids, including call scripts, public explainers, coalition listings, press links, and public accountability framing.
+- Maintained Fair Rent NYC / Commercial Rent Stabilization public-facing materials, including reference-library, call-script, Intro 93 progress, and small-business / cultural-space affordability surfaces.
+- Produced public resources and organizing documents that connected New York City's DIY cultural-space advocacy with related national DIY / artist-space safety and affordability work.
+
+Current working lanes:
+
+- Commercial Rent Stabilization / FairRentNYC: city and state strategy, bill-lineage review, public-safe campaign memory, small-business and cultural-space alignment, and careful collective-work framing.
+- Public-data foundation: policy-neutral framing for aggregated commercial vacancy, occupancy, lease-cost, storefront, and RPIE-derived indicators that could support future public oversight without exposing confidential tenant or property records.
+- Coalition memory and coordination: running minutes, action trackers, source maps, public/private boundaries, signup / follow-up protocols, story-consent handling, and "no surprises" review habits.
+- Cultural-space fieldwork: keeping venues, artist spaces, event organizers, DIY rooms, insurance, lease pressure, and rent shocks visible inside small-business and commercial-rent conversations.
+- Nightlife enforcement accountability: maintaining awareness of CURE / M.A.R.C.H. style enforcement transparency as part of cultural-space safety and preservation.
 
 Use:
 
 - Site should keep "helped build and steward," "supported," and "contributed to."
 - It is accurate to name "30+ pages"; the running-minutes PDF is 34 pages.
+- Site may name Jamie as a NYC Artist Coalition co-founder if Jamie approves that public framing; avoid implying sole leadership or speaking for every coalition partner.
+- Public case page can answer: role, coalition accomplishments, and current working lanes without publishing raw notes or private strategy.
 
 Do not say:
 
@@ -103,6 +130,8 @@ Do not say:
 - "Authored official legal analysis."
 - "Owned the bill."
 - "Represents the coalition's final position."
+- "Single-handedly repealed the Cabaret Law."
+- "NYC Artist Coalition alone created the Office of Nightlife."
 
 ### CallNYC
 
@@ -263,4 +292,3 @@ Before production indexing:
 - Active civic collaborators review any active-project page that names them or implies coalition position.
 - Public-safety scan passes with no production blockers.
 - Unapproved screenshots, photos, quotes, raw transcripts, private paths, and private records remain out of the public repo.
-
