@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -16,14 +17,12 @@ export default function AboutPage() {
         <h1 className="text-5xl font-bold text-jb-ink">About</h1>
         <div className="mt-8 space-y-6 text-xl leading-9 text-jb-ink/78">
           <p>
-            I am Jamie Burkart, a technical project manager and implementation
-            lead based in Brooklyn.
+            {site.referrerSentence}
           </p>
           <p>
-            My work sits where systems are under-structured and the stakes are
-            human: civic technology, small-business operations, public-facing
-            tools, cultural infrastructure, coalition work, and knowledge
-            systems.
+            My work sits where goals are high-context and loosely defined:
+            civic technology, small-business operations, public-facing tools,
+            cultural infrastructure, coalition work, and knowledge systems.
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
@@ -33,9 +32,16 @@ export default function AboutPage() {
             people can use after the meeting or launch is over.
           </p>
           <p>
-            I am currently focused on technical project management, product
-            operations, implementation, business analysis, civic/govtech
-            delivery, and source-backed knowledge systems.
+            I am currently focused on technical project management, technical
+            operations, product operations, implementation, business analysis,
+            civic technology delivery, and source-backed knowledge systems.
+          </p>
+          <p>
+            In NYC Artist Coalition / FairRentNYC work, my public-safe role is
+            co-founder and civic-systems, documentation, and policy-communications
+            lead. The work turns cultural-space advocacy into usable civic
+            infrastructure: campaign pages, explainers, source maps, running
+            minutes, action systems, public-data framing, and careful handoffs.
           </p>
         </div>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">

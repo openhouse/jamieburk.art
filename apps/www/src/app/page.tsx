@@ -8,9 +8,10 @@ import { featuredWork } from "@/data/work";
 
 const transformations = [
   ["Scattered stakeholder context", "shared decision records"],
-  ["Fragmented public data", "civic guidance and source maps"],
-  ["Legacy operations", "maintainable e-commerce workflows"],
-  ["Recurring community gatherings", "repeatable participation infrastructure"]
+  ["Cultural-space advocacy", "public civic infrastructure"],
+  ["Fragmented open-data context", "resident-facing guidance and source maps"],
+  ["Legacy operating habits", "maintainable e-commerce workflows"],
+  ["Recurring community work", "repeatable onboarding and continuity systems"]
 ];
 
 export default function HomePage() {
@@ -29,9 +30,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These selected systems show a repeated pattern: ambiguous work
+              becomes clearer, documented, easier to coordinate, safer to hand
+              off, and more usable for the people who need to act.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -55,8 +56,8 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
               The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
+              unclear, protect what should stay private, and leave behind
+              requirements, records, workflows, and handoffs people can act on.
             </p>
           </div>
           <dl className="grid gap-3">
@@ -77,14 +78,14 @@ export default function HomePage() {
         <div>
           <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-            Clarify to Structure to Build to Document to Transfer
+            Clarify, structure, build, document, transfer
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
+            I usually enter when the work is important but ambiguous. I listen
+            across stakeholders, map what is known and unknown, create the
+            workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>

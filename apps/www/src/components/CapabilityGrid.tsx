@@ -3,27 +3,27 @@ import { JBCard } from "@/components/JBCard";
 const capabilities = [
   {
     title: "Technical project management",
-    text: "Requirements, workflows, status rhythms, risk notes, implementation plans, QA/UAT support, and handoffs."
+    text: "I turn ambiguous goals into requirements, workflows, status rhythms, risk notes, implementation plans, quality-assurance support, and handoffs."
   },
   {
     title: "Product operations",
-    text: "Planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory."
+    text: "I create planning systems, decision logs, feedback loops, launch support, adoption materials, and operating memory so teams can keep moving."
   },
   {
     title: "Knowledge systems & documentation",
-    text: "Source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems."
+    text: "I build source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems people can maintain."
   },
   {
     title: "Civic technology & open data",
-    text: "Public-facing tools, data translation, policy explainers, campaign hubs, and resident/community guidance."
+    text: "I translate civic open data, policy context, and campaign materials into public-facing tools, explainers, and resident or community guidance."
   },
   {
     title: "Web systems & public-facing tools",
-    text: "Maintainable websites, e-commerce workflows, community platforms, and low-cost public infrastructure."
+    text: "I maintain websites, e-commerce workflows, community platforms, and low-cost public infrastructure that nontechnical collaborators can use."
   },
   {
     title: "Community systems",
-    text: "Onboarding, facilitation, hospitality, artist support, recurring gatherings, and continuity systems."
+    text: "I create onboarding, facilitation, hospitality, artist-support, recurring-gathering, and continuity systems for complex human environments."
   }
 ];
 

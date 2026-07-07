@@ -29,6 +29,7 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:production
 ```
 
 ## Environment
@@ -37,11 +38,12 @@ Staging is the first deployment target and is non-indexable by default:
 
 ```bash
 APP_ENV=staging
-SITE_ENV=staging
-NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_LINKEDIN_URL=
+NEXT_PUBLIC_GITHUB_URL=
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -49,13 +51,18 @@ Production should only be enabled after staging review:
 
 ```bash
 APP_ENV=production
-SITE_ENV=production
-NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=<approved-public-email>
+NEXT_PUBLIC_LINKEDIN_URL=<approved-linkedin-url-or-empty>
+NEXT_PUBLIC_GITHUB_URL=<approved-github-url-or-empty>
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+Production indexing is opt-in. The site only becomes indexable when
+`APP_ENV=production`, `SITE_URL=https://jamieburk.art`, and
+`NEXT_PUBLIC_ROBOTS_POLICY=index` are all true.
 
 ## Deployment
 
@@ -80,8 +87,18 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body, prose, and UI text. Use Archivo Narrow for headings, labels,
+eyebrows, proof labels, and compact public-notice emphasis. Do not commit or
+serve private, proprietary, or unlicensed font files.
+
+Trade Gothic, Verlag, Gotham Rounded, Risque, and Maria are design references
+only unless Jamie explicitly supplies licensing or permission.
+
+## Editorial Representation Rules
+
+Professional copy should use action verbs, define named projects, avoid
+unexplained acronyms, clarify technical terms, answer toward what end, and make
+Jamie's role visible without overclaiming.
 
 ## Content Rules
 
@@ -92,6 +109,19 @@ or serve private, proprietary, or unlicensed font files.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
 - When uncertain, mark: `TODO: Jamie approval required.`
+
+## Internal Proof Knowledge Graph
+
+The public-safe proof knowledge graph lives at `apps/www/src/data/proofs.ts`.
+It is the repo-internal source-of-truth claim layer for Jamie's professional
+accomplishments: claim, source basis, confidence, visibility, public-use
+guidance, and guardrails.
+
+The website is a composed projection of that graph, optimized for audience,
+purpose, and clarity through homepage proof strips, resume highlights,
+role-specific proof rows, case studies, and supporting pages. The graph itself
+is not exposed as a public route or archive index. See `docs/proofs-bank.md`
+before adding or changing public claims.
 
 ## Launch Blockers
 
@@ -104,3 +134,5 @@ or serve private, proprietary, or unlicensed font files.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Confirm `npm run check:production` fails until every production approval and
+  environment value is ready, then passes on the reviewed commit before launch.

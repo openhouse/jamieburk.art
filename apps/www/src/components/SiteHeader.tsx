@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 import { site } from "@/data/site";
 
 const navItems = [
@@ -24,7 +25,7 @@ export function SiteHeader() {
               <li key={item.href}>
                 <Link
                   className="rounded-lg px-3 py-2 text-jb-ink/78 hover:bg-jb-sky/18 hover:text-jb-blue"
-                  href={item.href}
+                  href={item.href as Route}
                 >
                   {item.label}
                 </Link>
