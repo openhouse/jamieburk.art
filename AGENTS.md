@@ -23,7 +23,19 @@ workspaces, Dockerfile, Dokku.
 - `npm run typecheck`
 - `npm run lint`
 - `npm run build`
+- `npm run public-safety`
 - `npm run check`
+
+## Knowledge Bank
+
+Use `docs/knowledge-bank/README.md` as the orientation file for public-safe
+claim governance. Use `docs/proofs-bank.md` for reusable proof claims,
+`docs/public-claims-inventory.md` for page-level claim placement, and
+`docs/copy-guidelines.md` for professional-legibility rules.
+
+Website components should project from reviewed claims where feasible. Do not
+strengthen claims directly in React components when a proof-bank or inventory
+update is needed first.
 
 ## Public-Safety Rules
 
@@ -35,7 +47,9 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, move the issue to `docs/launch-blockers.md`,
+`docs/public-claims-inventory.md`, or `docs/knowledge-bank/approval-register.md`.
+Do not publish unresolved TODOs in public UI.
 
 ## Scope Rules
 

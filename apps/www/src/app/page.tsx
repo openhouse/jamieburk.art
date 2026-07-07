@@ -29,7 +29,7 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
+              These projects show a recurring pattern: emerging situations
               becoming usable systems, public-facing tools, documentation,
               decision trails, and durable handoffs.
             </p>
@@ -51,7 +51,7 @@ export default function HomePage() {
               Operating motif
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
-              What was unclear becomes usable
+              What is taking shape becomes usable
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
               The projects differ, but the move is consistent: clarify what is
@@ -82,8 +82,8 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
+            I usually enter when the work is important and still taking shape.
+            I listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
