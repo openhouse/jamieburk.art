@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 type JBButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "inverse";
   download?: boolean;
 };
 
@@ -20,7 +20,9 @@ export function JBButton({
     secondary:
       "btn btn-outline min-h-11 rounded-lg border-jb-blue px-5 text-jb-blue normal-case tracking-normal hover:border-jb-blue hover:bg-jb-blue hover:text-jb-paper",
     ghost:
-      "btn btn-ghost min-h-11 rounded-lg px-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
+      "btn btn-ghost min-h-11 rounded-lg px-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20",
+    inverse:
+      "btn min-h-11 rounded-lg border border-jb-paper bg-jb-paper px-5 text-jb-blue normal-case tracking-normal hover:border-jb-ochre hover:bg-jb-ochre hover:text-jb-ink"
   }[variant];
 
   if (href.startsWith("/")) {

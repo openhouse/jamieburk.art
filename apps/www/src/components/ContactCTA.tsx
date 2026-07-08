@@ -5,15 +5,19 @@ export function ContactCTA() {
   return (
     <section className="rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
       <h2 className="text-2xl font-semibold text-jb-ink">
-        Looking for technical project management, product operations,
-        implementation, or knowledge-systems support?
+        Need technical project management, product operations, implementation,
+        or knowledge-systems support?
       </h2>
+      <p className="mt-3 leading-7 text-jb-ink/76">
+        I am looking for work where careful operating structure helps
+        public-facing teams move with more clarity, accountability, and care.
+      </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href="/resume" variant="secondary">
-          Download resume
+          View resume
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
-          Contact Jamie
+        <JBButton href={site.emailHref}>
+          Email Jamie
         </JBButton>
       </div>
     </section>

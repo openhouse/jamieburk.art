@@ -9,7 +9,8 @@ export function SiteFooter() {
           <p className="font-semibold text-jb-ink">{site.name}</p>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-jb-ink/70">
             Technical Project Manager - Product Operations & Implementation.
-            Public-safe portfolio, civic notebook, and future living archive.
+            Public-safe portfolio for operating structure, civic technology,
+            documentation systems, and durable handoffs.
           </p>
         </div>
         <nav aria-label="Footer navigation">

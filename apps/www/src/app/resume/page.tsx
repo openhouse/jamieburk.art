@@ -22,21 +22,21 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            turning emerging, loosely defined work into requirements,
+            workflows, documentation, decision trails, launch support,
+            onboarding materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
               Download resume PDF
             </JBButton>
-            <JBButton href="/contact" variant="secondary">
-              Contact Jamie
+            <JBButton href={site.emailHref} variant="secondary">
+              Email Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+          <p className="mt-4 text-sm leading-6 text-jb-ink/70">
+            The PDF is the current public resume artifact and includes the direct
+            contact details intended for hiring conversations.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

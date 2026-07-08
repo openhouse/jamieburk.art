@@ -1,11 +1,17 @@
 import { JBButton } from "@/components/JBButton";
 
 export function Hero() {
+  const trail = [
+    ["Listen", "Stakeholder context, constraints, risks"],
+    ["Structure", "Requirements, workflows, decision records"],
+    ["Transfer", "Launch support, onboarding, durable handoffs"]
+  ];
+
   return (
     <section className="border-b-4 jb-rule">
       <div className="jb-frame grid gap-10 py-16 md:grid-cols-[1.25fr_0.75fr] md:items-end md:py-20">
         <div className="jb-reading">
-          <p className="text-sm font-semibold uppercase text-jb-blue">
+          <p className="text-sm font-semibold text-jb-blue">
             Technical Project Manager - Product Operations & Implementation
           </p>
           <h1 className="mt-5 font-display text-5xl font-bold leading-[1.02] text-jb-ink sm:text-6xl">
@@ -15,7 +21,7 @@ export function Hero() {
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
+            I help teams turn emerging, loosely defined work into usable
             systems: requirements, workflows, documentation, decision trails,
             launch support, onboarding, and durable handoffs.
           </p>
@@ -34,31 +40,21 @@ export function Hero() {
           </p>
         </div>
         <div
-          aria-label="Representative operating-structure diagram"
-          className="jb-artifact-surface rounded-lg border border-jb-ink/15 p-5 shadow-sm"
+          aria-label="Representative operating-structure trail"
+          className="rounded-lg border border-jb-ink/15 bg-jb-warm p-5"
         >
-          <div className="grid grid-cols-2 gap-3 text-sm font-semibold text-jb-ink">
-            {[
-              "Requirements",
-              "Workflows",
-              "Decision Trails",
-              "Launch Support",
-              "Onboarding",
-              "Handoffs"
-            ].map((label, index) => (
-              <div
-                className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
-                key={label}
-              >
-                <span className="text-xs text-jb-blue">0{index + 1}</span>
-                <p className="mt-5">{label}</p>
-              </div>
+          <p className="text-sm font-semibold text-jb-blue">Operating trail</p>
+          <ol className="mt-5 space-y-5">
+            {trail.map(([step, text]) => (
+              <li className="border-t border-jb-ink/14 pt-4" key={step}>
+                <p className="text-xl font-semibold text-jb-ink">{step}</p>
+                <p className="mt-1 text-sm leading-6 text-jb-ink/76">{text}</p>
+              </li>
             ))}
-          </div>
-          <p className="mt-5 text-sm leading-6 text-jb-ink/68">
-            Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
+          </ol>
+          <p className="mt-6 text-sm leading-6 text-jb-ink/76">
+            The handoff is the artifact: a shared record people can use after
+            the meeting, launch, or transition is over.
           </p>
         </div>
       </div>

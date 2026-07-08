@@ -22,16 +22,16 @@ export default function HomePage() {
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="text-sm font-semibold text-jb-blue">
               Selected systems
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: emerging, loosely
+              defined work becoming usable systems, public-facing tools,
+              documentation, decision trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -47,7 +47,7 @@ export default function HomePage() {
       <section className="bg-jb-warm/80 py-16">
         <div className="jb-frame grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="jb-reading">
-            <p className="text-sm font-semibold uppercase text-jb-blue">
+            <p className="text-sm font-semibold text-jb-blue">
               Operating motif
             </p>
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
@@ -59,10 +59,10 @@ export default function HomePage() {
               people can act on.
             </p>
           </div>
-          <dl className="grid gap-3">
+          <dl className="divide-y divide-jb-ink/12 border-y border-jb-ink/12">
             {transformations.map(([from, to]) => (
               <div
-                className="grid gap-2 rounded-lg border border-jb-ink/12 bg-jb-paper p-4 sm:grid-cols-[1fr_auto_1fr]"
+                className="grid gap-2 py-4 sm:grid-cols-[1fr_auto_1fr]"
                 key={from}
               >
                 <dt className="font-semibold text-jb-ink">{from}</dt>
@@ -75,16 +75,16 @@ export default function HomePage() {
       </section>
       <section className="jb-frame grid gap-8 py-16 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
-          <p className="text-sm font-semibold uppercase text-jb-blue">How I work</p>
+          <p className="text-sm font-semibold text-jb-blue">How I work</p>
           <h2 className="mt-3 text-3xl font-bold text-jb-ink">
             Clarify to Structure to Build to Document to Transfer
           </h2>
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
+            I usually enter when the work is important and still forming. I
+            listen across stakeholders, map what is known and open, create the
+            workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>
