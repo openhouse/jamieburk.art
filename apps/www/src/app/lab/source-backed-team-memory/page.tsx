@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { JBButton } from "@/components/JBButton";
+import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -11,6 +12,8 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function SourceBackedTeamMemoryPage() {
+  const methodProof = requireReadyOrCarefulProof("source-backed-team-memory-method");
+
   return (
     <article className="jb-frame py-12">
       <div className="jb-reading">
@@ -19,15 +22,13 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          A lab / proof-of-practice exploring source-backed operating memory,
-          decision lineage, onboarding context, and human-correctable AI
-          workflows for knowledge-heavy teams.
+          {methodProof.publicWording}
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
-            production SaaS, AI replacement for judgment, or private archive
-            browser.
+            production SaaS, chatbot, surveillance system, AI replacement for
+            judgment, or private archive browser.
           </p>
         </div>
         <div className="mt-10 space-y-6">
