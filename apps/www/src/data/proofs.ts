@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "E-commerce and operations improvements tied to business growth",
+    shortWording: "Contributed to a period of 2x revenue growth",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -164,8 +164,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Helped build and steward shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "Shared civic campaign memory and coordination systems",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    shortWording: "Helped steward 30+ pages of civic campaign memory",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +269,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "Co-built followable community-calendar infrastructure",
+    shortWording: "Co-built platform adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "Built repeatable gathering and residency operating rhythms",
+    shortWording: "Created systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -393,7 +393,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to move public-facing technical work from emerging conditions to launch.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
@@ -474,9 +474,11 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 
 export const homepageProofs = [
   "career-operating-structure-14-years",
-  "technical-operations-operating-backbone",
-  "hje-modernization-stewardship",
+  "hje-revenue-growth-contribution",
+  "fair-rent-campaign-memory",
   "nyc-artist-coalition-public-web-infrastructure",
+  "wowlist-community-platform",
+  "sunday-dinner-196-participation-infrastructure",
   "callnyc-civic-data-guidance",
   "ai-evals-professional-development"
 ].map(requireReadyOrCarefulProof);

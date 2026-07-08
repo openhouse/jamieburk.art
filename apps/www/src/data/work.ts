@@ -92,7 +92,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements, contributing to a period of 2x revenue growth.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -118,7 +118,7 @@ const workItemsInput = [
       {
         title: "Public-safe analytics summary",
         description:
-          "Impact framed as a contribution to online growth without exposing private dashboards or internal revenue detail.",
+          "Impact framed as a contribution to a period of 2x revenue growth without exposing private dashboards or internal revenue detail.",
         type: "analytics summary"
       },
       {
@@ -159,7 +159,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "E-commerce and operations improvements tied to business growth",
+      "Contributed to a period of 2x revenue growth",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
     knownOpenProtected: {
@@ -177,7 +177,7 @@ const workItemsInput = [
     series: "Civic Documentation",
     subtitle: "Coalition memory and civic documentation systems",
     summary:
-      "Helped build and steward shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+      "Helped build and steward 30+ pages of shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
     role: "Documentation Systems Lead & Coalition Operations Support",
     years: "2024-Present",
     status: "Full case study",
@@ -356,7 +356,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities for DIY arts and music organizers.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform with 1,800+ users, 16,000+ posts/events, and adoption across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -399,7 +399,8 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Followable keyword-community model"
+      "1,800+ users and 16,000+ posts/events supported",
+      "Roughly 35 city ecosystems reached"
     ],
     knownOpenProtected: {
       known:
@@ -416,7 +417,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems for recurring gatherings and artist-residency work.",
+      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -449,8 +450,8 @@ const workItemsInput = [
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
-      "Repeatable gathering and hosting rhythms",
-      "Resident-artist onboarding and continuity support",
+      "300+ hosted gatherings",
+      "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
@@ -469,7 +470,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",

@@ -43,7 +43,7 @@ export default function TechnicalOperationsPage() {
                     aria-hidden="true"
                     className="mt-2 h-2 w-2 shrink-0 rounded-full bg-jb-ochre"
                   />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
+                  <span>{proof.publicWording}</span>
                 </li>
               ))}
             </ul>
