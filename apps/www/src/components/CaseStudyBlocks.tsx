@@ -8,9 +8,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Role", item.role],
     ["Years", item.years],
     ["Context", item.series],
-    ["Status", item.status],
-    ["Visibility", item.visibility],
-    ["Role fit", item.roleFit]
+    ["Useful for", item.roleFit]
   ];
 
   return (
@@ -18,10 +16,10 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
       <h2 className="text-xl font-semibold" id="at-a-glance">
         At a glance
       </h2>
-      <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+      <dl className="mt-5 grid gap-4">
         {rows.map(([label, value]) => (
           <div key={label}>
-            <dt className="text-xs font-semibold uppercase text-jb-paper/70">
+            <dt className="jb-meta-label text-xs text-jb-paper/70">
               {label}
             </dt>
             <dd className="mt-1 leading-6">{value}</dd>
@@ -29,7 +27,7 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
         ))}
       </dl>
       <div className="mt-5">
-        <p className="text-xs font-semibold uppercase text-jb-paper/70">
+        <p className="jb-meta-label text-xs text-jb-paper/70">
           Tags
         </p>
         <div className="mt-3">
@@ -40,16 +38,57 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   );
 }
 
+export function ProjectChange({ item }: { item: WorkMeta }) {
+  return (
+    <section
+      aria-labelledby="project-change"
+      className="rounded-lg border border-jb-blue/20 bg-jb-paper p-5 sm:p-6"
+    >
+      <h2 className="text-2xl font-semibold text-jb-ink" id="project-change">
+        What changed
+      </h2>
+      <dl className="mt-5 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+        <div>
+          <dt className="jb-meta-label text-xs text-jb-blue">Starting material</dt>
+          <dd className="mt-2 leading-7 text-jb-ink/76">{item.whatWasUnclear}</dd>
+        </div>
+        <div>
+          <dt className="jb-meta-label text-xs text-jb-green">Structure created</dt>
+          <dd className="mt-2 leading-7 text-jb-ink/76">{item.whatBecameUsable}</dd>
+        </div>
+      </dl>
+    </section>
+  );
+}
+
+export function EvidenceList({ item }: { item: WorkMeta }) {
+  return (
+    <section aria-labelledby="evidence-list" className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
+      <h2 className="text-xl font-semibold text-jb-ink" id="evidence-list">
+        Evidence
+      </h2>
+      <ul className="mt-4 space-y-3 text-sm leading-6 text-jb-ink/76">
+        {item.evidence.map((evidence) => (
+          <li className="flex gap-3" key={evidence}>
+            <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-jb-ochre" />
+            <span>{evidence}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
+        Work produced
       </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+      <ul className="mt-4 flex flex-wrap gap-3">
         {item.artifactTypes.map((artifact) => (
           <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
+            className="rounded-full border border-jb-ink/12 bg-jb-paper px-4 py-2 text-sm font-medium text-jb-ink"
             key={artifact}
           >
             {artifact}
@@ -64,15 +103,20 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
-          <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
-              {artifact.type} / 0{index + 1}
+          <JBCard
+            className={`jb-artifact-surface min-h-52 ${
+              index === 0 && item.artifacts.length > 1 ? "md:col-span-2" : ""
+            }`}
+            key={artifact.title}
+          >
+            <p className="jb-meta-label text-xs text-jb-blue">
+              {artifact.type}
             </p>
-            <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
+            <h3 className="mt-8 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
             <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
           </JBCard>
         ))}
@@ -81,24 +125,24 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
-export function KnownOpenProtected({ item }: { item: WorkMeta }) {
+export function ClaimBoundaries({ item }: { item: WorkMeta }) {
   const blocks = [
-    ["Known", item.knownOpenProtected.known],
-    ["Open", item.knownOpenProtected.open],
-    ["Protected", item.knownOpenProtected.protected]
+    ["Can be said plainly", item.knownOpenProtected.known],
+    ["Needs approval to show", item.knownOpenProtected.open],
+    ["Stays offline", item.knownOpenProtected.protected]
   ] as const;
 
   return (
-    <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
-        Known / Open / Protected
+    <section aria-labelledby="claim-boundaries">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="claim-boundaries">
+        Claim boundaries
       </h2>
-      <div className="mt-5 grid gap-4 md:grid-cols-3">
+      <div className="mt-5 divide-y divide-jb-ink/12 rounded-lg border border-jb-ink/12 bg-jb-paper">
         {blocks.map(([label, text]) => (
-          <JBCard key={label}>
-            <h3 className="text-lg font-semibold text-jb-blue">{label}</h3>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/72">{text}</p>
-          </JBCard>
+          <div className="grid gap-2 p-4 md:grid-cols-[220px_1fr]" key={label}>
+            <h3 className="font-semibold text-jb-blue">{label}</h3>
+            <p className="text-sm leading-6 text-jb-ink/72">{text}</p>
+          </div>
         ))}
       </div>
     </section>
@@ -131,19 +175,19 @@ function NoteBlock({
 export function CareNote({ item }: { item: WorkMeta }) {
   if (!item.careNote) return null;
   return (
-    <NoteBlock title="Care note / limits" tone="ochre">
+    <NoteBlock title="Boundary" tone="ochre">
       <p>{item.careNote}</p>
     </NoteBlock>
   );
 }
 
-export function VisibilityNote({ item }: { item: WorkMeta }) {
+export function EvidenceScopeNote({ item }: { item: WorkMeta }) {
   return (
-    <NoteBlock title="Visibility" tone="blue">
+    <NoteBlock title="Scope" tone="blue">
       <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
-        {item.currentStatus}
+        This page describes {item.title} through claims that can be shared
+        plainly today. More detailed records stay out of the public site unless
+        they are approved for release.
       </p>
     </NoteBlock>
   );
@@ -152,7 +196,7 @@ export function VisibilityNote({ item }: { item: WorkMeta }) {
 export function PublicSafetyNote({ item }: { item: WorkMeta }) {
   if (!item.publicSafety?.note) return null;
   return (
-    <NoteBlock title="Public-safety note" tone="ochre">
+    <NoteBlock title="Claim discipline" tone="ochre">
       <p>{item.publicSafety.note}</p>
     </NoteBlock>
   );
@@ -161,7 +205,7 @@ export function PublicSafetyNote({ item }: { item: WorkMeta }) {
 export function SourceLayer({ item }: { item: WorkMeta }) {
   if (!item.sourceLayer) return null;
   return (
-    <NoteBlock title="Source layer" tone="green">
+    <NoteBlock title="Evidence basis" tone="green">
       <p>{item.sourceLayer}</p>
     </NoteBlock>
   );

@@ -31,7 +31,7 @@ const artifactTypeSchema = z.enum([
   "diagram",
   "download",
   "analytics summary",
-  "public-safe screenshot",
+  "approved screenshot",
   "template",
   "script",
   "map",
@@ -107,7 +107,7 @@ const workItemsInput = [
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
-    artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
+    artifactTypes: ["website", "workflow", "analytics summary", "approved screenshot"],
     artifacts: [
       {
         title: "E-commerce workflow map",
@@ -116,7 +116,7 @@ const workItemsInput = [
         type: "workflow"
       },
       {
-        title: "Public-safe analytics summary",
+        title: "Bounded analytics summary",
         description:
           "Impact framed as a contribution to online growth without exposing private dashboards or internal revenue detail.",
         type: "analytics summary"
@@ -147,7 +147,7 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, approved resume wording, bounded impact summary, and intentionally withheld private operating materials.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
@@ -166,7 +166,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns can be shown only after explicit approval.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -192,13 +192,13 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public explanations, public campaign websites, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
         title: "Campaign-memory spine",
         description:
-          "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
+          "A shared documentation structure for meetings, next steps, decision context, and continuity.",
         type: "meeting memory"
       },
       {
@@ -216,7 +216,7 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+          "Website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
       }
     ],
@@ -243,9 +243,9 @@ const workItemsInput = [
       { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
     ],
     careNote:
-      "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
+      "This page summarizes collective civic and coalition work without publishing private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, public campaign materials, meeting-memory summaries, and bounded descriptions of private coalition context.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -263,9 +263,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie helped structure and steward campaign memory, coordination documents, source maps, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Specific collaborator names, meeting materials, screenshots, and internal artifacts can be shown only after explicit approval.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
@@ -326,7 +326,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, and a bounded historical summary.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -339,13 +339,13 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Historical civic-tech demo with archive and citation materials held for confirmation"
     ],
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Archive links, screenshots, and press citations can be added after the correct materials are confirmed.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -386,9 +386,9 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Claims should avoid overreading adoption beyond aggregate historical estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Bounded summary, historical project context, and aggregate records.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -398,14 +398,14 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
+      "Aggregate historical records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and more precise adoption wording can be added after explicit approval.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -442,7 +442,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Bounded summary and intentionally omitted private community records.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -458,7 +458,7 @@ const workItemsInput = [
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, photos, and artifacts can be shown only with consent and approval.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }
@@ -493,9 +493,9 @@ const workItemsInput = [
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
-      "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
+      "Short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Bounded summary and public-record context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -511,7 +511,7 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Specific public-funding materials, named partners, and project status details can be added after explicit approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

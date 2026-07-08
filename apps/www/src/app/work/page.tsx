@@ -7,7 +7,7 @@ import { createMetadata } from "@/lib/metadata";
 export const metadata: Metadata = createMetadata({
   title: "Selected Work - Jamie Burkart",
   description:
-    "Selected public-safe case studies showing technical project management, product operations, civic technology, documentation systems, and implementation work.",
+    "Selected case studies showing technical project management, product operations, civic technology, documentation systems, and implementation work.",
   path: "/work"
 });
 

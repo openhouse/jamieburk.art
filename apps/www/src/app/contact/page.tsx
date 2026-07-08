@@ -16,12 +16,13 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, consulting, or collaboration:
+          For roles, referrals, consulting, or collaboration, use the current
+          resume PDF.
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
+              <dt className="font-semibold text-jb-ink">Contact details</dt>
               <dd className="mt-1 text-jb-ink/74">
                 {site.hasPublicEmail ? (
                   <a
@@ -35,7 +36,7 @@ export default function ContactPage() {
                     className="font-semibold text-jb-blue hover:text-jb-green"
                     href={site.resumePath}
                   >
-                    Direct contact details are in the current resume PDF
+                    Open the current resume PDF
                   </a>
                 )}
               </dd>
@@ -44,36 +45,32 @@ export default function ContactPage() {
               <dt className="font-semibold text-jb-ink">Location</dt>
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
+            {site.linkedinHref ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">LinkedIn</dt>
+                <dd className="mt-1 text-jb-ink/74">
                   <a
                     className="font-semibold text-jb-blue hover:text-jb-green"
                     href={site.linkedinHref}
                   >
                     {site.linkedinLabel}
                   </a>
-                ) : (
-                  "Not published on this site."
-                )}
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
+                </dd>
+              </div>
+            ) : null}
+            {site.githubHref ? (
+              <div>
+                <dt className="font-semibold text-jb-ink">GitHub</dt>
+                <dd className="mt-1 text-jb-ink/74">
                   <a
                     className="font-semibold text-jb-blue hover:text-jb-green"
                     href={site.githubHref}
                   >
                     {site.githubLabel}
                   </a>
-                ) : (
-                  "Not published on this site."
-                )}
-              </dd>
-            </div>
+                </dd>
+              </div>
+            ) : null}
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
