@@ -50,6 +50,7 @@ const workMetaSchema = z.object({
   featured: z.boolean(),
   priority: z.number(),
   visibility: visibilitySchema,
+  proofBankIds: z.array(z.string()),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
@@ -98,6 +99,10 @@ const workItemsInput = [
     featured: true,
     priority: 1,
     visibility: "public-safe",
+    proofBankIds: [
+      "hje-modernization-stewardship",
+      "hje-revenue-growth-contribution"
+    ],
     whatWasUnclear:
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
@@ -179,11 +184,16 @@ const workItemsInput = [
     featured: true,
     priority: 2,
     visibility: "public-safe",
+    proofBankIds: [
+      "fair-rent-campaign-memory",
+      "fair-rent-source-map",
+      "nyc-artist-coalition-public-web-infrastructure"
+    ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, and shared campaign memory.",
-    artifactTypes: ["source map", "meeting memory", "decision record", "public handout"],
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+    artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
         title: "Campaign-memory spine",
@@ -202,6 +212,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Public campaign web surfaces",
+        description:
+          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+        type: "website"
       }
     ],
     tags: [
@@ -216,8 +232,15 @@ const workItemsInput = [
       "Meeting Synthesis",
       "Source Mapping",
       "Action Tracking",
+      "Campaign Websites",
       "Public Guidance",
       "Decision Records"
+    ],
+    links: [
+      { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
+      { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -234,6 +257,7 @@ const workItemsInput = [
     evidence: [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
@@ -259,6 +283,7 @@ const workItemsInput = [
     featured: true,
     priority: 3,
     visibility: "public-safe",
+    proofBankIds: ["callnyc-civic-data-guidance"],
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
@@ -331,13 +356,14 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Python / Django + Ember.js community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
     featured: true,
     priority: 4,
     visibility: "public-safe",
+    proofBankIds: ["wowlist-community-platform"],
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
@@ -352,7 +378,13 @@ const workItemsInput = [
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
-    capabilities: ["Django", "Ember.js", "Community Platform Design", "Event Workflows"],
+    capabilities: [
+      "Django",
+      "PostgreSQL / PostGIS",
+      "Ember.js",
+      "Community Platform Design",
+      "Event Workflows"
+    ],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -363,9 +395,10 @@ const workItemsInput = [
     roleFit:
       "Community systems, product operations, public-facing platforms, and event distribution workflows.",
     evidence: [
-      "Python / Django + Ember.js platform",
+      "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
+      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached"
     ],
     knownOpenProtected: {
@@ -390,6 +423,7 @@ const workItemsInput = [
     featured: true,
     priority: 5,
     visibility: "summary-only",
+    proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
@@ -435,17 +469,18 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including public-funding and stakeholder documentation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
+    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, and stakeholder context for an adaptive reuse effort.",
+      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -470,7 +505,7 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "Funding process support"
+      "$490,539 public funding recommendation"
     ],
     knownOpenProtected: {
       known:
