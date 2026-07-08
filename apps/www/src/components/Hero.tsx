@@ -15,7 +15,7 @@ export function Hero() {
             I create operating structure for complex public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
+            I help teams turn emerging, stakeholder-heavy work into usable
             systems: requirements, workflows, documentation, decision trails,
             launch support, onboarding, and durable handoffs.
           </p>
@@ -47,7 +47,7 @@ export function Hero() {
               "Handoffs"
             ].map((label, index) => (
               <div
-                className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper/76 p-4"
+                className="min-h-22 rounded-lg border border-jb-ink/12 bg-jb-paper p-4"
                 key={label}
               >
                 <span className="text-xs text-jb-blue">0{index + 1}</span>

@@ -15,9 +15,9 @@ export const site = {
   emailLabel: contactEmail || "Direct contact details in resume PDF",
   emailHref: contactEmail ? `mailto:${contactEmail}` : "/resume",
   hasPublicEmail: Boolean(contactEmail),
-  linkedinLabel: linkedInUrl ? "LinkedIn" : "LinkedIn link not published",
+  linkedinLabel: "LinkedIn",
   linkedinHref: linkedInUrl || "",
-  githubLabel: githubUrl ? "GitHub" : "GitHub link not published",
+  githubLabel: "GitHub",
   githubHref: githubUrl || "",
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"

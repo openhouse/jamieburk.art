@@ -71,11 +71,7 @@ html {
 
 body {
   min-width: 320px;
-  background:
-    linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
-    var(--jb-oil-white);
-  background-size: 42px 42px;
+  background: var(--jb-oil-white);
   color: var(--jb-oil-ink);
   font-family: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
   font-size: 17px;
@@ -132,11 +128,7 @@ h2 {
 }
 
 .jb-artifact-surface {
-  background:
-    linear-gradient(135deg, rgba(116, 194, 229, 0.24), transparent 34%),
-    linear-gradient(225deg, rgba(252, 225, 209, 0.55), transparent 45%),
-    linear-gradient(0deg, rgba(247, 236, 134, 0.24), transparent 58%),
-    #f7f4ee;
+  background: #f7f4ee;
 }
 
 .jb-label,

@@ -393,7 +393,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to move public-facing technical work from emerging need to launch.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
@@ -496,7 +496,7 @@ export const resumeProofHighlights = [
 export const technicalOperationsProofRows = [
   {
     capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    toward: "Turning emerging public-facing work into launchable plans, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",

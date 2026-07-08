@@ -10,9 +10,12 @@ type WorkCardProps = {
 
 export function WorkCard({ item }: WorkCardProps) {
   return (
-    <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5 shadow-sm">
+    <article className="rounded-lg border border-jb-ink/15 bg-jb-warm/88 p-5">
       <div className="flex flex-col gap-4">
-        <StatusBadge status={item.status} visibility={item.visibility} />
+        <div className="flex flex-wrap items-center gap-3">
+          <StatusBadge status={item.status} visibility={item.visibility} />
+          <p className="text-sm font-semibold text-jb-brown">{item.years}</p>
+        </div>
         <div>
           <h2 className="text-2xl font-semibold text-jb-ink">
             <Link className="hover:text-jb-blue" href={`/work/${item.slug}` as Route}>
@@ -24,11 +27,11 @@ export function WorkCard({ item }: WorkCardProps) {
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
-            <dt className="font-semibold text-jb-ink">What was unclear</dt>
+            <dt className="font-semibold text-jb-ink">Starting material</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatWasUnclear}</dd>
           </div>
           <div>
-            <dt className="font-semibold text-jb-ink">What became usable</dt>
+            <dt className="font-semibold text-jb-ink">Structure created</dt>
             <dd className="mt-1 leading-6 text-jb-ink/72">{item.whatBecameUsable}</dd>
           </div>
         </dl>

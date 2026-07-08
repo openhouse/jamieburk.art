@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, CreditsList, KnownOpenProtected, PublicSafetyNote, SourceLayer, VisibilityNote } from "@/components/CaseStudyBlocks";
+import { AtAGlance, ArtifactGallery, ArtifactList, CareNote, ClaimBoundaries, CreditsList, EvidenceList, EvidenceScopeNote, ProjectChange, SourceLayer } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
@@ -20,13 +20,16 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <div className="mt-8">
+            <ProjectChange item={item} />
+          </div>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
           </div>
         </div>
         <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
           <AtAGlance item={item} />
-          <VisibilityNote item={item} />
+          <EvidenceList item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
               Download resume
@@ -40,10 +43,10 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
       <div className="mt-14 space-y-12">
         <ArtifactList item={item} />
         <ArtifactGallery item={item} />
-        <KnownOpenProtected item={item} />
+        <ClaimBoundaries item={item} />
         <div className="grid gap-4 md:grid-cols-2">
+          <EvidenceScopeNote item={item} />
           <CareNote item={item} />
-          <PublicSafetyNote item={item} />
           <SourceLayer item={item} />
         </div>
         <CreditsList item={item} />

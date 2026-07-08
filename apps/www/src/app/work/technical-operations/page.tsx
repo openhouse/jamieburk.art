@@ -22,7 +22,7 @@ export default function TechnicalOperationsPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
           environments, I build the operating backbone teams need to move public
-          work from ambiguity to launch: requirements, planning cycles, risk
+          work from emerging need to launch: requirements, planning cycles, risk
           surfacing, decision records, onboarding materials, handoffs, and
           operating documentation people actually use.
         </p>

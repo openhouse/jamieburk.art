@@ -22,7 +22,7 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
+            turning emerging work into requirements, workflows, documentation,
             decision trails, launch support, onboarding materials, and durable
             handoffs.
           </p>
