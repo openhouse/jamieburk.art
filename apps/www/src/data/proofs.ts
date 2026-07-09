@@ -259,6 +259,57 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "collaborator-approval-pending"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Supported KC Spaces Fund digital infrastructure",
+    detailedPublicWording:
+      "Jamie built and maintained a Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, contact, and fundraising display.",
+    sourceBasis:
+      "Public campaign materials and a public-safe archival/code summary reviewed in July 2026.",
+    sourceNote:
+      "Do not present AI-assisted archival review as collaborator testimony; corroborate broader role framing with campaign organizers before stronger claims.",
+    whyItMatters:
+      "Shows urgent public-facing campaign launch, web-stack delivery, and careful collective-work attribution.",
+    guardrail:
+      "Use support language; public organizing credit remains with the organizers named by the campaign unless collaborators approve broader framing.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie publicly led KC Spaces Fund",
+      "Jamie made grant or disbursement decisions",
+      "Jamie authored all campaign language",
+      "Jamie owned the collective outcome"
+    ],
+    protectedBoundaries: [
+      "Applicant and grantee materials",
+      "Donor and subscriber data",
+      "Payment-request records",
+      "Credentials",
+      "Billing details",
+      "Raw email exports",
+      "Raw text-message archives",
+      "Private shared documents",
+      "Sensitive strategy, legal, financial, or personal context"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "web-infrastructure",
+      "donation-flows",
+      "application-flows",
+      "public-facing-launch"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -551,6 +602,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

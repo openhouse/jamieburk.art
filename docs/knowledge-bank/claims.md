@@ -108,6 +108,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful  
+**Support level:** Strong  
+**Evidence class:** Public project artifact / public-safe archive summary / collaborator approval pending  
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.  
+**Detailed public-safe wording:** Jamie built and maintained a Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, contact, and fundraising display.  
+**Where to project:** Technical Operations.  
+**Why it matters:** Shows urgent public-facing campaign launch, web-stack delivery, and careful collective-work attribution.  
+**Guardrail:** Use support language; public organizing credit remains with the organizers named by the campaign unless collaborators approve broader framing.  
+**Do not say:** Jamie organized KC Spaces Fund; Jamie publicly led KC Spaces Fund; Jamie made grant or disbursement decisions; Jamie authored all campaign language; Jamie owned the collective outcome.  
+**Protected boundaries:** Applicant and grantee materials, donor and subscriber data, payment-request records, credentials, billing details, raw email exports, raw text-message archives, private shared documents, and sensitive strategy, legal, financial, or personal context stay offline.  
+**Review owner:** Jamie / Collaborator approval needed for stronger role framing, public quotes, or named testimony  
+**Last reviewed:** 2026-07-09
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful  
