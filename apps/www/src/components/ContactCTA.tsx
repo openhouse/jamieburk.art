@@ -12,7 +12,7 @@ export function ContactCTA() {
         <JBButton href="/resume" variant="secondary">
           Download resume
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
+        <JBButton href={site.emailHref}>
           Contact Jamie
         </JBButton>
       </div>

@@ -37,14 +37,16 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|supporting-materials-private|job-hunt-private|job-hunt|Jamie Projects History|gmail-export|drive-export|otter|financial|health|therapy|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
+const privatePathExemptions = new Set(["apps/www/src/app/api/health/route.ts"]);
 
 const isProduction =
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
   process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
   process.env.NODE_ENV === "production";
+const robotsPolicy = process.env.NEXT_PUBLIC_ROBOTS_POLICY;
 
 const resumePath = path.join(
   repoRoot,
@@ -159,7 +161,7 @@ for (const file of allFiles) {
     addFailure(file, "font file must not be committed or served from the repo");
   }
 
-  if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {
+  if ((privatePathPattern.test(rel) && !privatePathExemptions.has(rel)) || /\.private\./i.test(rel)) {
     addFailure(file, "private/source-material path must not be committed");
   }
 
@@ -172,6 +174,12 @@ scanPattern(
   shippedContentFiles,
   "production-facing approval marker requires resolution before launch",
   /TODO:\s*Jamie approval required/i
+);
+
+scanPattern(
+  publicContentFiles,
+  "visible internal launch marker appears in production-facing content",
+  /\bTODO\b|approval required|pending confirmation|replace placeholder|if public-ready/i
 );
 
 scanPattern(
@@ -211,8 +219,9 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let siteData = "";
 if (existsSync(siteDataPath)) {
-  const siteData = readText(siteDataPath);
+  siteData = readText(siteDataPath);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
@@ -243,9 +252,10 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+  const siteHasDefaultContactEmail = /jamie\.burkart@gmail\.com/.test(siteData);
+  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !siteHasDefaultContactEmail && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
     addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !siteHasDefaultContactEmail) {
     addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }
@@ -267,10 +277,26 @@ if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConf
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
-  failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
-  );
+if (isProduction) {
+  if (process.env.APP_ENV !== "production") {
+    failures.push(`production preflight requires APP_ENV=production (got ${process.env.APP_ENV ?? "unset"})`);
+  }
+
+  if (process.env.SITE_URL !== "https://jamieburk.art") {
+    failures.push(`production preflight requires SITE_URL=https://jamieburk.art (got ${process.env.SITE_URL ?? "unset"})`);
+  }
+
+  if (process.env.NEXT_PUBLIC_SITE_URL !== "https://jamieburk.art") {
+    failures.push(
+      `production preflight requires NEXT_PUBLIC_SITE_URL=https://jamieburk.art (got ${process.env.NEXT_PUBLIC_SITE_URL ?? "unset"})`
+    );
+  }
+
+  if (robotsPolicy !== "index" && robotsPolicy !== "noindex") {
+    failures.push(
+      `production preflight requires NEXT_PUBLIC_ROBOTS_POLICY=index or noindex (got ${robotsPolicy ?? "unset"})`
+    );
+  }
 }
 
 if (warnings.length) {

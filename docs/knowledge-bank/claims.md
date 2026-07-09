@@ -9,7 +9,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
 **Public wording:** 14+ years creating operating structure across civic, cultural, small-business, and technical environments.  
-**Detailed public-safe wording:** Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.  
+**Detailed public-safe wording:** Jamie helps emerging work become usable systems where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.
 **Where to project:** Homepage, Resume page, Technical Operations, About.  
 **Why it matters:** Establishes the throughline across projects without forcing one job title onto every period of work.  
 **Guardrail:** Does not imply one continuous formal employment role, PMP certification, or government employment.  
@@ -38,8 +38,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
+**Public wording:** Contributed to 2x online revenue growth for a legacy business.
+**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x online revenue growth.
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
 **Guardrail:** Must stay as contribution language.  
@@ -143,8 +143,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.
+**Detailed public-safe wording:** Jamie supported planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
@@ -158,11 +158,11 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Moderate  
 **Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
-**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
+**Public wording:** Source-Backed Team Memory is a bounded method for preserving operating memory: decision records, open questions, onboarding context, source-linked notes, and human-reviewed AI-assisted documentation.
+**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, source-linked notes, and reviewable source links without turning private archives into unsafe browsing surfaces.
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
 **Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
-**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
+**Guardrail:** Not production SaaS. Not an omniscient AI layer. Not a private archive browser. Not broad ingestion. Not a replacement for human judgment.
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
@@ -173,7 +173,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
+**Public wording:** Jamie builds the operating backbone public-facing teams need to stay focused, unblocked, and able to hand off work.
 **Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  

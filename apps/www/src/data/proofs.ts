@@ -104,10 +104,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+      "Contributed to 2x online revenue growth for a legacy business.",
+    shortWording: "Contributed to 2x online revenue growth for a legacy business",
     detailedPublicWording:
-      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x online revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
     sourceNote: "Keep causal language careful and aggregate.",
     whyItMatters:
@@ -165,7 +165,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +269,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording:
+      "Co-built a community platform adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +304,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording:
+      "Created participation systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -333,7 +335,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
@@ -364,13 +366,13 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
-      "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Source-Backed Team Memory is a bounded method for preserving operating memory: decision records, open questions, onboarding context, source-linked notes, and human-reviewed AI-assisted documentation.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, source-linked notes, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
     guardrail:
-      "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
+      "Not production SaaS. Not an omniscient AI layer. Not a private archive browser. Not broad ingestion. Not a replacement for human judgment.",
     doNotSay: [
       "Built a production AI memory platform for a client",
       "Automated trust",
@@ -393,7 +395,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone public-facing teams need to stay focused, unblocked, and able to hand off work.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",

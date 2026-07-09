@@ -21,10 +21,7 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            Download the current resume PDF.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -35,8 +32,7 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+            Updated June 2026.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

@@ -1,4 +1,4 @@
-import { APP_ENV, IS_PRODUCTION, ROBOTS_INDEXABLE, SITE_URL } from "@/lib/site-url";
+import { APP_ENV, ROBOTS_INDEXABLE } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 
@@ -6,11 +6,8 @@ export function GET() {
   return Response.json(
     {
       ok: true,
-      service: "jamie-portfolio",
-      appEnv: APP_ENV,
-      siteUrl: SITE_URL,
-      isProduction: IS_PRODUCTION,
-      robotsIndexable: ROBOTS_INDEXABLE
+      environment: APP_ENV,
+      robots: ROBOTS_INDEXABLE ? "index" : "noindex"
     },
     {
       headers: ROBOTS_INDEXABLE

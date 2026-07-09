@@ -75,7 +75,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,7 +90,7 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
 
 Enable TLS:

@@ -26,9 +26,13 @@ export default function SourceBackedTeamMemoryPage() {
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
+            Early research / method / consulting practice. Not production SaaS,
+            not an omniscient AI layer, not a private archive browser, not
+            broad ingestion, and not a replacement for human judgment.
+          </p>
+          <p className="mt-3 font-semibold leading-7 text-jb-ink">
+            AI drafts. Humans review. The shared record remains inspectable and
+            correctable.
           </p>
         </div>
         <div className="mt-10 space-y-6">
