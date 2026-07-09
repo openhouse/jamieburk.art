@@ -19,19 +19,24 @@ private/
 archive-private/
 raw/
 raw-otter/
+otter-private/
 transcripts-private/
 client-private/
 legal-review/
 support-private/
 support-materials-private/
+job-hunt/
 job-hunt-private/
+Jamie Projects History/
 screenshots-private/
 private-screenshots/
 resumes-private/
 supporting-materials/
+private-fonts/
 *.key
 *.pem
 *.p12
+*.pfx
 *.crt
 *.cer
 *.ttf

@@ -68,7 +68,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
+**Public wording:** Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - Mutual-aid campaign infrastructure
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review / local code-history summary / collaborator approval pending
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Archival review supports that Jamie built, adapted, and deployed the Ghost-based campaign site, customized reusable campaign theme work, and implemented web affordances for donation, application, sign-up, and fundraising display flows.
+**Where to project:** Internal-only proof bank for now. Do not project to homepage, resume page, Work cards, or case studies until human collaborators review the framing.
+**Why it matters:** Adds a concrete mutual-aid / campaign-infrastructure proof point while preserving public organizer credit and private applicant, donor, list, payment, and archive boundaries.
+**Guardrail:** This is AI-assisted archival review, not an eyewitness testimonial. Use behind-the-scenes digital infrastructure language; do not imply Jamie was a named public organizer unless organizers confirm that framing.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie made grant decisions; Jamie wrote all public campaign copy; Jamie was one of the named public organizers; Jamie can publish applicant, donor, list, payment, or private campaign records.
+**Protected boundaries:** Applicant or grantee materials, donor and mailing-list exports, payment request files, credentials and login sheets, billing addresses and payment details, raw email archives, raw message archives, private project documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / KC Spaces Fund collaborators
+**Last reviewed:** 2026-07-09
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  
@@ -173,8 +188,8 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
-**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
+**Public wording:** Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.
+**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
 **Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  

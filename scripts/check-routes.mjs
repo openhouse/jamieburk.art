@@ -57,8 +57,12 @@ const nextConfigSource = read("apps/www/next.config.ts");
 for (const legacyRoute of [
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",
+  "/work/fair-rent",
+  "/work/nyc-artist-coalition",
   "/work/nyc-artist-coalition-fair-rent",
+  "/work/commercial-rent-stabilization",
   "/work/196-artists-residency",
+  "/work/sunday-dinner",
   "/work/source-backed-team-memory",
   "/work/noting-us"
 ]) {
@@ -100,8 +104,12 @@ for (const blockedRoute of [
   "/work/source-backed-team-memory",
   "/work/noting-us",
   "/work/fairrentnyc",
+  "/work/fair-rent",
+  "/work/nyc-artist-coalition",
+  "/work/commercial-rent-stabilization",
   "/work/fairrentnyc-commercial-rent-stabilization",
-  "/work/196-artists-residency"
+  "/work/196-artists-residency",
+  "/work/sunday-dinner"
 ]) {
   if (sitemapSource.includes(`"${blockedRoute}"`) || sitemapSource.includes(`'${blockedRoute}'`)) {
     fail(`sitemap includes blocked or legacy route: ${blockedRoute}`);
