@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - Behind-the-scenes campaign web infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie built and maintained a Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display while keeping public organizer credit collective.
+**Where to project:** Internal proof bank for now. Possible future Technical Operations or civic/cultural infrastructure projection after Jamie chooses the public framing.
+**Why it matters:** Shows rapid public-facing campaign implementation, deployment, fundraising display, and operational web affordances in a mutual-aid context.
+**Guardrail:** Use behind-the-scenes support and collective-work language. Do not claim Jamie was a named public organizer unless the named organizers confirm that framing. Treat the source as an AI-assisted archival review, not a human collaborator testimonial.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie raised the campaign funds; Jamie controlled grant decisions; Jamie wrote every campaign message; an AI-assisted archive note is a human collaborator testimonial.
+**Protected boundaries:** Applicant or grantee packets, donor/list exports, subscriber data, payment-request files, credential/login sheets, billing/payment details, raw email exports, raw text-message archives, private project documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / Collaborator confirmation needed before broader public-role framing
+**Last reviewed:** 2026-07-09
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  
