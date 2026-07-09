@@ -107,8 +107,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings, compact
+metadata, and proof labels. Do not commit or serve private, proprietary, or
+unlicensed font files.
 
 ## Content Rules
 

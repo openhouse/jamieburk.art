@@ -15,6 +15,9 @@ It includes:
   the absence of a public proofs route.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
+- Public contact values for email, LinkedIn, and GitHub are wired into site
+  data, `.env.example`, package preflight commands, Docker build args, and
+  deployment docs.
 
 Do not merge donor branches wholesale. This branch hand-composes the strongest
 ideas from the production-readiness-composite family.
@@ -55,5 +58,5 @@ ideas from the production-readiness-composite family.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
 
-Production deploy remains blocked until Jamie explicitly approves the reviewed
-content and release.
+Production deploy remains blocked until Jamie reviews the staged branch and
+intentionally enables the production environment.

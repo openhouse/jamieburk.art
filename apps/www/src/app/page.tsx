@@ -29,9 +29,10 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: loosely defined,
+              stakeholder-heavy situations becoming usable systems,
+              public-facing tools, documentation, decision trails, and durable
+              handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -42,6 +43,15 @@ export default function HomePage() {
           {featuredWork.map((item) => (
             <WorkCard item={item} key={item.slug} />
           ))}
+        </div>
+      </section>
+      <section className="jb-frame pb-4">
+        <div className="rounded-lg border border-jb-blue/20 bg-jb-sky/15 p-5">
+          <p className="text-lg font-semibold leading-8 text-jb-ink">
+            For technical operations roles, the transferable pattern is
+            consistent: make the team&apos;s work visible enough to plan, unblock,
+            onboard, report, ship, and improve.
+          </p>
         </div>
       </section>
       <section className="bg-jb-warm/80 py-16">
@@ -82,11 +92,11 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
-            adoption, and leave behind materials that make the work easier to
-            maintain.
+            I usually enter when important work has more context than
+            structure. I listen across stakeholders, map what is known and
+            unknown, create the workflows or documentation the team needs,
+            support launch or adoption, and leave behind materials that make the
+            work easier to maintain.
           </p>
           <ContactCTA />
         </div>

@@ -59,6 +59,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",
         permanent: false

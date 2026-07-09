@@ -273,6 +273,10 @@ if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
   );
 }
 
+if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  failures.push("production env requires NEXT_PUBLIC_CONTACT_EMAIL");
+}
+
 if (warnings.length) {
   console.warn("Public-safety warnings:");
   for (const warning of warnings) {

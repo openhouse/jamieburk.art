@@ -40,7 +40,7 @@ export default function Image() {
           Jamie Burkart
         </div>
         <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn under-structured work into usable systems.
+          I turn emerging work into usable systems.
         </div>
       </div>
     ),
