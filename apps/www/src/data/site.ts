@@ -4,7 +4,7 @@ const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "jamie.burkart@gmail.com";
 const linkedInUrl =
   process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ||
-  "https://linkedin.com/in/jamie-burkart";
+  "https://www.linkedin.com/in/jamie-burkart/";
 const githubUrl =
   process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || "https://github.com/openhouse";
 

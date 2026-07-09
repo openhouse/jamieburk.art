@@ -70,12 +70,32 @@ const nextConfig: NextConfig = {
         permanent: false
       },
       {
+        source: "/work/fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/nyc-artist-coalition",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
         source: "/work/nyc-artist-coalition-fair-rent",
         destination: "/work/fair-rent-nyc",
         permanent: false
       },
       {
+        source: "/work/commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
         source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/work/sunday-dinner",
         destination: "/work/196-sunday-dinner",
         permanent: false
       },

@@ -13,7 +13,7 @@ export const metadata: Metadata = createMetadata({
 });
 
 const roleFitItems = [
-  "Planning cycles, delivery tracking, status updates, and recurring meeting rhythms",
+  "Planning cycles, dependency tracking, status updates, and recurring meeting rhythms",
   "Decision frameworks, decision records, action trackers, and risk surfacing",
   "Onboarding paths, handbooks, runbooks, templates, and durable handoff materials",
   "Cross-functional coordination across technical, policy, communications, stakeholder, and public-facing contexts",
@@ -78,20 +78,20 @@ export default function TechnicalOperationsPage() {
       <section className="mt-12 grid gap-8 lg:grid-cols-[0.38fr_0.62fr]">
         <div>
           <h2 className="text-3xl font-bold text-jb-ink">
-            What I bring to Technical Operations
+            Why this maps to Technical Operations
           </h2>
           <p className="mt-4 leading-7 text-jb-ink/76">
             I build the operating backbone that helps small, high-output teams
-            stay focused, unblocked, documented, and shipping.
+            stay aligned, documented, unblocked, and shipping.
           </p>
         </div>
         <div className="space-y-5">
           <p className="text-lg leading-8 text-jb-ink/78">
-            That means planning cycles, decision frameworks, delivery tracking,
-            onboarding paths, status updates, meeting rhythms, handbooks,
-            runbooks, retros, stakeholder communication, and the quiet
-            follow-through that keeps ambiguous work from becoming recurring
-            confusion.
+            That means planning cycles, decision frameworks, delivery and
+            dependency tracking, onboarding paths, status updates, meeting
+            rhythms, handbooks, runbooks, retros, stakeholder communication, and
+            the quiet follow-through that keeps ambiguous work from becoming
+            recurring confusion.
           </p>
           <ul className="grid gap-3">
             {roleFitItems.map((item) => (
