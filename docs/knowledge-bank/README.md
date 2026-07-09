@@ -32,6 +32,8 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Intake notes:** public-safe summaries in `docs/knowledge-bank/intake/`
+  for evidence that may later become public copy after review.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.

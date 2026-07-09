@@ -41,14 +41,22 @@ Use claims that directly support operating-backbone fit:
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `community-cultural-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
+
+## Internal-Only Intake Claims
+
+These claims are in the knowledge bank but should not appear on the public site
+until Jamie decides the projection is useful and safe:
+
+- `kc-spaces-fund-digital-infrastructure`
 
 ## Lab / Source-Backed Team Memory
 
 Use only public-safe method claims.
 
-Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
-imply production SaaS.
+Do not name private collaborators, publish private pricing terms, publish
+private transcripts, or imply production SaaS.
 
 ## Case Studies
 

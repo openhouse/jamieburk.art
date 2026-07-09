@@ -38,7 +38,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the public page bounded and move the review note to the
+launch checklist or knowledge-bank launch blockers.
 
 ## Knowledge Bank
 
