@@ -211,12 +211,15 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let siteDataHasDefaultContactEmail = false;
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
   }
+
+  siteDataHasDefaultContactEmail = /defaultContactEmail\s*=\s*"[^"]+@[^"]+"/.test(siteData);
 }
 
 if (!existsSync(resumePath)) {
@@ -243,9 +246,18 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
-    addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  if (
+    isProduction &&
+    !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
+    !siteDataHasDefaultContactEmail &&
+    !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)
+  ) {
+    addFailure(resumePath, "production contact email env is unset and no default or resume PDF email is available");
+  } else if (
+    isProduction &&
+    !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
+    !siteDataHasDefaultContactEmail
+  ) {
     addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }
@@ -263,13 +275,25 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   addFailure(siteUrlPath, "production indexing is not explicit opt-in");
 }
 
-if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
+if (
+  !/\/resume\/(?:\:path\*|Jamie-Burkart-Resume-Technical-Project-Manager\.pdf)/.test(nextConfigSource) ||
+  !/X-Robots-Tag/.test(nextConfigSource)
+) {
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
+if (
+  isProduction &&
+  !["index", "noindex"].includes(process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "")
+) {
   failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+    `production env requires explicit NEXT_PUBLIC_ROBOTS_POLICY=index or noindex (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+  );
+}
+
+if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "noindex") {
+  warnings.push(
+    "production soft-launch noindex is explicit; flip NEXT_PUBLIC_ROBOTS_POLICY=index only after final approval"
   );
 }
 

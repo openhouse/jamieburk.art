@@ -30,6 +30,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
+- [ ] `npm run preflight:production:soft`
 - [ ] `npm run preflight:production`
 - [ ] Docker build
 - [ ] Docker run

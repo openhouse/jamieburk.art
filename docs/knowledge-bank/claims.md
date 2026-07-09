@@ -22,7 +22,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Ready  
 **Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / public reporting
 **Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
 **Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
@@ -32,6 +32,21 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## hje-online-sales-public-reporting - Public reporting on online sales
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.
+**Detailed public-safe wording:** ToolGuyd documented the 2009 online-store launch with cart, checkout, search, catalog navigation, country-of-origin information, and a distinctive flying-tools interaction; KCUR later reported online sales as 50 percent of the business by 2016.
+**Where to project:** HJE case study, Technical Operations.
+**Why it matters:** Adds public-source context for the scale of the e-commerce transition without relying on private dashboards.
+**Guardrail:** Use as business-context evidence for the e-commerce transition, not as a sole-causation claim about Jamie.
+**Do not say:** Jamie alone made online sales 50 percent of the business; Jamie caused all online-sales growth; online sales were nonexistent until Jamie unless citing the narrower 2009 public-store launch context.
+**Protected boundaries:** Private sales data, internal dashboards, customer data, revenue detail, and vendor terms stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-09
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 

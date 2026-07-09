@@ -10,6 +10,16 @@ human-correctable, source-linked operating memory for knowledge-heavy teams.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.
 
+## Bounded Sprint Shape
+
+- 1-2 week paid discovery / prototype sprint
+- Selected source set
+- Decision-memory template
+- Known / Open / Protected map
+- Onboarding-context note
+- Privacy / retention / access notes
+- Continue / revise / stop recommendation
+
 ## Strong Proof IDs
 
 - `source-backed-team-memory-method`

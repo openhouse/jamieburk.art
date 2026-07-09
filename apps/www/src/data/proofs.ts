@@ -78,7 +78,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
-    sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
+    sourceBasis:
+      "Approved resume language, ToolGuyd 2009 online-store coverage, KCUR 2016 online-sales reporting, public website context, and public-safe business summary.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
       "Jamie fully owned the business",
@@ -105,7 +106,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -129,6 +130,39 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "hje-online-sales-public-reporting",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.",
+    shortWording: "Public reporting described online sales as 50 percent of HJE's business by 2016",
+    detailedPublicWording:
+      "ToolGuyd documented the 2009 online-store launch with cart, checkout, search, catalog navigation, country-of-origin information, and a distinctive flying-tools interaction; KCUR later reported online sales as 50 percent of the business by 2016.",
+    sourceBasis:
+      "ToolGuyd, 'Harry Epstein Launches New Online Store!' (2009), and KCUR, 'How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive' (2016).",
+    whyItMatters:
+      "Adds public-source context for the scale of the e-commerce transition without relying on private dashboards.",
+    guardrail:
+      "Use as business-context evidence for the e-commerce transition, not as a sole-causation claim about Jamie.",
+    doNotSay: [
+      "Jamie alone made online sales 50 percent of the business",
+      "Jamie caused all online-sales growth",
+      "Online sales were nonexistent until Jamie unless citing the narrower 2009 public-store launch context"
+    ],
+    protectedBoundaries: [
+      "Private sales data",
+      "Internal dashboards",
+      "Customer data",
+      "Revenue detail",
+      "Vendor terms"
+    ],
+    surfaces: ["case-study", "technical-operations"],
+    relatedProjects: ["harry-j-epstein"],
+    relatedCapabilities: ["e-commerce", "analytics", "implementation"],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "callnyc-civic-data-guidance",
@@ -269,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems reaching roughly 35 city-based arts and music ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +337,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "300+ gatherings / 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -500,6 +534,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
+      "hje-online-sales-public-reporting",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform"
     ]
