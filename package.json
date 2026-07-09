@@ -21,8 +21,8 @@
     "public-safety": "node scripts/check-public-safety.mjs",
     "check:public-safety": "npm run public-safety",
     "check:routes": "node scripts/check-routes.mjs",
-    "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
-    "check:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse npm run check",
-    "preflight:production": "npm run check:production"
+    "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex node scripts/preflight-staging.mjs",
+    "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse node scripts/preflight-production.mjs",
+    "check:production": "rm -rf apps/www/.next && APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse npm run check && npm run preflight:production"
   }
 }

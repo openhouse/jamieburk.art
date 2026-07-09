@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -24,31 +26,30 @@ const roleFitItems = [
 
 const proofMap = [
   {
-    title: "Coordinate delivery and surface risks early",
+    title: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein",
     body:
-      "FairRentNYC / Commercial Rent Stabilization shows shared campaign memory, action trackers, source maps, decision records, and follow-up systems across many stakeholders."
+      "Legacy e-commerce, operations, implementation, stakeholder translation, and long-term systems stewardship."
   },
   {
-    title: "Build operating processes that scale",
+    title: "FairRentNYC / Commercial Rent Stabilization",
+    href: "/work/fair-rent-nyc",
     body:
-      "Harry J. Epstein Company shows long-term web, e-commerce, analytics, content, marketing, and workflow stewardship for a real operating business."
+      "Civic documentation, coalition memory, decision records, source maps, public-data framing, and collective-work boundaries."
   },
   {
-    title: "Write documentation people actually use",
+    title: "CallNYC.org",
+    href: "/work/callnyc",
     body:
-      "Across FairRentNYC, CallNYC, HJE, WOWList, and Source-Backed Team Memory, the work leaves behind source maps, public guidance, meeting memory, resource libraries, templates, and handoffs."
+      "Open-data translation into resident-facing guidance and archived civic-service prototype design."
   },
   {
-    title: "Onboard and support people into complex work",
+    title: "Source-Backed Team Memory",
+    href: "/lab/source-backed-team-memory",
     body:
-      "196 Artists Residency / Sunday Dinner and WOWList show onboarding, participation systems, organizer workflows, and continuity practices."
-  },
-  {
-    title: "Improve the operation over time",
-    body:
-      "The repeated pattern is: clarify what is known, name what is open, protect what should stay private, and leave a system the next person can keep using."
+      "Decision lineage, onboarding context, human-reviewed AI-assisted documentation, and source-backed knowledge workflows."
   }
-];
+] satisfies { title: string; href: string; body: string }[];
 
 export default function TechnicalOperationsPage() {
   return (
@@ -103,7 +104,11 @@ export default function TechnicalOperationsPage() {
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {proofMap.map((item) => (
             <JBCard key={item.title}>
-              <h3 className="text-xl font-semibold text-jb-ink">{item.title}</h3>
+              <h3 className="text-xl font-semibold text-jb-ink">
+                <Link className="hover:text-jb-blue" href={item.href as Route}>
+                  {item.title}
+                </Link>
+              </h3>
               <p className="mt-3 leading-7 text-jb-ink/76">{item.body}</p>
             </JBCard>
           ))}

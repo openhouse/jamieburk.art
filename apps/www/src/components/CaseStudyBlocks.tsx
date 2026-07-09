@@ -46,6 +46,12 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
         Representative artifact types
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/70">
+        These cards describe public-safe examples, redrawn structures, or
+        artifact types. They do not imply that private source files, raw notes,
+        legal-review materials, private screenshots, or unapproved documents are
+        published here.
+      </p>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
           <li
@@ -93,6 +99,12 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl text-sm leading-6 text-jb-ink/70">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        approval, citation, screenshot, or stronger evidence. Protected is
+        intentionally omitted because privacy, consent, client trust, law, civic
+        sensitivity, or community safety requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>

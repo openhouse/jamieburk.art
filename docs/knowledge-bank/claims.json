@@ -1,0 +1,46 @@
+{
+  "claims": [
+    {
+      "id": "core-operating-structure",
+      "status": "approved",
+      "publicWording": "Jamie creates operating structure for complex public-facing teams.",
+      "allowedSurfaces": ["homepage", "about", "resume", "technical-operations"],
+      "guardrail": "Tie to concrete artifacts: requirements, workflows, documentation, launch support, onboarding, and handoffs."
+    },
+    {
+      "id": "oti-operational-backbone",
+      "status": "approved",
+      "publicWording": "Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.",
+      "allowedSurfaces": ["technical-operations", "resume", "about"],
+      "guardrail": "Use for role fit; do not imply formal authority over every team."
+    },
+    {
+      "id": "hje-2x-growth",
+      "status": "approved-use-with-care",
+      "publicWording": "Contributed to 2x revenue growth for a legacy e-commerce business.",
+      "allowedSurfaces": ["homepage-proof-strip", "resume", "hje-case-study"],
+      "guardrail": "Contribution language only. Do not imply sole causation."
+    },
+    {
+      "id": "fairrent-30-pages",
+      "status": "approved-use-with-care",
+      "publicWording": "Helped build and steward 30+ pages of shared campaign-memory and coordination infrastructure.",
+      "allowedSurfaces": ["homepage-proof-strip", "resume", "fair-rent-case-study"],
+      "guardrail": "Use collective-work language. Do not publish private notes or legal-review material."
+    },
+    {
+      "id": "wowlist-35-ecosystems",
+      "status": "approved-use-with-care",
+      "publicWording": "Co-built community web systems that reached roughly 35 city ecosystems.",
+      "allowedSurfaces": ["homepage-proof-strip", "resume", "wowlist-case-study"],
+      "guardrail": "Use roughly; avoid overclaiming current activity."
+    },
+    {
+      "id": "sunday-dinner-300-20",
+      "status": "approved-use-with-care",
+      "publicWording": "Created repeatable hosting and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "allowedSurfaces": ["homepage-proof-strip", "resume", "196-case-study"],
+      "guardrail": "No guest data, photos, names, addresses, attendance records, or private resident details."
+    }
+  ]
+}
