@@ -58,9 +58,11 @@ for (const legacyRoute of [
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",
   "/work/nyc-artist-coalition-fair-rent",
+  "/work/fair-rent-crs",
   "/work/196-artists-residency",
   "/work/source-backed-team-memory",
-  "/work/noting-us"
+  "/work/noting-us",
+  "/technical-operations"
 ]) {
   if (!nextConfigSource.includes(`source: "${legacyRoute}"`)) {
     fail(`legacy redirect missing: ${legacyRoute}`);
@@ -70,7 +72,8 @@ for (const legacyRoute of [
 for (const destination of [
   "/work/fair-rent-nyc",
   "/work/196-sunday-dinner",
-  "/lab/source-backed-team-memory"
+  "/lab/source-backed-team-memory",
+  "/work/technical-operations"
 ]) {
   if (!nextConfigSource.includes(`destination: "${destination}"`)) {
     fail(`redirect destination missing: ${destination}`);
@@ -101,6 +104,7 @@ for (const blockedRoute of [
   "/work/noting-us",
   "/work/fairrentnyc",
   "/work/fairrentnyc-commercial-rent-stabilization",
+  "/work/fair-rent-crs",
   "/work/196-artists-residency"
 ]) {
   if (sitemapSource.includes(`"${blockedRoute}"`) || sitemapSource.includes(`'${blockedRoute}'`)) {

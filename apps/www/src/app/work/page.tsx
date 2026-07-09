@@ -21,6 +21,12 @@ export default function WorkPage() {
           clearer requirements, usable systems, public-facing tools,
           documentation, decision trails, and durable handoffs.
         </p>
+        <p className="mt-4 text-sm leading-6 text-jb-ink/68">
+          Known is public-safe and evidence-backed enough to say. Open needs
+          approval, citation, screenshot, or stronger evidence. Protected is
+          intentionally omitted because privacy, consent, client trust, law,
+          civic sensitivity, or community safety requires it.
+        </p>
         <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
           <Link className="text-jb-blue hover:text-jb-green" href="/work/technical-operations">
             Technical Operations proof page

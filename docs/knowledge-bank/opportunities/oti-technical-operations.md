@@ -28,6 +28,7 @@ Implementation roles.
 - `hje-modernization-stewardship`
 - `fair-rent-campaign-memory`
 - `callnyc-civic-data-guidance`
+- `kc-spaces-fund-digital-infrastructure`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
 
