@@ -82,16 +82,23 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
 
 export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   const blocks = [
-    ["Defensible", item.knownOpenProtected.known],
-    ["Needs review", item.knownOpenProtected.open],
-    ["Kept private", item.knownOpenProtected.protected]
+    ["Known", item.knownOpenProtected.known],
+    ["Open", item.knownOpenProtected.open],
+    ["Protected", item.knownOpenProtected.protected]
   ] as const;
 
   return (
     <section aria-labelledby="known-open-protected">
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
-        Evidence boundaries
+        Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl leading-7 text-jb-ink/72">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        citation, screenshot, collaborator approval, or stronger review.
+        Protected is intentionally omitted because privacy, consent, client
+        trust, legal sensitivity, civic sensitivity, or community safety
+        requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
@@ -186,7 +193,7 @@ export function ProjectLinks({ item }: { item: WorkMeta }) {
             <a
               className="block rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 font-semibold text-jb-blue hover:border-jb-blue hover:text-jb-green"
               href={link.url}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               {link.label}

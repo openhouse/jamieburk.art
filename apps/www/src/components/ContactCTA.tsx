@@ -12,7 +12,7 @@ export function ContactCTA() {
           Role-fit proof page
         </JBButton>
         <JBButton href="/resume" variant="secondary">
-          Download resume
+          Download résumé
         </JBButton>
         <JBButton href="/contact" variant="ghost">
           Contact Jamie

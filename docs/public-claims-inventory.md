@@ -9,6 +9,7 @@ This file tracks where launch-critical claims appear in the site.
 | HJE 2x revenue-growth contribution | Proof strip, Technical Operations page, HJE case study, resume page, resume PDF | Use contribution language only. |
 | CallNYC archive / Politico coverage | CallNYC case study, Technical Operations page, resume PDF | Include archived/unofficial disclaimer. |
 | FairRentNYC 30+ pages of campaign-memory infrastructure | Proof strip, Technical Operations page, FairRentNYC case study, resume page, resume PDF | Use collective-work language and omit private materials. |
+| KC Spaces Fund behind-the-scenes digital infrastructure | Technical Operations page, Knowledge Bank | Keep as technical and operational support; do not imply named public organizer status or grant decision authority. |
 | WOWList roughly 35 city ecosystems | Proof strip, WOWList case study, resume page, resume PDF | Use "roughly" or "across roughly"; do not over-precision this claim. |
 | Sunday Dinner / 196 Artists Residency 300+ gatherings and 20+ resident artists | Proof strip, case study, resume page, resume PDF | Keep summary-only unless consented artifacts are added. |
 | KC Town Hall $490,539 public funding recommendation | KC Town Hall case study, resume PDF | Keep off homepage; omit private project details. |

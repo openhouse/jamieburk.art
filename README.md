@@ -30,9 +30,12 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
 npm run public-safety
+npm run check:public-safety
 npm run check:routes
 npm run preflight:staging
+npm run preflight:production:noindex
 npm run preflight:production
 ```
 
@@ -69,10 +72,13 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
-Production should only be enabled after staging review:
+Production should soft-launch noindex after staging review:
 
 ```bash
 APP_ENV=production
@@ -80,6 +86,16 @@ SITE_ENV=production
 NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
+NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
+NEXT_TELEMETRY_DISABLED=1
+```
+
+Production indexing is a separate final approval step:
+
+```bash
 NEXT_PUBLIC_ROBOTS_POLICY=index
 NEXT_TELEMETRY_DISABLED=1
 ```
@@ -126,10 +142,11 @@ labels. Do not commit or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Confirm resume PDF before production deployment.
+- Confirm resume PDF in browser before production deployment.
 - Confirm screenshots/artifacts before publishing them.
 - Keep exact proof metrics aligned with the Knowledge Bank and approved resume.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
+- Soft-launch production with `NEXT_PUBLIC_ROBOTS_POLICY=noindex`, then switch
+  to `index` only after final review.
 - Confirm no private/proprietary fonts are committed or served.

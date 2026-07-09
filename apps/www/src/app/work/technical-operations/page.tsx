@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -55,6 +56,25 @@ const sections = [
   }
 ];
 
+const roleFitBullets = [
+  "Coordinate delivery across multiple concurrent projects from concept through public launch.",
+  "Surface risks early and turn recurring blockers into process improvements.",
+  "Build planning cycles, decision frameworks, status updates, meeting rituals, and retrospectives.",
+  "Coordinate across product, engineering, design, communications, legal, security, contracts, and leadership contexts.",
+  "Write handbooks, runbooks, onboarding guides, source maps, decision records, and adoption materials people actually use.",
+  "Report honestly on team health, project status, operational metrics, and what is or is not working.",
+  "Improve working systems quarter over quarter without overengineering."
+];
+
+const proofLinks = [
+  ["Harry J. Epstein Company", "/work/harry-j-epstein"],
+  ["FairRentNYC / Commercial Rent Stabilization", "/work/fair-rent-nyc"],
+  ["CallNYC.org", "/work/callnyc"],
+  ["Source-Backed Team Memory", "/lab/source-backed-team-memory"],
+  ["196 / Sunday Dinner", "/work/196-sunday-dinner"],
+  ["WOWList", "/work/wowlist"]
+] as const;
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -63,12 +83,43 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          I build the operating backbone teams need to move: delivery
-          coordination, planning rhythms, decision logs, action trackers,
-          onboarding materials, handbooks, runbooks, status reporting, risk
-          notes, retrospectives, launch support, and durable handoffs.
+          I build the operating backbone that helps public-facing technical
+          teams stay focused, unblocked, accountable, and able to hand off work.
+          That means delivery coordination, planning rhythms, decision logs,
+          action trackers, onboarding materials, handbooks, runbooks, status
+          reporting, risk notes, retrospectives, launch support, and durable
+          handoffs.
         </p>
       </div>
+      <section className="mt-10 border-y border-jb-ink/12 py-8">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_0.28fr]">
+          <div>
+            <h2 className="text-2xl font-semibold text-jb-ink">
+              Role fit for Technical Operations Manager
+            </h2>
+            <ul className="mt-5 space-y-3 text-jb-ink/76">
+              {roleFitBullets.map((bullet) => (
+                <li className="flex gap-3" key={bullet}>
+                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-green" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-jb-ink">Proof links</h3>
+            <ul className="mt-4 space-y-3">
+              {proofLinks.map(([label, href]) => (
+                <li key={href}>
+                  <Link className="font-semibold text-jb-blue hover:text-jb-green" href={href}>
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {sections.map((section) => (
           <JBCard key={section.title}>

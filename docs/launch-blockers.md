@@ -22,5 +22,5 @@ Production should not be deployed until this list is clear.
 - Re-run local and staging route checks after deploy.
 - Open the resume PDF manually in a browser.
 - Confirm no visible public launch notes or temporary draft language in deployed HTML.
-- Only deploy production with `NEXT_PUBLIC_ROBOTS_POLICY=index` after final
-  review.
+- Soft-launch production with `NEXT_PUBLIC_ROBOTS_POLICY=noindex`.
+- Only switch production to `NEXT_PUBLIC_ROBOTS_POLICY=index` after final review.

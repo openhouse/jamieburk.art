@@ -41,7 +41,7 @@ export default function ContactPage() {
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.linkedinHref}
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   {site.linkedinLabel}
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.githubHref}
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   {site.githubLabel}
@@ -65,7 +65,7 @@ export default function ContactPage() {
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
                 <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
-                  View resume page
+                  View résumé page
                 </Link>
               </dd>
             </div>

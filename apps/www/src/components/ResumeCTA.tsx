@@ -12,7 +12,7 @@ export function ResumeCTA() {
       </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href={site.resumePath} variant="secondary" download>
-          Download resume PDF
+          Download résumé PDF
         </JBButton>
         <JBButton href="/work/technical-operations" variant="secondary">
           Role-fit proof page

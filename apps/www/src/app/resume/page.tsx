@@ -21,8 +21,8 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            Download the current resume for Technical Project Manager - Product
-            Operations & Implementation roles.
+            Current résumé for Technical Project Manager - Product Operations &
+            Implementation roles.
           </p>
           <p className="mt-4 text-lg leading-8 text-jb-ink/76">
             For a fast role-fit read, start with Technical Operations &
@@ -34,7 +34,7 @@ export default function ResumePage() {
               Technical Operations proof page
             </JBButton>
             <JBButton href={site.resumePath} download>
-              Download resume PDF
+              Download résumé PDF
             </JBButton>
             <JBButton href="/contact" variant="secondary">
               Contact Jamie

@@ -22,10 +22,10 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work/technical-operations">
-              View Technical Operations
+              View Technical Operations proof
             </JBButton>
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              Download résumé
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

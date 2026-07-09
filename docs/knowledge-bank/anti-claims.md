@@ -31,6 +31,12 @@ Do not imply CallNYC is an official or current City service.
 
 Do not name collaborators unless approved.
 
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, made grant decisions, or was a named
+public organizer unless the organizers named by campaign materials approve that
+framing.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or
