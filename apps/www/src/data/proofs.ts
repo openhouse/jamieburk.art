@@ -6,6 +6,8 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "ai-assisted-archival-review"
+  | "local-code-archive-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -357,6 +359,60 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "ai-assisted-archival-review",
+      "local-code-archive-summary",
+      "collaborator-approval-pending"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Archival review supports that Jamie built, adapted, and deployed the Ghost-based campaign site, customized reusable campaign theme work, and implemented web affordances for donation, application, sign-up, and fundraising display flows.",
+    sourceBasis:
+      "AI-assisted archival review from July 2026 using public campaign materials, public-safe summaries of private project records, local code-history summaries, and Jamie-provided context.",
+    sourceNote:
+      "This is not an eyewitness testimonial. Treat as private proof-bank background until human collaborators review the framing.",
+    whyItMatters:
+      "Adds a concrete mutual-aid / campaign-infrastructure proof point while preserving public organizer credit and private applicant, donor, list, payment, and archive boundaries.",
+    guardrail:
+      "Use behind-the-scenes digital infrastructure language; do not imply Jamie was a named public organizer unless organizers confirm that framing.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie wrote all public campaign copy",
+      "Jamie was one of the named public organizers",
+      "Jamie can publish applicant, donor, list, payment, or private campaign records"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor and mailing-list exports",
+      "Payment request files",
+      "Credentials and login sheets",
+      "Billing addresses and payment details",
+      "Raw email archives",
+      "Raw message archives",
+      "Private project documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "ghost",
+      "theme-customization",
+      "donation-flows",
+      "application-flows",
+      "platform-continuity"
+    ],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "source-backed-team-memory-method",

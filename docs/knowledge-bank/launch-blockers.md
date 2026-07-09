@@ -18,6 +18,8 @@
 - [x] Jamie authorized use of the current Technical Project Manager resume PDF
   with phone number inside the PDF.
 - [ ] Jamie approves proof metrics.
+- [ ] KC Spaces Fund collaborators review the behind-the-scenes digital
+  infrastructure framing before any public site projection.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
 - [ ] Jamie approves final production deploy.
