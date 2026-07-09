@@ -15,7 +15,7 @@ Do not imply private archives are browsable or available.
 
 ## HJE
 
-Do not say Jamie caused 2x revenue growth.
+Do not say Jamie caused 2x online revenue growth.
 Use contribution language.
 
 ## FairRentNYC / CRS
@@ -38,8 +38,9 @@ photos without approval.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Do not publish private financial, legal, family, property, lender, or partner
+details. Keep funding language tied to public recommendation unless final
+funding details are separately confirmed.
 
 ## Source-Backed Team Memory
 

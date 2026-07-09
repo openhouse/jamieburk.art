@@ -105,18 +105,18 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "Contributed to 2x online revenue growth while helping a legacy e-commerce business adapt to e-commerce.",
+    shortWording: "Contributed to 2x online revenue growth for a legacy e-commerce business",
     detailedPublicWording:
-      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to 2x online revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
     sourceNote: "Keep causal language careful and aggregate.",
     whyItMatters:
       "Provides a concise business-impact proof point while retaining careful causality.",
     guardrail: "Must stay as contribution language.",
     doNotSay: [
-      "Caused 2x revenue growth",
-      "Single-handedly doubled revenue",
+      "Caused 2x online revenue growth",
+      "Single-handedly doubled online revenue",
       "Fully owned all business growth"
     ],
     protectedBoundaries: [
@@ -336,10 +336,10 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings / 20+ resident artists supported",
+      "Created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure, documenting 300+ gatherings and supporting 20+ resident artists.",
+    shortWording: "Repeatable participation infrastructure across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie supported recurring cultural work through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
@@ -367,10 +367,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for adaptive reuse of a long-vacant historic building.",
     sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
     guardrail:
       "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",

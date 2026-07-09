@@ -16,9 +16,14 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, technical project management, product
-          operations, implementation, civic / govtech, knowledge-systems, or
-          source-backed team-memory conversations:
+          For roles, referrals, consulting, or collaboration around technical
+          project management, product operations, implementation, civic/govtech
+          delivery, documentation systems, or source-backed team memory:
+        </p>
+        <p className="mt-4 leading-7 text-jb-ink/72">
+          Best-fit conversations: technical project management, product
+          operations, implementation, civic/govtech delivery, documentation
+          systems, and source-backed team memory.
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">

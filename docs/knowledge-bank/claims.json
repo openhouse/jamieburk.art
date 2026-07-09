@@ -1,0 +1,137 @@
+[
+  {
+    "id": "career-operating-structure-14-years",
+    "status": "approved",
+    "publicProjection": "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["homepage", "resume", "technical-operations", "about"],
+    "boundaries": ["Does not imply one continuous formal employment role, PMP certification, or government employment."],
+    "antiClaims": ["14+ years as a formal technical project manager in one organization"]
+  },
+  {
+    "id": "hje-modernization-stewardship",
+    "status": "approved",
+    "publicProjection": "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    "sourceClass": ["approved-resume", "public-source", "public-safe-archive-summary"],
+    "surfaces": ["resume", "technical-operations", "work-card", "case-study"],
+    "boundaries": ["Use stewardship and contribution language; do not expose private dashboards, customer data, revenue detail, vendor terms, or sensitive operating practices."],
+    "antiClaims": ["Jamie fully owned the business", "Jamie owned all growth"]
+  },
+  {
+    "id": "hje-revenue-growth-contribution",
+    "status": "use-with-care",
+    "publicProjection": "Contributed to 2x online revenue growth while helping a legacy e-commerce business adapt to e-commerce.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["homepage", "resume", "technical-operations", "case-study"],
+    "boundaries": ["Use contribution language and do not expose private dashboards or revenue details."],
+    "antiClaims": ["Caused 2x online revenue growth", "Single-handedly doubled online revenue"]
+  },
+  {
+    "id": "hje-online-sales-public-reporting",
+    "status": "approved",
+    "publicProjection": "Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.",
+    "sourceClass": ["public-source"],
+    "surfaces": ["technical-operations", "case-study"],
+    "boundaries": ["Use as context for the e-commerce transition, not as sole-causation proof about Jamie."],
+    "antiClaims": ["Jamie alone made online sales 50 percent of the business"]
+  },
+  {
+    "id": "fair-rent-campaign-memory",
+    "status": "use-with-care",
+    "publicProjection": "Built and stewarded 30+ pages of shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    "boundaries": ["Use collective-work language and do not publish raw or private coalition context."],
+    "antiClaims": ["Jamie led the movement", "Jamie owned the campaign", "Jamie provided official legal analysis"]
+  },
+  {
+    "id": "fair-rent-source-map",
+    "status": "use-with-care",
+    "publicProjection": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["resume", "technical-operations", "case-study"],
+    "boundaries": ["Do not imply legal authority, official bill ownership, or public release of private legal-review context."],
+    "antiClaims": ["Jamie authored the legislation", "Jamie provided legal advice"]
+  },
+  {
+    "id": "nyc-artist-coalition-public-web-infrastructure",
+    "status": "use-with-care",
+    "publicProjection": "Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+    "sourceClass": ["approved-resume", "public-source", "jamie-review-confirmation"],
+    "surfaces": ["resume", "technical-operations", "work-card", "case-study"],
+    "boundaries": ["Website authorship is Jamie's direct contribution; campaign accomplishments remain collective."],
+    "antiClaims": ["Jamie solely led NYC Artist Coalition", "Jamie authored every policy position"]
+  },
+  {
+    "id": "callnyc-civic-data-guidance",
+    "status": "approved",
+    "publicProjection": "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+    "sourceClass": ["approved-resume", "public-source"],
+    "surfaces": ["technical-operations", "work-card", "case-study"],
+    "boundaries": ["Always describe it as archived and unofficial."],
+    "antiClaims": ["Current city service", "Official city guidance", "Emergency guidance"]
+  },
+  {
+    "id": "wowlist-community-platform",
+    "status": "use-with-care",
+    "publicProjection": "Co-built community web systems adopted across roughly 35 city-based arts and music ecosystems.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    "boundaries": ["Use approximate adoption language and do not publish private user or organizer data."],
+    "antiClaims": ["Official chapters in 35 cities", "Full ownership of organizer adoption"]
+  },
+  {
+    "id": "sunday-dinner-196-participation-infrastructure",
+    "status": "use-with-care",
+    "publicProjection": "Created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure, documenting 300+ gatherings and supporting 20+ resident artists.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary", "jamie-review-confirmation"],
+    "surfaces": ["homepage", "resume", "technical-operations", "work-card", "case-study"],
+    "boundaries": ["Do not include participant names, photos, addresses, attendance records, or stories without explicit consent."],
+    "antiClaims": ["Comprehensive public archive", "Attendance database"]
+  },
+  {
+    "id": "kc-town-hall-public-benefit-documentation",
+    "status": "use-with-care",
+    "publicProjection": "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.",
+    "sourceClass": ["approved-resume", "public-source", "public-safe-archive-summary"],
+    "surfaces": ["technical-operations", "work-card", "case-study"],
+    "boundaries": ["Protect legal, financial, family, property, lender, partner, and stakeholder details."],
+    "antiClaims": ["Final funding received", "Current property status", "Official municipal endorsement beyond the public record"]
+  },
+  {
+    "id": "kc-spaces-fund-digital-infrastructure",
+    "status": "protected",
+    "publicProjection": "Internal proof-bank background only until collaborators confirm public wording.",
+    "sourceClass": ["public-source", "public-safe-archive-summary"],
+    "surfaces": ["internal-only"],
+    "boundaries": ["Do not render publicly; do not present as human testimonial or public organizer credit."],
+    "antiClaims": ["Jamie organized KC Spaces Fund", "Jamie made grant decisions"]
+  },
+  {
+    "id": "source-backed-team-memory-method",
+    "status": "use-with-care",
+    "publicProjection": "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+    "sourceClass": ["public-safe-archive-summary"],
+    "surfaces": ["technical-operations", "lab"],
+    "boundaries": ["Not finished SaaS, not a chatbot, not a private archive browser, and not an AI replacement for judgment."],
+    "antiClaims": ["Built a production AI memory platform for a client", "Automated trust", "Replaces human review"]
+  },
+  {
+    "id": "technical-operations-operating-backbone",
+    "status": "approved",
+    "publicProjection": "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+    "sourceClass": ["approved-resume", "public-safe-archive-summary"],
+    "surfaces": ["homepage", "resume", "technical-operations", "about"],
+    "boundaries": ["Keep generally framed and do not imply certification or replacement of product, engineering, legal, or executive judgment."],
+    "antiClaims": ["Jamie is a certified PMP unless separately approved", "Jamie replaces product, engineering, legal, or executive judgment"]
+  },
+  {
+    "id": "ai-evals-professional-development",
+    "status": "approved",
+    "publicProjection": "Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.",
+    "sourceClass": ["approved-resume", "public-source"],
+    "surfaces": ["resume", "lab", "about"],
+    "boundaries": ["Treat as professional development, not instructor affiliation or certification authority beyond completion."],
+    "antiClaims": ["Jamie teaches the course", "Jamie is certified by Maven as an AI evaluator unless approved"]
+  }
+]

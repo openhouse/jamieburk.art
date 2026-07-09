@@ -13,7 +13,7 @@ const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and intentionally limited public surfaces",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
-  "Font-file-free CSS stacks with Karla / Oswald preferences and system fallbacks",
+  "Font-file-free CSS stacks with Karla / Archivo Narrow preferences and system fallbacks",
   "No private or proprietary font files are committed or served",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Staging-first Docker / Dokku deployment with staging noindex by default",

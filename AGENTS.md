@@ -4,7 +4,7 @@
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
 Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+operating structure for ambiguous, loosely defined, public-facing work.
 
 ## Current Canonical App
 
@@ -72,15 +72,19 @@ Before publishing public copy, ask:
   insider language?
 - Does it say what became usable?
 
-Prefer: clarified, structured, built, co-built, stewarded, translated,
-coordinated, facilitated, documented, implemented, synthesized, mapped,
-supported, maintained, transferred, improved.
+Prefer verbs such as: clarified, structured, built, co-built, stewarded,
+translated, coordinated, facilitated, documented, implemented, synthesized,
+mapped, supported, maintained, transferred, improved.
 
-Use careful collective language: helped, supported, contributed to, co-built,
-stewarded, translated.
+Use careful collective language where work was collective: helped, supported,
+contributed to, co-built, stewarded, translated.
 
 Avoid: single-handedly, owned the bill, led the movement, solved the crisis,
 caused 2x growth.
+
+Documentation is not clerical aftercare. When accurate, frame it as
+stewardship, facilitation, coordination, synthesis, analysis, and operating
+infrastructure.
 
 ## Scope Rules
 

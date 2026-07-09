@@ -55,7 +55,10 @@ for (const slug of [
 
 const nextConfigSource = read("apps/www/next.config.ts");
 for (const legacyRoute of [
+  "/technical-operations",
   "/work/fairrentnyc-commercial-rent-stabilization",
+  "/work/fair-rent-crs",
+  "/work/crs",
   "/work/fairrentnyc",
   "/work/nyc-artist-coalition-fair-rent",
   "/work/196-artists-residency",
@@ -69,6 +72,7 @@ for (const legacyRoute of [
 
 for (const destination of [
   "/work/fair-rent-nyc",
+  "/work/technical-operations",
   "/work/196-sunday-dinner",
   "/lab/source-backed-team-memory"
 ]) {
@@ -100,6 +104,9 @@ for (const blockedRoute of [
   "/work/source-backed-team-memory",
   "/work/noting-us",
   "/work/fairrentnyc",
+  "/technical-operations",
+  "/work/fair-rent-crs",
+  "/work/crs",
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/196-artists-residency"
 ]) {

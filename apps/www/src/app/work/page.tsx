@@ -49,7 +49,7 @@ export default function WorkPage() {
                   </p>
                   <p className="mt-3 text-sm font-semibold text-jb-green">
                     Early research / method / consulting practice. Not a
-                    finished production SaaS.
+                    finished SaaS.
                   </p>
                   <Link
                     className="mt-5 inline-block font-semibold text-jb-blue hover:text-jb-green"

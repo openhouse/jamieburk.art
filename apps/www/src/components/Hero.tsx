@@ -14,12 +14,12 @@ export function Hero() {
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
             I turn ambiguous, loosely defined work into usable systems for
-            complex public-facing teams.
+            public-facing teams.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
             I help teams clarify requirements, map workflows, coordinate
-            delivery, surface risks, document decisions, onboard collaborators,
-            and ship public-facing work with durable handoffs.
+            delivery, document decisions, support launch, onboard collaborators,
+            and leave behind durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>

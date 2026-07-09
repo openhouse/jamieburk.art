@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -211,15 +211,16 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
-let siteDataHasDefaultContactEmail = false;
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
   }
+}
 
-  siteDataHasDefaultContactEmail = /defaultContactEmail\s*=\s*"[^"]+@[^"]+"/.test(siteData);
+if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  addFailure(siteDataPath, "production contact email env is unset");
 }
 
 if (!existsSync(resumePath)) {
@@ -246,20 +247,6 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (
-    isProduction &&
-    !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
-    !siteDataHasDefaultContactEmail &&
-    !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)
-  ) {
-    addFailure(resumePath, "production contact email env is unset and no default or resume PDF email is available");
-  } else if (
-    isProduction &&
-    !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
-    !siteDataHasDefaultContactEmail
-  ) {
-    addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
-  }
 }
 
 const siteUrlPath = path.join(repoRoot, "apps/www/src/lib/site-url.ts");

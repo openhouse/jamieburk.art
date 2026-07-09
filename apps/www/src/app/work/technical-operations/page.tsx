@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { JBButton } from "@/components/JBButton";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
@@ -7,43 +8,25 @@ import { technicalOperationsProofRows } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
-const roleFitSections = [
-  {
-    title: "Delivery coordination",
-    items: [
-      "Coordinated public-facing launches and prototypes including CallNYC, WOWList, and Harry J. Epstein e-commerce workflows.",
-      "Tracked work from idea to public surface: requirements, user pathways, implementation, QA / UAT support, launch, and handoff."
-    ]
-  },
-  {
-    title: "Operating backbone",
-    items: [
-      "Built shared documentation, decision records, action trackers, and source maps for FairRentNYC / Commercial Rent Stabilization and NYC Artist Coalition work.",
-      "Helped teams retain what was decided, what remained open, who needed follow-up, and what could safely be explained publicly."
-    ]
-  },
-  {
-    title: "Onboarding, runbooks, and handoffs",
-    items: [
-      "Created onboarding, invitation, hosting, continuity, and follow-through systems for 196 Artists Residency / Sunday Dinner.",
-      "Created maintainable handoff materials for web, content, campaign, and community systems."
-    ]
-  },
-  {
-    title: "Status reporting and honest escalation",
-    items: [
-      "Use Known / Open / Protected as a practical reporting model: Known is evidence-backed and safe to act on; Open needs review, decision, owner, or additional source; Protected should not be exposed because of privacy, consent, legal sensitivity, client trust, or community safety.",
-      "This is directly useful for team health, stakeholder reporting, risk visibility, and decision-making."
-    ]
-  },
-  {
-    title: "Cross-functional dependencies",
-    items: [
-      "Coordinated across civic, policy, legal-review, public-data, cultural, web, content, marketing, operations, and community contexts.",
-      "Translated between technical and nontechnical stakeholders without turning the documentation layer into bureaucracy."
-    ]
-  }
+const roleFitBullets = [
+  "Coordinate delivery across multiple concurrent projects from concept through public launch.",
+  "Surface risks early and turn recurring blockers into process improvements.",
+  "Build planning cycles, sprint rituals, decision frameworks, status reporting, and post-launch retrospectives.",
+  "Coordinate across product, engineering, design, communications, legal, security, contracts, leadership, and external stakeholder contexts.",
+  "Onboard new collaborators with guides, templates, source maps, and early-week context.",
+  "Write and maintain handbooks, runbooks, operating documentation, and principles that codify how a team works.",
+  "Report honestly on team health, project status, operational metrics, and what is or is not working.",
+  "Improve working systems quarter over quarter without overengineering."
 ];
+
+const relevantProofLinks = [
+  { label: "Harry J. Epstein Company", href: "/work/harry-j-epstein" },
+  { label: "FairRentNYC / Commercial Rent Stabilization", href: "/work/fair-rent-nyc" },
+  { label: "CallNYC.org", href: "/work/callnyc" },
+  { label: "Source-Backed Team Memory", href: "/lab/source-backed-team-memory" },
+  { label: "WOWList.org", href: "/work/wowlist" },
+  { label: "196 Artists Residency / Sunday Dinner", href: "/work/196-sunday-dinner" }
+] as const;
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
@@ -60,9 +43,11 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to stay
-          focused, unblocked, accountable, and able to hand off work.
+          I build the operating backbone that helps public-facing technical
+          teams stay focused, unblocked, and shipping: delivery tracking, risk
+          surfacing, planning rhythms, decision frameworks, onboarding guides,
+          handbooks, runbooks, reporting, retrospectives, operational metrics,
+          and durable handoffs.
         </p>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           My strongest pattern is turning ambiguous or loosely defined operating
@@ -85,22 +70,32 @@ export default function TechnicalOperationsPage() {
           </div>
         </div>
       </div>
-      <section className="mt-10 grid gap-5 md:grid-cols-2">
-        {roleFitSections.map((section) => (
-          <JBCard key={section.title}>
-            <h2 className="text-2xl font-semibold text-jb-ink">
-              {section.title}
-            </h2>
-            <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {section.items.map((item) => (
-                <li className="flex gap-3" key={item}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </JBCard>
-        ))}
+      <section className="mt-12 rounded-lg border border-jb-ink/12 bg-jb-paper p-6">
+        <h2 className="text-3xl font-bold text-jb-ink">
+          Role fit for Technical Operations Manager
+        </h2>
+        <ul className="mt-6 grid gap-4 md:grid-cols-2">
+          {roleFitBullets.map((item) => (
+            <li className="flex gap-3 leading-7 text-jb-ink/76" key={item}>
+              <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section className="mt-12">
+        <h2 className="text-3xl font-bold text-jb-ink">Relevant proof</h2>
+        <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {relevantProofLinks.map((item) => (
+            <Link
+              className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5 font-semibold text-jb-blue hover:border-jb-blue hover:text-jb-green"
+              href={item.href}
+              key={item.href}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </section>
       <section className="mt-14">
         <h2 className="text-3xl font-bold text-jb-ink">Proof bank highlights</h2>
@@ -127,8 +122,7 @@ export default function TechnicalOperationsPage() {
       </div>
       <div className="mt-10 rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
         <p className="font-semibold text-jb-ink">
-          For technical operations, product operations, implementation, and
-          public-sector digital service roles:
+          Use this page for OTI / technical operations referrals.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <JBButton href={site.resumePath} download>

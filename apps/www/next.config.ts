@@ -59,7 +59,28 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
+        permanent: false
+      },
+      {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/fair-rent-crs",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/crs",
         destination: "/work/fair-rent-nyc",
         permanent: false
       },

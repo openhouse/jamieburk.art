@@ -160,7 +160,7 @@ const workItemsInput = [
     evidence: [
       "Web, e-commerce, marketing, content, and analytics systems",
       "Operations workflow improvements and long-term systems stewardship",
-      "Contributed to 2x revenue growth",
+      "Contributed to 2x online revenue growth",
       "Public reporting described online sales as 50 percent of the business by 2016",
       "Stakeholder translation across technical and nontechnical contexts"
     ],
@@ -418,7 +418,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure, documenting 300+ gatherings and supporting 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -458,7 +458,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -471,7 +471,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -511,7 +511,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, while keeping private financial, legal, family, property, lender, and partner details offline.",
       open:
         "Additional public-funding materials, named partners, and current project-status details can be added later only after confirmation.",
       protected:

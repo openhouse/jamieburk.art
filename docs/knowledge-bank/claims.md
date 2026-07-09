@@ -53,12 +53,12 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
+**Public wording:** Contributed to 2x online revenue growth while helping a legacy e-commerce business adapt to e-commerce.
+**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to 2x online revenue growth.
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
 **Guardrail:** Must stay as contribution language.  
-**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.  
+**Do not say:** Caused 2x online revenue growth; single-handedly doubled online revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
@@ -143,8 +143,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Public wording:** Created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure, documenting 300+ gatherings and supporting 20+ resident artists.
+**Detailed public-safe wording:** Jamie supported recurring cultural work through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
@@ -158,13 +158,13 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for adaptive reuse of a long-vacant historic building.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
 **Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Protected boundaries:** Private financial, legal, family, property, lender, banking, partner, and stakeholder details stay offline.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
