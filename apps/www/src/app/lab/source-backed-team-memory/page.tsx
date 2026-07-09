@@ -38,7 +38,7 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact">Discuss a bounded team-memory sprint</JBButton>
         </div>
       </div>
     </article>

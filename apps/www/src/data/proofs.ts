@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -165,7 +165,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +269,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +303,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording:
+      "Created repeatable trust-building and participation infrastructure across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -333,7 +334,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",

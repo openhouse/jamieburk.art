@@ -61,7 +61,8 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. Production should deploy noindex first, then become indexable only after
+Jamie approves the reviewed production surface.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -75,7 +76,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,7 +91,7 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
 
 Enable TLS:
@@ -106,6 +107,22 @@ Local remote:
 git remote add dokku-production dokku@<droplet-host-or-ip>:jamieburk-art
 git push dokku-production HEAD:main
 ```
+
+After production smoke tests pass and Jamie approves indexing, switch robots to
+explicit index and rebuild/redeploy:
+
+```bash
+dokku config:set jamieburk-art NEXT_PUBLIC_ROBOTS_POLICY=index
+dokku docker-options:remove jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+git push dokku-production HEAD:main
+```
+
+Also verify `https://www.jamieburk.art` resolves to the `jamieburk-art`
+production app and redirects to `https://jamieburk.art`. A current external
+smoke test showed `www.jamieburk.art` reaching an older `npr.jamieburk.art`
+route, which must be fixed in DNS/Dokku/nginx if it persists after production
+deployment.
 
 ## Local Docker Verification
 

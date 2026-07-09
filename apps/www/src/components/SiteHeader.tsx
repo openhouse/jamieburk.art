@@ -3,9 +3,10 @@ import { site } from "@/data/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/work/technical-operations", label: "Technical Operations" },
   { href: "/resume", label: "Resume" },
-  { href: "/contact", label: "Contact" }
+  { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" }
 ] as const;
 
 export function SiteHeader() {

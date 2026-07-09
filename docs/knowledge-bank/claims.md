@@ -74,7 +74,7 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.  
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.  
-**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.  
+**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and quotes not reviewed for public use stay offline.  
 **Review owner:** Jamie / Collaborator approval needed for named materials  
 **Last reviewed:** 2026-07-07
 
@@ -89,7 +89,7 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.  
 **Guardrail:** Do not imply legal authority or official bill ownership.  
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.  
-**Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
+**Protected boundaries:** Legal-review context, private strategy, private correspondence, and collaborator notes not reviewed for public use stay offline.  
 **Review owner:** Jamie / Collaborator approval needed  
 **Last reviewed:** 2026-07-07
 
@@ -104,7 +104,7 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Makes Jamie's direct web authorship visible without overstating collective campaign accomplishments.  
 **Guardrail:** Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.  
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions.  
-**Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.  
+**Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and collaborator details not reviewed for public use stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
@@ -119,7 +119,7 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
 **Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
 **Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
-**Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
+**Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and community artifacts not reviewed for public use stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
@@ -134,7 +134,7 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
-**Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
+**Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and photos not reviewed for public use stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
@@ -143,7 +143,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
+**Public wording:** Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
@@ -194,6 +194,6 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.  
 **Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.  
 **Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.  
-**Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
+**Protected boundaries:** Do not publish private coursework, private cohort materials, or evaluations not reviewed for public use.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07

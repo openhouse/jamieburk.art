@@ -187,6 +187,18 @@ scanPattern(
 );
 
 scanPattern(
+  publicContentFiles,
+  "internal launch placeholder language appears in production-facing content",
+  /\b(?:approval required|before launch|pending)\b/i
+);
+
+scanPattern(
+  publicContentFiles,
+  "phone number appears in HTML/source outside the resume PDF",
+  /\b(?:\+?1[\s.-]?)?\(?[2-9]\d{2}\)?[\s.-]\d{3}[\s.-]\d{4}\b/
+);
+
+scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
@@ -211,8 +223,11 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let publicContactConfigured = Boolean(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
+  publicContactConfigured =
+    publicContactConfigured || /jamie\.burkart@gmail\.com|mailto:\$\{contactEmail\}/.test(siteData);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
@@ -243,9 +258,9 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+  if (isProduction && !publicContactConfigured && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
     addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  } else if (isProduction && !publicContactConfigured) {
     addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }
@@ -265,12 +280,6 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
 
 if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
-}
-
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
-  failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
-  );
 }
 
 if (warnings.length) {

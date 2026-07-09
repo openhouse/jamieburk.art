@@ -23,21 +23,12 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.hasPublicEmail ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.emailHref}
-                  >
-                    {site.emailLabel}
-                  </a>
-                ) : (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.resumePath}
-                  >
-                    Direct contact details are in the current resume PDF
-                  </a>
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.emailHref}
+                >
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -47,31 +38,27 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.linkedinHref}
-                  >
-                    {site.linkedinLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.linkedinLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.githubHref}
-                  >
-                    {site.githubLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -84,6 +71,16 @@ export default function ContactPage() {
             </div>
           </dl>
         </div>
+        <section className="mt-8 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
+          <h2 className="text-xl font-semibold text-jb-ink">Referral blurb</h2>
+          <p className="mt-3 leading-7 text-jb-ink/76">
+            Jamie Burkart is a Technical Project Manager - Product Operations &
+            Implementation lead who helps teams turn ambiguous,
+            stakeholder-heavy work into usable systems: requirements,
+            workflows, documentation, decision trails, launch support,
+            onboarding, and durable handoffs.
+          </p>
+        </section>
       </div>
     </div>
   );
