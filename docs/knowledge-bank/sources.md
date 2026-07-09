@@ -14,6 +14,16 @@ Resume text Jamie has approved for public professional use.
 Public websites, public records, public case-study pages, public coverage,
 public GitHub repositories, or public project URLs.
 
+Approved public artifact examples for this launch pass include:
+
+- NYC Artist Coalition public website.
+- FairRentNYC public website.
+- Talks Not Raids public website.
+- Let NYC Dance public website.
+- Harry J. Epstein Company public website.
+- CallNYC public GitHub repository.
+- CallNYC archived Politico New York PDF.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

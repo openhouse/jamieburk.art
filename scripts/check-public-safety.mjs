@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -211,12 +211,15 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let siteHasDefaultContactEmail = false;
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
   }
+
+  siteHasDefaultContactEmail = /jamie\.burkart@gmail\.com/.test(siteData);
 }
 
 if (!existsSync(resumePath)) {
@@ -243,9 +246,14 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+  if (
+    isProduction &&
+    !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&
+    !siteHasDefaultContactEmail &&
+    !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)
+  ) {
     addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !siteHasDefaultContactEmail) {
     addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }

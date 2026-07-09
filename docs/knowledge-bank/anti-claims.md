@@ -20,6 +20,11 @@ Use contribution language.
 
 ## FairRentNYC / CRS
 
+Do not say Jamie solely led NYC Artist Coalition or single-handedly caused
+Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement
+reporting legislation, Commercial Rent Stabilization progress, or storefront
+stability advocacy outcomes.
+
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 

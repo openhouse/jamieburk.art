@@ -10,6 +10,21 @@ human-correctable, source-linked operating memory for knowledge-heavy teams.
 
 AI drafts. Humans review. The shared record remains inspectable and correctable.
 
+Operating memory helps a team understand what has been decided, why it was
+decided, what source material supports that understanding, what remains open,
+who holds which context, and what new collaborators need in order to join
+intelligently.
+
+## Public-Safe Deliverables
+
+- knowledge-friction map;
+- source / workflow inventory;
+- decision-memory template;
+- meeting-memory template;
+- onboarding or "how we know what we know" starter page;
+- privacy, access, and retention notes;
+- 30-day continue / revise / stop recommendation.
+
 ## Strong Proof IDs
 
 - `source-backed-team-memory-method`

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SourceBackedMemory from "@/content/lab/source-backed-team-memory.mdx";
 import { JBButton } from "@/components/JBButton";
 import { requireReadyOrCarefulProof } from "@/data/proofs";
+import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -38,7 +39,9 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href={site.emailHref}>
+            Discuss a bounded source-backed memory sprint
+          </JBButton>
         </div>
       </div>
     </article>

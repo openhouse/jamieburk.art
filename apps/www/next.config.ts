@@ -61,32 +61,32 @@ const nextConfig: NextConfig = {
       {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",
-        permanent: false
+        permanent: true
       },
       {
         source: "/work/fairrentnyc",
         destination: "/work/fair-rent-nyc",
-        permanent: false
+        permanent: true
       },
       {
         source: "/work/nyc-artist-coalition-fair-rent",
         destination: "/work/fair-rent-nyc",
-        permanent: false
+        permanent: true
       },
       {
         source: "/work/196-artists-residency",
         destination: "/work/196-sunday-dinner",
-        permanent: false
+        permanent: true
       },
       {
         source: "/work/source-backed-team-memory",
         destination: "/lab/source-backed-team-memory",
-        permanent: false
+        permanent: true
       },
       {
         source: "/work/noting-us",
         destination: "/lab/source-backed-team-memory",
-        permanent: false
+        permanent: true
       }
     ];
   }

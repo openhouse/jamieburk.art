@@ -182,3 +182,26 @@ export function CreditsList({ item }: { item: WorkMeta }) {
     </section>
   );
 }
+
+export function LinksList({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+  return (
+    <section aria-labelledby="links-list">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="links-list">
+        Public links
+      </h2>
+      <ul className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a
+              className="inline-flex rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-jb-blue hover:border-jb-blue/40 hover:text-jb-green"
+              href={link.url}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
