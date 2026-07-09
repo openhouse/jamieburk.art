@@ -27,6 +27,13 @@ lists, or source documents that were not approved for public use.
 
 Do not imply CallNYC is an official or current City service.
 
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, made grant decisions, acted as fiscal
+sponsor, owned the public campaign, or wrote every line of public campaign copy.
+Use behind-the-scenes digital infrastructure language unless named organizers
+confirm a broader framing.
+
 ## WOWList
 
 Do not name collaborators unless approved.

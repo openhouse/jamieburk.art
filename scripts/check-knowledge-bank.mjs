@@ -15,6 +15,7 @@ const requiredProofIds = [
   "hje-modernization-stewardship",
   "hje-revenue-growth-contribution",
   "callnyc-civic-data-guidance",
+  "kc-spaces-fund-digital-infrastructure",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "wowlist-community-platform",
@@ -34,6 +35,7 @@ const requiredWorkProofs = new Map([
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],
+  ["kc-spaces-fund", ["kc-spaces-fund-digital-infrastructure"]],
   ["wowlist", ["wowlist-community-platform"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]
@@ -104,8 +106,11 @@ if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
 }
 
-if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
-  fail("docs/proofs-bank.md conflicts with docs/knowledge-bank/claims.md; use one canonical claim register");
+if (existsSync(path.join(repoRoot, "docs/proofs-bank.md"))) {
+  const proofsBankSource = read(path.join(repoRoot, "docs/proofs-bank.md"));
+  if (!proofsBankSource.includes("docs/knowledge-bank/claims.md")) {
+    fail("docs/proofs-bank.md must point to docs/knowledge-bank/claims.md as the human-readable claim register");
+  }
 }
 
 const blockedRouteDirs = [

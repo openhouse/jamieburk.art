@@ -18,8 +18,14 @@ const siteUrl = stripTrailingSlash(
       : "https://staging.jamieburk.art")
 );
 
+const isProduction =
+  appEnv === "production" ||
+  process.env.SITE_ENV === "production" ||
+  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production";
+
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
+  isProduction &&
+  siteUrl === "https://jamieburk.art" &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
@@ -59,6 +65,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
+      {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",
         permanent: false
@@ -69,8 +81,18 @@ const nextConfig: NextConfig = {
         permanent: false
       },
       {
+        source: "/work/fair-rent-crs",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
         source: "/work/nyc-artist-coalition-fair-rent",
         destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
         permanent: false
       },
       {

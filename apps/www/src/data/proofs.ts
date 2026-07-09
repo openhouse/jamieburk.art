@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -155,6 +155,52 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Supported KC Spaces Fund digital campaign infrastructure",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, reusable campaign theme, GoFundMe widget layer, and donation/application/sign-up web affordances while public organizer credit remains with the organizers named by the campaign.",
+    sourceBasis:
+      "Public GoFundMe page and AI-assisted archival/code review summarized for public-safe use.",
+    sourceNote:
+      "Treat the archival review as source-backed background, not as a human collaborator testimonial.",
+    whyItMatters:
+      "Shows public-facing emergency campaign infrastructure, rapid implementation, platform stewardship, and care with collective credit.",
+    guardrail:
+      "Use behind-the-scenes technical and operational support language; public organizing credit remains with the campaign's named organizers.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie was the fiscal sponsor",
+      "Jamie wrote every line of public campaign copy",
+      "Jamie owned the public campaign"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee records",
+      "Donor/list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials",
+      "Billing details",
+      "Private correspondence archives",
+      "Private message archives",
+      "Private project documents"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "public-facing-launch",
+      "fundraising-infrastructure",
+      "platform-stewardship"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",
@@ -165,7 +211,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built 30+ pages of shared civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -268,8 +314,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Python / Django + Ember.js community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+    shortWording: "Co-built community web systems adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -289,7 +335,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
-    relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
+    relatedCapabilities: ["python", "django", "ember", "community-platforms"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -302,8 +348,8 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+      "Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure, documenting 300+ gatherings and supporting 20+ resident artists.",
+    shortWording: "Supported 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -333,10 +379,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.",
+    shortWording: "Co-led adaptive reuse planning with a $490,539 public funding recommendation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for adaptive reuse across commercial, residential, historic, and public-benefit constraints.",
     sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
     guardrail:
       "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
@@ -527,6 +573,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

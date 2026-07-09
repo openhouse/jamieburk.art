@@ -22,7 +22,7 @@ export default function ResumePage() {
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
             I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
+            turning emerging work into requirements, workflows, documentation,
             decision trails, launch support, onboarding materials, and durable
             handoffs.
           </p>
@@ -35,8 +35,8 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+            Current public résumé for Technical Project Manager - Product
+            Operations & Implementation.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

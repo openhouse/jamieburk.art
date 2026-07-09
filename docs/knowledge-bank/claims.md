@@ -63,6 +63,32 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+
+**Support level:** Moderate
+
+**Evidence class:** Public source / public-safe AI-assisted archival-code review / Jamie review confirmation
+
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+
+**Detailed public-safe wording:** Jamie built and maintained the Ghost-based campaign site, reusable campaign theme, GoFundMe widget layer, and donation/application/sign-up web affordances while public organizer credit remains with the organizers named by the campaign.
+
+**Where to project:** Technical Operations, Work card, Case study.
+
+**Why it matters:** Shows public-facing emergency campaign infrastructure, rapid implementation, platform stewardship, and care with collective credit.
+
+**Guardrail:** Use behind-the-scenes technical and operational support language; public organizing credit remains with the campaign's named organizers. Treat the archival review as source-backed background, not as a human collaborator testimonial.
+
+**Do not say:** Jamie organized KC Spaces Fund; Jamie made grant decisions; Jamie was the fiscal sponsor; Jamie wrote every line of public campaign copy; Jamie owned the public campaign.
+
+**Protected boundaries:** Applicant or grantee records, donor/list exports, subscriber data, payment-request files, credentials, billing details, private correspondence and message archives, and private project documents stay outside the repo.
+
+**Review owner:** Jamie / Collaborator memory welcome for social context
+
+**Last reviewed:** 2026-07-09
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful  
@@ -113,7 +139,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
+**Public wording:** Co-built WOWList.org, a Python / Django + Ember.js community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
@@ -128,7 +154,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
+**Public wording:** Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure, documenting 300+ gatherings and supporting 20+ resident artists.
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
@@ -143,8 +169,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for adaptive reuse across commercial, residential, historic, and public-benefit constraints.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  

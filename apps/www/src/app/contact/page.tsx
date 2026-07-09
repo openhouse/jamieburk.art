@@ -21,23 +21,14 @@ export default function ContactPage() {
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
+              <dt className="font-semibold text-jb-ink">Email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.hasPublicEmail ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.emailHref}
-                  >
-                    {site.emailLabel}
-                  </a>
-                ) : (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.resumePath}
-                  >
-                    Direct contact details are in the current resume PDF
-                  </a>
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.emailHref}
+                >
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -47,31 +38,27 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.linkedinHref}
-                  >
-                    {site.linkedinLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.linkedinLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.githubHref}
-                  >
-                    {site.githubLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>
