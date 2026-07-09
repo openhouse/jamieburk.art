@@ -107,8 +107,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Archivo Narrow for display headings, proof
+labels, section eyebrows, and compact metadata. Do not commit or serve private,
+proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -122,13 +123,11 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Remaining Production Review
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+- Review every public route on staging before production deploy.
+- Keep unapproved screenshots, photos, quotes, and private artifacts out of V1.
+- Confirm collaborator names and credits that are not already public-safe.
+- Verify staging noindex behavior before sharing broadly.
+- Verify production metadata points to `https://jamieburk.art`.
+- Verify no private/proprietary fonts are committed or served.

@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for legacy e-commerce",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -226,6 +226,40 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "nyc-artist-coalition-civic-systems-role",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Co-founded NYC Artist Coalition and leads civic systems, coalition operations, and policy communications work across cultural-space advocacy, Commercial Rent Stabilization, storefront stability, and public-data framing.",
+    shortWording: "Co-founder and civic systems lead for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie builds and stewards campaign and knowledge infrastructure for NYC Artist Coalition work, including shared documentation, public guidance, action trackers, source maps, call scripts, QR pathways, handouts, follow-up systems, and report-back materials.",
+    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign context.",
+    whyItMatters:
+      "Clarifies Jamie's role in NYC Artist Coalition without converting collective campaign work into a solo claim.",
+    guardrail:
+      "Use role and infrastructure language. Campaign outcomes remain collective and should not be attributed to Jamie alone.",
+    doNotSay: [
+      "Jamie solely led NYC Artist Coalition",
+      "Jamie alone created the Office of Nightlife",
+      "Jamie alone repealed the Cabaret Law",
+      "Jamie controls coalition strategy or partner decisions"
+    ],
+    protectedBoundaries: [
+      "Private coalition notes",
+      "Legal-review materials",
+      "Stakeholder lists",
+      "Private correspondence",
+      "Strategy records",
+      "Unapproved collaborator details"
+    ],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["coalition-operations", "policy-communications", "public-data-framing"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -269,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +337,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "Documented 300+ gatherings and supported 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -486,6 +520,7 @@ export const resumeProofHighlights = [
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyc-artist-coalition-civic-systems-role",
   "callnyc-civic-data-guidance",
   "nyc-artist-coalition-public-web-infrastructure",
   "wowlist-community-platform",

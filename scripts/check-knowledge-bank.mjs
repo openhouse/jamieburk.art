@@ -17,10 +17,13 @@ const requiredProofIds = [
   "callnyc-civic-data-guidance",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyc-artist-coalition-civic-systems-role",
+  "nyc-artist-coalition-public-web-infrastructure",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "source-backed-team-memory-method",
+  "ai-evals-professional-development"
 ];
 
 const requiredWorkProofs = new Map([
@@ -30,6 +33,7 @@ const requiredWorkProofs = new Map([
     [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "nyc-artist-coalition-civic-systems-role",
       "nyc-artist-coalition-public-web-infrastructure"
     ]
   ],

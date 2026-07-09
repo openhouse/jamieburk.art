@@ -181,6 +181,18 @@ scanPattern(
 );
 
 scanPattern(
+  shippedContentFiles,
+  "public-facing copy should use clearer Chad-lens language instead of under-structured",
+  /\bunder-structured\b/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "production-facing launch scaffold language requires resolution",
+  /\b(?:pending Jamie approval|Jamie approval|before launch|before publication|may be added after Jamie confirms|screenshots pending|citation pending|approval pending|approvals pending)\b/i
+);
+
+scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
