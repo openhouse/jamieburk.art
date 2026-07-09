@@ -12,15 +12,18 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I build the operating backbone that helps complex public-facing teams
+            plan, document, decide, onboard, report, and ship.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help teams turn emerging, stakeholder-heavy work into clear
+            requirements, workflows, decision records, status rhythms, runbooks,
+            onboarding materials, launch support, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href="/work">View selected work</JBButton>
+            <JBButton href="/work/technical-operations">
+              View Technical Operations
+            </JBButton>
             <JBButton href="/resume" variant="secondary">
               Download resume
             </JBButton>

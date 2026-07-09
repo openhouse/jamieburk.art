@@ -32,8 +32,9 @@ dokku config:set jamieburk-art-staging \
 ```
 
 The app reads URL and robots settings during build for metadata, sitemap, and
-robots output. If Dokku does not expose config values during Docker build, add
-matching build args:
+robots output. Staging remains non-indexable. Production is indexable only when
+`NEXT_PUBLIC_ROBOTS_POLICY=index` is explicitly set. If Dokku does not expose
+config values during Docker build, add matching build args:
 
 ```bash
 dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
@@ -79,7 +80,10 @@ dokku config:set jamieburk-art \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
-  HOSTNAME=0.0.0.0
+  HOSTNAME=0.0.0.0 \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 ```
 
 If staging required build args, add production build args too:

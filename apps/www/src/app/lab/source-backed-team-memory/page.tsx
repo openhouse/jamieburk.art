@@ -35,10 +35,15 @@ export default function SourceBackedTeamMemoryPage() {
           <SourceBackedMemory />
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
+          <JBButton href="/work/technical-operations">
+            Role-fit proof page
+          </JBButton>
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact" variant="ghost">
+            Contact Jamie
+          </JBButton>
         </div>
       </div>
     </article>

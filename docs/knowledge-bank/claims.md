@@ -173,7 +173,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
+**Public wording:** Jamie builds the operating backbone teams need to move emerging public-facing technical work from early shape to launch.  
 **Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
@@ -191,7 +191,7 @@ claim beyond the wording and guardrails here.
 **Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.  
 **Detailed public-safe wording:** Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.  
 **Where to project:** Resume page, Lab page, About.  
-**Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.  
+**Why it matters:** Supports Jamie's source-backed memory and AI-assisted documentation work without overstating product maturity.  
 **Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.  
 **Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.  
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  

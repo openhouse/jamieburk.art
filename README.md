@@ -107,8 +107,8 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for display headings and proof
+labels. Do not commit or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -118,16 +118,17 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
-  `docs/knowledge-bank/launch-blockers.md`.
+- When uncertain, keep the claim out of the public app and record the question
+  in the Knowledge Bank claim register or a private handoff note.
+- The public site should not strengthen claims beyond the Knowledge Bank without
+  review. Exact metrics may be used when they are public-safe, defensible, and
+  aligned with the approved resume.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
+- Confirm resume PDF before production deployment.
+- Confirm screenshots/artifacts before publishing them.
+- Keep exact proof metrics aligned with the Knowledge Bank and approved resume.
 - Confirm collaborator names, photos, and quotes.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.

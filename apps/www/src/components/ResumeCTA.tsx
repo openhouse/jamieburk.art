@@ -7,11 +7,15 @@ export function ResumeCTA() {
       <h2 className="text-2xl font-semibold">Resume</h2>
       <p className="mt-3 leading-7 text-jb-paper/82">
         Technical project management, product operations, implementation,
-        documentation systems, civic technology, and public-facing tools.
+        documentation systems, civic technology, public-facing tools, and
+        durable handoffs.
       </p>
-      <div className="mt-5">
+      <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href={site.resumePath} variant="secondary" download>
           Download resume PDF
+        </JBButton>
+        <JBButton href="/work/technical-operations" variant="secondary">
+          Role-fit proof page
         </JBButton>
       </div>
     </section>

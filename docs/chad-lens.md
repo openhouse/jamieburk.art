@@ -16,7 +16,7 @@ This portfolio should reduce the reader's burden without reducing the record.
 
 ## Preferred Moves
 
-- Replace vague "under-structured" wording with concrete explanations:
+- Replace vague staging-era wording with concrete explanations:
   requirements, workflows, ownership, documentation, and handoffs were not yet
   clear.
 - Replace "tracking meetings" with the actual work: synthesizing meetings into

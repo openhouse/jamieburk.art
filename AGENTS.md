@@ -38,7 +38,11 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the claim out of the public app and record the question in
+the Knowledge Bank claim register or a private handoff note. The public site
+should not strengthen claims beyond the Knowledge Bank without review. Exact
+metrics may be used when they are public-safe, defensible, and aligned with the
+approved resume.
 
 ## Knowledge Bank
 
