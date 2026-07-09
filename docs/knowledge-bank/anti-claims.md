@@ -43,5 +43,5 @@ stronger language.
 
 ## Source-Backed Team Memory
 
-Do not name Jonathan Marmor, publish pricing, publish private transcript
-context, or imply deployment inside his company.
+Do not name private collaborators, publish pricing, publish private transcript
+context, or imply deployment inside a private company.

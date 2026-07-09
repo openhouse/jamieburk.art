@@ -19,7 +19,7 @@ AI drafts. Humans review. The shared record remains inspectable and correctable.
 
 ## Boundaries
 
-Do not name Jonathan Marmor.
+Do not name private collaborators.
 Do not publish pricing.
 Do not publish private transcript excerpts.
 Do not publish private company context.
