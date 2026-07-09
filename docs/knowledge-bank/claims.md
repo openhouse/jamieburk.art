@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.
+**Where to project:** Internal-only for now; possible future case-study or Technical Operations support after human collaborator review.
+**Why it matters:** Shows rapid campaign-web implementation, donation/application flow support, and behind-the-scenes operational infrastructure for collective mutual-aid work.
+**Guardrail:** Keep public organizer credit with the organizers named by the campaign unless those people confirm broader framing for Jamie.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie made grant decisions; Jamie wrote every line of public campaign copy; Jamie was a named public organizer unless confirmed by the named organizers.
+**Protected boundaries:** Applicant or grantee packets, donor and subscriber data, payment request files, credential or login sheets, billing and domain-payment details, raw private correspondence, private project documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / human collaborators if projected publicly
+**Last reviewed:** 2026-07-09
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

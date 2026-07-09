@@ -8,6 +8,7 @@ export type EvidenceClass =
   | "public-safe-archive-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
+  | "ai-assisted-archival-review"
   | "collaborator-approval-pending";
 
 export type ProofSurface =
@@ -359,6 +360,45 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archival-review"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.",
+    sourceBasis:
+      "Public campaign materials and public-safe AI-assisted archival review conducted with Jamie in July 2026.",
+    sourceNote:
+      "Use as an archival proof-bank claim, not as a human collaborator testimonial or eyewitness account.",
+    whyItMatters:
+      "Shows rapid campaign-web implementation, donation/application flow support, and behind-the-scenes operational infrastructure for collective mutual-aid work.",
+    guardrail:
+      "Keep public organizer credit with the organizers named by the campaign unless those people confirm broader framing for Jamie.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public campaign copy",
+      "Jamie was a named public organizer unless confirmed by the named organizers"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee packets",
+      "Donor and subscriber data",
+      "Payment request files",
+      "Credential or login sheets",
+      "Billing and domain-payment details",
+      "Raw private correspondence",
+      "Private project documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "implementation", "donation-flows", "operational-infrastructure"],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "source-backed-team-memory-method",
