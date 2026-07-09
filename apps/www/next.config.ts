@@ -19,7 +19,8 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
+  process.env.APP_ENV === "production" &&
+  siteUrl === "https://jamieburk.art" &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [

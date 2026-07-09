@@ -164,8 +164,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    shortWording: "Helped steward 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -333,7 +333,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
@@ -479,6 +479,30 @@ export const homepageProofs = [
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure"
 ].map(requireReadyOrCarefulProof);
+
+export const homepageProofHighlights = [
+  {
+    proof: requireReadyOrCarefulProof("career-operating-structure-14-years"),
+    wording: "14+ years creating operating structure"
+  },
+  {
+    proof: requireReadyOrCarefulProof("hje-revenue-growth-contribution"),
+    wording: "Contributed to measurable online growth for legacy e-commerce"
+  },
+  {
+    proof: requireReadyOrCarefulProof("fair-rent-campaign-memory"),
+    wording: "Helped build and steward civic campaign-memory infrastructure"
+  },
+  {
+    proof: requireReadyOrCarefulProof("wowlist-community-platform"),
+    wording: "Co-built community web systems across local arts and music scenes"
+  },
+  {
+    proof: requireReadyOrCarefulProof("sunday-dinner-196-participation-infrastructure"),
+    wording:
+      "Created repeatable hosting and continuity systems for gatherings and resident artists"
+  }
+] as const;
 
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
