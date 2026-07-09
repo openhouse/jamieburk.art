@@ -42,6 +42,11 @@ const proofMap = [
       "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
   },
   {
+    project: "KC Spaces Fund",
+    proof:
+      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+  },
+  {
     project: "KC Town Hall",
     proof: "long-horizon project planning and public-benefit documentation."
   },

@@ -20,6 +20,7 @@ const requiredProofIds = [
   "nyc-artist-coalition-civic-systems",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
+  "kc-spaces-fund-digital-infrastructure",
   "kc-town-hall-public-benefit-documentation",
   "source-backed-team-memory-method"
 ];

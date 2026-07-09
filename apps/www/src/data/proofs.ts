@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -371,6 +372,53 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archive-review"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.",
+    sourceBasis:
+      "Public GoFundMe page, public campaign domain, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
+    sourceNote:
+      "Use as an evidence-based archival proof note, not a human collaborator testimonial.",
+    whyItMatters:
+      "Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.",
+    guardrail:
+      "Behind-the-scenes technical and operational support only. Do not frame Jamie as the public organizer, grant decision-maker, fiscal sponsor, or sole campaign owner.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie ran the fundraiser",
+      "Jamie made grant decisions",
+      "Jamie was the fiscal sponsor",
+      "A human collaborator provided this testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor and list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials or login sheets",
+      "Billing and payment details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private Drive documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "public-facing-web-systems",
+      "campaign-infrastructure",
+      "implementation",
+      "technical-operations"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
@@ -572,6 +620,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

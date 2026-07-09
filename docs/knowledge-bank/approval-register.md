@@ -18,6 +18,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
+- KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 
@@ -31,4 +32,5 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Guest lists.
 - Attendance records.
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
+- Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.

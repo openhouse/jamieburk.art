@@ -31,6 +31,7 @@ Implementation roles.
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 
 ## Public Projection
 
