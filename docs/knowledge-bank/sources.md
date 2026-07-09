@@ -20,6 +20,15 @@ Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
 
+### AI-Assisted Archival Review
+
+An AI-assisted review may support a public-safe archive summary when it is
+clearly labeled as review work rather than collaborator memory or testimonial
+evidence. The repo may keep the public-safe claim, source class, confidence
+posture, and boundaries. It must not publish raw record inventories, private
+paths, private filenames, correspondence excerpts, subscriber data, billing
+details, or sensitive operational context.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

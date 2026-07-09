@@ -35,6 +35,9 @@ The knowledge bank exists to:
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+- **Proof intake:** new evidence first lives outside this public repo; only
+  public-safe summaries and claim records move into this bank. See
+  `proof-intake.md`.
 
 ## Core Rule
 
