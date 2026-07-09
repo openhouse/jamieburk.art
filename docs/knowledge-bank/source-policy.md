@@ -15,6 +15,21 @@ Use these source classes for claims:
   sensitive operating details.
 - Jamie-reviewed firsthand context where the wording is careful and bounded.
 
+## AI-Assisted Archival Review
+
+AI-assisted archival review can help summarize code history, public campaign
+materials, local records, and private archive patterns, but it is not a human
+collaborator testimonial. Use it as source analysis only.
+
+When an AI-assisted review supports a claim:
+
+- identify it as archival evidence rather than memory;
+- keep private paths, raw filenames, message contents, credentials, list data,
+  payment records, and personal details out of the repo;
+- preserve collective credit and public organizer framing;
+- route public projection through Jamie and collaborator review when the work
+  involved a collective campaign or mutual-aid effort.
+
 ## Projection Rule
 
 The website may use strong claims when the claim has approved wording,

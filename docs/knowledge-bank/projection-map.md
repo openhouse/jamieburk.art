@@ -50,6 +50,13 @@ Use only public-safe method claims.
 Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
 imply production SaaS.
 
+## Not Yet Projected
+
+Keep these in the public-safe proof bank but off the public website until Jamie
+chooses a specific use and, where appropriate, collaborator review:
+
+- `kc-spaces-fund-digital-infrastructure`
+
 ## Case Studies
 
 Each case study should include proof IDs in work metadata, then use those claims

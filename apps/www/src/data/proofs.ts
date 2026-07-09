@@ -359,6 +359,56 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure.",
+    shortWording: "Supported KC Spaces Fund digital infrastructure behind the scenes",
+    detailedPublicWording:
+      "Jamie supported the campaign's web layer with Ghost-based site work, reusable campaign-theme customization, donation/application/sign-up affordances, and fundraising-display infrastructure.",
+    sourceBasis:
+      "Public campaign materials plus Jamie-reviewed, AI-assisted public-safe archival summary of local code and project records.",
+    sourceNote:
+      "Use as archival evidence, not as a human collaborator testimonial. Keep public organizer credit with the people named by the campaign unless collaborators confirm broader wording.",
+    whyItMatters:
+      "Shows rapid campaign implementation and operational web infrastructure for a mutual-aid effort while preserving the collective public story.",
+    guardrail:
+      "Behind-the-scenes technical and operational support only; do not imply Jamie was a named public organizer or grant decision-maker.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie led KC Spaces Fund",
+      "Jamie decided grants or disbursements",
+      "Jamie wrote all campaign copy",
+      "AI archival review is a human collaborator testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee packets",
+      "Donor and mailing-list exports",
+      "Payment-request files",
+      "Credential or login records",
+      "Billing details",
+      "Raw email archives",
+      "Raw message archives",
+      "Private project documents",
+      "Private repository paths"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "fundraising-infrastructure",
+      "implementation",
+      "public-facing-tools"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
