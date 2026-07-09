@@ -48,7 +48,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
-    shortWording: "14+ years creating operating structure",
+    shortWording: "14+ years building operating structure",
     detailedPublicWording:
       "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "2x revenue growth contribution for legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -269,7 +269,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "roughly 35 city ecosystems reached through WOWList.org",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "300+ hosted gatherings / 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -393,10 +393,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
-      "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
+      "Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Names the role fit across product operations, implementation, technical project management, and public-facing delivery.",
@@ -495,8 +495,9 @@ export const resumeProofHighlights = [
 
 export const technicalOperationsProofRows = [
   {
-    capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    capability: "Delivery coordination and status reporting",
+    toward:
+      "Turning unclear public-facing work into launchable plans, visible cross-team dependencies, status rhythms, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
@@ -505,8 +506,9 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    capability: "Risk surfacing and decision frameworks",
+    toward:
+      "Making risks, open questions, public/private boundaries, and stakeholder next steps visible before they slow the work.",
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
@@ -515,7 +517,8 @@ export const technicalOperationsProofRows = [
   },
   {
     capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    toward:
+      "Converting meetings, source trails, handbooks, runbooks, onboarding guides, and recurring practices into reusable working memory.",
     proofIds: [
       "fair-rent-campaign-memory",
       "sunday-dinner-196-participation-infrastructure",
@@ -523,8 +526,9 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    capability: "Post-launch learning and adoption",
+    toward:
+      "Shaping websites, prototypes, and community platforms so real audiences can act, then improving the operation over time without overengineering.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "callnyc-civic-data-guidance",

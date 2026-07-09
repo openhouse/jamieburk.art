@@ -8,7 +8,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** 14+ years creating operating structure across civic, cultural, small-business, and technical environments.  
+**Public wording:** 14+ years building operating structure across civic, cultural, small-business, and technical environments.
 **Detailed public-safe wording:** Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.  
 **Where to project:** Homepage, Resume page, Technical Operations, About.  
 **Why it matters:** Establishes the throughline across projects without forcing one job title onto every period of work.  
@@ -173,8 +173,8 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
-**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
+**Public wording:** Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.
+**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
 **Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  
