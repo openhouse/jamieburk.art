@@ -19,7 +19,8 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
+  process.env.APP_ENV === "production" &&
+  siteUrl === "https://jamieburk.art" &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
@@ -48,7 +49,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/resume/:path*",
-        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
+        headers: [{ key: "X-Robots-Tag", value: "noindex, noarchive" }]
       },
       {
         source: "/(.*)",
@@ -58,6 +59,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: true
+      },
       {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",

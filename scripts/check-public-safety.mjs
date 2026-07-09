@@ -37,14 +37,16 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|supporting-materials|financial|health|therapy)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
-  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
-  process.env.NODE_ENV === "production";
+  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production";
+
+const productionIndexingRequested =
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const resumePath = path.join(
   repoRoot,
@@ -150,6 +152,7 @@ for (const file of allFiles) {
   const rel = relative(file);
   const base = path.basename(file);
   const ext = path.extname(file).toLowerCase();
+  const isAllowedHealthRoute = rel.startsWith("apps/www/src/app/api/health/");
 
   if (base.startsWith(".env") && base !== ".env.example") {
     addFailure(file, "environment file must not be committed");
@@ -159,11 +162,11 @@ for (const file of allFiles) {
     addFailure(file, "font file must not be committed or served from the repo");
   }
 
-  if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {
+  if (!isAllowedHealthRoute && (privatePathPattern.test(rel) || /\.private\./i.test(rel))) {
     addFailure(file, "private/source-material path must not be committed");
   }
 
-  if (/\.(key|pem|p12|crt|cer)$/i.test(rel)) {
+  if (/\.(key|pem|p8|p12|crt|cer)$/i.test(rel)) {
     addFailure(file, "key or certificate material must not be committed");
   }
 }
@@ -175,6 +178,12 @@ scanPattern(
 );
 
 scanPattern(
+  publicContentFiles,
+  "approval or launch scaffold language appears in public-facing content",
+  /\b(?:pending|launch scaffold|scaffold branch)\b/i
+);
+
+scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
   /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
@@ -183,13 +192,25 @@ scanPattern(
 scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
-  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|raw\s+otter|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+);
+
+scanPattern(
+  publicContentFiles,
+  "public-facing copy still uses under-structured language",
+  /\bunder-structured\b/i
+);
+
+scanPattern(
+  publicContentFiles,
+  "phone number appears in HTML or site data; phone belongs only in the approved PDF",
+  /\b(?:\+?1[-.\s]?)?\(?[2-9]\d{2}\)?[-.\s][2-9]\d{2}[-.\s]\d{4}\b/
 );
 
 scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
-  /\b(?:PRIVATE|CONFIDENTIAL)\b/
+  /\b(?:PRIVATE|CONFIDENTIAL|DO NOT PUBLISH|INTERNAL ONLY|PRIVATE_DATA)\b/
 );
 
 const credentialPatterns = [
@@ -263,14 +284,34 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   addFailure(siteUrlPath, "production indexing is not explicit opt-in");
 }
 
-if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
-  addFailure(nextConfigPath, "resume PDF noindex header is missing");
+if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource) || !/noarchive/.test(nextConfigSource)) {
+  addFailure(nextConfigPath, "resume PDF noindex/noarchive header is missing");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
+if (
+  isProduction &&
+  !["index", "noindex"].includes(process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "")
+) {
   failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index or noindex (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
   );
+}
+
+if (productionIndexingRequested) {
+  const requiredProductionEnv = {
+    APP_ENV: "production",
+    SITE_URL: "https://jamieburk.art",
+    NEXT_PUBLIC_SITE_URL: "https://jamieburk.art",
+    NEXT_PUBLIC_ROBOTS_POLICY: "index"
+  };
+
+  for (const [key, expected] of Object.entries(requiredProductionEnv)) {
+    if (process.env[key] !== expected) {
+      failures.push(
+        `indexing requires ${key}=${expected} (got ${process.env[key] ?? "unset"})`
+      );
+    }
+  }
 }
 
 if (warnings.length) {

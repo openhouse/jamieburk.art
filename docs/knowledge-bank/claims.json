@@ -1,0 +1,21 @@
+{
+  "source": "apps/www/src/data/proofs.ts",
+  "canonicalTextRegister": "docs/knowledge-bank/claims.md",
+  "lastReviewed": "2026-07-09",
+  "claimIds": [
+    "career-operating-structure-14-years",
+    "hje-modernization-stewardship",
+    "hje-revenue-growth-contribution",
+    "callnyc-civic-data-guidance",
+    "fair-rent-campaign-memory",
+    "fair-rent-source-map",
+    "nyc-artist-coalition-public-web-infrastructure",
+    "kc-spaces-fund-digital-infrastructure",
+    "wowlist-community-platform",
+    "sunday-dinner-196-participation-infrastructure",
+    "kc-town-hall-public-benefit-documentation",
+    "source-backed-team-memory-method",
+    "technical-operations-operating-backbone",
+    "ai-evals-professional-development"
+  ]
+}

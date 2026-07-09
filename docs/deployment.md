@@ -75,7 +75,7 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,8 +90,13 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
 ```
+
+This is the production soft-launch posture: real production URL, no search
+indexing yet. After Jamie explicitly approves final production indexing, change
+`NEXT_PUBLIC_ROBOTS_POLICY` to `index`, rebuild if needed, and redeploy the
+exact reviewed commit SHA.
 
 Enable TLS:
 
@@ -145,3 +150,31 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+
+## Preflight Commands
+
+Staging must remain noindex:
+
+```bash
+npm run preflight:staging
+```
+
+Production soft launch, before indexing approval:
+
+```bash
+APP_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+npm run preflight:production
+```
+
+Final production indexing, after explicit Jamie approval:
+
+```bash
+APP_ENV=production \
+SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
+NEXT_PUBLIC_ROBOTS_POLICY=index \
+npm run check:production
+```

@@ -26,10 +26,15 @@ Implementation roles.
 
 - `technical-operations-operating-backbone`
 - `hje-modernization-stewardship`
+- `hje-revenue-growth-contribution`
 - `fair-rent-campaign-memory`
+- `fair-rent-source-map`
+- `nyc-artist-coalition-public-web-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `kc-town-hall-public-benefit-documentation`
 
 ## Public Projection
 

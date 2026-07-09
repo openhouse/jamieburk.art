@@ -19,6 +19,8 @@ changes public claims.
 - [ ] Collaborator-sensitive claims are approved or omitted.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.
+- [ ] KC Spaces Fund is described as behind-the-scenes digital infrastructure
+  unless collaborators approve a broader role.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,
   transcript, or company context.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
