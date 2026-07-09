@@ -9,7 +9,6 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
     ["Years", item.years],
     ["Context", item.series],
     ["Status", item.status],
-    ["Visibility", item.visibility],
     ["Role fit", item.roleFit]
   ];
 
@@ -44,7 +43,7 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-list">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
+        Work surfaces
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
         {item.artifactTypes.map((artifact) => (
@@ -64,7 +63,7 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        Representative artifacts
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -93,6 +92,13 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
       <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
         Known / Open / Protected
       </h2>
+      <p className="mt-3 max-w-3xl leading-7 text-jb-ink/72">
+        Known is public-safe and evidence-backed enough to say. Open needs
+        citation, screenshot, collaborator approval, or stronger review.
+        Protected is intentionally omitted because privacy, consent, client
+        trust, legal sensitivity, civic sensitivity, or community safety
+        requires it.
+      </p>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
           <JBCard key={label}>
@@ -138,12 +144,18 @@ export function CareNote({ item }: { item: WorkMeta }) {
 }
 
 export function VisibilityNote({ item }: { item: WorkMeta }) {
+  const scopeLabel = {
+    public: "Public work",
+    "public-safe": "Selected public proof",
+    redacted: "Redacted public proof",
+    "summary-only": "Summary proof",
+    private: "Private"
+  }[item.visibility];
+
   return (
-    <NoteBlock title="Visibility" tone="blue">
+    <NoteBlock title="Scope" tone="blue">
       <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
-        {item.currentStatus}
+        <strong>{scopeLabel}.</strong> {item.currentStatus}
       </p>
     </NoteBlock>
   );
@@ -152,7 +164,7 @@ export function VisibilityNote({ item }: { item: WorkMeta }) {
 export function PublicSafetyNote({ item }: { item: WorkMeta }) {
   if (!item.publicSafety?.note) return null;
   return (
-    <NoteBlock title="Public-safety note" tone="ochre">
+    <NoteBlock title="Claim discipline" tone="ochre">
       <p>{item.publicSafety.note}</p>
     </NoteBlock>
   );
@@ -161,9 +173,35 @@ export function PublicSafetyNote({ item }: { item: WorkMeta }) {
 export function SourceLayer({ item }: { item: WorkMeta }) {
   if (!item.sourceLayer) return null;
   return (
-    <NoteBlock title="Source layer" tone="green">
+    <NoteBlock title="Evidence basis" tone="green">
       <p>{item.sourceLayer}</p>
     </NoteBlock>
+  );
+}
+
+export function ProjectLinks({ item }: { item: WorkMeta }) {
+  if (!item.links?.length) return null;
+
+  return (
+    <section aria-labelledby="project-links">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="project-links">
+        Public links
+      </h2>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {item.links.map((link) => (
+          <li key={link.url}>
+            <a
+              className="block rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 font-semibold text-jb-blue hover:border-jb-blue hover:text-jb-green"
+              href={link.url}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

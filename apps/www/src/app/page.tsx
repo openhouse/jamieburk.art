@@ -29,9 +29,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
+              These projects show a recurring pattern: emerging situations
               becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              decision records, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -53,11 +53,11 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl font-bold text-jb-ink">
               What was unclear becomes usable
             </h2>
-            <p className="mt-4 leading-8 text-jb-ink/76">
-              The projects differ, but the move is consistent: clarify what is
-              known, protect what should stay private, and leave behind material
-              people can act on.
-            </p>
+          <p className="mt-4 leading-8 text-jb-ink/76">
+              The projects differ, but the move is consistent: listen to the
+              material, clarify what is known, protect what should stay private,
+              and leave behind structure people can act on.
+          </p>
           </div>
           <dl className="grid gap-3">
             {transformations.map(([from, to]) => (
@@ -82,7 +82,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important and still taking shape. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to

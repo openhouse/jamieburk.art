@@ -22,8 +22,11 @@ export default function SourceBackedTeamMemoryPage() {
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          {methodProof.publicWording}
+          Source-Backed Team Memory is a lab / method for turning meetings,
+          decisions, open questions, and source materials into human-reviewable
+          operating memory.
         </p>
+        <p className="mt-4 leading-7 text-jb-ink/72">{methodProof.publicWording}</p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
@@ -35,10 +38,15 @@ export default function SourceBackedTeamMemoryPage() {
           <SourceBackedMemory />
         </div>
         <div className="mt-10 flex flex-wrap gap-3">
+          <JBButton href="/work/technical-operations">
+            Role-fit proof page
+          </JBButton>
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact" variant="ghost">
+            Discuss a source-backed team memory pilot
+          </JBButton>
         </div>
       </div>
     </article>

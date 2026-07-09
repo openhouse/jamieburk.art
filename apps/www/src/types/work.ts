@@ -26,7 +26,6 @@ export type ArtifactType =
   | "diagram"
   | "download"
   | "analytics summary"
-  | "public-safe screenshot"
   | "template"
   | "script"
   | "map"

@@ -59,7 +59,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
+        permanent: false
+      },
+      {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/work/commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",
         permanent: false
       },

@@ -27,7 +27,7 @@ spreadsheets with private rows.
 There is intentionally no public `/proofs`, `/knowledge-bank`, or
 `/public-claims` route. The site should remain a composed portfolio.
 
-## Production TODO Behavior
+## Production Review-Marker Behavior
 
 Production-facing content must not render visible approval markers. When a claim
 needs approval, put the issue in `docs/knowledge-bank/launch-blockers.md` or keep
