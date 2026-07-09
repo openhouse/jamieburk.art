@@ -278,7 +278,7 @@ for (const file of walk(docsRoot)) {
   if (!/\.(md|mdx|txt)$/i.test(file)) continue;
 
   const content = read(file);
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
+  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|supporting-materials-private|job-hunt|Jamie Projects History|gmail-export|drive-export|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
     fail(`${relative(file)} contains a private path, raw-source filename, or office-source marker`);
   }
 }

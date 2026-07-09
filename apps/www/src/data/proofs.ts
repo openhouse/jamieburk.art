@@ -8,6 +8,7 @@ export type EvidenceClass =
   | "public-safe-archive-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
+  | "ai-assisted-archival-review"
   | "collaborator-approval-pending";
 
 export type ProofSurface =
@@ -104,10 +105,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+      "Contributed to 2x online revenue growth for a legacy business.",
+    shortWording: "Contributed to 2x online revenue growth for a legacy business",
     detailedPublicWording:
-      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x online revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
     sourceNote: "Keep causal language careful and aggregate.",
     whyItMatters:
@@ -165,7 +166,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +270,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording:
+      "Co-built a community platform adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +305,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording:
+      "Created participation systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -333,7 +336,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
@@ -359,18 +362,57 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archival-review"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.",
+    sourceBasis:
+      "Public campaign materials and public-safe AI-assisted archival review conducted with Jamie in July 2026.",
+    sourceNote:
+      "Use as an archival proof-bank claim, not as a human collaborator testimonial or eyewitness account.",
+    whyItMatters:
+      "Shows rapid campaign-web implementation, donation/application flow support, and behind-the-scenes operational infrastructure for collective mutual-aid work.",
+    guardrail:
+      "Keep public organizer credit with the organizers named by the campaign unless those people confirm broader framing for Jamie.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public campaign copy",
+      "Jamie was a named public organizer unless confirmed by the named organizers"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee packets",
+      "Donor and subscriber data",
+      "Payment request files",
+      "Credential or login sheets",
+      "Billing and domain-payment details",
+      "Raw private correspondence",
+      "Private project documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "implementation", "donation-flows", "operational-infrastructure"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
     evidenceClass: ["public-safe-archive-summary"],
     publicWording:
-      "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+      "Source-Backed Team Memory is a bounded method for preserving operating memory: decision records, open questions, onboarding context, source-linked notes, and human-reviewed AI-assisted documentation.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
-      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, source-linked notes, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
     guardrail:
-      "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
+      "Not production SaaS. Not an omniscient AI layer. Not a private archive browser. Not broad ingestion. Not a replacement for human judgment.",
     doNotSay: [
       "Built a production AI memory platform for a client",
       "Automated trust",
@@ -393,7 +435,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone public-facing teams need to stay focused, unblocked, and able to hand off work.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",

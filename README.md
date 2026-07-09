@@ -107,7 +107,7 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
+Use Karla for body/UI text and Oswald for display headings. Do not commit
 or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules

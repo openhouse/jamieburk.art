@@ -28,7 +28,8 @@ for (const file of [
   "apps/www/src/app/resume/page.tsx",
   "apps/www/src/app/robots.ts",
   "apps/www/src/app/sitemap.ts",
-  "apps/www/src/app/api/health/route.ts"
+  "apps/www/src/app/api/health/route.ts",
+  "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
 ]) {
   requireFile(file);
 }
@@ -60,7 +61,8 @@ for (const legacyRoute of [
   "/work/nyc-artist-coalition-fair-rent",
   "/work/196-artists-residency",
   "/work/source-backed-team-memory",
-  "/work/noting-us"
+  "/work/noting-us",
+  "/technical-operations"
 ]) {
   if (!nextConfigSource.includes(`source: "${legacyRoute}"`)) {
     fail(`legacy redirect missing: ${legacyRoute}`);
@@ -68,6 +70,7 @@ for (const legacyRoute of [
 }
 
 for (const destination of [
+  "/work/technical-operations",
   "/work/fair-rent-nyc",
   "/work/196-sunday-dinner",
   "/lab/source-backed-team-memory"
@@ -75,6 +78,10 @@ for (const destination of [
   if (!nextConfigSource.includes(`destination: "${destination}"`)) {
     fail(`redirect destination missing: ${destination}`);
   }
+}
+
+if (!nextConfigSource.includes('value: "www.jamieburk.art"')) {
+  fail("www.jamieburk.art canonical redirect host check is missing");
 }
 
 const sitemapSource = read("apps/www/src/app/sitemap.ts");
@@ -85,8 +92,7 @@ for (const canonicalRoute of [
   "/resume",
   "/about",
   "/contact",
-  "/colophon",
-  "/lab/source-backed-team-memory"
+  "/colophon"
 ]) {
   if (!sitemapSource.includes(`"${canonicalRoute}"`)) {
     fail(`sitemap static route missing: ${canonicalRoute}`);
@@ -97,11 +103,13 @@ for (const blockedRoute of [
   "/proofs",
   "/knowledge-bank",
   "/public-claims",
+  "/lab/source-backed-team-memory",
   "/work/source-backed-team-memory",
   "/work/noting-us",
   "/work/fairrentnyc",
   "/work/fairrentnyc-commercial-rent-stabilization",
-  "/work/196-artists-residency"
+  "/work/196-artists-residency",
+  "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
 ]) {
   if (sitemapSource.includes(`"${blockedRoute}"`) || sitemapSource.includes(`'${blockedRoute}'`)) {
     fail(`sitemap includes blocked or legacy route: ${blockedRoute}`);

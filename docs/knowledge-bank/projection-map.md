@@ -50,6 +50,14 @@ Use only public-safe method claims.
 Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
 imply production SaaS.
 
+## Internal-Only Intake
+
+Use internal-only claims as proof-bank source discipline, not public website
+copy. These claims need human review, collaborator context, or a clearer
+publication decision before appearing on the site.
+
+- `kc-spaces-fund-digital-infrastructure`
+
 ## Case Studies
 
 Each case study should include proof IDs in work metadata, then use those claims

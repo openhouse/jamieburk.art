@@ -1,4 +1,5 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function Hero() {
   return (
@@ -12,16 +13,19 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I build the operating backbone public-facing teams need to stay
+            focused, unblocked, and able to hand off work.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I turn ambiguous, stakeholder-heavy work into usable systems:
+            requirements, workflows, documentation, decision trails, launch
+            support, onboarding materials, status rhythms, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <JBButton href="/work">View selected work</JBButton>
-            <JBButton href="/resume" variant="secondary">
+            <JBButton href="/work/technical-operations">
+              Technical Operations proof
+            </JBButton>
+            <JBButton href={site.resumePath} variant="secondary" download>
               Download resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
@@ -56,9 +60,8 @@ export function Hero() {
             ))}
           </div>
           <p className="mt-5 text-sm leading-6 text-jb-ink/68">
-            Scattered context becomes shared records, public guidance,
-            maintainable workflows, and materials people can use after the
-            meeting is over.
+            Emerging work becomes shared records, public guidance, maintainable
+            workflows, and materials people can use after the meeting is over.
           </p>
         </div>
       </div>
