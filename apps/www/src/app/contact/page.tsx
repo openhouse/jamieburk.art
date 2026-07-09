@@ -42,6 +42,7 @@ export default function ContactPage() {
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.linkedinHref}
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   {site.linkedinLabel}
                 </a>
@@ -54,6 +55,7 @@ export default function ContactPage() {
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.githubHref}
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   {site.githubLabel}
                 </a>

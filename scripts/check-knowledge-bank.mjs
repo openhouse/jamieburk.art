@@ -17,10 +17,13 @@ const requiredProofIds = [
   "callnyc-civic-data-guidance",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyc-artist-coalition-public-web-infrastructure",
+  "kc-spaces-fund-digital-infrastructure",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "source-backed-team-memory-method",
+  "ai-evals-professional-development"
 ];
 
 const requiredWorkProofs = new Map([
@@ -285,10 +288,15 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "chad-lens.md",
   "claims.md",
+  "claims.json",
   "sources.md",
+  "source-policy.md",
+  "publication-rules.md",
   "projection-map.md",
   "publishing-governance.md",
+  "proof-intake.md",
   "launch-blockers.md",
   "review-checklist.md",
   "anti-claims.md",

@@ -64,6 +64,14 @@ Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
+Prefer action verbs such as clarified, structured, built, co-built, stewarded,
+translated, coordinated, facilitated, documented, implemented, synthesized,
+mapped, supported, maintained, transferred, and improved.
+
+Avoid unsupported hero language: single-handedly built, led the movement, owned
+the bill, solved the crisis, caused 2x growth, official city system, legal
+determination, production SaaS, or AI replacement for judgment.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

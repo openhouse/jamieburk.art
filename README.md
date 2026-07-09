@@ -72,7 +72,8 @@ NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
 ```
 
-Production should only be enabled after staging review:
+Production should only be enabled after staging review. Use `noindex` for a
+quiet production review before the final indexing flip:
 
 ```bash
 APP_ENV=production
@@ -80,9 +81,12 @@ SITE_ENV=production
 NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
-NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_ROBOTS_POLICY=noindex
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+After Jamie explicitly approves production indexing, set
+`NEXT_PUBLIC_ROBOTS_POLICY=index` and redeploy the exact reviewed commit.
 
 ## Deployment
 
@@ -107,8 +111,8 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and Archivo Narrow for labels and compact civic
+emphasis. Do not commit or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 

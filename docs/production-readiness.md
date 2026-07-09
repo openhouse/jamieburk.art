@@ -1,7 +1,7 @@
 # Production Readiness
 
-This branch adds the knowledge-bank layer from the M-family
-production-readiness review.
+This branch composes the authorized launch-readiness family into one focused
+production/application readiness PR.
 
 It includes:
 
