@@ -54,6 +54,10 @@ for (const slug of [
 }
 
 const nextConfigSource = read("apps/www/next.config.ts");
+if (!nextConfigSource.includes('value: "www.jamieburk.art"')) {
+  fail("www.jamieburk.art redirect is missing");
+}
+
 for (const legacyRoute of [
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",

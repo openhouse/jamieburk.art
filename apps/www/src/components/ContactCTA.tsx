@@ -12,8 +12,8 @@ export function ContactCTA() {
         <JBButton href="/resume" variant="secondary">
           Download resume
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
-          Contact Jamie
+        <JBButton href={site.emailHref}>
+          Email Jamie
         </JBButton>
       </div>
     </section>

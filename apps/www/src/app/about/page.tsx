@@ -27,7 +27,7 @@ export default function AboutPage() {
           </p>
           <p>
             Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
+            emerging goals, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
