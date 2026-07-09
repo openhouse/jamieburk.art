@@ -13,6 +13,9 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+See `source-policy.md` for how public-safe evidence can support strong claims
+without publishing private source material.
+
 ## Purpose
 
 The knowledge bank exists to:

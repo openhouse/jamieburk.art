@@ -286,6 +286,7 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "claims.md",
+  "source-policy.md",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",

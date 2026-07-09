@@ -39,8 +39,10 @@ const textExtensions = new Set([
 const privatePathPattern =
   /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
+const forceProduction = process.argv.includes("--production");
 
 const isProduction =
+  forceProduction ||
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
   process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
@@ -171,13 +173,13 @@ for (const file of allFiles) {
 scanPattern(
   shippedContentFiles,
   "production-facing approval marker requires resolution before launch",
-  /TODO:\s*Jamie approval required/i
+  /\bTODO\b|TODO:\s*Jamie approval required/i
 );
 
 scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
-  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
+  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this|Coming soon|Available after approval|Pending confirmation)\b/i
 );
 
 scanPattern(
@@ -211,11 +213,35 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let siteDataHasPublicEmail = false;
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
+  }
+
+  if (!/jamie\.burkart@gmail\.com/.test(siteData)) {
+    addFailure(siteDataPath, "public contact email is missing from site data");
+  } else {
+    siteDataHasPublicEmail = true;
+  }
+
+  if (!/https:\/\/github\.com\/openhouse/.test(siteData)) {
+    addFailure(siteDataPath, "public GitHub URL is missing from site data");
+  }
+}
+
+const contactPagePath = path.join(repoRoot, "apps/www/src/app/contact/page.tsx");
+if (existsSync(contactPagePath)) {
+  const contactPage = readText(contactPagePath);
+
+  if (!/href=\{site\.emailHref\}/.test(contactPage) || !/site\.emailLabel/.test(contactPage)) {
+    addFailure(contactPagePath, "contact page must render the public email as a clickable link");
+  }
+
+  if (/Not published on this site|Direct contact details are in the current resume PDF/i.test(contactPage)) {
+    addFailure(contactPagePath, "contact page renders a placeholder contact row");
   }
 }
 
@@ -243,9 +269,9 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !siteDataHasPublicEmail && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
     addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !siteDataHasPublicEmail) {
     addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }
@@ -270,6 +296,12 @@ if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConf
 if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
   failures.push(
     `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+  );
+}
+
+if (isProduction && process.env.SITE_URL !== "https://jamieburk.art") {
+  failures.push(
+    `production env requires SITE_URL=https://jamieburk.art (got ${process.env.SITE_URL ?? "unset"})`
   );
 }
 

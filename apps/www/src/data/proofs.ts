@@ -47,10 +47,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
-    shortWording: "14+ years creating operating structure",
+      "14+ years building operating structure across civic, cultural, small-business, and technical environments.",
+    shortWording: "14+ years building operating structure",
     detailedPublicWording:
-      "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "Jamie builds operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Establishes the throughline across projects without forcing one job title onto every period of work.",
@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -165,7 +165,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built and stewarded 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +269,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "Created continuity systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -496,17 +496,16 @@ export const resumeProofHighlights = [
 export const technicalOperationsProofRows = [
   {
     capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    toward: "Coordinating multiple concurrent workstreams so launch, adoption, and maintenance stay visible.",
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
-      "callnyc-civic-data-guidance",
-      "wowlist-community-platform"
+      "callnyc-civic-data-guidance"
     ]
   },
   {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    capability: "Risk surfacing and unblocking",
+    toward: "Making open questions, public/private boundaries, blocked decisions, and next steps visible early.",
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
@@ -514,22 +513,39 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    capability: "Operating practices",
+    toward: "Creating planning rhythms, decision frameworks, action trackers, source maps, and retrospectives.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "sunday-dinner-196-participation-infrastructure",
+      "fair-rent-source-map",
       "source-backed-team-memory-method"
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    capability: "Cross-functional coordination",
+    toward: "Translating across product, engineering, design, communications, policy, leadership, and outside partners.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
-      "callnyc-civic-data-guidance",
-      "wowlist-community-platform",
-      "hje-revenue-growth-contribution"
+      "hje-modernization-stewardship",
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    capability: "Onboarding and handoffs",
+    toward: "Giving contributors enough context to become useful quickly and leaving maintainable systems behind.",
+    proofIds: [
+      "sunday-dinner-196-participation-infrastructure",
+      "source-backed-team-memory-method",
+      "hje-modernization-stewardship"
+    ]
+  },
+  {
+    capability: "Operating documentation",
+    toward: "Converting meetings, source trails, campaign needs, and recurring practices into reusable working memory.",
+    proofIds: [
+      "fair-rent-campaign-memory",
+      "sunday-dinner-196-participation-infrastructure",
+      "source-backed-team-memory-method"
     ]
   }
 ].map((row) => ({
