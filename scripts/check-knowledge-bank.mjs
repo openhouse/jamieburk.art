@@ -106,8 +106,11 @@ if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
 }
 
-if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
-  fail("docs/proofs-bank.md conflicts with docs/knowledge-bank/claims.md; use one canonical claim register");
+if (existsSync(path.join(repoRoot, "docs/proofs-bank.md"))) {
+  const proofsBankSource = read(path.join(repoRoot, "docs/proofs-bank.md"));
+  if (!proofsBankSource.includes("docs/knowledge-bank/claims.md")) {
+    fail("docs/proofs-bank.md must point to docs/knowledge-bank/claims.md as the human-readable claim register");
+  }
 }
 
 const blockedRouteDirs = [

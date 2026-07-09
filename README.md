@@ -119,9 +119,9 @@ unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
-  `docs/knowledge-bank/launch-blockers.md`.
+- When uncertain, record a launch blocker in
+  `docs/knowledge-bank/launch-blockers.md` and keep the unresolved claim out of
+  production-facing pages.
 
 ## Launch Blockers
 

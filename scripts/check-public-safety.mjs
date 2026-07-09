@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|supporting-materials|gmail-export|drive-export|financial|therapy|health-private|private-health|health-records)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =

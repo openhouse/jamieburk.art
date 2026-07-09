@@ -47,6 +47,7 @@ for (const slug of [
   "196-sunday-dinner",
   "callnyc",
   "harry-j-epstein",
+  "kc-spaces-fund",
   "kc-town-hall",
   "wowlist"
 ]) {
@@ -61,7 +62,9 @@ if (!nextConfigSource.includes('value: "www.jamieburk.art"')) {
 for (const legacyRoute of [
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",
+  "/work/fair-rent-crs",
   "/work/nyc-artist-coalition-fair-rent",
+  "/technical-operations",
   "/work/196-artists-residency",
   "/work/source-backed-team-memory",
   "/work/noting-us"
@@ -74,6 +77,7 @@ for (const legacyRoute of [
 for (const destination of [
   "/work/fair-rent-nyc",
   "/work/196-sunday-dinner",
+  "/work/technical-operations",
   "/lab/source-backed-team-memory"
 ]) {
   if (!nextConfigSource.includes(`destination: "${destination}"`)) {
@@ -89,8 +93,7 @@ for (const canonicalRoute of [
   "/resume",
   "/about",
   "/contact",
-  "/colophon",
-  "/lab/source-backed-team-memory"
+  "/colophon"
 ]) {
   if (!sitemapSource.includes(`"${canonicalRoute}"`)) {
     fail(`sitemap static route missing: ${canonicalRoute}`);
@@ -101,10 +104,13 @@ for (const blockedRoute of [
   "/proofs",
   "/knowledge-bank",
   "/public-claims",
+  "/lab/source-backed-team-memory",
   "/work/source-backed-team-memory",
   "/work/noting-us",
   "/work/fairrentnyc",
   "/work/fairrentnyc-commercial-rent-stabilization",
+  "/work/fair-rent-crs",
+  "/technical-operations",
   "/work/196-artists-residency"
 ]) {
   if (sitemapSource.includes(`"${blockedRoute}"`) || sitemapSource.includes(`'${blockedRoute}'`)) {
