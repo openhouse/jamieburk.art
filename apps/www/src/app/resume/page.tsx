@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
 
 const selectedImpact = [
   "Led web, e-commerce, marketing, analytics, and operations improvements for Harry J. Epstein Company, contributing to 2x revenue growth while helping an 80+ year-old legacy industrial business adapt to e-commerce.",
-  "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
+  "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance; covered in Politico New York.",
   "Built and stewarded 30+ pages of shared campaign-memory and coordination infrastructure for a 2026 Commercial Rent Stabilization collaboration.",
   "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across city and state sources.",
   "Co-built WOWList.org with Richard Caceres, a Python / Django + Ember.js community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
@@ -38,8 +38,10 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            Public resume for Technical Project Manager, Product Operations,
-            Implementation, and Technical Operations roles.
+            I create operating structure for public-facing technical teams,
+            turning loosely defined work into requirements, workflows,
+            documentation, decision trails, launch support, onboarding
+            materials, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
@@ -50,8 +52,9 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF with phone number, email, LinkedIn, and
-            GitHub included for employment review.
+            Current resume for Technical Project Manager - Product Operations
+            & Implementation roles. The PDF includes phone number, email,
+            LinkedIn, and GitHub for employment review.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

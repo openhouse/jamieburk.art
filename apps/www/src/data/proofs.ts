@@ -105,8 +105,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "Contributed to 2x revenue growth for an 80+ year-old legacy e-commerce business.",
+    shortWording: "Contributed to 2x revenue growth for an 80+ year-old legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -137,11 +137,12 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance; covered in Politico New York.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear.",
-    sourceBasis: "Approved resume language, archived prototype context, and public open-data context.",
+      "CallNYC turned open constituent-services data into issue pathways, district context, archived resident-facing guidance, and press-visible civic-tech context while making its unofficial status clear.",
+    sourceBasis:
+      "Approved resume language, archived prototype context, public open-data context, and public Politico New York PDF hosted by CallNYC.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -153,7 +154,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-09"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -166,7 +167,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "Structured 30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Built and stewarded 30+ pages of shared civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -324,7 +325,7 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     shortWording:
-      "Co-built a community platform adopted across roughly 35 city ecosystems",
+      "Co-built WOWList.org, adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -359,7 +360,7 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording:
-      "Documented 300+ gatherings and supported 20+ resident artists",
+      "Created repeatable systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",

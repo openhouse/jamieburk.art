@@ -8,7 +8,8 @@ consulting conversations.
 A bounded lab method for source-backed team memory: reviewable,
 human-correctable, source-linked operating memory for knowledge-heavy teams.
 
-AI drafts. Humans review. The shared record remains inspectable and correctable.
+AI drafts. Humans review. Sources remain inspectable. Corrections remain
+possible. Private material stays private.
 
 ## Strong Proof IDs
 

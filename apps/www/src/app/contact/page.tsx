@@ -16,9 +16,7 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, technical operations opportunities, product
-          operations, implementation work, civic technology, documentation
-          systems, or source-backed team memory conversations:
+          For roles, referrals, consulting, or collaboration:
         </p>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
@@ -43,8 +41,10 @@ export default function ContactPage() {
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.linkedinHref}
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  {site.linkedinHref}
+                  {site.linkedinLabel}
                 </a>
               </dd>
             </div>
@@ -54,8 +54,10 @@ export default function ContactPage() {
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
                   href={site.githubHref}
+                  rel="noopener noreferrer"
+                  target="_blank"
                 >
-                  {site.githubHref}
+                  {site.githubLabel}
                 </a>
               </dd>
             </div>
@@ -64,9 +66,9 @@ export default function ContactPage() {
               <dd className="mt-1">
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
-                  href={site.resumePath}
+                  href="/resume"
                 >
-                  {site.resumePath}
+                  View resume page
                 </a>
               </dd>
             </div>

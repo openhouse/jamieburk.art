@@ -124,13 +124,13 @@ unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Release Checks
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Review representative artifact descriptions before adding any screenshots or
+  source files.
+- Keep exact proof metrics aligned with `apps/www/src/data/proofs.ts`.
+- Confirm collaborator names, photos, and quotes before making them public.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
+- Use `docs/release-checklist.md` before production launch.

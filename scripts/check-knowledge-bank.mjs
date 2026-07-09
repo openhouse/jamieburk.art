@@ -285,7 +285,10 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "approval-register.md",
+  "chad-lens.md",
   "claims.md",
+  "source-policy.md",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",

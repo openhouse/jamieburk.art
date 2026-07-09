@@ -6,6 +6,27 @@ import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const failures = [];
+const httpBaseUrl =
+  process.argv[2] ?? process.env.ROUTE_BASE_URL ?? process.env.CHECK_ROUTES_BASE_URL;
+const requiredHttpRoutes = [
+  "/",
+  "/work",
+  "/work/technical-operations",
+  "/resume",
+  "/about",
+  "/contact",
+  "/colophon",
+  "/lab/source-backed-team-memory",
+  "/work/harry-j-epstein",
+  "/work/fair-rent-nyc",
+  "/work/callnyc",
+  "/work/wowlist",
+  "/work/196-sunday-dinner",
+  "/work/kc-town-hall",
+  "/robots.txt",
+  "/sitemap.xml",
+  "/api/health"
+];
 
 function fail(message) {
   failures.push(message);
@@ -111,6 +132,22 @@ for (const blockedRoute of [
 const labPageSource = read("apps/www/src/app/lab/source-backed-team-memory/page.tsx");
 if (!labPageSource.includes('path: "/lab/source-backed-team-memory"')) {
   fail("Source-Backed Team Memory canonical path must stay under /lab");
+}
+
+if (httpBaseUrl) {
+  const base = new URL(httpBaseUrl);
+
+  for (const route of requiredHttpRoutes) {
+    const url = new URL(route, base);
+    try {
+      const response = await fetch(url);
+      if (response.status !== 200) {
+        fail(`${url.toString()} returned ${response.status}, expected 200`);
+      }
+    } catch (error) {
+      fail(`${url.toString()} failed route check: ${error.message}`);
+    }
+  }
 }
 
 if (failures.length) {

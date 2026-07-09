@@ -40,7 +40,7 @@ export default function Image() {
           Jamie Burkart
         </div>
         <div style={{ color: "#1f5c3e", fontSize: 42, fontWeight: 700, marginTop: 28 }}>
-          I turn loosely defined public-facing work into usable systems.
+          I turn loosely defined work into usable systems.
         </div>
       </div>
     ),

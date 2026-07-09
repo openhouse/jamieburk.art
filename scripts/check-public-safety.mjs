@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(_private|private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -110,7 +110,15 @@ function pdftotext(file) {
       stdio: ["ignore", "pipe", "ignore"]
     });
   } catch {
-    addWarning(file, "pdftotext unavailable or failed; using binary string fallback");
+    const message =
+      "pdftotext unavailable or failed; PDF text safety check cannot be trusted";
+    addWarning(file, message);
+    if (isProduction && process.env.SKIP_PDF_TEXT_CHECK !== "1") {
+      addFailure(
+        file,
+        `${message}; set SKIP_PDF_TEXT_CHECK=1 only for a documented emergency escape hatch`
+      );
+    }
     return readFileSync(file).toString("latin1");
   }
 }
@@ -183,7 +191,7 @@ scanPattern(
 scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
-  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
+  /\b(?:Placeholder resume PDF|Replace with approved current resume|Replace the placeholder PDF|lorem ipsum|replace this)\b/i
 );
 
 scanPattern(

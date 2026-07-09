@@ -17,6 +17,7 @@
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
     "check": "npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
+    "check:public-safety": "node scripts/check-public-safety.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
     "check:routes": "node scripts/check-routes.mjs",
     "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",

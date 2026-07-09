@@ -278,7 +278,7 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
     years: "2014-2015",
     status: "Full case study",
@@ -307,8 +307,8 @@ const workItemsInput = [
       {
         title: "Historical context note",
         description:
-          "Archived civic-data prototype context is described without relying on unverified press claims.",
-        type: "guide"
+          "Public Politico New York coverage and archived project context are described without implying current or official service status.",
+        type: "press"
       }
     ],
     tags: [
@@ -325,10 +325,16 @@ const workItemsInput = [
       "Information Architecture",
       "Public Interfaces"
     ],
+    links: [
+      {
+        label: "Politico New York article PDF",
+        url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+      }
+    ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, and unofficial prototype framing.",
+      "CouncilStat / constituent-services open data, archived project context, public Politico New York article PDF, and unofficial prototype framing.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -342,13 +348,14 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
+      "Covered in Politico New York",
       "Historical civic-tech demo with archived unofficial status"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
+        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype, with public Politico New York coverage.",
       open:
-        "Additional archive links or screenshots can be added later only if they are public-safe and verified.",
+        "Additional screenshots can be added later only if they are public-safe and verified.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }

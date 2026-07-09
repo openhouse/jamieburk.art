@@ -12,12 +12,13 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I build the operating backbone for loosely defined public-facing technical work.
+            I turn loosely defined work into usable systems.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguity into requirements, planning rhythms,
-            decision logs, onboarding materials, documentation systems, launch
-            support, stakeholder updates, and durable handoffs.
+            I build the operating backbone teams need to plan, track, onboard,
+            document, report, decide, and ship: requirements, workflows,
+            decision trails, launch support, adoption materials, and durable
+            handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>

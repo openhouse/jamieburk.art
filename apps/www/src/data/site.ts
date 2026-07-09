@@ -19,9 +19,9 @@ export const site = {
   emailLabel: contactEmail,
   emailHref: `mailto:${contactEmail}`,
   hasPublicEmail: true,
-  linkedinLabel: "LinkedIn",
+  linkedinLabel: "linkedin.com/in/jamie-burkart",
   linkedinHref: linkedInUrl,
-  githubLabel: "GitHub",
+  githubLabel: "github.com/openhouse",
   githubHref: githubUrl,
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"
