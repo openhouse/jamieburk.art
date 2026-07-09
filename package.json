@@ -15,11 +15,14 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
+    "check": "npm run check -w @jamie-burkart/www && npm run check:knowledge-bank && npm run check:public-safety && npm run check:routes",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
+    "check:knowledge-bank": "npm run knowledge-bank",
     "public-safety": "node scripts/check-public-safety.mjs",
+    "check:public-safety": "npm run public-safety",
     "check:routes": "node scripts/check-routes.mjs",
-    "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
-    "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check"
+    "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex node scripts/preflight-staging.mjs",
+    "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse node scripts/preflight-production.mjs",
+    "check:production": "rm -rf apps/www/.next && APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse npm run check && npm run preflight:production"
   }
 }

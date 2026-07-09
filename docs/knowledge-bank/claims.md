@@ -8,7 +8,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** 14+ years creating operating structure across civic, cultural, small-business, and technical environments.  
+**Public wording:** 14+ years building operating structure across civic, cultural, small-business, and technical environments.
 **Detailed public-safe wording:** Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.  
 **Where to project:** Homepage, Resume page, Technical Operations, About.  
 **Why it matters:** Establishes the throughline across projects without forcing one job title onto every period of work.  
@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - Behind-the-scenes campaign web infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie built and maintained a Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display while keeping public organizer credit collective.
+**Where to project:** Internal proof bank for now. Possible future Technical Operations or civic/cultural infrastructure projection after Jamie chooses the public framing.
+**Why it matters:** Shows rapid public-facing campaign implementation, deployment, fundraising display, and operational web affordances in a mutual-aid context.
+**Guardrail:** Use behind-the-scenes support and collective-work language. Do not claim Jamie was a named public organizer unless the named organizers confirm that framing. Treat the source as an AI-assisted archival review, not a human collaborator testimonial.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie raised the campaign funds; Jamie controlled grant decisions; Jamie wrote every campaign message; an AI-assisted archive note is a human collaborator testimonial.
+**Protected boundaries:** Applicant or grantee packets, donor/list exports, subscriber data, payment-request files, credential/login sheets, billing/payment details, raw email exports, raw text-message archives, private project documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / Collaborator confirmation needed before broader public-role framing
+**Last reviewed:** 2026-07-09
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  
@@ -173,8 +188,8 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
-**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
+**Public wording:** Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.
+**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
 **Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  
