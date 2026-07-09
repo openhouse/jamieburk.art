@@ -20,6 +20,13 @@ Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
 
+### AI-Assisted Archival Review
+
+A public-safe synthesis created by inspecting private/local records with an AI
+assistant. This is useful for finding evidence trails, but it is not a human
+collaborator testimonial or eyewitness memory. Public wording still needs
+Jamie review, source-basis labeling, and collaborator-sensitive guardrails.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for
