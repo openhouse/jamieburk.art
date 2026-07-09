@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "ai-assisted-archival-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -405,6 +406,56 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "ai-assisted-archival-review"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Public-safe archival review supports that Jamie built, adapted, and maintained campaign web infrastructure including a Ghost-based site, reusable campaign theme work, donation/application/sign-up affordances, and fundraising-display support.",
+    sourceBasis:
+      "Public campaign materials and an AI-assisted archival review of private/local project records, summarized without publishing private source files.",
+    sourceNote:
+      "This is not a human collaborator testimonial or first-person memory from the 2020 project.",
+    whyItMatters:
+      "Shows rapid public-facing implementation support for collective mutual-aid work while preserving public organizer credit.",
+    guardrail:
+      "Do not describe Jamie as a named public organizer unless the named organizers confirm that framing.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie led the mutual-aid campaign",
+      "Jamie made grant decisions",
+      "Jamie wrote all public copy",
+      "Jamie was the fiscal sponsor"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor or subscriber data",
+      "Payment-request files",
+      "Credential or login records",
+      "Private emails",
+      "Private text-message archives",
+      "Domain billing details",
+      "Private project documents",
+      "Unapproved collaborator memories"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "public-facing-tools",
+      "implementation",
+      "mutual-aid-infrastructure"
+    ],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "source-backed-team-memory-method",

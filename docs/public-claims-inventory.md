@@ -45,3 +45,10 @@ the proof bank.
 - Keep Known / Open / Protected visible.
 - Keep private evidence, private correspondence, private records, and
   unapproved images out of the repo.
+
+## Internal-Only Intake
+
+- KC Spaces Fund has a careful proof-bank claim for behind-the-scenes digital
+  infrastructure, but it is not currently projected on the public website.
+- Do not publish a KC Spaces Fund page, card, or resume line unless Jamie
+  decides it is useful and the wording preserves public organizer credit.
