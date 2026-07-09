@@ -5,9 +5,8 @@ The V1 type direction is public-safe and font-file-free.
 ## Current Policy
 
 - Karla is the body, UI, prose, card, and long-reading font.
-- Oswald is the label, metadata, section-eyebrow, and compact civic-emphasis
-  font.
-- League Spartan is not required for the shipped interface in this branch.
+- Archivo Narrow is the compact public-grotesque font for headings, labels,
+  proof-strip language, metadata, and selected display text.
 - No private, proprietary, or unapproved font files should be committed or
   served from this repo.
 

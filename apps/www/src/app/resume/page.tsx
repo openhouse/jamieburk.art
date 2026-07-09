@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JBButton } from "@/components/JBButton";
+import { JBCard } from "@/components/JBCard";
 import { resumeProofHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
@@ -10,6 +11,24 @@ export const metadata: Metadata = createMetadata({
     "Resume page for Jamie Burkart: Technical Project Manager - Product Operations & Implementation.",
   path: "/resume"
 });
+
+const resumeSections = [
+  {
+    title: "Product operations & implementation",
+    text:
+      "Requirements, workflow maps, user stories, acceptance criteria, decision logs, rollout planning, adoption materials, and handoff documentation."
+  },
+  {
+    title: "Knowledge systems & documentation",
+    text:
+      "Documentation architecture, meeting synthesis, source maps, shared drives, resource libraries, templates, and searchable reference systems."
+  },
+  {
+    title: "Web, open-data & civic technology",
+    text:
+      "Public-facing tools, JavaScript / TypeScript, React / Next.js, Python / Django, SQL, Git / GitHub, Docker / Dokku, QGIS, and open-data workflows."
+  }
+];
 
 export default function ResumePage() {
   return (
@@ -35,9 +54,17 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+            Current resume for Technical Project Manager - Product Operations &
+            Implementation roles. Last updated: July 2026.
           </p>
+          <div className="mt-8 grid gap-4">
+            {resumeSections.map((section) => (
+              <JBCard as="section" key={section.title}>
+                <h2 className="text-xl font-semibold text-jb-ink">{section.title}</h2>
+                <p className="mt-3 leading-7 text-jb-ink/76">{section.text}</p>
+              </JBCard>
+            ))}
+          </div>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>

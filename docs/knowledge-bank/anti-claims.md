@@ -38,10 +38,17 @@ photos without approval.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Do not expose private finance, legal, ownership, partner, property, banking, or
+stakeholder details. Do not imply current property status or official municipal
+endorsement beyond the public record.
+
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, led the mutual-aid campaign, made
+grant decisions, wrote all public copy, or served as fiscal sponsor unless
+named organizers explicitly confirm a stronger role framing.
 
 ## Source-Backed Team Memory
 
-Do not name Jonathan Marmor, publish pricing, publish private transcript
-context, or imply deployment inside his company.
+Do not name private collaborators, publish pricing, publish private transcript
+context, or imply deployment inside a specific company.
