@@ -13,8 +13,10 @@
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
-- [ ] Jamie approves public email/contact path.
-- [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [x] Jamie authorized public email, LinkedIn, GitHub, and contact-page
+  projection for this launch pass.
+- [x] Jamie authorized use of the current Technical Project Manager resume PDF
+  with phone number inside the PDF.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.

@@ -68,7 +68,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
+**Public wording:** Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
@@ -173,8 +173,8 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
-**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
+**Public wording:** Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.
+**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
 **Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  

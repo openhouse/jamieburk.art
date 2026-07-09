@@ -30,8 +30,11 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
 npm run public-safety
+npm run check:public-safety
 npm run check:routes
+npm run check:production
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -69,6 +72,9 @@ NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -81,6 +87,9 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -107,8 +116,8 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI text and the current approved display face for display
+headings. Do not commit or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -118,14 +127,13 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
+- When uncertain, keep the claim out of production-facing pages and record the
+  approval blocker in
   `docs/knowledge-bank/launch-blockers.md`.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Confirm public email, LinkedIn, and GitHub links remain approved.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
