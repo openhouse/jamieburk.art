@@ -2,7 +2,9 @@ import { SITE_URL } from "@/lib/site-url";
 
 const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "jamie.burkart@gmail.com";
-const linkedInUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ?? "";
+const linkedInUrl =
+  process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ||
+  "https://linkedin.com/in/jamie-burkart";
 const githubUrl =
   process.env.NEXT_PUBLIC_GITHUB_URL?.trim() || "https://github.com/openhouse";
 
@@ -13,14 +15,14 @@ export const site = {
   title:
     "Jamie Burkart - Technical Project Manager | Product Operations & Implementation",
   description:
-    "Brooklyn-based technical project manager building operating structure across product operations, implementation, documentation, civic technology, web systems, knowledge systems, and public-facing tools.",
+    "I turn ambiguous, loosely defined work into usable systems.",
   emailLabel: contactEmail,
   emailHref: `mailto:${contactEmail}`,
   hasPublicEmail: true,
-  linkedinLabel: linkedInUrl ? "LinkedIn" : "LinkedIn link not published",
-  linkedinHref: linkedInUrl || "",
-  githubLabel: githubUrl ? "GitHub" : "GitHub link not published",
-  githubHref: githubUrl || "",
+  linkedinLabel: "linkedin.com/in/jamie-burkart",
+  linkedinHref: linkedInUrl,
+  githubLabel: "github.com/openhouse",
+  githubHref: githubUrl,
   resumePath: "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
   location: "Brooklyn, NY"
 } as const;

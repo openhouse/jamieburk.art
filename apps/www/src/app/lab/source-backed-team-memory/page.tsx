@@ -28,7 +28,8 @@ export default function SourceBackedTeamMemoryPage() {
           <p className="leading-7 text-jb-ink/76">
             Early research / method / consulting practice. Not a finished
             production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
+            judgment, private archive browser, or request for broad
+            company-system access.
           </p>
         </div>
         <div className="mt-10 space-y-6">
@@ -38,7 +39,7 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact">Discuss a source-backed team memory pilot</JBButton>
         </div>
       </div>
     </article>

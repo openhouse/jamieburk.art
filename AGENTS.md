@@ -38,7 +38,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the claim out of production-facing pages and record the
+review need in `docs/knowledge-bank/launch-blockers.md`.
 
 ## Knowledge Bank
 
@@ -73,7 +74,8 @@ change for V1.
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.
-Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production: `jamieburk.art`, indexable only when the explicit production robots
+configuration is set.
 
 ## Voice
 

@@ -48,12 +48,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/resume/:path*",
-        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
-      },
-      {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, noarchive" }]
       }
     ];
   },

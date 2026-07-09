@@ -16,7 +16,7 @@ export default function ResumePage() {
     <div className="jb-frame py-12">
       <div className="grid gap-10 lg:grid-cols-[0.68fr_0.32fr]">
         <div className="jb-reading">
-          <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
+          <h1 className="text-5xl font-bold text-jb-ink">Résumé</h1>
           <p className="mt-4 text-2xl font-semibold text-jb-green">
             Technical Project Manager - Product Operations & Implementation
           </p>
@@ -28,15 +28,15 @@ export default function ResumePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>
-              Download resume PDF
+              Download résumé PDF
             </JBButton>
             <JBButton href="/contact" variant="secondary">
               Contact Jamie
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. The downloadable artifact includes the
-            approved contact details for job applications and referrals.
+            Current résumé for Technical Project Manager - Product Operations &
+            Implementation roles.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

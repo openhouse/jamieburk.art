@@ -3,9 +3,10 @@ import { site } from "@/data/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
+  { href: "/work/technical-operations", label: "Technical Operations" },
   { href: "/lab/source-backed-team-memory", label: "Lab" },
   { href: "/about", label: "About" },
-  { href: "/resume", label: "Resume" },
+  { href: "/resume", label: "Résumé" },
   { href: "/contact", label: "Contact" }
 ] as const;
 
@@ -20,7 +21,7 @@ export function SiteHeader() {
           {site.name}
         </Link>
         <nav aria-label="Primary navigation">
-          <ul className="flex flex-wrap items-center justify-end gap-1 text-sm font-medium sm:gap-2">
+          <ul className="flex flex-wrap items-center justify-end gap-1 text-sm font-medium sm:gap-1.5">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link

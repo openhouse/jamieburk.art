@@ -23,7 +23,7 @@ export function JBButton({
       "btn btn-ghost min-h-11 rounded-lg px-5 text-jb-ink normal-case tracking-normal hover:bg-jb-sky/20"
   }[variant];
 
-  if (href.startsWith("/")) {
+  if (href.startsWith("/") && !download) {
     return (
       <Link className={className} href={href as Route} download={download}>
         {children}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -16,7 +15,8 @@ export default function ContactPage() {
       <div className="jb-reading">
         <h1 className="text-5xl font-bold text-jb-ink">Contact</h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          For roles, referrals, consulting, or collaboration, email Jamie at{" "}
+          For roles, referrals, consulting conversations, or collaboration,
+          email Jamie at{" "}
           <a
             className="font-semibold text-jb-blue hover:text-jb-green"
             href={site.emailHref}
@@ -34,7 +34,7 @@ export default function ContactPage() {
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
           <dl className="space-y-5">
             <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
+              <dt className="font-semibold text-jb-ink">Email</dt>
               <dd className="mt-1 text-jb-ink/74">
                 <a
                   className="font-semibold text-jb-blue hover:text-jb-green"
@@ -73,11 +73,15 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
-              <dt className="font-semibold text-jb-ink">Resume</dt>
+              <dt className="font-semibold text-jb-ink">Résumé</dt>
               <dd className="mt-1">
-                <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
-                  View resume page
-                </Link>
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  download
+                  href={site.resumePath}
+                >
+                  Download résumé PDF
+                </a>
               </dd>
             </div>
           </dl>

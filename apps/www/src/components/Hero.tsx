@@ -16,14 +16,14 @@ export function Hero() {
             I build operating structure for ambiguous public-facing technical work.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I build the operating backbone teams need to coordinate delivery,
-            surface risks early, onboard contributors, document decisions,
-            report clearly, and keep public-facing technical work moving.
+            I help teams turn ambiguous, stakeholder-heavy work into usable
+            systems: requirements, workflows, documentation, decision trails,
+            launch support, onboarding, and durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
             <JBButton href={site.resumePath} variant="secondary" download>
-              Download resume
+              Download résumé
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

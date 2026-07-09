@@ -37,8 +37,9 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
+const phonePattern = /(?:\+?1[\s.-]?)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}/;
 const forceProduction = process.argv.includes("--production");
 
 const isProduction =
@@ -165,7 +166,7 @@ for (const file of allFiles) {
     addFailure(file, "private/source-material path must not be committed");
   }
 
-  if (/\.(key|pem|p12|crt|cer)$/i.test(rel)) {
+  if (/\.(key|pem|p12|pfx|crt|cer)$/i.test(rel)) {
     addFailure(file, "key or certificate material must not be committed");
   }
 }
@@ -179,7 +180,13 @@ scanPattern(
 scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
-  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this|Coming soon|Available after approval|Pending confirmation)\b/i
+  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this|Coming soon|Available after approval|Pending confirmation|pending approval|available after approval)\b/i
+);
+
+scanPattern(
+  publicContentFiles,
+  "phone number must not render in website HTML outside the approved resume PDF",
+  phonePattern
 );
 
 scanPattern(
@@ -229,6 +236,23 @@ if (existsSync(siteDataPath)) {
 
   if (!/https:\/\/github\.com\/openhouse/.test(siteData)) {
     addFailure(siteDataPath, "public GitHub URL is missing from site data");
+  }
+
+  if (!/https:\/\/linkedin\.com\/in\/jamie-burkart/.test(siteData)) {
+    addFailure(siteDataPath, "public LinkedIn URL is missing from site data");
+  }
+}
+
+const workDataPath = path.join(repoRoot, "apps/www/src/data/work.ts");
+if (existsSync(workDataPath)) {
+  const workData = readText(workDataPath);
+
+  if (/visibility:\s*["']private["']/.test(workData)) {
+    addFailure(workDataPath, "private work item visibility must not be shipped");
+  }
+
+  if (/status:\s*["']Draft["']/.test(workData)) {
+    addFailure(workDataPath, "draft work item status must not be shipped");
   }
 }
 
