@@ -20,11 +20,12 @@ dokku proxy:ports-set jamieburk-art-staging http:80:3000
 
 dokku config:set jamieburk-art-staging \
   APP_ENV=staging \
-  SITE_ENV=staging \
-  NEXT_PUBLIC_DEPLOY_ENV=staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -37,12 +38,17 @@ matching build args:
 
 ```bash
 dokku docker-options:add jamieburk-art-staging build '--build-arg APP_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_ENV=staging'
-dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=staging'
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
+
+Use `APP_ENV` as the canonical environment selector. Older compatibility
+fallbacks may still read `SITE_ENV` or `NEXT_PUBLIC_DEPLOY_ENV`, but new Dokku
+config and build args should not require them.
 
 Enable TLS after DNS resolves:
 
@@ -71,11 +77,12 @@ dokku proxy:ports-set jamieburk-art http:80:3000
 
 dokku config:set jamieburk-art \
   APP_ENV=production \
-  SITE_ENV=production \
-  NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -86,11 +93,12 @@ If staging required build args, add production build args too:
 
 ```bash
 dokku docker-options:add jamieburk-art build '--build-arg APP_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
 
 Enable TLS:
@@ -112,22 +120,24 @@ git push dokku-production HEAD:main
 ```bash
 docker build \
   --build-arg APP_ENV=staging \
-  --build-arg SITE_ENV=staging \
-  --build-arg NEXT_PUBLIC_DEPLOY_ENV=staging \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  --build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  --build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  --build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   -t jamieburk-art:staging-test .
 ```
 
 ```bash
 docker run --rm -p 3000:3000 \
   -e APP_ENV=staging \
-  -e SITE_ENV=staging \
-  -e NEXT_PUBLIC_DEPLOY_ENV=staging \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  -e NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  -e NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   jamieburk-art:staging-test
 ```
 

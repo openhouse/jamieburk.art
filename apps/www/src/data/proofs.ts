@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for legacy e-commerce",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -226,6 +226,40 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "nyc-artist-coalition-civic-systems-role",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Co-founded NYC Artist Coalition and leads civic systems, coalition operations, and policy communications work across cultural-space advocacy, Commercial Rent Stabilization, storefront stability, and public-data framing.",
+    shortWording: "Co-founder and civic systems lead for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie builds and stewards campaign and knowledge infrastructure for NYC Artist Coalition work, including shared documentation, public guidance, action trackers, source maps, call scripts, QR pathways, handouts, follow-up systems, and report-back materials.",
+    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign context.",
+    whyItMatters:
+      "Clarifies Jamie's role in NYC Artist Coalition without converting collective campaign work into a solo claim.",
+    guardrail:
+      "Use role and infrastructure language. Campaign outcomes remain collective and should not be attributed to Jamie alone.",
+    doNotSay: [
+      "Jamie solely led NYC Artist Coalition",
+      "Jamie alone created the Office of Nightlife",
+      "Jamie alone repealed the Cabaret Law",
+      "Jamie controls coalition strategy or partner decisions"
+    ],
+    protectedBoundaries: [
+      "Private coalition notes",
+      "Legal-review materials",
+      "Stakeholder lists",
+      "Private correspondence",
+      "Strategy records",
+      "Unapproved collaborator details"
+    ],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["coalition-operations", "policy-communications", "public-data-framing"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -269,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +337,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "Documented 300+ gatherings and supported 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -326,6 +360,49 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Built behind-the-scenes web infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained campaign web infrastructure for KC Spaces Fund: a Ghost-based campaign site, reusable theme work, a GoFundMe display layer, and donation, application, sign-up, and contact pathways for a public mutual-aid campaign that reported $9,590 raised from 107 donations.",
+    sourceBasis:
+      "Public GoFundMe campaign page plus AI-assisted public-safe archival review of Jamie's private source materials.",
+    sourceNote:
+      "Use as an archival proof claim, not as a human collaborator testimonial.",
+    whyItMatters:
+      "Shows emergency public-facing web implementation, campaign infrastructure, and careful collective-work attribution.",
+    guardrail:
+      "Do not present Jamie as a named public organizer, fundraiser of record, grant decision-maker, or owner of collective outcomes.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie raised the campaign funds",
+      "Jamie made grant decisions",
+      "Jamie wrote every public campaign line",
+      "Jamie should receive public organizer credit unless organizers confirm that framing"
+    ],
+    protectedBoundaries: [
+      "Applicant records",
+      "Grantee records",
+      "Donor or subscriber exports",
+      "Payment request files",
+      "Credential or login records",
+      "Billing details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private planning documents",
+      "Private code paths",
+      "Unapproved collaborator memories"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "implementation", "forms", "donation-flows"],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -486,6 +563,7 @@ export const resumeProofHighlights = [
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyc-artist-coalition-civic-systems-role",
   "callnyc-civic-data-guidance",
   "nyc-artist-coalition-public-web-infrastructure",
   "wowlist-community-platform",
@@ -527,6 +605,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

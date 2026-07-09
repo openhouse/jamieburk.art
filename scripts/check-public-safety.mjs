@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|otter|transcripts-private|client-private|coalition-private|residency-private|legal-review|support-private|support-materials-private|supporting-materials|job-hunt-private|job-hunt|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|gmail|gdrive|google-drive|google-docs|stakeholders|internal-analytics|secrets)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -163,7 +163,7 @@ for (const file of allFiles) {
     addFailure(file, "private/source-material path must not be committed");
   }
 
-  if (/\.(key|pem|p12|crt|cer)$/i.test(rel)) {
+  if (/\.(key|pem|p12|crt|cer|cert|kdbx)$/i.test(rel)) {
     addFailure(file, "key or certificate material must not be committed");
   }
 }
@@ -178,6 +178,18 @@ scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
   /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "public-facing copy should use clearer Chad-lens language instead of under-structured",
+  /\bunder-structured\b/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "production-facing launch scaffold language requires resolution",
+  /\b(?:pending Jamie approval|Jamie approval|before launch|before publication|may be added after Jamie confirms|screenshots pending|citation pending|approval pending|approvals pending)\b/i
 );
 
 scanPattern(

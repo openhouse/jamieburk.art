@@ -3,6 +3,7 @@ import { site } from "@/data/site";
 
 const navItems = [
   { href: "/work", label: "Work" },
+  { href: "/work/technical-operations", label: "Technical Ops" },
   { href: "/about", label: "About" },
   { href: "/resume", label: "Resume" },
   { href: "/contact", label: "Contact" }

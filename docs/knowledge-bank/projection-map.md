@@ -36,6 +36,7 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
@@ -54,3 +55,6 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+KC Spaces Fund may appear as a short proof page only. Keep it framed as
+behind-the-scenes web infrastructure, not public organizing credit.
