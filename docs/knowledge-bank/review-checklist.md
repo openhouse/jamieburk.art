@@ -23,6 +23,11 @@ changes public claims.
   transcript, or company context.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
   needed.
+- [ ] AI-assisted archival review notes are not presented as human
+  collaborator testimonials.
+- [ ] KC Spaces Fund language preserves public organizer credit and keeps
+  applicant, donor, payment, credential, billing, correspondence, and raw
+  archive material offline.
 - [ ] No raw transcripts, private notes, legal-review materials, stakeholder
   lists, private rows, private screenshots, private photos, private fonts,
   credentials, or private correspondence have been committed.

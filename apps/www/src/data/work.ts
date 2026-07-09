@@ -147,12 +147,12 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, public-safe summary, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study. Screenshot approvals pending.",
+    currentStatus: "Public-safe full case study. Private operating evidence remains offline.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
@@ -166,7 +166,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns remain unpublished unless separately cleared.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -178,7 +178,7 @@ const workItemsInput = [
     subtitle: "Coalition memory and civic documentation systems",
     summary:
       "Built and stewarded shared campaign-memory and coordination infrastructure for Commercial Rent Stabilization and storefront-stability advocacy.",
-    role: "Documentation Systems Lead & Coalition Operations Support",
+    role: "Co-Founder, Civic Systems & Coalition Operations Lead",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -187,6 +187,7 @@ const workItemsInput = [
     proofBankIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "nyc-artist-coalition-civic-systems-role",
       "nyc-artist-coalition-public-web-infrastructure"
     ],
     whatWasUnclear:
@@ -245,16 +246,17 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, public campaign materials, meeting memory summaries, and private/redacted coalition context described only as public-safe summaries.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary. Private coalition context remains offline.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
     evidence: [
+      "Co-founded NYC Artist Coalition and leads civic systems, coalition operations, and policy communications work",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -263,9 +265,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helps structure public-safe campaign memory, coordination documents, source maps, public-data framing, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Specific private artifacts, collaborator details, meeting materials, and screenshots remain unpublished unless separately cleared.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
@@ -305,7 +307,7 @@ const workItemsInput = [
       {
         title: "Archived press note",
         description:
-          "External coverage can be linked after Jamie confirms the correct Politico New York citation.",
+          "External coverage is referenced only when the exact public citation is confirmed.",
         type: "press"
       }
     ],
@@ -326,12 +328,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, public-safe screenshots pending, and press citation pending.",
+      "CouncilStat / constituent-services open data, archived project context, and public-safe summary. Exact press links and screenshots remain out of V1.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
+    currentStatus: "Archived prototype with public-safe historical framing.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -339,13 +341,13 @@ const workItemsInput = [
       "Built after a New York City Council civic-data hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Historical civic-tech demo with press citation pending"
+      "Historical civic-tech demo"
     ],
     knownOpenProtected: {
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Archive links, screenshots, and the exact press citation remain unpublished until separately confirmed.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -388,8 +390,8 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
-    credits: ["Jamie Burkart", "WOWList collaborators"],
+      "Public-safe summary and historical project context. Raw platform data and unreviewed screenshots stay offline.",
+    credits: ["Jamie Burkart", "Richard Caceres", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
     roleFit:
@@ -405,7 +407,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and more precise adoption wording remain unpublished until separately confirmed.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -442,7 +444,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary with private community records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -458,9 +460,90 @@ const workItemsInput = [
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, photos, and artifacts remain unpublished without consent.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
+    }
+  },
+  {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Mutual-Aid Infrastructure",
+    subtitle: "Campaign web infrastructure for COVID-era arts-space relief",
+    summary:
+      "Supported a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces as behind-the-scenes digital infrastructure.",
+    role: "Web Infrastructure & Implementation Support",
+    years: "2020",
+    status: "Short proof page",
+    featured: false,
+    priority: 6,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "A fast-moving mutual-aid campaign needed a public site, donation visibility, application and sign-up paths, and platform continuity without confusing behind-the-scenes web work with public organizer credit.",
+    whatBecameUsable:
+      "A campaign web stack with public explanation, donation/application/sign-up affordances, fundraising display, and maintainable platform assets.",
+    artifactTypes: ["website", "workflow", "prototype", "template"],
+    artifacts: [
+      {
+        title: "Campaign site infrastructure",
+        description:
+          "Ghost-based campaign site and theme work that helped make the fund legible and usable online.",
+        type: "website"
+      },
+      {
+        title: "Donation and application pathways",
+        description:
+          "Public-facing action paths for donations, applications, sign-ups, and contact.",
+        type: "workflow"
+      },
+      {
+        title: "Fundraising display layer",
+        description:
+          "GoFundMe display work treated as campaign infrastructure, not as a claim that Jamie raised the funds.",
+        type: "prototype"
+      }
+    ],
+    tags: [
+      "Community Systems",
+      "Implementation",
+      "Public-Facing Tools",
+      "Campaign Websites",
+      "Mutual Aid"
+    ],
+    capabilities: [
+      "Campaign Websites",
+      "Donation Flows",
+      "Forms",
+      "Launch Support",
+      "Boundary-Safe Documentation"
+    ],
+    links: [{ label: "Public GoFundMe page", url: "https://www.gofundme.com/f/kcspacesfund" }],
+    careNote:
+      "This page describes Jamie's documented technical and operational support. It does not recast him as a public organizer, fundraiser of record, grant decision-maker, or owner of collective outcomes.",
+    sourceLayer:
+      "Public GoFundMe page and public-safe archival review. Private application records, subscriber exports, payment records, credentials, billing details, private correspondence, and raw archives stay offline.",
+    credits: ["Jamie Burkart", "KC Spaces Fund organizers and collaborators"],
+    publicSafety: {
+      note: "Use behind-the-scenes infrastructure language and preserve public organizer credit with the campaign's organizers."
+    },
+    currentStatus: "Public-safe short proof page. Private campaign records remain offline.",
+    group: "Community and cultural infrastructure",
+    roleFit:
+      "Emergency public-facing implementation, campaign web infrastructure, donation/application workflows, launch support, and careful collective attribution.",
+    evidence: [
+      "Public campaign page reported $9,590 raised from 107 donations",
+      "Public campaign described emergency relief grants for grassroots arts and culture spaces",
+      "Public-safe archival review supports Jamie's web infrastructure role",
+      "Behind-the-scenes site, theme, widget, and action-path implementation"
+    ],
+    knownOpenProtected: {
+      known:
+        "KC Spaces Fund was a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, and Jamie's documented contribution was behind-the-scenes digital infrastructure.",
+      open:
+        "Firsthand collaborator memories could clarify social context and exact authorship boundaries beyond the archival traces.",
+      protected:
+        "Applicant records, donor or subscriber exports, payment files, credentials, billing details, private correspondence, raw archives, and unapproved collaborator memories are omitted."
     }
   },
   {
@@ -474,7 +557,7 @@ const workItemsInput = [
     years: "2020s",
     status: "Short proof page",
     featured: false,
-    priority: 6,
+    priority: 7,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
@@ -495,7 +578,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public-safe summary and public-record framing.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -511,7 +594,7 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Specific public-funding materials, named partners, and project status details remain unpublished unless separately cleared.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
@@ -527,6 +610,7 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 

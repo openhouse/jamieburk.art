@@ -60,8 +60,8 @@
   --color-jb-sky: var(--jb-pale-blue);
   --color-jb-rose: var(--jb-classic-rose);
   --font-sans: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
-  --font-label: var(--font-oswald), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  --font-label: var(--font-archivo-narrow), "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo-narrow), var(--font-karla), ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -143,7 +143,7 @@ h2 {
 .jb-eyebrow,
 .jb-meta-label {
   font-family: var(--font-label);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;

@@ -17,10 +17,14 @@ const requiredProofIds = [
   "callnyc-civic-data-guidance",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyc-artist-coalition-civic-systems-role",
+  "nyc-artist-coalition-public-web-infrastructure",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
+  "kc-spaces-fund-digital-infrastructure",
   "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "source-backed-team-memory-method",
+  "ai-evals-professional-development"
 ];
 
 const requiredWorkProofs = new Map([
@@ -30,12 +34,14 @@ const requiredWorkProofs = new Map([
     [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "nyc-artist-coalition-civic-systems-role",
       "nyc-artist-coalition-public-web-infrastructure"
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],
   ["wowlist", ["wowlist-community-platform"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
+  ["kc-spaces-fund", ["kc-spaces-fund-digital-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]
 ]);
 
@@ -287,12 +293,18 @@ for (const requiredDoc of [
   "README.md",
   "claims.md",
   "sources.md",
+  "approval-register.md",
   "projection-map.md",
   "publishing-governance.md",
   "launch-blockers.md",
   "review-checklist.md",
   "anti-claims.md",
+  "chad-lens.md",
+  "opportunities.md",
   "public-safety.md",
+  "../outreach/oti-message-to-hiring-team.md",
+  "../outreach/oti-referrer-note.md",
+  "../outreach/jonathan-source-backed-memory-note.md",
   "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {
