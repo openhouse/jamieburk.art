@@ -30,8 +30,10 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
 npm run public-safety
 npm run check:routes
+npm run check:production
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -107,8 +109,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body, UI, and prose. Use Archivo Narrow for compact
+public-grotesque headings, proof labels, and selected display text. Do not
+commit or serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -118,14 +121,12 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
-  `docs/knowledge-bank/launch-blockers.md`.
+- When uncertain, keep the public page bounded and move the review note to
+  `docs/knowledge-bank/launch-blockers.md` or `docs/launch-checklist.md`.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Public email, LinkedIn, and GitHub are published in `apps/www/src/data/site.ts`.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
