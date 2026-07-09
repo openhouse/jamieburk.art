@@ -20,6 +20,12 @@ Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
 
+### AI-Assisted Archival Review
+
+Summaries produced from Jamie-reviewed archive inspection. This can support
+private proof-bank reasoning, but it is not a human collaborator testimonial and
+should not be quoted as firsthand memory.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

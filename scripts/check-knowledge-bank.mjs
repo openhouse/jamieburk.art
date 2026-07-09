@@ -104,8 +104,16 @@ if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
 }
 
-if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
-  fail("docs/proofs-bank.md conflicts with docs/knowledge-bank/claims.md; use one canonical claim register");
+const proofsBankPath = path.join(repoRoot, "docs/proofs-bank.md");
+if (existsSync(proofsBankPath) && existsSync(claimsPath)) {
+  const proofsBankSource = read(proofsBankPath);
+  if (!proofsBankSource.includes("docs/knowledge-bank/claims.md")) {
+    fail("docs/proofs-bank.md must point to the canonical claims register");
+  }
+
+  if (/^##\s+[a-z0-9-]+\s*$/gm.test(proofsBankSource)) {
+    fail("docs/proofs-bank.md must not create a second standalone claim register");
+  }
 }
 
 const blockedRouteDirs = [
@@ -286,6 +294,7 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "claims.md",
+  "source-policy.md",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",

@@ -12,3 +12,7 @@ The V1 type direction is public-safe and font-file-free.
   served from this repo.
 
 Use `next/font/google` rather than committing font binaries.
+
+Do not ship Trade Gothic, Verlag, Gotham Rounded, Risque, Maria handwriting
+fonts, or any private/proprietary local font files unless explicit
+licensing/permission exists.
