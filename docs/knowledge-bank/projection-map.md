@@ -43,6 +43,13 @@ Use claims that directly support operating-backbone fit:
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
 
+## Intake / Not Yet Projected
+
+These claims are public-safe enough for the knowledge bank but should not appear
+on public pages until their framing has had additional review:
+
+- `kc-spaces-fund-digital-infrastructure`
+
 ## Lab / Source-Backed Team Memory
 
 Use only public-safe method claims.

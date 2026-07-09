@@ -11,6 +11,10 @@ operating structure for complex public-facing teams.
 Use `apps/www`. Do not rename it to `apps/site`, `apps/web`, or another path
 without explicit approval.
 
+The production launch site is a focused public-safe portfolio for Technical
+Project Manager - Product Operations & Implementation. Public contact values
+are authorized for launch in `apps/www/src/data/site.ts`.
+
 ## Stack
 
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
@@ -38,7 +42,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, record launch blockers in `docs/knowledge-bank/launch-blockers.md`.
+Do not render approval markers in production-facing pages.
 
 ## Knowledge Bank
 
@@ -64,6 +69,9 @@ Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
+Ask of every public claim: What did Jamie do? Toward what end? What became
+usable? What is protected?
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
@@ -73,7 +81,8 @@ change for V1.
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.
-Production later: `jamieburk.art`, indexable only after Jamie approves content.
+Production later: `jamieburk.art`, indexable only after Jamie approves content
+and production explicitly sets `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Voice
 

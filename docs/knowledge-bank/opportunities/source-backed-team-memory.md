@@ -19,9 +19,21 @@ AI drafts. Humans review. The shared record remains inspectable and correctable.
 
 ## Boundaries
 
-Do not name Jonathan Marmor.
+Do not name Jonathan Marmor on the public site.
 Do not publish pricing.
 Do not publish private transcript excerpts.
 Do not publish private company context.
 Do not imply production SaaS.
 Do not imply company-wide deployment.
+
+## Sharing Package
+
+Primary public URL:
+
+```text
+https://jamieburk.art/lab/source-backed-team-memory
+```
+
+Reusable outreach copy lives outside the public site routes:
+
+- `docs/outreach/jonathan-source-backed-memory-note.md`

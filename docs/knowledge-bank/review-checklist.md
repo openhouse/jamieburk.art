@@ -17,6 +17,8 @@ changes public claims.
   language.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
+- [ ] AI-assisted archival notes are labeled as archival review, not human
+  collaborator testimony.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,
