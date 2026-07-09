@@ -393,6 +393,53 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "AI-assisted archival review of public campaign materials and private code/archive summaries indicates Jamie built or adapted the Ghost-based campaign site, customized a reusable campaign theme, and supported donation, application, sign-up, contact, and fundraising-display affordances.",
+    sourceBasis:
+      "Public GoFundMe campaign context and AI-assisted archival review of public-safe summaries from local code, campaign, list, domain, and platform records reviewed with Jamie on 2026-07-09.",
+    sourceNote:
+      "This is not a human collaborator testimonial or first-person eyewitness account. Keep as private proof-bank background until collaborators confirm public wording.",
+    whyItMatters:
+      "Shows fast campaign-site implementation, donation/application flow support, platform custody, and technical operations for a collective mutual-aid effort.",
+    guardrail:
+      "Credit public organizing to the organizers named by campaign materials unless those collaborators confirm a broader framing for Jamie.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie was one of the public organizers unless confirmed by named organizers",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public campaign copy",
+      "This note is a collaborator testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant and grantee records",
+      "Donor and subscriber data",
+      "Payment-request materials",
+      "Credentials and login sheets",
+      "Billing and payment details",
+      "Raw email exports",
+      "Raw text-message archives",
+      "Private shared-drive documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "ghost",
+      "theme-customization",
+      "fundraising-infrastructure",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
