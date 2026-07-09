@@ -211,8 +211,13 @@ for (const file of textFiles.filter((item) => !scannerFiles.has(item))) {
 }
 
 const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
+let siteHasPublicContactEmail = Boolean(process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim());
+
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
+  siteHasPublicContactEmail =
+    siteHasPublicContactEmail ||
+    (/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(siteData) && /mailto:/.test(siteData));
 
   if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
@@ -243,10 +248,10 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
-    addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
-    addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
+  if (isProduction && !siteHasPublicContactEmail && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+    addFailure(resumePath, "production public contact email is unavailable and resume PDF does not expose a contact email");
+  } else if (isProduction && !siteHasPublicContactEmail) {
+    addWarning(resumePath, "production public contact email is unavailable; contact page relies on resume PDF");
   }
 }
 

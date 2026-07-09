@@ -152,7 +152,7 @@ const workItemsInput = [
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study. Screenshot approvals pending.",
+    currentStatus: "Public-safe full case study; private operating evidence omitted.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
@@ -166,7 +166,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns are not published in this launch patch.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -245,12 +245,12 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, public campaign materials, meeting-memory summaries, and private/redacted coalition context summarized without exposing raw source material.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary; private coalition context omitted.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, product operations, documentation architecture, source-backed memory, public guidance, and implementation support.",
@@ -265,7 +265,7 @@ const workItemsInput = [
       known:
         "Jamie helped structure and steward public-safe campaign memory, coordination documents, source maps, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Additional public artifacts, collaborator names, meeting materials, and screenshots stay off-page unless they are separately reviewed for publication.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
@@ -305,7 +305,7 @@ const workItemsInput = [
       {
         title: "Archived press note",
         description:
-          "External coverage can be linked after Jamie confirms the correct Politico New York citation.",
+          "Historical press coverage is treated as context without turning the prototype into a current-service claim.",
         type: "press"
       }
     ],
@@ -331,7 +331,7 @@ const workItemsInput = [
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots and citation approvals pending.",
+    currentStatus: "Archived prototype; no current-service claim.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -345,7 +345,7 @@ const workItemsInput = [
       known:
         "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype.",
       open:
-        "The correct archive link, screenshots, and press citation need Jamie approval before publication.",
+        "Archive links, screenshots, and press links stay off-page unless canonical URLs are confirmed.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -365,7 +365,7 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: ["wowlist-community-platform"],
     whatWasUnclear:
-      "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
+      "DIY organizers needed easy-to-adopt ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
     artifactTypes: ["website", "workflow", "prototype"],
@@ -373,7 +373,7 @@ const workItemsInput = [
       {
         title: "Keyword-community model",
         description:
-          "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
+          "An easy-to-adopt distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
       }
     ],
@@ -388,7 +388,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe summary and historical project context, with private user data and raw community records omitted.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -405,7 +405,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots, archive links, and more precise adoption wording stay off-page unless canonical materials are confirmed.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -458,7 +458,7 @@ const workItemsInput = [
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, photos, and artifacts stay off-page without consent and publication review.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }
@@ -511,7 +511,7 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Additional public-funding materials, named partners, and project status details stay off-page unless separately confirmed.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

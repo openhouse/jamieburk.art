@@ -37,3 +37,16 @@ Use `/work/technical-operations` as the role-fit proof surface.
 
 Do not make the public page an application-specific OTI page unless Jamie
 explicitly requests that.
+
+## Application Package
+
+Primary website URL:
+
+```text
+https://jamieburk.art/work/technical-operations
+```
+
+Copy blocks live outside the public site routes:
+
+- `docs/applications/oti-technical-operations-message.md`
+- `docs/applications/oti-referrer-note.md`

@@ -137,6 +137,8 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I http://localhost:3000/work/technical-operations
 ```
 
 Expected staging behavior:
@@ -145,3 +147,49 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The resume PDF returns `200`, `Content-Type: application/pdf`, and
+  `X-Robots-Tag: noindex, nofollow`.
+- `/work/technical-operations` returns `200` and is the primary role-fit URL.
+
+## Staging Smoke Test
+
+After pushing to staging, verify:
+
+```bash
+curl -i https://staging.jamieburk.art/api/health
+curl -i https://staging.jamieburk.art/robots.txt
+curl -i https://staging.jamieburk.art/sitemap.xml
+curl -I https://staging.jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I https://staging.jamieburk.art/work/technical-operations
+```
+
+Expected staging behavior:
+
+- `/api/health` reports `appEnv: staging`, the staging site URL, and
+  `robotsIndexable: false`.
+- `/robots.txt` disallows `/`.
+- `/sitemap.xml` returns `200` and contains staging URLs only.
+- The resume PDF returns `200`, `Content-Type: application/pdf`, and
+  `X-Robots-Tag: noindex, nofollow`.
+- `/work/technical-operations` returns `200`.
+
+## Production Smoke Test
+
+Run only after Jamie approves production deployment:
+
+```bash
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -I https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I https://jamieburk.art/work/technical-operations
+```
+
+Expected production behavior:
+
+- `/api/health` reports production, `https://jamieburk.art`, and
+  `robotsIndexable: true`.
+- `/robots.txt` allows `/` and points to the production sitemap.
+- `/sitemap.xml` returns `200` and contains production URLs only.
+- The resume PDF remains noindex/nofollow.
+- `/work/technical-operations` returns `200`.

@@ -13,6 +13,9 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const referrerLanguage =
+  "Jamie Burkart is a Technical Project Manager focused on Product Operations & Implementation. He helps civic, cultural, small-business, public-facing, and technical teams turn ambiguous work into usable workflows, documentation, public-facing tools, implementation support, onboarding, and durable handoffs.";
+
 export default function HomePage() {
   return (
     <>
@@ -29,9 +32,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: ambiguous, high-context
+              situations becoming usable systems, public-facing tools,
+              documentation, decision trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,13 +85,28 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
-            listen across stakeholders, map what is known and unknown, create
-            the workflows or documentation the team needs, support launch or
+            I usually enter when the work is important but not yet legible: too
+            many stakeholders, scattered documents, unclear ownership,
+            incomplete data, urgent public needs, fragile trust, or a product
+            that exists in practice but not yet as a clear system. I listen
+            across stakeholders, map what is known and unknown, create the
+            workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
             maintain.
           </p>
           <ContactCTA />
+        </div>
+      </section>
+      <section className="bg-jb-paper py-14">
+        <div className="jb-frame">
+          <div className="rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+            <p className="text-sm font-semibold uppercase text-jb-blue">
+              Referrer language
+            </p>
+            <p className="mt-4 max-w-4xl text-lg leading-8 text-jb-ink/78">
+              {referrerLanguage}
+            </p>
+          </div>
         </div>
       </section>
     </>
