@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie helped make the campaign's online surface usable by supporting the campaign site, reusable theme work, donation/application/sign-up affordances, fundraising-display infrastructure, and domain/platform continuity.
+**Where to project:** Internal-only for now; possible Technical Operations or future short proof page after collaborator/social-memory review.
+**Why it matters:** Shows fast-turnaround civic/cultural campaign implementation, web infrastructure, deployment, donation/application flows, and public/private credit discipline.
+**Guardrail:** Keep public organizer credit with the campaign-named organizers unless they confirm a broader framing. Describe Jamie's role as technical, operational, and behind the scenes. Treat the source note as AI-assisted archival review, not a human collaborator testimonial or eyewitness account.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie led the campaign; Jamie made grant decisions; Jamie wrote every line of public copy; the AI archival note is a collaborator testimonial.
+**Protected boundaries:** Applicant or grantee materials, donor or subscriber exports, payment-request files, credential or login records, billing and domain-payment details, private project records, private messages and correspondence, and unapproved collaborator memories or quotes stay offline.
+**Review owner:** Jamie / collaborator review needed before public projection
+**Last reviewed:** 2026-07-09
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

@@ -359,6 +359,53 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie helped make the campaign's online surface usable by supporting the campaign site, reusable theme work, donation/application/sign-up affordances, fundraising-display infrastructure, and domain/platform continuity.",
+    sourceBasis:
+      "Public campaign materials and AI-assisted archival review of Jamie-provided public-safe project records.",
+    sourceNote:
+      "Use as an archival proof note, not as a human collaborator testimonial or eyewitness account.",
+    whyItMatters:
+      "Shows fast-turnaround civic/cultural campaign implementation, web infrastructure, deployment, donation/application flows, and public/private credit discipline.",
+    guardrail:
+      "Keep public organizer credit with the campaign-named organizers unless they confirm a broader framing. Describe Jamie's role as technical, operational, and behind the scenes.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie led the campaign",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public copy",
+      "The AI archival note is a collaborator testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor or subscriber exports",
+      "Payment-request files",
+      "Credential or login records",
+      "Billing and domain-payment details",
+      "Private project records",
+      "Private messages and correspondence",
+      "Unapproved collaborator memories or quotes"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "ghost",
+      "deployment",
+      "donation-flows",
+      "application-flows",
+      "domain-platform-continuity"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",

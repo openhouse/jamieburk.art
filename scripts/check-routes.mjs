@@ -55,9 +55,12 @@ for (const slug of [
 
 const nextConfigSource = read("apps/www/next.config.ts");
 for (const legacyRoute of [
+  "/:path*",
+  "/technical-operations",
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",
   "/work/nyc-artist-coalition-fair-rent",
+  "/work/fair-rent-crs",
   "/work/196-artists-residency",
   "/work/source-backed-team-memory",
   "/work/noting-us"
@@ -68,6 +71,8 @@ for (const legacyRoute of [
 }
 
 for (const destination of [
+  "https://jamieburk.art/:path*",
+  "/work/technical-operations",
   "/work/fair-rent-nyc",
   "/work/196-sunday-dinner",
   "/lab/source-backed-team-memory"
@@ -97,15 +102,25 @@ for (const blockedRoute of [
   "/proofs",
   "/knowledge-bank",
   "/public-claims",
+  "/technical-operations",
   "/work/source-backed-team-memory",
   "/work/noting-us",
   "/work/fairrentnyc",
   "/work/fairrentnyc-commercial-rent-stabilization",
+  "/work/fair-rent-crs",
   "/work/196-artists-residency"
 ]) {
   if (sitemapSource.includes(`"${blockedRoute}"`) || sitemapSource.includes(`'${blockedRoute}'`)) {
     fail(`sitemap includes blocked or legacy route: ${blockedRoute}`);
   }
+}
+
+if (!nextConfigSource.includes('type: "host", value: "www.jamieburk.art"')) {
+  fail("www.jamieburk.art apex redirect host rule is missing");
+}
+
+if (!nextConfigSource.includes("permanent: true")) {
+  fail("www.jamieburk.art apex redirect must be permanent");
 }
 
 const labPageSource = read("apps/www/src/app/lab/source-backed-team-memory/page.tsx");

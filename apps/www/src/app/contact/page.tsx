@@ -23,21 +23,12 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.hasPublicEmail ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.emailHref}
-                  >
-                    {site.emailLabel}
-                  </a>
-                ) : (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.resumePath}
-                  >
-                    Direct contact details are in the current resume PDF
-                  </a>
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.emailHref}
+                >
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -45,33 +36,25 @@ export default function ContactPage() {
               <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
             </div>
             <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
+              <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.linkedinHref}
-                  >
-                    {site.linkedinLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                >
+                  github.com/openhouse
+                </a>
               </dd>
             </div>
             <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
+              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.githubHref}
-                  >
-                    {site.githubLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinHref}
+                >
+                  linkedin.com/in/jamie-burkart
+                </a>
               </dd>
             </div>
             <div>
@@ -80,6 +63,15 @@ export default function ContactPage() {
                 <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
                   View resume page
                 </Link>
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-jb-ink">Best-fit conversations</dt>
+              <dd className="mt-1 text-jb-ink/74">
+                Technical project management, technical operations, product
+                operations, implementation, civic technology, documentation
+                systems, knowledge systems, public-facing web tools, and
+                source-backed team memory.
               </dd>
             </div>
           </dl>

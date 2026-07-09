@@ -12,7 +12,9 @@ It includes:
 - Chad-lens editorial guidance.
 - One public-safety scanner that calls the focused knowledge-bank checker.
 - Route checks for canonical pages, legacy redirects, sitemap discipline, and
-  the absence of a public proofs route.
+  the absence of public proofs / knowledge-bank routes.
+- Canonical redirects for `www.jamieburk.art`, `/technical-operations`, and
+  legacy work routes.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
 
@@ -31,6 +33,8 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
+- [ ] Local smoke test for `/api/health`, `/robots.txt`, `/sitemap.xml`,
+  résumé PDF headers, `/work/technical-operations`, and `/technical-operations`
 - [ ] Docker build
 - [ ] Docker run
 - [ ] Route smoke tests

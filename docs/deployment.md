@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
 
 Enable TLS after DNS resolves:
@@ -76,6 +82,9 @@ dokku config:set jamieburk-art \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -91,6 +100,9 @@ dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
 
 Enable TLS:
@@ -117,6 +129,9 @@ docker build \
   --build-arg SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   --build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  --build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  --build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  --build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   -t jamieburk-art:staging-test .
 ```
 
@@ -128,6 +143,9 @@ docker run --rm -p 3000:3000 \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  -e NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  -e NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   jamieburk-art:staging-test
 ```
 
@@ -137,6 +155,9 @@ Verify:
 curl -i http://localhost:3000/api/health
 curl -i http://localhost:3000/robots.txt
 curl -i http://localhost:3000/sitemap.xml
+curl -I http://localhost:3000/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I http://localhost:3000/work/technical-operations
+curl -I http://localhost:3000/technical-operations
 ```
 
 Expected staging behavior:
@@ -145,3 +166,56 @@ Expected staging behavior:
 - `/robots.txt` disallows `/`.
 - `/sitemap.xml` uses the staging or local site URL, never production.
 - Responses include `X-Robots-Tag: noindex, nofollow` outside production.
+- The resume PDF returns `200`, `Content-Type: application/pdf`, and
+  `X-Robots-Tag: noindex, nofollow`.
+- `/work/technical-operations` returns `200` and is the primary role-fit URL.
+- `/technical-operations` redirects to `/work/technical-operations`.
+
+## Staging Smoke Test
+
+After pushing to staging, verify:
+
+```bash
+curl -i https://staging.jamieburk.art/api/health
+curl -i https://staging.jamieburk.art/robots.txt
+curl -i https://staging.jamieburk.art/sitemap.xml
+curl -I https://staging.jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I https://staging.jamieburk.art/work/technical-operations
+curl -I https://staging.jamieburk.art/technical-operations
+```
+
+Expected staging behavior:
+
+- `/api/health` reports `appEnv: staging`, the staging site URL, and
+  `robotsIndexable: false`.
+- `/robots.txt` disallows `/`.
+- `/sitemap.xml` returns `200` and contains staging URLs only.
+- The resume PDF returns `200`, `Content-Type: application/pdf`, and
+  `X-Robots-Tag: noindex, nofollow`.
+- `/work/technical-operations` returns `200`.
+- `/technical-operations` redirects to `/work/technical-operations`.
+
+## Production Smoke Test
+
+Run only after Jamie approves production deployment:
+
+```bash
+curl -i https://jamieburk.art/api/health
+curl -i https://jamieburk.art/robots.txt
+curl -i https://jamieburk.art/sitemap.xml
+curl -I https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf
+curl -I https://jamieburk.art/work/technical-operations
+curl -I https://jamieburk.art/technical-operations
+curl -I https://www.jamieburk.art/work/technical-operations
+```
+
+Expected production behavior:
+
+- `/api/health` reports production, `https://jamieburk.art`, and
+  `robotsIndexable: true`.
+- `/robots.txt` allows `/` and points to the production sitemap.
+- `/sitemap.xml` returns `200` and contains production URLs only.
+- The resume PDF remains noindex/nofollow.
+- `/work/technical-operations` returns `200`.
+- `/technical-operations` redirects to `/work/technical-operations`.
+- `www.jamieburk.art` redirects permanently to `jamieburk.art`.
