@@ -36,6 +36,7 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`

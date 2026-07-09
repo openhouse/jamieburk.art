@@ -26,6 +26,7 @@ Implementation roles.
 
 - `technical-operations-operating-backbone`
 - `hje-modernization-stewardship`
+- `kc-spaces-fund-digital-infrastructure`
 - `fair-rent-campaign-memory`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`

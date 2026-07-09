@@ -4,6 +4,7 @@ export type SupportLevel = "strong" | "moderate" | "careful" | "pending";
 
 export type EvidenceClass =
   | "approved-resume"
+  | "ai-assisted-archive-review"
   | "public-source"
   | "public-safe-archive-summary"
   | "firsthand-collaborator-context"
@@ -259,6 +260,59 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "ai-assisted-archive-review",
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign serving grassroots arts and culture spaces.",
+    shortWording: "Supported KC Spaces Fund digital infrastructure",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.",
+    sourceBasis:
+      "AI-assisted archival review of local code history, public campaign context, and public-safe project summary.",
+    sourceNote:
+      "Use technical support and collective-work framing; public organizer credit remains with the campaign-named organizers unless those collaborators approve broader wording.",
+    whyItMatters:
+      "Shows public-facing launch infrastructure, campaign implementation, web-platform stewardship, and careful handling of collective credit.",
+    guardrail:
+      "Do not frame Jamie as a named public organizer or sole campaign owner; describe the role as technical and operational support.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie led the mutual-aid campaign",
+      "Jamie made grant decisions",
+      "Jamie wrote all public campaign copy",
+      "Jamie owned the public campaign outcome"
+    ],
+    protectedBoundaries: [
+      "Applicant and grantee materials",
+      "Donor and list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials and login records",
+      "Billing and renewal details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private shared documents",
+      "Sensitive legal, financial, or personal context"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "public-facing-launches",
+      "web-infrastructure",
+      "donation-flows",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -498,11 +552,12 @@ export const resumeProofHighlights = [
 export const technicalOperationsProofRows = [
   {
     capability: "Delivery coordination and risk surfacing",
-    proofLine: "Harry J. Epstein Company, CallNYC, WOWList.",
+    proofLine: "Harry J. Epstein Company, KC Spaces Fund, CallNYC, WOWList.",
     toward:
       "Jamie has moved work from concept to public launch in e-commerce, civic-data, and community-platform contexts, while translating between technical and nontechnical stakeholders.",
     proofIds: [
       "hje-modernization-stewardship",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform"
     ]
