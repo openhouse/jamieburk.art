@@ -39,7 +39,9 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href={site.emailHref}>Email Jamie</JBButton>
+          <JBButton href={site.emailHref}>
+            Discuss a source-backed team memory pilot
+          </JBButton>
         </div>
       </div>
     </article>

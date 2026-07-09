@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|supporting-materials-private|job-hunt|job-hunt-private|Jamie Projects History|gmail-export|drive-export|otter|financial|health|therapy|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -159,7 +159,9 @@ for (const file of allFiles) {
     addFailure(file, "font file must not be committed or served from the repo");
   }
 
-  if (privatePathPattern.test(rel) || /\.private\./i.test(rel)) {
+  const isAllowedHealthRoute = rel === "apps/www/src/app/api/health/route.ts";
+
+  if ((privatePathPattern.test(rel) && !isAllowedHealthRoute) || /\.private\./i.test(rel)) {
     addFailure(file, "private/source-material path must not be committed");
   }
 
@@ -170,8 +172,8 @@ for (const file of allFiles) {
 
 scanPattern(
   shippedContentFiles,
-  "production-facing approval marker requires resolution before launch",
-  /TODO:\s*Jamie approval required/i
+  "production-facing launch-scaffold language requires resolution",
+  /(?:\b(?:under-structured|pending Jamie approval|Jamie approval|before launch|before publication|screenshots pending|citation pending|approval pending|approvals pending|Source layer)\b|Current status:)/i
 );
 
 scanPattern(
@@ -188,8 +190,8 @@ scanPattern(
 
 scanPattern(
   shippedContentFiles,
-  "all-caps private/confidential marker appears in production-facing content",
-  /\b(?:PRIVATE|CONFIDENTIAL)\b/
+  "all-caps private/internal marker appears in production-facing content",
+  /\b(?:PRIVATE|CONFIDENTIAL|DO NOT PUBLISH|INTERNAL ONLY|PRIVATE_DATA)\b/
 );
 
 const credentialPatterns = [

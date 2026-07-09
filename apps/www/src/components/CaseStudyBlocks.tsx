@@ -139,10 +139,9 @@ export function CareNote({ item }: { item: WorkMeta }) {
 
 export function VisibilityNote({ item }: { item: WorkMeta }) {
   return (
-    <NoteBlock title="Visibility" tone="blue">
+    <NoteBlock title="Publication boundary" tone="blue">
       <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
+        This public summary is marked <strong>{item.visibility}</strong>.{" "}
         {item.currentStatus}
       </p>
     </NoteBlock>
@@ -161,7 +160,7 @@ export function PublicSafetyNote({ item }: { item: WorkMeta }) {
 export function SourceLayer({ item }: { item: WorkMeta }) {
   if (!item.sourceLayer) return null;
   return (
-    <NoteBlock title="Source layer" tone="green">
+    <NoteBlock title="Evidence basis" tone="green">
       <p>{item.sourceLayer}</p>
     </NoteBlock>
   );

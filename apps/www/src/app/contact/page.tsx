@@ -47,6 +47,17 @@ export default function ContactPage() {
               </dd>
             </div>
             <div>
+              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
+              <dd className="mt-1 text-jb-ink/74">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinHref}
+                >
+                  linkedin.com/in/jamie-burkart
+                </a>
+              </dd>
+            </div>
+            <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
                 <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">

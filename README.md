@@ -81,6 +81,9 @@ NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -107,8 +110,8 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body/UI/prose and Oswald for labels/metadata. Do not commit or
+serve private, proprietary, or unlicensed font files.
 
 ## Content Rules
 
@@ -118,14 +121,17 @@ or serve private, proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
-  `docs/knowledge-bank/launch-blockers.md`.
+- Apply Chad Lens before public copy ships: name what Jamie did, toward what
+  end, what became usable, and what remains protected.
+- When uncertain, keep launch blockers in `docs/knowledge-bank/launch-blockers.md`.
+  Do not render approval markers in production-facing pages.
+- Do not add public `/proofs`, `/knowledge-bank`, or `/public-claims` routes.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
+- Public contact values are authorized for launch:
+  `jamie.burkart@gmail.com`, `https://linkedin.com/in/jamie-burkart`, and
+  `https://github.com/openhouse`.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.

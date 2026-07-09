@@ -16,6 +16,9 @@ This portfolio should reduce the reader's burden without reducing the record.
 
 ## Preferred Moves
 
+- Prefer active verbs: clarified, structured, built, co-built, stewarded,
+  translated, coordinated, facilitated, documented, implemented, synthesized,
+  mapped, supported, maintained, transferred, improved.
 - Replace vague "under-structured" wording with concrete explanations:
   requirements, workflows, ownership, documentation, and handoffs were not yet
   clear.
@@ -27,5 +30,7 @@ This portfolio should reduce the reader's burden without reducing the record.
 - Replace "lightweight" with small, bounded, practical, or easy to adopt.
 - Replace "maintainers" with organizers, calendar organizers, or community
   operators unless the technical audience expects "maintainers."
+- Avoid inflated shortcuts: single-handedly, owned the bill, led the movement,
+  solved the crisis, or caused 2x growth.
 
 The goal is courageous precision: neither understatement nor overclaiming.
