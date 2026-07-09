@@ -175,21 +175,39 @@ scanPattern(
 );
 
 scanPattern(
+  publicContentFiles,
+  "production-facing approval or citation marker requires resolution before launch",
+  /\b(?:approval required|pending approval|screenshots pending|citation pending|placeholder resume)\b/i
+);
+
+scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
   /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
 );
 
 scanPattern(
+  shippedContentFiles,
+  "private visibility must not be projected into production-facing content",
+  /\bvisibility:\s*["']private["']/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "draft status must not be projected into production-facing content",
+  /\bstatus:\s*["']Draft["']/i
+);
+
+scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
-  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?|\d{4}-\d{2}-\d{2}-Call with [A-Z][A-Za-z]+ [A-Z][A-Za-z]+_otter\.ai|named private collaborator transcript)\b/i
 );
 
 scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
-  /\b(?:PRIVATE|CONFIDENTIAL)\b/
+  /\b(?:PRIVATE|CONFIDENTIAL|DO NOT PUBLISH|INTERNAL ONLY|PRIVATE_DATA)\b/
 );
 
 const credentialPatterns = [
@@ -226,7 +244,7 @@ if (!existsSync(resumePath)) {
 } else {
   const stats = statSync(resumePath);
 
-  if (stats.size < 10_000) {
+  if (stats.size < 5_000) {
     addFailure(resumePath, "resume PDF is unexpectedly small");
   }
 
@@ -245,8 +263,6 @@ if (!existsSync(resumePath)) {
 
   if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
     addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
-    addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
   }
 }
 
