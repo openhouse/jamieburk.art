@@ -36,6 +36,17 @@ Do not name collaborators unless approved.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, raised the campaign funds, made grant
+decisions, wrote all public campaign copy, or should receive public organizer
+credit unless organizers confirm that framing.
+
+Do not publish applicant records, grantee records, donor or subscriber exports,
+payment request files, credential or login records, billing details, raw email
+archives, raw text-message archives, private planning documents, private code
+paths, or unapproved collaborator memories.
+
 ## KC Town Hall
 
 Prefer "supported" or "co-founded and documented" unless Jamie approves

@@ -157,6 +157,22 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+**Short public wording:** Built behind-the-scenes web infrastructure for KC Spaces Fund.
+**Detailed public-safe wording:** Jamie built and maintained campaign web infrastructure for KC Spaces Fund: a Ghost-based campaign site, reusable theme work, a GoFundMe display layer, and donation, application, sign-up, and contact pathways for a public mutual-aid campaign that reported $9,590 raised from 107 donations.
+**Where to project:** Technical Operations, Work card, short proof page.
+**Why it matters:** Shows emergency public-facing web implementation, campaign infrastructure, and careful collective-work attribution.
+**Guardrail:** Do not present Jamie as a named public organizer, fundraiser of record, grant decision-maker, or owner of collective outcomes.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie raised the campaign funds; Jamie made grant decisions; Jamie wrote every public campaign line; Jamie should receive public organizer credit unless organizers confirm that framing.
+**Protected boundaries:** Applicant records, grantee records, donor or subscriber exports, payment request files, credential or login records, billing details, raw email archives, raw text-message archives, private planning documents, private code paths, and unapproved collaborator memories stay offline.
+**Review owner:** Jamie / Collaborator confirmation useful for stronger social-context language
+**Last reviewed:** 2026-07-09
+
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
 **Status:** Careful

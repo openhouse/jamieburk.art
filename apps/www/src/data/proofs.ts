@@ -362,6 +362,49 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Built behind-the-scenes web infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained campaign web infrastructure for KC Spaces Fund: a Ghost-based campaign site, reusable theme work, a GoFundMe display layer, and donation, application, sign-up, and contact pathways for a public mutual-aid campaign that reported $9,590 raised from 107 donations.",
+    sourceBasis:
+      "Public GoFundMe campaign page plus AI-assisted public-safe archival review of Jamie's private source materials.",
+    sourceNote:
+      "Use as an archival proof claim, not as a human collaborator testimonial.",
+    whyItMatters:
+      "Shows emergency public-facing web implementation, campaign infrastructure, and careful collective-work attribution.",
+    guardrail:
+      "Do not present Jamie as a named public organizer, fundraiser of record, grant decision-maker, or owner of collective outcomes.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie raised the campaign funds",
+      "Jamie made grant decisions",
+      "Jamie wrote every public campaign line",
+      "Jamie should receive public organizer credit unless organizers confirm that framing"
+    ],
+    protectedBoundaries: [
+      "Applicant records",
+      "Grantee records",
+      "Donor or subscriber exports",
+      "Payment request files",
+      "Credential or login records",
+      "Billing details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private planning documents",
+      "Private code paths",
+      "Unapproved collaborator memories"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "implementation", "forms", "donation-flows"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
@@ -562,6 +605,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

@@ -48,6 +48,16 @@ A public-safe synthesis of a private or semi-private conversation.
 Safe behavior: do not quote private calls, attribute private comments, or name
 participants unless explicitly approved.
 
+### ai-assisted-archival-review
+
+A public-safe synthesis created by an AI assistant from source material Jamie
+surfaced for review.
+
+Safe behavior: label it as archival review, not a human collaborator
+testimonial. Use public sources for public facts when available, keep private
+source contents out of the repo, and treat collaborator memories or consent
+questions as open until people confirm them.
+
 ## Source Rules
 
 - Public sources may be linked if appropriate.
@@ -57,6 +67,8 @@ participants unless explicitly approved.
   contents.
 - Conversation summaries must not quote private calls unless explicitly
   approved.
+- AI-assisted archival reviews may support public-safe claim drafting, but they
+  must not be presented as eyewitness testimony.
 - Do not paste private local file paths into source notes.
 - Do not publish private email, raw transcripts, stakeholder lists,
   legal-review materials, internal dashboards, source bundles, or private

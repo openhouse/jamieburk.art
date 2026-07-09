@@ -466,6 +466,87 @@ const workItemsInput = [
     }
   },
   {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Mutual-Aid Infrastructure",
+    subtitle: "Campaign web infrastructure for COVID-era arts-space relief",
+    summary:
+      "Supported a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces as behind-the-scenes digital infrastructure.",
+    role: "Web Infrastructure & Implementation Support",
+    years: "2020",
+    status: "Short proof page",
+    featured: false,
+    priority: 6,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "A fast-moving mutual-aid campaign needed a public site, donation visibility, application and sign-up paths, and platform continuity without confusing behind-the-scenes web work with public organizer credit.",
+    whatBecameUsable:
+      "A campaign web stack with public explanation, donation/application/sign-up affordances, fundraising display, and maintainable platform assets.",
+    artifactTypes: ["website", "workflow", "prototype", "template"],
+    artifacts: [
+      {
+        title: "Campaign site infrastructure",
+        description:
+          "Ghost-based campaign site and theme work that helped make the fund legible and usable online.",
+        type: "website"
+      },
+      {
+        title: "Donation and application pathways",
+        description:
+          "Public-facing action paths for donations, applications, sign-ups, and contact.",
+        type: "workflow"
+      },
+      {
+        title: "Fundraising display layer",
+        description:
+          "GoFundMe display work treated as campaign infrastructure, not as a claim that Jamie raised the funds.",
+        type: "prototype"
+      }
+    ],
+    tags: [
+      "Community Systems",
+      "Implementation",
+      "Public-Facing Tools",
+      "Campaign Websites",
+      "Mutual Aid"
+    ],
+    capabilities: [
+      "Campaign Websites",
+      "Donation Flows",
+      "Forms",
+      "Launch Support",
+      "Boundary-Safe Documentation"
+    ],
+    links: [{ label: "Public GoFundMe page", url: "https://www.gofundme.com/f/kcspacesfund" }],
+    careNote:
+      "This page describes Jamie's documented technical and operational support. It does not recast him as a public organizer, fundraiser of record, grant decision-maker, or owner of collective outcomes.",
+    sourceLayer:
+      "Public GoFundMe page and public-safe archival review. Private application records, subscriber exports, payment records, credentials, billing details, private correspondence, and raw archives stay offline.",
+    credits: ["Jamie Burkart", "KC Spaces Fund organizers and collaborators"],
+    publicSafety: {
+      note: "Use behind-the-scenes infrastructure language and preserve public organizer credit with the campaign's organizers."
+    },
+    currentStatus: "Public-safe short proof page. Private campaign records remain offline.",
+    group: "Community and cultural infrastructure",
+    roleFit:
+      "Emergency public-facing implementation, campaign web infrastructure, donation/application workflows, launch support, and careful collective attribution.",
+    evidence: [
+      "Public campaign page reported $9,590 raised from 107 donations",
+      "Public campaign described emergency relief grants for grassroots arts and culture spaces",
+      "Public-safe archival review supports Jamie's web infrastructure role",
+      "Behind-the-scenes site, theme, widget, and action-path implementation"
+    ],
+    knownOpenProtected: {
+      known:
+        "KC Spaces Fund was a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, and Jamie's documented contribution was behind-the-scenes digital infrastructure.",
+      open:
+        "Firsthand collaborator memories could clarify social context and exact authorship boundaries beyond the archival traces.",
+      protected:
+        "Applicant records, donor or subscriber exports, payment files, credentials, billing details, private correspondence, raw archives, and unapproved collaborator memories are omitted."
+    }
+  },
+  {
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
@@ -476,7 +557,7 @@ const workItemsInput = [
     years: "2020s",
     status: "Short proof page",
     featured: false,
-    priority: 6,
+    priority: 7,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
@@ -529,6 +610,7 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 
