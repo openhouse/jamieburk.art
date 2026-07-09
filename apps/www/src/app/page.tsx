@@ -13,11 +13,41 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const startHereLinks = [
+  ["For Technical Operations roles", "/work/technical-operations"],
+  ["For public-facing implementation proof", "/work/harry-j-epstein"],
+  ["For civic documentation and operating memory", "/work/fair-rent-nyc"],
+  ["For open-data / resident guidance proof", "/work/callnyc"],
+  ["Download resume", "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"],
+  ["Contact Jamie", "/contact"]
+] as const;
+
 export default function HomePage() {
   return (
     <>
       <Hero />
       <ProofStrip />
+      <section className="jb-frame py-12">
+        <div className="flex flex-col gap-5 rounded-lg border border-jb-ink/12 bg-jb-warm p-5 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
+            <h2 className="mt-2 text-2xl font-semibold text-jb-ink">
+              Choose the strongest proof path for the reader in front of you.
+            </h2>
+          </div>
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {startHereLinks.map(([label, href]) => (
+              <a
+                className="rounded-lg border border-jb-blue/25 bg-jb-paper px-4 py-3 text-sm font-semibold text-jb-blue hover:border-jb-green hover:text-jb-green"
+                href={href}
+                key={href}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -29,7 +59,7 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
+              These projects show a recurring pattern: loosely defined situations
               becoming usable systems, public-facing tools, documentation,
               decision trails, and durable handoffs.
             </p>
@@ -82,7 +112,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important but loosely defined. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to

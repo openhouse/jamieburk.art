@@ -105,7 +105,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -164,8 +164,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    shortWording: "Structured 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -269,7 +269,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording:
+      "Co-built a community platform adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +304,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording:
+      "Documented 300+ gatherings and supported 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -495,40 +497,69 @@ export const resumeProofHighlights = [
 
 export const technicalOperationsProofRows = [
   {
-    capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    capability: "Delivery coordination and risk surfacing",
+    proofLine: "Harry J. Epstein Company, CallNYC, WOWList.",
+    toward:
+      "Jamie has moved work from concept to public launch in e-commerce, civic-data, and community-platform contexts, while translating between technical and nontechnical stakeholders.",
     proofIds: [
-      "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform"
     ]
   },
   {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    capability: "Operating processes and team rituals",
+    proofLine: "FairRentNYC / Commercial Rent Stabilization, 196 / Sunday Dinner.",
+    toward:
+      "Jamie structures recurring work through meeting memory, action trackers, decision records, public guidance, facilitation rhythms, and repeatable handoffs.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "fair-rent-source-map",
-      "kc-town-hall-public-benefit-documentation"
+      "sunday-dinner-196-participation-infrastructure"
     ]
   },
   {
-    capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    capability: "Documentation people actually use",
+    proofLine: "FairRentNYC, CallNYC, Source-Backed Team Memory.",
+    toward:
+      "Jamie creates source maps, runbook-like guidance, public explanations, and reviewable documentation systems that help people continue work after meetings or launches.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "sunday-dinner-196-participation-infrastructure",
+      "fair-rent-source-map",
+      "callnyc-civic-data-guidance",
       "source-backed-team-memory-method"
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    capability: "Onboarding and ramp support",
+    proofLine: "196 Artists Residency / Sunday Dinner, HJE, Source-Backed Team Memory.",
+    toward:
+      "Jamie builds low-overhead onboarding, hosting, continuity, and handoff practices so new participants can understand what matters and contribute sooner.",
+    proofIds: [
+      "sunday-dinner-196-participation-infrastructure",
+      "hje-modernization-stewardship",
+      "source-backed-team-memory-method"
+    ]
+  },
+  {
+    capability: "Cross-functional and public-sector translation",
+    proofLine: "FairRentNYC / NYC Artist Coalition, CallNYC, KC Town Hall.",
+    toward:
+      "Jamie translates across community stakeholders, public data, policy context, technical systems, and public-facing materials while protecting sensitive information.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "callnyc-civic-data-guidance",
+      "kc-town-hall-public-benefit-documentation"
+    ]
+  },
+  {
+    capability: "Continuous improvement",
+    proofLine: "HJE, WOWList, FairRentNYC.",
+    toward:
+      "Jamie works iteratively: clarify what is known, surface what is open, protect what should remain private, improve the working system, and document the next responsible move.",
+    proofIds: [
+      "hje-modernization-stewardship",
       "wowlist-community-platform",
+      "fair-rent-campaign-memory",
       "hje-revenue-growth-contribution"
     ]
   }
