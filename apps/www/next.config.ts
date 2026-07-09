@@ -19,7 +19,8 @@ const siteUrl = stripTrailingSlash(
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
@@ -47,12 +48,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/resume/:path*",
-        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }]
-      },
-      {
         source: "/(.*)",
         headers: globalHeaders
+      },
+      {
+        source: "/resume/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, noarchive" }]
       }
     ];
   },
@@ -75,6 +76,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/work/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/work/sunday-dinner-196-artists-residency",
         destination: "/work/196-sunday-dinner",
         permanent: false
       },
