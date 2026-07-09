@@ -25,6 +25,9 @@ dokku config:set jamieburk-art-staging \
   SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art \
   NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -42,6 +45,9 @@ dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_DE
 dokku docker-options:add jamieburk-art-staging build '--build-arg SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art'
 dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art-staging build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
 
 Enable TLS after DNS resolves:
@@ -61,7 +67,8 @@ git push dokku-staging HEAD:main
 ## Production Setup Draft
 
 Use this only after staging content, accessibility, metadata, and public-safety
-review.
+review. First production deploy should be publicly accessible but explicitly
+noindex until final smoke testing passes.
 
 ```bash
 dokku apps:create jamieburk-art
@@ -75,7 +82,10 @@ dokku config:set jamieburk-art \
   NEXT_PUBLIC_DEPLOY_ENV=production \
   SITE_URL=https://jamieburk.art \
   NEXT_PUBLIC_SITE_URL=https://jamieburk.art \
-  NEXT_PUBLIC_ROBOTS_POLICY=index \
+  NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_ENV=production \
   PORT=3000 \
@@ -90,8 +100,15 @@ dokku docker-options:add jamieburk-art build '--build-arg SITE_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_DEPLOY_ENV=production'
 dokku docker-options:add jamieburk-art build '--build-arg SITE_URL=https://jamieburk.art'
 dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_SITE_URL=https://jamieburk.art'
-dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=index'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_ROBOTS_POLICY=noindex'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart'
+dokku docker-options:add jamieburk-art build '--build-arg NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse'
 ```
+
+After production smoke testing passes and Jamie approves indexing, flip
+`NEXT_PUBLIC_ROBOTS_POLICY=index` in Dokku config and matching build args, then
+rebuild/redeploy the same reviewed code.
 
 Enable TLS:
 
@@ -128,6 +145,9 @@ docker run --rm -p 3000:3000 \
   -e SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_SITE_URL=http://localhost:3000 \
   -e NEXT_PUBLIC_ROBOTS_POLICY=noindex \
+  -e NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com \
+  -e NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart \
+  -e NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse \
   jamieburk-art:staging-test
 ```
 

@@ -52,6 +52,7 @@ const publicSurfaces = new Set([
 const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
+const claimsJsonPath = path.join(repoRoot, "docs/knowledge-bank/claims.json");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
 
 function fail(message) {
@@ -102,6 +103,10 @@ if (!existsSync(proofPath)) {
 
 if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
+}
+
+if (!existsSync(claimsJsonPath)) {
+  fail("docs/knowledge-bank/claims.json is missing");
 }
 
 if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
@@ -240,6 +245,37 @@ if (existsSync(claimsPath)) {
   });
 }
 
+if (existsSync(claimsJsonPath)) {
+  try {
+    const claimRows = JSON.parse(read(claimsJsonPath));
+
+    if (!Array.isArray(claimRows)) {
+      fail("docs/knowledge-bank/claims.json must be an array");
+    } else {
+      const jsonIds = new Set();
+      for (const row of claimRows) {
+        for (const field of [
+          "id",
+          "status",
+          "publicProjection",
+          "sourceClass",
+          "surfaces",
+          "boundaries",
+          "antiClaims"
+        ]) {
+          if (!(field in row)) fail(`claims.json row is missing ${field}`);
+        }
+        if (row.id) jsonIds.add(row.id);
+      }
+      for (const id of requiredProofIds) {
+        if (!jsonIds.has(id)) warn(`claims.json does not include required proof ID: ${id}`);
+      }
+    }
+  } catch (error) {
+    fail(`docs/knowledge-bank/claims.json is invalid JSON: ${error.message}`);
+  }
+}
+
 if (existsSync(workPath)) {
   const workSource = read(workPath);
   const allProofIds = new Set(proofIds);
@@ -285,8 +321,11 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "claims.json",
   "claims.md",
+  "approval-register.md",
   "sources.md",
+  "source-classes.md",
   "projection-map.md",
   "publishing-governance.md",
   "launch-blockers.md",
@@ -299,6 +338,24 @@ for (const requiredDoc of [
   const absolute = path.join(docsRoot, requiredDoc);
   if (!existsSync(absolute) || !statSync(absolute).size) {
     fail(`docs/knowledge-bank/${requiredDoc} is missing or empty`);
+  }
+}
+
+for (const requiredRootDoc of [
+  "docs/deployment.md",
+  "docs/launch-checklist.md",
+  "docs/staging-qa.md",
+  "docs/public-safety.md",
+  "docs/typefaces.md",
+  "docs/chad-lens.md",
+  "docs/opportunities/oti-technical-operations.md",
+  "docs/opportunities/source-backed-team-memory.md",
+  "docs/outreach/oti-referrer-note.md",
+  "docs/outreach/jonathan-source-backed-team-memory.md"
+]) {
+  const absolute = path.join(repoRoot, requiredRootDoc);
+  if (!existsSync(absolute) || !statSync(absolute).size) {
+    fail(`${requiredRootDoc} is missing or empty`);
   }
 }
 

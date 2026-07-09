@@ -37,7 +37,7 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resume-private|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
@@ -219,6 +219,10 @@ if (existsSync(siteDataPath)) {
   }
 }
 
+if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
+  addFailure(siteDataPath, "production contact email env is unset");
+}
+
 if (!existsSync(resumePath)) {
   failures.push(
     "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf - approved resume PDF is missing"
@@ -243,11 +247,6 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
-    addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
-    addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
-  }
 }
 
 const siteUrlPath = path.join(repoRoot, "apps/www/src/lib/site-url.ts");
@@ -263,13 +262,25 @@ if (!/NEXT_PUBLIC_ROBOTS_POLICY\s*===\s*["']index["']/.test(siteUrlSource + next
   addFailure(siteUrlPath, "production indexing is not explicit opt-in");
 }
 
-if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConfigSource)) {
+if (
+  !/\/resume\/(?:\:path\*|Jamie-Burkart-Resume-Technical-Project-Manager\.pdf)/.test(nextConfigSource) ||
+  !/X-Robots-Tag/.test(nextConfigSource)
+) {
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
+if (
+  isProduction &&
+  !["index", "noindex"].includes(process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "")
+) {
   failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+    `production env requires explicit NEXT_PUBLIC_ROBOTS_POLICY=index or noindex (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+  );
+}
+
+if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY === "noindex") {
+  warnings.push(
+    "production soft-launch noindex is explicit; flip NEXT_PUBLIC_ROBOTS_POLICY=index only after final approval"
   );
 }
 

@@ -1,31 +1,44 @@
-# Chad Lens
+# Chad Lens: Professional Legibility
 
-This portfolio should reduce the reader's burden without reducing the record.
+Before publishing public copy, ask:
 
-## Review Questions
+- Would a smart but busy hiring reader understand what Jamie did?
+- Does the copy explain toward what end the work existed?
+- Is Jamie visible as the actor without overstating sole ownership?
+- Does the language use active verbs?
+- Does it translate specialized terms for public-sector, hiring, and
+  institutional readers?
+- Does it avoid making the reader decode arrows, acronyms, clever shorthand, or
+  insider language?
+- Does it say what became usable?
 
-- Is Jamie visible as the actor?
-- Does the claim answer "toward what end?"
-- Does the language say what became usable?
-- Would a hiring manager, public-sector reader, or HR reviewer understand it in
-  one pass?
-- Does the sentence name the work instead of hiding behind "systems," "data," or
-  "AI"?
-- Does the claim use stewardship language where the work was collective?
-- Does the wording avoid inflated ownership, causality, or authority claims?
+Prefer verbs such as: clarified, structured, built, co-built, stewarded,
+translated, coordinated, facilitated, documented, implemented, synthesized,
+mapped, supported, maintained, transferred, improved.
 
-## Preferred Moves
+Use careful collective language where work was collective: helped, supported,
+contributed to, co-built, stewarded, translated.
 
-- Replace vague "under-structured" wording with concrete explanations:
-  requirements, workflows, ownership, documentation, and handoffs were not yet
-  clear.
-- Replace "tracking meetings" with the actual work: synthesizing meetings into
-  decision records, action trackers, open questions, and stakeholder next steps.
+Avoid unsupported hero language: single-handedly, owned the bill, led the
+movement, solved the crisis, caused 2x growth.
+
+Documentation is not clerical aftercare. When accurate, frame it as
+stewardship, facilitation, coordination, synthesis, analysis, and operating
+infrastructure.
+
+## Copy Moves
+
+- Replace broad public uses of "under-structured" with "ambiguous," "loosely
+  defined," "complex," or "resource-constrained," unless the phrase is
+  immediately defined.
+- Replace "tracking" where it undersells the work.
+- Replace unexplained symbols with words in resume and site copy.
+- Make every project's purpose visible: toward what end?
 - Replace generic "data" with the actual domain: open-data workflows, dataset
   documentation, public-data framing, analytics, visualization, or data-product
   requirements.
-- Replace "lightweight" with small, bounded, practical, or easy to adopt.
-- Replace "maintainers" with organizers, calendar organizers, or community
-  operators unless the technical audience expects "maintainers."
+- Replace "maintainers" with organizers, calendar organizers, local calendar
+  editors, or community operators unless the technical audience expects
+  "maintainers."
 
 The goal is courageous precision: neither understatement nor overclaiming.

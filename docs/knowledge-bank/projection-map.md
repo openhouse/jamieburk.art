@@ -54,3 +54,13 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Internal-Only / Intake
+
+Use this status for proof notes that are useful background but not ready for the
+public site.
+
+- `kc-spaces-fund-digital-infrastructure`
+
+KC Spaces Fund should remain internal-only until human collaborators confirm
+public wording, collective credit, and any named-person framing.

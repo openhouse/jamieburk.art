@@ -22,7 +22,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Ready  
 **Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / public reporting
 **Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
 **Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
@@ -33,17 +33,32 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## hje-online-sales-public-reporting - Public reporting on online sales
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.
+**Detailed public-safe wording:** ToolGuyd documented the 2009 online-store launch with cart, checkout, search, catalog navigation, country-of-origin information, and a distinctive flying-tools interaction; KCUR later reported online sales as 50 percent of the business by 2016.
+**Where to project:** HJE case study, Technical Operations.
+**Why it matters:** Adds public-source context for the scale of the e-commerce transition without relying on private dashboards.
+**Guardrail:** Use as business-context evidence for the e-commerce transition, not as a sole-causation claim about Jamie.
+**Do not say:** Jamie alone made online sales 50 percent of the business; Jamie caused all online-sales growth; online sales were nonexistent until Jamie unless citing the narrower 2009 public-store launch context.
+**Protected boundaries:** Private sales data, internal dashboards, customer data, revenue detail, and vendor terms stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-09
+
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
+**Public wording:** Contributed to 2x online revenue growth while helping a legacy e-commerce business adapt to e-commerce.
+**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to 2x online revenue growth.
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
 **Guardrail:** Must stay as contribution language.  
-**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.  
+**Do not say:** Caused 2x online revenue growth; single-handedly doubled online revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
@@ -128,8 +143,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Public wording:** Created Sunday Dinner / 196 Artists Residency as repeatable participation infrastructure, documenting 300+ gatherings and supporting 20+ resident artists.
+**Detailed public-safe wording:** Jamie supported recurring cultural work through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
@@ -143,15 +158,30 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant approximately 6,500 sq. ft. historic building into four commercial spaces and three homes; secured a $490,539 public funding recommendation.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for adaptive reuse of a long-vacant historic building.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
 **Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Protected boundaries:** Private financial, legal, family, property, lender, banking, partner, and stakeholder details stay offline.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces.
+**Detailed public-safe wording:** AI-assisted archival review of public campaign materials and private code/archive summaries indicates Jamie built or adapted the Ghost-based campaign site, customized a reusable campaign theme, and supported donation, application, sign-up, contact, and fundraising-display affordances.
+**Where to project:** Internal-only until collaborators confirm public wording.
+**Why it matters:** Shows fast campaign-site implementation, donation/application flow support, platform custody, and technical operations for a collective mutual-aid effort.
+**Guardrail:** Credit public organizing to the organizers named by campaign materials unless those collaborators confirm a broader framing for Jamie.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie was one of the public organizers unless confirmed by named organizers; Jamie made grant decisions; Jamie wrote every line of public campaign copy; this note is a collaborator testimonial.
+**Protected boundaries:** Applicant and grantee records, donor and subscriber data, payment-request materials, credentials and login sheets, billing and payment details, raw email exports, raw text-message archives, private shared-drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / collaborator confirmation needed before public projection
+**Last reviewed:** 2026-07-09
 
 ## source-backed-team-memory-method - Source-backed team memory
 

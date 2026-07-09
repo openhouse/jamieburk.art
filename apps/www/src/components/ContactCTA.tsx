@@ -9,11 +9,11 @@ export function ContactCTA() {
         implementation, or knowledge-systems support?
       </h2>
       <div className="mt-5 flex flex-wrap gap-3">
-        <JBButton href="/resume" variant="secondary">
+        <JBButton href={site.resumePath} variant="secondary" download>
           Download resume
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
-          Contact Jamie
+        <JBButton href={site.emailHref}>
+          Email Jamie
         </JBButton>
       </div>
     </section>

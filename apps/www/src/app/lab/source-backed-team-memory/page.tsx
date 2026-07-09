@@ -26,9 +26,9 @@ export default function SourceBackedTeamMemoryPage() {
         </p>
         <div className="mt-6 rounded-lg border border-jb-ochre/50 bg-jb-lemon/25 p-5">
           <p className="leading-7 text-jb-ink/76">
-            Early research / method / consulting practice. Not a finished
-            production SaaS, chatbot, surveillance system, AI replacement for
-            judgment, or private archive browser.
+            This is an early method / consulting practice, not a finished SaaS,
+            not an AI replacement for judgment, and not a private archive
+            browser.
           </p>
         </div>
         <div className="mt-10 space-y-6">
@@ -38,7 +38,7 @@ export default function SourceBackedTeamMemoryPage() {
           <JBButton href="/work" variant="secondary">
             View selected work
           </JBButton>
-          <JBButton href="/contact">Contact Jamie</JBButton>
+          <JBButton href="/contact">Discuss a source-backed team memory pilot</JBButton>
         </div>
       </div>
     </article>

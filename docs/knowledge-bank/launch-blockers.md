@@ -1,5 +1,10 @@
 # Launch Blockers
 
+2026-07-09 status: Jamie authorized the public email/contact path, the current
+phone-in-PDF resume artifact, and the strongest defensible public-safe metrics
+used in this branch. Collaborator-sensitive names, screenshots, quotes, photos,
+raw records, and private materials remain omitted unless separately approved.
+
 - [ ] Every homepage proof claim exists in the knowledge bank.
 - [ ] Every resume-page proof claim exists in the knowledge bank.
 - [ ] Every Technical Operations proof row exists in the knowledge bank.
