@@ -124,11 +124,13 @@ or serve private, proprietary, or unlicensed font files.
 
 ## Launch Blockers
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
+- Public email, LinkedIn, GitHub, and current resume PDF are configured for the
+  authorized launch branch.
+- Confirm screenshots/artifacts before publishing any actual screenshots or
+  files beyond representative artifact cards.
+- Confirm exact proof metrics before making stronger causal claims.
+- Confirm collaborator names, photos, and quotes before adding any that are not
+  already public-safe or already present in the approved resume artifact.
 - Confirm staging noindex behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.
