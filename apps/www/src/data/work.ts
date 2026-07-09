@@ -361,7 +361,7 @@ const workItemsInput = [
     years: "2010s",
     status: "Short proof page",
     featured: true,
-    priority: 4,
+    priority: 5,
     visibility: "public-safe",
     proofBankIds: ["wowlist-community-platform"],
     whatWasUnclear:
@@ -411,6 +411,88 @@ const workItemsInput = [
     }
   },
   {
+    title: "KC Spaces Fund",
+    slug: "kc-spaces-fund",
+    series: "Mutual-Aid Campaign Infrastructure",
+    subtitle: "Behind-the-scenes digital infrastructure for a COVID-era arts-space fund",
+    summary:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure for the campaign site, theme, fundraising display, and donation/application/sign-up affordances.",
+    role: "Behind-the-Scenes Digital Infrastructure",
+    years: "2020",
+    status: "Short proof page",
+    featured: false,
+    priority: 4,
+    visibility: "public-safe",
+    proofBankIds: ["kc-spaces-fund-digital-infrastructure"],
+    whatWasUnclear:
+      "A rapid mutual-aid campaign needed a public website, fundraiser presence, application and donation pathways, contact/list flows, and platform continuity while preserving public organizer credit and private applicant/donor boundaries.",
+    whatBecameUsable:
+      "A Ghost-based campaign site, reusable campaign theme, GoFundMe widget layer, and web affordances that helped people understand the fund, donate, apply, sign up, and share the campaign.",
+    artifactTypes: ["website", "template", "prototype", "workflow"],
+    artifacts: [
+      {
+        title: "Campaign site infrastructure",
+        description:
+          "A Ghost-based public web surface for explaining the fund and routing people toward donation, application, sign-up, and contact actions.",
+        type: "website"
+      },
+      {
+        title: "Reusable campaign theme",
+        description:
+          "Campaign-specific theme work supporting calls to action, embedded forms, navigation, styling, and public presentation.",
+        type: "template"
+      },
+      {
+        title: "Fundraising display layer",
+        description:
+          "A GoFundMe widget layer for showing campaign fundraising progress and related action paths.",
+        type: "prototype"
+      }
+    ],
+    tags: [
+      "Civic Technology",
+      "Campaign Websites",
+      "Implementation",
+      "Product Operations",
+      "Public-Facing Tools"
+    ],
+    capabilities: [
+      "Ghost",
+      "Theme Customization",
+      "Fundraising Infrastructure",
+      "Campaign Launch Support",
+      "Public-Safe Boundaries"
+    ],
+    links: [{ label: "Public GoFundMe page", url: "https://www.gofundme.com/f/kcspacesfund" }],
+    careNote:
+      "Public-safe summary of behind-the-scenes technical and operational support. This page does not publish applicant, grantee, donor, subscriber, payment, credential, billing, private correspondence, message, or private project records.",
+    sourceLayer:
+      "Public GoFundMe page plus public-safe AI-assisted archival/code review summary. The review is source-backed background, not a human collaborator testimonial.",
+    credits: ["Jamie Burkart", "KC Spaces Fund organizers named on the public campaign page"],
+    publicSafety: {
+      note: "Use behind-the-scenes digital infrastructure language. Do not describe Jamie as a public organizer unless named organizers confirm that broader framing."
+    },
+    currentStatus: "Public-safe short proof page.",
+    group: "Civic and public-facing systems",
+    roleFit:
+      "Public-facing launch support, campaign web infrastructure, implementation, platform stewardship, and collective-credit boundary judgment.",
+    evidence: [
+      "Public GoFundMe page for KC Spaces Fund",
+      "$9,590 raised of a $9,500 goal from 107 donations on the public GoFundMe page",
+      "Emergency relief grants up to $500 described on the public GoFundMe page",
+      "AI-assisted archival/code review supports Jamie's site, theme, and widget infrastructure role",
+      "Public organizer credit remains with the organizers named by the campaign"
+    ],
+    knownOpenProtected: {
+      known:
+        "Jamie supported KC Spaces Fund through behind-the-scenes web infrastructure, campaign-site implementation, theme customization, fundraising display work, and donation/application/sign-up affordances.",
+      open:
+        "Collaborators can still add firsthand memory about social context, decision-making, public language, and division of labor.",
+      protected:
+        "Applicant/grantee records, donor or subscriber exports, payment-request files, credentials, billing details, private correspondence and message archives, and private project documents are omitted."
+    }
+  },
+  {
     title: "196 Artists Residency / Sunday Dinner",
     slug: "196-sunday-dinner",
     series: "Participation Infrastructure",
@@ -421,7 +503,7 @@ const workItemsInput = [
     years: "2010s",
     status: "Short proof page",
     featured: true,
-    priority: 5,
+    priority: 6,
     visibility: "summary-only",
     proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
     whatWasUnclear:
@@ -474,7 +556,7 @@ const workItemsInput = [
     years: "2020s",
     status: "Short proof page",
     featured: false,
-    priority: 6,
+    priority: 7,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
@@ -528,6 +610,7 @@ export type WorkSlug =
   | "callnyc"
   | "fair-rent-nyc"
   | "harry-j-epstein"
+  | "kc-spaces-fund"
   | "kc-town-hall"
   | "wowlist";
 

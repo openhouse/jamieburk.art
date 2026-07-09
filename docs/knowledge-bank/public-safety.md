@@ -38,3 +38,9 @@ the claim out of public projection until it is reviewed.
 Private sources may support a public-safe claim, but the private source itself
 stays outside the repo. Describe aggregate patterns, approved public artifacts,
 and public-safe summaries rather than private record inventories.
+
+AI-assisted archival reviews may support a public-safe claim only when labeled
+as source-backed background. Do not present an AI archival review as a human
+collaborator testimonial or eyewitness memory. Keep raw local paths, private
+correspondence, message contents, billing records, applicant/grantee materials,
+donor/list exports, subscriber data, and credentials out of the repo.

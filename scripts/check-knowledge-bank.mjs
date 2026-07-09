@@ -15,6 +15,7 @@ const requiredProofIds = [
   "hje-modernization-stewardship",
   "hje-revenue-growth-contribution",
   "callnyc-civic-data-guidance",
+  "kc-spaces-fund-digital-infrastructure",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "wowlist-community-platform",
@@ -34,6 +35,7 @@ const requiredWorkProofs = new Map([
     ]
   ],
   ["callnyc", ["callnyc-civic-data-guidance"]],
+  ["kc-spaces-fund", ["kc-spaces-fund-digital-infrastructure"]],
   ["wowlist", ["wowlist-community-platform"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]

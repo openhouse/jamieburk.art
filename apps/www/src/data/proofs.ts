@@ -155,6 +155,52 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Supported KC Spaces Fund digital campaign infrastructure",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, reusable campaign theme, GoFundMe widget layer, and donation/application/sign-up web affordances while public organizer credit remains with the organizers named by the campaign.",
+    sourceBasis:
+      "Public GoFundMe page and AI-assisted archival/code review summarized for public-safe use.",
+    sourceNote:
+      "Treat the archival review as source-backed background, not as a human collaborator testimonial.",
+    whyItMatters:
+      "Shows public-facing emergency campaign infrastructure, rapid implementation, platform stewardship, and care with collective credit.",
+    guardrail:
+      "Use behind-the-scenes technical and operational support language; public organizing credit remains with the campaign's named organizers.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie was the fiscal sponsor",
+      "Jamie wrote every line of public campaign copy",
+      "Jamie owned the public campaign"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee records",
+      "Donor/list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials",
+      "Billing details",
+      "Private correspondence archives",
+      "Private message archives",
+      "Private project documents"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "public-facing-launch",
+      "fundraising-infrastructure",
+      "platform-stewardship"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",
@@ -527,6 +573,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

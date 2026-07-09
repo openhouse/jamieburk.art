@@ -81,6 +81,11 @@ const roleProofCards = [
       "Public-data translation into resident-facing guidance, issue pathways, and archived civic-tech product shape."
   },
   {
+    title: "KC Spaces Fund",
+    text:
+      "Emergency campaign web infrastructure, public-facing action paths, fundraising display, platform stewardship, and collective-credit boundaries."
+  },
+  {
     title: "WOWList",
     text:
       "Community platform delivery, organizer adoption, low-cost deployment, event workflows, and public-facing product operations."
