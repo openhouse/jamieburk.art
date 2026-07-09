@@ -25,6 +25,13 @@ attendance records, private rows, screenshots, or correspondence.
 Known through Jamie or collaborators, but not yet necessarily approved for
 stronger public publication.
 
+### AI-Assisted Archival Review
+
+A public-safe synthesis created by an AI assistant after reviewing materials
+Jamie surfaced. This may support a proof-bank claim when the note clearly names
+its limits, but it is not a human collaborator testimonial and should not be
+presented as first-hand memory.
+
 ### Approval Pending
 
 Potentially usable, but do not project to public pages until Jamie or

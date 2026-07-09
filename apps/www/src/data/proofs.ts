@@ -259,6 +259,51 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, through behind-the-scenes digital infrastructure: campaign-site implementation, theme customization, donation/application/sign-up affordances, and fundraising-display support.",
+    shortWording:
+      "Supported KC Spaces Fund with behind-the-scenes campaign web infrastructure",
+    detailedPublicWording:
+      "Jamie supported KC Spaces Fund through technical and operational web work that helped the campaign explain the fund, route people toward donation and application actions, support sign-up/contact flows, and display fundraising progress.",
+    sourceBasis:
+      "Public GoFundMe campaign materials and a public-safe, AI-assisted archival review of project records Jamie surfaced.",
+    sourceNote:
+      "This is an archival proof note, not a human collaborator testimonial. Keep public organizer credit with the people named by the campaign.",
+    whyItMatters:
+      "Shows rapid public-facing implementation support for a sensitive, collective mutual-aid effort without overstating Jamie's public role.",
+    guardrail:
+      "Describe Jamie's role as technical and operational support; do not claim public organizer, grantmaking, fiscal-sponsor, or campaign-lead responsibility.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie was the public campaign lead",
+      "Jamie made grant decisions",
+      "Jamie controlled the fiscal sponsorship or funds",
+      "Jamie authored every public campaign text"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor or subscriber exports",
+      "Payment request records",
+      "Credential or login details",
+      "Billing records",
+      "Private correspondence",
+      "Raw message archives",
+      "Private campaign documents"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "implementation", "public-facing-web-systems"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -528,6 +573,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

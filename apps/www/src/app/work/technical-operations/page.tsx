@@ -4,6 +4,7 @@ import { ContactCTA } from "@/components/ContactCTA";
 import { JBButton } from "@/components/JBButton";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { requireReadyOrCarefulProof } from "@/data/proofs";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -64,6 +65,10 @@ const proofLinks = [
   { label: "CallNYC civic-data prototype", href: "/work/callnyc" }
 ] as const;
 
+const additionalProofs = [
+  requireReadyOrCarefulProof("kc-spaces-fund-digital-infrastructure")
+] as const;
+
 export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
@@ -113,6 +118,19 @@ export default function TechnicalOperationsPage() {
             </li>
           ))}
         </ul>
+        <div className="mt-6 border-t border-jb-ink/12 pt-5">
+          <h3 className="text-lg font-semibold text-jb-ink">
+            Additional public-facing systems proof
+          </h3>
+          <ul className="mt-3 space-y-3 text-jb-ink/76">
+            {additionalProofs.map((proof) => (
+              <li className="flex gap-3" key={proof.id}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{proof.shortWording ?? proof.publicWording}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
