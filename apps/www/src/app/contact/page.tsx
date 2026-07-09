@@ -11,6 +11,13 @@ export const metadata: Metadata = createMetadata({
 });
 
 export default function ContactPage() {
+  const bestFitConversations = [
+    "Technical project management / technical operations roles",
+    "Product operations, implementation, and business-analysis roles",
+    "Civic technology, govtech, public-facing tools, and documentation systems",
+    "Source-backed team memory / bounded consulting pilots"
+  ];
+
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
@@ -18,8 +25,22 @@ export default function ContactPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           For roles, referrals, consulting, or collaboration:
         </p>
+        <section className="mt-8 rounded-lg border border-jb-blue/20 bg-jb-sky/12 p-6">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Best-fit conversations
+          </h2>
+          <ul className="mt-4 space-y-3 text-jb-ink/76">
+            {bestFitConversations.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
         <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
-          <dl className="space-y-5">
+          <h2 className="text-2xl font-semibold text-jb-ink">Contact</h2>
+          <dl className="mt-5 space-y-5">
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">

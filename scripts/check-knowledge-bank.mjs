@@ -293,12 +293,18 @@ for (const requiredDoc of [
   "README.md",
   "claims.md",
   "sources.md",
+  "approval-register.md",
   "projection-map.md",
   "publishing-governance.md",
   "launch-blockers.md",
   "review-checklist.md",
   "anti-claims.md",
+  "chad-lens.md",
+  "opportunities.md",
   "public-safety.md",
+  "../outreach/oti-message-to-hiring-team.md",
+  "../outreach/oti-referrer-note.md",
+  "../outreach/jonathan-source-backed-memory-note.md",
   "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {

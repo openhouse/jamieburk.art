@@ -3,8 +3,8 @@
 Focused, public-safe portfolio for Jamie Burkart: Technical Project Manager -
 Product Operations & Implementation.
 
-The site should make this believable: Jamie creates operating structure for
-complex public-facing teams.
+The site should make this believable: Jamie turns ambiguous, loosely defined
+work into usable systems.
 
 ## Stack
 
@@ -30,6 +30,7 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
 npm run public-safety
 npm run check:routes
 npm run preflight:staging
@@ -64,11 +65,12 @@ Staging is the first deployment target and is non-indexable by default:
 
 ```bash
 APP_ENV=staging
-SITE_ENV=staging
-NEXT_PUBLIC_DEPLOY_ENV=staging
 SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=noindex
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
 
@@ -76,13 +78,19 @@ Production should only be enabled after staging review:
 
 ```bash
 APP_ENV=production
-SITE_ENV=production
-NEXT_PUBLIC_DEPLOY_ENV=production
 SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_SITE_URL=https://jamieburk.art
 NEXT_PUBLIC_ROBOTS_POLICY=index
+NEXT_PUBLIC_CONTACT_EMAIL=jamie.burkart@gmail.com
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/jamie-burkart
+NEXT_PUBLIC_GITHUB_URL=https://github.com/openhouse
 NEXT_TELEMETRY_DISABLED=1
 ```
+
+`SITE_ENV` and `NEXT_PUBLIC_DEPLOY_ENV` are treated only as migration
+compatibility by older code paths. New commands and deployment docs should use
+`APP_ENV`, `SITE_URL`, `NEXT_PUBLIC_SITE_URL`, and
+`NEXT_PUBLIC_ROBOTS_POLICY`.
 
 ## Deployment
 
@@ -119,9 +127,9 @@ proprietary, or unlicensed font files.
   analytics, client-private materials, or raw community records.
 - Use public-safe summaries, redacted screenshots, representative diagrams,
   approved public artifacts, and careful collective-work language.
-- When uncertain, mark: `TODO: Jamie approval required.`
-  Do not render that marker in production-facing pages; keep launch blockers in
-  `docs/knowledge-bank/launch-blockers.md`.
+- Keep unresolved production questions in
+  `docs/knowledge-bank/launch-blockers.md`, not in app copy or public-facing
+  placeholder text.
 
 ## Remaining Production Review
 

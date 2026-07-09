@@ -32,8 +32,14 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Approval register:** current public-use approvals and production gates in
+  `docs/knowledge-bank/approval-register.md`.
 - **Source policy:** public-safe source-class rules in
   `docs/knowledge-bank/source-policy.md`.
+- **Chad Lens:** public-copy review questions in
+  `docs/knowledge-bank/chad-lens.md`.
+- **Outreach drafts:** public-safe working copy in `docs/outreach/`, not linked
+  from public navigation.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.

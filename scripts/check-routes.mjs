@@ -47,6 +47,7 @@ for (const slug of [
   "196-sunday-dinner",
   "callnyc",
   "harry-j-epstein",
+  "kc-spaces-fund",
   "kc-town-hall",
   "wowlist"
 ]) {
@@ -55,6 +56,13 @@ for (const slug of [
 
 const nextConfigSource = read("apps/www/next.config.ts");
 for (const legacyRoute of [
+  "/fairrentnyc",
+  "/fair-rent",
+  "/commercial-rent-stabilization",
+  "/196-artists-residency",
+  "/sunday-dinner",
+  "/source-backed-team-memory",
+  "/noting-us",
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",
   "/work/nyc-artist-coalition-fair-rent",
@@ -65,6 +73,10 @@ for (const legacyRoute of [
   if (!nextConfigSource.includes(`source: "${legacyRoute}"`)) {
     fail(`legacy redirect missing: ${legacyRoute}`);
   }
+}
+
+if (!nextConfigSource.includes('type: "host"') || !nextConfigSource.includes("www.jamieburk.art")) {
+  fail("www host redirect is missing");
 }
 
 for (const destination of [

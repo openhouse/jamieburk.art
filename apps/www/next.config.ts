@@ -59,6 +59,47 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.jamieburk.art" }],
+        destination: "https://jamieburk.art/:path*",
+        permanent: false
+      },
+      {
+        source: "/fairrentnyc",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/fair-rent",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/commercial-rent-stabilization",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
+        source: "/196-artists-residency",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/sunday-dinner",
+        destination: "/work/196-sunday-dinner",
+        permanent: false
+      },
+      {
+        source: "/source-backed-team-memory",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
+      },
+      {
+        source: "/noting-us",
+        destination: "/lab/source-backed-team-memory",
+        permanent: false
+      },
+      {
         source: "/work/fairrentnyc-commercial-rent-stabilization",
         destination: "/work/fair-rent-nyc",
         permanent: false
