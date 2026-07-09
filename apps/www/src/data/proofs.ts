@@ -6,6 +6,8 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "ai-assisted-archival-review"
+  | "local-code-archive-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -164,7 +166,7 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
     shortWording: "30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
@@ -359,6 +361,60 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "ai-assisted-archival-review",
+      "local-code-archive-summary",
+      "collaborator-approval-pending"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Archival review supports that Jamie built, adapted, and deployed the Ghost-based campaign site, customized reusable campaign theme work, and implemented web affordances for donation, application, sign-up, and fundraising display flows.",
+    sourceBasis:
+      "AI-assisted archival review from July 2026 using public campaign materials, public-safe summaries of private project records, local code-history summaries, and Jamie-provided context.",
+    sourceNote:
+      "This is not an eyewitness testimonial. Treat as private proof-bank background until human collaborators review the framing.",
+    whyItMatters:
+      "Adds a concrete mutual-aid / campaign-infrastructure proof point while preserving public organizer credit and private applicant, donor, list, payment, and archive boundaries.",
+    guardrail:
+      "Use behind-the-scenes digital infrastructure language; do not imply Jamie was a named public organizer unless organizers confirm that framing.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie made grant decisions",
+      "Jamie wrote all public campaign copy",
+      "Jamie was one of the named public organizers",
+      "Jamie can publish applicant, donor, list, payment, or private campaign records"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor and mailing-list exports",
+      "Payment request files",
+      "Credentials and login sheets",
+      "Billing addresses and payment details",
+      "Raw email archives",
+      "Raw message archives",
+      "Private project documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "ghost",
+      "theme-customization",
+      "donation-flows",
+      "application-flows",
+      "platform-continuity"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
@@ -393,10 +449,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to stay focused, unblocked, documented, and shipping.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
-      "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
+      "Jamie clarifies requirements, maps workflows, coordinates delivery, maintains status reporting, surfaces risk, supports decision frameworks, prepares handbooks, runbooks, onboarding guides, and handoff materials, and improves working systems over time.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Names the role fit across product operations, implementation, technical project management, and public-facing delivery.",
@@ -495,8 +551,9 @@ export const resumeProofHighlights = [
 
 export const technicalOperationsProofRows = [
   {
-    capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    capability: "Delivery coordination and status reporting",
+    toward:
+      "Turning unclear public-facing work into launchable plans, visible cross-team dependencies, status rhythms, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
@@ -505,8 +562,9 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    capability: "Risk surfacing and decision frameworks",
+    toward:
+      "Making risks, open questions, public/private boundaries, and stakeholder next steps visible before they slow the work.",
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
@@ -515,7 +573,8 @@ export const technicalOperationsProofRows = [
   },
   {
     capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    toward:
+      "Converting meetings, source trails, handbooks, runbooks, onboarding guides, and recurring practices into reusable working memory.",
     proofIds: [
       "fair-rent-campaign-memory",
       "sunday-dinner-196-participation-infrastructure",
@@ -523,8 +582,9 @@ export const technicalOperationsProofRows = [
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    capability: "Public-facing launch, adoption, and learning",
+    toward:
+      "Shaping websites, prototypes, and community platforms so real audiences can act, then improving the operation over time without overengineering.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "callnyc-civic-data-guidance",

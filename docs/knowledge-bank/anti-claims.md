@@ -41,6 +41,13 @@ photos without approval.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, made grant decisions, wrote every
+line of public campaign copy, or was one of the named public organizers unless
+the organizers confirm that framing. Use behind-the-scenes digital
+infrastructure language until collaborator review supports anything broader.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
