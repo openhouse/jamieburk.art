@@ -35,8 +35,7 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+            Current public resume PDF with approved job-search contact details.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

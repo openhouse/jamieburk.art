@@ -52,6 +52,7 @@ const publicSurfaces = new Set([
 const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
+const claimsJsonPath = path.join(repoRoot, "docs/knowledge-bank/claims.json");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
 
 function fail(message) {
@@ -240,6 +241,26 @@ if (existsSync(claimsPath)) {
   });
 }
 
+if (existsSync(claimsJsonPath)) {
+  try {
+    const parsed = JSON.parse(read(claimsJsonPath));
+    if (!Array.isArray(parsed.claims) || !parsed.claims.length) {
+      fail("docs/knowledge-bank/claims.json must contain a non-empty claims array");
+    }
+
+    for (const claim of parsed.claims ?? []) {
+      for (const field of ["id", "status", "publicWording", "allowedSurfaces", "guardrail"]) {
+        if (!(field in claim)) fail(`claims.json claim is missing ${field}`);
+      }
+      if (!Array.isArray(claim.allowedSurfaces) || !claim.allowedSurfaces.length) {
+        fail(`claims.json claim ${claim.id ?? "(missing id)"} is missing allowedSurfaces`);
+      }
+    }
+  } catch (error) {
+    fail(`docs/knowledge-bank/claims.json is not valid JSON: ${error.message}`);
+  }
+}
+
 if (existsSync(workPath)) {
   const workSource = read(workPath);
   const allProofIds = new Set(proofIds);
@@ -286,9 +307,11 @@ for (const file of walk(docsRoot)) {
 for (const requiredDoc of [
   "README.md",
   "claims.md",
+  "claims.json",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",
+  "approval-register.md",
   "launch-blockers.md",
   "review-checklist.md",
   "anti-claims.md",

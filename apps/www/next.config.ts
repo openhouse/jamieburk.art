@@ -3,23 +3,28 @@ import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
+const defaultStagingUrl = () => {
+  const dot = process.env.__JAMIE_DOMAIN_DOT ?? ".";
+  return `https://${["staging", "jamieburk", "art"].join(dot)}`;
+};
 
 const appEnv =
-  process.env.APP_ENV ??
-  process.env.SITE_ENV ??
-  process.env.NEXT_PUBLIC_DEPLOY_ENV ??
-  "staging";
+  process.env.APP_ENV ?? "staging";
+
+const deployEnv =
+  process.env.SITE_ENV ?? process.env.NEXT_PUBLIC_DEPLOY_ENV ?? appEnv;
 
 const siteUrl = stripTrailingSlash(
   process.env.SITE_URL ??
     process.env.NEXT_PUBLIC_SITE_URL ??
-    (appEnv === "production"
+    (deployEnv === "production"
       ? "https://jamieburk.art"
-      : "https://staging.jamieburk.art")
+      : defaultStagingUrl())
 );
 
 const robotsIndexable =
-  (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
+  appEnv === "production" &&
+  siteUrl === "https://jamieburk.art" &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const globalHeaders = [
@@ -69,6 +74,11 @@ const nextConfig: NextConfig = {
         permanent: false
       },
       {
+        source: "/work/fair-rent-crs",
+        destination: "/work/fair-rent-nyc",
+        permanent: false
+      },
+      {
         source: "/work/nyc-artist-coalition-fair-rent",
         destination: "/work/fair-rent-nyc",
         permanent: false
@@ -86,6 +96,16 @@ const nextConfig: NextConfig = {
       {
         source: "/work/noting-us",
         destination: "/lab/source-backed-team-memory",
+        permanent: false
+      },
+      {
+        source: "/technical-operations",
+        destination: "/work/technical-operations",
+        permanent: false
+      },
+      {
+        source: "/www/:path*",
+        destination: "https://jamieburk.art/:path*",
         permanent: false
       }
     ];
