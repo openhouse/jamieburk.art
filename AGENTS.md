@@ -58,11 +58,29 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
-## Chad Lens
+## Chad Lens: Professional Legibility
 
-Minimize the reader's burden. Make Jamie visible as the actor, explain what the
-work made usable, translate specialized language for hiring and public-sector
-readers, and use collective-work language where the work was collective.
+Before publishing public copy, ask:
+
+- Would a smart but busy hiring reader understand what Jamie did?
+- Does the copy explain toward what end the work existed?
+- Is Jamie visible as the actor without overstating sole ownership?
+- Does the language use active verbs?
+- Does it translate specialized terms for public-sector, hiring, and
+  institutional readers?
+- Does it avoid making the reader decode arrows, acronyms, clever shorthand, or
+  insider language?
+- Does it say what became usable?
+
+Prefer: clarified, structured, built, co-built, stewarded, translated,
+coordinated, facilitated, documented, implemented, synthesized, mapped,
+supported, maintained, transferred, improved.
+
+Use careful collective language: helped, supported, contributed to, co-built,
+stewarded, translated.
+
+Avoid: single-handedly, owned the bill, led the movement, solved the crisis,
+caused 2x growth.
 
 ## Scope Rules
 

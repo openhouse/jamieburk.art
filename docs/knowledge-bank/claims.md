@@ -22,7 +22,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Ready  
 **Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / public reporting
 **Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
 **Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
@@ -32,6 +32,21 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## hje-online-sales-public-reporting - Public reporting on online sales
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.
+**Detailed public-safe wording:** ToolGuyd documented the 2009 online-store launch with cart, checkout, search, catalog navigation, country-of-origin information, and a distinctive flying-tools interaction; KCUR later reported online sales as 50 percent of the business by 2016.
+**Where to project:** HJE case study, Technical Operations.
+**Why it matters:** Adds public-source context for the scale of the e-commerce transition without relying on private dashboards.
+**Guardrail:** Use as business-context evidence for the e-commerce transition, not as a sole-causation claim about Jamie.
+**Do not say:** Jamie alone made online sales 50 percent of the business; Jamie caused all online-sales growth; online sales were nonexistent until Jamie unless citing the narrower 2009 public-store launch context.
+**Protected boundaries:** Private sales data, internal dashboards, customer data, revenue detail, and vendor terms stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-09
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
@@ -152,6 +167,21 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces.
+**Detailed public-safe wording:** AI-assisted archival review of public campaign materials and private code/archive summaries indicates Jamie built or adapted the Ghost-based campaign site, customized a reusable campaign theme, and supported donation, application, sign-up, contact, and fundraising-display affordances.
+**Where to project:** Internal-only until collaborators confirm public wording.
+**Why it matters:** Shows fast campaign-site implementation, donation/application flow support, platform custody, and technical operations for a collective mutual-aid effort.
+**Guardrail:** Credit public organizing to the organizers named by campaign materials unless those collaborators confirm a broader framing for Jamie.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie was one of the public organizers unless confirmed by named organizers; Jamie made grant decisions; Jamie wrote every line of public campaign copy; this note is a collaborator testimonial.
+**Protected boundaries:** Applicant and grantee records, donor and subscriber data, payment-request materials, credentials and login sheets, billing and payment details, raw email exports, raw text-message archives, private shared-drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / collaborator confirmation needed before public projection
+**Last reviewed:** 2026-07-09
 
 ## source-backed-team-memory-method - Source-backed team memory
 

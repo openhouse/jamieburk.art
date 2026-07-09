@@ -31,6 +31,8 @@ changes public claims.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.
+- [ ] `npm run preflight:production:soft` passes with explicit production
+  noindex environment variables.
 - [ ] `npm run preflight:production` passes only with explicit production
-  indexing environment variables.
+  indexing environment variables after approval.
 - [ ] Jamie has approved production launch content.

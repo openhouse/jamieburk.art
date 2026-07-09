@@ -78,7 +78,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
-    sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
+    sourceBasis:
+      "Approved resume language, ToolGuyd 2009 online-store coverage, KCUR 2016 online-sales reporting, public website context, and public-safe business summary.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
       "Jamie fully owned the business",
@@ -105,7 +106,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -129,6 +130,39 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "implementation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "hje-online-sales-public-reporting",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Public reporting described Harry J. Epstein Company's online sales as 50 percent of the business by 2016, after the 2009 launch of a full online store.",
+    shortWording: "Public reporting described online sales as 50 percent of HJE's business by 2016",
+    detailedPublicWording:
+      "ToolGuyd documented the 2009 online-store launch with cart, checkout, search, catalog navigation, country-of-origin information, and a distinctive flying-tools interaction; KCUR later reported online sales as 50 percent of the business by 2016.",
+    sourceBasis:
+      "ToolGuyd, 'Harry Epstein Launches New Online Store!' (2009), and KCUR, 'How Flying Dolphins Kept This Old-School Kansas City Hardware Store Alive' (2016).",
+    whyItMatters:
+      "Adds public-source context for the scale of the e-commerce transition without relying on private dashboards.",
+    guardrail:
+      "Use as business-context evidence for the e-commerce transition, not as a sole-causation claim about Jamie.",
+    doNotSay: [
+      "Jamie alone made online sales 50 percent of the business",
+      "Jamie caused all online-sales growth",
+      "Online sales were nonexistent until Jamie unless citing the narrower 2009 public-store launch context"
+    ],
+    protectedBoundaries: [
+      "Private sales data",
+      "Internal dashboards",
+      "Customer data",
+      "Revenue detail",
+      "Vendor terms"
+    ],
+    surfaces: ["case-study", "technical-operations"],
+    relatedProjects: ["harry-j-epstein"],
+    relatedCapabilities: ["e-commerce", "analytics", "implementation"],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "callnyc-civic-data-guidance",
@@ -269,7 +303,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Co-built community web systems reaching roughly 35 city-based arts and music ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +337,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "300+ gatherings / 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -357,6 +391,53 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "AI-assisted archival review of public campaign materials and private code/archive summaries indicates Jamie built or adapted the Ghost-based campaign site, customized a reusable campaign theme, and supported donation, application, sign-up, contact, and fundraising-display affordances.",
+    sourceBasis:
+      "Public GoFundMe campaign context and AI-assisted archival review of public-safe summaries from local code, campaign, list, domain, and platform records reviewed with Jamie on 2026-07-09.",
+    sourceNote:
+      "This is not a human collaborator testimonial or first-person eyewitness account. Keep as private proof-bank background until collaborators confirm public wording.",
+    whyItMatters:
+      "Shows fast campaign-site implementation, donation/application flow support, platform custody, and technical operations for a collective mutual-aid effort.",
+    guardrail:
+      "Credit public organizing to the organizers named by campaign materials unless those collaborators confirm a broader framing for Jamie.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie was one of the public organizers unless confirmed by named organizers",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public campaign copy",
+      "This note is a collaborator testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant and grantee records",
+      "Donor and subscriber data",
+      "Payment-request materials",
+      "Credentials and login sheets",
+      "Billing and payment details",
+      "Raw email exports",
+      "Raw text-message archives",
+      "Private shared-drive documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "ghost",
+      "theme-customization",
+      "fundraising-infrastructure",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "source-backed-team-memory-method",
@@ -500,6 +581,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
+      "hje-online-sales-public-reporting",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform"
     ]
