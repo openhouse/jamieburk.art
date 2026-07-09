@@ -35,8 +35,9 @@ export default function ResumePage() {
             </JBButton>
           </div>
           <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
+            Current resume for Technical Project Manager - Product Operations &
+            Implementation roles. The PDF includes Jamie&apos;s approved public
+            application contact details.
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">

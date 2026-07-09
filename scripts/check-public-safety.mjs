@@ -37,14 +37,16 @@ const textExtensions = new Set([
 ]);
 
 const privatePathPattern =
-  /(^|\/)(private|archive-private|raw|raw-otter|transcripts-private|client-private|legal-review|support-private|support-materials-private|job-hunt-private|screenshots-private|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
+  /(^|\/)(private|_private|archive-private|raw|raw-transcripts|raw-otter|otter-exports|transcripts-private|client-private|coalition-private|legal-review|residency-private|support-private|support-materials-private|job-hunt-private|screenshots-private|screenshots-unapproved|private-screenshots|resumes-private|supporting-materials)(\/|$)/i;
 const fontExtensions = new Set([".eot", ".otf", ".ttf", ".woff", ".woff2"]);
 
 const isProduction =
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
-  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
-  process.env.NODE_ENV === "production";
+  process.env.NEXT_PUBLIC_DEPLOY_ENV === "production";
+
+const productionIndexingRequested =
+  process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
 
 const resumePath = path.join(
   repoRoot,
@@ -183,13 +185,13 @@ scanPattern(
 scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
-  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+  /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|raw\s+otter|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
 );
 
 scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
-  /\b(?:PRIVATE|CONFIDENTIAL)\b/
+  /\b(?:PRIVATE|CONFIDENTIAL|DO NOT PUBLISH|INTERNAL ONLY|PRIVATE_DATA)\b/
 );
 
 const credentialPatterns = [
@@ -271,6 +273,22 @@ if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
   failures.push(
     `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
   );
+}
+
+if (productionIndexingRequested) {
+  const requiredProductionEnv = {
+    APP_ENV: "production",
+    SITE_URL: "https://jamieburk.art",
+    NEXT_PUBLIC_ROBOTS_POLICY: "index"
+  };
+
+  for (const [key, expected] of Object.entries(requiredProductionEnv)) {
+    if (process.env[key] !== expected) {
+      failures.push(
+        `indexing requires ${key}=${expected} (got ${process.env[key] ?? "unset"})`
+      );
+    }
+  }
 }
 
 if (warnings.length) {

@@ -68,7 +68,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
+**Public wording:** Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
@@ -108,6 +108,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful  
+**Support level:** Strong  
+**Evidence class:** Public project artifact / public-safe archive summary / collaborator approval pending  
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.  
+**Detailed public-safe wording:** Jamie built and maintained a Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, contact, and fundraising display.  
+**Where to project:** Technical Operations.  
+**Why it matters:** Shows urgent public-facing campaign launch, web-stack delivery, and careful collective-work attribution.  
+**Guardrail:** Use support language; public organizing credit remains with the organizers named by the campaign unless collaborators approve broader framing.  
+**Do not say:** Jamie organized KC Spaces Fund; Jamie publicly led KC Spaces Fund; Jamie made grant or disbursement decisions; Jamie authored all campaign language; Jamie owned the collective outcome.  
+**Protected boundaries:** Applicant and grantee materials, donor and subscriber data, payment-request records, credentials, billing details, raw email exports, raw text-message archives, private shared documents, and sensitive strategy, legal, financial, or personal context stay offline.  
+**Review owner:** Jamie / Collaborator approval needed for stronger role framing, public quotes, or named testimony  
+**Last reviewed:** 2026-07-09
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful  
@@ -143,7 +158,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
+**Public wording:** Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
