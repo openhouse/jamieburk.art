@@ -20,6 +20,7 @@ const ignoredDirs = new Set([
 ]);
 
 const textExtensions = new Set([
+  ".body",
   ".css",
   ".example",
   ".html",
@@ -32,6 +33,7 @@ const textExtensions = new Set([
   ".ts",
   ".tsx",
   ".txt",
+  ".xml",
   ".yaml",
   ".yml"
 ]);
@@ -44,7 +46,10 @@ const isProduction =
   process.env.APP_ENV === "production" ||
   process.env.SITE_ENV === "production" ||
   process.env.NEXT_PUBLIC_DEPLOY_ENV === "production" ||
-  process.env.NODE_ENV === "production";
+  process.env.SITE_URL === "https://jamieburk.art" ||
+  process.env.NEXT_PUBLIC_SITE_URL === "https://jamieburk.art";
+
+const productionEnvRequired = isProduction;
 
 const resumePath = path.join(
   repoRoot,
@@ -177,7 +182,13 @@ scanPattern(
 scanPattern(
   shippedContentFiles,
   "placeholder text appears in production-facing content",
-  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this)\b/i
+  /\b(?:Placeholder resume PDF|Replace with approved current resume|lorem ipsum|replace this|replace the placeholder)\b/i
+);
+
+scanPattern(
+  shippedContentFiles,
+  "production-facing launch marker requires resolution before launch",
+  /\b(?:pending confirmation|pending approval|before launch)\b/i
 );
 
 scanPattern(
@@ -214,8 +225,20 @@ const siteDataPath = path.join(repoRoot, "apps/www/src/data/site.ts");
 if (existsSync(siteDataPath)) {
   const siteData = readText(siteDataPath);
 
-  if (/Public email pending confirmation|LinkedIn pending|GitHub pending/i.test(siteData)) {
+  if (/Public email pending confirmation|LinkedIn pending|GitHub pending|not published/i.test(siteData)) {
     addFailure(siteDataPath, "unapproved public contact placeholder appears in site data");
+  }
+
+  if (!/jamie\.burkart@gmail\.com/.test(siteData)) {
+    addFailure(siteDataPath, "approved public contact email is missing");
+  }
+
+  if (!/https:\/\/linkedin\.com\/in\/jamie-burkart/.test(siteData)) {
+    addFailure(siteDataPath, "approved LinkedIn URL is missing");
+  }
+
+  if (!/https:\/\/github\.com\/openhouse/.test(siteData)) {
+    addFailure(siteDataPath, "approved GitHub URL is missing");
   }
 }
 
@@ -243,10 +266,8 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
-  if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
-    addFailure(resumePath, "production contact email env is unset and resume PDF does not expose a contact email");
-  } else if (isProduction && !process.env.NEXT_PUBLIC_CONTACT_EMAIL) {
-    addWarning(resumePath, "production contact email env is unset; contact page relies on resume PDF");
+  if (isProduction && !/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(resumeText)) {
+    addFailure(resumePath, "production resume PDF does not expose a contact email");
   }
 }
 
@@ -267,9 +288,41 @@ if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConf
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
 }
 
+if (productionEnvRequired) {
+  const requiredProductionEnv = {
+    APP_ENV: "production",
+    SITE_ENV: "production",
+    NEXT_PUBLIC_DEPLOY_ENV: "production",
+    SITE_URL: "https://jamieburk.art",
+    NEXT_PUBLIC_SITE_URL: "https://jamieburk.art",
+    NEXT_PUBLIC_ROBOTS_POLICY: "index"
+  };
+
+  for (const [key, expected] of Object.entries(requiredProductionEnv)) {
+    if (process.env[key] !== expected) {
+      failures.push(
+        `production env requires ${key}=${expected} (got ${process.env[key] ?? "unset"})`
+      );
+    }
+  }
+}
+
 if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
   failures.push(
     `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
+  );
+}
+
+if (productionEnvRequired) {
+  const generatedRoot = path.join(repoRoot, "apps/www/.next/server/app");
+  const generatedFiles = walk(generatedRoot).filter((file) => {
+    return textExtensions.has(path.extname(file)) || /\.(html|txt|xml|body)$/i.test(file);
+  });
+
+  scanPattern(
+    generatedFiles,
+    "staging URL appears in production build output",
+    /https:\/\/staging\.jamieburk\.art/i
   );
 }
 

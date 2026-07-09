@@ -12,12 +12,13 @@ export function Hero() {
             Jamie Burkart
           </h1>
           <p className="mt-6 text-2xl font-semibold leading-snug text-jb-green">
-            I create operating structure for complex public-facing teams.
+            I turn ambiguous, stakeholder-heavy work into usable operating systems.
           </p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
-            I help teams turn ambiguous, stakeholder-heavy work into usable
-            systems: requirements, workflows, documentation, decision trails,
-            launch support, onboarding, and durable handoffs.
+            I help civic, cultural, small-business, and technical teams clarify
+            requirements, map workflows, coordinate stakeholders, document
+            decisions, support launch, onboard collaborators, and leave behind
+            durable handoffs.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
@@ -29,8 +30,8 @@ export function Hero() {
             </JBButton>
           </div>
           <p className="mt-6 text-sm font-medium text-jb-ink/64">
-            Brooklyn, NY / Civic technology / Product operations / Knowledge
-            systems / Public-facing tools
+            Brooklyn, NY / Technical operations / Product operations / Civic
+            technology / Knowledge systems / Public-facing tools
           </p>
         </div>
         <div
@@ -41,7 +42,7 @@ export function Hero() {
             {[
               "Requirements",
               "Workflows",
-              "Decision Trails",
+              "Decision Records",
               "Launch Support",
               "Onboarding",
               "Handoffs"
@@ -58,7 +59,7 @@ export function Hero() {
           <p className="mt-5 text-sm leading-6 text-jb-ink/68">
             Scattered context becomes shared records, public guidance,
             maintainable workflows, and materials people can use after the
-            meeting is over.
+            meeting, launch, or handoff is over.
           </p>
         </div>
       </div>

@@ -68,7 +68,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
+**Public wording:** Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
@@ -138,12 +138,27 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## community-cultural-infrastructure - Community and cultural infrastructure
+
+**Status:** Careful  
+**Support level:** Careful  
+**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Public wording:** Community and cultural infrastructure across recurring gatherings, artist support, and public-facing tools.  
+**Detailed public-safe wording:** Jamie's community systems work spans recurring gatherings, artist-residency support, organizer workflows, and public-facing tools, with private participant records and unapproved materials kept offline.  
+**Where to project:** Homepage, Technical Operations, About.  
+**Why it matters:** Allows the homepage to show the community/cultural throughline without exposing private community records or over-indexing on metrics.  
+**Guardrail:** Use aggregate, public-safe wording. Do not imply ownership of participants, scenes, or collaborators.  
+**Do not say:** Jamie owns the community archive; Jamie can publish participant records; all city or scene adoption was directly controlled by Jamie.  
+**Protected boundaries:** Guest lists, attendance records, organizer contact lists, private messages, addresses, raw community records, and unapproved photos stay offline.  
+**Review owner:** Jamie  
+**Last reviewed:** 2026-07-09
+
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
+**Public wording:** Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  

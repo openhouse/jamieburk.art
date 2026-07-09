@@ -1,7 +1,36 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
+
+const contactRows = [
+  {
+    label: "Email",
+    value: site.emailLabel,
+    href: site.emailHref
+  },
+  {
+    label: "Location",
+    value: site.location
+  },
+  {
+    label: "LinkedIn",
+    value: site.linkedinLabel,
+    href: site.linkedinHref
+  },
+  {
+    label: "GitHub",
+    value: site.githubLabel,
+    href: site.githubHref
+  }
+];
+
+const bestFitConversations = [
+  "Technical operations roles",
+  "Product operations / implementation roles",
+  "Civic technology and public-service delivery",
+  "Documentation and knowledge systems",
+  "Bounded source-backed team-memory sprint"
+];
 
 export const metadata: Metadata = createMetadata({
   title: "Contact - Jamie Burkart",
@@ -18,72 +47,54 @@ export default function ContactPage() {
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           For roles, referrals, consulting, or collaboration:
         </p>
-        <div className="mt-8 rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
-          <dl className="space-y-5">
-            <div>
-              <dt className="font-semibold text-jb-ink">Public email</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                {site.hasPublicEmail ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.emailHref}
-                  >
-                    {site.emailLabel}
-                  </a>
-                ) : (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.resumePath}
-                  >
-                    Direct contact details are in the current resume PDF
-                  </a>
-                )}
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">Location</dt>
-              <dd className="mt-1 text-jb-ink/74">{site.location}</dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">LinkedIn</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.linkedinHref}
-                  >
-                    {site.linkedinLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
-              </dd>
-            </div>
-            <div>
-              <dt className="font-semibold text-jb-ink">GitHub</dt>
-              <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.githubHref}
-                  >
-                    {site.githubLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
-              </dd>
-            </div>
+      </div>
+      <div className="mt-8 grid gap-6 lg:grid-cols-[0.62fr_0.38fr]">
+        <section className="rounded-lg border border-jb-ink/12 bg-jb-warm p-6">
+          <h2 className="text-2xl font-semibold text-jb-ink">Direct links</h2>
+          <dl className="mt-5 space-y-5">
+            {contactRows.map((row) => (
+              <div key={row.label}>
+                <dt className="font-semibold text-jb-ink">{row.label}</dt>
+                <dd className="mt-1 text-jb-ink/74">
+                  {row.href ? (
+                    <a
+                      className="font-semibold text-jb-blue hover:text-jb-green"
+                      href={row.href}
+                    >
+                      {row.value}
+                    </a>
+                  ) : (
+                    row.value
+                  )}
+                </dd>
+              </div>
+            ))}
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
-                <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
-                  View resume page
-                </Link>
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.resumePath}
+                >
+                  Download resume PDF
+                </a>
               </dd>
             </div>
           </dl>
-        </div>
+        </section>
+        <section className="rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-6">
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Best-fit conversations
+          </h2>
+          <ul className="mt-5 space-y-3 text-jb-ink/76">
+            {bestFitConversations.map((item) => (
+              <li className="flex gap-3" key={item}>
+                <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-blue" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );

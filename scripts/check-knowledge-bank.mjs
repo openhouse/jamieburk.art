@@ -104,8 +104,15 @@ if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
 }
 
-if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
-  fail("docs/proofs-bank.md conflicts with docs/knowledge-bank/claims.md; use one canonical claim register");
+const proofBankAliasPath = path.join(repoRoot, "docs/proofs-bank.md");
+if (existsSync(proofBankAliasPath) && existsSync(claimsPath)) {
+  const aliasSource = read(proofBankAliasPath);
+  if (
+    !aliasSource.includes("docs/knowledge-bank/claims.md") ||
+    !aliasSource.includes("apps/www/src/data/proofs.ts")
+  ) {
+    fail("docs/proofs-bank.md must point to the canonical proof register");
+  }
 }
 
 const blockedRouteDirs = [
@@ -299,6 +306,23 @@ for (const requiredDoc of [
   const absolute = path.join(docsRoot, requiredDoc);
   if (!existsSync(absolute) || !statSync(absolute).size) {
     fail(`docs/knowledge-bank/${requiredDoc} is missing or empty`);
+  }
+}
+
+for (const requiredDoc of [
+  "docs/knowledge-bank.md",
+  "docs/proofs-bank.md",
+  "docs/public-claims-inventory.md",
+  "docs/content-safety.md",
+  "docs/launch-checklist.md",
+  "docs/typefaces.md",
+  "docs/deployment.md",
+  "docs/application-checklist.md",
+  "docs/quotable-lines.md"
+]) {
+  const absolute = path.join(repoRoot, requiredDoc);
+  if (!existsSync(absolute) || !statSync(absolute).size) {
+    fail(`${requiredDoc} is missing or empty`);
   }
 }
 

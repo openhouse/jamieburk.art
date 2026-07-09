@@ -26,6 +26,7 @@ export type ProofClaim = {
   supportLevel: SupportLevel;
   evidenceClass: EvidenceClass[];
   publicWording: string;
+  homepageWording?: string;
   shortWording?: string;
   detailedPublicWording?: string;
   sourceBasis: string;
@@ -48,6 +49,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
+    homepageWording: "14+ years turning ambiguous work into usable systems",
     shortWording: "14+ years creating operating structure",
     detailedPublicWording:
       "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
@@ -75,6 +77,8 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
       "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    homepageWording:
+      "Long-term e-commerce and operations improvements for an 80+ year-old industrial business",
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
@@ -164,8 +168,10 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    homepageWording:
+      "Shared civic campaign-memory infrastructure for Commercial Rent Stabilization work",
+    shortWording: "Helped steward 30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -328,12 +334,54 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "community-cultural-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "approved-resume",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Community and cultural infrastructure across recurring gatherings, artist support, and public-facing tools.",
+    homepageWording:
+      "Community and cultural infrastructure across recurring gatherings, artist support, and public-facing tools",
+    shortWording:
+      "Community infrastructure across gatherings, artist support, and public tools",
+    detailedPublicWording:
+      "Jamie's community systems work spans recurring gatherings, artist-residency support, organizer workflows, and public-facing tools, with private participant records and unapproved materials kept offline.",
+    sourceBasis:
+      "Approved resume language and public-safe aggregate summaries for Sunday Dinner / 196 Artists Residency and WOWList.",
+    whyItMatters:
+      "Allows the homepage to show the community/cultural throughline without exposing private community records or over-indexing on metrics.",
+    guardrail:
+      "Use aggregate, public-safe wording. Do not imply ownership of participants, scenes, or collaborators.",
+    doNotSay: [
+      "Jamie owns the community archive",
+      "Jamie can publish participant records",
+      "All city or scene adoption was directly controlled by Jamie"
+    ],
+    protectedBoundaries: [
+      "Guest lists",
+      "Attendance records",
+      "Organizer contact lists",
+      "Private messages",
+      "Addresses",
+      "Raw community records",
+      "Unapproved photos"
+    ],
+    surfaces: ["homepage", "technical-operations", "about"],
+    relatedProjects: ["196-sunday-dinner", "wowlist"],
+    relatedCapabilities: ["community-systems", "onboarding", "public-facing-tools"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Supported redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
@@ -394,6 +442,8 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
       "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+    homepageWording:
+      "Technical operations across civic, small-business, cultural, and public-facing teams",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
@@ -474,10 +524,10 @@ export function selectProofs(surface: ProofSurface): ProofClaim[] {
 
 export const homepageProofs = [
   "career-operating-structure-14-years",
-  "hje-revenue-growth-contribution",
+  "technical-operations-operating-backbone",
+  "hje-modernization-stewardship",
   "fair-rent-campaign-memory",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure"
+  "community-cultural-infrastructure"
 ].map(requireReadyOrCarefulProof);
 
 export const resumeProofHighlights = [
