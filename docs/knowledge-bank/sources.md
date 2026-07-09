@@ -20,6 +20,19 @@ Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
 
+### AI-Assisted Archival Review
+
+Evidence-based summary generated from materials Jamie surfaced for private
+review. This can support a proof-bank note, but it is not a human collaborator
+testimonial and should not be attributed as first-hand memory.
+
+### Local Code-History Summary
+
+Aggregate summary of local repository names, commit patterns, authorship
+signals, deployment shape, and implementation scope. Do not publish private
+paths, credentials, deployment remotes, logs, or raw repository history unless
+they are separately reviewed for public release.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

@@ -38,7 +38,8 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, keep the claim out of public projection and record the approval
+blocker in `docs/knowledge-bank/launch-blockers.md`.
 
 ## Knowledge Bank
 
@@ -58,11 +59,19 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
-## Chad Lens
+## Chad Lens: Professional Legibility
 
-Minimize the reader's burden. Make Jamie visible as the actor, explain what the
-work made usable, translate specialized language for hiring and public-sector
-readers, and use collective-work language where the work was collective.
+- Minimize the reader's burden.
+- Translate specialized language for hiring and public-sector readers.
+- Use action verbs that show Jamie's agency.
+- Explain each project's purpose: toward what end?
+- Show what became usable.
+- Avoid unsupported ownership claims.
+- Prefer helped / supported / contributed to / co-built where work was
+  collective.
+- Do not let tool lists make Jamie disappear.
+- Do not publish unapproved contact info, metrics, screenshots, collaborator
+  names, quotes, or private materials.
 
 ## Scope Rules
 
