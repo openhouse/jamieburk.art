@@ -259,6 +259,47 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Built behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained campaign web infrastructure for KC Spaces Fund: a Ghost-based campaign site, customized campaign theme work, and web affordances for donation, application, sign-up, and fundraising display.",
+    sourceBasis:
+      "Public GoFundMe campaign page, Jamie confirmation, and public-safe archival/code review.",
+    sourceNote:
+      "Public GoFundMe page reviewed 2026-07-09 shows $9,590 raised of a $9,500 goal, 107 donations, Kendell Harbin for Allied Media Projects Inc., and a public-facing organizer list naming Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo.",
+    whyItMatters:
+      "Shows public-facing implementation, launch support, and technical operations work for a collective emergency-relief campaign without taking public organizer credit away from the named organizers.",
+    guardrail:
+      "Keep this as behind-the-scenes technical and operational support; public organizer credit remains with the organizers named by campaign materials unless they approve a broader framing.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie was a named public organizer",
+      "Jamie made grant decisions",
+      "Jamie wrote every line of public campaign copy",
+      "Jamie solely owned the campaign"
+    ],
+    protectedBoundaries: [
+      "Applicant/grantee records",
+      "Donor/list exports",
+      "Payment files",
+      "Credential sheets",
+      "Billing details",
+      "Raw correspondence",
+      "Raw message archives",
+      "Private project documents",
+      "Unapproved collaborator recollections"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["campaign-websites", "launch-support", "technical-operations"],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -393,7 +434,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to move emerging public-facing technical work from early shape to launch.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
@@ -527,6 +568,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

@@ -267,10 +267,16 @@ if (!/\/resume\/:path\*/.test(nextConfigSource) || !/X-Robots-Tag/.test(nextConf
   addFailure(nextConfigPath, "resume PDF noindex header is missing");
 }
 
-if (isProduction && process.env.NEXT_PUBLIC_ROBOTS_POLICY !== "index") {
-  failures.push(
-    `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index (got ${process.env.NEXT_PUBLIC_ROBOTS_POLICY ?? "unset"})`
-  );
+if (isProduction) {
+  const robotsPolicy = process.env.NEXT_PUBLIC_ROBOTS_POLICY;
+
+  if (!["index", "noindex"].includes(robotsPolicy ?? "")) {
+    failures.push(
+      `production env requires NEXT_PUBLIC_ROBOTS_POLICY=index or noindex (got ${robotsPolicy ?? "unset"})`
+    );
+  } else if (robotsPolicy === "noindex") {
+    warnings.push("production soft-launch mode is noindex; switch to index only after final approval");
+  }
 }
 
 if (warnings.length) {

@@ -108,6 +108,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## kc-spaces-fund-digital-infrastructure - Mutual-aid campaign digital infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie built and maintained campaign web infrastructure for KC Spaces Fund: a Ghost-based campaign site, customized campaign theme work, and web affordances for donation, application, sign-up, and fundraising display.
+**Where to project:** Technical Operations.
+**Why it matters:** Shows public-facing implementation, launch support, and technical operations work for a collective emergency-relief campaign without taking public organizer credit away from the named organizers.
+**Guardrail:** Keep this as behind-the-scenes technical and operational support; public organizer credit remains with the organizers named by campaign materials unless they approve a broader framing.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie was a named public organizer; Jamie made grant decisions; Jamie wrote every line of public campaign copy; Jamie solely owned the campaign.
+**Protected boundaries:** Applicant/grantee records, donor/list exports, payment files, credential sheets, billing details, raw correspondence, raw message archives, private project documents, and unapproved collaborator recollections stay offline.
+**Review owner:** Jamie / Collaborator approval needed for stronger role framing
+**Last reviewed:** 2026-07-09
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful  
@@ -173,7 +188,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
+**Public wording:** Jamie builds the operating backbone teams need to move emerging public-facing technical work from early shape to launch.  
 **Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
@@ -191,7 +206,7 @@ claim beyond the wording and guardrails here.
 **Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.  
 **Detailed public-safe wording:** Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.  
 **Where to project:** Resume page, Lab page, About.  
-**Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.  
+**Why it matters:** Supports Jamie's source-backed memory and AI-assisted documentation work without overstating product maturity.  
 **Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.  
 **Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.  
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  

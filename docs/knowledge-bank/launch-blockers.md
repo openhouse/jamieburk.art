@@ -13,9 +13,9 @@
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
-- [ ] Jamie approves public email/contact path.
-- [ ] Jamie approves resume PDF and phone-in-PDF behavior.
-- [ ] Jamie approves proof metrics.
+- [x] Jamie approves public email/contact path for the authorized branch.
+- [x] Jamie approves resume PDF and phone-in-PDF behavior for the authorized branch.
+- [x] Jamie approves proof metrics for the authorized branch.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
-- [ ] Jamie approves final production deploy.
+- [ ] Jamie approves final production deploy and any switch to production indexing.

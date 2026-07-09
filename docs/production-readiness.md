@@ -27,9 +27,12 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run build`
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
+- [ ] `npm run check:knowledge-bank`
 - [ ] `npm run public-safety`
+- [ ] `npm run check:public-safety`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
+- [ ] `npm run preflight:production:noindex`
 - [ ] `npm run preflight:production`
 - [ ] Docker build
 - [ ] Docker run
@@ -56,4 +59,5 @@ ideas from the production-readiness-composite family.
 - [ ] Chad-lens review passes.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
-content and release.
+content and release. The first production deploy should run noindex; final
+indexing requires a separate approval of the exact production surface.

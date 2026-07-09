@@ -1,5 +1,4 @@
 import { JBButton } from "@/components/JBButton";
-import { site } from "@/data/site";
 
 export function ContactCTA() {
   return (
@@ -9,10 +8,13 @@ export function ContactCTA() {
         implementation, or knowledge-systems support?
       </h2>
       <div className="mt-5 flex flex-wrap gap-3">
-        <JBButton href="/resume" variant="secondary">
-          Download resume
+        <JBButton href="/work/technical-operations">
+          Role-fit proof page
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
+        <JBButton href="/resume" variant="secondary">
+          Download résumé
+        </JBButton>
+        <JBButton href="/contact" variant="ghost">
           Contact Jamie
         </JBButton>
       </div>

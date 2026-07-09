@@ -21,23 +21,25 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning ambiguous work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            Current résumé for Technical Project Manager - Product Operations &
+            Implementation roles.
+          </p>
+          <p className="mt-4 text-lg leading-8 text-jb-ink/76">
+            For a fast role-fit read, start with Technical Operations &
+            Implementation, then the Harry J. Epstein, FairRentNYC, and CallNYC
+            case studies.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
+            <JBButton href="/work/technical-operations">
+              Technical Operations proof page
+            </JBButton>
             <JBButton href={site.resumePath} download>
-              Download resume PDF
+              Download résumé PDF
             </JBButton>
             <JBButton href="/contact" variant="secondary">
               Contact Jamie
             </JBButton>
           </div>
-          <p className="mt-4 text-sm text-jb-ink/62">
-            Current public resume PDF. Direct contact details are kept inside the
-            approved resume artifact.
-          </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
           <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
