@@ -203,7 +203,7 @@ if (existsSync(proofPath)) {
 
     if (status === "careful") warn(`${id} is careful and must keep its guardrail in public copy`);
 
-    if (id === "source-backed-team-memory-method" && /Jonathan Marmor|pricing|private transcript|private company/i.test(publicFieldBundle)) {
+    if (id === "source-backed-team-memory-method" && /pricing|private transcript|private company|named private collaborator/i.test(publicFieldBundle)) {
       fail("source-backed-team-memory-method exposes private collaborator, pricing, transcript, or company context in public fields");
     }
   }
@@ -285,7 +285,10 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "approval-register.md",
+  "chad-lens.md",
   "claims.md",
+  "source-policy.md",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",

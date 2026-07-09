@@ -36,6 +36,7 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
@@ -47,8 +48,8 @@ Use claims that directly support operating-backbone fit:
 
 Use only public-safe method claims.
 
-Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
-imply production SaaS.
+Do not name private collaborators, publish pricing, publish private transcripts,
+or imply production SaaS.
 
 ## Case Studies
 

@@ -35,33 +35,33 @@ claim beyond the wording and guardrails here.
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
-**Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
-**Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
-**Guardrail:** Must stay as contribution language.  
-**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.  
-**Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.  
-**Review owner:** Jamie  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / firsthand operational context
+**Public wording:** Contributed to 2x revenue growth for an 80+ year-old legacy e-commerce business.
+**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.
+**Where to project:** Homepage, Resume page, Technical Operations, HJE case study.
+**Why it matters:** Provides a concise business-impact proof point while retaining careful causality.
+**Guardrail:** Must stay as contribution language.
+**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
+**Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## callnyc-civic-data-guidance - Civic data to resident guidance
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public source  
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.  
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows civic-data translation, information architecture, and public interface delivery.  
-**Guardrail:** Always describe it as archived and unofficial.  
-**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.  
-**Protected boundaries:** No current-service claims, private user data, or unverified guidance.  
-**Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public project artifact / public source
+**Public wording:** Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance; covered in Politico New York.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, archived resident-facing guidance, and press-visible civic-tech context while making its unofficial status clear.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows civic-data translation, information architecture, and public interface delivery.
+**Guardrail:** Always describe it as archived and unofficial.
+**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
+**Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-09
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
@@ -107,6 +107,21 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** AI-assisted archival review / public project artifact / public-safe archive summary / Jamie review confirmation
+**Public wording:** Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign serving grassroots arts and culture spaces.
+**Detailed public-safe wording:** Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.
+**Where to project:** Technical Operations.
+**Why it matters:** Shows public-facing launch infrastructure, campaign implementation, web-platform stewardship, and careful handling of collective credit.
+**Guardrail:** Do not frame Jamie as a named public organizer or sole campaign owner; describe the role as technical and operational support.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie led the mutual-aid campaign; Jamie made grant decisions; Jamie wrote all public campaign copy; Jamie owned the public campaign outcome.
+**Protected boundaries:** Applicant and grantee materials, donor and list exports, subscriber data, payment-request files, credentials and login records, billing and renewal details, raw email archives, raw text-message archives, private shared documents, and sensitive legal, financial, or personal context stay outside the repo.
+**Review owner:** Jamie / Collaborator approval needed for stronger public framing
+**Last reviewed:** 2026-07-09
 
 ## wowlist-community-platform - Followable community platform
 

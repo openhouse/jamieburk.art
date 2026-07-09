@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { JBButton } from "@/components/JBButton";
 import { site } from "@/data/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -23,21 +23,12 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">Public email</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.hasPublicEmail ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.emailHref}
-                  >
-                    {site.emailLabel}
-                  </a>
-                ) : (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.resumePath}
-                  >
-                    Direct contact details are in the current resume PDF
-                  </a>
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.emailHref}
+                >
+                  {site.emailLabel}
+                </a>
               </dd>
             </div>
             <div>
@@ -47,42 +38,44 @@ export default function ContactPage() {
             <div>
               <dt className="font-semibold text-jb-ink">LinkedIn</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.linkedinHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.linkedinHref}
-                  >
-                    {site.linkedinLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.linkedinHref}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {site.linkedinLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">GitHub</dt>
               <dd className="mt-1 text-jb-ink/74">
-                {site.githubHref ? (
-                  <a
-                    className="font-semibold text-jb-blue hover:text-jb-green"
-                    href={site.githubHref}
-                  >
-                    {site.githubLabel}
-                  </a>
-                ) : (
-                  "Not published on this site."
-                )}
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href={site.githubHref}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {site.githubLabel}
+                </a>
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-jb-ink">Resume</dt>
               <dd className="mt-1">
-                <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/resume">
+                <a
+                  className="font-semibold text-jb-blue hover:text-jb-green"
+                  href="/resume"
+                >
                   View resume page
-                </Link>
+                </a>
               </dd>
             </div>
           </dl>
+          <div className="mt-8">
+            <JBButton href={site.emailHref}>Email Jamie</JBButton>
+          </div>
         </div>
       </div>
     </div>

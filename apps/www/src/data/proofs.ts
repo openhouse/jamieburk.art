@@ -4,6 +4,7 @@ export type SupportLevel = "strong" | "moderate" | "careful" | "pending";
 
 export type EvidenceClass =
   | "approved-resume"
+  | "ai-assisted-archive-review"
   | "public-source"
   | "public-safe-archive-summary"
   | "firsthand-collaborator-context"
@@ -104,8 +105,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
-      "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+      "Contributed to 2x revenue growth for an 80+ year-old legacy e-commerce business.",
+    shortWording: "Contributed to 2x revenue growth for an 80+ year-old legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -136,11 +137,12 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Built CallNYC.org after the New York City Council's first civic-data hackathon, translating constituent-services open data into resident-facing find help / next steps guidance; covered in Politico New York.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear.",
-    sourceBasis: "Approved resume language, archived prototype context, and public open-data context.",
+      "CallNYC turned open constituent-services data into issue pathways, district context, archived resident-facing guidance, and press-visible civic-tech context while making its unofficial status clear.",
+    sourceBasis:
+      "Approved resume language, archived prototype context, public open-data context, and public Politico New York PDF hosted by CallNYC.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -152,7 +154,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-09"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -164,8 +166,8 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Helped build and steward 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    shortWording: "Built and stewarded 30+ pages of shared civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -259,6 +261,59 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "ai-assisted-archive-review",
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Supported KC Spaces Fund as behind-the-scenes digital infrastructure for a 2020 Kansas City mutual-aid campaign serving grassroots arts and culture spaces.",
+    shortWording: "Supported KC Spaces Fund digital infrastructure",
+    detailedPublicWording:
+      "Jamie built and maintained the Ghost-based campaign site, customized a reusable campaign theme, and implemented web affordances for donation, application, sign-up, and fundraising display.",
+    sourceBasis:
+      "AI-assisted archival review of local code history, public campaign context, and public-safe project summary.",
+    sourceNote:
+      "Use technical support and collective-work framing; public organizer credit remains with the campaign-named organizers unless those collaborators approve broader wording.",
+    whyItMatters:
+      "Shows public-facing launch infrastructure, campaign implementation, web-platform stewardship, and careful handling of collective credit.",
+    guardrail:
+      "Do not frame Jamie as a named public organizer or sole campaign owner; describe the role as technical and operational support.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie led the mutual-aid campaign",
+      "Jamie made grant decisions",
+      "Jamie wrote all public campaign copy",
+      "Jamie owned the public campaign outcome"
+    ],
+    protectedBoundaries: [
+      "Applicant and grantee materials",
+      "Donor and list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials and login records",
+      "Billing and renewal details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private shared documents",
+      "Sensitive legal, financial, or personal context"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: [
+      "campaign-websites",
+      "public-facing-launches",
+      "web-infrastructure",
+      "donation-flows",
+      "implementation"
+    ],
+    lastReviewed: "2026-07-09"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -269,7 +324,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording:
+      "Co-built WOWList.org, adopted across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -303,7 +359,8 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording:
+      "Created repeatable systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -495,40 +552,70 @@ export const resumeProofHighlights = [
 
 export const technicalOperationsProofRows = [
   {
-    capability: "Delivery coordination",
-    toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
+    capability: "Delivery coordination and risk surfacing",
+    proofLine: "Harry J. Epstein Company, KC Spaces Fund, CallNYC, WOWList.",
+    toward:
+      "Jamie has moved work from concept to public launch in e-commerce, civic-data, and community-platform contexts, while translating between technical and nontechnical stakeholders.",
     proofIds: [
-      "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform"
     ]
   },
   {
-    capability: "Risk surfacing and decision clarity",
-    toward: "Making open questions, public/private boundaries, and stakeholder next steps visible.",
+    capability: "Operating processes and team rituals",
+    proofLine: "FairRentNYC / Commercial Rent Stabilization, 196 / Sunday Dinner.",
+    toward:
+      "Jamie structures recurring work through meeting memory, action trackers, decision records, public guidance, facilitation rhythms, and repeatable handoffs.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "fair-rent-source-map",
-      "kc-town-hall-public-benefit-documentation"
+      "sunday-dinner-196-participation-infrastructure"
     ]
   },
   {
-    capability: "Operating documentation people use",
-    toward: "Converting meetings, source trails, and recurring practices into reusable working memory.",
+    capability: "Documentation people actually use",
+    proofLine: "FairRentNYC, CallNYC, Source-Backed Team Memory.",
+    toward:
+      "Jamie creates source maps, runbook-like guidance, public explanations, and reviewable documentation systems that help people continue work after meetings or launches.",
     proofIds: [
       "fair-rent-campaign-memory",
-      "sunday-dinner-196-participation-infrastructure",
+      "fair-rent-source-map",
+      "callnyc-civic-data-guidance",
       "source-backed-team-memory-method"
     ]
   },
   {
-    capability: "Public-facing launch and adoption",
-    toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
+    capability: "Onboarding and ramp support",
+    proofLine: "196 Artists Residency / Sunday Dinner, HJE, Source-Backed Team Memory.",
+    toward:
+      "Jamie builds low-overhead onboarding, hosting, continuity, and handoff practices so new participants can understand what matters and contribute sooner.",
+    proofIds: [
+      "sunday-dinner-196-participation-infrastructure",
+      "hje-modernization-stewardship",
+      "source-backed-team-memory-method"
+    ]
+  },
+  {
+    capability: "Cross-functional and public-sector translation",
+    proofLine: "FairRentNYC / NYC Artist Coalition, CallNYC, KC Town Hall.",
+    toward:
+      "Jamie translates across community stakeholders, public data, policy context, technical systems, and public-facing materials while protecting sensitive information.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "callnyc-civic-data-guidance",
+      "kc-town-hall-public-benefit-documentation"
+    ]
+  },
+  {
+    capability: "Continuous improvement",
+    proofLine: "HJE, WOWList, FairRentNYC.",
+    toward:
+      "Jamie works iteratively: clarify what is known, surface what is open, protect what should remain private, improve the working system, and document the next responsible move.",
+    proofIds: [
+      "hje-modernization-stewardship",
       "wowlist-community-platform",
+      "fair-rent-campaign-memory",
       "hje-revenue-growth-contribution"
     ]
   }
