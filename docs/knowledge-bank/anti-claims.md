@@ -20,6 +20,11 @@ Use contribution language.
 
 ## FairRentNYC / CRS
 
+Do not say Jamie solely led NYC Artist Coalition or single-handedly caused
+Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement
+reporting legislation, Commercial Rent Stabilization progress, or storefront
+stability advocacy outcomes.
+
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
@@ -35,6 +40,17 @@ Do not name collaborators unless approved.
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+## KC Spaces Fund
+
+Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant
+decisions, acted as fiscal sponsor, or was one of the campaign's public
+organizers unless the named organizers confirm that framing.
+
+Do not present AI-assisted archival review as a human collaborator testimonial.
+Do not publish applicant/grantee materials, donor/list exports, subscriber data,
+payment-request files, credentials, billing details, raw email/text archives, or
+private Drive documents.
 
 ## KC Town Hall
 

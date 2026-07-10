@@ -27,9 +27,11 @@ Implementation roles.
 - `technical-operations-operating-backbone`
 - `hje-modernization-stewardship`
 - `fair-rent-campaign-memory`
+- `nyc-artist-coalition-civic-systems`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
+- `kc-spaces-fund-digital-infrastructure`
 
 ## Public Projection
 
@@ -37,3 +39,9 @@ Use `/work/technical-operations` as the role-fit proof surface.
 
 Do not make the public page an application-specific OTI page unless Jamie
 explicitly requests that.
+
+## Chad-Lens Summary
+
+The reader should understand in one pass that Jamie coordinates delivery,
+surfaces risks, creates operating documentation, supports onboarding, builds
+decision records, and improves working systems over time.

@@ -42,75 +42,90 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
 **Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
 **Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
-**Guardrail:** Must stay as contribution language.  
-**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.  
-**Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.  
-**Review owner:** Jamie  
+**Guardrail:** Must stay as contribution language.
+**Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
+**Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## callnyc-civic-data-guidance - Civic data to resident guidance
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public source  
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.  
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows civic-data translation, information architecture, and public interface delivery.  
-**Guardrail:** Always describe it as archived and unofficial.  
-**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.  
-**Protected boundaries:** No current-service claims, private user data, or unverified guidance.  
-**Review owner:** Jamie  
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public project artifact / public source
+**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
+**Guardrail:** Always describe it as archived and unofficial.
+**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
+**Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.  
-**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.  
-**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
-**Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.  
-**Guardrail:** Use collective-work language and do not publish raw or private coalition context.  
-**Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.  
-**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
+**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
+**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
+**Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
+**Guardrail:** Use collective-work language and do not publish raw or private coalition context.
+**Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
+**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
 **Last reviewed:** 2026-07-07
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.  
-**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.  
-**Where to project:** Resume page, Technical Operations, Case study.  
-**Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.  
-**Guardrail:** Do not imply legal authority or official bill ownership.  
-**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
+**Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
+**Where to project:** Resume page, Technical Operations, Case study.
+**Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
+**Guardrail:** Do not imply legal authority or official bill ownership.
+**Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
 **Review owner:** Jamie / Collaborator approval needed  
 **Last reviewed:** 2026-07-07
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public project artifact / Jamie review confirmation  
-**Public wording:** Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.  
-**Detailed public-safe wording:** Jamie built public-facing campaign web infrastructure that translated cultural-space advocacy into issue explanations, calls to action, public resources, and support paths.  
-**Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.  
-**Why it matters:** Makes Jamie's direct web authorship visible without overstating collective campaign accomplishments.  
-**Guardrail:** Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.  
-**Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions.  
-**Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.  
-**Review owner:** Jamie  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public project artifact / Jamie review confirmation
+**Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
+**Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
+**Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
+**Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
+**Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
+**Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
+
+## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary
+**Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
+**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+**Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
+**Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
+**Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
+**Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
+**Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-09
 
 ## wowlist-community-platform - Followable community platform
 
-**Status:** Careful  
+**Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
 **Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
@@ -137,6 +152,21 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
+**Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
+**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Where to project:** Technical Operations. Future resume or case-study use requires Jamie review and, if public organizer framing changes, collaborator confirmation.
+**Why it matters:** Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.
+**Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
+**Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
+**Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
+**Last reviewed:** 2026-07-09
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -105,7 +106,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "firsthand-collaborator-context"],
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
-    shortWording: "2x revenue growth contribution for legacy e-commerce",
+    shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -139,8 +140,9 @@ export const proofClaims: ProofClaim[] = [
       "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear.",
-    sourceBasis: "Approved resume language, archived prototype context, and public open-data context.",
+      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+    sourceBasis:
+      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -231,19 +233,21 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
     publicWording:
-      "Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
-    shortWording: "Built public campaign websites for NYC Artist Coalition advocacy",
+      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+    shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
-      "Jamie built public-facing campaign web infrastructure that translated cultural-space advocacy into issue explanations, calls to action, public resources, and support paths.",
+      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
     sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
     whyItMatters:
-      "Makes Jamie's direct web authorship visible without overstating collective campaign accomplishments.",
-    guardrail: "Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.",
+      "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
+    guardrail:
+      "Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",
       "Jamie authored every policy position",
-      "Jamie controlled partner decisions"
+      "Jamie controlled partner decisions",
+      "Jamie single-handedly caused policy outcomes"
     ],
     protectedBoundaries: [
       "Private coalition notes",
@@ -257,6 +261,46 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "nyc-artist-coalition-civic-systems",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
+    shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+    sourceBasis:
+      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+    whyItMatters:
+      "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
+    guardrail:
+      "Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.",
+    doNotSay: [
+      "Jamie alone repealed the Cabaret Law",
+      "Jamie alone created the Office of Nightlife",
+      "Jamie alone passed nightlife enforcement reporting legislation",
+      "Jamie speaks for every NYC Artist Coalition collaborator"
+    ],
+    protectedBoundaries: [
+      "Private coalition notes",
+      "Internal disputes",
+      "Private correspondence",
+      "Membership records",
+      "Unapproved collaborator names",
+      "Legal-review materials"
+    ],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study", "about"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "coalition-operations",
+      "policy-communications",
+      "public-data-framing",
+      "civic-systems"
+    ],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "wowlist-community-platform",
@@ -326,6 +370,53 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "kc-spaces-fund-digital-infrastructure",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archive-review"],
+    publicWording:
+      "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    detailedPublicWording:
+      "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.",
+    sourceBasis:
+      "Public GoFundMe page, public campaign domain, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
+    sourceNote:
+      "Use as an evidence-based archival proof note, not a human collaborator testimonial.",
+    whyItMatters:
+      "Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.",
+    guardrail:
+      "Behind-the-scenes technical and operational support only. Do not frame Jamie as the public organizer, grant decision-maker, fiscal sponsor, or sole campaign owner.",
+    doNotSay: [
+      "Jamie organized KC Spaces Fund",
+      "Jamie ran the fundraiser",
+      "Jamie made grant decisions",
+      "Jamie was the fiscal sponsor",
+      "A human collaborator provided this testimonial"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee materials",
+      "Donor and list exports",
+      "Subscriber data",
+      "Payment-request files",
+      "Credentials or login sheets",
+      "Billing and payment details",
+      "Raw email archives",
+      "Raw text-message archives",
+      "Private Drive documents",
+      "Sensitive strategy, legal, financial, or personal information"
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "public-facing-web-systems",
+      "campaign-infrastructure",
+      "implementation",
+      "technical-operations"
+    ],
+    lastReviewed: "2026-07-09"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -488,6 +579,7 @@ export const resumeProofHighlights = [
   "fair-rent-source-map",
   "callnyc-civic-data-guidance",
   "nyc-artist-coalition-public-web-infrastructure",
+  "nyc-artist-coalition-civic-systems",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
   "ai-evals-professional-development"
@@ -527,6 +619,8 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyc-artist-coalition-civic-systems",
+      "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

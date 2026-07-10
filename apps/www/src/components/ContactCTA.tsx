@@ -8,12 +8,16 @@ export function ContactCTA() {
         Looking for technical project management, product operations,
         implementation, or knowledge-systems support?
       </h2>
+      <p className="mt-3 leading-7 text-jb-ink/74">
+        Email Jamie about roles, referrals, bounded consulting work, or
+        collaboration.
+      </p>
       <div className="mt-5 flex flex-wrap gap-3">
         <JBButton href="/resume" variant="secondary">
           Download resume
         </JBButton>
-        <JBButton href={site.hasPublicEmail ? site.emailHref : "/contact"}>
-          Contact Jamie
+        <JBButton href={site.emailHref}>
+          Email Jamie
         </JBButton>
       </div>
     </section>

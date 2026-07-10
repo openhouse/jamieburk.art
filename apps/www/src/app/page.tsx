@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Route } from "next";
 import { CapabilityGrid } from "@/components/CapabilityGrid";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Hero } from "@/components/Hero";
@@ -13,10 +14,67 @@ const transformations = [
   ["Recurring community gatherings", "repeatable participation infrastructure"]
 ];
 
+const startHereLinks = [
+  {
+    href: "/work/technical-operations",
+    label: "Technical Operations & Implementation",
+    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+  },
+  {
+    href: "/work/harry-j-epstein",
+    label: "Harry J. Epstein Company",
+    note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
+  },
+  {
+    href: "/work/fair-rent-nyc",
+    label: "FairRentNYC / Commercial Rent Stabilization",
+    note: "Campaign memory, source maps, public-data framing, and coalition operations."
+  },
+  {
+    href: "/work/callnyc",
+    label: "CallNYC.org",
+    note: "Civic open data translated into resident-facing guidance."
+  },
+  {
+    href: "/resume",
+    label: "Resume",
+    note: "PDF for applications and hiring workflows."
+  }
+];
+
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <section className="jb-frame py-12">
+        <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
+          <div className="jb-reading">
+            <p className="text-sm font-semibold uppercase text-jb-blue">Start here</p>
+            <h2 className="mt-3 text-3xl font-bold text-jb-ink">
+              Quick path through the portfolio
+            </h2>
+            <p className="mt-4 leading-8 text-jb-ink/76">
+              New to my work? These pages give the clearest route through the
+              site for hiring managers, referrers, civic-tech peers, and
+              collaborators.
+            </p>
+          </div>
+          <div className="grid gap-3">
+            {startHereLinks.map((item) => (
+              <Link
+                className="rounded-lg border border-jb-ink/12 bg-jb-warm p-4 hover:border-jb-blue/40 hover:bg-jb-sky/14"
+                href={item.href as Route}
+                key={item.href}
+              >
+                <span className="font-semibold text-jb-blue">{item.label}</span>
+                <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                  {item.note}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
@@ -29,9 +87,9 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: under-structured situations
-              becoming usable systems, public-facing tools, documentation,
-              decision trails, and durable handoffs.
+              These projects show a recurring pattern: ambiguous, high-context
+              situations becoming usable systems, public-facing tools,
+              documentation, decision trails, and durable handoffs.
             </p>
           </div>
           <Link className="font-semibold text-jb-blue hover:text-jb-green" href="/work">
@@ -82,7 +140,7 @@ export default function HomePage() {
         </div>
         <div className="space-y-7">
           <p className="text-xl leading-9 text-jb-ink/78">
-            I usually enter when the work is important but under-structured. I
+            I usually enter when the work is important but loosely defined. I
             listen across stakeholders, map what is known and unknown, create
             the workflows or documentation the team needs, support launch or
             adoption, and leave behind materials that make the work easier to
