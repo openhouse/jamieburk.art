@@ -80,8 +80,10 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+V1 uses Karla for body/UI text and Oswald for labels, metadata, navigation,
+eyebrows, and compact civic emphasis. League Spartan may be used only for rare
+display or Open Graph treatment. Do not commit or serve private, proprietary, or
+unlicensed font files.
 
 ## Content Rules
 
@@ -98,9 +100,12 @@ or serve private, proprietary, or unlicensed font files.
 - Replace placeholder resume PDF before production.
 - Confirm public email.
 - Confirm LinkedIn and GitHub links.
+- Confirm no public-facing TODOs remain.
 - Confirm screenshots/artifacts.
 - Confirm exact proof metrics.
 - Confirm collaborator names, photos, and quotes.
+- Confirm Technical Operations role-fit page language.
 - Confirm staging noindex behavior.
+- Confirm sitemap and health endpoint behavior.
 - Confirm production metadata points to `https://jamieburk.art`.
 - Confirm no private/proprietary fonts are committed or served.

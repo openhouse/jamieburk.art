@@ -24,7 +24,7 @@ export default function ResumePage() {
       <div className="grid gap-10 lg:grid-cols-[0.68fr_0.32fr]">
         <div className="jb-reading">
           <h1 className="text-5xl font-bold text-jb-ink">Resume</h1>
-          <p className="mt-4 text-2xl font-semibold text-jb-green">
+          <p className="jb-display-condensed mt-4 text-2xl font-semibold text-jb-green">
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
@@ -47,7 +47,9 @@ export default function ResumePage() {
           </p>
         </div>
         <aside className="rounded-lg border border-jb-ink/12 bg-jb-warm p-5">
-          <h2 className="text-2xl font-semibold text-jb-ink">Selected impact</h2>
+          <h2 className="jb-display-condensed text-2xl font-semibold text-jb-ink">
+            Selected impact
+          </h2>
           <ul className="mt-5 space-y-4 text-jb-ink/76">
             {highlights.map((highlight) => (
               <li className="flex gap-3" key={highlight}>

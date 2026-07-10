@@ -16,6 +16,12 @@ without explicit approval.
 Next.js App Router, React, TypeScript, MDX, Tailwind CSS, daisyUI, Node 26, npm
 workspaces, Dockerfile, Dokku.
 
+## Typeface Policy
+
+V1 uses Karla for body/UI text and Oswald for labels/metadata. League Spartan
+may be used only for rare display or Open Graph treatment. Do not commit or
+serve private, proprietary, or unlicensed font files.
+
 ## Commands
 
 - `npm ci`
