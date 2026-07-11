@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { CitationNotes, CitationRef } from "@/components/citations";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import { technicalOperationsProofRows } from "@/data/proofs";
@@ -29,7 +30,7 @@ const proofMap = [
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "open-data translation into resident-facing guidance after the January 2016 New York City Council CouncilStat hackathon at Civic Hall."
   },
   {
     project: "WOWList",
@@ -68,7 +69,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -77,6 +78,25 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding
           materials, documentation systems, launch support, and durable
           handoffs.
+        </p>
+        <p className="mt-5 leading-8 text-jb-ink/76">
+          After participating in a City Council workshop that previewed
+          constituent-service data, I independently built CallNYC.org to translate
+          the released records into issue-oriented resident guidance
+          <CitationRef
+            id="callnyc-independent-follow-on"
+            instance="technical-ops-proof"
+            pageKey="technical-operations"
+          />
+          {" "}
+          while documenting the limits created by differing data-entry practices
+          across district offices
+          <CitationRef
+            id="callnyc-data-limitations"
+            instance="technical-ops-limits"
+            pageKey="technical-operations"
+          />
+          .
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
@@ -121,6 +141,7 @@ export default function TechnicalOperationsPage() {
           </JBCard>
         ))}
       </div>
+      <CitationNotes pageKey="technical-operations" />
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />

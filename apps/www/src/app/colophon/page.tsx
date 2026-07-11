@@ -34,6 +34,16 @@ export default function ColophonPage() {
           production should only become indexable after content and metadata
           review.
         </p>
+        <section className="mt-8">
+          <h2 className="text-2xl font-semibold text-jb-ink">Citational care</h2>
+          <p className="mt-3 leading-8 text-jb-ink/76">
+            Significant factual claims are linked to numbered notes and
+            inspectable sources where public access is appropriate. Private or
+            sensitive evidence is described without exposing the underlying
+            archive. Citations state what a source supports, preserve relevant
+            limits, and leave room for correction.
+          </p>
+        </section>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {details.map((detail) => (
