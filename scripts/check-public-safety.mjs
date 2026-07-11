@@ -246,6 +246,18 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
   }
 
+  if (/first civic-data hackathon|first civic-tech hackathon/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF contains retired CallNYC hackathon wording");
+  }
+
+  if (
+    !/CallNYC\.org as an independent follow-on to the New York City\s+Council['’]s first CouncilStat hackathon/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
+  }
+
   if (
     isProduction &&
     !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&

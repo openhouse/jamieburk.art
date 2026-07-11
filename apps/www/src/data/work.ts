@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { getClaimProjection } from "@/data/knowledge-bank";
 import type { WorkMeta } from "@/types/work";
 
 const visibilitySchema = z.enum([
@@ -279,10 +280,13 @@ const workItemsInput = [
     slug: "callnyc",
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
-    summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+    summary: getClaimProjection(
+      "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+      "work-card",
+      "/work"
+    ).text,
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016 - archived",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -303,7 +307,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "An independent interpretation layer built from CouncilStat constituent-services records.",
         type: "map"
       },
       {
@@ -347,14 +351,14 @@ const workItemsInput = [
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:

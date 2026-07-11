@@ -30,7 +30,10 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
-- **Structured proof data:** machine-readable claim layer in
+- **Citation registry:** canonical sources, evidence relationships, claims,
+  projections, inquiries, corrections, and page plans in
+  `apps/www/src/data/knowledge-bank/records.ts`.
+- **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
@@ -56,3 +59,7 @@ usable, what Jamie did, and what boundary remains protected.
 
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
+
+See [citational-care.md](citational-care.md) for the authoring and validation
+workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
+pilot.

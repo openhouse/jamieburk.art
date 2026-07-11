@@ -39,3 +39,4 @@ supporting-materials/
 *.otf
 *.woff
 *.woff2
+reports/generated/

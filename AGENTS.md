@@ -27,6 +27,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
+- `npm run check:citations`
+- `npm run test:citations`
+- `npm run report:citations`
 
 ## Public-Safety Rules
 
@@ -44,6 +47,18 @@ When uncertain, write: `TODO: Jamie approval required.`
 
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
+
+Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
+canonical machine-readable source. Do not add or strengthen a public factual
+claim without updating the canonical claim, evidence relationship, and source
+records.
+
+Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
+authored prose. Do not type citation numbers manually.
+
+Do not expose private source paths, private assets, protected locators, signed
+URLs, or raw research artifacts. Regenerate the redacted public registry after
+changing canonical records.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.

@@ -32,6 +32,11 @@ lists, or source documents that were not approved for public use.
 
 Do not imply CallNYC is an official or current City service.
 
+Do not broaden “first CouncilStat hackathon” into a claim about the Council's
+first hackathon, first civic-data hackathon, or first civic-technology
+hackathon. Do not describe CallNYC as commissioned, officially submitted,
+selected, or a winner without new evidence and review.
+
 ## WOWList
 
 Do not name collaborators unless approved.
