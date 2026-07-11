@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -57,6 +60,25 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+### Citation architecture
+
+CallNYC is the first fully populated citational-care pilot. Structured records
+live in `apps/www/src/data/knowledge-bank/`: sources, claims, evidence,
+reader-facing citation notes, media governance, research runs, corrections, and
+page occurrence plans. Stable IDs live in those records; visible numbers are
+generated per page from each note's first appearance.
+
+MDX authors use the explicit `<Cite page occurrence noteId />` and
+`<References page />` components. `npm run check:citations` validates the graph,
+public-safety constraints, and MDX/page-plan drift. `npm run test:citations`
+covers numbering, backlinks, relationships, withholding, and source order.
+`npm run report:citations` regenerates `reports/citations.md` for human review.
+
+Normal citation checks are offline and deterministic. Public notes may cite a
+safe public link or render approved metadata/summary without a link. Private
+paths, filenames, face tags, GPS data, signed URLs, and protected source
+artifacts never belong in this repository.
 
 ## Environment
 
