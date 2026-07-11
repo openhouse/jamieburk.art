@@ -1,0 +1,19 @@
+[
+  {
+    "id": "callnyc-years-correction",
+    "subjectId": "work-callnyc-years",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "The event, project chronology, public repository context, and contemporaneous reporting place CallNYC in 2016.",
+    "requiredBeforeProduction": true,
+    "resolvedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-description-correction",
+    "subjectId": "resume-callnyc-event-description",
+    "previousValue": "the New York City Council's first civic-data hackathon",
+    "correctedValue": "a January 2016 New York City Council constituent-services hackathon at Civic Hall; the Council described the gathering as its first CouncilStat hackathon",
+    "reason": "The recovered Council language supports the narrower attributed CouncilStat description, not a broader first-civic-data-hackathon claim.",
+    "requiredBeforeProduction": true
+  }
+]

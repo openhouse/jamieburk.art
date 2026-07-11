@@ -1,0 +1,36 @@
+[
+  {
+    "id": "callnyc-civic-hall-event-page-search-2026-07",
+    "question": "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+    "method": "Reviewed deduplicated archived HTML captures and original URLs, grouped event-like URL keys, and checked successful pages, redirects, and captured 404 responses for CouncilStat, constituent-services, and New York City Council event references.",
+    "performedAt": "2026-07-11",
+    "corpus": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "distinctEventUrlKeys": 296,
+      "successfulEventPages": 215,
+      "redirects": 74,
+      "captured404Responses": 7
+    },
+    "recovered": [
+      "A January 31, 2016, capture of a Civic Hall events index page preserving Civic Hall and New York City Council posts inside an embedded social feed.",
+      "The Civic Hall announcement's date, advertised time window, and constituent-services purpose.",
+      "The Council's event-day description of the Civic Hall gathering as its first CouncilStat hackathon."
+    ],
+    "notRecovered": [
+      "CouncilStat, constituent-services, or New York City Council event slug",
+      "Civic Hall calendar listing",
+      "Dedicated Civic Hall event page",
+      "Full agenda",
+      "Full event schedule beyond the announced 1-3 p.m. window",
+      "Breakout roster",
+      "Complete attendee list",
+      "Facilitator list",
+      "Registration-form contents",
+      "Formal winners or published project roster"
+    ],
+    "conclusion": "No dedicated Civic Hall calendar or event-detail page was recovered in this research.",
+    "limitation": "No page was recovered in the searched corpus. This does not prove that no such page ever existed.",
+    "publicSummary": "The search reviewed 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event URL keys. It recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page."
+  }
+]
