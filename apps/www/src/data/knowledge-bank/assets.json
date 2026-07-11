@@ -1,0 +1,29 @@
+[
+  {
+    "id": "asset.callnyc.politico-archived-pdf",
+    "title": "Archived Politico New York PDF",
+    "assetType": "public_reference",
+    "sourceId": "source.politico-neubauer.callnyc.2016-03-14",
+    "publicUseStatus": "approved-public",
+    "publicDescription": "Public archived PDF used as a historical press reference for CallNYC.",
+    "guardrail": "Use as historical coverage only.",
+    "protectedBoundaries": ["Do not imply current-service status."],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "asset.callnyc.digital-district-photo-summary",
+    "title": "Digital District participant photo summary",
+    "assetType": "public_safe_summary",
+    "sourceId": "source.participant-photo.digital-district.2016-01-30-1410",
+    "publicUseStatus": "approved-public-summary",
+    "publicDescription": "Public-safe summary of a private participant photograph documenting a Digital District breakout prompt.",
+    "guardrail": "Do not publish the photo, identities, metadata, or local archive location.",
+    "protectedBoundaries": [
+      "Participant identities",
+      "Photo file",
+      "Local archive location",
+      "Metadata"
+    ],
+    "lastReviewed": "2026-07-11"
+  }
+]

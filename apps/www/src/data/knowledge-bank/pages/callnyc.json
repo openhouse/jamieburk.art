@@ -1,0 +1,17 @@
+{
+  "id": "page.work.callnyc",
+  "path": "/work/callnyc",
+  "title": "CallNYC.org",
+  "surface": "case-study",
+  "claimOrder": [
+    "claim.callnyc.hackathon.date-time-purpose",
+    "claim.callnyc.hackathon.first-councilstat",
+    "claim.callnyc.hackathon.event-branding",
+    "claim.callnyc.hackathon.digital-district-breakout",
+    "claim.callnyc.project.independent-follow-on",
+    "claim.callnyc.project.data-limitations",
+    "claim.callnyc.research.no-dedicated-event-page-recovered"
+  ],
+  "referenceHeading": "Sources & notes",
+  "publicBoundary": "The page may show numbered citations and public-safe notes. It must not render stable source IDs, local paths, raw archives, participant identities, or the private photo."
+}

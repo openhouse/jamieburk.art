@@ -1,0 +1,30 @@
+[
+  {
+    "id": "research.civic-hall-wayback-cdx.2026-07",
+    "title": "Civic Hall Wayback CDX review for January 2016 event evidence",
+    "runDate": "2026-07",
+    "scope": "Civic Hall public web captures relevant to recovering a dedicated event page, listing, agenda, registration content, or breakout roster for the January 30, 2016 NYC Council hackathon.",
+    "method": "Wayback CDX review of Civic Hall captures, deduplicated HTML captures, URL keys, event URL paths, successful captures, redirects, and not-found captures.",
+    "counts": {
+      "deduplicated_html_captures": 4630,
+      "original_urls": 1240,
+      "distinct_event_url_keys": 296,
+      "successful_event_pages": 215,
+      "redirect_event_urls": 74,
+      "not_found_captures": 7
+    },
+    "findings": [
+      "No dedicated Civic Hall calendar listing for the January 30, 2016 NYC Council hackathon was recovered in this run.",
+      "No full agenda, breakout roster, or registration-form contents for the event were recovered in this run.",
+      "The absence of recovered pages is an archival finding only; it must not be phrased as proof of nonexistence."
+    ],
+    "sourceIds": [
+      "source.civic-hall.x.693124020917522433",
+      "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td"
+    ],
+    "publicUseStatus": "approved-public-summary",
+    "guardrail": "Say not recovered, never did not exist.",
+    "protectedBoundaries": ["Do not publish raw CDX exports or local analysis paths."],
+    "lastReviewed": "2026-07-11"
+  }
+]

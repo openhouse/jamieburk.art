@@ -1,0 +1,187 @@
+[
+  {
+    "id": "claim.callnyc.hackathon.date-time-purpose",
+    "status": "approved-public",
+    "supportLevel": "strong",
+    "evidenceClass": ["public-source", "social-post"],
+    "publicWording": "On January 30, 2016, Civic Hall advertised a 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "sourceBasis": "Civic Hall public post and associated promotional graphic.",
+    "guardrail": "Describe this as the advertised time and focus, not confirmed total event duration.",
+    "publicUseBoundary": "Public page may cite date, advertised time, host context, and constituent-services focus.",
+    "requiredPublicQualifications": ["advertised 1-3 p.m."],
+    "doNotSay": ["The event necessarily lasted only from 1-3 p.m.", "The full agenda is recovered."],
+    "protectedBoundaries": ["Local social-media capture paths", "Unpublished archive notes"],
+    "allowedSurfaces": ["case-study", "technical-operations", "work-card"],
+    "support": [
+      {
+        "sourceId": "source.civic-hall.x.693124020917522433",
+        "locator": "public post text",
+        "note": "Supports date, advertised time, Civic Hall context, and constituent-services focus.",
+        "includeInPublicCitation": true
+      },
+      {
+        "sourceId": "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td",
+        "locator": "promotional graphic",
+        "note": "Supports event branding and public advertisement.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.first-councilstat",
+    "status": "approved-public",
+    "supportLevel": "strong",
+    "evidenceClass": ["public-source", "social-post"],
+    "publicWording": "The New York City Council posted from Civic Hall that day and described the gathering as the first CouncilStat hackathon.",
+    "sourceBasis": "New York City Council public post from January 30, 2016.",
+    "guardrail": "Use to describe the Council's public language about the event, not official sponsorship of CallNYC.",
+    "publicUseBoundary": "Public page may say the Council described the event as the first CouncilStat hackathon.",
+    "requiredPublicQualifications": ["The New York City Council posted"],
+    "doNotSay": ["CallNYC was the CouncilStat hackathon", "CallNYC was an official Council project"],
+    "protectedBoundaries": ["Unpublished correspondence", "Private collaborator notes"],
+    "allowedSurfaces": ["case-study", "technical-operations", "work-card"],
+    "support": [
+      {
+        "sourceId": "source.nyc-council.x.693509031768506368",
+        "locator": "public post text",
+        "note": "Supports the Council's public description of the gathering.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.event-branding",
+    "status": "approved-public",
+    "supportLevel": "moderate",
+    "evidenceClass": ["public-source", "image-asset"],
+    "publicWording": "Public Civic Hall materials advertised the event as an NYC Council hackathon connected to constituent services and CouncilStat.",
+    "sourceBasis": "Civic Hall promotional graphic and public post.",
+    "guardrail": "Use for public event branding only; do not convert branding into a recovered agenda.",
+    "publicUseBoundary": "Public page may mention event branding when paired with the social-post evidence.",
+    "requiredPublicQualifications": ["public Civic Hall materials"],
+    "doNotSay": ["The full event title was Digital District", "The full agenda is known"],
+    "protectedBoundaries": ["Unrecovered agenda", "Unpublished registration content"],
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "support": [
+      {
+        "sourceId": "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td",
+        "locator": "promotional graphic",
+        "note": "Supports public-facing event branding.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.digital-district-breakout",
+    "status": "approved-public-summary",
+    "supportLevel": "careful",
+    "evidenceClass": ["public-safe-archive-summary", "participant-photo"],
+    "publicWording": "A participant photograph documents a Digital District breakout prompt: Help improve City Council District office operations.",
+    "sourceBasis": "Private participant photo archive reviewed as a public-safe summary.",
+    "guardrail": "Do not publish the image, identities, metadata, or local archive location; do not present Digital District as the full event title.",
+    "publicUseBoundary": "Public page may cite the photo summary for the breakout label and visible prompt text.",
+    "requiredPublicQualifications": ["participant photograph", "breakout"],
+    "doNotSay": ["Digital District was the full event title", "All breakout participants are identified", "The photo is published"],
+    "protectedBoundaries": [
+      "Participant identities",
+      "Photo file",
+      "Local archive location",
+      "Metadata",
+      "Unapproved visual reproduction"
+    ],
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "support": [
+      {
+        "sourceId": "source.participant-photo.digital-district.2016-01-30-1410",
+        "locator": "visible breakout prompt",
+        "note": "Supports the Digital District breakout label and visible prompt text only.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.project.independent-follow-on",
+    "status": "approved-public",
+    "supportLevel": "strong",
+    "evidenceClass": ["public-source", "press", "code"],
+    "publicWording": "After the full dataset release, Jamie independently developed CallNYC.org as an archived civic prototype organizing constituent-service records into issue-oriented pages.",
+    "sourceBasis": "Politico New York coverage and public CallNYC GitHub repository.",
+    "guardrail": "Describe CallNYC as an independent archived prototype, not an official Council service.",
+    "publicUseBoundary": "Public page may describe Jamie's independent build and the issue-oriented public interface.",
+    "requiredPublicQualifications": ["independently", "archived civic prototype"],
+    "doNotSay": ["Official Council service", "Current city service", "Council endorsed CallNYC"],
+    "protectedBoundaries": ["Private development notes", "Unverified usage data"],
+    "allowedSurfaces": ["case-study", "technical-operations", "work-card"],
+    "support": [
+      {
+        "sourceId": "source.politico-neubauer.callnyc.2016-03-14",
+        "locator": "archived PDF",
+        "note": "Supports public coverage of CallNYC as a site for exploring constituent-services data.",
+        "includeInPublicCitation": true
+      },
+      {
+        "sourceId": "source.github.openhouse.callnyc",
+        "locator": "public repository",
+        "note": "Supports public code and project existence.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.project.data-limitations",
+    "status": "qualified-public",
+    "supportLevel": "careful",
+    "evidenceClass": ["public-source", "public-safe-archive-summary"],
+    "publicWording": "Council offices used CouncilStat differently, so case counts are imperfect operational traces, not simple performance measures.",
+    "sourceBasis": "Public coverage of CouncilStat / constituent-service data and project-specific public-safe interpretation.",
+    "guardrail": "Use limitation language whenever discussing counts, rankings, or comparisons.",
+    "publicUseBoundary": "Public page may explain why counts should be treated as traces rather than direct performance metrics.",
+    "requiredPublicQualifications": ["imperfect operational traces", "not simple performance measures"],
+    "doNotSay": ["CouncilStat counts directly rank Council offices", "Counts prove office performance"],
+    "protectedBoundaries": ["Unpublished analysis notebooks", "Private interpretations of individual offices"],
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "support": [
+      {
+        "sourceId": "source.politico-neubauer.callnyc.2016-03-14",
+        "locator": "archived PDF",
+        "note": "Supports public context for CouncilStat / constituent-services data and why interpretation requires care.",
+        "includeInPublicCitation": true
+      },
+      {
+        "sourceId": "source.github.openhouse.callnyc",
+        "locator": "public repository",
+        "note": "Supports the prototype's issue-oriented data interpretation surface.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.research.no-dedicated-event-page-recovered",
+    "status": "approved-public-summary",
+    "supportLevel": "careful",
+    "evidenceClass": ["ai-assisted-archive-review", "public-safe-archive-summary"],
+    "publicWording": "A July 2026 Wayback CDX review did not recover a dedicated Civic Hall calendar listing, full agenda, breakout roster, or registration-form contents for the event.",
+    "sourceBasis": "AI-assisted public-safe research run over Civic Hall Wayback CDX captures.",
+    "guardrail": "Always say not recovered; never assert nonexistence.",
+    "publicUseBoundary": "Public page may include the archival limitation as a note.",
+    "requiredPublicQualifications": ["not recover", "not recovered"],
+    "doNotSay": ["The event page never existed", "There was no agenda", "There was no roster"],
+    "protectedBoundaries": ["Raw CDX exports", "Local scripts", "Local analysis paths"],
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "support": [
+      {
+        "sourceId": "research.civic-hall-wayback-cdx.2026-07",
+        "locator": "research-run findings",
+        "note": "Supports archival limitation language and exact reviewed-count context.",
+        "includeInPublicCitation": true
+      }
+    ],
+    "lastReviewed": "2026-07-11"
+  }
+]

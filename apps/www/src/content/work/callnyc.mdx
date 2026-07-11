@@ -1,43 +1,47 @@
+import { Cite } from "@/components/citations/Cite";
+import { References } from "@/components/citations/References";
+import { callNycCitationPage } from "@/data/knowledge-bank";
+
 ## Context
 
-CallNYC.org was an archived civic-data prototype built after a New York City Council civic-data hackathon. The project explored how constituent-services open data could become clearer resident-facing guidance.
+On January 30, 2016, Civic Hall advertised a 1-3 p.m. New York City Council hackathon focused on constituent services.<Cite page={callNycCitationPage} claim="claim.callnyc.hackathon.date-time-purpose" /> The New York City Council posted from Civic Hall that day and described the gathering as the first CouncilStat hackathon.<Cite page={callNycCitationPage} claim="claim.callnyc.hackathon.first-councilstat" /> Public Civic Hall materials framed the event around an NYC Council hackathon connected to constituent services and CouncilStat.<Cite page={callNycCitationPage} claim="claim.callnyc.hackathon.event-branding" />
 
-The public problem was familiar: data existed, but the path from a resident's issue to a useful next step was not always easy to see. A spreadsheet or dataset can be technically public and still be hard for a person to use.
+A participant photograph also documents a breakout called Digital District, with the prompt: "Help improve City Council District office operations."<Cite page={callNycCitationPage} claim="claim.callnyc.hackathon.digital-district-breakout" /> That is the bounded public claim: Digital District is supported as a breakout label and prompt, not as the full event title.
 
-## What was unclear
+## What Was Unclear
 
-Constituent-services data carried civic signal, but residents needed a translation layer. What issue is this? Which office or district context might matter? What next step is reasonable? What should be treated as general guidance rather than official service direction?
+Constituent-service data carried civic signal, but the resident-facing path was not obvious. A dataset can be public and still be hard to use. What issue is this? Which district context matters? What next step is reasonable? Which statements belong on a public prototype, and which would wrongly imply official service direction?
 
-The project also needed a strong disclaimer. CallNYC was not an official City Council service, not a current civic service, not legal guidance, and not a replacement for emergency or agency channels. It was a civic-tech prototype exploring how public data could be made more navigable.
+Council offices also used CouncilStat differently, so case counts are imperfect operational traces, not simple performance measures.<Cite page={callNycCitationPage} claim="claim.callnyc.project.data-limitations" /> The work needed to make the data more navigable without pretending the numbers could rank offices, diagnose performance, or replace current service channels.
 
-## What became usable
+## What Became Usable
 
-The prototype organized open data into issue pathways, district context, and resident-facing guidance. It treated data translation as a product and information-architecture problem: the resident should not have to understand the whole dataset before seeing a next step.
+After the full dataset release, Jamie independently developed CallNYC.org as an archived civic prototype organizing constituent-service records into issue-oriented pages.<Cite page={callNycCitationPage} claim="claim.callnyc.project.independent-follow-on" />
 
-The public-safe framing today is historical. The project shows civic-data translation, open-data product thinking, public interface design, and the ability to move from a hackathon context into a working prototype.
+The prototype treated civic-data translation as a product and information-architecture problem. It organized issue pathways, district context, and resident-readable next steps while keeping the unofficial status visible. The point was not to become the City Council. The point was to show how a public dataset could become easier for a resident to enter.
 
-## What I did
+## What I Did
 
-Jamie built the prototype, shaped the issue pathways, translated data into public-facing guidance patterns, and connected civic-data structure to a resident-readable interface.
+Jamie built the prototype, shaped the issue pathways, translated constituent-service data into public-facing guidance patterns, and connected civic-data structure to a resident-readable interface.
 
-The work required choosing what not to claim. A prototype can demonstrate a pattern without pretending to be an official service. The page therefore keeps the archived status visible and avoids current-service language.
+The work required choosing what not to claim. CallNYC was not an official City Council service, not a current civic service, not legal guidance, not emergency guidance, and not a replacement for agency or elected-office channels.
 
-## How people used it
+## Archival Note
 
-Residents and civic-tech observers could see how an issue might connect to district context, constituent-service categories, or possible civic next steps. The project also gave collaborators a concrete surface for discussing what useful public guidance could look like.
+A July 2026 Wayback CDX review did not recover a dedicated Civic Hall calendar listing, full agenda, breakout roster, or registration-form contents for the event.<Cite page={callNycCitationPage} claim="claim.callnyc.research.no-dedicated-event-page-recovered" /> That is an archival limitation, not proof that those materials never existed.
 
-For product and operations teams, the transferable pattern is the same one visible elsewhere in Jamie's work: take a scattered or expert-facing source, map what a user needs to do, and create a pathway that is easier to enter.
+The strongest public support for the event context comes from the Civic Hall and New York City Council social posts. The Digital District breakout is supported by a private participant photo archive summarized here without publishing the image, identities, metadata, or local archive location.
 
-## Outcome / evidence
+## Outcome / Evidence
 
-The project was a historical civic-tech demo built from CouncilStat / constituent-services open data. It included public issue pages, resident-facing guidance, and civic-data interpretation after a New York City Council civic-data hackathon.
+CallNYC is historical civic-tech work from 2016: an archived, unofficial prototype built from constituent-service open data, public coverage, and a public code record. It matters because it shows a recurring pattern in Jamie's work: find the emerging structure inside a messy public system, give it a usable form, and keep the limits visible.
 
-Politico New York covered CallNYC in 2016 as a website for exploring City Council constituent-services data. Public-safe screenshots and additional archive links should still be confirmed before launch.
+## Transferable Proof
 
-## Transferable proof
-
-This case matters for civic technology and public-facing tools because it shows open-data translation into a usable public interface.
+This case matters for civic technology because it shows open-data translation into a public interface.
 
 It matters for product operations because the work moved from dataset to user pathway, with disclaimers and scope boundaries built into the surface.
 
-It matters for implementation because it demonstrates a small but complete civic prototype: data source, information architecture, interface, and public-safe guidance.
+It matters for implementation because it demonstrates a small but complete civic prototype: source context, information architecture, interface, public explanation, and public-safe citation discipline.
+
+<References page={callNycCitationPage} />
