@@ -66,11 +66,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
   background: var(--jb-oil-white);
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   background:
     linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
     linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
@@ -147,4 +148,123 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.jb-citation {
+  font-size: 0.72em;
+  font-variant-numeric: tabular-nums;
+  line-height: 0;
+  margin-inline-start: 0.12em;
+  vertical-align: super;
+}
+
+.jb-citation a {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.jb-citation a + a {
+  margin-inline-start: 0.08em;
+}
+
+.jb-citation a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.jb-citation a:focus-visible {
+  border-radius: 0.15rem;
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 2px;
+}
+
+.jb-endnotes {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 16%, transparent);
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+}
+
+.jb-endnotes h2 {
+  color: var(--jb-oil-ink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  scroll-margin-top: 7rem;
+}
+
+.jb-endnotes-intro {
+  color: color-mix(in srgb, var(--jb-oil-ink) 78%, transparent);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+  max-width: 70ch;
+}
+
+.jb-endnotes ol {
+  display: grid;
+  gap: 1.75rem;
+  list-style: none;
+  margin-top: 1.75rem;
+  padding: 0;
+}
+
+.jb-endnotes li {
+  max-width: 78ch;
+  overflow-wrap: anywhere;
+  scroll-margin-top: 7rem;
+}
+
+.jb-endnotes li:target {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 30%, transparent);
+  border-left: 4px solid var(--jb-yellow-ochre);
+  margin-left: -1rem;
+  padding: 0.75rem 1rem;
+}
+
+.jb-endnotes p {
+  line-height: 1.65;
+  margin: 0;
+}
+
+.jb-endnote-links,
+.jb-endnote-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem !important;
+}
+
+.jb-endnote-boundary {
+  color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
+  margin-top: 0.5rem !important;
+}
+
+.jb-endnote-backlinks a {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+@media print {
+  .jb-citation a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .jb-endnotes {
+    break-before: auto;
+    font-size: 9pt;
+  }
+
+  .jb-endnote-backlinks,
+  .jb-endnotes-intro {
+    display: none;
+  }
+
+  .jb-endnotes a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+  }
 }

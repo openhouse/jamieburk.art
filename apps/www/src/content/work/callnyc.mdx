@@ -1,43 +1,82 @@
 ## Context
 
-CallNYC.org was an archived civic-data prototype built after a New York City Council civic-data hackathon. The project explored how constituent-services open data could become clearer resident-facing guidance.
+<Claim
+  as="p"
+  claimId="CLM-CALLNYC-HACKATHON-DATE-TIME"
+  projection="case-study"
+  surface="/work/callnyc"
+  pageId="callnyc"
+  occurrenceId="event-date-time"
+/>
 
-The public problem was familiar: data existed, but the path from a resident's issue to a useful next step was not always easy to see. A spreadsheet or dataset can be technically public and still be hard for a person to use.
+<Claim
+  as="p"
+  claimId="CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON"
+  projection="case-study"
+  surface="/work/callnyc"
+  pageId="callnyc"
+  occurrenceId="first-councilstat-hackathon"
+/>
+
+<Claim
+  as="p"
+  claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+  projection="case-study"
+  surface="/work/callnyc"
+  pageId="callnyc"
+  occurrenceId="independent-follow-on"
+/>
 
 ## What was unclear
 
-Constituent-services data carried civic signal, but residents needed a translation layer. What issue is this? Which office or district context might matter? What next step is reasonable? What should be treated as general guidance rather than official service direction?
+The data carried civic signal, but a public dataset was not yet a resident pathway. A person still needed to understand what an issue meant, which office or district context might matter, what next step was reasonable, and where the source data could mislead.
 
-The project also needed a strong disclaimer. CallNYC was not an official City Council service, not a current civic service, not legal guidance, and not a replacement for emergency or agency channels. It was a civic-tech prototype exploring how public data could be made more navigable.
+<Claim
+  as="p"
+  claimId="CLM-CALLNYC-EVENT-BRANDING"
+  projection="case-study"
+  surface="/work/callnyc"
+  pageId="callnyc"
+  occurrenceId="event-branding"
+/>
 
-## What became usable
-
-The prototype organized open data into issue pathways, district context, and resident-facing guidance. It treated data translation as a product and information-architecture problem: the resident should not have to understand the whole dataset before seeing a next step.
-
-The public-safe framing today is historical. The project shows civic-data translation, open-data product thinking, public interface design, and the ability to move from a hackathon context into a working prototype.
+That wording documents the visible event brand. It does not establish a longer formal registration title.
 
 ## What I did
 
-Jamie built the prototype, shaped the issue pathways, translated data into public-facing guidance patterns, and connected civic-data structure to a resident-readable interface.
+Jamie built the independent prototype, organized records into issue-oriented pathways, and translated administrative categories into public-facing guidance patterns. The interface let a person enter through a recognizable concern instead of first having to understand the complete dataset.
 
-The work required choosing what not to claim. A prototype can demonstrate a pattern without pretending to be an official service. The page therefore keeps the archived status visible and avoids current-service language.
+The work also required choosing what not to claim. CallNYC was not commissioned by the Council, documented as a formal hackathon submission, or presented as an official City service.
 
-## How people used it
+## What became usable
 
-Residents and civic-tech observers could see how an issue might connect to district context, constituent-service categories, or possible civic next steps. The project also gave collaborators a concrete surface for discussing what useful public guidance could look like.
+The prototype organized constituent-services records into issue pages, district context, and possible next steps. It treated data translation as a product and information-architecture problem: a resident should not have to interpret the whole dataset before finding an entry point.
 
-For product and operations teams, the transferable pattern is the same one visible elsewhere in Jamie's work: take a scattered or expert-facing source, map what a user needs to do, and create a pathway that is easier to enter.
+For product and operations teams, the transferable pattern is direct: map a difficult source to the decisions a person needs to make, build a bounded pathway, and keep source limitations inside the product rather than in a separate disclaimer.
 
-## Outcome / evidence
+## Outcome and evidence
 
-The project was a historical civic-tech demo built from CouncilStat / constituent-services open data. It included public issue pages, resident-facing guidance, and civic-data interpretation after a New York City Council civic-data hackathon.
+Politico New York covered CallNYC on March 14, 2016, connecting Jamie's independent project to the January gathering and the later fuller CouncilStat data release.<Cite pageId="callnyc" occurrenceId="press-coverage" />
 
-Politico New York covered CallNYC in 2016 as a website for exploring City Council constituent-services data. Public-safe screenshots and additional archive links should still be confirmed before launch.
+The public repository preserves the surviving implementation. The current portfolio presents CallNYC as historical evidence of civic-data translation, public interface delivery, and careful scope-setting.
 
 ## Transferable proof
 
-This case matters for civic technology and public-facing tools because it shows open-data translation into a usable public interface.
+This case matters for civic technology because it shows open-data translation into a usable public interface.
 
 It matters for product operations because the work moved from dataset to user pathway, with disclaimers and scope boundaries built into the surface.
 
-It matters for implementation because it demonstrates a small but complete civic prototype: data source, information architecture, interface, and public-safe guidance.
+It matters for implementation because it demonstrates a small but complete public prototype: source data, information architecture, interface, iteration, and public documentation.
+
+<aside className="my-8 border-l-4 border-jb-ochre bg-jb-lemon/25 p-5 text-jb-ink/85">
+  <strong>Archive disclaimer:</strong>{" "}
+  <Claim
+    claimId="CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS"
+    projection="case-study"
+    surface="/work/callnyc"
+    pageId="callnyc"
+    occurrenceId="archived-status"
+  />{" "}
+  Historical officeholders, statistics, categories, and contact information
+  should not be used as present-day constituent-service guidance.
+</aside>

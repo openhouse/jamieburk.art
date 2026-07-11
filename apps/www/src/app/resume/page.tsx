@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Claim } from "@/components/citations";
 import { JBButton } from "@/components/JBButton";
 import { resumeProofHighlights } from "@/data/proofs";
 import { site } from "@/data/site";
@@ -45,7 +46,17 @@ export default function ResumePage() {
             {resumeProofHighlights.map((proof) => (
               <li className="flex gap-3" key={proof.id}>
                 <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                <span>{proof.shortWording ?? proof.publicWording}</span>
+                <span>
+                  {proof.id === "callnyc-civic-data-guidance" ? (
+                    <Claim
+                      claimId="CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"
+                      projection="resume-html"
+                      surface="/resume"
+                    />
+                  ) : (
+                    proof.shortWording ?? proof.publicWording
+                  )}
+                </span>
               </li>
             ))}
           </ul>
