@@ -53,15 +53,15 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing next-step guidance.
+**Detailed public-safe wording:** After the fuller CouncilStat dataset was released, Jamie independently developed CallNYC as public-facing issue pathways, district context, and archived resident guidance; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as archived and unofficial.
-**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
-**Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Guardrail:** Always describe it as independent, archived, and unofficial. Canonical source, evidence, and boundary records live in `apps/www/src/data/knowledge-bank/`.
+**Do not say:** The Council's first civic-data hackathon; New York City's first civic-tech hackathon; the Council's first hackathon of any kind; current city service; official city guidance; emergency guidance; legal guidance.
+**Protected boundaries:** No participant photograph, current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 

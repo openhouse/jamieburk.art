@@ -13,6 +13,8 @@
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
+- [x] CallNYC chronology, public page, canonical resume source, and public PDF
+  use the bounded 2016 / first CouncilStat wording.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
 - [ ] Jamie approves proof metrics.

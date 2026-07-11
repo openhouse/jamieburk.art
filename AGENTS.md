@@ -24,6 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:citations`
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -47,6 +48,12 @@ public-safe claim layer.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
+
+Do not add or strengthen a public factual claim without updating the Knowledge
+Bank's claim, evidence relationship, and source records.
+
+Use `<Cite>` for claims marked `citationRequired`. Do not type citation numbers
+manually. Do not expose private source paths, private assets, or signed URLs.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
 the bank with source basis, status, guardrail, and public-use boundary.
