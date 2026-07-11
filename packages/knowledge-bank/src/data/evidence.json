@@ -1,0 +1,113 @@
+[
+  {
+    "id": "ev-callnyc-schedule-announcement",
+    "kind": "source",
+    "claimId": "claim-callnyc-announced-schedule-purpose",
+    "sourceId": "src-civichall-announcement-2016",
+    "supportType": "direct",
+    "supportsText": "announced date, time window, NYC Council association, and constituent-services purpose",
+    "confidence": "confirmed",
+    "publicCitation": true,
+    "publicNote": "Civic Hall's announcement supplies the date, announced hours, Council association, and constituent-services focus.",
+    "limitations": [
+      "Announced hours do not prove actual event duration."
+    ]
+  },
+  {
+    "id": "ev-callnyc-schedule-archive-carrier",
+    "kind": "source",
+    "claimId": "claim-callnyc-announced-schedule-purpose",
+    "sourceId": "src-wayback-civichall-feed-2016",
+    "supportType": "archival-carrier",
+    "supportsText": "archived preservation context for the Civic Hall announcement",
+    "confidence": "confirmed",
+    "publicCitation": true,
+    "publicNote": "The Wayback page preserves the announcement in Civic Hall's embedded feed.",
+    "limitations": [
+      "The archived feed is not the event listing."
+    ]
+  },
+  {
+    "id": "ev-callnyc-first-councilstat",
+    "kind": "source",
+    "claimId": "claim-callnyc-first-councilstat-hackathon",
+    "sourceId": "src-nyccouncil-event-post-2016",
+    "supportType": "direct",
+    "supportsText": "Civic Hall venue and the Council's exact first #CouncilStat hackathon wording",
+    "confidence": "confirmed",
+    "publicCitation": true,
+    "publicNote": "The event-day Council post supplies the venue and the Council's exact wording.",
+    "limitations": [
+      "This does not establish a first hackathon of every kind."
+    ]
+  },
+  {
+    "id": "ev-callnyc-event-branding",
+    "kind": "source",
+    "claimId": "claim-callnyc-recovered-event-branding",
+    "sourceId": "src-civichall-promo-graphic-2016",
+    "supportType": "visible-text",
+    "supportsText": "visible New York City Council Hackathon branding",
+    "confidence": "confirmed",
+    "publicCitation": true,
+    "publicNote": "The promotional graphic supplies the recovered event-branding text.",
+    "limitations": [
+      "The graphic does not establish a longer formal registration title."
+    ]
+  },
+  {
+    "id": "ev-callnyc-follow-on-politico",
+    "kind": "source",
+    "claimId": "claim-callnyc-independent-follow-on",
+    "sourceId": "src-politico-callnyc-2016",
+    "supportType": "direct",
+    "supportsText": "sequence from Civic Hall gathering to full data release and Jamie's independent CallNYC development",
+    "confidence": "confirmed",
+    "publicCitation": true,
+    "publicNote": "Contemporaneous reporting supplies the event, release, and independent follow-on sequence.",
+    "limitations": [
+      "The coverage does not make CallNYC an official Council product."
+    ]
+  },
+  {
+    "id": "ev-callnyc-follow-on-repository",
+    "kind": "source",
+    "claimId": "claim-callnyc-independent-follow-on",
+    "sourceId": "src-callnyc-github-repository",
+    "supportType": "corroborating",
+    "supportsText": "surviving implementation of the independent CallNYC prototype",
+    "confidence": "strong",
+    "publicCitation": true,
+    "publicNote": "The public repository preserves implementation evidence.",
+    "limitations": [
+      "The repository does not establish complete historical usage."
+    ]
+  },
+  {
+    "id": "ev-callnyc-page-not-recovered",
+    "kind": "research-run",
+    "claimId": "claim-callnyc-page-not-recovered",
+    "researchRunId": "research-civichall-event-pages-2026",
+    "supportType": "negative-search-result",
+    "supportsText": "no dedicated calendar listing or event-detail page was recovered in the documented search",
+    "confidence": "strong",
+    "publicCitation": true,
+    "publicNote": "The bounded CDX search records a not-recovered result.",
+    "limitations": [
+      "The result does not prove that no dedicated page ever existed."
+    ]
+  },
+  {
+    "id": "ev-callnyc-digital-district-photo",
+    "kind": "source",
+    "claimId": "claim-callnyc-digital-district-breakout",
+    "sourceId": "src-participant-photo-digital-district",
+    "supportType": "participant-archive-only",
+    "supportsText": "placard wording and photographed breakout context",
+    "confidence": "confirmed",
+    "publicCitation": false,
+    "limitations": [
+      "No public citation until image rights, consent, caption, and publication approval are complete."
+    ]
+  }
+]

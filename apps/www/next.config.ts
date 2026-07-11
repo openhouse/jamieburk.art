@@ -38,6 +38,7 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
   outputFileTracingRoot: path.join(process.cwd(), "../../"),
+  transpilePackages: ["@jamie-burkart/knowledge-bank"],
   reactStrictMode: true,
   poweredByHeader: false,
   typedRoutes: true,
