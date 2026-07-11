@@ -45,6 +45,17 @@ When uncertain, write: `TODO: Jamie approval required.`
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
 
+## Citational Care
+
+Use `packages/knowledge-bank/` for structured source, claim, citation,
+research-run, and page-plan records that support public citations.
+
+Use `<Cite pageId="..." citationId="..." />` and `<ReferenceList pageId="..." />`
+in MDX. Do not type manual citation numbers into public copy.
+
+Private sources may support bounded public claims, but they must not expose
+private paths, images, metadata, raw filenames, contact details, or URLs.
+
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
 

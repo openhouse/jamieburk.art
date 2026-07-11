@@ -18,6 +18,9 @@ const siteUrl = stripTrailingSlash(
       : "https://staging.jamieburk.art")
 );
 
+const appRoot = process.cwd();
+const workspaceRoot = path.join(appRoot, "../..");
+
 const robotsIndexable =
   (appEnv === "production" || siteUrl === "https://jamieburk.art") &&
   process.env.NEXT_PUBLIC_ROBOTS_POLICY === "index";
@@ -37,9 +40,10 @@ const globalHeaders = [
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   output: "standalone",
-  outputFileTracingRoot: path.join(process.cwd(), "../../"),
+  outputFileTracingRoot: workspaceRoot,
   reactStrictMode: true,
   poweredByHeader: false,
+  transpilePackages: ["@jamie-burkart/knowledge-bank"],
   typedRoutes: true,
   images: {
     formats: ["image/avif", "image/webp"]

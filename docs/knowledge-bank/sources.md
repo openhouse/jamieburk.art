@@ -21,8 +21,10 @@ Approved public artifact examples for this launch pass include:
 - Talks Not Raids public website.
 - Let NYC Dance public website.
 - Harry J. Epstein Company public website.
+- Civic Hall and New York City Council public posts about the January 2016 CouncilStat hackathon context.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- Public Wayback captures that preserve public social-feed evidence; use with caveats and never as private-path proof.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
@@ -31,6 +33,11 @@ Approved public artifact examples for this launch pass include:
 Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
+
+Private participant evidence may be summarized only when it is stripped of
+images, metadata, private paths, personal details, and publication rights
+claims. A private source can support a bounded public claim without becoming a
+public artifact.
 
 ### AI-Assisted Archival Review
 

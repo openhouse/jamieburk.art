@@ -31,6 +31,15 @@ lists, or source documents that were not approved for public use.
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+Do not imply it was an official Council product, commissioned Council service,
+or formal hackathon submission.
+Do not say Jamie organized, led, or officially represented the New York City
+Council event.
+Do not say "Digital District" was the event's official title.
+Do not treat a participant photograph timestamp as the event start time.
+Do not imply Jamie caused the CouncilStat release.
+Do not treat CouncilStat counts as simple measures of office quality,
+effectiveness, specialization, resident need, or measured service improvement.
 
 ## WOWList
 

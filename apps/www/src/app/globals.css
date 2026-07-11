@@ -43,8 +43,45 @@
   --noise: 0;
 }
 
-@import "../styles/tokens.css";
-@import "../styles/phi-grid.css";
+:root {
+  --jb-broadway-blue: #0b5f81;
+  --jb-oil-white: #eeefec;
+  --jb-oil-paper: #f7f4ee;
+  --jb-oil-ink: #343435;
+  --jb-dark-gray: #5e5f61;
+  --jb-deep-green: #1f5c3e;
+  --jb-vandyke-brown: #76533a;
+  --jb-yellow-ochre: #e9b64e;
+  --jb-lemon-yellow: #f7ec86;
+  --jb-pale-orange: #fce1d1;
+  --jb-pale-blue: #74c2e5;
+  --jb-classic-rose: #e2aeb4;
+  --phi-inset-a: 19.0983005625%;
+  --phi-inset-b: 38.196601125%;
+  --phi-center: 50%;
+  --phi-inset-c: 61.803398875%;
+  --phi-inset-d: 80.9016994375%;
+}
+
+.jb-frame {
+  width: min(1100px, calc(100vw - 2rem));
+  margin-inline: auto;
+}
+
+.jb-reading {
+  max-width: 72ch;
+}
+
+.jb-phi-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(1rem, 0.190983fr)
+    minmax(0, 0.190983fr)
+    minmax(0, 0.118034fr)
+    minmax(0, 0.118034fr)
+    minmax(0, 0.190983fr)
+    minmax(1rem, 0.190983fr);
+}
 
 @theme inline {
   --color-jb-blue: var(--jb-broadway-blue);
@@ -147,4 +184,79 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.citation-ref {
+  margin-left: 0.18rem;
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.citation-ref a {
+  border-radius: 0.25rem;
+  color: var(--jb-broadway-blue);
+  text-decoration: none;
+}
+
+.citation-ref a:hover {
+  color: var(--jb-deep-green);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.citation-endnotes {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(52, 52, 53, 0.18);
+  padding-top: 1.5rem;
+}
+
+.citation-endnotes h2 {
+  font-size: 1.5rem;
+  font-weight: 650;
+}
+
+.citation-endnotes ol {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.4rem;
+}
+
+.citation-endnotes li {
+  padding-left: 0.25rem;
+}
+
+.citation-note-text,
+.citation-note-caveat {
+  color: rgba(52, 52, 53, 0.82);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.citation-note-caveat {
+  margin-top: 0.35rem;
+}
+
+.citation-source-list {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.citation-source-list > li {
+  border-left: 3px solid rgba(11, 95, 129, 0.22);
+  padding-left: 0.85rem;
+}
+
+.citation-backlink {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.citation-backlink a {
+  color: var(--jb-broadway-blue);
 }
