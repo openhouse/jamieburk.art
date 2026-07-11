@@ -280,9 +280,9 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built an independent civic-data prototype after a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing pathways.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -291,7 +291,7 @@ const workItemsInput = [
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
-      "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+      "An archived, unofficial civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance while keeping comparison limits visible.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -303,7 +303,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "A civic-data interpretation layer built after a January 2016 New York City Council constituent-services hackathon at Civic Hall.",
         type: "map"
       },
       {
@@ -337,28 +337,29 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
-    credits: ["Jamie Burkart", "Civic-data collaborators"],
+      "Civic Hall and New York City Council event records, a Council-branded promotional graphic, protected participant-archive evidence, bounded Wayback/CDX research, Politico New York coverage, and the public GitHub repository.",
+    credits: ["Jamie Burkart"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Archived, unofficial prototype. Source-backed historical reconstruction published.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Built independently after a January 2016 New York City Council constituent-services hackathon at Civic Hall",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Covered by Politico New York in March 2016",
+      "CouncilStat comparison limits documented"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "Jamie independently built CallNYC after the full CouncilStat dataset became public, translating constituent-services records into issue pathways and resident-facing guidance; Politico New York covered it in March 2016.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "No complete agenda, breakout roster, registration-form contents, formal winner list, or dedicated Civic Hall event page has been recovered.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "The participant photograph supporting the Digital District breakout remains unpublished, with no filename, metadata, face tags, or depicted identities exposed."
       }
   },
   {

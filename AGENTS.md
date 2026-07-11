@@ -24,6 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:citations`
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -50,6 +51,10 @@ clarity, audience, and purpose.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
 the bank with source basis, status, guardrail, and public-use boundary.
+
+Citations reduce reader burden; they do not authorize overstatement. Add or
+update the Knowledge Bank claim before adding a public citation. Keep private
+sources private. Preserve qualifiers and anti-claims.
 
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
