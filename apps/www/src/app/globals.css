@@ -70,7 +70,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   background:
     linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
     linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
@@ -147,4 +147,130 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.citation-marker {
+  font-size: 0.75em;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  line-height: 0;
+  margin-inline-start: 0.12em;
+}
+
+.citation-marker a {
+  scroll-margin-top: 8rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
+.citation-marker a:focus-visible,
+.reference-backlinks a:focus-visible {
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 3px;
+}
+
+.citation-references {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 18%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+}
+
+.citation-references > h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.citation-references > ol {
+  list-style: decimal;
+  margin: 0;
+  padding-inline-start: 1.5rem;
+}
+
+.reference-note {
+  overflow-wrap: anywhere;
+  padding-block: 0.6rem 1.1rem;
+  padding-inline-start: 0.35rem;
+  scroll-margin-top: 8rem;
+}
+
+.reference-note::marker {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+}
+
+.reference-note:target {
+  background: color-mix(in srgb, var(--jb-pale-blue) 22%, transparent);
+  border-inline-start: 3px solid var(--jb-broadway-blue);
+}
+
+.reference-note h3 {
+  font-size: 1rem;
+  margin-block: 0 0.35rem;
+}
+
+.reference-note p {
+  margin-block: 0.35rem;
+}
+
+.reference-sources {
+  list-style: none;
+  margin-block: 0.7rem;
+  padding: 0;
+}
+
+.reference-source {
+  border-inline-start: 2px solid color-mix(in srgb, var(--jb-oil-ink) 14%, transparent);
+  margin-block: 0.7rem;
+  padding-inline-start: 0.75rem;
+}
+
+.reference-byline {
+  color: color-mix(in srgb, var(--jb-oil-ink) 70%, transparent);
+}
+
+.reference-links,
+.reference-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+}
+
+.reference-links a,
+.reference-backlinks a {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.reference-backlinks a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 2.75rem;
+}
+
+.reference-qualification {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 24%, transparent);
+  border-inline-start: 3px solid var(--jb-yellow-ochre);
+  padding: 0.55rem 0.75rem;
+}
+
+@media print {
+  .reference-backlinks {
+    display: none;
+  }
+
+  .citation-references a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    overflow-wrap: anywhere;
+  }
+
+  .reference-note:target,
+  .reference-qualification {
+    background: transparent;
+  }
 }

@@ -1,0 +1,25 @@
+[
+  {
+    "route": "/work/callnyc",
+    "slug": "callnyc",
+    "referenceHeading": "References",
+    "occurrences": [
+      {
+        "id": "announced-schedule",
+        "noteId": "note.callnyc.date-time-purpose"
+      },
+      {
+        "id": "councilstat-framing",
+        "noteId": "note.callnyc.councilstat-framing"
+      },
+      {
+        "id": "independent-follow-on",
+        "noteId": "note.callnyc.independent-follow-on-press"
+      },
+      {
+        "id": "schedule-recap",
+        "noteId": "note.callnyc.date-time-purpose"
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "artifact.callnyc.digital-district-photo",
+    "type": "photograph",
+    "title": "Digital District participant photograph",
+    "sourceId": "source.callnyc.digital-district-photo",
+    "rightsStatus": "review-required",
+    "publicationStatus": "protected",
+    "capturedAt": "2016-01-30, approximately 2:10 p.m.",
+    "visiblyEstablishes": [
+      "Digital District breakout-table wording",
+      "district-office-operations prompt",
+      "collaborative table setting"
+    ],
+    "doesNotEstablish": [
+      "official event title",
+      "event start time",
+      "facilitator identity",
+      "complete participant roster",
+      "formal breakout deliverable"
+    ],
+    "representedPeopleReview": "Required before any public use.",
+    "cropNotes": "Preserve collective context; do not isolate or identify unknown participants.",
+    "altTextDraft": "Participants seated around a table with a placard labeled Digital District.",
+    "captionDraft": "Digital District breakout table at Civic Hall, January 30, 2016. Publication pending rights and represented-person review."
+  },
+  {
+    "id": "artifact.callnyc.council-hackathon-graphic",
+    "type": "document",
+    "title": "New York City Council Hackathon promotional graphic",
+    "sourceId": "source.callnyc.council-hackathon-graphic",
+    "rightsStatus": "cleared",
+    "publicationStatus": "public",
+    "photographerOrCreator": "New York City Council / Civic Hall",
+    "visiblyEstablishes": [
+      "New York City Council Hackathon wording",
+      "labs.council.nyc reference"
+    ],
+    "doesNotEstablish": [
+      "longer formal registration title",
+      "event agenda",
+      "participant list"
+    ],
+    "altTextDraft": "New York City Council Hackathon promotional graphic directing readers to labs.council.nyc."
+  },
+  {
+    "id": "artifact.callnyc.politico-archived-pdf",
+    "type": "document",
+    "title": "Archived Politico New York coverage of CallNYC",
+    "sourceId": "source.callnyc.politico.2016-03-14",
+    "rightsStatus": "cleared",
+    "publicationStatus": "public",
+    "photographerOrCreator": "Miranda Neubauer / Politico New York",
+    "visiblyEstablishes": [
+      "March 2016 publication context",
+      "article text describing CallNYC"
+    ],
+    "doesNotEstablish": [
+      "current Politico URL availability",
+      "official Council ownership of CallNYC"
+    ]
+  }
+]

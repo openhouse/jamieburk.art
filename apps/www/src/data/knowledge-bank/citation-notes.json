@@ -1,0 +1,72 @@
+[
+  {
+    "id": "note.callnyc.date-time-purpose",
+    "title": "Date, announced time, and purpose",
+    "claimIds": ["claim.callnyc.hackathon.date-time-purpose"],
+    "evidenceIds": [
+      "evidence.callnyc.schedule.civic-hall-announcement",
+      "evidence.callnyc.schedule.wayback-carrier"
+    ],
+    "publicText": "Civic Hall announced the January 30, 2016 gathering for 1-3 p.m. and described its constituent-services focus.",
+    "qualification": "The time window was announced in advance; it does not prove the event's actual duration. The Wayback page preserves an embedded social feed and is not the event listing.",
+    "status": "ready"
+  },
+  {
+    "id": "note.callnyc.councilstat-framing",
+    "title": "CouncilStat framing and Civic Hall venue",
+    "claimIds": ["claim.callnyc.hackathon.first-councilstat"],
+    "evidenceIds": [
+      "evidence.callnyc.councilstat.council-post",
+      "evidence.callnyc.councilstat.wayback-carrier"
+    ],
+    "publicText": "New York City Council's event-day post from Civic Hall described the gathering as its first CouncilStat hackathon.",
+    "qualification": "The Council's attributed CouncilStat wording does not establish that this was its first civic-data event of every kind.",
+    "status": "ready"
+  },
+  {
+    "id": "note.callnyc.independent-follow-on-press",
+    "title": "Independent CallNYC follow-on and press coverage",
+    "claimIds": [
+      "claim.callnyc.project.independent-follow-on",
+      "claim.callnyc.press.politico-coverage",
+      "claim.callnyc.project.archived-unofficial"
+    ],
+    "evidenceIds": [
+      "evidence.callnyc.follow-on.politico",
+      "evidence.callnyc.follow-on.github",
+      "evidence.callnyc.follow-on.project-site",
+      "evidence.callnyc.press.politico",
+      "evidence.callnyc.archived-status.project-site"
+    ],
+    "publicText": "Politico New York's March 2016 coverage, the public repository, and the archived project surface document Jamie's independent follow-on development of CallNYC.",
+    "qualification": "CallNYC was not an official Council product or established formal hackathon submission and is not current civic guidance.",
+    "status": "ready"
+  },
+  {
+    "id": "note.callnyc.event-branding",
+    "title": "Recovered event branding",
+    "claimIds": ["claim.callnyc.hackathon.event-branding"],
+    "evidenceIds": ["evidence.callnyc.branding.graphic"],
+    "publicText": "The Council-branded promotional graphic used the wording 'New York City Council Hackathon.'",
+    "qualification": "This supports recovered branding, not a longer formal registration title.",
+    "status": "ready"
+  },
+  {
+    "id": "note.callnyc.digital-district-photo",
+    "title": "Digital District participant photograph",
+    "claimIds": ["claim.callnyc.hackathon.digital-district-breakout"],
+    "evidenceIds": ["evidence.callnyc.digital-district.photo"],
+    "publicText": "Protected participant-archive photograph documenting visible breakout-table wording.",
+    "qualification": "Do not render publicly until image rights, crop, photographer, and represented people are cleared.",
+    "status": "protected"
+  },
+  {
+    "id": "note.callnyc.negative-archive-finding",
+    "title": "Bounded Civic Hall archive search",
+    "claimIds": ["claim.callnyc.research.no-event-page-recovered"],
+    "evidenceIds": ["evidence.callnyc.research.cdx-negative-result"],
+    "publicText": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the bounded CDX review.",
+    "qualification": "This does not prove that no page ever existed.",
+    "status": "open"
+  }
+]

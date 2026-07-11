@@ -53,15 +53,15 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Public wording:** Built CallNYC.org independently after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing next-step guidance.
+**Detailed public-safe wording:** Civic Hall announced the January 30 gathering for 1-3 p.m.; the Council described it that day as its first CouncilStat hackathon. After the complete CouncilStat dataset was released, Jamie independently developed CallNYC as an archived and unofficial resident-facing interpretation; Politico New York covered the project in March 2016.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as archived and unofficial.
-**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
-**Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Guardrail:** Preserve the Council attribution, distinguish announced hours from actual duration, and always describe CallNYC as independent, archived, and unofficial.
+**Do not say:** The Council's first civic-data hackathon; CallNYC was built during the hackathon; CallNYC was an official hackathon project or Council product; the event began at the photograph timestamp; current city service; official, emergency, or legal guidance.
+**Protected boundaries:** No current-service claims, private user data, unverified guidance, or participant photograph before rights and represented-people review.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 

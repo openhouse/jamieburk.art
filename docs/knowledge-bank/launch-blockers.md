@@ -11,6 +11,11 @@
 - [ ] Source-Backed Team Memory does not expose private collaborator/client
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
+- [ ] Citation-required CallNYC claims render accessible References and pass
+  `npm run check:citations`.
+- [ ] Replace the résumé PDF wording “the New York City Council's first
+  civic-data hackathon” from the approved editable résumé source before
+  production.
 - [ ] Public-safety scanner passes.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.

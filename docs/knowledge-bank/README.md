@@ -32,6 +32,9 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Citational-care data:** normalized sources, claims, evidence relationships,
+  authored notes, page occurrences, media boundaries, research runs, and
+  corrections in `apps/www/src/data/knowledge-bank/`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -56,3 +59,7 @@ usable, what Jamie did, and what boundary remains protected.
 
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
+
+See [Citational Care](citational-care.md) for stable IDs, page-local numerical
+references, source boundaries, protected media, negative research findings, and
+the production correction gate.

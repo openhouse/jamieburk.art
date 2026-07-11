@@ -1,0 +1,156 @@
+[
+  {
+    "id": "evidence.callnyc.schedule.civic-hall-announcement",
+    "claimId": "claim.callnyc.hackathon.date-time-purpose",
+    "sourceId": "source.callnyc.civic-hall-announcement.2016-01-29",
+    "relation": "direct",
+    "supportsText": "announced date, announced time window, Council association, and constituent-services purpose",
+    "publicCitation": true,
+    "citationNote": "The Civic Hall announcement supplies the date, announced hours, and constituent-services focus.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The announced hours do not prove actual event duration."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.schedule.wayback-carrier",
+    "claimId": "claim.callnyc.hackathon.date-time-purpose",
+    "sourceId": "source.callnyc.civic-hall-wayback-carrier.2016-01-31",
+    "relation": "archival-carrier",
+    "supportsText": "archival preservation context for the Civic Hall announcement",
+    "publicCitation": true,
+    "citationNote": "The archived page preserves the post in Civic Hall's embedded feed.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The Wayback page is not the event listing."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.councilstat.council-post",
+    "claimId": "claim.callnyc.hackathon.first-councilstat",
+    "sourceId": "source.callnyc.nyc-council-event-post.2016-01-30",
+    "relation": "direct",
+    "supportsText": "Civic Hall venue and the Council's attributed first CouncilStat hackathon wording",
+    "publicCitation": true,
+    "citationNote": "The event-day Council post supplies the venue and attributed CouncilStat wording.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The post does not establish first civic-data hackathon of every kind."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.councilstat.wayback-carrier",
+    "claimId": "claim.callnyc.hackathon.first-councilstat",
+    "sourceId": "source.callnyc.civic-hall-wayback-carrier.2016-01-31",
+    "relation": "archival-carrier",
+    "supportsText": "archival preservation context for the NYC Council event-day post",
+    "publicCitation": true,
+    "citationNote": "The archived Civic Hall page preserves the Council post inside an embedded feed.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The Wayback page is not the event listing."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.branding.graphic",
+    "claimId": "claim.callnyc.hackathon.event-branding",
+    "sourceId": "source.callnyc.council-hackathon-graphic",
+    "relation": "visual-evidence",
+    "supportsText": "visible New York City Council Hackathon wording",
+    "publicCitation": true,
+    "citationNote": "The graphic supplies the recovered event-branding text.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The graphic does not establish a longer formal registration title."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.digital-district.photo",
+    "claimId": "claim.callnyc.hackathon.digital-district-breakout",
+    "sourceId": "source.callnyc.digital-district-photo",
+    "relation": "participant-archive-only",
+    "supportsText": "visible breakout-table label and district-office-operations prompt",
+    "publicCitation": false,
+    "confidence": "confirmed",
+    "limitations": [
+      "No public rendering until rights, crop, photographer, and represented people are cleared."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.follow-on.politico",
+    "claimId": "claim.callnyc.project.independent-follow-on",
+    "sourceId": "source.callnyc.politico.2016-03-14",
+    "relation": "direct",
+    "supportsText": "event participation, later data release, and independent CallNYC development",
+    "publicCitation": true,
+    "citationNote": "Politico's March 2016 coverage describes the sequence from the gathering to the later data release and independent project.",
+    "confidence": "strong",
+    "limitations": [
+      "The archived PDF is hosted on CallNYC.org."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.follow-on.github",
+    "claimId": "claim.callnyc.project.independent-follow-on",
+    "sourceId": "source.callnyc.github-repository",
+    "relation": "corroborating",
+    "supportsText": "project existence and independent implementation",
+    "publicCitation": true,
+    "citationNote": "The public repository corroborates Jamie's implementation of CallNYC.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The repository does not establish the event schedule or institutional claims."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.follow-on.project-site",
+    "claimId": "claim.callnyc.project.independent-follow-on",
+    "sourceId": "source.callnyc.archived-project",
+    "relation": "contextual",
+    "supportsText": "archived resident-facing project surface",
+    "publicCitation": true,
+    "citationNote": "The archived project shows the public interface and independent, unofficial framing.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The project surface does not by itself establish complete build chronology."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.press.politico",
+    "claimId": "claim.callnyc.press.politico-coverage",
+    "sourceId": "source.callnyc.politico.2016-03-14",
+    "relation": "direct",
+    "supportsText": "March 2016 Politico New York coverage of CallNYC",
+    "publicCitation": true,
+    "citationNote": "The archived PDF documents Politico New York's March 2016 coverage.",
+    "confidence": "confirmed",
+    "limitations": [
+      "The linked artifact is an archived PDF hosted on CallNYC.org."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.archived-status.project-site",
+    "claimId": "claim.callnyc.project.archived-unofficial",
+    "sourceId": "source.callnyc.archived-project",
+    "relation": "direct",
+    "supportsText": "archived and unofficial project framing",
+    "publicCitation": true,
+    "citationNote": "The project surface identifies CallNYC as an archived independent prototype.",
+    "confidence": "confirmed",
+    "limitations": [
+      "CallNYC is not current civic guidance."
+    ]
+  },
+  {
+    "id": "evidence.callnyc.research.cdx-negative-result",
+    "claimId": "claim.callnyc.research.no-event-page-recovered",
+    "sourceId": "source.callnyc.civic-hall-cdx-audit.2026-07",
+    "relation": "negative-search-result",
+    "supportsText": "no dedicated calendar listing or event-detail page was recovered in the bounded search",
+    "publicCitation": false,
+    "confidence": "strong",
+    "limitations": [
+      "The result does not prove that no page ever existed."
+    ]
+  }
+]
