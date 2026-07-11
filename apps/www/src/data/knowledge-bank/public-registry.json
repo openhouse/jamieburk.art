@@ -1,0 +1,370 @@
+{
+  "sources": [
+    {
+      "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+      "title": "Civic Hall announcement of New York City Council hackathon",
+      "organization": "Civic Hall",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2016-01-29",
+      "accessedAt": "2026-07-11",
+      "canonicalUrl": "https://x.com/CivicHall/status/693124020917522433",
+      "archiveUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Civic Hall announcement of a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services.",
+      "publicNote": "The archived Civic Hall page preserves the embedded social post. It is not a recovered Civic Hall calendar listing or event-detail page.",
+      "doesNotEstablish": [
+        "a recovered Civic Hall calendar listing",
+        "a dedicated event-detail page",
+        "the complete formal event title",
+        "the agenda",
+        "the participant roster"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+      "title": "New York City Council event-day CouncilStat hackathon post",
+      "organization": "New York City Council",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live-and-archived",
+      "publishedAt": "2016-01-30",
+      "accessedAt": "2026-07-11",
+      "canonicalUrl": "https://x.com/NYCCouncil/status/693509031768506368",
+      "archiveUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "New York City Council event-day post from Civic Hall identifying the gathering as the Council's first CouncilStat hackathon.",
+      "publicNote": "The source supports the narrower 'first CouncilStat hackathon' wording, not a broader historical superlative.",
+      "doesNotEstablish": [
+        "broader historical hackathon superlatives",
+        "the full agenda",
+        "a complete attendee list",
+        "formal winners",
+        "CallNYC as an official submission"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "title": "New York City Council Hackathon promotional graphic",
+      "organization": "New York City Council / Civic Hall",
+      "kind": "promotional-graphic",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-11",
+      "assetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.",
+      "publicNote": "The graphic supports the visible event branding, not a longer formal registration title.",
+      "doesNotEstablish": [
+        "a longer formal registration title",
+        "the agenda",
+        "breakout structure",
+        "participant roster"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-POLITICO-2016-03-14",
+      "title": "Website provides new information about council members' focus",
+      "organization": "Politico New York",
+      "author": "Miranda Neubauer",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2016-03-14",
+      "accessedAt": "2026-07-11",
+      "archiveUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Miranda Neubauer, 'Website provides new information about council members' focus,' Politico New York, March 14, 2016.",
+      "publicNote": "The reporting connects Jamie to the January event, the fuller data release, and his independent development and iteration of CallNYC.",
+      "doesNotEstablish": [
+        "CallNYC as an official Council product",
+        "CallNYC as a formal hackathon submission",
+        "CallNYC as a documented winner"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-GITHUB-REPOSITORY",
+      "title": "CallNYC source repository",
+      "organization": "openhouse",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-11",
+      "canonicalUrl": "https://github.com/openhouse/CallNYC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public CallNYC source repository.",
+      "publicNote": "The repository documents the surviving implementation of the independent, archived prototype.",
+      "doesNotEstablish": [
+        "official Council ownership",
+        "formal hackathon submission status",
+        "current resident-service guidance"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
+      "status": "confirmed",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+          "relationship": "direct-support",
+          "supports": [
+            "date",
+            "time",
+            "Council event",
+            "constituent-services purpose"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+          "relationship": "corroborating",
+          "supports": [
+            "date",
+            "venue",
+            "CouncilStat context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not describe the Wayback page as a recovered event calendar listing."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The Council described the gathering as its first CouncilStat hackathon.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+          "relationship": "direct-support",
+          "supports": [
+            "the Council's own first-CouncilStat description"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": []
+    },
+    {
+      "id": "CLM-CALLNYC-EVENT-BRANDING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+          "relationship": "direct-support",
+          "supports": [
+            "graphic wording",
+            "event branding"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the wording as visible branding, not proof of a longer formal registration title."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/callnyc"
+          ]
+        },
+        {
+          "key": "resume-html",
+          "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/resume"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+          "relationship": "direct-support",
+          "supports": [
+            "sequence from the January event through the fuller data release",
+            "Jamie's independent development and iteration",
+            "Politico coverage"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-GITHUB-REPOSITORY",
+          "relationship": "corroborating",
+          "supports": [
+            "surviving implementation of the independent prototype"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "CallNYC was an independent follow-on, not an official Council product, documented formal submission, or winner."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "CallNYC is an archived independent prototype, not an official or current New York City Council service.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-GITHUB-REPOSITORY",
+          "relationship": "direct-support",
+          "supports": [
+            "surviving independent implementation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-POLITICO-2016-03-14",
+          "relationship": "context",
+          "supports": [
+            "contemporaneous independent-project framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Historical officeholders, statistics, categories, and contact information are not current guidance."
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "id": "callnyc",
+      "surface": "/work/callnyc",
+      "sourceOrder": [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      ],
+      "occurrences": [
+        {
+          "id": "event-date-time",
+          "claimId": "CLM-CALLNYC-HACKATHON-DATE-TIME",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+            "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"
+          ]
+        },
+        {
+          "id": "first-councilstat-hackathon",
+          "claimId": "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"
+          ]
+        },
+        {
+          "id": "independent-follow-on",
+          "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-POLITICO-2016-03-14",
+            "SRC-CALLNYC-GITHUB-REPOSITORY"
+          ]
+        },
+        {
+          "id": "event-branding",
+          "claimId": "CLM-CALLNYC-EVENT-BRANDING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+          ]
+        },
+        {
+          "id": "press-coverage",
+          "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        },
+        {
+          "id": "archived-status",
+          "claimId": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-GITHUB-REPOSITORY",
+            "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    }
+  ]
+}
