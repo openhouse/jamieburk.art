@@ -9,6 +9,7 @@ export type WorkStatus =
   | "Full case study"
   | "Short proof page"
   | "Lab / research"
+  | "Archived independent prototype"
   | "Archived prototype"
   | "Public-safe summary only"
   | "Draft";
