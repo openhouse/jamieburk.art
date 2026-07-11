@@ -3,6 +3,10 @@
 This file names source categories that can support public-safe claims without
 publishing private source material.
 
+Citation-ready source records and their evidentiary boundaries live in
+`apps/www/src/data/knowledge-bank/sources.json`; relationships to claims live in
+`evidence.json`.
+
 ## Source Classes
 
 ### Approved Resume
@@ -23,6 +27,11 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- Civic Hall's January 2016 constituent-services hackathon announcement.
+- New York City Council's event-day CouncilStat post from Civic Hall.
+- Civic Hall's archived embedded social feed, used only as an archival carrier.
+- The public New York City Council Hackathon promotional graphic, used only for
+  visible branding.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
@@ -51,6 +60,10 @@ stronger public publication.
 
 Potentially usable, but do not project to public pages until Jamie or
 collaborators approve.
+
+The Digital District participant photograph remains protected and unlinked. It
+cannot be used as public institutional evidence until rights, credit, crop, and
+represented-people review are complete.
 
 ## Prohibited Source Material In This Repo
 

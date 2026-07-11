@@ -137,24 +137,28 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Built CallNYC.org independently after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing next-step guidance.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+      "CallNYC independently turned CouncilStat constituent-services records into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
-    guardrail: "Always describe it as archived and unofficial.",
+      "Civic Hall and NYC Council event posts, archived prototype context, public GitHub repository, and verified Politico New York coverage.",
+    guardrail:
+      "Describe CallNYC as an archived, independent, unofficial follow-on. Preserve attribution for the CouncilStat wording.",
     doNotSay: [
       "Current city service",
       "Official city guidance",
       "Emergency guidance",
-      "Legal guidance"
+      "Legal guidance",
+      "The Council's first civic-data hackathon",
+      "CallNYC was built during the hackathon",
+      "Official Council product"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",

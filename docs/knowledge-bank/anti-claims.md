@@ -31,6 +31,13 @@ lists, or source documents that were not approved for public use.
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+Do not call the gathering the Council's first civic-data hackathon. Preserve the
+Council's attributed wording: its first CouncilStat hackathon.
+Do not say CallNYC was built during the hackathon, was an official hackathon
+project, or was a New York City Council product.
+Do not treat the announced 1-3 p.m. window as proof of actual duration or the
+approximately 2:10 p.m. photograph timestamp as the event start time.
+Do not present “Digital District” as the recovered title of the full event.
 
 ## WOWList
 
