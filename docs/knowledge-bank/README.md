@@ -13,6 +13,10 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+See `citational-care.md` for the public citation model used when exact dates,
+public records, press coverage, and externally verifiable outcomes need
+numbered references.
+
 ## Purpose
 
 The knowledge bank exists to:
