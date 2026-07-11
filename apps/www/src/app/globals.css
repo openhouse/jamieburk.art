@@ -148,3 +148,53 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-ref {
+  margin-left: 0.1em;
+  font-size: 0.82em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.citation-ref a {
+  display: inline-block;
+  min-width: 0.75em;
+  padding: 0 0.04em;
+  line-height: 1;
+  color: var(--jb-broadway-blue);
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 95, 129, 0.38);
+  text-underline-offset: 0.14em;
+}
+
+.citation-ref a:hover {
+  text-decoration-color: currentColor;
+}
+
+.citation-source-note:target {
+  background: rgba(247, 236, 134, 0.28);
+}
+
+.citation-backlink {
+  display: inline-flex;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media print {
+  .citation-backlink {
+    display: none;
+  }
+
+  .citation-sources a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    overflow-wrap: anywhere;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "callnyc-hackathon-announced-schedule",
+    "internalClaim": "Civic Hall announced a January 30, 2016, 1-3 p.m. NYC Council hackathon focused on constituent services.",
+    "publicProjection": "Civic Hall announced the New York City Council hackathon for January 30, 2016, from 1-3 p.m.",
+    "status": "defensible",
+    "allowedSurfaces": ["/work/callnyc"],
+    "boundaries": [
+      "Say announced for 1-3 p.m., not ran from 1-3 p.m."
+    ],
+    "antiClaims": [
+      "Do not call the archived feed a dedicated calendar listing."
+    ],
+    "approvalOwner": "Jamie",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-first-councilstat-hackathon",
+    "internalClaim": "NYC Council described the Civic Hall gathering as its first CouncilStat hackathon.",
+    "publicProjection": "An event-day New York City Council post described the gathering as its first CouncilStat hackathon.",
+    "status": "defensible",
+    "allowedSurfaces": ["/work/callnyc", "resume-source"],
+    "boundaries": [
+      "Preserve the exact CouncilStat qualifier."
+    ],
+    "antiClaims": [
+      "Do not broaden this to the Council's first civic-data hackathon.",
+      "Do not describe CallNYC as an official hackathon submission."
+    ],
+    "approvalOwner": "Jamie",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "internalClaim": "The recovered promotional graphic used the words 'New York City Council Hackathon.'",
+    "publicProjection": "A Council-branded promotional graphic called the event the 'New York City Council Hackathon.'",
+    "status": "defensible",
+    "allowedSurfaces": ["/work/callnyc", "image-caption"],
+    "boundaries": [
+      "Describe this as recovered branding, not a formal registration title."
+    ],
+    "antiClaims": [
+      "Do not infer a longer official title."
+    ],
+    "approvalOwner": "Jamie",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "internalClaim": "Participant photographs document a breakout marked 'Digital District - Help improve City Council District office operations.'",
+    "publicProjection": "Participant photographs document a 'Digital District' breakout focused on improving Council district-office operations.",
+    "status": "open",
+    "allowedSurfaces": ["/work/callnyc", "image-caption"],
+    "boundaries": [
+      "Publish only after the photograph and represented people are cleared.",
+      "Preserve collective context in the crop.",
+      "Treat Digital District as a breakout label, not the event title."
+    ],
+    "antiClaims": [
+      "Do not identify an unknown facilitator.",
+      "Do not infer actual discussion topics beyond the visible prompt."
+    ],
+    "approvalOwner": "Jamie and photo editor",
+    "lastReviewedAt": "2026-07-11"
+  }
+]

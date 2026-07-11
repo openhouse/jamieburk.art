@@ -1,0 +1,59 @@
+[
+  {
+    "claimId": "callnyc-hackathon-announced-schedule",
+    "sourceId": "src-civichall-x-693124020917522433",
+    "supportType": "direct",
+    "supportsText": "announced date, time window, NYC Council association, and constituent-services purpose",
+    "publicCitation": true,
+    "citationNote": "Civic Hall's announcement supplies the date, announced hours, Council association, and constituent-services focus.",
+    "confidence": "confirmed",
+    "limitations": [
+      "announced hours do not prove actual event duration"
+    ]
+  },
+  {
+    "claimId": "callnyc-hackathon-announced-schedule",
+    "sourceId": "src-wayback-civichall-events-page-2-20160131",
+    "supportType": "archival-carrier",
+    "supportsText": "archived preservation context for the announcement",
+    "publicCitation": true,
+    "citationNote": "The archived page preserves the post in Civic Hall's embedded feed; it is archival context, not a recovered event listing.",
+    "confidence": "confirmed",
+    "limitations": [
+      "the Wayback page is not the event listing"
+    ]
+  },
+  {
+    "claimId": "callnyc-first-councilstat-hackathon",
+    "sourceId": "src-nyccouncil-x-693509031768506368",
+    "supportType": "direct",
+    "supportsText": "Civic Hall venue and first #CouncilStat wording",
+    "publicCitation": true,
+    "citationNote": "The event-day Council post supplies the Civic Hall venue and the Council's exact 'first #CouncilStat hackathon' wording.",
+    "confidence": "confirmed",
+    "limitations": [
+      "does not establish first hackathon of every kind"
+    ]
+  },
+  {
+    "claimId": "callnyc-event-branding",
+    "sourceId": "src-civichall-promo-graphic-cz5m-mawwaa42td",
+    "supportType": "direct",
+    "supportsText": "visible event-branding text",
+    "publicCitation": true,
+    "citationNote": "The graphic supplies the recovered event-branding text.",
+    "confidence": "confirmed",
+    "limitations": []
+  },
+  {
+    "claimId": "callnyc-digital-district-breakout",
+    "sourceId": "src-participant-photo-digital-district",
+    "supportType": "participant-archive-only",
+    "supportsText": "placard wording and photographed breakout context",
+    "publicCitation": false,
+    "confidence": "confirmed",
+    "limitations": [
+      "no public citation until image rights and publication approval are complete"
+    ]
+  }
+]
