@@ -31,6 +31,16 @@ lists, or source documents that were not approved for public use.
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+Do not say "Digital District" was the official event title, that 2:10 p.m. was
+the event start, or that the event occurred at an inherited NoMad map pin.
+Do not confirm Melissa Mark-Viverito as an attendee or say Jamie facilitated the
+Digital District breakout without new evidence.
+Do not say CallNYC was built during the hackathon, was a formal submission, was
+an official Council product, or was adopted by the Council.
+Do not treat CouncilStat case counts as direct measures of office quality.
+Do not say a dedicated Civic Hall listing was proven not to exist or that a
+complete agenda, roster, or registration form was recovered.
+Do not present CallNYC as current resident guidance.
 
 ## WOWList
 
