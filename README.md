@@ -31,6 +31,7 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run public-safety
+npm run check:citations
 npm run check:routes
 npm run preflight:staging
 npm run preflight:production
@@ -42,10 +43,16 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
-first adding a public-safe proof record.
+first adding a public-safe proof or citation record.
+
+Before adding or strengthening a factual public claim, check the knowledge bank
+and `docs/citational-care.md`. Public pages may cite public links, archived
+links, or public-safe source summaries. Never expose private source paths or raw
+private records.
 
 The knowledge bank is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
@@ -56,7 +63,9 @@ There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+metadata. `npm run check:citations` checks source, claim, citation-group, and
+page-order integrity. `npm run check:routes` checks canonical routes and legacy
+redirects.
 
 ## Environment
 

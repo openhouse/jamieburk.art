@@ -139,6 +139,94 @@ h2 {
     #f7f4ee;
 }
 
+.citation-ref {
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.08em;
+  vertical-align: super;
+  white-space: nowrap;
+}
+
+.citation-ref a {
+  color: currentColor;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.prose .citation-ref a,
+.citation-notes a {
+  color: var(--jb-broadway-blue);
+}
+
+.citation-ref a:hover,
+.citation-notes a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.citation-ref a:focus-visible,
+.citation-notes a:focus-visible {
+  border-radius: 0.15rem;
+  outline: 2px solid var(--jb-broadway-blue);
+  outline-offset: 2px;
+}
+
+.citation-notes {
+  border-block-start: 1px solid rgba(52, 52, 53, 0.16);
+  margin-block-start: clamp(3rem, 8vw, 6rem);
+  padding-block: 1.5rem 2rem;
+  scroll-margin-top: 6rem;
+}
+
+.citation-notes h2 {
+  color: var(--jb-oil-ink);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+}
+
+.citation-notes ol {
+  list-style: decimal;
+  margin-block-start: 1rem;
+  padding-inline-start: 1.35rem;
+}
+
+.citation-notes li {
+  color: rgba(52, 52, 53, 0.82);
+  line-height: 1.7;
+  margin-block: 0.9rem;
+  max-width: 78ch;
+  scroll-margin-top: 6rem;
+}
+
+.citation-notes li:target {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 22%, transparent);
+  border-radius: 0.35rem;
+  outline: 0.35rem solid color-mix(in srgb, var(--jb-lemon-yellow) 22%, transparent);
+}
+
+.citation-source-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.7rem;
+  margin-inline-start: 0.35rem;
+}
+
+.citation-source-label {
+  color: rgba(52, 52, 53, 0.66);
+  font-weight: 600;
+}
+
+.citation-source-label::after {
+  content: " (summary)";
+  font-weight: 400;
+}
+
+.citation-backref {
+  display: inline-block;
+  font-weight: 700;
+  margin-inline-start: 0.55rem;
+}
+
 .jb-label,
 .jb-eyebrow,
 .jb-meta-label {
@@ -147,4 +235,16 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+@media print {
+  .citation-ref a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .citation-notes a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    overflow-wrap: anywhere;
+  }
 }

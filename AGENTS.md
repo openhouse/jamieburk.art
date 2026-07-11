@@ -26,6 +26,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run check`
 - `npm run knowledge-bank`
 - `npm run public-safety`
+- `npm run check:citations`
 - `npm run check:routes`
 
 ## Public-Safety Rules
@@ -38,18 +39,24 @@ internal analytics, client-private materials, or raw community records.
 Use public-safe summaries, redacted examples, representative diagrams, approved
 artifacts, and careful collective-work language.
 
-When uncertain, write: `TODO: Jamie approval required.`
+When uncertain, record the blocker in `docs/knowledge-bank/launch-blockers.md`.
+Do not render approval markers in production-facing pages.
 
 ## Knowledge Bank
 
-Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
-public-safe claim layer.
+Use `docs/knowledge-bank/`, `apps/www/src/data/proofs.ts`, and
+`apps/www/src/data/knowledge-bank/` as the public-safe claim and citation layer.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
 
 Do not strengthen a claim in a public page unless the stronger claim exists in
 the bank with source basis, status, guardrail, and public-use boundary.
+
+Before adding or strengthening dates, metrics, institutional relationships,
+event identities, published coverage, funding amounts, adoption counts, public
+releases, or archival reconstructions, check `docs/citational-care.md` and add
+source / claim / citation-group records as needed.
 
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.

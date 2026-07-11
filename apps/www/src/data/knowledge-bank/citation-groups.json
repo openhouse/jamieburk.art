@@ -1,0 +1,155 @@
+[
+  {
+    "id": "callnyc-event-date-time",
+    "claimIds": [
+      "callnyc-hackathon-date-time",
+      "callnyc-first-councilstat-hackathon",
+      "callnyc-hackathon-branding"
+    ],
+    "sourceIds": [
+      "civic-hall-social-post-2016",
+      "nyc-council-social-post-2016",
+      "civic-hall-wayback-2016-01-31",
+      "nyc-council-hackathon-graphic-2016"
+    ],
+    "shortLabel": "January 2016 Civic Hall CouncilStat hackathon",
+    "note": "Civic Hall announced a January 30, 1-3 p.m. New York City Council hackathon focused on constituent services. A Council event-day post identified the gathering at Civic Hall as its first CouncilStat hackathon. The promotional graphic supports New York City Council Hackathon branding. The Wayback page preserves the posts through an embedded social feed; it is not the event's calendar listing.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": true,
+    "includeMediaLinks": true,
+    "status": "ready",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district",
+    "claimIds": [
+      "callnyc-digital-district-breakout",
+      "civic-hall-calendar-listing-not-recovered"
+    ],
+    "sourceIds": [
+      "participant-photo-digital-district-2016",
+      "research-run-civic-hall-cdx-2026"
+    ],
+    "shortLabel": "Digital District breakout and archival limits",
+    "note": "Participant photography documents a Digital District breakout with the prompt Help improve City Council District office operations. The photograph supports the breakout wording, not the official title of the full event. No complete agenda, breakout roster, registration contents, or dedicated event-detail page was recovered in the reviewed Wayback corpus.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-independent-follow-on",
+    "claimIds": [
+      "callnyc-independent-follow-on"
+    ],
+    "sourceIds": [
+      "councilstat-release-context-2016",
+      "callnyc-politico-2016",
+      "callnyc-github-repository"
+    ],
+    "shortLabel": "Independent CallNYC follow-on project",
+    "note": "CallNYC was an independent follow-on project built after the complete CouncilStat release. Politico New York covered it in 2016 as a website for exploring City Council constituent-services data. It was not an official Council product or a documented formal hackathon submission.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-data-limitations",
+    "claimIds": [
+      "callnyc-data-limitations"
+    ],
+    "sourceIds": [
+      "councilstat-data-limitations-summary"
+    ],
+    "shortLabel": "CouncilStat data limitations",
+    "note": "District offices used CouncilStat differently and entered information with different frequency. Recorded case counts could reflect demand, outreach, staffing, or data-entry practices; they should not be read as a simple performance ranking.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "homepage-career-14-years",
+    "claimIds": [
+      "homepage-career-operating-structure-14-years"
+    ],
+    "sourceIds": [
+      "approved-resume-portfolio-chronology"
+    ],
+    "shortLabel": "14+ years creating operating structure",
+    "note": "Approved professional resume and public portfolio chronology. This does not imply one continuous formal technical-project-manager title or one employer.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "ready",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "homepage-hje-2x-revenue",
+    "claimIds": [
+      "homepage-hje-revenue-growth"
+    ],
+    "sourceIds": [
+      "hje-firsthand-operational-record"
+    ],
+    "shortLabel": "HJE 2x revenue contribution",
+    "note": "Approved resume and long-term firsthand operational record. The public claim is contribution language; private revenue dashboards and internal financial records are not published.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "homepage-fair-rent-30-pages",
+    "claimIds": [
+      "homepage-fair-rent-30-pages"
+    ],
+    "sourceIds": [
+      "fair-rent-public-safe-archive-summary"
+    ],
+    "shortLabel": "30+ pages of campaign-memory infrastructure",
+    "note": "Public-safe archive summary of shared campaign-memory and coordination infrastructure. Private coalition notes, legal review, and stakeholder records are not published.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "homepage-wowlist-35-cities",
+    "claimIds": [
+      "homepage-wowlist-city-ecosystems"
+    ],
+    "sourceIds": [
+      "wowlist-historical-project-record"
+    ],
+    "shortLabel": "WOWList city ecosystems",
+    "note": "Approved resume and historical project record. Roughly preserves the public-safe nature of the adoption estimate; private user data and organizer contact lists are not published.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "homepage-sunday-dinner-counts",
+    "claimIds": [
+      "homepage-sunday-dinner-counts"
+    ],
+    "sourceIds": [
+      "sunday-dinner-public-safe-aggregate-record"
+    ],
+    "shortLabel": "196 / Sunday Dinner participation counts",
+    "note": "Approved resume and public-safe aggregate record. Private guest, attendance, and resident records are not published.",
+    "includeOriginalLinks": false,
+    "includeArchiveLinks": false,
+    "includeMediaLinks": false,
+    "status": "careful",
+    "lastReviewedAt": "2026-07-11"
+  }
+]
