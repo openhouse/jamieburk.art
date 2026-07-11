@@ -1,0 +1,139 @@
+[
+  {
+    "id": "claim.callnyc.hackathon.date-time-purpose",
+    "internalClaim": "Civic Hall announced a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "publicProjection": "On January 30, 2016, Civic Hall hosted a New York City Council hackathon focused on constituent services; Civic Hall had announced the gathering for 1-3 p.m.",
+    "status": "defensible",
+    "citationPolicy": "required",
+    "allowedSurfaces": ["/work/callnyc"],
+    "boundaries": [
+      "Say announced for 1-3 p.m.; do not present the window as proved actual duration."
+    ],
+    "antiClaims": [
+      "The event began at 2:10 p.m.",
+      "The event ran for exactly two hours.",
+      "The Wayback capture is the event's calendar listing."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.first-councilstat",
+    "internalClaim": "New York City Council described the January 30 gathering as its first CouncilStat hackathon.",
+    "publicProjection": "An event-day New York City Council post described the gathering as its first CouncilStat hackathon.",
+    "status": "defensible",
+    "citationPolicy": "required",
+    "allowedSurfaces": ["/work/callnyc", "resume-source-note"],
+    "boundaries": [
+      "Preserve attribution to New York City Council and the CouncilStat qualifier."
+    ],
+    "antiClaims": [
+      "The New York City Council's first civic-data hackathon.",
+      "New York City's first civic-technology hackathon."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.event-branding",
+    "internalClaim": "The recovered promotional graphic used the words 'New York City Council Hackathon.'",
+    "publicProjection": "The recovered promotional graphic used the wording 'New York City Council Hackathon.'",
+    "status": "defensible",
+    "citationPolicy": "recommended",
+    "allowedSurfaces": ["/work/callnyc", "future-image-caption"],
+    "boundaries": [
+      "Describe this as recovered branding, not a longer formal registration title."
+    ],
+    "antiClaims": [
+      "New York City Council Hackathon was the complete official registration title."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.hackathon.digital-district-breakout",
+    "internalClaim": "A participant photograph documents a table placard reading 'Digital District - Help improve City Council District office operations.'",
+    "publicProjection": "A participant photograph documents 'Digital District' as a breakout-table label and district-office-operations prompt.",
+    "status": "protected",
+    "citationPolicy": "not-needed",
+    "allowedSurfaces": ["internal-research-note", "future-photo-caption"],
+    "boundaries": [
+      "Do not publish until the exact image, rights, crop, photographer, and represented people are cleared.",
+      "Treat Digital District as breakout wording, not the event title."
+    ],
+    "antiClaims": [
+      "Digital District was the event's official title.",
+      "The participant photograph establishes the event format or attendance.",
+      "The photograph identifies an unknown facilitator."
+    ],
+    "approvalOwner": "Jamie Burkart and photo editor",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.project.independent-follow-on",
+    "internalClaim": "After the complete CouncilStat dataset was released, Jamie independently built CallNYC.org as a resident-facing interpretation of the administrative records.",
+    "publicProjection": "Built CallNYC.org independently after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing next-step guidance.",
+    "status": "defensible",
+    "citationPolicy": "required",
+    "allowedSurfaces": ["/work/callnyc", "work-card", "resume-source-note"],
+    "boundaries": [
+      "CallNYC was an independent follow-on, not an official Council product or established formal hackathon submission."
+    ],
+    "antiClaims": [
+      "CallNYC was built during the hackathon.",
+      "CallNYC was an official hackathon project.",
+      "CallNYC was a New York City Council product."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.press.politico-coverage",
+    "internalClaim": "Politico New York covered CallNYC in March 2016.",
+    "publicProjection": "Politico New York covered CallNYC in March 2016.",
+    "status": "defensible",
+    "citationPolicy": "required",
+    "allowedSurfaces": ["/work/callnyc", "work-card"],
+    "boundaries": [
+      "Describe the linked document as an archived PDF hosted on CallNYC.org."
+    ],
+    "antiClaims": [
+      "The linked PDF is a currently verified live Politico article page."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.project.archived-unofficial",
+    "internalClaim": "CallNYC is an archived independent prototype, not an official or current City Council service.",
+    "publicProjection": "CallNYC is an archived independent prototype, not an official or current City Council service.",
+    "status": "defensible",
+    "citationPolicy": "recommended",
+    "allowedSurfaces": ["/work/callnyc", "work-card"],
+    "boundaries": [
+      "Keep archived and unofficial language visible wherever the project is summarized."
+    ],
+    "antiClaims": [
+      "CallNYC is a current civic guidance service.",
+      "CallNYC is an official City Council service."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "claim.callnyc.research.no-event-page-recovered",
+    "internalClaim": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the bounded CDX review.",
+    "status": "use-with-care",
+    "citationPolicy": "not-needed",
+    "allowedSurfaces": ["internal-research-note"],
+    "boundaries": [
+      "A bounded not-recovered result does not prove that no page ever existed."
+    ],
+    "antiClaims": [
+      "Civic Hall never published an event page.",
+      "No Civic Hall event page existed."
+    ],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewedAt": "2026-07-11"
+  }
+]

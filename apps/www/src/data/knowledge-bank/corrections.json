@@ -1,0 +1,39 @@
+[
+  {
+    "id": "correction.callnyc.resume-event-wording",
+    "status": "required-before-production",
+    "targetType": "resume-pdf",
+    "targetIdOrPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "currentText": "Built CallNYC.org after the New York City Council’s first civic-data hackathon, translating constituent-services open data into resident-facing “find help / next steps” guidance; covered in Politico New York.",
+    "replacementText": "Built CallNYC.org independently after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing next-step guidance; covered in Politico New York.",
+    "reason": "Recovered sources support the Council's attributed first CouncilStat hackathon wording, not the broader first civic-data hackathon claim. The binary PDF requires the approved editable resume source.",
+    "relatedClaimIds": [
+      "claim.callnyc.hackathon.first-councilstat",
+      "claim.callnyc.project.independent-follow-on"
+    ],
+    "relatedSourceIds": [
+      "source.callnyc.nyc-council-event-post.2016-01-30",
+      "source.callnyc.politico.2016-03-14"
+    ],
+    "openedAt": "2026-07-11"
+  },
+  {
+    "id": "correction.callnyc.case-study-year",
+    "status": "resolved",
+    "targetType": "page-copy",
+    "targetIdOrPath": "/work/callnyc",
+    "currentText": "2014-2015",
+    "replacementText": "2016",
+    "reason": "Public event, project, repository, and press evidence place the cited vertical slice in 2016.",
+    "relatedClaimIds": [
+      "claim.callnyc.hackathon.date-time-purpose",
+      "claim.callnyc.project.independent-follow-on"
+    ],
+    "relatedSourceIds": [
+      "source.callnyc.civic-hall-announcement.2016-01-29",
+      "source.callnyc.politico.2016-03-14"
+    ],
+    "openedAt": "2026-07-11",
+    "resolvedAt": "2026-07-11"
+  }
+]
