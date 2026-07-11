@@ -49,9 +49,9 @@ export default function ColophonPage() {
           Claims involving dates, numbers, public outcomes, institutional history,
           or external recognition are linked to public sources where possible.
           Superscript numbers lead to page-specific notes and source links. The
-          Knowledge Bank records source class, support type, caveats, and review
-          status. Private source material remains outside the public site and
-          repository.
+          Knowledge Bank records source class, support type, caveats, rights,
+          corrections, and review status. Private source material remains outside
+          the public site and repository.
         </p>
       </section>
     </div>

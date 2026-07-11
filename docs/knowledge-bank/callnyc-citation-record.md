@@ -31,6 +31,11 @@ These are research findings, not proof that the materials never existed.
 - Digital District: participant photograph only. It remains protected until
   rights and consent review are complete.
 
+## Corrections
+
+- Project period corrected from `2014-2015` to `2016`.
+- Broad first-hackathon language corrected to `first CouncilStat hackathon`.
+
 ## Public Wording
 
 Use:

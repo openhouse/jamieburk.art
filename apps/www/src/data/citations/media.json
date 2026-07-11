@@ -1,0 +1,21 @@
+[
+  {
+    "id": "MEDIA-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+    "kind": "photograph",
+    "title": "Digital District breakout photograph",
+    "sourceId": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+    "relatedClaimIds": ["CALLNYC-DIGITAL-DISTRICT-001"],
+    "eventId": "CALLNYC-2016-COUNCILSTAT-HACKATHON",
+    "photographer": "Pending review",
+    "rightsHolder": "Pending review",
+    "rightsStatus": "pending",
+    "peoplePictured": [],
+    "consentStatus": "pending",
+    "publicCitation": false,
+    "caption": "Internal participant photograph of a Digital District breakout table.",
+    "altText": "Internal photograph pending rights and consent review.",
+    "cropNotes": "Do not crop or publish before rights review.",
+    "redactionNotes": "Review people, placards, metadata, and consent before any public use.",
+    "lastReviewed": "2026-07-11"
+  }
+]

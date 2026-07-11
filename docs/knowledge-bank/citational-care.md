@@ -29,14 +29,21 @@ Here is what remains unresolved.
 
 Structured citation data lives in `apps/www/src/data/citations/`.
 
-- `sources.json` records source class, URL or archive URL, rights posture,
+- `sources.json` records source class, original URL, archive URL, rights posture,
   public-citation permission, caveat, and last review date.
 - `claims.json` records exact claim wording, support relationships, status,
   confidence, guardrails, and allowed projection surfaces.
-- `pages.json` records page-local citation order and occurrence IDs. Display
-  numbers are generated from this order and must not be stored as stable data.
+- `notes.json` records the public editorial note attached to a claim, the
+  sources used by that note, and whether original or archive links should render.
+- `pages.json` records page-local citation order by note ID and occurrence IDs.
+  Display numbers are generated from this order and must not be stored as stable
+  data.
 - `research-findings.json` records search results such as "not recovered" so
   they do not get mistaken for positive evidence.
+- `media.json` records rights, consent, caption, alt text, and publication
+  status for photographs and other visual artifacts.
+- `corrections.json` records factual corrections without turning the public page
+  into a correction ledger.
 
 The public website consumes this structured layer through server-rendered
 components. The Knowledge Bank can hold more structure than the public page

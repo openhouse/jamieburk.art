@@ -62,13 +62,13 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 
 ## Citational Care
 
-Public factual claims can be linked to page-local numerical citations backed by
-stable Knowledge Bank source and claim IDs. Run `npm run citations` before
-committing citation changes, and run `npm run test:citations` when citation
-ordering or anchor behavior changes.
+Public factual claims may use page-local numerical citations backed by stable
+Knowledge Bank source, claim, note, research, media, and correction records.
+Run `npm run citations`, `npm run report:citations`, and
+`npm run test:citations` before committing citation changes.
 
 Citation display numbers are generated from each page projection. Do not type
-display numbers into canonical source or claim data.
+display numbers into canonical source, claim, note, media, or correction data.
 
 ## Environment
 

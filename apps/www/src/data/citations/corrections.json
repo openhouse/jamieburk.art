@@ -1,0 +1,28 @@
+[
+  {
+    "id": "CORR-CALLNYC-YEAR-2016",
+    "subject": "CallNYC public project period",
+    "previousWording": "2014-2015",
+    "correctedWording": "2016",
+    "reason": "Public evidence supports the CouncilStat hackathon and CallNYC follow-on project sequence in 2016. No separate earlier public project period is documented for this case-study claim.",
+    "supportClaimIds": [
+      "CALLNYC-EVENT-001",
+      "CALLNYC-PROJECT-001",
+      "CALLNYC-PRESS-001"
+    ],
+    "correctedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"],
+    "publicNoteRequired": false
+  },
+  {
+    "id": "CORR-CALLNYC-FIRST-COUNCILSTAT",
+    "subject": "CallNYC hackathon description",
+    "previousWording": "first civic data hackathon",
+    "correctedWording": "first CouncilStat hackathon",
+    "reason": "The Council source supports the exact phrase \"first CouncilStat hackathon\". It does not support broader first-hackathon claims.",
+    "supportClaimIds": ["CALLNYC-EVENT-002"],
+    "correctedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"],
+    "publicNoteRequired": false
+  }
+]

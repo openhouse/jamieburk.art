@@ -10,20 +10,29 @@ const citationDir = path.join(repoRoot, "apps/www/src/data/citations");
 const defaultFiles = {
   sources: path.join(citationDir, "sources.json"),
   claims: path.join(citationDir, "claims.json"),
+  notes: path.join(citationDir, "notes.json"),
   pages: path.join(citationDir, "pages.json"),
-  findings: path.join(citationDir, "research-findings.json")
+  findings: path.join(citationDir, "research-findings.json"),
+  media: path.join(citationDir, "media.json"),
+  corrections: path.join(citationDir, "corrections.json")
 };
 
 const privatePathPattern =
-  /\/Users\/|\/Volumes\/|\/private\/tmp|Mobile Documents|supporting-materials|private archive|raw transcript/i;
+  /\/Users\/|\/Volumes\/|\/private\/tmp|Mobile Documents|supporting-materials|private archive|raw transcript|civic-hall-wayback-research/i;
 
-const callnycPublicFiles = [
+const publicCopyFiles = [
   "apps/www/src/content/work/callnyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/work/technical-operations/page.tsx",
   "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/proofs.md"
+].map((file) => path.join(repoRoot, file));
+
+const citationComponentFiles = [
+  "apps/www/src/components/citations/Citation.tsx",
+  "apps/www/src/components/citations/References.tsx",
+  "apps/www/src/components/citations/SourceLinks.tsx"
 ].map((file) => path.join(repoRoot, file));
 
 function readJson(file) {
@@ -43,40 +52,33 @@ function isValidUrl(value) {
   }
 }
 
-function duplicateIds(items) {
+function duplicateIds(items, idField = "id") {
   const seen = new Set();
   const duplicates = new Set();
 
   for (const item of items) {
-    if (seen.has(item.id)) duplicates.add(item.id);
-    seen.add(item.id);
+    const id = item[idField];
+    if (seen.has(id)) duplicates.add(id);
+    seen.add(id);
   }
 
   return [...duplicates];
 }
 
-function duplicatePageIds(pages) {
-  const seen = new Set();
-  const duplicates = new Set();
-
-  for (const page of pages) {
-    if (seen.has(page.pageId)) duplicates.add(page.pageId);
-    seen.add(page.pageId);
-  }
-
-  return [...duplicates];
+function asArray(value) {
+  return Array.isArray(value) ? value : [];
 }
 
 export function buildPageNumbers(page) {
-  return new Map(page.citationOrder.map((item, index) => [item.claimId, index + 1]));
+  return new Map(page.citationOrder.map((item, index) => [item.noteId, index + 1]));
 }
 
-export function citationAnchorIds(page, claimId, occurrenceId) {
+export function citationAnchorIds(page, noteId, occurrenceId) {
   const numbers = buildPageNumbers(page);
-  const number = numbers.get(claimId);
+  const number = numbers.get(noteId);
 
   if (!number) {
-    throw new Error(`Claim ${claimId} is not projected on ${page.pageId}`);
+    throw new Error(`Citation note ${noteId} is not projected on ${page.pageId}`);
   }
 
   return {
@@ -90,14 +92,61 @@ export function loadCitationData(files = defaultFiles) {
   return {
     sources: readJson(files.sources),
     claims: readJson(files.claims),
+    notes: readJson(files.notes),
     pages: readJson(files.pages),
     findings: readJson(files.findings),
-    raw: {
-      sources: readText(files.sources),
-      claims: readText(files.claims),
-      pages: readText(files.pages),
-      findings: readText(files.findings)
-    }
+    media: readJson(files.media),
+    corrections: readJson(files.corrections),
+    raw: Object.fromEntries(
+      Object.entries(files).map(([key, file]) => [key, readText(file)])
+    )
+  };
+}
+
+export function summarizeCitationData(data) {
+  const sources = data.sources ?? [];
+  const claims = data.claims ?? [];
+  const notes = data.notes ?? [];
+  const pages = data.pages ?? [];
+  const findings = data.findings ?? [];
+  const media = data.media ?? [];
+  const corrections = data.corrections ?? [];
+
+  const sourceVisibility = sources.reduce(
+    (acc, source) => {
+      if (source.publicCitation) acc.public += 1;
+      else acc.restricted += 1;
+      return acc;
+    },
+    { public: 0, restricted: 0 }
+  );
+
+  const claimStatuses = claims.reduce((acc, claim) => {
+    acc[claim.status] = (acc[claim.status] ?? 0) + 1;
+    return acc;
+  }, {});
+
+  const noteIds = new Set(notes.map((note) => note.id));
+  const projectedNoteIds = new Set(
+    pages.flatMap((page) => page.citationOrder.map((item) => item.noteId))
+  );
+
+  return {
+    counts: {
+      sources: sources.length,
+      claims: claims.length,
+      notes: notes.length,
+      pages: pages.length,
+      researchFindings: findings.length,
+      media: media.length,
+      corrections: corrections.length
+    },
+    sourceVisibility,
+    claimStatuses,
+    orphanNotes: [...noteIds].filter((id) => !projectedNoteIds.has(id)),
+    pageOrders: Object.fromEntries(
+      pages.map((page) => [page.pageId, page.citationOrder.map((item) => item.noteId)])
+    )
   };
 }
 
@@ -106,13 +155,18 @@ export function validateCitationData(data, options = {}) {
   const warnings = [];
   const sources = data.sources ?? [];
   const claims = data.claims ?? [];
+  const notes = data.notes ?? [];
   const pages = data.pages ?? [];
   const findings = data.findings ?? [];
+  const media = data.media ?? [];
+  const corrections = data.corrections ?? [];
   const raw = data.raw ?? {};
 
   const sourceById = new Map(sources.map((source) => [source.id, source]));
   const claimById = new Map(claims.map((claim) => [claim.id, claim]));
+  const noteById = new Map(notes.map((note) => [note.id, note]));
   const pageById = new Map(pages.map((page) => [page.pageId, page]));
+  const mediaById = new Map(media.map((item) => [item.id, item]));
   const findingIds = new Set(findings.map((finding) => finding.id));
 
   function fail(message) {
@@ -129,8 +183,19 @@ export function validateCitationData(data, options = {}) {
   const claimDuplicates = duplicateIds(claims);
   if (claimDuplicates.length) fail(`Duplicate claim IDs: ${claimDuplicates.join(", ")}`);
 
-  const pageDuplicates = duplicatePageIds(pages);
+  const noteDuplicates = duplicateIds(notes);
+  if (noteDuplicates.length) fail(`Duplicate citation note IDs: ${noteDuplicates.join(", ")}`);
+
+  const pageDuplicates = duplicateIds(pages, "pageId");
   if (pageDuplicates.length) fail(`Duplicate page IDs: ${pageDuplicates.join(", ")}`);
+
+  const mediaDuplicates = duplicateIds(media);
+  if (mediaDuplicates.length) fail(`Duplicate media IDs: ${mediaDuplicates.join(", ")}`);
+
+  const correctionDuplicates = duplicateIds(corrections);
+  if (correctionDuplicates.length) {
+    fail(`Duplicate correction IDs: ${correctionDuplicates.join(", ")}`);
+  }
 
   const rawCitationData = Object.values(raw).join("\n");
   if (privatePathPattern.test(rawCitationData)) {
@@ -142,12 +207,23 @@ export function validateCitationData(data, options = {}) {
   }
 
   for (const source of sources) {
-    if (source.url && !isValidUrl(source.url)) fail(`${source.id} has malformed url`);
+    if (source.originalUrl && !isValidUrl(source.originalUrl)) {
+      fail(`${source.id} has malformed originalUrl`);
+    }
     if (source.archiveUrl && !isValidUrl(source.archiveUrl)) {
       fail(`${source.id} has malformed archiveUrl`);
     }
+    if (source.originalUrl && source.archiveUrl && source.originalUrl === source.archiveUrl) {
+      fail(`${source.id} has identical originalUrl and archiveUrl`);
+    }
+    if (source.publicCitation && !source.originalUrl && !source.archiveUrl) {
+      fail(`${source.id} is public but has no public URL`);
+    }
     if (source.status === "unstable" && !source.caveat) {
       fail(`${source.id} is unstable but lacks a caveat`);
+    }
+    if (source.status === "unstable" && source.publicCitation && !source.archiveUrl) {
+      warn(`${source.id} is unstable and has no archive fallback`);
     }
     if ((source.status === "private" || source.status === "pending-rights") && source.publicCitation) {
       fail(`${source.id} is ${source.status} but marked publicCitation=true`);
@@ -155,11 +231,11 @@ export function validateCitationData(data, options = {}) {
   }
 
   for (const claim of claims) {
-    if (claim.status === "Ready" && !claim.supports?.length) {
+    if (claim.status === "Ready" && !asArray(claim.supports).length) {
       fail(`${claim.id} is Ready but has no supporting source`);
     }
 
-    for (const support of claim.supports ?? []) {
+    for (const support of asArray(claim.supports)) {
       if (findingIds.has(support.sourceId) || support.sourceId.startsWith("FINDING-")) {
         fail(`${claim.id} uses a research finding as positive evidence: ${support.sourceId}`);
       }
@@ -168,12 +244,32 @@ export function validateCitationData(data, options = {}) {
       }
     }
 
-    for (const pageId of claim.allowedPages ?? []) {
+    for (const pageId of asArray(claim.allowedPages)) {
       const page = pageById.get(pageId);
       if (!page) continue;
-      const projected = page.citationOrder.some((item) => item.claimId === claim.id);
+      const projected = page.citationOrder.some((item) => {
+        const note = noteById.get(item.noteId);
+        return note?.claimId === claim.id;
+      });
       if (claim.citationRequired && !projected) {
         fail(`${claim.id} is citation-required but absent from ${pageId}`);
+      }
+    }
+  }
+
+  for (const note of notes) {
+    const claim = claimById.get(note.claimId);
+    if (!claim) fail(`${note.id} references nonexistent claim ${note.claimId}`);
+
+    for (const sourceId of asArray(note.sourceIds)) {
+      const source = sourceById.get(sourceId);
+      if (!source) {
+        fail(`${note.id} references nonexistent source ${sourceId}`);
+        continue;
+      }
+
+      if (claim && !asArray(claim.supports).some((support) => support.sourceId === sourceId)) {
+        warn(`${note.id} cites ${sourceId}, which is not listed in ${claim.id} supports`);
       }
     }
   }
@@ -182,11 +278,14 @@ export function validateCitationData(data, options = {}) {
     const occurrences = new Set();
 
     for (const item of page.citationOrder ?? []) {
-      const claim = claimById.get(item.claimId);
-      if (!claim) {
-        fail(`${page.pageId} references nonexistent claim ${item.claimId}`);
+      const note = noteById.get(item.noteId);
+      if (!note) {
+        fail(`${page.pageId} references nonexistent citation note ${item.noteId}`);
         continue;
       }
+
+      const claim = claimById.get(note.claimId);
+      if (!claim) continue;
 
       for (const occurrence of item.occurrences ?? []) {
         if (occurrences.has(occurrence)) {
@@ -195,8 +294,8 @@ export function validateCitationData(data, options = {}) {
         occurrences.add(occurrence);
       }
 
-      for (const support of claim.supports ?? []) {
-        const source = sourceById.get(support.sourceId);
+      for (const sourceId of asArray(note.sourceIds)) {
+        const source = sourceById.get(sourceId);
         if (!source) continue;
 
         if (!source.publicCitation) {
@@ -207,7 +306,7 @@ export function validateCitationData(data, options = {}) {
           fail(`${page.pageId} publicly cites ${source.status} source ${source.id}`);
         }
 
-        if (source.type === "social-post" && source.archiveUrl && !page.includeArchiveLinks) {
+        if (source.type === "social-post" && source.archiveUrl && !note.includeArchiveLinks) {
           fail(`${page.pageId} cites social post ${source.id} but omits archive links`);
         }
 
@@ -224,8 +323,8 @@ export function validateCitationData(data, options = {}) {
         }
       }
 
-      if (!claim.guardrail) {
-        fail(`${claim.id} is publicly cited but lacks a guardrail`);
+      if (!claim.guardrail && !note.caveatOverride) {
+        fail(`${claim.id} is publicly cited but lacks a guardrail or note caveat`);
       }
     }
   }
@@ -236,8 +335,42 @@ export function validateCitationData(data, options = {}) {
     }
   }
 
-  if (options.checkCallNYCPublicCopy !== false) {
-    for (const file of callnycPublicFiles) {
+  for (const item of media) {
+    if (item.sourceId && !sourceById.has(item.sourceId)) {
+      fail(`${item.id} references nonexistent source ${item.sourceId}`);
+    }
+
+    for (const claimId of asArray(item.relatedClaimIds)) {
+      if (!claimById.has(claimId)) fail(`${item.id} references nonexistent claim ${claimId}`);
+    }
+
+    if (item.publicCitation && item.rightsStatus !== "approved" && item.rightsStatus !== "not-required") {
+      fail(`${item.id} is publicly projected without approved/not-required rights`);
+    }
+
+    if (item.publicCitation && item.consentStatus === "pending") {
+      fail(`${item.id} is publicly projected while consent is pending`);
+    }
+
+    if (item.publicAssetPath && item.rightsStatus !== "approved" && item.rightsStatus !== "not-required") {
+      fail(`${item.id} has a public asset path without publishable rights`);
+    }
+
+    if (item.id === "MEDIA-CALLNYC-DIGITAL-DISTRICT-PHOTO" && item.publicCitation) {
+      fail("Digital District media record projects publicly before rights approval");
+    }
+  }
+
+  for (const correction of corrections) {
+    for (const claimId of asArray(correction.supportClaimIds)) {
+      if (!claimById.has(claimId)) {
+        fail(`${correction.id} references nonexistent claim ${claimId}`);
+      }
+    }
+  }
+
+  if (options.checkPublicCopy !== false) {
+    for (const file of publicCopyFiles) {
       if (!existsSync(file)) continue;
       const content = readText(file);
       const rel = path.relative(repoRoot, file);
@@ -250,10 +383,13 @@ export function validateCitationData(data, options = {}) {
         fail(`${rel} contains unsupported first-hackathon wording`);
       }
     }
-  }
 
-  if (options.warnOnExternalUrls) {
-    warn("Live external URL availability is intentionally not a build blocker");
+    for (const file of citationComponentFiles) {
+      if (!existsSync(file)) continue;
+      const content = readText(file);
+      const rel = path.relative(repoRoot, file);
+      if (/doc-endnote/.test(content)) fail(`${rel} uses deprecated doc-endnote`);
+    }
   }
 
   return { failures, warnings };

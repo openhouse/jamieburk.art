@@ -2,6 +2,7 @@ import type { SourceRecord } from "@/data/citations";
 
 type SourceLinksProps = {
   sources: SourceRecord[];
+  includeOriginalLinks: boolean;
   includeArchiveLinks: boolean;
 };
 
@@ -15,7 +16,11 @@ function sourceLabel(source: SourceRecord) {
   return "Source";
 }
 
-export function SourceLinks({ sources, includeArchiveLinks }: SourceLinksProps) {
+export function SourceLinks({
+  sources,
+  includeOriginalLinks,
+  includeArchiveLinks
+}: SourceLinksProps) {
   const seen = new Set<string>();
   const links = sources.flatMap((source) => {
     const sourceLinks: Array<{ href: string; label: string; key: string }> = [];
@@ -29,10 +34,10 @@ export function SourceLinks({ sources, includeArchiveLinks }: SourceLinksProps) 
       });
     }
 
-    if (source.url && !seen.has(source.url)) {
-      seen.add(source.url);
+    if (includeOriginalLinks && source.originalUrl && !seen.has(source.originalUrl)) {
+      seen.add(source.originalUrl);
       sourceLinks.push({
-        href: source.url,
+        href: source.originalUrl,
         label: sourceLabel(source),
         key: `${source.id}-url`
       });

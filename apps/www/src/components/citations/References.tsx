@@ -19,10 +19,13 @@ export function References({ pageId }: ReferencesProps) {
             <p>{entry.note}</p>
             <SourceLinks
               sources={entry.sources}
-              includeArchiveLinks={projection.includeArchiveLinks}
+              includeOriginalLinks={entry.citationNote.includeOriginalLinks}
+              includeArchiveLinks={entry.citationNote.includeArchiveLinks}
             />
-            {entry.claim.guardrail ? (
-              <p className="reference-caveat">{entry.claim.guardrail}</p>
+            {entry.citationNote.caveatOverride ?? entry.claim.guardrail ? (
+              <p className="reference-caveat">
+                {entry.citationNote.caveatOverride ?? entry.claim.guardrail}
+              </p>
             ) : null}
             {entry.sources.some((source) => source.caveat) ? (
               <ul className="reference-caveats">

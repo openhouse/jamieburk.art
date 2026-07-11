@@ -26,6 +26,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run check`
 - `npm run knowledge-bank`
 - `npm run citations`
+- `npm run report:citations`
 - `npm run test:citations`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -64,11 +65,15 @@ Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
 - Do not type citation display numbers into canonical data.
 - Add or update a stable claim record first.
+- A citation must support the exact clause beside it.
 - Link every public claim to public-safe sources.
+- Source origin and archival preservation are separate.
 - Attach caveats to the exact claim/source relationship.
 - Never expose private source paths or private evidence.
 - "Not recovered" is a research finding, not positive evidence.
+- Participant images require rights and consent before public projection.
 - Public pages project from the Knowledge Bank; they do not expose it wholesale.
+- Corrections should be recorded, not silently erased from editorial history.
 
 ## Chad Lens
 

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "NOTE-CALLNYC-EVENT-DATE",
+    "claimId": "CALLNYC-EVENT-001",
+    "publicText": "Civic Hall announced the January 30, 2016 constituent-services hackathon for 1-3 p.m. The archived page preserves the evidence in an embedded social feed; no dedicated Civic Hall calendar or event-detail page has been recovered.",
+    "sourceIds": [
+      "SRC-CALLNYC-CIVICHALL-ANNOUNCEMENT",
+      "SRC-CALLNYC-CIVICHALL-WAYBACK-CONTAINER"
+    ],
+    "caveatOverride": "Do not describe the Wayback container as a recovered event-detail or calendar page.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": true
+  },
+  {
+    "id": "NOTE-CALLNYC-FIRST-COUNCILSTAT",
+    "claimId": "CALLNYC-EVENT-002",
+    "publicText": "The New York City Council described the Civic Hall gathering as its first CouncilStat hackathon. This supports the exact phrase \"first CouncilStat hackathon,\" not broader first-hackathon claims.",
+    "sourceIds": [
+      "SRC-CALLNYC-NYCCOUNCIL-EVENT-DAY",
+      "SRC-CALLNYC-CIVICHALL-WAYBACK-CONTAINER"
+    ],
+    "caveatOverride": "Use \"first CouncilStat hackathon.\" Do not broaden the claim into a first-hackathon claim about civic data, the Council, or Civic Hall.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": true
+  },
+  {
+    "id": "NOTE-CALLNYC-FOLLOW-ON",
+    "claimId": "CALLNYC-PROJECT-001",
+    "publicText": "Politico New York reported that Jamie attended a Council hackathon at Civic Hall in January before the data release, then created CallNYC after the full dataset became available. The public repository remains a project artifact for the historical implementation.",
+    "sourceIds": [
+      "SRC-CALLNYC-POLITICO-2016",
+      "SRC-CALLNYC-GITHUB"
+    ],
+    "caveatOverride": "CallNYC was independent, archived, unofficial, and historical. Do not call it an official Council product or current civic service.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false
+  },
+  {
+    "id": "NOTE-CALLNYC-DATA-LIMITS",
+    "claimId": "CALLNYC-DATA-001",
+    "publicText": "Politico New York reported that Council offices used CouncilStat differently and entered information with differing frequency, so the records needed cautious interpretation.",
+    "sourceIds": ["SRC-CALLNYC-POLITICO-2016"],
+    "caveatOverride": "Do not interpret case counts as a simple measure of office quality, specialization, demand, or service effectiveness.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false
+  },
+  {
+    "id": "NOTE-CALLNYC-PRESS",
+    "claimId": "CALLNYC-PRESS-001",
+    "publicText": "Politico New York covered CallNYC on March 14, 2016, in an article by Miranda Neubauer.",
+    "sourceIds": ["SRC-CALLNYC-POLITICO-2016"],
+    "caveatOverride": "Link the archived PDF and identify the publication and date.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false
+  },
+  {
+    "id": "NOTE-CALLNYC-TECHOPS-PROOF",
+    "claimId": "CALLNYC-PROJECT-001",
+    "publicText": "The CallNYC case study, Politico New York coverage, and the public project repository support using CallNYC as evidence of public-sector data interpretation, bounded resident-facing implementation, and careful treatment of source limitations.",
+    "sourceIds": [
+      "SRC-CALLNYC-POLITICO-2016",
+      "SRC-CALLNYC-GITHUB"
+    ],
+    "caveatOverride": "This supports role-fit evidence for implementation judgment. It does not make CallNYC an official Council product or current civic service.",
+    "includeOriginalLinks": true,
+    "includeArchiveLinks": false
+  }
+]

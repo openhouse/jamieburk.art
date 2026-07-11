@@ -2,14 +2,14 @@ import { getCitationAnchorIds } from "@/lib/citations";
 
 type CitationProps = {
   pageId: string;
-  claimId: string;
+  noteId: string;
   occurrenceId: string;
 };
 
-export function Citation({ pageId, claimId, occurrenceId }: CitationProps) {
-  const { number, noteId, citationId } = getCitationAnchorIds(
+export function Citation({ pageId, noteId, occurrenceId }: CitationProps) {
+  const { number, noteId: referenceId, citationId } = getCitationAnchorIds(
     pageId,
-    claimId,
+    noteId,
     occurrenceId
   );
 
@@ -17,7 +17,7 @@ export function Citation({ pageId, claimId, occurrenceId }: CitationProps) {
     <sup className="citation-ref">
       <a
         id={citationId}
-        href={`#${noteId}`}
+        href={`#${referenceId}`}
         role="doc-noteref"
         aria-label={`Citation ${number}`}
       >

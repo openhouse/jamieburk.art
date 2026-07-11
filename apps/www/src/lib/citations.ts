@@ -1,7 +1,9 @@
 import {
   citationClaimById,
+  citationNoteById,
   citationPageById,
   citationSourceById,
+  type CitationNote,
   type ClaimRecord,
   type PageCitationProjection,
   type SourceRecord
@@ -16,6 +18,7 @@ export type CitationAnchorIds = {
 export type CitationReferenceEntry = {
   number: number;
   noteId: string;
+  citationNote: CitationNote;
   claim: ClaimRecord;
   note: string;
   sources: SourceRecord[];
@@ -37,20 +40,20 @@ export function getCitationProjection(pageId: string): PageCitationProjection {
 
 export function getCitationAnchorIds(
   pageId: string,
-  claimId: string,
+  noteId: string,
   occurrenceId: string
 ): CitationAnchorIds {
   const projection = getCitationProjection(pageId);
-  const citationIndex = projection.citationOrder.findIndex((item) => item.claimId === claimId);
+  const citationIndex = projection.citationOrder.findIndex((item) => item.noteId === noteId);
 
   if (citationIndex === -1) {
-    throw new Error(`Claim ${claimId} is not projected on ${pageId}`);
+    throw new Error(`Citation note ${noteId} is not projected on ${pageId}`);
   }
 
   const item = projection.citationOrder[citationIndex];
 
   if (!item.occurrences.includes(occurrenceId)) {
-    throw new Error(`Occurrence ${occurrenceId} is not registered for ${claimId} on ${pageId}`);
+    throw new Error(`Occurrence ${occurrenceId} is not registered for ${noteId} on ${pageId}`);
   }
 
   const number = citationIndex + 1;
@@ -66,18 +69,24 @@ export function getCitationReferenceEntries(pageId: string): CitationReferenceEn
   const projection = getCitationProjection(pageId);
 
   return projection.citationOrder.map((item, index) => {
-    const claim = citationClaimById.get(item.claimId);
+    const citationNote = citationNoteById.get(item.noteId);
+
+    if (!citationNote) {
+      throw new Error(`Unknown citation note: ${item.noteId}`);
+    }
+
+    const claim = citationClaimById.get(citationNote.claimId);
 
     if (!claim) {
-      throw new Error(`Unknown citation claim: ${item.claimId}`);
+      throw new Error(`Unknown citation claim: ${citationNote.claimId}`);
     }
 
     const number = index + 1;
-    const sources = claim.supports.map((support) => {
-      const source = citationSourceById.get(support.sourceId);
+    const sources = citationNote.sourceIds.map((sourceId) => {
+      const source = citationSourceById.get(sourceId);
 
       if (!source) {
-        throw new Error(`Unknown citation source: ${support.sourceId}`);
+        throw new Error(`Unknown citation source: ${sourceId}`);
       }
 
       return source;
@@ -86,8 +95,9 @@ export function getCitationReferenceEntries(pageId: string): CitationReferenceEn
     return {
       number,
       noteId: `ref-${pageId}-${number}`,
+      citationNote,
       claim,
-      note: item.noteOverride ?? claim.canonicalWording,
+      note: citationNote.publicText ?? claim.canonicalWording,
       sources,
       backlinks: item.occurrences.map((occurrenceId) => ({
         occurrenceId,
