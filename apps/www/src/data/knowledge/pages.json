@@ -1,0 +1,16 @@
+[
+  {
+    "route": "/work/callnyc",
+    "slug": "callnyc",
+    "occurrences": [
+      {
+        "id": "announced-schedule",
+        "claimId": "callnyc-hackathon-announced-schedule"
+      },
+      {
+        "id": "first-councilstat",
+        "claimId": "callnyc-first-councilstat-hackathon"
+      }
+    ]
+  }
+]
