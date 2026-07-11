@@ -17,6 +17,7 @@ const details = [
   "No private or proprietary font files are committed or served",
   "Designed with Broadway blue, Jamie's oil-pastel palette, and a quiet proportional grid",
   "Staging-first Docker / Dokku deployment with staging noindex by default",
+  "Consequential public claims are linked to a source-backed Knowledge Bank. Citation numbers are generated per page; private supporting materials remain protected.",
   "No invasive tracking in V1"
 ];
 
