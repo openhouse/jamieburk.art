@@ -1,0 +1,71 @@
+[
+  {
+    "id": "CALLNYC-NOTE-01",
+    "claimIds": [
+      "CLM-CALLNYC-EVENT-DATE-TIME",
+      "CLM-CALLNYC-FIRST-COUNCILSTAT"
+    ],
+    "evidenceIds": [
+      "EVD-CALLNYC-CIVICHALL-ANNOUNCEMENT",
+      "EVD-CALLNYC-NYCC-COUNCILSTAT"
+    ],
+    "title": "January 2016 event context",
+    "publicNote": "Civic Hall's public announcement supports the January 30, 2016 date, 1-3 p.m. advertised time, and constituent-services focus. The New York City Council's event-day post describes the gathering as its first CouncilStat hackathon. These sources do not make CallNYC an official Council product.",
+    "sourceOrder": [
+      "EVD-CALLNYC-CIVICHALL-ANNOUNCEMENT",
+      "EVD-CALLNYC-NYCC-COUNCILSTAT"
+    ],
+    "boundaryNote": "Use the CouncilStat attribution as an attributed institutional description, not as a broader civic-technology first.",
+    "visibility": "public"
+  },
+  {
+    "id": "CALLNYC-NOTE-02",
+    "claimIds": [
+      "CLM-CALLNYC-DIGITAL-DISTRICT"
+    ],
+    "evidenceIds": [
+      "EVD-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+    ],
+    "title": "Digital District breakout label",
+    "publicNote": "A private participant photograph documents a breakout/table placard reading \"Digital District - Help improve City Council District office operations.\" The photograph supports the visible breakout label and a breakout in progress, not the official title of the whole event or the event start time.",
+    "sourceOrder": [
+      "EVD-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+    ],
+    "boundaryNote": "The photograph remains private; no image file, archive path, or private metadata is published.",
+    "visibility": "public"
+  },
+  {
+    "id": "CALLNYC-NOTE-03",
+    "claimIds": [
+      "CLM-CALLNYC-INDEPENDENT-FOLLOWON"
+    ],
+    "evidenceIds": [
+      "EVD-CALLNYC-POLITICO-FOLLOWON",
+      "EVD-CALLNYC-GITHUB-FOLLOWON"
+    ],
+    "title": "Independent CallNYC follow-on",
+    "publicNote": "Politico New York reporting and the public repository support CallNYC as an independent public-facing interpretation of CouncilStat / constituent-services data after the full dataset was released. The record supports project publication and implementation, not official Council ownership or current guidance.",
+    "sourceOrder": [
+      "EVD-CALLNYC-POLITICO-FOLLOWON",
+      "EVD-CALLNYC-GITHUB-FOLLOWON"
+    ],
+    "boundaryNote": "Keep CallNYC framed as archived, unofficial, independent, and not current civic, legal, or emergency guidance.",
+    "visibility": "public"
+  },
+  {
+    "id": "CALLNYC-NOTE-04",
+    "claimIds": [
+      "CLM-CALLNYC-CIVICHALL-PAGE-NOT-RECOVERED"
+    ],
+    "evidenceIds": [
+      "EVD-CALLNYC-CIVICHALL-CDX-NOT-RECOVERED"
+    ],
+    "title": "Dedicated Civic Hall page not recovered",
+    "publicNote": "A documented Wayback CDX research pass did not recover a dedicated Civic Hall calendar listing or event-detail page for the January 2016 event. That supports \"not recovered within the documented search,\" not \"never existed.\"",
+    "sourceOrder": [
+      "EVD-CALLNYC-CIVICHALL-CDX-NOT-RECOVERED"
+    ],
+    "boundaryNote": "Do not convert a negative search finding into an existence claim.",
+    "visibility": "restricted"
+  }
+]

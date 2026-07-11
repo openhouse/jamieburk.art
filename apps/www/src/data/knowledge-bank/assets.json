@@ -1,0 +1,85 @@
+[
+  {
+    "id": "ASSET-CIVICHALL-GRAPHIC-CZ5M",
+    "sourceId": "SRC-CIVICHALL-GRAPHIC-CZ5M",
+    "mediaType": "promotional-graphic",
+    "title": "New York City Council Hackathon promotional graphic",
+    "creator": "Civic Hall / New York City Council",
+    "captureDate": null,
+    "captureDateBasis": "published-date",
+    "visibility": "public",
+    "rightsState": "link-only",
+    "permissionStatus": "not-required",
+    "publicAssetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "visibleText": [
+      "New York City Council Hackathon"
+    ],
+    "supportsFacets": [
+      "event-branding",
+      "labs-council-nyc-reference"
+    ],
+    "caveats": [
+      "Supports recovered event branding, not a complete formal title."
+    ],
+    "allowedSurfaces": [
+      "knowledge-bank",
+      "public-citation-note"
+    ]
+  },
+  {
+    "id": "ASSET-PHOTO-DIGITAL-DISTRICT-001",
+    "sourceId": "SRC-PHOTO-DIGITAL-DISTRICT-001",
+    "mediaType": "photograph",
+    "title": "Digital District breakout photograph",
+    "creator": "Jamie Burkart",
+    "captureDate": "2016-01-30",
+    "captureDateBasis": "embedded-metadata",
+    "visibility": "private",
+    "rightsState": "private-review",
+    "permissionStatus": "not-cleared",
+    "publicAssetUrl": null,
+    "visibleText": [
+      "Digital District - Help improve City Council District office operations."
+    ],
+    "supportsFacets": [
+      "digital-district-visible-text",
+      "breakout-in-progress",
+      "photograph-capture-time"
+    ],
+    "caveats": [
+      "The asset remains private in this PR.",
+      "The approximately 2:10 p.m. timestamp documents a breakout in progress, not the event start time."
+    ],
+    "allowedSurfaces": [
+      "knowledge-bank",
+      "public-citation-note"
+    ]
+  },
+  {
+    "id": "ASSET-POLITICO-PDF-2016-03-14",
+    "sourceId": "SRC-POLITICO-NEUBAUER-2016-03-14",
+    "mediaType": "pdf",
+    "title": "Archived Politico New York PDF about CallNYC",
+    "creator": "Politico New York",
+    "captureDate": "2016-03-14",
+    "captureDateBasis": "published-date",
+    "visibility": "public",
+    "rightsState": "link-only",
+    "permissionStatus": "not-required",
+    "publicAssetUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+    "visibleText": [
+      "Website provides new information about council members' focus"
+    ],
+    "supportsFacets": [
+      "independent-reporting",
+      "project-publication"
+    ],
+    "caveats": [
+      "Linked as a public archived PDF, not republished as a local file."
+    ],
+    "allowedSurfaces": [
+      "public-citation-note",
+      "public-link"
+    ]
+  }
+]
