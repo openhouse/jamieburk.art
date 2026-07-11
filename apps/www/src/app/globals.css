@@ -70,7 +70,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   background:
     linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
     linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
@@ -147,4 +147,48 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+[data-footnote-ref] {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.75em;
+  font-weight: 700;
+  margin-inline-start: 0.12em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.14em;
+}
+
+[data-footnote-ref]:focus-visible,
+[data-footnote-backref]:focus-visible {
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 3px;
+}
+
+section[data-footnotes] {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 18%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-top: 3rem;
+  padding-bottom: 2.5rem;
+  padding-top: 1.25rem;
+}
+
+section[data-footnotes] h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+section[data-footnotes] li {
+  scroll-margin-top: 8rem;
+}
+
+section[data-footnotes] li:target {
+  background: color-mix(in srgb, var(--jb-pale-blue) 22%, transparent);
+}
+
+[data-footnote-backref] {
+  font-size: 0.86em;
+  margin-inline-start: 0.35em;
 }
