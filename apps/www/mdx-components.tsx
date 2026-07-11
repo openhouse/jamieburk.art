@@ -1,7 +1,11 @@
 import type { MDXComponents } from "mdx/types";
+import { Cite } from "@/components/citations/Cite";
+import { References } from "@/components/citations/References";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
+    Cite,
+    References,
     h2: ({ children }) => (
       <h2 className="mt-12 text-2xl font-semibold text-jb-ink">{children}</h2>
     ),
