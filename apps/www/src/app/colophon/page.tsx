@@ -42,6 +42,17 @@ export default function ColophonPage() {
           </JBCard>
         ))}
       </div>
+      <section className="jb-reading mt-14">
+        <h2 className="text-3xl font-semibold text-jb-ink">Citational care</h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Exact dates, historical events, public records, press coverage, and
+          externally verifiable outcomes use numbered references where
+          practical. The knowledge bank records what each source supports, what
+          it does not establish, and where a claim remains qualified or
+          unresolved. Private material may inform Jamie&apos;s review without
+          becoming a public source.
+        </p>
+      </section>
     </div>
   );
 }
