@@ -1,0 +1,229 @@
+[
+  {
+    "id": "src-civichall-announcement-2016",
+    "type": "official-social-post",
+    "title": "Civic Hall post announcing a January 30, 2016 NYC Council hackathon",
+    "shortTitle": "Civic Hall hackathon announcement",
+    "authorOrOrganization": "Civic Hall",
+    "publishedAt": "2016-01-29",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "live-and-archived",
+    "links": [
+      {
+        "kind": "original",
+        "label": "Original Civic Hall post",
+        "url": "https://x.com/CivicHall/status/693124020917522433"
+      },
+      {
+        "kind": "archive-context",
+        "label": "Wayback-captured Civic Hall embedded feed",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/"
+      }
+    ],
+    "publicNote": "Announces January 30, 1-3 p.m., for a New York City Council hackathon focused on constituent services.",
+    "establishes": [
+      "announced date",
+      "announced time window",
+      "NYC Council association",
+      "constituent-services purpose"
+    ],
+    "doesNotEstablish": [
+      "actual start or end time",
+      "full agenda",
+      "attendance",
+      "breakout roster",
+      "a dedicated Civic Hall calendar listing"
+    ],
+    "lastCheckedAt": "2026-07-11"
+  },
+  {
+    "id": "src-civichall-promo-graphic-2016",
+    "type": "public-project-artifact",
+    "title": "New York City Council Hackathon promotional graphic",
+    "shortTitle": "NYC Council Hackathon graphic",
+    "authorOrOrganization": "New York City Council / Civic Hall",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "live-and-archived",
+    "links": [
+      {
+        "kind": "media",
+        "label": "Promotional graphic",
+        "url": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large"
+      },
+      {
+        "kind": "archive-context",
+        "label": "Wayback-captured Civic Hall embedded feed",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/"
+      }
+    ],
+    "publicNote": "Council-branded graphic reading 'New York City Council Hackathon' and 'labs.council.nyc.'",
+    "establishes": [
+      "recovered event branding",
+      "use of the phrase New York City Council Hackathon",
+      "association with labs.council.nyc"
+    ],
+    "doesNotEstablish": [
+      "a longer formal registration title",
+      "event agenda",
+      "the name of any breakout"
+    ],
+    "rightsStatus": "Link only; reproduction rights are not asserted by this repository.",
+    "consentStatus": "Not applicable to the public graphic link.",
+    "lastCheckedAt": "2026-07-11"
+  },
+  {
+    "id": "src-nyccouncil-event-post-2016",
+    "type": "official-social-post",
+    "title": "New York City Council event-day post from Civic Hall",
+    "shortTitle": "NYC Council event-day post",
+    "authorOrOrganization": "New York City Council",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "live-and-archived",
+    "links": [
+      {
+        "kind": "original",
+        "label": "Original NYC Council post",
+        "url": "https://x.com/NYCCouncil/status/693509031768506368"
+      },
+      {
+        "kind": "archive-context",
+        "label": "Wayback-captured Civic Hall embedded feed",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/"
+      }
+    ],
+    "publicNote": "Event-day post identifying the gathering at Civic Hall as the Council's first #CouncilStat hackathon.",
+    "establishes": [
+      "event occurred at Civic Hall",
+      "January 30 event-day context",
+      "Council's wording first #CouncilStat hackathon"
+    ],
+    "doesNotEstablish": [
+      "first civic-data hackathon of any kind",
+      "full event title",
+      "full agenda",
+      "participant roster"
+    ],
+    "lastCheckedAt": "2026-07-11"
+  },
+  {
+    "id": "src-wayback-civichall-feed-2016",
+    "type": "archived-web-capture",
+    "title": "Civic Hall events page preserving its embedded social feed",
+    "shortTitle": "Archived Civic Hall embedded feed",
+    "publisher": "Internet Archive Wayback Machine",
+    "capturedAt": "2016-01-31T00:46:01Z",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "archived",
+    "links": [
+      {
+        "kind": "archive",
+        "label": "January 31, 2016 Wayback capture",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/"
+      }
+    ],
+    "publicNote": "Archived Civic Hall page preserving the relevant Civic Hall and NYC Council posts inside an embedded social feed.",
+    "establishes": [
+      "the posts were embedded on Civic Hall's archived site"
+    ],
+    "doesNotEstablish": [
+      "that this page was the event's calendar listing",
+      "that Civic Hall had a dedicated event-detail page"
+    ],
+    "archivalCarrierFor": [
+      "src-civichall-announcement-2016",
+      "src-nyccouncil-event-post-2016"
+    ],
+    "lastCheckedAt": "2026-07-11"
+  },
+  {
+    "id": "src-participant-photo-digital-district",
+    "type": "participant-archive",
+    "title": "Digital District breakout photograph",
+    "shortTitle": "Digital District participant photograph",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "visibility": "protected",
+    "availability": "archived",
+    "links": [],
+    "publicNote": "Protected participant photograph documenting a Digital District breakout placard.",
+    "establishes": [
+      "visible breakout wording",
+      "participant working context",
+      "approximate photograph time around 2:10 p.m."
+    ],
+    "doesNotEstablish": [
+      "official title of the full event",
+      "facilitator identity",
+      "full discussion topics",
+      "complete participant roster"
+    ],
+    "rightsStatus": "Photographer and publication rights review required.",
+    "consentStatus": "Represented-person review required."
+  },
+  {
+    "id": "src-politico-callnyc-2016",
+    "type": "press",
+    "title": "Website provides new information about council members' focus",
+    "shortTitle": "Politico New York coverage",
+    "authorOrOrganization": "Miranda Neubauer",
+    "publisher": "Politico New York",
+    "publishedAt": "2016-03-14",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "archived",
+    "links": [
+      {
+        "kind": "local-public-artifact",
+        "label": "Archived Politico New York PDF",
+        "url": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+      }
+    ],
+    "publicNote": "Contemporaneous coverage connects the Civic Hall gathering, the later full CouncilStat release, and Jamie's independent development of CallNYC.",
+    "establishes": [
+      "Jamie attended the January Civic Hall gathering",
+      "the full CouncilStat data later became public",
+      "Jamie independently developed CallNYC",
+      "CallNYC translated constituent-services records for public exploration"
+    ],
+    "doesNotEstablish": [
+      "CallNYC was an official Council product",
+      "CallNYC was a formal hackathon submission",
+      "CallNYC measured service outcomes"
+    ],
+    "lastCheckedAt": "2026-07-11"
+  },
+  {
+    "id": "src-callnyc-github-repository",
+    "type": "public-project-artifact",
+    "title": "CallNYC source repository",
+    "shortTitle": "CallNYC GitHub repository",
+    "authorOrOrganization": "openhouse",
+    "publisher": "GitHub",
+    "accessedAt": "2026-07-11",
+    "visibility": "public",
+    "availability": "live",
+    "links": [
+      {
+        "kind": "canonical",
+        "label": "Public CallNYC repository",
+        "url": "https://github.com/openhouse/CallNYC"
+      }
+    ],
+    "publicNote": "Public repository preserving the implementation of the independent, archived CallNYC prototype.",
+    "establishes": [
+      "surviving CallNYC implementation",
+      "independent project authorship context"
+    ],
+    "doesNotEstablish": [
+      "official Council ownership",
+      "current service status",
+      "complete historical usage"
+    ],
+    "lastCheckedAt": "2026-07-11"
+  }
+]

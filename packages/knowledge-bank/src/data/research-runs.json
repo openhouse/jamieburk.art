@@ -1,0 +1,24 @@
+[
+  {
+    "id": "research-civichall-event-pages-2026",
+    "subject": "Search for a dedicated Civic Hall listing for the January 2016 NYC Council hackathon",
+    "performedAt": "2026-07-11",
+    "method": "CDX enumeration of Civic Hall HTML captures and event URL prefixes",
+    "scope": {
+      "deduplicatedCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "notFoundCaptures": 7
+    },
+    "result": "No dedicated calendar listing or event-detail page was recovered.",
+    "interpretation": "Civic Hall site evidence survives through an embedded social feed, not through a recovered event page.",
+    "doesNotProve": [
+      "that no dedicated page ever existed",
+      "that Civic Hall did not promote the event elsewhere",
+      "that an external registration page was never available"
+    ],
+    "visibility": "public-summary"
+  }
+]

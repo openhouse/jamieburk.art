@@ -1,0 +1,25 @@
+[
+  {
+    "pageId": "callnyc",
+    "route": "/work/callnyc",
+    "heading": "Sources",
+    "occurrences": [
+      {
+        "id": "callnyc-announced-schedule-and-purpose",
+        "citationGroupId": "callnyc-announced-schedule-and-purpose"
+      },
+      {
+        "id": "callnyc-first-councilstat-hackathon",
+        "citationGroupId": "callnyc-first-councilstat-hackathon"
+      },
+      {
+        "id": "callnyc-independent-follow-on",
+        "citationGroupId": "callnyc-independent-follow-on"
+      },
+      {
+        "id": "callnyc-civic-hall-page-not-recovered",
+        "citationGroupId": "callnyc-civic-hall-page-not-recovered"
+      }
+    ]
+  }
+]

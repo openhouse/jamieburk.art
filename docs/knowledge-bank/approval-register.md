@@ -15,7 +15,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
-- CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
+- CallNYC: archived, independently developed, unofficial civic-data prototype;
+  January 2016 CouncilStat event wording and Politico New York coverage are
+  source-backed. Digital District participant photography remains protected.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.

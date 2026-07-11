@@ -1,0 +1,27 @@
+[
+  {
+    "id": "correction-callnyc-year-2016",
+    "subject": "CallNYC public chronology",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "The recovered Civic Hall, Council, project, and press record places the event and CallNYC work in 2016.",
+    "resolvedAt": "2026-07-11",
+    "relatedClaimIds": [
+      "claim-callnyc-announced-schedule-purpose",
+      "claim-callnyc-independent-follow-on"
+    ],
+    "status": "resolved"
+  },
+  {
+    "id": "correction-callnyc-councilstat-wording",
+    "subject": "CallNYC event description",
+    "previousValue": "first civic-data hackathon",
+    "correctedValue": "an event-day New York City Council post described the gathering as its first CouncilStat hackathon",
+    "reason": "The Council source supports the narrower attributed CouncilStat wording, not the broader former phrase.",
+    "resolvedAt": "2026-07-11",
+    "relatedClaimIds": [
+      "claim-callnyc-first-councilstat-hackathon"
+    ],
+    "status": "resolved"
+  }
+]

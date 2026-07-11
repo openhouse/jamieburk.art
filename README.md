@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -42,6 +45,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `packages/knowledge-bank/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -55,8 +59,24 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+To add a citation:
+
+1. add a source;
+2. add an atomic claim and optional professional `proofId`;
+3. add an evidence relationship;
+4. add or revise a citation group;
+5. add a page occurrence;
+6. place `<Cite pageId="..." id="..." />` beside the proposition;
+7. render `<References pageId="..." />` once after the main content;
+8. run the citation and full repository checks.
+
+`npm run check:citations` validates records and public authoring,
+`npm run test:citations` runs deterministic regression tests, and
+`npm run report:citations` writes `reports/citations.md`. The canonical workflow
+is in `docs/knowledge-bank/citation-policy.md`.
+
+`npm run knowledge-bank` checks the professional proof schema, projection rules,
+and work metadata. `npm run check:routes` checks canonical routes and redirects.
 
 ## Environment
 

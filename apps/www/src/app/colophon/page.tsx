@@ -34,6 +34,12 @@ export default function ColophonPage() {
           production should only become indexable after content and metadata
           review.
         </p>
+        <p className="mt-6 leading-8 text-jb-ink/76">
+          Selected factual claims are linked to a small, human-reviewed knowledge
+          bank that tracks source, confidence, audience, corrections, and protected
+          boundaries. Numerical references lead to page-level source notes; private
+          supporting records are not published.
+        </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {details.map((detail) => (

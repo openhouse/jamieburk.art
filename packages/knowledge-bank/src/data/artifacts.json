@@ -1,0 +1,58 @@
+[
+  {
+    "id": "artifact-callnyc-promotional-graphic",
+    "type": "graphic",
+    "title": "New York City Council Hackathon promotional graphic",
+    "sourceId": "src-civichall-promo-graphic-2016",
+    "visibility": "public",
+    "rightsStatus": "Link only; reproduction rights are not asserted by this repository.",
+    "consentStatus": "Not applicable to the public graphic link.",
+    "publicUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "depicts": [
+      "New York City Council Hackathon branding",
+      "labs.council.nyc"
+    ],
+    "establishes": [
+      "visible event-branding text"
+    ],
+    "doesNotEstablish": [
+      "a longer formal registration title",
+      "event agenda",
+      "breakout names"
+    ],
+    "captionLimits": [
+      "Describe as recovered branding, not a complete formal title."
+    ],
+    "cropLimits": [
+      "Do not reproduce in the site without a separate rights review."
+    ]
+  },
+  {
+    "id": "artifact-callnyc-digital-district-photo",
+    "type": "photograph",
+    "title": "Digital District participant photograph",
+    "sourceId": "src-participant-photo-digital-district",
+    "visibility": "protected",
+    "rightsStatus": "Photographer and publication rights review required.",
+    "consentStatus": "Represented-person review required.",
+    "publicMetadataOnly": true,
+    "depicts": [
+      "breakout placard",
+      "participant working context"
+    ],
+    "establishes": [
+      "visible Digital District breakout wording"
+    ],
+    "doesNotEstablish": [
+      "official title of the full event",
+      "facilitator identity",
+      "complete participant roster"
+    ],
+    "captionLimits": [
+      "No public caption before rights, consent, and publication review."
+    ],
+    "cropLimits": [
+      "Do not publish or crop before represented-person and photographer review."
+    ]
+  }
+]

@@ -15,6 +15,9 @@
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [ ] Correct the CallNYC line in the editable resume source from "first
+  civic-data hackathon" to the supported attributed CouncilStat wording, then
+  export and review a replacement PDF in a separate change.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
