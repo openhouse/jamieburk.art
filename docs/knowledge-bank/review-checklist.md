@@ -23,6 +23,11 @@ changes public claims.
   transcript, or company context.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
   needed.
+- [ ] Photo-supported copy distinguishes visible corroboration from authorship,
+  causality, leadership, metrics, dates, consent, and project identity.
+- [ ] Every proposed public photograph has separately reviewed rights, consent,
+  collaborator/client approval, caption, credit, crop, alt text, and sensitive
+  context.
 - [ ] No raw transcripts, private notes, legal-review materials, stakeholder
   lists, private rows, private screenshots, private photos, private fonts,
   credentials, or private correspondence have been committed.

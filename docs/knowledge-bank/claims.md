@@ -23,6 +23,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary  
+**Photographic corroboration:** Industrial retail, inventory, tools, machinery, and production settings show the physical operating environment that the e-commerce work had to translate. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
 **Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
@@ -53,6 +54,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
+**Photographic corroboration:** Presentation rooms, projected interfaces, a development terminal, and card-based review provide bounded visual context for prototyping and information architecture; public code and coverage remain the stronger authorship sources. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
@@ -68,6 +70,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Photographic corroboration:** Public panels, campaign stages, speakers, signage, and audiences corroborate a sustained public-facing layer of collective advocacy, not Jamie's sole leadership or causality. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
@@ -113,6 +116,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
+**Photographic corroboration:** Public convenings, campaign stages, speakers, visible advocacy materials, and audiences corroborate coalition communication and operations while leaving event ownership and policy causality collective. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 **Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
@@ -128,6 +132,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
+**Photographic corroboration:** Public displays, organizer-facing presentations, press ephemera, and DIY event materials place the platform in a lived organizer ecosystem; metrics still depend on non-photographic sources. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
@@ -143,6 +148,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Photographic corroboration:** Kitchens, prepared food, bread, tables, courtyards, and gardens make the material labor of recurring hospitality visible without conferring consent to identify or publish participants. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
@@ -173,6 +179,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
+**Photographic corroboration:** Building exteriors, damaged interiors, roof and masonry conditions, site walks, roof work, and public-room context corroborate documentation and adaptive-reuse work; they do not prove final funding or current status. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
@@ -188,6 +195,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Moderate  
 **Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
+**Photographic corroboration:** Older images of documents, cards, notes, and printed matter arranged for comparison support a longer review-and-handoff practice but are not evidence that the 2026 method was deployed for a client. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
 **Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
@@ -203,6 +211,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
+**Photographic corroboration:** Across project contexts, visible work recurs at the junction of software, public communication, material systems, hospitality, and the built environment. This supports the throughline but does not create a new title, metric, or sole-authorship claim. See `photo-evidence-review-v04-e.md`.
 **Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
 **Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
