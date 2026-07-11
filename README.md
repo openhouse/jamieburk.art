@@ -30,6 +30,8 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:citations
+npm run test:citations
 npm run public-safety
 npm run check:routes
 npm run preflight:staging
@@ -42,6 +44,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -57,6 +60,21 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+### Citation authoring
+
+Public MDX pages cite a stable occurrence declared in the citation page
+manifest. Numbers remain page-local and generated:
+
+```mdx
+<Cite page={callnycCitationPage} occurrence="councilstat-framing" />
+
+<References page={callnycCitationPage} />
+```
+
+See `docs/knowledge-bank/citational-care.md`. Run `npm run check:citations`
+before opening a PR. `npm run check:citation-links` is an optional network audit
+and is intentionally excluded from normal builds.
 
 ## Environment
 

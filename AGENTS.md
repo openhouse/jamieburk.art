@@ -25,6 +25,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run build`
 - `npm run check`
 - `npm run knowledge-bank`
+- `npm run check:citations`
+- `npm run test:citations`
 - `npm run public-safety`
 - `npm run check:routes`
 
@@ -57,6 +59,19 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Citational Care
+
+- Use stable claim, source, note, and occurrence IDs, never hand-assigned public
+  numbers.
+- Cite factual, numerical, chronological, institutional, and historical claims.
+- A source record must state what it supports and what it does not establish.
+- Do not use one citation to support unrelated clauses.
+- Preserve attribution for attributed claims.
+- Do not expose private evidence, raw transcripts, private paths, or protected
+  sources.
+- The public site is a projection from the knowledge bank, not an evidence dump.
+- Run `npm run check:citations` before opening a PR.
 
 ## Chad Lens
 
