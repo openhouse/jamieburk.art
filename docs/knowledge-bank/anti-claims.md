@@ -12,6 +12,11 @@ Do not imply a prototype is a current official service.
 Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
+Do not treat a photograph, album label, date, People association, or machine
+label as independent proof of authorship, causality, leadership, metrics,
+consent, or project identity.
+Do not publish an editor field, contact sheet, private photo-library metadata,
+or unapproved photograph.
 
 ## HJE
 

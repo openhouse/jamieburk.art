@@ -42,6 +42,11 @@ If a private archive supports a public claim, describe the aggregate result or
 public-safe pattern. Do not describe the private record inventory in unnecessary
 detail.
 
+For photographic evidence, record what is visibly corroborated and what the
+image cannot establish. Retrieval labels, dates, People associations, and visual
+similarity are not narrative authority. No image becomes publication-approved
+merely by entering an editor field or supporting a knowledge-bank note.
+
 ## Projection Rule
 
 The site should project from this bank, not mirror it.
