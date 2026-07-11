@@ -38,3 +38,14 @@ the claim out of public projection until it is reviewed.
 Private sources may support a public-safe claim, but the private source itself
 stays outside the repo. Describe aggregate patterns, approved public artifacts,
 and public-safe summaries rather than private record inventories.
+
+## Visual Evidence
+
+The repo may contain public-safe visual corroboration summaries, but not the
+private photographs, contact sheets, identifiers, local paths, People
+associations, or private metadata used to derive them.
+
+Possession, album membership, and People association do not establish
+publication permission. Before any image enters the website, separately confirm
+rights, consent, dignity, context, credit, and removal of unnecessary private
+metadata.

@@ -198,6 +198,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## reviewable-artifacts-practice - Reviewable artifacts across projects
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe visual archive summary
+**Public wording:** Jamie makes complex work reviewable through documents, maps, diagrams, cards, prototypes, public interfaces, and durable working environments.
+**Detailed public-safe wording:** Across projects, Jamie externalizes requirements, decisions, source trails, open questions, and next steps into artifacts other people can inspect, correct, and use.
+**Where to project:** Technical Operations, About, Case studies when tied to project-specific proof.
+**Why it matters:** Makes the operating-structure claim concrete for hiring and public-sector readers by showing what the work becomes in practice.
+**Guardrail:** Use as a cross-project practice claim. Tie public examples to project-specific proof and approved artifacts.
+**Do not say:** Jamie authored every visible artifact; a photograph proves project ownership or outcomes; the private visual archive is publicly available.
+**Protected boundaries:** Unapproved photographs, private interiors, identifiable people without approval, private records visible inside photographs, and rights or consent metadata stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-11
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

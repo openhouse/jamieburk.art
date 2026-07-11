@@ -32,6 +32,9 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Visual corroboration:** public-safe findings linked to claims in
+  `apps/www/src/data/visual-corroboration.ts`, without publishing the private
+  photographs or metadata used to derive them.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -41,6 +44,10 @@ The knowledge bank exists to:
 If a private archive supports a public claim, describe the aggregate result or
 public-safe pattern. Do not describe the private record inventory in unnecessary
 detail.
+
+Visual evidence may corroborate setting, material conditions, visible presence,
+or the existence of an artifact. It does not independently prove authorship,
+causation, outcome, consent, endorsement, or publication rights.
 
 ## Projection Rule
 

@@ -21,6 +21,12 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
+- Reviewable artifacts practice: approved as a careful cross-project claim when
+  public examples are tied to project-specific proof and approved artifacts.
+- Public-safe visual archive summaries: approved as contextual corroboration
+  when they contain no photographs, identifiers, private paths, People
+  associations, or private metadata. This does not approve any photograph for
+  publication.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -33,5 +39,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Guest lists.
 - Attendance records.
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
+- Private image identifiers, contact sheets, People associations, rights notes,
+  or embedded private records.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.
