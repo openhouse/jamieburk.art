@@ -145,6 +145,14 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const callNYCPublicSurfaceFiles = shippedContentFiles.filter((file) =>
+  [
+    "apps/www/src/content/work/callnyc.mdx",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/app/resume/page.tsx",
+    "apps/www/src/app/work/technical-operations/page.tsx"
+  ].includes(relative(file))
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -184,6 +192,24 @@ scanPattern(
   publicContentFiles,
   "raw/private transcript exposure appears in production-facing content",
   /\b(?:otter(?:\.ai|_ai)?|raw\s+(?:meeting\s+)?transcripts?|private\s+transcript\s+excerpt|corrected[_ -]?(?:working[_ -]?)?transcripts?|repaired[_ -]?transcripts?)\b/i
+);
+
+scanPattern(
+  callNYCPublicSurfaceFiles,
+  "retired CallNYC first civic-data claim appears on a public surface",
+  /first\s+civic[- ]data\s+hackathon/i
+);
+
+scanPattern(
+  callNYCPublicSurfaceFiles,
+  "retired CallNYC 2014-2015 chronology appears on a public surface",
+  /2014\s*[-–]\s*2015/i
+);
+
+scanPattern(
+  callNYCPublicSurfaceFiles,
+  "unresolved citation placeholder appears on a public surface",
+  /SOURCE\s+TK|citation\s+pending|press\s+citation\s+pending|\[\?\]/i
 );
 
 scanPattern(
@@ -244,6 +270,10 @@ if (!existsSync(resumePath)) {
 
   if (/\b(?:TODO|Placeholder resume PDF|lorem ipsum|replace this)\b/i.test(resumeText)) {
     addFailure(resumePath, "resume PDF contains placeholder or TODO text");
+  }
+
+  if (/first\s+civic[- ]data\s+hackathon|2014\s*[-–]\s*2015/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF contains retired CallNYC chronology or wording");
   }
 
   if (

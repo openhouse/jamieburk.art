@@ -29,6 +29,7 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -42,6 +43,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -56,7 +58,13 @@ There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+metadata. `npm run check:citations` validates source, claim, evidence, and
+page-citation relationships without network access. `npm run check:routes`
+checks canonical routes and legacy redirects.
+
+CallNYC is the first complete cited case study. Its MDX uses `<Cite>` with
+stable occurrence IDs; source numbers and return links are generated from the
+page manifest. The site intentionally has no public knowledge-bank route.
 
 ## Environment
 

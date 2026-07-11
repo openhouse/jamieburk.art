@@ -13,6 +13,7 @@ import {
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
+import { References } from "@/components/citations";
 import type { WorkMeta } from "@/types/work";
 
 type CaseStudyLayoutProps = {
@@ -59,6 +60,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </div>
         <LinksList item={item} />
         <CreditsList item={item} />
+        <References pageId={item.slug} />
       </div>
     </article>
   );

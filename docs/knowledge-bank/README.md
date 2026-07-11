@@ -1,5 +1,11 @@
 # Knowledge Bank
 
+Citational-care policy and implementation guidance:
+
+- `citational-care.md`
+- `source-classes.md`
+- `projects/callnyc.md`
+
 This directory is the public-safe knowledge base for Jamie Burkart's
 professional accomplishment claims.
 
