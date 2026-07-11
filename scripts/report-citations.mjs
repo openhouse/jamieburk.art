@@ -47,5 +47,5 @@ lines.push(
 
 const output = path.join(repoRoot, "reports/citations.md");
 mkdirSync(path.dirname(output), { recursive: true });
-writeFileSync(output, `${lines.join("\n")}\n`, "utf8");
+writeFileSync(output, `${lines.join("\n").trimEnd()}\n`, "utf8");
 console.log(path.relative(repoRoot, output));

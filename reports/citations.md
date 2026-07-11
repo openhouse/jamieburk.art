@@ -19,4 +19,3 @@ Public boundary: CallNYC is an archived, independent, unofficial prototype. Prot
 
 - SRC-CALL-DIGITAL-DISTRICT-PHOTO: public-metadata-only; approval-required; rights pending
 - CORR-CALL-RESUME-PDF: Approved resume PDF remains follow-up-required.
-
