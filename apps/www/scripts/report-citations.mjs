@@ -175,8 +175,6 @@ for (const group of citationGroups.filter((record) => record.visibility !== "pub
   lines.push(`- \`${group.id}\`: ${group.publicNote}`);
 }
 
-lines.push("");
-
 const reportPath = path.join(repoRoot, "reports/citations.md");
 fs.mkdirSync(path.dirname(reportPath), { recursive: true });
 fs.writeFileSync(reportPath, `${lines.join("\n")}\n`);

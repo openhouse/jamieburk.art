@@ -91,7 +91,7 @@ function AssetEvidence({ evidenceRecord }: { evidenceRecord: EvidenceRecord }) {
   const source = asset.sourceId ? getSource(asset.sourceId) : null;
   const privateDescription =
     asset.visibility === "private" || !asset.publicAssetUrl
-      ? " Private asset; no public asset URL."
+      ? " Private source; no public asset URL."
       : "";
 
   return (
