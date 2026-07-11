@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -42,6 +45,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -54,6 +58,18 @@ photos, unapproved screenshots, or unapproved quotes.
 
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
+
+To add a citation, add a source to `sources.json`, a proposition to `claims.json`,
+and their relationship to `evidence.json`. Then add the stable claim occurrence
+to `pages.json` and place `<Cite page={...} occurrence="..." />` beside the exact
+proposition in MDX. Add one `<SourceNotes page={...} />` after the page's main
+content. Authors never enter citation numbers; the resolver assigns them by
+first source appearance.
+
+`npm run check:citations` validates records and authored occurrences,
+`npm run test:citations` runs citation regressions, and
+`npm run report:citations` writes `reports/citations.md`. The full policy is in
+`docs/knowledge-bank/citation-policy.md`.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
