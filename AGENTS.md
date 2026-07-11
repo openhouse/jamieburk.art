@@ -27,6 +27,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
+- `npm run check:citations`
+- `npm run test:citations`
+- `npm run report:citations`
 
 ## Public-Safety Rules
 
@@ -57,6 +60,31 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Citational Care
+
+Use the app-local citation system under `apps/www/src/data/knowledge-bank/`,
+`apps/www/src/lib/citations/`, and `apps/www/src/components/citations/`.
+
+Do not add a second citation package, API, database, CMS, or remark/rehype
+citation pipeline unless explicitly requested.
+
+Separate source origin from preservation. If an Internet Archive capture
+preserves a public source, name the original publisher as the source and the
+archive as preservation context.
+
+Public citations must be page-local, generated at render time, and reset per
+page. Do not store global citation numbers in the data.
+
+Public projections require approved claims, allowed surfaces, evidence
+relationships, source boundaries, required qualifiers, and anti-claims.
+
+Private evidence may be represented only as a public-safe summary. Do not expose
+private paths, raw metadata, participant identities, unapproved media, or
+unpublished source files.
+
+Run `npm run check:citations`, `npm run test:citations`, and
+`npm run report:citations` after editing cited claims.
 
 ## Chad Lens
 

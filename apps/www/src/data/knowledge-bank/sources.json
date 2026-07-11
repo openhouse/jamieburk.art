@@ -1,0 +1,176 @@
+[
+  {
+    "id": "source.civic-hall.x.693124020917522433",
+    "title": "Civic Hall announcement of New York City Council hackathon",
+    "shortCitation": "Civic Hall public post, January 30, 2016",
+    "fullCitation": "Civic Hall, public social post announcing a New York City Council hackathon focused on constituent services, January 30, 2016.",
+    "publisher": "Civic Hall",
+    "sourceType": "partner_institution_social_post",
+    "medium": "social_post",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "originalUrl": "https://x.com/CivicHall/status/693124020917522433",
+    "archiveUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+    "publiclyLinkable": true,
+    "accessStatus": "archived",
+    "publicNote": "Supports the advertised date, 1-3 p.m. window, New York City Council hackathon context, and constituent-services focus. The archived Civic Hall page preserves an embedded social feed; it is not a recovered Civic Hall calendar listing for the event.",
+    "establishes": [
+      "January 30, 2016 advertised date",
+      "advertised 1-3 p.m. event window",
+      "New York City Council hackathon context",
+      "constituent-services focus"
+    ],
+    "doesNotEstablish": [
+      "actual start or end time",
+      "dedicated event page recovery",
+      "full formal event title",
+      "full agenda",
+      "attendance",
+      "breakout roster"
+    ],
+    "preservation": {
+      "provider": "Internet Archive Wayback Machine",
+      "method": "Archived Civic Hall events page containing embedded social-feed evidence.",
+      "captureUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+      "capturedAt": "2016-01-31T00:46:01Z",
+      "caution": "Wayback preserves the page context; it is not the author of the Civic Hall post."
+    }
+  },
+  {
+    "id": "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td",
+    "title": "Civic Hall promotional graphic for New York City Council Hackathon",
+    "shortCitation": "Civic Hall promotional graphic",
+    "fullCitation": "Civic Hall, promotional graphic attached to the New York City Council Hackathon announcement, January 2016.",
+    "publisher": "Civic Hall",
+    "sourceType": "promotional_graphic",
+    "medium": "image",
+    "publishedAt": "2016-01",
+    "accessedAt": "2026-07-11",
+    "originalUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "publiclyLinkable": true,
+    "accessStatus": "public",
+    "publicNote": "Supports visible event branding: New York City Council Hackathon and labs.council.nyc branding. It does not prove the complete formal registration title.",
+    "establishes": [
+      "visible New York City Council Hackathon heading",
+      "labs.council.nyc branding"
+    ],
+    "doesNotEstablish": [
+      "complete formal registration title",
+      "agenda",
+      "attendance",
+      "breakout roster"
+    ]
+  },
+  {
+    "id": "source.nyc-council.x.693509031768506368",
+    "title": "New York City Council event-day post from Civic Hall",
+    "shortCitation": "New York City Council public post, January 30, 2016",
+    "fullCitation": "New York City Council, public social post from Civic Hall describing the gathering as its first CouncilStat hackathon, January 30, 2016.",
+    "publisher": "New York City Council",
+    "sourceType": "official_institutional_social_post",
+    "medium": "social_post",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "originalUrl": "https://x.com/NYCCouncil/status/693509031768506368",
+    "archiveUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+    "publiclyLinkable": true,
+    "accessStatus": "archived",
+    "publicNote": "Supports event-day Civic Hall venue context and the Council's description of the gathering as its first CouncilStat hackathon. It does not establish that CallNYC was an official Council product.",
+    "establishes": [
+      "January 30 event day",
+      "Civic Hall venue context",
+      "Council description of first CouncilStat hackathon"
+    ],
+    "doesNotEstablish": [
+      "official Council affiliation for CallNYC",
+      "formal hackathon submission status for CallNYC",
+      "full agenda"
+    ],
+    "preservation": {
+      "provider": "Internet Archive Wayback Machine",
+      "method": "Archived Civic Hall events page containing embedded social-feed evidence.",
+      "captureUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+      "capturedAt": "2016-01-31T00:46:01Z",
+      "caution": "Wayback preserves the page context; it is not the author of the Council post."
+    }
+  },
+  {
+    "id": "source.participant-photo.digital-district.2016-01-30-1410",
+    "title": "Participant photograph documenting Digital District breakout",
+    "shortCitation": "Participant photo archive, January 30, 2016",
+    "fullCitation": "Participant photograph archive, public-safe summary of a Digital District breakout/table prompt, January 30, 2016, approximately 2:10 p.m.",
+    "publisher": "Participant archive",
+    "sourceType": "participant_archive",
+    "medium": "photograph",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "publiclyLinkable": false,
+    "accessStatus": "private",
+    "publicNote": "Summary-only private-source note. The image supports a visible Digital District breakout/table title, the prompt Help improve City Council District office operations, a photographed moment around 2:10 p.m., and that a breakout was underway. The photograph itself, identities, raw metadata, and permissions are not published here.",
+    "establishes": [
+      "visible Digital District breakout/table title",
+      "visible prompt Help improve City Council District office operations",
+      "breakout underway at photographed moment",
+      "approximate 2:10 p.m. camera timestamp"
+    ],
+    "doesNotEstablish": [
+      "complete event title",
+      "event start time",
+      "full agenda",
+      "facilitator identity",
+      "full participant roster"
+    ]
+  },
+  {
+    "id": "source.politico-neubauer.callnyc.2016-03-14",
+    "title": "Website provides new information about council members' focus",
+    "shortCitation": "Politico New York coverage, March 14, 2016",
+    "fullCitation": "Politico New York, Website provides new information about council members' focus, March 14, 2016.",
+    "publisher": "Politico New York",
+    "sourceType": "independent_reporting",
+    "medium": "pdf",
+    "publishedAt": "2016-03-14",
+    "accessedAt": "2026-07-11",
+    "archiveUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+    "publiclyLinkable": true,
+    "accessStatus": "archived",
+    "publicNote": "Supports public reporting about CallNYC, Jamie's participation, pre-release event context, independent follow-on development, public-data limitations, and CallNYC framing. Use summary only; do not reproduce long copyrighted passages.",
+    "establishes": [
+      "public reporting about CallNYC",
+      "Jamie's participation",
+      "pre-release event context",
+      "independent follow-on development",
+      "public-data limitation context"
+    ],
+    "doesNotEstablish": [
+      "current service status",
+      "official Council service status",
+      "resident outcomes",
+      "complete hackathon record"
+    ]
+  },
+  {
+    "id": "source.github.openhouse.callnyc",
+    "title": "Openhouse CallNYC public repository",
+    "shortCitation": "CallNYC public GitHub repository",
+    "fullCitation": "Openhouse, CallNYC public code repository.",
+    "publisher": "Openhouse",
+    "sourceType": "public_code_repository",
+    "medium": "code_repository",
+    "accessedAt": "2026-07-11",
+    "originalUrl": "https://github.com/openhouse/CallNYC",
+    "publiclyLinkable": true,
+    "accessStatus": "public",
+    "publicNote": "Supports project and public-code provenance. It does not establish adoption, resident outcomes, or official affiliation.",
+    "establishes": [
+      "project existence",
+      "public-code provenance",
+      "implementation context"
+    ],
+    "doesNotEstablish": [
+      "adoption",
+      "resident outcomes",
+      "official affiliation"
+    ]
+  }
+]

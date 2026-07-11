@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Cite, References } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsCitationPage } from "@/data/knowledge-bank";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -28,8 +30,17 @@ const proofMap = [
   },
   {
     project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+    proof: (
+      <>
+        independent 2016 civic-data prototype translating CouncilStat /
+        constituent-services open data into resident-facing issue pathways and
+        next-step guidance.
+        <Cite
+          page={technicalOperationsCitationPage}
+          occurrence="technical-operations-callnyc-proof"
+        />
+      </>
+    )
   },
   {
     project: "WOWList",
@@ -104,6 +115,12 @@ export default function TechnicalOperationsPage() {
             ))}
           </dl>
         </JBCard>
+      </section>
+      <section className="jb-reading mt-10">
+        <References
+          page={technicalOperationsCitationPage}
+          heading="Source note"
+        />
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

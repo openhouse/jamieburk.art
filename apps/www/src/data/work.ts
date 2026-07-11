@@ -280,9 +280,9 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Independently built a 2016 civic-data prototype translating CouncilStat / constituent-services open data into resident-facing issue pathways and next-step guidance.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -303,7 +303,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "A civic-data interpretation layer developed after a January 2016 New York City Council / Civic Hall hackathon context.",
         type: "map"
       },
       {
@@ -337,28 +337,30 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "Public source links, archived Civic Hall / Council social-feed context, Politico New York coverage, public GitHub repository, public-safe research-run summary, and summary-only participant-photo evidence. Private image files, raw metadata, identities, and permissions are not published.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus:
+      "Archived prototype. Citations are published for public sources and summary-only notes; any screenshots or private media require Jamie approval before publication.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Developed after a January 2016 New York City Council / Civic Hall hackathon context",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Covered by Politico New York in March 2016",
+      "Public code provenance is available in the Openhouse CallNYC repository"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived, unofficial 2016 prototype with Politico New York coverage and public code provenance.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "Additional screenshots, media, and private archive details need Jamie approval before publication.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "No current-service claims, official city affiliation claims, private user data, participant identities, raw photo metadata, or unverified guidance are published."
       }
   },
   {

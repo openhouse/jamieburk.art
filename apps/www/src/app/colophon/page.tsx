@@ -12,6 +12,7 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Citational Care: readable claims with page-local source notes and private evidence boundaries",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -42,6 +43,18 @@ export default function ColophonPage() {
           </JBCard>
         ))}
       </div>
+      <section className="jb-reading mt-10">
+        <h2 className="text-3xl font-semibold text-jb-ink">Citational Care</h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Public claims on this site are meant to be readable first, then
+          source-backed when the reader wants to inspect the trail. The
+          knowledge bank separates sources, claims, evidence relationships,
+          corrections, and protected boundaries, while the website projects
+          only the public-safe layer. Private archive material can support a
+          summary without exposing raw correspondence, participant identities,
+          unpublished media, local file paths, or sensitive metadata.
+        </p>
+      </section>
     </div>
   );
 }

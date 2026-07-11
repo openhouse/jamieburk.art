@@ -1,0 +1,45 @@
+[
+  {
+    "id": "asset.callnyc.digital-district-photo-summary",
+    "title": "Digital District participant photograph summary",
+    "assetClass": "photograph",
+    "sourceId": "source.participant-photo.digital-district.2016-01-30-1410",
+    "date": "2016-01-30",
+    "time": "14:10",
+    "rightsStatus": "protected",
+    "consentStatus": "protected",
+    "publicationStatus": "summary_only",
+    "publiclyLinkable": false,
+    "supports": [
+      "Digital District breakout/table title",
+      "visible prompt Help improve City Council District office operations",
+      "approximate camera timestamp"
+    ],
+    "doesNotSupport": [
+      "complete event title",
+      "event start time",
+      "full participant roster",
+      "permission to publish the photograph"
+    ],
+    "publicNote": "Summary only. The image, path, identities, and raw metadata are not published."
+  },
+  {
+    "id": "asset.callnyc.civic-hall-promo-graphic",
+    "title": "Civic Hall New York City Council Hackathon graphic",
+    "assetClass": "promotional_graphic",
+    "sourceId": "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td",
+    "rightsStatus": "review_required",
+    "consentStatus": "not_applicable",
+    "publicationStatus": "public",
+    "publiclyLinkable": true,
+    "supports": [
+      "visible New York City Council Hackathon heading",
+      "labs.council.nyc branding"
+    ],
+    "doesNotSupport": [
+      "complete formal registration title",
+      "agenda"
+    ],
+    "publicNote": "Public promotional graphic linked as evidence; no local copy is committed."
+  }
+]

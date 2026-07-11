@@ -30,6 +30,9 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Citational Care:** page-local citation system for source records, claims,
+  evidence relationships, research runs, media rights, corrections, and public
+  projections. See `docs/citational-care.md`.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and

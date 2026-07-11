@@ -1,0 +1,53 @@
+{
+  "id": "page.work.callnyc",
+  "surface": "case-study",
+  "path": "/work/callnyc",
+  "title": "CallNYC.org",
+  "occurrences": [
+    {
+      "occurrenceId": "callnyc-context-hackathon-window",
+      "claimId": "claim.callnyc.hackathon.date-time-purpose"
+    },
+    {
+      "occurrenceId": "callnyc-context-first-councilstat",
+      "claimId": "claim.callnyc.hackathon.first-councilstat"
+    },
+    {
+      "occurrenceId": "callnyc-context-independent-follow-on",
+      "claimId": "claim.callnyc.project.independent-follow-on"
+    },
+    {
+      "occurrenceId": "callnyc-unclear-independent-follow-on",
+      "claimId": "claim.callnyc.project.independent-follow-on"
+    },
+    {
+      "occurrenceId": "callnyc-usable-independent-follow-on",
+      "claimId": "claim.callnyc.project.independent-follow-on"
+    },
+    {
+      "occurrenceId": "callnyc-role-independent-follow-on",
+      "claimId": "claim.callnyc.project.independent-follow-on"
+    },
+    {
+      "occurrenceId": "callnyc-usage-data-limitations",
+      "claimId": "claim.callnyc.project.data-limitations"
+    },
+    {
+      "occurrenceId": "callnyc-evidence-independent-follow-on",
+      "claimId": "claim.callnyc.project.independent-follow-on"
+    },
+    {
+      "occurrenceId": "callnyc-evidence-event-branding",
+      "claimId": "claim.callnyc.hackathon.event-branding"
+    },
+    {
+      "occurrenceId": "callnyc-evidence-digital-district",
+      "claimId": "claim.callnyc.hackathon.digital-district-breakout",
+      "treatment": "summary_only"
+    },
+    {
+      "occurrenceId": "callnyc-evidence-negative-research",
+      "claimId": "claim.callnyc.research.no-dedicated-event-page-recovered"
+    }
+  ]
+}

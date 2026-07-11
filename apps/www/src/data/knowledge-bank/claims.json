@@ -1,0 +1,149 @@
+[
+  {
+    "id": "claim.callnyc.hackathon.date-time-purpose",
+    "canonicalAssertion": "Civic Hall advertised a New York City Council hackathon focused on constituent services for January 30, 2016, from 1-3 p.m.",
+    "publicText": "Civic Hall advertised a New York City Council hackathon focused on constituent services for January 30, 2016, from 1-3 p.m.",
+    "status": "qualified",
+    "confidence": "high",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "The 1-3 p.m. period is the advertised event window, not independently verified actual start and end times."
+    ],
+    "antiClaims": [
+      "Do not call the advertised window proven actual duration.",
+      "Do not describe the archived social-feed page as a recovered event listing."
+    ]
+  },
+  {
+    "id": "claim.callnyc.hackathon.first-councilstat",
+    "canonicalAssertion": "The New York City Council described the January 30 gathering at Civic Hall as its first CouncilStat hackathon.",
+    "publicText": "The New York City Council described the January 30 gathering at Civic Hall as its first CouncilStat hackathon.",
+    "status": "verified",
+    "confidence": "high",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [],
+    "antiClaims": [
+      "Do not imply CallNYC was an official Council product."
+    ]
+  },
+  {
+    "id": "claim.callnyc.hackathon.event-branding",
+    "canonicalAssertion": "The promotional graphic attached to Civic Hall's announcement was headed New York City Council Hackathon.",
+    "publicText": "The promotional graphic attached to Civic Hall's announcement was headed \"New York City Council Hackathon.\"",
+    "status": "qualified",
+    "confidence": "high",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "Recovered event branding is not proof of a longer formal registration title."
+    ],
+    "antiClaims": [
+      "Do not call Digital District the complete event title.",
+      "Do not claim the full registration title is recovered."
+    ]
+  },
+  {
+    "id": "claim.callnyc.hackathon.digital-district-breakout",
+    "canonicalAssertion": "A participant photograph documents a breakout titled Digital District with the prompt Help improve City Council District office operations.",
+    "publicText": "A participant photograph documents a breakout titled \"Digital District\" with the prompt \"Help improve City Council District office operations.\"",
+    "status": "qualified",
+    "confidence": "medium",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "Participant archive only.",
+      "Breakout/table title, not complete event title.",
+      "Approximately 2:10 p.m. is a camera timestamp, not event schedule evidence.",
+      "No image, private path, or participant identities published."
+    ],
+    "antiClaims": [
+      "Do not publish the photograph.",
+      "Do not name unidentified participants.",
+      "Do not call Digital District the complete event title."
+    ]
+  },
+  {
+    "id": "claim.callnyc.project.independent-follow-on",
+    "canonicalAssertion": "After the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing interpretation of constituent-services records.",
+    "publicText": "After the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing interpretation of constituent-services records.",
+    "status": "qualified",
+    "confidence": "high",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study", "technical-operations", "work-card"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "CallNYC was an independent civic prototype, not an official New York City Council service or a documented formal hackathon submission."
+    ],
+    "antiClaims": [
+      "Do not call CallNYC an official Council service.",
+      "Do not call CallNYC a documented formal hackathon submission.",
+      "Do not describe it as current resident guidance."
+    ]
+  },
+  {
+    "id": "claim.callnyc.project.data-limitations",
+    "canonicalAssertion": "Council offices used CouncilStat differently and with different frequency, so recorded case counts could not safely be treated as simple measures of office performance.",
+    "publicText": "Council offices used CouncilStat differently and with different frequency, so recorded case counts could not safely be treated as simple measures of office performance.",
+    "status": "qualified",
+    "confidence": "high",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study", "technical-operations"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "Recorded case counts are imperfect operational traces, not simple office-performance metrics."
+    ],
+    "antiClaims": [
+      "Do not use CouncilStat case counts as simple performance rankings."
+    ]
+  },
+  {
+    "id": "claim.callnyc.research.no-dedicated-event-page-recovered",
+    "canonicalAssertion": "No dedicated Civic Hall calendar listing or event-detail page has been recovered for the January 2016 workshop.",
+    "publicText": "No dedicated Civic Hall calendar listing or event-detail page has been recovered for the January 2016 workshop.",
+    "status": "qualified",
+    "confidence": "medium",
+    "publiclyUsable": true,
+    "allowedSurfaces": ["case-study"],
+    "approval": {
+      "status": "approved",
+      "owner": "Jamie",
+      "approvedAt": "2026-07-11"
+    },
+    "requiredQualifiers": [
+      "Not recovered is an archival finding, not proof of nonexistence."
+    ],
+    "antiClaims": [
+      "Do not say that no dedicated page ever existed."
+    ]
+  }
+]
