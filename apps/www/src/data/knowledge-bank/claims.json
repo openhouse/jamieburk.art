@@ -1,0 +1,1179 @@
+[
+  {
+    "id": "career-operating-structure-14-years",
+    "canonicalStatement": "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
+    "publicProjections": {
+      "homepage": "14+ years creating operating structure",
+      "caseStudy": "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "resume": "14+ years creating operating structure across civic, cultural, small-business, and technical environments."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-career-operating-structure-14-years",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe portfolio briefs.",
+    "qualifications": [
+      "Does not imply one continuous formal employment role, PMP certification, or government employment."
+    ],
+    "antiClaims": [
+      "14+ years as a formal technical project manager in one organization"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "about"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "ready",
+      "supportLevel": "strong",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "14+ years creating operating structure",
+      "detailedPublicWording": "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
+      "sourceBasis": "Approved resume language and public-safe portfolio briefs.",
+      "whyItMatters": "Establishes the throughline across projects without forcing one job title onto every period of work.",
+      "protectedBoundaries": [
+        "Private clients",
+        "Collaborator records",
+        "Raw community materials",
+        "Internal operating details"
+      ],
+      "relatedProjects": [],
+      "relatedCapabilities": [
+        "technical-project-management",
+        "product-operations",
+        "implementation"
+      ]
+    }
+  },
+  {
+    "id": "hje-modernization-stewardship",
+    "canonicalStatement": "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+    "publicProjections": {
+      "workCard": "Modernized legacy e-commerce and operations workflows",
+      "caseStudy": "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
+      "resume": "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-hje-modernization-stewardship",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language, public website context, and public-safe business summary.",
+    "qualifications": [
+      "Use stewardship and contribution language."
+    ],
+    "antiClaims": [
+      "Jamie fully owned the business",
+      "Jamie owned all growth",
+      "Jamie replaced the company's institutional knowledge"
+    ],
+    "allowedSurfaces": [
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "ready",
+      "supportLevel": "strong",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source",
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "Modernized legacy e-commerce and operations workflows",
+      "detailedPublicWording": "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
+      "sourceBasis": "Approved resume language, public website context, and public-safe business summary.",
+      "protectedBoundaries": [
+        "Private dashboards",
+        "Credentials",
+        "Customer data",
+        "Revenue detail",
+        "Vendor terms",
+        "Sensitive operating practices"
+      ],
+      "relatedProjects": [
+        "harry-j-epstein"
+      ],
+      "relatedCapabilities": [
+        "e-commerce",
+        "analytics",
+        "workflow-mapping",
+        "handoffs"
+      ]
+    }
+  },
+  {
+    "id": "hje-revenue-growth-contribution",
+    "canonicalStatement": "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
+    "publicProjections": {
+      "homepage": "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "caseStudy": "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "resume": "Contributed to a period of 2x revenue growth for a legacy e-commerce business."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-hje-revenue-growth-contribution",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ],
+        "note": "Keep causal language careful and aggregate."
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe firsthand operational context. Keep causal language careful and aggregate.",
+    "qualifications": [
+      "Must stay as contribution language."
+    ],
+    "antiClaims": [
+      "Caused 2x revenue growth",
+      "Single-handedly doubled revenue",
+      "Fully owned all business growth"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "firsthand-collaborator-context"
+      ],
+      "shortWording": "Contributed to 2x revenue growth for a legacy e-commerce business",
+      "detailedPublicWording": "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
+      "sourceBasis": "Approved resume language and public-safe firsthand operational context.",
+      "sourceNote": "Keep causal language careful and aggregate.",
+      "whyItMatters": "Provides a concise business-impact proof point while retaining careful causality.",
+      "protectedBoundaries": [
+        "Private revenue figures",
+        "Dashboards",
+        "Customer data",
+        "Vendor terms",
+        "Internal analytics"
+      ],
+      "relatedProjects": [
+        "harry-j-epstein"
+      ],
+      "relatedCapabilities": [
+        "e-commerce",
+        "analytics",
+        "implementation"
+      ]
+    }
+  },
+  {
+    "id": "callnyc-civic-data-guidance",
+    "canonicalStatement": "Jamie independently built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat records into resident-facing next-step guidance.",
+    "publicProjections": {
+      "workCard": "Independently built an archived resident-facing interpretation of CouncilStat records after participating in a January 2016 constituent-services hackathon at Civic Hall.",
+      "caseStudy": "Jamie independently built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall.",
+      "resume": "Built CallNYC.org after participating in a January 2016 New York City Council constituent-services hackathon at Civic Hall."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "callnyc-public-project",
+        "relation": "directly-supports",
+        "supports": [
+          "project existence",
+          "independent project framing"
+        ]
+      },
+      {
+        "sourceId": "civic-hall-x-693124020917522433",
+        "relation": "contextualizes",
+        "supports": [
+          "event date",
+          "constituent-services focus"
+        ]
+      },
+      {
+        "sourceId": "nyc-council-x-693509031768506368",
+        "relation": "corroborates",
+        "supports": [
+          "event date",
+          "Civic Hall venue"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+    "qualifications": [
+      "Always describe CallNYC as archived, independent, and unofficial.",
+      "The recovered sources do not establish CallNYC as an official hackathon project."
+    ],
+    "antiClaims": [
+      "Current city service",
+      "Official city guidance",
+      "Emergency guidance",
+      "Legal guidance",
+      "CallNYC was built at the hackathon",
+      "CallNYC was an official hackathon project",
+      "CallNYC was a New York City Council product"
+    ],
+    "allowedSurfaces": [
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "ready",
+      "supportLevel": "strong",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source"
+      ],
+      "shortWording": "Translated civic open data into resident-facing guidance",
+      "detailedPublicWording": "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+      "sourceBasis": "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "protectedBoundaries": [
+        "Current-service claims",
+        "Private user data",
+        "Unverified guidance"
+      ],
+      "relatedProjects": [
+        "callnyc"
+      ],
+      "relatedCapabilities": [
+        "open-data",
+        "resident-guidance",
+        "information-architecture"
+      ]
+    }
+  },
+  {
+    "id": "fair-rent-campaign-memory",
+    "canonicalStatement": "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
+    "publicProjections": {
+      "homepage": "30+ pages of civic campaign-memory infrastructure",
+      "workCard": "30+ pages of civic campaign-memory infrastructure",
+      "caseStudy": "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
+      "resume": "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-fair-rent-campaign-memory",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ],
+        "note": "Use collective-work language and omit private coalition context."
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe collaboration summary. Use collective-work language and omit private coalition context.",
+    "qualifications": [
+      "Use collective-work language and do not publish raw or private coalition context."
+    ],
+    "antiClaims": [
+      "Jamie led the movement",
+      "Jamie owned the campaign",
+      "Jamie provided official legal analysis",
+      "Jamie single-handedly created the policy work"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary",
+        "firsthand-collaborator-context"
+      ],
+      "shortWording": "30+ pages of civic campaign-memory infrastructure",
+      "detailedPublicWording": "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
+      "sourceBasis": "Approved resume language and public-safe collaboration summary.",
+      "sourceNote": "Use collective-work language and omit private coalition context.",
+      "whyItMatters": "Shows documentation as operating infrastructure for sensitive, collective civic work.",
+      "protectedBoundaries": [
+        "Private coalition notes",
+        "Legal-review materials",
+        "Stakeholder lists",
+        "Private emails",
+        "Raw strategy context",
+        "Unapproved quotes"
+      ],
+      "relatedProjects": [
+        "fair-rent-nyc"
+      ],
+      "relatedCapabilities": [
+        "meeting-synthesis",
+        "decision-records",
+        "source-mapping"
+      ]
+    }
+  },
+  {
+    "id": "fair-rent-source-map",
+    "canonicalStatement": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
+    "publicProjections": {
+      "caseStudy": "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
+      "resume": "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-fair-rent-source-map",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe source-map summary.",
+    "qualifications": [
+      "Do not imply legal authority or official bill ownership."
+    ],
+    "antiClaims": [
+      "Jamie authored the legislation",
+      "Jamie provided legal advice",
+      "The redline is official legal analysis"
+    ],
+    "allowedSurfaces": [
+      "resume",
+      "technical-operations",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary",
+        "firsthand-collaborator-context"
+      ],
+      "shortWording": "Created a legislative source map and provenance redline",
+      "detailedPublicWording": "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
+      "sourceBasis": "Approved resume language and public-safe source-map summary.",
+      "protectedBoundaries": [
+        "Legal-review context",
+        "Private strategy",
+        "Private correspondence",
+        "Unapproved collaborator notes"
+      ],
+      "relatedProjects": [
+        "fair-rent-nyc"
+      ],
+      "relatedCapabilities": [
+        "source-mapping",
+        "public-data-framing",
+        "policy-translation"
+      ]
+    }
+  },
+  {
+    "id": "nyc-artist-coalition-public-web-infrastructure",
+    "canonicalStatement": "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+    "publicProjections": {
+      "workCard": "Co-founded NYC Artist Coalition and built public campaign websites",
+      "caseStudy": "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
+      "resume": "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-nyc-artist-coalition-public-web-infrastructure",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language, Jamie confirmation, and public campaign websites.",
+    "qualifications": [
+      "Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective."
+    ],
+    "antiClaims": [
+      "Jamie solely led NYC Artist Coalition",
+      "Jamie owned every campaign",
+      "Jamie authored every policy position",
+      "Jamie controlled partner decisions",
+      "Jamie single-handedly caused policy outcomes"
+    ],
+    "allowedSurfaces": [
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source",
+        "jamie-review-confirmation"
+      ],
+      "shortWording": "Co-founded NYC Artist Coalition and built public campaign websites",
+      "detailedPublicWording": "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
+      "sourceBasis": "Approved resume language, Jamie confirmation, and public campaign websites.",
+      "whyItMatters": "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
+      "protectedBoundaries": [
+        "Private coalition notes",
+        "CMS/admin details",
+        "Strategy records",
+        "Contact lists",
+        "Private correspondence",
+        "Unapproved collaborator details"
+      ],
+      "relatedProjects": [
+        "fair-rent-nyc"
+      ],
+      "relatedCapabilities": [
+        "campaign-websites",
+        "public-guidance",
+        "information-architecture"
+      ]
+    }
+  },
+  {
+    "id": "nyc-artist-coalition-civic-systems",
+    "canonicalStatement": "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
+    "publicProjections": {
+      "workCard": "Civic systems and coalition operations for NYC Artist Coalition",
+      "caseStudy": "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "resume": "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-nyc-artist-coalition-civic-systems",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+    "qualifications": [
+      "Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes."
+    ],
+    "antiClaims": [
+      "Jamie alone repealed the Cabaret Law",
+      "Jamie alone created the Office of Nightlife",
+      "Jamie alone passed nightlife enforcement reporting legislation",
+      "Jamie speaks for every NYC Artist Coalition collaborator"
+    ],
+    "allowedSurfaces": [
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study",
+      "about"
+    ],
+    "lastReviewedAt": "2026-07-09",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source",
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "Civic systems and coalition operations for NYC Artist Coalition",
+      "detailedPublicWording": "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "sourceBasis": "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "whyItMatters": "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
+      "protectedBoundaries": [
+        "Private coalition notes",
+        "Internal disputes",
+        "Private correspondence",
+        "Membership records",
+        "Unapproved collaborator names",
+        "Legal-review materials"
+      ],
+      "relatedProjects": [
+        "fair-rent-nyc"
+      ],
+      "relatedCapabilities": [
+        "coalition-operations",
+        "policy-communications",
+        "public-data-framing",
+        "civic-systems"
+      ]
+    }
+  },
+  {
+    "id": "wowlist-community-platform",
+    "canonicalStatement": "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+    "publicProjections": {
+      "homepage": "WOWList reached roughly 35 city ecosystems",
+      "workCard": "WOWList reached roughly 35 city ecosystems",
+      "caseStudy": "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "resume": "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-wowlist-community-platform",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe aggregate historical summary.",
+    "qualifications": [
+      "Use approximate adoption language and do not describe city activity as official chapters."
+    ],
+    "antiClaims": [
+      "Official chapters in 35 cities",
+      "Full ownership of all organizer adoption",
+      "Current active platform unless confirmed"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary",
+        "firsthand-collaborator-context"
+      ],
+      "shortWording": "WOWList reached roughly 35 city ecosystems",
+      "detailedPublicWording": "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "sourceBasis": "Approved resume language and public-safe aggregate historical summary.",
+      "protectedBoundaries": [
+        "Private user data",
+        "Organizer contact lists",
+        "Raw records",
+        "Geolocation rows",
+        "Unapproved community artifacts"
+      ],
+      "relatedProjects": [
+        "wowlist"
+      ],
+      "relatedCapabilities": [
+        "django",
+        "postgresql",
+        "postgis",
+        "ember",
+        "community-platforms"
+      ]
+    }
+  },
+  {
+    "id": "sunday-dinner-196-participation-infrastructure",
+    "canonicalStatement": "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    "publicProjections": {
+      "homepage": "300+ gatherings and 20+ resident artists supported",
+      "workCard": "300+ gatherings and 20+ resident artists supported",
+      "caseStudy": "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "resume": "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-sunday-dinner-196-participation-infrastructure",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe aggregate project history.",
+    "qualifications": [
+      "Keep the page summary-only and avoid turning community trust work into spectacle."
+    ],
+    "antiClaims": [
+      "Institutional ownership of participants' work",
+      "Comprehensive public archive",
+      "Attendance database"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary",
+        "jamie-review-confirmation"
+      ],
+      "shortWording": "300+ gatherings and 20+ resident artists supported",
+      "detailedPublicWording": "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "sourceBasis": "Approved resume language and public-safe aggregate project history.",
+      "protectedBoundaries": [
+        "Guest lists",
+        "Attendance records",
+        "Addresses",
+        "Private messages",
+        "Raw community records",
+        "Unapproved photos"
+      ],
+      "relatedProjects": [
+        "196-sunday-dinner"
+      ],
+      "relatedCapabilities": [
+        "onboarding",
+        "facilitation",
+        "documentation",
+        "handoffs"
+      ]
+    }
+  },
+  {
+    "id": "kc-spaces-fund-digital-infrastructure",
+    "canonicalStatement": "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
+    "publicProjections": {
+      "caseStudy": "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-kc-spaces-fund-digital-infrastructure",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ],
+        "note": "Use as an evidence-based archival proof note, not a human collaborator testimonial."
+      }
+    ],
+    "publicCitationNote": "Public GoFundMe page, public campaign domain, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material. Use as an evidence-based archival proof note, not a human collaborator testimonial.",
+    "qualifications": [
+      "Behind-the-scenes technical and operational support only. Do not frame Jamie as the public organizer, grant decision-maker, fiscal sponsor, or sole campaign owner."
+    ],
+    "antiClaims": [
+      "Jamie organized KC Spaces Fund",
+      "Jamie ran the fundraiser",
+      "Jamie made grant decisions",
+      "Jamie was the fiscal sponsor",
+      "A human collaborator provided this testimonial"
+    ],
+    "allowedSurfaces": [
+      "technical-operations"
+    ],
+    "lastReviewedAt": "2026-07-09",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "public-source",
+        "public-safe-archive-summary",
+        "ai-assisted-archive-review"
+      ],
+      "shortWording": "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+      "detailedPublicWording": "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.",
+      "sourceBasis": "Public GoFundMe page, public campaign domain, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
+      "sourceNote": "Use as an evidence-based archival proof note, not a human collaborator testimonial.",
+      "whyItMatters": "Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.",
+      "protectedBoundaries": [
+        "Applicant or grantee materials",
+        "Donor and list exports",
+        "Subscriber data",
+        "Payment-request files",
+        "Credentials or login sheets",
+        "Billing and payment details",
+        "Raw email archives",
+        "Raw text-message archives",
+        "Private Drive documents",
+        "Sensitive strategy, legal, financial, or personal information"
+      ],
+      "relatedProjects": [],
+      "relatedCapabilities": [
+        "public-facing-web-systems",
+        "campaign-infrastructure",
+        "implementation",
+        "technical-operations"
+      ]
+    }
+  },
+  {
+    "id": "kc-town-hall-public-benefit-documentation",
+    "canonicalStatement": "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+    "publicProjections": {
+      "workCard": "Supported adaptive reuse planning and public-benefit documentation",
+      "caseStudy": "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-kc-town-hall-public-benefit-documentation",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language, public record summary, and public-safe project context.",
+    "qualifications": [
+      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed."
+    ],
+    "antiClaims": [
+      "Final funding received",
+      "Current property status",
+      "Private financial details",
+      "Official municipal endorsement beyond the public record"
+    ],
+    "allowedSurfaces": [
+      "technical-operations",
+      "work-card",
+      "case-study"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "careful",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source",
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "Supported adaptive reuse planning and public-benefit documentation",
+      "detailedPublicWording": "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "sourceBasis": "Approved resume language, public record summary, and public-safe project context.",
+      "protectedBoundaries": [
+        "Private financial details",
+        "Legal details",
+        "Property details",
+        "Banking details",
+        "Stakeholder details"
+      ],
+      "relatedProjects": [
+        "kc-town-hall"
+      ],
+      "relatedCapabilities": [
+        "project-planning",
+        "public-benefit-documentation",
+        "stakeholder-context"
+      ]
+    }
+  },
+  {
+    "id": "source-backed-team-memory-method",
+    "canonicalStatement": "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
+    "publicProjections": {
+      "caseStudy": "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces."
+    },
+    "knowledgeStatus": "corroborated",
+    "publicationStatus": "qualified",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-source-backed-team-memory-method",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Public-safe lab materials and proposal-derived method summary.",
+    "qualifications": [
+      "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment."
+    ],
+    "antiClaims": [
+      "Built a production AI memory platform for a client",
+      "Automated trust",
+      "Replaces human review"
+    ],
+    "allowedSurfaces": [
+      "technical-operations",
+      "lab"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "careful",
+      "supportLevel": "moderate",
+      "evidenceClass": [
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "Bounded method for source-backed team memory",
+      "detailedPublicWording": "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
+      "sourceBasis": "Public-safe lab materials and proposal-derived method summary.",
+      "protectedBoundaries": [
+        "Private collaborator names",
+        "Pricing",
+        "Private transcript excerpts",
+        "Private company context"
+      ],
+      "relatedProjects": [
+        "source-backed-team-memory"
+      ],
+      "relatedCapabilities": [
+        "source-backed-memory",
+        "documentation-architecture",
+        "human-review"
+      ]
+    }
+  },
+  {
+    "id": "technical-operations-operating-backbone",
+    "canonicalStatement": "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+    "publicProjections": {
+      "homepage": "Operating backbone for public-facing technical work",
+      "caseStudy": "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
+      "resume": "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-technical-operations-operating-backbone",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe portfolio briefs.",
+    "qualifications": [
+      "Keep it generally framed; do not make the site only an OTI application page."
+    ],
+    "antiClaims": [
+      "Jamie is a certified PMP unless separately approved",
+      "Jamie replaces product, engineering, legal, or executive judgment"
+    ],
+    "allowedSurfaces": [
+      "homepage",
+      "resume",
+      "technical-operations",
+      "about"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "ready",
+      "supportLevel": "strong",
+      "evidenceClass": [
+        "approved-resume",
+        "public-safe-archive-summary"
+      ],
+      "shortWording": "Operating backbone for public-facing technical work",
+      "detailedPublicWording": "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
+      "sourceBasis": "Approved resume language and public-safe portfolio briefs.",
+      "whyItMatters": "Names the role fit across product operations, implementation, technical project management, and public-facing delivery.",
+      "protectedBoundaries": [
+        "Private client materials",
+        "Internal health metrics",
+        "HR context",
+        "Confidential team information"
+      ],
+      "relatedProjects": [],
+      "relatedCapabilities": [
+        "delivery-coordination",
+        "risk-surfacing",
+        "handoffs"
+      ]
+    }
+  },
+  {
+    "id": "ai-evals-professional-development",
+    "canonicalStatement": "Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.",
+    "publicProjections": {
+      "resume": "Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "proof-source-ai-evals-professional-development",
+        "relation": "directly-supports",
+        "supports": [
+          "existing public-safe proof wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "Approved resume language and public-safe certificate.",
+    "qualifications": [
+      "Treat as professional development, not instructor affiliation or certification authority beyond completion."
+    ],
+    "antiClaims": [
+      "Jamie teaches the course",
+      "Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved"
+    ],
+    "allowedSurfaces": [
+      "resume",
+      "lab",
+      "about"
+    ],
+    "lastReviewedAt": "2026-07-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ],
+    "proofProjection": {
+      "status": "ready",
+      "supportLevel": "strong",
+      "evidenceClass": [
+        "approved-resume",
+        "public-source"
+      ],
+      "shortWording": "Completed AI Evals for Engineers & PMs in 2026",
+      "detailedPublicWording": "Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.",
+      "sourceBasis": "Approved resume language and public-safe certificate.",
+      "protectedBoundaries": [
+        "Private coursework",
+        "Private cohort materials",
+        "Unapproved evaluations"
+      ],
+      "relatedProjects": [
+        "source-backed-team-memory"
+      ],
+      "relatedCapabilities": [
+        "ai-evals",
+        "human-review",
+        "evaluation"
+      ]
+    }
+  },
+  {
+    "id": "callnyc-hackathon-date-time",
+    "canonicalStatement": "Civic Hall announced the NYC Council constituent-services hackathon for January 30, 2016, from 1-3 p.m.",
+    "publicProjections": {
+      "caseStudy": "On January 30, 2016, Civic Hall hosted a 1-3 p.m. New York City Council hackathon focused on constituent services."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "ready",
+    "citationPolicy": "required",
+    "evidence": [
+      {
+        "sourceId": "civic-hall-x-693124020917522433",
+        "relation": "directly-supports",
+        "supports": [
+          "date",
+          "time",
+          "constituent-services purpose"
+        ]
+      },
+      {
+        "sourceId": "nyc-council-x-693509031768506368",
+        "relation": "corroborates",
+        "supports": [
+          "date",
+          "venue"
+        ]
+      }
+    ],
+    "publicCitationNote": "Civic Hall announced the January 30, 2016 gathering for 1-3 p.m. and described its constituent-services focus; NYC Council posted from Civic Hall that day.",
+    "qualifications": [
+      "The approximately 2:10 p.m. photograph timestamp is not the event start time."
+    ],
+    "antiClaims": [
+      "The event began at 2:10 p.m.",
+      "Complete event hours were recovered from a formal agenda."
+    ],
+    "allowedSurfaces": [
+      "callnyc-case-study",
+      "callnyc-photo-caption"
+    ],
+    "lastReviewedAt": "2026-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ]
+  },
+  {
+    "id": "callnyc-first-councilstat-hackathon",
+    "canonicalStatement": "NYC Council contemporaneously described the event as its first CouncilStat hackathon.",
+    "publicProjections": {
+      "caseStudy": "The Council described the gathering that day as its first CouncilStat hackathon."
+    },
+    "knowledgeStatus": "attributed",
+    "publicationStatus": "ready-with-attribution",
+    "citationPolicy": "required",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-x-693509031768506368",
+        "relation": "directly-supports",
+        "supports": [
+          "attributed wording"
+        ]
+      }
+    ],
+    "publicCitationNote": "NYC Council's event-day post described the gathering as its first \"#CouncilStat hackathon.\"",
+    "qualifications": [
+      "Preserve attribution to NYC Council."
+    ],
+    "antiClaims": [
+      "It was definitively the Council's first civic-data hackathon of every kind."
+    ],
+    "allowedSurfaces": [
+      "callnyc-case-study",
+      "resume-source-note"
+    ],
+    "lastReviewedAt": "2026-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ]
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "canonicalStatement": "A participant photograph documents a breakout table called \"Digital District\" with the prompt \"Help improve City Council District office operations.\"",
+    "publicProjections": {
+      "caseStudy": "A participant photograph documents a \"Digital District\" breakout table focused on improving City Council district-office operations.",
+      "caption": "\"Digital District\" breakout table at Civic Hall, January 30, 2016."
+    },
+    "knowledgeStatus": "confirmed",
+    "publicationStatus": "qualified",
+    "citationPolicy": "required",
+    "evidence": [
+      {
+        "sourceId": "photo-digital-district-2016-01-30",
+        "relation": "visual-evidence",
+        "supports": [
+          "visible placard wording",
+          "photograph timestamp"
+        ]
+      }
+    ],
+    "publicCitationNote": "Participant photograph showing the \"Digital District\" table placard and its district-office-operations prompt. The image is not yet published pending photo rights and editorial review.",
+    "qualifications": [
+      "\"Digital District\" is supported as breakout wording only."
+    ],
+    "antiClaims": [
+      "\"Digital District\" was the event's official title."
+    ],
+    "allowedSurfaces": [
+      "callnyc-case-study",
+      "callnyc-photo-caption"
+    ],
+    "lastReviewedAt": "2026-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ]
+  },
+  {
+    "id": "civic-hall-calendar-listing-not-recovered",
+    "canonicalStatement": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the completed CDX review.",
+    "publicProjections": {
+      "archivalNote": "No dedicated Civic Hall calendar listing or event page has been recovered."
+    },
+    "knowledgeStatus": "negative-research-finding",
+    "publicationStatus": "internal-only",
+    "citationPolicy": "recommended",
+    "evidence": [
+      {
+        "sourceId": "research-run-civic-hall-cdx-2026-07",
+        "relation": "directly-supports",
+        "supports": [
+          "search method",
+          "negative result"
+        ]
+      }
+    ],
+    "publicCitationNote": "A deeper CDX review recovered embedded social-feed evidence but no dedicated Civic Hall calendar listing or event-detail page.",
+    "qualifications": [
+      "Embedded social-feed evidence was recovered on Civic Hall pages."
+    ],
+    "antiClaims": [
+      "The Wayback capture is itself the event's calendar listing."
+    ],
+    "allowedSurfaces": [
+      "internal-research-note"
+    ],
+    "lastReviewedAt": "2026-07",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ]
+  }
+]

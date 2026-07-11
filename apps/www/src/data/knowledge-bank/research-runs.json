@@ -1,0 +1,25 @@
+[
+  {
+    "id": "research-run-civic-hall-cdx-2026-07",
+    "subject": "Civic Hall January 2016 NYC Council hackathon archive search",
+    "performedAt": "2026-07",
+    "method": "CDX and Wayback review of Civic Hall HTML captures and event-prefix URLs, with deduplication by original URL.",
+    "scope": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "captured404s": 7
+    },
+    "finding": "No dedicated Civic Hall calendar listing or event-detail page was recovered. Embedded social-feed evidence independently supports the date, time, venue, event branding, CouncilStat context, and constituent-services purpose.",
+    "limitations": [
+      "The unavailable RSVP form was not recovered.",
+      "No agenda or breakout roster was recovered.",
+      "The negative result does not prove that no event page ever existed."
+    ],
+    "privateArtifactId": "civic-hall-wayback-research-2026-07",
+    "publicSummary": "No dedicated Civic Hall calendar listing or event page has been recovered."
+  }
+]
+
