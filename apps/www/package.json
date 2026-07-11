@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && npm run standalone:assets",
+    "dev": "next dev --webpack",
+    "build": "next build --webpack && npm run standalone:assets",
     "standalone:assets": "sh -c 'if [ -d .next/standalone/apps/www ]; then rm -rf .next/standalone/apps/www/public .next/standalone/apps/www/.next/static && mkdir -p .next/standalone/apps/www/.next && cp -R public .next/standalone/apps/www/public && cp -R .next/static .next/standalone/apps/www/.next/static; fi'",
     "start": "sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'",
     "lint": "eslint .",
@@ -20,6 +20,8 @@
     "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "remark-gfm": "^4.0.1",
+    "unist-util-visit": "^5.1.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

@@ -30,11 +30,16 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
-- **Structured proof data:** machine-readable claim layer in
+- **Structured claim data:** canonical machine-readable records in
+  `apps/www/src/data/knowledge-bank/`.
+- **Proof projection:** backward-compatible public projection in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+
+See `docs/citational-care.md` for source and claim records, MDX and TSX
+authoring, uncertainty, negative research findings, photo evidence, and checks.
 
 ## Core Rule
 

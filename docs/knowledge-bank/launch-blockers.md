@@ -15,6 +15,8 @@
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [ ] Replace the resume PDF's "first civic-data hackathon" wording through the
+  approved editable-resume workflow; see `docs/resume-consistency.md`.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.

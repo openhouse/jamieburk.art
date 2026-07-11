@@ -143,7 +143,8 @@ const scannerFiles = new Set([
 ]);
 const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(file));
 const publicContentFiles = shippedContentFiles.filter((file) => {
-  return relative(file) !== "apps/www/src/data/proofs.ts";
+  const rel = relative(file);
+  return rel !== "apps/www/src/data/proofs.ts" && !rel.startsWith("apps/www/src/data/knowledge-bank/");
 });
 
 for (const file of allFiles) {

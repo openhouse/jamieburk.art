@@ -42,8 +42,9 @@ When uncertain, write: `TODO: Jamie approval required.`
 
 ## Knowledge Bank
 
-Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
-public-safe claim layer.
+Use `docs/knowledge-bank/` and `apps/www/src/data/knowledge-bank/` as the
+public-safe claim layer. `apps/www/src/data/proofs.ts` is a backward-compatible
+projection from that canonical bank.
 
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
@@ -57,6 +58,17 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Citational Care
+
+- Use stable claim IDs, never hand-assigned public numbers.
+- Cite factual, numerical, chronological, institutional, and historical claims.
+- A source record must state what it supports and what it does not establish.
+- Do not use one citation to support unrelated clauses.
+- Preserve attribution for attributed claims.
+- Do not expose private evidence, raw transcripts, private paths, or protected sources.
+- The public site is a projection from the knowledge bank, not an evidence dump.
+- Run `npm run check:citations` before opening a PR.
 
 ## Chad Lens
 

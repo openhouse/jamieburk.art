@@ -3,322 +3,122 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadKnowledgeBank } from "../apps/www/src/lib/knowledge-bank-runtime.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-
 const failures = [];
 const warnings = [];
-
 const requiredProofIds = [
-  "career-operating-structure-14-years",
-  "technical-operations-operating-backbone",
-  "hje-modernization-stewardship",
-  "hje-revenue-growth-contribution",
-  "callnyc-civic-data-guidance",
-  "fair-rent-campaign-memory",
-  "fair-rent-source-map",
-  "nyc-artist-coalition-civic-systems",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure",
-  "kc-spaces-fund-digital-infrastructure",
-  "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "career-operating-structure-14-years", "technical-operations-operating-backbone",
+  "hje-modernization-stewardship", "hje-revenue-growth-contribution",
+  "callnyc-civic-data-guidance", "fair-rent-campaign-memory", "fair-rent-source-map",
+  "nyc-artist-coalition-civic-systems", "wowlist-community-platform",
+  "sunday-dinner-196-participation-infrastructure", "kc-spaces-fund-digital-infrastructure",
+  "kc-town-hall-public-benefit-documentation", "source-backed-team-memory-method"
 ];
-
 const requiredWorkProofs = new Map([
   ["harry-j-epstein", ["hje-modernization-stewardship", "hje-revenue-growth-contribution"]],
-  [
-    "fair-rent-nyc",
-    [
-      "fair-rent-campaign-memory",
-      "fair-rent-source-map",
-      "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
-    ]
-  ],
-  ["callnyc", ["callnyc-civic-data-guidance"]],
-  ["wowlist", ["wowlist-community-platform"]],
+  ["fair-rent-nyc", ["fair-rent-campaign-memory", "fair-rent-source-map", "nyc-artist-coalition-public-web-infrastructure", "nyc-artist-coalition-civic-systems"]],
+  ["callnyc", ["callnyc-civic-data-guidance"]], ["wowlist", ["wowlist-community-platform"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]
 ]);
-
-const publicSurfaces = new Set([
-  "homepage",
-  "resume",
-  "technical-operations",
-  "work-card",
-  "case-study",
-  "lab",
-  "about"
-]);
-
-const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
-const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
-const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
 
-function fail(message) {
-  failures.push(message);
+function walk(directory) {
+  if (!existsSync(directory)) return [];
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const item = path.join(directory, entry.name);
+    return entry.isDirectory() ? walk(item) : [item];
+  });
+}
+function fail(message) { failures.push(message); }
+function read(file) { return readFileSync(file, "utf8"); }
+
+let bank;
+try {
+  bank = loadKnowledgeBank();
+} catch (error) {
+  fail(`Knowledge-bank JSON failed schema validation: ${error instanceof Error ? error.message : String(error)}`);
 }
 
-function warn(message) {
-  warnings.push(message);
-}
+const proofClaims = bank?.claims.filter((claim) => claim.proofProjection) ?? [];
+const proofIds = new Set(proofClaims.map((claim) => claim.id));
+for (const id of requiredProofIds) if (!proofIds.has(id)) fail(`Missing required proof claim: ${id}`);
 
-function read(file) {
-  return readFileSync(file, "utf8");
-}
-
-function walk(dir) {
-  if (!existsSync(dir)) return [];
-
-  const files = [];
-  for (const entry of readdirSync(dir, { withFileTypes: true })) {
-    const absolute = path.join(dir, entry.name);
-    if (entry.isDirectory()) files.push(...walk(absolute));
-    if (entry.isFile()) files.push(absolute);
+for (const claim of proofClaims) {
+  const projection = claim.proofProjection;
+  if (projection.status === "careful") warnings.push(`${claim.id} is careful and must keep its guardrail in public copy`);
+  if (["pending", "private"].includes(projection.status) && claim.allowedSurfaces.some((surface) => surface !== "internal-only")) {
+    fail(`${claim.id} is pending/private but projected to a public surface`);
   }
-  return files;
+  if (!claim.qualifications.length) fail(`${claim.id} is missing a guardrail qualification`);
+  if (!claim.antiClaims.length) fail(`${claim.id} is missing anti-claims`);
+  if (!projection.protectedBoundaries.length) fail(`${claim.id} is missing protected boundaries`);
 }
 
-function relative(file) {
-  return path.relative(repoRoot, file);
+for (const route of ["proofs", "knowledge-bank", "public-claims"]) {
+  if (existsSync(path.join(repoRoot, "apps/www/src/app", route))) fail(`apps/www/src/app/${route} must not exist as a public route`);
 }
 
-function extractStrings(block, field) {
-  const match = new RegExp(`${field}:\\s*\\[([\\s\\S]*?)\\]`).exec(block);
-  if (!match) return [];
-  return [...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1]);
-}
-
-function extractStringField(block, field) {
-  return new RegExp(`${field}:\\s*"([^"]*)"`).exec(block)?.[1] ?? "";
-}
-
-function assertIncludes(text, expected, label) {
-  if (!text.includes(expected)) fail(`${label} is missing ${expected}`);
-}
-
-if (!existsSync(proofPath)) {
-  fail("apps/www/src/data/proofs.ts is missing");
-}
-
-if (!existsSync(claimsPath)) {
-  fail("docs/knowledge-bank/claims.md is missing");
-}
-
-if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
-  fail("docs/proofs-bank.md conflicts with docs/knowledge-bank/claims.md; use one canonical claim register");
-}
-
-const blockedRouteDirs = [
-  "apps/www/src/app/proofs",
-  "apps/www/src/app/knowledge-bank",
-  "apps/www/src/app/public-claims"
-];
-
-for (const routeDir of blockedRouteDirs) {
-  if (existsSync(path.join(repoRoot, routeDir))) {
-    fail(`${routeDir} must not exist as a public route`);
-  }
-}
-
-let proofSource = "";
-let proofIds = [];
-const proofBlocks = new Map();
-
-if (existsSync(proofPath)) {
-  proofSource = read(proofPath);
-
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw-otter|otter(?:\.ai|_ai)|\.docx|\.xlsx/i.test(proofSource)) {
-    fail("apps/www/src/data/proofs.ts contains a private path or private source marker");
-  }
-
-  if (!/export type SupportLevel\s*=/.test(proofSource)) {
-    fail("Proof data is missing SupportLevel type");
-  }
-
-  for (const match of proofSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
-    const [, id] = match;
-    proofIds.push(id);
-    proofBlocks.set(id, match[0]);
-  }
-
-  const uniqueIds = new Set(proofIds);
-  if (uniqueIds.size !== proofIds.length) {
-    const duplicates = proofIds.filter((id, index) => proofIds.indexOf(id) !== index);
-    fail(`Duplicate proof IDs: ${[...new Set(duplicates)].join(", ")}`);
-  }
-
-  for (const id of requiredProofIds) {
-    if (!uniqueIds.has(id)) fail(`Missing required proof claim: ${id}`);
-  }
-
-  for (const [id, block] of proofBlocks.entries()) {
-    const status = extractStringField(block, "status");
-    const supportLevel = extractStringField(block, "supportLevel");
-    const evidenceClasses = extractStrings(block, "evidenceClass");
-    const surfaces = extractStrings(block, "surfaces");
-    const publicFieldBundle = [
-      "publicWording",
-      "shortWording",
-      "detailedPublicWording",
-      "sourceBasis",
-      "sourceNote",
-      "whyItMatters"
-    ]
-      .map((field) => extractStringField(block, field))
-      .join(" ");
-
+const claimsDocPath = path.join(docsRoot, "claims.md");
+if (!existsSync(claimsDocPath)) fail("docs/knowledge-bank/claims.md is missing");
+else {
+  const claimsDoc = read(claimsDocPath);
+  for (const id of proofIds) if (!claimsDoc.includes(`## ${id}`)) fail(`claims.md is missing ${id}`);
+  const headings = [...claimsDoc.matchAll(/^##\s+([a-z0-9-]+)/gm)];
+  headings.forEach((heading, index) => {
+    const block = claimsDoc.slice(heading.index, headings[index + 1]?.index ?? claimsDoc.length);
     for (const field of [
-      "status",
-      "supportLevel",
-      "publicWording",
-      "sourceBasis",
-      "guardrail",
-      "lastReviewed"
-    ]) {
-      if (!new RegExp(`${field}:`).test(block)) fail(`${id} is missing ${field}`);
-    }
-
-    if (!["ready", "careful", "pending", "private"].includes(status)) {
-      fail(`${id} has invalid status: ${status || "missing"}`);
-    }
-
-    if (!["strong", "moderate", "careful", "pending"].includes(supportLevel)) {
-      fail(`${id} has invalid supportLevel: ${supportLevel || "missing"}`);
-    }
-
-    if (!evidenceClasses.length) fail(`${id} is missing evidenceClass`);
-    if (!extractStrings(block, "doNotSay").length) fail(`${id} is missing doNotSay`);
-    if (!extractStrings(block, "protectedBoundaries").length) {
-      fail(`${id} is missing protectedBoundaries`);
-    }
-    if (!surfaces.length) fail(`${id} is missing surfaces`);
-
-    if ((status === "pending" || status === "private") && surfaces.some((surface) => publicSurfaces.has(surface))) {
-      fail(`${id} is pending/private but projected to a public surface`);
-    }
-
-    if (status === "ready" && /TODO|approval required/i.test(block)) {
-      fail(`${id} is ready but contains unresolved approval language`);
-    }
-
-    if (status === "careful") warn(`${id} is careful and must keep its guardrail in public copy`);
-
-    if (id === "source-backed-team-memory-method" && /Jonathan Marmor|pricing|private transcript|private company/i.test(publicFieldBundle)) {
-      fail("source-backed-team-memory-method exposes private collaborator, pricing, transcript, or company context in public fields");
-    }
-  }
-}
-
-if (existsSync(claimsPath)) {
-  const claimsSource = read(claimsPath);
-
-  for (const id of proofIds) {
-    if (!claimsSource.includes(`## ${id}`)) fail(`claims.md is missing ${id}`);
-  }
-
-  const claimHeadings = [...claimsSource.matchAll(/^##\s+([a-z0-9-]+)/gm)];
-  claimHeadings.forEach((match, index) => {
-    const id = match[1];
-    const nextHeading = claimHeadings[index + 1]?.index ?? claimsSource.length;
-    const block = claimsSource.slice(match.index, nextHeading);
-    for (const field of [
-      "**Status:**",
-      "**Support level:**",
-      "**Evidence class:**",
-      "**Public wording:**",
-      "**Detailed public-safe wording:**",
-      "**Where to project:**",
-      "**Why it matters:**",
-      "**Guardrail:**",
-      "**Do not say:**",
-      "**Protected boundaries:**",
-      "**Review owner:**",
-      "**Last reviewed:**"
-    ]) {
-      if (!block.includes(field)) fail(`${id} in claims.md is missing ${field}`);
-    }
+      "**Status:**", "**Support level:**", "**Evidence class:**", "**Public wording:**",
+      "**Detailed public-safe wording:**", "**Where to project:**", "**Why it matters:**",
+      "**Guardrail:**", "**Do not say:**", "**Protected boundaries:**", "**Review owner:**", "**Last reviewed:**"
+    ]) if (!block.includes(field)) fail(`${heading[1]} in claims.md is missing ${field}`);
   });
 }
 
+const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 if (existsSync(workPath)) {
-  const workSource = read(workPath);
-  const allProofIds = new Set(proofIds);
-
-  for (const match of workSource.matchAll(/proofBankIds:\s*\[([\s\S]*?)\]/g)) {
-    const ids = [...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1]);
-    for (const id of ids) {
-      if (!allProofIds.has(id)) fail(`work.ts references missing proof claim: ${id}`);
+  const work = read(workPath);
+  for (const match of work.matchAll(/proofBankIds:\s*\[([\s\S]*?)\]/g)) {
+    for (const id of [...match[1].matchAll(/"([^"]+)"/g)].map((item) => item[1])) {
+      if (!proofIds.has(id)) fail(`work.ts references missing proof claim: ${id}`);
     }
   }
-
-  for (const slugMatch of workSource.matchAll(/slug:\s*"([^"]+)"/g)) {
-    const slug = slugMatch[1];
-    const nextSlugIndex = workSource.indexOf("\n    slug:", slugMatch.index + 1);
-    const block = workSource.slice(
-      Math.max(0, workSource.lastIndexOf("\n  {", slugMatch.index)),
-      nextSlugIndex === -1 ? workSource.indexOf("\n] satisfies", slugMatch.index) : nextSlugIndex
-    );
-
-    if (!/proofBankIds:\s*\[/.test(block)) {
-      fail(`${slug} is missing proofBankIds`);
-    }
-
-    const required = requiredWorkProofs.get(slug) ?? [];
-    for (const id of required) {
-      assertIncludes(block, `"${id}"`, `${slug} proofBankIds`);
-    }
-
-    if (/(2x|30\+|1,800\+|16,000\+|300\+|20\+|\$490,539)/.test(block) && !/proofBankIds:\s*\[[\s\S]*?"[^"]+"/.test(block)) {
-      fail(`${slug} includes metric-bearing evidence without proofBankIds`);
+  for (const match of work.matchAll(/slug:\s*"([^"]+)"/g)) {
+    const slug = match[1];
+    const next = work.indexOf("\n    slug:", match.index + 1);
+    const block = work.slice(Math.max(0, work.lastIndexOf("\n  {", match.index)), next === -1 ? work.length : next);
+    if (!/proofBankIds:\s*\[/.test(block)) fail(`${slug} is missing proofBankIds`);
+    for (const id of requiredWorkProofs.get(slug) ?? []) {
+      if (!block.includes(`"${id}"`)) fail(`${slug} proofBankIds is missing ${id}`);
     }
   }
 }
 
-for (const file of walk(docsRoot)) {
-  if (!/\.(md|mdx|txt)$/i.test(file)) continue;
-
-  const content = read(file);
-  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(content)) {
-    fail(`${relative(file)} contains a private path, raw-source filename, or office-source marker`);
+for (const file of walk(docsRoot).filter((item) => /\.(md|mdx|txt)$/i.test(item))) {
+  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|otter\.ai\.txt|\.docx|\.xlsx/i.test(read(file))) {
+    fail(`${path.relative(repoRoot, file)} contains a private path or raw-source marker`);
   }
 }
 
 for (const requiredDoc of [
-  "README.md",
-  "chad-lens.md",
-  "approval-register.md",
-  "claims.md",
-  "proofs.md",
-  "sources.md",
-  "projection-map.md",
-  "publishing-governance.md",
-  "launch-blockers.md",
-  "review-checklist.md",
-  "anti-claims.md",
-  "public-safety.md",
-  "opportunities/oti-technical-operations.md",
+  "README.md", "chad-lens.md", "approval-register.md", "claims.md", "proofs.md", "sources.md",
+  "projection-map.md", "publishing-governance.md", "launch-blockers.md", "review-checklist.md",
+  "anti-claims.md", "public-safety.md", "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {
-  const absolute = path.join(docsRoot, requiredDoc);
-  if (!existsSync(absolute) || !statSync(absolute).size) {
-    fail(`docs/knowledge-bank/${requiredDoc} is missing or empty`);
-  }
+  const file = path.join(docsRoot, requiredDoc);
+  if (!existsSync(file) || !statSync(file).size) fail(`docs/knowledge-bank/${requiredDoc} is missing or empty`);
 }
 
 if (warnings.length) {
   console.warn("Knowledge-bank warnings:");
-  for (const warning of warnings) console.warn(`- ${warning}`);
+  warnings.forEach((warning) => console.warn(`- ${warning}`));
 }
-
 if (failures.length) {
   console.error("Knowledge-bank check failed:");
-  for (const failure of failures) console.error(`- ${failure}`);
+  failures.forEach((failure) => console.error(`- ${failure}`));
   process.exit(1);
 }
-
-console.log(
-  `Knowledge-bank check passed${warnings.length ? ` with ${warnings.length} warning(s)` : ""}.`
-);
+console.log(`Knowledge-bank check passed for ${bank.claims.length} claims with ${warnings.length} warning(s).`);
