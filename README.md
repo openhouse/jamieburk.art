@@ -32,6 +32,9 @@ npm run check
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -42,6 +45,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/records.ts`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -57,6 +61,10 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run check:citations` validates the source-to-projection graph and redacted
+public registry; `npm run test:citations` runs citation regressions; and
+`npm run report:citations` writes an ignored review report to
+`reports/generated/citations.md`.
 
 ## Environment
 
