@@ -1,0 +1,21 @@
+{
+  "page": "/work/callnyc",
+  "citations": [
+    {
+      "key": "event-date-and-time",
+      "claimId": "CLM-CALLNYC-EVENT-DATE-TIME"
+    },
+    {
+      "key": "first-councilstat",
+      "claimId": "CLM-CALLNYC-FIRST-COUNCILSTAT"
+    },
+    {
+      "key": "digital-district",
+      "claimId": "CLM-CALLNYC-DIGITAL-DISTRICT"
+    },
+    {
+      "key": "independent-followon",
+      "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOWON"
+    }
+  ]
+}

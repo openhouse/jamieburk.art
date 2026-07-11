@@ -53,11 +53,11 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Public wording:** Built CallNYC.org as an independent 2016 follow-on to a New York City Council / Civic Hall CouncilStat hackathon, translating constituent-services open data into resident-facing next-step guidance.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance after the full CouncilStat dataset was released; Politico New York covered the independent project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as archived and unofficial.
+**Guardrail:** Always describe it as archived, independent, unofficial, and not documented as a formal hackathon submission.
 **Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
