@@ -1,0 +1,13 @@
+[
+  {
+    "id": "FINDING-CALLNYC-CIVICHALL-LISTING-NOT-RECOVERED",
+    "subject": "Civic Hall calendar or event-detail listing",
+    "status": "not-recovered",
+    "method": "CDX / Wayback review of Civic Hall captures and event-prefix URLs.",
+    "scope": "4,630 deduplicated HTML captures representing 1,240 original URLs, plus 296 distinct event URL keys: 215 successful pages, 74 redirects, and seven 404 captures.",
+    "conclusion": "No Wayback-captured Civic Hall calendar listing or dedicated event-detail page was recovered for the January 2016 New York City Council constituent-services hackathon.",
+    "limitation": "This documents the scope and result of the search. It does not prove that no listing ever existed.",
+    "publicProjection": "source-note",
+    "lastReviewed": "2026-07-11"
+  }
+]

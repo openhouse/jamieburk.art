@@ -12,6 +12,7 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Page-local citational care for claims involving dates, numbers, public outcomes, institutional history, and external recognition",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -42,6 +43,17 @@ export default function ColophonPage() {
           </JBCard>
         ))}
       </div>
+      <section className="jb-reading mt-12">
+        <h2 className="text-3xl font-semibold text-jb-ink">Citational care</h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Claims involving dates, numbers, public outcomes, institutional history,
+          or external recognition are linked to public sources where possible.
+          Superscript numbers lead to page-specific notes and source links. The
+          Knowledge Bank records source class, support type, caveats, and review
+          status. Private source material remains outside the public site and
+          repository.
+        </p>
+      </section>
     </div>
   );
 }

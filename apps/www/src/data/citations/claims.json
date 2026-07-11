@@ -1,0 +1,120 @@
+[
+  {
+    "id": "CALLNYC-EVENT-001",
+    "canonicalWording": "On January 30, 2016, Civic Hall announced a 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "status": "Ready",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-CIVICHALL-ANNOUNCEMENT",
+        "relationship": "direct"
+      },
+      {
+        "sourceId": "SRC-CALLNYC-CIVICHALL-WAYBACK-CONTAINER",
+        "relationship": "corroborating"
+      }
+    ],
+    "allowedPages": ["work-callnyc"],
+    "guardrail": "Do not describe the Wayback container as a recovered event-detail or calendar page.",
+    "antiClaims": ["Civic Hall calendar listing recovered", "Dedicated Civic Hall event page recovered"],
+    "citationRequired": true,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "CALLNYC-EVENT-002",
+    "canonicalWording": "The New York City Council described the gathering at Civic Hall as its first CouncilStat hackathon.",
+    "status": "Ready",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-NYCCOUNCIL-EVENT-DAY",
+        "relationship": "direct"
+      },
+      {
+        "sourceId": "SRC-CALLNYC-CIVICHALL-WAYBACK-CONTAINER",
+        "relationship": "corroborating"
+      }
+    ],
+    "allowedPages": ["work-callnyc"],
+    "guardrail": "Use \"first CouncilStat hackathon.\" Do not broaden the claim into a first-hackathon claim about civic data, the Council, or Civic Hall.",
+    "antiClaims": ["broad first-hackathon claims", "first NYC Council hackathon", "first Civic Hall hackathon"],
+    "citationRequired": true,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "CALLNYC-PROJECT-001",
+    "canonicalWording": "After the full CouncilStat dataset became public, Jamie independently built CallNYC.org as a resident-facing interpretation of those records.",
+    "status": "Ready",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-POLITICO-2016",
+        "relationship": "direct"
+      },
+      {
+        "sourceId": "SRC-CALLNYC-GITHUB",
+        "relationship": "corroborating"
+      }
+    ],
+    "allowedPages": ["work-callnyc", "technical-operations"],
+    "guardrail": "CallNYC was independent, archived, unofficial, and historical. Do not call it an official Council product or current civic service.",
+    "antiClaims": ["official Council product", "current civic service", "official City Council service"],
+    "citationRequired": true,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "CALLNYC-DATA-001",
+    "canonicalWording": "CouncilStat records required careful interpretation because Council offices used the application differently and entered information with differing frequency.",
+    "status": "Ready",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-POLITICO-2016",
+        "relationship": "direct"
+      }
+    ],
+    "allowedPages": ["work-callnyc"],
+    "guardrail": "Do not interpret case counts as a simple measure of office quality, specialization, demand, or service effectiveness.",
+    "antiClaims": ["case counts measure office quality", "case counts measure service effectiveness"],
+    "citationRequired": true,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "CALLNYC-PRESS-001",
+    "canonicalWording": "Politico New York covered CallNYC on March 14, 2016.",
+    "status": "Ready",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-POLITICO-2016",
+        "relationship": "direct"
+      }
+    ],
+    "allowedPages": ["work-callnyc"],
+    "guardrail": "Link the archived PDF and identify the publication and date.",
+    "citationRequired": true,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "CALLNYC-DIGITAL-DISTRICT-001",
+    "canonicalWording": "A participant photograph shows a breakout table labeled \"Digital District - Help improve City Council District office operations.\"",
+    "status": "Protected",
+    "confidence": "high",
+    "supports": [
+      {
+        "sourceId": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+        "relationship": "participant-record"
+      }
+    ],
+    "allowedPages": [],
+    "guardrail": "Keep internal until photograph rights and participant consent are approved.",
+    "citationRequired": false,
+    "reviewedBy": ["Jamie Burkart"],
+    "lastReviewed": "2026-07-11"
+  }
+]
