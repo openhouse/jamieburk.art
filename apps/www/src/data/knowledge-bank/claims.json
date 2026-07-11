@@ -1,0 +1,306 @@
+[
+  {
+    "id": "callnyc-hackathon-date-time",
+    "status": "ready",
+    "confidence": "strong",
+    "canonicalPublicWording": "On January 30, 2016, Civic Hall hosted a 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "evidence": [
+      {
+        "sourceId": "civic-hall-social-post-2016",
+        "relationship": "directly-supports",
+        "supportSummary": "Provides the January 30 date, 1-3 p.m. time, NYC Council relationship, and constituent-services focus."
+      },
+      {
+        "sourceId": "nyc-council-social-post-2016",
+        "relationship": "corroborates",
+        "supportSummary": "Confirms the event at Civic Hall on January 30 and identifies its CouncilStat context."
+      },
+      {
+        "sourceId": "civic-hall-wayback-2016-01-31",
+        "relationship": "corroborates",
+        "supportSummary": "Preserves both posts through Civic Hall's embedded social feed."
+      }
+    ],
+    "caveat": "No dedicated Civic Hall calendar listing or event-detail page has been recovered.",
+    "doNotSay": [
+      "The dedicated Civic Hall calendar listing confirms the event.",
+      "The complete formal registration title is known."
+    ],
+    "protectedBoundaries": [],
+    "surfaces": ["case-study", "technical-operations"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "callnyc-hackathon-branding",
+    "status": "careful",
+    "confidence": "moderate",
+    "canonicalPublicWording": "A surviving promotional graphic used the branding New York City Council Hackathon.",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-hackathon-graphic-2016",
+        "relationship": "directly-supports",
+        "supportSummary": "Shows New York City Council Hackathon and labs.council.nyc."
+      }
+    ],
+    "caveat": "Treat this as recovered branding, not proof of the complete formal registration title.",
+    "doNotSay": [
+      "New York City Council Hackathon was conclusively the event's full official title."
+    ],
+    "protectedBoundaries": [],
+    "surfaces": ["case-study"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "callnyc-first-councilstat-hackathon",
+    "status": "ready",
+    "confidence": "strong",
+    "canonicalPublicWording": "The New York City Council described the event as its first CouncilStat hackathon.",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-social-post-2016",
+        "relationship": "directly-supports",
+        "supportSummary": "The Council's event-day post identifies the gathering as its first CouncilStat hackathon."
+      }
+    ],
+    "doNotSay": [],
+    "protectedBoundaries": [],
+    "surfaces": ["case-study", "technical-operations"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "status": "careful",
+    "confidence": "moderate",
+    "canonicalPublicWording": "Participant photography documents a Digital District breakout focused on improving City Council district-office operations.",
+    "evidence": [
+      {
+        "sourceId": "participant-photo-digital-district-2016",
+        "relationship": "directly-supports",
+        "supportSummary": "The photographed placard reads Digital District and Help improve City Council District office operations."
+      }
+    ],
+    "caveat": "No agenda, facilitator record, breakout roster, or required deliverable has been recovered.",
+    "doNotSay": [
+      "Digital District was the official title of the entire event.",
+      "Jamie facilitated Digital District.",
+      "The breakout addressed specific workflows not established by the surviving evidence."
+    ],
+    "protectedBoundaries": [
+      "Private photo-library location",
+      "Unverified participant identities",
+      "Uncleared image rights"
+    ],
+    "surfaces": ["case-study"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "civic-hall-calendar-listing-not-recovered",
+    "status": "careful",
+    "confidence": "strong",
+    "canonicalPublicWording": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the reviewed Wayback corpus.",
+    "evidence": [
+      {
+        "sourceId": "research-run-civic-hall-cdx-2026",
+        "relationship": "negative-search-finding",
+        "supportSummary": "The reviewed CDX corpus did not produce a dedicated calendar or event-detail page for the hackathon."
+      }
+    ],
+    "caveat": "This is a search finding, not proof that no listing ever existed.",
+    "doNotSay": [
+      "No dedicated event page ever existed."
+    ],
+    "protectedBoundaries": [
+      "Private temporary research artifacts"
+    ],
+    "surfaces": ["case-study", "internal-only"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "callnyc-independent-follow-on",
+    "status": "careful",
+    "confidence": "moderate",
+    "canonicalPublicWording": "After the complete CouncilStat dataset was released, Jamie independently built CallNYC.org as a resident-facing interpretation of the records.",
+    "evidence": [
+      {
+        "sourceId": "councilstat-release-context-2016",
+        "relationship": "contextualizes",
+        "supportSummary": "Provides public-safe release context for the CouncilStat records that CallNYC interpreted."
+      },
+      {
+        "sourceId": "callnyc-github-repository",
+        "relationship": "corroborates",
+        "supportSummary": "Provides public project context for CallNYC as an independent civic-tech repository."
+      },
+      {
+        "sourceId": "callnyc-politico-2016",
+        "relationship": "corroborates",
+        "supportSummary": "Covers CallNYC in 2016 as a website for exploring City Council constituent-services data."
+      }
+    ],
+    "caveat": "Do not describe CallNYC as an official Council product or documented formal hackathon submission.",
+    "doNotSay": [
+      "Jamie built CallNYC during the hackathon.",
+      "Jamie won the hackathon.",
+      "CallNYC was commissioned by the Council."
+    ],
+    "protectedBoundaries": [
+      "Unverified internal project chronology"
+    ],
+    "surfaces": ["case-study", "technical-operations"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "callnyc-data-limitations",
+    "status": "careful",
+    "confidence": "moderate",
+    "canonicalPublicWording": "Because district offices used CouncilStat differently, CallNYC treated case counts as evidence of recorded activity, not as a simple measure of office performance.",
+    "evidence": [
+      {
+        "sourceId": "councilstat-data-limitations-summary",
+        "relationship": "directly-supports",
+        "supportSummary": "Summarizes the data-use limitation that offices used CouncilStat differently and recorded cases with different frequency."
+      }
+    ],
+    "caveat": "Use as interpretive qualification unless a public methodology source is separately verified.",
+    "doNotSay": [
+      "CouncilStat case counts measured district-office performance.",
+      "CallNYC rankings were current or official."
+    ],
+    "protectedBoundaries": [
+      "Unverified performance interpretations"
+    ],
+    "surfaces": ["case-study"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "homepage-career-operating-structure-14-years",
+    "status": "ready",
+    "confidence": "strong",
+    "canonicalPublicWording": "14+ years creating operating structure.",
+    "evidence": [
+      {
+        "sourceId": "approved-resume-portfolio-chronology",
+        "relationship": "directly-supports",
+        "supportSummary": "Approved professional resume and public portfolio chronology."
+      }
+    ],
+    "caveat": "Does not imply one continuous formal technical-project-manager title or one employer.",
+    "doNotSay": [
+      "14+ years as a formal technical project manager in one organization."
+    ],
+    "protectedBoundaries": [
+      "Private clients",
+      "Private collaborator records"
+    ],
+    "surfaces": ["homepage"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "homepage-hje-revenue-growth",
+    "status": "careful",
+    "confidence": "careful",
+    "canonicalPublicWording": "Contributed to 2x revenue growth for a legacy e-commerce business.",
+    "evidence": [
+      {
+        "sourceId": "hje-firsthand-operational-record",
+        "relationship": "directly-supports",
+        "supportSummary": "Approved resume and long-term firsthand operational record."
+      }
+    ],
+    "caveat": "The public claim is contribution language; private revenue dashboards and internal financial records are not published.",
+    "doNotSay": [
+      "Jamie caused the full increase.",
+      "Jamie single-handedly produced the full increase."
+    ],
+    "protectedBoundaries": [
+      "Private dashboards",
+      "Internal financial records"
+    ],
+    "surfaces": ["homepage"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "homepage-fair-rent-30-pages",
+    "status": "careful",
+    "confidence": "careful",
+    "canonicalPublicWording": "30+ pages of civic campaign-memory infrastructure.",
+    "evidence": [
+      {
+        "sourceId": "fair-rent-public-safe-archive-summary",
+        "relationship": "directly-supports",
+        "supportSummary": "Public-safe archive summary of shared campaign-memory and coordination infrastructure."
+      }
+    ],
+    "caveat": "Private coalition notes, legal review, and stakeholder records are not published.",
+    "doNotSay": [
+      "Jamie led the movement.",
+      "Jamie owned the campaign."
+    ],
+    "protectedBoundaries": [
+      "Private coalition notes",
+      "Legal-review materials",
+      "Stakeholder records"
+    ],
+    "surfaces": ["homepage"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "homepage-wowlist-city-ecosystems",
+    "status": "careful",
+    "confidence": "careful",
+    "canonicalPublicWording": "WOWList reached roughly 35 city ecosystems.",
+    "evidence": [
+      {
+        "sourceId": "wowlist-historical-project-record",
+        "relationship": "directly-supports",
+        "supportSummary": "Approved resume and historical project record."
+      }
+    ],
+    "caveat": "Roughly preserves the public-safe nature of the adoption estimate.",
+    "doNotSay": [
+      "Official chapters in 35 cities."
+    ],
+    "protectedBoundaries": [
+      "Private user data",
+      "Organizer contact lists"
+    ],
+    "surfaces": ["homepage"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  },
+  {
+    "id": "homepage-sunday-dinner-counts",
+    "status": "careful",
+    "confidence": "careful",
+    "canonicalPublicWording": "300+ gatherings and 20+ resident artists supported.",
+    "evidence": [
+      {
+        "sourceId": "sunday-dinner-public-safe-aggregate-record",
+        "relationship": "directly-supports",
+        "supportSummary": "Approved resume and public-safe aggregate record."
+      }
+    ],
+    "caveat": "Private guest, attendance, and resident records are not published.",
+    "doNotSay": [
+      "Comprehensive public attendance database."
+    ],
+    "protectedBoundaries": [
+      "Private guest records",
+      "Attendance records",
+      "Resident records"
+    ],
+    "surfaces": ["homepage"],
+    "revisedAt": "2026-07-11",
+    "reviewedBy": ["Jamie Burkart"]
+  }
+]

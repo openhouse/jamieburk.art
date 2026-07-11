@@ -1,0 +1,270 @@
+[
+  {
+    "id": "civic-hall-social-post-2016",
+    "kind": "social-post",
+    "sourceClass": "primary-contemporaneous",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "Civic Hall announcement of NYC Council constituent-services hackathon",
+    "shortLabel": "Civic Hall post",
+    "publisher": "Civic Hall",
+    "publishedAt": "2016-01-29",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "originalUrl": "https://x.com/CivicHall/status/693124020917522433",
+    "supportSummary": "Announces a January 30, 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "limitations": [
+      "Does not provide the full agenda or a complete formal registration title."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "nyc-council-hackathon-graphic-2016",
+    "kind": "promotional-graphic",
+    "sourceClass": "primary-contemporaneous",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "New York City Council Hackathon promotional graphic",
+    "shortLabel": "Promotional graphic",
+    "publisher": "New York City Council / Civic Hall",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "mediaUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "supportSummary": "Displays New York City Council Hackathon branding and the labs.council.nyc address.",
+    "limitations": [
+      "Supports recovered event branding, not necessarily the complete formal title."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "nyc-council-social-post-2016",
+    "kind": "social-post",
+    "sourceClass": "official-institutional",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "NYC Council event-day CouncilStat hackathon post",
+    "shortLabel": "NYC Council post",
+    "publisher": "New York City Council",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "originalUrl": "https://x.com/NYCCouncil/status/693509031768506368",
+    "supportSummary": "Places the gathering at Civic Hall on January 30 and identifies it as the Council's first CouncilStat hackathon.",
+    "limitations": [],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "civic-hall-wayback-2016-01-31",
+    "kind": "archived-page",
+    "sourceClass": "primary-contemporaneous",
+    "visibility": "public-archived",
+    "publicCitationMode": "link",
+    "title": "Civic Hall events page Wayback capture with embedded social feed",
+    "shortLabel": "Wayback capture",
+    "publisher": "Civic Hall / Internet Archive",
+    "capturedAt": "2016-01-31T00:46:01Z",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "archivedUrl": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+    "supportSummary": "Preserves the Civic Hall and NYC Council posts through the page's embedded social feed.",
+    "limitations": [
+      "This is not the hackathon's calendar listing or dedicated event page."
+    ],
+    "availability": "archived",
+    "rights": "link-only"
+  },
+  {
+    "id": "participant-photo-digital-district-2016",
+    "kind": "participant-photograph",
+    "sourceClass": "participant-archive",
+    "visibility": "private-review-only",
+    "publicCitationMode": "summary-only",
+    "title": "Participant photograph documenting the Digital District breakout",
+    "shortLabel": "Participant photograph archive",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Documents a breakout placard reading Digital District and Help improve City Council District office operations.",
+    "limitations": [
+      "Photographer, copyright, and public-image use require separate confirmation.",
+      "Supports the breakout wording, not the official title of the full event.",
+      "A photograph timestamp is not the event schedule.",
+      "Do not store or expose a private photo-library path."
+    ],
+    "availability": "private",
+    "rights": "conditional"
+  },
+  {
+    "id": "research-run-civic-hall-cdx-2026",
+    "kind": "research-run",
+    "sourceClass": "research-finding",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "Civic Hall calendar and event-detail recovery research run",
+    "shortLabel": "Wayback research run",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Documents a bounded Wayback CDX search that did not recover a dedicated Civic Hall calendar listing, event-detail page, agenda, breakout roster, or registration-form contents.",
+    "limitations": [
+      "Failure to recover a listing is not proof that no listing ever existed.",
+      "Private temporary research artifacts remain outside the repository."
+    ],
+    "availability": "not-recovered",
+    "rights": "private-review"
+  },
+  {
+    "id": "callnyc-politico-2016",
+    "kind": "news-report",
+    "sourceClass": "independent-secondary",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "Politico New York coverage of CallNYC",
+    "shortLabel": "Politico New York",
+    "publisher": "Politico New York",
+    "publishedAt": "2016",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "originalUrl": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
+    "supportSummary": "Covers CallNYC in 2016 as a website for exploring City Council constituent-services data.",
+    "limitations": [
+      "Archived PDF is used as historical context, not as evidence that CallNYC was an official Council service."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "callnyc-github-repository",
+    "kind": "project-website",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "CallNYC public GitHub repository",
+    "shortLabel": "GitHub repository",
+    "publisher": "GitHub / openhouse",
+    "accessedAt": "2026-07-11",
+    "lastCheckedAt": "2026-07-11",
+    "originalUrl": "https://github.com/openhouse/CallNYC",
+    "supportSummary": "Public repository context for the independent CallNYC project.",
+    "limitations": [
+      "Repository context does not make the project an official City Council product."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "councilstat-release-context-2016",
+    "kind": "dataset",
+    "sourceClass": "official-institutional",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "CouncilStat constituent-services release context",
+    "shortLabel": "CouncilStat release context",
+    "publisher": "New York City Council",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Public-safe source summary for the release context behind CallNYC's independent follow-on use of CouncilStat constituent-services records.",
+    "limitations": [
+      "No public URL is asserted in this record until the canonical release page is separately verified."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "councilstat-data-limitations-summary",
+    "kind": "dataset",
+    "sourceClass": "contextual",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "CouncilStat data-use limitations summary",
+    "shortLabel": "Data limitations summary",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Public-safe summary that district offices used CouncilStat differently, so recorded case counts should not be treated as a simple office-performance ranking.",
+    "limitations": [
+      "Use as interpretive qualification unless a public methodology source is separately verified."
+    ],
+    "availability": "live",
+    "rights": "link-only"
+  },
+  {
+    "id": "approved-resume-portfolio-chronology",
+    "kind": "public-artifact",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-linkable",
+    "publicCitationMode": "link",
+    "title": "Approved resume and portfolio chronology",
+    "shortLabel": "Resume",
+    "accessedAt": "2026-07-11",
+    "originalUrl": "/resume",
+    "supportSummary": "Supports the public chronology for 14+ years creating operating structure.",
+    "limitations": [
+      "Does not imply one continuous formal technical-project-manager title or one employer."
+    ],
+    "availability": "live",
+    "rights": "publishable"
+  },
+  {
+    "id": "hje-firsthand-operational-record",
+    "kind": "public-artifact",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "HJE public-safe firsthand operational record",
+    "shortLabel": "Public-safe operational record",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Approved resume and long-term firsthand operational record for the HJE 2x revenue contribution claim.",
+    "limitations": [
+      "Private revenue dashboards and internal financial records are not published.",
+      "Use contribution language only."
+    ],
+    "availability": "private",
+    "rights": "private-review"
+  },
+  {
+    "id": "fair-rent-public-safe-archive-summary",
+    "kind": "public-artifact",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "FairRentNYC public-safe archive summary",
+    "shortLabel": "Public-safe archive summary",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Public-safe archive summary of shared campaign-memory and coordination infrastructure.",
+    "limitations": [
+      "Private coalition notes, legal review, and stakeholder records are not published."
+    ],
+    "availability": "private",
+    "rights": "private-review"
+  },
+  {
+    "id": "wowlist-historical-project-record",
+    "kind": "public-artifact",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "WOWList historical project record",
+    "shortLabel": "Historical project record",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Approved resume and historical project record supporting the rough estimate that WOWList reached about 35 city ecosystems.",
+    "limitations": [
+      "Roughly preserves the public-safe nature of the adoption estimate.",
+      "Private user data and organizer contact lists are not published."
+    ],
+    "availability": "private",
+    "rights": "private-review"
+  },
+  {
+    "id": "sunday-dinner-public-safe-aggregate-record",
+    "kind": "public-artifact",
+    "sourceClass": "primary-retrospective",
+    "visibility": "public-unlinked",
+    "publicCitationMode": "summary-only",
+    "title": "196 / Sunday Dinner public-safe aggregate record",
+    "shortLabel": "Public-safe aggregate record",
+    "accessedAt": "2026-07-11",
+    "supportSummary": "Approved resume and public-safe aggregate record for the 300+ gatherings and 20+ resident artists claim.",
+    "limitations": [
+      "Private guest, attendance, and resident records are not published."
+    ],
+    "availability": "private",
+    "rights": "private-review"
+  }
+]

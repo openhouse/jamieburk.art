@@ -1,0 +1,37 @@
+[
+  {
+    "id": "research-run-civic-hall-cdx-2026",
+    "subject": "Civic Hall calendar and event-detail recovery for January 2016 NYC Council constituent-services hackathon",
+    "conductedAt": "2026-07-10",
+    "method": "Wayback CDX enumeration and deduplicated HTML review across Civic Hall pages and event URL prefixes.",
+    "corpusSummary": "Reviewed 4,630 deduplicated HTML captures representing 1,240 original URLs.",
+    "querySummary": "A separate all-status event-prefix pass reviewed 296 event URL keys: 215 successful pages, 74 redirects, and seven 404 captures.",
+    "counts": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "notFoundCaptures": 7
+    },
+    "findings": [
+      "Civic Hall's embedded social feed preserved a January 30, 1-3 p.m. NYC Council constituent-services hackathon announcement.",
+      "An event-day NYC Council post identified the gathering at Civic Hall as its first CouncilStat hackathon.",
+      "A promotional graphic used New York City Council Hackathon branding.",
+      "The RSVP resolved to a Civic Hall-domain Google Form that is now unavailable."
+    ],
+    "notRecovered": [
+      "Civic Hall calendar listing",
+      "Dedicated Civic Hall event-detail page",
+      "Agenda",
+      "Breakout roster",
+      "Registration-form contents"
+    ],
+    "limitations": [
+      "Failure to recover a listing is not proof that no listing ever existed.",
+      "Private temporary research artifacts remain outside the repository."
+    ],
+    "publicSummaryAllowed": true,
+    "privateArtifactsRemainOutsideRepo": true
+  }
+]
