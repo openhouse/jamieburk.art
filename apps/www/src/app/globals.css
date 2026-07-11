@@ -148,3 +148,130 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-ref {
+  margin-left: 0.12em;
+  white-space: nowrap;
+}
+
+.citation-ref a {
+  border-radius: 0.25rem;
+  color: var(--jb-broadway-blue);
+  font-size: 0.78em;
+  font-weight: 700;
+  padding: 0.05rem 0.12rem;
+  text-decoration: none;
+}
+
+.citation-ref a:focus-visible,
+.citation-ref a:hover {
+  background: rgba(116, 194, 229, 0.28);
+  text-decoration: underline;
+}
+
+.reference-list {
+  border-top: 1px solid rgba(52, 52, 53, 0.18);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+.reference-list h2 {
+  scroll-margin-top: 8rem;
+}
+
+.reference-list ol {
+  display: grid;
+  gap: 1rem;
+  list-style: decimal;
+  margin: 1rem 0 0;
+  padding-left: 1.4rem;
+}
+
+.reference-list li {
+  scroll-margin-top: 8rem;
+}
+
+.reference-list li:target {
+  background: rgba(247, 236, 134, 0.3);
+  border-radius: 0.5rem;
+  outline: 2px solid rgba(233, 182, 78, 0.55);
+  outline-offset: 0.35rem;
+}
+
+.citation-note-text,
+.citation-note-caveat,
+.citation-source-description,
+.citation-edge,
+.citation-private-note {
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.citation-note-caveat,
+.citation-private-note {
+  color: rgba(52, 52, 53, 0.72);
+}
+
+.citation-source-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.citation-source-heading {
+  font-weight: 700;
+  margin: 0;
+}
+
+.citation-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.citation-link-list a,
+.citation-backlink a {
+  align-items: center;
+  border: 1px solid rgba(11, 95, 129, 0.28);
+  border-radius: 0.35rem;
+  display: inline-flex;
+  font-weight: 700;
+  min-height: 2rem;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+}
+
+.citation-link-list a:hover,
+.citation-link-list a:focus-visible,
+.citation-backlink a:hover,
+.citation-backlink a:focus-visible {
+  background: rgba(116, 194, 229, 0.18);
+  text-decoration: underline;
+}
+
+.citation-corrections {
+  margin-top: 0.75rem;
+}
+
+.citation-corrections summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.citation-backlink {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+@media print {
+  .citation-backlink {
+    display: none;
+  }
+}
