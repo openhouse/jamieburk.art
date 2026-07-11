@@ -50,6 +50,8 @@ export type WorkMeta = {
   series: string;
   subtitle: string;
   summary: string;
+  citationPageId?: string;
+  summaryCitationOccurrences?: string[];
   role: string;
   years: string;
   status: WorkStatus;

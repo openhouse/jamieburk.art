@@ -44,6 +44,8 @@ const workMetaSchema = z.object({
   series: z.string(),
   subtitle: z.string(),
   summary: z.string(),
+  citationPageId: z.string().optional(),
+  summaryCitationOccurrences: z.array(z.string()).optional(),
   role: z.string(),
   years: z.string(),
   status: workStatusSchema,
@@ -280,9 +282,11 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "After participating in a New York City Council constituent-services hackathon at Civic Hall on January 30, 2016, Jamie independently built CallNYC.org after the full CouncilStat dataset was released - translating administrative case records into issue-oriented resident pathways while documenting important limitations in the source data.",
+    citationPageId: "callnyc",
+    summaryCitationOccurrences: ["summary-event", "summary-follow-on"],
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -303,7 +307,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "An independent interpretation layer developed after the full CouncilStat dataset was released.",
         type: "map"
       },
       {
@@ -327,17 +331,8 @@ const workItemsInput = [
       "Information Architecture",
       "Public Interfaces"
     ],
-    links: [
-      {
-        label: "Politico New York archived PDF",
-        url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
-      },
-      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
-    ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
-    sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -347,14 +342,15 @@ const workItemsInput = [
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
-      "Translated CouncilStat / constituent-services open data",
-      "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Participated in a January 30, 2016 New York City Council constituent-services hackathon at Civic Hall",
+      "Independently developed CallNYC after the full CouncilStat dataset was released",
+      "Translated constituent-services records into issue-oriented pathways",
+      "Documented source-data limits and kept the prototype's unofficial status visible",
+      "Covered by Politico New York on March 14, 2016"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "Jamie independently built CallNYC in 2016, translating constituent-services open data into issue pathways while documenting limits in the source data and the prototype's unofficial status.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:

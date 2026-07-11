@@ -13,6 +13,7 @@ import {
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { StatusBadge } from "@/components/StatusBadge";
+import { Cite } from "@/components/citations";
 import type { WorkMeta } from "@/types/work";
 
 type CaseStudyLayoutProps = {
@@ -30,7 +31,18 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             {item.title}
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <p className="mt-5 text-xl leading-8 text-jb-ink/78">
+            {item.summary}
+            {item.citationPageId
+              ? item.summaryCitationOccurrences?.map((occurrenceId) => (
+                  <Cite
+                    key={occurrenceId}
+                    occurrenceId={occurrenceId}
+                    pageId={item.citationPageId!}
+                  />
+                ))
+              : null}
+          </p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
           </div>

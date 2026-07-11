@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { Cite, References } from "@/components/citations";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -25,11 +26,6 @@ const proofMap = [
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
       "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
-  },
-  {
-    project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
   },
   {
     project: "WOWList",
@@ -103,6 +99,19 @@ export default function TechnicalOperationsPage() {
               </div>
             ))}
           </dl>
+          <div className="mt-4">
+            <p className="font-semibold text-jb-ink">CallNYC</p>
+            <p className="mt-1 leading-7 text-jb-ink/72">
+              Jamie moved from ambiguous operational data to an independent
+              public-facing prototype: clarifying the problem, interpreting
+              inconsistent records, documenting limitations, and translating
+              institutional information into a more usable form.
+              <Cite
+                occurrenceId="callnyc-product-method"
+                pageId="technical-operations"
+              />
+            </p>
+          </div>
         </JBCard>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -124,6 +133,9 @@ export default function TechnicalOperationsPage() {
       <div className="mt-10 grid gap-5 lg:grid-cols-2">
         <ResumeCTA />
         <ContactCTA />
+      </div>
+      <div className="jb-reading mt-14">
+        <References pageId="technical-operations" />
       </div>
     </div>
   );
