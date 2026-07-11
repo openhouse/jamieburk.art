@@ -42,6 +42,17 @@ personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
 
+### Curated Photo-Field Review
+
+A structured local visual review that inspects image pixels, records editorial
+judgments, separates safety holds, and preserves uncertainty without publishing
+the underlying photographs.
+
+This source class can corroborate depicted environments, material practices,
+and recurring visual patterns. It does not independently prove project
+attribution, dates, aggregate metrics, causal impact, role ownership, identity,
+or consent to publish a person or image.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

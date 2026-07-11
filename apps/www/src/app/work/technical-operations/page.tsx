@@ -39,7 +39,7 @@ const proofMap = [
   {
     project: "196 / Sunday Dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "direct hosting, room and meal preparation, onboarding, facilitation, continuity, and documentation for recurring human systems."
   },
   {
     project: "KC Spaces Fund",

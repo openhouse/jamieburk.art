@@ -427,7 +427,7 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+      "Hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     role: "Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
@@ -438,7 +438,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable participation infrastructure for preparing rooms and meals, welcoming people, supporting resident artists, facilitating gatherings, and carrying the work forward.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -453,21 +453,23 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary, Jamie confirmation, curated photo-field findings without published images, approved public materials pending, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
+      "Jamie hosts Sunday Dinner",
       "300+ hosted gatherings",
       "20+ resident artists supported",
+      "Room setup, meal preparation, welcome, and recurring hospitality practice",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie hosts Sunday Dinner and created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:

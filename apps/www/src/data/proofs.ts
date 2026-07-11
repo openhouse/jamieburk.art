@@ -7,6 +7,7 @@ export type EvidenceClass =
   | "public-source"
   | "public-safe-archive-summary"
   | "ai-assisted-archive-review"
+  | "curated-photo-field-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -343,14 +344,18 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
+      "curated-photo-field-review",
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+      "Hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    shortWording: "Hosts Sunday Dinner and sustains its participation infrastructure",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "Jamie hosts Sunday Dinner and made recurring cultural work easier to continue through practical invitation, room and meal preparation, onboarding, facilitation, documentation, and follow-through systems.",
+    sourceBasis:
+      "Approved resume language, Jamie review confirmation, public-safe aggregate project history, and a public-safe summary of a curated photo-field review.",
+    sourceNote:
+      "The photo-field review corroborates the material hosting practice but does not independently prove aggregate counts, identify participants for publication, or grant consent to publish images.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -369,7 +374,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

@@ -41,6 +41,20 @@ Do not name collaborators unless approved.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+Do not treat a Photos person association as consent, identify an unnamed person
+from the archive, or use the photo field to prove the 300+ gathering or 20+
+resident-artist counts. Those metrics retain their existing source basis.
+
+## Visual Evidence
+
+Do not infer project attribution from visual similarity alone.
+Do not treat an editorial view as a factual project label.
+Do not use generic nightlife imagery as WOWList proof.
+Do not use material metaphors as evidence that Source-Backed Team Memory is a
+deployed product.
+Do not publish any selected image without a separate consent, credit, safety,
+and context review.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant
