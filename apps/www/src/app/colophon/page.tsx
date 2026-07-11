@@ -12,6 +12,7 @@ export const metadata: Metadata = createMetadata({
 const details = [
   "Static-first Next.js App Router site with local MDX content",
   "Public-safe artifacts, claim discipline, and visible content-status notes",
+  "Page-local numerical citations generated from a public-safe knowledge bank",
   "Accessibility-minded semantic HTML, keyboard focus states, and readable type",
   "Karla for body/UI text and League Spartan for display headings",
   "No private or proprietary font files are committed or served",
@@ -33,6 +34,13 @@ export default function ColophonPage() {
           print-layout sketchpad. Staging is reviewable but not indexable, and
           production should only become indexable after content and metadata
           review.
+        </p>
+        <p className="mt-5 text-lg leading-8 text-jb-ink/72">
+          Selected factual and quantitative claims use page-local numerical
+          citations generated from a public-safe knowledge bank. Citations link
+          to public sources where possible, identify private primary evidence
+          without exposing it, preserve corrections, and retain uncertainty
+          rather than smoothing it away.
         </p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-2">

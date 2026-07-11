@@ -23,6 +23,8 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- CallNYC Civic Hall and New York City Council public posts.
+- CallNYC Wayback embedded-feed capture.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
@@ -51,6 +53,14 @@ stronger public publication.
 
 Potentially usable, but do not project to public pages until Jamie or
 collaborators approve.
+
+### Citational-Care Records
+
+`packages/knowledge-bank` contains typed source, artifact, claim, evidence-edge,
+citation-group, research-run, correction, and page-projection records for the
+CallNYC pilot. These records may include private-primary evidence descriptions
+only when the public description is summary-only and no private locator, raw
+metadata, or unpublished asset is committed.
 
 ## Prohibited Source Material In This Repo
 
