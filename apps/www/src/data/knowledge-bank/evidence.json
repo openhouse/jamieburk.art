@@ -1,0 +1,101 @@
+[
+  {
+    "id": "evidence-civic-hall-announcement",
+    "sourceId": "source-civic-hall-hackathon-post-2016-01",
+    "claimId": "callnyc-event-date-time-purpose",
+    "relation": "direct-support",
+    "locator": "Post text.",
+    "supportNote": "Supports the announced January 30 date, 1-3 p.m. hours, and constituent-services purpose.",
+    "limitations": ["Announced hours do not prove actual duration."],
+    "confidence": "confirmed",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-nyc-council-event-day",
+    "sourceId": "source-nyc-council-councilstat-post-2016-01-30",
+    "claimId": "callnyc-first-councilstat-hackathon",
+    "relation": "direct-support",
+    "locator": "Event-day post.",
+    "supportNote": "Supports January 30, Civic Hall, and the Council's first CouncilStat hackathon wording.",
+    "limitations": ["Does not support first civic-data hackathon."],
+    "confidence": "confirmed",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-civic-hall-wayback-carrier",
+    "sourceId": "source-civic-hall-wayback-feed-2016-01-31",
+    "claimId": "callnyc-event-date-time-purpose",
+    "relation": "archival-carrier",
+    "locator": "Embedded social feed in captured Civic Hall page.",
+    "supportNote": "Preserves the announcement in Civic Hall site context.",
+    "limitations": ["This is not a recovered event listing or dedicated event page."],
+    "confidence": "strong",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-civic-hall-promotional-graphic",
+    "sourceId": "source-civic-hall-promotional-graphic-2016-01",
+    "claimId": "callnyc-event-branding",
+    "relation": "direct-support",
+    "locator": "Visible graphic text.",
+    "supportNote": "Supports the promotional wording 'New York City Council Hackathon.'",
+    "limitations": ["Does not prove a longer formal title."],
+    "confidence": "confirmed",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-politico-callnyc",
+    "sourceId": "source-politico-callnyc-2016-03-14",
+    "claimId": "callnyc-independent-follow-on-project",
+    "relation": "direct-support",
+    "locator": "Article text describing Jamie, the CouncilStat release, and CallNYC.",
+    "supportNote": "Supports independent follow-on development and March 2016 coverage.",
+    "limitations": ["Does not make CallNYC an official Council product."],
+    "confidence": "confirmed",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-callnyc-project",
+    "sourceId": "source-callnyc-archived-site",
+    "claimId": "callnyc-independent-follow-on-project",
+    "relation": "direct-support",
+    "locator": "Archived project snapshot.",
+    "supportNote": "Supports the project's existence, interface, and archived status.",
+    "limitations": ["The prototype is not current civic guidance."],
+    "confidence": "confirmed",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-callnyc-repository",
+    "sourceId": "source-callnyc-github-repository",
+    "claimId": "callnyc-independent-follow-on-project",
+    "relation": "corroborating",
+    "locator": "Public repository.",
+    "supportNote": "Corroborates implementation and project authorship context.",
+    "limitations": ["Repository presence does not establish official sponsorship."],
+    "confidence": "strong",
+    "publicUseStatus": "approved"
+  },
+  {
+    "id": "evidence-digital-district-photo",
+    "sourceId": "source-participant-photo-digital-district-2016-01-30",
+    "claimId": "callnyc-digital-district-breakout",
+    "relation": "participant-reconstruction",
+    "locator": "Placard visible in participant photograph.",
+    "supportNote": "Supports the visible Digital District placard wording.",
+    "limitations": ["Does not establish the formal event title, schedule, facilitator, or roster."],
+    "confidence": "confirmed",
+    "publicUseStatus": "review-required"
+  },
+  {
+    "id": "evidence-civic-hall-cdx-search",
+    "sourceId": "source-civic-hall-cdx-research-2026-07-11",
+    "claimId": "callnyc-calendar-listing-not-recovered",
+    "relation": "negative-search",
+    "locator": "Wayback CDX enumeration and event-prefix review.",
+    "supportNote": "Supports only the bounded conclusion that no dedicated listing was recovered in the documented search.",
+    "limitations": ["Does not prove that a listing never existed."],
+    "confidence": "strong",
+    "publicUseStatus": "internal-only"
+  }
+]

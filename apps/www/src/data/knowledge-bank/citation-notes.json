@@ -1,0 +1,46 @@
+[
+  {
+    "id": "callnyc-event-context",
+    "title": "January 2016 CouncilStat hackathon at Civic Hall",
+    "shortLabel": "Civic Hall and New York City Council event evidence",
+    "claimIds": ["callnyc-event-date-time-purpose", "callnyc-first-councilstat-hackathon"],
+    "evidenceIds": ["evidence-civic-hall-announcement", "evidence-nyc-council-event-day", "evidence-civic-hall-wayback-carrier"],
+    "publicSummary": "Civic Hall announced a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services. A New York City Council event-day post located the gathering at Civic Hall and called it the Council's first CouncilStat hackathon. The Wayback page preserves the posts through an embedded social feed; it is not the event's calendar listing.",
+    "boundaries": ["Announced hours do not prove actual event duration.", "Do not broaden first CouncilStat hackathon to first civic-data hackathon."],
+    "publicationState": "public",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "title": "Recovered event branding",
+    "shortLabel": "New York City Council Hackathon graphic",
+    "claimIds": ["callnyc-event-branding"],
+    "evidenceIds": ["evidence-civic-hall-promotional-graphic"],
+    "publicSummary": "The Council-branded graphic attached to Civic Hall's announcement reads 'New York City Council Hackathon' and includes 'labs.council.nyc.' This is recovered promotional branding, not proof of a longer formal registration title.",
+    "boundaries": ["Do not infer a longer official title or the names of breakout tracks."],
+    "publicationState": "public",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-independent-follow-on",
+    "title": "Independent development and press coverage of CallNYC",
+    "shortLabel": "CallNYC project and Politico coverage",
+    "claimIds": ["callnyc-independent-follow-on-project"],
+    "evidenceIds": ["evidence-politico-callnyc", "evidence-callnyc-project", "evidence-callnyc-repository"],
+    "publicSummary": "After CouncilStat constituent-services data became publicly available, Jamie independently developed CallNYC.org as a resident-facing civic-data prototype. Politico New York covered the project in March 2016. CallNYC was not an official Council product and is now an archived project.",
+    "boundaries": ["Do not say CallNYC was built at the hackathon.", "Do not describe it as an official or current Council service."],
+    "publicationState": "public",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "title": "Digital District breakout",
+    "shortLabel": "Participant photograph archive",
+    "claimIds": ["callnyc-digital-district-breakout"],
+    "evidenceIds": ["evidence-digital-district-photo"],
+    "publicSummary": "Participant photographs document a breakout placard reading 'Digital District - Help improve City Council District office operations.'",
+    "boundaries": ["Treat Digital District as a breakout label, not the title of the entire event.", "Do not publish until rights, crop, credit, and represented-person review are complete."],
+    "publicationState": "withheld",
+    "lastReviewed": "2026-07-11"
+  }
+]

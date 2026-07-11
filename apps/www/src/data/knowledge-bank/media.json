@@ -1,0 +1,33 @@
+[
+  {
+    "id": "media-callnyc-digital-district-participant-photo",
+    "type": "photograph",
+    "title": "Digital District participant photograph",
+    "sourceId": "source-participant-photo-digital-district-2016-01-30",
+    "date": "2016-01-30",
+    "rightsStatus": "needs-research",
+    "consentStatus": "needs-consent",
+    "publicUseStatus": "review-required",
+    "evidentiaryScope": "direct",
+    "establishes": ["visible placard wording", "breakout working context", "photograph capture timestamp"],
+    "doesNotEstablish": ["formal event title", "event start or end time", "complete agenda", "facilitator identity", "complete participant roster"],
+    "boundaries": ["Do not publish the image or private archive locator in this release."],
+    "opaqueLocator": "participant-archive:callnyc-digital-district",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "media-callnyc-promotional-graphic",
+    "type": "graphic",
+    "title": "New York City Council Hackathon promotional graphic",
+    "sourceId": "source-civic-hall-promotional-graphic-2016-01",
+    "date": "2016-01",
+    "rightsStatus": "needs-research",
+    "consentStatus": "not-applicable",
+    "publicUseStatus": "public-summary-only",
+    "evidentiaryScope": "direct",
+    "establishes": ["visible promotional wording"],
+    "doesNotEstablish": ["longer formal registration title", "complete agenda"],
+    "boundaries": ["Link to the recovered asset; do not republish without rights review."],
+    "lastReviewed": "2026-07-11"
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "callnyc-event-date-time-purpose",
+    "canonicalText": "Civic Hall announced a New York City Council constituent-services hackathon for January 30, 2016, from 1-3 p.m.",
+    "publicProjection": "Civic Hall announced the January 30, 2016 event for 1-3 p.m. and described it as focused on improving constituent services.",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": ["Describe 1-3 p.m. as announced hours, not proven event duration."],
+    "antiClaims": ["The event necessarily began and ended at the announced times."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-first-councilstat-hackathon",
+    "canonicalText": "The New York City Council described the January 30, 2016 gathering at Civic Hall as its first CouncilStat hackathon.",
+    "publicProjection": "On January 30, 2016, the New York City Council held its first CouncilStat hackathon at Civic Hall.",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": ["Preserve the exact CouncilStat qualifier."],
+    "antiClaims": ["The event was the Council's first civic-data hackathon.", "The event was the Council's first hackathon of any kind."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "canonicalText": "The promotional graphic attached to Civic Hall's announcement reads 'New York City Council Hackathon.'",
+    "publicProjection": "The Council-branded graphic attached to Civic Hall's announcement used the wording 'New York City Council Hackathon.'",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": ["Treat the wording as promotional branding, not a formal registration title."],
+    "antiClaims": ["The graphic proves a longer official event title."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-independent-follow-on-project",
+    "canonicalText": "After CouncilStat constituent-services data became publicly available, Jamie independently developed CallNYC.org as a resident-facing civic-data prototype; Politico New York covered it in March 2016.",
+    "publicProjection": "After CouncilStat constituent-services data became publicly available, Jamie independently developed CallNYC.org as an archived resident-facing civic-data prototype. Politico New York covered the project in March 2016.",
+    "state": "known",
+    "precision": "month-only",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": ["CallNYC was an independent follow-on project, not an official Council product or current service."],
+    "antiClaims": ["Jamie built CallNYC at the hackathon.", "The Council commissioned CallNYC.", "CallNYC is a current public-service directory."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "canonicalText": "Participant photographs show a breakout placard reading 'Digital District - Help improve City Council District office operations.'",
+    "publicProjection": "Participant photographs document a Digital District breakout placard.",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["knowledge-bank"],
+    "boundaries": ["Do not project publicly until image rights, crop, credit, and represented-person review are complete."],
+    "antiClaims": ["Digital District was the formal title of the whole event.", "The photograph proves the event start time."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-calendar-listing-not-recovered",
+    "canonicalText": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the documented Wayback search.",
+    "state": "known",
+    "precision": "not-recovered",
+    "supportLevel": "strong",
+    "allowedSurfaces": ["knowledge-bank"],
+    "boundaries": ["Absence from the recovered capture set is not proof that a page never existed."],
+    "antiClaims": ["No Civic Hall event page existed."],
+    "approvalOwner": "Jamie Burkart",
+    "lastReviewed": "2026-07-11"
+  }
+]
