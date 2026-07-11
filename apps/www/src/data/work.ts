@@ -277,12 +277,12 @@ const workItemsInput = [
   {
     title: "CallNYC.org",
     slug: "callnyc",
-    series: "Civic Prototype",
-    subtitle: "Civic data to resident-facing guidance",
+    series: "CouncilStat Civic Technology",
+    subtitle: "Constituent-service data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Participated in a New York City Council workshop examining constituent-service delivery and pre-release CouncilStat data, then independently translated the published dataset into CallNYC.org, a resident-facing civic prototype with explicit limits on what the administrative records could responsibly support.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -337,12 +337,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "NYC Council constituent-services / CouncilStat civic-technology workshop; independent archived civic prototype. References distinguish original posts, a Wayback embedded-feed carrier, independent reporting, the project repository, restricted participant evidence, and bounded archival research.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Archived, independent, unofficial historical prototype.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -354,11 +354,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "January 30, 2016; Civic Hall; a 1-3 p.m. announcement; constituent-services and CouncilStat context; Jamie's attendance and independent development after the full data release; verified 2016 Politico coverage; and the public GitHub repository.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "The complete formal registration title, agenda, full and breakout rosters, registration-form contents, participant-photo publication rights and consent, and any additional screenshots not yet approved.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "Private participant archive paths and metadata, unapproved participant identities, private correspondence, raw working notes, unapproved images, and any claim of official Council ownership or endorsement of CallNYC."
       }
   },
   {

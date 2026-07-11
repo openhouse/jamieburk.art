@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -56,7 +59,11 @@ There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+metadata. `npm run check:citations` validates governed source, claim, note,
+manifest, research, media, and correction records. `npm run test:citations`
+checks the core citation invariants, and `npm run report:citations` prints the
+review trail. See [`docs/citational-care.md`](docs/citational-care.md).
+`npm run check:routes` checks canonical routes and legacy redirects.
 
 ## Environment
 
