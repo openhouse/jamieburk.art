@@ -1,0 +1,78 @@
+[
+  {
+    "id": "callnyc-hackathon-date-time-purpose",
+    "canonicalText": "The New York City Council held its first CouncilStat hackathon at Civic Hall on January 30, 2016; Civic Hall advertised it for 1–3 p.m. and focused on constituent services.",
+    "publicProjection": "On January 30, 2016, the New York City Council held its first CouncilStat hackathon at Civic Hall. Civic Hall advertised the event for 1–3 p.m. and described it as focused on improving constituent services.",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "evidenceIds": [
+      "evidence-civic-hall-announcement",
+      "evidence-nyc-council-event-day"
+    ],
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": [
+      "Do not broaden first CouncilStat hackathon to first civic-data hackathon.",
+      "Do not call the archived embedded feed a recovered Civic Hall calendar listing."
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "canonicalText": "The promotional graphic attached to Civic Hall's announcement reads New York City Council Hackathon.",
+    "publicProjection": "The promotional graphic attached to Civic Hall's announcement used the branding New York City Council Hackathon.",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "evidenceIds": ["evidence-civic-hall-announcement"],
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": [
+      "Treat the wording as recovered event branding, not proof of a longer formal registration title."
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "canonicalText": "Participant photographs show a breakout placard reading “Digital District — Help improve City Council District office operations.”",
+    "publicProjection": "Participant photographs document a breakout labeled “Digital District — Help improve City Council District office operations.”",
+    "state": "known",
+    "precision": "exact",
+    "supportLevel": "strong",
+    "evidenceIds": ["evidence-digital-district-photo"],
+    "allowedSurfaces": ["/work/callnyc", "photo-caption", "knowledge-bank"],
+    "boundaries": [
+      "Do not treat Digital District as the formal title of the entire event.",
+      "Do not expose private archive paths, location data, face tags, or unapproved participant identities."
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-independent-follow-on-project",
+    "canonicalText": "After the complete CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing civic-data prototype; Politico New York covered it in March 2016.",
+    "publicProjection": "After the complete CouncilStat dataset was released, Jamie independently developed CallNYC.org as an archived resident-facing civic-data prototype. Politico New York covered the project in March 2016.",
+    "state": "known",
+    "precision": "month-only",
+    "supportLevel": "strong",
+    "evidenceIds": ["evidence-politico-callnyc", "evidence-callnyc-project"],
+    "allowedSurfaces": ["/work/callnyc", "knowledge-bank"],
+    "boundaries": [
+      "Do not say CallNYC was built at the hackathon.",
+      "Do not describe CallNYC as an official Council product or current service."
+    ],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "callnyc-calendar-listing-not-recovered",
+    "canonicalText": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the documented Wayback search.",
+    "state": "known",
+    "precision": "not-recovered",
+    "supportLevel": "strong",
+    "evidenceIds": ["evidence-civic-hall-cdx-search"],
+    "allowedSurfaces": ["knowledge-bank"],
+    "boundaries": [
+      "Do not infer that no listing ever existed.",
+      "Do not project this research-method claim into the main CallNYC narrative without a specific editorial reason."
+    ],
+    "lastReviewed": "2026-07-11"
+  }
+]

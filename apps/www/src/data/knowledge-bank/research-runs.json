@@ -1,0 +1,22 @@
+[
+  {
+    "id": "civic-hall-cdx-pass-2026-07-11",
+    "method": "Wayback CDX enumeration and event-prefix review",
+    "conductedAt": "2026-07-11",
+    "scope": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "notFoundCaptures": 7
+    },
+    "finding": "No Civic Hall calendar listing or dedicated event-detail page was recovered for the January 2016 New York City Council constituent-services hackathon.",
+    "limitations": [
+      "Absence from the recovered capture set is not proof that a page never existed.",
+      "The embedded social feed is archival Civic Hall site evidence, not a recovered calendar listing.",
+      "The RSVP form is no longer available and no archived copy was recovered.",
+      "No agenda, breakout roster, registration contents, or dedicated event page was recovered."
+    ]
+  }
+]
