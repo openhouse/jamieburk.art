@@ -28,6 +28,7 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run check:citations
 npm run check
 npm run knowledge-bank
 npm run public-safety
@@ -57,6 +58,16 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+## Citational Care
+
+Citational care makes public claims inspectable while keeping source limits,
+uncertainty, corrections, and protected context visible. The
+`npm run check:citations` command validates the structured source, claim,
+research-run, correction, and citation-projection records used by the CallNYC
+pilot.
+
+See `docs/citational-care.md`.
 
 ## Environment
 

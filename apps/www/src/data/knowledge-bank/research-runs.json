@@ -1,0 +1,24 @@
+[
+  {
+    "id": "RUN-CIVICHALL-CDX-2026-07",
+    "subject": "Civic Hall event-page recovery",
+    "performedAt": "2026-07-11",
+    "method": "Wayback CDX enumeration of Civic Hall HTML captures and a separate all-status pass over event-prefix URLs.",
+    "counts": {
+      "deduplicated_html_captures": 4630,
+      "original_urls": 1240,
+      "distinct_event_url_keys": 296,
+      "successful_pages": 215,
+      "redirects": 74,
+      "not_found_captures": 7
+    },
+    "findings": [
+      "No Civic Hall calendar listing or dedicated event-detail page was recovered for the January 2016 New York City Council constituent-services hackathon.",
+      "A January 31, 2016 Wayback capture preserves Civic Hall's embedded social feed, including Civic Hall and New York City Council posts.",
+      "The Civic Hall-domain Google RSVP form is no longer available and no archived copy was recovered."
+    ],
+    "epistemicLimit": "This supports \"not recovered within the documented search,\" not \"no such page ever existed.\"",
+    "publicCitation": "Documented Wayback CDX research pass covering 4,630 deduplicated HTML captures and 296 distinct event URL keys; no dedicated event page was recovered.",
+    "privateResearchArtifacts": true
+  }
+]

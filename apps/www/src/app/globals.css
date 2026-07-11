@@ -148,3 +148,76 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation {
+  display: inline-flex;
+  gap: 0.03rem;
+  font-family: var(--font-karla), ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.08em;
+  vertical-align: super;
+}
+
+.citation a {
+  align-items: center;
+  border-radius: 0.25rem;
+  color: var(--jb-broadway-blue);
+  display: inline-flex;
+  justify-content: center;
+  min-block-size: 1.5rem;
+  min-inline-size: 1.5rem;
+  text-decoration: none;
+}
+
+.citation a:hover {
+  text-decoration: underline;
+}
+
+.citation a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.references-section {
+  border-top: 1px solid rgba(52, 52, 53, 0.16);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.reference-list {
+  margin-top: 1.25rem;
+}
+
+.reference-entry {
+  scroll-margin-top: var(--sticky-header-offset, 6rem);
+}
+
+.reference-entry:target {
+  background: rgba(247, 236, 134, 0.36);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 0.45rem rgba(247, 236, 134, 0.24);
+}
+
+.reference-links,
+.reference-caveats {
+  margin-top: 0.75rem;
+}
+
+.reference-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reference-links a,
+.reference-backlinks a {
+  color: var(--jb-broadway-blue);
+  font-weight: 600;
+}
+
+.reference-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
