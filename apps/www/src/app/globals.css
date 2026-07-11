@@ -148,3 +148,100 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-marker {
+  font-size: 0.68em;
+  font-variant-numeric: tabular-nums;
+  line-height: 0;
+  margin-left: 0.12em;
+  vertical-align: super;
+}
+
+.citation-marker a {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.citation-marker,
+.citation-endnotes li {
+  scroll-margin-top: 7rem;
+}
+
+.citation-marker:target a,
+.citation-endnotes > ol > li:target {
+  background: color-mix(in srgb, var(--jb-yellow-ochre) 24%, transparent);
+}
+
+.citation-endnotes {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 22%, transparent);
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+}
+
+.citation-endnotes > ol {
+  display: grid;
+  gap: 1.75rem;
+  padding-left: 1.7rem;
+}
+
+.citation-endnotes > ol > li {
+  padding-left: 0.35rem;
+}
+
+.citation-endnotes p {
+  margin: 0;
+}
+
+.citation-caveat {
+  color: color-mix(in srgb, var(--jb-oil-ink) 70%, transparent);
+  font-size: 0.94rem;
+  margin-top: 0.4rem !important;
+}
+
+.citation-source-list {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+}
+
+.citation-source-entry {
+  overflow-wrap: anywhere;
+}
+
+.citation-source-entry cite {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.citation-source-links,
+.citation-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.citation-source-links a,
+.citation-backlinks a {
+  font-size: 0.88rem;
+}
+
+.citation-protected-label {
+  color: color-mix(in srgb, var(--jb-oil-ink) 66%, transparent);
+  display: block;
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+}
+
+@media print {
+  .citation-backlinks {
+    display: none;
+  }
+
+  .citation-endnotes {
+    break-before: auto;
+  }
+}

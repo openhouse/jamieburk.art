@@ -23,6 +23,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run typecheck`
 - `npm run lint`
 - `npm run build`
+- `npm run check:citations`
+- `npm run test:citations`
+- `npm run report:citations`
 - `npm run check`
 - `npm run knowledge-bank`
 - `npm run public-safety`
@@ -57,6 +60,14 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+Use `apps/www/src/data/knowledge-bank/` for structured sources, claims,
+evidence relationships, citation notes, page occurrences, research runs,
+corrections, and asset provenance. Significant public claims should cite an
+approved record through `<Cite pageId occurrenceId />`; render one
+`<References pageId />` list per cited page. Never type citation numbers into
+prose. Protected sources and assets must not expose URLs, local paths, private
+filenames, or unreviewed media.
 
 ## Chad Lens
 
