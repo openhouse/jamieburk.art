@@ -13,6 +13,10 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+`visual-evidence.md` records what a whole-library visual review can corroborate,
+what remains uncertain, and the provenance, rights, consent, caption, and
+public-safety gates required before any photograph reaches the site.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -41,6 +45,10 @@ The knowledge bank exists to:
 If a private archive supports a public claim, describe the aggregate result or
 public-safe pattern. Do not describe the private record inventory in unnecessary
 detail.
+
+Photographs are corroborating evidence, not self-authenticating claims. Keep
+raw images and metadata outside the repo, and do not infer role, causality,
+consent, scale, or project attribution from appearance alone.
 
 ## Projection Rule
 

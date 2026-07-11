@@ -292,6 +292,7 @@ for (const requiredDoc of [
   "approval-register.md",
   "claims.md",
   "proofs.md",
+  "visual-evidence.md",
   "sources.md",
   "projection-map.md",
   "publishing-governance.md",

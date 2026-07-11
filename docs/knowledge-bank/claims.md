@@ -198,6 +198,32 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## visual-archive-material-operating-practice - Situated material practice
+
+**Status:** Careful
+
+**Support level:** Moderate
+
+**Evidence class:** Public-safe archive summary / AI-assisted archival review
+
+**Public wording:** Jamie's visual archive documents a recurring practice of working through people, artifacts, rooms, public places, and technical systems to give emerging work usable form.
+
+**Detailed public-safe wording:** Across civic, cultural, small-business, and technical contexts, the strongest photographs show work becoming usable through facilitation, preparation, arrangement, documentation, implementation, and care.
+
+**Where to project:** Internal knowledge bank only until specific images, captions, provenance, rights, consent expectations, and public safety are approved.
+
+**Why it matters:** Makes the operating-structure throughline concrete without converting private photographs into public proof by default.
+
+**Guardrail:** Use as a qualitative corroborating pattern only. Confirm image provenance, Jamie's role, caption language, rights, consent expectations, and public safety separately before projection.
+
+**Do not say:** The photographs independently prove Jamie led every depicted project; a People association proves a professional relationship or role; editor-field or project-view counts prove project scale; an identifiable person has consented to publication; visual similarity proves project attribution.
+
+**Protected boundaries:** Unapproved photographs, raw filenames and identifiers, People labels and private metadata, minors and private relationships, domestic or intimate settings, private documents and screens, and sensitive property details stay outside the repo.
+
+**Review owner:** Jamie
+
+**Last reviewed:** 2026-07-11
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

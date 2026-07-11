@@ -13,6 +13,15 @@ Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
 
+## Visual Evidence
+
+Do not treat a photograph as self-authenticating evidence of Jamie's role,
+project ownership, causality, scale, or impact. Do not treat a People
+association, face, favorite, edit, album membership, date, location, or visual
+similarity as consent or definitive project provenance. Do not publish raw
+photos, identifiers, metadata, private text, or sensitive locations without the
+required review and approval.
+
 ## HJE
 
 Do not say Jamie caused 2x revenue growth.
