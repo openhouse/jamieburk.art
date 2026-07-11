@@ -13,6 +13,16 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+## Registers
+
+- `claims.md`: canonical human-readable professional claims.
+- `proofs.md`: compact public-safe proof posture.
+- `sources.md`: approved source classes and source boundaries.
+- `visual-archive-findings.md`: public-safe findings and limits from private
+  photo review; no raw photographs or identifying metadata.
+- `publishing-governance.md`: rules for moving private context into public
+  projection.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -41,6 +51,10 @@ The knowledge bank exists to:
 If a private archive supports a public claim, describe the aggregate result or
 public-safe pattern. Do not describe the private record inventory in unnecessary
 detail.
+
+For photographs, also separate what is visible from what is inferred. A frame
+may corroborate setting, material context, or participation; it does not by
+itself prove authorship, authority, endorsement, causation, or outcome.
 
 ## Projection Rule
 
