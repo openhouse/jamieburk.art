@@ -148,3 +148,117 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-ref {
+  margin-left: 0.1em;
+  font-size: 0.82em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: super;
+}
+
+.citation-ref a {
+  display: inline-block;
+  min-width: 0.8em;
+  padding: 0 0.05em;
+  color: var(--jb-broadway-blue);
+  line-height: 1;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 95, 129, 0.38);
+  text-underline-offset: 0.14em;
+}
+
+.citation-ref a:hover {
+  text-decoration-color: currentColor;
+}
+
+.citation-sources {
+  margin-top: 3.5rem;
+  border-top: 1px solid rgba(11, 95, 129, 0.25);
+  padding-top: 2rem;
+}
+
+.citation-sources > h2 {
+  margin-top: 0;
+}
+
+.citation-sources > ol {
+  margin-top: 1.25rem;
+  list-style: decimal;
+  padding-left: 1.75rem;
+}
+
+.citation-source-note {
+  scroll-margin-top: 7rem;
+  padding: 0.25rem 0 1.5rem 0.5rem;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.citation-source-note:target {
+  background: rgba(247, 236, 134, 0.28);
+}
+
+.citation-source-note h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.citation-source-note p {
+  margin: 0.45rem 0;
+}
+
+.citation-source-list {
+  margin: 0.65rem 0;
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: rgba(52, 52, 53, 0.78);
+}
+
+.citation-source-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.8rem;
+}
+
+.citation-source-links a {
+  color: var(--jb-broadway-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(11, 95, 129, 0.35);
+  text-underline-offset: 0.2rem;
+}
+
+.citation-no-link,
+.citation-limit {
+  color: rgba(52, 52, 53, 0.7);
+}
+
+.citation-backlinks {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.citation-backlinks a {
+  display: inline-flex;
+  min-height: 2rem;
+  min-width: 2rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media print {
+  .citation-backlinks {
+    display: none;
+  }
+
+  .citation-sources a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    overflow-wrap: anywhere;
+    font-weight: 400;
+  }
+}
