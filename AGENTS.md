@@ -54,6 +54,16 @@ the bank with source basis, status, guardrail, and public-use boundary.
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
 
+Citational care is required for public case-study claims that depend on
+specific sources: keep stable source and claim IDs in the knowledge bank, render
+only page-local numbered citations in public pages, and keep source order a page
+manifest concern.
+
+Do not expose local archive paths, raw research exports, participant identities,
+private images, source IDs, claim IDs, or research-run IDs in rendered pages.
+Negative archival findings must say `not recovered`; do not assert
+nonexistence from absence.
+
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
