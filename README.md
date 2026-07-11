@@ -28,6 +28,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run check
 npm run knowledge-bank
 npm run public-safety
@@ -57,6 +60,11 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+Significant factual claims may also use the typed source, claim, evidence,
+citation-note, correction, research, and asset records documented in
+[`docs/citational-care.md`](docs/citational-care.md). `npm run check:citations`
+validates that graph and its public projections without fetching external URLs.
 
 ## Environment
 
