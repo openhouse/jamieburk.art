@@ -1,6 +1,9 @@
+import { Cite, References } from "@/components/citations";
+import { callNycCitationPage } from "@/data/knowledge-bank";
+
 ## Context
 
-CallNYC.org was an archived civic-data prototype built after a New York City Council civic-data hackathon. The project explored how constituent-services open data could become clearer resident-facing guidance.
+CallNYC.org is an archived civic-data prototype from 2016. Civic Hall advertised a New York City Council hackathon focused on constituent services for January 30, 2016, from 1-3 p.m.; that period is the advertised event window, not independently verified actual start and end times.<Cite page={callNycCitationPage} occurrence="callnyc-context-hackathon-window" /> The Council also described the January 30 gathering at Civic Hall as its first CouncilStat hackathon.<Cite page={callNycCitationPage} occurrence="callnyc-context-first-councilstat" /> CallNYC grew from that civic-data context into an independent resident-facing interpretation of constituent-services records.<Cite page={callNycCitationPage} occurrence="callnyc-context-independent-follow-on" />
 
 The public problem was familiar: data existed, but the path from a resident's issue to a useful next step was not always easy to see. A spreadsheet or dataset can be technically public and still be hard for a person to use.
 
@@ -8,17 +11,17 @@ The public problem was familiar: data existed, but the path from a resident's is
 
 Constituent-services data carried civic signal, but residents needed a translation layer. What issue is this? Which office or district context might matter? What next step is reasonable? What should be treated as general guidance rather than official service direction?
 
-The project also needed a strong disclaimer. CallNYC was not an official City Council service, not a current civic service, not legal guidance, and not a replacement for emergency or agency channels. It was a civic-tech prototype exploring how public data could be made more navigable.
+The project also needed a strong disclaimer. CallNYC was not an official City Council service, not a current civic service, not legal guidance, and not a replacement for emergency or agency channels. It was an independent civic prototype exploring how public data could be made more navigable.<Cite page={callNycCitationPage} occurrence="callnyc-unclear-independent-follow-on" />
 
 ## What became usable
 
 The prototype organized open data into issue pathways, district context, and resident-facing guidance. It treated data translation as a product and information-architecture problem: the resident should not have to understand the whole dataset before seeing a next step.
 
-The public-safe framing today is historical. The project shows civic-data translation, open-data product thinking, public interface design, and the ability to move from a hackathon context into a working prototype.
+The public-safe framing today is historical. The project shows civic-data translation, open-data product thinking, public interface design, and the ability to move from a hackathon context into a working prototype. It should not be described as current resident guidance or an official Council service.<Cite page={callNycCitationPage} occurrence="callnyc-usable-independent-follow-on" />
 
 ## What I did
 
-Jamie built the prototype, shaped the issue pathways, translated data into public-facing guidance patterns, and connected civic-data structure to a resident-readable interface.
+Jamie built the prototype, shaped the issue pathways, translated data into public-facing guidance patterns, and connected civic-data structure to a resident-readable interface. The strongest public phrasing is that, after the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing interpretation of constituent-services records.<Cite page={callNycCitationPage} occurrence="callnyc-role-independent-follow-on" />
 
 The work required choosing what not to claim. A prototype can demonstrate a pattern without pretending to be an official service. The page therefore keeps the archived status visible and avoids current-service language.
 
@@ -26,13 +29,17 @@ The work required choosing what not to claim. A prototype can demonstrate a patt
 
 Residents and civic-tech observers could see how an issue might connect to district context, constituent-service categories, or possible civic next steps. The project also gave collaborators a concrete surface for discussing what useful public guidance could look like.
 
-For product and operations teams, the transferable pattern is the same one visible elsewhere in Jamie's work: take a scattered or expert-facing source, map what a user needs to do, and create a pathway that is easier to enter.
+For product and operations teams, the transferable pattern is the same one visible elsewhere in Jamie's work: take a scattered or expert-facing source, map what a user needs to do, and create a pathway that is easier to enter. The CouncilStat records also carried a built-in measurement caution: offices used the system differently and with different frequency, so recorded case counts could not safely be treated as simple measures of office performance.<Cite page={callNycCitationPage} occurrence="callnyc-usage-data-limitations" />
 
 ## Outcome / evidence
 
 The project was a historical civic-tech demo built from CouncilStat / constituent-services open data. It included public issue pages, resident-facing guidance, and civic-data interpretation after a New York City Council civic-data hackathon.
 
-Politico New York covered CallNYC in 2016 as a website for exploring City Council constituent-services data. Public-safe screenshots and additional archive links should still be confirmed before launch.
+Politico New York covered CallNYC in March 2016 as a website for exploring City Council constituent-services data, and the public repository provides code-level provenance.<Cite page={callNycCitationPage} occurrence="callnyc-evidence-independent-follow-on" /> The public source set also includes a Civic Hall promotional graphic headed "New York City Council Hackathon," but recovered event branding is not proof of a longer formal registration title.<Cite page={callNycCitationPage} occurrence="callnyc-evidence-event-branding" />
+
+A private participant-photo archive is tracked only as a public-safe summary. It documents a "Digital District" breakout/table prompt, including "Help improve City Council District office operations," and an approximate 2:10 p.m. camera timestamp; the photograph, identities, raw metadata, and permissions are not published here.<Cite page={callNycCitationPage} occurrence="callnyc-evidence-digital-district" />
+
+A July 2026 public-safe research run recovered embedded social-feed evidence but did not recover a dedicated Civic Hall calendar listing, event-detail page, full agenda, breakout roster, or registration-form contents. "Not recovered" is an archival finding, not proof of nonexistence.<Cite page={callNycCitationPage} occurrence="callnyc-evidence-negative-research" />
 
 ## Transferable proof
 
@@ -41,3 +48,5 @@ This case matters for civic technology and public-facing tools because it shows 
 It matters for product operations because the work moved from dataset to user pathway, with disclaimers and scope boundaries built into the surface.
 
 It matters for implementation because it demonstrates a small but complete civic prototype: data source, information architecture, interface, and public-safe guidance.
+
+<References page={callNycCitationPage} />

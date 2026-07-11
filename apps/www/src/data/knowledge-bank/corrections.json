@@ -1,0 +1,16 @@
+[
+  {
+    "id": "correction.callnyc.project-year.2016",
+    "surface": "/work/callnyc",
+    "field": "years",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "Recovered event chronology and independent March 2016 reporting support 2016 as the public project year.",
+    "sourceClaimIds": [
+      "claim.callnyc.hackathon.date-time-purpose",
+      "claim.callnyc.project.independent-follow-on"
+    ],
+    "status": "resolved",
+    "resolvedAt": "2026-07-11"
+  }
+]

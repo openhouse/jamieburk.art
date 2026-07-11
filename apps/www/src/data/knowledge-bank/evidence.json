@@ -1,0 +1,75 @@
+[
+  {
+    "id": "evidence.callnyc.date-time-purpose.civic-hall-post",
+    "claimId": "claim.callnyc.hackathon.date-time-purpose",
+    "sourceId": "source.civic-hall.x.693124020917522433",
+    "relationship": "direct_support",
+    "locator": "public post text and embedded archived social-feed context",
+    "note": "Supports date, advertised time window, Council hackathon context, and constituent-services focus.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.first-councilstat.council-post",
+    "claimId": "claim.callnyc.hackathon.first-councilstat",
+    "sourceId": "source.nyc-council.x.693509031768506368",
+    "relationship": "direct_support",
+    "locator": "public post text and embedded archived social-feed context",
+    "note": "Supports the Council's event-day description of the Civic Hall gathering as its first CouncilStat hackathon.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.event-branding.promo-graphic",
+    "claimId": "claim.callnyc.hackathon.event-branding",
+    "sourceId": "source.civic-hall.promo-graphic.CZ5m-mAWwAA42td",
+    "relationship": "direct_support",
+    "locator": "visible heading and branding",
+    "note": "Supports the visible New York City Council Hackathon heading and labs.council.nyc branding.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.digital-district.participant-photo",
+    "claimId": "claim.callnyc.hackathon.digital-district-breakout",
+    "sourceId": "source.participant-photo.digital-district.2016-01-30-1410",
+    "relationship": "direct_support",
+    "locator": "public-safe image summary",
+    "note": "Supports the Digital District breakout/table label, visible prompt, and approximate 2:10 p.m. camera timestamp only.",
+    "publicCitation": true,
+    "publicNoteOverride": "Summary-only participant archive: supports the visible Digital District breakout/table label, the prompt, and the approximate 2:10 p.m. camera timestamp. Publication and participant permissions are tracked separately."
+  },
+  {
+    "id": "evidence.callnyc.independent-follow-on.politico",
+    "claimId": "claim.callnyc.project.independent-follow-on",
+    "sourceId": "source.politico-neubauer.callnyc.2016-03-14",
+    "relationship": "direct_support",
+    "locator": "archived PDF",
+    "note": "Supports public reporting about Jamie's CallNYC participation, pre-release event context, independent follow-on development, and public-data limitations.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.independent-follow-on.github",
+    "claimId": "claim.callnyc.project.independent-follow-on",
+    "sourceId": "source.github.openhouse.callnyc",
+    "relationship": "corroboration",
+    "locator": "public repository",
+    "note": "Supports public code and project provenance.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.data-limitations.politico",
+    "claimId": "claim.callnyc.project.data-limitations",
+    "sourceId": "source.politico-neubauer.callnyc.2016-03-14",
+    "relationship": "qualification",
+    "locator": "archived PDF",
+    "note": "Supports public-data limitation context around how CouncilStat records could be interpreted.",
+    "publicCitation": true
+  },
+  {
+    "id": "evidence.callnyc.negative-search.research-run",
+    "claimId": "claim.callnyc.research.no-dedicated-event-page-recovered",
+    "sourceId": "research.civic-hall-wayback-cdx.2026-07",
+    "relationship": "negative_search_result",
+    "locator": "July 2026 public-safe research-run summary",
+    "note": "Supports the not-recovered finding for a dedicated Civic Hall calendar listing, event-detail page, full agenda, breakout roster, and registration-form contents.",
+    "publicCitation": true
+  }
+]

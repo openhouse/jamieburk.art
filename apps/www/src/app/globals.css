@@ -148,3 +148,80 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation {
+  font-size: 0.72em;
+  font-weight: 700;
+  line-height: 0;
+  margin-left: 0.12rem;
+  position: relative;
+  top: -0.42em;
+  vertical-align: baseline;
+}
+
+.citation a {
+  border-radius: 0.2rem;
+  color: var(--jb-broadway-blue);
+  padding: 0 0.08rem;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.citation a:focus-visible,
+.citation-backlinks a:focus-visible {
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 2px;
+}
+
+.citation-references {
+  border-top: 1px solid rgba(94, 95, 97, 0.28);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+.citation-reference-list {
+  display: grid;
+  gap: 1rem;
+  padding-left: 1.4rem;
+}
+
+.citation-reference-list li {
+  border-radius: 0.45rem;
+  scroll-margin-top: 7rem;
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.citation-reference-list li:target {
+  background: rgba(247, 236, 134, 0.34);
+  box-shadow: 0 0 0 0.42rem rgba(247, 236, 134, 0.34);
+}
+
+.citation-reference-number,
+.citation-backlinks a {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+}
+
+.citation-reference-boundary,
+.citation-qualifier-list {
+  color: rgba(52, 52, 53, 0.72);
+  font-size: 0.94em;
+}
+
+.citation-backlinks {
+  margin-top: 0.35rem;
+}
+
+@media print {
+  .citation a,
+  .citation-backlinks a {
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .citation-reference-list li {
+    break-inside: avoid;
+  }
+}

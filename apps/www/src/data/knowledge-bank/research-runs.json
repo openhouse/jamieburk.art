@@ -1,0 +1,36 @@
+[
+  {
+    "id": "research.civic-hall-wayback-cdx.2026-07",
+    "subject": "Civic Hall Wayback CDX review for January 2016 CouncilStat hackathon evidence",
+    "performedAt": "2026-07",
+    "status": "complete",
+    "methodSummary": "Public-safe review of Civic Hall Wayback CDX captures, URL keys, event URL paths, successful captures, redirects, not-found captures, and embedded social-feed evidence relevant to the January 30, 2016 CouncilStat hackathon context.",
+    "counts": {
+      "deduplicated_html_captures": 4630,
+      "original_urls": 1240,
+      "distinct_event_url_keys": 296,
+      "successful_event_pages": 215,
+      "redirect_event_urls": 74,
+      "not_found_captures": 7
+    },
+    "findings": [
+      "Archived Civic Hall pages preserve relevant Civic Hall and New York City Council posts through an embedded social feed.",
+      "The Civic Hall post supports January 30, advertised 1-3 p.m., and constituent-services focus.",
+      "The New York City Council post supports event day, Civic Hall venue context, and first CouncilStat hackathon wording.",
+      "The RSVP short link resolves to a Civic Hall-domain Google Form.",
+      "The form is unavailable and no archived form contents were recovered."
+    ],
+    "negativeFindings": [
+      "No dedicated Civic Hall calendar listing recovered.",
+      "No dedicated event-detail page recovered.",
+      "No full agenda recovered.",
+      "No breakout roster recovered.",
+      "No registration-form contents recovered."
+    ],
+    "publicSummary": "A July 2026 public-safe review recovered embedded social-feed evidence but did not recover a dedicated calendar listing, event-detail page, full agenda, breakout roster, or registration-form contents.",
+    "privateArtifacts": {
+      "storedInPublicRepo": false,
+      "status": "retained_outside_public_repo"
+    }
+  }
+]

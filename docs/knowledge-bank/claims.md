@@ -53,15 +53,15 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Public wording:** Independently built CallNYC.org in 2016 as an archived civic-data prototype translating CouncilStat / constituent-services open data into resident-facing issue pathways and next-step guidance.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; public sources include March 2016 Politico New York coverage and the Openhouse CallNYC repository.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as archived and unofficial.
-**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
-**Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Guardrail:** Always describe it as archived, unofficial, and independent; do not treat CouncilStat counts as simple office-performance metrics.
+**Do not say:** Current city service; official city guidance; emergency guidance; legal guidance; documented formal hackathon submission; simple performance ranking.
+**Protected boundaries:** No current-service claims, private user data, unverified guidance, participant identities, private photo files, or raw photo metadata.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
