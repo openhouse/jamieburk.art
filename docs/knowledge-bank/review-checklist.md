@@ -17,6 +17,10 @@ changes public claims.
   language.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
+- [ ] Every proposed photograph has image-specific caption, consent, credit,
+  rights, crop, and accessibility review.
+- [ ] No editor-field category or metadata label is being treated as proof of
+  authorship, causality, project provenance, or publication permission.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,

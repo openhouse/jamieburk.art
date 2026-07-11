@@ -32,6 +32,8 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Visual evidence register:** public-safe account of what the photo archive
+  can support, cannot support, and still requires consent or rights review.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
@@ -56,3 +58,7 @@ usable, what Jamie did, and what boundary remains protected.
 
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
+
+For photographs, begin with `visual-evidence.md`. Inclusion in an editor field
+is not approval to publish and does not establish authorship, causality,
+caption accuracy, consent, or rights clearance.
