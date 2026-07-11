@@ -7,6 +7,7 @@ export type EvidenceClass =
   | "public-source"
   | "public-safe-archive-summary"
   | "ai-assisted-archive-review"
+  | "curated-visual-archive-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -68,6 +69,59 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: [],
     relatedCapabilities: ["technical-project-management", "product-operations", "implementation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "cross-project-material-operating-practice",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: [
+      "public-safe-archive-summary",
+      "curated-visual-archive-summary",
+      "jamie-review-confirmation"
+    ],
+    publicWording:
+      "Across civic, cultural, small-business, and technical work, Jamie gives emerging work usable form through documents, interfaces, facilitation artifacts, tools, spaces, and repeatable routines.",
+    shortWording: "Gives emerging work usable form",
+    detailedPublicWording:
+      "Jamie's work repeatedly connects abstract needs to material forms people can use: a mapped workflow, a public interface, a working document, a meeting artifact, a maintained space, or a repeatable hosting and handoff practice.",
+    sourceBasis:
+      "Public-safe cross-project archive summary corroborated by a locally curated visual-archive review.",
+    sourceNote:
+      "The visual archive supports recurring settings, artifacts, and modes of work; project records remain the basis for authorship, role, scope, and impact claims.",
+    whyItMatters:
+      "Names the material continuity across projects without forcing every setting into one job title or treating collaborators as background.",
+    guardrail:
+      "Treat photographs as corroborating context, not standalone proof of authorship, leadership, impact, consent, or publication rights.",
+    doNotSay: [
+      "The photo archive independently verifies every project claim",
+      "Jamie created every visible artifact",
+      "Jamie led every visible gathering",
+      "Album membership is publication approval"
+    ],
+    protectedBoundaries: [
+      "Raw photographs and previews",
+      "Private album and People metadata",
+      "Unapproved identities and locations",
+      "Images of minors or private life",
+      "Unapproved collaborator likenesses"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc",
+      "wowlist",
+      "196-sunday-dinner",
+      "kc-town-hall"
+    ],
+    relatedCapabilities: [
+      "workflow-mapping",
+      "documentation",
+      "facilitation",
+      "implementation",
+      "handoffs"
+    ],
+    lastReviewed: "2026-07-11"
   },
   {
     id: "hje-modernization-stewardship",

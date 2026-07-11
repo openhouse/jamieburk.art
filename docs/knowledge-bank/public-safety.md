@@ -22,6 +22,10 @@ unapproved screenshots, unapproved photos, unapproved quotes, credentials,
 private stakeholder lists, internal analytics, private font files, or raw
 spreadsheets with private rows.
 
+For visual archives, also keep raw photo-library exports, private previews,
+filenames, album labels, People associations, precise private locations, and
+unapproved collaborator likenesses outside the repo.
+
 ## Public Routes
 
 There is intentionally no public `/proofs`, `/knowledge-bank`, or
