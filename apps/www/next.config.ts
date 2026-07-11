@@ -1,6 +1,9 @@
 import path from "node:path";
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
+import remarkKnowledgeBankCitations from "./src/lib/remark-knowledge-bank-citations.mjs";
+import rehypeCitationAccessibility from "./src/lib/rehype-citation-accessibility.mjs";
 
 const stripTrailingSlash = (value: string) => value.replace(/\/$/, "");
 
@@ -93,7 +96,15 @@ const nextConfig: NextConfig = {
 };
 
 const withMDX = createMDX({
-  extension: /\.mdx?$/
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [remarkGfm, remarkKnowledgeBankCitations],
+    rehypePlugins: [rehypeCitationAccessibility],
+    remarkRehypeOptions: {
+      footnoteLabel: "References",
+      clobberPrefix: "citation-"
+    }
+  }
 });
 
 export default withMDX(nextConfig);
