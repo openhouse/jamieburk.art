@@ -2,128 +2,113 @@ import { sourceRecordSchema, type SourceRecord } from "./schemas.ts";
 
 const sourceRecordsInput = [
   {
-    id: "civic-hall-hackathon-announcement-2016",
-    title: "Civic Hall announcement of the New York City Council hackathon",
-    shortLabel: "Civic Hall hackathon announcement",
-    authorOrAccount: "Civic Hall",
-    publisher: "X",
-    datePublished: "2016-01-29",
-    sourceClass: "official-organizational-social",
-    mediaType: "social-post",
-    publicationStatus: "public-with-caveat",
-    canonicalUrl: "https://x.com/CivicHall/status/693124020917522433",
-    accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "live",
-    publicSourceNote:
-      "Civic Hall announced a January 30 New York City Council hackathon focused on constituent services and gave the event hours as 1-3 p.m.",
-    researchNote:
-      "Use for the announced date, time, and constituent-services focus, not for a participant roster, agenda, or formal registration title."
-  },
-  {
-    id: "civic-hall-hackathon-promotional-graphic-2016",
-    title: "New York City Council Hackathon promotional graphic",
-    shortLabel: "Council hackathon graphic",
-    authorOrAccount: "Civic Hall",
-    datePublished: "2016-01-29",
-    sourceClass: "official-organizational-social",
-    mediaType: "image",
-    publicationStatus: "public-with-caveat",
-    canonicalUrl: "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
-    accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "live",
-    rightsStatus: "Publicly viewable; reproduction rights not asserted",
-    publicSourceNote:
-      "The Council-branded graphic reads 'New York City Council Hackathon' and displays labs.council.nyc.",
-    researchNote:
-      "Treat this as recovered event branding, not proof of a longer formal registration title."
-  },
-  {
-    id: "nyc-council-councilstat-hackathon-post-2016",
-    title: "New York City Council post from the first CouncilStat hackathon",
-    shortLabel: "CouncilStat event-day post",
-    authorOrAccount: "New York City Council",
-    publisher: "X",
-    datePublished: "2016-01-30",
-    sourceClass: "official-organizational-social",
-    mediaType: "social-post",
-    publicationStatus: "public-with-caveat",
-    canonicalUrl: "https://x.com/NYCCouncil/status/693509031768506368",
-    accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "live",
-    publicSourceNote:
-      "The New York City Council posted from Civic Hall on January 30 and described the gathering as its first CouncilStat hackathon."
-  },
-  {
-    id: "civic-hall-embedded-feed-wayback-2016-01-31",
-    title: "Civic Hall events page with embedded social feed",
-    shortLabel: "Civic Hall embedded-feed capture",
-    publisher: "Internet Archive Wayback Machine",
-    datePublished: "2016-01-31",
-    sourceClass: "web-archive",
-    mediaType: "web-page",
-    publicationStatus: "public-with-caveat",
-    archiveUrl:
+    id: "civic-hall-x-693124020917522433",
+    title: "Civic Hall announcement of NYC Council constituent-services hackathon",
+    kind: "official-social-post",
+    account: "Civic Hall",
+    url: "https://x.com/CivicHall/status/693124020917522433",
+    archivedUrl:
       "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
-    originalUrl: "http://civichall.org/events/page/2/",
+    archiveTimestamp: "2016-01-31T00:46:01Z",
+    archiveRelation: "embedded-social-feed-capture",
     accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "archived",
-    publicSourceNote:
-      "A January 31 Wayback capture preserves the Civic Hall and Council posts inside Civic Hall's embedded social feed.",
-    researchNote:
-      "This is evidence from an embedded social feed, not a recovered Civic Hall calendar listing or dedicated event page."
+    availability: "archived",
+    visibility: "public",
+    publicNote:
+      "Announces '1/30 1-3pm' for a New York City Council hackathon focused on improving constituent services. The Wayback page preserves the post within Civic Hall's embedded social feed; it is not the event's calendar listing."
   },
   {
-    id: "participant-archive-digital-district-2016",
-    title: "Participant photograph of the Digital District breakout",
-    shortLabel: "Participant photograph",
-    datePublished: "2016-01-30",
-    sourceClass: "participant-archive",
-    mediaType: "photograph",
-    publicationStatus: "private",
-    linkStatus: "unavailable",
-    rightsStatus: "Private participant archive; not cleared for publication",
-    publicSourceNote:
-      "A participant-archive photograph shows a 'Digital District' placard, the district-office-operations prompt, and a breakout underway at approximately 2:10 p.m. No public link is provided.",
-    researchNote:
-      "The image supports the breakout-table title and an approximate image timestamp, not the overall event title, event start time, participant roster, or facilitation credit."
+    id: "nyc-council-x-693509031768506368",
+    title: "NYC Council event-day post from Civic Hall",
+    kind: "official-social-post",
+    account: "New York City Council",
+    url: "https://x.com/NYCCouncil/status/693509031768506368",
+    archivedUrl:
+      "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+    archiveTimestamp: "2016-01-31T00:46:01Z",
+    archiveRelation: "embedded-social-feed-capture",
+    accessedAt: "2026-07-11",
+    availability: "archived",
+    visibility: "public",
+    publicNote:
+      "Identifies the January 30 gathering at Civic Hall as the Council's first #CouncilStat hackathon."
   },
   {
-    id: "politico-callnyc-2016-03-14",
+    id: "nyc-council-hackathon-promotional-graphic",
+    title: "New York City Council Hackathon promotional graphic",
+    kind: "promotional-graphic",
+    url: "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    accessedAt: "2026-07-11",
+    availability: "live",
+    visibility: "public",
+    rightsStatus: "Publicly viewable; reproduction rights are not asserted here",
+    publicNote:
+      "Reads 'New York City Council Hackathon' and labs.council.nyc. This supports event branding, not necessarily the complete formal registration title."
+  },
+  {
+    id: "civic-hall-wayback-2016-01-31",
+    title: "Civic Hall page preserving embedded social-feed evidence",
+    kind: "archived-carrier-page",
+    archivedUrl:
+      "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+    archiveTimestamp: "2016-01-31T00:46:01Z",
+    archiveRelation: "embedded-social-feed-capture",
+    accessedAt: "2026-07-11",
+    availability: "archived",
+    visibility: "public",
+    publicNote:
+      "Evidence carrier for the Civic Hall and NYC Council posts. It is not a recovered event-calendar listing or dedicated event-detail page."
+  },
+  {
+    id: "callnyc-politico-2016-03-14",
     title: "Website provides new information about council members' focus",
-    shortLabel: "Politico New York coverage",
-    authorOrAccount: "Miranda Neubauer",
+    kind: "independent-reporting",
+    author: "Miranda Neubauer",
     publisher: "Politico New York",
-    datePublished: "2016-03-14",
-    sourceClass: "independent-journalism",
-    mediaType: "pdf",
-    publicationStatus: "public",
-    canonicalUrl:
+    issuedAt: "2016-03-14",
+    url:
       "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf",
     accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "live",
-    publicSourceNote:
-      "Politico New York connected Jamie to the January Civic Hall gathering, the later full CouncilStat data release, and his independent development and iteration of CallNYC."
+    availability: "live",
+    visibility: "public",
+    publicNote:
+      "Reports Jamie's attendance at a January Council hackathon at Civic Hall, his independent development of CallNYC after the full dataset became public, the rapid build for a BetaNYC School of Data event, the resident-facing purpose, and cautions about differing CouncilStat use across district offices."
   },
   {
-    id: "callnyc-source-repository",
-    title: "CallNYC source repository",
-    shortLabel: "CallNYC repository",
-    authorOrAccount: "openhouse",
+    id: "callnyc-github-repository",
+    title: "CallNYC project repository",
+    kind: "project-archive",
+    author: "Jamie Burkart",
     publisher: "GitHub",
-    sourceClass: "primary-project",
-    mediaType: "repository",
-    publicationStatus: "public",
-    canonicalUrl: "https://github.com/openhouse/CallNYC",
+    url: "https://github.com/openhouse/CallNYC",
     accessedAt: "2026-07-11",
-    lastVerifiedAt: "2026-07-11",
-    linkStatus: "live",
-    publicSourceNote:
-      "The public repository documents the surviving implementation of the independent, archived CallNYC prototype."
+    availability: "live",
+    visibility: "public",
+    publicNote:
+      "Documents the surviving implementation of the independent, archived CallNYC prototype."
+  },
+  {
+    id: "callnyc-digital-district-participant-photo",
+    title: "Participant photograph of 'Digital District' discussion",
+    kind: "participant-photograph",
+    availability: "private",
+    visibility: "restricted",
+    rightsStatus: "Publication restricted pending rights and consent review",
+    publicNote:
+      "Participant photograph in the governed archive; publication restricted pending rights and consent review. It shows a placard reading 'Digital District - Help improve City Council District office operations.'",
+    internalNote:
+      "Publication requires photographer-rights review, participant review, caption review, and crop approval. The photograph does not establish the full event agenda or prove that Digital District was the formal title of the whole event."
+  },
+  {
+    id: "civic-hall-cdx-research-run",
+    title: "Civic Hall Wayback/CDX event-page reconstruction",
+    kind: "research-run",
+    availability: "private",
+    visibility: "private",
+    publicNote:
+      "A governed archival search reviewed 4,630 deduplicated HTML captures representing 1,240 original URLs and 296 distinct event URL keys. No matching calendar listing or dedicated event page was recovered in that search; this does not prove that no such listing ever existed.",
+    internalNote:
+      "Keep working files and raw capture data outside the public repository."
   }
 ] satisfies SourceRecord[];
 

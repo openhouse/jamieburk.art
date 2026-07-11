@@ -4,30 +4,31 @@ const pageCitationSetsInput = [
   {
     pageId: "callnyc-case-study",
     references: [
-      { refId: "callnyc-summary-event", noteId: "callnyc-event" },
-      { refId: "callnyc-summary-project", noteId: "callnyc-project-and-iteration" },
-      { refId: "callnyc-context-event", noteId: "callnyc-event" },
+      { refId: "callnyc-summary-event", noteId: "callnyc-event-date-time" },
       {
-        refId: "callnyc-context-branding",
-        noteId: "callnyc-branding-and-councilstat"
+        refId: "callnyc-summary-follow-on",
+        noteId: "callnyc-participation-follow-on"
+      },
+      { refId: "callnyc-opening-event", noteId: "callnyc-event-date-time" },
+      {
+        refId: "callnyc-opening-branding",
+        noteId: "callnyc-event-branding-councilstat"
       },
       {
-        refId: "callnyc-context-digital-district",
-        noteId: "callnyc-digital-district"
+        refId: "callnyc-opening-follow-on",
+        noteId: "callnyc-participation-follow-on"
       },
-      { refId: "callnyc-context-project", noteId: "callnyc-project-and-iteration" },
-      { refId: "callnyc-timeline-event", noteId: "callnyc-event" },
-      { refId: "callnyc-timeline-project", noteId: "callnyc-project-and-iteration" },
-      { refId: "callnyc-work-project", noteId: "callnyc-project-and-iteration" },
-      { refId: "callnyc-work-data", noteId: "callnyc-data-limits" },
-      { refId: "callnyc-use-iteration", noteId: "callnyc-project-and-iteration" },
-      { refId: "callnyc-evidence-event", noteId: "callnyc-event" },
+      { refId: "callnyc-opening-method", noteId: "callnyc-product-method" },
       {
-        refId: "callnyc-evidence-digital-district",
-        noteId: "callnyc-digital-district"
+        refId: "callnyc-digital-district",
+        noteId: "callnyc-digital-district-photo"
       },
-      { refId: "callnyc-evidence-data", noteId: "callnyc-data-limits" },
-      { refId: "callnyc-archive-disclaimer", noteId: "callnyc-archive-status" }
+      { refId: "callnyc-data-limits", noteId: "callnyc-product-method" },
+      {
+        refId: "callnyc-calendar-search",
+        noteId: "callnyc-calendar-search-limit"
+      },
+      { refId: "callnyc-archive-status", noteId: "callnyc-product-method" }
     ]
   }
 ] satisfies PageCitationSet[];

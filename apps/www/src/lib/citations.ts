@@ -1,8 +1,4 @@
-import type {
-  PageCitationSet,
-  PublicationStatus,
-  SourceRecord
-} from "../data/knowledge-bank/schemas.ts";
+import type { PageCitationSet, SourceRecord } from "../data/knowledge-bank/schemas.ts";
 
 export type BuiltCitationReference = {
   refId: string;
@@ -27,8 +23,23 @@ export type BuiltCitationSet = {
 };
 
 export type PublicSourceLink = {
-  label: "View source" | "View graphic" | "Original source" | "Archived capture";
+  label: "View source" | "View graphic" | "Original post" | "Archived copy";
   url: string;
+};
+
+export type PublicSourceProjection = {
+  id: string;
+  title: string;
+  kind: SourceRecord["kind"];
+  author?: string;
+  publisher?: string;
+  account?: string;
+  issuedAt?: string;
+  availability: SourceRecord["availability"];
+  visibility: SourceRecord["visibility"];
+  publicNote: string;
+  links: PublicSourceLink[];
+  isRestricted: boolean;
 };
 
 export function buildCitationSet(pageSet: PageCitationSet): BuiltCitationSet {
@@ -65,12 +76,7 @@ export function buildCitationSet(pageSet: PageCitationSet): BuiltCitationSet {
 }
 
 export function getPublicSourceLinks(source: SourceRecord): PublicSourceLink[] {
-  if (
-    source.publicationStatus === ("private" satisfies PublicationStatus) ||
-    source.publicationStatus === ("unavailable" satisfies PublicationStatus)
-  ) {
-    return [];
-  }
+  if (source.visibility !== "public") return [];
 
   const links: PublicSourceLink[] = [];
   const seen = new Set<string>();
@@ -80,9 +86,33 @@ export function getPublicSourceLinks(source: SourceRecord): PublicSourceLink[] {
     links.push({ label, url });
   };
 
-  add(source.mediaType === "image" ? "View graphic" : "View source", source.canonicalUrl);
-  add("Archived capture", source.archiveUrl);
-  add("Original source", source.originalUrl);
+  const primaryLabel =
+    source.kind === "promotional-graphic"
+      ? "View graphic"
+      : source.kind === "official-social-post"
+        ? "Original post"
+        : "View source";
 
+  add(primaryLabel, source.url);
+  add("Archived copy", source.archivedUrl);
   return links;
+}
+
+export function projectPublicSource(source: SourceRecord): PublicSourceProjection {
+  return {
+    id: source.id,
+    title: source.title,
+    kind: source.kind,
+    author: source.author,
+    publisher: source.publisher,
+    account: source.account,
+    issuedAt: source.issuedAt,
+    availability: source.availability,
+    visibility: source.visibility,
+    publicNote:
+      source.publicNote ??
+      "Source retained in the governed archive; public description is not approved.",
+    links: getPublicSourceLinks(source),
+    isRestricted: source.visibility !== "public"
+  };
 }

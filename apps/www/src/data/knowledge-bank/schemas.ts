@@ -1,151 +1,200 @@
 import { z } from "zod";
 
-const stableIdSchema = z
+const kebabIdSchema = z
   .string()
   .min(1)
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Use a stable kebab-case identifier");
 
+const claimIdSchema = z
+  .string()
+  .min(1)
+  .regex(/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/, "Use a stable dotted or kebab-case identifier");
+
 const publicUrlSchema = z.url().refine(
-  (value) => !/^(?:file:)|localhost|127\.0\.0\.1/i.test(value),
-  "Citation URLs must be public web URLs"
+  (value) =>
+    !/^(?:file:)|localhost|127\.0\.0\.1|staging\.jamieburk\.art/i.test(value),
+  "Citation URLs must be production-safe public web URLs"
 );
 
-export const sourceClassSchema = z.enum([
-  "official-institutional",
-  "official-organizational-social",
-  "independent-journalism",
-  "primary-project",
-  "participant-archive",
-  "web-archive",
-  "research-reconstruction"
+export const sourceKindSchema = z.enum([
+  "official-web-page",
+  "official-social-post",
+  "archived-carrier-page",
+  "promotional-graphic",
+  "independent-reporting",
+  "participant-photograph",
+  "project-archive",
+  "research-run",
+  "internal-record"
 ]);
 
-export const mediaTypeSchema = z.enum([
-  "web-page",
-  "social-post",
-  "image",
-  "pdf",
-  "dataset",
-  "repository",
-  "photograph",
-  "other"
-]);
-
-export const publicationStatusSchema = z.enum([
+export const sourceVisibilitySchema = z.enum([
   "public",
-  "public-with-caveat",
+  "restricted",
   "private",
-  "unavailable"
+  "protected"
 ]);
 
-export const claimStrengthSchema = z.enum([
-  "direct",
-  "corroborated",
-  "reconstructed",
-  "inferred",
-  "unresolved"
-]);
-
-export const evidenceRelationSchema = z.enum([
-  "supports",
-  "corroborates",
-  "contextualizes",
-  "limits",
-  "contradicts"
-]);
-
-export const claimStatusSchema = z.enum([
-  "approved",
-  "provisional",
-  "private",
-  "rejected"
+export const sourceAvailabilitySchema = z.enum([
+  "live",
+  "archived",
+  "dead",
+  "not-recovered",
+  "private"
 ]);
 
 export const sourceRecordSchema = z
   .object({
-    id: stableIdSchema,
+    id: kebabIdSchema,
     title: z.string().min(1),
-    shortLabel: z.string().min(1),
-    authorOrAccount: z.string().min(1).optional(),
+    kind: sourceKindSchema,
+    author: z.string().min(1).optional(),
     publisher: z.string().min(1).optional(),
-    datePublished: z.iso.date().optional(),
-    sourceClass: sourceClassSchema,
-    mediaType: mediaTypeSchema,
-    publicationStatus: publicationStatusSchema,
-    canonicalUrl: publicUrlSchema.optional(),
-    archiveUrl: publicUrlSchema.optional(),
-    originalUrl: publicUrlSchema.optional(),
+    account: z.string().min(1).optional(),
+    issuedAt: z.iso.date().optional(),
+    url: publicUrlSchema.optional(),
+    archivedUrl: publicUrlSchema.optional(),
+    archiveTimestamp: z.iso.datetime({ offset: true }).optional(),
+    archiveRelation: z.string().min(1).optional(),
     accessedAt: z.iso.date().optional(),
-    lastVerifiedAt: z.iso.date().optional(),
-    linkStatus: z.enum(["live", "archived", "unavailable", "unchecked"]).optional(),
+    availability: sourceAvailabilitySchema,
+    visibility: sourceVisibilitySchema,
+    rightsHolder: z.string().min(1).optional(),
     rightsStatus: z.string().min(1).optional(),
-    creditLine: z.string().min(1).optional(),
-    publicSourceNote: z.string().min(1),
-    researchNote: z.string().min(1).optional()
+    publicNote: z.string().min(1).optional(),
+    internalNote: z.string().min(1).optional()
   })
   .superRefine((source, context) => {
     if (
-      source.publicationStatus === "private" &&
-      (source.canonicalUrl || source.archiveUrl || source.originalUrl)
+      source.visibility !== "public" &&
+      (source.url || source.archivedUrl || source.archiveTimestamp)
     ) {
       context.addIssue({
         code: "custom",
-        message: "Private sources cannot expose public URLs"
+        message: "Restricted, private, and protected sources cannot expose URLs or archive metadata"
+      });
+    }
+
+    if (source.visibility !== "public" && !source.publicNote) {
+      context.addIssue({
+        code: "custom",
+        message: "A non-public source needs an approved public-safe description"
+      });
+    }
+
+    if (source.kind === "archived-carrier-page" && !source.archiveRelation) {
+      context.addIssue({
+        code: "custom",
+        message: "Archived carrier pages must state their relationship to the original evidence"
       });
     }
   });
 
-export const claimEvidenceSchema = z.object({
-  sourceId: stableIdSchema,
-  relation: evidenceRelationSchema,
+export const evidenceRelationshipSchema = z.enum([
+  "supports",
+  "qualifies",
+  "contextualizes",
+  "contradicts",
+  "does-not-support"
+]);
+
+export const evidenceLinkSchema = z.object({
+  sourceId: kebabIdSchema,
+  relationship: evidenceRelationshipSchema,
   locator: z.string().min(1).optional(),
-  supports: z.string().min(1),
-  doesNotSupport: z.string().min(1).optional()
+  supportNote: z.string().min(1),
+  limitationNote: z.string().min(1).optional()
 });
+
+export const claimStatusSchema = z.enum(["approved", "qualified", "open", "protected"]);
+export const confidenceSchema = z.enum(["high", "medium-high", "medium", "low"]);
+export const projectionSurfaceSchema = z.enum([
+  "homepage",
+  "work-card",
+  "case-study",
+  "technical-operations",
+  "resume-page",
+  "lab",
+  "photo-caption"
+]);
 
 export const claimRecordSchema = z.object({
-  id: stableIdSchema,
-  projectId: stableIdSchema,
+  id: claimIdSchema,
   publicText: z.string().min(1),
+  internalText: z.string().min(1).optional(),
   status: claimStatusSchema,
-  strength: claimStrengthSchema,
-  mustCite: z.boolean(),
-  evidence: z.array(claimEvidenceSchema).min(1),
-  caveat: z.string().min(1).optional(),
-  antiClaims: z.array(z.string().min(1)).default([]),
-  publicSurfaces: z.array(stableIdSchema),
-  reviewedBy: z.array(z.string().min(1)).optional(),
-  reviewedAt: z.iso.date().optional()
+  confidence: confidenceSchema,
+  evidence: z.array(evidenceLinkSchema).min(1),
+  qualifiers: z.array(z.string().min(1)).optional(),
+  projectionSurfaces: z.array(projectionSurfaceSchema),
+  approvalOwner: z.string().min(1),
+  approvedAt: z.iso.date().optional(),
+  antiClaims: z.array(z.string().min(1)).optional(),
+  protectedBoundary: z.string().min(1).optional()
 });
 
-export const citationNoteRecordSchema = z.object({
-  id: stableIdSchema,
-  shortLabel: z.string().min(1),
-  claimIds: z.array(stableIdSchema).min(1),
-  sourceIds: z.array(stableIdSchema).min(1),
-  publicNote: z.string().min(1),
-  publicCaveat: z.string().min(1).optional()
+export const evidenceNoteRecordSchema = z.object({
+  id: kebabIdSchema,
+  claimIds: z.array(claimIdSchema).min(1),
+  sourceIds: z.array(kebabIdSchema).min(1),
+  title: z.string().min(8),
+  publicSummary: z.string().min(1),
+  qualification: z.string().min(1).optional(),
+  preferredSourceId: kebabIdSchema.optional()
+});
+
+export const researchRunRecordSchema = z.object({
+  id: kebabIdSchema,
+  purpose: z.string().min(1),
+  performedAt: z.iso.date().optional(),
+  method: z.string().min(1),
+  capturesReviewed: z.number().int().nonnegative().optional(),
+  originalUrlsReviewed: z.number().int().nonnegative().optional(),
+  eventUrlKeysReviewed: z.number().int().nonnegative().optional(),
+  finding: z.string().min(1),
+  limitations: z.array(z.string().min(1)).min(1),
+  privateWorkingPath: z.string().min(1).optional()
+});
+
+export const mediaEvidenceRecordSchema = z.object({
+  id: kebabIdSchema,
+  sourceId: kebabIdSchema,
+  filename: z.string().min(1).optional(),
+  photographedAt: z.iso.datetime({ offset: true }).optional(),
+  photographer: z.string().min(1).optional(),
+  rightsHolder: z.string().min(1).optional(),
+  rightsStatus: z.string().min(1).optional(),
+  consentStatus: z.string().min(1).optional(),
+  eventAssociation: z.enum(["verified", "probable", "contextual-only", "unverified"]),
+  visibleEvidence: z.array(z.string().min(1)).optional(),
+  captionPublic: z.string().min(1).optional(),
+  captionArchival: z.string().min(1).optional(),
+  protectedPeople: z.array(z.string().min(1)).optional(),
+  cropRestrictions: z.array(z.string().min(1)).optional()
 });
 
 export const citationReferenceSchema = z.object({
-  refId: stableIdSchema,
-  noteId: stableIdSchema
+  refId: kebabIdSchema,
+  noteId: kebabIdSchema
 });
 
 export const pageCitationSetSchema = z.object({
-  pageId: stableIdSchema,
+  pageId: kebabIdSchema,
   references: z.array(citationReferenceSchema).min(1)
 });
 
-export type SourceClass = z.infer<typeof sourceClassSchema>;
-export type MediaType = z.infer<typeof mediaTypeSchema>;
-export type PublicationStatus = z.infer<typeof publicationStatusSchema>;
-export type ClaimStrength = z.infer<typeof claimStrengthSchema>;
-export type EvidenceRelation = z.infer<typeof evidenceRelationSchema>;
-export type ClaimStatus = z.infer<typeof claimStatusSchema>;
+export type SourceKind = z.infer<typeof sourceKindSchema>;
+export type SourceVisibility = z.infer<typeof sourceVisibilitySchema>;
+export type SourceAvailability = z.infer<typeof sourceAvailabilitySchema>;
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
-export type ClaimEvidence = z.infer<typeof claimEvidenceSchema>;
+export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
+export type EvidenceLink = z.infer<typeof evidenceLinkSchema>;
+export type ClaimStatus = z.infer<typeof claimStatusSchema>;
+export type Confidence = z.infer<typeof confidenceSchema>;
+export type ProjectionSurface = z.infer<typeof projectionSurfaceSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
-export type CitationNoteRecord = z.infer<typeof citationNoteRecordSchema>;
+export type EvidenceNoteRecord = z.infer<typeof evidenceNoteRecordSchema>;
+export type ResearchRunRecord = z.infer<typeof researchRunRecordSchema>;
+export type MediaEvidenceRecord = z.infer<typeof mediaEvidenceRecordSchema>;
 export type CitationReference = z.infer<typeof citationReferenceSchema>;
 export type PageCitationSet = z.infer<typeof pageCitationSetSchema>;

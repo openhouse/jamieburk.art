@@ -1,196 +1,158 @@
 # Citational Care
 
-Citational care leaves an inspectable path from a significant public claim to
-the evidence that supports it. It is not a demand to cite every sentence, and it
-does not turn the portfolio into an academic paper. Clear prose remains primary.
+Citational care gives a reader an inspectable path from a consequential public
+claim to the evidence that supports or limits it. It is not a demand to cite
+every sentence or turn the portfolio into a research database. The sentence
+still has to tell the story; the citation opens the record.
 
-The normalized records live in `apps/www/src/data/knowledge-bank/`:
+The existing proof registry in `apps/www/src/data/proofs.ts` remains the
+portfolio-level claim index. The typed records in
+`apps/www/src/data/knowledge-bank/` extend it for claims that need source-level
+citational care:
 
-- `sources.ts` describes public and private source records;
-- `claims.ts` states the approved claim, evidence relationships, limits, and
-  anti-claims;
-- `citation-notes.ts` composes one or more sources into a public note;
-- `page-citations.ts` declares each in-text reference in reading order;
-- `schemas.ts` defines and validates every record with Zod.
+- `sources.ts` records source identity, access, visibility, and public notes;
+- `claims.ts` records claim wording, status, confidence, evidence links,
+  approval, qualifiers, and anti-claims;
+- `citation-notes.ts` composes one or more claims and sources into a public
+  evidence note;
+- `research-runs.ts` records bounded search methods and negative findings;
+- `media.ts` records rights, consent, event association, and caption limits;
+- `page-citations.ts` declares citation occurrences in reading order;
+- `schemas.ts` validates every record with Zod.
 
-Rendering and composition live in `apps/www/src/lib/` and
-`apps/www/src/components/citations/`.
+The public site is an edited projection of these records. It is not a public
+evidence dump, private archive browser, or substitute for editorial review.
 
-## Editorial Rules
+## Source, Claim, And Evidence Note
 
-1. Put Jamie's agency in the sentence.
-2. Explain the purpose of the work and what became usable.
-3. Cite significant factual claims, not every clause.
-4. State what a source supports and what it does not support.
-5. Preserve collective-work language and institutional boundaries.
-6. Keep anti-claims beside the positive claim in the knowledge bank.
-7. Describe private evidence without exposing it.
-8. Correct the record in one place, then review every public projection.
+A **source** is the thing inspected: an official post, article, graphic,
+repository, participant photograph, or governed research run.
 
-Citations support the prose; they do not substitute for a clear sentence.
+A **claim** is the sentence the portfolio may say. It includes the exact
+evidence relationship, confidence, projection surfaces, approval owner,
+qualifiers, anti-claims, and protected boundary.
 
-## Source Classes
+An **evidence note** is what a visible citation number opens. It may bring
+several sources together when convergence is the clearest explanation. It says
+what those sources establish and preserves the limitation a reader needs.
 
-- `official-institutional`: records published through a government or other
-  official institutional channel.
-- `official-organizational-social`: an organization's public social post or
-  public announcement.
-- `independent-journalism`: reporting produced independently of the project.
-- `primary-project`: the project itself, including a public repository.
-- `participant-archive`: first-party or participant evidence that remains in a
-  bounded archive.
-- `web-archive`: a preserved historical capture.
-- `research-reconstruction`: a public-safe synthesis whose inferential status
-  must remain explicit.
+Evidence and inference remain separate. A placard can establish its visible
+wording; it cannot establish a complete agenda or formal event title.
 
-## Claim Strengths
+## Visibility
 
-- `direct`: the source directly shows or states the claim.
-- `corroborated`: multiple sources or source types support the claim.
-- `reconstructed`: the claim follows from a bounded sequence of evidence but
-  is not stated by one source.
-- `inferred`: the claim is a reasoned interpretation and needs visible caution.
-- `unresolved`: the evidence does not yet support public wording.
+- `public`: safe to describe and link.
+- `restricted`: an approved public-safe description may render, but source
+  access, paths, metadata, and protected content may not.
+- `private`: retained as governed evidence; only an approved aggregate
+  description may render.
+- `protected`: no public projection beyond an explicitly approved boundary.
+
+A citation is not publication permission. Restricted or private evidence may
+support approved wording without exposing a URL, filename, local path, raw
+metadata, participant identity, or quotation.
 
 ## Evidence Relationships
 
-- `supports`: direct positive evidence.
-- `corroborates`: independent or additional confirmation.
+- `supports`: directly helps establish the claim.
+- `qualifies`: narrows the claim or adds a condition a reader needs.
 - `contextualizes`: explains surrounding conditions without proving the whole
   claim.
-- `limits`: establishes what the claim cannot responsibly say.
-- `contradicts`: records evidence against a proposed claim.
+- `contradicts`: provides evidence against the claim.
+- `does-not-support`: records a tempting inference the source cannot establish.
 
-## Publication Statuses
+Use a limitation note whenever a source could easily be asked to prove too
+much.
 
-- `public`: safe to link and describe.
-- `public-with-caveat`: public, but the note must preserve an interpretive or
-  access limitation.
-- `private`: safe to describe only at the approved aggregate level; never add a
-  public URL.
-- `unavailable`: no current public access; preserve a bounded historical note.
+## Page-Local Numbering
 
-## Anti-Claims
+Stable source, claim, and note IDs are never visible numbering. A page manifest
+lists citation occurrences in reading order. `buildCitationSet` assigns the
+first distinct note number `1`, the next `2`, and so on. Reusing a note ID on
+the same page reuses its number. Only notes present in the page manifest appear
+under References.
 
-Anti-claims are explicit statements the portfolio must not imply. They protect
-collective credit, prevent causal overreach, distinguish independent projects
-from official services, and keep metrics inside their evidentiary limits.
+Each occurrence gets a unique anchor. References link back to every occurrence.
+Numbers, links, and References render as ordinary server HTML and work without
+JavaScript.
 
-An anti-claim belongs in the structured claim record even when it is not shown
-verbatim on the public page. The page should make the corresponding boundary
-legible in ordinary language.
+## Authoring
 
-## Per-Page Numbering
-
-`page-citations.ts` records references in first-appearance order. The
-`buildCitationSet` helper assigns the first distinct note number `1`, the next
-distinct note `2`, and so on. A repeated note ID reuses its original number.
-Each marker receives its own reference anchor, while each note renders once and
-links back to every occurrence.
-
-Numbers are generated during server rendering. Do not type citation numbers into
-prose, calculate them in a client component, or keep a separate hand-numbered
-bibliography.
-
-## Add A Source
-
-1. Choose a stable semantic ID.
-2. Add the source to `sources.ts`.
-3. Record its source class, media type, publication status, and public note.
-4. Add canonical, original, or archive URLs only when they are public.
-5. State access and verification dates when known.
-6. Run `npm run check:citations`.
-
-For a public page with both original and archived evidence, keep the URLs in
-their distinct fields. The renderer labels them separately.
-
-## Add A Claim
-
-1. Write the clear public sentence first.
-2. Choose status and strength.
-3. Set `mustCite` for a significant factual claim.
-4. Add evidence relationships with a plain statement of what each source
-   supports and, when useful, what it does not support.
-5. Add caveats and anti-claims.
-6. Declare only approved public surfaces.
-
-Provisional, private, and rejected claims cannot be configured for production
-public surfaces.
-
-## Add A Citation Note
-
-1. Group only tightly related claims.
-2. Add the corresponding source IDs.
-3. Write a note a general reader can understand without seeing the research
-   workspace.
-4. Put the most important limit in `publicCaveat`.
-5. Add one or more page references where the note first becomes useful.
-
-The note list is not a dump of source metadata. It explains why the cited
-sentence is defensible.
-
-## Cite A Private Source Safely
-
-A private source receives:
-
-- a stable, non-sensitive ID;
-- a generic but accurate title;
-- `publicationStatus: "private"`;
-- a public-safe description of what is visible or known;
-- a limit describing what the source cannot establish;
-- no canonical, original, or archive URL.
-
-Do not include private filenames, local paths, participant metadata, raw text,
-exact locations, contact details, or an invented link. A private source note is
-an evidentiary boundary, not a path into the archive.
-
-## Correct A Claim Later
-
-1. Update the source or claim record.
-2. Reassess strength, status, evidence relations, caveat, and anti-claims.
-3. Update the public sentence if the correction changes what a reader should
-   understand.
-4. Review every page listed in `publicSurfaces`.
-5. Run citation validation and the full check pipeline.
-
-Stable IDs should survive wording corrections. Create a new ID only when the
-meaning of the claim or source has materially changed.
-
-## Accessibility Requirements
-
-- In-text markers are links inside `sup` with `role="doc-noteref"`.
-- Every marker has a contextual accessible label.
-- Endnotes use a native ordered list inside `role="doc-endnotes"`.
-- Every note links back to each marker that cited it.
-- Source titles use `cite`; whole notes and citation numbers do not.
-- Focus remains visible.
-- Reference and note anchors use scroll margin for sticky navigation.
-- Long source text and URLs wrap at narrow widths.
-- The target highlight does not require animation or JavaScript.
-
-## Complete CallNYC Example
-
-The CallNYC page uses this sequence:
+Import the page citation set and use note IDs rather than numbers:
 
 ```tsx
-import { CitationList, CitationRef } from "@/components/citations";
+import { Cite, References } from "@/components/citations";
 import { callNYCCitationSet } from "@/lib/page-citations";
 
 <p>
   Civic Hall announced the gathering for January 30, 2016.
-  <CitationRef
+  <Cite
     set={callNYCCitationSet}
-    refId="callnyc-context-event"
+    noteId="callnyc-event-date-time"
+    refId="callnyc-opening-event"
   />
 </p>
 
-<CitationList set={callNYCCitationSet} />
+<References set={callNYCCitationSet} />
 ```
 
-The page reference points to `callnyc-event`. That note connects the approved
-claim to Civic Hall, Council, and web-archive source records. Later references
-to `callnyc-event` reuse the same number while receiving distinct marker IDs and
-backlinks.
+`refId` identifies a unique occurrence from `page-citations.ts`; authors never
+type the visible number. For a note used only once, `refId` may be omitted.
+Grouped citations use `noteIds` and, when needed, matching `refIds`.
+
+Place the marker immediately after the clause or sentence it supports. Put
+`<References />` after the substantive case-study content.
+
+## Add A Source Safely
+
+1. Choose a stable, non-sensitive ID.
+2. Add the source to `sources.ts` with kind, visibility, availability, and an
+   accurate public note.
+3. Add public URLs only when visibility is `public`.
+4. Label archived carrier relationships explicitly; a carrier page is not the
+   original source or a recovered event listing.
+5. State what the source does not establish in the claim evidence link.
+6. Run `npm run check:citations`.
+
+Private source material stays outside this repository. Do not commit raw
+captures, transcript text, research exports, photographs, correspondence,
+private metadata, local paths, or credentials to make a reference look more
+complete.
+
+## Record A Not-Recovered Finding
+
+“Not recovered” is not “did not exist.” Record the purpose, method, reviewed
+scope, finding, and at least one limitation in a `ResearchRunRecord`. The public
+claim must say that nothing matching was recovered **in the documented search**
+and must state that this does not prove the source never existed.
+
+Raw research corpora and working paths remain outside the repository. The
+public Knowledge Bank stores only governed counts, method, finding, and limits.
+
+## Photographs, Rights, And Consent
+
+A photograph needs a `SourceRecord` and a `MediaEvidenceRecord`. Record rights
+status, consent status, event association, visible evidence, caption limits,
+and crop restrictions. Do not add the image, filename, private path, protected
+people, raw metadata, or photographer identity unless each item is approved for
+this public repository.
+
+Visible content supports only what it actually shows. A timestamp does not
+establish an event schedule; a placard does not establish a full agenda.
+
+## Accessibility And Print
+
+- Citation markers are real links inside `sup`, with `role="doc-noteref"` and
+  descriptive accessible names.
+- References use a native ordered list inside `role="doc-endnotes"`.
+- Every note links back to each cited occurrence.
+- Focus remains visibly outlined, and anchors use scroll margin for the sticky
+  navigation.
+- Long titles, qualifications, and URLs wrap on narrow screens.
+- Print output keeps bracketed numbers and References legible and prints public
+  source URLs.
+
+The feature does not require hovercards, JavaScript, or a public source browser.
 
 ## Validation
 
@@ -201,11 +163,13 @@ npm run check:citations
 npm run check
 ```
 
-The citation check is local and deterministic. It validates schemas,
-referential integrity, privacy boundaries, production status, numbering,
-anchors, backlinks, CallNYC year and anti-claims, and a set of pure helper
-contracts. It does not fetch external URLs.
+The citation check validates schema shape, duplicate IDs, references among
+sources, claims, notes, and pages, approval and evidence requirements, public
+projection safety, archive-carrier labels, bounded not-recovered findings,
+production-safe URLs, accessible titles, deterministic numbering, unique
+anchors, backlinks, restricted-source redaction, and the corrected CallNYC
+year. It does not fetch external URLs.
 
-Link status is a separate manual editorial responsibility. Unchecked or
-archive-dependent links produce warnings without making historical citations
-disappear.
+Warnings identify editorial follow-up such as a live URL without an archive
+fallback, a high-impact claim with one source, a dead source, incomplete media
+rights or consent, or a qualified claim whose public wording needs review.

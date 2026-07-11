@@ -34,6 +34,12 @@ research material
 
 ## Not Recovered
 
+The governed research run reviewed 4,630 deduplicated HTML captures
+representing 1,240 original URLs. A separate all-status event-prefix pass found
+296 distinct event URL keys: 215 successful pages, 74 redirects, and seven 404
+captures. No CouncilStat, constituent-services, or NYC Council event slug was
+recovered.
+
 No recovered source establishes:
 
 - a dedicated Civic Hall calendar listing or event-detail page;
@@ -46,6 +52,10 @@ No recovered source establishes:
 
 The Wayback page is evidence from an embedded social feed. It must not be
 described as a recovered Civic Hall calendar listing.
+
+This is a finding about the documented search scope. It does not prove that no
+calendar listing or dedicated event page ever existed. Raw captures and working
+paths remain outside this public repository.
 
 ## Safe Wording
 

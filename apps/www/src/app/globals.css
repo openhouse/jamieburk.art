@@ -148,6 +148,10 @@ h2 {
   vertical-align: baseline;
 }
 
+.citation-group {
+  white-space: nowrap;
+}
+
 .citation-marker a {
   color: var(--jb-broadway-blue);
   font-weight: 700;
@@ -206,6 +210,11 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.citation-note-title {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
 .citation-note-caveat {
   color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
   font-size: 0.94rem;
@@ -261,6 +270,34 @@ h2 {
   font-weight: 700;
   margin-top: 0.35rem;
   text-transform: uppercase;
+}
+
+@media print {
+  .citation-marker a,
+  .citation-source-entry a {
+    color: inherit;
+  }
+
+  .citation-endnotes {
+    border-top-color: #555;
+    max-width: none;
+  }
+
+  .citation-endnotes > ol > li,
+  .citation-source-entry {
+    break-inside: avoid;
+  }
+
+  .citation-source-links a::after {
+    content: " (" attr(href) ")";
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.82em;
+    overflow-wrap: anywhere;
+  }
+
+  .citation-backlinks {
+    display: none;
+  }
 }
 
 .jb-label,

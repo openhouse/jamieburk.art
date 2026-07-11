@@ -1,71 +1,47 @@
-import { CitationList, CitationRef } from "@/components/citations";
+import { Cite, References } from "@/components/citations";
 import { callNYCCitationSet } from "@/lib/page-citations";
 
-## Institutional context
+## Context
 
-The New York City Council was opening constituent-services records through CouncilStat, but administrative data still needed interpretation before it could help a resident decide what to do. Civic Hall announced a constituent-services hackathon for January 30, 2016, from 1-3 p.m.; the Council posted from Civic Hall that day and described the gathering as its first CouncilStat hackathon.<CitationRef set={callNYCCitationSet} refId="callnyc-context-event" />
+On January 30, 2016, the New York City Council held a 1-3 p.m. constituent-services hackathon at Civic Hall<Cite set={callNYCCitationSet} noteId="callnyc-event-date-time" refId="callnyc-opening-event" />. A Council-branded promotional graphic called it the "New York City Council Hackathon," while an event-day Council post identified it as the Council's first #CouncilStat hackathon<Cite set={callNYCCitationSet} noteId="callnyc-event-branding-councilstat" refId="callnyc-opening-branding" />.
 
-A recovered promotional graphic used the shorter branding "New York City Council Hackathon." That graphic documents the event brand, not a longer formal registration title. The surviving Wayback evidence comes from Civic Hall's embedded social feed, not a recovered calendar listing.<CitationRef set={callNYCCitationSet} refId="callnyc-context-branding" />
+Jamie participated in the workshop and later independently developed CallNYC.org after the complete CouncilStat dataset became public<Cite set={callNYCCitationSet} noteId="callnyc-participation-follow-on" refId="callnyc-opening-follow-on" />. The archived prototype reorganized constituent-service records into issue-oriented pages and office contact paths while making the limitations of inconsistent administrative records explicit<Cite set={callNYCCitationSet} noteId="callnyc-product-method" refId="callnyc-opening-method" />.
 
-One documented breakout was titled "Digital District - Help improve City Council District office operations." A private participant photograph supports that breakout-table title; it does not establish the title of the overall event, a full participant roster, or an event start time.<CitationRef set={callNYCCitationSet} refId="callnyc-context-digital-district" />
-
-After the complete CouncilStat dataset was released in early March, Jamie independently developed CallNYC as a resident-facing follow-on. It was not commissioned by the Council, submitted as an official hackathon project, or presented as a Council service.<CitationRef set={callNYCCitationSet} refId="callnyc-context-project" />
-
-## Timeline
-
-<ol className="my-6 space-y-4 border-l border-jb-blue/30 pl-6 text-jb-ink/85">
-  <li>
-    <strong>January 30, 2016</strong> - Constituent-services / CouncilStat
-    hackathon at Civic Hall, announced for 1-3 p.m.
-    <CitationRef set={callNYCCitationSet} refId="callnyc-timeline-event" />
-  </li>
-  <li>
-    <strong>Early March 2016</strong> - The complete CouncilStat
-    constituent-services dataset was released publicly.
-  </li>
-  <li>
-    <strong>March 2016</strong> - Jamie independently developed CallNYC, and
-    Politico New York published coverage on March 14.
-    <CitationRef set={callNYCCitationSet} refId="callnyc-timeline-project" />
-  </li>
-</ol>
+A participant photograph documents a "Digital District" discussion whose placard invited attendees to "Help improve City Council District office operations"<Cite set={callNYCCitationSet} noteId="callnyc-digital-district-photo" refId="callnyc-digital-district" />. The photograph is not published here: rights, consent, caption, and crop review remain open, and the visible placard does not establish the formal title or complete agenda of the full event.
 
 ## What was unclear
 
 CouncilStat data contained civic signal, but a public dataset was not yet a resident pathway. A person still needed to understand what an issue meant, which office or district context might matter, what next step was reasonable, and where the source data could mislead.
 
-The project also needed a firm boundary. CallNYC could demonstrate a translation pattern without pretending to be official guidance, a live service, or a complete measure of district-office performance.
+Different Council offices used CouncilStat differently and with differing frequency. The records could reveal patterns, but they could not responsibly be presented as a simple performance ranking. Jamie's product judgment included deciding what the data could not prove<Cite set={callNYCCitationSet} noteId="callnyc-product-method" refId="callnyc-data-limits" />.
 
 ## What I did
 
-Jamie recognized that the released administrative data still needed a resident-facing layer. He built the independent prototype, organized records into issue-oriented pathways, and designed pages for public discovery and sharing. After conversations with prospective users, he expanded the available contact options.<CitationRef set={callNYCCitationSet} refId="callnyc-work-project" />
+Jamie built the independent prototype, organized records into issue-oriented pathways, and designed pages for search, sharing, and office contact. He translated administrative categories into public-facing choices without presenting the result as official City guidance.
 
-He also made source limits operational. CallNYC filtered records without borough data as one method of excluding apparent spam or out-of-city entries, while keeping clear that case totals could not be read as simple rankings of office quality, effectiveness, specialization, or resident need.<CitationRef set={callNYCCitationSet} refId="callnyc-work-data" />
+The work joined implementation with evidence discipline: source limits were part of the interface and editorial logic, not a disclaimer added after the product decisions had already been made.
 
 ## What became usable
 
-The prototype turned administrative records into issue pages, district context, and possible next steps. It made the translation layer visible: residents did not need to understand the entire dataset before entering through a recognizable concern.
+CallNYC turned a difficult administrative dataset into issue pages, district context, and possible next steps. Residents did not need to understand the entire source table before entering through a recognizable concern.
 
-For product and operations teams, the transferable pattern is direct: map a difficult source to the decisions a person needs to make, build a bounded pathway, and keep the source limitations inside the product rather than in a separate disclaimer no one sees.
+The prototype also gave civic-technology collaborators a concrete surface for discussing how public records might become useful without promising more certainty than the records contained.
 
-## Use and iteration
+## Archival method
 
-Contemporaneous reporting documents a small, fast feedback loop rather than broad adoption. Jamie optimized pages for search and sharing, then added more contact options after conversations with prospective users. The surviving repository keeps the implementation inspectable.<CitationRef set={callNYCCitationSet} refId="callnyc-use-iteration" />
+No Civic Hall calendar listing or dedicated event-detail page was recovered in the documented archival search<Cite set={callNYCCitationSet} noteId="callnyc-calendar-search-limit" refId="callnyc-calendar-search" />. That is a bounded negative finding, not a claim that no listing ever existed. The surviving Wayback page carries embedded public posts; it is not the event's recovered calendar listing.
 
-## Evidence and limits
+## Transferable proof
 
-- **Official organizational evidence:** Civic Hall and New York City Council posts support the January 30 date, announced hours, constituent-services focus, Civic Hall setting, and CouncilStat context.<CitationRef set={callNYCCitationSet} refId="callnyc-evidence-event" />
-- **Independent journalism and primary project evidence:** Politico New York supports the independent follow-on, build sequence, filtering method, and iteration; the public repository documents the surviving implementation.
-- **Private participant evidence:** A participant photograph supports "Digital District" as one breakout-table title. It remains private and supplies neither an overall event title nor publication permission.<CitationRef set={callNYCCitationSet} refId="callnyc-evidence-digital-district" />
-- **Reasoned reconstruction:** The recovered sources establish a bounded event and project sequence. They do not establish a dedicated Civic Hall listing, full agenda, breakout roster, participant list, facilitator, formal winners, or published project roster.
-- **Data limits:** CouncilStat totals require context and do not independently measure service quality or resident outcomes.<CitationRef set={callNYCCitationSet} refId="callnyc-evidence-data" />
+For product and operations teams, the transferable pattern is direct: map a difficult source to the decisions a person needs to make, build a bounded pathway, and keep the source limitations inside the operating system people actually use.
 
 <aside className="my-8 border-l-4 border-jb-ochre bg-jb-lemon/25 p-5 text-jb-ink/85">
-  <strong>Archive disclaimer:</strong> Archived independent civic-data
-  prototype. Not an official or current New York City Council service.
-  Historical officeholders, rankings, statistics, categories, and contact
-  information should not be used as present-day constituent-service guidance.
-  <CitationRef set={callNYCCitationSet} refId="callnyc-archive-disclaimer" />
+  <strong>Archive disclaimer:</strong> CallNYC is an archived, independent,
+  unofficial historical prototype. It is not a current New York City Council
+  service, legal guidance, emergency guidance, or present-day constituent-service
+  directory. Historical officeholders, statistics, categories, and contact
+  information should not be used as current guidance.
+  <Cite set={callNYCCitationSet} noteId="callnyc-product-method" refId="callnyc-archive-status" />
 </aside>
 
-<CitationList set={callNYCCitationSet} />
+<References set={callNYCCitationSet} />

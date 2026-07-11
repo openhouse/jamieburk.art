@@ -1,42 +1,37 @@
 import {
-  citationNoteRecordsById,
+  evidenceNoteRecordsById,
   sourceRecordsById
 } from "@/data/knowledge-bank";
 import type { BuiltCitationSet } from "@/lib/citations";
 import { SourceEntry } from "./SourceEntry";
 
-export function CitationList({ set }: { set: BuiltCitationSet }) {
+export function References({ set }: { set: BuiltCitationSet }) {
   return (
     <section
-      aria-labelledby={`${set.pageId}-sources-heading`}
+      aria-labelledby={`${set.pageId}-references-heading`}
       className="citation-endnotes"
       role="doc-endnotes"
     >
-      <h2 id={`${set.pageId}-sources-heading`}>Sources and notes</h2>
-      <ol>
+      <h2 id={`${set.pageId}-references-heading`}>References</h2>
+      <ol className="references-list">
         {set.notes.map((builtNote) => {
-          const note = citationNoteRecordsById[builtNote.noteId];
+          const note = evidenceNoteRecordsById[builtNote.noteId];
 
-          if (!note) {
-            throw new Error(`Unknown citation note: ${builtNote.noteId}`);
-          }
+          if (!note) throw new Error(`Unknown evidence note: ${builtNote.noteId}`);
 
           return (
             <li id={builtNote.noteAnchorId} key={builtNote.noteId}>
-              <p className="citation-note-text">{note.publicNote}</p>
-              {note.publicCaveat ? (
+              <p className="citation-note-title">{note.title}</p>
+              <p className="citation-note-text">{note.publicSummary}</p>
+              {note.qualification ? (
                 <p className="citation-note-caveat">
-                  <strong>Limit:</strong> {note.publicCaveat}
+                  <strong>Qualification:</strong> {note.qualification}
                 </p>
               ) : null}
               <ul aria-label={`Sources for citation ${builtNote.number}`}>
                 {note.sourceIds.map((sourceId) => {
                   const source = sourceRecordsById[sourceId];
-
-                  if (!source) {
-                    throw new Error(`Unknown citation source: ${sourceId}`);
-                  }
-
+                  if (!source) throw new Error(`Unknown citation source: ${sourceId}`);
                   return <SourceEntry key={sourceId} source={source} />;
                 })}
               </ul>
@@ -51,7 +46,10 @@ export function CitationList({ set }: { set: BuiltCitationSet }) {
                     href={`#${anchorId}`}
                     key={anchorId}
                   >
-                    Return{builtNote.referenceAnchorIds.length > 1 ? ` ${index + 1}` : ""}
+                    Back to citation {builtNote.number}
+                    {builtNote.referenceAnchorIds.length > 1
+                      ? `, occurrence ${index + 1}`
+                      : ""}
                   </a>
                 ))}
               </p>

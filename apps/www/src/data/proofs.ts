@@ -38,6 +38,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  citationClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -137,12 +138,12 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Participated in a New York City Council constituent-services workshop, then independently translated the published CouncilStat dataset into CallNYC.org, a resident-facing civic prototype with explicit limits on what the records could responsibly support.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "Structured CallNYC source, claim, evidence-note, research-run, and media records; public GitHub repository; verified Politico New York coverage; and qualified public event evidence.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -154,7 +155,13 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    citationClaimIds: [
+      "callnyc.event.date-and-venue",
+      "callnyc.participation-and-follow-on",
+      "callnyc.product-method",
+      "callnyc.project.archived-unofficial-status"
+    ],
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",

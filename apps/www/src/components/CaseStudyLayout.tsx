@@ -12,7 +12,7 @@ import {
   VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
-import { CitationRef } from "@/components/citations";
+import { Cite } from "@/components/citations";
 import { getBuiltCitationSet } from "@/lib/page-citations";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
@@ -37,9 +37,18 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">
             {item.summary}
             {citationSet
-              ? item.summaryCitationRefIds?.map((refId) => (
-                  <CitationRef key={refId} refId={refId} set={citationSet} />
-                ))
+              ? item.summaryCitationRefIds?.map((refId) => {
+                  const reference = citationSet.referencesById[refId];
+                  if (!reference) throw new Error(`Unknown summary citation: ${refId}`);
+                  return (
+                    <Cite
+                      key={refId}
+                      noteId={reference.noteId}
+                      refId={refId}
+                      set={citationSet}
+                    />
+                  );
+                })
               : null}
           </p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
