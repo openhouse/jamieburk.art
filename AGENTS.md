@@ -24,6 +24,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:citations`
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -57,6 +58,11 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+Public claims with material factual, numerical, historical, institutional, or
+attribution stakes must be represented through the Knowledge Bank and projected
+with citational care. Never strengthen a claim beyond its evidence or expose
+protected source material.
 
 ## Chad Lens
 

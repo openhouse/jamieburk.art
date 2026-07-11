@@ -12,6 +12,8 @@ import {
   VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
+import { Cite } from "@/components/citations";
+import { getBuiltCitationSet } from "@/lib/page-citations";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
 
@@ -21,6 +23,8 @@ type CaseStudyLayoutProps = {
 };
 
 export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
+  const citationSet = getBuiltCitationSet(item.citationPageId);
+
   return (
     <article className="jb-frame py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(280px,0.28fr)]">
@@ -30,7 +34,23 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             {item.title}
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <p className="mt-5 text-xl leading-8 text-jb-ink/78">
+            {item.summary}
+            {citationSet
+              ? item.summaryCitationRefIds?.map((refId) => {
+                  const reference = citationSet.referencesById[refId];
+                  if (!reference) throw new Error(`Unknown summary citation: ${refId}`);
+                  return (
+                    <Cite
+                      key={refId}
+                      noteId={reference.noteId}
+                      refId={refId}
+                      set={citationSet}
+                    />
+                  );
+                })
+              : null}
+          </p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
           </div>
