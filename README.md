@@ -30,6 +30,8 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run citations
+npm run test:citations
 npm run public-safety
 npm run check:routes
 npm run preflight:staging
@@ -57,6 +59,16 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+## Citational Care
+
+Public factual claims may use page-local numerical citations backed by stable
+Knowledge Bank source, claim, note, research, media, and correction records.
+Run `npm run citations`, `npm run report:citations`, and
+`npm run test:citations` before committing citation changes.
+
+Citation display numbers are generated from each page projection. Do not type
+display numbers into canonical source, claim, note, media, or correction data.
 
 ## Environment
 

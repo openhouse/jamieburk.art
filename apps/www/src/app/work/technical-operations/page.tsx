@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Citation } from "@/components/citations/Citation";
+import { References } from "@/components/citations/References";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -29,7 +31,7 @@ const proofMap = [
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "open-data translation into resident-facing guidance after the New York City Council's first CouncilStat hackathon."
   },
   {
     project: "WOWList",
@@ -104,6 +106,23 @@ export default function TechnicalOperationsPage() {
             ))}
           </dl>
         </JBCard>
+      </section>
+      <section className="jb-reading mt-10">
+        <h2 className="text-3xl font-semibold text-jb-ink">
+          Public-sector implementation judgment
+        </h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          CallNYC is evidence of public-sector implementation judgment: Jamie
+          worked from administrative operating data, preserved its interpretive
+          limits, and built a bounded resident-facing prototype rather than
+          overstating what the records could prove.
+          <Citation
+            pageId="technical-operations"
+            noteId="NOTE-CALLNYC-TECHOPS-PROOF"
+            occurrenceId="callnyc-implementation-judgment"
+          />
+        </p>
+        <References pageId="technical-operations" />
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (

@@ -1,0 +1,40 @@
+[
+  {
+    "pageId": "work-callnyc",
+    "notesHeading": "Notes & sources",
+    "includeBacklinks": true,
+    "citationOrder": [
+      {
+        "noteId": "NOTE-CALLNYC-EVENT-DATE",
+        "occurrences": ["context-date-time"]
+      },
+      {
+        "noteId": "NOTE-CALLNYC-FIRST-COUNCILSTAT",
+        "occurrences": ["context-first-councilstat"]
+      },
+      {
+        "noteId": "NOTE-CALLNYC-FOLLOW-ON",
+        "occurrences": ["context-follow-on"]
+      },
+      {
+        "noteId": "NOTE-CALLNYC-DATA-LIMITS",
+        "occurrences": ["data-limits"]
+      },
+      {
+        "noteId": "NOTE-CALLNYC-PRESS",
+        "occurrences": ["press-coverage"]
+      }
+    ]
+  },
+  {
+    "pageId": "technical-operations",
+    "notesHeading": "Notes & sources",
+    "includeBacklinks": true,
+    "citationOrder": [
+      {
+        "noteId": "NOTE-CALLNYC-TECHOPS-PROOF",
+        "occurrences": ["callnyc-implementation-judgment"]
+      }
+    ]
+  }
+]
