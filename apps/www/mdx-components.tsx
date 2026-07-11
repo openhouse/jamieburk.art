@@ -1,4 +1,6 @@
 import type { MDXComponents } from "mdx/types";
+import { Cite } from "@/components/citations/Cite";
+import { References } from "@/components/citations/References";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -16,6 +18,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     strong: ({ children }) => (
       <strong className="font-semibold text-jb-ink">{children}</strong>
     ),
+    Cite,
+    References,
     ...components
   };
 }
