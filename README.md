@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -57,6 +60,26 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+## Citational Care
+
+Public claims that depend on exact dates, public records, press coverage, or
+externally verifiable historical events use the citational-care registry:
+
+- `apps/www/src/data/knowledge-bank/sources.json`
+- `apps/www/src/data/knowledge-bank/claims.json`
+- `apps/www/src/data/knowledge-bank/page-citations.json`
+- `apps/www/src/data/knowledge-bank/media.json`
+- `apps/www/src/data/knowledge-bank/research-runs.json`
+- `apps/www/src/data/knowledge-bank/corrections.json`
+
+Use `<Cite />` for natural prose, `<Claim />` only when canonical wording must
+not drift, and `<References />` for same-page Notes & sources. Public display
+numbers are generated per page; stable IDs live in the registry.
+
+`npm run check:citations` validates public/private projection boundaries.
+`npm run test:citations` checks numbering and projection invariants.
+`npm run report:citations` prints a deterministic reviewer report.
 
 ## Environment
 

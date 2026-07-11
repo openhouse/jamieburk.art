@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { Claim, References } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
 import { technicalOperationsProofRows } from "@/data/proofs";
+import { createCitationScope } from "@/lib/citations/scope";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
@@ -57,6 +59,10 @@ const proofMap = [
   }
 ];
 
+const technicalOperationsCitations = createCitationScope("technical-operations", [
+  "callnyc-hackathon-to-independent-follow-on"
+]);
+
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
   description:
@@ -105,6 +111,17 @@ export default function TechnicalOperationsPage() {
           </dl>
         </JBCard>
       </section>
+      <section className="mt-10">
+        <JBCard>
+          <h2 className="text-2xl font-semibold text-jb-ink">Cited proof</h2>
+          <p className="mt-3 leading-7 text-jb-ink/76">
+            <Claim
+              scope={technicalOperationsCitations}
+              claimId="callnyc-hackathon-to-independent-follow-on"
+            />
+          </p>
+        </JBCard>
+      </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (
           <JBCard key={row.capability}>
@@ -125,6 +142,7 @@ export default function TechnicalOperationsPage() {
         <ResumeCTA />
         <ContactCTA />
       </div>
+      <References scope={technicalOperationsCitations} />
     </div>
   );
 }

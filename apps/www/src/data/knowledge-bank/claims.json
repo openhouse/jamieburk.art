@@ -1,0 +1,171 @@
+[
+  {
+    "id": "callnyc-hackathon-announced-date-time",
+    "projectId": "callnyc",
+    "publicText": "Civic Hall announced a New York City Council hackathon focused on constituent services for January 30, 2016, from 1-3 p.m.",
+    "status": "approved-qualified",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "civic-hall-x-693124020917522433",
+        "relation": "supports",
+        "note": "Directly supports the announced date, time, Council relationship, and constituent-services purpose."
+      },
+      {
+        "sourceId": "civic-hall-wayback-2016-01-31-events-page-2",
+        "relation": "corroborates",
+        "note": "Preserves the embedded Civic Hall post; it is not a dedicated event listing."
+      }
+    ],
+    "caveat": "The 1-3 p.m. period is the announced event time. A participant photograph timestamp of approximately 2:10 p.m. is separate evidence.",
+    "antiClaims": [
+      "The Wayback capture is the event's Civic Hall calendar listing.",
+      "The participant photograph time is the event start time."
+    ],
+    "projectedPages": [
+      "/work/callnyc"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-first-councilstat-hackathon",
+    "projectId": "callnyc",
+    "publicText": "An event-day New York City Council post identified the gathering at Civic Hall as its first CouncilStat hackathon.",
+    "status": "approved",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-x-693509031768506368",
+        "relation": "supports",
+        "note": "Direct official event-day description."
+      },
+      {
+        "sourceId": "civic-hall-wayback-2016-01-31-events-page-2",
+        "relation": "corroborates",
+        "note": "Preserves the Council post through Civic Hall's embedded social feed."
+      }
+    ],
+    "projectedPages": [
+      "/work/callnyc"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "projectId": "callnyc",
+    "publicText": "The promotional graphic attached to Civic Hall's post used the branding 'New York City Council Hackathon' and displayed labs.council.nyc.",
+    "status": "approved-qualified",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-hackathon-promotional-graphic",
+        "relation": "supports",
+        "note": "The wording and labs.council.nyc reference are visible in the graphic."
+      }
+    ],
+    "caveat": "Treat this as recovered event branding, not proof of a longer formal registration title.",
+    "projectedPages": [
+      "/work/callnyc"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-independent-follow-on",
+    "projectId": "callnyc",
+    "publicText": "After the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing interpretation of the records.",
+    "status": "approved-qualified",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "politico-callnyc-2016-03-14",
+        "relation": "supports",
+        "note": "The article reports that Jamie encountered the data at the Civic Hall event and created CallNYC after the full dataset was released."
+      },
+      {
+        "sourceId": "github-openhouse-callnyc",
+        "relation": "corroborates",
+        "note": "Public code repository documents the independent project artifact."
+      }
+    ],
+    "caveat": "CallNYC was not an official Council product and is now an archived, unofficial prototype.",
+    "antiClaims": [
+      "Jamie built CallNYC during the hackathon.",
+      "CallNYC was an official New York City Council product.",
+      "CallNYC was a formal hackathon submission."
+    ],
+    "projectedPages": [
+      "/work/callnyc",
+      "/work/technical-operations"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-councilstat-usage-varied",
+    "projectId": "callnyc",
+    "publicText": "Council staff cautioned that district offices used CouncilStat differently and with different frequency, so case counts could not responsibly be treated as a standardized measure of office performance.",
+    "status": "approved-qualified",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "politico-callnyc-2016-03-14",
+        "relation": "supports",
+        "note": "The article reports the Council's caution about differing office usage and frequency."
+      }
+    ],
+    "caveat": "This supports interpretive caution about CouncilStat comparability; it is not a criticism of any individual Council office.",
+    "antiClaims": [
+      "Higher CouncilStat counts measured better service.",
+      "The dataset was complete or consistently entered across offices."
+    ],
+    "projectedPages": [
+      "/work/callnyc"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-protected",
+    "projectId": "callnyc",
+    "publicText": "Protected internal research note about location-label evidence in a participant photograph.",
+    "status": "do-not-publish",
+    "confidence": "low",
+    "evidence": [
+      {
+        "sourceId": "callnyc-digital-district-participant-photo",
+        "relation": "supports",
+        "note": "The private photograph may support a bounded internal research question, but it is not public evidence and cannot be projected without rights and consent approval."
+      }
+    ],
+    "caveat": "Do not render this claim publicly until source rights, consent, crop, caption, and attribution are approved.",
+    "antiClaims": [
+      "The photograph is public evidence.",
+      "The location-label wording is an official event title.",
+      "Recognizable participants may be published without review."
+    ],
+    "projectedPages": [],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-hackathon-to-independent-follow-on",
+    "projectId": "callnyc",
+    "publicText": "Jamie participated in the Council's first CouncilStat hackathon at Civic Hall in January 2016, then independently built CallNYC after the full dataset release.",
+    "status": "approved-qualified",
+    "confidence": "high",
+    "evidence": [
+      {
+        "sourceId": "nyc-council-x-693509031768506368",
+        "relation": "contextualizes",
+        "note": "Supports the CouncilStat hackathon and Civic Hall setting."
+      },
+      {
+        "sourceId": "politico-callnyc-2016-03-14",
+        "relation": "supports",
+        "note": "Supports Jamie's participation and the independent follow-on project after release."
+      }
+    ],
+    "caveat": "CallNYC was not built during the hackathon and was not an official Council product.",
+    "projectedPages": [
+      "/work/technical-operations"
+    ],
+    "lastReviewedAt": "2026-07-11"
+  }
+]

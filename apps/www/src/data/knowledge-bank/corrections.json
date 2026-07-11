@@ -1,0 +1,45 @@
+[
+  {
+    "id": "callnyc-years-2014-2015-to-2016",
+    "subjectId": "callnyc",
+    "status": "applied",
+    "priorWording": "2014-2015",
+    "revisedWording": "2016",
+    "reason": "Public evidence supports the January 30, 2016 CouncilStat hackathon and 2016 CallNYC press coverage; the older year range overstated and blurred the historical record.",
+    "effectiveAt": "2026-07-11",
+    "reviewedBy": [
+      "Codex archival review"
+    ],
+    "supersedes": [
+      "work.callnyc.years"
+    ]
+  },
+  {
+    "id": "callnyc-first-civic-data-to-first-councilstat",
+    "subjectId": "callnyc-first-councilstat-hackathon",
+    "status": "applied",
+    "priorWording": "first civic-data hackathon",
+    "revisedWording": "first CouncilStat hackathon",
+    "reason": "The event-day Council source supports the narrower CouncilStat formulation; broader civic-data wording is not the precise sourced proposition.",
+    "effectiveAt": "2026-07-11",
+    "reviewedBy": [
+      "Codex archival review"
+    ]
+  },
+  {
+    "id": "callnyc-future-source-link-replacement",
+    "subjectId": "callnyc-public-sources",
+    "status": "informational",
+    "revisedWording": "Replace volatile live links with stronger archives when available.",
+    "reason": "X/Twitter and link-only media URLs can become unavailable; citation validation should warn without making live network availability a build dependency.",
+    "effectiveAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-future-photo-rights-status-change",
+    "subjectId": "callnyc-digital-district-participant-photo",
+    "status": "informational",
+    "revisedWording": "If rights, consent, crop, and caption review are approved later, update media visibility before any public projection.",
+    "reason": "Citation evidence does not equal publication permission.",
+    "effectiveAt": "2026-07-11"
+  }
+]
