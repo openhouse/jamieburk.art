@@ -66,6 +66,8 @@ export type WorkMeta = {
   links?: Array<{ label: string; url: string }>;
   careNote?: string;
   sourceLayer?: string;
+  citationPageId?: string;
+  summaryCitationRefIds?: string[];
   credits?: string[];
   publicSafety?: { note: string };
   currentStatus: string;
