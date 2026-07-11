@@ -1,0 +1,65 @@
+[
+  {
+    "id": "media-callnyc-digital-district-participant-photo",
+    "sourceId": "participant-photo-digital-district-2016",
+    "kind": "photograph",
+    "title": "Participant photograph of Digital District breakout placard",
+    "rights": "conditional",
+    "consent": "pending",
+    "evidenceRole": "participant-archive-evidence",
+    "depicts": "A breakout placard reading Digital District and Help improve City Council District office operations.",
+    "maySupport": [
+      "The phrase Digital District appeared as breakout wording.",
+      "The breakout prompt concerned City Council district-office operations."
+    ],
+    "mustNotImply": [
+      "Digital District was the official title of the full event.",
+      "The photograph timestamp establishes the event start time.",
+      "The image is cleared for publication.",
+      "Named participants or facilitators have been identified."
+    ],
+    "publicCaption": "Participant photograph documenting the Digital District breakout. Photographer credit, rights, and public-image use remain under review.",
+    "altText": "Unpublished participant photograph of a Digital District breakout placard.",
+    "publicUse": "hold"
+  },
+  {
+    "id": "media-callnyc-future-representative-civic-hackathon-photo",
+    "kind": "photograph",
+    "title": "Future representative Civic Hall hackathon photograph slot",
+    "rights": "unknown",
+    "consent": "unknown",
+    "evidenceRole": "representative-context",
+    "depicts": "Potential future representative photograph of a civic-technology hackathon at Civic Hall during its original Flatiron period.",
+    "maySupport": [
+      "Atmospheric or representative context if rights and captioning are cleared."
+    ],
+    "mustNotImply": [
+      "The photograph depicts the January 30, 2016 Council event unless independently verified.",
+      "The photograph documents the Digital District breakout unless independently verified."
+    ],
+    "publicCaption": "Representative photograph of a civic-technology hackathon at Civic Hall during its original Flatiron period. The image has not been verified as a photograph of the January 2016 Council event.",
+    "altText": "Representative civic-technology hackathon scene at Civic Hall.",
+    "publicUse": "do-not-publish"
+  },
+  {
+    "id": "media-nyc-council-hackathon-promotional-graphic",
+    "sourceId": "nyc-council-hackathon-graphic-2016",
+    "kind": "graphic",
+    "title": "New York City Council Hackathon promotional graphic",
+    "rights": "link-only",
+    "consent": "not-required",
+    "evidenceRole": "public-artifact",
+    "depicts": "A public promotional graphic with New York City Council Hackathon branding and labs.council.nyc.",
+    "maySupport": [
+      "Recovered public branding for the January 2016 event."
+    ],
+    "mustNotImply": [
+      "The graphic alone proves the complete formal registration title.",
+      "The graphic establishes Jamie's role."
+    ],
+    "publicUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "publicCaption": "Public promotional graphic used as branding evidence, not as the complete formal event title.",
+    "altText": "Promotional graphic for a New York City Council hackathon.",
+    "publicUse": "conditional"
+  }
+]

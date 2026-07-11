@@ -280,18 +280,18 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built an independent civic-data prototype translating CouncilStat constituent-services records into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
     whatWasUnclear:
-      "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
+      "After a January 30, 2016 CouncilStat / constituent-services hackathon context and the full CouncilStat release, residents still needed a clearer public-facing pathway from issue to relevant civic context or next step.",
     whatBecameUsable:
-      "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+      "An archived independent civic-tech prototype that organized CouncilStat records into issue pathways, district context, and resident-facing guidance while making its unofficial status visible.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -303,7 +303,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "A civic-data interpretation layer built as an independent follow-on after the complete CouncilStat dataset release.",
         type: "map"
       },
       {
@@ -337,26 +337,27 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, recovered Civic Hall / NYC Council event context, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe source summaries.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Archived independent prototype; no current-service claim.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Built as an independent follow-on after a January 30, 2016 CouncilStat / constituent-services hackathon context",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Covered by Politico New York in 2016",
+      "Treated recorded case counts as activity records, not simple office-performance rankings"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC translated CouncilStat / constituent-services records into issue pathways and resident-facing guidance as an archived independent prototype with 2016 Politico New York coverage.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "Additional screenshots, archive links, and image rights require separate review before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }

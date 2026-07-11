@@ -1,0 +1,32 @@
+[
+  {
+    "id": "callnyc-2016-event-and-follow-on-correction",
+    "claimIds": [
+      "callnyc-hackathon-date-time",
+      "callnyc-hackathon-branding",
+      "callnyc-digital-district-breakout",
+      "callnyc-independent-follow-on"
+    ],
+    "pageIds": [
+      "callnyc",
+      "technical-operations"
+    ],
+    "priorWording": "CallNYC was previously described with an inaccurate multi-year range, generic civic-data hackathon context, ambiguous Digital District wording, and a possible implication that the project was built at the hackathon.",
+    "revisedWording": "CallNYC 2016; January 30, 2016, 1-3 p.m. Civic Hall / New York City Council constituent-services CouncilStat hackathon; Digital District as participant-archive breakout wording; CallNYC as an independent follow-on after the complete CouncilStat release.",
+    "reason": "Recovered contemporaneous Civic Hall and NYC Council evidence, participant-archive evidence, bounded Wayback research, public repository context, and 2016 coverage support a more precise chronology and require stronger anti-claims.",
+    "sourceIds": [
+      "civic-hall-social-post-2016",
+      "nyc-council-social-post-2016",
+      "nyc-council-hackathon-graphic-2016",
+      "civic-hall-wayback-2016-01-31",
+      "participant-photo-digital-district-2016",
+      "research-run-civic-hall-cdx-2026",
+      "callnyc-politico-2016",
+      "callnyc-github-repository"
+    ],
+    "correctedAt": "2026-07-11",
+    "reviewedBy": [
+      "Jamie Burkart"
+    ]
+  }
+]

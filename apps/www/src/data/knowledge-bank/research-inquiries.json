@@ -1,0 +1,48 @@
+[
+  {
+    "id": "callnyc-dedicated-event-page",
+    "subject": "January 2016 Civic Hall / NYC Council hackathon",
+    "question": "Was there a dedicated Civic Hall event-detail page or registration listing for the January 30, 2016 CouncilStat hackathon?",
+    "status": "open",
+    "relatedSourceIds": [
+      "civic-hall-wayback-2016-01-31",
+      "research-run-civic-hall-cdx-2026"
+    ],
+    "relatedClaimIds": [
+      "civic-hall-calendar-listing-not-recovered"
+    ],
+    "whatWouldResolveIt": "A recoverable event-detail page, registration capture, Civic Hall CMS export, or collaborator confirmation identifying the canonical listing.",
+    "publicProjection": "qualified-note",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-facilitation",
+    "subject": "Digital District breakout",
+    "question": "Who facilitated Digital District, what other breakout tracks existed, and what was the complete breakout roster?",
+    "status": "open",
+    "relatedSourceIds": [
+      "participant-photo-digital-district-2016"
+    ],
+    "relatedClaimIds": [
+      "callnyc-digital-district-breakout"
+    ],
+    "whatWouldResolveIt": "A public agenda, facilitator notes, participant packet, or collaborator confirmation that can be safely cited.",
+    "publicProjection": "qualified-note",
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-rsvp-form-contents",
+    "subject": "Unavailable Civic Hall RSVP form",
+    "question": "What did the unavailable RSVP form contain, and did it use a more precise title than the recovered social and graphic evidence?",
+    "status": "open",
+    "relatedSourceIds": [
+      "research-run-civic-hall-cdx-2026"
+    ],
+    "relatedClaimIds": [
+      "callnyc-hackathon-branding"
+    ],
+    "whatWouldResolveIt": "A recoverable Google Form capture, organizer export, or contemporaneous registration email.",
+    "publicProjection": "none",
+    "lastReviewedAt": "2026-07-11"
+  }
+]
