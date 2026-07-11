@@ -1,12 +1,29 @@
+import { Cite, References } from "@/components/citations";
+import { createCitationScope } from "@/lib/citations/scope";
+
+export const callnycCitationIds = [
+  "callnyc-hackathon-announced-date-time",
+  "callnyc-first-councilstat-hackathon",
+  "callnyc-independent-follow-on",
+  "callnyc-councilstat-usage-varied"
+];
+
+export const callnycCitations = createCitationScope(
+  "callnyc",
+  callnycCitationIds
+);
+
 ## Context
 
-CallNYC.org was an archived civic-data prototype built after a New York City Council civic-data hackathon. The project explored how constituent-services open data could become clearer resident-facing guidance.
+On January 30, 2016, the New York City Council convened a constituent-services hackathon at Civic Hall. Civic Hall announced the event for 1-3 p.m.<Cite scope={callnycCitations} claimId="callnyc-hackathon-announced-date-time" /> An event-day Council post identified the gathering as the Council's first CouncilStat hackathon.<Cite scope={callnycCitations} claimId="callnyc-first-councilstat-hackathon" /> Participants previewed constituent-services data and considered how district-office operations and the dataset itself could become more usable. After the fuller CouncilStat data was publicly released, Jamie independently developed CallNYC.org as an archived, unofficial resident-facing interpretation of the records.<Cite scope={callnycCitations} claimId="callnyc-independent-follow-on" />
 
 The public problem was familiar: data existed, but the path from a resident's issue to a useful next step was not always easy to see. A spreadsheet or dataset can be technically public and still be hard for a person to use.
 
 ## What was unclear
 
 Constituent-services data carried civic signal, but residents needed a translation layer. What issue is this? Which office or district context might matter? What next step is reasonable? What should be treated as general guidance rather than official service direction?
+
+Because district offices used CouncilStat differently and with different frequency, the records could not responsibly be treated as a standardized measure of office performance.<Cite scope={callnycCitations} claimId="callnyc-councilstat-usage-varied" />
 
 The project also needed a strong disclaimer. CallNYC was not an official City Council service, not a current civic service, not legal guidance, and not a replacement for emergency or agency channels. It was a civic-tech prototype exploring how public data could be made more navigable.
 
@@ -32,7 +49,7 @@ For product and operations teams, the transferable pattern is the same one visib
 
 The project was a historical civic-tech demo built from CouncilStat / constituent-services open data. It included public issue pages, resident-facing guidance, and civic-data interpretation after a New York City Council civic-data hackathon.
 
-Politico New York covered CallNYC in 2016 as a website for exploring City Council constituent-services data. Public-safe screenshots and additional archive links should still be confirmed before launch.
+Politico New York documented Jamie's participation and independent CallNYC follow-on after the full data release. Public-safe screenshots, participant-photo publication, the full official event title, agenda, breakout roster, and registration contents remain unresolved or approval-gated.
 
 ## Transferable proof
 
@@ -41,3 +58,5 @@ This case matters for civic technology and public-facing tools because it shows 
 It matters for product operations because the work moved from dataset to user pathway, with disclaimers and scope boundaries built into the surface.
 
 It matters for implementation because it demonstrates a small but complete civic prototype: data source, information architecture, interface, and public-safe guidance.
+
+<References scope={callnycCitations} />
