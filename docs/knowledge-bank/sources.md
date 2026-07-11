@@ -42,6 +42,21 @@ personal or financial material.
 
 AI-assisted archival review is not a human collaborator testimonial.
 
+### Curated Visual Archive Review
+
+A local-only review of photographs using visible content, existing archive
+provenance, recursive editorial evaluation, and explicit safety holds.
+
+This source class can establish that a visible environment, artifact, public
+action, or material trace exists in the archive. By itself it does not
+establish Jamie's authorship, causality, sole leadership, an exact project
+metric, participant consent, caption accuracy, copyright ownership, or approval
+for website publication.
+
+Only aggregate, public-safe findings belong in this repo. Original photographs,
+private album names, face data, private locations, handwritten records, and
+unapproved participant identities remain outside it.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for
@@ -67,5 +82,7 @@ collaborators approve.
 - unapproved screenshots;
 - unapproved quotes;
 - unapproved photos;
+- face associations or inferred identities;
+- exact private locations or private album inventories;
 - private financial records;
 - private personal records.

@@ -30,8 +30,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Use stewardship and contribution language.  
 **Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
 **Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
+**Visual evidence note:** The July 2026 whole-library review did not yield a defensible HJE-specific photo set. Keep this claim anchored in the approved resume, public business context, and stronger project records.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
@@ -60,8 +61,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Always describe it as archived and unofficial.
 **Do not say:** Current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
+**Visual evidence note:** The July 2026 whole-library review did not yield a defensible CallNYC-specific photo set. Prefer the public prototype, repository, and coverage as proof.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
@@ -120,8 +122,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
+**Visual evidence note:** The July 2026 review found substantial storefront, public-action, campaign-sign, meeting, and coalition-setting coverage. It supports context and documented presence, not sole authorship or policy causality.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-11
 
 ## wowlist-community-platform - Followable community platform
 
@@ -135,8 +138,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
 **Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
+**Visual evidence note:** No explicit WOW List provenance survived the July 2026 visual review. Do not relabel broad cultural-event photographs as WOW List evidence.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
@@ -150,8 +154,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
+**Visual evidence note:** The July 2026 review found a strong person-free material record of rooms, food, tables, candles, storage, and continuity work. It does not establish the 300+ gathering metric or participant consent.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -180,8 +185,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
 **Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Visual evidence note:** The July 2026 review found one defensible exterior/building-orientation frame. It supports place context only, not Jamie's role, funding status, or project outcome.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## source-backed-team-memory-method - Source-backed team memory
 
@@ -195,8 +201,9 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
+**Visual evidence note:** The July 2026 review did not yield a defensible project-specific photo set. Prefer public-safe diagrams and method artifacts.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## technical-operations-operating-backbone - Operating backbone
 
@@ -210,8 +217,24 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  
 **Do not say:** Jamie is a certified PMP unless separately approved; Jamie replaces product, engineering, legal, or executive judgment.  
 **Protected boundaries:** Private client materials, internal health metrics, HR context, and confidential team information stay offline.  
+**Visual evidence note:** The July 2026 review found only three defensible screen- or presentation-based frames for the project-specific Technical Operations view. Photographs are supporting context; screenshots, diagrams, public artifacts, and project records remain primary proof.
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
+
+## professional-practice-visual-environments - Systems work in lived environments
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Curated visual archive review / public-safe archive summary
+**Public wording:** A curated visual review documents recurring environments around Jamie's work: public meetings, storefront campaigns, shared working rooms, hospitality infrastructure, and material production.
+**Detailed public-safe wording:** The archive gives Jamie's operating practice a concrete visual vocabulary through people using rooms, storefront and campaign documentation, screens and working materials, prepared tables, buildings, and production tools.
+**Where to project:** Internal-only until individual images receive publication review.
+**Why it matters:** Makes the relationship among people, places, artifacts, and operating structure legible without forcing every photograph into a project claim.
+**Guardrail:** Photographs may establish visible context but not authorship, causality, sole leadership, exact metrics, consent, rights, or permission to publish.
+**Do not say:** The photo archive proves every portfolio claim; every pictured event was Jamie's project; inclusion in the editor field grants publication rights; Jamie authored every pictured artifact.
+**Protected boundaries:** Original private photographs, private album inventories, face associations, exact private locations, handwritten records, private-message imagery, unapproved participant identities, and safety HOLD contents stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-11
 
 ## ai-evals-professional-development - AI evals professional development
 

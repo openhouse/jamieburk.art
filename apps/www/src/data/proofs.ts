@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "curated-visual-archive-review"
   | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
@@ -80,6 +81,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
+    sourceNote:
+      "The July 2026 whole-library visual review did not yield a defensible HJE-specific photo set. Keep this claim anchored in the approved resume, public business context, and stronger project records.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
       "Jamie fully owned the business",
@@ -97,7 +100,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "hje-revenue-growth-contribution",
@@ -143,6 +146,8 @@ export const proofClaims: ProofClaim[] = [
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
       "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+    sourceNote:
+      "The July 2026 whole-library visual review did not yield a defensible CallNYC-specific photo set. Prefer the public prototype, repository, and coverage as proof.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -154,7 +159,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",
@@ -274,6 +279,8 @@ export const proofClaims: ProofClaim[] = [
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
       "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+    sourceNote:
+      "A July 2026 curated visual review found substantial storefront, public-action, campaign-sign, meeting, and coalition-setting coverage. The photographs support context and documented presence, not sole authorship or policy causality.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -300,7 +307,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "wowlist-community-platform",
@@ -317,6 +324,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceNote:
+      "No explicit WOW List provenance survived the July 2026 curated visual review. Do not relabel broad cultural-event photographs as WOW List evidence.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -334,7 +343,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",
@@ -351,6 +360,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceNote:
+      "A July 2026 curated visual review found a strong person-free material record of rooms, food, tables, candles, storage, and continuity work. It does not establish the 300+ gathering metric or participant consent.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -369,7 +380,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -429,6 +440,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
     sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+    sourceNote:
+      "A July 2026 curated visual review found one defensible exterior/building-orientation frame. It supports place context only, not Jamie's role, funding status, or project outcome.",
     guardrail:
       "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
     doNotSay: [
@@ -447,7 +460,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "source-backed-team-memory-method",
@@ -460,6 +473,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
     sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceNote:
+      "The July 2026 whole-library visual review did not yield a defensible project-specific photo set. Prefer public-safe diagrams and method artifacts.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -476,7 +491,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -489,6 +504,8 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
+    sourceNote:
+      "A July 2026 curated visual review found only three defensible screen- or presentation-based frames for the project-specific Technical Operations view. Photographs are supporting context; screenshots, diagrams, public artifacts, and project records remain primary proof.",
     whyItMatters:
       "Names the role fit across product operations, implementation, technical project management, and public-facing delivery.",
     guardrail:
@@ -506,7 +523,52 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
+  },
+  {
+    id: "professional-practice-visual-environments",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["curated-visual-archive-review", "public-safe-archive-summary"],
+    publicWording:
+      "A curated visual review documents recurring environments around Jamie's work: public meetings, storefront campaigns, shared working rooms, hospitality infrastructure, and material production.",
+    shortWording: "Systems work made visible through rooms, artifacts, and public settings",
+    detailedPublicWording:
+      "The archive gives Jamie's operating practice a concrete visual vocabulary through people using rooms, storefront and campaign documentation, screens and working materials, prepared tables, buildings, and production tools.",
+    sourceBasis:
+      "Public-safe aggregate findings from a July 2026 local-only whole-library visual review with recursive evaluation and a separate safety HOLD.",
+    sourceNote:
+      "This is contextual visual evidence. It is not image-level publication approval and does not replace project records, public artifacts, or collaborator testimony.",
+    whyItMatters:
+      "Makes the relationship among people, places, artifacts, and operating structure legible without forcing every photograph into a project claim.",
+    guardrail:
+      "Use internally until individual images receive caption, consent, credit, rights, crop, and accessibility review. Photographs may establish visible context but not authorship, causality, sole leadership, exact metrics, or permission to publish.",
+    doNotSay: [
+      "The photo archive proves every portfolio claim",
+      "Every pictured event was Jamie's project",
+      "Inclusion in the editor field grants publication rights",
+      "A pictured environment proves Jamie authored every visible artifact"
+    ],
+    protectedBoundaries: [
+      "Original private photographs",
+      "Private album inventories",
+      "Face associations",
+      "Exact private locations",
+      "Handwritten records",
+      "Private-message imagery",
+      "Unapproved participant identities",
+      "Safety HOLD contents"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["fair-rent-nyc", "196-sunday-dinner", "kc-town-hall"],
+    relatedCapabilities: [
+      "implementation",
+      "facilitation",
+      "documentation",
+      "hospitality-infrastructure",
+      "material-production"
+    ],
+    lastReviewed: "2026-07-11"
   },
   {
     id: "ai-evals-professional-development",

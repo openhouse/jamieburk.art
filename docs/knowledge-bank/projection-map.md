@@ -54,3 +54,13 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Photographs
+
+Use `visual-evidence.md` before selecting a photograph. An editor-field image
+may become a website candidate only after image-specific caption, consent,
+credit, rights, crop, and accessibility review.
+
+Photographs may support orientation, visible proof, or human stakes. They must
+not silently strengthen a claim from contribution to sole authorship, from
+presence to causality, or from archive access to publication consent.

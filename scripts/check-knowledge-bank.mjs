@@ -22,7 +22,8 @@ const requiredProofIds = [
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
   "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "source-backed-team-memory-method",
+  "professional-practice-visual-environments"
 ];
 
 const requiredWorkProofs = new Map([
@@ -299,6 +300,7 @@ for (const requiredDoc of [
   "review-checklist.md",
   "anti-claims.md",
   "public-safety.md",
+  "visual-evidence.md",
   "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {
