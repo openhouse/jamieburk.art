@@ -1,0 +1,23 @@
+[
+  {
+    "id": "callnyc-digital-district-participant-photo",
+    "kind": "photograph",
+    "title": "CallNYC hackathon participant photograph with restricted location-label evidence",
+    "visibility": "protected",
+    "eventAssociation": "January 30, 2016 New York City Council CouncilStat hackathon at Civic Hall",
+    "visibleEvidence": [
+      "participant setting",
+      "restricted location-label wording"
+    ],
+    "rightsStatus": "pending-rights-review",
+    "consentStatus": "pending-consent-review",
+    "publicationStatus": "pending-rights",
+    "cropRestrictions": [
+      "Do not publish faces or identifying participant details before consent review",
+      "Do not crop or caption in a way that implies an official event title"
+    ],
+    "protectedPeople": [
+      "recognizable participants"
+    ]
+  }
+]

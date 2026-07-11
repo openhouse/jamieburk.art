@@ -1,9 +1,15 @@
 import claimsJson from "@/data/knowledge-bank/claims.json";
+import correctionsJson from "@/data/knowledge-bank/corrections.json";
+import mediaJson from "@/data/knowledge-bank/media.json";
 import pageCitationsJson from "@/data/knowledge-bank/page-citations.json";
+import researchRunsJson from "@/data/knowledge-bank/research-runs.json";
 import sourcesJson from "@/data/knowledge-bank/sources.json";
 import {
   claimRecordSchema,
+  correctionRecordSchema,
+  mediaRecordSchema,
   pageCitationsSchema,
+  researchRunRecordSchema,
   sourceRecordSchema,
   type ClaimRecord,
   type SourceRecord
@@ -11,6 +17,9 @@ import {
 
 export const citationSources = sourceRecordSchema.array().parse(sourcesJson);
 export const citationClaims = claimRecordSchema.array().parse(claimsJson);
+export const citationMedia = mediaRecordSchema.array().parse(mediaJson);
+export const citationResearchRuns = researchRunRecordSchema.array().parse(researchRunsJson);
+export const citationCorrections = correctionRecordSchema.array().parse(correctionsJson);
 export const pageCitations = pageCitationsSchema.parse(pageCitationsJson);
 
 const sourceById = new Map(citationSources.map((source) => [source.id, source]));

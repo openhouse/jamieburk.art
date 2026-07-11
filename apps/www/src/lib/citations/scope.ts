@@ -14,14 +14,15 @@ function normalizeScopeKey(key: string) {
 
 export function createCitationScope(key: string, claimIds: readonly string[]): CitationScope {
   const normalizedKey = normalizeScopeKey(key);
+  const firstAppearanceClaimIds = [...new Set(claimIds)];
   const numberByClaimId = Object.fromEntries(
-    claimIds.map((claimId, index) => [claimId, index + 1])
+    firstAppearanceClaimIds.map((claimId, index) => [claimId, index + 1])
   );
 
   return {
     key: normalizedKey,
-    claimIds: [...claimIds],
-    claims: claimIds.map((claimId) => getCitationClaim(claimId)),
+    claimIds: firstAppearanceClaimIds,
+    claims: firstAppearanceClaimIds.map((claimId) => getCitationClaim(claimId)),
     numberByClaimId
   };
 }

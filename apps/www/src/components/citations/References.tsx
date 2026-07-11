@@ -24,8 +24,9 @@ export function References({ scope }: ReferencesProps) {
     <section
       aria-labelledby={`references-${scope.key}-heading`}
       className="references-section"
+      role="doc-bibliography"
     >
-      <h2 id={`references-${scope.key}-heading`}>References</h2>
+      <h2 id={`references-${scope.key}-heading`}>Notes &amp; sources</h2>
       <ol className="references-list">
         {scope.claims.map((claim) => {
           const number = getCitationNumber(scope, claim.id);
@@ -82,6 +83,7 @@ export function References({ scope }: ReferencesProps) {
                 aria-label={`Back to citation ${number}`}
                 className="reference-backlink"
                 href={`#${citationId}`}
+                role="doc-backlink"
               >
                 Back to citation {number} ↩
               </a>

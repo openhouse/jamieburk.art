@@ -19,6 +19,7 @@ export function Cite({ scope, claimId, label }: CiteProps) {
         aria-label={label ?? `Citation ${number}: ${claim.publicText}`}
         href={`#${referenceId}`}
         id={citationId}
+        role="doc-noteref"
       >
         {number}
       </a>

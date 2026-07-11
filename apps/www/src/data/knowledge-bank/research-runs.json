@@ -1,0 +1,12 @@
+[
+  {
+    "id": "callnyc-civic-hall-event-page-negative-search-2026-07-11",
+    "question": "Can a dedicated Civic Hall calendar or event-detail page for the January 30, 2016 CouncilStat hackathon be recovered?",
+    "method": "Reviewed archived Civic Hall event captures and related public source trails for the event, distinguishing embedded social-feed carriers from dedicated event pages.",
+    "scope": "4,630 deduplicated HTML captures, 1,240 original URLs, 296 distinct event URL keys, 215 successful event pages, 74 redirects, and 7 captured 404s.",
+    "performedAt": "2026-07-11",
+    "result": "No dedicated Civic Hall calendar listing or event-detail page was recovered. The Wayback source used publicly is an embedded-social-feed carrier.",
+    "limitation": "Non-recovery is not proof that no dedicated listing ever existed.",
+    "publicProjection": "summary"
+  }
+]

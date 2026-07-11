@@ -105,5 +105,23 @@
       "Current constituent-service accuracy",
       "Current officeholders or contact information"
     ]
+  },
+  {
+    "id": "callnyc-digital-district-participant-photo",
+    "type": "participant-photo",
+    "publisher": "Private Jamie Burkart archive",
+    "title": "Participant photograph with restricted location-label evidence",
+    "dateAccessed": "2026-07-11",
+    "availability": "private",
+    "publicVisibility": "protected",
+    "scopeNote": "Protected internal evidence for a location-label research question. The file path, image, faces, and caption are intentionally withheld pending rights and consent review.",
+    "doesNotSupport": [
+      "Permission to publish the photograph",
+      "Permission to identify recognizable participants",
+      "A formal event title",
+      "A public source link"
+    ],
+    "rightsStatus": "pending-rights-review",
+    "consentStatus": "pending-consent-review"
   }
 ]

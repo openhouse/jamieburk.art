@@ -112,6 +112,7 @@
         "note": "The article reports the Council's caution about differing office usage and frequency."
       }
     ],
+    "caveat": "This supports interpretive caution about CouncilStat comparability; it is not a criticism of any individual Council office.",
     "antiClaims": [
       "Higher CouncilStat counts measured better service.",
       "The dataset was complete or consistently entered across offices."
@@ -119,6 +120,28 @@
     "projectedPages": [
       "/work/callnyc"
     ],
+    "lastReviewedAt": "2026-07-11"
+  },
+  {
+    "id": "callnyc-digital-district-protected",
+    "projectId": "callnyc",
+    "publicText": "Protected internal research note about location-label evidence in a participant photograph.",
+    "status": "do-not-publish",
+    "confidence": "low",
+    "evidence": [
+      {
+        "sourceId": "callnyc-digital-district-participant-photo",
+        "relation": "supports",
+        "note": "The private photograph may support a bounded internal research question, but it is not public evidence and cannot be projected without rights and consent approval."
+      }
+    ],
+    "caveat": "Do not render this claim publicly until source rights, consent, crop, caption, and attribution are approved.",
+    "antiClaims": [
+      "The photograph is public evidence.",
+      "The location-label wording is an official event title.",
+      "Recognizable participants may be published without review."
+    ],
+    "projectedPages": [],
     "lastReviewedAt": "2026-07-11"
   },
   {
