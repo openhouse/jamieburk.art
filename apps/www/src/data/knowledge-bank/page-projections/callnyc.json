@@ -1,0 +1,17 @@
+{
+  "page": "/work/callnyc",
+  "occurrences": [
+    {
+      "citationKey": "event-context",
+      "citationGroupId": "CALLNYC-NOTE-01"
+    },
+    {
+      "citationKey": "digital-district",
+      "citationGroupId": "CALLNYC-NOTE-02"
+    },
+    {
+      "citationKey": "independent-follow-on",
+      "citationGroupId": "CALLNYC-NOTE-03"
+    }
+  ]
+}

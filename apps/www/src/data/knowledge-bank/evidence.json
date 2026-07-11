@@ -1,0 +1,110 @@
+[
+  {
+    "id": "EVD-CALLNYC-CIVICHALL-ANNOUNCEMENT",
+    "claimId": "CLM-CALLNYC-EVENT-DATE-TIME",
+    "target": {
+      "kind": "source",
+      "id": "SRC-CIVICHALL-X-693124020917522433"
+    },
+    "relationship": "direct",
+    "supports": "Civic Hall's announcement supports the January 30, 2016 date, 1-3 p.m. advertised time, and constituent-services focus.",
+    "doesNotSupport": [
+      "A formal full agenda",
+      "The full participant roster",
+      "CallNYC as an official Council project"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-NYCC-COUNCILSTAT",
+    "claimId": "CLM-CALLNYC-FIRST-COUNCILSTAT",
+    "target": {
+      "kind": "source",
+      "id": "SRC-NYCC-X-693509031768506368"
+    },
+    "relationship": "direct",
+    "supports": "The New York City Council described the event-day gathering as its first CouncilStat hackathon.",
+    "doesNotSupport": [
+      "The broader phrase \"first civic-data hackathon\"",
+      "Any claim that CallNYC was commissioned by the Council"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-PROMOTIONAL-GRAPHIC",
+    "claimId": "CLM-CALLNYC-EVENT-BRANDING",
+    "target": {
+      "kind": "asset",
+      "id": "ASSET-CIVICHALL-GRAPHIC-CZ5M"
+    },
+    "relationship": "visible-text",
+    "supports": "Visible text on the promotional graphic reads \"New York City Council Hackathon.\"",
+    "doesNotSupport": [
+      "A longer formal registration title",
+      "The title of every breakout"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+    "claimId": "CLM-CALLNYC-DIGITAL-DISTRICT",
+    "target": {
+      "kind": "asset",
+      "id": "ASSET-PHOTO-DIGITAL-DISTRICT-001"
+    },
+    "relationship": "visible-text",
+    "supports": "Visible placard text in a private participant photograph reads \"Digital District - Help improve City Council District office operations.\"",
+    "doesNotSupport": [
+      "The official title of the whole event",
+      "The full agenda",
+      "The event start time",
+      "Publication permission for the photograph"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-POLITICO-FOLLOWON",
+    "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOWON",
+    "target": {
+      "kind": "source",
+      "id": "SRC-POLITICO-NEUBAUER-2016-03-14"
+    },
+    "relationship": "direct",
+    "supports": "The March 2016 reporting supports Jamie's attendance at the January event, the later full data release, and CallNYC as a public-facing interpretation of the administrative data.",
+    "doesNotSupport": [
+      "Official Council ownership",
+      "A formal Council commission",
+      "Current civic guidance"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-GITHUB-FOLLOWON",
+    "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOWON",
+    "target": {
+      "kind": "source",
+      "id": "SRC-CALLNYC-GITHUB"
+    },
+    "relationship": "corroborating",
+    "supports": "The public repository supports the existence and independent implementation context of CallNYC.",
+    "doesNotSupport": [
+      "The event schedule",
+      "Institutional claims about the Council"
+    ],
+    "publicSafe": true
+  },
+  {
+    "id": "EVD-CALLNYC-CIVICHALL-CDX-NOT-RECOVERED",
+    "claimId": "CLM-CALLNYC-CIVICHALL-PAGE-NOT-RECOVERED",
+    "target": {
+      "kind": "research-run",
+      "id": "RUN-CIVICHALL-CDX-2026-07"
+    },
+    "relationship": "documented-search-result",
+    "supports": "The documented CDX research did not recover a dedicated Civic Hall calendar listing or event-detail page.",
+    "doesNotSupport": [
+      "That no event page ever existed"
+    ],
+    "publicSafe": true
+  }
+]

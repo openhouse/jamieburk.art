@@ -1,0 +1,139 @@
+[
+  {
+    "id": "CLM-CALLNYC-EVENT-DATE-TIME",
+    "canonical": "Civic Hall announced a New York City Council hackathon focused on constituent services for January 30, 2016, from 1-3 p.m.",
+    "status": "verified",
+    "confidence": "high",
+    "publicWording": {
+      "portfolio": "Civic Hall advertised the January 30, 2016 session for 1-3 p.m."
+    },
+    "caveats": [],
+    "prohibitedWording": [
+      "The participant photo timestamp proves when the event began."
+    ],
+    "allowedSurfaces": [
+      "/work/callnyc"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    "id": "CLM-CALLNYC-FIRST-COUNCILSTAT",
+    "canonical": "The New York City Council described the January 30 gathering as its first CouncilStat hackathon.",
+    "status": "verified-attribution",
+    "confidence": "high",
+    "publicWording": {
+      "portfolio": "The Council described the gathering as its first CouncilStat hackathon."
+    },
+    "caveats": [
+      "Keep the statement attributed to the Council."
+    ],
+    "prohibitedWording": [
+      "The Council's first civic-data hackathon.",
+      "New York City's first civic-technology hackathon."
+    ],
+    "allowedSurfaces": [
+      "/work/callnyc"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    "id": "CLM-CALLNYC-EVENT-BRANDING",
+    "canonical": "A promotional graphic attached to Civic Hall's announcement bears the title \"New York City Council Hackathon.\"",
+    "status": "verified-visible-text",
+    "confidence": "high",
+    "publicWording": {
+      "knowledgeBank": "The event's recovered promotional graphic reads \"New York City Council Hackathon.\""
+    },
+    "caveats": [
+      "This is recovered branding, not proof of a longer formal registration title."
+    ],
+    "prohibitedWording": [
+      "New York City Council Hackathon was the complete official registration title."
+    ],
+    "allowedSurfaces": [
+      "knowledge-bank",
+      "public-citation-note"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    "id": "CLM-CALLNYC-DIGITAL-DISTRICT",
+    "canonical": "A participant photograph documents a breakout table labeled \"Digital District - Help improve City Council District office operations.\"",
+    "status": "verified-visible-text",
+    "confidence": "high",
+    "publicWording": {
+      "portfolio": "A participant photograph documents a breakout labeled \"Digital District - Help improve City Council District office operations.\""
+    },
+    "caveats": [
+      "\"Digital District\" is supported as a breakout/table label, not the title of the whole event."
+    ],
+    "prohibitedWording": [
+      "The hackathon was officially titled Digital District.",
+      "Digital District was the event's only breakout.",
+      "Digital District was the official event title."
+    ],
+    "allowedSurfaces": [
+      "/work/callnyc"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    "id": "CLM-CALLNYC-INDEPENDENT-FOLLOWON",
+    "canonical": "After the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a public-facing interpretation of the administrative data.",
+    "status": "verified",
+    "confidence": "high",
+    "publicWording": {
+      "portfolio": "After the full CouncilStat dataset was released, Jamie independently developed CallNYC.org as a resident-facing interpretation of the administrative data.",
+      "technicalOperations": "Participated in a Council constituent-services data workshop, identified usability and interpretation constraints, and independently delivered a public-facing civic-data prototype after the complete dataset was released."
+    },
+    "caveats": [
+      "CallNYC was not an official Council product and is not documented as a formal hackathon submission."
+    ],
+    "prohibitedWording": [
+      "CallNYC was commissioned by the New York City Council.",
+      "CallNYC was the official hackathon product.",
+      "CallNYC was completed during the hackathon.",
+      "CallNYC was created at the hackathon",
+      "CallNYC was commissioned by the Council"
+    ],
+    "allowedSurfaces": [
+      "/work/callnyc",
+      "/work/technical-operations"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  },
+  {
+    "id": "CLM-CALLNYC-CIVICHALL-PAGE-NOT-RECOVERED",
+    "canonical": "No Civic Hall calendar listing or dedicated event-detail page was recovered in the documented CDX search.",
+    "status": "supported-negative-search-finding",
+    "confidence": "medium",
+    "publicWording": {
+      "knowledgeBank": "No dedicated Civic Hall event page has been recovered within the documented search."
+    },
+    "caveats": [
+      "The search result does not prove that no page ever existed."
+    ],
+    "prohibitedWording": [
+      "Civic Hall never published an event page.",
+      "No Civic Hall event page existed.",
+      "Civic Hall never had an event page"
+    ],
+    "allowedSurfaces": [
+      "knowledge-bank",
+      "public-citation-note"
+    ],
+    "relatedProofIds": [
+      "callnyc-civic-data-guidance"
+    ]
+  }
+]

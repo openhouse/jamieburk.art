@@ -29,6 +29,9 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -42,10 +45,16 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
+
+The structured citational-care layer in `apps/www/src/data/knowledge-bank/`
+connects sources, assets, claims, evidence, research runs, corrections, citation
+groups, and page projections. It is intentionally app-local for V1. See
+`docs/citational-care.md`.
 
 The knowledge bank is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,
@@ -55,8 +64,12 @@ photos, unapproved screenshots, or unapproved quotes.
 There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
-`npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run check:citations` checks structured citation integrity, public/private
+boundaries, and stale public wording. `npm run test:citations` verifies
+page-local numbering and citation behavior. `npm run report:citations` writes a
+public-safe report to `reports/citations.md`. `npm run knowledge-bank` checks the
+proof schema, projection rules, and work metadata. `npm run check:routes` checks
+canonical routes and legacy redirects.
 
 ## Environment
 

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "CORR-CALLNYC-YEARS-001",
+    "surface": "/work/callnyc",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "Civic Hall evidence, New York City Council evidence, participant archive evidence, project chronology, public repository context, and contemporaneous reporting place the event and CallNYC development in 2016.",
+    "supportingClaimIds": [
+      "CLM-CALLNYC-EVENT-DATE-TIME",
+      "CLM-CALLNYC-FIRST-COUNCILSTAT",
+      "CLM-CALLNYC-INDEPENDENT-FOLLOWON"
+    ],
+    "status": "resolved",
+    "resolvedAt": "2026-07-11"
+  }
+]

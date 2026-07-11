@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { Cite, References } from "@/components/citations";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { technicalOperationsProjection } from "@/data/knowledge-bank";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
@@ -28,8 +30,18 @@ const proofMap = [
   },
   {
     project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+    proof: (
+      <>
+        Participated in a Council constituent-services data workshop, identified
+        usability and interpretation constraints, and independently delivered a
+        public-facing civic-data prototype after the complete dataset was
+        released.
+        <Cite
+          projection={technicalOperationsProjection}
+          citationKey="callnyc-independent-follow-on"
+        />
+      </>
+    )
   },
   {
     project: "WOWList",
@@ -103,6 +115,7 @@ export default function TechnicalOperationsPage() {
               </div>
             ))}
           </dl>
+          <References projection={technicalOperationsProjection} heading="Sources and notes" />
         </JBCard>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">

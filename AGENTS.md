@@ -24,6 +24,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run lint`
 - `npm run build`
 - `npm run check`
+- `npm run check:citations`
+- `npm run test:citations`
+- `npm run report:citations`
 - `npm run knowledge-bank`
 - `npm run public-safety`
 - `npm run check:routes`
@@ -45,6 +48,11 @@ When uncertain, write: `TODO: Jamie approval required.`
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
 
+Use `apps/www/src/data/knowledge-bank/` for structured citational care when a
+page needs same-page notes tied to specific claims. The model is Source, Asset,
+Claim, Evidence, ResearchRun, Correction, CitationGroup, and PageProjection.
+Public pages use page projections, not raw evidence browsing.
+
 Website copy should project from the knowledge bank and stay optimized for
 clarity, audience, and purpose.
 
@@ -57,6 +65,11 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+Do not publish private source paths, private images, private photo metadata, raw
+research artifacts, or restricted citation groups. Private evidence may support a
+public-safe description only when the citation group has a boundary note and the
+public page publishes no private file path or asset URL.
 
 ## Chad Lens
 
