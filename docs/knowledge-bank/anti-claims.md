@@ -31,6 +31,16 @@ lists, or source documents that were not approved for public use.
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+Do not describe the event as the Council's first civic-data hackathon; the
+recoverable Council language is narrower: its first CouncilStat hackathon.
+Do not imply Digital District was the full event title or that the participant
+photograph timestamp was the event start time.
+Do not describe the Wayback capture as a recovered event page.
+Do not imply CallNYC was commissioned, endorsed, adopted, maintained, submitted,
+or awarded by the Council.
+Do not treat CouncilStat case counts as simple measures of office performance,
+quality, specialization, or resident need.
+Do not turn a bounded failure to recover a page into proof that no page existed.
 
 ## WOWList
 

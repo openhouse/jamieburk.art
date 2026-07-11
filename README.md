@@ -28,6 +28,7 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run check:citations
 npm run check
 npm run knowledge-bank
 npm run public-safety
@@ -42,6 +43,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/citations/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -57,6 +59,8 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run check:citations` validates source relationships, citation manifests,
+MDX occurrences, protected-source boundaries, and bounded negative findings.
 
 ## Environment
 
