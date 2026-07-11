@@ -30,6 +30,9 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run public-safety
 npm run check:routes
 npm run preflight:staging
@@ -42,6 +45,8 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/` for source, assertion, evidence,
+  research-run, artifact, correction, citation-note, and page-manifest records
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -57,6 +62,16 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+`npm run check:citations` validates citation relationships and public-use
+boundaries. `npm run test:citations` runs resolver and rights-policy regression
+tests. `npm run report:citations` refreshes the human-readable review report at
+`reports/citations.md`.
+
+Citation authoring is compact: add or reuse an atomic assertion, source, and
+evidence relationship; compose a public citation note; place the note in the
+page manifest; then use `<Cite note="NOTE-ID" occurrence="unique-id" />` and
+`<References />` in MDX. Authors never manage numbers.
 
 ## Environment
 

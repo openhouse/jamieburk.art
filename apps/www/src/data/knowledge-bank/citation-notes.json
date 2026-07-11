@@ -1,0 +1,62 @@
+[
+  {
+    "id": "NOTE-CALL-EVENT-CONTEXT",
+    "title": "January 2016 event context",
+    "evidenceIds": [
+      "EVID-CALL-CIVICHALL-DATE",
+      "EVID-CALL-CIVICHALL-HOURS",
+      "EVID-CALL-CIVICHALL-PURPOSE",
+      "EVID-CALL-NYCCOUNCIL-VENUE",
+      "EVID-CALL-NYCCOUNCIL-FIRST-COUNCILSTAT"
+    ],
+    "publicText": "Civic Hall announced a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services. An event-day Council post placed the gathering at Civic Hall and described it as the Council's first CouncilStat hackathon.",
+    "boundaryNote": "The time range is an announced window. 'First' remains attributed to the Council. The archived carrier preserves embedded social posts and is not a recovered event listing.",
+    "status": "public-ready-with-qualification",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "NOTE-CALL-PROMOTIONAL-BRANDING",
+    "title": "Recovered event branding",
+    "evidenceIds": ["EVID-CALL-PROMOTIONAL-BRANDING"],
+    "publicText": "A New York City Council-branded promotional graphic used the wording 'New York City Council Hackathon.'",
+    "boundaryNote": "The graphic supports recovered event branding, not a longer formal registration title.",
+    "status": "public-ready-with-qualification",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "NOTE-CALL-INDEPENDENT-FOLLOW-ON",
+    "title": "Independent CallNYC follow-on",
+    "evidenceIds": ["EVID-CALL-COUNCIL-DATA-PURPOSE", "EVID-CALL-POLITICO-INDEPENDENT-FOLLOW-ON"],
+    "publicText": "After the complete constituent-services data became public, Jamie independently developed CallNYC.org as a resident-facing interpretation of the records.",
+    "boundaryNote": "CallNYC was not an official Council product, formal hackathon submission, adopted service, or current public service.",
+    "status": "public-ready-with-qualification",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "NOTE-CALL-DATA-LIMITATIONS",
+    "title": "CouncilStat interpretation limits",
+    "evidenceIds": ["EVID-CALL-POLITICO-LIMITATIONS"],
+    "publicText": "Politico reported Council staff's caution that offices used CouncilStat differently and entered information with different frequency.",
+    "boundaryNote": "Recorded case totals cannot be treated as a simple measure of office quality, specialization, or resident need.",
+    "status": "public-ready-with-qualification",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "NOTE-CALL-POLITICO",
+    "title": "Politico New York coverage",
+    "evidenceIds": ["EVID-CALL-POLITICO-COVERAGE"],
+    "publicText": "Politico New York covered CallNYC on March 14, 2016.",
+    "boundaryNote": "Coverage does not establish official Council ownership, adoption, or current-service status.",
+    "status": "public-ready",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "NOTE-CALL-PUBLIC-REPOSITORY",
+    "title": "Public implementation repository",
+    "evidenceIds": ["EVID-CALL-GITHUB-REPOSITORY"],
+    "publicText": "The public GitHub repository preserves the CallNYC implementation history.",
+    "boundaryNote": "Repository existence does not establish official Council status, adoption, or current service availability.",
+    "status": "public-ready",
+    "lastReviewed": "2026-07-11"
+  }
+]

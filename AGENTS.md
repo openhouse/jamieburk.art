@@ -64,6 +64,22 @@ Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
+## Citational Care
+
+- Cite atomic public propositions, not vague paragraphs.
+- Stable IDs live in the knowledge bank; numbers are page-local.
+- The evidence relationship is the epistemic unit.
+- Citation notes are the public presentation unit.
+- A source supports only the assertions named in its evidence records.
+- Preserve attribution and qualifiers.
+- "Not recovered" never means "did not exist."
+- Representative images cannot prove a specific event.
+- Public citation is not permission to expose a private source.
+- Do not expose private paths, raw research output, transcripts, photograph
+  identifiers, or protected locators.
+- Citations must work without JavaScript and be keyboard accessible.
+- Do not add a public knowledge-bank route.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,
