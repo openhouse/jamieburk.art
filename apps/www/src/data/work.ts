@@ -280,9 +280,9 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Independently built an archived civic-data prototype translating constituent-services open data into resident-facing next-step guidance.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -303,7 +303,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "An independent civic-data interpretation layer built after the January 2016 New York City Council CouncilStat hackathon at Civic Hall.",
         type: "map"
       },
       {
@@ -347,7 +347,7 @@ const workItemsInput = [
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Built independently after the January 2016 New York City Council CouncilStat hackathon at Civic Hall",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016"

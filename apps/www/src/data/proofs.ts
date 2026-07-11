@@ -137,12 +137,12 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Independently built CallNYC.org after the January 2016 New York City Council CouncilStat hackathon at Civic Hall, translating constituent-services open data into resident-facing next-step guidance.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "CallNYC knowledge records for the Civic Hall announcement and New York City Council event-day post, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
@@ -154,7 +154,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",
