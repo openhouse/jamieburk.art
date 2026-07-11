@@ -13,6 +13,12 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+Consequential cited claims additionally use the structured JSON/Zod layer in
+`apps/www/src/data/knowledge-bank/`. The existing proof register remains the
+canonical professional-claim layer; citation records add source objects,
+evidence relationships, page projection, and research-run precision rather than
+replacing it.
+
 ## Purpose
 
 The knowledge bank exists to:

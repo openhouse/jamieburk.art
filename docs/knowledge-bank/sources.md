@@ -23,6 +23,7 @@ Approved public artifact examples for this launch pass include:
 - Harry J. Epstein Company public website.
 - CallNYC public GitHub repository.
 - CallNYC archived Politico New York PDF.
+- CallNYC structured citation records in `apps/www/src/data/knowledge-bank/`.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
