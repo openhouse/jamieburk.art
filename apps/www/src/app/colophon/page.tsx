@@ -42,6 +42,20 @@ export default function ColophonPage() {
           </JBCard>
         ))}
       </div>
+      <section className="jb-reading mt-14 border-t-2 border-jb-blue pt-8">
+        <h2 className="text-3xl font-bold text-jb-ink">Citational care</h2>
+        <p className="mt-5 leading-8 text-jb-ink/76">
+          Factual, quantitative, and historical claims on this site are connected,
+          where appropriate, to page-local numbered citations. The underlying
+          knowledge bank records what each source supports, what it does not
+          establish, and what evidence remains protected.
+        </p>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          A citation is not permission to expose a private source. An unavailable
+          source is not silently treated as verified. A source associated with a
+          project is not assumed to support every claim about that project.
+        </p>
+      </section>
     </div>
   );
 }

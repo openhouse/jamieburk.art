@@ -64,6 +64,23 @@ Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
+## Citational Care
+
+- Use stable internal IDs and page-local public citation numbers.
+- Treat evidence relationships, not source lists, as the citation unit.
+- Exact dates, times, quantities, money, "first" claims, official status,
+  historical sequences, quotations, press claims, and institutional outcomes
+  require citations.
+- A source supports only the assertions named in its evidence relationships.
+- "Not recovered" never means "did not exist."
+- Representative images cannot be used as direct proof of a specific event.
+- Preserve original and archived URLs as related links.
+- Do not expose private source files, raw research output, local filesystem
+  paths, private transcripts, or unapproved photographs.
+- Citations must remain understandable, keyboard accessible, and functional
+  without JavaScript.
+- Do not add a public knowledge-bank browser in V1.
+
 ## Scope Rules
 
 Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser,

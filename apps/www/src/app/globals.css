@@ -148,3 +148,75 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-marker {
+  display: inline-flex;
+  gap: 0.08em;
+  margin-inline-start: 0.08em;
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: super;
+  white-space: nowrap;
+}
+
+.citation-marker a {
+  display: inline-block;
+  min-width: 1.4em;
+  padding-block: 0.32em;
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.citation-sources {
+  margin-top: 3rem;
+  border-top: 2px solid var(--jb-broadway-blue);
+  padding-top: 0.75rem;
+}
+
+.citation-sources ol {
+  list-style: decimal;
+  padding-inline-start: 1.75rem;
+}
+
+.citation-reference {
+  margin-block: 1.5rem;
+  border-inline-start: 3px solid transparent;
+  padding: 0.25rem 0.5rem 0.5rem 0.75rem;
+  scroll-margin-top: 7rem;
+}
+
+.citation-reference:target {
+  border-inline-start-color: var(--jb-yellow-ochre);
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 24%, transparent);
+}
+
+.citation-reference p {
+  margin-block: 0.4rem;
+}
+
+.citation-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.citation-status {
+  font-size: 0.9rem;
+}
+
+.citation-backlink {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-weight: 700;
+}
+
+@media print {
+  .citation-sources {
+    display: block;
+  }
+
+  .citation-reference {
+    break-inside: avoid;
+  }
+}

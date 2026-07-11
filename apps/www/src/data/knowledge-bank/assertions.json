@@ -1,0 +1,207 @@
+[
+  {
+    "id": "ASSERT-CALL-EVENT-DATE",
+    "project": "CallNYC",
+    "proposition": "The New York City Council constituent-services hackathon took place on January 30, 2016.",
+    "publicWording": "The event took place on January 30, 2016.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [],
+    "qualifications": [],
+    "allowedSurfaces": ["callnyc-case-study", "photo-caption", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-EVENT-HOURS",
+    "project": "CallNYC",
+    "proposition": "Civic Hall announced the January 30 event for 1–3 p.m.",
+    "publicWording": "Civic Hall announced the session for 1–3 p.m.",
+    "status": "supported-with-attribution",
+    "citationRequired": true,
+    "antiClaims": [
+      "Independent evidence proves the event began at 1 p.m. and ended at 3 p.m.",
+      "2:10 p.m. was the event start time."
+    ],
+    "qualifications": [
+      "The time window comes from Civic Hall's announcement."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "photo-caption", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-EVENT-VENUE",
+    "project": "CallNYC",
+    "proposition": "The January 30, 2016 CouncilStat hackathon took place at Civic Hall.",
+    "publicWording": "The Council convened the event at Civic Hall.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [
+      "The event occurred at an inherited NoMad map pin."
+    ],
+    "qualifications": [],
+    "allowedSurfaces": ["callnyc-case-study", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-CONSTITUENT-SERVICES-PURPOSE",
+    "project": "CallNYC",
+    "proposition": "The January 2016 hackathon previewed CouncilStat constituent-services data and explored how to improve constituent services and data usability.",
+    "publicWording": "Participants previewed CouncilStat constituent-services data and explored how it could become more usable and transparent.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [],
+    "qualifications": [
+      "The Council's retrospective public post is the source for the preview and improvement purpose."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-FIRST-COUNCILSTAT",
+    "project": "CallNYC",
+    "proposition": "The New York City Council described the gathering as its first CouncilStat hackathon.",
+    "publicWording": "The Council described it that day as its first CouncilStat hackathon.",
+    "status": "supported-with-attribution",
+    "citationRequired": true,
+    "antiClaims": [
+      "It was definitively New York City's first civic-data hackathon.",
+      "It was the first municipal hackathon of any kind."
+    ],
+    "qualifications": [
+      "Keep attribution to the Council."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "resume-background-notes", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-PROMOTIONAL-BRANDING",
+    "project": "CallNYC",
+    "proposition": "A recovered promotional graphic used the wording “New York City Council Hackathon” and displayed labs.council.nyc.",
+    "publicWording": "A Council-branded graphic used the wording “New York City Council Hackathon.”",
+    "status": "use-with-care",
+    "citationRequired": true,
+    "antiClaims": [
+      "“New York City Council Hackathon” is proven to be the complete formal registration title."
+    ],
+    "qualifications": [
+      "Treat the wording as recovered promotional branding only."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-DIGITAL-DISTRICT",
+    "project": "CallNYC",
+    "proposition": "A participant photograph documents a “Digital District — Help improve City Council District office operations” breakout placard at approximately 2:10 p.m.",
+    "status": "protected",
+    "citationRequired": false,
+    "antiClaims": [
+      "“Digital District” was the official event title.",
+      "2:10 p.m. was the event start time.",
+      "Jamie facilitated the Digital District breakout."
+    ],
+    "qualifications": [
+      "Do not project publicly until photographer credit and rights review are complete."
+    ],
+    "allowedSurfaces": ["knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-CALENDAR-NOT-RECOVERED",
+    "project": "CallNYC",
+    "proposition": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the current research pass.",
+    "publicWording": "No dedicated Civic Hall event page has been recovered.",
+    "status": "not-recovered",
+    "citationRequired": false,
+    "antiClaims": [
+      "Civic Hall never published an event page.",
+      "A dedicated Civic Hall event listing was proven not to exist."
+    ],
+    "qualifications": [
+      "A negative search result is bounded by the search method and surviving archive."
+    ],
+    "allowedSurfaces": ["knowledge-bank", "callnyc-research-note"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-AGENDA-NOT-RECOVERED",
+    "project": "CallNYC",
+    "proposition": "No complete agenda, participant roster, breakout roster, or registration form was recovered in the current research pass.",
+    "status": "not-recovered",
+    "citationRequired": false,
+    "antiClaims": [
+      "A complete agenda, roster, or registration form was recovered.",
+      "Melissa Mark-Viverito is confirmed as an attendee."
+    ],
+    "qualifications": [
+      "The surviving posts and graphic do not establish a full agenda or roster.",
+      "Failure to recover these records does not prove that they never existed."
+    ],
+    "allowedSurfaces": ["knowledge-bank", "callnyc-research-note"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-INDEPENDENT-FOLLOW-ON",
+    "claimId": "callnyc-civic-data-guidance",
+    "project": "CallNYC",
+    "proposition": "Jamie independently built CallNYC.org after the full CouncilStat constituent-services data became public.",
+    "publicWording": "After the complete dataset became public, Jamie independently built CallNYC.org as a resident-facing interpretation of the records.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [
+      "CallNYC was built during the hackathon.",
+      "CallNYC was a formal hackathon submission.",
+      "CallNYC was an official Council product.",
+      "CallNYC was adopted by the Council."
+    ],
+    "qualifications": [
+      "Do not state a precise data-release day; the public record supports March 2016 and a release before the March 14 Politico article."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "resume", "technical-operations", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-DATA-LIMITATIONS",
+    "project": "CallNYC",
+    "proposition": "CouncilStat case counts were not a uniform performance measure because district offices used and updated the system differently and recorded work with different frequency.",
+    "publicWording": "Different Council offices used CouncilStat differently and entered information with different frequency, so recorded case counts could not safely be read as a simple office-quality measure.",
+    "status": "use-with-care",
+    "citationRequired": true,
+    "antiClaims": [
+      "CouncilStat case counts directly measured office quality.",
+      "A larger recorded caseload proved greater resident need or office effectiveness."
+    ],
+    "qualifications": [
+      "Politico reported staff cautions about different usage and entry frequency across offices.",
+      "Jamie also noted that more district-office work occurred than the dataset reflected."
+    ],
+    "allowedSurfaces": ["callnyc-case-study", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-POLITICO-COVERAGE",
+    "project": "CallNYC",
+    "proposition": "Politico New York covered CallNYC on March 14, 2016.",
+    "publicWording": "Politico New York covered CallNYC on March 14, 2016.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [],
+    "qualifications": [],
+    "allowedSurfaces": ["callnyc-case-study", "resume", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "ASSERT-CALL-PUBLIC-REPOSITORY",
+    "project": "CallNYC",
+    "proposition": "A public GitHub repository preserves CallNYC project code.",
+    "publicWording": "The public repository preserves the project code.",
+    "status": "supported",
+    "citationRequired": true,
+    "antiClaims": [
+      "Repository existence proves official Council adoption or current service status."
+    ],
+    "qualifications": [],
+    "allowedSurfaces": ["callnyc-case-study", "knowledge-bank"],
+    "lastReviewed": "2026-07-11"
+  }
+]

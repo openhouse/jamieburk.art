@@ -15,6 +15,9 @@
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [ ] Follow-up required: regenerate the approved resume PDF with the corrected
+  CallNYC chronology. The repository contains only the binary PDF, so this PR
+  updates editable site and knowledge-bank copy without modifying the PDF by hand.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.

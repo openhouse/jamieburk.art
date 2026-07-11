@@ -1,0 +1,35 @@
+[
+  {
+    "id": "RUN-CALL-CIVIC-HALL-CDX-2026-07",
+    "subject": "Civic Hall evidence for the January 2016 New York City Council constituent-services hackathon",
+    "performedAt": "2026-07",
+    "method": [
+      "Deduplicated HTML-capture enumeration",
+      "All-status event-prefix pass",
+      "Embedded social-feed inspection",
+      "RSVP redirect resolution"
+    ],
+    "scope": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "notFoundCaptures": 7
+    },
+    "status": "not-recovered",
+    "finding": "No dedicated Civic Hall calendar listing or event-detail page was recovered for the January 2016 New York City Council constituent-services hackathon.",
+    "limitations": [
+      "Failure to recover a page does not prove that no page ever existed.",
+      "The archived Civic Hall page preserves social posts through an embedded feed; it is not itself the event listing.",
+      "No agenda, breakout roster, registration-form contents, or dedicated event page was recovered."
+    ],
+    "sourceIds": [
+      "SRC-CALL-CIVICHALL-ANNOUNCEMENT",
+      "SRC-CALL-NYCCOUNCIL-EVENT-DAY"
+    ],
+    "publicSummaryAllowed": true,
+    "publicSummary": "A broad Wayback/CDX search did not recover a dedicated Civic Hall event page.",
+    "protectedArtifactPolicy": "Do not commit temporary research directories, raw CDX output, browser profiles, cookies, or machine-local paths."
+  }
+]
