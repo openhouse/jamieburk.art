@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "public-safe-visual-archive-summary"
   | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
@@ -38,6 +39,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  visualCorroborationIds?: string[];
   lastReviewed: string;
 };
 
@@ -67,6 +69,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["technical-project-management", "product-operations", "implementation"],
+    visualCorroborationIds: ["visual-cross-project-material-practice"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -97,6 +100,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["harry-j-epstein"],
     relatedCapabilities: ["e-commerce", "analytics", "workflow-mapping", "handoffs"],
+    visualCorroborationIds: ["visual-hje-physical-operations"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -154,6 +158,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
+    visualCorroborationIds: ["visual-callnyc-prototype-context"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -193,6 +198,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
+    visualCorroborationIds: ["visual-fairrent-public-material-context"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -225,6 +231,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
+    visualCorroborationIds: ["visual-fairrent-public-material-context"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -260,6 +267,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
+    visualCorroborationIds: ["visual-fairrent-public-material-context"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -300,6 +308,7 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
+    visualCorroborationIds: ["visual-fairrent-public-material-context"],
     lastReviewed: "2026-07-09"
   },
   {
@@ -334,6 +343,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
+    visualCorroborationIds: ["visual-wowlist-cultural-distribution-context"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -369,6 +379,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
+    visualCorroborationIds: ["visual-sunday-dinner-hosting-infrastructure"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -447,6 +458,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
+    visualCorroborationIds: ["visual-kc-town-hall-site-operations"],
     lastReviewed: "2026-07-07"
   },
   {
@@ -476,7 +488,52 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
+    visualCorroborationIds: ["visual-source-backed-reviewable-traces"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "reviewable-artifacts-practice",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-visual-archive-summary"],
+    publicWording:
+      "Jamie makes complex work reviewable through documents, maps, diagrams, cards, prototypes, public interfaces, and durable working environments.",
+    shortWording: "Makes complex work reviewable through usable artifacts",
+    detailedPublicWording:
+      "Across projects, Jamie externalizes requirements, decisions, source trails, open questions, and next steps into artifacts other people can inspect, correct, and use.",
+    sourceBasis:
+      "Approved resume language and a public-safe aggregate summary of recurring patterns in Jamie's visual archive.",
+    sourceNote:
+      "The visual archive corroborates a material pattern; no photograph alone proves authorship, causation, outcome, consent, or publication rights.",
+    whyItMatters:
+      "Makes the operating-structure claim concrete for hiring and public-sector readers by showing what the work becomes in practice.",
+    guardrail:
+      "Use as a cross-project practice claim. Tie public examples to project-specific proof and approved artifacts.",
+    doNotSay: [
+      "Jamie authored every visible artifact",
+      "A photograph proves project ownership or outcomes",
+      "The private visual archive is publicly available"
+    ],
+    protectedBoundaries: [
+      "Unapproved photographs",
+      "Private interiors",
+      "Identifiable people without approval",
+      "Private records visible inside photographs",
+      "Rights and consent metadata"
+    ],
+    surfaces: ["technical-operations", "about", "case-study"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "documentation-architecture",
+      "decision-records",
+      "prototyping",
+      "handoffs"
+    ],
+    visualCorroborationIds: [
+      "visual-cross-project-material-practice",
+      "visual-source-backed-reviewable-traces"
+    ],
+    lastReviewed: "2026-07-11"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -506,6 +563,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "about"],
     relatedProjects: [],
     relatedCapabilities: ["delivery-coordination", "risk-surfacing", "handoffs"],
+    visualCorroborationIds: ["visual-cross-project-material-practice"],
     lastReviewed: "2026-07-07"
   },
   {

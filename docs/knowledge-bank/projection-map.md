@@ -40,6 +40,7 @@ Use claims that directly support operating-backbone fit:
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
+- `reviewable-artifacts-practice`
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
 
@@ -54,3 +55,6 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+Visual-corroboration records guide image selection and captions. They do not
+authorize publication and should not be rendered as a public claims database.

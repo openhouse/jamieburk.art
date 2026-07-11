@@ -16,6 +16,19 @@ bank.
 7. Public-safety check fails production if pending/private/approval-marker
    material is projected.
 
+## Visual Evidence Flow
+
+1. Private photographs remain outside the repo.
+2. Review produces a public-safe aggregate finding, not a public image set.
+3. The finding records what is visible, what it supports, and what it cannot
+   establish.
+4. The finding links to existing proof claims through stable IDs.
+5. A photograph enters the website only after separate rights, consent,
+   dignity, context, credit, and metadata review.
+
+Visual corroboration may strengthen source posture. It must not silently
+strengthen ownership, causality, authority, outcome, or current-status language.
+
 ## Status Meanings
 
 - Ready: strong enough for public site copy.

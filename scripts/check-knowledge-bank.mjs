@@ -22,7 +22,8 @@ const requiredProofIds = [
   "sunday-dinner-196-participation-infrastructure",
   "kc-spaces-fund-digital-infrastructure",
   "kc-town-hall-public-benefit-documentation",
-  "source-backed-team-memory-method"
+  "source-backed-team-memory-method",
+  "reviewable-artifacts-practice"
 ];
 
 const requiredWorkProofs = new Map([
@@ -55,6 +56,14 @@ const publicSurfaces = new Set([
 const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
+const visualCorroborationPath = path.join(
+  repoRoot,
+  "apps/www/src/data/visual-corroboration.ts"
+);
+const visualCorroborationDocsPath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/visual-corroboration.md"
+);
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
 
 function fail(message) {
@@ -105,6 +114,14 @@ if (!existsSync(proofPath)) {
 
 if (!existsSync(claimsPath)) {
   fail("docs/knowledge-bank/claims.md is missing");
+}
+
+if (!existsSync(visualCorroborationPath)) {
+  fail("apps/www/src/data/visual-corroboration.ts is missing");
+}
+
+if (!existsSync(visualCorroborationDocsPath)) {
+  fail("docs/knowledge-bank/visual-corroboration.md is missing");
 }
 
 if (existsSync(path.join(repoRoot, "docs/proofs-bank.md")) && existsSync(claimsPath)) {
@@ -212,6 +229,111 @@ if (existsSync(proofPath)) {
   }
 }
 
+let visualCorroborationSource = "";
+let visualCorroborationIds = [];
+const visualCorroborationBlocks = new Map();
+
+if (existsSync(visualCorroborationPath)) {
+  visualCorroborationSource = read(visualCorroborationPath);
+
+  if (/\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|contact-sheets|\.photoslibrary/i.test(visualCorroborationSource)) {
+    fail("apps/www/src/data/visual-corroboration.ts contains a private path or raw visual-source marker");
+  }
+
+  for (const match of visualCorroborationSource.matchAll(/\{\n\s+id:\s*"([^"]+)"[\s\S]*?\n\s+\}/g)) {
+    const [, id] = match;
+    visualCorroborationIds.push(id);
+    visualCorroborationBlocks.set(id, match[0]);
+  }
+
+  const uniqueVisualIds = new Set(visualCorroborationIds);
+  if (uniqueVisualIds.size !== visualCorroborationIds.length) {
+    const duplicates = visualCorroborationIds.filter(
+      (id, index) => visualCorroborationIds.indexOf(id) !== index
+    );
+    fail(`Duplicate visual corroboration IDs: ${[...new Set(duplicates)].join(", ")}`);
+  }
+
+  if (!visualCorroborationIds.length) {
+    fail("apps/www/src/data/visual-corroboration.ts has no records");
+  }
+
+  for (const [id, block] of visualCorroborationBlocks.entries()) {
+    for (const field of [
+      "status",
+      "supportLevel",
+      "sourceClass",
+      "publicSafeSummary",
+      "supports",
+      "doesNotEstablish",
+      "protectedBoundaries",
+      "relatedClaimIds",
+      "relatedProjects",
+      "projectionGuidance",
+      "lastReviewed"
+    ]) {
+      if (!new RegExp(`${field}:`).test(block)) {
+        fail(`${id} visual corroboration is missing ${field}`);
+      }
+    }
+
+    if (extractStringField(block, "status") !== "careful") {
+      fail(`${id} visual corroboration must have careful status`);
+    }
+
+    if (!new Set(["moderate", "contextual"]).has(extractStringField(block, "supportLevel"))) {
+      fail(`${id} visual corroboration has invalid supportLevel`);
+    }
+
+    if (extractStringField(block, "sourceClass") !== "public-safe-visual-archive-summary") {
+      fail(`${id} visual corroboration has invalid sourceClass`);
+    }
+
+    for (const field of ["supports", "doesNotEstablish", "protectedBoundaries", "relatedClaimIds"]) {
+      if (!extractStrings(block, field).length) {
+        fail(`${id} visual corroboration is missing ${field} entries`);
+      }
+    }
+
+    for (const claimId of extractStrings(block, "relatedClaimIds")) {
+      if (!proofBlocks.has(claimId)) {
+        fail(`${id} visual corroboration references missing proof claim: ${claimId}`);
+      }
+    }
+  }
+
+  for (const [claimId, block] of proofBlocks.entries()) {
+    for (const visualId of extractStrings(block, "visualCorroborationIds")) {
+      const visualBlock = visualCorroborationBlocks.get(visualId);
+      if (!visualBlock) {
+        fail(`${claimId} references missing visual corroboration: ${visualId}`);
+        continue;
+      }
+      if (!extractStrings(visualBlock, "relatedClaimIds").includes(claimId)) {
+        fail(`${claimId} and ${visualId} are not linked in both directions`);
+      }
+    }
+  }
+
+  for (const [visualId, block] of visualCorroborationBlocks.entries()) {
+    for (const claimId of extractStrings(block, "relatedClaimIds")) {
+      const proofBlock = proofBlocks.get(claimId);
+      if (proofBlock && !extractStrings(proofBlock, "visualCorroborationIds").includes(visualId)) {
+        fail(`${visualId} and ${claimId} are not linked in both directions`);
+      }
+    }
+  }
+}
+
+if (existsSync(visualCorroborationDocsPath)) {
+  const visualDocsSource = read(visualCorroborationDocsPath);
+  for (const id of visualCorroborationIds) {
+    if (!visualDocsSource.includes(`## ${id}`)) {
+      fail(`visual-corroboration.md is missing ${id}`);
+    }
+  }
+}
+
 if (existsSync(claimsPath)) {
   const claimsSource = read(claimsPath);
 
@@ -291,6 +413,7 @@ for (const requiredDoc of [
   "chad-lens.md",
   "approval-register.md",
   "claims.md",
+  "visual-corroboration.md",
   "proofs.md",
   "sources.md",
   "projection-map.md",

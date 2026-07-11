@@ -23,6 +23,13 @@ changes public claims.
   transcript, or company context.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
   needed.
+- [ ] Every visual-corroboration record states what it supports and what it does
+  not establish.
+- [ ] Every `visualCorroborationIds` reference resolves in both directions.
+- [ ] No private photographs, identifiers, local paths, contact sheets, People
+  associations, or private image metadata have been committed.
+- [ ] Any photograph projected publicly has separate rights, consent, dignity,
+  context, credit, and metadata review.
 - [ ] No raw transcripts, private notes, legal-review materials, stakeholder
   lists, private rows, private screenshots, private photos, private fonts,
   credentials, or private correspondence have been committed.
