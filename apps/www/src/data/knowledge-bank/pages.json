@@ -1,0 +1,11 @@
+[
+  {
+    "id": "callnyc",
+    "path": "/work/callnyc",
+    "occurrences": [
+      { "id": "event-context", "noteId": "callnyc-event-context" },
+      { "id": "event-branding", "noteId": "callnyc-event-branding" },
+      { "id": "independent-follow-on", "noteId": "callnyc-independent-follow-on" }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "civic-hall-cdx-pass-2026-07-11",
+    "question": "Was a dedicated Civic Hall calendar listing or event-detail page preserved for the January 2016 New York City Council constituent-services hackathon?",
+    "method": "Wayback CDX enumeration and event-prefix review",
+    "conductedAt": "2026-07-11",
+    "scope": {
+      "deduplicatedHtmlCaptures": 4630,
+      "originalUrls": 1240,
+      "eventUrlKeys": 296,
+      "successfulPages": 215,
+      "redirects": 74,
+      "notFoundCaptures": 7
+    },
+    "recovered": ["Civic Hall embedded social-feed evidence", "Civic Hall announcement", "New York City Council event-day post", "promotional graphic"],
+    "notRecovered": ["dedicated Civic Hall calendar listing", "dedicated Civic Hall event-detail page", "agenda", "breakout roster", "registration-form contents"],
+    "finding": "No dedicated Civic Hall calendar listing or event-detail page was recovered in the documented search.",
+    "publicSummary": "No dedicated Civic Hall event page was recovered in this research pass. The surviving Civic Hall site evidence comes from an embedded social feed.",
+    "limitations": ["Absence from the recovered capture set is not proof that a page never existed.", "The embedded feed is archival site evidence, not a recovered calendar listing.", "The RSVP form is unavailable and no archived copy was recovered."],
+    "publicationState": "public-summary"
+  }
+]

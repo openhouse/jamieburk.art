@@ -1,0 +1,37 @@
+[
+  {
+    "id": "correction-callnyc-year",
+    "surface": "/work/callnyc",
+    "field": "years",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "The source-backed chronology places the event, data release, independent development, and coverage in January-March 2016.",
+    "evidenceIds": ["evidence-civic-hall-announcement", "evidence-nyc-council-event-day", "evidence-politico-callnyc"],
+    "status": "applied",
+    "resolvedAt": "2026-07-11",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "correction-callnyc-hackathon-wording",
+    "surface": "/work/callnyc",
+    "field": "hackathon description",
+    "previousValue": "first civic-data hackathon",
+    "correctedValue": "first CouncilStat hackathon",
+    "reason": "The recovered Council wording is specifically first CouncilStat hackathon.",
+    "evidenceIds": ["evidence-nyc-council-event-day"],
+    "status": "applied",
+    "resolvedAt": "2026-07-11",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "correction-callnyc-resume-wording",
+    "surface": "approved resume PDF",
+    "field": "hackathon description",
+    "previousValue": "first civic-data hackathon",
+    "correctedValue": "first CouncilStat hackathon",
+    "reason": "The approved binary should be regenerated only through its established editable-source workflow.",
+    "evidenceIds": ["evidence-nyc-council-event-day"],
+    "status": "follow-up-required",
+    "lastReviewed": "2026-07-11"
+  }
+]
