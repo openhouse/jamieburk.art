@@ -20,6 +20,14 @@ Aggregate or summarized knowledge derived from private records without exposing
 the private records, private paths, names, contact lists, raw transcripts,
 attendance records, private rows, screenshots, or correspondence.
 
+### Curated Photo Evidence Summary
+
+Aggregate findings from locally reviewed photographs without publishing the
+photographs, asset identifiers, People associations, private paths, raw OCR, or
+private metadata. This class may corroborate visible presence, settings,
+artifacts, and material continuity. It does not independently establish role,
+authorship, leadership, outcomes, rights, consent, or comprehensive history.
+
 ### Firsthand / Collaborator Context
 
 Known through Jamie or collaborators, but not yet necessarily approved for

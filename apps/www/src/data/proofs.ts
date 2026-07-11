@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "curated-photo-evidence-summary"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
   | "collaborator-approval-pending";
@@ -229,13 +230,21 @@ export const proofClaims: ProofClaim[] = [
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
+    evidenceClass: [
+      "approved-resume",
+      "public-source",
+      "curated-photo-evidence-summary",
+      "jamie-review-confirmation"
+    ],
     publicWording:
       "Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Built public campaign websites for NYC Artist Coalition advocacy",
     detailedPublicWording:
       "Jamie built public-facing campaign web infrastructure that translated cultural-space advocacy into issue explanations, calls to action, public resources, and support paths.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis:
+      "Approved resume language, Jamie confirmation, public campaign websites, and a public-safe summary of locally reviewed photo evidence.",
+    sourceNote:
+      "Photo evidence corroborates sustained presence in coalition gatherings and public advocacy settings from 2017 through 2025. It does not establish sole leadership, campaign ownership, website authorship, or campaign outcomes.",
     whyItMatters:
       "Makes Jamie's direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail: "Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.",
@@ -256,7 +265,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -340,6 +349,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
+      "curated-photo-evidence-summary",
       "jamie-review-confirmation"
     ],
     publicWording:
@@ -347,7 +357,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, and a public-safe summary of locally reviewed photo evidence.",
+    sourceNote:
+      "Photo evidence corroborates recurring hosted environments and material traces including documents, handwriting, artworks, tables, utensils, and prepared rooms. It does not independently verify gathering or resident counts, participant identity, or publication consent.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -366,7 +379,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -403,13 +416,16 @@ export const proofClaims: ProofClaim[] = [
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
-    evidenceClass: ["public-safe-archive-summary"],
+    evidenceClass: ["public-safe-archive-summary", "curated-photo-evidence-summary"],
     publicWording:
       "Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.",
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Public-safe lab materials, a proposal-derived method summary, and a public-safe summary of locally reviewed process imagery.",
+    sourceNote:
+      "Photo candidates provide a visual vocabulary of documents, handwriting, working surfaces, boards, and connective materials. They do not prove client deployment or product maturity.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -426,7 +442,46 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
+  },
+  {
+    id: "photo-archive-visual-corroboration",
+    status: "pending",
+    supportLevel: "moderate",
+    evidenceClass: ["curated-photo-evidence-summary", "jamie-review-confirmation"],
+    publicWording:
+      "A locally reviewed photo archive corroborates Jamie's sustained presence in public advocacy, cultural hosting, and documentation-rich working environments.",
+    shortWording: "Visual corroboration across civic and cultural work",
+    detailedPublicWording:
+      "The photographs add embodied and material context to existing documentary claims: Jamie appears in real public and collaborative settings, while recurring rooms, signs, documents, handwritten materials, artworks, tables, and tools make the practical conditions of the work visible.",
+    sourceBasis:
+      "Public-safe aggregate findings from a local-only, safety-gated photo curation and evaluation run completed in July 2026.",
+    sourceNote:
+      "Keep internal-only until individual images pass identity, project, date, creator, rights, consent, caption, and crop review.",
+    whyItMatters:
+      "Adds human presence and material specificity to the portfolio without treating private photographs as self-authenticating proof.",
+    guardrail:
+      "Use photographs as corroboration and orientation. Do not infer role, leadership, authorship, outcomes, consent, or comprehensive history from image content or album membership alone.",
+    doNotSay: [
+      "The photo archive proves every portfolio claim",
+      "People recognition establishes consent or professional role",
+      "Project-album membership establishes authorship or leadership",
+      "Every selected image is approved for publication"
+    ],
+    protectedBoundaries: [
+      "Unapproved photos",
+      "Raw image metadata",
+      "People associations",
+      "Private locations",
+      "Private group contexts",
+      "Asset identifiers",
+      "Raw OCR",
+      "Private archive paths"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["fair-rent-nyc", "196-sunday-dinner", "source-backed-team-memory"],
+    relatedCapabilities: ["documentation", "visual-evidence-review", "public-safety"],
+    lastReviewed: "2026-07-11"
   },
   {
     id: "technical-operations-operating-backbone",

@@ -97,16 +97,17 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public project artifact / Jamie review confirmation  
+**Evidence class:** Approved resume / public project artifact / curated photo evidence summary / Jamie review confirmation
 **Public wording:** Built public campaign websites for NYC Artist Coalition advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.  
 **Detailed public-safe wording:** Jamie built public-facing campaign web infrastructure that translated cultural-space advocacy into issue explanations, calls to action, public resources, and support paths.  
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.  
 **Why it matters:** Makes Jamie's direct web authorship visible without overstating collective campaign accomplishments.  
+**Source note:** Photo evidence corroborates sustained presence in coalition gatherings and public advocacy settings from 2017 through 2025. It does not establish sole leadership, campaign ownership, website authorship, or campaign outcomes.
 **Guardrail:** Website authorship is Jamie's direct contribution; campaign accomplishments remain collective.  
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions.  
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## kc-spaces-fund-digital-infrastructure - Mutual-aid campaign digital infrastructure
 
@@ -142,16 +143,17 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public-safe archive summary / curated photo evidence summary / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
+**Source note:** Photo evidence corroborates recurring hosted environments and material traces including documents, handwriting, artworks, tables, utensils, and prepared rooms. It does not independently verify gathering or resident counts, participant identity, or publication consent.
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
@@ -172,16 +174,32 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
+**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary / curated photo evidence summary
 **Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
 **Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
 **Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
+**Source note:** Photo candidates provide a visual vocabulary of documents, handwriting, working surfaces, boards, and connective materials. They do not prove client deployment or product maturity.
 **Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
+
+## photo-archive-visual-corroboration - Visual corroboration across civic and cultural work
+
+**Status:** Pending
+**Support level:** Moderate
+**Evidence class:** Curated photo evidence summary / Jamie review confirmation
+**Public wording:** A locally reviewed photo archive corroborates Jamie's sustained presence in public advocacy, cultural hosting, and documentation-rich working environments.
+**Detailed public-safe wording:** The photographs add embodied and material context to existing documentary claims: Jamie appears in real public and collaborative settings, while recurring rooms, signs, documents, handwritten materials, artworks, tables, and tools make the practical conditions of the work visible.
+**Where to project:** Internal only until individual images pass publication review.
+**Why it matters:** Adds human presence and material specificity to the portfolio without treating private photographs as self-authenticating proof.
+**Guardrail:** Use photographs as corroboration and orientation. Do not infer role, leadership, authorship, outcomes, consent, or comprehensive history from image content or album membership alone.
+**Do not say:** The archive proves every portfolio claim; People recognition establishes consent or professional role; project-album membership establishes authorship or leadership; every selected image is approved for publication.
+**Protected boundaries:** Unapproved photos, raw image metadata, People associations, private locations, private group contexts, asset identifiers, raw OCR, and private archive paths stay offline.
+**Review owner:** Jamie / Asset-specific rights and consent review required
+**Last reviewed:** 2026-07-11
 
 ## technical-operations-operating-backbone - Operating backbone
 

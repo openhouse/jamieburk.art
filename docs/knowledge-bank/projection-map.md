@@ -55,3 +55,9 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Photo Evidence
+
+`photo-archive-visual-corroboration` remains internal-only. Do not project it as
+site copy or publish an image from the editor field until that individual asset
+has passed the review requirements in `photo-evidence-review-2026-07.md`.
