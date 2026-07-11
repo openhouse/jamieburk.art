@@ -54,4 +54,3 @@ No citation-integrity failures in the non-production check.
 - Public source source.callnyc.politico.2016-03-14 has no archive link or archive carrier
 - Public source source.callnyc.github-repository has no archive link or archive carrier
 - Public source source.callnyc.archived-project has no archive link or archive carrier
-

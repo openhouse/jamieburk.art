@@ -73,5 +73,6 @@ if (validation.warnings.length) {
 
 const outputPath = path.join(repoRoot, "reports/citations.md");
 mkdirSync(path.dirname(outputPath), { recursive: true });
-writeFileSync(outputPath, `${lines.filter((line) => line !== undefined).join("\n")}\n`);
+const report = lines.filter((line) => line !== undefined).join("\n").trimEnd();
+writeFileSync(outputPath, `${report}\n`);
 console.log(`Wrote ${path.relative(repoRoot, outputPath)}`);
