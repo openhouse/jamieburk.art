@@ -137,24 +137,29 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Built CallNYC.org independently after participating in the New York City Council's first CouncilStat hackathon, translating constituent-services open data into resident-facing next-step guidance.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+      "After the January 30, 2016 CouncilStat hackathon and the subsequent dataset release, Jamie independently developed CallNYC as an archived resident-facing prototype; Politico New York covered it in March 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
-    guardrail: "Always describe it as archived and unofficial.",
+      "Structured public-source records, archived prototype context, public GitHub repository, official social posts, participant photographic evidence, and verified Politico New York coverage.",
+    sourceNote:
+      "The event is supported as the Council's first CouncilStat hackathon, not its first civic-data hackathon. CallNYC was an independent follow-on project, not an official Council product.",
+    guardrail:
+      "Always describe CallNYC as archived, independent, and unofficial; keep the hackathon, dataset release, and later prototype chronologically distinct.",
     doNotSay: [
       "Current city service",
       "Official city guidance",
       "Emergency guidance",
-      "Legal guidance"
+      "Legal guidance",
+      "Built CallNYC at the hackathon",
+      "The Council's first civic-data hackathon"
     ],
     protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",

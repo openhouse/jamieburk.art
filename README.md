@@ -29,6 +29,7 @@ npm run typecheck
 npm run lint
 npm run build
 npm run check
+npm run check:citations
 npm run knowledge-bank
 npm run public-safety
 npm run check:routes
@@ -57,6 +58,28 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+## Citation Architecture
+
+CallNYC is the first fully populated citation pilot. Citational data lives in:
+
+- `apps/www/src/data/knowledge-bank/sources.json`
+- `apps/www/src/data/knowledge-bank/evidence.json`
+- `apps/www/src/data/knowledge-bank/claims.json`
+- `apps/www/src/data/knowledge-bank/pages.json`
+- `apps/www/src/data/knowledge-bank/research-runs.json`
+
+Zod schemas and the TypeScript loader live beside those records. Stable IDs
+identify claims, sources, evidence relationships, pages, and research runs;
+visible numbers are generated per page from first evidence appearance.
+
+`npm run check:citations` validates the graph and its MDX projection offline. It
+does not fetch public sources during a normal build. Private evidence may receive
+a text-only reference, but private source paths, files, location data, and person
+tags must never enter the repository.
+
+See `docs/knowledge-bank/citation-policy.md` and the public-safe CallNYC research
+record in `docs/knowledge-bank/research/` before adding another cited page.
 
 ## Environment
 

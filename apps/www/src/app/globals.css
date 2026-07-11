@@ -148,3 +148,146 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-cluster {
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.14em;
+  vertical-align: super;
+  white-space: nowrap;
+}
+
+.citation-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.citation-cluster a {
+  align-items: center;
+  border-radius: 0.2rem;
+  color: var(--jb-broadway-blue);
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 1.5rem;
+  min-width: 1.35rem;
+  padding-inline: 0.12rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.citation-cluster a:hover {
+  background: color-mix(in srgb, var(--jb-pale-blue) 38%, transparent);
+  color: var(--jb-deep-green);
+}
+
+.citation-cluster a:focus-visible {
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 2px;
+}
+
+.citation-separator {
+  color: var(--jb-oil-ink);
+  margin-inline: 0.02em;
+}
+
+.references {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 18%, transparent);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.references-list {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+  margin-top: 1.25rem;
+  padding: 0;
+}
+
+.references-list > li {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  scroll-margin-top: 7rem;
+}
+
+.references-list > li:target {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 30%, transparent);
+  border-radius: 0.35rem;
+  margin: -0.5rem;
+  padding: 0.5rem;
+}
+
+.reference-number {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.reference-body {
+  min-width: 0;
+}
+
+.reference-title {
+  color: var(--jb-oil-ink);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.reference-title a {
+  color: var(--jb-broadway-blue);
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.reference-citation-label,
+.reference-note {
+  color: color-mix(in srgb, var(--jb-oil-ink) 76%, transparent);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-top: 0.35rem;
+}
+
+.reference-meta,
+.reference-actions,
+.reference-backlinks {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.9rem;
+  margin-top: 0.55rem;
+}
+
+.reference-meta span {
+  color: var(--jb-deep-green);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.reference-actions,
+.reference-backlinks {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.reference-actions a,
+.reference-backlinks a {
+  color: var(--jb-broadway-blue);
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+@media print {
+  .citation-cluster a,
+  .reference-title a {
+    color: inherit;
+  }
+
+  .reference-backlinks {
+    display: none;
+  }
+}

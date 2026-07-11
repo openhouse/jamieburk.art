@@ -51,6 +51,7 @@ const workMetaSchema = z.object({
   priority: z.number(),
   visibility: visibilitySchema,
   proofBankIds: z.array(z.string()),
+  citationPageId: z.string().optional(),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
   artifactTypes: z.array(artifactTypeSchema),
@@ -280,14 +281,15 @@ const workItemsInput = [
     series: "Civic Prototype",
     subtitle: "Civic data to resident-facing guidance",
     summary:
-      "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
+      "Built an independent civic-data prototype after participating in a New York City Council constituent-services hackathon, translating CouncilStat open data into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "January-March 2016",
     status: "Full case study",
     featured: true,
     priority: 3,
     visibility: "public-safe",
     proofBankIds: ["callnyc-civic-data-guidance"],
+    citationPageId: "callnyc",
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
@@ -303,7 +305,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "A civic-data interpretation layer developed after a 2016 New York City Council constituent-services hackathon.",
         type: "map"
       },
       {
@@ -328,6 +330,7 @@ const workItemsInput = [
       "Public Interfaces"
     ],
     links: [
+      { label: "Archived CallNYC project", url: "https://callnyc.org/" },
       {
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
@@ -337,28 +340,30 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "Official social posts, archived Civic Hall site evidence, participant photographic evidence, CouncilStat context, the archived CallNYC project, independent Politico reporting, the public GitHub repository, and a public-safe research log.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus:
+      "Archived prototype with source-backed event chronology. Event photographs remain subject to rights and participant review.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
+      "Participated in the January 30, 2016 New York City Council CouncilStat hackathon at Civic Hall",
+      "Independently developed CallNYC after the complete CouncilStat dataset release",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Covered by Politico New York on March 14, 2016"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "The Council held its first CouncilStat hackathon at Civic Hall on January 30, 2016. Civic Hall advertised it for 1–3 p.m. and focused on constituent services. Participant photographs document a Digital District breakout. Jamie subsequently developed CallNYC independently after the dataset release.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "The formal registration title, complete agenda, full participant roster, breakout facilitator, other breakout tracks, registration-form contents, exact Council recommendations, and explanation for the conflicting photo map pin remain unresolved.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "Private archive paths, full location and camera metadata, face tags, unapproved participant identities, private correspondence, and unreviewed photographs remain offline."
       }
   },
   {
