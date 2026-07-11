@@ -1,0 +1,31 @@
+[
+  {
+    "id": "ART-CALL-PROMOTIONAL-GRAPHIC",
+    "title": "New York City Council Hackathon promotional graphic",
+    "kind": "promotional-graphic",
+    "sourceId": "SRC-CALL-PROMOTIONAL-GRAPHIC",
+    "supportsAssertionIds": ["ASSERT-CALL-PROMOTIONAL-BRANDING"],
+    "evidenceScope": "direct",
+    "rightsStatus": "unknown",
+    "caption": "Recovered promotional graphic reading “New York City Council Hackathon” and displaying labs.council.nyc.",
+    "limitations": [
+      "Linked as source evidence in this PR; not embedded as a portfolio image.",
+      "Does not prove a longer formal registration title."
+    ]
+  },
+  {
+    "id": "ART-CALL-DIGITAL-DISTRICT-PHOTO",
+    "title": "Participant photograph of the Digital District placard",
+    "kind": "photograph",
+    "sourceId": "SRC-CALL-DIGITAL-DISTRICT-PHOTO",
+    "supportsAssertionIds": ["ASSERT-CALL-DIGITAL-DISTRICT"],
+    "evidenceScope": "direct",
+    "rightsStatus": "needs-photographer-permission",
+    "caption": "Participant photograph documenting the Digital District placard during the January 30 gathering.",
+    "limitations": [
+      "Do not publish until photographer credit, rights, subject context, and public-safety review are complete.",
+      "The photograph timestamp is not the event start time.",
+      "The placard does not establish the formal event title."
+    ]
+  }
+]

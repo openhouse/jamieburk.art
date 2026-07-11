@@ -1,0 +1,145 @@
+[
+  {
+    "id": "EVID-CALL-CIVICHALL-DATE",
+    "assertionId": "ASSERT-CALL-EVENT-DATE",
+    "sourceId": "SRC-CALL-CIVICHALL-ANNOUNCEMENT",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "1/30 1 - 3pm"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the January 30, 2016 event date.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-CIVICHALL-HOURS",
+    "assertionId": "ASSERT-CALL-EVENT-HOURS",
+    "sourceId": "SRC-CALL-CIVICHALL-ANNOUNCEMENT",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "1/30 1 - 3pm"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports Civic Hall's announced 1–3 p.m. time window; it does not independently verify observed start and end times.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-NYCCOUNCIL-VENUE",
+    "assertionId": "ASSERT-CALL-EVENT-VENUE",
+    "sourceId": "SRC-CALL-NYCCOUNCIL-EVENT-DAY",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "In the house at @CivicHall"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports Civic Hall as the event venue.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-NYCCOUNCIL-FIRST-COUNCILSTAT",
+    "assertionId": "ASSERT-CALL-FIRST-COUNCILSTAT",
+    "sourceId": "SRC-CALL-NYCCOUNCIL-EVENT-DAY",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "our 1st #CouncilStat hackathon"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the Council-attributed first CouncilStat hackathon characterization, not a broader first-civic-hackathon claim.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-PROMOTIONAL-BRANDING",
+    "assertionId": "ASSERT-CALL-PROMOTIONAL-BRANDING",
+    "sourceId": "SRC-CALL-PROMOTIONAL-GRAPHIC",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "NEW YORK CITY COUNCIL HACKATHON / LABS.COUNCIL.NYC"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports recovered event branding, not a longer formal registration title.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-COUNCIL-DATA-PURPOSE",
+    "assertionId": "ASSERT-CALL-CONSTITUENT-SERVICES-PURPOSE",
+    "sourceId": "SRC-CALL-NYCCOUNCIL-CONSTITUENT-DATA",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "section",
+      "value": "January 2016 hackathon at Civic Hall"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the Council's retrospective description of previewing constituent-services data and improving its usefulness and transparency.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-POLITICO-INDEPENDENT-FOLLOW-ON",
+    "assertionId": "ASSERT-CALL-INDEPENDENT-FOLLOW-ON",
+    "sourceId": "SRC-CALL-POLITICO-COVERAGE",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "attended ... ahead of the data release / After the full data-set was released two weeks ago, he decided to create a project"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the sequence from January preview event to complete data release to Jamie's independent CallNYC build.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-POLITICO-LIMITATIONS",
+    "assertionId": "ASSERT-CALL-DATA-LIMITATIONS",
+    "sourceId": "SRC-CALL-POLITICO-COVERAGE",
+    "relation": "qualifies",
+    "locator": {
+      "kind": "visible-text",
+      "value": "different Council offices use the system in different ways and with different frequency"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports caution against treating recorded case counts as a uniform office-performance measure.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-POLITICO-COVERAGE",
+    "assertionId": "ASSERT-CALL-POLITICO-COVERAGE",
+    "sourceId": "SRC-CALL-POLITICO-COVERAGE",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "record-field",
+      "value": "Politico New York article title, byline, and March 14, 2016 publication date"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the press-coverage claim and publication date.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-GITHUB-REPOSITORY",
+    "assertionId": "ASSERT-CALL-PUBLIC-REPOSITORY",
+    "sourceId": "SRC-CALL-PUBLIC-REPOSITORY",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "section",
+      "value": "repository root"
+    },
+    "publicCitation": true,
+    "publicNote": "Supports the existence of a public CallNYC source repository, not official adoption or current service status.",
+    "lastVerified": "2026-07-11"
+  },
+  {
+    "id": "EVID-CALL-DIGITAL-DISTRICT-PLACARD",
+    "assertionId": "ASSERT-CALL-DIGITAL-DISTRICT",
+    "sourceId": "SRC-CALL-DIGITAL-DISTRICT-PHOTO",
+    "relation": "direct-support",
+    "locator": {
+      "kind": "visible-text",
+      "value": "Digital District — Help improve City Council District office operations"
+    },
+    "publicCitation": false,
+    "publicNote": "Do not render until the photograph's rights and credit are cleared.",
+    "lastVerified": "2026-07-11"
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "id": "SRC-CALL-CIVICHALL-ANNOUNCEMENT",
+    "sourceClass": "organizer-social-post",
+    "title": "Civic Hall announcement of a New York City Council constituent-services hackathon",
+    "creator": "Civic Hall",
+    "publisher": "X",
+    "publishedAt": "2016-01-29",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "canonical",
+        "url": "https://x.com/CivicHall/status/693124020917522433"
+      },
+      {
+        "kind": "archive",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+        "capturedAt": "2016-01-31T00:46:01Z",
+        "note": "The archived page preserves the post through Civic Hall's embedded social feed. It is not a recovered event calendar listing."
+      }
+    ],
+    "availability": "archived",
+    "publicCitationPolicy": "link-both",
+    "shortLabel": "Civic Hall announcement",
+    "publicCitation": "Civic Hall, post announcing a January 30, 1–3 p.m. New York City Council hackathon focused on constituent services.",
+    "summary": "Announces January 30, 2016, 1–3 p.m., for a New York City Council hackathon focused on constituent services.",
+    "supports": [
+      "January 30, 2016 date",
+      "announced 1–3 p.m. time window",
+      "New York City Council organizer",
+      "constituent-services focus"
+    ],
+    "limitations": [
+      "The announced hours are not independent proof of the event's observed start and end.",
+      "The Wayback page is not a recovered dedicated event listing."
+    ],
+    "caveats": [
+      "Treat the Wayback URL as archival preservation of the embedded social post."
+    ],
+    "stability": "fragile",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-NYCCOUNCIL-EVENT-DAY",
+    "sourceClass": "official-government-post",
+    "title": "New York City Council event-day CouncilStat hackathon post",
+    "creator": "New York City Council",
+    "publisher": "X",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "canonical",
+        "url": "https://x.com/NYCCouncil/status/693509031768506368"
+      },
+      {
+        "kind": "archive",
+        "url": "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/",
+        "capturedAt": "2016-01-31T00:46:01Z",
+        "note": "Preserved in Civic Hall's embedded social feed; the archived page is not a dedicated event listing."
+      }
+    ],
+    "availability": "archived",
+    "publicCitationPolicy": "link-both",
+    "shortLabel": "NYC Council event-day post",
+    "publicCitation": "New York City Council, event-day post from Civic Hall identifying the gathering as its first CouncilStat hackathon.",
+    "summary": "Posts from Civic Hall on January 30 and identifies the event as the Council's first CouncilStat hackathon.",
+    "supports": [
+      "Civic Hall venue",
+      "January 30 event-day context",
+      "the Council's first CouncilStat hackathon characterization"
+    ],
+    "limitations": [
+      "Use attribution when making the first-hackathon claim.",
+      "Does not establish the complete agenda, attendee roster, or formal event title."
+    ],
+    "caveats": [
+      "The Wayback capture preserves an embedded social feed, not a recovered event page."
+    ],
+    "stability": "fragile",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-PROMOTIONAL-GRAPHIC",
+    "sourceClass": "promotional-image",
+    "title": "New York City Council Hackathon promotional graphic",
+    "creator": "New York City Council / Civic Hall",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "media",
+        "url": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large"
+      }
+    ],
+    "availability": "live",
+    "publicCitationPolicy": "link-canonical",
+    "shortLabel": "Hackathon promotional graphic",
+    "publicCitation": "New York City Council-branded promotional graphic reading “New York City Council Hackathon.”",
+    "summary": "The graphic reads “New York City Council Hackathon” and includes labs.council.nyc.",
+    "supports": [
+      "recovered event branding",
+      "labs.council.nyc reference"
+    ],
+    "limitations": [
+      "Does not establish a longer formal registration title."
+    ],
+    "caveats": [
+      "No separate archival preservation URL was recovered in this research pass."
+    ],
+    "stability": "fragile",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-DIGITAL-DISTRICT-PHOTO",
+    "sourceClass": "participant-photograph",
+    "title": "Participant photograph of the Digital District breakout placard",
+    "publishedAt": "2016-01-30",
+    "accessedAt": "2026-07-11",
+    "links": [],
+    "availability": "withheld",
+    "publicCitationPolicy": "approval-required",
+    "shortLabel": "Participant photograph",
+    "publicCitation": "Participant photograph archive documenting the “Digital District — Help improve City Council District office operations” placard at approximately 2:10 p.m.",
+    "summary": "Documents a breakout placard and a photograph timestamp of approximately 2:10 p.m.",
+    "supports": [
+      "Digital District placard wording",
+      "breakout activity at approximately 2:10 p.m."
+    ],
+    "limitations": [
+      "The photograph timestamp is not the event start time.",
+      "Digital District is not established as the formal event title.",
+      "Publication requires photographer credit and rights review."
+    ],
+    "caveats": [],
+    "stability": "stable",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-NYCCOUNCIL-CONSTITUENT-DATA",
+    "sourceClass": "official-government-post",
+    "title": "Constituent Services Data",
+    "creator": "New York City Council Labs",
+    "publisher": "New York City Council",
+    "publishedAt": "2016-05-27",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "canonical",
+        "url": "https://council.nyc.gov/labs/2016/05/27/constituent-services-data/"
+      }
+    ],
+    "availability": "live",
+    "publicCitationPolicy": "link-canonical",
+    "shortLabel": "NYC Council constituent-services data post",
+    "publicCitation": "New York City Council Labs, “Constituent Services Data,” May 27, 2016.",
+    "summary": "Describes CouncilStat constituent-services data and says the Council hosted a January 2016 Civic Hall hackathon to preview the data and improve its usefulness and transparency.",
+    "supports": [
+      "January 2016 Civic Hall data-preview hackathon",
+      "constituent-services purpose",
+      "public release and transparency context"
+    ],
+    "limitations": [
+      "Published after the event and does not provide the exact January event date or announced hours."
+    ],
+    "caveats": [],
+    "stability": "stable",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-POLITICO-COVERAGE",
+    "sourceClass": "press",
+    "title": "Website provides new information about council members' focus",
+    "creator": "Miranda Neubauer",
+    "publisher": "Politico New York",
+    "publishedAt": "2016-03-14",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "canonical",
+        "url": "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
+      }
+    ],
+    "availability": "live",
+    "publicCitationPolicy": "link-canonical",
+    "shortLabel": "Politico New York coverage",
+    "publicCitation": "Miranda Neubauer, “Website provides new information about council members' focus,” Politico New York, March 14, 2016.",
+    "summary": "Reports that Jamie attended the January Civic Hall hackathon before the complete dataset was released, then independently created CallNYC after release; also records cautions about uneven CouncilStat use across offices.",
+    "supports": [
+      "independent follow-on chronology",
+      "March 2016 CallNYC existence",
+      "Politico New York coverage",
+      "CouncilStat interpretation limitations"
+    ],
+    "limitations": [
+      "Press reporting supports attributed chronology and quotations, not official Council adoption or ownership of CallNYC.",
+      "Does not provide a precise calendar date for the complete data release."
+    ],
+    "caveats": [],
+    "stability": "stable",
+    "lastReviewed": "2026-07-11"
+  },
+  {
+    "id": "SRC-CALL-PUBLIC-REPOSITORY",
+    "sourceClass": "public-repository",
+    "title": "CallNYC public source repository",
+    "creator": "Jamie Burkart / openhouse",
+    "publisher": "GitHub",
+    "accessedAt": "2026-07-11",
+    "links": [
+      {
+        "kind": "canonical",
+        "url": "https://github.com/openhouse/CallNYC"
+      }
+    ],
+    "availability": "live",
+    "publicCitationPolicy": "link-canonical",
+    "shortLabel": "CallNYC public repository",
+    "publicCitation": "openhouse, CallNYC public source repository, GitHub.",
+    "summary": "Preserves the public source repository for the independent CallNYC prototype.",
+    "supports": [
+      "public repository existence",
+      "project implementation context"
+    ],
+    "limitations": [
+      "Repository existence does not establish official Council status, adoption, or current service availability."
+    ],
+    "caveats": [],
+    "stability": "stable",
+    "lastReviewed": "2026-07-11"
+  }
+]
