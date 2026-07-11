@@ -148,3 +148,90 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-marker {
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.12em;
+  vertical-align: super;
+}
+
+.citation-marker a {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.references-section {
+  margin-top: 3.5rem;
+  max-width: 72ch;
+}
+
+.references-section h2 {
+  color: var(--jb-oil-ink);
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.references-list {
+  counter-reset: reference-item;
+  display: grid;
+  gap: 1rem;
+  list-style: decimal;
+  margin-top: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.reference-item {
+  background: rgba(247, 244, 238, 0.78);
+  border: 1px solid rgba(52, 52, 53, 0.12);
+  border-radius: 0.5rem;
+  color: rgba(52, 52, 53, 0.78);
+  padding: 1rem;
+  scroll-margin-top: 7rem;
+}
+
+.reference-item:target {
+  outline: 2px solid var(--jb-broadway-blue);
+  outline-offset: 0.35rem;
+}
+
+.reference-claim {
+  color: var(--jb-oil-ink);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.reference-caveat,
+.reference-sources,
+.reference-sources p {
+  margin-top: 0.65rem;
+}
+
+.reference-sources {
+  display: grid;
+  gap: 0.9rem;
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.reference-links,
+.reference-links a,
+.reference-backlink {
+  overflow-wrap: anywhere;
+}
+
+.reference-links a,
+.reference-backlink {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.reference-backlink {
+  display: inline-block;
+  margin-top: 0.85rem;
+}

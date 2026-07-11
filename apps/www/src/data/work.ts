@@ -282,7 +282,7 @@ const workItemsInput = [
     summary:
       "Built a civic-data prototype translating constituent-services open data into resident-facing find help / next steps guidance.",
     role: "Civic-Tech Builder & Product Translator",
-    years: "2014-2015",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -303,7 +303,7 @@ const workItemsInput = [
       {
         title: "Open-data translation layer",
         description:
-          "A civic-data interpretation layer built after a New York City Council civic-data hackathon.",
+          "A civic-data interpretation layer built after the fuller CouncilStat release and informed by a January 2016 New York City Council constituent-services hackathon.",
         type: "map"
       },
       {
@@ -332,33 +332,52 @@ const workItemsInput = [
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
       },
-      { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
+      {
+        label: "Civic Hall announcement",
+        url: "https://x.com/CivicHall/status/693124020917522433"
+      },
+      {
+        label: "NYC Council event-day post",
+        url: "https://x.com/NYCCouncil/status/693509031768506368"
+      },
+      {
+        label: "Archived Civic Hall capture",
+        url: "https://web.archive.org/web/20160131004601/http://civichall.org/events/page/2/"
+      },
+      {
+        label: "Promotional graphic",
+        url: "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large"
+      },
+      { label: "CallNYC GitHub repository", url: "https://github.com/openhouse/CallNYC" }
     ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "Civic Hall and New York City Council event posts preserved through a Wayback-captured Civic Hall page; Politico New York coverage; public CallNYC code repository; participant archive context; public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus:
+      "Archived prototype. Public citations verified for the January 2016 event context and independent follow-on project; public-safe screenshots remain pending.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
     evidence: [
-      "Built after a New York City Council civic-data hackathon",
-      "Translated CouncilStat / constituent-services open data",
+      "Civic Hall announced the January 30, 2016, 1-3 p.m. constituent-services hackathon",
+      "An event-day New York City Council post called it the Council's first CouncilStat hackathon at Civic Hall",
+      "Politico New York documented Jamie's participation and independent CallNYC follow-on after the full data release",
+      "Public CallNYC source repository",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC translated civic open data into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC was an independent 2016 civic-tech prototype informed by a January New York City Council constituent-services hackathon at Civic Hall and developed after the fuller CouncilStat release.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "Public-safe screenshots, participant-photo publication, the full official event title, agenda, breakout roster, and registration contents remain unresolved or approval-gated.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "No current-service claims, official city affiliation claims, private user data, raw research artifacts, private transcript material, or unverified guidance are published."
       }
   },
   {
