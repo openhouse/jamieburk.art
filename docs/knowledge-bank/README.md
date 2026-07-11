@@ -32,9 +32,13 @@ The knowledge bank exists to:
   boundaries, and projection guidance.
 - **Structured proof data:** machine-readable claim layer in
   `apps/www/src/data/proofs.ts`.
+- **Citation graph:** canonical sources, atomic claims, evidence, groups, page
+  plans, research runs, corrections, and artifacts in `packages/knowledge-bank/`.
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+
+See `citation-policy.md` for the citation authoring and governance workflow.
 
 ## Core Rule
 
