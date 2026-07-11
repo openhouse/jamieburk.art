@@ -35,6 +35,17 @@ export default function ColophonPage() {
           review.
         </p>
       </div>
+      <section aria-labelledby="citational-care" className="jb-reading mt-12">
+        <h2 className="text-2xl font-semibold text-jb-ink" id="citational-care">
+          Citational care
+        </h2>
+        <p className="mt-4 leading-8 text-jb-ink/76">
+          Significant factual claims are linked to numbered notes and inspectable
+          sources where public access is appropriate. Private or sensitive evidence
+          is described without exposing the underlying archive. Citations state what
+          a source supports, preserve relevant limits, and leave room for correction.
+        </p>
+      </section>
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {details.map((detail) => (
           <JBCard key={detail}>
