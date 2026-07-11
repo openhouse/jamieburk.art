@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ART-CALL-PROMOTIONAL-GRAPHIC",
+    "title": "New York City Council Hackathon promotional graphic",
+    "kind": "promotional-graphic",
+    "sourceId": "SRC-CALL-PROMOTIONAL-GRAPHIC",
+    "publicAssetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
+    "supportsAssertionIds": ["ASSERT-CALL-PROMOTIONAL-BRANDING"],
+    "evidenceScope": "direct",
+    "publicUseStatus": "approved-public",
+    "rightsStatus": "cleared",
+    "caption": "Recovered New York City Council Hackathon promotional graphic.",
+    "limitations": ["Supports visible branding, not a longer formal event title."]
+  },
+  {
+    "id": "ART-CALL-DIGITAL-DISTRICT-PHOTO",
+    "title": "Participant photograph metadata for a workshop placard",
+    "kind": "photograph",
+    "sourceId": "SRC-CALL-DIGITAL-DISTRICT-PHOTO",
+    "supportsAssertionIds": ["ASSERT-CALL-DIGITAL-DISTRICT"],
+    "evidenceScope": "direct",
+    "publicUseStatus": "public-metadata-only",
+    "rightsStatus": "needs-photographer-permission",
+    "caption": "Public-safe metadata for a participant workshop photograph.",
+    "limitations": [
+      "The image itself is not published.",
+      "Metadata does not establish the event title, start time, facilitator, attendee roster, or complete discussion."
+    ]
+  }
+]

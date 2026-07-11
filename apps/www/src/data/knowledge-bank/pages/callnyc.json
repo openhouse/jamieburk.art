@@ -1,0 +1,22 @@
+{
+  "id": "PAGE-CALL-WORK",
+  "route": "/work/callnyc",
+  "slug": "callnyc",
+  "citationOrder": [
+    "NOTE-CALL-EVENT-CONTEXT",
+    "NOTE-CALL-PROMOTIONAL-BRANDING",
+    "NOTE-CALL-INDEPENDENT-FOLLOW-ON",
+    "NOTE-CALL-DATA-LIMITATIONS",
+    "NOTE-CALL-POLITICO",
+    "NOTE-CALL-PUBLIC-REPOSITORY"
+  ],
+  "occurrences": [
+    { "noteId": "NOTE-CALL-EVENT-CONTEXT", "occurrence": "call-event-context-1" },
+    { "noteId": "NOTE-CALL-PROMOTIONAL-BRANDING", "occurrence": "call-event-branding-1" },
+    { "noteId": "NOTE-CALL-INDEPENDENT-FOLLOW-ON", "occurrence": "call-independent-follow-on-1" },
+    { "noteId": "NOTE-CALL-DATA-LIMITATIONS", "occurrence": "call-data-limits-1" },
+    { "noteId": "NOTE-CALL-POLITICO", "occurrence": "call-politico-1" },
+    { "noteId": "NOTE-CALL-PUBLIC-REPOSITORY", "occurrence": "call-repository-1" }
+  ],
+  "publicBoundary": "CallNYC is an archived, independent, unofficial prototype. Protected sources and participant-photo details do not render."
+}

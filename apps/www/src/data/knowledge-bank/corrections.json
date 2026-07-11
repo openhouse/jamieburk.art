@@ -1,0 +1,34 @@
+[
+  {
+    "id": "CORR-CALL-YEAR-2016",
+    "surface": "CallNYC work metadata",
+    "previousValue": "2014-2015",
+    "correctedValue": "2016",
+    "reason": "Recovered and public event chronology places the event, release, build, and coverage in 2016.",
+    "relatedAssertionIds": ["ASSERT-CALL-EVENT-DATE", "ASSERT-CALL-INDEPENDENT-FOLLOW-ON"],
+    "relatedSourceIds": ["SRC-CALL-CIVICHALL-ANNOUNCEMENT", "SRC-CALL-POLITICO-COVERAGE"],
+    "status": "applied-to-site",
+    "resolvedAt": "2026-07-11"
+  },
+  {
+    "id": "CORR-CALL-HACKATHON-WORDING",
+    "surface": "CallNYC portfolio and knowledge-bank wording",
+    "previousValue": "first civic-data hackathon / built at or after hackathon",
+    "correctedValue": "independent follow-on to the Council-attributed first CouncilStat hackathon at Civic Hall",
+    "reason": "Source-specific evidence narrows and strengthens the chronology and first-hackathon claim.",
+    "relatedAssertionIds": ["ASSERT-CALL-FIRST-COUNCILSTAT", "ASSERT-CALL-INDEPENDENT-FOLLOW-ON"],
+    "relatedSourceIds": ["SRC-CALL-NYCCOUNCIL-EVENT-DAY", "SRC-CALL-POLITICO-COVERAGE"],
+    "status": "applied-to-site",
+    "resolvedAt": "2026-07-11"
+  },
+  {
+    "id": "CORR-CALL-RESUME-PDF",
+    "surface": "Approved resume PDF",
+    "previousValue": "Built CallNYC.org after the New York City Council's first civic-data hackathon",
+    "correctedValue": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon at Civic Hall",
+    "reason": "The repository contains only the binary PDF, so correction requires regeneration from the editable source outside this repository.",
+    "relatedAssertionIds": ["ASSERT-CALL-FIRST-COUNCILSTAT", "ASSERT-CALL-INDEPENDENT-FOLLOW-ON"],
+    "relatedSourceIds": ["SRC-CALL-NYCCOUNCIL-EVENT-DAY", "SRC-CALL-POLITICO-COVERAGE"],
+    "status": "follow-up-required"
+  }
+]
