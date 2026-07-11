@@ -30,6 +30,7 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:citations
 npm run public-safety
 npm run check:routes
 npm run preflight:staging
@@ -41,7 +42,8 @@ npm run preflight:production
 This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
-- `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/knowledge-bank/`
+- `apps/www/src/data/proofs.ts` (backward-compatible projection)
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -56,7 +58,23 @@ There is intentionally no public `/proofs` route. The site should remain a
 composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
-metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+metadata. `npm run check:citations` validates source relationships, public
+status, anti-claims, stable MDX references, and private-path boundaries.
+`npm run check:routes` checks canonical routes and legacy redirects.
+
+### Citations
+
+In MDX, cite the stable knowledge-bank claim ID. Do not hand-write the
+definition or assign a public number:
+
+```mdx
+The Council described the gathering as its first CouncilStat
+hackathon.[^callnyc-first-councilstat-hackathon]
+```
+
+The build generates page-local numerical markers, a References section, source
+links, qualifications, and backlinks. TSX surfaces use `createCitationScope`,
+`CitationMark`, and `References`. See `docs/citational-care.md`.
 
 ## Environment
 
