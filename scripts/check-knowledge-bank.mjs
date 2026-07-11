@@ -299,6 +299,7 @@ for (const requiredDoc of [
   "review-checklist.md",
   "anti-claims.md",
   "public-safety.md",
+  "visual-evidence.md",
   "opportunities/oti-technical-operations.md",
   "opportunities/source-backed-team-memory.md"
 ]) {

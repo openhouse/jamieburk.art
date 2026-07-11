@@ -56,3 +56,9 @@ usable, what Jamie did, and what boundary remains protected.
 
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
+
+## Visual Evidence
+
+`visual-evidence.md` records public-safe findings from structured photo-field
+review. It describes visible patterns and limits without publishing photographs,
+identities, private source locations, or sensitive records.

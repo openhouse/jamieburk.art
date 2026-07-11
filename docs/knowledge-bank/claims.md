@@ -142,16 +142,17 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Evidence class:** Approved resume / public-safe archive summary / curated photo-field review / Jamie review confirmation
+**Public wording:** Hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+**Detailed public-safe wording:** Jamie hosts Sunday Dinner and made recurring cultural work easier to continue through practical invitation, room and meal preparation, onboarding, facilitation, documentation, and follow-through systems.
+**Source note:** The curated photo-field review corroborates the material hosting practice but does not independently prove aggregate counts, identify participants for publication, or grant consent to publish images.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-11
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
