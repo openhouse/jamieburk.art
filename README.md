@@ -28,6 +28,9 @@ Use `.env.example` for local environment defaults.
 npm run typecheck
 npm run lint
 npm run build
+npm run check:citations
+npm run test:citations
+npm run report:citations
 npm run check
 npm run knowledge-bank
 npm run public-safety
@@ -42,6 +45,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
+- `apps/www/src/data/citations/`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -57,6 +61,30 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+`npm run check:citations` validates source relationships, citation manifests,
+MDX occurrences, protected-source boundaries, and bounded negative findings.
+`npm run test:citations` runs compact citation regressions, and
+`npm run report:citations` prints the deterministic page, claim, source,
+correction, and unresolved-item report without fetching external URLs.
+
+### Citation Authoring
+
+1. Add a stable public-safe source to
+   `apps/www/src/data/citations/sources.json`.
+2. Add the smallest defensible claim to `claims.json` and attach typed evidence
+   relationships to its source IDs.
+3. Preserve qualifiers, limitations, anti-claims, prohibited wording, and the
+   approved public surfaces.
+4. Add the claim to the page manifest in `citation-sets.json` in first-appearance
+   order.
+5. Place `<Cite setId="..." claimId="..." occurrence={1} />` directly after
+   the supported proposition and increment repeated occurrences contiguously.
+6. End the page with `<References setId="..." />`.
+7. Run `npm run check:citations`, `npm run test:citations`, and `npm run check`.
+
+Private evidence stays outside this public repository. A protected record may
+provide safe citation text, but it must not expose a path, filename, image,
+identity record, signed URL, or public source link.
 
 ## Environment
 

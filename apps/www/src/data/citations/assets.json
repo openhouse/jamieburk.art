@@ -1,0 +1,35 @@
+[
+  {
+    "id": "asset-callnyc-promotional-graphic",
+    "sourceId": "src-callnyc-promotional-graphic",
+    "kind": "promotional_graphic",
+    "title": "New York City Council Hackathon promotional graphic",
+    "description": "Council-branded graphic used as public source evidence for the visible event branding.",
+    "visibleText": "New York City Council Hackathon; labs.council.nyc",
+    "visibility": "public",
+    "rightsStatus": "review_required",
+    "consentStatus": "not_required",
+    "publicUseStatus": "metadata_only",
+    "allowedSurfaces": ["knowledge-bank", "/work/callnyc"],
+    "publicAltText": "New York City Council Hackathon promotional graphic displaying labs.council.nyc.",
+    "publicCaption": "Council-branded promotional graphic, January 2016.",
+    "cropReviewStatus": "not_started"
+  },
+  {
+    "id": "asset-callnyc-digital-district-photo",
+    "sourceId": "src-callnyc-digital-district-photo",
+    "kind": "photograph",
+    "title": "Digital District participant photograph",
+    "description": "Protected participant evidence for the visible breakout prompt and approximate capture time.",
+    "visibleText": "Digital District — Help improve City Council District office operations",
+    "capturedAt": "January 30, 2016, approximately 2:10 p.m.",
+    "visibility": "protected",
+    "rightsStatus": "review_required",
+    "consentStatus": "review_required",
+    "publicUseStatus": "metadata_only",
+    "allowedSurfaces": ["knowledge-bank", "/work/callnyc"],
+    "publicAltText": "Protected participant photograph documenting a Digital District breakout prompt.",
+    "publicCaption": "Participant-archive evidence; photograph timestamp is not the event start time.",
+    "cropReviewStatus": "review_required"
+  }
+]

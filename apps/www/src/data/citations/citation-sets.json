@@ -1,0 +1,17 @@
+[
+  {
+    "id": "callnyc-case-study",
+    "pagePath": "/work/callnyc",
+    "entries": [
+      { "claimId": "callnyc-event-date-time-purpose", "occurrences": 1 },
+      { "claimId": "callnyc-event-venue-and-councilstat-context", "occurrences": 1 },
+      { "claimId": "callnyc-event-branding", "occurrences": 1 },
+      { "claimId": "callnyc-digital-district-breakout", "occurrences": 1 },
+      { "claimId": "callnyc-no-dedicated-listing-recovered", "occurrences": 1 },
+      { "claimId": "callnyc-independent-follow-on", "occurrences": 1 },
+      { "claimId": "callnyc-archived-unofficial-status", "occurrences": 2 },
+      { "claimId": "callnyc-data-comparability-limits", "occurrences": 1 },
+      { "claimId": "callnyc-politico-coverage", "occurrences": 1 }
+    ]
+  }
+]

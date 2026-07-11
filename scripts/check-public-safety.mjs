@@ -146,6 +146,12 @@ const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
 
+scanPattern(
+  shippedContentFiles,
+  "private source path appears in production-facing content",
+  /file:\/\/|\/(?:private|tmp|Volumes|Users)\/|civic-hall-wayback-research/i
+);
+
 for (const file of allFiles) {
   const rel = relative(file);
   const base = path.basename(file);

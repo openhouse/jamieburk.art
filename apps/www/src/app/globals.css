@@ -70,7 +70,7 @@ html {
 }
 
 body {
-  min-width: 320px;
+  min-width: 0;
   background:
     linear-gradient(90deg, rgba(11, 95, 129, 0.026) 1px, transparent 1px),
     linear-gradient(180deg, rgba(118, 83, 58, 0.024) 1px, transparent 1px),
@@ -147,4 +147,116 @@ h2 {
   letter-spacing: 0.055em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+
+.citation-marker {
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.12em;
+  vertical-align: super;
+}
+
+.citation-marker a {
+  border-radius: 0.2rem;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.12em 0.18em;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.citation-references {
+  border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 18%, transparent);
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+.citation-references > h2 {
+  margin-top: 0;
+}
+
+.citation-references > ol {
+  list-style: decimal;
+  margin: 1.5rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.citation-note {
+  border-radius: 0.35rem;
+  margin-block: 1.25rem;
+  padding: 0.4rem 0.55rem 0.55rem;
+  scroll-margin-top: 7rem;
+}
+
+.citation-note::marker {
+  color: var(--jb-broadway-blue);
+  font-weight: 700;
+}
+
+.citation-note:target {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 34%, transparent);
+  outline: 2px solid color-mix(in srgb, var(--jb-yellow-ochre) 68%, transparent);
+}
+
+.citation-note-claim {
+  font-weight: 650;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.citation-source-list {
+  list-style: disc;
+  margin: 0.7rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.citation-source-list li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-block: 0.6rem;
+}
+
+.citation-source-links,
+.citation-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.8rem;
+  margin-top: 0.45rem;
+}
+
+.citation-source-link,
+.citation-backlinks a {
+  color: var(--jb-broadway-blue);
+  font-size: 0.88rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.citation-note-limit {
+  color: color-mix(in srgb, var(--jb-oil-ink) 78%, transparent);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0.65rem 0 0;
+}
+
+@media print {
+  .citation-references {
+    break-before: auto;
+  }
+
+  .citation-note {
+    break-inside: avoid;
+  }
+
+  .citation-source-link[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-weight: 400;
+    overflow-wrap: anywhere;
+  }
+
+  .citation-backlinks {
+    display: none;
+  }
 }

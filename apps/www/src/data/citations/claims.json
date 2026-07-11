@@ -1,0 +1,309 @@
+[
+  {
+    "id": "callnyc-event-date-time-purpose",
+    "canonicalText": "Civic Hall announced a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services.",
+    "publicVariants": {
+      "callnyc-case-study": "On January 30, 2016, Civic Hall hosted a New York City Council hackathon focused on constituent services; Civic Hall advertised a 1-3 p.m. workshop window."
+    },
+    "evidenceStatus": "corroborated",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-civic-hall-post",
+        "support": "direct",
+        "note": "Directly supports the announced date, time window, Council connection, and constituent-services purpose."
+      },
+      {
+        "sourceId": "src-callnyc-wayback-social-feed",
+        "support": "corroborating",
+        "note": "Preserves the announcement inside an embedded social feed."
+      }
+    ],
+    "qualifier": "The 1-3 p.m. value is the advertised workshop window, not proof that every activity occurred for exactly those hours.",
+    "limitations": [
+      "No full agenda or complete event schedule has been recovered."
+    ],
+    "antiClaims": [
+      "The event began at 2:10 p.m.",
+      "The 1-3 p.m. announcement proves every activity occurred for exactly those hours."
+    ],
+    "prohibitedWording": [
+      "The event began at 2:10 p.m.",
+      "The event ran from 1-3 p.m."
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-event-venue-and-councilstat-context",
+    "canonicalText": "A New York City Council event-day post identified the Civic Hall gathering as its first CouncilStat hackathon.",
+    "evidenceStatus": "verified_primary",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-nyc-council-post",
+        "support": "direct"
+      },
+      {
+        "sourceId": "src-callnyc-wayback-social-feed",
+        "support": "corroborating"
+      }
+    ],
+    "qualifier": "'First CouncilStat hackathon' is the Council's description, not a broader claim about all civic-data hackathons.",
+    "limitations": [
+      "The Wayback page preserves the post inside an embedded feed; it is not a dedicated event listing."
+    ],
+    "antiClaims": [
+      "This was the New York City Council's first civic-data hackathon.",
+      "The Wayback capture is a recovered event page or calendar listing.",
+      "Melissa Mark-Viverito was confirmed present."
+    ],
+    "prohibitedWording": [
+      "first civic-data hackathon",
+      "Melissa Mark-Viverito attended"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-event-branding",
+    "canonicalText": "A Council-branded promotional graphic reads 'New York City Council Hackathon' and displays labs.council.nyc.",
+    "evidenceStatus": "verified_primary",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-promotional-graphic",
+        "support": "direct"
+      }
+    ],
+    "limitations": [
+      "The graphic establishes visible branding, not a longer formal registration title."
+    ],
+    "antiClaims": [
+      "Digital District was the official title of the full event."
+    ],
+    "prohibitedWording": [
+      "Digital District was the event title"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-digital-district-breakout",
+    "canonicalText": "Jamie's participant archive documents a breakout prompt reading 'Digital District - Help improve City Council District office operations' at approximately 2:10 p.m. on January 30, 2016.",
+    "evidenceStatus": "archive_supported",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-digital-district-photo",
+        "support": "direct",
+        "note": "Protected participant photograph; public citation text is safe, but the image and metadata remain unpublished."
+      }
+    ],
+    "qualifier": "Approximately 2:10 p.m. is the photograph timestamp, not an event start time.",
+    "limitations": [
+      "The photograph does not identify every person, role, organizer, facilitator, or collaborator shown."
+    ],
+    "antiClaims": [
+      "Digital District was the official title of the full event.",
+      "The event began at 2:10 p.m.",
+      "Unknown people in the photograph were Council staff, Civic Hall staff, organizers, facilitators, or Jamie's collaborators.",
+      "The conflicting Apple Photos map pin establishes the venue."
+    ],
+    "prohibitedWording": [
+      "The event began at 2:10 p.m.",
+      "The photograph proves the venue",
+      "The people pictured were Council staff"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-no-dedicated-listing-recovered",
+    "canonicalText": "No dedicated Civic Hall calendar or event-detail page was recovered in this research.",
+    "evidenceStatus": "not_recovered",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-cdx-research-2026-07",
+        "support": "direct"
+      },
+      {
+        "sourceId": "src-callnyc-wayback-social-feed",
+        "support": "contextual",
+        "note": "Shows what was recovered: an index-page capture preserving embedded social posts."
+      }
+    ],
+    "qualifier": "The finding is bounded to the searched Wayback/CDX corpus.",
+    "limitations": [
+      "The result does not prove that no dedicated page ever existed.",
+      "A full agenda, breakout roster, attendee list, facilitator list, registration-form contents, formal winners, and published project roster were also not recovered."
+    ],
+    "antiClaims": [
+      "No dedicated event page ever existed.",
+      "The absence of a recovered page proves no page ever existed."
+    ],
+    "prohibitedWording": [
+      "No dedicated event page ever existed"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-independent-follow-on",
+    "proofId": "callnyc-civic-data-guidance",
+    "canonicalText": "After the full CouncilStat dataset became public, Jamie independently developed CallNYC as a resident-facing interpretation of the records.",
+    "evidenceStatus": "independently_reported",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-politico-2016-03-14",
+        "support": "direct",
+        "note": "Politico independently reported the hackathon context, full-dataset release, and Jamie's rapid follow-on development."
+      },
+      {
+        "sourceId": "src-callnyc-github-repository",
+        "support": "corroborating",
+        "note": "The public repository preserves the project implementation."
+      }
+    ],
+    "limitations": [
+      "The sources do not establish CallNYC as an official Council product, formal hackathon submission, or winner."
+    ],
+    "antiClaims": [
+      "CallNYC was commissioned, endorsed, adopted, or maintained by the Council.",
+      "CallNYC was a formal hackathon submission or winner."
+    ],
+    "prohibitedWording": [
+      "commissioned by the Council",
+      "formal hackathon submission",
+      "hackathon winner"
+    ],
+    "approvedSurfaces": ["/work/callnyc", "work-card", "technical-operations"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-archived-unofficial-status",
+    "proofId": "callnyc-civic-data-guidance",
+    "canonicalText": "CallNYC is an archived independent prototype, not an official or current New York City Council service.",
+    "evidenceStatus": "corroborated",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-politico-2016-03-14",
+        "support": "direct",
+        "note": "Describes Jamie's independent development of the website after the data release."
+      },
+      {
+        "sourceId": "src-callnyc-github-repository",
+        "support": "corroborating",
+        "note": "Preserves the project as a public source repository."
+      }
+    ],
+    "qualifier": "The portfolio presents the project historically and does not offer current civic guidance.",
+    "limitations": [
+      "The project is not legal advice, emergency guidance, or comprehensive current civic guidance."
+    ],
+    "antiClaims": [
+      "CallNYC was commissioned, endorsed, adopted, or maintained by the Council.",
+      "CallNYC is a current City Council service.",
+      "CallNYC provides legal advice or emergency guidance."
+    ],
+    "prohibitedWording": [
+      "CallNYC is an official City Council service",
+      "CallNYC is a current City Council service"
+    ],
+    "approvedSurfaces": ["/work/callnyc", "work-card", "technical-operations"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-data-comparability-limits",
+    "canonicalText": "Council offices used CouncilStat differently and with different frequency, so case counts could not responsibly be treated as a simple measure of office performance, specialization, or resident need.",
+    "evidenceStatus": "independently_reported",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-politico-2016-03-14",
+        "support": "direct",
+        "note": "Politico reported staff cautions that offices used CouncilStat in different ways and with different frequency."
+      }
+    ],
+    "qualifier": "The public interpretation adds the responsible limit that raw counts should not be treated as simple comparative scores.",
+    "limitations": [
+      "The article does not provide a complete office-by-office data-quality audit."
+    ],
+    "antiClaims": [
+      "CouncilStat counts measured office performance, quality, specialization, or need.",
+      "The Council adopted a specific participant recommendation unless a source says so."
+    ],
+    "prohibitedWording": [
+      "CouncilStat measured office performance",
+      "CouncilStat measured office quality"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-politico-coverage",
+    "proofId": "callnyc-civic-data-guidance",
+    "canonicalText": "Politico New York covered CallNYC on March 14, 2016, as a website for exploring newly released City Council constituent-services data.",
+    "evidenceStatus": "independently_reported",
+    "evidence": [
+      {
+        "sourceId": "src-callnyc-politico-2016-03-14",
+        "support": "direct"
+      }
+    ],
+    "qualifier": "The article is historical coverage of the 2016 prototype, not evidence of current service status.",
+    "limitations": [
+      "The article does not establish Council commissioning, endorsement, adoption, or operation of CallNYC."
+    ],
+    "antiClaims": [
+      "Politico coverage made CallNYC an official Council service."
+    ],
+    "prohibitedWording": [
+      "Politico endorsed CallNYC"
+    ],
+    "approvedSurfaces": ["/work/callnyc"],
+    "publicApproved": true,
+    "recordStatus": "active",
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-years-2014-2015-superseded",
+    "canonicalText": "CallNYC project years were 2014-2015.",
+    "evidenceStatus": "unresolved",
+    "evidence": [],
+    "limitations": [
+      "This former value was corrected to 2016."
+    ],
+    "approvedSurfaces": [],
+    "publicApproved": false,
+    "recordStatus": "superseded",
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  },
+  {
+    "id": "callnyc-first-civic-data-hackathon-superseded",
+    "canonicalText": "CallNYC followed the New York City Council's first civic-data hackathon.",
+    "evidenceStatus": "unresolved",
+    "evidence": [],
+    "limitations": [
+      "The recovered Council language is narrower: its first CouncilStat hackathon."
+    ],
+    "approvedSurfaces": [],
+    "publicApproved": false,
+    "recordStatus": "superseded",
+    "reviewedAt": "2026-07-11",
+    "reviewedBy": "Jamie Burkart with AI-assisted archival review"
+  }
+]

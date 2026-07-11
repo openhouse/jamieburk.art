@@ -137,24 +137,35 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source"],
     publicWording:
-      "Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.",
+      "Independently built CallNYC.org after a January 2016 New York City Council constituent-services hackathon at Civic Hall, translating CouncilStat open data into resident-facing pathways.",
     shortWording: "Translated civic open data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
+      "After the full CouncilStat dataset became public, Jamie independently developed CallNYC as an archived, unofficial interpretation of constituent-services records, with issue pathways, district context, resident-facing guidance, and explicit comparison limits; Politico New York covered the project in March 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "Public Civic Hall and New York City Council event records, protected participant-archive evidence, bounded Wayback/CDX research, public GitHub repository, and verified Politico New York coverage.",
+    sourceNote:
+      "Detailed source, claim, evidence-relationship, limitation, and anti-claim records live in the CallNYC citation dataset.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Current city service",
       "Official city guidance",
       "Emergency guidance",
-      "Legal guidance"
+      "Legal guidance",
+      "First civic-data hackathon",
+      "Formal hackathon submission or winner",
+      "Commissioned, endorsed, adopted, or maintained by the Council"
     ],
-    protectedBoundaries: ["Current-service claims", "Private user data", "Unverified guidance"],
+    protectedBoundaries: [
+      "Participant photograph and metadata",
+      "Depicted identities",
+      "Current-service claims",
+      "Private user data",
+      "Unverified guidance"
+    ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-11"
   },
   {
     id: "fair-rent-campaign-memory",

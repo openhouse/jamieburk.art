@@ -15,6 +15,9 @@
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
+- [ ] Correct the resume PDF sentence "the New York City Council's first
+  civic-data hackathon" to the source-bounded January 2016 constituent-services
+  hackathon wording before production publication.
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
