@@ -148,3 +148,99 @@ h2 {
   line-height: 1.2;
   text-transform: uppercase;
 }
+
+.citation-ref {
+  font-size: 0.72em;
+  line-height: 0;
+  margin-inline-start: 0.08em;
+  vertical-align: super;
+}
+
+.citation-ref a {
+  color: var(--jb-broadway-blue);
+  display: inline-block;
+  margin: -0.28em;
+  padding: 0.28em;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.citation-ref a:focus-visible,
+.references a:focus-visible {
+  outline: 0.18rem solid currentColor;
+  outline-offset: 0.16rem;
+}
+
+.references {
+  border-block-start: 1px solid rgba(52, 52, 53, 0.18);
+  margin-block-start: 3rem;
+  padding-block-start: 2rem;
+}
+
+.references h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.references ol {
+  list-style: decimal;
+  margin-block-start: 1rem;
+  padding-inline-start: 1.35rem;
+}
+
+.references li {
+  color: rgba(52, 52, 53, 0.78);
+  line-height: 1.65;
+  padding-inline-start: 0.25rem;
+  scroll-margin-top: 7rem;
+}
+
+.references li + li {
+  margin-block-start: 1.25rem;
+}
+
+.references li:target {
+  background: color-mix(in srgb, var(--jb-lemon-yellow) 35%, transparent);
+}
+
+.references p {
+  margin: 0;
+}
+
+.source-links,
+.reference-backlinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.7rem;
+  margin-block-start: 0.45rem;
+}
+
+.source-links a,
+.reference-backlinks a {
+  color: var(--jb-broadway-blue);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.reference-caveat,
+.reference-caveats {
+  color: rgba(52, 52, 53, 0.68);
+  font-size: 0.95rem;
+  margin-block-start: 0.45rem;
+}
+
+.reference-caveats {
+  list-style: disc;
+  padding-inline-start: 1.1rem;
+}
+
+@media print {
+  .citation-ref,
+  .references {
+    display: initial;
+  }
+}
