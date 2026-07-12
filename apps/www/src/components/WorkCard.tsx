@@ -22,6 +22,10 @@ export function WorkCard({ item }: WorkCardProps) {
           <p className="mt-2 font-medium text-jb-green">{item.subtitle}</p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
         </div>
+        <div>
+          <p className="text-sm font-semibold text-jb-ink">{"Jamie's role"}</p>
+          <p className="mt-1 text-sm leading-6 text-jb-ink/72">{item.role}</p>
+        </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
           <div>
             <dt className="font-semibold text-jb-ink">What was unclear</dt>

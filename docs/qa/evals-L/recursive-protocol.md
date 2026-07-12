@@ -10,6 +10,7 @@ or deployment configuration.
 Run:
 
 ```sh
+npm run evals:chad
 npm run evals:recursive
 ```
 
@@ -29,6 +30,18 @@ The first pass should answer:
 The resume page, Technical Operations page, work index, selected case studies,
 about page, contact page, and Source-Backed Team Memory lab page are the minimum
 review surface.
+
+### Chad-Lens Criterion
+
+`npm run evals:chad` scores the public projection against six dimensions:
+actor visibility, purpose, concrete work, one-pass legibility, defensible
+strength, and collective credit. Passing requires at least 90/100 and no hard
+failure. Hard failures cover hidden project roles, unsupported ownership,
+weakened source/guardrail structure, and inflated public claims.
+
+Treat the score as a regression gate, not a substitute for editorial judgment.
+If it fails, improve the claim bank or public projection, rerun the evaluator,
+and repeat until the criterion is met without weakening public-safety rules.
 
 ## Loop 2: Claim Projection
 

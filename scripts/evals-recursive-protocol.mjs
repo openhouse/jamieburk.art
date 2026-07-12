@@ -60,6 +60,7 @@ const requiredFiles = [
   "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
   "scripts/check-knowledge-bank.mjs",
   "scripts/check-public-safety.mjs",
+  "scripts/evals-chad-lens.mjs",
   "scripts/check-routes.mjs"
 ];
 
@@ -73,6 +74,7 @@ for (const script of [
   "knowledge-bank",
   "public-safety",
   "check:routes",
+  "evals:chad",
   "evals:recursive",
   "preflight:staging",
   "preflight:production"
@@ -82,6 +84,14 @@ for (const script of [
 
 if (scripts.check && !scripts.check.includes("npm run evals:recursive")) {
   fail("package.json check script must include npm run evals:recursive");
+}
+
+if (scripts.check && !scripts.check.includes("npm run evals:chad")) {
+  fail("package.json check script must include npm run evals:chad");
+}
+
+if (scripts["evals:chad"] !== "node scripts/evals-chad-lens.mjs") {
+  fail("package.json evals:chad must run scripts/evals-chad-lens.mjs");
 }
 
 if (scripts["evals:recursive"] !== "node scripts/evals-recursive-protocol.mjs") {
@@ -118,6 +128,15 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:recursive", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:chad", doc[0]);
 }
 
 for (const phrase of [
