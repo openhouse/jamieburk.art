@@ -29,6 +29,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
 - [ ] `npm run check:routes`
+- [ ] `npm run evals:recursive`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
 - [ ] Docker build
@@ -53,6 +54,7 @@ ideas from the production-readiness-composite family.
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
+- [ ] Recursive eval protocol passes.
 - [ ] Chad-lens review passes.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed

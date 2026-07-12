@@ -12,6 +12,7 @@
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
+- [ ] Recursive eval protocol passes with `npm run evals:recursive`.
 - [ ] Chad-lens review passes.
 - [ ] Jamie approves public email/contact path.
 - [ ] Jamie approves resume PDF and phone-in-PDF behavior.
