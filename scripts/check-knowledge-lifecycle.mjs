@@ -9,6 +9,7 @@ const candidateClaims = knowledgeBank.candidateClaims ?? [];
 const promotions = knowledgeBank.promotions ?? [];
 const editorialBriefs = knowledgeBank.editorialBriefs ?? [];
 const discoveryNotes = knowledgeBank.discoveryNotes ?? [];
+const pressCollections = knowledgeBank.pressCollections ?? [];
 
 const suppliedUrls = [
   "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
@@ -270,6 +271,50 @@ const criteria = [
         .find((item) => item.claimId === claimId);
       return occurrence && renderedProjectionSources.includes(claimId) && renderedProjectionSources.includes(occurrence.id);
     })
+  },
+  {
+    id: "campaign-press-census",
+    label: "All four campaign press collections preserve the complete deduplicated census",
+    pass:
+      pressCollections.length === 4 &&
+      JSON.stringify(pressCollections.map((collection) => collection.entries.length)) ===
+        JSON.stringify([21, 7, 8, 1]) &&
+      pressCollections.flatMap((collection) => collection.entries).length === 37 &&
+      new Set(
+        pressCollections.flatMap((collection) =>
+          collection.entries.map((entry) => entry.sourceId)
+        )
+      ).size === 36
+  },
+  {
+    id: "campaign-press-lineage",
+    label: "Every campaign and article source has a bounded reading and explicit retrieval state",
+    pass:
+      pressCollections.length === 4 &&
+      pressCollections.every(
+        (collection) =>
+          sourceIds.has(collection.campaignSourceId) &&
+          readingBySourceId.has(collection.campaignSourceId) &&
+          collection.entries.every(
+            (entry) =>
+              sourceIds.has(entry.sourceId) &&
+              readingBySourceId.has(entry.sourceId) &&
+              ["read", "metadata-only", "not-recovered"].includes(entry.retrievalStatus)
+          )
+      )
+  },
+  {
+    id: "campaign-press-claim-discipline",
+    label: "The campaign-site claim is projected while reach and solo-causality claims remain held",
+    pass:
+      claimIds.has("CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE") &&
+      renderedProjectionSources.includes("CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE") &&
+      ["CND-NYCAC-PRESS-REACH", "CND-NYCAC-CAMPAIGN-SOLO-CAUSALITY"].every(
+        (id) => {
+          const candidate = candidateById.get(id);
+          return candidate && candidate.status === "hold" && !candidate.promotedClaimId;
+        }
+      )
   }
 ];
 

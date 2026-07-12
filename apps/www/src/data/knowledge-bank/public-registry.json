@@ -368,6 +368,57 @@
         "the outcome of every board discussion",
         "completed construction or current project status"
       ]
+    },
+    {
+      "id": "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+      "title": "Let NYC Dance campaign site and press section",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://letnycdance.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Let NYC Dance campaign site and press section.",
+      "publicNote": "The live campaign page preserves action language and 21 listed press articles about Cabaret Law repeal and cultural-space advocacy.",
+      "doesNotEstablish": [
+        "Jamie's authorship of the listed articles",
+        "audience reach or sole causality for repeal"
+      ]
+    },
+    {
+      "id": "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+      "title": "Save NYC Spaces campaign site and press section",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Save NYC Spaces campaign site and press section.",
+      "publicNote": "The live campaign page preserves public context and eight listed press articles about the Office of Nightlife and related reforms.",
+      "doesNotEstablish": [
+        "Jamie's authorship of the listed articles",
+        "audience reach or sole causality for the Office of Nightlife"
+      ]
+    },
+    {
+      "id": "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
+      "title": "Fair Rent NYC public reference library",
+      "organization": "NYC Artist Coalition / Fair Rent NYC",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://fairrentnyc.nycartc.com/library/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Fair Rent NYC, public reference library, reporting and narrative context section.",
+      "publicNote": "The live public library marks its links as public or public-share approved and lists one reporting source in its narrative-context section.",
+      "doesNotEstablish": [
+        "endorsement of every source argument",
+        "Jamie's sole authorship of the campaign or policy work"
+      ]
     }
   ],
   "claims": [
@@ -840,6 +891,69 @@
         "Describe the documented action as a board recommendation, not a final award.",
         "Do not infer completed construction or current project status."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across four campaign sites Jamie built - Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC - the public information architecture paired action pathways with reporting context. Their surviving press and reference sections preserve 37 article placements linking to 36 distinct published articles.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+          "relationship": "direct-support",
+          "supports": [
+            "Let NYC Dance campaign surface",
+            "21 press-list entries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
+          "relationship": "direct-support",
+          "supports": [
+            "Talks Not Raids campaign surface",
+            "seven press-list entries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+          "relationship": "direct-support",
+          "supports": [
+            "Save NYC Spaces campaign surface",
+            "eight press-list entries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
+          "relationship": "direct-support",
+          "supports": [
+            "Fair Rent NYC public reference library",
+            "one reporting-list entry"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The count describes placements in surviving campaign-site lists, not unique press hits or audience reach.",
+        "One NPR article appears in two campaign collections, producing 37 placements and 36 distinct articles.",
+        "Do not imply that Jamie authored, commissioned, or was named in every article.",
+        "Campaign and policy outcomes remain collective."
+      ]
     }
   ],
   "pages": [
@@ -939,7 +1053,10 @@
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
         "SRC-NYC-COUNCIL-CABARET-REPEAL-2017",
         "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
-        "SRC-NYC-COUNCIL-INT-1156-2018"
+        "SRC-NYC-COUNCIL-INT-1156-2018",
+        "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+        "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
       ],
       "occurrences": [
         {
@@ -969,6 +1086,17 @@
           "sourceIds": [
             "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
             "SRC-NYC-COUNCIL-INT-1156-2018"
+          ]
+        },
+        {
+          "id": "nycac-campaign-press-infrastructure",
+          "claimId": "CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+            "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
+            "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+            "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
           ]
         }
       ]

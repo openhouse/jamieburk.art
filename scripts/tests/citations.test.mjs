@@ -108,6 +108,38 @@ test("knowledge development records preserve promotion lineage and explicit hold
   assert.ok(heldByBriefs.has("CND-KC-TOWN-HALL-FUNDING-AWARD"));
 });
 
+test("campaign press collections preserve placements, deduplication, and retrieval boundaries", () => {
+  assert.deepEqual(
+    knowledgeBank.pressCollections.map((collection) => [
+      collection.campaign,
+      collection.entries.length
+    ]),
+    [
+      ["Let NYC Dance", 21],
+      ["Talks Not Raids", 7],
+      ["Save NYC Spaces", 8],
+      ["Fair Rent NYC", 1]
+    ]
+  );
+  const placements = knowledgeBank.pressCollections.flatMap((collection) => collection.entries);
+  assert.equal(placements.length, 37);
+  assert.equal(new Set(placements.map((entry) => entry.sourceId)).size, 36);
+  assert.equal(
+    placements.filter((entry) => entry.sourceId === "SRC-NYCAC-CABARET-NPR-2017").length,
+    2
+  );
+  assert.ok(
+    placements
+      .filter((entry) => entry.retrievalStatus === "metadata-only")
+      .every((entry) => entry.archiveUrl)
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE"
+  );
+  assert.ok(claim.boundaries.some((boundary) => /not.*reach/i.test(boundary)));
+  assert.ok(claim.antiClaims.some((antiClaim) => /earned-media/i.test(antiClaim)));
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");

@@ -108,6 +108,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
+## nyc-artist-coalition-campaign-press-infrastructure - Campaign reporting context
+
+**Status:** Confirmed with boundary
+**Support level:** Direct public-source support
+**Evidence class:** Public campaign sites / published articles / Archive.org preservation
+**Public wording:** Across four campaign sites Jamie built, public action pathways were paired with curated reporting context; 37 surviving list placements point to 36 distinct published articles.
+**Detailed public-safe wording:** Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC preserve 21, seven, eight, and one press or reporting placements respectively. One NPR article appears in two collections.
+**Where to project:** FairRentNYC case study.
+**Why it matters:** Shows repeatable public information architecture that connects complex civic campaigns to action, source context, and durable public memory.
+**Guardrail:** This is a count of placements in surviving campaign lists, not unique earned-media hits, audience reach, article authorship, or policy causality.
+**Do not say:** Jamie generated 36 press hits; Jamie authored or commissioned every article; the press proves Jamie alone caused the policy outcomes.
+**Protected boundaries:** None in the public census; private campaign analytics, outreach records, and correspondence remain offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
 **Status:** Careful

@@ -325,6 +325,35 @@ export const discoveryNoteSchema = z.object({
   createdAt: z.iso.date()
 });
 
+export const pressCollectionEntrySchema = z.object({
+  sourceId: stableIdSchema,
+  listedTitle: z.string().min(1),
+  listedUrl: publicUrlSchema,
+  retrievalStatus: z.enum(["read", "metadata-only", "not-recovered"]),
+  archiveUrl: publicUrlSchema.optional(),
+  note: z.string().min(1).optional()
+});
+
+export const pressCollectionSchema = z
+  .object({
+    id: stableIdSchema,
+    project: stableIdSchema,
+    campaign: z.string().min(1),
+    campaignSourceId: stableIdSchema,
+    sectionTitle: z.string().min(1),
+    collectedAt: z.iso.date(),
+    expectedArticleCount: z.number().int().positive(),
+    entries: z.array(pressCollectionEntrySchema).min(1)
+  })
+  .superRefine((collection, context) => {
+    if (collection.entries.length !== collection.expectedArticleCount) {
+      context.addIssue({
+        code: "custom",
+        message: `Expected ${collection.expectedArticleCount} press entries; found ${collection.entries.length}`
+      });
+    }
+  });
+
 export const knowledgeBankSchema = z.object({
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
@@ -336,7 +365,8 @@ export const knowledgeBankSchema = z.object({
   candidateClaims: z.array(candidateClaimSchema),
   promotions: z.array(promotionRecordSchema),
   editorialBriefs: z.array(editorialBriefSchema),
-  discoveryNotes: z.array(discoveryNoteSchema)
+  discoveryNotes: z.array(discoveryNoteSchema),
+  pressCollections: z.array(pressCollectionSchema)
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
@@ -353,4 +383,6 @@ export type CandidateClaim = z.infer<typeof candidateClaimSchema>;
 export type PromotionRecord = z.infer<typeof promotionRecordSchema>;
 export type EditorialBrief = z.infer<typeof editorialBriefSchema>;
 export type DiscoveryNote = z.infer<typeof discoveryNoteSchema>;
+export type PressCollectionEntry = z.infer<typeof pressCollectionEntrySchema>;
+export type PressCollection = z.infer<typeof pressCollectionSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

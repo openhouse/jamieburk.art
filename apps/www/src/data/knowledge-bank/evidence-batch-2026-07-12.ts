@@ -641,7 +641,10 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
         "SRC-NYC-COUNCIL-CABARET-REPEAL-2017",
         "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
-        "SRC-NYC-COUNCIL-INT-1156-2018"
+        "SRC-NYC-COUNCIL-INT-1156-2018",
+        "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+        "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
       ],
       occurrences: [
         {
@@ -671,6 +674,17 @@ export const evidenceBatchRecords: EvidenceBatch = {
           sourceIds: [
             "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
             "SRC-NYC-COUNCIL-INT-1156-2018"
+          ]
+        },
+        {
+          id: "nycac-campaign-press-infrastructure",
+          claimId: "CLM-NYCAC-CAMPAIGN-PRESS-INFRASTRUCTURE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
+            "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
+            "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
+            "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
           ]
         }
       ]

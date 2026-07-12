@@ -34,6 +34,23 @@ The official 2023 CURE announcement acknowledges NYC Artist Coalition among the
 advocates connected to the issue and establishes the later policy outcome. It
 strengthens the chronology while leaving the causal claim held.
 
+## Campaign Press Collections
+
+The four campaign sites Jamie identified preserve a repeatable public
+information-architecture pattern: issue context, action pathways, coalition or
+progress context, and curated reporting. A July 12, 2026 census recovered 21
+press placements from Let NYC Dance, seven from Talks Not Raids, eight from Save
+NYC Spaces, and one reporting source from Fair Rent NYC. Those 37 placements
+point to 36 distinct articles because the same NPR Cabaret Law article appears
+in two campaign collections.
+
+The count is useful as evidence of the depth and durability of the campaign
+source layer. It is not an earned-media metric, an audience-reach number, or
+proof that Jamie authored, commissioned, or was named in every article. The
+typed collection records preserve the original listed URLs, normalized article
+sources, Archive.org fallbacks, and read versus metadata-only status. See
+`docs/knowledge-bank/campaign-press-census-2026-07-12.md`.
+
 ## Held Claims
 
 - Jamie's exact individual share of NYC Artist Coalition's instrumental policy
@@ -43,6 +60,8 @@ strengthens the chronology while leaving the causal claim held.
   chain.
 - Jamie's testimony describes a 100 percent Fireguard study-group pass rate;
   that metric remains testimony until independently corroborated.
+- The campaign-site press census does not establish earned-media reach or solo
+  causality for legislative and agency outcomes.
 
 These claims remain in the bank with explicit research questions. They are not
 weakened into disappearance or strengthened beyond the evidence.

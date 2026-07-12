@@ -47,7 +47,8 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     ...knowledgeBank.claims.map((item) => item.id),
     ...knowledgeBank.researchInquiries.map((item) => item.id),
     ...knowledgeBank.candidateClaims.map((item) => item.id),
-    ...knowledgeBank.sourceReadings.map((item) => item.id)
+    ...knowledgeBank.sourceReadings.map((item) => item.id),
+    ...knowledgeBank.pressCollections.map((item) => item.id)
   ]);
 
   for (const [label, items] of [
@@ -61,7 +62,8 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     ["candidate claim", knowledgeBank.candidateClaims],
     ["promotion", knowledgeBank.promotions],
     ["editorial brief", knowledgeBank.editorialBriefs],
-    ["discovery note", knowledgeBank.discoveryNotes]
+    ["discovery note", knowledgeBank.discoveryNotes],
+    ["press collection", knowledgeBank.pressCollections]
   ]) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
   }
@@ -168,6 +170,27 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const candidateId of note.candidateClaimIds) if (!candidateById.has(candidateId)) errors.push(`Discovery note ${note.id} references unknown candidate ${candidateId}`);
   }
 
+  for (const collection of knowledgeBank.pressCollections) {
+    if (!sourceById.has(collection.campaignSourceId)) {
+      errors.push(`Press collection ${collection.id} references unknown campaign source ${collection.campaignSourceId}`);
+    }
+    const entrySourceIds = collection.entries.map((entry) => entry.sourceId);
+    if (new Set(entrySourceIds).size !== entrySourceIds.length) {
+      errors.push(`Press collection ${collection.id} repeats an article source`);
+    }
+    for (const entry of collection.entries) {
+      if (!sourceById.has(entry.sourceId)) {
+        errors.push(`Press collection ${collection.id} references unknown article source ${entry.sourceId}`);
+      }
+      if (entry.retrievalStatus === "metadata-only" && !entry.archiveUrl) {
+        errors.push(`Metadata-only press entry ${collection.id}/${entry.sourceId} has no archive fallback`);
+      }
+      if (entry.retrievalStatus === "not-recovered" && entry.archiveUrl) {
+        errors.push(`Not-recovered press entry ${collection.id}/${entry.sourceId} exposes a recovered archive URL`);
+      }
+    }
+  }
+
   for (const page of knowledgeBank.pages) {
     for (const id of duplicateIds(page.occurrences)) errors.push(`Duplicate occurrence ${page.id}/${id}`);
     if (new Set(page.sourceOrder).size !== page.sourceOrder.length) errors.push(`Page ${page.id} has duplicate source-order entries`);
@@ -225,7 +248,11 @@ export function citationReport() {
     ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds),
     ...knowledgeBank.sourceReadings.map((reading) => reading.sourceId),
     ...knowledgeBank.candidateClaims.flatMap((candidate) => candidate.sourceIds),
-    ...knowledgeBank.discoveryNotes.flatMap((note) => note.sourceIds)
+    ...knowledgeBank.discoveryNotes.flatMap((note) => note.sourceIds),
+    ...knowledgeBank.pressCollections.flatMap((collection) => [
+      collection.campaignSourceId,
+      ...collection.entries.map((entry) => entry.sourceId)
+    ])
   ]);
   const activeProjections = knowledgeBank.claims.flatMap((claim) => claim.projections.filter((item) => item.status === "active"));
   return {
@@ -243,6 +270,13 @@ export function citationReport() {
     promotions: knowledgeBank.promotions.length,
     editorialBriefs: knowledgeBank.editorialBriefs.length,
     discoveryNotes: knowledgeBank.discoveryNotes.length,
+    pressCollections: knowledgeBank.pressCollections.length,
+    pressPlacements: knowledgeBank.pressCollections.flatMap((collection) => collection.entries).length,
+    distinctPressArticles: new Set(
+      knowledgeBank.pressCollections.flatMap((collection) =>
+        collection.entries.map((entry) => entry.sourceId)
+      )
+    ).size,
     citedClaims: citedClaimIds.size,
     uncitedPublicClaims: knowledgeBank.claims.filter((claim) => claim.projections.some((item) => item.status === "active" && item.surfaces.some((surface) => surface.startsWith("/"))) && !citedClaimIds.has(claim.id)).map((claim) => claim.id),
     orphanSources: knowledgeBank.sources.filter((source) => !referencedSourceIds.has(source.id)).map((source) => source.id),
