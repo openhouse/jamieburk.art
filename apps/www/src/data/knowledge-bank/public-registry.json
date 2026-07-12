@@ -494,6 +494,47 @@
         "the reason for the transition",
         "completed construction"
       ]
+    },
+    {
+      "id": "SRC-RAFT-SOUNDINGS-2007",
+      "title": "Rollin' on the river ... again",
+      "organization": "Soundings",
+      "author": "Soundings Editors",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://soundingsonline.com/news/rollin-on-the-river-again/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Soundings Editors, 'Rollin' on the river ... again,' Soundings, accessed July 12, 2026.",
+      "publicNote": "The report identifies Jamie, Libby Hendon, and Laura Mattingly as the traveling trio and documents a collaborative, human-powered expedition that began in Kansas City.",
+      "doesNotEstablish": [
+        "an exact final landing point",
+        "completion of every planned route segment",
+        "solo execution by Jamie",
+        "a complete participant roster"
+      ]
+    },
+    {
+      "id": "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
+      "title": "Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC",
+      "organization": "Jamie Burkart / NYC Artist Coalition",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-03-27",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://jamieburk.art/artifacts/toward-a-fuller-public-baseline-commercial-vacancy-lease-cost-nyc.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, 'Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC,' March 27, 2026.",
+      "publicNote": "The two-page public brief specifies a deliberately small, privacy-preserving pilot rather than requesting confidential filing or tenant-level data.",
+      "doesNotEstablish": [
+        "agency adoption of the proposal",
+        "implementation of the proposed dataset",
+        "access to confidential RPIE filings",
+        "official legal or statistical authority"
+      ]
     }
   ],
   "claims": [
@@ -700,7 +741,7 @@
       "projections": [
         {
           "key": "about",
-          "text": "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative raft expedition down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
+          "text": "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -737,6 +778,18 @@
             "Missouri and Mississippi route",
             "river-community outreach",
             "participatory exhibition"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-RAFT-SOUNDINGS-2007",
+          "relationship": "corroborating",
+          "supports": [
+            "the Kansas City starting point",
+            "more than 1,000 miles traveled",
+            "human-powered construction",
+            "invitations for people encountered along the route to participate"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1073,6 +1126,38 @@
         "Do not imply that Jamie authored, commissioned, or was named in every article.",
         "Campaign and policy outcomes remain collective."
       ]
+    },
+    {
+      "id": "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie translated a public-data opportunity into a smallest-serious-pilot brief: geography-aggregated commercial vacancy and lease-cost indicators, a coverage and suppression table, and a plain-language methods note, designed to complement existing storefront reporting without exposing confidential filings or tenant-level records.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the privacy-preserving pilot brief",
+            "the three-part minimum release",
+            "the boundary against confidential filings and tenant-level records"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the brief as a proposal and implementation specification, not an adopted City program.",
+        "Do not imply access to confidential RPIE records or official statistical authority."
+      ]
     }
   ],
   "pages": [
@@ -1146,7 +1231,8 @@
       "sourceOrder": [
         "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
         "SRC-RAFT-PITCH-2007",
-        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"
+        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+        "SRC-RAFT-SOUNDINGS-2007"
       ],
       "occurrences": [
         {
@@ -1156,7 +1242,8 @@
           "sourceIds": [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
             "SRC-RAFT-PITCH-2007",
-            "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"
+            "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+            "SRC-RAFT-SOUNDINGS-2007"
           ]
         }
       ]
@@ -1175,7 +1262,8 @@
         "SRC-NYC-COUNCIL-INT-1156-2018",
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
-        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
       ],
       "occurrences": [
         {
@@ -1216,6 +1304,14 @@
             "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
             "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
             "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
+          ]
+        },
+        {
+          "id": "crs-privacy-preserving-data-pilot",
+          "claimId": "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
           ]
         }
       ]

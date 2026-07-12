@@ -15,7 +15,7 @@ test("page-local numbering follows first source appearance", () => {
 });
 
 test("new editorial projections resolve through page-local citation plans", () => {
-  assert.equal(resolveCitationReferences("about").length, 3);
+  assert.equal(resolveCitationReferences("about").length, 4);
   assert.ok(resolveCitationReferences("fair-rent-nyc").length >= 8);
   assert.deepEqual(
     resolveCitationOccurrence("fair-rent-nyc", "nycac-public-testimony-2017-2019").sources.map(
@@ -24,6 +24,13 @@ test("new editorial projections resolve through page-local citation plans", () =
     ["SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-NYC-COUNCIL-MARCH-HEARING-2019"]
   );
   assert.equal(resolveCitationOccurrence("wowlist", "sbdiy-calendar-use").sources.length, 1);
+  assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "crs-privacy-preserving-data-pilot"
+    ).sources.map((item) => item.source.id),
+    ["SRC-CRS-FULLER-PUBLIC-BASELINE-2026"]
+  );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "municipal-record").sources.map(
       (item) => item.source.id
@@ -44,6 +51,14 @@ test("new editorial projections resolve through page-local citation plans", () =
       "/about"
     ).text,
     /participatory public systems/
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
+      "about",
+      "/about"
+    ).text,
+    /more than 1,000 miles/
   );
   assert.match(
     getClaimProjection(
@@ -92,7 +107,43 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(serialized, /ARCHIVE-TEAMS|ARCHIVE-CRS|RESEARCH-TEAMS/);
+  assert.doesNotMatch(serialized, /Mobile Documents|CloudDocs|job-hunt\//i);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
+});
+
+test("Teams archival production preserves source lineage, selection, and holds", () => {
+  const archiveIntakeIds = [
+    "INT-2026-07-12-TEAMS-JAMIE-PROJECTS-HISTORY",
+    "INT-2026-07-12-TEAMS-CRS",
+    "INT-2026-07-12-TEAMS-JOB-HUNT"
+  ];
+  assert.ok(
+    archiveIntakeIds.every((id) =>
+      knowledgeBank.intakeItems.some(
+        (item) =>
+          item.id === id && item.visibility === "protected" && item.status === "processed"
+      )
+    )
+  );
+  const pilot = resolveCitationOccurrence(
+    "fair-rent-nyc",
+    "crs-privacy-preserving-data-pilot"
+  );
+  assert.match(pilot.projection.text, /coverage and suppression table/);
+  assert.match(pilot.projection.text, /without exposing confidential filings/);
+  assert.ok(pilot.claim.boundaries.some((boundary) => /not an adopted|proposal/i.test(boundary)));
+  const heldIds = [
+    "CND-CRS-LEGISLATIVE-PROVENANCE-ARTIFACT",
+    "CND-SORTED-AUDIO-MAXMSP-2013",
+    "CND-RIVER-RAFT-KC-GULF"
+  ];
+  assert.ok(
+    heldIds.every((id) => {
+      const candidate = knowledgeBank.candidateClaims.find((item) => item.id === id);
+      return candidate && candidate.status !== "promoted" && !candidate.promotedClaimId;
+    })
+  );
 });
 
 test("candidate claims remain deeper than the selected public registry", () => {

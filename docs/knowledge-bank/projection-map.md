@@ -66,6 +66,11 @@ The NYC Artist Coalition / FairRentNYC case study may project:
 
 - `CLM-NYCAC-CIVIC-ADVOCACY-2017`
 - `CLM-TALKS-NOT-RAIDS-TRANSPARENCY`
+- `CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT`
 
 It must not project the held Office-of-Nightlife individual-causality or
 MARCH-disbanding causality candidates as settled claims.
+
+The About page may use Soundings to make the existing river-expedition
+throughline concrete at more than 1,000 miles. It must continue to hold the exact
+Gulf landing candidate until a final landing record is recovered.

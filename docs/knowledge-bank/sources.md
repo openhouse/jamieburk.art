@@ -48,6 +48,25 @@ program. The confirmation supports the transition only and does not disclose
 the receiving organization, reasons, or terms. See
 [research-batch-2026-07-12.md](research-batch-2026-07-12.md).
 
+The July 12 Teams archival-production pass adds five bounded source records:
+
+- Soundings reporting on the 2007 river expedition's participants, human-powered
+  construction, Kansas City starting point, participatory invitation, and
+  1,000-plus-mile scale.
+- Monthly Music Hackathon NYC's project page for Jamie's 2013 Max/MSP audio
+  experiment.
+- Jamie's approved two-page public brief, *Toward a Fuller Public Baseline for
+  Commercial Vacancy and Lease Cost in NYC*.
+- Protected metadata for Jamie's Commercial Rent Stabilization legislative
+  provenance redline.
+- Public-safe, non-renderable metadata for the earlier Open Data Foundation
+  policy-to-data brief.
+
+The project-history and CRS folders supplied evidence. The job-hunt folder was
+used as an editorial routing layer and not as independent verification. Raw
+paths, correspondence, legal-review context, and proposal terms remain outside
+the public registry.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

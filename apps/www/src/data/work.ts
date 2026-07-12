@@ -188,13 +188,14 @@ const workItemsInput = [
     proofBankIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -214,6 +215,12 @@ const workItemsInput = [
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
         type: "decision record"
+      },
+      {
+        title: "Public-data pilot brief",
+        description:
+          "A smallest-serious-release specification for aggregate vacancy and lease-cost indicators, suppression reporting, methods, and privacy boundaries.",
+        type: "public handout"
       },
       {
         title: "Public campaign web surfaces",
@@ -242,7 +249,11 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      {
+        label: "Public-data pilot brief",
+        url: "/artifacts/toward-a-fuller-public-baseline-commercial-vacancy-lease-cost-nyc.pdf"
+      }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -264,7 +275,8 @@ const workItemsInput = [
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "Public-data framing and stakeholder next steps",
+      "Privacy-preserving commercial vacancy and lease-cost pilot specification"
     ],
     knownOpenProtected: {
       known:

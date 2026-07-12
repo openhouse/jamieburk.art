@@ -345,7 +345,7 @@ export const evidenceBatchRecords: EvidenceBatch = {
         {
           key: "about",
           text:
-            "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative raft expedition down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
+            "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
           status: "active",
           citationRequired: true,
           surfaces: ["/about"]
@@ -373,6 +373,19 @@ export const evidenceBatchRecords: EvidenceBatch = {
           relationship: "direct-support",
           supports: ["Missouri and Mississippi route", "river-community outreach", "participatory exhibition"],
           locator: "Project description and public-program listing",
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-RAFT-SOUNDINGS-2007",
+          relationship: "corroborating",
+          supports: [
+            "the Kansas City starting point",
+            "more than 1,000 miles traveled",
+            "human-powered construction",
+            "invitations for people encountered along the route to participate"
+          ],
+          locator: "Expedition background and participant sections",
           confidence: "high",
           renderCitation: true
         }
@@ -615,7 +628,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
       sourceOrder: [
         "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
         "SRC-RAFT-PITCH-2007",
-        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"
+        "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+        "SRC-RAFT-SOUNDINGS-2007"
       ],
       occurrences: [
         {
@@ -625,7 +639,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
           sourceIds: [
             "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
             "SRC-RAFT-PITCH-2007",
-            "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"
+            "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+            "SRC-RAFT-SOUNDINGS-2007"
           ]
         }
       ]
@@ -644,7 +659,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "SRC-NYC-COUNCIL-INT-1156-2018",
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
-        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
       ],
       occurrences: [
         {
@@ -686,6 +702,12 @@ export const evidenceBatchRecords: EvidenceBatch = {
             "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
             "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY"
           ]
+        },
+        {
+          id: "crs-privacy-preserving-data-pilot",
+          claimId: "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
+          projection: "case-study",
+          sourceIds: ["SRC-CRS-FULLER-PUBLIC-BASELINE-2026"]
         }
       ]
     }

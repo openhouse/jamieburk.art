@@ -211,7 +211,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language, public-safe source-map summary, and a close reading of Jamie's protected provenance artifact.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +228,46 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "fair-rent-public-data-pilot",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Specified a privacy-preserving pilot release for geography-aggregated commercial vacancy and lease-cost indicators.",
+    shortWording: "Specified a privacy-preserving commercial-data pilot",
+    detailedPublicWording:
+      "Jamie defined a smallest serious release: an indicator table, coverage and suppression reporting, a plain-language methods note, minimum useful fields, and explicit exclusions for confidential filings and tenant-level records.",
+    sourceBasis:
+      "Jamie's approved two-page public brief, Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC.",
+    sourceNote:
+      "The brief is a proposal and implementation specification, not an adopted City program.",
+    whyItMatters:
+      "Shows requirements definition, privacy-by-design, data-product judgment, and the ability to scope a credible minimum release for public-sector stakeholders.",
+    guardrail:
+      "Use proposal and pilot-specification language. Do not imply agency adoption, implementation, confidential-data access, or official statistical authority.",
+    doNotSay: [
+      "New York City adopted Jamie's proposal",
+      "Jamie built or operated the proposed City dataset",
+      "Jamie had access to confidential RPIE filings"
+    ],
+    protectedBoundaries: [
+      "Confidential tax filings",
+      "Tenant identities",
+      "Parcel-level rent records",
+      "Private distribution correspondence"
+    ],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "requirements-definition",
+      "privacy-by-design",
+      "public-data-framing",
+      "implementation-planning"
+    ],
+    lastReviewed: "2026-07-12"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -606,6 +646,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },

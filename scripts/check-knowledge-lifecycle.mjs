@@ -81,6 +81,20 @@ const kcTownHallCouncilSourceIds = [
   "SRC-KCMO-CCED-CLAWBACK-240317-2024"
 ];
 
+const archivalProductionSourceIds = [
+  "SRC-RAFT-SOUNDINGS-2007",
+  "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+  "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
+  "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+  "SRC-CRS-OPEN-DATA-FOUNDATION-2025"
+];
+
+const teamsArchiveIntakeIds = [
+  "INT-2026-07-12-TEAMS-JAMIE-PROJECTS-HISTORY",
+  "INT-2026-07-12-TEAMS-CRS",
+  "INT-2026-07-12-TEAMS-JOB-HUNT"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -101,6 +115,10 @@ const renderedProjectionSources = [
   readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8"),
   readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8")
 ].join("\n");
+const publicRegistryText = readFileSync(
+  "apps/www/src/data/knowledge-bank/public-registry.json",
+  "utf8"
+);
 
 const criteria = [
   {
@@ -403,6 +421,123 @@ const criteria = [
         !/(because|due to).*transition/i.test(projection.text)
       );
     })()
+  },
+  {
+    id: "teams-archive-intake",
+    label: "Jamie Projects History, CRS, and job-hunt each have bounded archive dispositions",
+    pass: teamsArchiveIntakeIds.every((id) => {
+      const item = intakeItems.find((candidate) => candidate.id === id);
+      return Boolean(
+        item &&
+        item.visibility === "protected" &&
+        item.status === "processed" &&
+        item.protectedLocatorId &&
+        item.linkedRecordIds.includes("INQ-TEAMS-ARCHIVAL-PRODUCTION-2026")
+      );
+    })
+  },
+  {
+    id: "archival-production-readings",
+    label: "Every archival-production source has an atomic close reading with limits",
+    pass: archivalProductionSourceIds.every((id) => {
+      const source = knowledgeBank.sources.find((item) => item.id === id);
+      const reading = readingBySourceId.get(id);
+      return Boolean(
+        source &&
+        source.supportsGenerally.length >= 2 &&
+        source.doesNotEstablish.length >= 2 &&
+        reading &&
+        reading.assertions.length >= 2 &&
+        reading.limitations.length >= 1
+      );
+    })
+  },
+  {
+    id: "crs-data-pilot-promotion",
+    label: "The privacy-preserving data pilot has complete promotion and citation lineage",
+    pass: (() => {
+      const candidate = candidateById.get("CND-CRS-PRIVACY-PRESERVING-DATA-PILOT");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT"
+      );
+      const occurrence = knowledgeBank.pages
+        .find((page) => page.id === "fair-rent-nyc")
+        ?.occurrences.find((item) => item.id === "crs-privacy-preserving-data-pilot");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === candidate.id &&
+            promotion.claimId === claim?.id &&
+            promotion.decision === "promoted"
+        ) &&
+        claim?.boundaries.some((boundary) => /not an adopted|proposal/i.test(boundary)) &&
+        occurrence?.sourceIds?.includes("SRC-CRS-FULLER-PUBLIC-BASELINE-2026") &&
+        renderedProjectionSources.includes(claim.id) &&
+        renderedProjectionSources.includes(occurrence.id)
+      );
+    })()
+  },
+  {
+    id: "archival-production-depth-holds",
+    label: "Mature provenance and technical-history fragments remain available but unprojected",
+    pass: [
+      "CND-CRS-LEGISLATIVE-PROVENANCE-ARTIFACT",
+      "CND-SORTED-AUDIO-MAXMSP-2013"
+    ].every((id) => {
+      const candidate = candidateById.get(id);
+      return (
+        candidate?.status === "ready-for-promotion" &&
+        !candidate.promotedClaimId &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === id && promotion.decision === "held"
+        )
+      );
+    })
+  },
+  {
+    id: "raft-scale-with-landing-boundary",
+    label: "The public throughline uses verified scale while the exact Gulf landing remains held",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE"
+      );
+      const projection = claim?.projections.find((item) => item.key === "about");
+      const gulfCandidate = candidateById.get("CND-RIVER-RAFT-KC-GULF");
+      return Boolean(
+        projection?.text.includes("more than 1,000 miles") &&
+        claim?.evidence.some(
+          (evidence) =>
+            evidence.sourceId === "SRC-RAFT-SOUNDINGS-2007" && evidence.renderCitation
+        ) &&
+        gulfCandidate?.status === "research-needed" &&
+        !gulfCandidate.promotedClaimId &&
+        !projection?.text.includes("Gulf of Mexico")
+      );
+    })()
+  },
+  {
+    id: "archival-production-public-safety",
+    label: "Protected locators and private archive coordinates stay out of the public registry",
+    pass:
+      !/ARCHIVE-TEAMS|ARCHIVE-CRS|RESEARCH-TEAMS/.test(publicRegistryText) &&
+      !/Mobile Documents|CloudDocs|job-hunt\//i.test(publicRegistryText) &&
+      knowledgeBank.sources
+        .filter((source) =>
+          [
+            "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+            "SRC-CRS-OPEN-DATA-FOUNDATION-2025"
+          ].includes(source.id)
+        )
+        .every(
+          (source) =>
+            source.visibility !== "public" &&
+            !source.canonicalUrl &&
+            !source.archiveUrl &&
+            !source.assetUrl
+        )
   }
 ];
 

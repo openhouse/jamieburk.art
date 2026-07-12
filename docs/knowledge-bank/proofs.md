@@ -12,11 +12,14 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
+- Specified a smallest-serious, privacy-preserving pilot for geography-aggregated commercial vacancy and lease-cost indicators, including coverage and suppression reporting, a methods note, and explicit confidential-data exclusions.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation for a proposal that advanced from CCED Board recommendation to Council authorization and appropriation of $490,539; Jamie later transitioned the project to a mission-aligned organization, KC Town Hall withdrew from the original allocation, and the unused funds were returned.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
+- Public reporting documents that Jamie and collaborators began a human-powered raft expedition in Kansas City, traveled more than 1,000 miles, and invited people encountered along the route to participate.
+- Monthly Music Hackathon NYC documents a 2013 Max/MSP program Jamie built to segment audio and sort clips by a selected feature. This mature source remains in the bank for future composition.
 
 ## Projection Rule
 

@@ -15,6 +15,8 @@ The repo is public. Approval here means approved for public-safe repository and 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
+- Commercial vacancy and lease-cost pilot brief: approved as a public artifact and citation. Describe it as Jamie's privacy-preserving proposal and implementation specification, not an adopted City program or implemented dataset.
+- Commercial Rent Stabilization provenance redline: public-safe claim metadata is approved; the underlying working document remains protected and is not approved for public distribution.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.

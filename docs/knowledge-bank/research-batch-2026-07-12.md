@@ -54,3 +54,20 @@ machine-readable registry.
 
 This is successful maturation, not discarded material. The bank retains more
 depth than the current public argument needs.
+
+## Teams archival-production pass
+
+A selective close reading of Jamie Projects History, CRS, and job-hunt added a
+second archive-to-claim loop. The project-history archive supplied two public
+sources; CRS supplied one approved public artifact and two bounded working-source
+records; job-hunt supplied editorial selection criteria rather than independent
+proof.
+
+The pass promoted one public claim: Jamie specified a smallest-serious,
+privacy-preserving pilot for aggregated commercial vacancy and lease-cost data.
+It also strengthened the existing participatory-systems claim with a documented
+1,000-plus-mile raft journey. The Max/MSP prototype and legislative provenance
+artifact remain ready-for-promotion candidates held from the current site.
+
+See `docs/knowledge-bank/archival-production-2026-07-12.md` for the method,
+source dispositions, and iCloud-availability limits.

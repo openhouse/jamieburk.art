@@ -28,6 +28,11 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not describe the commercial vacancy and lease-cost pilot as adopted,
+implemented, commissioned by the City, or based on Jamie's access to
+confidential RPIE filings. Do not publish the legislative provenance working
+document or treat it as legal advice or official legislative history.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

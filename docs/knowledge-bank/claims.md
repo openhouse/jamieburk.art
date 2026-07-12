@@ -93,6 +93,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / Collaborator approval needed  
 **Last reviewed:** 2026-07-07
 
+## fair-rent-public-data-pilot - Privacy-preserving public-data pilot
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved public artifact / public-safe archive review
+**Public wording:** Specified a privacy-preserving pilot release for geography-aggregated commercial vacancy and lease-cost indicators.
+**Detailed public-safe wording:** Jamie defined a smallest serious release: an indicator table, coverage and suppression reporting, a plain-language methods note, minimum useful fields, and explicit exclusions for confidential filings and tenant-level records.
+**Where to project:** Resume page, Technical Operations, FairRentNYC case study.
+**Why it matters:** Shows requirements definition, privacy-by-design, data-product judgment, and the ability to scope a credible minimum release for public-sector stakeholders.
+**Guardrail:** Use proposal and pilot-specification language.
+**Do not say:** New York City adopted the proposal; Jamie built or operated the proposed City dataset; Jamie had access to confidential RPIE filings.
+**Protected boundaries:** Confidential filings, tenant identities, parcel-level rent records, private distribution correspondence, and agency deliberation stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
 **Status:** Careful
