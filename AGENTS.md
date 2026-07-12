@@ -30,6 +30,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run check:launch-evals`
+- `npm run test:launch-evals`
+- `npm run report:launch-evals`
 
 ## Public-Safety Rules
 
@@ -78,6 +81,16 @@ Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
+
+## Launch-Readiness Evals
+
+Use `evals/launch-readiness/evals.json` for recursive launch improvement. Hard
+gates are invariants and cannot be averaged away by a high judge score. Improve
+the lowest-scoring criterion with one bounded change, rerun every affected
+case, and keep the change only when the objective improves without weakening
+truth, consent, collective credit, accessibility, or exact-commit release
+discipline. Follow `evals/launch-readiness/judge.md`; do not expose private
+evidence to an evaluator.
 
 ## Scope Rules
 
