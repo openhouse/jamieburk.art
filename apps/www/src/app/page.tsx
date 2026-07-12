@@ -26,14 +26,9 @@ const startHereLinks = [
     note: "Legacy e-commerce, analytics, content, marketing, and operations modernization."
   },
   {
-    href: "/work/fair-rent-nyc",
-    label: "FairRentNYC / Commercial Rent Stabilization",
-    note: "Campaign memory, source maps, public-data framing, and coalition operations."
-  },
-  {
     href: "/work/callnyc",
-    label: "CallNYC.org",
-    note: "Civic open data translated into resident-facing guidance."
+    label: "CallNYC",
+    note: "Source-backed civic delivery from open constituent-services data to resident-facing guidance."
   },
   {
     href: "/resume",
@@ -98,7 +93,7 @@ export default function HomePage() {
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard compact item={item} key={item.slug} />
           ))}
         </div>
       </section>

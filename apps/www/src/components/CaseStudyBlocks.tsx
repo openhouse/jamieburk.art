@@ -40,10 +40,11 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   );
 }
 
-export function ArtifactList({ item }: { item: WorkMeta }) {
+export function ArtifactList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}artifact-list`;
   return (
-    <section aria-labelledby="artifact-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Primary artifacts
       </h2>
       <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -60,11 +61,12 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
   );
 }
 
-export function ArtifactGallery({ item }: { item: WorkMeta }) {
+export function ArtifactGallery({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}artifact-gallery`;
   return (
-    <section aria-labelledby="artifact-gallery">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
+        Representative outputs
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {item.artifacts.map((artifact, index) => (
@@ -81,7 +83,8 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
   );
 }
 
-export function KnownOpenProtected({ item }: { item: WorkMeta }) {
+export function KnownOpenProtected({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
+  const headingId = `${idPrefix}known-open-protected`;
   const blocks = [
     ["Known", item.knownOpenProtected.known],
     ["Open", item.knownOpenProtected.open],
@@ -89,8 +92,8 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   ] as const;
 
   return (
-    <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Known / Open / Protected
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
@@ -158,6 +161,18 @@ export function PublicSafetyNote({ item }: { item: WorkMeta }) {
   );
 }
 
+export function BoundaryNote({ item }: { item: WorkMeta }) {
+  if (!item.careNote && !item.publicSafety?.note) return null;
+  return (
+    <NoteBlock title="Boundaries" tone="ochre">
+      {item.careNote ? <p>{item.careNote}</p> : null}
+      {item.publicSafety?.note ? (
+        <p className={item.careNote ? "mt-3" : undefined}>{item.publicSafety.note}</p>
+      ) : null}
+    </NoteBlock>
+  );
+}
+
 export function SourceLayer({ item }: { item: WorkMeta }) {
   if (!item.sourceLayer) return null;
   return (
@@ -167,11 +182,12 @@ export function SourceLayer({ item }: { item: WorkMeta }) {
   );
 }
 
-export function CreditsList({ item }: { item: WorkMeta }) {
+export function CreditsList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
   if (!item.credits?.length) return null;
+  const headingId = `${idPrefix}credits-list`;
   return (
-    <section aria-labelledby="credits-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="credits-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Credits
       </h2>
       <ul className="mt-3 list-disc space-y-2 pl-6 text-jb-ink/76">
@@ -183,11 +199,12 @@ export function CreditsList({ item }: { item: WorkMeta }) {
   );
 }
 
-export function LinksList({ item }: { item: WorkMeta }) {
+export function LinksList({ item, idPrefix = "" }: { item: WorkMeta; idPrefix?: string }) {
   if (!item.links?.length) return null;
+  const headingId = `${idPrefix}links-list`;
   return (
-    <section aria-labelledby="links-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="links-list">
+    <section aria-labelledby={headingId}>
+      <h2 className="text-2xl font-semibold text-jb-ink" id={headingId}>
         Public links
       </h2>
       <ul className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">

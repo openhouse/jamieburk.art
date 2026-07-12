@@ -1,4 +1,5 @@
 import { JBButton } from "@/components/JBButton";
+import { site } from "@/data/site";
 
 export function Hero() {
   return (
@@ -21,8 +22,8 @@ export function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href="/work">View selected work</JBButton>
-            <JBButton href="/resume" variant="secondary">
-              Download resume
+            <JBButton href={site.resumePath} variant="secondary" download>
+              Download resume PDF
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

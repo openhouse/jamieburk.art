@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "id": "portfolio-readiness-v1",
+  "title": "Jamie Burkart portfolio readiness",
+  "objective": "Make Jamie immediately legible as a Technical Project Manager working across product operations and implementation, while preserving factual accuracy, collective credit, contextual integrity, and a finished public experience.",
+  "decision": "Is this revision ready to support job applications and, after explicit approval, production publication?",
+  "audiences": [
+    "hiring managers",
+    "public-sector reviewers",
+    "referrers",
+    "civic-technology peers",
+    "past and future collaborators"
+  ],
+  "stopCondition": {
+    "allDeterministicGatesPass": true,
+    "weightedScoreAtLeast": 90,
+    "everyCriterionAtLeast": 4,
+    "criticalCriteriaAtLeast": 4,
+    "stablePassingRuns": 2,
+    "explicitHumanApprovalRequiredForProduction": true
+  },
+  "scoreScale": {
+    "1": "Actively misleading, unsafe, broken, or unusable.",
+    "2": "Major gaps make the intended conclusion difficult or risky.",
+    "3": "Directionally sound, but a material ambiguity or burden remains.",
+    "4": "Clear, defensible, useful, and ready with only minor refinements.",
+    "5": "Exceptionally clear and credible; the evidence, language, and experience reinforce one another without excess."
+  },
+  "deterministicChecks": [
+    {
+      "id": "citation-registry-valid",
+      "description": "Canonical citation records and the public registry are internally consistent and current.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:citations"
+    },
+    {
+      "id": "citation-tests-valid",
+      "description": "Citation projection, source relationship, and public-registry tests pass.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run test:citations"
+    },
+    {
+      "id": "knowledge-bank-valid",
+      "description": "Structured claims, sources, evidence, and projection rules are internally valid.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run knowledge-bank"
+    },
+    {
+      "id": "public-safety-valid",
+      "description": "Public surfaces contain no prohibited private material, placeholders, or unsafe claim projections.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run public-safety"
+    },
+    {
+      "id": "route-contract-valid",
+      "description": "Canonical routes exist and no public proofs or knowledge-bank route is exposed.",
+      "profiles": ["fast", "release"],
+      "type": "command",
+      "command": "npm run check:routes"
+    },
+    {
+      "id": "resume-artifact-present",
+      "description": "The application resume is a substantive PDF artifact.",
+      "profiles": ["fast", "release"],
+      "type": "file",
+      "path": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "minimumBytes": 10000
+    },
+    {
+      "id": "application-path-present",
+      "description": "The homepage, role-fit proof surface, resume, and contact route all exist.",
+      "profiles": ["fast", "release"],
+      "type": "files",
+      "paths": [
+        "apps/www/src/app/page.tsx",
+        "apps/www/src/app/work/technical-operations/page.tsx",
+        "apps/www/src/app/resume/page.tsx",
+        "apps/www/src/app/contact/page.tsx"
+      ]
+    },
+    {
+      "id": "public-contact-configured",
+      "description": "The contact surface is configured as an actual public path rather than a placeholder.",
+      "profiles": ["fast", "release"],
+      "type": "text-match",
+      "path": "apps/www/src/data/site.ts",
+      "pattern": "hasPublicEmail\\s*:\\s*true"
+    },
+    {
+      "id": "no-visible-launch-debris",
+      "description": "Public projections do not expose internal launch instructions or placeholder language.",
+      "profiles": ["fast", "release"],
+      "type": "text-not-match",
+      "paths": [
+        "apps/www/src/app",
+        "apps/www/src/components",
+        "apps/www/src/content",
+        "apps/www/src/data/work.ts",
+        "apps/www/src/data/site.ts"
+      ],
+      "pattern": "TODO:\\s*Jamie approval required|approval required before launch|placeholder resume|replace with approved|lorem ipsum"
+    },
+    {
+      "id": "callnyc-chronology-consistent",
+      "description": "CallNYC's displayed date range includes the documented 2016 public record.",
+      "profiles": ["fast", "release"],
+      "type": "text-match",
+      "path": "apps/www/src/data/work.ts",
+      "pattern": "title:\\s*\"CallNYC\\.org\"[\\s\\S]{0,1200}?years:\\s*\"[^\"]*2016[^\"]*\""
+    },
+    {
+      "id": "staging-preflight",
+      "description": "The complete application passes in staging mode with no indexing.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:staging"
+    },
+    {
+      "id": "production-preflight",
+      "description": "The complete application passes with explicit production URL and indexing configuration.",
+      "profiles": ["release"],
+      "type": "command",
+      "command": "npm run preflight:production"
+    }
+  ],
+  "criteria": [
+    {
+      "id": "positioning-clarity",
+      "name": "Positioning clarity",
+      "weight": 15,
+      "minimumScore": 4,
+      "critical": false,
+      "stewards": ["Prof Ingeborg Gerdes", "Jamie Burkart", "Prof Warren Sack"],
+      "question": "Within one screen and one pass, can a reader explain what Jamie does, when his work becomes valuable, and what becomes usable because of it?",
+      "passDefinition": "The language treats ambiguity and transition as ordinary working conditions, makes Jamie's agency visible, and names concrete outputs without shame, mystification, or inflated abstraction.",
+      "evidenceToInspect": ["homepage hero", "homepage operating motif", "About page", "Technical Operations introduction"],
+      "repairPolicy": "Prefer one concrete sentence grown from the work's materials. Preserve warmth, but move poetic explanation below the first-pass hiring signal.",
+      "antiGaming": "Do not improve clarity by narrowing Jamie to a single project type or replacing meaningful complexity with generic management language."
+    },
+    {
+      "id": "hiring-path",
+      "name": "Hiring path and role fit",
+      "weight": 15,
+      "minimumScore": 4,
+      "critical": false,
+      "stewards": ["Chad Berkowitz", "Amanda Gordon", "Cyd Harrell"],
+      "question": "Can a busy hiring reader move from homepage to role fit, strongest proof, resume, and contact without deciding what to do next?",
+      "passDefinition": "The path is obvious, concise, and aligned to Technical Project Manager, product operations, implementation, business analysis, and public-sector delivery work.",
+      "evidenceToInspect": ["homepage calls to action", "Start Here sequence", "Technical Operations page", "resume page", "contact page"],
+      "repairPolicy": "Reduce reader choices, strengthen information scent, and put the strongest role-fit proof before secondary experiments or archival depth.",
+      "antiGaming": "Do not hide substantive case studies merely to shorten the path; sequence them."
+    },
+    {
+      "id": "proof-defensibility",
+      "name": "Proof specificity and defensibility",
+      "weight": 20,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Ben Balter", "Hamel Husain", "Deborah Treisman"],
+      "question": "Does each consequential claim identify Jamie's action, the usable result, the source basis, and the boundary on what is not established?",
+      "passDefinition": "Strong claims are specific, traceable to the knowledge bank, temporally consistent, and no stronger on the website than in their evidence record.",
+      "evidenceToInspect": ["proof strip", "resume highlights", "Technical Operations proof map", "case-study claims", "knowledge-bank entries and citations"],
+      "repairPolicy": "Correct chronology and claim scope in the bank first, then update every projection. Prefer contribution language when causality or ownership is shared.",
+      "antiGaming": "Never raise a score by inventing evidence, converting inference into fact, suppressing a material caveat, or treating an AI archival review as eyewitness testimony."
+    },
+    {
+      "id": "reader-effort",
+      "name": "Reader effort",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": false,
+      "stewards": ["Chad Berkowitz", "Cyd Harrell", "Prof Margaret Morse"],
+      "question": "Does each page reveal its purpose, strongest evidence, and next action before asking the reader to absorb supporting context?",
+      "passDefinition": "Headings, summaries, page order, and labels create a low-friction scanning experience without flattening the record.",
+      "evidenceToInspect": ["heading hierarchy", "first viewport", "case-study At a Glance blocks", "link labels", "mobile reading order"],
+      "repairPolicy": "Move the answer forward, shorten repeated setup, and make labels predict the destination.",
+      "antiGaming": "Do not remove necessary context, care notes, or collective credit just to reduce word count."
+    },
+    {
+      "id": "narrative-finish",
+      "name": "Narrative finish and confidence",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": false,
+      "stewards": ["Vivian Gornick", "Deborah Treisman", "Stephen Coles"],
+      "question": "Does the site read as a deliberate finished portfolio rather than a workspace apologizing for its own incompleteness?",
+      "passDefinition": "The prose is direct, the visual hierarchy feels settled, and unresolved editorial process is represented as a principled boundary or omitted from public view.",
+      "evidenceToInspect": ["all visible status language", "Known/Open/Protected blocks", "case-study endings", "typographic hierarchy", "empty or provisional sections"],
+      "repairPolicy": "Remove internal process debris. Recast enduring public limitations as concise boundaries, and omit optional material that is not ready.",
+      "antiGaming": "Do not disguise an actual blocker as polished copy."
+    },
+    {
+      "id": "application-readiness",
+      "name": "Application readiness",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Amanda Gordon", "Ben Balter"],
+      "question": "Can Jamie confidently send the site with an application today, with a working current resume, contact path, and two or three convincing proof destinations?",
+      "passDefinition": "The resume artifact is current and consistent with the site, contact works, links resolve, and the recommended application packet is self-contained.",
+      "evidenceToInspect": ["resume page and PDF", "contact links", "homepage", "Technical Operations", "Harry J. Epstein", "FairRentNYC or CallNYC"],
+      "repairPolicy": "Fix broken or ambiguous front-door artifacts before expanding secondary content.",
+      "antiGaming": "A file's presence is not evidence that its content is current, approved, or consistent."
+    },
+    {
+      "id": "interface-confidence",
+      "name": "Interface and accessibility confidence",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": false,
+      "stewards": ["Stephen Coles", "Prof Margaret Morse", "Cyd Harrell"],
+      "question": "Across desktop and mobile, does the interface feel legible, stable, keyboard-usable, and appropriate to a serious public-facing portfolio?",
+      "passDefinition": "No overlap, overflow, broken focus order, unreadable contrast, unstable controls, empty visual surfaces, or decorative competition with the evidence.",
+      "evidenceToInspect": ["desktop and 320/390px screenshots", "keyboard navigation", "focus states", "console output", "page metadata", "reduced-motion behavior"],
+      "repairPolicy": "Repair usability and hierarchy before adding ornament. Keep the visual system expressive but subordinate to reading and proof.",
+      "antiGaming": "Do not score from source code alone; inspect rendered pages."
+    },
+    {
+      "id": "contextual-integrity",
+      "name": "Contextual integrity and care",
+      "weight": 10,
+      "minimumScore": 4,
+      "critical": true,
+      "stewards": ["Helen Nissenbaum", "Jamie Burkart", "Prof Ingeborg Gerdes"],
+      "question": "Does the portfolio preserve the appropriate flow of information, credit, consent, and privacy for every project context?",
+      "passDefinition": "Public-safe summaries reveal professional contribution without exposing private records, overstating collective roles, or repurposing information beyond its warranted context.",
+      "evidenceToInspect": ["public-safety output", "claim guardrails", "credits", "care notes", "image permissions", "contact and resume boundaries"],
+      "repairPolicy": "Use the strongest public-safe claim supported by the record. Keep protected material offline and seek human approval where consent or contextual use is unresolved.",
+      "antiGaming": "Neither maximal disclosure nor maximal omission is the goal; preserve truthful contribution and appropriate boundaries together."
+    }
+  ]
+}
