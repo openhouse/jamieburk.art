@@ -18,7 +18,7 @@ reporting, Cabaret Law and Office of Nightlife coverage, Talks Not Raids and
 M.A.R.C.H. history, the unresolved Council-account engagement metric, and a
 photo-editor discovery loop. It also demonstrates two reciprocal returns: a
 specific waterways photo lead routed to an inquiry, and independent reader
-feedback routed to named governance artifacts.
+feedback routed through a stable governance inquiry to named artifacts.
 
 No intake record is itself permission to publish a website claim. Photo leads
 must first become reviewed sources or inquiries. Private raw records, contact

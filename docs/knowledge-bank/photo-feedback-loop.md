@@ -28,6 +28,7 @@ assert that a suitable image exists.
 
 Independent reader feedback also enters through the same front door. The record
 `INT-READER-FEEDBACK-PROJECTION-RATIONALES-2026-07-12` is classified as reader
-feedback and points to the governance artifacts it changed. Reader reaction may
-improve composition or open research, but it is not evidence of a professional
+feedback, resolves through `INQ-READER-FEEDBACK-PROJECTION-GOVERNANCE`, and
+points to the governance artifacts it changed. Reader reaction may improve
+composition or open research, but it is not evidence of a professional
 accomplishment.
