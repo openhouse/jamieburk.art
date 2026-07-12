@@ -688,10 +688,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source"],
     publicWording:
-      "Contributed to a multi-year public arc from M.A.R.C.H. transparency advocacy and enacted reporting requirements to New York City's replacement of M.A.R.C.H. with an engagement-first process.",
-    shortWording: "Contributed to the public arc from M.A.R.C.H. transparency to CURE",
+      "Advocated M.A.R.C.H. transparency through Talks Not Raids within a multi-year public sequence that later included enacted reporting requirements and New York City's replacement of M.A.R.C.H. with an engagement-first process.",
+    shortWording: "Advocated M.A.R.C.H. transparency within the later public sequence to CURE",
     detailedPublicWording:
-      "Talks Not Raids advocated transparency and engagement; Intro 1156 became Local Law 220 of 2019; and in 2023 New York City replaced M.A.R.C.H. with CURE after years of collective effort.",
+      "Jamie testified for Talks Not Raids and M.A.R.C.H. transparency. Intro 1156 later became Local Law 220 of 2019; in 2023 New York City replaced M.A.R.C.H. with CURE after years of collective effort. The sequence does not establish that Jamie or one campaign caused the later replacement.",
     sourceBasis:
       "Public Talks Not Raids materials, the New York City Council legislative record, and the city's 2023 CURE announcement.",
     whyItMatters:

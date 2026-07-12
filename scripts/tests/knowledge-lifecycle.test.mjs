@@ -109,6 +109,12 @@ test("high-risk projections retain their evidence posture", () => {
       `**Public wording:** ${waterwaysProof.publicWording}`
     )
   );
+  const marchProof = proofClaims.find(
+    (proof) => proof.id === "march-transparency-to-cure"
+  );
+  assert.match(marchProof.publicWording, /^Advocated M\.A\.R\.C\.H\. transparency/);
+  assert.match(marchProof.detailedPublicWording, /does not establish .* caused/i);
+  assert.doesNotMatch(marchProof.publicWording, /^Contributed to/);
 });
 
 test("reader feedback resolves to a public governance artifact", () => {

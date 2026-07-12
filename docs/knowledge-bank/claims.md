@@ -68,7 +68,7 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Moderate
-**Public wording:** Contributed to a multi-year public arc from M.A.R.C.H. transparency advocacy and enacted reporting requirements to New York City's replacement of M.A.R.C.H. with an engagement-first process.
+**Public wording:** Advocated M.A.R.C.H. transparency through Talks Not Raids within a multi-year public sequence that later included enacted reporting requirements and New York City's replacement of M.A.R.C.H. with an engagement-first process.
 **Guardrail:** This is a documented sequence and collective contribution, not sole or linear causality.
 **Canonical claim:** `CLM-MARCH-TRANSPARENCY-TO-CURE`.
 
