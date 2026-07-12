@@ -48,6 +48,60 @@ export function validatePublicSourceContracts(
   return errors;
 }
 
+export function validateChadLensContracts(sources = {}) {
+  const errors = [];
+  const readSource = (key, relativePath) =>
+    sources[key] ?? readFileSync(relativePath, "utf8");
+  const hero = readSource("hero", "apps/www/src/components/Hero.tsx");
+  const normalizedHero = hero.replace(/\s+/g, " ");
+  const work = readSource("work", "apps/www/src/data/work.ts");
+  const proofs = readSource("proofs", "apps/www/src/data/proofs.ts");
+  const technicalOperations = readSource(
+    "technicalOperations",
+    "apps/www/src/app/work/technical-operations/page.tsx"
+  );
+
+  for (const expected of [
+    "Technical Project Manager - Product Operations & Implementation",
+    "I create operating structure",
+    "requirements, workflows, documentation, decision trails",
+    "launch support, onboarding, and durable handoffs"
+  ]) {
+    if (!normalizedHero.includes(expected)) {
+      errors.push(`Hero is missing Chad-lens signal: ${expected}`);
+    }
+  }
+
+  for (const expected of [
+    "Jamie helped an 80+ year-old",
+    "Jamie co-founded NYC Artist Coalition",
+    "Jamie co-built a Django",
+    "Jamie hosts Sunday Dinner"
+  ]) {
+    if (!work.includes(expected)) {
+      errors.push(`Featured work summary is missing an explicit actor: ${expected}`);
+    }
+  }
+
+  if (!work.includes('"CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"')) {
+    errors.push("CallNYC work card is not projected from its governed claim");
+  }
+  if (/\blightweight\b/i.test(work)) {
+    errors.push("Featured public work uses vague lightweight language");
+  }
+
+  for (const [label, source] of [
+    ["Technical Operations", technicalOperations],
+    ["proof bank", proofs]
+  ]) {
+    if (!/CallNYC[\s\S]{0,220}archived[\s\S]{0,120}unofficial/i.test(source)) {
+      errors.push(`${label} does not carry the archived and unofficial CallNYC boundary`);
+    }
+  }
+
+  return errors;
+}
+
 export function validateSuite(suite) {
   const errors = [];
   const requireValue = (condition, message) => {
@@ -245,10 +299,13 @@ function run() {
   const suite = JSON.parse(readFileSync(suitePath, "utf8"));
   const result = validateSuite(suite);
   const sourceErrors = validatePublicSourceContracts();
+  const chadLensErrors = validateChadLensContracts();
 
-  if (result.errors.length || sourceErrors.length) {
+  if (result.errors.length || sourceErrors.length || chadLensErrors.length) {
     console.error("Portfolio eval suite validation failed:");
-    for (const error of [...result.errors, ...sourceErrors]) console.error(`- ${error}`);
+    for (const error of [...result.errors, ...sourceErrors, ...chadLensErrors]) {
+      console.error(`- ${error}`);
+    }
     process.exit(1);
   }
 

@@ -65,10 +65,10 @@ The correction registry preserves three active decisions:
 
 The approved resume wording is:
 
-> Built CallNYC.org as an independent follow-on to the New York City Council's
-> first CouncilStat hackathon, translating constituent-services data into
-> resident-facing issue pages and next-step guidance; covered in Politico New
-> York.
+> Jamie built CallNYC.org as an archived, unofficial, independent follow-on to
+> the New York City Council's first CouncilStat hackathon, translating
+> constituent-services data into resident-facing issue pages and next-step
+> guidance; covered in Politico New York.
 
 ## Digital District photograph
 

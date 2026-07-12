@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  validateChadLensContracts,
   validatePublicSourceContracts,
   validateSuite
 } from "../check-portfolio-evals.mjs";
@@ -39,6 +40,20 @@ test("Chad lens remains a blocking application criterion", () => {
   const errors = validateSuite(candidate).errors.join("\n");
   assert.match(errors, /PR-015 Chad lens eval must be blocking/);
   assert.match(errors, /application sharing must require PR-015/);
+});
+
+test("Chad lens source contract requires visible actors and CallNYC boundaries", () => {
+  const errors = validateChadLensContracts({
+    hero: "Technical Project Manager - Product Operations & Implementation I create operating structure requirements, workflows, documentation, decision trails launch support, onboarding, and durable handoffs",
+    work: 'summary: "Helped an 80+ year-old" summary: "Co-founded NYC Artist Coalition" summary: "Co-built a Django" summary: "Created repeatable" "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"',
+    proofs: "CallNYC archived unofficial",
+    technicalOperations: "CallNYC archived unofficial"
+  });
+  assert.match(errors.join("\n"), /explicit actor/);
+});
+
+test("canonical public source meets deterministic Chad lens contracts", () => {
+  assert.deepEqual(validateChadLensContracts(), []);
 });
 
 test("optimizer cannot grade its own patch", () => {

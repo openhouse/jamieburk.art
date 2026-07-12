@@ -53,7 +53,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
-**Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
+**Public wording:** Jamie built CallNYC.org as an archived, unofficial, independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
@@ -61,7 +61,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-11
+**Last reviewed:** 2026-07-12
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
@@ -143,7 +143,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
+**Public wording:** Jamie hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
@@ -151,7 +151,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-12
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
