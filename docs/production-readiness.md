@@ -13,6 +13,8 @@ It includes:
 - One public-safety scanner that calls the focused knowledge-bank checker.
 - Route checks for canonical pages, legacy redirects, sitemap discipline, and
   the absence of a public proofs route.
+- Recursive evals protocol for claim accuracy, boundary review, hiring clarity,
+  web QA, and production cutover readiness.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
 
@@ -28,6 +30,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
+- [ ] `npm run check:evals`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
@@ -46,6 +49,8 @@ ideas from the production-readiness-composite family.
 - [ ] Every Technical Operations proof row exists in the knowledge bank.
 - [ ] Work items with strong claims have proofBankIds.
 - [ ] Pending/private claims are not projected onto public pages.
+- [ ] Public pages contain no TODO, placeholder, pending approval,
+  before-launch, or screenshot-pending language.
 - [ ] Careful claims include their guardrails.
 - [ ] Metrics are approved or softened.
 - [ ] Collaborator-sensitive claims are approved or omitted.

@@ -13,6 +13,8 @@ changes public claims.
 - [ ] Technical Operations claims answer "toward what end?"
 - [ ] Work metadata includes `proofBankIds` for strong or metric-bearing claims.
 - [ ] Pending and private claims are not projected onto public pages.
+- [ ] Public pages contain no TODO, placeholder, pending approval,
+  before-launch, or screenshot-pending language.
 - [ ] Careful claims preserve contribution, stewardship, or collective-work
   language.
 - [ ] Metrics are approved, softened, or explicitly bounded.
@@ -27,8 +29,11 @@ changes public claims.
   lists, private rows, private screenshots, private photos, private fonts,
   credentials, or private correspondence have been committed.
 - [ ] No public `/proofs`, `/knowledge-bank`, or `/public-claims` route exists.
+- [ ] `docs/qa/recursive-evals-M.md` has been followed for claim review,
+  public-safety boundaries, hiring clarity, web QA, and release gates.
 - [ ] `npm run knowledge-bank` passes.
 - [ ] `npm run public-safety` passes.
+- [ ] `npm run check:evals` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.
 - [ ] `npm run preflight:production` passes only with explicit production

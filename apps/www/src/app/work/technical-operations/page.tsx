@@ -29,7 +29,7 @@ const proofMap = [
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "open-data translation into resident-facing guidance as an independent follow-on to the New York City Council's first CouncilStat hackathon."
   },
   {
     project: "WOWList",

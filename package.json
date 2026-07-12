@@ -22,6 +22,7 @@
     "report:citations": "node scripts/report-citations.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
+    "check:evals": "npm run public-safety && npm run check:routes",
     "routes": "npm run check:routes",
     "check:routes": "node scripts/check-routes.mjs",
     "check:production": "npm run preflight:production",
