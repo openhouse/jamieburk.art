@@ -178,8 +178,8 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
+      "Served as a founding-era NYC Artist Coalition organizer and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+    role: "Founding-Era Organizer, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2024-Present",
     status: "Full case study",
     featured: true,
@@ -257,7 +257,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
-      "Co-founder role in NYC Artist Coalition",
+      "Founding-era organizing role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
@@ -268,7 +268,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie served as a founding-era NYC Artist Coalition organizer and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

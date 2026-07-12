@@ -235,15 +235,15 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
     publicWording:
-      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
-    shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
+      "Served as a founding-era NYC Artist Coalition organizer and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+    shortWording: "Founding-era NYC Artist Coalition organizer and public-web builder",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Public-safe project-history review, Jamie confirmation, public campaign websites, and contemporaneous public affiliation.",
     whyItMatters:
-      "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
+      "Makes Jamie's founding-era organizing, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
-      "Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.",
+      "Founding-era organizing and website authorship are supported; the formal co-founder title remains held for corroboration, and campaign accomplishments remain collective.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",

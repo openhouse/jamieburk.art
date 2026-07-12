@@ -13,6 +13,13 @@ repeal advocacy within collective work. It does not, by itself, establish the
 coalition's formation history, legislative authorship, or a single actor's
 causation of repeal.
 
+A public-safe aggregate review of surviving project records supports describing
+Jamie as a founding-era organizer who built and stewarded coalition and campaign
+web infrastructure, campaign memory, coordination materials, source maps,
+public-data framing, policy communications, and follow-up systems. The formal
+co-founder title remains held for independent formation-record or collaborator
+corroboration.
+
 ## Sources
 
 - [Gothamist, DIY Venues Demand Repeal of Widely Reviled Cabaret Law](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law)
@@ -21,8 +28,8 @@ causation of repeal.
 
 ## Open Research
 
-- Recover formation records and collaborator testimony establishing Jamie's
-  role in creating NYC Artist Coalition.
+- Recover formation records and collaborator testimony that can determine
+  whether the formal co-founder title is independently corroborated.
 - Map Jamie's strongest defensible contribution to Cabaret Law repeal against
   hearing records, legislation, coalition actions, and collaborator accounts.
 - Establish Jamie's work producing nightlife town halls and contributing to the

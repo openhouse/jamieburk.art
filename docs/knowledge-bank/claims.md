@@ -98,11 +98,11 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / Jamie review confirmation
-**Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
+**Public wording:** Served as a founding-era NYC Artist Coalition organizer and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
 **Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
-**Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
-**Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
+**Why it matters:** Makes Jamie's founding-era organizing, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
+**Guardrail:** Founding-era organizing and website authorship are supported; the formal co-founder title remains held for independent corroboration, and campaign accomplishments remain collective.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
 **Review owner:** Jamie

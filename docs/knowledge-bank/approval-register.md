@@ -13,7 +13,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 ## Approved With Guardrails
 
 - HJE 2x claim: contribution wording only.
-- NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition role: founding-era organizer, civic systems, coalition operations, policy communications, and public web infrastructure are approved; the formal co-founder title remains held for corroboration, and policy outcomes remain collective.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.

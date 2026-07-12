@@ -99,6 +99,22 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
+      id: "INT-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
+      kind: "artifact-lead",
+      capturedAt: "2026-07-12",
+      capturedFrom: "Existing approved proof records and public-safe project archive review",
+      publicSafeSummary: "Aggregate review of founding-era NYC Artist Coalition web implementation, campaign surfaces, civic systems, and operational records.",
+      projects: ["nyc-artist-coalition"],
+      status: "integrated",
+      disposition: "source-created",
+      sourceIds: ["SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026"],
+      claimIds: ["CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE", "CLM-NAC-CIVIC-SYSTEMS"],
+      researchTaskIds: ["TASK-NAC-CREATION-ROLE"],
+      notes: ["The aggregate review supports founding-era web and systems work, but does not independently establish the formal co-founder title or solo policy causation."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "INT-NAC-CREATION-ROLE-RECOLLECTION",
       kind: "recollection",
       capturedAt: "2026-07-12",
@@ -397,6 +413,19 @@ const knowledgeBankInput = {
       publicNote: "A supplied public source lead awaiting recovery and close reading of the relevant passage.",
       supportsGenerally: ["the existence of a public source lead for further review"],
       doesNotEstablish: ["any portfolio claim before the relevant passage is recovered", "Jamie's role in nightlife advocacy", "Cabaret Law repeal causation"]
+    },
+    {
+      id: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
+      title: "Public-safe NYC Artist Coalition project-history review",
+      kind: "project-archive",
+      visibility: "public-metadata-only",
+      preservationStatus: "private",
+      accessedAt: "2026-07-12",
+      publicCitation: "Public-safe aggregate review of NYC Artist Coalition project records and surviving web implementations.",
+      publicNote: "The public registry records conclusions and boundaries only; raw coalition, correspondence, access, and strategy records remain outside the repository.",
+      protectedLocatorId: "ARCHIVE-NAC-PROJECT-HISTORY-2017-2026-001",
+      supportsGenerally: ["Jamie's founding-era public web implementation", "campaign website and information-surface work", "civic systems and coalition operations across multiple advocacy efforts"],
+      doesNotEstablish: ["the formal co-founder title without formation corroboration", "solo ownership of collective campaigns", "legislative authorship", "sole causation of policy or enforcement outcomes"]
     }
   ],
   sourceAssertions: [
@@ -543,6 +572,42 @@ const knowledgeBankInput = {
       publicSafe: true,
       reviewedAt: "2026-07-12",
       reviewedBy: ["Codex public-source review"]
+    },
+    {
+      id: "AST-NAC-ARCHIVE-PUBLIC-WEB-INFRASTRUCTURE",
+      sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
+      project: "nyc-artist-coalition",
+      assertion: "The public-safe archive review documents Jamie's founding-era implementation and stewardship of coalition and campaign web surfaces.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "AST-NAC-ARCHIVE-CIVIC-SYSTEMS",
+      sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
+      project: "nyc-artist-coalition",
+      assertion: "The public-safe archive review documents Jamie's work on campaign memory, coordination, public-data framing, policy communications, and follow-up systems across NYC Artist Coalition efforts.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NAC-CIVIC-SYSTEMS"],
+      publicSafe: true,
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "AST-NAC-ARCHIVE-COFOUNDER-BOUNDARY",
+      sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
+      project: "nyc-artist-coalition",
+      assertion: "The archive supports a founding-era organizing and infrastructure role but does not yet independently corroborate the formal co-founder title.",
+      relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: ["CLM-NAC-CREATION-ROLE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
     }
   ],
   claims: [
@@ -753,16 +818,57 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
+      id: "CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE",
+      project: "nyc-artist-coalition",
+      internalClaim: "Jamie served as a founding-era organizer and built and stewarded public web infrastructure for NYC Artist Coalition and campaign surfaces including FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [{ key: "case-study", text: "As a founding-era NYC Artist Coalition organizer, Jamie built and stewarded coalition and campaign websites, issue explanations, calls to action, public resources, and support paths.", status: "active", citationRequired: false, surfaces: ["/work/fair-rent-nyc"] }],
+      evidence: [
+        { sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", relationship: "direct-support", supports: ["founding-era involvement", "web implementation", "campaign information surfaces"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "corroborating", supports: ["public affiliation with NYC Artist Coalition in 2017"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["Use founding-era organizer and direct web-infrastructure language; keep the formal co-founder title in research until independently corroborated, and keep campaign outcomes collective."],
+      antiClaims: ["Jamie solely founded or led NYC Artist Coalition", "Jamie authored every coalition position", "Jamie controlled campaign partners", "Website authorship establishes sole campaign ownership"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-NAC-CIVIC-SYSTEMS",
+      project: "nyc-artist-coalition",
+      internalClaim: "Jamie built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition advocacy from 2017 onward.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [{ key: "case-study", text: "Jamie translated coalition, policy, and public-data needs into campaign memory, source maps, coordination materials, public explanations, and follow-up systems across NYC Artist Coalition advocacy.", status: "active", citationRequired: false, surfaces: ["/work/fair-rent-nyc"] }],
+      evidence: [
+        { sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", relationship: "direct-support", supports: ["campaign memory", "coalition operations", "policy communications", "public-data framing", "follow-up systems"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "corroborating", supports: ["specific fire-code study-group and repeal-advocacy context"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["This is an infrastructure and campaign-support claim, not legislative authorship or sole causation of Cabaret Law, Office of Nightlife, enforcement, rent-policy, or storefront outcomes."],
+      antiClaims: ["Jamie alone repealed the Cabaret Law", "Jamie alone created the Office of Nightlife", "Jamie alone ended MARCH raids", "Jamie speaks for every coalition collaborator"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "CLM-NAC-CREATION-ROLE",
       project: "nyc-artist-coalition",
-      internalClaim: "Jamie's precise role in creating NYC Artist Coalition is an active research question supported presently by his recollection and later public identification with the coalition, not yet by recovered formation records.",
+      internalClaim: "The archive and public reporting support Jamie's founding-era organizing and infrastructure role; whether the formal co-founder title can be independently corroborated remains an active research question.",
       status: "inference",
       maturity: "research-needed",
       projectionEligibility: "hold",
       collectiveWork: true,
       projections: [{ key: "archive-note", text: "Formation history and contributor roles for NYC Artist Coalition remain under research.", status: "hold", citationRequired: false, surfaces: [] }],
-      evidence: [{ sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "context", supports: ["Jamie was publicly identified with NYC Artist Coalition by June 2017"], confidence: "high", renderCitation: false }],
-      boundaries: ["Do not promote public affiliation in 2017 into a founding claim without formation records or corroborating testimony."],
+      evidence: [
+        { sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", relationship: "supports-boundary", supports: ["founding-era role is supported while formal title remains unresolved"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "context", supports: ["Jamie was publicly identified with NYC Artist Coalition by June 2017"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["Use the supported founding-era organizer and infrastructure language; do not restore the formal co-founder title without formation records or corroborating testimony."],
       antiClaims: ["Jamie created NYC Artist Coalition alone", "The reviewed articles establish the coalition's complete formation history"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-12",

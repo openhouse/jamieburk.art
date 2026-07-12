@@ -43,10 +43,25 @@ research-stage coalition-formation claim to eligible. The suite failed `KB-003`
 and `KB-004` respectively, demonstrating that the principal guardrails detect
 regressions.
 
-## Iteration 2 - Stability Run
+## Iteration 2 - Hybrid Reconciliation
 
-Re-ran the complete frozen suite after tests and documentation. Weighted score
-`1.0000`; all ten evals passed at `4/4`; two consecutive passing runs reached;
+An independent blind evidence editor passed `KB-007` at `4/4` and failed
+`KB-009` at `3/4`. The judge found a cross-layer contradiction: the new
+canonical record held the formal NYC Artist Coalition co-founder title and
+specific Office of Nightlife / MARCH causal roles for research, while existing
+public proof and case-study layers still used stronger language.
+
+The accepted correction did not erase Jamie's role. It replaced the
+uncorroborated formal title with the stronger currently supported formulation:
+founding-era organizer and builder/steward of public web and civic systems. It
+also added canonical archive-summary claims for the existing infrastructure
+work, while keeping formal founding status and specific causal roles in the
+research queue.
+
+## Iteration 3 - Stability Run
+
+Re-ran the deterministic suite, mutation tests, and blind hybrid review after
+the reconciliation. Two consecutive complete passing runs are required before
 status `threshold_met`.
 
 Threshold applies to this knowledge-development batch. It does not constitute

@@ -59,7 +59,12 @@ function makeResult(id, findings, evidence) {
   };
 }
 
-export function evaluateKnowledgeBank(suite, bank, consecutivePassingRuns = 1) {
+export function evaluateKnowledgeBank(
+  suite,
+  bank,
+  consecutivePassingRuns = 1,
+  hybridResults = []
+) {
   const sourceIds = new Set(bank.sources.map((item) => item.id));
   const claimIds = new Set(bank.claims.map((item) => item.id));
   const taskIds = new Set(bank.researchTasks.map((item) => item.id));
@@ -163,7 +168,30 @@ export function evaluateKnowledgeBank(suite, bank, consecutivePassingRuns = 1) {
     "KB-009": ["eligible claims checked for explicit use-now or hold disposition"],
     "KB-010": [`${photoLeads.length} photo lead and ${bank.sources.filter((item) => item.kind === "participant-photograph").length} participant-photo source checked`]
   };
-  const results = suite.evals.map((entry) => makeResult(entry.id, findings[entry.id], evidence[entry.id]));
+  const hybridById = new Map(hybridResults.map((entry) => [entry.eval_id, entry]));
+  const results = suite.evals.map((entry) => {
+    const deterministic = makeResult(entry.id, findings[entry.id], evidence[entry.id]);
+    if (entry.grader !== "hybrid") return deterministic;
+
+    const hybrid = hybridById.get(entry.id);
+    if (!hybrid) {
+      return makeResult(
+        entry.id,
+        [...deterministic.findings, `${entry.id} requires an independent hybrid scorecard`],
+        deterministic.evidence
+      );
+    }
+
+    const combinedFindings = [...deterministic.findings, ...(hybrid.findings ?? [])];
+    return {
+      eval_id: entry.id,
+      score: deterministic.pass ? hybrid.score : 0,
+      pass: deterministic.pass && hybrid.pass === true,
+      evidence: [...deterministic.evidence, ...(hybrid.evidence ?? [])],
+      findings: combinedFindings,
+      confidence: hybrid.confidence
+    };
+  });
   const weightedScore = results.reduce((total, result) => {
     const weight = suite.evals.find((entry) => entry.id === result.eval_id).weight;
     return total + weight * (result.score / suite.score_scale.maximum);
@@ -193,8 +221,17 @@ async function run() {
 
   const { knowledgeBank } = await import("../apps/www/src/data/knowledge-bank/records.ts");
   const consecutiveArg = process.argv.find((value) => value.startsWith("--consecutive="));
+  const hybridArg = process.argv.find((value) => value.startsWith("--hybrid-report="));
   const consecutive = Number(consecutiveArg?.split("=")[1] ?? 1);
-  const result = evaluateKnowledgeBank(suite, knowledgeBank, consecutive);
+  const hybridReport = hybridArg
+    ? JSON.parse(readFileSync(hybridArg.slice("--hybrid-report=".length), "utf8"))
+    : { results: [] };
+  const result = evaluateKnowledgeBank(
+    suite,
+    knowledgeBank,
+    consecutive,
+    hybridReport.results
+  );
   console.log(JSON.stringify(result, null, 2));
   if (result.results.some((entry) => !entry.pass)) process.exit(1);
 }
