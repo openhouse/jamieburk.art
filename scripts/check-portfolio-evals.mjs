@@ -86,6 +86,18 @@ export function validateSuite(suite) {
   );
   requireValue(blockingCount > 0, "suite must include at least one blocking eval");
 
+  const chadLens = suite.evals?.find((entry) => entry.id === "PR-015");
+  requireValue(Boolean(chadLens), "suite must include PR-015 Chad lens eval");
+  requireValue(chadLens?.blocking === true, "PR-015 Chad lens eval must be blocking");
+  requireValue(
+    chadLens?.grader === "llm_judge",
+    "PR-015 Chad lens eval must use an independent LLM judge"
+  );
+  requireValue(
+    suite.application_share_thresholds?.required_eval_ids?.includes("PR-015"),
+    "application-share threshold must require PR-015 Chad lens eval"
+  );
+
   const validateThresholds = (name, thresholds, production = false) => {
     requireValue(typeof thresholds === "object" && thresholds !== null, `${name} is required`);
     requireValue(

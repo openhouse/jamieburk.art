@@ -45,3 +45,16 @@ test("iteration records preserve the human-blocked stop state", () => {
   candidate.iteration_record_schema.allowed_decisions = ["accept", "reject"];
   assert.match(validateSuite(candidate).errors.join("\n"), /stop_human_blocked/);
 });
+
+test("Chad lens remains a blocking application-share eval", () => {
+  const candidate = cloneSuite();
+  const chadLens = candidate.evals.find((entry) => entry.id === "PR-015");
+  chadLens.blocking = false;
+  candidate.application_share_thresholds.required_eval_ids =
+    candidate.application_share_thresholds.required_eval_ids.filter(
+      (id) => id !== "PR-015"
+    );
+  const errors = validateSuite(candidate).errors.join("\n");
+  assert.match(errors, /Chad lens eval must be blocking/);
+  assert.match(errors, /application-share threshold must require PR-015/);
+});

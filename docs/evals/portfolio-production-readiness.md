@@ -57,6 +57,28 @@ hold:
 
 Weighted strength never compensates for a failed blocking eval.
 
+## Chad Lens
+
+`PR-015` makes courageous precision a blocking application criterion. It asks
+whether the site gives Jamie full, defensible credit without asking a reader to
+decode vague abstractions or converting collective work into solo causality.
+
+A passing candidate makes six things legible on its primary surfaces:
+
+1. Jamie's role;
+2. Jamie's action;
+3. the practical end of the work;
+4. what became usable, changed, launched, or easier to continue;
+5. the approved proof for the claim; and
+6. the boundary between Jamie's contribution and the collective outcome.
+
+The grader must look for errors in both directions. Understatement includes
+hiding supported ownership behind generic helper language, omitting useful
+scale, and substituting words such as `systems`, `data`, or `AI` for the actual
+work. Overstatement includes unsupported ownership, causality, authority,
+scale, current status, or erasure of collaborators. Confidence is not a reason
+to exceed the knowledge bank, and caution is not a reason to suppress it.
+
 ## Recursive Hill-Climb Protocol
 
 1. **Freeze the rubric.** Record the rubric version and candidate commit before
@@ -113,6 +135,8 @@ Every run should identify:
 - extracted resume text plus rendered resume pages;
 - knowledge-bank, approval-register, and launch-ledger results;
 - LLM scorecards with page-level evidence.
+- Chad-lens scorecards with paired public-copy and knowledge-bank citations,
+  including explicit understatement and overstatement findings;
 - application packet manifest, target-role brief, and cross-surface consistency
   report when evaluating a live application.
 

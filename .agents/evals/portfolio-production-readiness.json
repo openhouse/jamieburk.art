@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -65,7 +65,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -88,7 +88,7 @@
       "category": "proof",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
@@ -110,7 +110,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 8,
+      "weight": 6,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -130,7 +130,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -362,6 +362,31 @@
       ],
       "evidence_required": ["role brief", "packet manifest", "blind judge scorecard", "cross-surface consistency report"],
       "remediation_hint": "Tailor selection and sequence before adding claims; keep one role, three proof surfaces, and one clear next action."
+    },
+    {
+      "id": "PR-015",
+      "title": "Chad lens: courageous precision",
+      "category": "positioning",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "inputs": ["homepage", "resume page", "technical operations page", "lead work summaries", "knowledge-bank claims", "Chad Lens guidance"],
+      "procedure": [
+        "Give three blind judges the public candidate, approved knowledge-bank claims, and Chad Lens guidance without patch intent or optimization history.",
+        "For each primary surface, ask who Jamie was, what Jamie did, toward what end, what became usable or changed, and which approved proof supports the wording.",
+        "Ask judges to identify both understatement and overstatement: hidden agency, vague nouns, timid helper language, inflated ownership, unsupported causality, official authority, and erased collective credit.",
+        "Require judges to cite observed page text and the corresponding knowledge-bank claim or guardrail."
+      ],
+      "pass_criteria": [
+        "Every primary surface makes Jamie's role and action legible without requiring the reader to decode abstract references to systems, data, AI, coordination, or support.",
+        "The first 250 words of each lead surface state the practical end and what became usable, changed, launched, or easier to continue.",
+        "Directly supported work uses the strongest accurate verb available, including built, created, co-founded, led, or stewarded where the knowledge bank supports it; contribution language is not used to hide documented ownership.",
+        "Scale, duration, artifacts, and outcomes appear when approved and materially useful to role fit; no strong approved proof is suppressed merely from fear of sounding boastful.",
+        "Collective outcomes retain contribution or stewardship language, named credit where approved, and explicit limits on solo causality or official authority.",
+        "All three judges report no critical overstatement and no critical understatement, no judge scores below 3, and the median score is 4."
+      ],
+      "evidence_required": ["three independent scorecards", "page excerpts", "claim-and-guardrail citations", "understatement and overstatement findings"],
+      "remediation_hint": "Strengthen the smallest number of high-value sentences with approved actor-action-purpose-result proof, or narrow wording that exceeds the record; never trade accuracy for confidence."
     }
   ],
   "grader_output_schema": {
