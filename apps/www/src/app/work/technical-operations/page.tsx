@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Route } from "next";
+import Link from "next/link";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -6,54 +7,45 @@ import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
-  "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
-  "Track status, surface risks early, and name recurring blockers before they become patterns.",
-  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
-  "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
-  "Onboard collaborators with handbooks, runbooks, operating documentation, source maps, and decision records.",
-  "Report team health, project status, and operational metrics with honesty about what is and is not working.",
-  "Improve working systems over time without overengineering."
+  "Turn emerging requirements into bounded plans, owners, milestones, releases, and handoffs.",
+  "Make status, risks, decisions, and recurring blockers visible before teams lose time or context.",
+  "Coordinate dependencies across technical, legal, communications, contracts, and external-stakeholder work.",
+  "Create decision records, runbooks, source maps, and onboarding materials people can use without replaying every meeting.",
+  "Report what is working, what remains open, and what needs human judgment so teams can improve without overengineering."
 ];
 
 const proofMap = [
   {
-    project: "HJE",
-    proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+    project: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein",
+    action:
+      "I helped translate legacy operating knowledge into web, e-commerce, analytics, marketing, content, and workflow improvements.",
+    result:
+      "Customers gained a clearer way to find and order products, while internal stakeholders gained more repeatable digital workflows."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
-    proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+    href: "/work/fair-rent-nyc",
+    action:
+      "I built and stewarded shared campaign memory, decision records, source maps, action trackers, and stakeholder follow-up for collective civic work.",
+    result:
+      "Collaborators could trace decisions, sources, open questions, and next steps while protected strategy and legal-review context stayed private."
   },
   {
-    project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+    project: "CallNYC.org",
+    href: "/work/callnyc",
+    action:
+      "I built an independent prototype that translated constituent-services records into issue-oriented public guidance.",
+    result:
+      "Residents gained issue pathways, district context, and possible next steps without first decoding the complete dataset."
   },
   {
-    project: "WOWList",
-    proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
-  },
-  {
-    project: "196 / Sunday Dinner",
-    proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
-  },
-  {
-    project: "KC Spaces Fund",
-    proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
-  },
-  {
-    project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
-  },
-  {
-    project: "Source-Backed Team Memory",
-    proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+    project: "196 Artists Residency / Sunday Dinner",
+    href: "/work/196-sunday-dinner",
+    action:
+      "I created repeatable hosting, onboarding, facilitation, documentation, and continuity practices for recurring cultural work.",
+    result:
+      "The participation structure supported 300+ gatherings and 20+ resident artists without publishing private community records."
   }
 ];
 
@@ -73,16 +65,16 @@ export default function TechnicalOperationsPage() {
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
           Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          environments, I clarify requirements, coordinate delivery, and build
+          decision, onboarding, and handoff materials so teams can make
+          decisions, launch public work, and transfer ownership without losing
+          context.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">
-            How this maps to team operations
+            Operating work I deliver
           </h2>
           <ul className="mt-5 space-y-3 text-jb-ink/76">
             {operationsMap.map((item) => (
@@ -94,12 +86,33 @@ export default function TechnicalOperationsPage() {
           </ul>
         </JBCard>
         <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
+          <h2 className="text-2xl font-semibold text-jb-ink">
+            Selected proof: my work and what became usable
+          </h2>
           <dl className="mt-5 space-y-4">
             {proofMap.map((item) => (
-              <div key={item.project}>
-                <dt className="font-semibold text-jb-ink">{item.project}</dt>
-                <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
+              <div
+                className="border-t border-jb-ink/12 pt-4 first:border-t-0 first:pt-0"
+                key={item.project}
+              >
+                <dt className="font-semibold text-jb-ink">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href={item.href as Route}
+                  >
+                    {item.project}
+                  </Link>
+                </dt>
+                <dd className="mt-2 text-sm leading-6 text-jb-ink/72">
+                  <span className="font-semibold text-jb-ink">My work:</span>{" "}
+                  {item.action}
+                </dd>
+                <dd className="mt-2 text-sm leading-6 text-jb-ink/72">
+                  <span className="font-semibold text-jb-ink">
+                    What became usable:
+                  </span>{" "}
+                  {item.result}
+                </dd>
               </div>
             ))}
           </dl>

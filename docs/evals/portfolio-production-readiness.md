@@ -76,6 +76,7 @@ Validate the frozen rubric with:
 ```bash
 npm run evals:portfolio
 npm run test:portfolio-evals
+npm run check:chad-lens
 ```
 
 After graders produce one public-safe JSON run report, calculate the readiness

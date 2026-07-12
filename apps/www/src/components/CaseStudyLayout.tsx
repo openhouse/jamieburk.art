@@ -31,7 +31,11 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             {item.title}
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
-          <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <p className="mt-5 text-sm leading-6 text-jb-ink/72">
+            <span className="font-semibold text-jb-ink">My role:</span>{" "}
+            {item.role}
+          </p>
+          <p className="mt-4 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
           <div className="prose mt-10 max-w-none prose-headings:text-jb-ink prose-p:text-jb-ink/82 prose-a:text-jb-blue prose-strong:text-jb-ink">
             {children}
             <References pageId={item.slug} />
@@ -42,7 +46,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

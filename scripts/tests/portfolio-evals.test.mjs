@@ -125,3 +125,10 @@ test("a passing result cannot hide missing evidence", () => {
   run.results[0].evidence = ["not_observed"];
   assert.match(validateRun(suite, run).errors.join("\n"), /cannot pass with missing evidence/);
 });
+
+test("Chad lens is a blocking application and production criterion", () => {
+  const chadLens = suite.evals.find((entry) => entry.id === "PR-015");
+  assert.equal(chadLens.blocking, true);
+  assert.deepEqual(chadLens.applies_to, ["application_share", "production_launch"]);
+  assert.ok(suite.application_share_thresholds.required_eval_ids.includes("PR-015"));
+});

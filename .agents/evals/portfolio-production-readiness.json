@@ -24,7 +24,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-014"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-014", "PR-015"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -67,7 +67,7 @@
       "grader": "llm_judge",
       "applies_to": ["application_share", "production_launch"],
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -114,7 +114,7 @@
       "grader": "llm_judge",
       "applies_to": ["application_share", "production_launch"],
       "blocking": false,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -135,7 +135,7 @@
       "grader": "llm_judge",
       "applies_to": ["application_share", "production_launch"],
       "blocking": false,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -341,7 +341,7 @@
       "grader": "hybrid",
       "applies_to": ["application_share", "production_launch"],
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
       "procedure": [
         "Verify the course-completion evidence and wording.",
@@ -362,7 +362,7 @@
       "grader": "llm_judge",
       "applies_to": ["application_share"],
       "blocking": false,
-      "weight": 4,
+      "weight": 3,
       "inputs": ["target-role brief", "resume PDF", "technical operations page", "two role-relevant case studies", "tailored application note"],
       "procedure": [
         "Give a blind judge the role brief and complete application packet without optimization history.",
@@ -377,6 +377,31 @@
       ],
       "evidence_required": ["role brief", "packet manifest", "blind judge scorecard", "cross-surface consistency report"],
       "remediation_hint": "Tailor selection and sequence before adding claims; keep one role, three proof surfaces, and one clear next action."
+    },
+    {
+      "id": "PR-015",
+      "title": "Chad lens: courageous precision with low reader burden",
+      "category": "positioning",
+      "grader": "hybrid",
+      "applies_to": ["application_share", "production_launch"],
+      "blocking": true,
+      "weight": 7,
+      "inputs": ["homepage", "work index", "technical operations page", "lead case-study introductions", "knowledge-bank Chad lens"],
+      "procedure": [
+        "Run the deterministic Chad-lens source check.",
+        "For the homepage, Technical Operations page, and three lead case studies, record the named project or context, Jamie's action, the end served, what became usable, and the collective-work boundary where applicable.",
+        "Give three blind hiring-reader judges only the candidate pages and frozen rubric. Ask each to explain Jamie's role, action, intended consequence, and strongest proof without decoding acronyms or generic systems language."
+      ],
+      "pass_criteria": [
+        "The first viewport names Jamie's role, direct contribution, concrete work products, and the practical end they serve.",
+        "Every lead proof names the project, Jamie's action, and what became usable; generic descriptions of desired duties do not substitute for evidence.",
+        "No unexplained employer-specific acronym or project abbreviation interrupts the general hiring path.",
+        "Terms such as systems, data, AI, infrastructure, and operations are paired with concrete examples in the same passage.",
+        "Collective projects distinguish Jamie's contribution from team or movement outcomes without hiding Jamie as an actor.",
+        "At least two of three blind judges answer role, action, end, and usable result accurately; the median score is at least 3."
+      ],
+      "evidence_required": ["deterministic check output", "actor-action-end-result matrix", "first-viewport excerpts", "three blind scorecards", "collective-credit review"],
+      "remediation_hint": "Rewrite the smallest high-traffic passage that makes the reader infer Jamie's action, purpose, concrete output, or contribution boundary."
     }
   ],
   "grader_output_schema": {

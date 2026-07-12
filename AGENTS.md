@@ -32,6 +32,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run report:citations`
 - `npm run evals:portfolio`
 - `npm run test:portfolio-evals`
+- `npm run check:chad-lens`
 
 ## Public-Safety Rules
 

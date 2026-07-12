@@ -37,6 +37,7 @@ npm run test:citations
 npm run report:citations
 npm run evals:portfolio
 npm run test:portfolio-evals
+npm run check:chad-lens
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -70,8 +71,11 @@ public registry; `npm run test:citations` runs citation regressions; and
 
 `npm run evals:portfolio` validates the frozen application-share and
 production-launch rubric. `npm run test:portfolio-evals` protects its scoring,
-mode boundaries, evidence requirements, and human-approval stop condition. See
-`docs/evals/portfolio-production-readiness.md` for the recursive agent protocol.
+mode boundaries, evidence requirements, and human-approval stop condition.
+`npm run check:chad-lens` verifies that the highest-traffic hiring path makes
+Jamie's role, action, practical end, usable result, and contribution boundaries
+explicit. See `docs/evals/portfolio-production-readiness.md` for the recursive
+agent protocol.
 
 ## Environment
 

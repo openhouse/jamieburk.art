@@ -20,6 +20,10 @@ export function WorkCard({ item }: WorkCardProps) {
             </Link>
           </h2>
           <p className="mt-2 font-medium text-jb-green">{item.subtitle}</p>
+          <p className="mt-3 text-sm leading-6 text-jb-ink/72">
+            <span className="font-semibold text-jb-ink">My role:</span>{" "}
+            {item.role}
+          </p>
           <p className="mt-4 leading-7 text-jb-ink/76">{item.summary}</p>
         </div>
         <dl className="grid gap-3 text-sm md:grid-cols-2">
