@@ -2,6 +2,17 @@
 
 The repo is public. Approval here means approved for public-safe repository and website projection, not approval to publish private source material.
 
+## Launch Confirmation - 2026-07-11
+
+Jamie confirmed that the public email, phone number in the approved resume PDF,
+and LinkedIn profile are current and correct. Jamie also authorized the launch
+preparation work needed to present the portfolio and application materials at
+their strongest public-safe standard.
+
+This confirmation authorizes release preparation. Production promotion still
+uses the exact-commit gate in `launch-blockers.md`: review, deploy, verify, and
+only then enable indexing for that SHA.
+
 ## Approved Defaults
 
 - Resume PDF: use the exact approved application PDF at `apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf`.

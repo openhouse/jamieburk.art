@@ -1,0 +1,406 @@
+{
+  "version": 1,
+  "id": "jamieburk-art-launch-readiness",
+  "objective": "Make Jamie immediately legible as a Technical Project Manager - Product Operations & Implementation lead while preserving factual support, collective credit, consent, accessibility, and exact-commit release discipline.",
+  "targets": {
+    "allHardGatesPass": true,
+    "weightedJudgeScoreAtLeast": 4.2,
+    "scoreScale": 5,
+    "maximumCriterionRegression": 0.25,
+    "consecutivePassingRuns": 2
+  },
+  "hardGates": [
+    {
+      "id": "LR-HG-REPO",
+      "kind": "command",
+      "description": "Citation, type, lint, build, knowledge-bank, public-safety, route, and launch-eval checks pass.",
+      "command": "npm run check"
+    },
+    {
+      "id": "LR-HG-STAGING",
+      "kind": "command",
+      "description": "Staging builds with staging canonicals and fail-closed noindex behavior.",
+      "command": "npm run preflight:staging"
+    },
+    {
+      "id": "LR-HG-DEPENDENCIES",
+      "kind": "command",
+      "description": "The current production dependency audit has no high or critical advisories; lower-severity residual risks are explicitly reviewed and documented.",
+      "command": "npm audit --omit=dev --audit-level=high"
+    },
+    {
+      "id": "LR-HG-PRODUCTION",
+      "kind": "command",
+      "description": "Production builds only with the explicit production URL and index policy.",
+      "command": "npm run preflight:production"
+    },
+    {
+      "id": "LR-HG-RESPONSIVE",
+      "kind": "browser",
+      "description": "Canonical routes have one H1, no horizontal overflow, and no console errors at every required viewport.",
+      "runtimeCaseIds": [
+        "LR-RUNTIME-RESPONSIVE"
+      ]
+    },
+    {
+      "id": "LR-HG-ACCESSIBILITY",
+      "kind": "browser",
+      "description": "Keyboard focus, skip navigation, citations, headings, and primary actions remain semantically usable.",
+      "runtimeCaseIds": [
+        "LR-RUNTIME-KEYBOARD",
+        "LR-RUNTIME-CITATIONS"
+      ]
+    },
+    {
+      "id": "LR-HG-EXACT-SHA",
+      "kind": "approval",
+      "description": "Jamie approves the exact staging-reviewed SHA that is promoted; no nearby branch or rebuilt variant may substitute for it.",
+      "evidenceRequired": [
+        "approved commit SHA",
+        "staging URL",
+        "production image or deployment identifier"
+      ]
+    },
+    {
+      "id": "LR-HG-PRODUCTION-SMOKE",
+      "kind": "deployment",
+      "description": "Apex and www routing, TLS, health, canonicals, Open Graph, resume delivery, robots, and sitemap are verified after deployment.",
+      "evidenceRequired": [
+        "HTTP observations",
+        "resume SHA-256",
+        "robots and sitemap bodies"
+      ]
+    }
+  ],
+  "sourceChecks": [
+    {
+      "id": "LR-SOURCE-EMERGING",
+      "description": "Primary professional framing treats uncertainty as emerging structure rather than a deficiency.",
+      "checks": [
+        {
+          "file": "apps/www/src/components/Hero.tsx",
+          "mustInclude": [
+            "turn emerging, stakeholder-heavy work into usable"
+          ],
+          "mustNotInclude": [
+            "turn ambiguous"
+          ]
+        },
+        {
+          "file": "apps/www/src/app/opengraph-image.tsx",
+          "mustInclude": [
+            "I turn emerging work into usable systems."
+          ],
+          "mustNotInclude": [
+            "I turn ambiguous work"
+          ]
+        },
+        {
+          "file": "apps/www/src/app/resume/page.tsx",
+          "mustInclude": [
+            "turning emerging work into requirements"
+          ],
+          "mustNotInclude": [
+            "turning ambiguous work"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LR-SOURCE-CONTACT",
+      "description": "Approved contact and resume paths remain exact, while phone stays inside the approved PDF rather than website HTML.",
+      "checks": [
+        {
+          "file": "apps/www/src/data/site.ts",
+          "mustInclude": [
+            "jamie.burkart@gmail.com",
+            "https://linkedin.com/in/jamie-burkart",
+            "https://github.com/openhouse",
+            "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+          ],
+          "mustNotInclude": [
+            "(816) 728-8685"
+          ]
+        },
+        {
+          "file": "docs/knowledge-bank/approval-register.md",
+          "mustInclude": [
+            "Launch Confirmation - 2026-07-11",
+            "Phone: do not display in website HTML"
+          ],
+          "mustNotInclude": []
+        }
+      ]
+    },
+    {
+      "id": "LR-SOURCE-TYPE",
+      "description": "Public documentation describes the typefaces the application actually ships.",
+      "checks": [
+        {
+          "file": "README.md",
+          "mustInclude": [
+            "Use Karla for body, UI, prose, and display headings.",
+            "Use Oswald for labels"
+          ],
+          "mustNotInclude": [
+            "League Spartan for display headings"
+          ]
+        },
+        {
+          "file": "DESIGN.md",
+          "mustInclude": [
+            "Display Font:** Karla",
+            "Label Font:** Oswald"
+          ],
+          "mustNotInclude": [
+            "Display Font:** League Spartan"
+          ]
+        },
+        {
+          "file": "apps/www/src/app/colophon/page.tsx",
+          "mustInclude": [
+            "Karla for body, UI, prose, and display; Oswald for labels"
+          ],
+          "mustNotInclude": [
+            "League Spartan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LR-SOURCE-RESPONSIVE",
+      "description": "Known long headings and actions use the reviewed narrow-screen treatment.",
+      "checks": [
+        {
+          "file": "apps/www/src/app/work/technical-operations/page.tsx",
+          "mustInclude": [
+            "text-balance text-4xl font-bold leading-tight text-jb-ink sm:text-5xl"
+          ],
+          "mustNotInclude": []
+        },
+        {
+          "file": "apps/www/src/app/lab/source-backed-team-memory/page.tsx",
+          "mustInclude": [
+            "text-balance text-4xl font-bold leading-tight text-jb-ink sm:text-5xl",
+            "Discuss a memory sprint"
+          ],
+          "mustNotInclude": [
+            "Discuss a bounded source-backed memory sprint"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LR-SOURCE-RELEASE",
+      "description": "Release governance distinguishes durable approval from exact-commit deployment evidence.",
+      "checks": [
+        {
+          "file": "docs/knowledge-bank/launch-blockers.md",
+          "mustInclude": [
+            "Exact-Commit Release Actions",
+            "Jamie approves the exact production SHA after staging review.",
+            "Confirm production alone uses `NEXT_PUBLIC_ROBOTS_POLICY=index`"
+          ],
+          "mustNotInclude": [
+            "a nearby branch passed, so production is ready"
+          ]
+        }
+      ]
+    }
+  ],
+  "judgeCriteria": [
+    {
+      "id": "LR-JUDGE-ROLE",
+      "label": "Role legibility",
+      "weight": 0.2,
+      "minimumScore": 4,
+      "intent": "Within one viewport and three minutes, a hiring reader can name Jamie's target role, operating contribution, and relevant proof path.",
+      "anchors": {
+        "1": "The role is vague or requires reconstructing Jamie's identity from many projects.",
+        "3": "The role is stated, but the connection between claims and proof requires effort.",
+        "5": "The role, operating contribution, and next proof step are immediate, specific, and memorable."
+      }
+    },
+    {
+      "id": "LR-JUDGE-EVIDENCE",
+      "label": "Evidence and epistemic care",
+      "weight": 0.2,
+      "minimumScore": 4,
+      "intent": "Claims are concrete, source-backed where verification matters, bounded by what evidence establishes, and free of inflation.",
+      "anchors": {
+        "1": "Important claims are unsupported, overstated, or contradicted by their evidence.",
+        "3": "Most claims are careful, but support or limitations are unevenly visible.",
+        "5": "Every consequential claim is appropriately supported, qualified, and easy to inspect without exposing protected evidence."
+      }
+    },
+    {
+      "id": "LR-JUDGE-EMERGING",
+      "label": "Emerging-work framing",
+      "weight": 0.15,
+      "minimumScore": 4,
+      "intent": "The portfolio presents transition and under-formed structure without shaming teams, while remaining concrete enough for hiring readers.",
+      "anchors": {
+        "1": "The language blames, diagnoses, or romanticizes the people seeking help.",
+        "3": "The language is humane but occasionally abstract or euphemistic.",
+        "5": "The language makes emerging structure feel normal, actionable, and professionally precise."
+      }
+    },
+    {
+      "id": "LR-JUDGE-BURDEN",
+      "label": "Reader burden and hierarchy",
+      "weight": 0.15,
+      "minimumScore": 3,
+      "intent": "A time-limited reader can choose a clear path, scan the evidence, and act without carrying the archive's complexity.",
+      "anchors": {
+        "1": "The reader must explore broadly or decode internal language before understanding relevance.",
+        "3": "The main path is visible, with some avoidable repetition or density.",
+        "5": "Each surface advances one clear argument and the next action is obvious."
+      }
+    },
+    {
+      "id": "LR-JUDGE-COLLECTIVE",
+      "label": "Collective credit and protected boundaries",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Jamie's contribution is visible without appropriating collective outcomes or exposing people and records that should remain protected.",
+      "anchors": {
+        "1": "The page implies sole ownership, exposes protected material, or obscures collaborators' agency.",
+        "3": "Collective language is mostly careful but Jamie's role or the boundary is occasionally unclear.",
+        "5": "Jamie's contribution, collective context, and protected absences are all precise and mutually reinforcing."
+      }
+    },
+    {
+      "id": "LR-JUDGE-VISUAL",
+      "label": "Visual proof and credibility",
+      "weight": 0.1,
+      "minimumScore": 3,
+      "intent": "The visual system and approved evidence help readers inspect real work rather than merely accept descriptive copy.",
+      "anchors": {
+        "1": "Presentation is generic, broken, or substitutes decoration for proof.",
+        "3": "The system is coherent and some evidence is inspectable, but key cases remain text-heavy.",
+        "5": "A small number of decisive, approved artifacts make the work tangible without clutter or consent risk."
+      }
+    },
+    {
+      "id": "LR-JUDGE-OPERATIONS",
+      "label": "Operational credibility",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "The site demonstrates that Jamie can coordinate implementation, create durable operating structure, and leave work maintainable after launch.",
+      "anchors": {
+        "1": "The portfolio describes values without showing operational practice or outcomes.",
+        "3": "Operational skills are named and partly evidenced, but examples remain generic.",
+        "5": "Requirements, workflows, decisions, launch support, adoption, and handoffs are connected to specific outcomes across contexts."
+      }
+    }
+  ],
+  "runtimeCases": [
+    {
+      "id": "LR-RUNTIME-RESPONSIVE",
+      "persona": "Job applicant reviewer using an ordinary phone, tablet, or desktop",
+      "routes": [
+        "/",
+        "/work",
+        "/work/technical-operations",
+        "/resume",
+        "/about",
+        "/contact",
+        "/colophon",
+        "/lab/source-backed-team-memory",
+        "/work/callnyc"
+      ],
+      "viewports": [
+        [320, 760],
+        [375, 812],
+        [768, 900],
+        [1024, 900],
+        [1440, 1000]
+      ],
+      "assertions": [
+        "HTTP response succeeds",
+        "exactly one H1 exists",
+        "document scroll width does not exceed client width",
+        "H1 content does not overflow its box",
+        "no console errors occur",
+        "canonical and robots metadata match the tested environment"
+      ]
+    },
+    {
+      "id": "LR-RUNTIME-KEYBOARD",
+      "persona": "Keyboard-only hiring reader",
+      "routes": [
+        "/",
+        "/work/technical-operations",
+        "/contact"
+      ],
+      "viewports": [
+        [375, 812],
+        [1440, 1000]
+      ],
+      "assertions": [
+        "skip link is the first focusable control",
+        "focus indicator is visible",
+        "primary navigation and calls to action have a logical focus order",
+        "skip link targets the main landmark",
+        "email, LinkedIn, and resume actions remain keyboard operable"
+      ]
+    },
+    {
+      "id": "LR-RUNTIME-CITATIONS",
+      "persona": "Civic-technology reviewer checking a consequential claim",
+      "routes": [
+        "/work/callnyc"
+      ],
+      "viewports": [
+        [375, 812],
+        [1440, 1000]
+      ],
+      "assertions": [
+        "noteref links have accessible labels",
+        "the page has one doc-endnotes section",
+        "source notes use ordered-list semantics",
+        "backlinks return to unique reference occurrences",
+        "protected and open evidence is not rendered"
+      ]
+    },
+    {
+      "id": "LR-RUNTIME-HIRING-PATH",
+      "persona": "OTI or civic-technology hiring manager with three minutes",
+      "routes": [
+        "/",
+        "/work/technical-operations",
+        "/resume",
+        "/work/callnyc",
+        "/work/fair-rent-nyc"
+      ],
+      "task": "State Jamie's role, name three demonstrated operating capabilities, identify two supporting projects, and locate the resume and contact path.",
+      "success": "The answer is accurate using only visible public content, with no inference from private archives."
+    }
+  ],
+  "hillClimb": {
+    "objectiveOrder": [
+      "reduce hard-gate failures to zero",
+      "raise every judge criterion to its minimum",
+      "raise the weighted score to the target",
+      "reduce reader effort without weakening evidence or boundaries"
+    ],
+    "iteration": [
+      "Record the starting commit and run every hard gate.",
+      "Render all runtime cases and collect only public-safe evidence.",
+      "Ask a fresh judge context to score every criterion with cited page evidence.",
+      "Choose the lowest-scoring criterion and state one falsifiable improvement hypothesis.",
+      "Make the smallest coherent change that tests that hypothesis.",
+      "Re-run all hard gates and the affected runtime cases, then re-score the full rubric.",
+      "Keep the change only if no hard gate fails, no criterion regresses beyond the allowed maximum, and the objective improves.",
+      "Commit the accepted iteration with its eval report; otherwise revert only that iteration."
+    ],
+    "antiGaming": [
+      "Never improve a score by deleting guardrails, qualifications, sources, collective credit, or protected boundaries.",
+      "Never expose private evidence to make a public claim easier to judge.",
+      "Never tune only one viewport, route, persona, or judge phrasing.",
+      "Never replace an approved resume, contact fact, or metric without Jamie's explicit review.",
+      "Never promote a different SHA from the one that passed staging review."
+    ],
+    "stopWhen": "All hard gates pass and the weighted target plus every criterion minimum are met in two consecutive fresh-judge runs."
+  }
+}

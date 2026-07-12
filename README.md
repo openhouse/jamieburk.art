@@ -115,8 +115,9 @@ drafts, Docker build args, and verification checklist.
 
 ## Typeface Policy
 
-Use Karla for body/UI text and League Spartan for display headings. Do not commit
-or serve private, proprietary, or unlicensed font files.
+Use Karla for body, UI, prose, and display headings. Use Oswald for labels,
+metadata, and compact civic emphasis. Do not commit or serve private,
+proprietary, or unlicensed font files. See `docs/typefaces.md`.
 
 ## Content Rules
 
@@ -130,13 +131,16 @@ or serve private, proprietary, or unlicensed font files.
   Do not render that marker in production-facing pages; keep launch blockers in
   `docs/knowledge-bank/launch-blockers.md`.
 
-## Launch Blockers
+## Launch Readiness
 
-- Confirm public email.
-- Confirm LinkedIn and GitHub links.
-- Confirm screenshots/artifacts.
-- Confirm exact proof metrics.
-- Confirm collaborator names, photos, and quotes.
-- Confirm staging noindex behavior.
-- Confirm production metadata points to `https://jamieburk.art`.
-- Confirm no private/proprietary fonts are committed or served.
+Approved contact details and public-use boundaries live in
+`docs/knowledge-bank/approval-register.md`. Cleared content gates and the
+remaining exact-commit release actions live in
+`docs/knowledge-bank/launch-blockers.md`. Re-run the complete checks for every
+production candidate; do not infer readiness from an earlier commit.
+
+The recursive agent evaluation suite lives in `evals/launch-readiness/`. Run
+`npm run check:launch-evals`, `npm run test:launch-evals`, and
+`npm run report:launch-evals`. Hard gates remain authoritative; weighted judge
+scores may improve clarity but may not override safety, consent, accessibility,
+or exact-commit release requirements.
