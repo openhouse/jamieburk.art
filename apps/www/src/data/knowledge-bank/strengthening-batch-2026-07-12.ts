@@ -329,12 +329,12 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
     {
       id: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
       project: "kc-town-hall",
-      internalClaim: "Kansas City records identify Jamie as KC Town Hall's developer/presenter; the board unanimously recommended the adaptive-reuse project to the City Council for approval and funding, and later records show Jamie's continued participation.",
+      internalClaim: "Kansas City records identify Jamie as KC Town Hall's developer/presenter; after the board recommendation, the Council accepted and appropriated $490,539 for the project and authorized funding-agreement negotiations. The project later withdrew and the unused allocation was reappropriated.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "case-study",
-          text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter for an adaptive-reuse plan with four retail spaces and three apartments. In 2019, the board unanimously recommended the project to the City Council for approval and $490,539 in funding; a 2021 packet records Jamie's continued participation.",
+          text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter for an adaptive-reuse plan with four retail spaces and three apartments. After the board's unanimous recommendation, the Council adopted Resolution 190649 accepting $490,539 for the project and passed Ordinance 190642 appropriating that amount to its project account. The funding agreement did not reach use: KC Town Hall later withdrew, and the Council reappropriated the unused allocation in 2024.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/kc-town-hall"]
@@ -350,19 +350,44 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
           renderCitation: true
         },
         {
+          sourceId: "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
+          relationship: "direct-support",
+          supports: ["Council adoption", "$490,539 funding acceptance", "authorization to negotiate a funding agreement"],
+          locator: "Resolution title and legislative history",
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+          relationship: "direct-support",
+          supports: ["Council passage of the Round Two appropriation ordinance", "appropriation into designated project accounts"],
+          locator: "Ordinance title and legislative history",
+          confidence: "high",
+          renderCitation: true
+        },
+        {
           sourceId: "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
           relationship: "corroborating",
           supports: ["continued public participation for KC Town Hall"],
           confidence: "high",
           renderCitation: true
+        },
+        {
+          sourceId: "SRC-KCMO-CCED-CLAWBACK-240317-2024",
+          relationship: "direct-support",
+          supports: ["$490,539 KC Town Hall appropriation", "project withdrawal", "reappropriation of the unused allocation"],
+          locator: "Recitals and Sections 1-2",
+          confidence: "high",
+          renderCitation: true
         }
       ],
       boundaries: [
-        "Describe the documented action as a board recommendation, not a final award.",
-        "Do not infer completed construction or current project status."
+        "Describe the documented actions as Council authorization and appropriation, not receipt or disbursement.",
+        "The funding agreement was not completed for use; do not infer expenditure, completed construction, or current project status.",
+        "Include the later withdrawal and reappropriation when summarizing the allocation lifecycle."
       ],
-      antiClaims: ["KC Town Hall received a final $490,539 award", "City Council approval and disbursement are established", "the documented redevelopment was completed"],
-      researchInquiryIds: [],
+      antiClaims: ["KC Town Hall received or spent $490,539", "the Council appropriation proves a completed funding agreement", "the documented redevelopment was completed"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026"],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     }
@@ -387,7 +412,10 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       surface: "/work/kc-town-hall",
       sourceOrder: [
         "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
-        "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"
+        "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
+        "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+        "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+        "SRC-KCMO-CCED-CLAWBACK-240317-2024"
       ],
       occurrences: [
         {
@@ -396,7 +424,10 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
           projection: "case-study",
           sourceIds: [
             "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
-            "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"
+            "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
+            "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+            "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+            "SRC-KCMO-CCED-CLAWBACK-240317-2024"
           ]
         }
       ]

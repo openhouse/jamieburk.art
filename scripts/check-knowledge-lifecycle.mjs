@@ -75,6 +75,12 @@ const strengtheningPromotedClaimIds = [
   "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
 ];
 
+const kcTownHallCouncilSourceIds = [
+  "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
+  "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+  "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -315,6 +321,49 @@ const criteria = [
           return candidate && candidate.status === "hold" && !candidate.promotedClaimId;
         }
       )
+  },
+  {
+    id: "kc-town-hall-council-record",
+    label: "Council adoption, appropriation, and later clawback have canonical source readings",
+    pass: kcTownHallCouncilSourceIds.every((id) => {
+      const reading = readingBySourceId.get(id);
+      return sourceIds.has(id) && reading && reading.assertions.length >= 2 && reading.limitations.length >= 1;
+    })
+  },
+  {
+    id: "kc-town-hall-council-promotion",
+    label: "The Council authorization candidate is promoted while receipt and disbursement remain held",
+    pass:
+      candidateById.get("CND-KC-TOWN-HALL-COUNCIL-AUTHORIZATION")?.status === "promoted" &&
+      candidateById.get("CND-KC-TOWN-HALL-COUNCIL-AUTHORIZATION")?.promotedClaimId ===
+        "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD" &&
+      promotions.some(
+        (promotion) =>
+          promotion.candidateClaimId === "CND-KC-TOWN-HALL-COUNCIL-AUTHORIZATION" &&
+          promotion.claimId === "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD" &&
+          promotion.decision === "promoted"
+      ) &&
+      candidateById.get("CND-KC-TOWN-HALL-FUNDING-AWARD")?.status === "hold" &&
+      !candidateById.get("CND-KC-TOWN-HALL-FUNDING-AWARD")?.promotedClaimId
+  },
+  {
+    id: "kc-town-hall-council-projection",
+    label: "The case study renders Council allocation with the non-disbursement lifecycle boundary",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
+      );
+      const projection = claim?.projections.find((item) => item.key === "case-study");
+      return Boolean(
+        projection &&
+        /Council.*adopted/i.test(projection.text) &&
+        /appropriat/i.test(projection.text) &&
+        /490,539/.test(projection.text) &&
+        /withdr/i.test(projection.text) &&
+        claim?.boundaries.some((boundary) => /disburs/i.test(boundary)) &&
+        renderedProjectionSources.includes("CLM-KC-TOWN-HALL-MUNICIPAL-RECORD")
+      );
+    })()
   }
 ];
 

@@ -35,13 +35,15 @@ knowledge-bank registry. Sources used by a public projection appear in that
 page's redacted citation plan; contextual or unresolved sources remain in the
 bank without being forced onto the site.
 
-The July 12 portfolio-strengthening batch adds ten sources across four project
-areas: two official City Council transcripts of Jamie's public testimony, VICE
+The July 12 portfolio-strengthening batch and follow-up add thirteen sources
+across four project areas: two official City Council transcripts of Jamie's public testimony, VICE
 and Village Voice reporting on NYC Artist Coalition, a City announcement of the
 MARCH-to-CURE transition, the City-hosted CreateNYC coalition appendix, an
-independent SBDIY page using a WOWList calendar, two Kansas City municipal
-records for KC Town Hall, and KCUR reporting on Jamie's 8th Street Tunnel public
-history program. See
+independent SBDIY page using a WOWList calendar, five Kansas City municipal
+records tracing KC Town Hall from board recommendation through Council
+authorization, appropriation, and later reappropriation of the unused
+allocation, and KCUR reporting on Jamie's 8th Street Tunnel public history
+program. See
 [research-batch-2026-07-12.md](research-batch-2026-07-12.md).
 
 ### Public-Safe Archive Summary

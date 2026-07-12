@@ -59,8 +59,11 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Use "co-led redevelopment planning and public-benefit documentation" for
+Jamie's role. Council authorization and appropriation of $490,539 are supported
+when paired with the later withdrawal and return of the unused allocation. Do
+not say KC Town Hall received or spent the funds, executed the funding
+agreement, or completed construction.
 
 ## Source-Backed Team Memory
 

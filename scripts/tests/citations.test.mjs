@@ -24,7 +24,18 @@ test("new editorial projections resolve through page-local citation plans", () =
     ["SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-NYC-COUNCIL-MARCH-HEARING-2019"]
   );
   assert.equal(resolveCitationOccurrence("wowlist", "sbdiy-calendar-use").sources.length, 1);
-  assert.equal(resolveCitationOccurrence("kc-town-hall", "municipal-record").sources.length, 2);
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "municipal-record").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+      "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
+      "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+      "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+      "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+    ]
+  );
   assert.match(
     getClaimProjection(
       "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
@@ -138,6 +149,19 @@ test("campaign press collections preserve placements, deduplication, and retriev
   );
   assert.ok(claim.boundaries.some((boundary) => /not.*reach/i.test(boundary)));
   assert.ok(claim.antiClaims.some((antiClaim) => /earned-media/i.test(antiClaim)));
+});
+
+test("KC Town Hall distinguishes Council appropriation from receipt and disbursement", () => {
+  const resolved = resolveCitationOccurrence("kc-town-hall", "municipal-record");
+  assert.match(resolved.projection.text, /Council adopted Resolution 190649/);
+  assert.match(resolved.projection.text, /Ordinance 190642 appropriating/);
+  assert.match(resolved.projection.text, /reappropriated the unused allocation in 2024/);
+  assert.ok(resolved.claim.boundaries.some((boundary) => /not receipt or disbursement/i.test(boundary)));
+  const held = knowledgeBank.candidateClaims.find(
+    (candidate) => candidate.id === "CND-KC-TOWN-HALL-FUNDING-AWARD"
+  );
+  assert.equal(held.status, "hold");
+  assert.equal(held.promotedClaimId, undefined);
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

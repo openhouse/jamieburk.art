@@ -426,18 +426,20 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the proposal advanced from unanimous CCED Board recommendation to Council authorization and appropriation of $490,539.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records show Council authorization and appropriation in 2019; the project later withdrew and the unused allocation was reappropriated in 2024.",
+    sourceBasis: "Approved resume language and official Kansas City board, Council, appropriation, and clawback records.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Use Council authorization and appropriation language, not receipt or expenditure. Include the later withdrawal when describing the allocation lifecycle.",
     doNotSay: [
-      "Final funding received",
+      "Funding received or spent",
+      "Executed funding agreement",
+      "Completed construction",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded actions"
     ],
     protectedBoundaries: [
       "Private financial details",

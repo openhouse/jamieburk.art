@@ -484,9 +484,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building; the proposal advanced from board recommendation to Council authorization and appropriation of $490,539.",
+    role: "Developer / Project Planning & Documentation",
+    years: "2019-2021",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -520,13 +520,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 Council authorization and appropriation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; official records show board recommendation followed by Council authorization and appropriation.",
       open:
-        "Funding, partner, and status language stays bounded to public-safe, source-backed project context.",
+        "The project later withdrew and the unused allocation was reappropriated; reasons for withdrawal and private agreement context stay outside the public claim.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

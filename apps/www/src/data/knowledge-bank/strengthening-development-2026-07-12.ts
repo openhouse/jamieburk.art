@@ -329,26 +329,26 @@ export const strengtheningDevelopmentRecords: StrengtheningDevelopment = {
     {
       id: "CND-KC-TOWN-HALL-MUNICIPAL-RECORD",
       project: "kc-town-hall",
-      text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter, record a unanimous board funding recommendation, and later show his continued participation.",
+      text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter, record a unanimous board recommendation, and establish subsequent Council authorization and appropriation.",
       status: "promoted",
-      sourceIds: ["SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"],
-      researchInquiryIds: [],
-      supportSummary: "Two official city packets establish the named role, adaptive-reuse details, unanimous board recommendation, and continued public participation.",
+      sourceIds: ["SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019", "SRC-KCMO-CCED-ORDINANCE-190642-2019", "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021", "SRC-KCMO-CCED-CLAWBACK-240317-2024"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026"],
+      supportSummary: "Official city records establish the named role, adaptive-reuse details, board recommendation, Council authorization and appropriation, continued participation, and later withdrawal.",
       missingEvidence: [],
-      boundaries: ["Say board recommendation, not final award; do not infer City Council approval, disbursement, completed construction, or current status."],
+      boundaries: ["Say Council authorization and appropriation, not receipt or disbursement; include the later withdrawal and reappropriation; do not infer completed construction or current status."],
       promotedClaimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
       reviewedAt: "2026-07-12"
     },
     {
       id: "CND-KC-TOWN-HALL-FUNDING-AWARD",
       project: "kc-town-hall",
-      text: "KC Town Hall received a final $490,539 public funding award.",
-      status: "research-needed",
-      sourceIds: ["SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"],
-      researchInquiryIds: [],
-      supportSummary: "The reviewed records establish a request and municipal participation, not a final award.",
-      missingEvidence: ["executed funding agreement or final award record", "disbursement or completion record"],
-      boundaries: ["Do not publish award or recommendation wording from these records."],
+      text: "KC Town Hall received or spent the $490,539 Council allocation.",
+      status: "hold",
+      sourceIds: ["SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019", "SRC-KCMO-CCED-ORDINANCE-190642-2019", "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021", "SRC-KCMO-CCED-CLAWBACK-240317-2024"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026"],
+      supportSummary: "The Council authorized and appropriated the allocation, but the later ordinance identifies it as unused, records the project's withdrawal, and reappropriates the full amount.",
+      missingEvidence: ["executed funding agreement", "disbursement or expenditure record"],
+      boundaries: ["Authorization and appropriation are publishable; receipt, expenditure, completed construction, and reasons for withdrawal are not established."],
       reviewedAt: "2026-07-12"
     },
     {
@@ -369,7 +369,7 @@ export const strengtheningDevelopmentRecords: StrengtheningDevelopment = {
     { id: "PROM-NYCAC-SOLE-POLICY-CAUSALITY-HOLD", candidateClaimId: "CND-NYCAC-SOLE-POLICY-CAUSALITY", decision: "held", reason: "The evidence establishes participation and collective advocacy, not sole causality across three outcomes.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-WOWLIST-SBDIY-CALENDAR-USE", candidateClaimId: "CND-WOWLIST-SBDIY-CALENDAR-USE", claimId: "CLM-WOWLIST-SBDIY-CALENDAR-USE", decision: "promoted", reason: "A concrete external-use example strengthens the product story without relying on private user data.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex source review"] },
     { id: "PROM-KC-TOWN-HALL-MUNICIPAL-RECORD", candidateClaimId: "CND-KC-TOWN-HALL-MUNICIPAL-RECORD", claimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD", decision: "promoted", reason: "Official records make Jamie's role and the proposed adaptive-reuse program concrete.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex source review"] },
-    { id: "PROM-KC-TOWN-HALL-FUNDING-AWARD-HOLD", candidateClaimId: "CND-KC-TOWN-HALL-FUNDING-AWARD", decision: "held", reason: "The sources show a request, not a final award.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
+    { id: "PROM-KC-TOWN-HALL-FUNDING-AWARD-HOLD", candidateClaimId: "CND-KC-TOWN-HALL-FUNDING-AWARD", decision: "held", reason: "The Council allocated the funds, but later official records identify the allocation as unused and reappropriate the full amount after withdrawal.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-EIGHTH-STREET-TUNNEL-EDITORIAL-HOLD", candidateClaimId: "CND-EIGHTH-STREET-TUNNEL-PUBLIC-HISTORY", decision: "held", reason: "The claim is defensible and retained for future composition; the current site already carries the participatory throughline and does not need another project example.", decidedAt: "2026-07-12", decidedBy: ["Jamie Burkart", "Codex editorial review"] }
   ],
   editorialBriefs: [
@@ -383,8 +383,8 @@ export const strengtheningDevelopmentRecords: StrengtheningDevelopment = {
       rationale: [
         "Use official testimony to make Jamie visible as the actor while keeping outcomes collective.",
         "Use one outside WOWList community to show the product model in use without publishing private platform data.",
-        "Use official Kansas City records to replace abstract redevelopment language with a bounded role and program.",
-        "Keep causal policy claims, unsupported award wording, and additional participatory examples in the bank until evidence or composition warrants projection."
+        "Use official Kansas City records to show that Jamie's proposal advanced through board recommendation, Council authorization, and appropriation.",
+        "Keep receipt, disbursement, causal policy claims, and additional participatory examples in the bank unless evidence and composition warrant projection."
       ],
       createdAt: "2026-07-12"
     }
@@ -393,9 +393,9 @@ export const strengtheningDevelopmentRecords: StrengtheningDevelopment = {
     {
       id: "DISC-STRENGTHENING-BATCH-NEXT-RESEARCH-2026",
       kind: "agent-research",
-      summary: "Next research should seek final KC Town Hall award records, independent corroboration of fire-safety outcomes, collaborator testimony on coalition production roles, and additional public traces of WOWList community adoption.",
+      summary: "The Council authorization question is resolved; future KC Town Hall research may examine agreement negotiations, withdrawal context, and project afterlife while other priorities remain fire-safety corroboration, coalition production testimony, and public traces of WOWList adoption.",
       projectHints: ["kc-town-hall", "nyc-artist-coalition", "wowlist"],
-      sourceIds: ["SRC-NYC-COUNCIL-MARCH-HEARING-2019", "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-SBDIY-WOWLIST-CALENDAR"],
+      sourceIds: ["SRC-NYC-COUNCIL-MARCH-HEARING-2019", "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019", "SRC-KCMO-CCED-CLAWBACK-240317-2024", "SRC-SBDIY-WOWLIST-CALENDAR"],
       candidateClaimIds: ["CND-NYCAC-SOLE-POLICY-CAUSALITY", "CND-KC-TOWN-HALL-FUNDING-AWARD", "CND-WOWLIST-SBDIY-CALENDAR-USE"],
       rightsReviewRequired: false,
       status: "researching",
