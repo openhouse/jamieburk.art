@@ -28,7 +28,7 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Strong
-**Public wording:** Conceived and organized a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.
+**Public wording:** Conceived and organized a collaborative raft expedition; in a published first-person account, described a four-month journey from Kansas City down the Missouri and Mississippi rivers until the water reached salt, then developed participatory public programs around how waterways connect cities, stories, and people.
 **Guardrail:** Describe the work as collaborative and use "reached salt water" unless a complete route record establishes a Gulf terminus.
 **Canonical claims:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-GREAT-ACCOMMODATIONS`.
 

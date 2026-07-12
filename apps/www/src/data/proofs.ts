@@ -546,7 +546,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Conceived and organized a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.",
+      "Conceived and organized a collaborative raft expedition; in a published first-person account, described a four-month journey from Kansas City down the Missouri and Mississippi rivers until the water reached salt, then developed participatory public programs around how waterways connect cities, stories, and people.",
     shortWording: "Built participatory public work around connected waterways",
     detailedPublicWording:
       "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",

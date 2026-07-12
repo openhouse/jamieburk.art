@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -98,6 +99,15 @@ test("high-risk projections retain their evidence posture", () => {
   assert.match(
     byId.get("CLM-TALKS-NOT-RAIDS-ADVOCACY").projections.find((item) => item.key === "case-study").text,
     /Testified .* supported the coalition's .* campaign/i
+  );
+  const waterwaysProof = proofClaims.find(
+    (proof) => proof.id === "waterways-participatory-practice"
+  );
+  assert.match(waterwaysProof.publicWording, /published first-person account/i);
+  assert.ok(
+    readFileSync("docs/knowledge-bank/claims.md", "utf8").includes(
+      `**Public wording:** ${waterwaysProof.publicWording}`
+    )
   );
 });
 
