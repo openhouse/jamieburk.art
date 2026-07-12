@@ -204,6 +204,58 @@ export const correctionRecordSchema = z.object({
   status: z.enum(["active", "superseded"])
 });
 
+export const intakeItemSchema = z
+  .object({
+    id: stableIdSchema,
+    title: z.string().min(1),
+    project: stableIdSchema.optional(),
+    kind: z.enum([
+      "memory-fragment",
+      "source-link",
+      "metric-lead",
+      "project-lead",
+      "claim-candidate"
+    ]),
+    summary: z.string().min(1),
+    status: z.enum([
+      "captured",
+      "source-associated",
+      "researching",
+      "claim-candidate",
+      "integrated",
+      "held"
+    ]),
+    sourceIds: z.array(stableIdSchema).default([]),
+    relatedClaimIds: z.array(stableIdSchema).default([]),
+    candidateClaims: z.array(z.string().min(1)).default([]),
+    researchQuestions: z.array(z.string().min(1)).default([]),
+    boundaries: z.array(z.string().min(1)).min(1),
+    projectionStatus: z.literal("no-public-projection"),
+    receivedAt: z.iso.date(),
+    reviewedAt: z.iso.date(),
+    reviewedBy: z.array(z.string().min(1)).default([])
+  })
+  .superRefine((item, context) => {
+    if (item.status === "source-associated" && !item.sourceIds.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Source-associated intake requires at least one source"
+      });
+    }
+    if (item.status === "claim-candidate" && !item.candidateClaims.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Claim-candidate intake requires candidate claim language"
+      });
+    }
+    if (item.status === "integrated" && !item.relatedClaimIds.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Integrated intake requires at least one related claim"
+      });
+    }
+  });
+
 export const citationOccurrenceSchema = z.object({
   id: stableIdSchema,
   claimId: stableIdSchema,
@@ -223,6 +275,7 @@ export const knowledgeBankSchema = z.object({
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
+  intakeItems: z.array(intakeItemSchema),
   pages: z.array(citationPageSchema)
 });
 
@@ -232,6 +285,7 @@ export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
+export type IntakeItem = z.infer<typeof intakeItemSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

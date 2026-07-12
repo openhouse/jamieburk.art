@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
+import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
@@ -52,6 +53,43 @@ test("private and metadata-only evidence is absent from the public registry", ()
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
+});
+
+test("intake remains non-projectable and absent from the public registry", () => {
+  assert.equal(knowledgeBank.intakeItems.length, 3);
+  assert.ok(knowledgeBank.intakeItems.every((item) => item.projectionStatus === "no-public-projection"));
+  const serialized = JSON.stringify(publicCitationRegistry);
+  for (const item of knowledgeBank.intakeItems) assert.doesNotMatch(serialized, new RegExp(item.id));
+});
+
+test("intake maturity states require their supporting structure", () => {
+  const base = {
+    id: "INTAKE-TEST",
+    title: "Test intake",
+    kind: "memory-fragment",
+    summary: "A public-safe test fragment.",
+    sourceIds: [],
+    relatedClaimIds: [],
+    candidateClaims: [],
+    researchQuestions: [],
+    boundaries: ["Do not project directly."],
+    projectionStatus: "no-public-projection",
+    receivedAt: "2026-07-12",
+    reviewedAt: "2026-07-12",
+    reviewedBy: []
+  };
+
+  assert.equal(intakeItemSchema.safeParse({ ...base, status: "captured" }).success, true);
+  assert.equal(intakeItemSchema.safeParse({ ...base, status: "source-associated" }).success, false);
+  assert.equal(intakeItemSchema.safeParse({ ...base, status: "claim-candidate" }).success, false);
+  assert.equal(intakeItemSchema.safeParse({ ...base, status: "integrated" }).success, false);
+});
+
+test("new source leads preserve claim boundaries", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  assert.ok(sourceById.get("SRC-WATERWAYS-PITCH-HUCK-FINN-2007").doesNotEstablish.some((item) => /Gulf of Mexico/i.test(item)));
+  assert.ok(sourceById.get("SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19").doesNotEstablish.some((item) => /alone repealed/i.test(item)));
+  assert.ok(sourceById.get("SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20").doesNotEstablish.some((item) => /Jamie's role/i.test(item)));
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

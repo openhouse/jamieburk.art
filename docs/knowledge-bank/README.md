@@ -28,6 +28,9 @@ The knowledge bank exists to:
 
 ## Publication Model
 
+- **Intake:** public-safe fragments, source links, metrics leads, project leads,
+  and claim candidates that have entered the system but are not approved for
+  public projection.
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Citation registry:** canonical sources, evidence relationships, claims,
@@ -39,11 +42,20 @@ The knowledge bank exists to:
   rewrites claims for readers.
 - **Private archive:** not in this repo.
 
+Intake is deliberately broader than publication. A useful fragment can remain
+captured or under research indefinitely without becoming website copy. See
+[intake.md](intake.md) for the maturity model and submission procedure.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or
 public-safe pattern. Do not describe the private record inventory in unnecessary
 detail.
+
+Nothing public-safe needs to be discarded, but nothing private should be moved
+into this public repository merely to avoid losing it. Private evidence remains
+outside the repo and may be represented only by a protected locator or a
+public-safe aggregate description.
 
 ## Projection Rule
 
