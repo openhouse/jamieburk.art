@@ -25,13 +25,33 @@ public-safe, and ready to act from.
    is preserved, and public pages do not expose internal approval workflow.
 4. **Hiring pass:** confirm the homepage, Technical Operations page, resume, and
    contact path make Jamie easy to refer, interview, and hire.
-5. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
+5. **Chad-lens pass:** run `npm run check:chad-lens`. Revise failing public
+   surfaces until the deterministic criterion reaches 10/10.
+6. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
-6. **Automation pass:** run `npm run check`, `npm run public-safety`,
-   `npm run check:routes`, `npm run preflight:staging`, and
-   `npm run preflight:production` when the environment is available.
-7. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
+7. **Automation pass:** run `npm run check`, `npm run check:evals`,
+   `npm run preflight:staging`, and `npm run preflight:production` when the
+   environment is available.
+8. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
    only for unresolved P0/P1 blockers.
+
+## Chad-Lens Criterion
+
+`npm run check:chad-lens` is a deterministic copy regression eval. It requires
+all 10 criteria to pass:
+
+- Jamie is the visible actor on the homepage, Technical Operations page, resume
+  page, work index, and work cards.
+- The three role-focused introductions say what the resulting structure lets
+  people or teams do.
+- Every structured work item names a concrete usable output.
+- Work cards show Jamie's role and dates before project detail.
+- Collective civic work retains contribution and stewardship language.
+
+The eval reduces review drift; it does not establish factual truth. Claim
+accuracy still belongs to the knowledge-bank, provenance, and boundary passes.
+The initial branch baseline was 5/10. The copy hill climb added explicit team
+agency to four introductions and made Jamie's role visible on work cards.
 
 ## P0: Blocks Job-Application Sharing
 
@@ -44,7 +64,7 @@ public-safe, and ready to act from.
 - Private material, raw transcripts, private local paths, credentials, private
   screenshots, private fonts, or unapproved personal/community records appear in
   the repo or public surface.
-- `npm run check` or `npm run public-safety` fails.
+- `npm run check`, `npm run check:chad-lens`, or `npm run public-safety` fails.
 
 ## P1: Blocks Production Cutover
 

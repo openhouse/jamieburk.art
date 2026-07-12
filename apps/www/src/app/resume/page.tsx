@@ -22,10 +22,11 @@ export default function ResumePage() {
             Technical Project Manager - Product Operations & Implementation
           </p>
           <p className="mt-6 text-xl leading-8 text-jb-ink/76">
-            I create operating structure for complex public-facing teams,
-            turning emerging work into requirements, workflows, documentation,
-            decision trails, launch support, onboarding materials, and durable
-            handoffs.
+            I create operating structure for complex public-facing teams. I turn
+            emerging work into clear requirements, coordinated workflows,
+            decision records, launch support, onboarding materials, and durable
+            handoffs so teams can decide, launch, onboard others, and carry the
+            work forward.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <JBButton href={site.resumePath} download>

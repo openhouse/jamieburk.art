@@ -31,6 +31,7 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run public-safety
+npm run check:chad-lens
 npm run check:evals
 npm run check:routes
 npm run check:citations
@@ -69,8 +70,9 @@ public registry; `npm run test:citations` runs citation regressions; and
 
 `docs/qa/recursive-evals-M.md` defines the repeatable launch-readiness loop for
 claim review, public-safety boundaries, hiring clarity, web QA, and production
-cutover checks. `npm run check:evals` is an alias over the public-safety and
-route gates; it does not create a second scanner.
+cutover checks. `npm run check:chad-lens` runs the deterministic hiring-clarity
+criterion. `npm run check:evals` combines that criterion with the existing
+public-safety and route gates; it does not create a second safety scanner.
 
 ## Environment
 

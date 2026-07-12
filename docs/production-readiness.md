@@ -30,6 +30,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
+- [ ] `npm run check:chad-lens` (10/10)
 - [ ] `npm run check:evals`
 - [ ] `npm run check:routes`
 - [ ] `npm run preflight:staging`
@@ -58,7 +59,8 @@ ideas from the production-readiness-composite family.
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
-- [ ] Chad-lens review passes.
+- [ ] Chad-lens deterministic eval passes at 10/10 and manual review confirms
+  the wording remains accurate, natural, and collectively responsible.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
 content and release.

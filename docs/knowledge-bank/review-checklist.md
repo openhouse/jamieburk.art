@@ -33,6 +33,7 @@ changes public claims.
   public-safety boundaries, hiring clarity, web QA, and release gates.
 - [ ] `npm run knowledge-bank` passes.
 - [ ] `npm run public-safety` passes.
+- [ ] `npm run check:chad-lens` passes at 10/10.
 - [ ] `npm run check:evals` passes.
 - [ ] `npm run check:routes` passes.
 - [ ] `npm run preflight:staging` passes.
