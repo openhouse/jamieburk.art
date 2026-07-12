@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import {
   AtAGlance,
   ArtifactGallery,
-  ArtifactList,
   CreditsList,
   EvidenceAndLimits,
   LinksList,
@@ -51,7 +50,6 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
-        <ArtifactList item={item} />
         <EvidenceAndLimits item={item} />
         <LinksList item={item} />
         <CreditsList item={item} />

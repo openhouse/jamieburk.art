@@ -40,26 +40,6 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   );
 }
 
-export function ArtifactList({ item }: { item: WorkMeta }) {
-  return (
-    <section aria-labelledby="artifact-list">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-list">
-        Primary artifacts
-      </h2>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-        {item.artifactTypes.map((artifact) => (
-          <li
-            className="rounded-lg border border-jb-ink/12 bg-jb-paper px-4 py-3 text-sm font-medium text-jb-ink"
-            key={artifact}
-          >
-            {artifact}
-          </li>
-        ))}
-      </ul>
-    </section>
-  );
-}
-
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
   const visualArtifacts = item.artifacts.filter((artifact) => artifact.asset);
   const mappedArtifacts = item.artifacts.filter((artifact) => !artifact.asset);

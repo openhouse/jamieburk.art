@@ -71,8 +71,9 @@ runtime gates.
 Launch-readiness `v2` adds `CHAD-001`, a two-grader semantic criterion for
 reader burden, actor visibility, concrete intervention, usable result, purpose,
 and collective-credit boundaries. Both independent baseline graders scored the
-current priority surfaces at `0.8`, meeting the threshold without a public-copy
-change.
+current priority surfaces at `0.8`. A complete semantic rescore then exposed an
+editorial-layering failure; one bounded deduplication pass raised editorial from
+`0.5` to `0.8` while preserving the Chad score at `0.8`.
 
 See `chad-lens-review.md` for the surface findings, stopping decision, and
 non-blocking opportunities toward `1.0`.

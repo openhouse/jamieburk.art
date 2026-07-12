@@ -27,11 +27,26 @@ purpose legible in one pass. HJE and FairRentNYC preserve contribution and
 collective-credit boundaries, satisfying the criterion's explicit boundary
 requirement.
 
-## Hill-climb decision
+## Recursive result
 
-No public-copy change was accepted. The criterion met its threshold on the
-first independent run, and the protocol rejects changes made only to improve
-grader-facing wording. Stopping here preserves the smaller-change objective.
+`CHAD-001` met its threshold on the first independent run, so no change was
+made merely to improve that score. When the same graders evaluated the complete
+semantic set against the exact `v2` candidate, both independently scored
+`EDITORIAL-001` at `0.5`: actual artifacts and necessary boundaries were still
+repeated across narrative, artifact, and governance layers.
+
+One bounded editorial change removed the duplicate Primary artifacts inventory,
+gave each case-study result one primary location, and left detailed method
+exclusions in the lab page's What It Is Not section. Both graders then scored:
+
+| Criterion | Grader A | Grader B | Result |
+| --- | ---: | ---: | --- |
+| EDITORIAL-001 | 0.8 | 0.8 | Improved / pass |
+| CHAD-001 | 0.8 | 0.8 | Preserved / pass |
+
+The change was accepted because it improved the failing criterion without
+weakening Chad's lens, collective credit, source limitations, artifacts, or
+public-safety boundaries.
 
 The graders identified non-blocking opportunities toward a score of `1.0`:
 
@@ -43,7 +58,7 @@ The graders identified non-blocking opportunities toward a score of `1.0`:
   collaborator credit;
 - make the Contact introduction more specific.
 
-Those ideas require their own bounded hypotheses and must retain HJE
+The remaining ideas toward `1.0` require their own bounded hypotheses and must retain HJE
 contribution language, FairRentNYC collective credit, CallNYC's independent and
 unofficial boundaries, and all artifact and source limitations.
 
