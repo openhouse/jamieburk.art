@@ -179,7 +179,7 @@ const workItemsInput = [
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
       "Served as a founding-era NYC Artist Coalition organizer and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Founding-Era Organizer, Civic Systems, Coalition Operations & Policy Communications Lead",
+    role: "Founding-Era Organizer, Civic Systems & Coalition Operations",
     years: "2024-Present",
     status: "Full case study",
     featured: true,

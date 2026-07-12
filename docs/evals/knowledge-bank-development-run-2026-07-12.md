@@ -58,6 +58,13 @@ also added canonical archive-summary claims for the existing infrastructure
 work, while keeping formal founding status and specific causal roles in the
 research queue.
 
+A second blind pass scored both hybrid criteria `3/4`. It identified an
+unsupported formal-sounding `Lead` role label and a cross-project waterway
+throughline that appeared in public-safe prose without its own canonical claim.
+The next correction removed the title inflation while preserving the actual
+actions, and registered the participatory throughline as a bounded claim with
+three source relationships.
+
 ## Iteration 3 - Stability Run
 
 Re-ran the deterministic suite, mutation tests, and blind hybrid review after
