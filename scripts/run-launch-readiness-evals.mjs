@@ -5,7 +5,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v1/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v2/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");

@@ -65,3 +65,14 @@ all three semantic criteria at `0.8`.
 
 See `semantic-review.md` for the before/after record and unresolved human and
 runtime gates.
+
+## Chad Lens
+
+Launch-readiness `v2` adds `CHAD-001`, a two-grader semantic criterion for
+reader burden, actor visibility, concrete intervention, usable result, purpose,
+and collective-credit boundaries. Both independent baseline graders scored the
+current priority surfaces at `0.8`, meeting the threshold without a public-copy
+change.
+
+See `chad-lens-review.md` for the surface findings, stopping decision, and
+non-blocking opportunities toward `1.0`.
