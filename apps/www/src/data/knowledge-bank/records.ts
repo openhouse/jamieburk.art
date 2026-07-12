@@ -211,7 +211,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "Surviving public evidence identifies 11 posts from accounts of 10 sitting NYC Council members engaging with CallNYC or referring residents to the project.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026", relationship: "direct-support", supports: ["11 attributable member-account posts", "10 sitting Council-member accounts", "interaction modes"], confidence: "high", renderCitation: true }],
       boundaries: ["This is account-level evidence and does not establish who personally typed each post.", "Three of the profile's 110 reported timeline entries remain unrecovered.", "Current counters are not contemporaneous impact analytics."],
       antiClaims: ["The New York City Council endorsed CallNYC", "Ten Council members formally endorsed CallNYC", "Every tagged Council member engaged", "The complete account history was recovered", "Jamie personally conversed with every member"],

@@ -34,6 +34,13 @@ with, or institutionally endorsed CallNYC.
 
 ## Account-level context
 
+X reported 110 posts while failing to render the logged-out timeline, so the
+review treated this as a retrieval limitation rather than evidence of an empty
+account. An authenticated PDF preserved one populated page and six blank
+continuation pages; exact pagination cursors across two public mirrors recovered
+107 unique entries, leaving three unrecovered. No API credential was configured
+or required for the core engagement claim.
+
 The recovered `@CallNYCapp` corpus contained:
 
 - 107 unique visible timeline entries against 110 posts reported by the
@@ -75,9 +82,10 @@ impact measures. They do not identify every liking or reposting account.
 
 ## Approved projection
 
-> Surviving public posts show accounts of 10 sitting NYC Council members
-> engaging with CallNYC through quote-posts, replies, amplification,
-> acknowledgment, or a resident referral.
+> CallNYC used CouncilStat data to create a public recognition and feedback loop
+> with Council offices. Eleven surviving public posts document engagement by
+> accounts of 10 then-sitting NYC Council members through interpretation,
+> replies, amplification, acknowledgment, and a resident referral.
 
 ## Anti-claims
 

@@ -144,6 +144,9 @@ if (existsSync(runsRoot)) {
     if (result.suiteId !== suite.suiteId) {
       fail(`${runName} references the wrong suiteId`);
     }
+    if (result.version !== 1) {
+      fail(`${runName} result version must be 1`);
+    }
     if (!Number.isInteger(result.iterations) || result.iterations < 1 || result.iterations > stop.maxIterations) {
       fail(`${runName} iterations must be from 1 to ${stop.maxIterations}`);
     }
@@ -157,6 +160,13 @@ if (existsSync(runsRoot)) {
       fail(`${runName} is incomplete but does not name unresolved criteria`);
     }
 
+    const resultFixtureIds = uniqueIds(result.fixtures ?? [], `${runName} fixtures`);
+    for (const fixtureId of fixtureIds) {
+      if (!resultFixtureIds.has(fixtureId)) {
+        fail(`${runName} is missing fixture ${fixtureId}`);
+      }
+    }
+
     for (const fixtureResult of result.fixtures ?? []) {
       if (!fixtureIds.has(fixtureResult.id)) {
         fail(`${runName} references unknown fixture ${fixtureResult.id}`);
@@ -166,6 +176,77 @@ if (existsSync(runsRoot)) {
         (fixtureResult.qualifyingRounds?.length ?? 0) < stop.requiredConsecutivePasses
       ) {
         fail(`${runName}/${fixtureResult.id} is accepted without enough qualifying rounds`);
+      }
+
+      const rounds = fixtureResult.qualifyingRounds ?? [];
+      if (rounds.some((round) => !Number.isInteger(round) || round < 1 || round > result.iterations)) {
+        fail(`${runName}/${fixtureResult.id} has a qualifying round outside the run`);
+      }
+      if (new Set(rounds).size !== rounds.length) {
+        fail(`${runName}/${fixtureResult.id} repeats a qualifying round`);
+      }
+      if (
+        rounds.length >= stop.requiredConsecutivePasses &&
+        rounds.slice(1).some((round, index) => round !== rounds[index] + 1)
+      ) {
+        fail(`${runName}/${fixtureResult.id} qualifying rounds must be consecutive`);
+      }
+
+      if (result.status === "passed") {
+        if (!fixtureResult.disposition?.startsWith("accepted")) {
+          fail(`${runName}/${fixtureResult.id} must be accepted in a passed run`);
+        }
+        if (fixtureResult.acceptedIteration !== rounds[0]) {
+          fail(`${runName}/${fixtureResult.id} acceptedIteration must match its first qualifying round`);
+        }
+
+        for (const judgeKey of ["evidenceJudge", "hiringReaderJudge"]) {
+          const judge = fixtureResult[judgeKey];
+          if (!judge) {
+            fail(`${runName}/${fixtureResult.id} is missing ${judgeKey}`);
+            continue;
+          }
+          if (judge.allHardGatesPassed !== true) {
+            fail(`${runName}/${fixtureResult.id}/${judgeKey} did not pass every hard gate`);
+          }
+          if (judge.weightedScore < stop.targetWeightedScore) {
+            fail(
+              `${runName}/${fixtureResult.id}/${judgeKey} scored ${judge.weightedScore}; ` +
+                `${stop.targetWeightedScore} is required`
+            );
+          }
+          if (judge.minimumCriterionScore < stop.minimumCriterionScore) {
+            fail(`${runName}/${fixtureResult.id}/${judgeKey} has a criterion below the minimum`);
+          }
+          if (
+            stop.requiredPerfectCriteria?.includes("calibration") &&
+            judge.calibration !== 5
+          ) {
+            fail(`${runName}/${fixtureResult.id}/${judgeKey} must score calibration 5`);
+          }
+          if ((judge.regressions?.length ?? 0) > stop.maxRegressions) {
+            fail(`${runName}/${fixtureResult.id}/${judgeKey} exceeds the regression limit`);
+          }
+        }
+      }
+    }
+
+    if (result.status === "passed") {
+      if (result.stoppingReason !== "success-condition-reached") {
+        fail(`${runName} passed without the success stopping reason`);
+      }
+      if ((result.unresolvedCriteria?.length ?? 0) !== 0 || result.summary?.unresolved !== 0) {
+        fail(`${runName} passed but still records unresolved criteria`);
+      }
+      if (
+        result.summary?.thresholdMet !== fixtureIds.size ||
+        result.summary?.hardGateFailuresInFinalCandidates !== 0 ||
+        result.summary?.acceptedDraftRegressions > stop.maxRegressions
+      ) {
+        fail(`${runName} passed but its summary does not satisfy the stop policy`);
+      }
+      if ((result.judgeRoles?.length ?? 0) < 2) {
+        fail(`${runName} passed without two independent judge roles`);
       }
     }
 

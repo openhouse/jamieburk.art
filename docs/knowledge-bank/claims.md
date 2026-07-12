@@ -68,8 +68,8 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Strong
 **Evidence class:** Public source / public-safe archive summary
-**Public wording:** Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.
-**Detailed public-safe wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven attributable posts from accounts of 10 sitting members interpreted the data, credited staff, replied to the account, amplified recognition, acknowledged the work, or referred residents to the project.
+**Public wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices; 11 surviving public posts document engagement by accounts of 10 then-sitting NYC Council members.
+**Detailed public-safe wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral.
 **Where to project:** Technical Operations, Case study.
 **Why it matters:** Shows that the resident-facing prototype also created a legible feedback loop with public offices.
 **Guardrail:** Keep this at account level. Engagement does not establish Council commissioning, adoption, partnership, institutional endorsement, or who personally typed each post.

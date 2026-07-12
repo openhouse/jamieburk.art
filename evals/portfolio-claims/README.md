@@ -131,3 +131,8 @@ selected for every fixture, independent judge outcomes, regressions, stopping
 reason, and unresolved criteria. A run may be useful and mergeable while its
 overall result remains `incomplete`; the status must reflect the suite's stop
 policy rather than the rhetorical quality of its best candidates.
+
+The first complete run is
+[`runs/2026-07-12-feature-evals-B/`](./runs/2026-07-12-feature-evals-B/). It
+records the selected candidate, both final judge scores, qualifying rounds, and
+publication surface for all eight fixtures.

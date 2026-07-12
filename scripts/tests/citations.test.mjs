@@ -12,6 +12,7 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "member-engagement").sources.map((item) => item.number), [6]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -45,6 +46,14 @@ test("negative research preserves scope and limitations", () => {
   assert.equal(inquiry.resultStatus, "not-recovered");
   assert.ok(inquiry.limitations.some((item) => /not proof of nonexistence/i.test(item)));
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);
+});
+
+test("member engagement remains account-level and institutionally bounded", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT");
+  assert.ok(claim);
+  assert.match(claim.internalClaim, /11 posts.*10 sitting NYC Council members/i);
+  assert.ok(claim.boundaries.some((item) => /account-level/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /endorsed CallNYC/i.test(item)));
 });
 
 test("private and metadata-only evidence is absent from the public registry", () => {

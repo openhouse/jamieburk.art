@@ -26,10 +26,10 @@ product, a documented formal submission, or a documented winner.
 
 ## Council-member account response
 
-Surviving public posts show accounts of 10 sitting NYC Council members engaging
-with CallNYC through quote-posts, replies, amplification, acknowledgment, or a
-resident referral. This is account-level evidence, not Council commissioning,
-adoption, partnership, or institutional endorsement. See
+CallNYC used CouncilStat data to create a public recognition and feedback loop
+with Council offices. Eleven surviving public posts document engagement by
+accounts of 10 then-sitting NYC Council members. This is account-level evidence,
+not Council commissioning, adoption, partnership, or institutional endorsement. See
 [`callnyc-member-engagement.md`](./callnyc-member-engagement.md).
 
 ## Source inventory

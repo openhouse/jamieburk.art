@@ -328,7 +328,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.",
+          "text": "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [

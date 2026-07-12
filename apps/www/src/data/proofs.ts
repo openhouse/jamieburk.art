@@ -164,10 +164,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source", "public-safe-archive-summary"],
     publicWording:
-      "Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.",
+      "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices; 11 surviving public posts document engagement by accounts of 10 then-sitting NYC Council members.",
     shortWording: "Public response from 10 sitting NYC Council-member accounts",
     detailedPublicWording:
-      "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven attributable posts from accounts of 10 sitting members interpreted the data, credited staff, replied to the account, amplified recognition, acknowledged the work, or referred residents to the project.",
+      "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral.",
     sourceBasis:
       "Public posts from Council-member accounts and a public-safe archival review of the account timeline and quote-post search results.",
     sourceNote:
