@@ -1,0 +1,596 @@
+{
+  "responsive": [
+    {
+      "route": "/",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/technical-operations",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/resume",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/about",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/contact",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/colophon",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/callnyc",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/wowlist",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "bodyScrollWidth": 320,
+      "h1ClientWidth": 288,
+      "h1ScrollWidth": 288
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/technical-operations",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/resume",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/about",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/contact",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/colophon",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/callnyc",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/wowlist",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "width": 375,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "h1ClientWidth": 343,
+      "h1ScrollWidth": 343
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 435,
+      "h1ScrollWidth": 435
+    },
+    {
+      "route": "/work",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/work/technical-operations",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/resume",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/about",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/contact",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/colophon",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/work/callnyc",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/work/wowlist",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "h1ClientWidth": 736,
+      "h1ScrollWidth": 736
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 663,
+      "h1ScrollWidth": 663
+    },
+    {
+      "route": "/work",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/work/technical-operations",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/resume",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 721,
+      "h1ScrollWidth": 721
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/colophon",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/lab/source-backed-team-memory",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 726,
+      "h1ScrollWidth": 726
+    },
+    {
+      "route": "/work/harry-j-epstein",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    },
+    {
+      "route": "/work/fair-rent-nyc",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    },
+    {
+      "route": "/work/callnyc",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    },
+    {
+      "route": "/work/wowlist",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    },
+    {
+      "route": "/work/196-sunday-dinner",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    },
+    {
+      "route": "/work/kc-town-hall",
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "h1ClientWidth": 763,
+      "h1ScrollWidth": 763
+    }
+  ],
+  "responsiveFailures": [],
+  "keyboardFocus": {
+    "tag": "A",
+    "text": "Skip to content",
+    "href": "#main",
+    "outlineStyle": "solid",
+    "outlineWidth": "3px",
+    "top": "16px",
+    "boundingRect": {
+      "x": 16,
+      "y": 16,
+      "width": 134.9375,
+      "height": 40,
+      "top": 16,
+      "right": 150.9375,
+      "bottom": 56,
+      "left": 16
+    }
+  },
+  "zoomResults": [
+    {
+      "route": "/",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440
+    },
+    {
+      "route": "/work/technical-operations",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440
+    },
+    {
+      "route": "/work/callnyc",
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "bodyScrollWidth": 1440
+    }
+  ],
+  "zoomFailures": [],
+  "artifacts": [
+    {
+      "path": "/work/harry-j-epstein",
+      "alt": "Harry J. Epstein Company New Items storefront with category filters, product cards, prices, cart actions, and hand-drawn brand artwork.",
+      "naturalWidth": 1425,
+      "naturalHeight": 891,
+      "caption": "public-safe screenshot / direct evidencePublic e-commerce storefrontPublic storefront capture, July 2026. It directly documents the maintained customer-facing catalog and distinctive public voice; it does not expose private analytics, orders, or revenue data.Captured 2026-07-12 from a public web surface.",
+      "sourceUrl": "https://www.harryepstein.com/collections/new-items"
+    },
+    {
+      "path": "/work/fair-rent-nyc",
+      "alt": "Fair Rent NYC public explainer page with campaign navigation and plain-language Commercial Rent Stabilization information.",
+      "naturalWidth": 1425,
+      "naturalHeight": 891,
+      "caption": "public-safe screenshot / direct evidencePublic campaign web surfacesPublic FairRentNYC explainer capture, July 2026. It directly documents a campaign information surface and plain-language policy communication; it does not establish sole authorship or individual policy outcomes.Captured 2026-07-12 from a public web surface.",
+      "sourceUrl": "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/"
+    },
+    {
+      "path": "/work/callnyc",
+      "alt": "Archived CallNYC interface with an issue navigation list, search field, resident-facing explanation, and visible archived-project disclaimer.",
+      "naturalWidth": 1185,
+      "naturalHeight": 375,
+      "caption": "public-safe screenshot / direct evidenceIssue pathway prototypePublic archived-prototype capture, July 2026. It directly documents the issue-first navigation and resident-facing framing; the visible disclaimer preserves that the tool is unofficial and not current guidance.Captured 2026-07-12 from a public web surface.",
+      "sourceUrl": "https://callnyc.org/"
+    }
+  ],
+  "citationEvidence": {
+    "citations": 9,
+    "citationNames": [
+      "Citation 1: Civic Hall announcement of New York City Council hackathon",
+      "Citation 2: New York City Council event-day CouncilStat hackathon post",
+      "Citation 2: New York City Council event-day CouncilStat hackathon post",
+      "Citation 3: Website provides new information about council members' focus",
+      "Citation 4: CallNYC source repository",
+      "Citation 5: New York City Council Hackathon promotional graphic",
+      "Citation 3: Website provides new information about council members' focus",
+      "Citation 4: CallNYC source repository",
+      "Citation 3: Website provides new information about council members' focus"
+    ],
+    "backlinks": 9,
+    "sourcesHeading": "Sources and notesThese notes preserve what each source supports and where its limits remain. See something that needs correction? Contact Jamie.[1] Civic Hall announcement of a January 30, 2016, 1-3 p.m. New York City Council hackathon focused on constituent services.Original postThe archived Civic Hall page preserves the embedded social post. It is not a recovered Civic Hall calendar listing or event-detail page.Boundary: This source does not establish a recovered Civic Hall calendar listing, a dedicated event-detail page, the complete formal event title, the agenda, the participant roster.Return 1[2] New York City Council event-day post from Civic Hall identifying the gathering as the Council's first CouncilStat hackathon.Original postThe source supports the narrower 'first CouncilStat hackathon' wording, not a broader historical superlative.Boundary: This source does not establish broader historical hackathon superlatives, the full agenda, a complete attendee list, formal winners, CallNYC as an official submission.Return 1Return 2[3] Miranda Neubauer, 'Website provides new information about council members' focus,' Politico New York, March 14, 2016.The reporting connects Jamie to the January event, the fuller data release, and his independent development and iteration of CallNYC.Boundary: This source does not establish CallNYC as an official Council product, CallNYC as a formal hackathon submission, CallNYC as a documented winner.Return 1Return 2Return 3[4] Public CallNYC source repository.The repository documents the surviving implementation of the independent, archived prototype.Boundary: This source does not establish official Council ownership, formal hackathon submission status, current resident-service guidance.Return 1Return 2[5] NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.The graphic supports the visible event branding, not a longer formal registration title.Boundary: This source does not establish a longer formal registration title, the agenda, breakout structure, participant roster.Return 1"
+  },
+  "noJsEvidence": {
+    "citations": 9,
+    "references": 5,
+    "h1": "CallNYC.org"
+  },
+  "consoleErrors": []
+}

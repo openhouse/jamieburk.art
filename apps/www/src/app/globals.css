@@ -110,16 +110,15 @@ h2 {
 }
 
 .skip-link {
-  position: absolute;
+  position: fixed;
   left: 1rem;
-  top: 1rem;
+  top: -5rem;
   z-index: 50;
-  transform: translateY(-150%);
-  transition: transform 160ms ease;
 }
 
-.skip-link:focus {
-  transform: translateY(0);
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 1rem;
 }
 
 .jb-rule {

@@ -59,7 +59,20 @@ const workMetaSchema = z.object({
     z.object({
       title: z.string(),
       description: z.string(),
-      type: artifactTypeSchema
+      type: artifactTypeSchema,
+      asset: z
+        .object({
+          src: z.string().startsWith("/artifacts/"),
+          width: z.number().int().positive(),
+          height: z.number().int().positive(),
+          alt: z.string().min(20),
+          caption: z.string().min(20),
+          sourceUrl: z.string().url(),
+          capturedAt: z.string(),
+          evidenceScope: z.enum(["direct", "contextual", "representative"]),
+          rightsStatus: z.enum(["public-web-capture", "approved"])
+        })
+        .optional()
     })
   ),
   tags: z.array(z.string()),
@@ -111,10 +124,22 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "Public e-commerce storefront",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
-        type: "workflow"
+          "The public New Items collection shows the customer-facing catalog, filters, product cards, pricing, cart actions, and brand voice working as one maintained storefront.",
+        type: "public-safe screenshot",
+        asset: {
+          src: "/artifacts/hje/public-storefront.png",
+          width: 1425,
+          height: 891,
+          alt: "Harry J. Epstein Company New Items storefront with category filters, product cards, prices, cart actions, and hand-drawn brand artwork.",
+          caption:
+            "Public storefront capture, July 2026. It directly documents the maintained customer-facing catalog and distinctive public voice; it does not expose private analytics, orders, or revenue data.",
+          sourceUrl: "https://www.harryepstein.com/collections/new-items",
+          capturedAt: "2026-07-12",
+          evidenceScope: "direct",
+          rightsStatus: "public-web-capture"
+        }
       },
       {
         title: "Public-safe analytics summary",
@@ -148,12 +173,12 @@ const workItemsInput = [
     careNote:
       "No private analytics dashboards, revenue details, passwords, customer data, vendor information, or internal operational materials are published.",
     sourceLayer:
-      "Public website, public-safe summary, approved screenshots pending, resume-backed impact claims, and private materials intentionally omitted.",
+      "Public website, dated public-site capture, public-safe summary, resume-backed impact claims, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
       note: "Use only public-safe claims and approved screenshots. Treat metrics as contribution language unless Jamie approves more precise wording."
     },
-    currentStatus: "Public-safe full case study. Screenshot approvals pending.",
+    currentStatus: "Public-safe full case study with a dated public-site capture.",
     group: "Operating systems for teams",
     roleFit:
       "Technical operations, product operations, implementation, business analysis, documentation, and small-business web systems.",
@@ -167,7 +192,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Additional screenshots, internal workflow diagrams, and more detailed impact evidence require separate review before publication.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -219,7 +244,19 @@ const workItemsInput = [
         title: "Public campaign web surfaces",
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
-        type: "website"
+        type: "public-safe screenshot",
+        asset: {
+          src: "/artifacts/fair-rent-nyc/public-campaign-site.png",
+          width: 1425,
+          height: 891,
+          alt: "Fair Rent NYC public explainer page with campaign navigation and plain-language Commercial Rent Stabilization information.",
+          caption:
+            "Public FairRentNYC explainer capture, July 2026. It directly documents a campaign information surface and plain-language policy communication; it does not establish sole authorship or individual policy outcomes.",
+          sourceUrl: "https://fairrentnyc.nycartc.com/what-is-commercial-rent-stabilization/",
+          capturedAt: "2026-07-12",
+          evidenceScope: "direct",
+          rightsStatus: "public-web-capture"
+        }
       }
     ],
     tags: [
@@ -252,7 +289,7 @@ const workItemsInput = [
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active public-safe summary with a dated public campaign-site capture. Additional collaborator materials remain approval-gated.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
@@ -270,7 +307,7 @@ const workItemsInput = [
       known:
         "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Additional named collaborators, meeting materials, photographs, and internal campaign artifacts require separate approval.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
@@ -302,7 +339,19 @@ const workItemsInput = [
         title: "Issue pathway prototype",
         description:
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
-        type: "prototype"
+        type: "public-safe screenshot",
+        asset: {
+          src: "/artifacts/callnyc/public-prototype.png",
+          width: 1185,
+          height: 375,
+          alt: "Archived CallNYC interface with an issue navigation list, search field, resident-facing explanation, and visible archived-project disclaimer.",
+          caption:
+            "Public archived-prototype capture, July 2026. It directly documents the issue-first navigation and resident-facing framing; the visible disclaimer preserves that the tool is unofficial and not current guidance.",
+          sourceUrl: "https://callnyc.org/",
+          capturedAt: "2026-07-12",
+          evidenceScope: "direct",
+          rightsStatus: "public-web-capture"
+        }
       },
       {
         title: "Open-data translation layer",
@@ -341,12 +390,12 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and a dated public prototype capture.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Archived prototype with a dated public-site capture.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -360,7 +409,7 @@ const workItemsInput = [
       known:
         "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "Additional archive links and any participant photographs require separate review before publication.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }

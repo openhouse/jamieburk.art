@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import Image from "next/image";
 import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
@@ -61,27 +61,72 @@ export function ArtifactList({ item }: { item: WorkMeta }) {
 }
 
 export function ArtifactGallery({ item }: { item: WorkMeta }) {
+  const visualArtifacts = item.artifacts.filter((artifact) => artifact.asset);
+  const mappedArtifacts = item.artifacts.filter((artifact) => !artifact.asset);
+
   return (
     <section aria-labelledby="artifact-gallery">
       <h2 className="text-2xl font-semibold text-jb-ink" id="artifact-gallery">
-        Artifact gallery
+        {visualArtifacts.length ? "Public artifacts" : "Artifact map"}
       </h2>
-      <div className="mt-5 grid gap-4 md:grid-cols-3">
-        {item.artifacts.map((artifact, index) => (
-          <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
-            <p className="text-xs font-semibold uppercase text-jb-blue">
-              {artifact.type} / 0{index + 1}
-            </p>
-            <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
-            <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
-          </JBCard>
-        ))}
-      </div>
+      {visualArtifacts.length ? (
+        <div
+          className={
+            visualArtifacts.length === 1
+              ? "mt-5 max-w-4xl"
+              : "mt-5 grid gap-5 lg:grid-cols-2"
+          }
+        >
+          {visualArtifacts.map((artifact) => (
+            <figure
+              className="overflow-hidden rounded-lg border border-jb-ink/14 bg-jb-paper"
+              key={artifact.title}
+            >
+              <a href={artifact.asset?.sourceUrl}>
+                <Image
+                  alt={artifact.asset?.alt ?? ""}
+                  className="h-auto w-full border-b border-jb-ink/12"
+                  height={artifact.asset?.height ?? 1}
+                  src={artifact.asset?.src ?? ""}
+                  width={artifact.asset?.width ?? 1}
+                />
+              </a>
+              <figcaption className="p-5">
+                <p className="text-xs font-semibold uppercase text-jb-blue">
+                  {artifact.type} / {artifact.asset?.evidenceScope} evidence
+                </p>
+                <h3 className="mt-3 text-xl font-semibold text-jb-ink">
+                  {artifact.title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-jb-ink/76">
+                  {artifact.asset?.caption}
+                </p>
+                <p className="mt-3 text-xs leading-5 text-jb-ink/64">
+                  Captured {artifact.asset?.capturedAt} from a public web surface.
+                </p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      ) : null}
+      {mappedArtifacts.length ? (
+        <div className="mt-5 grid gap-4 md:grid-cols-3">
+          {mappedArtifacts.map((artifact, index) => (
+            <JBCard className="jb-artifact-surface min-h-56" key={artifact.title}>
+              <p className="text-xs font-semibold uppercase text-jb-blue">
+                {artifact.type} / 0{index + 1}
+              </p>
+              <h3 className="mt-10 text-xl font-semibold text-jb-ink">{artifact.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-jb-ink/72">{artifact.description}</p>
+            </JBCard>
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }
 
-export function KnownOpenProtected({ item }: { item: WorkMeta }) {
+export function EvidenceAndLimits({ item }: { item: WorkMeta }) {
   const blocks = [
     ["Known", item.knownOpenProtected.known],
     ["Open", item.knownOpenProtected.open],
@@ -89,9 +134,9 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
   ] as const;
 
   return (
-    <section aria-labelledby="known-open-protected">
-      <h2 className="text-2xl font-semibold text-jb-ink" id="known-open-protected">
-        Known / Open / Protected
+    <section aria-labelledby="evidence-and-limits">
+      <h2 className="text-2xl font-semibold text-jb-ink" id="evidence-and-limits">
+        Evidence and limits
       </h2>
       <div className="mt-5 grid gap-4 md:grid-cols-3">
         {blocks.map(([label, text]) => (
@@ -101,69 +146,12 @@ export function KnownOpenProtected({ item }: { item: WorkMeta }) {
           </JBCard>
         ))}
       </div>
+      {item.sourceLayer ? (
+        <p className="mt-5 text-sm leading-6 text-jb-ink/72">
+          <strong className="text-jb-ink">Source basis:</strong> {item.sourceLayer}
+        </p>
+      ) : null}
     </section>
-  );
-}
-
-function NoteBlock({
-  title,
-  children,
-  tone = "blue"
-}: {
-  title: string;
-  children: ReactNode;
-  tone?: "blue" | "green" | "ochre";
-}) {
-  const styles = {
-    blue: "border-jb-blue/30 bg-jb-sky/15",
-    green: "border-jb-green/30 bg-jb-green/[0.08]",
-    ochre: "border-jb-ochre/50 bg-jb-lemon/25"
-  }[tone];
-
-  return (
-    <section className={`rounded-lg border p-5 ${styles}`}>
-      <h2 className="text-xl font-semibold text-jb-ink">{title}</h2>
-      <div className="mt-3 text-sm leading-6 text-jb-ink/76">{children}</div>
-    </section>
-  );
-}
-
-export function CareNote({ item }: { item: WorkMeta }) {
-  if (!item.careNote) return null;
-  return (
-    <NoteBlock title="Care note / limits" tone="ochre">
-      <p>{item.careNote}</p>
-    </NoteBlock>
-  );
-}
-
-export function VisibilityNote({ item }: { item: WorkMeta }) {
-  return (
-    <NoteBlock title="Visibility" tone="blue">
-      <p>
-        This page is marked <strong>{item.visibility}</strong>. Current status:
-        {" "}
-        {item.currentStatus}
-      </p>
-    </NoteBlock>
-  );
-}
-
-export function PublicSafetyNote({ item }: { item: WorkMeta }) {
-  if (!item.publicSafety?.note) return null;
-  return (
-    <NoteBlock title="Public-safety note" tone="ochre">
-      <p>{item.publicSafety.note}</p>
-    </NoteBlock>
-  );
-}
-
-export function SourceLayer({ item }: { item: WorkMeta }) {
-  if (!item.sourceLayer) return null;
-  return (
-    <NoteBlock title="Source layer" tone="green">
-      <p>{item.sourceLayer}</p>
-    </NoteBlock>
   );
 }
 
