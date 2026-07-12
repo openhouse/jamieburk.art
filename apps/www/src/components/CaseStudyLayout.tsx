@@ -2,13 +2,9 @@ import type { ReactNode } from "react";
 import {
   AtAGlance,
   ArtifactGallery,
-  ArtifactList,
-  CareNote,
   CreditsList,
-  KnownOpenProtected,
   LinksList,
-  PublicSafetyNote,
-  SourceLayer,
+  ProjectRecord,
   VisibilityNote
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
@@ -51,16 +47,10 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
-        <ArtifactList item={item} />
         <ArtifactGallery item={item} />
-        <KnownOpenProtected item={item} />
-        <div className="grid gap-4 md:grid-cols-2">
-          <CareNote item={item} />
-          <PublicSafetyNote item={item} />
-          <SourceLayer item={item} />
-        </div>
         <LinksList item={item} />
         <CreditsList item={item} />
+        <ProjectRecord item={item} />
       </div>
     </article>
   );

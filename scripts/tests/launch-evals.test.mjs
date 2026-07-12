@@ -47,3 +47,18 @@ test("one criterion below its floor rejects an otherwise strong run", () => {
   assert.equal(result.accepted, false);
   assert.deepEqual(result.belowMinimum, ["LR-JUDGE-COLLECTIVE"]);
 });
+
+test("the Chad lens is explicit and cannot be averaged away", () => {
+  const chad = suite.judgeCriteria.find(
+    (criterion) => criterion.id === "LR-JUDGE-CHAD"
+  );
+  assert.equal(chad?.minimumScore, 4);
+
+  const scores = suite.judgeCriteria.map((criterion) => ({
+    criterionId: criterion.id,
+    score: criterion.id === "LR-JUDGE-CHAD" ? 3 : 5
+  }));
+  const result = scoreJudgeResults(suite, scores, true);
+  assert.equal(result.accepted, false);
+  assert.deepEqual(result.belowMinimum, ["LR-JUDGE-CHAD"]);
+});

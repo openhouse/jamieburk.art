@@ -11,6 +11,13 @@ It deliberately separates:
   legibility;
 - **hill-climb rules**, which govern recursive improvement.
 
+The weighted rubric includes an explicit **Chad lens**: a hiring reader should
+see Jamie as the actor, understand what became usable and why it fits the target
+role, and reach the supporting proof without carrying secondary archive or
+publication-governance complexity. This criterion cannot pass by deleting
+evidence, collective credit, or protected boundaries; those records must remain
+available and accurate without dominating the primary path.
+
 ## Commands
 
 ```bash

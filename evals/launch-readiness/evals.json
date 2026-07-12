@@ -232,13 +232,43 @@
           "mustNotInclude": []
         }
       ]
+    },
+    {
+      "id": "LR-SOURCE-CHAD-LENS",
+      "description": "Case studies keep Jamie's action, usable result, representative artifacts, and public next steps visible while secondary publication governance remains available without dominating the hiring path.",
+      "checks": [
+        {
+          "file": "apps/www/src/components/CaseStudyBlocks.tsx",
+          "mustInclude": [
+            "Representative artifacts",
+            "Project record and publication boundaries",
+            "<details"
+          ],
+          "mustNotInclude": [
+            "Artifact gallery",
+            "Primary artifacts"
+          ]
+        },
+        {
+          "file": "apps/www/src/components/CaseStudyLayout.tsx",
+          "mustInclude": [
+            "<ArtifactGallery item={item} />",
+            "<LinksList item={item} />",
+            "<CreditsList item={item} />",
+            "<ProjectRecord item={item} />"
+          ],
+          "mustNotInclude": [
+            "<ArtifactList item={item} />"
+          ]
+        }
+      ]
     }
   ],
   "judgeCriteria": [
     {
       "id": "LR-JUDGE-ROLE",
       "label": "Role legibility",
-      "weight": 0.2,
+      "weight": 0.15,
       "minimumScore": 4,
       "intent": "Within one viewport and three minutes, a hiring reader can name Jamie's target role, operating contribution, and relevant proof path.",
       "anchors": {
@@ -250,7 +280,7 @@
     {
       "id": "LR-JUDGE-EVIDENCE",
       "label": "Evidence and epistemic care",
-      "weight": 0.2,
+      "weight": 0.15,
       "minimumScore": 4,
       "intent": "Claims are concrete, source-backed where verification matters, bounded by what evidence establishes, and free of inflation.",
       "anchors": {
@@ -274,13 +304,25 @@
     {
       "id": "LR-JUDGE-BURDEN",
       "label": "Reader burden and hierarchy",
-      "weight": 0.15,
+      "weight": 0.1,
       "minimumScore": 3,
       "intent": "A time-limited reader can choose a clear path, scan the evidence, and act without carrying the archive's complexity.",
       "anchors": {
         "1": "The reader must explore broadly or decode internal language before understanding relevance.",
         "3": "The main path is visible, with some avoidable repetition or density.",
         "5": "Each surface advances one clear argument and the next action is obvious."
+      }
+    },
+    {
+      "id": "LR-JUDGE-CHAD",
+      "label": "Chad lens",
+      "weight": 0.15,
+      "minimumScore": 4,
+      "intent": "A hiring reader sees Jamie as the actor, understands what his work made usable and why it fits the target role, without carrying specialized archival or governance complexity; collective credit and evidence boundaries remain intact.",
+      "anchors": {
+        "1": "The archive, project, or values dominate; Jamie's action and hiring relevance must be reconstructed.",
+        "3": "Jamie and the usable result are visible, but repeated metadata, specialized language, or governance detail interrupts the hiring argument.",
+        "5": "Every key surface quickly states Jamie's action, usable result, and role relevance; secondary evidence and governance remain inspectable without interrupting the path, and collective credit stays precise."
       }
     },
     {
@@ -401,6 +443,28 @@
       ],
       "task": "State Jamie's role, name three demonstrated operating capabilities, identify two supporting projects, and locate the resume and contact path.",
       "success": "The answer is accurate using only visible public content, with no inference from private archives."
+    },
+    {
+      "id": "LR-RUNTIME-CHAD-LENS",
+      "persona": "Public-sector hiring manager scanning each proof page for 90 seconds",
+      "routes": [
+        "/work/harry-j-epstein",
+        "/work/fair-rent-nyc",
+        "/work/callnyc"
+      ],
+      "viewports": [
+        [320, 760],
+        [1440, 1000]
+      ],
+      "task": "Name Jamie's action, the usable result, and the target-role relevance without expanding secondary project-record details.",
+      "assertions": [
+        "Jamie is visible as the actor in the principal case-study content",
+        "what became usable and role fit are visible without opening the project record",
+        "representative artifacts, public links, and credits remain visible",
+        "publication governance is collapsed by default and keyboard expandable",
+        "expanded project records retain Known / Open / Protected, care, public-safety, and source boundaries"
+      ],
+      "success": "The hiring argument is accurate and complete before expansion; the expanded record preserves every unique public-safety and collective-work boundary."
     }
   ],
   "hillClimb": {
@@ -422,6 +486,7 @@
     ],
     "antiGaming": [
       "Never improve a score by deleting guardrails, qualifications, sources, collective credit, or protected boundaries.",
+      "Never improve the Chad lens by hiding Jamie's role, deleting unique evidence, or making publication boundaries unavailable.",
       "Never expose private evidence to make a public claim easier to judge.",
       "Never tune only one viewport, route, persona, or judge phrasing.",
       "Never replace an approved resume, contact fact, or metric without Jamie's explicit review.",
