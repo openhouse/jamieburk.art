@@ -21,6 +21,17 @@ Make the portfolio ready to:
 
 ## Score Model
 
+The suite has two evaluation modes:
+
+- `application_share` asks whether the portfolio, resume, contact path, and a
+  role-specific packet are ready to send to a hiring reader;
+- `production_launch` adds indexing, domain cutover, deployment, rollback, and
+  exact-candidate approval.
+
+Each eval declares its applicable modes. Production-only criteria cannot block
+an otherwise sound job application, and application-packet tailoring cannot
+silently become a production launch requirement.
+
 Each eval receives a score from 0 to 4:
 
 - `0` - absent, broken, unsafe, or contradicted;
@@ -32,30 +43,60 @@ Each eval receives a score from 0 to 4:
 The weighted score is:
 
 ```txt
-weighted_score = sum(eval.weight * eval.score / 4) / 100
+weighted_score = sum(applicable_eval.weight * applicable_eval.score / 4)
+                 / sum(applicable_eval.weight)
 ```
 
 A candidate is application-share eligible when all of these conditions hold:
 
 - weighted score is at least `0.80`;
 - every application-required eval passes;
-- every blocking eval scores at least `3` and every nonblocking eval scores at
-  least `2`;
+- every applicable blocking eval scores at least `3` and every applicable
+  nonblocking eval scores at least `2`;
 - Jamie has approved the exact resume, contact path, and public claim set.
 
 A candidate is production-launch eligible only when all of these conditions
 hold:
 
-- every blocking eval passes;
+- every production-applicable blocking eval passes;
 - weighted score is at least `0.90`;
-- every blocking eval scores at least `3` and every nonblocking eval scores at
-  least `2`;
+- every production-applicable blocking eval scores at least `3` and every
+  production-applicable nonblocking eval scores at least `2`;
 - the blind-reader comprehension median is at least `4`;
 - deterministic checks and the holdout regression pass;
 - two consecutive complete runs meet the threshold;
 - Jamie has explicitly approved the exact production candidate.
 
 Weighted strength never compensates for a failed blocking eval.
+
+## Executable Assessment
+
+Validate the frozen rubric with:
+
+```bash
+npm run evals:portfolio
+npm run test:portfolio-evals
+```
+
+After graders produce one public-safe JSON run report, calculate the readiness
+state and next criterion with:
+
+```bash
+node scripts/check-portfolio-evals.mjs reports/generated/portfolio-evals/run.json
+```
+
+The assessment returns one of four states:
+
+- `iterate` with the next failed non-human eval and its remediation hint;
+- `human_blocked` when the remaining decision belongs to Jamie or another
+  authorized person;
+- `threshold_met` when the selected mode's full criterion is reached;
+- `invalid` when the evidence report is incomplete or internally inconsistent.
+
+An application run omits production-only evals. A production run omits the
+role-specific application-packet eval and must also record blind-holdout status,
+reader median, and consecutive passing runs. A result cannot pass with
+`not_observed` evidence.
 
 ## Recursive Hill-Climb Protocol
 
@@ -83,6 +124,9 @@ Weighted strength never compensates for a failed blocking eval.
    eight iterations, or after three consecutive iterations without score
    improvement. At the latter two limits, report the remaining blocker instead
    of polishing indefinitely.
+10. **Honor human boundaries.** When the checker returns `human_blocked`, stop
+    changing the site. Record the exact approval or source needed and request it
+    from the authorized person.
 
 ## Grader Separation
 

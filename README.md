@@ -35,6 +35,8 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run evals:portfolio
+npm run test:portfolio-evals
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -65,6 +67,11 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run evals:portfolio` validates the frozen application-share and
+production-launch rubric. `npm run test:portfolio-evals` protects its scoring,
+mode boundaries, evidence requirements, and human-approval stop condition. See
+`docs/evals/portfolio-production-readiness.md` for the recursive agent protocol.
 
 ## Environment
 

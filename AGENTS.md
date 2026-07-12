@@ -30,6 +30,8 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run evals:portfolio`
+- `npm run test:portfolio-evals`
 
 ## Public-Safety Rules
 
