@@ -34,6 +34,9 @@ npm run public-safety
 npm run check:routes
 npm run check:citations
 npm run test:citations
+npm run test:evals
+npm run evals:application
+npm run evals:production
 npm run report:citations
 npm run preflight:staging
 npm run preflight:production
@@ -65,6 +68,11 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run evals:application` runs the deterministic application-readiness gates
+and rubric adapters. `npm run evals:production` adds fail-closed deployment and
+human-approval requirements. See `docs/evals/portfolio-readiness.md` before
+changing evaluation definitions or beginning a recursive optimization run.
 
 ## Environment
 

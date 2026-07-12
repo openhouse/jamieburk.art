@@ -167,7 +167,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns remain omitted unless separately approved for public use.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }

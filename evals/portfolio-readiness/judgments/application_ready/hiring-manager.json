@@ -1,0 +1,76 @@
+{
+  "judgeId": "codex-independent-hiring-manager",
+  "lens": "hiring-manager",
+  "candidate": "sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f",
+  "contract": "sha256:7ca78fd9e3d96878b6fa75dd38bfe6878ddc1e370e23534cd97f42f341691ec7",
+  "profile": "application_ready",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "evidence": [
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The opening viewport immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, explains his operating value, and exposes work, resume, and contact actions."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The operations map and project proof map connect Jamie's experience directly to technical operations, implementation, product operations, stakeholder coordination, and durable handoffs."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc",
+      "observation": "Specific accomplishments retain contribution language, collective attribution, archived-status warnings, and explicit claim boundaries while remaining useful to a hiring reader."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/callnyc",
+      "observation": "Occurrence-level citations provide inspectable sources, limits, accessible labels, and working backlinks without presenting the archived prototype as an official or current city service."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/resume, /work/harry-j-epstein",
+      "observation": "Internal phone and launch-approval narration has been removed while direct application actions and relevant public-evidence boundaries remain; longer case studies still require deliberate scanning."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc",
+      "observation": "Artifact galleries describe outputs but do not yet show inspectable project imagery, which remains an explicit application-ready deferral."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume, /contact",
+      "observation": "The website and downloadable PDF present consistent role framing, chronology, capabilities, and impact; the generic phone-pattern check confirms the PDF boundary without embedding the private value in public source."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "all evaluated routes",
+      "observation": "Candidate-bound evidence shows no overflow across desktop, mobile, and 200%-equivalent viewports, with 24 of 24 real keyboard focus events visibly outlined, including all nine citation markers."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume",
+      "observation": "Canonical metadata, Open Graph data, social imagery, route-specific descriptions, resume download, and contact links are present; verification used staging metadata defaults."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "/api/health",
+      "observation": "Fingerprint-bound evaluation, profile-neutral immutable baseline comparison, privacy-preserving resume checks, documented checks, and health diagnostics support handoff, while production deployment, indexing, and rollback evidence remain explicit application deferrals."
+    }
+  ],
+  "regressions": [],
+  "highestValueFailure": "visual_evidence",
+  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface while preserving its archived and unofficial status.",
+  "passes": true,
+  "confidence": "high"
+}
