@@ -75,6 +75,22 @@ test("a claim cannot use a source for an explicitly excluded proposition", () =>
   );
 });
 
+test("high-risk projections retain their evidence posture", () => {
+  const byId = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  assert.match(
+    byId.get("CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS").projections[0].text,
+    /portfolio presents .* historical evidence/i
+  );
+  assert.match(
+    byId.get("CLM-WATERWAYS-RAFT-EXPEDITION").projections.find((item) => item.key === "about").text,
+    /published account/i
+  );
+  assert.match(
+    byId.get("CLM-TALKS-NOT-RAIDS-ADVOCACY").projections.find((item) => item.key === "case-study").text,
+    /Testified .* supported the coalition's .* campaign/i
+  );
+});
+
 test("reader feedback resolves to a public governance artifact", () => {
   const feedback = knowledgeBank.intake.find((item) => item.kind === "reader-feedback");
   assert.equal(feedback.disposition, "governance-updated");

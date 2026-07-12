@@ -21,8 +21,10 @@ context and editorial boundaries; it is not a competing source of truth.
 - **March 14, 2016:** Politico New York published coverage of CallNYC and the
   CouncilStat release.
 
-CallNYC is an archived independent prototype. It was not an official Council
-product, a documented formal submission, or a documented winner.
+This portfolio presents CallNYC as historical evidence of an independent
+prototype. It was not an official Council product, a documented formal
+submission, or a documented winner. Historical categories, officeholders,
+statistics, and contact details are not current guidance.
 
 ## Source inventory
 

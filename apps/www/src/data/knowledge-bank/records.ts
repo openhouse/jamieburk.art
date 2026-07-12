@@ -188,11 +188,11 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       project: "callnyc",
-      internalClaim: "CallNYC is an archived independent civic-data prototype, not an official or current New York City Council service.",
+      internalClaim: "This portfolio presents CallNYC only as historical evidence of an independent civic-data prototype; it was not an official New York City Council product.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "This portfolio presents CallNYC as historical evidence of an independent prototype, not as an official New York City Council product.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
-        { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving independent implementation"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving implementation"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["contemporaneous independent-project framing"], confidence: "high", renderCitation: true }
       ],
       boundaries: ["Historical officeholders, statistics, categories, and contact information are not current guidance."],

@@ -268,7 +268,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "CallNYC is an archived independent prototype, not an official or current New York City Council service.",
+          "text": "This portfolio presents CallNYC as historical evidence of an independent prototype, not as an official New York City Council product.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -281,7 +281,7 @@
           "sourceId": "SRC-CALLNYC-GITHUB-REPOSITORY",
           "relationship": "direct-support",
           "supports": [
-            "surviving independent implementation"
+            "surviving implementation"
           ],
           "confidence": "high",
           "renderCitation": true

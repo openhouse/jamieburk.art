@@ -309,7 +309,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
-      { key: "about", text: "Conceived and organized a four-month collaborative raft journey from Kansas City down the Missouri and Mississippi rivers.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
+      { key: "about", text: "Conceived and organized a collaborative raft project; in his published account, the four-month journey traveled from Kansas City down the Missouri and Mississippi rivers until the water reached salt.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
@@ -405,7 +405,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Jamie testified before the New York City Council on behalf of NYC Artist Coalition for Talks Not Raids, describing coalition safety work and calling for transparency and engagement around M.A.R.C.H. operations; the campaign organized Council outreach for Intro 1156.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
-      { key: "case-study", text: "Helped turn nightlife-enforcement concerns into public testimony, a Council action campaign, and a transparency bill that became law.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold for a dedicated case-study sequence that clearly separates Jamie's testimony and campaign work from legislative sponsorship and enactment." }
+      { key: "case-study", text: "Testified for Talks Not Raids and supported the coalition's Council action campaign for a transparency bill that became law.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold for a dedicated case-study sequence that clearly separates Jamie's testimony and campaign work from legislative sponsorship and enactment." }
     ],
     evidence: [
       { sourceId: "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11", relationship: "direct-support", supports: ["Jamie testified for Talks Not Raids", "Jamie represented NYC Artist Coalition", "Jamie described coalition fire-safety workshops and study groups", "Jamie called for MARCH transparency"], locator: "Committee transcript pages 90-92", confidence: "high", renderCitation: true },
