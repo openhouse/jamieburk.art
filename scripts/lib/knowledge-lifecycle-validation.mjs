@@ -55,6 +55,17 @@ export function validateKnowledgeLifecycle(
   }
 
   for (const record of bank.intake) {
+    const lifecycleLinks = [
+      ...record.sourceIds,
+      ...record.claimIds,
+      ...record.inquiryIds,
+      ...record.correctionIds
+    ];
+    if (!lifecycleLinks.length && !["deferred", "rejected"].includes(record.status)) {
+      errors.push(
+        `Intake ${record.id} has no source, inquiry, claim, or correction disposition`
+      );
+    }
     for (const sourceId of record.sourceIds) {
       if (!sourceById.has(sourceId)) {
         errors.push(`Intake ${record.id} references unknown source ${sourceId}`);

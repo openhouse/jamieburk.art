@@ -217,6 +217,7 @@ export const intakeRecords = [
     status: "triaged",
     disposition: "governance-updated",
     dispositionNote: "The feedback produced required hold rationales, a projection-decision report, a specific photo-lead round trip, and lifecycle tests for both paths.",
+    inquiryIds: ["INQ-READER-FEEDBACK-PROJECTION-GOVERNANCE"],
     artifactPaths: [
       "apps/www/src/data/knowledge-bank/schema.ts",
       "docs/knowledge-bank/projection-map.md",

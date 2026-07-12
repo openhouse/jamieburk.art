@@ -121,7 +121,20 @@ test("reader feedback resolves to a public governance artifact", () => {
   const feedback = knowledgeBank.intake.find((item) => item.kind === "reader-feedback");
   assert.equal(feedback.disposition, "governance-updated");
   assert.ok(feedback.artifactPaths.length > 0);
+  assert.deepEqual(feedback.inquiryIds, [
+    "INQ-READER-FEEDBACK-PROJECTION-GOVERNANCE"
+  ]);
   assert.deepEqual(validateKnowledgeLifecycle(), []);
+});
+
+test("governance artifacts alone cannot dispose active intake", () => {
+  const candidate = cloneBank();
+  const feedback = candidate.intake.find((item) => item.kind === "reader-feedback");
+  feedback.inquiryIds = [];
+  assert.match(
+    validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
+    /Intake INT-READER-FEEDBACK-.* has no source, inquiry, claim, or correction disposition/
+  );
 });
 
 test("a concrete claim-generated photo lead returns to inquiry", () => {

@@ -250,8 +250,7 @@ export const intakeRecordSchema = z
       ...record.sourceIds,
       ...record.claimIds,
       ...record.inquiryIds,
-      ...record.correctionIds,
-      ...record.artifactPaths
+      ...record.correctionIds
     ];
     if (!links.length && !["deferred", "rejected"].includes(record.status)) {
       context.addIssue({

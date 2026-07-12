@@ -577,5 +577,28 @@ export const portfolioHistoryInquiries = [
     ],
     sourceIds: [],
     publicSummary: "The waterways claims have generated a specific, bounded photo-research inquiry; no image has been selected or promoted."
+  },
+  {
+    id: "INQ-READER-FEEDBACK-PROJECTION-GOVERNANCE",
+    project: "knowledge-bank-governance",
+    question: "How should independent reader feedback change projection governance without becoming evidence for Jamie's professional accomplishments?",
+    methods: [
+      "Recorded a public-safe summary of the feedback as typed intake.",
+      "Compared the feedback with the frozen projection criterion and existing claim, inquiry, and publication gates.",
+      "Changed governance artifacts and tests while prohibiting a direct reader-feedback-to-claim relationship."
+    ],
+    runAt: "2026-07-12",
+    resultStatus: "recovered",
+    findings: [
+      "Reader feedback can expose a composition or governance defect.",
+      "The feedback should resolve through a stable inquiry or correction and may name changed governance artifacts.",
+      "Reader feedback is not source evidence for an accomplishment and cannot link directly to a claim."
+    ],
+    limitations: [
+      "A reader judgment does not establish historical fact, role, scale, causality, rights, consent, or approval.",
+      "Future factual suggestions from readers must enter as separate source or claim-hypothesis intake."
+    ],
+    sourceIds: [],
+    publicSummary: "Reader feedback may improve projection governance through a stable inquiry, but it cannot serve as accomplishment evidence or directly activate a claim."
   }
 ] satisfies ResearchInquiry[];
