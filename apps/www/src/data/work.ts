@@ -59,7 +59,16 @@ const workMetaSchema = z.object({
     z.object({
       title: z.string(),
       description: z.string(),
-      type: artifactTypeSchema
+      type: artifactTypeSchema,
+      image: z
+        .object({
+          src: z.string().startsWith("/images/work/"),
+          alt: z.string().min(1),
+          caption: z.string().min(1),
+          sourceUrl: z.url(),
+          capturedAt: z.iso.date()
+        })
+        .optional()
     })
   ),
   tags: z.array(z.string()),
@@ -111,10 +120,18 @@ const workItemsInput = [
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
-        title: "E-commerce workflow map",
+        title: "Public e-commerce system",
         description:
-          "Representative flow for translating inventory knowledge, customer language, and order handling into a maintainable online workflow.",
-        type: "workflow"
+          "The current public storefront shows customer pathways by tool type and brand, search, product discovery, editorial voice, and purchase workflows operating together.",
+        type: "website",
+        image: {
+          src: "/images/work/harry-j-epstein-public-site-2026-07-12.jpg",
+          alt: "Harry J. Epstein Company public storefront showing tool-type and tool-brand navigation, search, checkout, and hand-drawn promotional artwork.",
+          caption:
+            "Public storefront capture showing the e-commerce navigation, product-discovery paths, checkout access, and distinctive company voice.",
+          sourceUrl: "https://www.harryepstein.com/",
+          capturedAt: "2026-07-12"
+        }
       },
       {
         title: "Public-safe analytics summary",
@@ -219,7 +236,15 @@ const workItemsInput = [
         title: "Public campaign web surfaces",
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
-        type: "website"
+        type: "website",
+        image: {
+          src: "/images/work/fairrentnyc-public-site-2026-07-12.jpg",
+          alt: "Fair Rent NYC public website showing its Commercial Rent Stabilization call to action and reference-library pathway.",
+          caption:
+            "Public campaign capture showing the call-to-action hierarchy and the reference-library path connecting advocacy with source material.",
+          sourceUrl: "https://fairrentnyc.nycartc.com/",
+          capturedAt: "2026-07-12"
+        }
       }
     ],
     tags: [
@@ -302,7 +327,15 @@ const workItemsInput = [
         title: "Issue pathway prototype",
         description:
           "Public-facing page patterns that moved from constituent issue to relevant office, district context, and possible next step.",
-        type: "prototype"
+        type: "prototype",
+        image: {
+          src: "/images/work/callnyc-interface-2026-07-12.jpg",
+          alt: "Archived CallNYC interface showing a housing issue menu, Council member results, service categories, and an archived-project disclaimer.",
+          caption:
+            "Archived interface capture showing how constituent-service records became issue navigation, district context, and ranked service patterns. Historical information is not current guidance.",
+          sourceUrl: "https://callnyc.org/",
+          capturedAt: "2026-07-12"
+        }
       },
       {
         title: "Open-data translation layer",
