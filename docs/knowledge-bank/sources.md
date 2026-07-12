@@ -26,6 +26,15 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+The July 12 evidence-development batch also includes public reporting and
+institutional records for Open House, the river raft project, Great
+Accommodations, Cabaret Law repeal advocacy, the Office of Nightlife town hall,
+Talks Not Raids, Introduction 1156 / Local Law 220, and later MARCH disbanding.
+Each source has a canonical machine-readable record and close reading in the
+knowledge-bank registry. Sources used by a public projection appear in that
+page's redacted citation plan; contextual or unresolved sources remain in the
+bank without being forced onto the site.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

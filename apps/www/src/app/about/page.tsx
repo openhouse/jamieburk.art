@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
+import { Claim, References } from "@/components/citations";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createMetadata({
@@ -32,6 +33,14 @@ export default function AboutPage() {
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.
           </p>
+          <Claim
+            as="p"
+            claimId="CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE"
+            occurrenceId="participatory-public-systems-throughline"
+            pageId="about"
+            projection="about"
+            surface="/about"
+          />
           <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
@@ -46,6 +55,7 @@ export default function AboutPage() {
             work.
           </p>
         </div>
+        <References pageId="about" />
       </div>
       <div className="mt-12 max-w-3xl">
         <ContactCTA />

@@ -39,6 +39,12 @@ The knowledge bank exists to:
   rewrites claims for readers.
 - **Private archive:** not in this repo.
 
+The upstream intake and maturation process is documented in
+[intake-and-maturation.md](intake-and-maturation.md). It preserves public-safe
+fragments, source readings, candidate claims, promotion decisions, editorial
+briefs, and photo/archive discovery notes before they reach the canonical claim
+and citation layers.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

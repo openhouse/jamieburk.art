@@ -50,7 +50,22 @@ Use only public-safe method claims.
 Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
 imply production SaaS.
 
+## About
+
+Use `CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE` once to connect Jamie's early
+participatory cultural practice to the current operating-structure throughline.
+Keep the exact raft destination and deeper project inventory in the bank until
+research and editorial need justify a larger projection.
+
 ## Case Studies
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The NYC Artist Coalition / FairRentNYC case study may project:
+
+- `CLM-NYCAC-CIVIC-ADVOCACY-2017`
+- `CLM-TALKS-NOT-RAIDS-TRANSPARENCY`
+
+It must not project the held Office-of-Nightlife individual-causality or
+MARCH-disbanding causality candidates as settled claims.

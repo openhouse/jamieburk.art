@@ -27,12 +27,15 @@ public-safe, and ready to act from.
    contact path make Jamie easy to refer, interview, and hire.
 5. **Chad-lens pass:** run `npm run check:chad-lens`. Revise failing public
    surfaces until the deterministic criterion reaches 10/10.
-6. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
+6. **Knowledge-lifecycle pass:** run `npm run check:knowledge-lifecycle`.
+   Continue intake, reading, research, promotion, and editorial selection until
+   the criterion reaches 12/12 without promoting unresolved claims.
+7. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
-7. **Automation pass:** run `npm run check`, `npm run check:evals`,
+8. **Automation pass:** run `npm run check`, `npm run check:evals`,
    `npm run preflight:staging`, and `npm run preflight:production` when the
    environment is available.
-8. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
+9. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
    only for unresolved P0/P1 blockers.
 
 ## Chad-Lens Criterion

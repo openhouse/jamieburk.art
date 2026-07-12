@@ -31,6 +31,7 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run public-safety
+npm run check:knowledge-lifecycle
 npm run check:chad-lens
 npm run check:evals
 npm run check:routes
@@ -72,7 +73,13 @@ public registry; `npm run test:citations` runs citation regressions; and
 claim review, public-safety boundaries, hiring clarity, web QA, and production
 cutover checks. `npm run check:chad-lens` runs the deterministic hiring-clarity
 criterion. `npm run check:evals` combines that criterion with the existing
-public-safety and route gates; it does not create a second safety scanner.
+knowledge-lifecycle, public-safety, and route gates; it does not create a second
+safety scanner.
+
+`docs/knowledge-bank/intake-and-maturation.md` defines how URLs, memories,
+artifacts, repositories, and photo discoveries enter the knowledge bank,
+develop through research, and remain available even when they are not selected
+for the current public site.
 
 ## Environment
 

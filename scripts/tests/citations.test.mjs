@@ -14,6 +14,27 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
 });
 
+test("new editorial projections resolve through page-local citation plans", () => {
+  assert.equal(resolveCitationReferences("about").length, 3);
+  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 6);
+  assert.match(
+    getClaimProjection(
+      "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
+      "about",
+      "/about"
+    ).text,
+    /participatory public systems/
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-TALKS-NOT-RAIDS-TRANSPARENCY",
+      "case-study",
+      "/work/fair-rent-nyc"
+    ).text,
+    /Local Law 220/
+  );
+});
+
 test("repeated sources retain one note and unique backlinks", () => {
   const references = resolveCitationReferences("callnyc");
   const council = references.find((item) => item.number === 2);
@@ -52,6 +73,26 @@ test("private and metadata-only evidence is absent from the public registry", ()
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
+});
+
+test("candidate claims remain deeper than the selected public registry", () => {
+  const promoted = knowledgeBank.candidateClaims.filter((candidate) => candidate.status === "promoted");
+  const held = knowledgeBank.candidateClaims.filter((candidate) => candidate.status !== "promoted");
+  const serialized = JSON.stringify(publicCitationRegistry);
+  assert.equal(promoted.length, 3);
+  assert.equal(held.length, 4);
+  for (const candidate of held) assert.doesNotMatch(serialized, new RegExp(candidate.id));
+  assert.doesNotMatch(serialized, /ultimately caused New York City to disband MARCH/);
+  assert.doesNotMatch(serialized, /Kansas City to the Gulf of Mexico/);
+});
+
+test("knowledge development records preserve promotion lineage and explicit holds", () => {
+  assert.equal(knowledgeBank.intakeItems.length, 9);
+  assert.equal(knowledgeBank.sourceReadings.length, 12);
+  assert.ok(knowledgeBank.promotions.every((promotion) =>
+    knowledgeBank.candidateClaims.some((candidate) => candidate.id === promotion.candidateClaimId)
+  ));
+  assert.ok(knowledgeBank.editorialBriefs[0].heldCandidateClaimIds.includes("CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS"));
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

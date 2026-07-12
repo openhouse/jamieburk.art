@@ -144,6 +144,7 @@ export const claimProjectionSchema = z.object({
     "resume-html",
     "technical-operations",
     "homepage",
+    "about",
     "photo-caption",
     "archive-note"
   ]),
@@ -218,12 +219,124 @@ export const citationPageSchema = z.object({
   occurrences: z.array(citationOccurrenceSchema)
 });
 
+export const intakeItemSchema = z
+  .object({
+    id: stableIdSchema,
+    receivedAt: z.iso.date(),
+    submittedBy: z.string().min(1),
+    kind: z.enum(["url", "memory", "claim", "artifact", "repository", "photo-lead"]),
+    visibility: z.enum(["public", "public-safe", "protected"]),
+    summary: z.string().min(1),
+    sourceUrl: publicUrlSchema.optional(),
+    projectHints: z.array(stableIdSchema).default([]),
+    status: z.enum(["captured", "triaged", "researching", "processed", "deferred"]),
+    disposition: z.string().min(1),
+    linkedRecordIds: z.array(stableIdSchema).default([]),
+    protectedLocatorId: stableIdSchema.optional()
+  })
+  .superRefine((item, context) => {
+    if (item.visibility === "protected" && item.sourceUrl) {
+      context.addIssue({ code: "custom", message: "Protected intake cannot expose a source URL" });
+    }
+  });
+
+const atomicAssertionSchema = z.object({
+  id: stableIdSchema,
+  statement: z.string().min(1),
+  locator: z.string().min(1).optional(),
+  confidence: z.enum(["high", "moderate", "limited"]),
+  publicSafe: z.boolean()
+});
+
+export const sourceReadingSchema = z.object({
+  id: stableIdSchema,
+  sourceId: stableIdSchema,
+  readAt: z.iso.date(),
+  reader: z.string().min(1),
+  assertions: z.array(atomicAssertionSchema).min(1),
+  limitations: z.array(z.string().min(1)).min(1),
+  entityIds: z.array(stableIdSchema).default([]),
+  themeIds: z.array(stableIdSchema).default([]),
+  candidateClaimIds: z.array(stableIdSchema).default([])
+});
+
+export const candidateClaimSchema = z.object({
+  id: stableIdSchema,
+  project: stableIdSchema,
+  text: z.string().min(1),
+  status: z.enum([
+    "captured",
+    "research-needed",
+    "partially-supported",
+    "ready-for-promotion",
+    "promoted",
+    "hold",
+    "contradicted",
+    "retired"
+  ]),
+  sourceIds: z.array(stableIdSchema).default([]),
+  researchInquiryIds: z.array(stableIdSchema).default([]),
+  supportSummary: z.string().min(1),
+  missingEvidence: z.array(z.string().min(1)).default([]),
+  boundaries: z.array(z.string().min(1)).default([]),
+  promotedClaimId: stableIdSchema.optional(),
+  reviewedAt: z.iso.date()
+});
+
+export const promotionRecordSchema = z
+  .object({
+    id: stableIdSchema,
+    candidateClaimId: stableIdSchema,
+    claimId: stableIdSchema.optional(),
+    decision: z.enum(["promoted", "held", "rejected"]),
+    reason: z.string().min(1),
+    decidedAt: z.iso.date(),
+    decidedBy: z.array(z.string().min(1)).min(1)
+  })
+  .superRefine((promotion, context) => {
+    if (promotion.decision === "promoted" && !promotion.claimId) {
+      context.addIssue({ code: "custom", message: "Promoted decisions require a claim ID" });
+    }
+    if (promotion.decision !== "promoted" && promotion.claimId) {
+      context.addIssue({ code: "custom", message: "Held or rejected decisions cannot assign a claim ID" });
+    }
+  });
+
+export const editorialBriefSchema = z.object({
+  id: stableIdSchema,
+  audience: z.string().min(1),
+  goal: z.string().min(1),
+  argument: z.string().min(1),
+  selectedClaimIds: z.array(stableIdSchema),
+  heldCandidateClaimIds: z.array(stableIdSchema),
+  rationale: z.array(z.string().min(1)).min(1),
+  createdAt: z.iso.date()
+});
+
+export const discoveryNoteSchema = z.object({
+  id: stableIdSchema,
+  kind: z.enum(["photo-editor", "archive-research", "agent-research", "collaborator-note"]),
+  summary: z.string().min(1),
+  projectHints: z.array(stableIdSchema).default([]),
+  sourceIds: z.array(stableIdSchema).default([]),
+  candidateClaimIds: z.array(stableIdSchema).min(1),
+  rightsReviewRequired: z.boolean(),
+  status: z.enum(["captured", "researching", "processed", "hold"]),
+  createdAt: z.iso.date()
+});
+
 export const knowledgeBankSchema = z.object({
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
-  pages: z.array(citationPageSchema)
+  pages: z.array(citationPageSchema),
+  intakeItems: z.array(intakeItemSchema),
+  sourceReadings: z.array(sourceReadingSchema),
+  candidateClaims: z.array(candidateClaimSchema),
+  promotions: z.array(promotionRecordSchema),
+  editorialBriefs: z.array(editorialBriefSchema),
+  discoveryNotes: z.array(discoveryNoteSchema)
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
@@ -234,4 +347,10 @@ export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
+export type IntakeItem = z.infer<typeof intakeItemSchema>;
+export type SourceReading = z.infer<typeof sourceReadingSchema>;
+export type CandidateClaim = z.infer<typeof candidateClaimSchema>;
+export type PromotionRecord = z.infer<typeof promotionRecordSchema>;
+export type EditorialBrief = z.infer<typeof editorialBriefSchema>;
+export type DiscoveryNote = z.infer<typeof discoveryNoteSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

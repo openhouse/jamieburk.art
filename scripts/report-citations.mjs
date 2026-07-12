@@ -12,6 +12,7 @@ const lines = [
   "## Preservation", "", "| Status | Count |", "| --- | ---: |", table(report.preservation), "",
   "## Claims and projections", "", `- Active projections: ${report.activeProjections}`, `- Cited claims: ${report.citedClaims}`, `- Uncited public claims: ${report.uncitedPublicClaims.join(", ") || "none"}`, `- Projection surfaces: ${report.projectionSurfaces.join(", ")}`, "",
   "## Research and corrections", "", `- Research inquiries: ${report.inquiries}`, `- Corrections: ${report.corrections}`, "",
+  "## Knowledge development", "", `- Intake items: ${report.intakeItems}`, `- Source readings: ${report.sourceReadings}`, `- Candidate claims: ${report.candidateClaims}`, `- Promoted candidates: ${report.promotedCandidates}`, `- Promotion decisions: ${report.promotions}`, `- Editorial briefs: ${report.editorialBriefs}`, `- Discovery notes: ${report.discoveryNotes}`, "",
   "## Bounded evidence", "", ...report.boundedEvidence.map((item) => `- ${item.id}: ${item.visibility}`), "",
   "## Orphan sources", "", ...(report.orphanSources.length ? report.orphanSources.map((id) => `- ${id}`) : ["None."]), "",
   "## Pages", "", ...report.pages.map((page) => `- ${page.id}: ${page.sources} sources, ${page.occurrences} occurrences`), ""
