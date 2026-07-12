@@ -15,10 +15,11 @@
     "start": "npm run start -w @jamie-burkart/www",
     "lint": "npm run lint -w @jamie-burkart/www",
     "typecheck": "npm run typecheck -w @jamie-burkart/www",
-    "check": "npm run check:citations && npm run test:citations && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
+    "check": "npm run check:citations && npm run test:citations && npm run test:evals && npm run check -w @jamie-burkart/www && npm run knowledge-bank && npm run public-safety && npm run check:routes",
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
+    "test:evals": "node --test scripts/tests/eval-runner.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",
@@ -26,6 +27,8 @@
     "check:routes": "node scripts/check-routes.mjs",
     "check:production": "npm run preflight:production",
     "eval:portfolio": "node scripts/eval-portfolio-readiness.mjs",
+    "eval:chad-lens": "node scripts/eval-portfolio-readiness.mjs --rubric evals/chad-lens/rubric.json",
+    "check:chad-lens": "node scripts/check-chad-lens-contract.mjs",
     "preflight:staging": "APP_ENV=staging SITE_ENV=staging NEXT_PUBLIC_DEPLOY_ENV=staging SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_SITE_URL=https://staging.jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=noindex npm run check",
     "preflight:production": "APP_ENV=production SITE_ENV=production NEXT_PUBLIC_DEPLOY_ENV=production SITE_URL=https://jamieburk.art NEXT_PUBLIC_SITE_URL=https://jamieburk.art NEXT_PUBLIC_ROBOTS_POLICY=index npm run check"
   }

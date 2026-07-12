@@ -7,11 +7,9 @@ import { parseArgs } from "node:util";
 import { fileURLToPath } from "node:url";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const rubricPath = path.join(repoRoot, "evals/portfolio-readiness/rubric.json");
-const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
-
 const { values } = parseArgs({
   options: {
+    rubric: { type: "string", default: "evals/portfolio-readiness/rubric.json" },
     profile: { type: "string", default: "fast" },
     scorecard: { type: "string" },
     "confirming-scorecard": { type: "string" },
@@ -20,6 +18,12 @@ const { values } = parseArgs({
     "skip-commands": { type: "boolean", default: false }
   }
 });
+
+const rubricPath = path.resolve(repoRoot, values.rubric);
+const rubric = JSON.parse(readFileSync(rubricPath, "utf8"));
+const allowedRecommendations = new Set(
+  rubric.recommendations ?? ["iterate", "application-ready", "production-ready"]
+);
 
 if (!new Set(["fast", "release"]).has(values.profile)) {
   console.error(`Unknown profile: ${values.profile}. Use fast or release.`);
@@ -139,7 +143,7 @@ function scoreScorecard(scorecardPath) {
   if (entries.size !== rubric.criteria.length) {
     errors.push(`Scorecard must contain exactly ${rubric.criteria.length} unique criteria.`);
   }
-  if (!new Set(["iterate", "application-ready", "production-ready"]).has(scorecard.releaseRecommendation)) {
+  if (!allowedRecommendations.has(scorecard.releaseRecommendation)) {
     errors.push("Scorecard releaseRecommendation is invalid.");
   }
 
@@ -157,8 +161,14 @@ function scoreScorecard(scorecardPath) {
       errors.push(`${criterion.id} score must be an integer from 1 to 5.`);
       continue;
     }
-    if (!Array.isArray(entry.evidence) || entry.evidence.length < 2) {
-      errors.push(`${criterion.id} needs at least two evidence observations.`);
+    const minimumEvidence = criterion.minimumEvidence ?? 2;
+    if (!Array.isArray(entry.evidence) || entry.evidence.length < minimumEvidence) {
+      errors.push(`${criterion.id} needs at least ${minimumEvidence} evidence observations.`);
+    }
+    for (const field of criterion.dimensionFields ?? []) {
+      if (!entry.dimensionFindings?.[field]) {
+        errors.push(`${criterion.id} is missing dimensionFindings.${field}.`);
+      }
     }
     if (!entry.repair) errors.push(`${criterion.id} needs a repair recommendation.`);
     if (!entry.antiGamingCheck) errors.push(`${criterion.id} needs an antiGamingCheck.`);
@@ -180,11 +190,16 @@ function scoreScorecard(scorecardPath) {
 }
 
 function scorecardPasses(result) {
+  const passingRecommendations = new Set(
+    rubric.passingRecommendations ?? rubric.recommendations ?? []
+  );
   return (
     result.errors.length === 0 &&
     result.weightedScore >= rubric.stopCondition.weightedScoreAtLeast &&
     result.belowMinimum.length === 0 &&
-    result.criticalFailures.length === 0
+    result.criticalFailures.length === 0 &&
+    (passingRecommendations.size === 0 ||
+      passingRecommendations.has(result.releaseRecommendation))
   );
 }
 
@@ -244,7 +259,8 @@ const report = {
     rubricFailures.length === 0 &&
     scorePass === true &&
     stableScorecards,
-  humanApprovalStillRequired: rubric.stopCondition.explicitHumanApprovalRequiredForProduction
+  humanApprovalStillRequired:
+    rubric.stopCondition.explicitHumanApprovalRequiredForProduction ?? false
 };
 
 if (values.output) {
@@ -256,7 +272,7 @@ if (values.output) {
 if (values.json) {
   console.log(JSON.stringify(report, null, 2));
 } else {
-  console.log(`\nPortfolio readiness eval (${values.profile})`);
+  console.log(`\n${rubric.title} (${values.profile})`);
   for (const result of results) {
     const status = result.skipped ? "SKIP" : result.passed ? "PASS" : "FAIL";
     console.log(`${status} ${result.id}: ${result.detail}`);
@@ -284,7 +300,9 @@ if (values.json) {
     console.log("\nNo LLM scorecard supplied; deterministic gates only.");
   }
   console.log(`Stop condition reached: ${report.stopConditionReached ? "yes" : "no"}`);
-  console.log("Production still requires Jamie's explicit approval.");
+  if (rubric.stopCondition.explicitHumanApprovalRequiredForProduction) {
+    console.log("Production still requires Jamie's explicit approval.");
+  }
 }
 
 if (

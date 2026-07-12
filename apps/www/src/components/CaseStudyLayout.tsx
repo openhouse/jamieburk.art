@@ -41,7 +41,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
     <article className="jb-frame py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(280px,0.28fr)]">
         <header className="min-w-0">
-          <StatusBadge status={item.status} visibility={item.visibility} />
+          <StatusBadge status={item.status} />
           <h1 className="mt-5 text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
             {item.title}
           </h1>

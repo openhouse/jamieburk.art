@@ -71,17 +71,17 @@ const strongestProofs = [
   {
     href: "/work/harry-j-epstein",
     label: "Private-sector implementation",
-    proof: "Legacy e-commerce and operations modernization, with careful contribution language for a period of 2x revenue growth."
+    proof: "I helped an 80+ year-old industrial business turn product knowledge and recurring operations into searchable e-commerce content and maintainable workflows that supported online growth."
   },
   {
     href: "/work/callnyc",
     label: "Civic product delivery",
-    proof: "An independent CouncilStat follow-on that translated public data into resident-facing issue pathways and guidance."
+    proof: "I independently built an archived, unofficial prototype that turned CouncilStat constituent-services records into issue pages and next-step guidance residents could navigate."
   },
   {
     href: "/work/fair-rent-nyc",
     label: "Coalition operations",
-    proof: "Shared campaign memory, source mapping, decision context, and public/private boundary management."
+    proof: "I helped coalition collaborators turn meetings, sources, policy questions, and next steps into 30+ shared pages they could use between meetings while keeping private context protected."
   }
 ];
 
@@ -139,11 +139,11 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          I enter when important public-facing work still lacks clear
+          requirements, ownership, or next steps. I help teams plan delivery,
+          surface risks, coordinate implementation, support launch, and leave
+          decision records, onboarding materials, and handoffs people can keep
+          using.
         </p>
       </div>
       <section className="mt-10" aria-labelledby="strongest-proof-heading">

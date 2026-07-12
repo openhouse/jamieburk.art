@@ -1,0 +1,72 @@
+# feature/evals-K Chad Lens run
+
+Date: 2026-07-12
+
+Decision sought: whether the core application path meets Chad's standard of
+courageous precision. This decision does not authorize production publication.
+
+## Baseline
+
+- Deterministic contract: failed on three uses of `lightweight` that named a
+  virtue without translating the actual bounded organizer need.
+- Fresh independent score: **3 / iterate**.
+- Most important failure: prominent summaries often named categories, artifact
+  sets, or boundaries without completing the shortest useful chain: Jamie did
+  a specific thing so a defined person or team could do something they could
+  not reliably do before.
+
+The baseline found strong collective and factual boundaries. The repair target
+was clarity and sequence, not stronger ownership or causality.
+
+## Accepted repairs
+
+- Replaced the homepage's abstract operating-structure lead with a direct
+  account of the working condition, Jamie's action, and the handoffs people can
+  continue using.
+- Removed a redundant homepage capability inventory and rewrote the selected
+  work introduction around what Jamie helped teams make usable.
+- Rewrote the three Technical Operations lead proofs as complete
+  action-to-user-result statements for HJE, CallNYC, and FairRentNYC.
+- Moved HJE and FairRentNYC's usable result before diagnostic detail in their
+  case-study narratives.
+- Revised HJE and FairRentNYC summaries and `whatBecameUsable` fields so they
+  name what customers, staff, or coalition collaborators could do.
+- Updated canonical proof wording and CallNYC projections so Jamie remains the
+  bounded actor wherever those claims appear.
+- Replaced `lightweight` with the actual WOWList need: a practical, low-cost,
+  bounded distribution pattern for organizers.
+- Reduced repeated status language at case-study openings while retaining
+  visibility and boundary context in At a Glance and supplemental evidence.
+
+No evidence class, metric, ownership boundary, or collective campaign outcome
+was strengthened.
+
+## Final evaluation
+
+- Deterministic fast gates: all passed.
+- Fresh independent judge A: **4 / criterion-met**.
+- Fresh independent judge B: **4 / criterion-met**.
+- Stable pair: yes.
+- All six required dimensions were addressed by both judges: actor legibility,
+  toward what end, usable result, one-pass translation, reader burden, and
+  collective precision.
+- Production browser matrix: 27 observations across 9 routes at desktop, 390px,
+  and 320px, with no route, H1, empty-link, overflow, duplicate-ID, console, or
+  page-error failures.
+
+The runner now requires a passing recommendation, all six dimension findings,
+and six evidence observations. Three regression tests confirm that
+`criterion-met` can pass, `iterate` cannot, and a missing dimension fails.
+
+## Remaining refinements
+
+- Long case studies can still consolidate repeated transferable-proof and
+  boundary language without removing source context.
+- The first HJE lead claim on the HTML resume could eventually name the
+  contributing work beside the 2x result, provided the compact layout remains
+  readable and the contribution guardrail stays intact.
+
+## Decision
+
+The Chad Lens criterion is met for application use. Production publication
+still requires Jamie's explicit approval.

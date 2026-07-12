@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Chad Lens scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evalId",
+    "evaluatedAt",
+    "evaluator",
+    "revision",
+    "pagesReviewed",
+    "criteria",
+    "releaseRecommendation"
+  ],
+  "properties": {
+    "evalId": { "const": "chad-lens-v1" },
+    "evaluatedAt": { "type": "string" },
+    "evaluator": { "type": "string", "minLength": 1 },
+    "revision": { "type": "string", "minLength": 1 },
+    "pagesReviewed": {
+      "type": "array",
+      "minItems": 6,
+      "items": { "type": "string" }
+    },
+    "criteria": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "score",
+          "confidence",
+          "dimensionFindings",
+          "evidence",
+          "mostImportantFailure",
+          "repair",
+          "repairLayer",
+          "antiGamingCheck"
+        ],
+        "properties": {
+          "id": { "const": "chad-lens" },
+          "score": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "confidence": { "enum": ["low", "medium", "high"] },
+          "dimensionFindings": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "actorLegibility",
+              "towardWhatEnd",
+              "usableResult",
+              "onePassTranslation",
+              "readerBurden",
+              "collectivePrecision"
+            ],
+            "properties": {
+              "actorLegibility": { "type": "string", "minLength": 1 },
+              "towardWhatEnd": { "type": "string", "minLength": 1 },
+              "usableResult": { "type": "string", "minLength": 1 },
+              "onePassTranslation": { "type": "string", "minLength": 1 },
+              "readerBurden": { "type": "string", "minLength": 1 },
+              "collectivePrecision": { "type": "string", "minLength": 1 }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 6,
+            "items": { "type": "string" }
+          },
+          "mostImportantFailure": { "type": ["string", "null"] },
+          "repair": { "type": "string", "minLength": 1 },
+          "repairLayer": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "enum": ["knowledge-bank", "website", "artifact", "infrastructure", "human-approval", "none"] }
+          },
+          "antiGamingCheck": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "releaseRecommendation": { "enum": ["iterate", "criterion-met"] }
+  }
+}

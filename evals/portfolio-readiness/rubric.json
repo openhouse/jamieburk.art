@@ -4,6 +4,7 @@
   "title": "Jamie Burkart portfolio readiness",
   "objective": "Make Jamie immediately legible as a Technical Project Manager working across product operations and implementation, while preserving factual accuracy, collective credit, contextual integrity, and a finished public experience.",
   "decision": "Is this revision ready to support job applications and, after explicit approval, production publication?",
+  "passingRecommendations": ["application-ready", "production-ready"],
   "audiences": [
     "hiring managers",
     "public-sector reviewers",
