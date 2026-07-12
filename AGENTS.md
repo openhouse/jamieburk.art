@@ -85,6 +85,21 @@ Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser
 private document browser, full photo archive, heavy animation, or major framework
 change for V1.
 
+## Launch-Readiness Evals
+
+- Read `evals/launch-readiness/v1/evals.json` before optimizing the public site
+  for production or job applications.
+- Run `npm run eval:launch-readiness` to establish the current baseline.
+- Improve one failing mutable criterion at a time and keep a change only when
+  the lexicographic objective improves without regressing a hard gate or
+  protected invariant.
+- Do not satisfy human approval or rights-clearance gates on Jamie's behalf.
+- Do not improve clarity, visual proof, or conversion by deleting citations,
+  qualifications, collective credit, accessibility affordances, or public-safe
+  boundaries.
+- A release pass requires two independent observation runs for the same commit;
+  use `npm run eval:launch-readiness:strict -- --observations <run-a>,<run-b>`.
+
 ## Deployment
 
 Staging first: `staging.jamieburk.art`, noindex.

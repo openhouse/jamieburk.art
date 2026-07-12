@@ -35,9 +35,25 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:launch-evals
+npm run eval:launch-readiness
 npm run preflight:staging
 npm run preflight:production
 ```
+
+## Launch-readiness evals
+
+The versioned eval contract in `evals/launch-readiness/v1/` lets human and LLM
+collaborators improve the portfolio recursively without collapsing release
+readiness into one gameable score. Hard factual, accessibility, runtime, and
+approval gates must all pass. Scored browser and semantic criteria must meet
+both a per-criterion floor and a weighted target across two independent runs.
+
+Run `npm run eval:launch-readiness` to see deterministic failures and the
+browser, semantic, runtime, or human evidence still required. The recursive
+agent loop, observation format, protected invariants, and strict release-gate
+command are documented in
+`evals/launch-readiness/v1/README.md`.
 
 ## Knowledge Bank
 
