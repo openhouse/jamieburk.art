@@ -38,6 +38,10 @@ npm run report:citations
 npm run check:evals
 npm run test:evals
 npm run eval:launch
+npm run check:knowledge-lifecycle
+npm run test:knowledge-lifecycle
+npm run eval:knowledge-lifecycle
+npm run eval:knowledge-lifecycle:gate
 npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
 npm run preflight:production
@@ -81,6 +85,11 @@ This repo includes a public-safe knowledge bank for professional claims:
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
 first adding a public-safe proof record.
+
+`docs/knowledge-bank/lifecycle.md` defines the loss-resistant path from intake
+through source reading, claim maturity, research, and an independent
+publication decision. The recursive checks live in
+`evals/knowledge-lifecycle/`.
 
 The knowledge bank is not a private archive. Do not commit raw transcripts,
 private coalition notes, legal-review materials, private correspondence,

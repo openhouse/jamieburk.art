@@ -14,7 +14,7 @@ const publicClaimSchema = z.object({
   id: z.string().min(1),
   status: z.enum(["confirmed", "confirmed-with-boundary"]),
   projections: z.array(claimProjectionSchema),
-  evidence: z.array(evidenceRelationshipSchema.omit({ internalExcerpt: true, locator: true })),
+  evidence: z.array(evidenceRelationshipSchema.omit({ locator: true, propositionIds: true })),
   boundaries: z.array(z.string())
 });
 

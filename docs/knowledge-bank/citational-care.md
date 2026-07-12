@@ -9,9 +9,14 @@ reasoning without exposing private evidence.
 ## Canonical flow
 
 ```text
-source -> evidence relationship -> claim -> approved projection
-       -> page occurrence -> page-local number -> public note
+intake -> source -> close reading -> evidence relationship -> claim maturity
+       -> publication decision -> approved projection -> page occurrence
+       -> page-local number -> public note
 ```
+
+See `lifecycle.md` for accession, research-task, maturity, and publication
+rules. Citational care governs the final evidence-to-reader path; the lifecycle
+governs how a fragment becomes eligible for that path.
 
 Stable IDs belong to sources, claims, inquiries, corrections, pages, and
 occurrences. Citation numbers are deliberately local to a page and are assigned

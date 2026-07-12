@@ -14,10 +14,44 @@ const usedSourceIds = new Set(
   }))
 );
 
+for (const claim of knowledgeBank.claims) {
+  const activeSurfaces = new Set(
+    claim.projections.filter((projection) => projection.status === "active").flatMap((projection) => projection.surfaces)
+  );
+  for (const surface of activeSurfaces) {
+    const decision = knowledgeBank.projectionDecisions.find(
+      (item) => item.claimId === claim.id && item.surface === surface
+    );
+    if (!decision || decision.decision !== "publish") {
+      throw new Error(`${claim.id} cannot serialize an active ${surface} projection without a publish decision`);
+    }
+  }
+  for (const decision of knowledgeBank.projectionDecisions.filter((item) => item.claimId === claim.id)) {
+    if (decision.decision !== "publish" && activeSurfaces.has(decision.surface)) {
+      throw new Error(`${claim.id} has a ${decision.decision} decision on active surface ${decision.surface}`);
+    }
+  }
+}
+
+for (const page of knowledgeBank.pages) {
+  for (const occurrence of page.occurrences) {
+    const claim = knowledgeBank.claims.find((item) => item.id === occurrence.claimId);
+    const decision = knowledgeBank.projectionDecisions.find(
+      (item) => item.claimId === occurrence.claimId && item.surface === page.surface
+    );
+    if (!claim || claim.maturity !== "projected") {
+      throw new Error(`${occurrence.claimId} cannot enter the public registry without projected maturity`);
+    }
+    if (!decision || decision.decision !== "publish") {
+      throw new Error(`${occurrence.claimId} cannot enter ${page.surface} without a publish decision`);
+    }
+  }
+}
+
 const publicRegistry = {
   sources: knowledgeBank.sources
     .filter((source) => usedSourceIds.has(source.id))
-    .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, ...source }) => source),
+    .map(({ protectedLocatorId: _protectedLocatorId, media: _media, supportsGenerally: _supportsGenerally, intakeIds: _intakeIds, ...source }) => source),
   claims: knowledgeBank.claims
     .filter((claim) => knowledgeBank.pages.some((page) => page.occurrences.some((occurrence) => occurrence.claimId === claim.id)))
     .map((claim) => ({
@@ -26,7 +60,7 @@ const publicRegistry = {
       projections: claim.projections.filter((projection) => projection.status === "active"),
       evidence: claim.evidence
         .filter((evidence) => evidence.renderCitation && usedSourceIds.has(evidence.sourceId))
-        .map(({ internalExcerpt: _internalExcerpt, locator: _locator, ...evidence }) => evidence),
+        .map(({ locator: _locator, propositionIds: _propositionIds, ...evidence }) => evidence),
       boundaries: claim.boundaries
     })),
   pages: knowledgeBank.pages

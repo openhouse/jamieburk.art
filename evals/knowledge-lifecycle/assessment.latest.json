@@ -1,0 +1,92 @@
+{
+  "suiteId": "knowledge-lifecycle",
+  "suiteVersion": "1.0.0",
+  "judge": {
+    "scores": [
+      {
+        "criterionId": "loss-resistance",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "intakeRecordSchema", "finding": "Models public and protected intake, corrections, photo observations, migration, routing, and holds." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "INTAKE-MIGRATION-CALLNYC-PUBLIC-CORPUS", "finding": "Reciprocally accessions existing CallNYC records." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED", "finding": "Preserves an unresolved lead at captured maturity without projection." },
+          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "intake-is-accounted-for", "finding": "Fails every source or claim lacking an accession." },
+          { "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs", "record": "every source and claim requires an accession", "finding": "Adversarial coverage verifies accession enforcement." }
+        ]
+      },
+      {
+        "criterionId": "source-decomposition",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "atomicPropositionSchema", "finding": "Distinguishes direct, collective, contextual, outcome, and limitation propositions." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "READ-RIVER-CHARLOTTE-STREET-2009", "finding": "Separates Jamie's role, shared outreach, project form, route account, and source limits." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006", "finding": "Separates instigation and care from communal governance." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "READ-NYC-CABARET-REPEAL-LAW-2017", "finding": "Records institutional outcome without attributing advocate causation." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "READ-CALLNYC-DIGITAL-DISTRICT-PHOTO", "finding": "Extracts bounded visual context while preserving rights and role limits." }
+        ]
+      },
+      {
+        "criterionId": "claim-defensibility",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-RIVER-GREAT-ACCOMMODATIONS", "finding": "Uses proposition support, collective credit, causal limits, and composition fields." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE", "finding": "Names Jamie's initiating and sustaining role while preserving group responsibility." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-NYCARTC-CABARET-SAFETY-ORGANIZING", "finding": "Separates documented action from legislative causation." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-NYCARTC-CABARET-REPEAL-OUTCOME", "finding": "Keeps outcome evidence and advocacy context distinct." },
+          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "claim-promotion-is-evidence-backed", "finding": "Enforces support relationships, semantic tags, boundaries, anti-claims, review, and composition." }
+        ]
+      },
+      {
+        "criterionId": "research-direction",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-NYCARTC-CREATION-ROLE", "finding": "Specifies records, chronology, collaborators, and proof-note work." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "finding": "Separates office creation from later town-hall evidence." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME", "finding": "Requires an action-to-institution-to-outcome evidence chain." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT", "finding": "Specifies verification, deduplication, denominators, and anti-adoption limits." }
+        ]
+      },
+      {
+        "criterionId": "projection-discipline",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "DEC-PUBLISH-CALLNYC-FOLLOW-ON-CASE", "finding": "Explicitly authorizes an active surface." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "DEC-RIVER-GREAT-ACCOMMODATIONS-DEFER", "finding": "Defers a public-ready claim for compositional reasons." },
+          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "publication-is-an-independent-decision", "finding": "Enforces publish decisions per active surface and detects conflicts." },
+          { "file": "scripts/generate-public-citations.mjs", "record": "for (const claim of knowledgeBank.claims)", "finding": "Public-registry generation checks active-surface authorization." },
+          { "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs", "record": "active surfaces require explicit publish decisions", "finding": "Adversarial coverage confirms active placement cannot bypass a decision." }
+        ]
+      },
+      {
+        "criterionId": "public-safety",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "sourceRecordSchema", "finding": "Models visibility, protected locators, media rights, and URL restrictions without raw excerpts." },
+          { "file": "apps/www/src/data/knowledge-bank/records.ts", "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO", "finding": "Retains public-safe metadata while display remains on hold." },
+          { "file": "scripts/generate-public-citations.mjs", "record": "publicRegistry", "finding": "Redacts protected locators, media, intake, proposition, and research fields." },
+          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "public-repo-boundary-is-enforced", "finding": "Scans the complete bank for private paths, correspondence markers, and contact details." },
+          { "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs", "record": "public-safe records reject correspondence and contact patterns", "finding": "Adversarial coverage verifies direct private-contact leakage fails." }
+        ]
+      },
+      {
+        "criterionId": "future-composability",
+        "score": 4,
+        "evidence": [
+          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "composition", "finding": "Structures action, end, usable result, audience, collective credit, and causal boundary." },
+          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "propositionIds", "finding": "Makes evidence traversable to exact source-reading propositions." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "ENT-HARRY-J-EPSTEIN", "finding": "Connects the legacy HJE project to the entity graph." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "ENT-FAIR-RENT-NYC", "finding": "Connects FairRentNYC to the entity graph." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "ENT-WOWLIST", "finding": "Connects WOWList to the entity graph." },
+          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "graph-references-are-valid", "finding": "Validates every project and reciprocal graph link." },
+          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT", "finding": "Routes visual discovery into bounded research without image projection." }
+        ]
+      }
+    ]
+  },
+  "humanGates": [
+    { "gateId": "jamie-claim-approval", "status": "pending", "confirmedBy": null },
+    { "gateId": "collaborator-credit-or-permission", "status": "pending", "confirmedBy": null },
+    { "gateId": "media-rights-and-consent", "status": "pending", "confirmedBy": null }
+  ],
+  "summary": "Independent third-pass score: 100/100. All seven hard gates and four quality targets pass; all judge criteria meet their floors. Human gates remain pending."
+}

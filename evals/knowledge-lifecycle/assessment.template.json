@@ -1,0 +1,21 @@
+{
+  "suiteId": "knowledge-lifecycle",
+  "suiteVersion": "1.0.0",
+  "judge": {
+    "scores": [
+      { "criterionId": "loss-resistance", "score": 0, "evidence": [] },
+      { "criterionId": "source-decomposition", "score": 0, "evidence": [] },
+      { "criterionId": "claim-defensibility", "score": 0, "evidence": [] },
+      { "criterionId": "research-direction", "score": 0, "evidence": [] },
+      { "criterionId": "projection-discipline", "score": 0, "evidence": [] },
+      { "criterionId": "public-safety", "score": 0, "evidence": [] },
+      { "criterionId": "future-composability", "score": 0, "evidence": [] }
+    ]
+  },
+  "humanGates": [
+    { "gateId": "jamie-claim-approval", "status": "pending", "confirmedBy": null },
+    { "gateId": "collaborator-credit-or-permission", "status": "pending", "confirmedBy": null },
+    { "gateId": "media-rights-and-consent", "status": "pending", "confirmedBy": null }
+  ],
+  "summary": ""
+}
