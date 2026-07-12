@@ -28,6 +28,10 @@ Approved public artifact examples for this launch pass include:
   2016, including an archived post and resolvable retweet object.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- Eric Barton's 2007 Pitch reporting on the recycled-material raft expedition.
+- Laura Mattingly's 2006 Good Times account of Open House.
+- Charlotte Street Foundation's 2009 Great Accommodations event record.
+- Emma Whitford's 2017 Gothamist reporting on Cabaret Law repeal organizing.
 
 ### Public-Safe Archive Summary
 

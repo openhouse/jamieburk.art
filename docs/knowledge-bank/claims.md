@@ -138,6 +138,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-09
 
+## nyc-artist-coalition-cabaret-organizing - Cabaret Law organizing
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Public wording:** In 2017, organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.
+**Detailed public-safe wording:** Contemporaneous Gothamist reporting identifies Jamie with NYC Artist Coalition, documents his fire-code study groups for DIY venues, and quotes his City Hall advocacy for full repeal of the Cabaret Law.
+**Where to project:** Technical Operations and NYC Artist Coalition / FairRentNYC case study.
+**Why it matters:** Adds a concrete, externally reported example of Jamie turning safety, regulation, and venue experience into public education and civic advocacy.
+**Guardrail:** Use this as evidence of Jamie's organizing contribution, not sole causality for the collective repeal outcome.
+**Do not say:** Jamie alone repealed the Cabaret Law; Jamie authored the repeal legislation; Jamie solely led NYC Artist Coalition.
+**Protected boundaries:** Private coalition strategy, unapproved collaborator context, and unverified causal claims about repeal stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

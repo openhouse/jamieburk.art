@@ -39,15 +39,48 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry]));
+  const projectById = new Map(knowledgeBank.projects.map((project) => [project.id, project]));
+  const decisionByClaimId = new Map();
 
   for (const [label, items] of [
     ["source", knowledgeBank.sources],
     ["claim", knowledgeBank.claims],
     ["research inquiry", knowledgeBank.researchInquiries],
     ["correction", knowledgeBank.corrections],
-    ["page", knowledgeBank.pages]
+    ["page", knowledgeBank.pages],
+    ["intake", knowledgeBank.intake],
+    ["project", knowledgeBank.projects],
+    ["publication decision", knowledgeBank.publicationDecisions]
   ]) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
+  }
+
+  for (const proofId of duplicateIds(knowledgeBank.proofCoverage.map((item) => ({ id: item.proofId })))) {
+    errors.push(`Duplicate proof-coverage ID: ${proofId}`);
+  }
+
+  for (const intake of knowledgeBank.intake) {
+    const linkedCount = intake.sourceIds.length + intake.claimIds.length + intake.inquiryIds.length;
+    if (intake.status === "received") errors.push(`Intake ${intake.id} has not been triaged`);
+    if (!linkedCount && !intake.dispositions.some((item) => ["merged-as-duplicate", "protected-from-publication", "rejected-with-reason"].includes(item))) {
+      errors.push(`Intake ${intake.id} has no durable disposition link`);
+    }
+    for (const projectId of intake.projectIds) if (!projectById.has(projectId)) errors.push(`Intake ${intake.id} references unknown project ${projectId}`);
+    for (const sourceId of intake.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Intake ${intake.id} references unknown source ${sourceId}`);
+    for (const claimId of intake.claimIds) if (!claimById.has(claimId)) errors.push(`Intake ${intake.id} references unknown claim ${claimId}`);
+    for (const inquiryId of intake.inquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Intake ${intake.id} references unknown inquiry ${inquiryId}`);
+  }
+
+  for (const project of knowledgeBank.projects) {
+    for (const sourceId of project.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Project ${project.id} references unknown source ${sourceId}`);
+    for (const claimId of project.claimIds) if (!claimById.has(claimId)) errors.push(`Project ${project.id} references unknown claim ${claimId}`);
+    for (const inquiryId of project.inquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Project ${project.id} references unknown inquiry ${inquiryId}`);
+  }
+
+  for (const decision of knowledgeBank.publicationDecisions) {
+    if (!claimById.has(decision.claimId)) errors.push(`Publication decision ${decision.id} references unknown claim ${decision.claimId}`);
+    if (decisionByClaimId.has(decision.claimId)) errors.push(`Claim ${decision.claimId} has multiple publication decisions`);
+    decisionByClaimId.set(decision.claimId, decision);
   }
 
   for (const source of knowledgeBank.sources) {
@@ -57,6 +90,15 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   }
 
   for (const claim of knowledgeBank.claims) {
+    if (!projectById.has(claim.project)) errors.push(`Claim ${claim.id} references unknown project ${claim.project}`);
+    const project = projectById.get(claim.project);
+    if (project && !project.claimIds.includes(claim.id)) errors.push(`Project ${project.id} does not link back to claim ${claim.id}`);
+    const decision = decisionByClaimId.get(claim.id);
+    if (!decision) errors.push(`Claim ${claim.id} has no publication decision`);
+    if (decision && decision.decision !== claim.editorialStatus) errors.push(`Claim ${claim.id} editorial status does not match publication decision`);
+    if (["reserve", "hold", "retired"].includes(claim.editorialStatus) && claim.projections.some((projection) => projection.status === "active" && projection.surfaces.some((surface) => surface.startsWith("/")))) {
+      errors.push(`Non-selected claim ${claim.id} is active on a public site surface`);
+    }
     for (const evidence of claim.evidence) {
       const source = sourceById.get(evidence.sourceId);
       if (!source) {
@@ -91,8 +133,16 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   }
 
   for (const inquiry of knowledgeBank.researchInquiries) {
+    if (!projectById.has(inquiry.project)) errors.push(`Inquiry ${inquiry.id} references unknown project ${inquiry.project}`);
     for (const sourceId of inquiry.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Inquiry ${inquiry.id} references unknown source ${sourceId}`);
     if (inquiry.resultStatus === "not-recovered" && !inquiry.limitations.length) errors.push(`Not-recovered inquiry ${inquiry.id} has no limitations`);
+  }
+
+  for (const coverage of knowledgeBank.proofCoverage) {
+    for (const sourceId of coverage.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Proof coverage ${coverage.proofId} references unknown source ${sourceId}`);
+    for (const inquiryId of coverage.inquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Proof coverage ${coverage.proofId} references unknown inquiry ${inquiryId}`);
+    if (coverage.status === "source-backed" && !coverage.sourceIds.length) errors.push(`Source-backed proof ${coverage.proofId} has no sources`);
+    if (coverage.status === "research-needed" && !coverage.inquiryIds.length) errors.push(`Research-needed proof ${coverage.proofId} has no inquiry`);
   }
 
   for (const correction of knowledgeBank.corrections) {
@@ -160,6 +210,10 @@ export function citationReport() {
     sourceKinds: countBy(knowledgeBank.sources, "kind"),
     sourceVisibility: countBy(knowledgeBank.sources, "visibility"),
     preservation: countBy(knowledgeBank.sources, "preservationStatus"),
+    intakeStatus: countBy(knowledgeBank.intake, "status"),
+    projectEditorialStatus: countBy(knowledgeBank.projects, "editorialStatus"),
+    claimEditorialStatus: countBy(knowledgeBank.claims, "editorialStatus"),
+    proofCoverage: countBy(knowledgeBank.proofCoverage, "status"),
     activeProjections: activeProjections.length,
     projectionSurfaces: [...new Set(activeProjections.flatMap((item) => item.surfaces))].sort(),
     corrections: knowledgeBank.corrections.length,

@@ -24,6 +24,7 @@ Use claims that match the approved resume:
 - `fair-rent-source-map`
 - `callnyc-civic-data-guidance`
 - `nyc-artist-coalition-public-web-infrastructure`
+- `nyc-artist-coalition-cabaret-organizing`
 - `wowlist-community-platform`
 - `sunday-dinner-196-participation-infrastructure`
 - `ai-evals-professional-development`
@@ -54,3 +55,13 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Reserve Depth
+
+Open House, Great Accommodations, and the raft expedition are currently mature
+reserve claims. They remain available for future applications, public-program
+roles, cultural work, photo briefs, and longitudinal research without being
+automatically added to the current site.
+
+The participatory-systems longitudinal frame remains on hold pending broader
+cross-project corroboration.

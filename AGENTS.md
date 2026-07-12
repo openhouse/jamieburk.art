@@ -51,6 +51,11 @@ When uncertain, write: `TODO: Jamie approval required.`
 Use `docs/knowledge-bank/` and `apps/www/src/data/proofs.ts` as the
 public-safe claim layer.
 
+Record new memories, URLs, artifacts, claims, corrections, and photo leads in
+the intake lifecycle before deciding whether they belong on the site. No silent
+loss does not mean automatic publication. Keep evidentiary maturity,
+publication safety, and editorial selection independent.
+
 Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
 claim without updating the canonical claim, evidence relationship, and source

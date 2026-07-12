@@ -214,6 +214,27 @@
         "a separately attributable like",
         "an institutional NYC Council endorsement"
       ]
+    },
+    {
+      "id": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "The article identifies Jamie with NYC Artist Coalition, reports that he organized fire-code study groups for DIY venues, and documents his City Hall advocacy for full repeal.",
+      "doesNotEstablish": [
+        "Jamie solely caused repeal",
+        "Jamie alone led the coalition",
+        "Jamie authored the repeal legislation",
+        "the full history of the collective campaign"
+      ]
     }
   ],
   "claims": [
@@ -506,6 +527,46 @@
         "This is public amplification by individual member accounts, not an official NYC Council endorsement.",
         "At least five is a verified minimum, not a complete historical census."
       ]
+    },
+    {
+      "id": "CLM-NYCARTC-CABARET-ORGANIZING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2017, Jamie organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Organized fire-code study groups for DIY venues and supported public advocacy for Cabaret Law repeal.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "fire-code study groups",
+            "City Hall advocacy for full repeal",
+            "NYC Artist Coalition affiliation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This establishes Jamie's documented organizing contribution, not sole causality for the collective repeal outcome."
+      ]
     }
   ],
   "pages": [
@@ -588,6 +649,23 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
+      ],
+      "occurrences": [
+        {
+          "id": "cabaret-organizing",
+          "claimId": "CLM-NYCARTC-CABARET-ORGANIZING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
           ]
         }
       ]

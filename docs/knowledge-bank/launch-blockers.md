@@ -14,6 +14,9 @@ public portfolio surface.
 - [x] Production cutover and rollback commands are documented.
 - [x] Chad-lens legibility passes as an automated hard gate: actor, purpose,
   usable outputs, bounded proof, and reader path are explicit.
+- [x] Knowledge lifecycle passes as an automated hard gate: intake has no
+  silent loss, claims have publication decisions, and every public proof has a
+  source-coverage disposition.
 
 ## Human gates
 

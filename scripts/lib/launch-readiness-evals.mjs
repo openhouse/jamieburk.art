@@ -15,6 +15,11 @@ function read(repoRoot, relativePath) {
   return readFileSync(path.join(repoRoot, relativePath), "utf8");
 }
 
+function readOptional(repoRoot, relativePath) {
+  const absolutePath = path.join(repoRoot, relativePath);
+  return existsSync(absolutePath) ? readFileSync(absolutePath, "utf8") : "";
+}
+
 function includesAll(content, fragments) {
   return fragments.filter((fragment) => !content.includes(fragment));
 }
@@ -152,6 +157,93 @@ export function evaluateChadLens({
   return missing;
 }
 
+export function evaluateKnowledgeLifecycle({
+  schema,
+  records,
+  framework,
+  knowledgeReadme,
+  fairRentCase,
+  proofs
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank schema", schema, [
+    "intakeRecordSchema",
+    "projectRecordSchema",
+    "publicationDecisionSchema",
+    "proofCoverageSchema",
+    "publicSafety",
+    "editorialStatus"
+  ]);
+  requireFragments("Canonical registry", records, [
+    "frameworkIntake",
+    "frameworkProjects",
+    "frameworkSources",
+    "frameworkClaims",
+    "frameworkInquiries",
+    "frameworkPublicationDecisions",
+    "frameworkProofCoverage"
+  ]);
+  requireFragments("Knowledge-bank framework", framework, [
+    "No silent loss",
+    "photoBrief",
+    "LEAD-NYCARTC-COFOUNDING-MEMORY",
+    "LEAD-CABARET-LAW-ROLE-MEMORY",
+    "LEAD-OFFICE-NIGHTLIFE-ROLE-MEMORY",
+    "LEAD-NIGHTLIFE-TOWN-HALLS-MEMORY",
+    "LEAD-TALKS-NOT-RAIDS-MARCH-MEMORY",
+    "LEAD-RAFT-GULF-MEMORY",
+    "LEAD-WATERWAYS-PUBLIC-ENGAGEMENT-MEMORY",
+    "LEAD-PITCH-RAFT-2007",
+    "LEAD-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
+    "LEAD-GOOD-TIMES-OPEN-HOUSE-2006",
+    "LEAD-GOTHAMIST-CABARET-2017",
+    "LEAD-NPR-CABARET-REPEAL-2017",
+    "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
+    "SRC-RAFT-PITCH-2007",
+    "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009",
+    "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+    "CLM-OPEN-HOUSE-PARTICIPATORY-PROGRAM",
+    "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM",
+    "CLM-RIVER-RAFT-EXPEDITION",
+    "CLM-NYCARTC-CABARET-ORGANIZING",
+    "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL"
+  ]);
+  requireFragments("Knowledge-bank documentation", knowledgeReadme, [
+    "No silent loss",
+    "Evidentiary maturity",
+    "Publication safety",
+    "Editorial selection",
+    "Publicly defensible does not mean selected"
+  ]);
+  requireFragments("Selective site projection", fairRentCase, [
+    "CLM-NYCARTC-CABARET-ORGANIZING",
+    "cabaret-organizing"
+  ]);
+
+  const proofIds = [...proofs.matchAll(/^\s+id:\s*"([^"]+)"/gm)].map(
+    (match) => match[1]
+  );
+  for (const proofId of proofIds) {
+    if (
+      !framework.includes(`proofId: "${proofId}"`) &&
+      !framework.includes(`coverage("${proofId}"`)
+    ) {
+      missing.push(`Source-coverage ledger is missing public proof: ${proofId}`);
+    }
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -161,7 +253,14 @@ export function runLaunchEvals(repoRoot) {
   const agentGuide = read(repoRoot, "AGENTS.md");
   const readme = read(repoRoot, "README.md");
   const records = read(repoRoot, "apps/www/src/data/knowledge-bank/records.ts");
+  const schema = read(repoRoot, "apps/www/src/data/knowledge-bank/schema.ts");
+  const framework = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/framework.ts"
+  );
+  const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
+  const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
   const proofs = read(repoRoot, "apps/www/src/data/proofs.ts");
   const technicalOperations = read(
     repoRoot,
@@ -380,6 +479,29 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const knowledgeLifecycleMissing = evaluateKnowledgeLifecycle({
+    schema,
+    records,
+    framework,
+    knowledgeReadme,
+    fairRentCase,
+    proofs
+  });
+  results.push(
+    result({
+      id: "knowledge-bank-lifecycle",
+      label: "Knowledge-bank lifecycle preserves intake and separates evidence from publication",
+      weight: 18,
+      hardGate: true,
+      missing: knowledgeLifecycleMissing,
+      evidence: [
+        "Every supplied memory and URL has a durable intake record and disposition.",
+        "Sources, claims, inquiries, publication decisions, proof-coverage debt, and photo research remain distinct and linked.",
+        "Only a deliberately selected bounded claim is promoted to the public site."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -416,6 +538,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not strengthen public claims before updating canonical evidence and boundaries.",
       "Do not publish private sources to satisfy a citation requirement.",
       "Do not make copy shorter by hiding Jamie as actor, omitting the purpose, or replacing usable outcomes with generic systems language.",
+      "Do not satisfy no-silent-loss by auto-publishing intake or converting memories directly into confirmed claims.",
       "Production deployment always requires explicit human approval."
     ]
   };

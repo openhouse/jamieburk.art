@@ -64,3 +64,26 @@ The hill climb made three bounded repairs:
 The evaluator itself then exposed and repaired one false negative caused by a
 JSX line break, normalizing whitespace without weakening the semantic contract.
 The final run returned to **100/100**, with the Chad-lens hard gate passing.
+
+## Knowledge-bank lifecycle recursive pass
+
+A second follow-up added an 18-point lifecycle hard gate. Its baseline scored
+**85/100** because the bank lacked durable intake, project, publication-decision,
+proof-coverage, and photo-research structures.
+
+The implementation then:
+
+- recorded twelve supplied memories and URLs with durable dispositions;
+- closely read and integrated four public sources;
+- created five bounded canonical claims and ten open inquiries: nine tied to the supplied material plus one cross-proof source-coverage queue;
+- separated evidentiary maturity, publication safety, and editorial selection;
+- assigned publication decisions to every canonical claim;
+- assigned source-coverage status to every public proof;
+- added photo-editor questions and rights notes to each project node;
+- selected the externally reported Cabaret organizing claim for the existing
+  civic case study while keeping Open House, Great Accommodations, and the raft
+  expedition in reserve and the longitudinal interpretation on hold.
+
+The semantic validator caught one misplaced project-link block. After repair,
+the lifecycle and launch suites returned to **100/100** with all hard gates
+passing.

@@ -334,6 +334,38 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "nyc-artist-coalition-cabaret-organizing",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "In 2017, organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.",
+    shortWording:
+      "Organized DIY-venue fire-code study groups and supported Cabaret Law repeal advocacy",
+    detailedPublicWording:
+      "Contemporaneous Gothamist reporting identifies Jamie with NYC Artist Coalition, documents his fire-code study groups for DIY venues, and quotes his City Hall advocacy for full repeal of the Cabaret Law.",
+    sourceBasis:
+      "Emma Whitford's June 19, 2017 Gothamist reporting and the canonical source relationship in the knowledge bank.",
+    whyItMatters:
+      "Adds a concrete, externally reported example of Jamie turning safety, regulation, and venue experience into public education and civic advocacy.",
+    guardrail:
+      "Use this as evidence of Jamie's organizing contribution, not sole causality for the collective repeal outcome.",
+    doNotSay: [
+      "Jamie alone repealed the Cabaret Law",
+      "Jamie authored the repeal legislation",
+      "Jamie solely led NYC Artist Coalition"
+    ],
+    protectedBoundaries: [
+      "Private coalition strategy",
+      "Unapproved collaborator context",
+      "Unverified causal claims about repeal"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-education", "civic-advocacy", "stakeholder-coordination"],
+    lastReviewed: "2026-07-12"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",
@@ -652,6 +684,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-cabaret-organizing",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "callnyc-council-member-amplification",

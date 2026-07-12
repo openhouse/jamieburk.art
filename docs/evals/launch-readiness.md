@@ -38,6 +38,7 @@ The canonical positioning sentence is:
 | Production cutover | 10 | Yes | The runbook names candidate, verification, and rollback commands. |
 | Release gate wiring | 12 | Yes | Citation, knowledge-bank, public-safety, route, eval-test, and prelaunch commands exist. |
 | Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
+| Knowledge-bank lifecycle | 18 | Yes | Intake has no silent loss; evidence maturity, safety, and editorial selection remain separate; every public proof has source-coverage status. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -67,3 +68,5 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - Do not treat an automated score as approval to deploy production.
 - Do not reduce reader burden by erasing Jamie as actor, omitting the purpose,
   or replacing concrete outputs with generic systems language.
+- Do not satisfy no-silent-loss by auto-publishing intake, treating memories as
+  corroboration, or moving every mature reserve claim onto the current site.

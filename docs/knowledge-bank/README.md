@@ -13,6 +13,25 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+## No silent loss
+
+Every submitted memory, URL, article, website, photograph, document, claim, or
+correction receives a durable intake record and disposition. A fragment may
+become a source, claim, inquiry, or project relationship; it may also be merged,
+protected, or rejected with a reason. Intake never becomes public copy merely
+because it was submitted.
+
+The framework keeps three judgments independent:
+
+- **Evidentiary maturity:** what the record currently establishes.
+- **Publication safety:** whether and under what boundary it may be public.
+- **Editorial selection:** whether it serves the argument of a particular
+  public composition now.
+
+Publicly defensible does not mean selected. Reserve material remains available
+for future applications, case studies, research, and photo-editor briefs without
+crowding the current site.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -33,6 +52,9 @@ The knowledge bank exists to:
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
+- **Intake and lifecycle framework:** public-safe leads, project relationships,
+  publication decisions, proof-source coverage, and photo research in
+  `apps/www/src/data/knowledge-bank/framework.ts`.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and

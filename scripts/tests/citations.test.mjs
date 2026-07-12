@@ -63,3 +63,50 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
 });
+
+test("intake has no silent loss and memories are not auto-promoted", () => {
+  assert.equal(knowledgeBank.intake.length, 12);
+  assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
+  assert.ok(knowledgeBank.intake.every((item) =>
+    item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
+  ));
+  const officeLead = knowledgeBank.intake.find(
+    (item) => item.id === "LEAD-OFFICE-NIGHTLIFE-ROLE-MEMORY"
+  );
+  assert.equal(officeLead.status, "researching");
+  assert.deepEqual(officeLead.claimIds, []);
+  assert.deepEqual(officeLead.inquiryIds, ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]);
+});
+
+test("publication decisions keep reserve depth off the current site", () => {
+  assert.equal(knowledgeBank.publicationDecisions.length, knowledgeBank.claims.length);
+  const decisionByClaim = new Map(
+    knowledgeBank.publicationDecisions.map((item) => [item.claimId, item])
+  );
+  assert.ok(knowledgeBank.claims.every(
+    (claim) => decisionByClaim.get(claim.id)?.decision === claim.editorialStatus
+  ));
+  assert.equal(
+    decisionByClaim.get("CLM-NYCARTC-CABARET-ORGANIZING").decision,
+    "selected"
+  );
+  assert.equal(
+    decisionByClaim.get("CLM-RIVER-RAFT-EXPEDITION").decision,
+    "reserve"
+  );
+  assert.throws(
+    () => getClaimProjection(
+      "CLM-RIVER-RAFT-EXPEDITION",
+      "archive-note",
+      "/work/fair-rent-nyc"
+    ),
+    /Unknown public claim|not approved/
+  );
+});
+
+test("new civic projection has a bounded page-local citation", () => {
+  const occurrence = resolveCitationOccurrence("fair-rent-nyc", "cabaret-organizing");
+  assert.equal(occurrence.claim.id, "CLM-NYCARTC-CABARET-ORGANIZING");
+  assert.deepEqual(occurrence.sources.map((item) => item.number), [1]);
+  assert.match(occurrence.claim.boundaries.join(" "), /not sole causality/i);
+});
