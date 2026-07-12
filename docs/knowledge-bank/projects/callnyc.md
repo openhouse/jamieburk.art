@@ -31,6 +31,8 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- Public CallNYC project mark preserved in that repository; cleared for this
+  portfolio with an explicit non-affiliation boundary.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
@@ -81,3 +83,10 @@ depicted.
 
 Rights require permission, consent requires review, and public display remains
 on hold. The photograph is not committed or rendered.
+
+## Cleared project mark
+
+The public source repository preserves a non-participant graphic reading
+"CALL NYC." It is cleared for display as the archived independent prototype's
+project mark. It does not establish Council ownership, affiliation, formal
+submission, or current-service status.

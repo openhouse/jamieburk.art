@@ -1,5 +1,6 @@
 import type { MDXComponents } from "mdx/types";
 import { Cite, Claim, References } from "@/components/citations";
+import { PublicArtifactFigure } from "@/components/PublicArtifactFigure";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -19,6 +20,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     Cite,
     Claim,
+    PublicArtifactFigure,
     References,
     ...components
   };

@@ -206,6 +206,32 @@
           ]
         }
       ]
+    },
+    {
+      "id": "LR-SOURCE-VISUAL-PROOF",
+      "description": "The CallNYC pilot includes one cleared, source-backed project artifact with its non-affiliation boundary intact.",
+      "checks": [
+        {
+          "file": "apps/www/src/content/work/callnyc.mdx",
+          "mustInclude": [
+            "CLM-CALLNYC-PROJECT-MARK",
+            "/artifacts/callnyc/callnyc-project-mark.png",
+            "does not establish official New York City Council ownership, affiliation, or current-service status"
+          ],
+          "mustNotInclude": [
+            "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+          ]
+        },
+        {
+          "file": "apps/www/src/data/knowledge-bank/records.ts",
+          "mustInclude": [
+            "SRC-CALLNYC-PROJECT-MARK",
+            "publicDisplayStatus: \"cleared\"",
+            "official New York City Council ownership"
+          ],
+          "mustNotInclude": []
+        }
+      ]
     }
   ],
   "judgeCriteria": [

@@ -100,6 +100,26 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-PROJECT-MARK",
+      "title": "CallNYC project mark",
+      "organization": "CallNYC",
+      "kind": "promotional-graphic",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://github.com/openhouse/CallNYC/blob/main/android-icon-192x192.png",
+      "assetUrl": "https://raw.githubusercontent.com/openhouse/CallNYC/main/android-icon-192x192.png",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CallNYC project mark preserved in the public source repository.",
+      "publicNote": "The mark documents the independent prototype's public identity. It does not establish official New York City Council affiliation or current-service status.",
+      "doesNotEstablish": [
+        "official New York City Council ownership",
+        "official affiliation",
+        "formal submission status",
+        "current resident-service status"
+      ]
     }
   ],
   "claims": [
@@ -299,6 +319,37 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-PROJECT-MARK",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "photo-caption",
+          "text": "The public source repository preserves this project mark from the archived CallNYC prototype.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-PROJECT-MARK",
+          "relationship": "direct-support",
+          "supports": [
+            "visible project mark",
+            "CALL NYC wording",
+            "public repository preservation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe this as the independent prototype's project mark, not evidence of Council ownership or affiliation."
+      ]
     }
   ],
   "pages": [
@@ -310,7 +361,8 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-PROJECT-MARK"
       ],
       "occurrences": [
         {
@@ -345,6 +397,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+          ]
+        },
+        {
+          "id": "project-mark",
+          "claimId": "CLM-CALLNYC-PROJECT-MARK",
+          "projection": "photo-caption",
+          "sourceIds": [
+            "SRC-CALLNYC-PROJECT-MARK"
           ]
         },
         {

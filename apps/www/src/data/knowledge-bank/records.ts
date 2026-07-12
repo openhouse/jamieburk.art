@@ -112,6 +112,29 @@ const knowledgeBankInput = {
       doesNotEstablish: ["official Council ownership", "formal hackathon submission status", "current resident-service guidance"]
     },
     {
+      id: "SRC-CALLNYC-PROJECT-MARK",
+      title: "CallNYC project mark",
+      organization: "CallNYC",
+      kind: "promotional-graphic",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://github.com/openhouse/CallNYC/blob/main/android-icon-192x192.png",
+      assetUrl: "https://raw.githubusercontent.com/openhouse/CallNYC/main/android-icon-192x192.png",
+      preferredPublicUrl: "canonical",
+      publicCitation: "CallNYC project mark preserved in the public source repository.",
+      publicNote: "The mark documents the independent prototype's public identity. It does not establish official New York City Council affiliation or current-service status.",
+      supportsGenerally: ["CallNYC project identity", "visible CALL NYC wording"],
+      doesNotEstablish: ["official New York City Council ownership", "official affiliation", "formal submission status", "current resident-service status"],
+      media: {
+        mediaKind: "graphic",
+        rightsStatus: "cleared",
+        consentStatus: "not-applicable",
+        publicDisplayStatus: "cleared",
+        visibleText: ["CALL NYC"]
+      }
+    },
+    {
       id: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026",
       title: "Civic Hall calendar and event-detail recovery research run",
       kind: "research-run",
@@ -191,6 +214,17 @@ const knowledgeBankInput = {
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-CALLNYC-PROJECT-MARK",
+      project: "callnyc",
+      internalClaim: "The public CallNYC source repository preserves a black-and-white project mark reading 'CALL NYC.'",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "photo-caption", text: "The public source repository preserves this project mark from the archived CallNYC prototype.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      evidence: [{ sourceId: "SRC-CALLNYC-PROJECT-MARK", relationship: "direct-support", supports: ["visible project mark", "CALL NYC wording", "public repository preservation"], confidence: "high", renderCitation: true }],
+      boundaries: ["Describe this as the independent prototype's project mark, not evidence of Council ownership or affiliation."],
+      antiClaims: ["official New York City Council mark", "proof of Council ownership", "proof of current-service status"],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-safety review"]
+    },
+    {
       id: "CLM-CALLNYC-DIGITAL-DISTRICT",
       project: "callnyc",
       internalClaim: "A participant photograph documents a breakout table labeled 'Digital District - Help improve City Council District office operations.'",
@@ -238,13 +272,15 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-CALLNYC-PROJECT-MARK"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+      { id: "project-mark", claimId: "CLM-CALLNYC-PROJECT-MARK", projection: "photo-caption", sourceIds: ["SRC-CALLNYC-PROJECT-MARK"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
