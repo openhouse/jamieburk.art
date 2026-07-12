@@ -35,13 +35,24 @@ The weighted score is:
 weighted_score = sum(eval.weight * eval.score / 4) / 100
 ```
 
-A candidate is launch-eligible only when all of these conditions hold:
+A candidate is application-share eligible when all of these conditions hold:
+
+- weighted score is at least `0.80`;
+- every application-required eval passes;
+- every blocking eval scores at least `3` and every nonblocking eval scores at
+  least `2`;
+- Jamie has approved the exact resume, contact path, and public claim set.
+
+A candidate is production-launch eligible only when all of these conditions
+hold:
 
 - every blocking eval passes;
 - weighted score is at least `0.90`;
-- no individual eval scores below `3`;
+- every blocking eval scores at least `3` and every nonblocking eval scores at
+  least `2`;
 - the blind-reader comprehension median is at least `4`;
 - deterministic checks and the holdout regression pass;
+- two consecutive complete runs meet the threshold;
 - Jamie has explicitly approved the exact production candidate.
 
 Weighted strength never compensates for a failed blocking eval.
@@ -66,10 +77,12 @@ Weighted strength never compensates for a failed blocking eval.
 7. **Record the iteration.** Save the before score, change summary, evidence,
    after score, regressions, and next candidate. Generated reports belong under
    `reports/generated/portfolio-evals/` and must not contain private sources.
-8. **Stop responsibly.** Stop when the launch threshold is met, after eight
-   iterations, or after three consecutive iterations without score improvement.
-   At the latter two limits, report the remaining blocker instead of polishing
-   indefinitely.
+8. **Confirm success.** A passing run is provisional. Re-run the complete suite
+   against the unchanged candidate and require a second consecutive pass.
+9. **Stop responsibly.** Stop when the relevant threshold is confirmed, after
+   eight iterations, or after three consecutive iterations without score
+   improvement. At the latter two limits, report the remaining blocker instead
+   of polishing indefinitely.
 
 ## Grader Separation
 
@@ -100,6 +113,8 @@ Every run should identify:
 - extracted resume text plus rendered resume pages;
 - knowledge-bank, approval-register, and launch-ledger results;
 - LLM scorecards with page-level evidence.
+- application packet manifest, target-role brief, and cross-surface consistency
+  report when evaluating a live application.
 
 Do not place raw transcripts, private correspondence, private notes, internal
 analytics, contact lists, credentials, or unapproved artifacts in an eval
@@ -120,6 +135,9 @@ rubric, or replace required human approval. Record evidence and score changes.
 Stop when the launch threshold is reached or the iteration limit requires a
 blocked report.
 ```
+
+For an application-only run, replace `launch threshold` with `application-share
+threshold` and do not infer permission to deploy or index production.
 
 ## Grader Output
 
@@ -142,3 +160,18 @@ Each eval result should use this shape:
 
 Use `not_observed` when required evidence could not be collected. Do not convert
 an unavailable observation into a pass.
+
+## Current Observed Failure Seeds
+
+These are starting observations, not permanent special cases. An agent must
+reproduce them against the candidate before grading or editing:
+
+- test every canonical route at `320`, `375`, `768`, and `1280` pixels;
+- verify that long headings and CTAs do not widen the document;
+- verify that labels such as `Download resume` match their destinations;
+- reject unexplained employer-specific acronyms in the general hiring path;
+- require stable sitemap dates or no sitemap dates;
+- distinguish language that makes emerging work inhabitable from language that
+  presents ambiguity as personal or organizational failure;
+- verify that production serves the reviewed portfolio rather than the previous
+  application while preserving the prior project at its intended subdomain.
