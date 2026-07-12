@@ -26,8 +26,8 @@ export default function AboutPage() {
             knowledge systems.
           </p>
           <p>
-            Across projects, I tend to do the same kind of work: clarify
-            ambiguous goals, translate between technical and nontechnical
+            Across projects, I tend to do the same kind of work: give emerging
+            goals usable form, translate between technical and nontechnical
             stakeholders, map workflows, build documentation, create usable
             interfaces, coordinate implementation, and leave behind handoffs
             people can use after the meeting or launch is over.

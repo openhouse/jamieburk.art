@@ -25,6 +25,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run build`
 - `npm run check`
 - `npm run knowledge-bank`
+- `npm run evals:portfolio`
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -72,6 +73,15 @@ wording, guardrail, protected boundaries, and last-reviewed date.
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
+
+## Claim Evals
+
+Use `evals/portfolio-claims/evals.json` when an LLM agent drafts or strengthens
+portfolio claims. Hard gates outrank rhetorical quality. Keep the highest-scoring
+candidate that passes every gate, compare revisions for regression, and stop
+only at the suite's explicit threshold. If the threshold is not reached within
+the iteration limit, return the best passing candidate with unresolved criteria
+instead of claiming completion.
 
 ## Chad Lens
 

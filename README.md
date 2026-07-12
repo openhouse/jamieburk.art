@@ -30,6 +30,8 @@ npm run lint
 npm run build
 npm run check
 npm run knowledge-bank
+npm run check:knowledge-bank
+npm run evals:portfolio
 npm run public-safety
 npm run check:routes
 npm run check:citations
@@ -65,6 +67,18 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+## Portfolio Claim Evals
+
+`evals/portfolio-claims/evals.json` expresses the portfolio's editorial intent
+as hard gates, scored criteria, public-safe fixtures, and a bounded recursive
+revision protocol. It rewards strong evidence-backed language while blocking
+overclaiming, underclaiming, unsafe publication, misplaced credit, and
+pathologizing descriptions of emerging work.
+
+Run `npm run evals:portfolio` to validate the suite. See
+`evals/portfolio-claims/README.md` for the generator/judge loop and stopping
+criterion.
 
 ## Environment
 

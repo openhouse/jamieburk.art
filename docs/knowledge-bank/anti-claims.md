@@ -32,6 +32,11 @@ lists, or source documents that were not approved for public use.
 
 Do not imply CallNYC is an official or current City service.
 
+Do not convert public posts by Council-member accounts into Council
+commissioning, adoption, partnership, institutional endorsement, or proof that
+each elected member personally typed the post. A tagged account is not an
+engaged account.
+
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,

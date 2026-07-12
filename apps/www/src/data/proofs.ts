@@ -159,6 +159,42 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-11"
   },
   {
+    id: "callnyc-council-member-engagement",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.",
+    shortWording: "Public response from 10 sitting NYC Council-member accounts",
+    detailedPublicWording:
+      "CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven attributable posts from accounts of 10 sitting members interpreted the data, credited staff, replied to the account, amplified recognition, acknowledged the work, or referred residents to the project.",
+    sourceBasis:
+      "Public posts from Council-member accounts and a public-safe archival review of the account timeline and quote-post search results.",
+    sourceNote:
+      "The account recovery found 107 visible entries against 110 reported posts; three remain unrecovered.",
+    whyItMatters:
+      "Shows that the resident-facing prototype also created a legible feedback loop with public offices.",
+    guardrail:
+      "Keep this at account level. Engagement does not establish Council commissioning, adoption, partnership, institutional endorsement, or who personally typed each post.",
+    doNotSay: [
+      "The New York City Council endorsed CallNYC",
+      "Ten Council members formally endorsed CallNYC",
+      "Every tagged Council member engaged",
+      "The complete account history was recovered",
+      "Jamie personally conversed with every member"
+    ],
+    protectedBoundaries: [
+      "Unrecovered account entries",
+      "Unidentified liker and reposter identities",
+      "Private account data",
+      "Unverified personal authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc"],
+    relatedCapabilities: ["open-data", "stakeholder-engagement", "public-feedback-loops"],
+    lastReviewed: "2026-07-12"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",
@@ -486,7 +522,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-safe-archive-summary"],
     publicWording:
-      "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
+      "Jamie builds the operating backbone teams need to move emerging public-facing technical work from early shape to launch.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
       "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",

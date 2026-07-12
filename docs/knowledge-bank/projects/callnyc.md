@@ -24,6 +24,14 @@ context and editorial boundaries; it is not a competing source of truth.
 CallNYC is an archived independent prototype. It was not an official Council
 product, a documented formal submission, or a documented winner.
 
+## Council-member account response
+
+Surviving public posts show accounts of 10 sitting NYC Council members engaging
+with CallNYC through quote-posts, replies, amplification, acknowledgment, or a
+resident referral. This is account-level evidence, not Council commissioning,
+adoption, partnership, or institutional endorsement. See
+[`callnyc-member-engagement.md`](./callnyc-member-engagement.md).
+
 ## Source inventory
 
 - Civic Hall announcement and its archived embedded-social-feed context.

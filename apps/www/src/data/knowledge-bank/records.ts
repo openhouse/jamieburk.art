@@ -122,6 +122,22 @@ const knowledgeBankInput = {
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001",
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
+    },
+    {
+      id: "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026",
+      title: "CallNYC Council-member account engagement review",
+      organization: "Jamie Burkart portfolio research",
+      kind: "research-run",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-07-12",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/callnyc-member-engagement.md",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Public-safe review of 11 posts from accounts of 10 sitting NYC Council members engaging with CallNYC, 2016-2017.",
+      publicNote: "The review links each attributable public post and preserves account-level, institutional, and recovery boundaries.",
+      supportsGenerally: ["11 attributable member-account posts", "10 sitting Council-member accounts", "interaction modes", "bounded timeline-recovery method"],
+      doesNotEstablish: ["Council commissioning", "Council adoption", "Council partnership", "institutional endorsement", "personal authorship by each elected member", "complete account-history recovery"]
     }
   ],
   claims: [
@@ -191,6 +207,17 @@ const knowledgeBankInput = {
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT",
+      project: "callnyc",
+      internalClaim: "Surviving public evidence identifies 11 posts from accounts of 10 sitting NYC Council members engaging with CallNYC or referring residents to the project.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "case-study", text: "Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      evidence: [{ sourceId: "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026", relationship: "direct-support", supports: ["11 attributable member-account posts", "10 sitting Council-member accounts", "interaction modes"], confidence: "high", renderCitation: true }],
+      boundaries: ["This is account-level evidence and does not establish who personally typed each post.", "Three of the profile's 110 reported timeline entries remain unrecovered.", "Current counters are not contemporaneous impact analytics."],
+      antiClaims: ["The New York City Council endorsed CallNYC", "Ten Council members formally endorsed CallNYC", "Every tagged Council member engaged", "The complete account history was recovered", "Jamie personally conversed with every member"],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "CLM-CALLNYC-DIGITAL-DISTRICT",
       project: "callnyc",
       internalClaim: "A participant photograph documents a breakout table labeled 'Digital District - Help improve City Council District office operations.'",
@@ -238,7 +265,8 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -246,6 +274,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "member-engagement", claimId: "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }]

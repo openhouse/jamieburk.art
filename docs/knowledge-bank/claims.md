@@ -63,6 +63,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-11
 
+## callnyc-council-member-engagement - Council-member account engagement
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Surviving public posts show accounts of 10 sitting NYC Council members engaging with CallNYC through quote-posts, replies, amplification, acknowledgment, or a resident referral.
+**Detailed public-safe wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven attributable posts from accounts of 10 sitting members interpreted the data, credited staff, replied to the account, amplified recognition, acknowledged the work, or referred residents to the project.
+**Where to project:** Technical Operations, Case study.
+**Why it matters:** Shows that the resident-facing prototype also created a legible feedback loop with public offices.
+**Guardrail:** Keep this at account level. Engagement does not establish Council commissioning, adoption, partnership, institutional endorsement, or who personally typed each post.
+**Do not say:** The New York City Council endorsed CallNYC; ten Council members formally endorsed CallNYC; every tagged Council member engaged; the complete account history was recovered; Jamie personally conversed with every member.
+**Protected boundaries:** Unrecovered account entries, unidentified liker and reposter identities, private account data, and unverified personal authorship stay outside the public claim.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful
@@ -203,7 +218,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
+**Public wording:** Jamie builds the operating backbone teams need to move emerging public-facing technical work from early shape to launch.
 **Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
 **Where to project:** Technical Operations, Homepage, Resume page, About.  
 **Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
