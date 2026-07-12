@@ -32,6 +32,7 @@ npm run check
 npm run knowledge-bank
 npm run check:knowledge-bank
 npm run evals:portfolio
+npm run evals:chad-lens
 npm run public-safety
 npm run check:routes
 npm run check:citations
@@ -79,6 +80,11 @@ pathologizing descriptions of emerging work.
 Run `npm run evals:portfolio` to validate the suite. See
 `evals/portfolio-claims/README.md` for the generator/judge loop and stopping
 criterion.
+
+`evals/chad-lens/eval.json` separately tests whether a claim minimizes reader
+burden, makes Jamie's bounded action visible, explains what became usable,
+translates specialist language, and preserves collective credit. Run
+`npm run evals:chad-lens` to validate that focused eval and its committed runs.
 
 ## Environment
 

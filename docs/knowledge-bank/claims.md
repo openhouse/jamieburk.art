@@ -114,7 +114,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / Jamie review confirmation
 **Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
-**Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
+**Detailed public-safe wording:** Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
 **Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
@@ -129,7 +129,7 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+**Detailed public-safe wording:** Jamie built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. Campaign decisions and accomplishments remained collective.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
 **Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.

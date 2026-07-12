@@ -83,6 +83,10 @@ only at the suite's explicit threshold. If the threshold is not reached within
 the iteration limit, return the best passing candidate with unresolved criteria
 instead of claiming completion.
 
+Use `evals/chad-lens/eval.json` for focused hiring-language revisions. A Chad
+Lens pass requires all five dimensions together and two consecutive independent
+passes; do not trade collective credit or evidentiary scope for readability.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the

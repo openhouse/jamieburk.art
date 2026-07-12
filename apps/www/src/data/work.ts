@@ -178,7 +178,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2024-Present",
     status: "Full case study",

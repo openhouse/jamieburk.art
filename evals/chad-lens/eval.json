@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "objective": "Make Jamie's bounded contribution, the usable change it produced, and its relevance to hiring and public-sector readers legible in one pass while preserving collective credit.",
+  "candidateContract": {
+    "maximumWords": 75,
+    "maximumSentences": 4,
+    "instructions": [
+      "Lead with Jamie as the actor for his documented direct contribution.",
+      "Name concrete outputs or operating changes rather than relying on category language.",
+      "Explain who could use the result and toward what end.",
+      "Translate specialist terms into language a hiring or public-sector reader can understand without project history.",
+      "Keep team decisions, campaign accomplishments, and policy outcomes collective where causality was shared."
+    ]
+  },
+  "hardGates": [
+    {
+      "id": "evidence-entailment",
+      "passCondition": "Every consequential clause is supported by the fixture at the stated scope."
+    },
+    {
+      "id": "public-safety",
+      "passCondition": "The candidate is safe for a public repository and newspaper quotation."
+    },
+    {
+      "id": "collective-credit",
+      "passCondition": "Jamie's direct work is direct and shared campaign or policy outcomes remain collective."
+    }
+  ],
+  "criterion": {
+    "id": "chad-lens",
+    "threshold": 5,
+    "dimensions": [
+      {
+        "id": "reader-burden",
+        "passCondition": "A hiring reader can understand the claim in one pass without project history or rereading."
+      },
+      {
+        "id": "jamie-as-actor",
+        "passCondition": "Jamie is the grammatical actor for each documented direct contribution."
+      },
+      {
+        "id": "usable-change",
+        "passCondition": "The claim names what became usable and for whom, not only what category of work occurred."
+      },
+      {
+        "id": "plain-language-translation",
+        "passCondition": "Specialized civic, policy, or operations language is translated through concrete outputs and ordinary verbs."
+      },
+      {
+        "id": "collective-work-boundary",
+        "passCondition": "The copy distinguishes Jamie's direct authorship from collaborators' decisions and collective outcomes without hiding his role."
+      }
+    ],
+    "anchors": {
+      "1": "Jamie is hidden or inflated, the usable result is absent, and the reader must infer the point.",
+      "3": "Jamie's role is visible, but at least one of the usable result, plain-language translation, reader fit, or collective boundary remains weak.",
+      "5": "In one pass, the reader sees Jamie's bounded action, concrete usable result, future relevance, and collective boundary in plain language."
+    }
+  },
+  "fixture": {
+    "id": "nyc-artist-coalition-hiring-translation",
+    "task": "Write a brief hiring-reader paragraph about Jamie's NYC Artist Coalition and FairRentNYC contribution.",
+    "evidence": {
+      "directContributions": [
+        "Jamie co-founded NYC Artist Coalition.",
+        "Jamie built public campaign websites, including NYC Artist Coalition, FairRentNYC, Talks Not Raids, and Let NYC Dance web surfaces.",
+        "Jamie built and stewarded civic systems, coalition operations, and policy-communications infrastructure."
+      ],
+      "usableOutputs": [
+        "campaign websites",
+        "issue explanations",
+        "calls to action",
+        "public resources",
+        "support paths",
+        "coordination materials"
+      ],
+      "audience": "Hiring and public-sector readers evaluating technical project management, product operations, implementation, civic delivery, and public-facing systems work.",
+      "collectiveBoundaries": [
+        "Campaign decisions and accomplishments were collective.",
+        "Do not claim sole campaign leadership, policy authorship, legal authority, or sole causality for policy outcomes."
+      ]
+    },
+    "startingCandidate": "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
+    "mustInclude": [
+      "Jamie as the direct actor",
+      "at least two concrete usable outputs",
+      "what collaborators or the public could do with the work",
+      "a visible collective-work boundary"
+    ],
+    "mustNotClaim": [
+      "Jamie solely led NYC Artist Coalition",
+      "Jamie owned every campaign",
+      "Jamie authored every policy position",
+      "Jamie caused policy outcomes"
+    ]
+  },
+  "judgeProtocol": {
+    "independentRoles": [
+      "evidence-judge",
+      "hiring-reader-judge"
+    ],
+    "rules": [
+      "Both judges score the same candidate independently.",
+      "A failed hard gate blocks the candidate regardless of its Chad-lens score.",
+      "Score 5 only when all five dimensions pass together.",
+      "The generator cannot be a deciding judge.",
+      "Keep the highest-scoring non-regressing candidate, not the latest candidate."
+    ]
+  },
+  "stopPolicy": {
+    "targetScore": 5,
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 8,
+    "successCondition": "Both independent judges pass every hard gate and score the Chad-lens criterion 5 in two consecutive rounds.",
+    "failureCondition": "At iteration 8, return the best passing candidate and unresolved dimensions without claiming completion."
+  }
+}

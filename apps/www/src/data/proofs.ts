@@ -274,7 +274,7 @@ export const proofClaims: ProofClaim[] = [
       "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
-      "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
+      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
     sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
@@ -309,7 +309,7 @@ export const proofClaims: ProofClaim[] = [
       "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
     shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
+      "Jamie built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. Campaign decisions and accomplishments remained collective.",
     sourceBasis:
       "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
     whyItMatters:
