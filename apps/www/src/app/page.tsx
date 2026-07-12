@@ -18,7 +18,7 @@ const startHereLinks = [
   {
     href: "/work/technical-operations",
     label: "Technical Operations & Implementation",
-    note: "The fastest role-fit proof surface for OTI, product operations, implementation, and delivery coordination."
+    note: "The fastest role-fit proof surface for technical project management, product operations, implementation, and delivery coordination."
   },
   {
     href: "/work/harry-j-epstein",
@@ -87,7 +87,7 @@ export default function HomePage() {
               Proof across operating, civic, and community systems
             </h2>
             <p className="mt-4 leading-8 text-jb-ink/76">
-              These projects show a recurring pattern: ambiguous, high-context
+              These projects show a recurring pattern: emerging, high-context
               situations becoming usable systems, public-facing tools,
               documentation, decision trails, and durable handoffs.
             </p>

@@ -13,6 +13,7 @@ import {
 } from "@/components/CaseStudyBlocks";
 import { JBButton } from "@/components/JBButton";
 import { References } from "@/components/citations";
+import { site } from "@/data/site";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { WorkMeta } from "@/types/work";
 
@@ -41,8 +42,8 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <AtAGlance item={item} />
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
-            <JBButton href="/resume" variant="secondary">
-              Download resume
+            <JBButton href={site.resumePath} variant="secondary" download>
+              Download resume PDF
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie

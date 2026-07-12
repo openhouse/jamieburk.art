@@ -1,7 +1,52 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
+import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const suitePath = ".agents/evals/portfolio-production-readiness.json";
+
+function walkSource(directory) {
+  if (!existsSync(directory)) return [];
+
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) return walkSource(absolute);
+    return /\.(?:mdx|tsx)$/.test(entry.name) ? [absolute] : [];
+  });
+}
+
+export function validatePublicSourceContracts(
+  sourceFiles = walkSource("apps/www/src")
+) {
+  const errors = [];
+  const mislabeledResumeAction =
+    /<(?:JBButton|Link|a)\b(?=[^>]*\bhref=["']\/resume["'])[^>]*>[\s\S]*?\bDownload resume(?: PDF)?\b[\s\S]*?<\/(?:JBButton|Link|a)>/i;
+
+  for (const file of sourceFiles) {
+    const source = typeof file === "string" ? readFileSync(file, "utf8") : file.source;
+    const label = typeof file === "string" ? file : file.path;
+
+    if (mislabeledResumeAction.test(source)) {
+      errors.push(
+        `${label} labels an HTML /resume destination as a download; link to the PDF or use View resume`
+      );
+    }
+    if (/\bambiguous goals\b/i.test(source)) {
+      errors.push(`${label} uses ambiguous goals; use emerging goals or equivalent non-shaming language`);
+    }
+  }
+
+  const homepage = sourceFiles.find((file) =>
+    (typeof file === "string" ? file : file.path).endsWith("apps/www/src/app/page.tsx")
+  );
+  if (homepage) {
+    const source = typeof homepage === "string" ? readFileSync(homepage, "utf8") : homepage.source;
+    if (/\bOTI\b/.test(source)) {
+      errors.push("apps/www/src/app/page.tsx contains an unexplained employer-specific acronym");
+    }
+  }
+
+  return errors;
+}
 
 export function validateSuite(suite) {
   const errors = [];
@@ -174,6 +219,18 @@ export function validateSuite(suite) {
       suite.iteration_record_schema.allowed_decisions.includes("stop_human_blocked"),
     "iteration records must support stop_human_blocked"
   );
+  requireValue(
+    Array.isArray(suite.run_record_schema?.required) &&
+      suite.run_record_schema.required.includes("candidate_sha") &&
+      suite.run_record_schema.required.includes("human_approval"),
+    "run records must bind human approval to a candidate"
+  );
+  requireValue(
+    Array.isArray(suite.run_record_schema?.allowed_targets) &&
+      suite.run_record_schema.allowed_targets.includes("application-share") &&
+      suite.run_record_schema.allowed_targets.includes("production-launch"),
+    "run records must support application-share and production-launch targets"
+  );
 
   return { errors, totalWeight, blockingCount, evalCount: suite.evals?.length ?? 0 };
 }
@@ -181,10 +238,11 @@ export function validateSuite(suite) {
 function run() {
   const suite = JSON.parse(readFileSync(suitePath, "utf8"));
   const result = validateSuite(suite);
+  const sourceErrors = validatePublicSourceContracts();
 
-  if (result.errors.length) {
+  if (result.errors.length || sourceErrors.length) {
     console.error("Portfolio eval suite validation failed:");
-    for (const error of result.errors) console.error(`- ${error}`);
+    for (const error of [...result.errors, ...sourceErrors]) console.error(`- ${error}`);
     process.exit(1);
   }
 

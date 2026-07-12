@@ -21,6 +21,7 @@
     "test:citations": "node --test scripts/tests/citations.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "evals:portfolio": "node scripts/check-portfolio-evals.mjs",
+    "evals:portfolio:score": "node scripts/score-portfolio-eval-run.mjs",
     "test:portfolio-evals": "node --test scripts/tests/portfolio-evals.test.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "public-safety": "node scripts/check-public-safety.mjs",

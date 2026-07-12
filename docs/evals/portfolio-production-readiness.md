@@ -161,6 +161,24 @@ Each eval result should use this shape:
 Use `not_observed` when required evidence could not be collected. Do not convert
 an unavailable observation into a pass.
 
+## Run Scoring
+
+Store one result for every eval in a public-safe JSON run record. Bind the run
+to both the candidate commit and frozen rubric commit, choose either the
+`application-share` or `production-launch` target, and record human approval for
+that exact candidate. Production runs also record the blind-reader median,
+holdout result, and number of consecutive complete passing runs.
+
+Score the record with:
+
+```bash
+npm run evals:portfolio:score -- path/to/run.json
+```
+
+The scorer exits nonzero and names every blocker when the target threshold is
+not met. A high weighted score cannot override a failed blocking eval, missing
+holdout evidence, an unconfirmed repeat run, or absent human approval.
+
 ## Current Observed Failure Seeds
 
 These are starting observations, not permanent special cases. An agent must
@@ -168,7 +186,7 @@ reproduce them against the candidate before grading or editing:
 
 - test every canonical route at `320`, `375`, `768`, and `1280` pixels;
 - verify that long headings and CTAs do not widen the document;
-- verify that labels such as `Download resume` match their destinations;
+- regression-test that labels such as `Download resume PDF` point to the PDF;
 - reject unexplained employer-specific acronyms in the general hiring path;
 - require stable sitemap dates or no sitemap dates;
 - distinguish language that makes emerging work inhabitable from language that

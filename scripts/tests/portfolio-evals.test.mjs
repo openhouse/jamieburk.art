@@ -1,7 +1,11 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { validateSuite } from "../check-portfolio-evals.mjs";
+import {
+  validatePublicSourceContracts,
+  validateSuite
+} from "../check-portfolio-evals.mjs";
+import { scoreRun } from "../score-portfolio-eval-run.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/portfolio-production-readiness.json", "utf8")
@@ -44,4 +48,74 @@ test("iteration records preserve the human-blocked stop state", () => {
   const candidate = cloneSuite();
   candidate.iteration_record_schema.allowed_decisions = ["accept", "reject"];
   assert.match(validateSuite(candidate).errors.join("\n"), /stop_human_blocked/);
+});
+
+test("download labels cannot point to the resume HTML page", () => {
+  const errors = validatePublicSourceContracts([
+    {
+      path: "apps/www/src/components/Test.tsx",
+      source: '<JBButton href="/resume">Download resume</JBButton>'
+    }
+  ]);
+  assert.match(errors.join("\n"), /labels an HTML \/resume destination as a download/);
+});
+
+function passingRun(target = "application-share") {
+  return {
+    suite_id: suite.suite_id,
+    target,
+    candidate_sha: "abc123",
+    rubric_sha: "rubric123",
+    blind_reader_median: 4,
+    holdout_regression_pass: true,
+    consecutive_passing_runs: 2,
+    human_approval: {
+      granted: true,
+      candidate_sha: "abc123",
+      approved_by: "Jamie Burkart",
+      approved_at: "2026-07-12"
+    },
+    results: suite.evals.map((entry) => ({
+      eval_id: entry.id,
+      score: 4,
+      pass: true,
+      evidence: ["observed evidence"],
+      findings: [],
+      recommended_next_move: null,
+      confidence: 0.9
+    }))
+  };
+}
+
+test("a complete approved application run is eligible", () => {
+  const result = scoreRun(suite, passingRun());
+  assert.equal(result.eligible, true);
+  assert.equal(result.weighted_score, 1);
+});
+
+test("weighted strength cannot compensate for a failed blocker", () => {
+  const run = passingRun();
+  const blocker = suite.evals.find((entry) => entry.blocking);
+  const result = run.results.find((entry) => entry.eval_id === blocker.id);
+  result.score = 2;
+  result.pass = false;
+  const scored = scoreRun(suite, run);
+  assert.equal(scored.eligible, false);
+  assert.match(scored.blockers.join("\n"), new RegExp(blocker.id));
+});
+
+test("production requires two consecutive passing runs", () => {
+  const run = passingRun("production-launch");
+  run.consecutive_passing_runs = 1;
+  const result = scoreRun(suite, run);
+  assert.equal(result.eligible, false);
+  assert.match(result.blockers.join("\n"), /two consecutive passing runs/);
+});
+
+test("human approval must name the evaluated candidate", () => {
+  const run = passingRun();
+  run.human_approval.candidate_sha = "different-sha";
+  const result = scoreRun(suite, run);
+  assert.equal(result.eligible, false);
+  assert.match(result.blockers.join("\n"), /exact candidate SHA/);
 });
