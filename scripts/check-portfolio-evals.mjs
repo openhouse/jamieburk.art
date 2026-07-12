@@ -130,6 +130,12 @@ export function validateSuite(suite) {
     `eval weights must total 100; received ${totalWeight}`
   );
   requireValue(blockingCount > 0, "suite must include at least one blocking eval");
+  const chadLensEval = suite.evals?.find((entry) => entry.id === "PR-015");
+  requireValue(chadLensEval?.blocking === true, "PR-015 Chad lens eval must be blocking");
+  requireValue(
+    suite.application_share_thresholds?.required_eval_ids?.includes("PR-015"),
+    "application sharing must require PR-015 Chad lens"
+  );
 
   const validateThresholds = (name, thresholds, production = false) => {
     requireValue(typeof thresholds === "object" && thresholds !== null, `${name} is required`);

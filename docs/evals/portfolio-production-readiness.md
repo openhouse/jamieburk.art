@@ -9,6 +9,12 @@ improve clarity, evidence presentation, navigation, and release safety. It may
 not strengthen a claim beyond its proof record, publish protected material, or
 substitute its own approval for Jamie's or a collaborator's.
 
+`PR-015` applies Chad's lens as a blocking application criterion: Jamie must be
+visible as the actor, the useful end and concrete output must be named, the
+strongest approved accomplishment must not be buried, and collective work must
+retain contribution or stewardship language. Courageous precision means
+neither understatement nor overclaiming.
+
 ## Objective
 
 Make the portfolio ready to:

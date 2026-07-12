@@ -29,6 +29,18 @@ test("application threshold cannot require an unknown eval", () => {
   assert.match(validateSuite(candidate).errors.join("\n"), /unknown eval PR-999/);
 });
 
+test("Chad lens remains a blocking application criterion", () => {
+  const candidate = cloneSuite();
+  candidate.evals.find((entry) => entry.id === "PR-015").blocking = false;
+  candidate.application_share_thresholds.required_eval_ids =
+    candidate.application_share_thresholds.required_eval_ids.filter(
+      (id) => id !== "PR-015"
+    );
+  const errors = validateSuite(candidate).errors.join("\n");
+  assert.match(errors, /PR-015 Chad lens eval must be blocking/);
+  assert.match(errors, /application sharing must require PR-015/);
+});
+
 test("optimizer cannot grade its own patch", () => {
   const candidate = cloneSuite();
   candidate.optimization.optimizer_may_not_grade_own_patch = false;

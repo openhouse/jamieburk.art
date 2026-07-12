@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -65,7 +65,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -88,7 +88,7 @@
       "category": "proof",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
@@ -110,7 +110,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -130,7 +130,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -362,6 +362,31 @@
       ],
       "evidence_required": ["role brief", "packet manifest", "blind judge scorecard", "cross-surface consistency report"],
       "remediation_hint": "Tailor selection and sequence before adding claims; keep one role, three proof surfaces, and one clear next action."
+    },
+    {
+      "id": "PR-015",
+      "title": "Courageous precision under Chad's lens",
+      "category": "positioning",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 7,
+      "inputs": ["homepage", "technical operations page", "featured work cards", "knowledge bank", "Chad lens guidance"],
+      "procedure": [
+        "Read the homepage and Technical Operations page once, without private archive context or optimization history.",
+        "For the lead promise and every featured work card, identify Jamie as actor, the concrete action, the end served, and what became usable.",
+        "Compare strong accomplishment language with the knowledge bank and its collective-credit and causality guardrails.",
+        "Ask a blind judge to state Jamie's role family and three defensible accomplishments without decoding internal portfolio language."
+      ],
+      "pass_criteria": [
+        "The first viewport names Jamie's role, makes Jamie the actor, and names concrete outputs rather than relying on generic systems language.",
+        "Every featured work summary makes Jamie's contribution grammatically visible and states a concrete action, output, beneficiary, or outcome.",
+        "The strongest approved metrics and accomplishments are presented directly enough to support referral or interview decisions.",
+        "Collective work uses co-built, co-founded, contributed, helped, supported, hosted, or stewarded language where required by the knowledge bank.",
+        "No sentence inflates ownership, causality, official authority, legal authority, current status, or scale beyond its approved proof record.",
+        "A blind judge identifies the role family and at least three accurate accomplishments in one pass, reports no material decoding burden, and scores the criterion at least 3."
+      ],
+      "evidence_required": ["actor-action-end-output matrix", "knowledge-bank comparison", "public-page excerpts", "blind judge scorecard"],
+      "remediation_hint": "Make Jamie and the useful end visible, replace vague nouns with named work and outputs, and strengthen only to the boundary already supported by the proof bank."
     }
   ],
   "grader_output_schema": {
