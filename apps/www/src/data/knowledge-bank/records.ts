@@ -122,6 +122,52 @@ const knowledgeBankInput = {
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001",
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
+    },
+    {
+      id: "SRC-HJE-PUBLIC-STOREFRONT-2026",
+      title: "Harry J. Epstein Company public storefront",
+      organization: "Harry J. Epstein Company",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.harryepstein.com/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Harry J. Epstein Company's public e-commerce storefront.",
+      publicNote: "The public surface documents customer-facing navigation, search, product content, checkout access, and the company's distinctive editorial voice.",
+      supportsGenerally: ["public storefront features", "customer-facing e-commerce surface", "company voice"],
+      doesNotEstablish: ["Jamie's role", "revenue growth", "internal systems", "causal business outcomes"]
+    },
+    {
+      id: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
+      title: "FairRentNYC public campaign site",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://fairrentnyc.nycartc.com/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "FairRentNYC public campaign site.",
+      publicNote: "The public surface connects a Commercial Rent Stabilization call to action with a reference-library pathway.",
+      supportsGenerally: ["campaign identity", "Commercial Rent Stabilization call to action", "public reference-library pathway"],
+      doesNotEstablish: ["Jamie's co-founder role", "Jamie's authorship", "shared-memory page counts", "policy outcomes"]
+    },
+    {
+      id: "SRC-WOWLIST-WAYBACK-2016-02-12",
+      title: "WOWList archived public application surface",
+      organization: "WOWList",
+      kind: "archived-web-capture",
+      visibility: "public",
+      preservationStatus: "archived",
+      capturedAt: "2016-02-12T01:12:39Z",
+      accessedAt: "2026-07-12",
+      archiveUrl: "https://web.archive.org/web/20160212011239/https://wowlist.org/",
+      preferredPublicUrl: "archive",
+      publicCitation: "February 12, 2016, Wayback capture of the WOWList public application.",
+      publicNote: "The capture identifies WOWList as an event-sharing and community-building project and preserves Ember application metadata plus a configured application-programming-interface endpoint.",
+      supportsGenerally: ["event-sharing purpose", "community-building purpose", "Ember application surface", "configured API endpoint"],
+      doesNotEstablish: ["user totals", "event totals", "city-ecosystem adoption", "Jamie's role", "current service availability"]
     }
   ],
   claims: [
@@ -210,6 +256,39 @@ const knowledgeBankInput = {
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE",
+      project: "harry-j-epstein",
+      internalClaim: "The current Harry J. Epstein Company storefront presents a customer-facing e-commerce system with product navigation, search, product content, checkout access, and a distinctive editorial voice.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "case-study", text: "The current public storefront combines tool-type and brand navigation, search, product content, checkout access, and the company's distinctive public voice.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }],
+      evidence: [{ sourceId: "SRC-HJE-PUBLIC-STOREFRONT-2026", relationship: "direct-support", supports: ["public storefront features", "customer-facing e-commerce surface", "company voice"], confidence: "high", renderCitation: true }],
+      boundaries: ["The public storefront documents the customer-facing surface, not Jamie's role, internal systems, revenue growth, or causal business outcomes."],
+      antiClaims: ["The public storefront alone proves Jamie caused revenue growth."],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+    },
+    {
+      id: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
+      project: "fair-rent-nyc",
+      internalClaim: "FairRentNYC's public campaign surface joins a Commercial Rent Stabilization call to action with a public reference-library pathway.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "case-study", text: "FairRentNYC's public site connects a Commercial Rent Stabilization call to action with a public reference-library pathway.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      evidence: [{ sourceId: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026", relationship: "direct-support", supports: ["campaign identity", "Commercial Rent Stabilization call to action", "public reference-library pathway"], confidence: "high", renderCitation: true }],
+      boundaries: ["The public site documents the campaign surface, not individual authorship, coalition roles, private documentation volume, or policy outcomes."],
+      antiClaims: ["The public site alone proves Jamie caused a policy outcome."],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+    },
+    {
+      id: "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE",
+      project: "wowlist",
+      internalClaim: "A February 2016 capture preserves WOWList's public event-sharing application, community-building description, Ember application metadata, and configured API endpoint.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "case-study", text: "A February 2016 capture preserves WOWList as a public event-sharing and community-building application, with Ember application metadata and a configured API endpoint.", status: "active", citationRequired: true, surfaces: ["/work/wowlist"] }],
+      evidence: [{ sourceId: "SRC-WOWLIST-WAYBACK-2016-02-12", relationship: "direct-support", supports: ["event-sharing purpose", "community-building purpose", "Ember application surface", "configured API endpoint"], confidence: "high", renderCitation: true }],
+      boundaries: ["The archived application shell does not establish user totals, event totals, geographic adoption, Jamie's role, or current availability."],
+      antiClaims: ["The archived application shell proves the portfolio's scale or adoption claims."],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     }
   ],
   researchInquiries: [{
@@ -230,25 +309,45 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
   ],
-  pages: [{
-    id: "callnyc",
-    surface: "/work/callnyc",
-    sourceOrder: [
-      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
-      "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
-      "SRC-CALLNYC-POLITICO-2016-03-14",
-      "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-    ],
-    occurrences: [
-      { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-      { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-      { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
-    ]
-  }]
+  pages: [
+    {
+      id: "callnyc",
+      surface: "/work/callnyc",
+      sourceOrder: [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      ],
+      occurrences: [
+        { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
+        { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    {
+      id: "harry-j-epstein",
+      surface: "/work/harry-j-epstein",
+      sourceOrder: ["SRC-HJE-PUBLIC-STOREFRONT-2026"],
+      occurrences: [{ id: "public-storefront", claimId: "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-STOREFRONT-2026"] }]
+    },
+    {
+      id: "fair-rent-nyc",
+      surface: "/work/fair-rent-nyc",
+      sourceOrder: ["SRC-FAIRRENTNYC-PUBLIC-SITE-2026"],
+      occurrences: [{ id: "public-campaign-surface", claimId: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE", projection: "case-study", sourceIds: ["SRC-FAIRRENTNYC-PUBLIC-SITE-2026"] }]
+    },
+    {
+      id: "wowlist",
+      surface: "/work/wowlist",
+      sourceOrder: ["SRC-WOWLIST-WAYBACK-2016-02-12"],
+      occurrences: [{ id: "archived-public-surface", claimId: "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE", projection: "case-study", sourceIds: ["SRC-WOWLIST-WAYBACK-2016-02-12"] }]
+    }
+  ]
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);
