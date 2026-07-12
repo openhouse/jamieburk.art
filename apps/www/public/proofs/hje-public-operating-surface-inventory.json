@@ -1,0 +1,20 @@
+{
+  "title": "Harry J. Epstein Company public operating surface inventory",
+  "reviewed": "2026-07-12",
+  "purpose": "Public-source inventory supporting the existence and breadth of the customer-facing e-commerce surface.",
+  "boundary": "These public URLs do not independently establish revenue causality, private analytics, or ownership of collective business outcomes.",
+  "surfaces": [
+    {
+      "label": "Public storefront",
+      "url": "https://www.harryepstein.com/"
+    },
+    {
+      "label": "Product navigation",
+      "url": "https://www.harryepstein.com/collections/tool-type"
+    },
+    {
+      "label": "Editorial content",
+      "url": "https://www.harryepstein.com/blogs/the-daily-dispatch-news-from-the-basement-of-the-tool-business"
+    }
+  ]
+}

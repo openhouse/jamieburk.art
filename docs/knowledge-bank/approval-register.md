@@ -9,6 +9,8 @@ The repo is public. Approval here means approved for public-safe repository and 
 - LinkedIn: `https://linkedin.com/in/jamie-burkart` is approved for display.
 - GitHub: `https://github.com/openhouse` is approved for display.
 - Phone: do not display in website HTML. Phone may remain in the approved resume PDF.
+- AI Evals completion certificate supplied by Jamie: approved for public
+  professional-development evidence.
 
 ## Approved With Guardrails
 
@@ -16,6 +18,11 @@ The repo is public. Approval here means approved for public-safe repository and 
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
+- CallNYC Council-branded event graphic: may appear as a source artifact when
+  its caption limits it to visible event branding.
+- Public URL inventories: may enumerate already approved public sites and
+  routes; do not include screenshots, private analytics, participant records,
+  or stronger causality claims.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.

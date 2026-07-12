@@ -9,7 +9,7 @@ export function validateSuite(suite) {
     if (!condition) errors.push(message);
   };
 
-  requireValue(suite.version === 1, "suite.version must be 1");
+  requireValue(suite.version === 2, "suite.version must be 2");
   requireValue(
     suite.suite_id === "portfolio-production-readiness",
     "suite.suite_id must be portfolio-production-readiness"
@@ -102,9 +102,26 @@ export function validateSuite(suite) {
         `${name}.${field} must fit the score scale`
       );
     }
+    requireValue(
+      Array.isArray(thresholds?.included_eval_ids) &&
+        thresholds.included_eval_ids.length > 0,
+      `${name}.included_eval_ids must be a non-empty array`
+    );
+    const includedIds = new Set(thresholds?.included_eval_ids ?? []);
+    requireValue(
+      includedIds.size === (thresholds?.included_eval_ids?.length ?? 0),
+      `${name}.included_eval_ids must not contain duplicates`
+    );
+    for (const id of includedIds) {
+      requireValue(ids.has(id), `${name}.included_eval_ids contains unknown eval ${id}`);
+    }
     if (Array.isArray(thresholds?.required_eval_ids)) {
       for (const id of thresholds.required_eval_ids) {
         requireValue(ids.has(id), `${name}.required_eval_ids contains unknown eval ${id}`);
+        requireValue(
+          includedIds.has(id),
+          `${name}.required_eval_ids contains excluded eval ${id}`
+        );
       }
     }
     if (production) {

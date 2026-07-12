@@ -25,6 +25,26 @@ test("application threshold cannot require an unknown eval", () => {
   assert.match(validateSuite(candidate).errors.join("\n"), /unknown eval PR-999/);
 });
 
+test("readiness profiles reject unknown or duplicate included evals", () => {
+  const candidate = cloneSuite();
+  candidate.application_share_thresholds.included_eval_ids.push("PR-001", "PR-999");
+  const errors = validateSuite(candidate).errors.join("\n");
+  assert.match(errors, /must not contain duplicates/);
+  assert.match(errors, /included_eval_ids contains unknown eval PR-999/);
+});
+
+test("required evals must be included in their readiness profile", () => {
+  const candidate = cloneSuite();
+  candidate.application_share_thresholds.included_eval_ids =
+    candidate.application_share_thresholds.included_eval_ids.filter(
+      (id) => id !== "PR-001"
+    );
+  assert.match(
+    validateSuite(candidate).errors.join("\n"),
+    /required_eval_ids contains excluded eval PR-001/
+  );
+});
+
 test("optimizer cannot grade its own patch", () => {
   const candidate = cloneSuite();
   candidate.optimization.optimizer_may_not_grade_own_patch = false;

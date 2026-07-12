@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "suite_id": "portfolio-production-readiness",
   "title": "Jamie Burkart portfolio production readiness",
   "objective": "Make the portfolio clear, inspectable, public-safe, application-ready, and production-safe without overstating Jamie's role or exposing protected material.",
@@ -23,6 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
+    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-013", "PR-014"],
     "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010"],
     "human_approval_required": true
   },
@@ -30,6 +31,7 @@
     "weighted_score_minimum": 0.9,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
+    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-008", "PR-009", "PR-010", "PR-011", "PR-012", "PR-013", "PR-014"],
     "blind_reader_median_minimum": 4,
     "all_blocking_evals_must_pass": true,
     "holdout_regression_must_pass": true,

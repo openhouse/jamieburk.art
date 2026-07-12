@@ -29,11 +29,20 @@ Each eval receives a score from 0 to 4:
 - `3` - strong and application-ready;
 - `4` - exceptional, specific, inspectable, and trustworthy.
 
-The weighted score is:
+Each readiness profile declares the evals it includes. Its weighted score is
+normalized to the total weight of that profile, so production-only gates do not
+depress an application-share score:
 
 ```txt
-weighted_score = sum(eval.weight * eval.score / 4) / 100
+weighted_score =
+  sum(included_eval.weight * included_eval.score / 4)
+  / sum(included_eval.weight)
 ```
+
+The application-share profile excludes indexing, production cutover, and final
+production approval (`PR-008`, `PR-011`, and `PR-012`). The production-launch
+profile includes all evals. This profile boundary changes aggregation only; it
+does not waive any production gate or permit deployment.
 
 A candidate is application-share eligible when all of these conditions hold:
 
