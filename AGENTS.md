@@ -30,6 +30,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run check:knowledge-intake`
 
 ## Public-Safety Rules
 
@@ -73,6 +74,19 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
+### Knowledge intake
+
+- Give every supplied URL, memory, possible claim, artifact lead, engagement
+  lead, or research lead a stable `INTAKE-` record or explicit duplicate hold.
+- Close-read a public source before marking it reviewed or decomposed.
+- Keep maturity, public-use policy, and editorial selection separate.
+- Decompose sources into atomic claims with locators, evidence roles,
+  limitations, anti-claims, and open inquiries.
+- Do not turn Jamie's memory into independent corroboration.
+- Do not silently discard unresolved material or publish it merely because the
+  source is public.
+- Report intake IDs and dispositions after processing new material.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the
@@ -87,7 +101,7 @@ change for V1.
 
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v2/evals.json` before optimizing the public site
+- Read `evals/launch-readiness/v3/evals.json` before optimizing the public site
   for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when

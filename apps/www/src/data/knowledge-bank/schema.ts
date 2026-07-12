@@ -9,6 +9,127 @@ const publicUrlSchema = z
   .url()
   .refine((value) => /^https?:\/\//.test(value), "Use an HTTP(S) public URL");
 
+export const intakeKindSchema = z.enum([
+  "public-url",
+  "memory",
+  "possible-claim",
+  "artifact-lead",
+  "engagement-lead",
+  "research-lead"
+]);
+
+export const intakeMaturitySchema = z.enum([
+  "captured",
+  "triaged",
+  "source-reviewed",
+  "decomposed",
+  "research-needed",
+  "superseded"
+]);
+
+export const intakePublicUseSchema = z.enum([
+  "public-linkable",
+  "cite-with-care",
+  "approval-required",
+  "protected"
+]);
+
+export const intakeEditorialStateSchema = z.enum([
+  "unsurfaced",
+  "candidate",
+  "selected",
+  "retired"
+]);
+
+export const intakeDispositionSchema = z.enum([
+  "source-created",
+  "claim-candidate-created",
+  "research-inquiry-created",
+  "linked-existing",
+  "linked-duplicate",
+  "held-protected",
+  "superseded"
+]);
+
+export const intakeRecordSchema = z
+  .object({
+    id: stableIdSchema,
+    capturedAt: z.iso.date(),
+    capturedBy: z.string().min(1),
+    kind: intakeKindSchema,
+    title: z.string().min(1),
+    publicSafeSummary: z.string().min(1),
+    whyItMatters: z.string().min(1),
+    projectHints: z.array(stableIdSchema).min(1),
+    maturity: intakeMaturitySchema,
+    publicUse: intakePublicUseSchema,
+    editorialState: intakeEditorialStateSchema,
+    disposition: intakeDispositionSchema,
+    canonicalUrl: publicUrlSchema.optional(),
+    sourceIds: z.array(stableIdSchema).default([]),
+    claimIds: z.array(stableIdSchema).default([]),
+    inquiryIds: z.array(stableIdSchema).default([]),
+    duplicateOf: stableIdSchema.optional(),
+    limitations: z.array(z.string().min(1)).default([]),
+    nextActions: z.array(z.string().min(1)).min(1)
+  })
+  .superRefine((intake, context) => {
+    const addIssue = (message: string) => context.addIssue({ code: "custom", message });
+
+    if (intake.kind === "public-url" && !intake.canonicalUrl) {
+      addIssue("Public URL intakes require a canonical URL");
+    }
+
+    if (intake.maturity === "source-reviewed" && !intake.sourceIds.length) {
+      addIssue("Source-reviewed intakes require a normalized source");
+    }
+
+    if (
+      intake.maturity === "decomposed" &&
+      (!intake.sourceIds.length || !intake.claimIds.length)
+    ) {
+      addIssue("Decomposed intakes require a source and atomic claim candidate");
+    }
+
+    if (
+      intake.editorialState === "selected" &&
+      (intake.maturity !== "decomposed" || intake.publicUse !== "public-linkable")
+    ) {
+      addIssue("Selected intakes must be decomposed and public-linkable");
+    }
+
+    const linkedRecordCount =
+      intake.sourceIds.length + intake.claimIds.length + intake.inquiryIds.length;
+
+    if (intake.disposition === "source-created" && !intake.sourceIds.length) {
+      addIssue("source-created disposition requires a source ID");
+    }
+    if (intake.disposition === "claim-candidate-created" && !intake.claimIds.length) {
+      addIssue("claim-candidate-created disposition requires a claim ID");
+    }
+    if (
+      intake.disposition === "research-inquiry-created" &&
+      !intake.inquiryIds.length
+    ) {
+      addIssue("research-inquiry-created disposition requires an inquiry ID");
+    }
+    if (intake.disposition === "linked-existing" && !linkedRecordCount) {
+      addIssue("linked-existing disposition requires a canonical record ID");
+    }
+    if (intake.disposition === "linked-duplicate" && !intake.duplicateOf) {
+      addIssue("linked-duplicate disposition requires duplicateOf");
+    }
+    if (
+      intake.disposition === "held-protected" &&
+      !["approval-required", "protected"].includes(intake.publicUse)
+    ) {
+      addIssue("held-protected disposition requires a non-public public-use policy");
+    }
+    if (intake.disposition === "superseded" && !intake.duplicateOf) {
+      addIssue("superseded disposition requires a superseding intake ID");
+    }
+  });
+
 export const sourceVisibilitySchema = z.enum([
   "public",
   "public-metadata-only",
@@ -219,6 +340,7 @@ export const citationPageSchema = z.object({
 });
 
 export const knowledgeBankSchema = z.object({
+  intakes: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
@@ -227,6 +349,7 @@ export const knowledgeBankSchema = z.object({
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
+export type IntakeRecord = z.infer<typeof intakeRecordSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;

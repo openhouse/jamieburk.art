@@ -9,9 +9,15 @@ reasoning without exposing private evidence.
 ## Canonical flow
 
 ```text
+fragment -> intake -> source / claim / inquiry disposition
 source -> evidence relationship -> claim -> approved projection
        -> page occurrence -> page-local number -> public note
 ```
+
+Intake precedes citation. A new source, memory, or possible claim first receives
+a stable public-safe intake record. See [intake-workflow.md](intake-workflow.md).
+Evidence maturity, public-use permission, and editorial selection are separate
+decisions; citation eligibility does not itself select material for the site.
 
 Stable IDs belong to sources, claims, inquiries, corrections, pages, and
 occurrences. Citation numbers are deliberately local to a page and are assigned

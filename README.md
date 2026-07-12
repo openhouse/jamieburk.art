@@ -43,7 +43,7 @@ npm run preflight:production
 
 ## Launch-readiness evals
 
-The active versioned eval contract in `evals/launch-readiness/v2/` lets human and LLM
+The active versioned eval contract in `evals/launch-readiness/v3/` lets human and LLM
 collaborators improve the portfolio recursively without collapsing release
 readiness into one gameable score. Hard factual, accessibility, runtime, and
 approval gates must all pass. Scored browser and semantic criteria must meet
@@ -53,7 +53,7 @@ Run `npm run eval:launch-readiness` to see deterministic failures and the
 browser, semantic, runtime, or human evidence still required. The recursive
 agent loop, observation format, protected invariants, and strict release-gate
 command are documented in
-`evals/launch-readiness/v2/README.md`.
+`evals/launch-readiness/v3/README.md`.
 
 ## Knowledge Bank
 
@@ -62,6 +62,7 @@ This repo includes a public-safe knowledge bank for professional claims:
 - `docs/knowledge-bank/`
 - `apps/www/src/data/proofs.ts`
 - `apps/www/src/data/knowledge-bank/records.ts`
+- `apps/www/src/data/knowledge-bank/intake.ts`
 
 The website is a projection of this bank. Pages select, sequence, and phrase
 claims for specific readers. Do not add stronger claims to app copy without
@@ -81,6 +82,11 @@ metadata. `npm run check:routes` checks canonical routes and legacy redirects.
 public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
+
+`npm run check:knowledge-intake` validates the lossless intake layer: submitted
+fragments, canonical dispositions, public-repository safety, and the separation
+between evidence maturity, public-use permission, and editorial selection. See
+`docs/knowledge-bank/intake-workflow.md`.
 
 ## Environment
 

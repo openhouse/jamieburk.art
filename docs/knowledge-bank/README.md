@@ -17,6 +17,8 @@ The website should use the clearest subset for a specific audience and purpose.
 
 The knowledge bank exists to:
 
+- receive new URLs, memories, possible claims, and research leads without
+  silently losing or prematurely publishing them;
 - preserve strong, defensible professional claims;
 - keep public site copy grounded in evidence;
 - separate verified scope from open questions;
@@ -28,6 +30,8 @@ The knowledge bank exists to:
 
 ## Publication Model
 
+- **Intake layer:** lossless public-safe capture, disposition, and next action
+  for new fragments in `apps/www/src/data/knowledge-bank/intake.ts`.
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Citation registry:** canonical sources, evidence relationships, claims,
@@ -61,5 +65,6 @@ For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
-workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
+workflow, [intake-workflow.md](intake-workflow.md) for the front-door protocol,
+and [projects/callnyc.md](projects/callnyc.md) for the first complete citation
 pilot.
