@@ -429,10 +429,10 @@ export const proofClaims: ProofClaim[] = [
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the proposal advanced from unanimous CCED Board recommendation to Council authorization and appropriation of $490,539.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records show Council authorization and appropriation in 2019; the project later withdrew and the unused allocation was reappropriated in 2024.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records show Council authorization and appropriation in 2019. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation, and the unused funds were reappropriated in 2024.",
     sourceBasis: "Approved resume language and official Kansas City board, Council, appropriation, and clawback records.",
     guardrail:
-      "Use Council authorization and appropriation language, not receipt or expenditure. Include the later withdrawal when describing the allocation lifecycle.",
+      "Use Council authorization and appropriation language, not receipt or expenditure. Include the mission-aligned transition, later withdrawal, and reappropriation when describing the lifecycle. Do not publish reasons or terms of the transition.",
     doNotSay: [
       "Funding received or spent",
       "Executed funding agreement",

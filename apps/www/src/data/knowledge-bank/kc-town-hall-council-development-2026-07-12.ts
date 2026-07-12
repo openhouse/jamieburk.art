@@ -30,6 +30,23 @@ export const kcTownHallCouncilDevelopmentRecords: KcTownHallCouncilDevelopment =
         "CND-KC-TOWN-HALL-COUNCIL-AUTHORIZATION",
         "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
       ]
+    },
+    {
+      id: "INT-2026-07-12-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+      receivedAt: "2026-07-12",
+      submittedBy: "Jamie Burkart",
+      kind: "memory",
+      visibility: "public-safe",
+      summary: "Jamie confirms that he transitioned the KC Town Hall project to a mission-aligned organization.",
+      projectHints: ["kc-town-hall"],
+      status: "processed",
+      disposition: "Promoted the professional continuity action while excluding the receiving organization's identity, transition terms, and reasons from the public record.",
+      linkedRecordIds: [
+        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+        "INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026",
+        "CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+        "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
+      ]
     }
   ],
   sourceReadings: [
@@ -76,6 +93,20 @@ export const kcTownHallCouncilDevelopmentRecords: KcTownHallCouncilDevelopment =
       entityIds: ["KC-Town-Hall", "KCMO-City-Council"],
       themeIds: ["public-appropriation", "project-closeout", "funding-boundary"],
       candidateClaimIds: ["CND-KC-TOWN-HALL-COUNCIL-AUTHORIZATION", "CND-KC-TOWN-HALL-FUNDING-AWARD"]
+    },
+    {
+      id: "READ-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+      readAt: "2026-07-12",
+      reader: "Codex public-safe review",
+      assertions: [
+        { id: "ASSERT-KCTH-MISSION-ALIGNED-TRANSITION", statement: "Jamie confirms that he transitioned the KC Town Hall project to a mission-aligned organization.", confidence: "high", publicSafe: true },
+        { id: "ASSERT-KCTH-TRANSITION-CONTINUITY", statement: "The transition was an intentional project-continuity action as Jamie's direct involvement concluded.", confidence: "high", publicSafe: true }
+      ],
+      limitations: ["Do not publish the receiving organization's identity, transition terms, or reasons for the transition without a separate public-source and approval pass."],
+      entityIds: ["Jamie-Burkart", "KC-Town-Hall"],
+      themeIds: ["project-transition", "mission-aligned-continuity", "public-private-boundary"],
+      candidateClaimIds: ["CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION"]
     }
   ],
   candidateClaims: [
@@ -95,6 +126,19 @@ export const kcTownHallCouncilDevelopmentRecords: KcTownHallCouncilDevelopment =
       boundaries: ["Do not turn authorization or appropriation into receipt, expenditure, an executed agreement, or completed construction."],
       promotedClaimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
       reviewedAt: "2026-07-12"
+    },
+    {
+      id: "CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+      project: "kc-town-hall",
+      text: "As his direct involvement concluded, Jamie transitioned the KC Town Hall project to a mission-aligned organization.",
+      status: "promoted",
+      sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026"],
+      supportSummary: "Jamie directly confirms the transition and approves the bounded professional fact for public portfolio use.",
+      missingEvidence: [],
+      boundaries: ["Do not identify the receiving organization or publish the transition's reasons or terms."],
+      promotedClaimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
+      reviewedAt: "2026-07-12"
     }
   ],
   promotions: [
@@ -106,6 +150,15 @@ export const kcTownHallCouncilDevelopmentRecords: KcTownHallCouncilDevelopment =
       reason: "Official records directly establish the Council milestone and later lifecycle, allowing stronger wording without implying payment or completion.",
       decidedAt: "2026-07-12",
       decidedBy: ["Jamie Burkart", "Codex public-source review"]
+    },
+    {
+      id: "PROM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+      candidateClaimId: "CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+      claimId: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
+      decision: "promoted",
+      reason: "The transition shows responsible project continuity and is public-safe when its private reasons and terms remain omitted.",
+      decidedAt: "2026-07-12",
+      decidedBy: ["Jamie Burkart", "Codex public-safe review"]
     }
   ],
   editorialBriefs: [
@@ -113,10 +166,10 @@ export const kcTownHallCouncilDevelopmentRecords: KcTownHallCouncilDevelopment =
       id: "BRIEF-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026",
       audience: "Hiring managers, public-sector implementation teams, and referrers",
       goal: "Make the municipal implementation milestone visible while preserving the difference between authorization and payment.",
-      argument: "Jamie helped carry an adaptive-reuse proposal from public-benefit framing and board review through Council authorization and appropriation.",
+      argument: "Jamie helped carry an adaptive-reuse proposal from public-benefit framing and board review through Council authorization and appropriation, then transitioned the project to a mission-aligned organization as his direct involvement concluded.",
       selectedClaimIds: ["CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"],
       heldCandidateClaimIds: ["CND-KC-TOWN-HALL-FUNDING-AWARD"],
-      rationale: ["Council adoption and appropriation are strong, independently verifiable milestones.", "The later withdrawal belongs in the same lifecycle so readers are not led to infer disbursement or construction."],
+      rationale: ["Council adoption and appropriation are strong, independently verifiable milestones.", "The mission-aligned transition shows continuity and responsible handoff without disclosing private reasons or terms.", "The later withdrawal belongs in the same lifecycle so readers are not led to infer disbursement or construction."],
       createdAt: "2026-07-12"
     }
   ],

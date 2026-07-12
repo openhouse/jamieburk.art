@@ -33,6 +33,7 @@ test("new editorial projections resolve through page-local citation plans", () =
       "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
       "SRC-KCMO-CCED-ORDINANCE-190642-2019",
       "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+      "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
       "SRC-KCMO-CCED-CLAWBACK-240317-2024"
     ]
   );
@@ -151,12 +152,15 @@ test("campaign press collections preserve placements, deduplication, and retriev
   assert.ok(claim.antiClaims.some((antiClaim) => /earned-media/i.test(antiClaim)));
 });
 
-test("KC Town Hall distinguishes Council appropriation from receipt and disbursement", () => {
+test("KC Town Hall preserves appropriation, transition, and non-disbursement boundaries", () => {
   const resolved = resolveCitationOccurrence("kc-town-hall", "municipal-record");
   assert.match(resolved.projection.text, /Council adopted Resolution 190649/);
   assert.match(resolved.projection.text, /Ordinance 190642 appropriating/);
-  assert.match(resolved.projection.text, /reappropriated the unused allocation in 2024/);
+  assert.match(resolved.projection.text, /transitioned the project to a mission-aligned organization/);
+  assert.match(resolved.projection.text, /reappropriated the unused funds in 2024/);
   assert.ok(resolved.claim.boundaries.some((boundary) => /not receipt or disbursement/i.test(boundary)));
+  assert.ok(resolved.claim.boundaries.some((boundary) => /reason for the transition.*not.*published/i.test(boundary)));
+  assert.doesNotMatch(resolved.projection.text, /(because|due to).*transition/i);
   const held = knowledgeBank.candidateClaims.find(
     (candidate) => candidate.id === "CND-KC-TOWN-HALL-FUNDING-AWARD"
   );

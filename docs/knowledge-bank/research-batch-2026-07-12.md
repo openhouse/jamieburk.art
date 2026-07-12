@@ -34,7 +34,8 @@ machine-readable registry.
 - Kansas City records name Jamie as KC Town Hall's developer/presenter and
   document a proposal that advanced from unanimous board recommendation to
   Council authorization and appropriation of $490,539. The same public claim
-  includes the later withdrawal and return of the unused allocation.
+  includes Jamie's transition of the project to a mission-aligned organization,
+  KC Town Hall's later withdrawal, and return of the unused allocation.
 
 ## Retained In The Bank
 
@@ -43,8 +44,10 @@ machine-readable registry.
   advocacy and collective influence, not sole causality.
 - KC Town Hall receipt, expenditure, an executed funding agreement, and
   completed construction remain held. The reviewed record establishes Council
-  authorization and appropriation, followed by withdrawal and reappropriation
-  of the unused allocation.
+  authorization and appropriation, followed by Jamie's mission-aligned
+  transition, KC Town Hall's withdrawal, and reappropriation of the unused
+  allocation. The receiving organization and transition reasons or terms remain
+  outside the public record.
 - The 8th Street Tunnel program is defensible and useful but remains
   editorially unselected for the current site, which already has a focused
   participatory-systems throughline.

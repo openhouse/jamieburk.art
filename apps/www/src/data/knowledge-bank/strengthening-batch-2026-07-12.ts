@@ -329,12 +329,12 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
     {
       id: "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
       project: "kc-town-hall",
-      internalClaim: "Kansas City records identify Jamie as KC Town Hall's developer/presenter; after the board recommendation, the Council accepted and appropriated $490,539 for the project and authorized funding-agreement negotiations. The project later withdrew and the unused allocation was reappropriated.",
+      internalClaim: "Kansas City records identify Jamie as KC Town Hall's developer/presenter; after the board recommendation, the Council accepted and appropriated $490,539 for the project and authorized funding-agreement negotiations. Jamie later transitioned the project to a mission-aligned organization; KC Town Hall withdrew from the original allocation and the unused funds were reappropriated.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "case-study",
-          text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter for an adaptive-reuse plan with four retail spaces and three apartments. After the board's unanimous recommendation, the Council adopted Resolution 190649 accepting $490,539 for the project and passed Ordinance 190642 appropriating that amount to its project account. The funding agreement did not reach use: KC Town Hall later withdrew, and the Council reappropriated the unused allocation in 2024.",
+          text: "Kansas City records identify Jamie as KC Town Hall's developer/presenter for an adaptive-reuse plan with four retail spaces and three apartments. After the board's unanimous recommendation, the Council adopted Resolution 190649 accepting $490,539 for the project and passed Ordinance 190642 appropriating that amount to its project account. The funding agreement did not reach use. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall withdrew from the original allocation, and the Council reappropriated the unused funds in 2024.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/kc-town-hall"]
@@ -373,6 +373,13 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
           renderCitation: true
         },
         {
+          sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+          relationship: "direct-support",
+          supports: ["Jamie transitioned the project to a mission-aligned organization", "intentional project continuity"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
           sourceId: "SRC-KCMO-CCED-CLAWBACK-240317-2024",
           relationship: "direct-support",
           supports: ["$490,539 KC Town Hall appropriation", "project withdrawal", "reappropriation of the unused allocation"],
@@ -384,7 +391,8 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       boundaries: [
         "Describe the documented actions as Council authorization and appropriation, not receipt or disbursement.",
         "The funding agreement was not completed for use; do not infer expenditure, completed construction, or current project status.",
-        "Include the later withdrawal and reappropriation when summarizing the allocation lifecycle."
+        "Include the mission-aligned transition, later withdrawal, and reappropriation when summarizing the project lifecycle.",
+        "The reason for the transition is not part of the public record and must not be published."
       ],
       antiClaims: ["KC Town Hall received or spent $490,539", "the Council appropriation proves a completed funding agreement", "the documented redevelopment was completed"],
       researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-AUTHORIZATION-2026"],
@@ -415,6 +423,7 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
         "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
         "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
         "SRC-KCMO-CCED-CLAWBACK-240317-2024"
       ],
       occurrences: [
@@ -427,6 +436,7 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
             "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
             "SRC-KCMO-CCED-ORDINANCE-190642-2019",
             "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+            "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
             "SRC-KCMO-CCED-CLAWBACK-240317-2024"
           ]
         }

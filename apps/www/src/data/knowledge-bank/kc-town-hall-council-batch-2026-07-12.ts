@@ -78,6 +78,28 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
         "the reason for the project's withdrawal",
         "completed construction"
       ]
+    },
+    {
+      id: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+      title: "Jamie Burkart public review confirmation of KC Town Hall transition",
+      organization: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-07-12",
+      accessedAt: "2026-07-12",
+      publicCitation: "Jamie Burkart, public portfolio review confirmation, July 12, 2026.",
+      publicNote: "Jamie confirms that he transitioned the KC Town Hall project to a mission-aligned organization as his direct involvement concluded.",
+      supportsGenerally: [
+        "Jamie transitioned the project to a mission-aligned organization",
+        "the transition was an intentional continuity action"
+      ],
+      doesNotEstablish: [
+        "the identity of the receiving organization",
+        "the legal or financial terms of the transition",
+        "the reason for the transition",
+        "completed construction"
+      ]
     }
   ],
   claims: [],
@@ -89,7 +111,8 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
       methods: [
         "Reviewed the official legislative history for Resolution 190649.",
         "Reviewed the official legislative history for companion Ordinance 190642.",
-        "Reviewed Ordinance 240317 for the City's retrospective account of appropriation and the later project withdrawal."
+        "Reviewed Ordinance 240317 for the City's retrospective account of appropriation and the later project withdrawal.",
+        "Recorded Jamie's public review confirmation that he transitioned the project to a mission-aligned organization."
       ],
       runAt: "2026-07-12",
       resultStatus: "recovered",
@@ -97,19 +120,22 @@ export const kcTownHallCouncilBatchRecords: KcTownHallCouncilBatch = {
         "On September 26, 2019, the Council adopted Resolution 190649 as substituted, accepting the CCED Board recommendation to fund KC Town Hall in the amount of $490,539 and authorizing negotiation of a funding agreement.",
         "At the same meeting, the Council passed Ordinance 190642 as substituted, reappropriating Central City Sales Tax funds into designated Round Two project accounts.",
         "Ordinance 240317 later states that Ordinance 190642 appropriated $490,539 to KC Town Hall's project account.",
+        "Jamie confirms that he transitioned the project to a mission-aligned organization as his direct involvement concluded.",
         "The 2024 ordinance states that KC Town Hall withdrew and would no longer proceed, and it reappropriated the unused allocation."
       ],
       limitations: [
         "Council authorization and appropriation are not proof of an executed funding agreement or disbursement.",
         "The reviewed records do not establish the reason for withdrawal or completed construction.",
+        "Jamie's confirmation does not identify the receiving organization or disclose the reasons or terms of the transition.",
         "No roll-call vote count was recovered; the official histories report adopted or passed as substituted."
       ],
       sourceIds: [
         "SRC-KCMO-KC-TOWN-HALL-RESOLUTION-190649-2019",
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
+        "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
         "SRC-KCMO-CCED-CLAWBACK-240317-2024"
       ],
-      publicSummary: "The Council accepted and appropriated the $490,539 KC Town Hall allocation in 2019; the agreement did not proceed to use, and the City reappropriated the unused allocation after the project withdrew."
+      publicSummary: "The Council accepted and appropriated the $490,539 KC Town Hall allocation in 2019. Jamie later transitioned the project to a mission-aligned organization; KC Town Hall withdrew from the original allocation, and the City reappropriated the unused funds."
     }
   ],
   pages: []

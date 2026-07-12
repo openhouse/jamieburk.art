@@ -364,6 +364,45 @@ const criteria = [
         renderedProjectionSources.includes("CLM-KC-TOWN-HALL-MUNICIPAL-RECORD")
       );
     })()
+  },
+  {
+    id: "kc-town-hall-transition-lineage",
+    label: "The mission-aligned transition has firsthand source, reading, candidate, and promotion lineage",
+    pass: (() => {
+      const sourceId = "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026";
+      const candidate = candidateById.get("CND-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION");
+      return Boolean(
+        sourceIds.has(sourceId) &&
+        readingBySourceId.get(sourceId)?.assertions.length >= 2 &&
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === candidate.id &&
+            promotion.claimId === candidate.promotedClaimId &&
+            promotion.decision === "promoted"
+        )
+      );
+    })()
+  },
+  {
+    id: "kc-town-hall-transition-privacy",
+    label: "The public projection names the transition without encoding its private cause",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
+      );
+      const projection = claim?.projections.find((item) => item.key === "case-study");
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026"
+      );
+      return Boolean(
+        projection?.text.includes("transitioned the project to a mission-aligned organization") &&
+        claim?.boundaries.some((boundary) => /reason.*transition.*not.*publish/i.test(boundary)) &&
+        source?.doesNotEstablish.some((boundary) => /reason for the transition/i.test(boundary)) &&
+        !/(because|due to).*transition/i.test(projection.text)
+      );
+    })()
   }
 ];
 

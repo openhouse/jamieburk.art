@@ -189,11 +189,11 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
 **Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the proposal advanced from unanimous CCED Board recommendation to Council authorization and appropriation of $490,539.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The Council accepted the funding recommendation and appropriated the allocation in 2019; the project later withdrew and the unused allocation was reappropriated in 2024.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The Council accepted the funding recommendation and appropriated the allocation in 2019. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation, and the unused funds were reappropriated in 2024.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Use authorization and appropriation language, not receipt or expenditure. Include the later withdrawal and reappropriation when summarizing the allocation lifecycle.
-**Do not say:** Funding received or spent; executed funding agreement; completed construction; current property status; official municipal endorsement beyond the recorded actions.
+**Guardrail:** Use authorization and appropriation language, not receipt or expenditure. Include the mission-aligned transition, later withdrawal, and reappropriation when summarizing the lifecycle. Do not publish the receiving organization's identity or the transition's reasons or terms.
+**Do not say:** Funding received or spent; executed funding agreement; completed construction; identity of the receiving organization; reasons or terms of the transition; current property status; official municipal endorsement beyond the recorded actions.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-12

@@ -526,7 +526,7 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; official records show board recommendation followed by Council authorization and appropriation.",
       open:
-        "The project later withdrew and the unused allocation was reappropriated; reasons for withdrawal and private agreement context stay outside the public claim.",
+        "Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation and the unused funds were reappropriated. The receiving organization's identity, transition terms, and reasons remain outside the public claim.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
