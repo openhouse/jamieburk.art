@@ -274,6 +274,100 @@
         "one organization as sole cause of passage",
         "later disbanding of MARCH"
       ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+      "title": "Committee on Consumer Affairs transcript: Enforcement of New York City's Cabaret Law",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Consumer Affairs hearing transcript, June 19, 2017.",
+      "publicNote": "The official transcript lists Jamie as an NYC Artist Coalition representative and records his testimony urging Cabaret Law repeal and a trust-based safety approach.",
+      "doesNotEstablish": [
+        "Jamie as author of the repeal legislation",
+        "Jamie or NYC Artist Coalition as sole cause of repeal",
+        "the accuracy of every historical assertion made by every witness"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+      "title": "Committee on the Justice System transcript: MARCH operations and Introduction 1156",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on the Justice System hearing transcript, February 11, 2019.",
+      "publicNote": "The official transcript records Jamie's testimony for Talks Not Raids, transparency, cooperative compliance, and coalition fire-safety work.",
+      "doesNotEstablish": [
+        "independent verification of the study-group pass-rate statement",
+        "Jamie as author of Introduction 1156",
+        "Jamie or Talks Not Raids as sole cause of later policy changes"
+      ]
+    },
+    {
+      "id": "SRC-SBDIY-WOWLIST-CALENDAR",
+      "title": "SBDIY community site with WOWList calendar links",
+      "organization": "SBDIY",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.sbdiy.org/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "SBDIY, community site linking to its WOWList calendar, accessed July 12, 2026.",
+      "publicNote": "The independent Santa Barbara DIY community site invites visitors to add events to its WOWList community calendar and links to its WOWList page.",
+      "doesNotEstablish": [
+        "current activity of the linked WOWList calendar",
+        "the total number of WOWList communities",
+        "Jamie's sole authorship of WOWList"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+      "title": "Central City Economic Development Sales Tax Board packet",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board packet, July 29, 2019.",
+      "publicNote": "The public packet lists Jamie as KC Town Hall's developer/presenter and records the board's unanimous recommendation to the City Council for approval and $490,539 in funding for four retail spaces and three apartments.",
+      "doesNotEstablish": [
+        "final City Council approval, contract execution, or disbursement",
+        "completed construction",
+        "current ownership or project status"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+      "title": "Central City Economic Development Sales Tax Board meeting packet",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-10-12",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/7198/637696345156870000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board meeting packet, October 12, 2021.",
+      "publicNote": "The public meeting packet identifies Jamie with KC Town Hall among community participants in the municipal review process.",
+      "doesNotEstablish": [
+        "a final funding award",
+        "the outcome of every board discussion",
+        "completed construction or current project status"
+      ]
     }
   ],
   "claims": [
@@ -632,6 +726,120 @@
         "Treat the campaign as collective work.",
         "Do not state that the campaign alone caused passage or MARCH disbanding."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie represented NYC Artist Coalition in public City Council testimony: in 2017 he urged repeal of the Cabaret Law and a trust-based safety approach; in 2019 he called for transparent, cooperative alternatives to MARCH raids and described coalition fire-safety work.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's public testimony",
+            "NYC Artist Coalition affiliation",
+            "Cabaret Law repeal and safety advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's public testimony",
+            "Talks Not Raids framing",
+            "fire-safety work and transparency advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute testimony and described work directly to Jamie while keeping policy outcomes collective.",
+        "Treat the transcripts as records of public testimony, not independent verification of every witness statement."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-SBDIY-CALENDAR-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A surviving independent community site shows the distribution model in use: SBDIY invited visitors to add events directly to its dedicated WOWList calendar.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SBDIY-WOWLIST-CALENDAR",
+          "relationship": "direct-support",
+          "supports": [
+            "dedicated community calendar",
+            "public invitation to add events"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use as a concrete example of external use, not as a proxy for total adoption."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Kansas City records identify Jamie as KC Town Hall's developer/presenter for an adaptive-reuse plan with four retail spaces and three apartments. In 2019, the board unanimously recommended the project to the City Council for approval and $490,539 in funding; a 2021 packet records Jamie's continued participation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "developer/presenter role",
+            "adaptive-reuse program",
+            "unanimous board funding recommendation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+          "relationship": "corroborating",
+          "supports": [
+            "continued public participation for KC Town Hall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe the documented action as a board recommendation, not a final award.",
+        "Do not infer completed construction or current project status."
+      ]
     }
   ],
   "pages": [
@@ -724,6 +932,8 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
+        "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
         "SRC-NYCAC-CABARET-GOTHAMIST-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
@@ -732,6 +942,15 @@
         "SRC-NYC-COUNCIL-INT-1156-2018"
       ],
       "occurrences": [
+        {
+          "id": "nycac-public-testimony-2017-2019",
+          "claimId": "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-2019"
+          ]
+        },
         {
           "id": "nycac-civic-advocacy-2017",
           "claimId": "CLM-NYCAC-CIVIC-ADVOCACY-2017",
@@ -750,6 +969,42 @@
           "sourceIds": [
             "SRC-TALKS-NOT-RAIDS-PUBLIC-SITE",
             "SRC-NYC-COUNCIL-INT-1156-2018"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-SBDIY-WOWLIST-CALENDAR"
+      ],
+      "occurrences": [
+        {
+          "id": "sbdiy-calendar-use",
+          "claimId": "CLM-WOWLIST-SBDIY-CALENDAR-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SBDIY-WOWLIST-CALENDAR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+        "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"
+      ],
+      "occurrences": [
+        {
+          "id": "municipal-record",
+          "claimId": "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+            "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021"
           ]
         }
       ]

@@ -33,6 +33,47 @@ const batchSourceIds = [
   "SRC-BUSHWICK-DAILY-MARCH-DISBANDS-2023"
 ];
 
+const strengtheningBatchUrls = [
+  "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+  "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+  "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
+  "https://www.villagevoice.com/awaiting-the-night-mayor/",
+  "https://www.nyc.gov/mayors-office/news/2023/12/transcript-mayor-adams-launches-effort-enhance-nightlife-safety-strengthen-small",
+  "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+  "https://www.sbdiy.org/",
+  "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+  "https://www.kcmo.gov/home/showpublisheddocument/7198/637696345156870000",
+  "https://www.kcur.org/arts-life/2016-09-15/the-8th-street-tunnel-is-a-gateway-to-kansas-citys-history-but-you-probably-cant-get-in"
+];
+
+const strengtheningBatchSourceIds = [
+  "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+  "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+  "SRC-VICE-NYCAC-DIY-SAFETY-2017",
+  "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+  "SRC-NYC-MAYOR-CURE-MARCH-2023",
+  "SRC-CREATENYC-NYCAC-APPENDIX-2017",
+  "SRC-SBDIY-WOWLIST-CALENDAR",
+  "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+  "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
+  "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016"
+];
+
+const strengtheningCandidateIds = [
+  "CND-NYCAC-PUBLIC-TESTIMONY",
+  "CND-NYCAC-SOLE-POLICY-CAUSALITY",
+  "CND-WOWLIST-SBDIY-CALENDAR-USE",
+  "CND-KC-TOWN-HALL-MUNICIPAL-RECORD",
+  "CND-KC-TOWN-HALL-FUNDING-AWARD",
+  "CND-EIGHTH-STREET-TUNNEL-PUBLIC-HISTORY"
+];
+
+const strengtheningPromotedClaimIds = [
+  "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
+  "CLM-WOWLIST-SBDIY-CALENDAR-USE",
+  "CLM-KC-TOWN-HALL-MUNICIPAL-RECORD"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -49,7 +90,9 @@ const readingBySourceId = new Map(sourceReadings.map((reading) => [reading.sourc
 const promotedCandidates = candidateClaims.filter((candidate) => candidate.status === "promoted");
 const renderedProjectionSources = [
   readFileSync("apps/www/src/app/about/page.tsx", "utf8"),
-  readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8")
+  readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
+  readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8"),
+  readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8")
 ].join("\n");
 
 const criteria = [
@@ -169,6 +212,64 @@ const criteria = [
     label: "The public site selects fewer claims than the bank retains",
     pass:
       promotedCandidates.length > 0 && promotedCandidates.length < candidateClaims.length
+  },
+  {
+    id: "strengthening-source-batch",
+    label: "Ten new public sources are canonical, bounded, and non-duplicative",
+    pass:
+      strengtheningBatchSourceIds.length === 10 &&
+      new Set(strengtheningBatchSourceIds).size === 10 &&
+      new Set(
+        strengtheningBatchSourceIds.map(
+          (id) => knowledgeBank.sources.find((item) => item.id === id)?.canonicalUrl
+        )
+      ).size === 10 &&
+      strengtheningBatchSourceIds.every((id) => {
+        const source = knowledgeBank.sources.find((item) => item.id === id);
+        return (
+          source &&
+          source.visibility === "public" &&
+          source.canonicalUrl &&
+          strengtheningBatchUrls.includes(source.canonicalUrl) &&
+          source.supportsGenerally.length >= 2 &&
+          source.doesNotEstablish.length >= 2
+        );
+      })
+  },
+  {
+    id: "strengthening-intake-and-readings",
+    label: "Every new source has intake lineage and a close reading",
+    pass:
+      strengtheningBatchUrls.every((url) =>
+        intakeItems.some((item) => item.sourceUrl === url && item.status === "processed")
+      ) &&
+      strengtheningBatchSourceIds.every((id) => {
+        const reading = readingBySourceId.get(id);
+        return reading && reading.assertions.length >= 2 && reading.limitations.length >= 1;
+      })
+  },
+  {
+    id: "strengthening-claim-maturation",
+    label: "The new batch matures useful claims while holding causal and funding overclaims",
+    pass:
+      strengtheningCandidateIds.every((id) => candidateById.has(id)) &&
+      strengtheningPromotedClaimIds.every((id) => claimIds.has(id)) &&
+      ["CND-NYCAC-SOLE-POLICY-CAUSALITY", "CND-KC-TOWN-HALL-FUNDING-AWARD"].every(
+        (id) => {
+          const candidate = candidateById.get(id);
+          return candidate && candidate.status !== "promoted" && !candidate.promotedClaimId;
+        }
+      )
+  },
+  {
+    id: "strengthening-public-projection",
+    label: "Only the strongest new hiring claims are projected with rendered citations",
+    pass: strengtheningPromotedClaimIds.every((claimId) => {
+      const occurrence = knowledgeBank.pages
+        .flatMap((page) => page.occurrences)
+        .find((item) => item.claimId === claimId);
+      return occurrence && renderedProjectionSources.includes(claimId) && renderedProjectionSources.includes(occurrence.id);
+    })
   }
 ];
 

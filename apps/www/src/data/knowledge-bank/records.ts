@@ -1,9 +1,34 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
 import { knowledgeDevelopmentRecords } from "./development-records.ts";
 import { evidenceBatchRecords } from "./evidence-batch-2026-07-12.ts";
+import { strengtheningBatchRecords } from "./strengthening-batch-2026-07-12.ts";
+import { strengtheningDevelopmentRecords } from "./strengthening-development-2026-07-12.ts";
 
 const knowledgeBankInput = {
-  ...knowledgeDevelopmentRecords,
+  intakeItems: [
+    ...knowledgeDevelopmentRecords.intakeItems,
+    ...strengtheningDevelopmentRecords.intakeItems
+  ],
+  sourceReadings: [
+    ...knowledgeDevelopmentRecords.sourceReadings,
+    ...strengtheningDevelopmentRecords.sourceReadings
+  ],
+  candidateClaims: [
+    ...knowledgeDevelopmentRecords.candidateClaims,
+    ...strengtheningDevelopmentRecords.candidateClaims
+  ],
+  promotions: [
+    ...knowledgeDevelopmentRecords.promotions,
+    ...strengtheningDevelopmentRecords.promotions
+  ],
+  editorialBriefs: [
+    ...knowledgeDevelopmentRecords.editorialBriefs,
+    ...strengtheningDevelopmentRecords.editorialBriefs
+  ],
+  discoveryNotes: [
+    ...knowledgeDevelopmentRecords.discoveryNotes,
+    ...strengtheningDevelopmentRecords.discoveryNotes
+  ],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -126,7 +151,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
     },
-    ...evidenceBatchRecords.sources
+    ...evidenceBatchRecords.sources,
+    ...strengtheningBatchRecords.sources
   ],
   claims: [
     {
@@ -215,7 +241,8 @@ const knowledgeBankInput = {
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
-    ...evidenceBatchRecords.claims
+    ...evidenceBatchRecords.claims,
+    ...strengtheningBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -229,7 +256,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...evidenceBatchRecords.researchInquiries],
+  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -253,7 +280,7 @@ const knowledgeBankInput = {
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
-  }, ...evidenceBatchRecords.pages]
+  }, ...evidenceBatchRecords.pages, ...strengtheningBatchRecords.pages]
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

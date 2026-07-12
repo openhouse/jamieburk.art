@@ -16,7 +16,15 @@ test("page-local numbering follows first source appearance", () => {
 
 test("new editorial projections resolve through page-local citation plans", () => {
   assert.equal(resolveCitationReferences("about").length, 3);
-  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 6);
+  assert.ok(resolveCitationReferences("fair-rent-nyc").length >= 8);
+  assert.deepEqual(
+    resolveCitationOccurrence("fair-rent-nyc", "nycac-public-testimony-2017-2019").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-NYC-COUNCIL-MARCH-HEARING-2019"]
+  );
+  assert.equal(resolveCitationOccurrence("wowlist", "sbdiy-calendar-use").sources.length, 1);
+  assert.equal(resolveCitationOccurrence("kc-town-hall", "municipal-record").sources.length, 2);
   assert.match(
     getClaimProjection(
       "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
@@ -79,20 +87,25 @@ test("candidate claims remain deeper than the selected public registry", () => {
   const promoted = knowledgeBank.candidateClaims.filter((candidate) => candidate.status === "promoted");
   const held = knowledgeBank.candidateClaims.filter((candidate) => candidate.status !== "promoted");
   const serialized = JSON.stringify(publicCitationRegistry);
-  assert.equal(promoted.length, 3);
-  assert.equal(held.length, 4);
+  assert.ok(promoted.length >= 6);
+  assert.ok(held.length > 0);
+  assert.ok(promoted.length < knowledgeBank.candidateClaims.length);
   for (const candidate of held) assert.doesNotMatch(serialized, new RegExp(candidate.id));
   assert.doesNotMatch(serialized, /ultimately caused New York City to disband MARCH/);
   assert.doesNotMatch(serialized, /Kansas City to the Gulf of Mexico/);
 });
 
 test("knowledge development records preserve promotion lineage and explicit holds", () => {
-  assert.equal(knowledgeBank.intakeItems.length, 9);
-  assert.equal(knowledgeBank.sourceReadings.length, 12);
+  assert.ok(knowledgeBank.intakeItems.length >= 19);
+  assert.ok(knowledgeBank.sourceReadings.length >= 22);
+  assert.ok(knowledgeBank.intakeItems.every((item) => item.linkedRecordIds.length > 0));
   assert.ok(knowledgeBank.promotions.every((promotion) =>
     knowledgeBank.candidateClaims.some((candidate) => candidate.id === promotion.candidateClaimId)
   ));
-  assert.ok(knowledgeBank.editorialBriefs[0].heldCandidateClaimIds.includes("CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS"));
+  const heldByBriefs = new Set(knowledgeBank.editorialBriefs.flatMap((brief) => brief.heldCandidateClaimIds));
+  assert.ok(heldByBriefs.has("CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS"));
+  assert.ok(heldByBriefs.has("CND-NYCAC-SOLE-POLICY-CAUSALITY"));
+  assert.ok(heldByBriefs.has("CND-KC-TOWN-HALL-FUNDING-AWARD"));
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

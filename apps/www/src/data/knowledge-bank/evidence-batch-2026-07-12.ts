@@ -634,6 +634,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
+        "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
         "SRC-NYCAC-CABARET-GOTHAMIST-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
@@ -642,6 +644,15 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "SRC-NYC-COUNCIL-INT-1156-2018"
       ],
       occurrences: [
+        {
+          id: "nycac-public-testimony-2017-2019",
+          claimId: "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-2019"
+          ]
+        },
         {
           id: "nycac-civic-advocacy-2017",
           claimId: "CLM-NYCAC-CIVIC-ADVOCACY-2017",
