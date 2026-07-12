@@ -52,7 +52,7 @@ export function Hero() {
                 key={label}
               >
                 <span className="text-xs text-jb-blue">0{index + 1}</span>
-                <p className="mt-5">{label}</p>
+                <p className="mt-5 text-xs sm:text-sm">{label}</p>
               </div>
             ))}
           </div>
