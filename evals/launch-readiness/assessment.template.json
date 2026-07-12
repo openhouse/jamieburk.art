@@ -1,6 +1,6 @@
 {
   "suiteId": "portfolio-launch-readiness",
-  "suiteVersion": "1.0.0",
+  "suiteVersion": "1.1.0",
   "commit": "REPLACE_WITH_COMMIT_SHA",
   "judge": {
     "model": "REPLACE_WITH_MODEL_AND_VERSION",
@@ -8,6 +8,7 @@
     "scores": [
       { "criterionId": "hiring-reader-clarity", "score": 0, "evidence": [] },
       { "criterionId": "agency-purpose-usability", "score": 0, "evidence": [] },
+      { "criterionId": "chad-lens", "score": 0, "evidence": [] },
       { "criterionId": "role-fit-proof", "score": 0, "evidence": [] },
       { "criterionId": "evidence-traceability", "score": 0, "evidence": [] },
       { "criterionId": "collective-credit-and-anti-claims", "score": 0, "evidence": [] },

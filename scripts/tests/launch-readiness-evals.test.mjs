@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   compareObjective,
@@ -17,6 +18,9 @@ test("launch-readiness contract is internally consistent", () => {
     100
   );
   assert.ok(suite.humanGates.every((gate) => gate.agentMaySelfCertify === false));
+  const chadLens = suite.judgeCriteria.find((criterion) => criterion.id === "chad-lens");
+  assert.equal(chadLens.floor, 4);
+  assert.equal(chadLens.minimumEvidence, 4);
 });
 
 test("source evaluator covers every declared source criterion", () => {
@@ -31,6 +35,14 @@ test("source evaluator covers every declared source criterion", () => {
   );
 });
 
+test("public Open fields describe uncertainty rather than approval workflow", () => {
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  assert.doesNotMatch(
+    work,
+    /\b(?:needs?|requires?)\s+(?:Jamie\s+)?approval\b|\bbefore\s+(?:launch|publication)\b/i
+  );
+});
+
 function completeAssessment({ verifier = "Jamie Burkart", score = 4 } = {}) {
   return {
     suiteId: suite.id,
@@ -41,7 +53,10 @@ function completeAssessment({ verifier = "Jamie Burkart", score = 4 } = {}) {
       scores: suite.judgeCriteria.map((criterion) => ({
         criterionId: criterion.id,
         score,
-        evidence: ["/ route observation", `${criterion.id} knowledge-bank observation`]
+        evidence: Array.from(
+          { length: criterion.minimumEvidence ?? 2 },
+          (_, index) => `${criterion.id} evidence ${index + 1}`
+        )
       }))
     },
     humanGates: suite.humanGates.map((gate) => ({
@@ -65,6 +80,21 @@ test("an LLM cannot self-certify human approval", () => {
   assert.equal(scored.valid, false);
   assert.equal(scored.pendingHumanGates.length, suite.humanGates.length);
   assert.ok(scored.failures.every((failure) => /named human owner/.test(failure)));
+});
+
+test("Chad's lens requires broad evidence and a perfect floor score", () => {
+  const thin = completeAssessment();
+  const submitted = thin.judge.scores.find((item) => item.criterionId === "chad-lens");
+  submitted.evidence = ["homepage", "resume"];
+  let scored = scoreAssessment(thin, suite);
+  assert.equal(scored.valid, false);
+  assert.ok(scored.failures.some((failure) => /chad-lens requires at least 4/.test(failure)));
+
+  const almost = completeAssessment();
+  almost.judge.scores.find((item) => item.criterionId === "chad-lens").score = 3;
+  scored = scoreAssessment(almost, suite);
+  assert.deepEqual(scored.judgeFloorFailures, ["chad-lens"]);
+  assert.equal(scored.judgeThresholdMet, false);
 });
 
 test("objective comparison accepts only lexicographic improvement", () => {

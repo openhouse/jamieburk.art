@@ -139,6 +139,22 @@ const knowledgeBankInput = {
       doesNotEstablish: ["Jamie's role", "revenue growth", "internal systems", "causal business outcomes"]
     },
     {
+      id: "SRC-HJE-PUBLIC-RESUME-2026-07-11",
+      title: "Jamie Burkart public resume - selected impact",
+      organization: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2026-07-11",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Jamie Burkart, public resume, selected-impact entry for Harry J. Epstein Company, July 11, 2026.",
+      publicNote: "The public resume supports Jamie's approved contribution wording. The underlying business figures remain private and are not presented as audited financial disclosure.",
+      supportsGenerally: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context"],
+      doesNotEstablish: ["sole causality", "audited financial results", "the underlying revenue figures", "ownership of all business growth"]
+    },
+    {
       id: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026",
       title: "FairRentNYC public campaign site",
       organization: "NYC Artist Coalition",
@@ -269,6 +285,17 @@ const knowledgeBankInput = {
       researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
+      id: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+      project: "harry-j-epstein",
+      internalClaim: "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth at Harry J. Epstein Company.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "case-study", text: "Jamie's web, e-commerce, marketing, analytics, and operations improvements contributed to a period of 2x revenue growth.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }],
+      evidence: [{ sourceId: "SRC-HJE-PUBLIC-RESUME-2026-07-11", relationship: "direct-support", supports: ["Jamie's HJE improvement areas", "contribution to 2x revenue growth", "legacy e-commerce context"], confidence: "high", renderCitation: true }],
+      boundaries: ["Treat this as approved contribution language, not sole causality or audited public financial disclosure; underlying figures remain private."],
+      antiClaims: ["Jamie caused all revenue growth.", "The portfolio publishes audited revenue figures.", "Jamie solely owned the business outcome."],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
+    },
+    {
       id: "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
       project: "fair-rent-nyc",
       internalClaim: "FairRentNYC's public campaign surface joins a Commercial Rent Stabilization call to action with a public reference-library pathway.",
@@ -332,8 +359,11 @@ const knowledgeBankInput = {
     {
       id: "harry-j-epstein",
       surface: "/work/harry-j-epstein",
-      sourceOrder: ["SRC-HJE-PUBLIC-STOREFRONT-2026"],
-      occurrences: [{ id: "public-storefront", claimId: "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-STOREFRONT-2026"] }]
+      sourceOrder: ["SRC-HJE-PUBLIC-STOREFRONT-2026", "SRC-HJE-PUBLIC-RESUME-2026-07-11"],
+      occurrences: [
+        { id: "public-storefront", claimId: "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-STOREFRONT-2026"] },
+        { id: "revenue-growth-contribution", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", projection: "case-study", sourceIds: ["SRC-HJE-PUBLIC-RESUME-2026-07-11"] }
+      ]
     },
     {
       id: "fair-rent-nyc",

@@ -13,9 +13,14 @@ human reviewers.
    pixels and verify status, headings, overflow, browser errors, the resume PDF,
    and environment-specific indexing behavior.
 3. **Judge criteria** score hiring-reader clarity, agency, role fit, evidence,
-   collective credit, public safety, visual proof, and completion confidence.
+   Chad's lens, collective credit, public safety, visual proof, and completion
+   confidence.
 4. **Human gates** reserve production approval, media rights/consent, and
    collaborator-sensitive credit for named people.
+
+`chad-lens.md` defines the first-pass editorial criterion. It has a required
+score of 4 and must cite evidence across the homepage, resume, role-fit page, and
+flagship case studies.
 
 ## Commands
 

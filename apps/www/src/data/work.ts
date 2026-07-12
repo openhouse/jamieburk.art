@@ -102,7 +102,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old industrial business carry trusted product knowledge into customer-facing e-commerce and maintainable digital workflows while preserving its distinctive public voice.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -184,7 +184,7 @@ const workItemsInput = [
       known:
         "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
       open:
-        "Specific screenshots, internal workflow diagrams, and detailed revenue breakdowns need Jamie approval before launch.",
+        "Detailed revenue attribution, internal workflow diagrams, and private operating records remain outside this public case study.",
       protected:
         "Private dashboards, credentials, customer data, internal revenue detail, vendor terms, and sensitive operating practices stay offline."
     }
@@ -195,7 +195,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Co-founded NYC Artist Coalition and helped collaborators turn fragmented policy, meeting, and campaign context into public websites, shared memory, source maps, and coordination systems they could use for cultural-space advocacy; campaign outcomes remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2024-Present",
     status: "Full case study",
@@ -295,7 +295,7 @@ const workItemsInput = [
       known:
         "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Some coalition artifacts, collaborator details, and meeting materials remain private or unattributed and are not part of this public case study.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }
@@ -393,7 +393,7 @@ const workItemsInput = [
       known:
         "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
       open:
-        "Public-safe screenshots and additional archive links need Jamie approval before publication.",
+        "A complete agenda, participant roster, breakout roster, and additional event context were not recovered or remain private; this case is bounded to the sources shown.",
       protected:
         "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
       }
@@ -404,7 +404,7 @@ const workItemsInput = [
     series: "Community Platform",
     subtitle: "Followable keyword communities for arts and music organizers",
     summary:
-      "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
+      "Co-built WOWList so DIY arts and music organizers could publish and distribute events through followable keyword communities rather than one editorial gatekeeper; public-safe records support use across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
     years: "2010s",
     status: "Short proof page",
@@ -453,7 +453,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Historical archive coverage is incomplete; adoption remains approximate and bounded to public-safe aggregate records.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -506,7 +506,7 @@ const workItemsInput = [
       known:
         "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
       open:
-        "Named participants, photos, and artifacts require consent and approval.",
+        "Named participants, private photographs, and community artifacts remain outside this public case study to protect consent and context.",
       protected:
         "Raw guest data, private records, attendance lists, addresses, and unapproved images are omitted."
     }
@@ -559,7 +559,7 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Current project status and private financial, legal, property, partner, and municipal-review details remain outside this public case study.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

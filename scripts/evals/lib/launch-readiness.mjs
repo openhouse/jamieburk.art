@@ -63,6 +63,12 @@ export function validateSuite(suite) {
       failures.push(`${criterion.id} has an invalid floor`);
     }
     if (!criterion.question) failures.push(`${criterion.id} needs a judge question`);
+    if (
+      criterion.minimumEvidence !== undefined &&
+      (!Number.isInteger(criterion.minimumEvidence) || criterion.minimumEvidence < 2)
+    ) {
+      failures.push(`${criterion.id} has an invalid minimum-evidence requirement`);
+    }
   }
 
   for (const score of ["0", "1", "2", "3", "4"]) {
@@ -140,7 +146,7 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
   const workflowEvidence = matchEvidence(
     repoRoot,
     [workFile],
-    /(?:screenshots?|materials?|approvals?|review)[^\n".]{0,36}\bpending\b|\bpending\s+(?:approval|approvals|review)\b/gi
+    /(?:screenshots?|materials?|approvals?|review)[^\n".]{0,36}\bpending\b|\bpending\s+(?:approval|approvals|review)\b|\b(?:needs?|requires?)\s+(?:Jamie\s+)?approval\b|\bbefore\s+(?:launch|publication)\b/gi
   );
   results.push(
     result(
@@ -289,8 +295,9 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
       failures.push(`${criterion.id} score must be an integer from 0 through 4`);
       continue;
     }
-    if (!Array.isArray(submitted.evidence) || submitted.evidence.length < 2) {
-      failures.push(`${criterion.id} requires at least two evidence entries`);
+    const minimumEvidence = criterion.minimumEvidence ?? 2;
+    if (!Array.isArray(submitted.evidence) || submitted.evidence.length < minimumEvidence) {
+      failures.push(`${criterion.id} requires at least ${minimumEvidence} evidence entries`);
     }
     weightedJudgeScore += (submitted.score / 4) * criterion.weight;
     if (submitted.score < criterion.floor) judgeFloorFailures.push(criterion.id);

@@ -15,6 +15,12 @@ For each `judgeCriteria` item:
 4. identify any anti-claim, guardrail, consent boundary, or uncertainty that the
    proposed improvement must preserve.
 
+For `chad-lens`, also follow `chad-lens.md`. Inspect at least the homepage,
+resume, Technical Operations page, and three flagship case studies. Provide at
+least four evidence entries spanning those surface types. Award 4 only when the
+reader does not have to assemble Jamie's action, purpose, usable result, and
+credit boundary from separate sections or specialist noun lists.
+
 Scoring rules:
 
 - Judge rendered meaning, not authorial intention.
@@ -28,6 +34,8 @@ Scoring rules:
 - Treat exposed approval workflow, placeholders, or production notes as a
   completion-confidence defect.
 - A hard-gate failure cannot be offset by a high prose score.
+- Do not reward Chad's-lens keyword presence without a complete, readable
+  action-to-purpose-to-usable-result argument.
 
 Return only JSON shaped like the `judge` object in
 `assessment.template.json`. Do not certify human gates.

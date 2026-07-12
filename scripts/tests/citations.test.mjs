@@ -31,6 +31,7 @@ test("multi-source occurrences preserve editorial order", () => {
 test("structured citations extend across four public case studies", () => {
   assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist"]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
+  assert.equal(resolveCitationOccurrence("harry-j-epstein", "revenue-growth-contribution").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("wowlist", "archived-public-surface").sources[0].number, 1);
 });
