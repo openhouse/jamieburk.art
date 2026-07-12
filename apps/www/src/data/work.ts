@@ -94,7 +94,7 @@ const workItemsInput = [
     subtitle: "E-commerce and operations modernization",
     summary:
       "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
-    role: "Technical Project Manager & Web Systems Lead",
+    role: "Technical Project Management, Web Systems & Operations",
     years: "2012-Present",
     status: "Full case study",
     featured: true,
@@ -179,8 +179,8 @@ const workItemsInput = [
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
       "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications",
+    years: "NYC Artist Coalition: 2017-Present; FairRentNYC: 2024-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -485,7 +485,7 @@ const workItemsInput = [
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
+    role: "Co-Lead, Redevelopment Planning & Public-Benefit Documentation",
     years: "2020s",
     status: "Short proof page",
     featured: false,
@@ -524,7 +524,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation for a long-vacant historic building.",
       open:
         "Specific public-funding materials, named partners, and project status details need approval.",
       protected:

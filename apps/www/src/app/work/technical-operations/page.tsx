@@ -6,12 +6,11 @@ import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
 
 const operationsMap = [
-  "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
-  "Track status, surface risks early, and name recurring blockers before they become patterns.",
-  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
-  "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
-  "Onboard collaborators with handbooks, runbooks, operating documentation, source maps, and decision records.",
-  "Report team health, project status, and operational metrics with honesty about what is and is not working.",
+  "Clarify requirements and map workflows for public-facing technical work.",
+  "Coordinate delivery from ambiguity toward launch.",
+  "Surface risks and open questions early so teams can act on them.",
+  "Maintain decision records and clear project-status reporting.",
+  "Prepare onboarding materials, operating documentation, and durable handoffs.",
   "Improve working systems over time without overengineering."
 ];
 
@@ -19,41 +18,42 @@ const proofMap = [
   {
     project: "HJE",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "Jamie helped modernize e-commerce, analytics, marketing, content, and operations workflows in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "Jamie built and stewarded 30+ pages of campaign memory, including decision records, source maps, action trackers, and public/private boundary management."
   },
   {
     project: "CallNYC",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "Jamie built an archived, independent, and unofficial prototype that translated CouncilStat open data into resident-facing guidance."
   },
   {
     project: "WOWList",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "Jamie co-built a community-calendar platform using Python / Django, PostgreSQL / PostGIS, and Ember.js across roughly 35 city ecosystems."
   },
   {
     project: "196 / Sunday Dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "Jamie created repeatable onboarding, facilitation, hosting, documentation, and continuity systems across 300+ gatherings and 20+ resident artists."
   },
   {
     project: "KC Spaces Fund",
     proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "Jamie built behind-the-scenes web infrastructure for a 2020 mutual-aid campaign, while organizer credit remains with the campaign's named organizers."
   },
   {
     project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "Jamie co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation."
   },
   {
     project: "Source-Backed Team Memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "Jamie is developing a bounded lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
 ];
 
@@ -72,11 +72,11 @@ export default function TechnicalOperationsPage() {
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
-          Across civic, cultural, small-business, and public-facing technical
-          environments, I build the operating backbone teams need to move:
-          planning rhythms, decision logs, action trackers, onboarding
-          materials, documentation systems, launch support, and durable
-          handoffs.
+          Across 14+ years in civic, cultural, small-business, and public-facing
+          technical environments, I have created the operating structure teams
+          need to move: requirements, workflows, decision records, action
+          trackers, onboarding materials, documentation systems, launch
+          support, and durable handoffs.
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">

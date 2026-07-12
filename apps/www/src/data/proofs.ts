@@ -76,7 +76,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
       "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
-    shortWording: "Modernized legacy e-commerce and operations workflows",
+    shortWording: "Jamie helped modernize legacy e-commerce and operations workflows",
     detailedPublicWording:
       "Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
@@ -169,7 +169,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+    shortWording: "Jamie built and stewarded 30+ pages of civic campaign memory",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -271,7 +271,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
       "Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.",
-    shortWording: "Civic systems and coalition operations for NYC Artist Coalition",
+    shortWording: "Jamie built and stewarded NYC Artist Coalition civic systems from 2017 onward",
     detailedPublicWording:
       "Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.",
     sourceBasis:
@@ -315,7 +315,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+    shortWording: "Jamie co-built WOWList across roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -349,7 +349,7 @@ export const proofClaims: ProofClaim[] = [
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    shortWording: "300+ gatherings and 20+ resident artists supported",
+    shortWording: "Jamie created repeatable systems across 300+ gatherings and 20+ resident artists",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",
@@ -380,7 +380,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archive-review"],
     publicWording:
       "Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.",
-    shortWording: "Behind-the-scenes digital infrastructure for KC Spaces Fund",
+    shortWording: "Jamie built behind-the-scenes web infrastructure for KC Spaces Fund",
     detailedPublicWording:
       "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.",
     sourceBasis:
@@ -427,7 +427,8 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+    shortWording:
+      "Jamie co-led adaptive reuse planning tied to a $490,539 public funding recommendation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
     sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
