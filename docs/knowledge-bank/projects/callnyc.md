@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-12
 
 **Public surface:** `/work/callnyc`
 
@@ -31,11 +31,29 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- New York City Council stated-meeting minutes confirming the five named
+  officeholders were serving Council members in 2016.
+- Public posts by Helen Rosenthal, Ydanis Rodriguez, Rosie Mendez, and Mathieu
+  Eugene, plus the archived CallNYC post and resolvable Peter Koo retweet
+  object.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+## Council-member amplification
+
+The recovered public record supports a verified minimum: at least five sitting
+NYC Council members publicly amplified CallNYC in 2016. Helen Rosenthal
+directly recommended the service to constituents; Ydanis Rodriguez, Rosie
+Mendez, and Mathieu Eugene quote-amplified project recognitions; and Peter Koo
+retweeted a CallNYC recognition.
+
+This is evidence of public amplification by individual member accounts. It is
+not an official NYC Council endorsement, and `at least five` is not a claim
+that only five members engaged. Mentions and tags without an affirmative action
+are not counted as engagement.
 
 ## Bounded research finding
 

@@ -112,6 +112,108 @@ const knowledgeBankInput = {
       doesNotEstablish: ["official Council ownership", "formal hackathon submission status", "current resident-service guidance"]
     },
     {
+      id: "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+      title: "New York City Council stated-meeting minutes",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-09-28",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=5b6f62c6-7eae-4d9e-9aec-c8b8fc36438c&ID=38126&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, minutes of the stated meeting, September 28, 2016.",
+      publicNote: "The minutes list Helen Rosenthal, Ydanis Rodriguez, Rosie Mendez, Mathieu Eugene, and Peter Koo as serving Council members in 2016.",
+      supportsGenerally: ["2016 Council officeholding for the five named members"],
+      doesNotEstablish: ["an institutional Council endorsement of CallNYC", "the social-media actions themselves"]
+    },
+    {
+      id: "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+      title: "Helen Rosenthal constituent-facing CallNYC recommendation",
+      organization: "Office of Council Member Helen Rosenthal",
+      author: "Helen Rosenthal",
+      kind: "government-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-09-27",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/HelenRosenthal/status/780797474277511170",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Helen Rosenthal, public post directing constituents to find their Council member through CallNYC.org, September 27, 2016.",
+      publicNote: "This is a direct member-authored recommendation of CallNYC to constituents.",
+      supportsGenerally: ["Helen Rosenthal publicly recommended CallNYC", "constituent-facing amplification"],
+      doesNotEstablish: ["an institutional NYC Council endorsement", "current constituent guidance"]
+    },
+    {
+      id: "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+      title: "Ydanis Rodriguez quote post responding to CallNYC",
+      organization: "Office of Council Member Ydanis Rodriguez",
+      author: "Ydanis Rodriguez",
+      kind: "government-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-05-19",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/ydanis/status/733089563334299648",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Ydanis Rodriguez, public quote post responding to CallNYC's recognition of his office's tenant-rights work, May 2016.",
+      publicNote: "Rodriguez described protecting tenants' rights as a privilege while quote-amplifying the CallNYC recognition.",
+      supportsGenerally: ["Ydanis Rodriguez publicly amplified CallNYC", "affirmative member-authored response"],
+      doesNotEstablish: ["an institutional NYC Council endorsement", "exclusive credit for tenant-rights work"]
+    },
+    {
+      id: "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+      title: "Rosie Mendez quote post responding to CallNYC",
+      organization: "Office of Council Member Rosie Mendez",
+      author: "Rosie Mendez",
+      kind: "government-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-05-19",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/RosieMendez/status/733410096915550208",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Rosie Mendez, public quote post thanking her team in response to CallNYC's recognition of emergency-repair constituent work, May 19, 2016.",
+      publicNote: "Mendez quote-amplified the CallNYC recognition and credited her staff.",
+      supportsGenerally: ["Rosie Mendez publicly amplified CallNYC", "collective team credit"],
+      doesNotEstablish: ["an institutional NYC Council endorsement", "Jamie as the source of the office's constituent-service work"]
+    },
+    {
+      id: "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+      title: "Mathieu Eugene quote post responding to CallNYC",
+      organization: "Office of Council Member Mathieu Eugene",
+      author: "Mathieu Eugene",
+      kind: "government-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-10-04",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/CMMathieuEugene/status/783305320508514304",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Mathieu Eugene, public quote post responding to CallNYC's recognition of his office's housing work, October 4, 2016.",
+      publicNote: "Eugene described himself as honored to help constituents while quote-amplifying the CallNYC recognition.",
+      supportsGenerally: ["Mathieu Eugene publicly amplified CallNYC", "affirmative member-authored response"],
+      doesNotEstablish: ["an institutional NYC Council endorsement", "exclusive credit for housing assistance"]
+    },
+    {
+      id: "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328",
+      title: "Peter Koo retweet of CallNYC Lifeline recognition",
+      organization: "Office of Council Member Peter Koo",
+      author: "Peter Koo",
+      kind: "government-social-post",
+      visibility: "public",
+      preservationStatus: "live-and-archived",
+      publishedAt: "2016-04-27",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/CMPeterKoo/status/725422714807267328",
+      archiveUrl: "https://web.archive.org/web/20200625082202/https://twitter.com/CallNYCapp/status/725403215282487296/photo/1?utm_source=fb&utm_medium=fb&utm_campaign=CMPeterKoo&utm_content=725422714807267328",
+      preferredPublicUrl: "archive",
+      publicCitation: "Archived CallNYC post and still-resolvable Peter Koo retweet-object URL documenting Koo's retweet of the project's Lifeline recognition, April 27, 2016.",
+      publicNote: "The retweet is directly supported. A like is strongly indicated by the archived combined engagement row but is not separately attributed in public wording.",
+      supportsGenerally: ["Peter Koo retweeted CallNYC", "public amplification of the Lifeline recognition"],
+      doesNotEstablish: ["a separately attributable like", "an institutional NYC Council endorsement"]
+    },
+    {
       id: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026",
       title: "Civic Hall calendar and event-detail recovery research run",
       kind: "research-run",
@@ -191,6 +293,28 @@ const knowledgeBankInput = {
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+      project: "callnyc",
+      internalClaim: "At least five sitting NYC Council members publicly amplified CallNYC in 2016 through a constituent-facing recommendation, affirmative quote posts, and a verified retweet.",
+      status: "confirmed-with-boundary",
+      projections: [
+        { key: "case-study", text: "At least five sitting NYC Council members publicly amplified CallNYC in 2016 through a constituent-facing recommendation, affirmative quote posts, and a verified retweet.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
+        { key: "resume-html", text: "At least five sitting NYC Council members publicly amplified CallNYC in 2016.", status: "active", citationRequired: false, surfaces: ["/resume"] },
+        { key: "technical-operations", text: "Earned public amplification from at least five sitting NYC Council members.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] }
+      ],
+      evidence: [
+        { sourceId: "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28", relationship: "context", supports: ["the five named people were serving Council members in 2016"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170", relationship: "direct-support", supports: ["direct constituent-facing recommendation of CallNYC"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648", relationship: "direct-support", supports: ["affirmative quote-amplification by Ydanis Rodriguez"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208", relationship: "direct-support", supports: ["quote-amplification and staff credit by Rosie Mendez"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304", relationship: "direct-support", supports: ["affirmative quote-amplification by Mathieu Eugene"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328", relationship: "direct-support", supports: ["verified retweet by Peter Koo"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["This is public amplification by individual member accounts, not an official NYC Council endorsement.", "At least five is a verified minimum, not a complete historical census."],
+      antiClaims: ["The NYC Council officially endorsed CallNYC", "Only five Council members engaged", "Every CallNYC mention, tag, like, or repost came from a Council member"],
+      researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex authenticated timeline and archival review"]
+    },
+    {
       id: "CLM-CALLNYC-DIGITAL-DISTRICT",
       project: "callnyc",
       internalClaim: "A participant photograph documents a breakout table labeled 'Digital District - Help improve City Council District office operations.'",
@@ -238,7 +362,13 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28",
+      "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170",
+      "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648",
+      "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
+      "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
+      "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -246,6 +376,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "council-member-amplification", claimId: "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION", projection: "case-study", sourceIds: ["SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28", "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170", "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648", "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208", "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304", "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }]

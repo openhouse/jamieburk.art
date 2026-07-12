@@ -15,6 +15,7 @@ const requiredProofIds = [
   "hje-modernization-stewardship",
   "hje-revenue-growth-contribution",
   "callnyc-civic-data-guidance",
+  "callnyc-council-member-amplification",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "nyc-artist-coalition-civic-systems",
@@ -36,7 +37,10 @@ const requiredWorkProofs = new Map([
       "nyc-artist-coalition-civic-systems"
     ]
   ],
-  ["callnyc", ["callnyc-civic-data-guidance"]],
+  [
+    "callnyc",
+    ["callnyc-civic-data-guidance", "callnyc-council-member-amplification"]
+  ],
   ["wowlist", ["wowlist-community-platform"]],
   ["196-sunday-dinner", ["sunday-dinner-196-participation-infrastructure"]],
   ["kc-town-hall", ["kc-town-hall-public-benefit-documentation"]]

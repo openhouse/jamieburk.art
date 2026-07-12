@@ -3,8 +3,8 @@
 ## Mission
 
 Build and maintain a focused, public-safe portfolio that makes Jamie legible as a
-Technical Project Manager - Product Operations & Implementation lead who creates
-operating structure for complex public-facing teams.
+Technical Project Manager - Product Operations & Implementation lead who turns
+emerging work into usable systems for complex public-facing teams.
 
 ## Current Canonical App
 
@@ -30,6 +30,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:citations`
 - `npm run test:citations`
 - `npm run report:citations`
+- `npm run test:evals`
+- `npm run evals:launch`
+- `npm run prelaunch:production`
 
 ## Public-Safety Rules
 

@@ -63,6 +63,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-11
 
+## callnyc-council-member-amplification - Council-member amplification
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Public wording:** At least five sitting NYC Council members publicly amplified CallNYC in 2016.
+**Detailed public-safe wording:** Helen Rosenthal directly recommended CallNYC to constituents; Ydanis Rodriguez, Rosie Mendez, and Mathieu Eugene quote-amplified project recognitions; and Peter Koo retweeted a CallNYC recognition.
+**Where to project:** Resume page, Technical Operations, CallNYC case study.
+**Why it matters:** Shows that an independently built civic-data interface reached relevant public officials and earned visible amplification.
+**Guardrail:** Use `at least five` as a verified minimum and individual-account amplification, never as an official NYC Council endorsement.
+**Do not say:** The NYC Council officially endorsed CallNYC; only five Council members engaged; every mention, tag, like, or repost was Council-member engagement.
+**Protected boundaries:** Do not publish private account data or infer engagement beyond the recovered public record.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful

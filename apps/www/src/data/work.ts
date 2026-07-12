@@ -291,7 +291,10 @@ const workItemsInput = [
     featured: true,
     priority: 3,
     visibility: "public-safe",
-    proofBankIds: ["callnyc-civic-data-guidance"],
+    proofBankIds: [
+      "callnyc-civic-data-guidance",
+      "callnyc-council-member-amplification"
+    ],
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:

@@ -159,6 +159,35 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-11"
   },
   {
+    id: "callnyc-council-member-amplification",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "At least five sitting NYC Council members publicly amplified CallNYC in 2016.",
+    shortWording: "Publicly amplified by at least five sitting NYC Council members",
+    detailedPublicWording:
+      "Helen Rosenthal directly recommended CallNYC to constituents; Ydanis Rodriguez, Rosie Mendez, and Mathieu Eugene quote-amplified project recognitions; and Peter Koo retweeted a CallNYC recognition.",
+    sourceBasis:
+      "Public member-account posts, an archived CallNYC post with a resolvable retweet object, and New York City Council stated-meeting minutes confirming 2016 officeholding.",
+    whyItMatters:
+      "Shows that an independently built civic-data interface reached relevant public officials and earned visible amplification.",
+    guardrail:
+      "Use at least five as a verified minimum and individual-account amplification, never as an official NYC Council endorsement.",
+    doNotSay: [
+      "The NYC Council officially endorsed CallNYC",
+      "Only five Council members engaged",
+      "Every mention, tag, like, or repost was Council-member engagement"
+    ],
+    protectedBoundaries: [
+      "Do not publish private account data or infer engagement beyond the recovered public record"
+    ],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["callnyc"],
+    relatedCapabilities: ["public-interest-technology", "stakeholder-adoption", "civic-data"],
+    lastReviewed: "2026-07-12"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",
@@ -580,6 +609,7 @@ export const resumeProofHighlights = [
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
   "callnyc-civic-data-guidance",
+  "callnyc-council-member-amplification",
   "nyc-artist-coalition-public-web-infrastructure",
   "nyc-artist-coalition-civic-systems",
   "wowlist-community-platform",
@@ -624,6 +654,7 @@ export const technicalOperationsProofRows = [
       "nyc-artist-coalition-civic-systems",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
+      "callnyc-council-member-amplification",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"
     ]
