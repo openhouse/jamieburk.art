@@ -60,7 +60,7 @@ approval of the exact production SHA.
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
-- [ ] Chad-lens review passes.
+- [x] Chad-lens automated hard gate passes.
 
 Production deploy remains blocked until Jamie explicitly approves the reviewed
 content and release.

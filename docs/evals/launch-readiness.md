@@ -37,6 +37,7 @@ The canonical positioning sentence is:
 | Application paths | 10 | Yes | Resume, contact, LinkedIn, and GitHub destinations remain explicit and approved. |
 | Production cutover | 10 | Yes | The runbook names candidate, verification, and rollback commands. |
 | Release gate wiring | 12 | Yes | Citation, knowledge-bank, public-safety, route, eval-test, and prelaunch commands exist. |
+| Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -64,3 +65,5 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   boundaries, and prohibited formulations.
 - Do not publish private evidence to satisfy a citation check.
 - Do not treat an automated score as approval to deploy production.
+- Do not reduce reader burden by erasing Jamie as actor, omitting the purpose,
+  or replacing concrete outputs with generic systems language.

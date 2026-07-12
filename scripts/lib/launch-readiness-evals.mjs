@@ -74,8 +74,87 @@ export function summarizeLaunchEvals(results, minimumScore = 94) {
   };
 }
 
+export function evaluateChadLens({
+  hero,
+  homePage,
+  technicalOperations,
+  resumePage,
+  proofs,
+  chadGuide
+}) {
+  const missing = [];
+
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      const normalizedFragment = fragment.replace(/\s+/g, " ");
+      if (!normalizedContent.includes(normalizedFragment)) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Hero", hero, [
+    "Technical Project Manager - Product Operations & Implementation",
+    PRIMARY_MESSAGE,
+    "I help teams",
+    "View selected work",
+    "Download resume",
+    "Contact Jamie"
+  ]);
+  requireFragments("Homepage", homePage, [
+    "Quick path through the portfolio",
+    "emerging, high-context work",
+    'href: "/work/technical-operations"',
+    'href: "/resume"'
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    "Role fit at a glance",
+    "Where I enter",
+    "What I coordinate",
+    "What teams can use afterward",
+    "A public-facing project has multiple stakeholders",
+    "I coordinate requirements",
+    "Teams leave with"
+  ]);
+  requireFragments("Resume", resumePage, [
+    "Technical Project Manager - Product Operations & Implementation",
+    PRIMARY_MESSAGE,
+    "Selected impact",
+    "Download resume PDF",
+    "Contact Jamie"
+  ]);
+  requireFragments("Chad-lens guidance", chadGuide, [
+    "Is Jamie visible as the actor?",
+    'Does the sentence answer "toward what end?"',
+    "Does the language say what became usable?",
+    "courageous precision"
+  ]);
+  requireFragments("Proof bank", proofs, [
+    'id: "career-operating-structure-14-years"',
+    'id: "hje-revenue-growth-contribution"',
+    'id: "fair-rent-campaign-memory"',
+    'id: "callnyc-council-member-amplification"'
+  ]);
+
+  const actorLedProofs = technicalOperations.match(/proof:\s*\n?\s*"I\s/g) ?? [];
+  if (actorLedProofs.length < 8) {
+    missing.push(
+      `Technical Operations needs eight actor-led proof summaries; found ${actorLedProofs.length}.`
+    );
+  }
+  if (/ambiguous, high-context/i.test(homePage)) {
+    missing.push(
+      "Homepage makes ambiguity the reader's frame instead of describing emerging work."
+    );
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
+  const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
   const resumePage = read(repoRoot, "apps/www/src/app/resume/page.tsx");
   const ogImage = read(repoRoot, "apps/www/src/app/opengraph-image.tsx");
   const siteData = read(repoRoot, "apps/www/src/data/site.ts");
@@ -91,6 +170,7 @@ export function runLaunchEvals(repoRoot) {
   const button = read(repoRoot, "apps/www/src/components/JBButton.tsx");
   const globalCss = read(repoRoot, "apps/www/src/app/globals.css");
   const deployment = read(repoRoot, "docs/deployment.md");
+  const chadGuide = read(repoRoot, "docs/knowledge-bank/chad-lens.md");
   const packageJson = JSON.parse(read(repoRoot, "package.json"));
   const resumePath = path.join(
     repoRoot,
@@ -278,6 +358,28 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const chadLensMissing = evaluateChadLens({
+    hero,
+    homePage,
+    technicalOperations,
+    resumePage,
+    proofs,
+    chadGuide
+  });
+  results.push(
+    result({
+      id: "chad-lens-legibility",
+      label: "Chad lens: actor, purpose, usable result, and reader path are explicit",
+      weight: 16,
+      hardGate: true,
+      missing: chadLensMissing,
+      evidence: [
+        "The primary path names Jamie's target role, entry condition, coordination work, usable outputs, proof, and next action.",
+        "Project summaries use actor-led, bounded contribution language instead of noun piles or inflated ownership."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -313,6 +415,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not hide overflow globally instead of repairing the responsible element.",
       "Do not strengthen public claims before updating canonical evidence and boundaries.",
       "Do not publish private sources to satisfy a citation requirement.",
+      "Do not make copy shorter by hiding Jamie as actor, omitting the purpose, or replacing usable outcomes with generic systems language.",
       "Production deployment always requires explicit human approval."
     ]
   };
@@ -354,4 +457,3 @@ export function writeLaunchEvalReports(repoRoot, report) {
 
   writeFileSync(path.join(reportDir, "launch-readiness.md"), `${lines.join("\n")}\n`);
 }
-

@@ -12,6 +12,8 @@ public portfolio surface.
   wired into `npm run prelaunch:production`.
 - [x] Known mobile overflow causes are repaired without global concealment.
 - [x] Production cutover and rollback commands are documented.
+- [x] Chad-lens legibility passes as an automated hard gate: actor, purpose,
+  usable outputs, bounded proof, and reader path are explicit.
 
 ## Human gates
 

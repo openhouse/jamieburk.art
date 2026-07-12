@@ -43,3 +43,24 @@ manual gates are:
   currently approved PDF;
 - open-PR ownership and supersession review;
 - production postdeploy verification after Jamie approves the exact SHA.
+
+## Chad-lens recursive pass
+
+A follow-up run added Chad's lens as a 16-point automated hard gate. The first
+run scored **85/100** and failed because the Technical Operations page required
+the reader to infer Jamie's entry condition, coordinating role, usable outputs,
+and relationship to the proof map. The homepage also retained one
+`ambiguous, high-context` formulation.
+
+The hill climb made three bounded repairs:
+
+- added a role-fit orientation band naming where Jamie enters, what he
+  coordinates, and what teams can use afterward;
+- rewrote all eight Technical Operations proof summaries in direct,
+  contribution-bounded first-person language;
+- changed the remaining homepage frame from ambiguous situations to emerging
+  work.
+
+The evaluator itself then exposed and repaired one false negative caused by a
+JSX line break, normalizing whitespace without weakening the semantic contract.
+The final run returned to **100/100**, with the Chad-lens hard gate passing.
