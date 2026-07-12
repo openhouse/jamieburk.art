@@ -1,0 +1,49 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 3,
+  "runId": "feature-evals-D-knowledge-intake-v3-20260712T212900Z",
+  "commit": "4b0be170dad8fa2ccae7c83b01b589e16207349f",
+  "baseUrl": "local-source-review",
+  "performedAt": "2026-07-12T21:29:00Z",
+  "results": [
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "All five supplied source records separate general support from explicit does-not-establish boundaries.",
+        "Charlotte Street, Good Times, Gothamist, and NPR material is decomposed into source-specific atomic claims with evidence roles, locators, boundaries, and anti-claims.",
+        "Stronger memories remain bounded in research inquiries rather than becoming independent corroboration or active public projections."
+      ],
+      "limitations": [
+        "Several locators remain descriptive paragraph anchors rather than durable quoted anchors or archived line references.",
+        "The source set is useful and bounded, not a comprehensive reconstruction of either project cluster."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-decomp-v3-post-A",
+        "runId": "019f583a-2106-70a0-be29-9792afcb0ad7"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The five public sources resolve to distinct claims and inquiries without obvious duplicate source records or near-duplicate public claims.",
+        "The raft endpoint, NYC Artist Coalition founding scope, policy role, town halls, Talks Not Raids, and CallNYC engagement remain open research rather than promoted claims.",
+        "Collective credit is explicit for Suzanne Hogan, participants, coalition collaborators, and movement-level outcomes."
+      ],
+      "limitations": [
+        "A score of 1 would require finer source anchors and more comprehensive decomposition where future editorial use justifies it.",
+        "This targeted semantic run does not re-observe browser, runtime, or human criteria."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-decomp-v3-post-B",
+        "runId": "019f583b-87d7-7501-beaa-290cbc0cb81f"
+      }
+    }
+  ],
+  "humanApprovals": []
+}
