@@ -16,3 +16,18 @@ finished.
 An image must never become evidence merely because it appears persuasive. It
 may suggest a research question; publication requires contextual verification
 and a separate consent review.
+
+## First Round Trip
+
+The mature waterways claims generated the public-safe lead
+`INT-WATERWAYS-PHOTO-LEAD-2026-07-12`. It asks a photo editor to look privately
+for the collaborative raft, river correspondence, participatory installations,
+public programs, or working documentation. The lead returns to
+`INQ-WATERWAYS-PHOTO-SELECTS`; it does not link to a claim, publish an image, or
+assert that a suitable image exists.
+
+Independent reader feedback also enters through the same front door. The record
+`INT-READER-FEEDBACK-PROJECTION-RATIONALES-2026-07-12` is classified as reader
+feedback and points to the governance artifacts it changed. Reader reaction may
+improve composition or open research, but it is not evidence of a professional
+accomplishment.

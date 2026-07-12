@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
@@ -75,6 +76,11 @@ export function validateKnowledgeLifecycle(
         errors.push(`Intake ${record.id} references unknown related intake ${relatedId}`);
       }
     }
+    for (const artifactPath of record.artifactPaths) {
+      if (!existsSync(artifactPath)) {
+        errors.push(`Intake ${record.id} references missing governance artifact ${artifactPath}`);
+      }
+    }
 
     if (record.status === "matured" && !record.claimIds.length) {
       errors.push(`Matured intake ${record.id} has no claim`);
@@ -113,6 +119,11 @@ export function validateKnowledgeLifecycle(
   }
 
   for (const claim of bank.claims) {
+    for (const projection of claim.projections) {
+      if (projection.status === "hold" && !projection.rationale) {
+        errors.push(`Held projection ${claim.id}/${projection.key} has no rationale`);
+      }
+    }
     if (["confirmed", "confirmed-with-boundary"].includes(claim.status)) {
       if (!claim.evidence.length) errors.push(`Mature claim ${claim.id} has no evidence`);
       if (!claim.reviewedBy.length) errors.push(`Mature claim ${claim.id} has no reviewer`);
@@ -162,6 +173,19 @@ export function knowledgeLifecycleReport(bank = knowledgeBank, proofs = proofCla
     claims: bank.claims.length,
     inquiries: bank.researchInquiries.length,
     heldMatureClaimIds: heldClaims.map((claim) => claim.id),
+    projectionDecisions: bank.claims.flatMap((claim) =>
+      claim.projections.map((projection) => ({
+        claimId: claim.id,
+        key: projection.key,
+        status: projection.status,
+        surfaces: projection.surfaces,
+        rationale:
+          projection.rationale ??
+          (projection.status === "active"
+            ? `Selected for ${projection.surfaces.join(", ")} as an approved audience-specific projection.`
+            : "No rationale recorded.")
+      }))
+    ),
     canonicallyLinkedProofIds: linkedProofs.map((proof) => proof.id),
     proofResearchBacklogIds: proofs
       .filter((proof) => !proof.canonicalClaimIds?.length)

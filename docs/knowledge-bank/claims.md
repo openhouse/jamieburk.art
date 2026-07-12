@@ -28,7 +28,7 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Strong
-**Public wording:** Conceived and organized a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.
+**Public wording:** Conceived and undertook a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.
 **Guardrail:** Describe the work as collaborative and use "reached salt water" unless a complete route record establishes a Gulf terminus.
 **Canonical claims:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-GREAT-ACCOMMODATIONS`.
 
@@ -52,7 +52,7 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Moderate
-**Public wording:** Helped build the coalition and public forum that pressed New York City's emerging Office of Nightlife to hear and protect small, diverse cultural spaces.
+**Public wording:** Worked as a founding NYC Artist Coalition member while the coalition advocated for the Office of Nightlife and spearheaded a public town hall centered on small, diverse cultural spaces.
 **Guardrail:** Current reporting supports the coalition's role more strongly than Jamie's exact individual production credit.
 **Canonical claim:** `CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL`.
 

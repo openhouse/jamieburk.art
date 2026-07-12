@@ -183,5 +183,41 @@ export const intakeRecords = [
     dispositionNote: "The feedback loop is modeled; no image, locator, identity, or visual inference is published or promoted in this pass.",
     inquiryIds: ["INQ-PHOTO-ARCHIVE-CLAIM-DISCOVERY"],
     boundaries: ["Visual leads do not automatically become evidence or claims.", "Private photo locators remain outside the public repo."]
+  },
+  {
+    id: "INT-WATERWAYS-PHOTO-LEAD-2026-07-12",
+    receivedAt: "2026-07-12",
+    kind: "photo-lead",
+    visibility: "protected-summary",
+    title: "Waterways expedition and Great Accommodations photo search",
+    description: "A claim-generated search lead for photographs or photographed artifacts showing the collaborative raft expedition, river correspondence, participatory installations, public programs, or working documentation.",
+    whyItMatters: "A responsibly selected image could make the scale and participatory character of the mature waterways claims immediately inspectable without adding a long block of site copy.",
+    projectIds: ["waterways-participatory-practice"],
+    status: "researching",
+    disposition: "inquiry-opened",
+    dispositionNote: "The mature waterways claims generated this bounded photo lead, which has returned to research rather than becoming evidence or a public asset.",
+    inquiryIds: ["INQ-WATERWAYS-PHOTO-SELECTS"],
+    relatedIntakeIds: ["INT-PHOTO-ARCHIVE-RECIPROCAL-DISCOVERY-2026-07-12"],
+    boundaries: ["This search lead does not assert that a suitable image exists.", "Private locators, pixels, identities, and rights information remain outside the public repo."]
+  },
+  {
+    id: "INT-READER-FEEDBACK-PROJECTION-RATIONALES-2026-07-12",
+    receivedAt: "2026-07-12",
+    kind: "reader-feedback",
+    visibility: "public-safe",
+    title: "Independent reader requested explicit projection rationales",
+    description: "A public-safe summary of independent evaluation feedback that held claims and the feedback loop were visible, but claim-level reasons for selection and omission needed to be inspectable.",
+    whyItMatters: "Reader feedback should improve the governance system without being mistaken for factual evidence about Jamie's work.",
+    projectIds: ["knowledge-bank-governance"],
+    status: "triaged",
+    disposition: "governance-updated",
+    dispositionNote: "The feedback produced required hold rationales, a projection-decision report, a specific photo-lead round trip, and lifecycle tests for both paths.",
+    artifactPaths: [
+      "apps/www/src/data/knowledge-bank/schema.ts",
+      "docs/knowledge-bank/projection-map.md",
+      "docs/knowledge-bank/photo-feedback-loop.md",
+      "scripts/lib/knowledge-lifecycle-validation.mjs"
+    ],
+    boundaries: ["Reader feedback can change governance or open research; it cannot serve as evidence for a professional accomplishment claim."]
   }
 ] satisfies IntakeRecordInput[];

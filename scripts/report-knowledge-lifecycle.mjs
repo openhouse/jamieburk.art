@@ -30,6 +30,15 @@ const lines = [
     ? report.heldMatureClaimIds.map((id) => `- ${id}`)
     : ["None."]),
   "",
+  "## Projection decisions",
+  "",
+  ...report.projectionDecisions.map((decision) => {
+    const destination = decision.surfaces.length
+      ? decision.surfaces.map((surface) => `\`${surface}\``).join(", ")
+      : "no public surface";
+    return `- \`${decision.claimId}/${decision.key}\` - **${decision.status}** - ${destination}: ${decision.rationale}`;
+  }),
+  "",
   "## Canonically linked proof claims",
   "",
   ...(report.canonicallyLinkedProofIds.length

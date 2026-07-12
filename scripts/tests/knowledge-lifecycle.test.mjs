@@ -41,6 +41,34 @@ test("photo leads cannot bypass research", () => {
   );
 });
 
+test("held projections require a compositional rationale", () => {
+  const candidate = cloneBank();
+  const claim = candidate.claims.find((item) =>
+    item.projections.some((projection) => projection.status === "hold")
+  );
+  claim.projections.find((projection) => projection.status === "hold").rationale = undefined;
+  assert.match(
+    validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
+    /Held projection .* has no rationale/
+  );
+});
+
+test("reader feedback resolves to a public governance artifact", () => {
+  const feedback = knowledgeBank.intake.find((item) => item.kind === "reader-feedback");
+  assert.equal(feedback.disposition, "governance-updated");
+  assert.ok(feedback.artifactPaths.length > 0);
+  assert.deepEqual(validateKnowledgeLifecycle(), []);
+});
+
+test("a concrete claim-generated photo lead returns to inquiry", () => {
+  const lead = knowledgeBank.intake.find(
+    (item) => item.id === "INT-WATERWAYS-PHOTO-LEAD-2026-07-12"
+  );
+  assert.equal(lead.status, "researching");
+  assert.deepEqual(lead.claimIds, []);
+  assert.deepEqual(lead.inquiryIds, ["INQ-WATERWAYS-PHOTO-SELECTS"]);
+});
+
 test("unlinked proof claims remain visible research backlog", () => {
   const report = knowledgeLifecycleReport();
   assert.ok(report.canonicallyLinkedProofIds.length > 0);

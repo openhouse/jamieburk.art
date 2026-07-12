@@ -54,3 +54,19 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Current Portfolio-History Decisions
+
+| Claim | Decision | Audience and compositional reason |
+| --- | --- | --- |
+| `CLM-WATERWAYS-RAFT-EXPEDITION` | Hold from site; retain in bank and photo research | Strong evidence of initiative and range, but the current hiring path needs a concise bridge to Jamie's present operating practice and an inspectable visual artifact. |
+| `CLM-WATERWAYS-GREAT-ACCOMMODATIONS` | Hold from site; retain in bank and photo research | Useful for participatory-program and public-engagement roles; adding it now would increase About-page burden and diffuse the technical-operations category. |
+| `CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE` | Hold from site; retain in bank and photo research | Strong early evidence of facilitation and shared governance; publish when participant context, image consent, and a compressed present-day connection are ready. |
+| `CLM-NYCAC-CABARET-ADVOCACY` | Hold for NYC Artist Coalition case-study composition | The current FairRentNYC page has a narrower purpose. A dedicated composition can give Jamie full credit while preserving decades of prior advocacy and broad coalition credit. |
+| `CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL` | Hold pending role research | Coalition-level evidence is strong; Jamie's exact individual town-hall production contribution needs production records or collaborator testimony before stronger projection. |
+| `CLM-TALKS-NOT-RAIDS-ADVOCACY` | Hold for dedicated policy sequence | Jamie's testimony and campaign role are strong. A dedicated sequence is needed so readers do not confuse advocacy with legislative sponsorship. |
+| `CLM-MARCH-TRANSPARENCY-TO-CURE` | Hold for dedicated policy sequence | The long arc matters, but it must be shown as collective, multi-year change rather than linear causality from one person, campaign, or law. |
+
+The generated `reports/generated/knowledge-lifecycle.md` lists every canonical
+projection decision and every mature claim currently held from website routes.
+The report is an audit surface, not public-site copy.

@@ -152,7 +152,12 @@ export const claimProjectionSchema = z.object({
   text: z.string().min(1),
   status: z.enum(["active", "hold", "deprecated", "disallowed"]),
   citationRequired: z.boolean(),
-  surfaces: z.array(z.string().min(1))
+  surfaces: z.array(z.string().min(1)),
+  rationale: z.string().min(1).optional()
+}).superRefine((projection, context) => {
+  if (projection.status === "hold" && !projection.rationale) {
+    context.addIssue({ code: "custom", message: "Held projection requires a rationale" });
+  }
 });
 
 export const claimRecordSchema = z.object({
@@ -206,6 +211,7 @@ export const intakeRecordSchema = z
       "public-safe-memory",
       "claim-hypothesis",
       "photo-lead",
+      "reader-feedback",
       "correction"
     ]),
     visibility: z.enum(["public-safe", "protected-summary"]),
@@ -226,6 +232,7 @@ export const intakeRecordSchema = z
       "inquiry-opened",
       "claim-created",
       "correction-created",
+      "governance-updated",
       "deferred-with-reason",
       "rejected-with-reason"
     ]),
@@ -235,6 +242,7 @@ export const intakeRecordSchema = z
     inquiryIds: z.array(stableIdSchema).default([]),
     correctionIds: z.array(stableIdSchema).default([]),
     relatedIntakeIds: z.array(stableIdSchema).default([]),
+    artifactPaths: z.array(z.string().min(1).regex(/^(?!\/)(?!.*\.\.).+$/)).default([]),
     boundaries: z.array(z.string().min(1)).default([])
   })
   .superRefine((record, context) => {
@@ -242,7 +250,8 @@ export const intakeRecordSchema = z
       ...record.sourceIds,
       ...record.claimIds,
       ...record.inquiryIds,
-      ...record.correctionIds
+      ...record.correctionIds,
+      ...record.artifactPaths
     ];
     if (!links.length && !["deferred", "rejected"].includes(record.status)) {
       context.addIssue({
@@ -264,6 +273,9 @@ export const intakeRecordSchema = z
     }
     if (record.disposition === "inquiry-opened" && !record.inquiryIds.length) {
       context.addIssue({ code: "custom", message: "Inquiry disposition requires an inquiry link" });
+    }
+    if (record.disposition === "governance-updated" && !record.artifactPaths.length) {
+      context.addIssue({ code: "custom", message: "Governance disposition requires an artifact path" });
     }
   });
 

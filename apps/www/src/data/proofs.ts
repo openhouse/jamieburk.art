@@ -304,12 +304,6 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    canonicalClaimIds: [
-      "CLM-NYCAC-CABARET-ADVOCACY",
-      "CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL",
-      "CLM-TALKS-NOT-RAIDS-ADVOCACY",
-      "CLM-MARCH-TRANSPARENCY-TO-CURE"
-    ],
     lastReviewed: "2026-07-09"
   },
   {
@@ -552,10 +546,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Conceived and organized a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.",
+      "Conceived and undertook a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.",
     shortWording: "Built participatory public work around connected waterways",
     detailedPublicWording:
-      "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
+      "Jamie conceived and undertook a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
     sourceBasis:
       "Contemporaneous reporting in The Pitch and a Charlotte Street institutional program page.",
     whyItMatters:
@@ -644,8 +638,8 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source"],
     publicWording:
-      "Helped build the coalition and public forum that pressed New York City's emerging Office of Nightlife to hear and protect small, diverse cultural spaces.",
-    shortWording: "Helped bring cultural-space voices into Office of Nightlife advocacy",
+      "Worked as a founding NYC Artist Coalition member while the coalition advocated for the Office of Nightlife and spearheaded a public town hall centered on small, diverse cultural spaces.",
+    shortWording: "Advanced Office of Nightlife accountability as a founding NYC Artist Coalition member",
     detailedPublicWording:
       "Contemporaneous reporting described NYC Artist Coalition as instrumental in Office of Nightlife advocacy and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.",
     sourceBasis: "Contemporaneous Bedford + Bowery and NPR reporting.",

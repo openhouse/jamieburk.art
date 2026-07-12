@@ -21,6 +21,7 @@ export const portfolioHistorySources = [
     publicNote: "The article identifies Jamie as originating the experiential raft expedition and connects it to his research into Kansas City's transportation history and relationship to the Missouri River.",
     supportsGenerally: [
       "Jamie originated the raft expedition idea",
+      "Jamie participated in the collaborative raft expedition",
       "the raft was built from recycled materials",
       "the group traveled across Missouri",
       "the project investigated Kansas City's relationship to the Missouri River"
@@ -303,11 +304,11 @@ export const portfolioHistoryClaims = [
   {
     id: "CLM-WATERWAYS-RAFT-EXPEDITION",
     project: "waterways-participatory-practice",
-    internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; the journey lasted four months and reached salt water.",
+    internalClaim: "Jamie conceived and undertook a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; the journey lasted four months and reached salt water.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
-      { key: "about", text: "Conceived and organized a four-month collaborative raft journey from Kansas City down the Missouri and Mississippi rivers.", status: "hold", citationRequired: true, surfaces: [] }
+      { key: "archive-note", text: "Jamie conceived and undertook a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
+      { key: "about", text: "Conceived and undertook a four-month collaborative raft journey from Kansas City down the Missouri and Mississippi rivers.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
@@ -326,8 +327,8 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Jamie spearheaded Great Accommodations, a participatory exhibition and public-program system that used connected rivers as a social network for stories, collaboration, and imagining life in river cities.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
-      { key: "about", text: "Built participatory public programs around how rivers connect cities, stories, and people.", status: "hold", citationRequired: true, surfaces: [] },
-      { key: "photo-brief", text: "Look for the inflatable environment, river correspondence, public programs, participatory installations, and working documentation associated with Great Accommodations.", status: "hold", citationRequired: false, surfaces: [] }
+      { key: "about", text: "Built participatory public programs around how rivers connect cities, stories, and people.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until the About page can add this range without displacing the clearer technical-operations positioning." },
+      { key: "photo-brief", text: "Look for the inflatable environment, river correspondence, public programs, participatory installations, and working documentation associated with Great Accommodations.", status: "hold", citationRequired: false, surfaces: [], rationale: "Use privately for photo research; do not publish until image context, authorship, rights, and participant consent are reviewed." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie spearheaded Great Accommodations", "the project used central rivers as a social network", "the exhibition included participatory installations and public programs"], confidence: "high", renderCitation: true }
@@ -345,8 +346,8 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Jamie initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
-      { key: "about", text: "Initiated and tended a 10-day communal, participatory art environment built around shared responsibility and documentation.", status: "hold", citationRequired: true, surfaces: [] },
-      { key: "photo-brief", text: "Look for the Porter Bridge Gallery household, participant-made installations, shared documentation tools, Shop Shows, and inflatable screening environment.", status: "hold", citationRequired: false, surfaces: [] }
+      { key: "about", text: "Initiated and tended a 10-day communal, participatory art environment built around shared responsibility and documentation.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until the site can explain the relationship between this early participatory practice and Jamie's current work without adding excessive reading burden." },
+      { key: "photo-brief", text: "Look for the Porter Bridge Gallery household, participant-made installations, shared documentation tools, Shop Shows, and inflatable screening environment.", status: "hold", citationRequired: false, surfaces: [], rationale: "Use as a private selection brief only; participant identity, context, authorship, rights, and consent require review." }
     ],
     evidence: [
       { sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28", relationship: "direct-support", supports: ["Jamie initiated Open House", "the public experiment ran for 10 days", "participants shared responsibility and decisions", "the project integrated communal living, art, performance, and documentation"], confidence: "high", renderCitation: true }
@@ -364,7 +365,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "As a founding member of NYC Artist Coalition, Jamie organized fire-code study groups, rallied at City Hall, and spoke publicly for Cabaret Law repeal inside the broader Let NYC Dance coalition.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
-      { key: "case-study", text: "Organized safety study groups and public advocacy for Cabaret Law repeal as a founding member of NYC Artist Coalition, working inside a broad coalition that won repeal.", status: "hold", citationRequired: true, surfaces: [] }
+      { key: "case-study", text: "Organized safety study groups and public advocacy for Cabaret Law repeal as a founding member of NYC Artist Coalition, working inside a broad coalition that won repeal.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold pending a dedicated NYC Artist Coalition case-study composition that can preserve decades of prior advocacy and coalition credit." }
     ],
     evidence: [
       { sourceId: "SRC-NYCAC-GOTHAMIST-2017-06-19", relationship: "direct-support", supports: ["Jamie organized fire-code study groups for DIY venues", "Jamie rallied at City Hall for full Cabaret Law repeal", "Jamie spoke as part of NYC Artist Coalition"], confidence: "high", renderCitation: true },
@@ -384,7 +385,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Contemporaneous reporting described NYC Artist Coalition as instrumental in Office of Nightlife advocacy and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
-      { key: "case-study", text: "Helped build the coalition and public forum that pressed the new Office of Nightlife to protect small, diverse cultural spaces.", status: "hold", citationRequired: true, surfaces: [] }
+      { key: "case-study", text: "Worked as a founding NYC Artist Coalition member while the coalition advocated for the Office of Nightlife and spearheaded a public town hall centered on small, diverse cultural spaces.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until production records or collaborator testimony can distinguish Jamie's individual town-hall work from the coalition role established by reporting." }
     ],
     evidence: [
       { sourceId: "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR", relationship: "direct-support", supports: ["NYC Artist Coalition spearheaded the Office of Nightlife town hall", "the coalition was described as instrumental in related advocacy", "Jamie participated as an NYC Artist Coalition representative"], confidence: "high", renderCitation: true },
@@ -403,7 +404,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Jamie testified before the New York City Council on behalf of NYC Artist Coalition for Talks Not Raids, describing coalition safety work and calling for transparency and engagement around M.A.R.C.H. operations; the campaign organized Council outreach for Intro 1156.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
-      { key: "case-study", text: "Helped turn nightlife-enforcement concerns into public testimony, a Council action campaign, and a transparency bill that became law.", status: "hold", citationRequired: true, surfaces: [] }
+      { key: "case-study", text: "Helped turn nightlife-enforcement concerns into public testimony, a Council action campaign, and a transparency bill that became law.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold for a dedicated case-study sequence that clearly separates Jamie's testimony and campaign work from legislative sponsorship and enactment." }
     ],
     evidence: [
       { sourceId: "SRC-NYC-COUNCIL-MARCH-HEARING-2019-02-11", relationship: "direct-support", supports: ["Jamie testified for Talks Not Raids", "Jamie represented NYC Artist Coalition", "Jamie described coalition fire-safety workshops and study groups", "Jamie called for MARCH transparency"], locator: "Committee transcript pages 90-92", confidence: "high", renderCitation: true },
@@ -423,7 +424,7 @@ export const portfolioHistoryClaims = [
     status: "confirmed-with-boundary",
     projections: [
       { key: "archive-note", text: "Talks Not Raids advocated M.A.R.C.H. transparency; Intro 1156 became Local Law 220 of 2019; and in 2023 New York City replaced M.A.R.C.H. with the engagement-first CURE process after years of collective effort.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
-      { key: "case-study", text: "Part of a multi-year public arc from transparency advocacy and enacted reporting requirements to the city's replacement of M.A.R.C.H. with an engagement-first process.", status: "hold", citationRequired: true, surfaces: [] }
+      { key: "case-study", text: "Part of a multi-year public arc from transparency advocacy and enacted reporting requirements to the city's replacement of M.A.R.C.H. with an engagement-first process.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until a public narrative can show the documented sequence without implying that Jamie, one campaign, or one law solely caused CURE." }
     ],
     evidence: [
       { sourceId: "SRC-NYCAC-TALKS-NOT-RAIDS", relationship: "direct-support", supports: ["the campaign supported Intro 1156", "the campaign framed transparency and engagement as alternatives to raids"], confidence: "high", renderCitation: true },
@@ -554,5 +555,26 @@ export const portfolioHistoryInquiries = [
     ],
     sourceIds: [],
     publicSummary: "Photo-editor review is modeled as a reciprocal research process: claims can guide selection, and visual leads can open inquiries, but images do not automatically become evidence or public claims."
+  },
+  {
+    id: "INQ-WATERWAYS-PHOTO-SELECTS",
+    project: "waterways-participatory-practice",
+    question: "Can a public-safe, rights-cleared image or photographed artifact make the raft expedition or Great Accommodations claims more inspectable without exposing participants or private archive structure?",
+    methods: [
+      "Generated a bounded search brief from mature waterways claims and their held photo projection.",
+      "Required context, date, authorship, rights, participant consent, and source corroboration before an image can support a claim or enter a public projection."
+    ],
+    runAt: "2026-07-12",
+    resultStatus: "open",
+    findings: [
+      "The mature waterways record identifies concrete visual subjects worth searching for.",
+      "No candidate image or private locator was reviewed or published in this pass."
+    ],
+    limitations: [
+      "The private photo archive was not inspected in this lifecycle run.",
+      "A photograph alone cannot establish project meaning, identity, date, authorship, rights, or consent."
+    ],
+    sourceIds: [],
+    publicSummary: "The waterways claims have generated a specific, bounded photo-research inquiry; no image has been selected or promoted."
   }
 ] satisfies ResearchInquiry[];

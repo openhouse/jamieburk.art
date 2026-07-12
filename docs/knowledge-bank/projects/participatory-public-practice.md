@@ -6,7 +6,7 @@ evaluated.
 
 ## Waterways expedition and public programs
 
-Jamie conceived and organized a collaborative bicycle-powered raft expedition
+Jamie conceived and undertook a collaborative bicycle-powered raft expedition
 from Kansas City down the Missouri and Mississippi rivers. Reviewed public
 sources support a four-month journey that reached salt water. Jamie later
 spearheaded *Great Accommodations*, a participatory exhibition and public
