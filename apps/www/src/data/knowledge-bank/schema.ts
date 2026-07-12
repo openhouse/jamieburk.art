@@ -277,6 +277,9 @@ export const intakeRecordSchema = z
     if (record.disposition === "governance-updated" && !record.artifactPaths.length) {
       context.addIssue({ code: "custom", message: "Governance disposition requires an artifact path" });
     }
+    if (record.kind === "reader-feedback" && record.claimIds.length) {
+      context.addIssue({ code: "custom", message: "Reader feedback cannot link directly to an accomplishment claim" });
+    }
   });
 
 export const correctionRecordSchema = z.object({

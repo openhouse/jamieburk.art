@@ -181,16 +181,16 @@ const knowledgeBankInput = {
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["sequence from the January event through the fuller data release", "Jamie's independent development and iteration", "Politico coverage"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "corroborating", supports: ["surviving implementation of the independent prototype"], confidence: "high", renderCitation: true }
       ],
-      boundaries: ["CallNYC was an independent follow-on, not an official Council product, documented formal submission, or winner."],
+      boundaries: ["CallNYC was an independent follow-on. Do not imply official Council status, a documented formal submission, or a win."],
       antiClaims: ["Jamie caused the CouncilStat release", "CallNYC was commissioned by the Council", "CallNYC was a winning hackathon submission"],
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       project: "callnyc",
-      internalClaim: "This portfolio presents CallNYC only as historical evidence of an independent civic-data prototype; it was not an official New York City Council product.",
+      internalClaim: "This portfolio presents CallNYC only as historical evidence of Jamie's independently developed civic-data prototype.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "This portfolio presents CallNYC as historical evidence of an independent prototype, not as an official New York City Council product.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "This portfolio presents CallNYC as historical evidence of Jamie's independently developed prototype.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving implementation"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["contemporaneous independent-project framing"], confidence: "high", renderCitation: true }

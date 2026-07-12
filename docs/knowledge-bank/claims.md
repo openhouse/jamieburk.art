@@ -108,10 +108,10 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
 **Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
-**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
+**Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and resident-facing guidance; this portfolio presents it as historical evidence, and Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
+**Guardrail:** Describe it as historical and independently developed; do not imply official city affiliation or current guidance. The narrower first-CouncilStat wording requires citation.
 **Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie

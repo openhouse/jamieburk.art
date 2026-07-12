@@ -286,7 +286,7 @@ const workItemsInput = [
       "/work"
     ).text,
     role: "Civic-Tech Builder & Product Translator",
-    years: "2016 - archived",
+    years: "2016",
     status: "Full case study",
     featured: true,
     priority: 3,
@@ -295,7 +295,7 @@ const workItemsInput = [
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
-      "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+      "A historical civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -339,14 +339,14 @@ const workItemsInput = [
       { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
     ],
     careNote:
-      "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
+      "Historical independently developed civic-data prototype. No official city affiliation is claimed, and its content is not current legal, emergency, or constituent-service guidance.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, historical project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
-      note: "This page must make the archived and unofficial status visible wherever the project is summarized."
+      note: "This page must make the historical, independently developed status and present-day guidance boundary visible wherever the project is summarized."
     },
-    currentStatus: "Archived prototype. Public-safe screenshots pending.",
+    currentStatus: "Historical prototype. Public-safe screenshots pending.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic technology, product translation, open-data workflows, resident guidance, and public-facing web systems.",
@@ -358,7 +358,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance; this portfolio presents it as historical evidence with 2016 Politico New York coverage.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:

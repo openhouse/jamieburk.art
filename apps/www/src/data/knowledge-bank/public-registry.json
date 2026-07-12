@@ -259,7 +259,7 @@
         }
       ],
       "boundaries": [
-        "CallNYC was an independent follow-on, not an official Council product, documented formal submission, or winner."
+        "CallNYC was an independent follow-on. Do not imply official Council status, a documented formal submission, or a win."
       ]
     },
     {
@@ -268,7 +268,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "This portfolio presents CallNYC as historical evidence of an independent prototype, not as an official New York City Council product.",
+          "text": "This portfolio presents CallNYC as historical evidence of Jamie's independently developed prototype.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [

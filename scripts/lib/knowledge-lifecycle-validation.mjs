@@ -95,6 +95,9 @@ export function validateKnowledgeLifecycle(
     if (record.kind === "photo-lead" && record.claimIds.length) {
       errors.push(`Photo lead ${record.id} bypasses research and links directly to a claim`);
     }
+    if (record.kind === "reader-feedback" && record.claimIds.length) {
+      errors.push(`Reader feedback ${record.id} bypasses governance and links directly to a claim`);
+    }
 
     for (const value of allStrings(record)) {
       for (const marker of privateMarkers) {

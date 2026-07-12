@@ -52,6 +52,16 @@ test("photo leads cannot bypass research", () => {
   );
 });
 
+test("reader feedback cannot become accomplishment evidence", () => {
+  const candidate = cloneBank();
+  const feedback = candidate.intake.find((item) => item.kind === "reader-feedback");
+  feedback.claimIds = ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"];
+  assert.match(
+    validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
+    /Reader feedback .* bypasses governance and links directly to a claim/
+  );
+});
+
 test("held projections require a compositional rationale", () => {
   const candidate = cloneBank();
   const claim = candidate.claims.find((item) =>
