@@ -147,8 +147,8 @@ export function validateKnowledgeLifecycle(
 
   for (const claim of bank.claims) {
     for (const projection of claim.projections) {
-      if (projection.status === "hold" && !projection.rationale) {
-        errors.push(`Held projection ${claim.id}/${projection.key} has no rationale`);
+      if (!projection.rationale) {
+        errors.push(`Projection ${claim.id}/${projection.key} has no rationale`);
       }
     }
     if (["confirmed", "confirmed-with-boundary"].includes(claim.status)) {
@@ -218,13 +218,17 @@ export function knowledgeLifecycleReport(bank = knowledgeBank, proofs = proofCla
         key: projection.key,
         status: projection.status,
         surfaces: projection.surfaces,
-        rationale:
-          projection.rationale ??
-          (projection.status === "active"
-            ? `Selected for ${projection.surfaces.join(", ")} as an approved audience-specific projection.`
-            : "No rationale recorded.")
+        rationale: projection.rationale
       }))
     ),
+    proofProjectionDecisions: proofs.map((proof) => ({
+      proofId: proof.id,
+      status: proof.status,
+      surfaces: proof.surfaces,
+      rationale: proof.whyItMatters ?? proof.publicWording,
+      guardrail: proof.guardrail,
+      canonicalCoverage: Boolean(proof.canonicalClaimIds?.length)
+    })),
     canonicallyLinkedProofIds: linkedProofs.map((proof) => proof.id),
     proofResearchBacklogIds: proofs
       .filter((proof) => !proof.canonicalClaimIds?.length)

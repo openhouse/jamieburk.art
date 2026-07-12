@@ -138,7 +138,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
       status: "confirmed",
-      projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Select on the case study to anchor the project chronology in recoverable public evidence without burdening higher-level hiring surfaces." }],
       evidence: [
         { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["date", "time", "Council event", "constituent-services purpose"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "corroborating", supports: ["date", "venue", "CouncilStat context"], confidence: "high", renderCitation: true }
@@ -151,7 +151,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "The New York City Council described the gathering as its first CouncilStat hackathon.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Select only in the cited case study because the narrow CouncilStat superlative clarifies provenance but is too detailed for the work index or resume." }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], confidence: "high", renderCitation: true }],
       boundaries: [],
       antiClaims: ["first civic-data hackathon", "first civic-tech hackathon", "the Council's first hackathon of any kind"],
@@ -162,7 +162,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Select as a compact evidence note that resolves naming ambiguity while keeping the visible brand distinct from an unrecovered formal event title." }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
@@ -173,9 +173,9 @@ const knowledgeBankInput = {
       internalClaim: "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of those constituent-services records.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
-        { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
-        { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
+        { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Lead with Jamie's action, source sequence, and public purpose for readers evaluating the complete civic-product case." },
+        { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"], rationale: "Use the shortest actor-action-purpose proof for hiring readers scanning the work index; defer chronology and source notes to the case study." },
+        { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"], rationale: "Select the compressed role, deliverable, civic purpose, and external coverage for resume readers while preserving independent-project wording." }
       ],
       evidence: [
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["sequence from the January event through the fuller data release", "Jamie's independent development and iteration", "Politico coverage"], confidence: "high", renderCitation: true },
@@ -190,7 +190,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "This portfolio presents CallNYC only as historical evidence of Jamie's independently developed civic-data prototype.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "case-study", text: "This portfolio presents CallNYC as historical evidence of Jamie's independently developed prototype.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "This portfolio presents CallNYC as historical evidence of Jamie's independently developed prototype.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"], rationale: "Keep the historical and independent scope adjacent to the case-study evidence so readers do not mistake a 2016 prototype for current city guidance." }],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving implementation"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["contemporaneous independent-project framing"], confidence: "high", renderCitation: true }
@@ -213,7 +213,7 @@ const knowledgeBankInput = {
       project: "callnyc",
       internalClaim: "No Civic Hall calendar listing or dedicated event-detail page was recovered in the documented Wayback/CDX review.",
       status: "not-recovered",
-      projections: [{ key: "archive-note", text: "No Civic Hall calendar listing or dedicated event-detail page has been recovered in the documented Wayback/CDX review.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/callnyc"] }],
+      projections: [{ key: "archive-note", text: "No Civic Hall calendar listing or dedicated event-detail page has been recovered in the documented Wayback/CDX review.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/callnyc"], rationale: "Retain only in the research-facing bank because the bounded negative search matters to provenance but not to the hiring-page argument." }],
       evidence: [{ sourceId: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026", relationship: "direct-support", supports: ["bounded negative search finding"], confidence: "high", renderCitation: false }],
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],

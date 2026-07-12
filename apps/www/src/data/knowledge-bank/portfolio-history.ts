@@ -77,6 +77,7 @@ export const portfolioHistorySources = [
     publicNote: "The feature documents Jamie's initiation and facilitation of a 10-day communal-living and participatory-art experiment at UC Santa Cruz, including collective decision-making and distributed documentation.",
     supportsGenerally: [
       "Jamie initiated Open House",
+      "Margaret Morse described Jamie as tending the experiment",
       "the public experiment ran for 10 days",
       "participants shared responsibility and decisions",
       "the project integrated communal living, art, performance, and documentation",
@@ -308,7 +309,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described a four-month journey that reached salt water.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
+      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the historical bank because it establishes initiative and scale; hold from hiring pages until an inspectable artifact and concise present-day bridge are ready." },
       { key: "about", text: "Conceived and organized a collaborative raft project; in his published account, the four-month journey traveled from Kansas City down the Missouri and Mississippi rivers until the water reached salt.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
@@ -327,7 +328,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "Jamie spearheaded Great Accommodations, a participatory exhibition and public-program system that treated connected rivers as a social network linking river cities, stories, and possible ways of living.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie spearheaded Great Accommodations, a participatory exhibition and public-program system that used connected rivers as a social network for stories, collaboration, and imagining life in river cities.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
+      { key: "archive-note", text: "Jamie spearheaded Great Accommodations, a participatory exhibition and public-program system that used connected rivers as a social network for stories, collaboration, and imagining life in river cities.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain as public-safe depth for participatory-program and civic-engagement compositions without displacing the current technical-operations narrative." },
       { key: "about", text: "Built participatory public programs around how rivers connect cities, stories, and people.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until the About page can add this range without displacing the clearer technical-operations positioning." },
       { key: "photo-brief", text: "Look for the inflatable environment, river correspondence, public programs, participatory installations, and working documentation associated with Great Accommodations.", status: "hold", citationRequired: false, surfaces: [], rationale: "Use privately for photo research; do not publish until image context, authorship, rights, and participant consent are reviewed." }
     ],
@@ -343,15 +344,15 @@ export const portfolioHistoryClaims = [
   {
     id: "CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE",
     project: "open-house-participatory-practice",
-    internalClaim: "Jamie initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz that combined communal living, participatory art, collective decision-making, and distributed documentation.",
+    internalClaim: "Jamie initiated and tended Open House, a 10-day public experiment at UC Santa Cruz that combined communal living, participatory art, collective decision-making, and distributed documentation.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
+      { key: "archive-note", text: "Jamie initiated and tended Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the public-safe historical bank because it establishes an early, source-backed throughline of participation infrastructure and collective governance without adding it to the current hiring site." },
       { key: "about", text: "Initiated and tended a 10-day communal, participatory art environment built around shared responsibility and documentation.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until the site can explain the relationship between this early participatory practice and Jamie's current work without adding excessive reading burden." },
       { key: "photo-brief", text: "Look for the Porter Bridge Gallery household, participant-made installations, shared documentation tools, Shop Shows, and inflatable screening environment.", status: "hold", citationRequired: false, surfaces: [], rationale: "Use as a private selection brief only; participant identity, context, authorship, rights, and consent require review." }
     ],
     evidence: [
-      { sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28", relationship: "direct-support", supports: ["Jamie initiated Open House", "the public experiment ran for 10 days", "participants shared responsibility and decisions", "the project integrated communal living, art, performance, and documentation"], confidence: "high", renderCitation: true }
+      { sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28", relationship: "direct-support", supports: ["Jamie initiated Open House", "Margaret Morse described Jamie as tending the experiment", "the public experiment ran for 10 days", "participants shared responsibility and decisions", "the project integrated communal living, art, performance, and documentation"], locator: "Profile sections 'Open House,' 'UCSC Staff Investigates The Open House,' and 'A Tradition of Experiment'", confidence: "high", renderCitation: true }
     ],
     boundaries: ["Collective decisions and participant work remain collectively credited.", "Do not republish participant identities, images, or private details without review."],
     antiClaims: ["Jamie was the sole author of participant activity.", "Every participant consented to future republication."],
@@ -365,7 +366,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "As a founding member of NYC Artist Coalition, Jamie organized fire-code study groups, rallied at City Hall, and spoke publicly for repeal of the discriminatory Cabaret Law inside the broader Let NYC Dance coalition.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "As a founding member of NYC Artist Coalition, Jamie organized fire-code study groups, rallied at City Hall, and spoke publicly for Cabaret Law repeal inside the broader Let NYC Dance coalition.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
+      { key: "archive-note", text: "As a founding member of NYC Artist Coalition, Jamie organized fire-code study groups, rallied at City Hall, and spoke publicly for Cabaret Law repeal inside the broader Let NYC Dance coalition.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"], rationale: "Retain Jamie's specific documented labor in the public-safe bank while reserving a full case study for a composition that can carry decades of coalition credit." },
       { key: "case-study", text: "Organized safety study groups and public advocacy for Cabaret Law repeal as a founding member of NYC Artist Coalition, working inside a broad coalition that won repeal.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold pending a dedicated NYC Artist Coalition case-study composition that can preserve decades of prior advocacy and coalition credit." }
     ],
     evidence: [
@@ -385,7 +386,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "Contemporaneous reporting described NYC Artist Coalition as instrumental in advocacy for the Office of Nightlife and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Contemporaneous reporting described NYC Artist Coalition as instrumental in Office of Nightlife advocacy and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
+      { key: "archive-note", text: "Contemporaneous reporting described NYC Artist Coalition as instrumental in Office of Nightlife advocacy and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"], rationale: "Retain the strong coalition-level record in the bank, with Jamie's narrower documented participation visible, while individual production attribution remains under inquiry." },
       { key: "case-study", text: "Worked as a founding NYC Artist Coalition member while the coalition advocated for the Office of Nightlife and spearheaded a public town hall centered on small, diverse cultural spaces.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until production records or collaborator testimony can distinguish Jamie's individual town-hall work from the coalition role established by reporting." }
     ],
     evidence: [
@@ -404,7 +405,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "Jamie testified before the New York City Council on behalf of NYC Artist Coalition for Talks Not Raids, describing coalition safety work and calling for transparency and engagement around M.A.R.C.H. operations; the public campaign organized Council outreach for Intro 1156.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie testified before the New York City Council on behalf of NYC Artist Coalition for Talks Not Raids, describing coalition safety work and calling for transparency and engagement around M.A.R.C.H. operations; the campaign organized Council outreach for Intro 1156.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
+      { key: "archive-note", text: "Jamie testified before the New York City Council on behalf of NYC Artist Coalition for Talks Not Raids, describing coalition safety work and calling for transparency and engagement around M.A.R.C.H. operations; the campaign organized Council outreach for Intro 1156.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"], rationale: "Retain as direct evidence of Jamie translating community concerns into public testimony; hold from the current site until the legislative and coalition sequence can be shown clearly." },
       { key: "case-study", text: "Testified for Talks Not Raids and supported the coalition's Council action campaign for a transparency bill that became law.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold for a dedicated case-study sequence that clearly separates Jamie's testimony and campaign work from legislative sponsorship and enactment." }
     ],
     evidence: [
@@ -424,7 +425,7 @@ export const portfolioHistoryClaims = [
     internalClaim: "The Talks Not Raids campaign advocated M.A.R.C.H. transparency; Intro 1156 became Local Law 220 of 2019; in 2023 New York City replaced M.A.R.C.H. with the engagement-first CURE process after years of collective effort.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Talks Not Raids advocated M.A.R.C.H. transparency; Intro 1156 became Local Law 220 of 2019; and in 2023 New York City replaced M.A.R.C.H. with the engagement-first CURE process after years of collective effort.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] },
+      { key: "archive-note", text: "Talks Not Raids advocated M.A.R.C.H. transparency; Intro 1156 became Local Law 220 of 2019; and in 2023 New York City replaced M.A.R.C.H. with the engagement-first CURE process after years of collective effort.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"], rationale: "Retain the documented multi-year sequence in the bank while keeping it off hiring pages until collective causality and Jamie's bounded advocacy role can remain unmistakable." },
       { key: "case-study", text: "Part of a multi-year public arc from transparency advocacy and enacted reporting requirements to the city's replacement of M.A.R.C.H. with an engagement-first process.", status: "hold", citationRequired: true, surfaces: [], rationale: "Hold until a public narrative can show the documented sequence without implying that Jamie, one campaign, or one law solely caused CURE." }
     ],
     evidence: [

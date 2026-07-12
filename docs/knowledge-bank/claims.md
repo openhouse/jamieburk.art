@@ -36,7 +36,7 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Ready
 **Support level:** Strong
-**Public wording:** Initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.
+**Public wording:** Initiated and tended Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.
 **Guardrail:** Collective decisions and participant work remain collectively credited; identities and images require separate review.
 **Canonical claim:** `CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE`.
 

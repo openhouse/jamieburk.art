@@ -39,6 +39,16 @@ const lines = [
     return `- \`${decision.claimId}/${decision.key}\` - **${decision.status}** - ${destination}: ${decision.rationale}`;
   }),
   "",
+  "## Public proof-surface decisions",
+  "",
+  ...report.proofProjectionDecisions.map((decision) => {
+    const destination = decision.surfaces.map((surface) => `\`${surface}\``).join(", ");
+    const coverage = decision.canonicalCoverage
+      ? "canonical claim linked"
+      : "canonical research backlog";
+    return `- \`${decision.proofId}\` - **${decision.status}** - ${destination} - ${coverage}: ${decision.rationale} Guardrail: ${decision.guardrail}`;
+  }),
+  "",
   "## Canonically linked proof claims",
   "",
   ...(report.canonicallyLinkedProofIds.length

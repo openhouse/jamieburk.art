@@ -63,7 +63,7 @@ test("reader feedback cannot become accomplishment evidence", () => {
   );
 });
 
-test("held projections require a compositional rationale", () => {
+test("every projection requires a compositional rationale", () => {
   const candidate = cloneBank();
   const claim = candidate.claims.find((item) =>
     item.projections.some((projection) => projection.status === "hold")
@@ -71,7 +71,7 @@ test("held projections require a compositional rationale", () => {
   claim.projections.find((projection) => projection.status === "hold").rationale = undefined;
   assert.match(
     validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
-    /Held projection .* has no rationale/
+    /Projection .* has no rationale/
   );
 });
 
@@ -153,5 +153,12 @@ test("unlinked proof claims remain visible research backlog", () => {
   assert.equal(
     report.canonicallyLinkedProofIds.length + report.proofResearchBacklogIds.length,
     proofClaims.length
+  );
+  assert.equal(report.proofProjectionDecisions.length, proofClaims.length);
+  assert.ok(
+    report.proofProjectionDecisions.every(
+      (decision) =>
+        decision.surfaces.length > 0 && decision.rationale && decision.guardrail
+    )
   );
 });

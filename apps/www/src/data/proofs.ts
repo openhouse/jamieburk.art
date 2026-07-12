@@ -581,7 +581,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.",
+      "Initiated and tended Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.",
     shortWording: "Initiated a 10-day communal participatory-art environment",
     detailedPublicWording:
       "Jamie initiated and tended a public environment in which participants shared responsibility for programming, decisions, installations, performances, daily life, and documentation.",

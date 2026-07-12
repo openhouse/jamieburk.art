@@ -114,7 +114,8 @@
           "citationRequired": true,
           "surfaces": [
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Select on the case study to anchor the project chronology in recoverable public evidence without burdening higher-level hiring surfaces."
         }
       ],
       "evidence": [
@@ -157,7 +158,8 @@
           "citationRequired": true,
           "surfaces": [
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Select only in the cited case study because the narrow CouncilStat superlative clarifies provenance but is too detailed for the work index or resume."
         }
       ],
       "evidence": [
@@ -184,7 +186,8 @@
           "citationRequired": true,
           "surfaces": [
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Select as a compact evidence note that resolves naming ambiguity while keeping the visible brand distinct from an unrecovered formal event title."
         }
       ],
       "evidence": [
@@ -214,7 +217,8 @@
           "citationRequired": true,
           "surfaces": [
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Lead with Jamie's action, source sequence, and public purpose for readers evaluating the complete civic-product case."
         },
         {
           "key": "work-card",
@@ -224,7 +228,8 @@
           "surfaces": [
             "/work",
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Use the shortest actor-action-purpose proof for hiring readers scanning the work index; defer chronology and source notes to the case study."
         },
         {
           "key": "resume-html",
@@ -233,7 +238,8 @@
           "citationRequired": false,
           "surfaces": [
             "/resume"
-          ]
+          ],
+          "rationale": "Select the compressed role, deliverable, civic purpose, and external coverage for resume readers while preserving independent-project wording."
         }
       ],
       "evidence": [
@@ -273,7 +279,8 @@
           "citationRequired": true,
           "surfaces": [
             "/work/callnyc"
-          ]
+          ],
+          "rationale": "Keep the historical and independent scope adjacent to the case-study evidence so readers do not mistake a 2016 prototype for current city guidance."
         }
       ],
       "evidence": [

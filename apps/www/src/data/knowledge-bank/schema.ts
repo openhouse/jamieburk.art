@@ -153,11 +153,7 @@ export const claimProjectionSchema = z.object({
   status: z.enum(["active", "hold", "deprecated", "disallowed"]),
   citationRequired: z.boolean(),
   surfaces: z.array(z.string().min(1)),
-  rationale: z.string().min(1).optional()
-}).superRefine((projection, context) => {
-  if (projection.status === "hold" && !projection.rationale) {
-    context.addIssue({ code: "custom", message: "Held projection requires a rationale" });
-  }
+  rationale: z.string().min(1)
 });
 
 export const claimRecordSchema = z.object({

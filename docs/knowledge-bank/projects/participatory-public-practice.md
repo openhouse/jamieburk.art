@@ -21,7 +21,7 @@ Credit named collaborators when discussing their specific contributions.
 
 ## Open House
 
-Jamie initiated and facilitated *Open House*, a 10-day public experiment at UC
+Jamie initiated and tended *Open House*, a 10-day public experiment at UC
 Santa Cruz combining communal living, participatory art, collective
 decision-making, and distributed documentation.
 
