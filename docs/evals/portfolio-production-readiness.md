@@ -79,6 +79,28 @@ work. Overstatement includes unsupported ownership, causality, authority,
 scale, current status, or erasure of collaborators. Confidence is not a reason
 to exceed the knowledge bank, and caution is not a reason to suppress it.
 
+## Knowledge Lifecycle
+
+`PR-016` through `PR-018` treat the knowledge bank as a production system, not
+an appendix to the current website.
+
+- `PR-016` requires lossless public-safe intake and explicit disposition. A
+  fragment can mature, remain under research, be deferred, or be rejected, but
+  it cannot silently disappear because it was not selected for a page.
+- `PR-017` requires source-associated claim maturation. Sources are decomposed
+  into what they support, what they do not establish, and what remains open.
+  Existing public claims without canonical source coverage become visible
+  research backlog.
+- `PR-018` requires projection discipline and reciprocal discovery. The bank
+  remains deeper than the site; audience-specific compositions select from it;
+  and photo or reader feedback returns to intake without becoming an automatic
+  public claim.
+
+Evidence state, visibility state, and projection state are independent. A
+public source may suggest an unresolved claim. A mature public-safe claim may be
+held from the current site for composition. A private visual lead may create a
+research inquiry without exposing the image or its locator.
+
 ## Recursive Hill-Climb Protocol
 
 1. **Freeze the rubric.** Record the rubric version and candidate commit before

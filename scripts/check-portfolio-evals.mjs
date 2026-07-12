@@ -98,6 +98,21 @@ export function validateSuite(suite) {
     "application-share threshold must require PR-015 Chad lens eval"
   );
 
+  for (const id of ["PR-016", "PR-017", "PR-018"]) {
+    requireValue(
+      suite.evals?.some((entry) => entry.id === id),
+      `suite must include ${id} knowledge-lifecycle eval`
+    );
+  }
+  for (const id of ["PR-016", "PR-017"]) {
+    const entry = suite.evals?.find((candidate) => candidate.id === id);
+    requireValue(entry?.blocking === true, `${id} knowledge-lifecycle eval must be blocking`);
+    requireValue(
+      suite.application_share_thresholds?.required_eval_ids?.includes(id),
+      `application-share threshold must require ${id}`
+    );
+  }
+
   const validateThresholds = (name, thresholds, production = false) => {
     requireValue(typeof thresholds === "object" && thresholds !== null, `${name} is required`);
     requireValue(

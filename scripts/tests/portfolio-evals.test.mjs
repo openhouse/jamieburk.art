@@ -58,3 +58,15 @@ test("Chad lens remains a blocking application-share eval", () => {
   assert.match(errors, /Chad lens eval must be blocking/);
   assert.match(errors, /application-share threshold must require PR-015/);
 });
+
+test("knowledge lifecycle keeps intake and maturation as blocking gates", () => {
+  const candidate = cloneSuite();
+  candidate.evals.find((entry) => entry.id === "PR-016").blocking = false;
+  candidate.application_share_thresholds.required_eval_ids =
+    candidate.application_share_thresholds.required_eval_ids.filter(
+      (id) => id !== "PR-017"
+    );
+  const errors = validateSuite(candidate).errors.join("\n");
+  assert.match(errors, /PR-016 knowledge-lifecycle eval must be blocking/);
+  assert.match(errors, /application-share threshold must require PR-017/);
+});

@@ -23,7 +23,7 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015", "PR-016", "PR-017"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
@@ -65,7 +65,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 10,
+      "weight": 7,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -110,7 +110,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 6,
+      "weight": 4,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -130,7 +130,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 5,
+      "weight": 4,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -152,7 +152,7 @@
       "category": "trust",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["public pages", "knowledge bank", "citation registry", "approval register"],
       "procedure": [
         "Run knowledge-bank, citation, and public-safety checks.",
@@ -174,7 +174,7 @@
       "category": "application",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["resume PDF", "resume HTML page"],
       "procedure": [
         "Extract resume text and render every page.",
@@ -240,7 +240,7 @@
       "category": "engineering",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["repository checks", "staging routes", "production Docker image"],
       "procedure": [
         "Run npm check, staging preflight, and production preflight serially.",
@@ -263,7 +263,7 @@
       "category": "accessibility",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["all canonical routes at 320, 375, 768, and 1280 pixel widths"],
       "procedure": [
         "Capture responsive screenshots and measure document overflow.",
@@ -285,7 +285,7 @@
       "category": "deployment",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 6,
+      "weight": 5,
       "inputs": ["apex domain", "www domain", "npr subdomain", "production health endpoint", "Dokku configuration"],
       "procedure": [
         "Verify the production app, domains, TLS, build arguments, runtime environment, redirect behavior, and rollback target.",
@@ -327,7 +327,7 @@
       "category": "future_direction",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
       "procedure": [
         "Verify the course-completion evidence and wording.",
@@ -347,7 +347,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 4,
+      "weight": 2,
       "inputs": ["target-role brief", "resume PDF", "technical operations page", "two role-relevant case studies", "tailored application note"],
       "procedure": [
         "Give a blind judge the role brief and complete application packet without optimization history.",
@@ -369,7 +369,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["homepage", "resume page", "technical operations page", "lead work summaries", "knowledge-bank claims", "Chad Lens guidance"],
       "procedure": [
         "Give three blind judges the public candidate, approved knowledge-bank claims, and Chad Lens guidance without patch intent or optimization history.",
@@ -387,6 +387,75 @@
       ],
       "evidence_required": ["three independent scorecards", "page excerpts", "claim-and-guardrail citations", "understatement and overstatement findings"],
       "remediation_hint": "Strengthen the smallest number of high-value sentences with approved actor-action-purpose-result proof, or narrow wording that exceeds the record; never trade accuracy for confidence."
+    },
+    {
+      "id": "PR-016",
+      "title": "Lossless public-safe intake and disposition",
+      "category": "knowledge-lifecycle",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 6,
+      "inputs": ["intake ledger", "source registry", "research inquiries", "private/public boundary policy"],
+      "procedure": [
+        "Submit a mixed batch containing a public URL, public-safe memory, claim hypothesis, artifact lead, and photo lead.",
+        "Trace each intake item to a stable source, inquiry, claim, correction, or explicit deferred/rejected disposition.",
+        "Run lifecycle validation and scan the public repository for private paths, raw private material, and undisposed intake items."
+      ],
+      "pass_criteria": [
+        "Every intake item has a stable ID, received date, kind, public-safe description, project associations, status, disposition, and reason for preserving it.",
+        "Every item links to a source, inquiry, claim, correction, or an explicit deferred/rejected reason; nothing disappears merely because it is not selected for the website.",
+        "Raw private evidence, private locators, contact lists, unapproved photographs, and private archive paths remain outside the public repository.",
+        "Intake cannot directly activate a website projection; claim maturation and projection selection remain separate gates.",
+        "Deterministic lifecycle validation passes with no duplicate IDs, broken references, or silently orphaned mature items."
+      ],
+      "evidence_required": ["mixed intake batch", "traceability report", "public-safety scan", "deterministic check output"],
+      "remediation_hint": "Add the missing stable record or disposition and preserve only a public-safe summary; never solve traceability by importing private raw evidence."
+    },
+    {
+      "id": "PR-017",
+      "title": "Claim maturation and source association",
+      "category": "knowledge-lifecycle",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 6,
+      "inputs": ["source registry", "research inquiries", "claim graph", "proof bank", "public projections"],
+      "procedure": [
+        "Decompose each source into propositions it supports, boundaries it establishes, and questions it leaves open.",
+        "Trace every matured claim to evidence relationships, research limitations, anti-claims, review state, and any proof-bank projection.",
+        "Review existing public proof claims for canonical source coverage and record uncovered claims as visible research backlog rather than implied verification."
+      ],
+      "pass_criteria": [
+        "Every confirmed or confirmed-with-boundary claim has source evidence, review attribution, a reviewed date, and wording no stronger than its evidence relationships.",
+        "Leadership, causality, public-policy outcome, scale, and current-status claims preserve collective credit and require corroboration or an explicit boundary.",
+        "Research inquiries record methods, findings, limitations, and source associations; inconclusive or partially recovered work is not promoted as confirmed fact.",
+        "Mature proof-bank claims link to canonical claim records when coverage exists, while uncovered public claims appear in a machine-generated research backlog.",
+        "No source is used to support a proposition it explicitly does not establish."
+      ],
+      "evidence_required": ["claim-to-source graph", "coverage report", "inquiry records", "independent claim review"],
+      "remediation_hint": "Narrow the claim, add corroborating evidence, or leave it as an open inquiry; do not convert memory or source adjacency into causality."
+    },
+    {
+      "id": "PR-018",
+      "title": "Projection depth and reciprocal discovery",
+      "category": "knowledge-lifecycle",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 4,
+      "inputs": ["eligible claim palette", "website projections", "application packet", "photo-editor brief", "research backlog"],
+      "procedure": [
+        "Compare the mature eligible claim palette with the claims selected for each public surface.",
+        "Verify that omission is recorded as composition rather than evidence loss and that no surface attempts to display the whole bank.",
+        "Generate one audience-specific proof selection and one public-safe photo-editor brief, then route any new visual lead back to intake as a research lead rather than an automatic claim."
+      ],
+      "pass_criteria": [
+        "The bank retains mature public-safe claims that are intentionally absent from the current website.",
+        "Each public surface selects claims according to audience, purpose, reading burden, writer's voice, and Chad's lens.",
+        "The citation layer remains available and auditable without dominating the primary reading experience.",
+        "Photo and reader feedback can create new intake and inquiry records but cannot automatically mature or publish a claim.",
+        "An agent can explain why a mature claim was selected, held, or omitted without treating omission as rejection."
+      ],
+      "evidence_required": ["projection comparison", "selection rationale", "photo-editor brief", "feedback-loop trace"],
+      "remediation_hint": "Preserve the claim in the bank, clarify its eligibility and audience fit, and keep the public composition selective."
     }
   ],
   "grader_output_schema": {
