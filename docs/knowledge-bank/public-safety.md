@@ -38,3 +38,8 @@ the claim out of public projection until it is reviewed.
 Private sources may support a public-safe claim, but the private source itself
 stays outside the repo. Describe aggregate patterns, approved public artifacts,
 and public-safe summaries rather than private record inventories.
+
+People associations, face detection, project-album membership, filenames, and
+embedded dates are retrieval cues, not publication approval. Every proposed
+image needs asset-specific identity, project, date, creator, rights, consent,
+caption, crop, and contextual review before it reaches the public site.

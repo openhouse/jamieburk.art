@@ -56,3 +56,9 @@ usable, what Jamie did, and what boundary remains protected.
 
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
+
+## Supporting Reviews
+
+- `photo-evidence-review-2026-07.md` records public-safe findings and boundaries
+  from the July 2026 local photo curation without publishing private images or
+  raw archive data.
