@@ -153,7 +153,7 @@ export const intakeClaimRecords = [
       sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
       relationship: "direct-support",
       supports: ["Jamie's originating role", "experiential raft concept", "transportation-history and Missouri River context"],
-      locator: "article opening",
+      locator: "opening paragraph identifying Jamie's idea and later paragraph on Kansas City transportation history",
       confidence: "high",
       renderCitation: false
     }],
@@ -164,21 +164,81 @@ export const intakeClaimRecords = [
     reviewedBy: ["Codex public-source close reading"]
   },
   {
-    id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-2009",
+    id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-ROLE-2009",
     project: "waterways-participatory-programs",
-    internalClaim: "Charlotte Street Foundation described Jamie as spearheading Great Accommodations, a participatory 2009 installation and public-program series that treated river systems as connections among people, places, stories, and civic identities.",
+    internalClaim: "Charlotte Street Foundation described Jamie as spearheading Great Accommodations in 2009.",
     status: "confirmed-with-boundary",
     projections: [],
     evidence: [{
       sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
       relationship: "direct-support",
-      supports: ["Jamie's spearheading role", "2009 exhibition and public programs", "participatory river-city purpose"],
-      locator: "event description and program details",
+      supports: ["Jamie's spearheading role", "2009 project date"],
+      locator: "opening event description identifying the project as spearheaded by Jamie",
       confidence: "high",
       renderCitation: false
     }],
-    boundaries: ["Credit Suzanne Hogan and the invited contributors for collaborative outreach and participation."],
-    antiClaims: ["The exhibition represented every river city.", "Jamie solely authored participant contributions."],
+    boundaries: ["Spearheaded does not mean sole authorship of collaborator or participant contributions."],
+    antiClaims: ["Jamie solely authored Great Accommodations."],
+    researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-OUTREACH-2009",
+    project: "waterways-participatory-programs",
+    internalClaim: "Charlotte Street Foundation reported that Jamie and Suzanne Hogan invited river-city participation through hundreds of letters and targeted online outreach.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
+      relationship: "direct-support",
+      supports: ["Jamie and Suzanne Hogan's shared outreach role", "hundreds of letters", "targeted river-city invitations"],
+      locator: "outreach paragraph naming Jamie and Suzanne Hogan",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["Credit the outreach jointly and do not infer response or attendance totals."],
+    antiClaims: ["Jamie alone conducted the outreach.", "Every contacted river city participated."],
+    researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM-2009",
+    project: "waterways-participatory-programs",
+    internalClaim: "Charlotte Street Foundation described Great Accommodations as an interactive installation with participatory experiences, community projects, public programs, and working documentation.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
+      relationship: "direct-support",
+      supports: ["interactive installation", "participatory experiences", "community projects", "public programs", "working documentation"],
+      locator: "installation description and dated public-program list",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The listing establishes the program form, not measured civic outcomes."],
+    antiClaims: ["The source proves long-term outcomes for participants or river cities."],
+    researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-FACILITATION-2009",
+    project: "waterways-participatory-programs",
+    internalClaim: "Charlotte Street Foundation described Jamie as serving during Great Accommodations as gallery attendant, active accommodator, and facilitator.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
+      relationship: "direct-support",
+      supports: ["Jamie's gallery-attendant role", "active-accommodator role", "facilitator role"],
+      locator: "gallery-participation paragraph describing Jamie's in-gallery role",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The role description does not assign Jamie sole authorship of participant activity."],
+    antiClaims: ["Jamie authored every contribution or interaction."],
     researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
     reviewedAt: "2026-07-12",
     reviewedBy: ["Codex public-source close reading"]
@@ -193,7 +253,7 @@ export const intakeClaimRecords = [
       sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
       relationship: "direct-support",
       supports: ["publication of Jamie's route account", "four-month self-reported duration", "Vicksburg hold described in the institutional page"],
-      locator: "quoted letter to potential collaborators",
+      locator: "published letter to potential collaborators recounting the raft route and Vicksburg hold",
       confidence: "high",
       renderCitation: false
     }],
@@ -204,21 +264,61 @@ export const intakeClaimRecords = [
     reviewedBy: ["Codex public-source close reading"]
   },
   {
-    id: "CLM-OPEN-HOUSE-PARTICIPATORY-PROGRAM-2006",
+    id: "CLM-OPEN-HOUSE-FORMAT-2006",
     project: "open-house",
-    internalClaim: "A 2006 Good Times feature documented Jamie turning a UCSC gallery into a ten-day public experiment combining communal living, an open art show, participant contribution, facilitation, and live documentation.",
+    internalClaim: "A 2006 Good Times feature documented Jamie turning a UCSC gallery into a ten-day public experiment in communal living and open art.",
     status: "confirmed-with-boundary",
     projections: [],
     evidence: [{
       sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
       relationship: "direct-support",
-      supports: ["ten-day Open House project", "communal-living and open-art format", "Jamie's organizer and facilitator role"],
-      locator: "headline and reported project narrative",
+      supports: ["ten-day Open House project", "communal-living and open-art format", "Jamie's initiating role"],
+      locator: "headline, dek, and opening paragraphs describing the April 7-16 project",
       confidence: "high",
       renderCitation: false
     }],
     boundaries: ["Describe Open House as an art and participation experiment, not a formal housing service."],
-    antiClaims: ["Open House was a municipal housing program.", "Jamie authored the work participants contributed."],
+    antiClaims: ["Open House was a municipal housing program."],
+    researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-OPEN-HOUSE-SHOP-SHOWS-LINEAGE-2006",
+    project: "open-house",
+    internalClaim: "Good Times reported that Open House developed from Jamie's participatory Shop Shows held from 2003 through 2005.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
+      relationship: "direct-support",
+      supports: ["Open House's relationship to Shop Shows", "reported 2003-2005 Shop Shows period"],
+      locator: "section connecting Open House to the earlier Shop Shows at The Shop",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The feature is not a complete inventory of every Shop Show or contributor."],
+    antiClaims: ["Good Times documents every Shop Show or participant."],
+    researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-OPEN-HOUSE-PARTICIPANT-AUTHORITY-2006",
+    project: "open-house",
+    internalClaim: "Good Times reported that Open House invited participants to contribute to and rearrange the gallery, and presented Jamie's aim as distributing artistic authority and participant meaning-making.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
+      relationship: "direct-support",
+      supports: ["participant contribution", "participant rearrangement of the space", "Jamie's reported participatory-art framing"],
+      locator: "project-description paragraphs and closing discussion of participant interpretation",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["Attribute the stated artistic purpose to the reported feature and do not claim uniform participant experience."],
+    antiClaims: ["Jamie authored the work participants contributed.", "Every participant understood the project in the same way."],
     researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
     reviewedAt: "2026-07-12",
     reviewedBy: ["Codex public-source close reading"]
@@ -242,7 +342,7 @@ export const intakeClaimRecords = [
         sourceId: "SRC-WATERWAYS-PITCH-HUCK-FINN-2007",
         relationship: "corroborating",
         supports: ["experiential expedition concept", "transportation-history and river context"],
-        locator: "article opening",
+        locator: "opening paragraph identifying Jamie's idea and later transportation-history paragraph",
         confidence: "moderate",
         renderCitation: false
       },
@@ -250,7 +350,7 @@ export const intakeClaimRecords = [
         sourceId: "SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009",
         relationship: "direct-support",
         supports: ["river-city outreach", "interactive and participatory installation", "facilitator role"],
-        locator: "event description",
+        locator: "outreach, installation-description, and gallery-participation paragraphs",
         confidence: "high",
         renderCitation: false
       }
@@ -262,30 +362,40 @@ export const intakeClaimRecords = [
     reviewedBy: ["Codex public-source synthesis"]
   },
   {
-    id: "CLM-NYCAC-CABARET-REPEAL-ACTIVITY-2017",
+    id: "CLM-NYCAC-FIRE-CODE-STUDY-GROUPS-2017",
     project: "nyc-artist-coalition",
-    internalClaim: "Gothamist documented Jamie organizing fire-code study groups for DIY venues and rallying for Cabaret Law repeal as part of NYC Artist Coalition; NPR later identified the coalition among groups mobilizing for repeal.",
+    internalClaim: "Gothamist documented Jamie organizing fire-code study groups for DIY venues after the Ghost Ship fire.",
     status: "confirmed-with-boundary",
     projections: [],
-    evidence: [
-      {
-        sourceId: "SRC-NYCAC-GOTHAMIST-CABARET-2017",
-        relationship: "direct-support",
-        supports: ["Jamie's fire-code study groups", "Jamie's public repeal advocacy", "NYC Artist Coalition role"],
-        locator: "article opening and coalition testimony",
-        confidence: "high",
-        renderCitation: false
-      },
-      {
-        sourceId: "SRC-NYCAC-NPR-NIGHTLIFE-2017",
-        relationship: "corroborating",
-        supports: ["NYC Artist Coalition participation in Let NYC Dance mobilization", "Jamie's public support for repeal"],
-        locator: "Let NYC Dance and closing paragraphs",
-        confidence: "high",
-        renderCitation: false
-      }
-    ],
-    boundaries: ["Describe Jamie's documented actions and contribution without assigning collective legislative causality to one person."],
+    evidence: [{
+      sourceId: "SRC-NYCAC-GOTHAMIST-CABARET-2017",
+      relationship: "direct-support",
+      supports: ["Jamie's fire-code study groups", "post-Ghost Ship safety context"],
+      locator: "paragraph reporting Jamie's fire-code study groups after the Ghost Ship fire",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["The source documents the study groups, not their attendance, curriculum, or measured effects."],
+    antiClaims: ["The study groups alone changed city policy."],
+    researchInquiryIds: ["INQ-NYCAC-CABARET-REPEAL-ROLE-SCOPE-2026"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-NYCAC-CABARET-REPEAL-RALLY-2017",
+    project: "nyc-artist-coalition",
+    internalClaim: "Gothamist documented Jamie rallying outside City Hall for full Cabaret Law repeal as part of NYC Artist Coalition.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-NYCAC-GOTHAMIST-CABARET-2017",
+      relationship: "direct-support",
+      supports: ["Jamie's City Hall rally participation", "full-repeal position", "NYC Artist Coalition affiliation"],
+      locator: "opening rally report and paragraph quoting Jamie on repeal",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["Describe the documented advocacy action without assigning collective legislative causality to one person."],
     antiClaims: ["Jamie repealed the Cabaret Law.", "Jamie drafted the repeal bill.", "NYC Artist Coalition acted alone."],
     researchInquiryIds: ["INQ-NYCAC-CABARET-REPEAL-ROLE-SCOPE-2026"],
     reviewedAt: "2026-07-12",
@@ -321,7 +431,7 @@ export const intakeClaimRecords = [
       sourceId: "SRC-NYCAC-NPR-NIGHTLIFE-2017",
       relationship: "direct-support",
       supports: ["Office of Nightlife enactment", "Nightlife Advisory Board enactment", "collective advocacy context"],
-      locator: "article opening",
+      locator: "opening paragraphs reporting enactment of the Office of Nightlife and Nightlife Advisory Board",
       confidence: "high",
       renderCitation: false
     }],
@@ -334,27 +444,17 @@ export const intakeClaimRecords = [
   {
     id: "CLM-NYCAC-FOUNDING-MEMBER-PRESS-2017",
     project: "nyc-artist-coalition",
-    internalClaim: "NPR identified Jamie as a founding member of the coalition, while Gothamist identified him with NYC Artist Coalition during public Cabaret Law advocacy.",
+    internalClaim: "NPR identified Jamie as a founding member of the coalition in its 2017 Cabaret Law reporting.",
     status: "confirmed-with-boundary",
     projections: [],
-    evidence: [
-      {
-        sourceId: "SRC-NYCAC-NPR-NIGHTLIFE-2017",
-        relationship: "direct-support",
-        supports: ["published founding-member identification", "Jamie's public repeal position"],
-        locator: "closing paragraphs",
-        confidence: "high",
-        renderCitation: false
-      },
-      {
-        sourceId: "SRC-NYCAC-GOTHAMIST-CABARET-2017",
-        relationship: "corroborating",
-        supports: ["Jamie's NYC Artist Coalition affiliation", "coalition public advocacy"],
-        locator: "article opening",
-        confidence: "high",
-        renderCitation: false
-      }
-    ],
+    evidence: [{
+      sourceId: "SRC-NYCAC-NPR-NIGHTLIFE-2017",
+      relationship: "direct-support",
+      supports: ["published founding-member identification"],
+      locator: "closing paragraph identifying Jamie as a founding coalition member",
+      confidence: "high",
+      renderCitation: false
+    }],
     boundaries: ["NPR uses the variant name NYC Arts Coalition; retain that source-level wording in research notes while using the project's verified name elsewhere."],
     antiClaims: ["The press sources establish every detail of the coalition's founding process.", "Founding-member identification proves sole leadership."],
     researchInquiryIds: ["INQ-NYCAC-FOUNDING-ROLE-SCOPE-2026"],
@@ -498,7 +598,7 @@ export const intakeRecords = [
     disposition: "claim-candidate-created",
     canonicalUrl: "https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/",
     sourceIds: ["SRC-WATERWAYS-CHARLOTTE-GREAT-ACCOMMODATIONS-2009"],
-    claimIds: ["CLM-WATERWAYS-GREAT-ACCOMMODATIONS-2009", "CLM-WATERWAYS-RAFT-ROUTE-PUBLISHED-ACCOUNT-2009", "CLM-WATERWAYS-PARTICIPATORY-PRACTICE-2006-2009"],
+    claimIds: ["CLM-WATERWAYS-GREAT-ACCOMMODATIONS-ROLE-2009", "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-OUTREACH-2009", "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM-2009", "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-FACILITATION-2009", "CLM-WATERWAYS-RAFT-ROUTE-PUBLISHED-ACCOUNT-2009", "CLM-WATERWAYS-PARTICIPATORY-PRACTICE-2006-2009"],
     inquiryIds: ["INQ-WATERWAYS-RAFT-GULF-ROUTE-2026", "INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
     limitations: ["The raft passage is an institutionally published account by Jamie, not an independent route log."],
     nextActions: ["Locate event photographs and route documentation; review collaborator credit before any website projection."]
@@ -518,7 +618,7 @@ export const intakeRecords = [
     disposition: "claim-candidate-created",
     canonicalUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
     sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006"],
-    claimIds: ["CLM-OPEN-HOUSE-PARTICIPATORY-PROGRAM-2006", "CLM-WATERWAYS-PARTICIPATORY-PRACTICE-2006-2009"],
+    claimIds: ["CLM-OPEN-HOUSE-FORMAT-2006", "CLM-OPEN-HOUSE-SHOP-SHOWS-LINEAGE-2006", "CLM-OPEN-HOUSE-PARTICIPANT-AUTHORITY-2006", "CLM-WATERWAYS-PARTICIPATORY-PRACTICE-2006-2009"],
     inquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"],
     limitations: ["Participant experiences should not be generalized into long-term outcomes."],
     nextActions: ["Locate surviving programs, photographs, and participant-created artifacts suitable for public review."]
@@ -538,7 +638,7 @@ export const intakeRecords = [
     disposition: "claim-candidate-created",
     canonicalUrl: "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
     sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017"],
-    claimIds: ["CLM-NYCAC-CABARET-REPEAL-ACTIVITY-2017", "CLM-NYCAC-FOUNDING-MEMBER-PRESS-2017"],
+    claimIds: ["CLM-NYCAC-FIRE-CODE-STUDY-GROUPS-2017", "CLM-NYCAC-CABARET-REPEAL-RALLY-2017"],
     inquiryIds: ["INQ-NYCAC-FOUNDING-ROLE-SCOPE-2026", "INQ-NYCAC-CABARET-REPEAL-ROLE-SCOPE-2026", "INQ-NYCAC-OFFICE-NIGHTLIFE-ROLE-SCOPE-2026"],
     limitations: ["The article documents contribution but not sole or quantified legislative causality."],
     nextActions: ["Map the article to hearing records, campaign artifacts, and collaborator-reviewed role evidence."]
@@ -558,7 +658,7 @@ export const intakeRecords = [
     disposition: "claim-candidate-created",
     canonicalUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
     sourceIds: ["SRC-NYCAC-NPR-NIGHTLIFE-2017"],
-    claimIds: ["CLM-NYCAC-CABARET-REPEAL-ACTIVITY-2017", "CLM-NYCAC-LET-NYC-DANCE-PARTICIPATION-2017", "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHED-2017", "CLM-NYCAC-FOUNDING-MEMBER-PRESS-2017"],
+    claimIds: ["CLM-NYCAC-LET-NYC-DANCE-PARTICIPATION-2017", "CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHED-2017", "CLM-NYCAC-FOUNDING-MEMBER-PRESS-2017"],
     inquiryIds: ["INQ-NYCAC-FOUNDING-ROLE-SCOPE-2026", "INQ-NYCAC-CABARET-REPEAL-ROLE-SCOPE-2026", "INQ-NYCAC-OFFICE-NIGHTLIFE-ROLE-SCOPE-2026"],
     limitations: ["The source does not define Jamie's division of labor in legislation or every coalition activity."],
     nextActions: ["Corroborate the founding and policy roles with primary records and collaborator review."]
@@ -615,7 +715,7 @@ export const intakeRecords = [
     editorialState: "unsurfaced",
     disposition: "research-inquiry-created",
     sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017", "SRC-NYCAC-NPR-NIGHTLIFE-2017"],
-    claimIds: ["CLM-NYCAC-CABARET-REPEAL-ACTIVITY-2017", "CLM-NYCAC-LET-NYC-DANCE-PARTICIPATION-2017"],
+    claimIds: ["CLM-NYCAC-FIRE-CODE-STUDY-GROUPS-2017", "CLM-NYCAC-CABARET-REPEAL-RALLY-2017", "CLM-NYCAC-LET-NYC-DANCE-PARTICIPATION-2017"],
     inquiryIds: ["INQ-NYCAC-CABARET-REPEAL-ROLE-SCOPE-2026"],
     limitations: ["Retain collective causality and distinguish documented actions from the stronger instrumental-role memory."],
     nextActions: ["Build a dated contribution map from hearings, campaigns, public events, sites, and collaborator accounts."]
