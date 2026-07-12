@@ -331,10 +331,10 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
 export function objectiveVector(report) {
   const summary = report.summary ?? report;
   return [
-    summary.hardGateFailures ?? Number.POSITIVE_INFINITY,
-    summary.judgeFloorFailures?.length ?? summary.judgeFloorFailureCount ?? Number.POSITIVE_INFINITY,
-    -(summary.weightedJudgeScore ?? Number.NEGATIVE_INFINITY),
-    summary.qualityTargetGaps ?? Number.POSITIVE_INFINITY
+    summary.hardGateFailures ?? 1_000_000,
+    summary.judgeFloorFailures?.length ?? summary.judgeFloorFailureCount ?? 0,
+    -(summary.weightedJudgeScore ?? 0),
+    summary.qualityTargetGaps ?? 0
   ];
 }
 
