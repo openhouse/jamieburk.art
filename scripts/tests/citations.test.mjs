@@ -146,6 +146,43 @@ test("Teams archival production preserves source lineage, selection, and holds",
   );
 });
 
+test("Shared Drive archival production promotes the operating pattern without exposing records", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-OPERATIONS"
+  );
+  const candidate = knowledgeBank.candidateClaims.find(
+    (item) => item.id === "CND-CRS-SHARED-MEMORY-OPERATING-SYSTEM"
+  );
+  assert.equal(candidate?.status, "promoted");
+  assert.equal(candidate?.promotedClaimId, claim?.id);
+  assert.equal(claim?.evidence.length, 3);
+  assert.ok(
+    claim?.evidence.every(
+      (evidence) => evidence.relationship === "private-support" && !evidence.renderCitation
+    )
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-CRS-SHARED-MEMORY-OPERATIONS",
+      "case-study",
+      "/work/fair-rent-nyc"
+    ).text,
+    /consent-aware follow-up/
+  );
+  const serialized = JSON.stringify(publicCitationRegistry);
+  assert.doesNotMatch(serialized, /SRC-GDRIVE|ARCHIVE-GDRIVE|RESEARCH-GDRIVE/);
+  for (const id of [
+    "CND-CRS-CONSENT-AWARE-OUTREACH-OPERATIONS",
+    "CND-SUNDAY-DINNER-RECURRING-HOSPITALITY-OPERATIONS",
+    "CND-196-RESIDENCY-ONBOARDING-WORKFLOW",
+    "CND-CRS-MULTILINGUAL-MEETING-MEMORY"
+  ]) {
+    const held = knowledgeBank.candidateClaims.find((item) => item.id === id);
+    assert.notEqual(held?.status, "promoted");
+    assert.equal(held?.promotedClaimId, undefined);
+  }
+});
+
 test("candidate claims remain deeper than the selected public registry", () => {
   const promoted = knowledgeBank.candidateClaims.filter((candidate) => candidate.status === "promoted");
   const held = knowledgeBank.candidateClaims.filter((candidate) => candidate.status !== "promoted");

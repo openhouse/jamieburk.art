@@ -1158,6 +1158,27 @@
         "Describe the brief as a proposal and implementation specification, not an adopted City program.",
         "Do not imply access to confidential RPIE records or official statistical authority."
       ]
+    },
+    {
+      "id": "CLM-CRS-SHARED-MEMORY-OPERATIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie built and maintained a shared campaign-memory operating system that organized decisions, action owners, open questions, public-data work, and consent-aware follow-up while keeping private coalition, legal-review, and stakeholder material protected.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Use collective-work language and describe Jamie's operating contribution without assigning him ownership of the coalition or campaign.",
+        "Do not expose private coalition notes, stakeholder records, legal-review context, unapproved quotations, or working links.",
+        "The source records support the operating pattern, not agreement by every collaborator with every note."
+      ]
     }
   ],
   "pages": [
@@ -1266,6 +1287,11 @@
         "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
       ],
       "occurrences": [
+        {
+          "id": "crs-shared-memory-operations",
+          "claimId": "CLM-CRS-SHARED-MEMORY-OPERATIONS",
+          "projection": "case-study"
+        },
         {
           "id": "nycac-public-testimony-2017-2019",
           "claimId": "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",

@@ -67,6 +67,16 @@ used as an editorial routing layer and not as independent verification. Raw
 paths, correspondence, legal-review context, and proposal terms remain outside
 the public registry.
 
+The July 12 Shared Drive archival-production pass adds seven protected records:
+a collection-level inventory run; Commercial Rent Stabilization running memory,
+outreach tracking, alignment minutes, and a staff-oriented data brief; a Sunday
+Dinner recurring-event tracker; and a 196 Artists Residency onboarding letter.
+Revision history was used to distinguish Jamie's authorship and stewardship from
+mere shared access. The pass formalized the shared campaign-memory claim while
+keeping stakeholder rows, participant records, meeting contents, working links,
+and Drive coordinates outside the public registry. See
+[shared-drive-archival-production-2026-07-12.md](shared-drive-archival-production-2026-07-12.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

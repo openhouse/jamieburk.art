@@ -95,6 +95,31 @@ const teamsArchiveIntakeIds = [
   "INT-2026-07-12-TEAMS-JOB-HUNT"
 ];
 
+const sharedDriveSourceIds = [
+  "SRC-GDRIVE-SHARED-DRIVE-RESEARCH-2026",
+  "SRC-GDRIVE-CRS-RUNNING-MEMORY-2026",
+  "SRC-GDRIVE-CRS-OUTREACH-TRACKER-2026",
+  "SRC-GDRIVE-CRS-ALIGNMENT-MINUTES-2026",
+  "SRC-GDRIVE-CRS-DATA-OPPORTUNITY-2026",
+  "SRC-GDRIVE-SUNDAY-DINNER-TRACKER-2025",
+  "SRC-GDRIVE-196-ONBOARDING-LETTER-2023"
+];
+
+const sharedDriveIntakeIds = [
+  "INT-2026-07-12-GDRIVE-SHARED-DRIVE-CORPUS",
+  "INT-2026-07-12-GDRIVE-CRS-OPERATING-MEMORY",
+  "INT-2026-07-12-GDRIVE-CRS-DATA-OPPORTUNITY",
+  "INT-2026-07-12-GDRIVE-SUNDAY-DINNER-TRACKER",
+  "INT-2026-07-12-GDRIVE-196-ONBOARDING"
+];
+
+const sharedDriveHeldCandidateIds = [
+  "CND-CRS-CONSENT-AWARE-OUTREACH-OPERATIONS",
+  "CND-SUNDAY-DINNER-RECURRING-HOSPITALITY-OPERATIONS",
+  "CND-196-RESIDENCY-ONBOARDING-WORKFLOW",
+  "CND-CRS-MULTILINGUAL-MEETING-MEMORY"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -538,6 +563,113 @@ const criteria = [
             !source.archiveUrl &&
             !source.assetUrl
         )
+  },
+  {
+    id: "shared-drive-corpus-selection",
+    label: "Shared Drive research records collection scope, selection, and access limits",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-GDRIVE-SHARED-DRIVE-RESEARCH-2026"
+      );
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-GDRIVE-SHARED-DRIVE-ARCHIVAL-PRODUCTION-2026"
+      );
+      return Boolean(
+        source?.supportsGenerally.some((item) => /110 Shared Drives/.test(item)) &&
+        source?.doesNotEstablish.some((item) => /created every accessible drive/.test(item)) &&
+        inquiry?.methods.some((item) => /representative cohort/i.test(item)) &&
+        inquiry?.limitations.some((item) => /not establish.*authored every file/i.test(item)) &&
+        sharedDriveIntakeIds.every((id) => {
+          const intake = intakeItems.find((item) => item.id === id);
+          return intake?.visibility === "protected" && intake.status === "processed";
+        })
+      );
+    })()
+  },
+  {
+    id: "shared-drive-close-readings",
+    label: "Every selected Shared Drive source has atomic assertions and explicit limits",
+    pass: sharedDriveSourceIds.every((id) => {
+      const source = knowledgeBank.sources.find((item) => item.id === id);
+      const reading = readingBySourceId.get(id);
+      return Boolean(
+        source &&
+        source.supportsGenerally.length >= 2 &&
+        source.doesNotEstablish.length >= 2 &&
+        reading &&
+        reading.assertions.length >= 2 &&
+        reading.limitations.length >= 1
+      );
+    })
+  },
+  {
+    id: "shared-drive-authorship-discipline",
+    label: "Revision evidence distinguishes Jamie's stewardship from shared access",
+    pass: [
+      "SRC-GDRIVE-CRS-RUNNING-MEMORY-2026",
+      "SRC-GDRIVE-CRS-OUTREACH-TRACKER-2026",
+      "SRC-GDRIVE-CRS-DATA-OPPORTUNITY-2026",
+      "SRC-GDRIVE-SUNDAY-DINNER-TRACKER-2025",
+      "SRC-GDRIVE-196-ONBOARDING-LETTER-2023"
+    ].every((id) => {
+      const source = knowledgeBank.sources.find((item) => item.id === id);
+      const reading = readingBySourceId.get(id);
+      return Boolean(
+        source?.supportsGenerally.some((item) => /recorded revisions|revision-level/i.test(item)) &&
+        reading?.assertions.some((assertion) => /revision/i.test(assertion.locator ?? ""))
+      );
+    })
+  },
+  {
+    id: "shared-drive-claim-promotion",
+    label: "The campaign-memory claim has complete private-evidence promotion lineage",
+    pass: (() => {
+      const candidate = candidateById.get("CND-CRS-SHARED-MEMORY-OPERATING-SYSTEM");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CRS-SHARED-MEMORY-OPERATIONS"
+      );
+      const occurrence = knowledgeBank.pages
+        .find((page) => page.id === "fair-rent-nyc")
+        ?.occurrences.find((item) => item.id === "crs-shared-memory-operations");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.evidence.length === 3 &&
+        claim.evidence.every(
+          (evidence) => evidence.relationship === "private-support" && !evidence.renderCitation
+        ) &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === candidate.id &&
+            promotion.claimId === claim.id &&
+            promotion.decision === "promoted"
+        ) &&
+        occurrence?.claimId === claim.id &&
+        renderedProjectionSources.includes(claim.id) &&
+        renderedProjectionSources.includes(occurrence.id)
+      );
+    })()
+  },
+  {
+    id: "shared-drive-public-safety-and-restraint",
+    label: "Private Drive coordinates stay redacted and deeper workflow claims remain held",
+    pass:
+      sharedDriveSourceIds.every((id) => {
+        const source = knowledgeBank.sources.find((item) => item.id === id);
+        return Boolean(
+          source &&
+          source.visibility !== "public" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+        );
+      }) &&
+      sharedDriveHeldCandidateIds.every((id) => {
+        const candidate = candidateById.get(id);
+        return Boolean(candidate && candidate.status !== "promoted" && !candidate.promotedClaimId);
+      }) &&
+      !/SRC-GDRIVE|ARCHIVE-GDRIVE|RESEARCH-GDRIVE/.test(publicRegistryText)
   }
 ];
 

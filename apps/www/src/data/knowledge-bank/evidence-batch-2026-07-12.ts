@@ -664,6 +664,11 @@ export const evidenceBatchRecords: EvidenceBatch = {
       ],
       occurrences: [
         {
+          id: "crs-shared-memory-operations",
+          claimId: "CLM-CRS-SHARED-MEMORY-OPERATIONS",
+          projection: "case-study"
+        },
+        {
           id: "nycac-public-testimony-2017-2019",
           claimId: "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
           projection: "case-study",

@@ -30,7 +30,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run check`
 - [ ] `npm run knowledge-bank`
 - [ ] `npm run public-safety`
-- [ ] `npm run check:knowledge-lifecycle` (12/12)
+- [ ] `npm run check:knowledge-lifecycle` (35/35)
 - [ ] `npm run check:chad-lens` (10/10)
 - [ ] `npm run check:evals`
 - [ ] `npm run check:routes`

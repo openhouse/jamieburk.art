@@ -69,3 +69,8 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+Archive-production reports record bounded collection work without publishing
+private source coordinates. The current reports cover the
+[Teams working archive](archival-production-2026-07-12.md) and the
+[Shared Google Drive archive](shared-drive-archival-production-2026-07-12.md).

@@ -6,6 +6,7 @@ export type EvidenceClass =
   | "approved-resume"
   | "public-source"
   | "public-safe-archive-summary"
+  | "protected-revision-history"
   | "ai-assisted-archive-review"
   | "firsthand-collaborator-context"
   | "jamie-review-confirmation"
@@ -165,14 +166,16 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "firsthand-collaborator-context"
+      "firsthand-collaborator-context",
+      "protected-revision-history"
     ],
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
     shortWording: "30+ pages of civic campaign-memory infrastructure",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+    sourceBasis:
+      "Approved resume language, public-safe collaboration summary, and protected revision-attributed operating artifacts reviewed without publishing private contents.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -195,7 +198,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
   },
   {
     id: "fair-rent-source-map",
@@ -385,14 +388,16 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
-      "jamie-review-confirmation"
+      "jamie-review-confirmation",
+      "protected-revision-history"
     ],
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, and protected revision-attributed event and onboarding artifacts that support the operating pattern without independently establishing the aggregate totals.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -411,7 +416,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

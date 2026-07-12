@@ -29,7 +29,9 @@ public-safe, and ready to act from.
    surfaces until the deterministic criterion reaches 10/10.
 6. **Knowledge-lifecycle pass:** run `npm run check:knowledge-lifecycle`.
    Continue intake, reading, research, promotion, and editorial selection until
-   the criterion reaches 12/12 without promoting unresolved claims.
+   every criterion passes without promoting unresolved claims. The current
+   suite contains 35 deterministic lifecycle criteria, including bounded Teams
+   and Shared Drive archival-production gates.
 7. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
 8. **Automation pass:** run `npm run check`, `npm run check:evals`,

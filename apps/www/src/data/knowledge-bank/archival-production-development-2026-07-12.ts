@@ -344,11 +344,15 @@ export const archivalProductionDevelopmentRecords: ArchivalProductionDevelopment
       status: "promoted",
       sourceIds: [
         "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
-        "SRC-CRS-OPEN-DATA-FOUNDATION-2025"
+        "SRC-CRS-OPEN-DATA-FOUNDATION-2025",
+        "SRC-GDRIVE-CRS-DATA-OPPORTUNITY-2026"
       ],
-      researchInquiryIds: ["INQ-TEAMS-ARCHIVAL-PRODUCTION-2026"],
+      researchInquiryIds: [
+        "INQ-TEAMS-ARCHIVAL-PRODUCTION-2026",
+        "INQ-GDRIVE-SHARED-DRIVE-ARCHIVAL-PRODUCTION-2026"
+      ],
       supportSummary:
-        "The approved public brief directly specifies the release structure, minimum fields, privacy exclusions, and next-step questions; an earlier bounded artifact corroborates the policy-to-data lane.",
+        "The approved public brief directly specifies the release structure, minimum fields, privacy exclusions, and next-step questions; protected earlier and later artifacts corroborate the policy-to-data lane and its staff handoff.",
       missingEvidence: [],
       boundaries: [
         "Call it a proposal or pilot specification, not an adopted City program.",

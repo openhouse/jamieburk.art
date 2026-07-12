@@ -194,6 +194,16 @@ export const archivalProductionBatchRecords: ArchivalProductionBatch = {
           supports: ["the preceding policy-to-data implementation lane"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-GDRIVE-CRS-DATA-OPPORTUNITY-2026",
+          relationship: "private-support",
+          supports: [
+            "the staff-oriented follow-up pathway",
+            "the continued minimum-release and privacy-boundary discipline"
+          ],
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
@@ -205,7 +215,10 @@ export const archivalProductionBatchRecords: ArchivalProductionBatch = {
         "Jamie built or operated the proposed City dataset",
         "Jamie had access to confidential tax filings"
       ],
-      researchInquiryIds: ["INQ-TEAMS-ARCHIVAL-PRODUCTION-2026"],
+      researchInquiryIds: [
+        "INQ-TEAMS-ARCHIVAL-PRODUCTION-2026",
+        "INQ-GDRIVE-SHARED-DRIVE-ARCHIVAL-PRODUCTION-2026"
+      ],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex archival review"]
     }
