@@ -31,6 +31,7 @@ npm run build
 npm run check
 npm run knowledge-bank
 npm run check:knowledge-bank
+npm run evals:portfolio
 npm run public-safety
 npm run check:public-safety
 npm run check:routes
@@ -60,6 +61,18 @@ composed portfolio, not a claims database.
 
 `npm run knowledge-bank` checks the proof schema, projection rules, and work
 metadata. `npm run check:routes` checks canonical routes and legacy redirects.
+
+## Portfolio Claim Evals
+
+`evals/portfolio-claims/evals.json` expresses the portfolio's editorial intent
+as hard gates, scored criteria, public-safe fixtures, and a bounded recursive
+revision protocol. It rewards strong evidence-backed language while blocking
+overclaiming, underclaiming, unsafe publication, misplaced credit, and
+pathologizing descriptions of emerging work.
+
+Run `npm run evals:portfolio` to validate the suite. See
+`evals/portfolio-claims/README.md` for the generator/judge loop and stopping
+criterion.
 
 ## Environment
 
