@@ -19,7 +19,7 @@ export default function SourceBackedTeamMemoryPage() {
     <article className="jb-frame py-12">
       <div className="jb-reading">
         <p className="text-sm font-semibold uppercase text-jb-blue">Lab / method</p>
-        <h1 className="mt-3 text-5xl font-bold text-jb-ink">
+        <h1 className="mt-3 text-balance text-4xl font-bold leading-tight text-jb-ink sm:text-5xl">
           Source-Backed Team Memory
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -40,7 +40,7 @@ export default function SourceBackedTeamMemoryPage() {
             View selected work
           </JBButton>
           <JBButton href={site.emailHref}>
-            Discuss a bounded source-backed memory sprint
+            Discuss a memory sprint
           </JBButton>
         </div>
       </div>

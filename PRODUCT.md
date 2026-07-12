@@ -15,7 +15,7 @@ structure for complex public-facing work.
 ## Product Purpose
 
 This portfolio makes Jamie legible as a Technical Project Manager - Product
-Operations & Implementation lead. It should show how ambiguous,
+Operations & Implementation lead. It should show how emerging,
 stakeholder-heavy work becomes usable systems: requirements, workflows,
 documentation, decision trails, launch support, onboarding, and durable
 handoffs. Success means a reviewer can understand Jamie's role fit, trust the
