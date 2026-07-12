@@ -51,7 +51,8 @@ export const portfolioHistorySources = [
       "the project used central rivers as a social network",
       "hundreds of invitations sought river-city stories",
       "the exhibition included participatory installations and public programs",
-      "Jamie's account of a four-month raft journey reaching salt water"
+      "Jamie's published account that he organized the bicycle-powered raft project",
+      "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"
     ],
     doesNotEstablish: [
       "a complete independent route log",
@@ -304,17 +305,17 @@ export const portfolioHistoryClaims = [
   {
     id: "CLM-WATERWAYS-RAFT-EXPEDITION",
     project: "waterways-participatory-practice",
-    internalClaim: "Jamie conceived and undertook a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; the journey lasted four months and reached salt water.",
+    internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described a four-month journey that reached salt water.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie conceived and undertook a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
-      { key: "about", text: "Conceived and undertook a four-month collaborative raft journey from Kansas City down the Missouri and Mississippi rivers.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
+      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"] },
+      { key: "about", text: "Conceived and organized a four-month collaborative raft journey from Kansas City down the Missouri and Mississippi rivers.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "corroborating", supports: ["Jamie's account of a four-month raft journey reaching salt water"], confidence: "moderate", renderCitation: true }
+      { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie's published account that he organized the bicycle-powered raft project", "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"], publicNote: "Charlotte Street reproduces Jamie's first-person retrospective account; it is public evidence of his account, not an independent route log.", confidence: "moderate", renderCitation: true }
     ],
-    boundaries: ["Describe the expedition as collaborative.", "Use 'reached salt water' unless a complete route log independently confirms a Gulf terminus."],
+    boundaries: ["Describe the expedition as collaborative.", "Route and duration details are Jamie's published first-person retrospective account, not an independently corroborated complete route log.", "Use 'reached salt water' rather than 'reached the Gulf of Mexico' unless a complete route log independently confirms that terminus."],
     antiClaims: ["Jamie completed the expedition alone.", "The reviewed sources independently establish every stop or participant."],
     researchInquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
     reviewedAt: "2026-07-12",

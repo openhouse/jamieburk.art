@@ -64,6 +64,17 @@ test("held projections require a compositional rationale", () => {
   );
 });
 
+test("a claim cannot use a source for an explicitly excluded proposition", () => {
+  const candidate = cloneBank();
+  const relationship = candidate.claims[0].evidence[0];
+  const source = candidate.sources.find((item) => item.id === relationship.sourceId);
+  source.doesNotEstablish.push(relationship.supports[0]);
+  assert.match(
+    validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
+    /uses .* to support a proposition the source does not establish/
+  );
+});
+
 test("reader feedback resolves to a public governance artifact", () => {
   const feedback = knowledgeBank.intake.find((item) => item.kind === "reader-feedback");
   assert.equal(feedback.disposition, "governance-updated");

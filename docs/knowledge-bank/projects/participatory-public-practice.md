@@ -6,16 +6,18 @@ evaluated.
 
 ## Waterways expedition and public programs
 
-Jamie conceived and undertook a collaborative bicycle-powered raft expedition
+Jamie conceived and organized a collaborative bicycle-powered raft expedition
 from Kansas City down the Missouri and Mississippi rivers. Reviewed public
-sources support a four-month journey that reached salt water. Jamie later
+sources support Jamie's published first-person account of a four-month journey
+that reached salt water. Jamie later
 spearheaded *Great Accommodations*, a participatory exhibition and public
 program that treated connected rivers as a social network linking cities,
 stories, correspondence, and possible ways of living.
 
 **Boundaries:** The work was collaborative. Use "reached salt water" until a
-complete route record establishes a Gulf terminus. Credit named collaborators
-when discussing their specific contributions.
+complete route record establishes a Gulf terminus. Route and duration are
+Jamie's public retrospective account rather than an independent route log.
+Credit named collaborators when discussing their specific contributions.
 
 ## Open House
 

@@ -28,6 +28,10 @@ function allStrings(value, strings = []) {
   return strings;
 }
 
+function normalizeProposition(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
 export function validateKnowledgeLifecycle(
   bank = knowledgeBank,
   proofs = proofClaims
@@ -142,6 +146,18 @@ export function validateKnowledgeLifecycle(
         !claim.antiClaims.length
       ) {
         errors.push(`Bounded claim ${claim.id} has no boundary or anti-claim`);
+      }
+    }
+    for (const relationship of claim.evidence) {
+      const source = sourceById.get(relationship.sourceId);
+      if (!source) continue;
+      const excluded = new Set(source.doesNotEstablish.map(normalizeProposition));
+      for (const support of relationship.supports) {
+        if (excluded.has(normalizeProposition(support))) {
+          errors.push(
+            `Claim ${claim.id} uses ${source.id} to support a proposition the source does not establish: ${support}`
+          );
+        }
       }
     }
   }
