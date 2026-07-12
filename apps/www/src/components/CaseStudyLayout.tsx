@@ -42,7 +42,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           <VisibilityNote item={item} />
           <div className="flex flex-wrap gap-3">
             <JBButton href="/resume" variant="secondary">
-              Download resume
+              View resume
             </JBButton>
             <JBButton href="/contact" variant="ghost">
               Contact Jamie
