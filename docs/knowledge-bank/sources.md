@@ -25,6 +25,17 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- The Pitch reporting on Jamie's collaborative raft expedition.
+- Charlotte Street's institutional page for *Great Accommodations*.
+- Good Times / Metro Santa Cruz reporting on *Open House*.
+- Gothamist, NPR, and Bedford + Bowery reporting on NYC Artist Coalition work.
+- New York City Council hearing transcripts and legislative records.
+- New York City's public announcement replacing M.A.R.C.H. with CURE.
+
+Typed source records include a public-safe summary, what the source supports,
+what it does not establish, preservation status, and claim or inquiry links.
+Adding a source without a disposition or association fails
+`npm run knowledge-lifecycle`.
 
 ### Public-Safe Archive Summary
 

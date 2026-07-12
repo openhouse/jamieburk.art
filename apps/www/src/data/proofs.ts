@@ -38,6 +38,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  canonicalClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -156,6 +157,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
+    canonicalClaimIds: ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
     lastReviewed: "2026-07-11"
   },
   {
@@ -301,6 +303,12 @@ export const proofClaims: ProofClaim[] = [
       "policy-communications",
       "public-data-framing",
       "civic-systems"
+    ],
+    canonicalClaimIds: [
+      "CLM-NYCAC-CABARET-ADVOCACY",
+      "CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL",
+      "CLM-TALKS-NOT-RAIDS-ADVOCACY",
+      "CLM-MARCH-TRANSPARENCY-TO-CURE"
     ],
     lastReviewed: "2026-07-09"
   },
@@ -537,6 +545,175 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "waterways-participatory-practice",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Conceived and organized a collaborative four-month raft expedition from Kansas City down the Missouri and Mississippi rivers, then developed participatory public programs around how waterways connect cities, stories, and people.",
+    shortWording: "Built participatory public work around connected waterways",
+    detailedPublicWording:
+      "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers, traveling for four months until the water reached salt. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
+    sourceBasis:
+      "Contemporaneous reporting in The Pitch and a Charlotte Street institutional program page.",
+    whyItMatters:
+      "Recovers a long-running participatory practice that connects expedition design, public programming, infrastructure, and civic imagination.",
+    guardrail:
+      "Describe both projects as collaborative and use 'reached salt water' unless a complete route record establishes a Gulf terminus.",
+    doNotSay: [
+      "Jamie completed the raft expedition alone",
+      "The reviewed sources establish every participant or stop",
+      "Jamie created every Great Accommodations component alone"
+    ],
+    protectedBoundaries: [
+      "Unreviewed participant identities",
+      "Private correspondence",
+      "Unreviewed archive images"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["waterways-participatory-practice"],
+    relatedCapabilities: ["participatory-design", "public-programming", "project-initiation"],
+    canonicalClaimIds: [
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-GREAT-ACCOMMODATIONS"
+    ],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "open-house-participatory-practice",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Initiated and facilitated Open House, a 10-day public experiment at UC Santa Cruz combining communal living, participatory art, collective decision-making, and distributed documentation.",
+    shortWording: "Initiated a 10-day communal participatory-art environment",
+    detailedPublicWording:
+      "Jamie initiated and tended a public environment in which participants shared responsibility for programming, decisions, installations, performances, daily life, and documentation.",
+    sourceBasis: "Contemporaneous reporting in Good Times / Metro Santa Cruz.",
+    whyItMatters:
+      "Shows an early, concrete example of Jamie designing conditions in which people could make and govern a public program together.",
+    guardrail: "Collective decisions and participant work remain collectively credited.",
+    doNotSay: [
+      "Jamie was the sole author of participant activity",
+      "Every participant consented to future republication"
+    ],
+    protectedBoundaries: [
+      "Unreviewed participant identities",
+      "Participant images without consent review",
+      "Private project records"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["open-house-participatory-practice"],
+    relatedCapabilities: ["participatory-design", "facilitation", "documentation-systems"],
+    canonicalClaimIds: ["CLM-OPEN-HOUSE-PARTICIPATORY-PRACTICE"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "nyc-artist-coalition-cabaret-advocacy",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "As a founding member of NYC Artist Coalition, organized fire-code study groups, rallied at City Hall, and spoke publicly for Cabaret Law repeal inside the broader Let NYC Dance coalition.",
+    shortWording: "Organized safety study groups and public advocacy for Cabaret Law repeal",
+    detailedPublicWording:
+      "Jamie's documented work joined practical venue-safety education with public advocacy, helping cultural spaces build knowledge while a broad, decades-deep coalition won repeal of New York City's Cabaret Law.",
+    sourceBasis:
+      "Contemporaneous Gothamist and NPR reporting plus the public Let NYC Dance campaign record.",
+    whyItMatters:
+      "Makes Jamie's specific coalition labor visible while preserving the scale and history of the collective victory.",
+    guardrail:
+      "Always credit repeal as a collective accomplishment with decades of prior advocacy.",
+    doNotSay: [
+      "Jamie alone repealed the Cabaret Law",
+      "NYC Artist Coalition was the only repeal organization",
+      "Jamie drafted the repeal legislation"
+    ],
+    protectedBoundaries: ["Private coalition notes", "Private correspondence", "Unapproved names"],
+    surfaces: ["internal-only"],
+    relatedProjects: ["nyc-artist-coalition"],
+    relatedCapabilities: ["coalition-operations", "public-advocacy", "safety-education"],
+    canonicalClaimIds: ["CLM-NYCAC-CABARET-ADVOCACY"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "nyc-artist-coalition-office-nightlife-town-hall",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Helped build the coalition and public forum that pressed New York City's emerging Office of Nightlife to hear and protect small, diverse cultural spaces.",
+    shortWording: "Helped bring cultural-space voices into Office of Nightlife advocacy",
+    detailedPublicWording:
+      "Contemporaneous reporting described NYC Artist Coalition as instrumental in Office of Nightlife advocacy and as spearheading a town hall where small, diverse cultural-space stakeholders addressed elected officials; Jamie participated as a founding coalition member.",
+    sourceBasis: "Contemporaneous Bedford + Bowery and NPR reporting.",
+    whyItMatters:
+      "Connects coalition formation to a concrete public institution and an accountable forum for people most affected by nightlife policy.",
+    guardrail:
+      "The reporting supports the coalition's role more strongly than Jamie's exact individual production credit.",
+    doNotSay: [
+      "Jamie alone created the Office of Nightlife",
+      "Jamie was the sole town-hall producer"
+    ],
+    protectedBoundaries: ["Private production records", "Private coalition correspondence"],
+    surfaces: ["internal-only"],
+    relatedProjects: ["nyc-artist-coalition"],
+    relatedCapabilities: ["coalition-operations", "public-forums", "institution-building"],
+    canonicalClaimIds: ["CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "talks-not-raids-advocacy",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Testified before the New York City Council for Talks Not Raids, describing NYC Artist Coalition's safety work and calling for transparency and engagement around M.A.R.C.H. operations.",
+    shortWording: "Turned nightlife-enforcement concerns into testimony and public action",
+    detailedPublicWording:
+      "Jamie testified on behalf of NYC Artist Coalition, connected practical fire-safety education to enforcement reform, and supported a public Council action campaign for Intro 1156, which became law.",
+    sourceBasis:
+      "New York City Council hearing transcript, public Talks Not Raids campaign materials, and the Council legislative record for Intro 1156.",
+    whyItMatters:
+      "Shows Jamie translating community experience into public testimony, a legible campaign, and an actionable policy pathway.",
+    guardrail:
+      "The transcript establishes Jamie's testimony; elected sponsors and collective advocates retain credit for the legislation.",
+    doNotSay: ["Jamie authored Intro 1156", "Jamie enacted the law alone"],
+    protectedBoundaries: ["Private coalition strategy", "Private affected-venue records"],
+    surfaces: ["internal-only"],
+    relatedProjects: ["talks-not-raids"],
+    relatedCapabilities: ["public-testimony", "policy-communications", "campaign-systems"],
+    canonicalClaimIds: ["CLM-TALKS-NOT-RAIDS-ADVOCACY"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "march-transparency-to-cure",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Contributed to a multi-year public arc from M.A.R.C.H. transparency advocacy and enacted reporting requirements to New York City's replacement of M.A.R.C.H. with an engagement-first process.",
+    shortWording: "Contributed to the public arc from M.A.R.C.H. transparency to CURE",
+    detailedPublicWording:
+      "Talks Not Raids advocated transparency and engagement; Intro 1156 became Local Law 220 of 2019; and in 2023 New York City replaced M.A.R.C.H. with CURE after years of collective effort.",
+    sourceBasis:
+      "Public Talks Not Raids materials, the New York City Council legislative record, and the city's 2023 CURE announcement.",
+    whyItMatters:
+      "Preserves the long policy sequence without collapsing collective advocacy and government action into a solo causal claim.",
+    guardrail: "Present this as a documented sequence and collective contribution, not sole causality.",
+    doNotSay: [
+      "Jamie alone disbanded M.A.R.C.H.",
+      "Intro 1156 automatically ended M.A.R.C.H.",
+      "CURE eliminated all enforcement"
+    ],
+    protectedBoundaries: ["Private coalition strategy", "Private enforcement records"],
+    surfaces: ["internal-only"],
+    relatedProjects: ["talks-not-raids"],
+    relatedCapabilities: ["policy-communications", "public-accountability", "long-horizon-advocacy"],
+    canonicalClaimIds: ["CLM-MARCH-TRANSPARENCY-TO-CURE"],
+    lastReviewed: "2026-07-12"
   }
 ];
 

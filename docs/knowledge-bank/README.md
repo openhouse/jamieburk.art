@@ -13,6 +13,30 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+## Knowledge Lifecycle
+
+Every useful fragment should receive a disposition, but publication is never
+automatic:
+
+1. **Capture:** Add a public-safe intake record with provenance, why it matters,
+   project links, and explicit boundaries.
+2. **Triage:** Link it to a source, inquiry, claim, correction, or a documented
+   defer/reject reason.
+3. **Research:** Read sources closely, record what each establishes and does not
+   establish, and keep unresolved questions open.
+4. **Mature:** Promote a claim only when evidence, confidence, reviewer,
+   boundaries, and anti-claims are present.
+5. **Project:** Decide independently whether the claim belongs on a particular
+   website page, in a photo brief, only in the public-safe bank, or nowhere yet.
+6. **Revisit:** Treat new sources, collaborator corrections, and photo-editor
+   discoveries as fresh intake. They may strengthen, narrow, supersede, or
+   retract earlier claims.
+
+The canonical typed records live in `apps/www/src/data/knowledge-bank/`. Run
+`npm run knowledge-lifecycle` to enforce the lifecycle and
+`npm run report:knowledge-lifecycle` to see held mature claims and research
+backlog items.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -30,6 +54,8 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake ledger:** lossless public-safe queue of incoming URLs, artifacts,
+  memories, hypotheses, corrections, and photo leads with explicit disposition.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
