@@ -108,6 +108,15 @@ export function validateKnowledgeLifecycle(
     }
   }
 
+  const intakeCorrectionIds = new Set(
+    bank.intake.flatMap((item) => item.correctionIds)
+  );
+  for (const correction of bank.corrections) {
+    if (!intakeCorrectionIds.has(correction.id)) {
+      errors.push(`Correction ${correction.id} has no intake disposition`);
+    }
+  }
+
   const graphSourceIds = new Set([
     ...bank.claims.flatMap((claim) => claim.evidence.map((item) => item.sourceId)),
     ...bank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds)

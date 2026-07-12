@@ -32,6 +32,11 @@ export const intakeRecords = [
       "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED"
     ],
     inquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"],
+    correctionIds: [
+      "COR-CALLNYC-CHRONOLOGY-2026",
+      "COR-CALLNYC-SUPERLATIVE-2026",
+      "COR-CALLNYC-EVENT-TIME-2026"
+    ],
     boundaries: ["Private photo and research locators remain outside the public citation projection."]
   },
   {

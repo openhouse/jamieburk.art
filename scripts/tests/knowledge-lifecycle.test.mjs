@@ -22,6 +22,17 @@ test("intake cannot reference unknown sources", () => {
   );
 });
 
+test("corrections cannot exist without an intake disposition", () => {
+  const candidate = cloneBank();
+  candidate.intake.forEach((item) => {
+    item.correctionIds = [];
+  });
+  assert.match(
+    validateKnowledgeLifecycle(candidate, proofClaims).join("\n"),
+    /Correction COR-CALLNYC-CHRONOLOGY-2026 has no intake disposition/
+  );
+});
+
 test("matured intake must retain a claim disposition", () => {
   const candidate = cloneBank();
   candidate.intake.find((item) => item.status === "matured").claimIds = [];
