@@ -12,6 +12,8 @@
   context.
 - [ ] Case studies use Known / Open / Protected where needed.
 - [ ] Public-safety scanner passes.
+- [ ] Knowledge-lifecycle criterion passes with
+  `npm run evals:knowledge-lifecycle`.
 - [ ] Recursive eval protocol passes with `npm run evals:recursive`.
 - [ ] Chad-lens criterion passes with `npm run evals:chad`.
 - [ ] Chad-lens review passes.

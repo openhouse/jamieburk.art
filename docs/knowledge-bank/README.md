@@ -63,3 +63,8 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See [framework.md](framework.md) for the intake-to-projection lifecycle,
+[intake/README.md](intake/README.md) for the agent filing protocol, and the
+[July 12 intake receipt](intake/2026-07-12-waterways-nightlife.md) for a complete
+worked example that promotes some claims while holding others for research.

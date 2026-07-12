@@ -10,6 +10,7 @@ or deployment configuration.
 Run:
 
 ```sh
+npm run evals:knowledge-lifecycle
 npm run evals:chad
 npm run evals:recursive
 ```
@@ -42,6 +43,18 @@ weakened source/guardrail structure, and inflated public claims.
 Treat the score as a regression gate, not a substitute for editorial judgment.
 If it fails, improve the claim bank or public projection, rerun the evaluator,
 and repeat until the criterion is met without weakening public-safety rules.
+
+### Knowledge-Lifecycle Criterion
+
+`npm run evals:knowledge-lifecycle` scores capture integrity, source quality,
+atomic observations, claim maturity, research recursion, projection discipline,
+and the photo-feedback loop. Passing requires at least 95/100 and no hard
+failure.
+
+The criterion deliberately permits a deep, mature knowledge bank with no new
+website projection. It fails when evidence is orphaned, inference is promoted,
+source limitations disappear, or unselected depth leaks into the public
+citation layer.
 
 ## Loop 2: Claim Projection
 

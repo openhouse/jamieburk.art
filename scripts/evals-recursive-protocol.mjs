@@ -53,6 +53,11 @@ const requiredFiles = [
   "docs/knowledge-bank/approval-register.md",
   "docs/knowledge-bank/projection-map.md",
   "docs/knowledge-bank/claims.md",
+  "docs/knowledge-bank/framework.md",
+  "docs/knowledge-bank/intake/README.md",
+  "docs/knowledge-bank/intake/2026-07-12-waterways-nightlife.md",
+  "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -61,6 +66,9 @@ const requiredFiles = [
   "scripts/check-knowledge-bank.mjs",
   "scripts/check-public-safety.mjs",
   "scripts/evals-chad-lens.mjs",
+  "scripts/evals-knowledge-lifecycle.mjs",
+  "scripts/report-knowledge-lifecycle.mjs",
+  "scripts/tests/knowledge-lifecycle.test.mjs",
   "scripts/check-routes.mjs"
 ];
 
@@ -74,6 +82,7 @@ for (const script of [
   "knowledge-bank",
   "public-safety",
   "check:routes",
+  "evals:knowledge-lifecycle",
   "evals:chad",
   "evals:recursive",
   "preflight:staging",
@@ -88,6 +97,19 @@ if (scripts.check && !scripts.check.includes("npm run evals:recursive")) {
 
 if (scripts.check && !scripts.check.includes("npm run evals:chad")) {
   fail("package.json check script must include npm run evals:chad");
+}
+
+if (scripts.check && !scripts.check.includes("npm run evals:knowledge-lifecycle")) {
+  fail("package.json check script must include npm run evals:knowledge-lifecycle");
+}
+
+if (
+  scripts["evals:knowledge-lifecycle"] !==
+  "node scripts/evals-knowledge-lifecycle.mjs"
+) {
+  fail(
+    "package.json evals:knowledge-lifecycle must run scripts/evals-knowledge-lifecycle.mjs"
+  );
 }
 
 if (scripts["evals:chad"] !== "node scripts/evals-chad-lens.mjs") {
@@ -137,6 +159,15 @@ for (const doc of [
   ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
 ]) {
   requireIncludes(doc[1], "npm run evals:chad", doc[0]);
+}
+
+for (const doc of [
+  ["docs/production-readiness.md", productionReadiness],
+  ["docs/knowledge-bank/review-checklist.md", reviewChecklist],
+  ["docs/knowledge-bank/launch-blockers.md", launchBlockers],
+  ["docs/qa/evals-L/recursive-protocol.md", recursiveProtocol]
+]) {
+  requireIncludes(doc[1], "npm run evals:knowledge-lifecycle", doc[0]);
 }
 
 for (const phrase of [

@@ -53,6 +53,29 @@ No dedicated Civic Hall listing or event-detail page was recovered. This is not
 proof that no page ever existed. Google Form contents, agenda, breakout roster,
 registration contents, and a complete participant list were not recovered.
 
+## Council-member account engagement
+
+A supplied seven-page timeline capture preserves a documented lower bound for
+Council-member engagement with CallNYC in 2016:
+
+- Dr. Mathieu Eugene quote-posted CallNYC's October 3 HPD Housing Lottery award
+  post on October 4, 2016.
+- Helen Rosenthal directed readers to `callnyc.org` on September 27, 2016;
+  CallNYC reposted her post.
+
+An official August 2016 New York City Council roster confirms that both were
+Council members in the relevant period. The canonical source records are
+`SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11` and
+`SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04`.
+
+This evidence supports **at least two distinct then-Council-member accounts
+publicly amplifying CallNYC in the captured timeline slice**. It does not
+establish a comprehensive account count, interaction total, endorsement,
+adoption, commissioning, or official project status. Platform blocking,
+deleted posts, account renames, and incomplete archives keep the comprehensive
+measurement inquiry open. The PDF itself remains outside the public repo; only
+public-safe metadata and bounded observations are committed.
+
 ## Corrections
 
 The correction registry preserves three active decisions:

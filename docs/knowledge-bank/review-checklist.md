@@ -30,6 +30,8 @@ changes public claims.
 - [ ] `npm run knowledge-bank` passes.
 - [ ] `npm run public-safety` passes.
 - [ ] `npm run check:routes` passes.
+- [ ] `npm run evals:knowledge-lifecycle` scores at least 95/100 with no hard
+  failures.
 - [ ] `npm run evals:chad` scores at least 90/100 with no hard failures.
 - [ ] `npm run evals:recursive` passes.
 - [ ] `npm run preflight:staging` passes.
