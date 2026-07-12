@@ -128,9 +128,9 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
-      internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
+      internalClaim: "The New York City Council held a constituent-services hackathon at Civic Hall on January 30, 2016; Civic Hall announced the session for 1-3 p.m.",
       status: "confirmed",
-      projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a constituent-services hackathon at Civic Hall. Civic Hall announced the session for 1-3 p.m.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["date", "time", "Council event", "constituent-services purpose"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "corroborating", supports: ["date", "venue", "CouncilStat context"], confidence: "high", renderCitation: true }

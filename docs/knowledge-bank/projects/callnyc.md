@@ -12,8 +12,9 @@ context and editorial boundaries; it is not a competing source of truth.
 
 - **2015:** Council 2.0 established policy context for open Council data,
   civic-technology collaboration, and user-centered experimentation.
-- **January 30, 2016:** the New York City Council held a 1-3 p.m.
-  constituent-services hackathon at Civic Hall.
+- **January 30, 2016:** the New York City Council held a
+  constituent-services hackathon at Civic Hall. Civic Hall announced the
+  session for 1-3 p.m.
 - **Early March 2016:** the fuller CouncilStat constituent-services data became
   available.
 - **March 2016:** Jamie independently developed CallNYC.org as a public-facing
