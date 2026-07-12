@@ -1,0 +1,24 @@
+{
+  "suiteId": "portfolio-launch-readiness",
+  "suiteVersion": "1.0.0",
+  "commit": "REPLACE_WITH_COMMIT_SHA",
+  "judge": {
+    "model": "REPLACE_WITH_MODEL_AND_VERSION",
+    "independentPass": true,
+    "scores": [
+      { "criterionId": "hiring-reader-clarity", "score": 0, "evidence": [] },
+      { "criterionId": "agency-purpose-usability", "score": 0, "evidence": [] },
+      { "criterionId": "role-fit-proof", "score": 0, "evidence": [] },
+      { "criterionId": "evidence-traceability", "score": 0, "evidence": [] },
+      { "criterionId": "collective-credit-and-anti-claims", "score": 0, "evidence": [] },
+      { "criterionId": "public-safety-and-boundaries", "score": 0, "evidence": [] },
+      { "criterionId": "visual-proof", "score": 0, "evidence": [] },
+      { "criterionId": "completion-confidence", "score": 0, "evidence": [] }
+    ]
+  },
+  "humanGates": [
+    { "gateId": "jamie-production-approval", "status": "pending", "verifiedBy": null },
+    { "gateId": "media-rights-and-consent", "status": "pending", "verifiedBy": null },
+    { "gateId": "collaborator-sensitive-credit", "status": "pending", "verifiedBy": null }
+  ]
+}

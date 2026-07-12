@@ -35,9 +35,40 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:evals
+npm run test:evals
+npm run eval:launch
+npm run eval:launch:browser -- --url http://127.0.0.1:3000 --profile local
 npm run preflight:staging
 npm run preflight:production
 ```
+
+## Launch Readiness Evals
+
+`evals/launch-readiness/` turns the portfolio's launch intentions into a
+recursive improvement contract for implementation and judge agents. It keeps
+deterministic source gates, browser behavior, LLM-judged editorial quality, and
+human approvals separate so an agent cannot award itself consent or production
+approval.
+
+```bash
+# Report source-level release blockers and quality targets.
+npm run eval:launch
+
+# Test a running build at the supported routes and viewports.
+npm run eval:launch:browser -- \
+  --url https://staging.jamieburk.art \
+  --profile staging
+
+# Compare two complete reports lexicographically.
+npm run eval:launch:compare -- before.json after.json
+```
+
+Read `evals/launch-readiness/agent-loop.md` before recursive work. A full
+release decision also needs an independent assessment based on
+`judge-prompt.md`, a passing browser report, and named confirmation of every
+human gate. `npm run preflight:production` intentionally enforces the
+source-level launch gate.
 
 ## Knowledge Bank
 

@@ -1,0 +1,197 @@
+{
+  "id": "portfolio-launch-readiness",
+  "version": "1.0.0",
+  "objective": "Make Jamie legible and credible to a busy hiring reader while preserving factual accuracy, collective credit, public safety, accessibility, and a clear path to action.",
+  "releaseThresholds": {
+    "hardGateFailures": 0,
+    "weightedJudgeScore": 90,
+    "minimumJudgeScore": 3,
+    "minimumSafetyScore": 4,
+    "maximumPlateauIterations": 2,
+    "maximumIterations": 8
+  },
+  "routes": [
+    "/",
+    "/work",
+    "/work/technical-operations",
+    "/resume",
+    "/about",
+    "/contact",
+    "/colophon",
+    "/lab/source-backed-team-memory",
+    "/work/harry-j-epstein",
+    "/work/fair-rent-nyc",
+    "/work/callnyc",
+    "/work/wowlist",
+    "/work/196-sunday-dinner",
+    "/work/kc-town-hall"
+  ],
+  "viewports": [
+    { "name": "mobile-320", "width": 320, "height": 800 },
+    { "name": "mobile-375", "width": 375, "height": 812 },
+    { "name": "tablet", "width": 768, "height": 1024 },
+    { "name": "desktop", "width": 1440, "height": 1000 }
+  ],
+  "sourceChecks": [
+    {
+      "id": "public-copy-has-no-workflow-status",
+      "kind": "hard-gate",
+      "intent": "A hiring reader should encounter a deliberate public artifact, not internal approval or production workflow.",
+      "remediation": "Resolve the approval or describe the public boundary as an intentional omission."
+    },
+    {
+      "id": "permanent-copy-is-employer-neutral",
+      "kind": "hard-gate",
+      "intent": "The permanent portfolio should remain legible across job applications.",
+      "remediation": "Replace unexplained employer-specific acronyms with the general role or capability."
+    },
+    {
+      "id": "colophon-explains-citational-care",
+      "kind": "hard-gate",
+      "intent": "The site should state how significant factual claims connect to public and protected evidence.",
+      "remediation": "Add the bounded Citational care statement to the Colophon."
+    },
+    {
+      "id": "launch-register-is-resolved",
+      "kind": "hard-gate",
+      "intent": "Production approval must be an explicit reviewed state rather than an assumed one.",
+      "remediation": "Close, remove, or explicitly defer every item in the launch-blockers register."
+    },
+    {
+      "id": "application-path-is-complete",
+      "kind": "hard-gate",
+      "intent": "A reader can reach work, role-fit proof, resume, and contact without interpretation.",
+      "remediation": "Restore the missing application-path link or approved resume artifact."
+    },
+    {
+      "id": "public-artifact-media-depth",
+      "kind": "quality-target",
+      "intent": "The portfolio should show inspectable work rather than requiring readers to imagine every artifact.",
+      "minimum": 3,
+      "remediation": "Add a small rights-cleared set of real, captioned project artifacts or photographs."
+    },
+    {
+      "id": "structured-citation-project-depth",
+      "kind": "quality-target",
+      "intent": "The strongest quantitative and causal claims should have inspectable evidence paths beyond one case study.",
+      "minimum": 4,
+      "remediation": "Add structured source, claim, projection, and page-note records for another high-value project."
+    }
+  ],
+  "browserChecks": [
+    {
+      "id": "canonical-routes-return-200",
+      "kind": "hard-gate",
+      "intent": "Every application route is reachable."
+    },
+    {
+      "id": "one-h1-per-route",
+      "kind": "hard-gate",
+      "intent": "Every page has one stable primary heading."
+    },
+    {
+      "id": "no-horizontal-overflow",
+      "kind": "hard-gate",
+      "intent": "Text and controls fit at all supported widths."
+    },
+    {
+      "id": "no-browser-errors",
+      "kind": "hard-gate",
+      "intent": "Application routes render without uncaught browser errors."
+    },
+    {
+      "id": "resume-pdf-is-reachable",
+      "kind": "hard-gate",
+      "intent": "The approved application artifact is downloadable."
+    },
+    {
+      "id": "indexing-matches-environment",
+      "kind": "hard-gate",
+      "intent": "Staging stays private from search while production is intentionally indexable."
+    }
+  ],
+  "judgeCriteria": [
+    {
+      "id": "hiring-reader-clarity",
+      "weight": 16,
+      "floor": 3,
+      "question": "Can a busy hiring reader understand Jamie's professional shape, strongest fit, and next action in one pass?"
+    },
+    {
+      "id": "agency-purpose-usability",
+      "weight": 16,
+      "floor": 3,
+      "question": "Do important claims name Jamie's agency, the end the work served, and what became usable?"
+    },
+    {
+      "id": "role-fit-proof",
+      "weight": 14,
+      "floor": 3,
+      "question": "Does the site demonstrate technical project management, product operations, implementation, and delivery coordination with concrete proof?"
+    },
+    {
+      "id": "evidence-traceability",
+      "weight": 14,
+      "floor": 3,
+      "question": "Can a reader inspect support for the strongest factual, quantitative, and causal claims?"
+    },
+    {
+      "id": "collective-credit-and-anti-claims",
+      "weight": 12,
+      "floor": 3,
+      "question": "Does the rhetoric preserve collective credit and avoid stronger ownership, causality, authority, or adoption claims than the evidence establishes?"
+    },
+    {
+      "id": "public-safety-and-boundaries",
+      "weight": 14,
+      "floor": 4,
+      "question": "Are private evidence, consent limits, legal boundaries, current-service disclaimers, and protected records handled safely without weakening defensible claims?"
+    },
+    {
+      "id": "visual-proof",
+      "weight": 8,
+      "floor": 2,
+      "question": "Do real, relevant, rights-cleared artifacts help readers inspect the work, with useful captions and provenance?"
+    },
+    {
+      "id": "completion-confidence",
+      "weight": 6,
+      "floor": 3,
+      "question": "Does the public site feel intentionally complete rather than exposing internal production state or unresolved placeholders?"
+    }
+  ],
+  "scoreAnchors": {
+    "0": "Absent, contradicted, unsafe, or unusable.",
+    "1": "Major gaps; a reader must infer the intended meaning or path.",
+    "2": "Partially effective, but important ambiguity, evidence, or usability gaps remain.",
+    "3": "Clear and credible with only bounded, non-blocking gaps.",
+    "4": "Exceptionally clear, specific, inspectable, and appropriately bounded."
+  },
+  "humanGates": [
+    {
+      "id": "jamie-production-approval",
+      "owner": "Jamie Burkart",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "media-rights-and-consent",
+      "owner": "Jamie Burkart or documented rights holder",
+      "agentMaySelfCertify": false
+    },
+    {
+      "id": "collaborator-sensitive-credit",
+      "owner": "Jamie Burkart and affected collaborator when needed",
+      "agentMaySelfCertify": false
+    }
+  ],
+  "antiGamingRules": [
+    "A higher score cannot compensate for a hard-gate failure.",
+    "A judge must cite route-level or record-level evidence for every score.",
+    "Do not remove a defensible claim merely to make citation coverage appear higher.",
+    "Do not weaken public-safety language to improve fluency or visual simplicity.",
+    "Do not add decorative or irrelevant media to satisfy artifact counts.",
+    "Do not mark a human gate complete without named human confirmation.",
+    "Do not improve one criterion by violating a knowledge-bank guardrail or anti-claim.",
+    "When objective scores tie, prefer the smaller, more reversible patch."
+  ]
+}
