@@ -13,6 +13,11 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+Nothing is silently discarded. That does not mean everything is published.
+Every public-safe lead receives an intake record and disposition; only supported
+claims become eligible for projection, and only claims useful to the current
+argument are selected for a public surface.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -30,6 +35,9 @@ The knowledge bank exists to:
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake ledger:** public-safe record of URLs, recollections, artifact leads,
+  photo observations, collaborator notes, and research questions. Intake is
+  memory, not confirmation.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
@@ -61,5 +69,6 @@ For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
-workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+workflow, [development-loop.md](development-loop.md) for the recursive
+knowledge-development protocol, and [projects/callnyc.md](projects/callnyc.md)
+for the first complete citation pilot.

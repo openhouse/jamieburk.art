@@ -288,6 +288,7 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "development-loop.md",
   "chad-lens.md",
   "approval-register.md",
   "claims.md",

@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-bank-development",
+  "title": "Source-backed knowledge development",
+  "objective": "Remember every public-safe lead, develop defensible claims from evidence, preserve uncertainty and collective credit, and project only claims that serve a defined public argument.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "unsafe, broken, missing, or contradicted",
+      "1": "captured but materially incomplete",
+      "2": "structured but not ready for promotion",
+      "3": "strong, bounded, and operational",
+      "4": "complete, inspectable, recursively maintainable, and trustworthy"
+    }
+  },
+  "thresholds": {
+    "weighted_score_minimum": 0.95,
+    "blocking_score_minimum": 4,
+    "nonblocking_score_minimum": 3,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "selection_order": [
+      "public-safety and unsupported-promotion failures",
+      "unresolved intake and referential-integrity failures",
+      "largest weighted score gap",
+      "smallest coherent correction that preserves evidence"
+    ],
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "nothing_is_silently_discarded": true
+  },
+  "hard_constraints": [
+    "The public repository contains only public sources, public-safe summaries, protected opaque locators, and approved projections.",
+    "A recollection may create a claim lead or research task but cannot independently confirm a claim.",
+    "A source must be decomposed into what it supports, bounds, contradicts, contextualizes, or leaves open.",
+    "Claim maturity and projection status are independent decisions.",
+    "Collective work must name Jamie's contribution without erasing collaborators, institutions, movements, or formal decision-makers.",
+    "Negative searches are recorded as not recovered, never as proof that an artifact or event did not exist.",
+    "Photographs remain outside the public repository until rights, consent, context, and public-display review are complete.",
+    "The public website is a selective projection of the knowledge bank, not a mirror of it."
+  ],
+  "evals": [
+    {
+      "id": "KB-001",
+      "title": "Intake coverage and disposition",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 15,
+      "procedure": ["Inventory every intake item in the current batch.", "Verify stable identity, provenance, status, and a linked disposition or explicit hold reason."],
+      "pass_criteria": ["No item is silently dropped.", "Every decomposed or integrated item links to a source, claim, or research task.", "Every held item records why."],
+      "remediation_hint": "Create or complete the intake record before developing more public copy."
+    },
+    {
+      "id": "KB-002",
+      "title": "Public safety and provenance",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 15,
+      "procedure": ["Scan public-safe records for private paths, raw-source markers, credentials, and exposed protected locators.", "Verify public URLs and citations for public sources."],
+      "pass_criteria": ["No private source material is exposed.", "Every public source has a public URL and citation.", "Every non-public source omits underlying URLs."],
+      "remediation_hint": "Replace raw material with a public-safe summary or opaque protected locator."
+    },
+    {
+      "id": "KB-003",
+      "title": "Atomic source decomposition",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "procedure": ["For every newly integrated or queued public source, inspect its atomic source assertions.", "Check that boundaries and open questions are represented where the source is incomplete."],
+      "pass_criteria": ["Every intake-linked source has at least one assertion.", "Assertions identify their relationship and confidence.", "A supplied URL alone does not become evidence for an unrelated claim."],
+      "remediation_hint": "Closely read the source and create atomic support, boundary, context, contradiction, or question records."
+    },
+    {
+      "id": "KB-004",
+      "title": "Claim maturity integrity",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 15,
+      "procedure": ["Compare every claim's maturity and eligibility with its evidence relationships.", "Verify that confirmed claims have direct support and research-needed claims remain held."],
+      "pass_criteria": ["No recollection-only claim is confirmed.", "Every eligible claim is confirmed or confirmed with a boundary.", "Every research-needed claim is held from projection."],
+      "remediation_hint": "Lower maturity or eligibility until the evidence supports promotion."
+    },
+    {
+      "id": "KB-005",
+      "title": "Evidence graph integrity",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 15,
+      "procedure": ["Resolve every source, assertion, claim, task, correction, page, and occurrence reference.", "Check stable-ID uniqueness within and across record classes."],
+      "pass_criteria": ["Every reference resolves.", "No stable ID is duplicated.", "Every page occurrence resolves to an eligible claim and cited source."],
+      "remediation_hint": "Repair the smallest broken reference and re-run the entire graph check."
+    },
+    {
+      "id": "KB-006",
+      "title": "Research queue discipline",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "procedure": ["Trace every research-needed claim to a research task or completed inquiry.", "Inspect methods, success criteria, limitations, and source boundaries."],
+      "pass_criteria": ["Every open consequential claim has an actionable research path.", "Tasks distinguish recovery from nonexistence and chronology from causation.", "Completed work records a bounded result."],
+      "remediation_hint": "Create a bounded research task with methods and success criteria instead of guessing."
+    },
+    {
+      "id": "KB-007",
+      "title": "Collective credit and anti-claims",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 8,
+      "procedure": ["Review every collective-work claim for Jamie's specific contribution, collaborator and institution boundaries, and prohibited overstatements."],
+      "pass_criteria": ["Every collective claim has a boundary and anti-claim.", "Supported action is not hidden behind vague team language.", "Movement or policy outcomes are not converted into solo causation."],
+      "remediation_hint": "Name Jamie's action plainly, then state the collective and institutional boundary just as plainly."
+    },
+    {
+      "id": "KB-008",
+      "title": "Projection discipline",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 7,
+      "procedure": ["Compare active public projections with claim eligibility, evidence, citation requirement, and registered page occurrence."],
+      "pass_criteria": ["Only eligible claims appear on public website surfaces.", "Strong active claims require citations where context warrants.", "Eligible knowledge may remain unprojected without being deleted."],
+      "remediation_hint": "Hold the projection or add the missing evidence and citation occurrence."
+    },
+    {
+      "id": "KB-009",
+      "title": "Public-claim coverage and underclaiming review",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "procedure": ["Trace consequential public claims back to the bank.", "Review eligible but unprojected claims as candidates for the current audience rather than automatic additions."],
+      "pass_criteria": ["Every consequential public claim has a bank record or approved proof record.", "Strong eligible claims receive an explicit use-now or hold decision.", "Depth does not force display."],
+      "remediation_hint": "Record the editorial disposition; compose for the audience instead of dumping the bank onto the page."
+    },
+    {
+      "id": "KB-010",
+      "title": "Photo-to-research feedback loop",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 2,
+      "procedure": ["Inspect photo leads and participant-photo sources.", "Verify metadata-only intake, research-task routing, and rights, consent, and display controls."],
+      "pass_criteria": ["A photo observation can become a research task without becoming a claim.", "Uncleared pixels remain outside the public repository.", "Any displayable photo records rights, consent, context, and claim relationship."],
+      "remediation_hint": "Route the observation through metadata-only intake and rights review before evidentiary or editorial use."
+    }
+  ]
+}
