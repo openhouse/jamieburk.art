@@ -9,8 +9,8 @@ an individual post.
 
 | Project or campaign | X / Twitter handle | Relationship | Evidence status |
 | --- | --- | --- | --- |
-| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated project account established by Jamie | Live account and public posts recovered |
-| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity established by Jamie and used by collaborators | Live account, public posts, City record, and bounded archive corpus recovered |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated project account established by Jamie | Authenticated search, live posts, bounded capture, and six-member Council minimum recovered |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity established by Jamie and used by collaborators | Authenticated search, 279 authored posts, 395 mention results, seven-member Council minimum, City dialogue, and collaborator continuity recovered |
 | Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |

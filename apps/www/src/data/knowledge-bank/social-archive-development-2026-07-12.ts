@@ -624,19 +624,30 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       id: "CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM",
       project: "public-project-identities",
       text:
-        "Recovered public evidence documents direct engagement by at least three distinct then-sitting Council member accounts with CallNYC or NYC Artist Coalition.",
+        "Recovered public evidence documents at least 29 direct posts by 13 distinct then-sitting Council members engaging with CallNYC or NYC Artist Coalition.",
       status: "promoted",
       sourceIds: [
         "SRC-SOCIAL-CALLNYC-HELEN-ROSENTHAL-2016",
         "SRC-SOCIAL-CALLNYC-MATHIEU-EUGENE-2016",
-        "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018"
+        "SRC-SOCIAL-CALLNYC-PETER-KOO-2016",
+        "SRC-SOCIAL-CALLNYC-STEVEN-MATTEO-2016",
+        "SRC-SOCIAL-CALLNYC-RUBEN-WILLS-2016",
+        "SRC-SOCIAL-CALLNYC-MARGARET-CHIN-2017",
+        "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018",
+        "SRC-SOCIAL-NYCAC-CARLINA-RIVERA-2018",
+        "SRC-SOCIAL-NYCAC-STEPHEN-LEVIN-2019",
+        "SRC-SOCIAL-NYCAC-JUSTIN-BRANNAN-2019",
+        "SRC-SOCIAL-NYCAC-MARK-LEVINE-2020",
+        "SRC-SOCIAL-NYCAC-JIMMY-VAN-BRAMER-2020",
+        "SRC-SOCIAL-NYCAC-BRAD-LANDER-2021",
+        "SRC-SOCIAL-X-AUTHENTICATED-RUN-2026"
       ],
       researchInquiryIds: ["INQ-PROJECT-SOCIAL-ARCHIVE-2026"],
       supportSummary:
-        "Direct public posts and published reproduction establish Helen Rosenthal, Mathieu Eugene, and Rafael Espinal as a recovered minimum.",
+        "Authenticated roster search plus public post records establish six then-sitting members engaging CallNYC and seven engaging NYC Artist Coalition.",
       missingEvidence: [],
       boundaries: [
-        "Three is a minimum, not an exhaustive total; mentions and anonymous interaction counts are excluded."
+        "Thirteen members and 29 posts are minimums, not exhaustive totals; outbound mentions and anonymous interaction counts are excluded."
       ],
       promotedClaimId: "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM",
       reviewedAt: "2026-07-12"
@@ -669,15 +680,16 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       status: "partially-supported",
       sourceIds: [
         "SRC-SOCIAL-CALLNYC-PROFILE-CAPTURE-2026",
-        "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026"
+        "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026",
+        "SRC-SOCIAL-X-AUTHENTICATED-RUN-2026"
       ],
       researchInquiryIds: ["INQ-PROJECT-SOCIAL-ARCHIVE-2026"],
       supportSummary:
-        "A minimum is recoverable, but the available timeline, Wayback, and oEmbed corpora do not expose a complete identity-level engagement history.",
+        "Authenticated search substantially raises the recoverable minimum, but X search, timeline, Wayback, and oEmbed corpora still do not expose a complete identity-level engagement history.",
       missingEvidence: [
-        "Official account exports or a reproducible authenticated full-history capture",
+        "Official account exports",
         "Complete replies, quotes, repost identities, and historical likes",
-        "A date-appropriate Council-account roster with handle changes"
+        "Deleted posts and a complete historical handle-change ledger"
       ],
       boundaries: ["Do not turn the recovered minimum into a comprehensive total."],
       reviewedAt: "2026-07-12"
@@ -729,7 +741,7 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       claimId: "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM",
       decision: "promoted",
       reason:
-        "Three direct engagements are individually sourced and explicitly presented as a minimum rather than a complete count.",
+        "Thirteen then-sitting members and 29 direct posts are source-backed and explicitly presented as recovered minimums rather than complete totals.",
       decidedAt: "2026-07-12",
       decidedBy: ["Jamie Burkart", "Codex archival review"]
     },
@@ -748,7 +760,7 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       candidateClaimId: "CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-EXACT",
       decision: "held",
       reason:
-        "The available sources support only a recovered minimum; an exact total requires a complete export or reproducible authenticated corpus.",
+        "Authenticated search supports a much stronger minimum, but an exact lifetime total still requires official exports and complete historical interaction data.",
       decidedAt: "2026-07-12",
       decidedBy: ["Jamie Burkart", "Codex archival review"]
     },
@@ -780,7 +792,7 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       ],
       rationale: [
         "Lead with durable systems and collaborator agency, not follower metrics.",
-        "Keep the three-member engagement minimum in the research report until it serves a clear public argument.",
+        "Keep the 13-member, 29-post engagement minimum in the research report until it serves a clear public argument.",
         "Do not add a social analytics panel or a new public knowledge-bank route."
       ],
       createdAt: "2026-07-12"

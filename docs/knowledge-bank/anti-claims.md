@@ -34,8 +34,17 @@ collective campaign voice and collaborator authorship. Do not attribute a
 particular post to a named collaborator without direct confirmation.
 
 Do not treat outbound mentions as engagement, captured likes or repost totals as
-identified Council-member interactions, or the recovered three-member minimum
-across CallNYC and NYC Artist Coalition as a comprehensive total.
+identified Council-member interactions, or the recovered 13-member / 29-post
+minimum across CallNYC and NYC Artist Coalition as a comprehensive total.
+
+Do not say Jamie authored Olympia Kazi's posts or that Olympia authored posts
+from the shared @NYCArtC account. The recovered 89-post corpus establishes
+Olympia's own sustained public use of the coalition identity, not shared-account
+post authorship or Jamie's direction of her voice.
+
+Do not convert 17 recovered NYC Cultural Affairs and NYC311 posts into a claim
+that the City adopted every coalition recommendation. Dialogue, service routing,
+and public recognition are not policy causality.
 
 Do not describe the commercial vacancy and lease-cost pilot as adopted,
 implemented, commissioned by the City, or based on Jamie's access to

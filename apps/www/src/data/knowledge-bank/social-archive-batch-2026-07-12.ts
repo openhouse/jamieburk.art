@@ -667,13 +667,13 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
       id: "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM",
       project: "public-project-identities",
       internalClaim:
-        "The bounded recovered evidence directly documents public engagement by at least three distinct then-sitting New York City Council member accounts with CallNYC or NYC Artist Coalition: Helen Rosenthal, Mathieu Eugene, and Rafael Espinal.",
+        "The bounded recovered evidence directly documents at least 29 public posts by 13 distinct then-sitting New York City Council member accounts engaging with CallNYC or NYC Artist Coalition.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "archive-note",
           text:
-            "Recovered public evidence documents direct engagement by at least three distinct then-sitting Council member accounts with CallNYC or NYC Artist Coalition: Helen Rosenthal, Mathieu Eugene, and Rafael Espinal.",
+            "Recovered public evidence documents at least 29 direct posts by 13 distinct then-sitting Council members engaging with CallNYC or NYC Artist Coalition.",
           status: "active",
           citationRequired: false,
           surfaces: ["docs/knowledge-bank/social-archive-2026-07-12"]
@@ -696,20 +696,98 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
           renderCitation: false
         },
         {
+          sourceId: "SRC-SOCIAL-CALLNYC-PETER-KOO-2016",
+          relationship: "direct-support",
+          supports: ["Peter Koo directly amplified CallNYC"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-CALLNYC-STEVEN-MATTEO-2016",
+          relationship: "direct-support",
+          supports: ["Steven Matteo directly replied to CallNYC"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-CALLNYC-RUBEN-WILLS-2016",
+          relationship: "direct-support",
+          supports: ["Ruben Wills directly replied to CallNYC"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-CALLNYC-MARGARET-CHIN-2017",
+          relationship: "direct-support",
+          supports: ["Margaret Chin directly acknowledged CallNYC"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
           sourceId: "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018",
           relationship: "direct-support",
           supports: ["Rafael Espinal publicly identified joint work with @NYCArtC"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-CARLINA-RIVERA-2018",
+          relationship: "direct-support",
+          supports: ["Carlina Rivera directly replied to NYC Artist Coalition"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-STEPHEN-LEVIN-2019",
+          relationship: "direct-support",
+          supports: ["Stephen Levin publicly thanked NYC Artist Coalition after MARCH testimony"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-JUSTIN-BRANNAN-2019",
+          relationship: "direct-support",
+          supports: ["Justin Brannan directly replied to NYC Artist Coalition"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-MARK-LEVINE-2020",
+          relationship: "direct-support",
+          supports: ["Mark Levine directly replied to NYC Artist Coalition"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-JIMMY-VAN-BRAMER-2020",
+          relationship: "direct-support",
+          supports: ["Jimmy Van Bramer included NYC Artist Coalition in public arts advocacy"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-NYCAC-BRAD-LANDER-2021",
+          relationship: "direct-support",
+          supports: ["Brad Lander engaged a coalition commercial-rent thread"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-SOCIAL-X-AUTHENTICATED-RUN-2026",
+          relationship: "corroborating",
+          supports: ["date-aware 13-member and 29-post deduplication"],
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
-        "Three is a recovered minimum, not a comprehensive total.",
+        "Thirteen members and 29 posts are recovered minimums, not comprehensive totals.",
         "Mentions by a project account are not counted as inbound engagement.",
-        "Anonymous likes or repost counts are not attributed to Council members."
+        "Anonymous likes or repost counts are not attributed to Council members.",
+        "Posts are classified against the officeholder's term dates; pre-term and post-term posts do not increase the then-sitting member count."
       ],
       antiClaims: [
-        "Only three Council members engaged",
+        "Only 13 Council members engaged",
         "every Council member mentioned by a project account engaged",
         "the engagements constitute official Council endorsement"
       ],
@@ -774,6 +852,9 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "Inspected a July 11 rendered CallNYC profile capture and recovered public status URLs from PDF link annotations.",
         "Queried the Internet Archive CDX index for distinct @NYCArtC status URLs.",
         "Requested public X oEmbed metadata for 286 distinct archived status URLs; 279 returned readable post metadata.",
+        "Ran authenticated X searches for project mentions, replies, authored posts, and callnyc.org links in an isolated browser context.",
+        "Queried 60 historical Council handles in date-aware batches and deduplicated recovered post URLs against officeholder term dates.",
+        "Ran a separate authenticated search for NYC Cultural Affairs, NYC311, Council, Mayor, and nightlife institutional accounts.",
         "Queried Wayback CDX and public X oEmbed for the historical @wowlist account and recovered two readable November 2016 posts.",
         "Resolved all 193 unique short links in the readable @NYCArtC corpus and classified campaign, government, reporting, resource, and platform destinations.",
         "Reviewed the City of New York CreateNYC Twitter-data appendix and published reporting that reproduces Council-member posts."
@@ -785,13 +866,16 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "The @NYCArtC corpus recovered 286 distinct archived post URLs and readable metadata for 279, spanning March 2017 through February 2023.",
         "Keyword coding within the overlapping 279-post corpus identified 11 Let NYC Dance, 12 Talks Not Raids, 144 Fair Rent NYC, 34 Save NYC Spaces, 41 COVID/mutual-aid, and 70 public-process posts.",
         "All 193 unique short links resolved; 59 distinct non-campaign external resource destinations across 42 domains were identified for deeper reading.",
-        "Public evidence documents a recovered minimum of three then-sitting Council member accounts directly engaging with CallNYC or NYC Artist Coalition.",
+        "Public evidence documents a recovered minimum of 13 then-sitting Council members and 29 direct posts engaging with CallNYC or NYC Artist Coalition.",
+        "Six then-sitting members directly engaged CallNYC; seven directly engaged NYC Artist Coalition.",
+        "Authenticated search recovered 89 unique Olympia Kazi posts mentioning @NYCArtC from November 2019 through June 2022.",
+        "Authenticated search recovered 17 posts from NYC Cultural Affairs and NYC311 directly engaging @NYCArtC in 2017.",
         "The CreateNYC appendix preserves NYC Cultural Affairs crediting @NYCArtC with gathering a large crowd for a DIY-spaces discussion.",
         "The shared @NYCArtC identity remained publicly active through at least August 2025.",
         "Two recovered @wowlist posts show the project distributing nationwide marches and inviting people to add events and receive updates about marches, meetings, and local connection."
       ],
       limitations: [
-        "No official X account export or complete authenticated search corpus was available to this run.",
+        "Authenticated X search is indexed and selective, not an official account export; it does not expose all deleted posts, historical handle changes, likes, repost identities, or impressions.",
         "Wayback coverage is selective; oEmbed does not expose complete reply, quote, repost, like, or impression histories.",
         "Mentions are outbound address, not evidence that the mentioned account engaged.",
         "Keyword groups overlap and are descriptive coding, not mutually exclusive campaign totals.",
@@ -808,10 +892,14 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "SRC-SOCIAL-NYCAC-LINK-CENSUS-2026",
         "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025",
         "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
-        "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016"
+        "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016",
+        "SRC-SOCIAL-X-AUTHENTICATED-RUN-2026",
+        "SRC-SOCIAL-OLYMPIA-NYCAC-CORPUS-2026",
+        "SRC-SOCIAL-NYC-INSTITUTIONAL-CORPUS-2026",
+        "SRC-SOCIAL-DOCUMENT-JOURNAL-NIGHTLIFE-2018"
       ],
       publicSummary:
-        "A bounded social-archive pass recovered three canonical project identities, 279 readable @NYCArtC posts from 286 archived URLs, two readable historical @wowlist posts, 193 resolved source links, and a minimum of three direct Council-member account engagements while preserving the incomplete-coverage boundary.",
+        "A bounded social-archive pass recovered three canonical project identities, 279 readable @NYCArtC posts from 286 archived URLs, two readable historical @wowlist posts, 193 resolved source links, 89 Olympia Kazi posts, 17 city-institution posts, and a minimum of 13 then-sitting Council members across 29 direct posts while preserving the incomplete-coverage boundary.",
       protectedLocatorId: "RESEARCH-PROJECT-SOCIAL-ARCHIVE-2026-001"
     }
   ]

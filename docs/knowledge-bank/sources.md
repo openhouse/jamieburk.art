@@ -80,11 +80,14 @@ and Drive coordinates outside the public registry. See
 The July 12 project-social pass adds public and protected records for
 @CallNYCapp, @NYCArtC, and historical @wowlist use. It recovered 279 readable
 @NYCArtC posts from 286 archived status URLs, resolved 193 unique source links,
-and identified a bounded minimum of three direct then-sitting Council-member
-account engagements across CallNYC and NYC Artist Coalition. The source layer
+and used authenticated X search to identify a bounded minimum of 13 then-sitting
+Council members across 29 direct posts involving CallNYC and NYC Artist
+Coalition. The authenticated layer also preserves 89 Olympia Kazi posts and 17
+NYC Cultural Affairs / NYC311 posts engaging the coalition identity. The source layer
 also adds the City of New York's CreateNYC Twitter-data appendix, Brooklyn Daily
 Eagle reporting that reproduces Rafael Espinal's post, and four public articles
-surfaced through the account corpus. See the
+surfaced through the account corpus, plus Document Journal's photographed account
+of the Cabaret Law repeal effort. See the
 [social account registry](social-account-registry.md) and
 [social archive inventory](social-archive-2026-07-12.md).
 

@@ -318,7 +318,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie created a durable public identity across the coalition logo, campaign website family, and shared social account. The account's public record shows collaborators carrying that identity across years of advocacy, resources, public process, and coalition continuity.",
     sourceBasis:
-      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, public posts, published reporting, and a bounded Wayback-indexed account corpus.",
+      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, public posts, published reporting, a bounded Wayback-indexed account corpus, and authenticated X searches across project, Council, city-agency, and collaborator accounts.",
     whyItMatters:
       "Shows that Jamie's design and implementation work created a public interface other people could use and sustain, not only a set of one-time pages.",
     guardrail:

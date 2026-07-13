@@ -7,13 +7,13 @@ Run date: 2026-07-12
 Jamie established public project identities for CallNYC, NYC Artist Coalition,
 and WOWList. The coalition's shared @NYCArtC identity also carried Let NYC
 Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC. Public evidence
-currently documents direct engagement by **at least three distinct then-sitting
-New York City Council member accounts** across CallNYC and NYC Artist Coalition:
-Helen Rosenthal, Mathieu Eugene, and Rafael Espinal.
+currently documents **at least 29 direct posts by 13 distinct then-sitting New
+York City Council members** across CallNYC and NYC Artist Coalition. Six engaged
+CallNYC; seven engaged NYC Artist Coalition.
 
-Three is a recovered minimum, not an exact total. Outbound mentions, anonymous
-like or repost totals, and project-authored posts naming Council members are not
-counted as direct Council-member engagement.
+Thirteen members and 29 posts are recovered minimums, not exact totals. Outbound
+mentions, anonymous like or repost totals, and project-authored posts naming
+Council members are not counted as direct Council-member engagement.
 
 ## Collection Method
 
@@ -24,6 +24,12 @@ counted as direct Council-member engagement.
 - Queried the Internet Archive CDX index for distinct @NYCArtC status URLs.
 - Requested public X oEmbed metadata for 286 archived status URLs; 279 returned
   readable post metadata.
+- Ran authenticated X searches for project mentions, replies, authored posts,
+  and domain links in an isolated browser profile.
+- Queried 60 historical Council handles in date-aware batches and deduplicated
+  results against officeholder term dates.
+- Queried city institutional accounts and separately deduplicated Olympia
+  Kazi's public posts mentioning @NYCArtC.
 - Resolved 193 unique short links from the readable corpus and classified the
   destinations.
 - Read the City of New York's CreateNYC Twitter-data appendix and published
@@ -40,6 +46,10 @@ Recovered public records include:
 - [CallNYC's March 5, 2016, launch post](https://x.com/CallNYCapp/status/706208629360304128).
 - [Helen Rosenthal directing residents to CallNYC](https://x.com/HelenRosenthal/status/780797474277511170).
 - [Mathieu Eugene amplifying a CallNYC housing-service recognition](https://x.com/CMMathieuEugene/status/783305320508514304).
+
+Authenticated search adds direct engagement by Peter Koo, Steven Matteo, Ruben
+Wills, and Margaret Chin. Together with Helen Rosenthal and Mathieu Eugene,
+that yields a recovered CallNYC minimum of six then-sitting Council members.
 
 The Wayback index also preserved CallNYC posts about Peter Koo, Brad Lander,
 and Ydanis Rodriguez. Those posts are project-authored mentions with small
@@ -60,6 +70,29 @@ The CallNYC profile capture shows CallNYC reposting both posts. This is useful
 evidence of cross-project continuity among public identities Jamie established.
 Two surviving posts are not an account inventory, audience measure, adoption
 count, or basis for attributing individual authorship.
+
+## Council Engagement Inventory
+
+The date-aware recovered minimum is:
+
+| Project identity | Then-sitting Council members recovered |
+| --- | --- |
+| CallNYC | Peter Koo, Steven Matteo, Ruben Wills, Helen Rosenthal, Mathieu Eugene, Margaret Chin |
+| NYC Artist Coalition | Rafael Espinal, Carlina Rivera, Stephen Levin, Justin Brannan, Mark Levine, Jimmy Van Bramer, Brad Lander |
+
+Representative records include [Margaret Chin connecting CallNYC recognition
+to improving service numbers](https://x.com/CM_MargaretChin/status/884863588317442049),
+[Stephen Levin thanking NYC Artist Coalition after MARCH
+testimony](https://x.com/StephenLevin33/status/1095020293112979457),
+[Rafael Espinal describing joint Save NYC Spaces
+work](https://x.com/RLEspinal/status/1098626837821997056), and [Brad Lander
+connecting a coalition thread to Commercial Rent Stabilization committee
+remarks](https://x.com/bradlander/status/1354840336330330116).
+
+The roster query recovered 28 qualifying posts from 12 members. Mathieu Eugene's
+separately preserved quoted-post response raises the cross-project minimum to 13
+members and 29 direct posts. Pre-term and post-term posts were excluded from the
+then-sitting count.
 
 ## NYC Artist Coalition Inventory
 
@@ -112,6 +145,37 @@ action to reporting, government records, hearings, grants, and public resources.
 It does not prove that the account generated the reporting or caused policy
 outcomes.
 
+## Collaborator Continuity
+
+Authenticated search recovered **89 unique public posts by Olympia Kazi**
+mentioning @NYCArtC from November 1, 2019, through June 9, 2022. Her posts
+carried Fair Rent NYC, nightlife, cultural-space advocacy, hearings, reporting,
+and coalition work through the shared public identity. A representative [April
+2022 post](https://x.com/olympiakazi/status/1516092153893691392) connects Save
+NYC Spaces, Talks Not Raids, and Fair Rent NYC to a City Council nightlife
+oversight hearing.
+
+This supports Jamie's identity-system claim and, separately, Olympia's sustained
+public authorship and stewardship. It does not attribute @NYCArtC posts to
+Olympia, imply Jamie directed her posts, or reduce collective work to either
+person.
+
+## City Institutional Dialogue
+
+Authenticated search recovered **17 direct posts from NYC Cultural Affairs and
+NYC311** engaging @NYCArtC in 2017. The exchanges addressed artist services,
+community-driven spaces, interagency relationships, the Cabaret Law, MARCH, and
+CreateNYC. In one representative exchange, [NYC Cultural Affairs asked the
+coalition to explain MARCH and Cabaret Law concerns](https://x.com/NYCulture/status/837715449920032768).
+The City agency also publicly credited @NYCArtC with gathering a large crowd for
+a DIY-spaces discussion.
+
+The authenticated source trail also surfaced [Document Journal's 2018 profile
+of the Cabaret Law repeal effort](https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/),
+which visibly includes Jamie among NYC Artist Coalition participants and
+photographs and quotes Olympia Kazi. The article misspells Jamie's surname in an
+image caption; the pictured person is Jamie Burkart.
+
 ## Public Use
 
 The strongest portfolio claim is about infrastructure and continuity: Jamie
@@ -126,8 +190,9 @@ argument.
 - Wayback coverage is selective, and X oEmbed does not expose a complete reply,
   quote, repost, like, or impression history.
 - The CallNYC capture contains only the timeline segment loaded at capture time.
-- The authenticated X browser context was not programmatically readable in this
-  run; account-level searches remain a held method rather than hidden evidence.
+- Authenticated X search is indexed and selective, not an official export; it
+  does not expose all deleted posts, historical handle changes, likes, repost
+  identities, or impressions.
 - Post-level authorship cannot be inferred from a shared account.
 - Exact Council engagement requires account exports or another reproducible
   full-history corpus plus a date-appropriate roster of Council handles.

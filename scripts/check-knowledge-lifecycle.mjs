@@ -140,6 +140,25 @@ const socialArchiveIntakeIds = [
   "INT-2026-07-12-SOCIAL-IDENTITY-CONFIRMATION"
 ];
 
+const authenticatedSocialSourceIds = [
+  "SRC-SOCIAL-X-AUTHENTICATED-RUN-2026",
+  "SRC-SOCIAL-CALLNYC-PETER-KOO-2016",
+  "SRC-SOCIAL-CALLNYC-STEVEN-MATTEO-2016",
+  "SRC-SOCIAL-CALLNYC-RUBEN-WILLS-2016",
+  "SRC-SOCIAL-CALLNYC-MARGARET-CHIN-2017",
+  "SRC-SOCIAL-NYCAC-CARLINA-RIVERA-2018",
+  "SRC-SOCIAL-NYCAC-STEPHEN-LEVIN-2019",
+  "SRC-SOCIAL-NYCAC-JUSTIN-BRANNAN-2019",
+  "SRC-SOCIAL-NYCAC-MARK-LEVINE-2020",
+  "SRC-SOCIAL-NYCAC-JIMMY-VAN-BRAMER-2020",
+  "SRC-SOCIAL-NYCAC-BRAD-LANDER-2021",
+  "SRC-SOCIAL-OLYMPIA-NYCAC-CORPUS-2026",
+  "SRC-SOCIAL-OLYMPIA-NYCAC-HEARING-2022",
+  "SRC-SOCIAL-NYC-INSTITUTIONAL-CORPUS-2026",
+  "SRC-SOCIAL-NYCULTURE-MARCH-CABARET-2017",
+  "SRC-SOCIAL-DOCUMENT-JOURNAL-NIGHTLIFE-2018"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -747,13 +766,59 @@ const criteria = [
       const minimum = candidateById.get("CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM");
       const exact = candidateById.get("CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-EXACT");
       const legacyBroadClaim = candidateById.get("CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM"
+      );
       return Boolean(
         minimum?.status === "promoted" &&
         minimum.promotedClaimId === "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM" &&
+        /29 direct posts.*13 distinct then-sitting/i.test(minimum.text) &&
+        /29 public posts.*13 distinct then-sitting/i.test(claim?.internalClaim || "") &&
+        claim?.boundaries.some((item) => /minimums, not comprehensive totals/i.test(item)) &&
         exact?.status !== "promoted" &&
         !exact?.promotedClaimId &&
         legacyBroadClaim?.status === "partially-supported" &&
         !legacyBroadClaim.promotedClaimId
+      );
+    })()
+  },
+  {
+    id: "authenticated-social-lineage",
+    label: "Authenticated social findings have atomic sources, readings, and platform limits",
+    pass:
+      intakeItems.some((item) => item.id === "INT-2026-07-12-AUTHENTICATED-X-ARCHIVE") &&
+      authenticatedSocialSourceIds.every((id) => {
+        const reading = readingBySourceId.get(id);
+        return sourceIds.has(id) && reading && reading.assertions.length >= 1 && reading.limitations.length >= 1;
+      })
+  },
+  {
+    id: "social-collaborator-credit",
+    label: "Olympia Kazi continuity is promoted under her authorship without shared-account overreach",
+    pass: (() => {
+      const candidate = candidateById.get("CND-NYCAC-OLYMPIA-PUBLIC-STEWARDSHIP");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-OLYMPIA-PUBLIC-STEWARDSHIP"
+      );
+      return Boolean(
+        candidate?.status === "promoted" &&
+        /89 recovered posts/i.test(candidate.text) &&
+        claim?.boundaries.some((item) => /Credit the posts to Olympia Kazi/i.test(item)) &&
+        claim.boundaries.some((item) => /Do not infer.*shared @NYCArtC account/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "social-city-dialogue-boundary",
+    label: "City-agency dialogue is source-backed without becoming an adoption claim",
+    pass: (() => {
+      const candidate = candidateById.get("CND-NYCAC-CITY-DIALOGUE");
+      const claim = knowledgeBank.claims.find((item) => item.id === "CLM-NYCAC-CITY-DIALOGUE");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        /Seventeen authenticated-search posts/i.test(candidate.supportSummary) &&
+        claim?.boundaries.some((item) => /do not equal adoption/i.test(item)) &&
+        claim.antiClaims.some((item) => /adopted every coalition recommendation/i.test(item))
       );
     })()
   },

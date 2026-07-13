@@ -13,6 +13,8 @@ import { sharedDriveArchivalBatchRecords } from "./shared-drive-archival-batch-2
 import { sharedDriveArchivalDevelopmentRecords } from "./shared-drive-archival-development-2026-07-12.ts";
 import { socialArchiveBatchRecords } from "./social-archive-batch-2026-07-12.ts";
 import { socialArchiveDevelopmentRecords } from "./social-archive-development-2026-07-12.ts";
+import { socialAuthenticatedBatchRecords } from "./social-authenticated-batch-2026-07-12.ts";
+import { socialAuthenticatedDevelopmentRecords } from "./social-authenticated-development-2026-07-12.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -22,7 +24,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilDevelopmentRecords.intakeItems,
     ...archivalProductionDevelopmentRecords.intakeItems,
     ...sharedDriveArchivalDevelopmentRecords.intakeItems,
-    ...socialArchiveDevelopmentRecords.intakeItems
+    ...socialArchiveDevelopmentRecords.intakeItems,
+    ...socialAuthenticatedDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -31,7 +34,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilDevelopmentRecords.sourceReadings,
     ...archivalProductionDevelopmentRecords.sourceReadings,
     ...sharedDriveArchivalDevelopmentRecords.sourceReadings,
-    ...socialArchiveDevelopmentRecords.sourceReadings
+    ...socialArchiveDevelopmentRecords.sourceReadings,
+    ...socialAuthenticatedDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -40,7 +44,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilDevelopmentRecords.candidateClaims,
     ...archivalProductionDevelopmentRecords.candidateClaims,
     ...sharedDriveArchivalDevelopmentRecords.candidateClaims,
-    ...socialArchiveDevelopmentRecords.candidateClaims
+    ...socialArchiveDevelopmentRecords.candidateClaims,
+    ...socialAuthenticatedDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -49,7 +54,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilDevelopmentRecords.promotions,
     ...archivalProductionDevelopmentRecords.promotions,
     ...sharedDriveArchivalDevelopmentRecords.promotions,
-    ...socialArchiveDevelopmentRecords.promotions
+    ...socialArchiveDevelopmentRecords.promotions,
+    ...socialAuthenticatedDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -197,7 +203,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilBatchRecords.sources,
     ...archivalProductionBatchRecords.sources,
     ...sharedDriveArchivalBatchRecords.sources,
-    ...socialArchiveBatchRecords.sources
+    ...socialArchiveBatchRecords.sources,
+    ...socialAuthenticatedBatchRecords.sources
   ],
   claims: [
     {
@@ -292,7 +299,8 @@ const knowledgeBankInput = {
     ...kcTownHallCouncilBatchRecords.claims,
     ...archivalProductionBatchRecords.claims,
     ...sharedDriveArchivalBatchRecords.claims,
-    ...socialArchiveBatchRecords.claims
+    ...socialArchiveBatchRecords.claims,
+    ...socialAuthenticatedBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
