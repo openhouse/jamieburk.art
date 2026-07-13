@@ -115,6 +115,9 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
       if (!projection || projection.status !== "active" || !projection.surfaces.includes(page.surface)) errors.push(`Occurrence ${page.id}/${occurrence.id} uses an unauthorized projection`);
       const renderable = new Set(claim.evidence.filter((item) => item.renderCitation).map((item) => item.sourceId));
       const sourceIds = occurrence.sourceIds ?? [...renderable];
+      const hasNonrenderedDirectSupport = claim.evidence.some((item) => !item.renderCitation && ["direct-support", "private-support"].includes(item.relationship));
+      const hasRenderedDirectSupport = claim.evidence.some((item) => item.renderCitation && item.relationship === "direct-support" && sourceIds.includes(item.sourceId));
+      if (hasNonrenderedDirectSupport && !hasRenderedDirectSupport) errors.push(`Occurrence ${page.id}/${occurrence.id} cites a claim whose only direct support is non-renderable`);
       for (const sourceId of sourceIds) {
         if (!sourceById.has(sourceId)) errors.push(`Occurrence ${page.id}/${occurrence.id} references unknown source ${sourceId}`);
         if (!renderable.has(sourceId)) errors.push(`Occurrence ${page.id}/${occurrence.id} uses ${sourceId} outside claim evidence`);

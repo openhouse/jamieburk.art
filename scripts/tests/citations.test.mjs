@@ -74,3 +74,14 @@ test("every citation plan is connected to its route and rendered occurrences", (
     assert.ok(resolveCitationReferences(page.id).length > 0);
   }
 });
+
+test("rendered citations do not stand in for protected direct support", () => {
+  for (const page of knowledgeBank.pages) {
+    for (const occurrence of page.occurrences) {
+      const claim = knowledgeBank.claims.find((item) => item.id === occurrence.claimId);
+      const hasNonrenderedDirectSupport = claim.evidence.some((item) => !item.renderCitation && ["direct-support", "private-support"].includes(item.relationship));
+      if (!hasNonrenderedDirectSupport) continue;
+      assert.ok(claim.evidence.some((item) => item.renderCitation && item.relationship === "direct-support" && occurrence.sourceIds?.includes(item.sourceId)));
+    }
+  }
+});

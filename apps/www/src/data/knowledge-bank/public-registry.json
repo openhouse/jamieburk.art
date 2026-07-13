@@ -623,6 +623,44 @@
       ]
     },
     {
+      "id": "CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "As a founding-era NYC Artist Coalition organizer, Jamie built and stewarded coalition and campaign websites, issue explanations, calls to action, public resources, and support paths.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Use founding-era organizer and direct web-infrastructure language; keep the formal co-founder title in research until independently corroborated, and keep campaign outcomes collective."
+      ]
+    },
+    {
+      "id": "CLM-NAC-CIVIC-SYSTEMS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie translated coalition, policy, and public-data needs into campaign memory, source maps, coordination materials, public explanations, and follow-up systems across NYC Artist Coalition advocacy.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "This is an infrastructure and campaign-support claim, not legislative authorship or sole causation of Cabaret Law, Office of Nightlife, enforcement, rent-policy, or storefront outcomes."
+      ]
+    },
+    {
       "id": "CLM-NAC-OFFICE-NIGHTLIFE-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -657,17 +695,6 @@
             "venue",
             "public agenda",
             "participating officials"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
-          "relationship": "context",
-          "supports": [
-            "institutional creation",
-            "official mandate",
-            "sponsor and City credit"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -714,7 +741,26 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Within the collective Let NYC Dance campaign, Jamie's web implementation helped turn legislation and public data into a usable civic-action surface: a call script, bill link, district lookup, and licensing, citation, and zoning evidence.",
+          "text": "Within the collective Let NYC Dance campaign, Jamie's web implementation helped turn legislation and public data into a usable civic-action surface.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The project artifact establishes coalition tooling; Jamie's web authorship is supported separately by the protected project-history review."
+      ]
+    },
+    {
+      "id": "CLM-NAC-CABARET-PUBLIC-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public Let NYC Dance campaign surface combined a Council call script, bill link, district lookup, and licensing, citation, and zoning evidence.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -725,18 +771,19 @@
       "evidence": [
         {
           "sourceId": "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017",
-          "relationship": "corroborating",
+          "relationship": "direct-support",
           "supports": [
-            "resident action design",
-            "public-data translation",
-            "Intro 1652 advocacy"
+            "call script",
+            "bill link",
+            "district lookup",
+            "public-data evidence"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "The project artifact establishes coalition tooling; Jamie's web authorship is supported separately by the protected project-history review."
+        "This public artifact establishes the campaign surface, not Jamie's authorship or the campaign's causal influence on repeal."
       ]
     },
     {
@@ -872,7 +919,26 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Within the collective Talks Not Raids campaign, Jamie's web implementation helped deliver a public report, Council sign-on tracking, and direct constituent calls around Intro 1156.",
+          "text": "Within the collective Talks Not Raids campaign, Jamie's web implementation helped deliver its public civic-action infrastructure.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Preserve the named partner coalition and distinguish advocacy tools from Council sponsorship and enactment."
+      ]
+    },
+    {
+      "id": "CLM-NAC-TALKS-NOT-RAIDS-PUBLIC-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public Talks Not Raids campaign surface documented a broad partner coalition, public report, Council sign-on tracking, and direct constituent calls around Intro 1156.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -883,19 +949,19 @@
       "evidence": [
         {
           "sourceId": "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
-          "relationship": "corroborating",
+          "relationship": "direct-support",
           "supports": [
-            "campaign participation",
             "partner coalition",
-            "report",
-            "Council action tools"
+            "public report",
+            "Council sign-on tracking",
+            "constituent action"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Preserve the named partner coalition and distinguish advocacy tools from Council sponsorship and enactment."
+        "This public artifact establishes the campaign surface and partners, not Jamie's authorship or sole campaign leadership."
       ]
     },
     {
@@ -1083,8 +1149,8 @@
           ]
         },
         {
-          "id": "cabaret-civic-tooling",
-          "claimId": "CLM-NAC-CABARET-CIVIC-TOOLING",
+          "id": "cabaret-public-surface",
+          "claimId": "CLM-NAC-CABARET-PUBLIC-SURFACE",
           "projection": "case-study",
           "sourceIds": [
             "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017"
@@ -1100,8 +1166,8 @@
           ]
         },
         {
-          "id": "talks-not-raids",
-          "claimId": "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "id": "talks-not-raids-public-surface",
+          "claimId": "CLM-NAC-TALKS-NOT-RAIDS-PUBLIC-SURFACE",
           "projection": "case-study",
           "sourceIds": [
             "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019"

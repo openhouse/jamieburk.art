@@ -994,7 +994,7 @@ const knowledgeBankInput = {
       methodsPlanned: ["Review City Council hearing and legislative records", "Map dated advocacy actions and public statements", "Seek corroboration from coalition collaborators", "Separate participation, coordination, influence, and legislative authority"],
       successCriteria: ["Name Jamie's strongest defensible actions", "Connect actions to observable process outcomes without claiming sole causation", "Credit organizations, advocates, sponsors, and decision-makers"],
       sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017", "SRC-NYC-COUNCIL-INT-1652-2017", "SRC-NYC-COUNCIL-CABARET-VOTE-2017", "SRC-NYC-MAYOR-CABARET-SIGNING-2017"],
-      claimIds: ["CLM-NAC-REPEAL-MOBILIZATION", "CLM-NAC-CABARET-CIVIC-TOOLING", "CLM-NAC-CABARET-REPEAL-OUTCOME"],
+      claimIds: ["CLM-NAC-REPEAL-MOBILIZATION", "CLM-NAC-CABARET-CIVIC-TOOLING", "CLM-NAC-CABARET-PUBLIC-SURFACE", "CLM-NAC-CABARET-REPEAL-OUTCOME"],
       publicSummary: "Public sources now establish Jamie's repeal advocacy, the coalition's civic-action tooling, and the enacted outcome while preserving movement and legislative credit.",
       reviewedAt: "2026-07-13"
     },
@@ -1020,7 +1020,7 @@ const knowledgeBankInput = {
       methodsPlanned: ["Recover public campaign pages and press", "Review public agency and Council records", "Build a dated policy and enforcement timeline", "Request collaborator corroboration", "Keep private venue and enforcement records protected"],
       successCriteria: ["Distinguish campaign actions from government decisions", "Establish Jamie's specific contribution", "Document the official status and timing of MARCH changes", "Avoid unsupported causal language"],
       sourceIds: ["SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"],
-      claimIds: ["CLM-NAC-MARCH-RAIDS-ROLE", "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN", "CLM-NAC-MARCH-TRANSPARENCY-LAW", "CLM-NAC-MARCH-DISBANDMENT-OUTCOME"],
+      claimIds: ["CLM-NAC-MARCH-RAIDS-ROLE", "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN", "CLM-NAC-TALKS-NOT-RAIDS-PUBLIC-SURFACE", "CLM-NAC-MARCH-TRANSPARENCY-LAW", "CLM-NAC-MARCH-DISBANDMENT-OUTCOME"],
       publicSummary: "The record now separates Jamie's web and civic-action contribution, the collective campaign, the 2019 transparency law, and MARCH's later disbandment.",
       reviewedAt: "2026-07-13"
     },
