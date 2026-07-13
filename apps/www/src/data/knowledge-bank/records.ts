@@ -8,10 +8,19 @@ import {
   lifecycleSourceReadings,
   lifecycleSources
 } from "./lifecycle-records.ts";
+import {
+  sourceExpansionClaims,
+  sourceExpansionDecisions,
+  sourceExpansionEntities,
+  sourceExpansionIntake,
+  sourceExpansionReadings,
+  sourceExpansionResearchTasks,
+  sourceExpansionSources
+} from "./source-expansion-2026-07-13.ts";
 
 const knowledgeBankInput = {
-  entities: lifecycleEntities,
-  intake: lifecycleIntake,
+  entities: [...lifecycleEntities, ...sourceExpansionEntities],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -207,7 +216,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["event-sharing purpose", "community-building purpose", "Ember application surface", "configured API endpoint"],
       doesNotEstablish: ["user totals", "event totals", "city-ecosystem adoption", "Jamie's role", "current service availability"]
     },
-    ...lifecycleSources
+    ...lifecycleSources,
+    ...sourceExpansionSources
   ],
   claims: [
     {
@@ -365,10 +375,11 @@ const knowledgeBankInput = {
       antiClaims: ["The archived application shell proves the portfolio's scale or adoption claims."],
       researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
-    ...lifecycleClaims
+    ...lifecycleClaims,
+    ...sourceExpansionClaims
   ],
-  sourceReadings: lifecycleSourceReadings,
-  researchTasks: lifecycleResearchTasks,
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings],
+  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -382,7 +393,7 @@ const knowledgeBankInput = {
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }],
-  projectionDecisions: lifecycleProjectionDecisions,
+  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },

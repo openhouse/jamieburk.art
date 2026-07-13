@@ -151,6 +151,14 @@ The pass promotes only what the current sources establish. It retains the
 larger assertions as high-priority research without projecting them to the
 website.
 
+The [July 13 ten-source expansion](research/source-expansion-2026-07-13.md)
+adds independent, institutional, project-owned, and government records across
+Sunday Dinner, WOWList, NYC Artist Coalition, Office of Nightlife, commercial
+rent advocacy, Kansas City public engagement, the river expedition, KC
+Town-Hall, and an augmented-reality collaboration. The batch is fully
+accessioned and closely read; its public-ready claims remain deferred until a
+future portfolio argument calls for them.
+
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing
 review status without pretending that a new proposition-level close reading

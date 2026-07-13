@@ -164,6 +164,41 @@ test("public-safe records reject correspondence and contact patterns", () => {
   assert.equal(report.results.find((item) => item.id === "public-repo-boundary-is-enforced").passed, false);
 });
 
+test("July 13 source expansion ingests ten distinct bounded public sources", () => {
+  const sourceIds = [
+    "SRC-GREENE-HILL-COOP-QA-2017",
+    "SRC-BEDFORD-DIY-SPACES-2017",
+    "SRC-BEDFORD-NIGHT-MAYOR-TOWN-HALL-2017",
+    "SRC-SAVE-NYC-SPACES-PLATFORM",
+    "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+    "SRC-KCMO-KC-TOWN-HALL-PROPOSAL-2019",
+    "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016",
+    "SRC-PITCH-GREAT-ACCOMMODATIONS-2009",
+    "SRC-WLBT-RAFT-2007",
+    "SRC-CLAUDETTE-AR-COLLABORATION"
+  ];
+
+  assert.equal(new Set(sourceIds).size, 10);
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.ok(source, `${sourceId} must be accessioned`);
+    assert.equal(source.visibility, "public");
+    assert.ok(source.intakeIds.length > 0);
+    assert.equal(reading?.status, "closely-read");
+    assert.ok(reading.propositions.length > 0);
+    assert.ok(reading.limitations.length > 0);
+  }
+
+  const kcReading = knowledgeBank.sourceReadings.find((item) => item.id === "READ-KCMO-KC-TOWN-HALL-2019");
+  const kcClaim = knowledgeBank.claims.find((item) => item.id === "CLM-KC-TOWN-HALL-CCED-RECOMMENDATION-2019");
+  const kcTask = knowledgeBank.researchTasks.find((item) => item.id === "TASK-KC-TOWN-HALL-DOWNSTREAM-OUTCOME");
+  assert.ok(kcReading.propositions.some((item) => item.id === "PROP-KCTOWN-BOARD-RECOMMENDATION"));
+  assert.ok(kcClaim.requiredSupportTags.includes("kc-town-hall-board-recommendation"));
+  assert.equal(kcTask.priority, "high");
+  assert.ok(kcTask.nextActions.length >= 3);
+});
+
 test("judge evidence and floors are enforced", () => {
   const assessment = {
     suiteId: suite.id,

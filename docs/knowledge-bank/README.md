@@ -62,4 +62,6 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+pilot. See the
+[July 13 ten-source expansion](research/source-expansion-2026-07-13.md) for a
+complete example of a versioned research-ingestion batch.
