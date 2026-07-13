@@ -266,6 +266,27 @@ export const researchedSourceRecords20260713 = [
       "technical implementation details",
       "audience reach or exhibition outcomes"
     ]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+    title: "Approved public resume, KC Town Hall role entry",
+    organization: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    capturedAt: "2026-07-11 approved public artifact",
+    publicCitation: "Jamie Burkart, approved public resume, KC Town Hall role entry, July 2026.",
+    publicNote: "The approved resume supplies Jamie's self-reported planning and public-benefit documentation role; official municipal records separately support the proposal details and presenter role.",
+    supportsGenerally: [
+      "Jamie's co-lead planning role",
+      "Jamie's public-benefit documentation role"
+    ],
+    doesNotEstablish: [
+      "independent corroboration of the complete division of labor",
+      "sole ownership or authorship",
+      "completed construction or final funds received",
+      "the reason the project later withdrew"
+    ]
   }
 ] satisfies SourceRecord[];
 
@@ -569,6 +590,38 @@ export const researchedClaimRecords20260713 = [
     reviewedBy: ["Codex public-source close reading"]
   },
   {
+    id: "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE",
+    project: "kc-town-hall",
+    internalClaim: "Jamie's approved resume describes him as co-leading planning and public-benefit documentation for the proposed KC Town Hall mixed-use rehabilitation.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "I co-led planning and public-benefit documentation for the proposed mixed-use rehabilitation.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work/kc-town-hall"]
+    }, {
+      key: "work-card",
+      text: "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work", "/work/kc-town-hall"]
+    }],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+      relationship: "private-support",
+      supports: ["Jamie's planning role", "Jamie's public-benefit documentation role"],
+      locator: "KC Town Hall entry on page 2",
+      confidence: "moderate",
+      renderCitation: false
+    }],
+    boundaries: ["This is approved resume-backed role language; municipal records separately corroborate the proposal and presenter details, not the complete division of labor."],
+    antiClaims: ["Jamie alone owned or authored the project.", "The planning role proves completed construction or final funds received."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie-approved resume", "Codex evidence-boundary review"]
+  },
+  {
     id: "CLM-KC-TOWN-HALL-PROPOSAL-2019",
     project: "kc-town-hall",
     internalClaim: "Kansas City public minutes identify Jamie as KC Town Hall's presenter for a $490,539 proposal to renovate a building at 36th and Indiana into four retail spaces and three apartments.",
@@ -581,7 +634,7 @@ export const researchedClaimRecords20260713 = [
       surfaces: ["/work/kc-town-hall"]
     }, {
       key: "work-card",
-      text: "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation and presented the $490,539 proposal in a public funding process.",
+      text: "Presented the $490,539 proposal in Kansas City's public funding process.",
       status: "active",
       citationRequired: false,
       surfaces: ["/work", "/work/kc-town-hall"]

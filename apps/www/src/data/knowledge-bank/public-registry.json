@@ -45,25 +45,6 @@
       ]
     },
     {
-      "id": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "title": "New York City Council Hackathon promotional graphic",
-      "organization": "New York City Council / Civic Hall",
-      "kind": "promotional-graphic",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-11",
-      "assetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
-      "preferredPublicUrl": "asset",
-      "publicCitation": "NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.",
-      "publicNote": "The graphic supports the visible event branding, not a longer formal registration title.",
-      "doesNotEstablish": [
-        "a longer formal registration title",
-        "the agenda",
-        "breakout structure",
-        "participant roster"
-      ]
-    },
-    {
       "id": "SRC-CALLNYC-POLITICO-2016-03-14",
       "title": "Website provides new information about council members' focus",
       "organization": "Politico New York",
@@ -253,36 +234,6 @@
         }
       ],
       "boundaries": []
-    },
-    {
-      "id": "CLM-CALLNYC-EVENT-BRANDING",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/callnyc"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-          "relationship": "direct-support",
-          "supports": [
-            "graphic wording",
-            "event branding"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Treat the wording as visible branding, not proof of a longer formal registration title."
-      ]
     },
     {
       "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
@@ -489,7 +440,7 @@
         },
         {
           "key": "work-card",
-          "text": "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation and presented the $490,539 proposal in a public funding process.",
+          "text": "Presented the $490,539 proposal in Kansas City's public funding process.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -566,8 +517,7 @@
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "occurrences": [
         {
@@ -594,14 +544,6 @@
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14",
             "SRC-CALLNYC-GITHUB-REPOSITORY"
-          ]
-        },
-        {
-          "id": "event-branding",
-          "claimId": "CLM-CALLNYC-EVENT-BRANDING",
-          "projection": "case-study",
-          "sourceIds": [
-            "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
           ]
         },
         {

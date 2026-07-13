@@ -190,7 +190,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie contributed long-term web, e-commerce, analytics, marketing, content, and operations improvements for an 80+ year-old legacy business.",
+        "A dated public storefront capture documents the maintained customer-facing catalog and distinctive public voice.",
       open:
         "Additional screenshots, internal workflow diagrams, and more detailed impact evidence require separate review before publication.",
       protected:
@@ -305,7 +305,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "A dated FairRentNYC capture documents a public campaign surface, and an official 2018 Council transcript documents Jamie's testimony as a coalition member.",
       open:
         "Additional named collaborators, meeting materials, photographs, and internal campaign artifacts require separate approval.",
       protected:
@@ -346,7 +346,7 @@ const workItemsInput = [
           height: 375,
           alt: "Archived CallNYC interface with an issue navigation list, search field, resident-facing explanation, and visible archived-project disclaimer.",
           caption:
-            "Public archived-prototype capture, July 2026. It directly documents the issue-first navigation and resident-facing framing; the visible disclaimer preserves that the tool is unofficial and not current guidance.",
+            "Public archived-prototype capture, July 2026. It directly documents the issue-first navigation and resident-facing framing.",
           sourceUrl: "https://callnyc.org/",
           capturedAt: "2026-07-12",
           evidenceScope: "direct",
@@ -407,11 +407,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "Politico's 2016 coverage, the public source repository, and a dated prototype capture document the independent project and its surviving interface.",
       open:
-        "Additional archive links and any participant photographs require separate review before publication.",
+        "No dedicated Civic Hall event page, complete agenda, registration form, or participant roster has been recovered.",
       protected:
-        "No current-service claims, official city affiliation claims, private user data, or unverified guidance are published."
+        "A participant photograph remains withheld pending photographer credit, rights review, and subject-consent review."
       }
   },
   {
@@ -532,8 +532,15 @@ const workItemsInput = [
     slug: "kc-town-hall",
     series: "Built Environment",
     subtitle: "Proposed adaptive reuse and public-benefit documentation",
-    summary:
-      "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation that received a $490,539 public funding recommendation and was later withdrawn before proceeding under that award.",
+    summary: [
+      getClaimProjection(
+        "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE",
+        "work-card",
+        "/work"
+      ).text,
+      getClaimProjection("CLM-KC-TOWN-HALL-PROPOSAL-2019", "work-card", "/work").text,
+      getClaimProjection("CLM-KC-TOWN-HALL-WITHDRAWN-2024", "work-card", "/work").text
+    ].join(" "),
     role: "Project Planning & Documentation Support",
     years: "2019-2024",
     status: "Short proof page",
@@ -584,7 +591,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported planning and documentation, presented the $490,539 mixed-use proposal in 2019, and the project later withdrew before proceeding under that award.",
+        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, and the later withdrawal.",
       open:
         "The public withdrawal record does not state the reasons or define every collaborator's role.",
       protected:
