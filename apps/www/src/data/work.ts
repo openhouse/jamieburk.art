@@ -178,9 +178,9 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Served as a founding-era NYC Artist Coalition organizer and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Served as a founding-era NYC Artist Coalition organizer and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure. Public records now connect that operating role to Cabaret Law repeal advocacy, Office of Nightlife public engagement, Talks Not Raids, FairRentNYC, and Commercial Rent Stabilization.",
     role: "Founding-Era Organizer, Civic Systems & Coalition Operations",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -189,12 +189,13 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-public-outcome-arc"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, policy question logs, public-data framing, stakeholder follow-up, public campaign websites, and resident-facing action tools that connected legislation to calls, district contacts, evidence, events, and coalition participation.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -218,7 +219,7 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance, including calls to action, public evidence, partner credit, and Council-facing tools.",
         type: "website"
       }
     ],
@@ -242,7 +243,11 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "2017 interview", url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter" },
+      { label: "Cabaret repeal record", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319&Options=ID%7CText%7C&Search=cabaret" },
+      { label: "Office of Nightlife", url: "https://www.nyc.gov/site/mome/news/091917-nightlife-office.page" },
+      { label: "MARCH transparency law", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -259,7 +264,9 @@ const workItemsInput = [
     evidence: [
       "Founding-era organizing role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
-      "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
+      "Publicly documented 2017 Cabaret Law repeal advocacy and invitation into coalition dialogue about the Office of Nightlife",
+      "Resident-facing campaign systems linking legislation, public data, district contacts, events, partner credit, and calls to action",
+      "Collective outcome record: Cabaret licensing repealed in 2017; MARCH reporting and notice requirements enacted in 2019; MARCH dismantled in 2023",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -268,7 +275,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie served as a founding-era NYC Artist Coalition organizer and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie served as a founding-era NYC Artist Coalition organizer and built public web and civic-action infrastructure. Public sources document his Cabaret Law advocacy and Office of Nightlife public-engagement work; official records establish the related City outcomes while preserving collective and institutional credit.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

@@ -10,6 +10,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - Served as a founding-era NYC Artist Coalition organizer and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
+- Public records document Jamie's Cabaret Law repeal advocacy, Office of Nightlife public-engagement work, and web and civic-action infrastructure for Talks Not Raids; related policy outcomes remain explicitly collective and institutionally credited.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.

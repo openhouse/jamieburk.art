@@ -302,7 +302,42 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "nyc-artist-coalition-public-outcome-arc",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Public records document Jamie's 2017 Cabaret Law repeal advocacy, his invitation into coalition dialogue about the new Office of Nightlife, and his web and civic-action infrastructure for Talks Not Raids.",
+    shortWording: "Documented nightlife advocacy and civic-action infrastructure",
+    detailedPublicWording:
+      "The related collective outcome record is now source-backed: Cabaret licensing ended in 2017; the Office of Nightlife was established in 2017; MARCH reporting and notice requirements became law in 2019; and the City dismantled MARCH in 2023.",
+    sourceBasis:
+      "Greene Hill Food Co-op interview, NYC Artist Coalition campaign pages, New York City Council legislation and press records, Mayor's Office records, Gothamist reporting, and a public-safe project-history review.",
+    whyItMatters:
+      "Connects Jamie's documented operating craft to visible civic products and outcomes while preserving the difference between contribution, collective advocacy, legislation, and agency action.",
+    guardrail:
+      "State Jamie's documented advocacy and infrastructure contribution separately from institutional outcomes. Keep all policy causation collective and bounded.",
+    doNotSay: [
+      "Jamie authored the Cabaret Law repeal or Office of Nightlife legislation",
+      "Jamie alone created the Office of Nightlife",
+      "Jamie alone passed Local Law 220",
+      "Jamie alone ended MARCH raids",
+      "All multi-agency nightlife inspections ended"
+    ],
+    protectedBoundaries: [
+      "Private coalition notes",
+      "Enforcement-sensitive venue records",
+      "Unapproved collaborator testimony",
+      "Private correspondence",
+      "Internal strategy"
+    ],
+    surfaces: ["work-card", "case-study", "technical-operations", "resume"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["campaign-websites", "public-guidance", "policy-communications", "civic-systems"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "wowlist-community-platform",

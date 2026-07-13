@@ -100,6 +100,215 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The interview directly records Jamie describing his work as part of NYC Artist Coalition, the preservation of community spaces, Cabaret Law repeal advocacy, and public dialogue around the Office of Nightlife.",
+      "doesNotEstablish": [
+        "Jamie's formal co-founder title",
+        "sole authorship of coalition work",
+        "legislative authorship",
+        "that Jamie alone caused repeal or created the Office of Nightlife"
+      ]
+    },
+    {
+      "id": "SRC-NAC-NYCARTC-ABOUT-2017",
+      "title": "About & Contact",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-27",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://nycartc.com/contact/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'About & Contact,' January 27, 2017.",
+      "publicNote": "A coalition-authored public statement of purpose published during its first year.",
+      "doesNotEstablish": [
+        "the complete formation history",
+        "Jamie's formal title",
+        "individual authorship of the page"
+      ]
+    },
+    {
+      "id": "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017",
+      "title": "Tell NYC Council: Legalize Dance - Repeal NYC's Racist 1926 Cabaret Law",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-08-01",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://nycartc.com/cabaret/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Tell NYC Council: Legalize Dance - Repeal NYC's Racist 1926 Cabaret Law,' August 1, 2017.",
+      "publicNote": "The campaign page combined a direct Council call, bill link, district lookup, and public licensing, citation, and zoning evidence.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship",
+        "legislative authorship",
+        "that the coalition alone caused repeal"
+      ]
+    },
+    {
+      "id": "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+      "title": "Tell NYC's Night Mayor: Save NYC Spaces",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-13",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://nycartc.com/nightmayor/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Tell NYC's Night Mayor: Save NYC Spaces,' October 13, 2017.",
+      "publicNote": "The page documents an October 11 town hall at Market Hotel, its public agenda, speakers, host, and participating City officials.",
+      "doesNotEstablish": [
+        "that Jamie alone produced the event",
+        "that the town hall created the Office",
+        "agreement by every participant with every recommendation"
+      ]
+    },
+    {
+      "id": "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
+      "title": "Transparency on M.A.R.C.H. - Talks Not Raids",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://nycartc.com/march/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Transparency on M.A.R.C.H. - Talks Not Raids,' February 12, 2019.",
+      "publicNote": "The page documents the coalition campaign, partner organizations, Council call-to-action, report link, and support for Intro 1156.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship",
+        "that advocacy alone caused enactment",
+        "that the 2019 page itself ended MARCH"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-INT-1652-2017",
+      "title": "Legislation Details: Introduction 1652-2017",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-21",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319&Options=ID%7CText%7C&Search=cabaret",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Introduction 1652-2017, enacted as Local Law 214 of 2017.",
+      "publicNote": "The official record identifies sponsors, legislative actions, enactment, and the license repeal with retained security requirements.",
+      "doesNotEstablish": [
+        "which advocate caused a sponsor to act",
+        "Jamie's legislative authorship",
+        "the full history of movement advocacy"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
+      "title": "Council to Vote to Repeal the New York City Cabaret Law of 1926",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-31",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://council.nyc.gov/press/2017/10/31/1541/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, 'Council to Vote to Repeal the New York City Cabaret Law of 1926,' October 31, 2017.",
+      "publicNote": "The Council's contemporaneous announcement identifies Intro 1652-A, sponsor Rafael Espinal, repeal scope, and retained security measures.",
+      "doesNotEstablish": [
+        "Jamie's role in the Council's internal process",
+        "sole credit for the repeal movement"
+      ]
+    },
+    {
+      "id": "SRC-NYC-MAYOR-CABARET-SIGNING-2017",
+      "title": "Mayor de Blasio Signs Legislation to Repeal Cabaret Law",
+      "organization": "New York City Mayor's Office",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-11-27",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://a860-gpp.nyc.gov/concern/nyc_government_publications/0p096960z?locale=en",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Mayor's Office, 'Mayor de Blasio Signs Legislation to Repeal Cabaret Law,' November 27, 2017.",
+      "publicNote": "The City's publications portal records the mayoral signing and repeal of the 91-year-old law.",
+      "doesNotEstablish": [
+        "individual advocacy causation",
+        "Jamie's role in bill drafting"
+      ]
+    },
+    {
+      "id": "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
+      "title": "Mayor de Blasio Signs Bill Establishing Nightlife Mayor",
+      "organization": "NYC Mayor's Office of Media and Entertainment",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.nyc.gov/site/mome/news/091917-nightlife-office.page",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Mayor's Office of Media and Entertainment, 'Mayor de Blasio Signs Bill Establishing Nightlife Mayor,' September 19, 2017.",
+      "publicNote": "The official announcement records Introduction 1688's signing, credits sponsor Rafael Espinal and City officials, and states the Office's liaison mandate.",
+      "doesNotEstablish": [
+        "that NYC Artist Coalition authored the legislation",
+        "that Jamie alone created the Office",
+        "the effect of later town-hall input"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-INT-1156-2018",
+      "title": "Legislation Details: Introduction 1156-2018",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-17",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Introduction 1156-2018, enacted as Local Law 220 of 2019.",
+      "publicNote": "The official record identifies sponsors, enactment, MARCH reporting requirements, and advance notice with defined public-safety exceptions.",
+      "doesNotEstablish": [
+        "that one organization caused enactment",
+        "Jamie's individual legislative role",
+        "MARCH disbandment"
+      ]
+    },
+    {
+      "id": "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023",
+      "title": "NYC Scrapping Abusive and Intrusive Late-Night Raids on Bars and Clubs",
+      "organization": "Gothamist",
+      "author": "David Brand",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2023-12-28",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://gothamist.com/news/nyc-scrapping-abusive-and-intrusive-late-night-raids-on-bars-and-clubs",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "David Brand, 'NYC Scrapping Abusive and Intrusive Late-Night Raids on Bars and Clubs,' Gothamist, December 28, 2023.",
+      "publicNote": "The report documents the mayor's announcement that the City was dismantling MARCH and replacing it with a corrective, notice-oriented approach.",
+      "doesNotEstablish": [
+        "that Jamie or one campaign caused disbandment",
+        "that all multi-agency inspections ended",
+        "that reporting law and disbandment were the same event"
+      ]
     }
   ],
   "claims": [
@@ -299,6 +508,304 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-NAC-OFFICE-NIGHTLIFE-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie publicly invited grassroots cultural participants into coalition dialogue about the new Office of Nightlife, arguing that it should protect the diverse community spaces where culture is made.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's coalition affiliation",
+            "community-space purpose",
+            "public invitation",
+            "Office of Nightlife dialogue"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "event date",
+            "venue",
+            "public agenda",
+            "participating officials"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
+          "relationship": "context",
+          "supports": [
+            "institutional creation",
+            "official mandate",
+            "sponsor and City credit"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe Jamie's documented advocacy and invitation into public dialogue separately from event production roles, legislative authorship, bill sponsorship, and institutional implementation."
+      ]
+    },
+    {
+      "id": "CLM-NAC-MARCH-RAIDS-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie built and stewarded public web and civic-action infrastructure for the collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019; the City later dismantled MARCH in 2023.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "collective campaign",
+            "Intro 1156 advocacy",
+            "partner credit",
+            "public tools"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-INT-1156-2018",
+          "relationship": "context",
+          "supports": [
+            "legislative sponsors",
+            "enactment",
+            "reporting and notice requirements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023",
+          "relationship": "context",
+          "supports": [
+            "December 2023 dismantling",
+            "replacement approach",
+            "continuing limits"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Jamie's supported role is web and civic-action infrastructure within a broad coalition; do not infer that he or one campaign caused enactment or the 2023 decision, and do not publish enforcement-sensitive private records."
+      ]
+    },
+    {
+      "id": "CLM-NAC-COALITION-PURPOSE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition emerged in 2017 as a cross-sector mutual-support and advocacy network for informal and affordable community spaces.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-NYCARTC-ABOUT-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "dated public purpose",
+            "coalition constituency",
+            "mutual-support model"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat the page as a coalition-authored description, not a complete formation history or an individual role record."
+      ]
+    },
+    {
+      "id": "CLM-NAC-CABARET-CIVIC-TOOLING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For Let NYC Dance, the coalition turned legislation and public data into a usable civic-action surface: a call script, bill link, district lookup, and licensing, citation, and zoning evidence.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "resident action design",
+            "public-data translation",
+            "Intro 1652 advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The project artifact establishes coalition tooling; Jamie's web authorship is supported separately by the protected project-history review."
+      ]
+    },
+    {
+      "id": "CLM-NAC-NIGHTLIFE-TOWN-HALL",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "An October 2017 Market Hotel town hall brought grassroots cultural-space voices into direct public dialogue with the commissioners and Council member shaping the new Office of Nightlife.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "date",
+            "venue",
+            "agenda",
+            "participants"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's public invitation",
+            "grassroots-space mandate"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the event host, speakers, officials, coalition, and participants; do not describe the event as the legal creation of the Office."
+      ]
+    },
+    {
+      "id": "CLM-NAC-CABARET-REPEAL-OUTCOME",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The collective repeal campaign reached an institutional outcome in 2017: Intro 1652-A became Local Law 214 and ended the City's cabaret-license requirement while retaining specified security rules.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-INT-1652-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "legislative history",
+            "sponsors",
+            "enactment",
+            "scope"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Council vote",
+            "sponsor credit",
+            "scope"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-MAYOR-CABARET-SIGNING-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "mayoral signing",
+            "November 27, 2017"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "State the enacted outcome separately from Jamie's documented advocacy and from the broader movement's causal contribution."
+      ]
+    },
+    {
+      "id": "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In September 2017, Introduction 1688 created the Office of Nightlife and Nightlife Advisory Board, establishing a formal liaison among City agencies, nightlife, residents, and communities.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "signing date",
+            "institutional creation",
+            "liaison mandate",
+            "official credit"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Council sponsor Rafael Espinal, the Council, the mayor, and implementing agencies; treat coalition advocacy as related public engagement, not legal authorship."
+      ]
     }
   ],
   "pages": [
@@ -362,6 +869,87 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyc-artist-coalition",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NAC-NYCARTC-ABOUT-2017",
+        "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+        "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017",
+        "SRC-NYC-COUNCIL-INT-1652-2017",
+        "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
+        "SRC-NYC-MAYOR-CABARET-SIGNING-2017",
+        "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
+        "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
+        "SRC-NYC-COUNCIL-INT-1156-2018",
+        "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"
+      ],
+      "occurrences": [
+        {
+          "id": "coalition-purpose",
+          "claimId": "CLM-NAC-COALITION-PURPOSE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-ABOUT-2017"
+          ]
+        },
+        {
+          "id": "jamie-public-role",
+          "claimId": "CLM-NAC-OFFICE-NIGHTLIFE-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
+            "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017"
+          ]
+        },
+        {
+          "id": "cabaret-civic-tooling",
+          "claimId": "CLM-NAC-CABARET-CIVIC-TOOLING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017"
+          ]
+        },
+        {
+          "id": "cabaret-repeal",
+          "claimId": "CLM-NAC-CABARET-REPEAL-OUTCOME",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-INT-1652-2017",
+            "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
+            "SRC-NYC-MAYOR-CABARET-SIGNING-2017"
+          ]
+        },
+        {
+          "id": "nightlife-office",
+          "claimId": "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017"
+          ]
+        },
+        {
+          "id": "nightlife-town-hall",
+          "claimId": "CLM-NAC-NIGHTLIFE-TOWN-HALL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+            "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"
+          ]
+        },
+        {
+          "id": "talks-not-raids",
+          "claimId": "CLM-NAC-MARCH-RAIDS-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
+            "SRC-NYC-COUNCIL-INT-1156-2018",
+            "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"
           ]
         }
       ]

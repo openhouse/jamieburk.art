@@ -121,7 +121,22 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-13
+
+## nyc-artist-coalition-public-outcome-arc - Nightlife advocacy outcome arc
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public sources / public-safe archive summary / Jamie review confirmation
+**Public wording:** Public records document Jamie's 2017 Cabaret Law repeal advocacy, his invitation into coalition dialogue about the new Office of Nightlife, and his web and civic-action infrastructure for Talks Not Raids.
+**Detailed public-safe wording:** The related collective outcome record is source-backed: Cabaret licensing ended in 2017; the Office of Nightlife was established in 2017; MARCH reporting and notice requirements became law in 2019; and the City dismantled MARCH in 2023.
+**Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Connects Jamie's documented operating craft to visible civic products and outcomes while preserving the difference between contribution, collective advocacy, legislation, and agency action.
+**Guardrail:** State Jamie's documented advocacy and infrastructure contribution separately from institutional outcomes. Keep all policy causation collective and bounded.
+**Do not say:** Jamie authored the legislation; Jamie alone created the Office of Nightlife; Jamie alone passed Local Law 220; Jamie alone ended MARCH raids; all multi-agency nightlife inspections ended.
+**Protected boundaries:** Private coalition notes, enforcement-sensitive venue records, unapproved collaborator testimony, private correspondence, and internal strategy stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
 
 ## wowlist-community-platform - Followable community platform
 

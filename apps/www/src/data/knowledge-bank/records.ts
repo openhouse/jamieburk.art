@@ -1,4 +1,5 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -87,15 +88,15 @@ const knowledgeBankInput = {
       kind: "public-url",
       capturedAt: "2026-07-12",
       capturedFrom: "Jamie Burkart portfolio working session",
-      publicSafeSummary: "Public newsletter lead supplied for possible nightlife or coalition corroboration.",
+      publicSafeSummary: "Public interview in which Jamie describes his NYC Artist Coalition work, community-space advocacy, and invitation into dialogue around the Office of Nightlife.",
       projects: ["nyc-artist-coalition"],
-      status: "decomposed",
-      disposition: "research-queued",
+      status: "integrated",
+      disposition: "source-created",
       sourceIds: ["SRC-NAC-GREENE-HILL-NEWSLETTER-2017"],
-      claimIds: [],
+      claimIds: ["CLM-NAC-OFFICE-NIGHTLIFE-ROLE", "CLM-NAC-NIGHTLIFE-TOWN-HALL"],
       researchTaskIds: ["TASK-NAC-GREENE-HILL-CLOSE-READ"],
-      notes: ["No claim is promoted until the page's relevant passage is recovered and closely read."],
-      reviewedAt: "2026-07-12",
+      notes: ["The page supports Jamie's public advocacy and invitation into coalition dialogue; it does not establish sole authorship, formal co-founder status, or policy causation."],
+      reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
@@ -193,7 +194,8 @@ const knowledgeBankInput = {
       notes: ["Only public-safe metadata enters the repository; pixels and protected locators remain outside it until rights and consent review."],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
-    }
+    },
+    ...nacPublicSourceBatch20260713.intake
   ],
   sources: [
     {
@@ -401,18 +403,19 @@ const knowledgeBankInput = {
     },
     {
       id: "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
-      title: "September 2017 Newsletter",
+      title: "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
       organization: "Greene Hill Food Co-op",
       kind: "institutional-web-page",
       visibility: "public",
       preservationStatus: "live",
-      accessedAt: "2026-07-12",
+      publishedAt: "2017-12-19",
+      accessedAt: "2026-07-13",
       canonicalUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
       preferredPublicUrl: "canonical",
-      publicCitation: "Greene Hill Food Co-op, 'September 2017 Newsletter.'",
-      publicNote: "A supplied public source lead awaiting recovery and close reading of the relevant passage.",
-      supportsGenerally: ["the existence of a public source lead for further review"],
-      doesNotEstablish: ["any portfolio claim before the relevant passage is recovered", "Jamie's role in nightlife advocacy", "Cabaret Law repeal causation"]
+      publicCitation: "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      publicNote: "The interview directly records Jamie describing his work as part of NYC Artist Coalition, the preservation of community spaces, Cabaret Law repeal advocacy, and public dialogue around the Office of Nightlife.",
+      supportsGenerally: ["Jamie publicly described working as part of NYC Artist Coalition", "Jamie described the coalition's purpose as preserving community spaces", "Jamie advocated legalizing dance", "Jamie invited public participation in a coalition town hall about the Office of Nightlife"],
+      doesNotEstablish: ["Jamie's formal co-founder title", "sole authorship of coalition work", "legislative authorship", "that Jamie alone caused repeal or created the Office of Nightlife"]
     },
     {
       id: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026",
@@ -426,7 +429,8 @@ const knowledgeBankInput = {
       protectedLocatorId: "ARCHIVE-NAC-PROJECT-HISTORY-2017-2026-001",
       supportsGenerally: ["Jamie's founding-era public web implementation", "campaign website and information-surface work", "civic systems and coalition operations across multiple advocacy efforts"],
       doesNotEstablish: ["the formal co-founder title without formation corroboration", "solo ownership of collective campaigns", "legislative authorship", "sole causation of policy or enforcement outcomes"]
-    }
+    },
+    ...nacPublicSourceBatch20260713.sources
   ],
   sourceAssertions: [
     {
@@ -565,13 +569,13 @@ const knowledgeBankInput = {
       id: "AST-NAC-GREENE-HILL-NEEDS-RECOVERY",
       sourceId: "SRC-NAC-GREENE-HILL-NEWSLETTER-2017",
       project: "nyc-artist-coalition",
-      assertion: "The supplied newsletter URL requires recovery and close reading before it can support a claim.",
-      relationship: "raises-question",
+      assertion: "In a public interview, Jamie described working as part of NYC Artist Coalition, preserving community spaces, legalizing dance, and inviting readers into a town hall dialogue about the new Office of Nightlife.",
+      relationship: "supports",
       confidence: "high",
-      candidateClaimIds: [],
+      candidateClaimIds: ["CLM-NAC-OFFICE-NIGHTLIFE-ROLE", "CLM-NAC-NIGHTLIFE-TOWN-HALL"],
       publicSafe: true,
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Codex public-source review"]
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
       id: "AST-NAC-ARCHIVE-PUBLIC-WEB-INFRASTRUCTURE",
@@ -608,7 +612,8 @@ const knowledgeBankInput = {
       publicSafe: true,
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex archival review"]
-    }
+    },
+    ...nacPublicSourceBatch20260713.sourceAssertions
   ],
   claims: [
     {
@@ -897,33 +902,42 @@ const knowledgeBankInput = {
     {
       id: "CLM-NAC-OFFICE-NIGHTLIFE-ROLE",
       project: "nyc-artist-coalition",
-      internalClaim: "Jamie's contribution to advocacy and public engagement connected with the creation and early mandate of the Office of Nightlife requires further source and collaborator research.",
-      status: "inference",
-      maturity: "research-needed",
-      projectionEligibility: "hold",
+      internalClaim: "In a 2017 public interview, Jamie described working as part of NYC Artist Coalition, advocating for community spaces and legal dance, and inviting people into a coalition town hall intended to shape the new Office of Nightlife's public mandate.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
       collectiveWork: true,
-      projections: [{ key: "archive-note", text: "Jamie's role in Office of Nightlife advocacy and public engagement remains under research.", status: "hold", citationRequired: false, surfaces: [] }],
-      evidence: [{ sourceId: "SRC-NAC-NPR-NIGHTLIFE-2017", relationship: "context", supports: ["2017 enactment and public purpose of the Office of Nightlife", "broader advocacy context"], confidence: "high", renderCitation: false }],
-      boundaries: ["Separate advocacy, town-hall production, legislative authorship, bill sponsorship, and institutional implementation."],
-      antiClaims: ["Jamie authored the Office of Nightlife legislation", "Jamie alone created the Office of Nightlife", "The reviewed NPR report specifies Jamie's individual role"],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-12",
+      projections: [{ key: "case-study", text: "Jamie publicly invited grassroots cultural participants into coalition dialogue about the new Office of Nightlife, arguing that it should protect the diverse community spaces where culture is made.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      evidence: [
+        { sourceId: "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", relationship: "direct-support", supports: ["Jamie's coalition affiliation", "community-space purpose", "public invitation", "Office of Nightlife dialogue"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", relationship: "corroborating", supports: ["event date", "venue", "public agenda", "participating officials"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017", relationship: "context", supports: ["institutional creation", "official mandate", "sponsor and City credit"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["Describe Jamie's documented advocacy and invitation into public dialogue separately from event production roles, legislative authorship, bill sponsorship, and institutional implementation."],
+      antiClaims: ["Jamie authored Introduction 1688", "Jamie alone created the Office of Nightlife", "The town hall legally established the Office", "Jamie speaks for every town-hall participant"],
+      researchInquiryIds: ["INQ-NAC-PUBLIC-SOURCE-BATCH-2026"],
+      reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
       id: "CLM-NAC-MARCH-RAIDS-ROLE",
       project: "nyc-artist-coalition",
-      internalClaim: "The Talks Not Raids campaign, Jamie's contribution, and the relationship between transparency advocacy and the end of MARCH raids remain active research questions.",
-      status: "inference",
-      maturity: "research-needed",
-      projectionEligibility: "hold",
+      internalClaim: "Jamie built and stewarded public web and civic-action infrastructure for NYC Artist Coalition's collective Talks Not Raids work; the campaign pressed for MARCH transparency, Intro 1156 became Local Law 220 in 2019, and the City dismantled MARCH in 2023.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
       collectiveWork: true,
-      projections: [{ key: "archive-note", text: "Talks Not Raids and the history of MARCH enforcement remain under research.", status: "hold", citationRequired: false, surfaces: [] }],
-      evidence: [],
-      boundaries: ["Do not infer causation from chronology and do not publish enforcement-sensitive private records."],
-      antiClaims: ["Jamie alone ended MARCH raids", "The end of raids is established without agency records", "Transparency advocacy and disbandment are the same event"],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-12",
+      projections: [{ key: "case-study", text: "Jamie built and stewarded public web and civic-action infrastructure for the collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019; the City later dismantled MARCH in 2023.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      evidence: [
+        { sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", relationship: "direct-support", supports: ["Jamie's Talks Not Raids web implementation", "public civic-action infrastructure"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", relationship: "corroborating", supports: ["collective campaign", "Intro 1156 advocacy", "partner credit", "public tools"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-NYC-COUNCIL-INT-1156-2018", relationship: "context", supports: ["legislative sponsors", "enactment", "reporting and notice requirements"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023", relationship: "context", supports: ["December 2023 dismantling", "replacement approach", "continuing limits"], confidence: "high", renderCitation: true }
+      ],
+      boundaries: ["Jamie's supported role is web and civic-action infrastructure within a broad coalition; do not infer that he or one campaign caused enactment or the 2023 decision, and do not publish enforcement-sensitive private records."],
+      antiClaims: ["Jamie alone ended MARCH raids", "Jamie authored Local Law 220", "Transparency advocacy and disbandment are the same event", "All multi-agency nightlife inspections ended"],
+      researchInquiryIds: ["INQ-NAC-PUBLIC-SOURCE-BATCH-2026"],
+      reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     {
@@ -941,7 +955,8 @@ const knowledgeBankInput = {
       researchInquiryIds: [],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
-    }
+    },
+    ...nacPublicSourceBatch20260713.claims
   ],
   researchTasks: [
     {
@@ -965,7 +980,7 @@ const knowledgeBankInput = {
       status: "queued",
       methodsPlanned: ["Locate dated formation documents and early public pages", "Review public-safe correspondence summaries", "Request contributor testimony with permission boundaries", "Compare named roles across contemporaneous sources"],
       successCriteria: ["Establish a dated formation sequence", "Name Jamie's specific actions and work products", "Preserve all materially involved collaborators", "Document what remains unknown"],
-      sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017"],
+      sourceIds: ["SRC-NAC-NYCARTC-ABOUT-2017", "SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"],
       claimIds: ["CLM-NAC-CREATION-ROLE"],
       publicSummary: "Research the coalition's formation history and Jamie's contribution without inferring founding status from later affiliation.",
       reviewedAt: "2026-07-12"
@@ -975,52 +990,52 @@ const knowledgeBankInput = {
       project: "nyc-artist-coalition",
       question: "How should Jamie's contribution to the successful Cabaret Law repeal be described relative to the larger coalition and legislative process?",
       priority: "high",
-      status: "queued",
+      status: "completed",
       methodsPlanned: ["Review City Council hearing and legislative records", "Map dated advocacy actions and public statements", "Seek corroboration from coalition collaborators", "Separate participation, coordination, influence, and legislative authority"],
       successCriteria: ["Name Jamie's strongest defensible actions", "Connect actions to observable process outcomes without claiming sole causation", "Credit organizations, advocates, sponsors, and decision-makers"],
-      sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017"],
-      claimIds: ["CLM-NAC-REPEAL-MOBILIZATION"],
-      publicSummary: "Develop a precise account of Jamie's repeal advocacy within the larger movement and legislative process.",
-      reviewedAt: "2026-07-12"
+      sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017", "SRC-NYC-COUNCIL-INT-1652-2017", "SRC-NYC-COUNCIL-CABARET-VOTE-2017", "SRC-NYC-MAYOR-CABARET-SIGNING-2017"],
+      claimIds: ["CLM-NAC-REPEAL-MOBILIZATION", "CLM-NAC-CABARET-CIVIC-TOOLING", "CLM-NAC-CABARET-REPEAL-OUTCOME"],
+      publicSummary: "Public sources now establish Jamie's repeal advocacy, the coalition's civic-action tooling, and the enacted outcome while preserving movement and legislative credit.",
+      reviewedAt: "2026-07-13"
     },
     {
       id: "TASK-NAC-OFFICE-NIGHTLIFE-ROLE",
       project: "nyc-artist-coalition",
       question: "What did Jamie and NYC Artist Coalition contribute to advocacy, town halls, or mandate-setting connected with the Office of Nightlife?",
       priority: "high",
-      status: "queued",
+      status: "completed",
       methodsPlanned: ["Review legislation, hearing testimony, event records, and public reports", "Locate town-hall programs and recordings", "Request collaborator corroboration", "Separate coalition advocacy from Council sponsorship and agency implementation"],
       successCriteria: ["Identify Jamie's specific work products and responsibilities", "Establish dates and public outcomes", "Preserve institutional and collective credit"],
-      sourceIds: ["SRC-NAC-NPR-NIGHTLIFE-2017"],
-      claimIds: ["CLM-NAC-OFFICE-NIGHTLIFE-ROLE"],
-      publicSummary: "Research Jamie's specific advocacy and public-engagement contribution around the Office of Nightlife.",
-      reviewedAt: "2026-07-12"
+      sourceIds: ["SRC-NAC-NPR-NIGHTLIFE-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017"],
+      claimIds: ["CLM-NAC-OFFICE-NIGHTLIFE-ROLE", "CLM-NAC-NIGHTLIFE-TOWN-HALL", "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME"],
+      publicSummary: "Public sources now establish Jamie's documented public advocacy, the coalition town hall, and the Office's institutional creation while separating those roles.",
+      reviewedAt: "2026-07-13"
     },
     {
       id: "TASK-NAC-MARCH-RAIDS-ROLE",
       project: "nyc-artist-coalition",
       question: "What do public and archival records establish about Talks Not Raids, Jamie's role, MARCH transparency, and the end of the raids?",
       priority: "high",
-      status: "queued",
+      status: "completed",
       methodsPlanned: ["Recover public campaign pages and press", "Review public agency and Council records", "Build a dated policy and enforcement timeline", "Request collaborator corroboration", "Keep private venue and enforcement records protected"],
       successCriteria: ["Distinguish campaign actions from government decisions", "Establish Jamie's specific contribution", "Document the official status and timing of MARCH changes", "Avoid unsupported causal language"],
-      sourceIds: [],
-      claimIds: ["CLM-NAC-MARCH-RAIDS-ROLE"],
-      publicSummary: "Build a source-backed history of Talks Not Raids and changes to MARCH enforcement.",
-      reviewedAt: "2026-07-12"
+      sourceIds: ["SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"],
+      claimIds: ["CLM-NAC-MARCH-RAIDS-ROLE", "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN", "CLM-NAC-MARCH-TRANSPARENCY-LAW", "CLM-NAC-MARCH-DISBANDMENT-OUTCOME"],
+      publicSummary: "The record now separates Jamie's web and civic-action contribution, the collective campaign, the 2019 transparency law, and MARCH's later disbandment.",
+      reviewedAt: "2026-07-13"
     },
     {
       id: "TASK-NAC-GREENE-HILL-CLOSE-READ",
       project: "nyc-artist-coalition",
       question: "What relevant passage, if any, does the supplied Greene Hill Food Co-op newsletter preserve?",
       priority: "medium",
-      status: "queued",
+      status: "completed",
       methodsPlanned: ["Recover the live or archived page", "Identify the passage relevant to Jamie's professional record", "Create atomic source assertions with locators"],
       successCriteria: ["Record the relevant passage or a bounded not-recovered result", "Do not attach the source to a claim solely because it was supplied"],
       sourceIds: ["SRC-NAC-GREENE-HILL-NEWSLETTER-2017"],
-      claimIds: [],
-      publicSummary: "Recover and closely read the supplied newsletter before using it as evidence.",
-      reviewedAt: "2026-07-12"
+      claimIds: ["CLM-NAC-OFFICE-NIGHTLIFE-ROLE", "CLM-NAC-NIGHTLIFE-TOWN-HALL"],
+      publicSummary: "The recovered interview directly documents Jamie's coalition affiliation, community-space advocacy, and public invitation around the Office of Nightlife.",
+      reviewedAt: "2026-07-13"
     },
     {
       id: "TASK-CALLNYC-COUNCIL-ENGAGEMENT",
@@ -1049,43 +1064,49 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12"
     }
   ],
-  researchInquiries: [{
-    id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
-    project: "callnyc",
-    question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
-    methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
-    runAt: "2026-07-11",
-    resultStatus: "not-recovered",
-    findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
-    limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
-    sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
-    publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
-    protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+  researchInquiries: [
+    {
+      id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      project: "callnyc",
+      question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+      methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
+      runAt: "2026-07-11",
+      resultStatus: "not-recovered",
+      findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
+      limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
+      sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
+      publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
+    },
+    ...nacPublicSourceBatch20260713.researchInquiries
+  ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
   ],
-  pages: [{
-    id: "callnyc",
-    surface: "/work/callnyc",
-    sourceOrder: [
-      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
-      "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
-      "SRC-CALLNYC-POLITICO-2016-03-14",
-      "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-    ],
-    occurrences: [
-      { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-      { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-      { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
-    ]
-  }]
+  pages: [
+    {
+      id: "callnyc",
+      surface: "/work/callnyc",
+      sourceOrder: [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      ],
+      occurrences: [
+        { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
+        { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    ...nacPublicSourceBatch20260713.pages
+  ]
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);
