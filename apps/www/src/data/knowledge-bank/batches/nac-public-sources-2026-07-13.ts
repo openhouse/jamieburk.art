@@ -635,19 +635,21 @@ export const nacPublicSourceBatch20260713: {
   ],
   pages: [
     {
-      id: "nyc-artist-coalition",
+      id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NAC-NYCARTC-ABOUT-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017", "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017", "SRC-NYC-COUNCIL-INT-1652-2017", "SRC-NYC-COUNCIL-CABARET-VOTE-2017", "SRC-NYC-MAYOR-CABARET-SIGNING-2017", "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017", "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"],
+      sourceOrder: ["SRC-NAC-NYCARTC-ABOUT-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017", "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017", "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", "SRC-NYC-COUNCIL-INT-1652-2017", "SRC-NYC-COUNCIL-CABARET-VOTE-2017", "SRC-NYC-MAYOR-CABARET-SIGNING-2017", "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"],
       occurrences: [
         { id: "coalition-purpose", claimId: "CLM-NAC-COALITION-PURPOSE", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-ABOUT-2017"] },
         { id: "jamie-public-role", claimId: "CLM-NAC-OFFICE-NIGHTLIFE-ROLE", projection: "case-study", sourceIds: ["SRC-NAC-GREENE-HILL-NEWSLETTER-2017", "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017"] },
         { id: "fire-code-study-groups", claimId: "CLM-NAC-FIRE-CODE-STUDY-GROUPS", projection: "case-study", sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017"] },
         { id: "repeal-mobilization", claimId: "CLM-NAC-REPEAL-MOBILIZATION", projection: "case-study", sourceIds: ["SRC-NAC-GOTHAMIST-CABARET-2017", "SRC-NAC-NPR-NIGHTLIFE-2017"] },
         { id: "cabaret-civic-tooling", claimId: "CLM-NAC-CABARET-CIVIC-TOOLING", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017"] },
+        { id: "nightlife-town-hall", claimId: "CLM-NAC-NIGHTLIFE-TOWN-HALL", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"] },
+        { id: "talks-not-raids", claimId: "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019"] },
         { id: "cabaret-repeal", claimId: "CLM-NAC-CABARET-REPEAL-OUTCOME", projection: "case-study", sourceIds: ["SRC-NYC-COUNCIL-INT-1652-2017", "SRC-NYC-COUNCIL-CABARET-VOTE-2017", "SRC-NYC-MAYOR-CABARET-SIGNING-2017"] },
         { id: "nightlife-office", claimId: "CLM-NAC-OFFICE-NIGHTLIFE-OUTCOME", projection: "case-study", sourceIds: ["SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017"] },
-        { id: "nightlife-town-hall", claimId: "CLM-NAC-NIGHTLIFE-TOWN-HALL", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"] },
-        { id: "talks-not-raids", claimId: "CLM-NAC-MARCH-RAIDS-ROLE", projection: "case-study", sourceIds: ["SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"] }
+        { id: "march-transparency-law", claimId: "CLM-NAC-MARCH-TRANSPARENCY-LAW", projection: "case-study", sourceIds: ["SRC-NYC-COUNCIL-INT-1156-2018"] },
+        { id: "march-disbandment", claimId: "CLM-NAC-MARCH-DISBANDMENT-OUTCOME", projection: "case-study", sourceIds: ["SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"] }
       ]
     }
   ]

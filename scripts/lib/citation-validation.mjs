@@ -4,6 +4,7 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -100,6 +101,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   }
 
   for (const page of knowledgeBank.pages) {
+    if (page.id !== page.surface.split("/").at(-1)) errors.push(`Page ${page.id} does not match route slug ${page.surface}`);
     for (const id of duplicateIds(page.occurrences)) errors.push(`Duplicate occurrence ${page.id}/${id}`);
     if (new Set(page.sourceOrder).size !== page.sourceOrder.length) errors.push(`Page ${page.id} has duplicate source-order entries`);
     const firstAppearance = [];
@@ -120,6 +122,11 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
       }
     }
     if (JSON.stringify(firstAppearance) !== JSON.stringify(page.sourceOrder)) errors.push(`Page ${page.id} source order does not match first appearance or contains unused sources`);
+    const occurrenceClaimIds = new Set(page.occurrences.map((item) => item.claimId));
+    for (const claim of knowledgeBank.claims) {
+      const projection = claim.projections.find((item) => item.status === "active" && item.surfaces.includes(page.surface));
+      if (projection?.citationRequired && !occurrenceClaimIds.has(claim.id)) errors.push(`Active cited claim ${claim.id} has no occurrence on ${page.id}`);
+    }
   }
 
   for (const value of allStrings(knowledgeBank)) {

@@ -927,7 +927,7 @@ const knowledgeBankInput = {
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
       collectiveWork: true,
-      projections: [{ key: "case-study", text: "Jamie built and stewarded public web and civic-action infrastructure for the collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019; the City later dismantled MARCH in 2023.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+      projections: [{ key: "archive-note", text: "Jamie built and stewarded public web and civic-action infrastructure for the collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019; the City later dismantled MARCH in 2023.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"] }],
       evidence: [
         { sourceId: "SRC-NAC-PUBLIC-SAFE-ARCHIVE-REVIEW-2026", relationship: "direct-support", supports: ["Jamie's Talks Not Raids web implementation", "public civic-action infrastructure"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019", relationship: "corroborating", supports: ["collective campaign", "Intro 1156 advocacy", "partner credit", "public tools"], confidence: "high", renderCitation: true },

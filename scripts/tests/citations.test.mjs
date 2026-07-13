@@ -63,3 +63,14 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
 });
+
+test("every citation plan is connected to its route and rendered occurrences", () => {
+  for (const page of knowledgeBank.pages) {
+    assert.equal(page.id, page.surface.split("/").at(-1));
+    const mdx = readFileSync(`apps/www/src/content${page.surface}.mdx`, "utf8");
+    for (const occurrence of page.occurrences) {
+      assert.match(mdx, new RegExp(`occurrenceId=["']${occurrence.id}["']`));
+    }
+    assert.ok(resolveCitationReferences(page.id).length > 0);
+  }
+});

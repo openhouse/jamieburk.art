@@ -678,60 +678,6 @@
       ]
     },
     {
-      "id": "CLM-NAC-MARCH-RAIDS-ROLE",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "Jamie built and stewarded public web and civic-action infrastructure for the collective Talks Not Raids campaign. Intro 1156 became Local Law 220 in 2019; the City later dismantled MARCH in 2023.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/fair-rent-nyc"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
-          "relationship": "corroborating",
-          "supports": [
-            "collective campaign",
-            "Intro 1156 advocacy",
-            "partner credit",
-            "public tools"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-NYC-COUNCIL-INT-1156-2018",
-          "relationship": "context",
-          "supports": [
-            "legislative sponsors",
-            "enactment",
-            "reporting and notice requirements"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023",
-          "relationship": "context",
-          "supports": [
-            "December 2023 dismantling",
-            "replacement approach",
-            "continuing limits"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Jamie's supported role is web and civic-action infrastructure within a broad coalition; do not infer that he or one campaign caused enactment or the 2023 decision, and do not publish enforcement-sensitive private records."
-      ]
-    },
-    {
       "id": "CLM-NAC-COALITION-PURPOSE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -919,6 +865,103 @@
       "boundaries": [
         "Credit Council sponsor Rafael Espinal, the Council, the mayor, and implementing agencies; treat coalition advocacy as related public engagement, not legal authorship."
       ]
+    },
+    {
+      "id": "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Within the collective Talks Not Raids campaign, Jamie's web implementation helped deliver a public report, Council sign-on tracking, and direct constituent calls around Intro 1156.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "campaign participation",
+            "partner coalition",
+            "report",
+            "Council action tools"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Preserve the named partner coalition and distinguish advocacy tools from Council sponsorship and enactment."
+      ]
+    },
+    {
+      "id": "CLM-NAC-MARCH-TRANSPARENCY-LAW",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Intro 1156 became Local Law 220 in 2019, requiring MARCH reporting and adding advance notice and an opportunity for establishments to respond, subject to public-safety exceptions.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-INT-1156-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "enactment",
+            "sponsors",
+            "reporting",
+            "notice",
+            "exceptions"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the Council sponsors and enactment process; describe campaign participation separately from legislative authority."
+      ]
+    },
+    {
+      "id": "CLM-NAC-MARCH-DISBANDMENT-OUTCOME",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In December 2023 the City dismantled MARCH and shifted to a notice-and-correction approach; that later outcome belongs in the same policy lineage, without being credited to Jamie or any one campaign alone.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023",
+          "relationship": "direct-support",
+          "supports": [
+            "December 2023 announcement",
+            "MARCH dismantling",
+            "replacement approach",
+            "continuing limits"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Treat disbandment as a later outcome in the policy lineage, not proof of advocacy causation; note that other interagency inspections continued."
+      ]
     }
   ],
   "pages": [
@@ -987,7 +1030,7 @@
       ]
     },
     {
-      "id": "nyc-artist-coalition",
+      "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
         "SRC-NAC-NYCARTC-ABOUT-2017",
@@ -996,11 +1039,11 @@
         "SRC-NAC-GOTHAMIST-CABARET-2017",
         "SRC-NAC-NPR-NIGHTLIFE-2017",
         "SRC-NAC-NYCARTC-CABARET-CAMPAIGN-2017",
+        "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
         "SRC-NYC-COUNCIL-INT-1652-2017",
         "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
         "SRC-NYC-MAYOR-CABARET-SIGNING-2017",
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
-        "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
         "SRC-NYC-COUNCIL-INT-1156-2018",
         "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"
       ],
@@ -1048,6 +1091,23 @@
           ]
         },
         {
+          "id": "nightlife-town-hall",
+          "claimId": "CLM-NAC-NIGHTLIFE-TOWN-HALL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
+            "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"
+          ]
+        },
+        {
+          "id": "talks-not-raids",
+          "claimId": "CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019"
+          ]
+        },
+        {
           "id": "cabaret-repeal",
           "claimId": "CLM-NAC-CABARET-REPEAL-OUTCOME",
           "projection": "case-study",
@@ -1066,21 +1126,18 @@
           ]
         },
         {
-          "id": "nightlife-town-hall",
-          "claimId": "CLM-NAC-NIGHTLIFE-TOWN-HALL",
+          "id": "march-transparency-law",
+          "claimId": "CLM-NAC-MARCH-TRANSPARENCY-LAW",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-NAC-NYCARTC-NIGHT-MAYOR-TOWN-HALL-2017",
-            "SRC-NAC-GREENE-HILL-NEWSLETTER-2017"
+            "SRC-NYC-COUNCIL-INT-1156-2018"
           ]
         },
         {
-          "id": "talks-not-raids",
-          "claimId": "CLM-NAC-MARCH-RAIDS-ROLE",
+          "id": "march-disbandment",
+          "claimId": "CLM-NAC-MARCH-DISBANDMENT-OUTCOME",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-NAC-NYCARTC-TALKS-NOT-RAIDS-2019",
-            "SRC-NYC-COUNCIL-INT-1156-2018",
             "SRC-GOTHAMIST-MARCH-DISBANDMENT-2023"
           ]
         }
