@@ -58,3 +58,15 @@ Its 434 unique records close exactly against the live 434-post profile control.
 Unlike project-account ledgers, its public census omits status IDs, URLs, exact
 dates, handles, and text to avoid creating a new public dossier from a personal
 record.
+
+## Facebook Event Surface
+
+NYC Artist Coalition's public Facebook event surface is documented separately
+from its shared X account. A July 13, 2026 authenticated pass accounts for the
+34-event host-card control with 33 recovered page-listed records and one
+unresolved historical slot. The event ledger supports analysis of dates,
+venues, formats, campaign relationships, and bounded response signals; it does
+not establish individual authorship, attendance, unique participation, or
+policy causality. See the
+[event report](nycartc-facebook-events-2026-07-13.md) and
+[34-slot census](nycartc-facebook-event-census-2026-07-13.csv).

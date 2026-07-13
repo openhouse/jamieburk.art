@@ -562,6 +562,9 @@ export const evidenceBatchRecords: EvidenceBatch = {
       ],
       sourceIds: [
         "SRC-NYCAC-CABARET-GOTHAMIST-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYCAC-NIGHT-MAYOR-TOWN-HALL-2017",
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
@@ -659,6 +662,10 @@ export const evidenceBatchRecords: EvidenceBatch = {
       sourceOrder: [
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
         "SRC-NYCAC-CABARET-GOTHAMIST-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYC-MOME-OFFICE-NIGHTLIFE-2017",
@@ -687,6 +694,18 @@ export const evidenceBatchRecords: EvidenceBatch = {
           sourceIds: [
             "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
             "SRC-NYC-COUNCIL-MARCH-HEARING-2019"
+          ]
+        },
+        {
+          id: "nycac-participation-system",
+          claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+            "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+            "SRC-NYCAC-CABARET-GOTHAMIST-2017"
           ]
         },
         {

@@ -183,6 +183,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-09
 
+## nyc-artist-coalition-participation-system - Recurring public participation
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public event pages / public-safe population accounting / Jamie review confirmation
+**Public wording:** Helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.
+**Detailed public-safe wording:** The 34-slot Facebook event ledger recovers 33 page-listed records from 2017 through 2021 and leaves one historical control slot unresolved. Twelve recurring-meeting records include ten distinct named physical cultural spaces and two virtual sessions. The wider population documents training, panels, hearings, town halls, support actions, workshops, public speakouts, and relief coordination.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows Jamie designing repeatable conditions for stakeholder discovery, convening, public communication, requirements formation, and civic follow-through.
+**Guardrail:** Use `helped establish and produce`; preserve collective and co-host credit. Facebook response totals are platform signals, not attendance, reach, or unique-person counts.
+**Do not say:** Jamie individually authored or solely produced every event; all 34 event pages were recovered; meetings occurred uninterrupted every month or always at a different venue; response totals equal attendance; the events alone caused policy outcomes.
+**Protected boundaries:** Guest identities, comments, invite context, collaborator correspondence, account administration, event credentials, and raw capture data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## nyc-artist-coalition-facebook-event-accounting - Event population control
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public-platform review / public-safe population accounting
+**Public wording:** A July 2026 census accounts for NYC Artist Coalition's 34-event Facebook control with 33 recovered page-listed records and one unresolved historical slot.
+**Detailed public-safe wording:** The event pages span January 2017 through January 2021. Seventeen records date to 2017, three to 2018, six to 2019, six to 2020, and one to 2021.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Makes completeness measurable while preserving the distinction between accounting and recovery.
+**Guardrail:** Say `34 slots accounted for`, not `34 events recovered`.
+**Do not say:** The unresolved slot was deleted; its identity or content is known; the current counter reveals events removed before capture.
+**Protected boundaries:** Raw capture data and private account context stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## nyc-artist-coalition-facebook-response-boundary - Response totals are not attendance
+
+**Status:** Confirmed with boundary
+**Support level:** Direct public-source support
+**Evidence class:** Public event pages / public-safe population accounting
+**Public wording:** Thirty-two recovered event pages displayed Facebook response totals from nine to 1.7K; these are response signals, not attendance or unique-person counts.
+**Detailed public-safe wording:** Nineteen pages displayed at least 100 responses, nine at least 400, and three at least 1,000. These overlapping, mutable platform totals must not be summed or converted into turnout, reach, endorsement, or impact.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Retains evidence of public interest without overstating what the platform metric measures.
+**Guardrail:** Never sum the totals and never relabel them as attendance.
+**Do not say:** The events drew the displayed number of attendees; each response represents a unique person; the totals measure campaign reach or policy influence.
+**Protected boundaries:** Guest identities and participant-level data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

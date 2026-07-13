@@ -51,6 +51,29 @@ typed collection records preserve the original listed URLs, normalized article
 sources, Archive.org fallbacks, and read versus metadata-only status. See
 `docs/knowledge-bank/campaign-press-census-2026-07-12.md`.
 
+## Facebook Event and Participation System
+
+A July 13, 2026 authenticated Facebook pass accounts for a 34-event host-card
+control with 33 recovered page-listed records and one unresolved historical
+slot. The surviving pages range from January 2017 through January 2021 and
+include coalition meetings, safety training, panels, hearings, town halls,
+venue-support actions, public speakouts, workshops, and relief sessions.
+
+Twelve records form a recurring-meeting series. Ten name distinct physical
+cultural spaces and two are virtual. Close reading shows a repeatable practice:
+listen to artists and cultural-space operators, turn lived problems into shared
+priorities, connect participants with practical learning or expert context, and
+create pathways into public testimony, agency dialogue, campaign action, or
+mutual support.
+
+Jamie confirms a substantial role in creating this public event layer and
+relates it to participation lessons developed through WOWList. The evidence
+supports saying that Jamie `helped establish and produce` the recurring
+participation system. It does not support individual authorship of every event,
+sole production, or sole policy causality. Facebook response totals remain
+platform signals rather than attendance counts. See
+`docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md`.
+
 ## Held Claims
 
 - Jamie's exact individual share of NYC Artist Coalition's instrumental policy
@@ -62,6 +85,8 @@ sources, Archive.org fallbacks, and read versus metadata-only status. See
   that metric remains testimony until independently corroborated.
 - The campaign-site press census does not establish earned-media reach or solo
   causality for legislative and agency outcomes.
+- The Facebook event census does not establish physical attendance, unique
+  participation, individual event authorship, or policy causality.
 
 These claims remain in the bank with explicit research questions. They are not
 weakened into disappearance or strengthened beyond the evidence.

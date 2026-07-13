@@ -85,3 +85,11 @@ Jamie's personal account has a stricter, aggregate-only
 the complete current profile control while withholding the raw personal
 timeline, historic contact and location detail, relationships, health
 references, and unreviewed media.
+
+The NYC Artist Coalition Facebook event surface has a separate
+[34-slot census](nycartc-facebook-event-census-2026-07-13.csv) and
+[archival-production report](nycartc-facebook-events-2026-07-13.md). The pass
+recovers 33 page-listed event records and preserves the remaining host-card
+control slot as unresolved. It documents the coalition's recurring
+participation system without publishing guest identities, comments, invite
+context, access credentials, or private account data.

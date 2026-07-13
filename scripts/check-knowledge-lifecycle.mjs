@@ -324,6 +324,38 @@ const urbanhermitExpectedRepostThemes = new Map([
   ["media-only-or-text-unavailable", 0]
 ]);
 
+const nycartcFacebookEventSourceIds = [
+  "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026",
+  "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026",
+  "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+  "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-CABARET-HEARING-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-NOVEMBER-MEETING-2017",
+  "SRC-NYCAC-FACEBOOK-EVENT-NIGHT-MAYOR-PANEL-2018",
+  "SRC-NYCAC-FACEBOOK-EVENT-MARCH-HEARING-2019",
+  "SRC-NYCAC-FACEBOOK-EVENT-SUMMER-MEETING-2019",
+  "SRC-NYCAC-FACEBOOK-EVENT-COVID-RELIEF-2020"
+];
+
+const nycartcFacebookEventCensusText = readFileSync(
+  "docs/knowledge-bank/nycartc-facebook-event-census-2026-07-13.csv",
+  "utf8"
+);
+const nycartcFacebookEventCensusRows = nycartcFacebookEventCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+const nycartcFacebookRecoveredEventRows = nycartcFacebookEventCensusRows.filter(
+  (row) => row[9] === "detail-recovered" || row[9] === "detail-partial-description"
+);
+const nycartcFacebookUnresolvedEventRows = nycartcFacebookEventCensusRows.filter(
+  (row) => row[9] === "unresolved-control-slot"
+);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -1247,6 +1279,156 @@ const criteria = [
         !/full_text|post_text|private_path|protected_locator/i.test(
           nycartcCensusText.split("\n")[0]
         )
+      );
+    })()
+  },
+  {
+    id: "nycartc-facebook-event-full-population-accounting",
+    label: "The 34-slot NYC Artist Coalition Facebook event control is fully reconciled with one unresolved slot",
+    pass: (() => {
+      const yearCounts = new Map();
+      for (const row of nycartcFacebookRecoveredEventRows) {
+        const year = row[2].slice(0, 4);
+        yearCounts.set(year, (yearCounts.get(year) ?? 0) + 1);
+      }
+      const recurringRows = nycartcFacebookRecoveredEventRows.filter((row) =>
+        [
+          "coalition-formation-meeting",
+          "recurring-meeting",
+          "panel-and-recurring-meeting",
+          "relief-meeting"
+        ].includes(row[6])
+      );
+      const recurringPhysicalVenues = new Set(
+        recurringRows
+          .filter((row) => !["Virtual", "Online"].includes(row[5]))
+          .map((row) => row[5])
+      );
+      return (
+        nycartcFacebookEventCensusRows.length === 34 &&
+        nycartcFacebookEventCensusRows.every((row) => row.length === 11) &&
+        new Set(nycartcFacebookEventCensusRows.map((row) => row[0])).size === 34 &&
+        nycartcFacebookRecoveredEventRows.length === 33 &&
+        new Set(nycartcFacebookRecoveredEventRows.map((row) => row[1])).size === 33 &&
+        nycartcFacebookUnresolvedEventRows.length === 1 &&
+        nycartcFacebookUnresolvedEventRows[0][0] === "unresolved-034" &&
+        nycartcFacebookRecoveredEventRows.filter((row) => row[4] === "direct-card-host")
+          .length === 24 &&
+        nycartcFacebookRecoveredEventRows.filter(
+          (row) => row[4] === "cohosted-or-associated"
+        ).length === 9 &&
+        nycartcFacebookRecoveredEventRows.filter((row) => row[8]).length === 32 &&
+        yearCounts.get("2017") === 17 &&
+        yearCounts.get("2018") === 3 &&
+        yearCounts.get("2019") === 6 &&
+        yearCounts.get("2020") === 6 &&
+        yearCounts.get("2021") === 1 &&
+        recurringRows.length === 12 &&
+        recurringPhysicalVenues.size === 10
+      );
+    })()
+  },
+  {
+    id: "nycartc-facebook-event-lifecycle-lineage",
+    label: "Facebook event findings have complete intake, source, reading, inquiry, promotion, and hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NYCAC-FACEBOOK-EVENTS-2026"
+      );
+      const population = candidateById.get("CND-NYCAC-FACEBOOK-EVENT-ACCOUNTING");
+      const participation = candidateById.get("CND-NYCAC-PARTICIPATION-SYSTEM");
+      const attendance = candidateById.get(
+        "CND-NYCAC-FACEBOOK-RESPONSES-EQUAL-ATTENDANCE"
+      );
+      const causality = candidateById.get("CND-NYCAC-EVENTS-CAUSED-POLICY-OUTCOMES");
+      return Boolean(
+        intakeItems.some((item) => item.id === "INT-2026-07-13-NYCAC-FACEBOOK-EVENTS") &&
+        nycartcFacebookEventSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        inquiry.findings.some((item) => /34.*33.*one unresolved/i.test(item)) &&
+        inquiry.limitations.some((item) => /not unique-person.*attendance/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId === "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026" &&
+        participation?.status === "promoted" &&
+        participation.promotedClaimId === "CLM-NYCAC-PARTICIPATION-SYSTEM" &&
+        attendance?.status === "research-needed" &&
+        causality?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === attendance.id && promotion.decision === "held"
+        ) &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === causality.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "nycartc-facebook-event-public-boundaries",
+    label: "Facebook event documentation preserves privacy, authorship, attendance, and causality boundaries",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026"
+      );
+      const participation = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-PARTICIPATION-SYSTEM"
+      );
+      const response = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        source?.visibility === "protected" &&
+        source.protectedLocatorId &&
+        /33 recovered.*one unresolved/i.test(report) &&
+        /response does not establish[\s\S]{0,80}attendance/i.test(report) &&
+        /helped establish and produce/i.test(report) &&
+        /Do not sum Facebook response totals/i.test(antiClaims) &&
+        participation?.boundaries.some((item) => /collectively|collective/i.test(item)) &&
+        response?.antiClaims.some((item) => /sum of all Facebook responses/i.test(item)) &&
+        nycartcFacebookEventCensusText.startsWith(
+          "slot_id,event_id,event_date,event_title,page_relationship,venue_or_mode,event_format,primary_program,response_display,recovery_status,source_url"
+        ) &&
+        !/guest|invite|comment|email|phone|passcode|zoom|protected_locator|private_path/i.test(
+          nycartcFacebookEventCensusText
+        ) &&
+        !publicRegistryText.includes("RESEARCH-NYCAC-FACEBOOK-EVENTS-2026-001")
+      );
+    })()
+  },
+  {
+    id: "nycartc-facebook-event-chad-projection",
+    label: "The event archive projects one bounded, hiring-legible participation-system claim",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-PARTICIPATION-SYSTEM"
+      );
+      const candidate = candidateById.get("CND-NYCAC-PARTICIPATION-SYSTEM");
+      const page = readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8");
+      const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+      const proofs = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.projections.some(
+          (projection) =>
+            projection.key === "case-study" &&
+            projection.status === "active" &&
+            projection.citationRequired &&
+            projection.surfaces.includes("/work/fair-rent-nyc")
+        ) &&
+        /claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"/.test(page) &&
+        /years:\s*"2017-Present"/.test(work) &&
+        /nyc-artist-coalition-participation-system/.test(work) &&
+        /nyc-artist-coalition-participation-system/.test(proofs)
       );
     })()
   },

@@ -180,7 +180,7 @@ const workItemsInput = [
     summary:
       "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -191,12 +191,13 @@ const workItemsInput = [
       "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-public-identity-system",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyc-artist-coalition-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, a shared public identity system, campaign websites, and durable campaign memory.",
+      "A recurring public participation format, running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, a shared public identity system, campaign websites, and durable campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -224,6 +225,12 @@ const workItemsInput = [
         type: "public handout"
       },
       {
+        title: "Participation and event system",
+        description:
+          "A recurring format for public invitations, rotating cultural-space meetings, practical support, priority-setting, hearings, and campaign follow-through.",
+        type: "workflow"
+      },
+      {
         title: "Public campaign web surfaces",
         description:
           "A shared public identity across the coalition logo, @NYCArtC account, and website infrastructure for NYC Artist Coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
@@ -244,6 +251,8 @@ const workItemsInput = [
       "Action Tracking",
       "Campaign Websites",
       "Public Identity Systems",
+      "Stakeholder Convening",
+      "Participation Systems",
       "Public Guidance",
       "Decision Records"
     ],
@@ -272,6 +281,7 @@ const workItemsInput = [
     evidence: [
       "Co-founder role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
+      "Recurring participation and event workflows across cultural-space meetings, public hearings, practical support, and campaign action",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
@@ -282,7 +292,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped structure its recurring participation practice, public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
       open:
         "Open policy, legal, city/state, and coalition-strategy questions are kept at the level of public-safe method and collective-work context.",
       protected:

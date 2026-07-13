@@ -383,6 +383,47 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-09"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, rotating cultural-space meetings, practical support, hearings, and campaign action.",
+    shortWording: "Recurring participation system for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie helped turn collective cultural-space concerns into repeatable public occasions for gathering, practical learning, priority-setting, testimony, and follow-through. The recovered Facebook event record accounts for 34 control slots: 33 public event records and one unresolved historical slot.",
+    sourceBasis:
+      "Jamie confirmation, a 34-slot public-safe Facebook event census, selected public event pages, and independent reporting on Jamie's coalition advocacy and the Market Hotel town hall.",
+    whyItMatters:
+      "Shows stakeholder convening and public participation as an operating system that connected listening, practical support, action design, and institutional interface.",
+    guardrail:
+      "Use helped establish and produce. Credit events and policy outcomes collectively. Do not assign Jamie authorship of every event page or convert Facebook responses into attendance or reach.",
+    doNotSay: [
+      "Jamie alone organized every NYC Artist Coalition event",
+      "Jamie authored every Facebook event page",
+      "The coalition met every month without interruption",
+      "Facebook responses equal attendance",
+      "The events alone caused policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Guest and attendee identities",
+      "Invite and friend context",
+      "Comments and participant profiles",
+      "Account administration",
+      "Online meeting credentials",
+      "Private analytics"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "stakeholder-convening",
+      "participation-systems",
+      "event-operations",
+      "civic-implementation"
+    ],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",

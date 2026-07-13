@@ -52,6 +52,22 @@ Do not convert 17 recovered NYC Cultural Affairs and NYC311 posts into a claim
 that the City adopted every coalition recommendation. Dialogue, service routing,
 and public recognition are not policy causality.
 
+Do not say all 34 Facebook events were recovered. The event ledger accounts
+for a 34-event host-card control with 33 recovered page-listed records and one
+unresolved historical slot.
+
+Do not sum Facebook response totals, treat them as unique people, or describe
+them as attendance, turnout, reach, endorsement, or impact. The 32 visible
+response totals are platform response signals only.
+
+Do not say Jamie individually authored or solely produced every event page or
+event. Use `helped establish and produce` for the recurring participation
+system and preserve co-host and collaborator credit.
+
+Do not say the coalition met without interruption every month or always used a
+different venue. The recovered population contains 12 recurring-meeting
+records: ten at distinct named physical cultural spaces and two virtual.
+
 Do not describe the commercial vacancy and lease-cost pilot as adopted,
 implemented, commissioned by the City, or based on Jamie's access to
 confidential RPIE filings. Do not publish the legislative provenance working

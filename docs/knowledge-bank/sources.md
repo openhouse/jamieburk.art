@@ -139,6 +139,17 @@ credit to Jamie Burkart and M.C. Schmidt for Horse Lords' official 2016
 "Truthers" video. The professional credit is retained; the raw personal
 timeline is not.
 
+The July 13 NYC Artist Coalition Facebook event pass uses the event index and a
+34-past-events host-card counter as separate controls. The resulting
+[34-slot census](nycartc-facebook-event-census-2026-07-13.csv) contains 33
+recovered event records and one unresolved historical slot. The accompanying
+[archival-production report](nycartc-facebook-events-2026-07-13.md) documents
+the event range, recurring meeting practice, venue rotation, participation
+formats, campaign pathways, response-total boundary, and Jamie's first-person
+role confirmation. Guest identities, comments, invite context, account
+administration, event credentials, and raw capture data remain outside the
+repository.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
