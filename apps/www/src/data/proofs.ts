@@ -28,6 +28,7 @@ export type ProofClaim = {
   evidenceClass: EvidenceClass[];
   publicWording: string;
   shortWording?: string;
+  homepageWording?: string;
   detailedPublicWording?: string;
   sourceBasis: string;
   sourceNote?: string;
@@ -50,6 +51,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "14+ years creating operating structure across civic, cultural, small-business, and technical environments.",
     shortWording: "14+ years creating operating structure",
+    homepageWording:
+      "I bring 14+ years of experience creating operating structure across civic, cultural, small-business, and technical work.",
     detailedPublicWording:
       "Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
@@ -107,6 +110,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Contributed to a period of 2x revenue growth for a legacy e-commerce business.",
     shortWording: "Contributed to 2x revenue growth for a legacy e-commerce business",
+    homepageWording:
+      "I helped modernize a legacy e-commerce operation, contributing to a period of 2x revenue growth.",
     detailedPublicWording:
       "Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.",
     sourceBasis: "Approved resume language and public-safe firsthand operational context.",
@@ -170,6 +175,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
     shortWording: "30+ pages of civic campaign-memory infrastructure",
+    homepageWording:
+      "I built and stewarded 30+ pages of shared civic campaign memory so collaborators could preserve decisions and coordinate follow-up.",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis: "Approved resume language and public-safe collaboration summary.",
@@ -316,6 +323,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     shortWording: "WOWList reached roughly 35 city ecosystems",
+    homepageWording:
+      "I co-built WOWList, giving DIY arts organizers a shared calendar platform adopted across roughly 35 city ecosystems.",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
@@ -350,6 +359,8 @@ export const proofClaims: ProofClaim[] = [
     publicWording:
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
+    homepageWording:
+      "I created repeatable hosting and continuity systems that supported 300+ gatherings and 20+ resident artists.",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis: "Approved resume language and public-safe aggregate project history.",

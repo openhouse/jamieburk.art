@@ -65,6 +65,28 @@ test("top-level positioning frames work as emerging rather than deficient", () =
   assert.match(projection, /still taking shape|emerging work/i);
 });
 
+test("Chad-lens proof is actor-led, linked, and immediately follows the hero", () => {
+  const homepage = read("apps/www/src/app/page.tsx");
+  const proofStrip = read("apps/www/src/components/ProofStrip.tsx");
+  const proofs = read("apps/www/src/data/proofs.ts");
+
+  assert.ok(homepage.indexOf("<Hero />") < homepage.indexOf("<ProofStrip />"));
+  assert.ok(homepage.indexOf("<ProofStrip />") < homepage.indexOf("Start here"));
+  assert.match(proofStrip, /proof\.homepageWording/);
+  assert.match(proofStrip, /View evidence/);
+  assert.match(proofStrip, /href=\{href as Route\}/);
+
+  for (const claim of [
+    "I bring 14+ years",
+    "I helped modernize",
+    "I built and stewarded 30+ pages",
+    "I co-built WOWList",
+    "I created repeatable hosting"
+  ]) {
+    assert.match(proofs, new RegExp(claim.replaceAll("+", "\\+")));
+  }
+});
+
 test("technical operations proof rows link to deeper evidence", () => {
   const page = read("apps/www/src/app/work/technical-operations/page.tsx");
   for (const href of [

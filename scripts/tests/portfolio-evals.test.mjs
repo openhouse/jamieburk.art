@@ -13,6 +13,14 @@ test("canonical portfolio eval suite is valid", () => {
   assert.deepEqual(validateSuite(suite).errors, []);
 });
 
+test("Chad-lens eval is blocking and required for application sharing", () => {
+  const chadLens = suite.evals.find((entry) => entry.id === "PR-015");
+  assert.equal(chadLens?.blocking, true);
+  assert.equal(chadLens?.grader, "llm_judge");
+  assert.ok(suite.application_share_thresholds.included_eval_ids.includes("PR-015"));
+  assert.ok(suite.application_share_thresholds.required_eval_ids.includes("PR-015"));
+});
+
 test("weights must total 100", () => {
   const candidate = cloneSuite();
   candidate.evals[0].weight += 1;

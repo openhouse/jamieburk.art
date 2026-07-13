@@ -93,7 +93,7 @@ const workItemsInput = [
     series: "Operating Structure",
     subtitle: "E-commerce and operations modernization",
     summary:
-      "Helped an 80+ year-old legacy industrial business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
+      "Helped an 80+ year-old industrial business adapt to e-commerce through web, analytics, content, marketing, and workflow improvements that contributed to a period of 2x revenue growth.",
     role: "Technical Project Manager & Web Systems Lead",
     years: "2012-Present",
     status: "Full case study",
@@ -178,7 +178,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
+      "Co-founded NYC Artist Coalition and built public civic systems, campaign websites, source maps, and shared campaign memory so collaborators could preserve decisions, coordinate follow-up, and prepare public explanations.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2017-Present; current collaboration 2026-Present",
     status: "Full case study",

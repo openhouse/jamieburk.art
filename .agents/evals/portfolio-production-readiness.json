@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "suite_id": "portfolio-production-readiness",
   "title": "Jamie Burkart portfolio production readiness",
   "objective": "Make the portfolio clear, inspectable, public-safe, application-ready, and production-safe without overstating Jamie's role or exposing protected material.",
@@ -23,15 +23,15 @@
     "weighted_score_minimum": 0.8,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-013", "PR-014"],
-    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010"],
+    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-013", "PR-014", "PR-015"],
+    "required_eval_ids": ["PR-001", "PR-005", "PR-006", "PR-007", "PR-009", "PR-010", "PR-015"],
     "human_approval_required": true
   },
   "production_launch_thresholds": {
     "weighted_score_minimum": 0.9,
     "blocking_score_minimum": 3,
     "nonblocking_score_minimum": 2,
-    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-008", "PR-009", "PR-010", "PR-011", "PR-012", "PR-013", "PR-014"],
+    "included_eval_ids": ["PR-001", "PR-002", "PR-003", "PR-004", "PR-005", "PR-006", "PR-007", "PR-008", "PR-009", "PR-010", "PR-011", "PR-012", "PR-013", "PR-014", "PR-015"],
     "blind_reader_median_minimum": 4,
     "all_blocking_evals_must_pass": true,
     "holdout_regression_must_pass": true,
@@ -67,7 +67,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -112,7 +112,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 8,
+      "weight": 6,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -132,7 +132,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 7,
+      "weight": 5,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -198,7 +198,7 @@
       "category": "usability",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 4,
+      "weight": 2,
       "inputs": ["all public links and buttons"],
       "procedure": [
         "Inventory CTA labels, hrefs, download attributes, and final destinations.",
@@ -364,6 +364,32 @@
       ],
       "evidence_required": ["role brief", "packet manifest", "blind judge scorecard", "cross-surface consistency report"],
       "remediation_hint": "Tailor selection and sequence before adding claims; keep one role, three proof surfaces, and one clear next action."
+    },
+    {
+      "id": "PR-015",
+      "title": "Courageous professional legibility through Chad's lens",
+      "category": "positioning",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "inputs": ["homepage", "work index", "technical operations page", "resume page", "featured project cards", "approved proof records"],
+      "procedure": [
+        "Give three blind hiring-reader judges the candidate URLs and no optimization history.",
+        "Ask each judge to write the one accurate sentence a warm referrer could use when sending the portfolio to a hiring manager.",
+        "Ask each judge to identify Jamie's substantive actions, toward what end, what became usable, the level of responsibility demonstrated, and the strongest defensible proof.",
+        "Scan the first viewport and featured project summaries for passive constructions, artifact-only lists, insider language, apology, inflated ownership, and buried approved evidence."
+      ],
+      "pass_criteria": [
+        "At least two of three judges can write a confident, accurate one-sentence referral without apology, unexplained terminology, or invented authority.",
+        "Jamie is visible as the actor in the top-level positioning and featured project summaries; tools and artifacts do not float without his contribution.",
+        "The first viewport states the operating value and toward what end in language a hiring, HR, product, implementation, or public-sector reader can understand in one pass.",
+        "Featured proof communicates what Jamie did, what became usable, and why it mattered before detailed process or governance language.",
+        "The strongest approved scope and outcome claims are surfaced early with contribution language where causality is shared and collective language where work was collective.",
+        "A hiring reader can see that Jamie can build the operational backbone of a public-facing technical team.",
+        "Median score is 4."
+      ],
+      "evidence_required": ["three independent referral sentences", "judge scorecards", "first-viewport observations", "featured-proof audit", "claim approval references"],
+      "remediation_hint": "Put Jamie back into the sentence, name the end and usable result, translate insider language, and move the strongest approved evidence earlier without overstating causality."
     }
   ],
   "grader_output_schema": {

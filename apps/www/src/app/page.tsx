@@ -46,6 +46,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ProofStrip />
       <section className="jb-frame py-12">
         <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
           <div className="jb-reading">
@@ -75,7 +76,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <ProofStrip />
       <CapabilityGrid />
       <section className="jb-frame py-16">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

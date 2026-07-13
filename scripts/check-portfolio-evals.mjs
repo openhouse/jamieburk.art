@@ -9,7 +9,7 @@ export function validateSuite(suite) {
     if (!condition) errors.push(message);
   };
 
-  requireValue(suite.version === 2, "suite.version must be 2");
+  requireValue(suite.version === 3, "suite.version must be 3");
   requireValue(
     suite.suite_id === "portfolio-production-readiness",
     "suite.suite_id must be portfolio-production-readiness"

@@ -44,6 +44,13 @@ production approval (`PR-008`, `PR-011`, and `PR-012`). The production-launch
 profile includes all evals. This profile boundary changes aggregation only; it
 does not waive any production gate or permit deployment.
 
+Version 3 adds `PR-015`, a blocking Chad-lens review of courageous professional
+legibility. Three blind hiring readers must be able to describe Jamie's action,
+the end it served, what became usable, and the operational responsibility shown;
+at least two must be able to write a confident, accurate one-sentence referral
+without apology or invented authority. This criterion makes understatement a
+real failure while preserving the suite's claim and collective-credit limits.
+
 A candidate is application-share eligible when all of these conditions hold:
 
 - weighted score is at least `0.80`;
