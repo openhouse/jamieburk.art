@@ -15,6 +15,7 @@ import { fileURLToPath } from "node:url";
 import {
   baselineComparison,
   browserEvidenceMatches,
+  findChadLensFriction,
   findGovernanceNarration,
   profileStatus,
   validateSuite,
@@ -27,6 +28,9 @@ const profileArg = args.indexOf("--profile");
 const profileId = profileArg >= 0 ? args[profileArg + 1] : "application_ready";
 const writeReports = !args.includes("--no-report");
 const jsonOnly = args.includes("--json");
+const baselineCommit = "93c49ff8f943c7497dbf51c117b3403543ad2bf4";
+const baselineRecordPath =
+  "evals/portfolio-readiness/baselines/feature-evals-C-93c49ff8.json";
 
 const suitePath = path.join(repoRoot, "evals/portfolio-readiness/suite.json");
 const suite = JSON.parse(readFileSync(suitePath, "utf8"));
@@ -111,7 +115,7 @@ const requiredFiles = [
   "docs/knowledge-bank/approval-register.md",
   "docs/knowledge-bank/launch-blockers.md",
   "evals/portfolio-readiness/suite.json",
-  "evals/portfolio-readiness/baselines/develop-2ec37fe.json",
+  baselineRecordPath,
   "evals/portfolio-readiness/evidence/application-ready.json"
 ];
 
@@ -157,7 +161,8 @@ const evaluatedContractPaths = [
   "docs/evals/portfolio-readiness.md",
   "evals/portfolio-readiness/suite.json",
   "evals/portfolio-readiness/model-judge.md",
-  "evals/portfolio-readiness/baselines/develop-2ec37fe.json",
+  "evals/portfolio-readiness/chad-lens-judge.md",
+  baselineRecordPath,
   "evals/portfolio-readiness/evidence/application-ready.json",
   "scripts/lib/portfolio-evals.mjs",
   "scripts/run-portfolio-evals.mjs",
@@ -183,6 +188,14 @@ const layoutSource = read("apps/www/src/app/layout.tsx");
 const metadataSource = read("apps/www/src/lib/metadata.ts");
 const healthSource = read("apps/www/src/app/api/health/route.ts");
 const workSource = read("apps/www/src/data/work.ts");
+const caseStudySources = [
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
+  "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/harry-j-epstein.mdx",
+  "apps/www/src/content/work/kc-town-hall.mdx",
+  "apps/www/src/content/work/wowlist.mdx"
+].map((file) => [file, read(file)]);
 const publicCitationRegistry = JSON.parse(
   read("apps/www/src/data/knowledge-bank/public-registry.json")
 );
@@ -192,9 +205,11 @@ const publicSources = [
   ["apps/www/src/app/work/technical-operations/page.tsx", operationsSource],
   ["apps/www/src/app/resume/page.tsx", resumeSource],
   ["apps/www/src/app/contact/page.tsx", contactSource],
-  ["apps/www/src/data/work.ts", workSource]
+  ["apps/www/src/data/work.ts", workSource],
+  ...caseStudySources
 ];
 const governanceFindings = findGovernanceNarration(publicSources);
+const chadLensFindings = findChadLensFriction(publicSources);
 
 const resumePath = path.join(
   repoRoot,
@@ -227,11 +242,9 @@ const resumeConsistencyPass =
   /first CouncilStat hackathon/i.test(resumeText) &&
   resumeSource.includes("site.resumePath");
 
-const baselineRecord = readJsonIfPresent(
-  "evals/portfolio-readiness/baselines/develop-2ec37fe.json"
-);
+const baselineRecord = readJsonIfPresent(baselineRecordPath);
 const baselineFingerprint = contentFingerprintAtCommit(
-  "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  baselineCommit,
   evaluatedSurfacePaths
 );
 const browserEvidence = readJsonIfPresent(
@@ -284,6 +297,10 @@ const hardGates = {
   model_judgment: {
     status: "pending",
     evidence: "Validated after candidate fingerprint and rubric evaluation."
+  },
+  chad_lens_review: {
+    status: "pending",
+    evidence: "Validated after deterministic Chad-lens review and dedicated model judgment."
   },
   public_safety: publicSafetyCheck,
   claim_integrity: {
@@ -368,6 +385,7 @@ const scores = {
       : 1,
   citational_care: citationCarePass ? 4 : 2,
   reader_effort: governanceFindings.length === 0 ? 3 : 2,
+  chad_lens: chadLensFindings.length === 0 ? 3 : 2,
   visual_evidence: visualAssetCount >= 12 ? 2 : 1,
   resume_alignment: hardGates.resume_consistency.status === "pass" ? 4 : 1,
   responsive_quality: hardGates.responsive_accessibility.status === "pass" ? 3 : 1,
@@ -378,7 +396,7 @@ const scores = {
 
 const baselineImproves = baselineComparison({
   baseline: baselineRecord,
-  commit: "2ec37fe6e47d11e600ede204d19a98f7d3cff139",
+  commit: baselineCommit,
   fingerprint: baselineFingerprint,
   profileId,
   scores
@@ -394,7 +412,7 @@ const judgments = existsSync(judgmentDir)
       .filter((file) => file.endsWith(".json"))
       .map((file) => JSON.parse(readFileSync(path.join(judgmentDir, file), "utf8")))
   : [];
-const requiredModelJudgments = 2;
+const requiredModelJudgments = 3;
 const validJudgments = validModelJudgments({
   judgments,
   candidate: candidateFingerprint,
@@ -405,6 +423,9 @@ const validJudgments = validModelJudgments({
 });
 const validJudgeIds = new Set(validJudgments.map((judgment) => judgment.judgeId));
 const validJudgeLenses = new Set(validJudgments.map((judgment) => judgment.lens));
+const validChadJudgments = validJudgments.filter(
+  (judgment) => judgment.lens === "chad-editorial" && judgment.scores?.chad_lens >= 3
+);
 
 hardGates.baseline_improvement = {
   status: baselineImproves ? "pass" : "fail",
@@ -420,6 +441,16 @@ hardGates.model_judgment = {
       ? "pass"
       : "fail",
   evidence: `${validJudgments.length} candidate-bound passing judgments from ${validJudgeIds.size} unique judges using ${validJudgeLenses.size} distinct lenses; ${requiredModelJudgments} required.`
+};
+hardGates.chad_lens_review = {
+  status:
+    scores.chad_lens >= 3 && chadLensFindings.length === 0 && validChadJudgments.length >= 1
+      ? "pass"
+      : "fail",
+  evidence:
+    scores.chad_lens >= 3 && chadLensFindings.length === 0 && validChadJudgments.length >= 1
+      ? "Deterministic Chad-lens scan and dedicated candidate-bound editorial judgment pass."
+      : `${chadLensFindings.length} deterministic Chad-lens finding(s); ${validChadJudgments.length} valid dedicated judgment(s).`
 };
 
 const profile = profileStatus({ suite, profileId, hardGates, scores });
@@ -439,6 +470,7 @@ const result = {
   findings: {
     baselineFingerprint,
     governanceNarration: governanceFindings,
+    chadLensFriction: chadLensFindings,
     citationScope: {
       requiredProjections: citationRequiredProjections.length,
       plannedPages: publicCitationRegistry.pages.length,
@@ -462,6 +494,8 @@ const result = {
     ? `Stop this optimization cycle after ${suite.profiles[profileId].consecutivePassingRuns} consecutive passing runs and independent model review.`
     : governanceFindings.length
       ? "Remove reader-irrelevant internal governance narration from public-facing copy without changing the underlying approval rules."
+      : chadLensFindings.length
+        ? "Rewrite the highest-value Chad-lens friction so Jamie, the actual work, and the useful outcome are legible without meta-narration or unsupported strengthening."
       : `Address ${profile.failedHardGates[0] ?? profile.failedRubrics[0] ?? "the weighted-score gap"} with the smallest defensible patch.`
 };
 
@@ -487,6 +521,12 @@ if (jsonOnly) {
     console.log("Reader-effort findings:");
     governanceFindings.forEach((finding) =>
       console.log(`- ${finding.file}:${finding.line} - ${finding.phrase}`)
+    );
+  }
+  if (chadLensFindings.length) {
+    console.log("Chad-lens findings:");
+    chadLensFindings.forEach((finding) =>
+      console.log(`- ${finding.file}:${finding.line} [${finding.id}] - ${finding.phrase}`)
     );
   }
   console.log(`Next action: ${result.nextAction}`);

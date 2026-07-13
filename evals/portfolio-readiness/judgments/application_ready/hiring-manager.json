@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-hiring-manager",
   "lens": "hiring-manager",
-  "candidate": "sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f",
-  "contract": "sha256:7ca78fd9e3d96878b6fa75dd38bfe6878ddc1e370e23534cd97f42f341691ec7",
+  "candidate": "sha256:d5f55c6294c5e87d41c3ae569d8c737e94e9a1d32e78e8585de4233954049986",
+  "contract": "sha256:9bef5618b28b88d07d88a1bc2ce283ded5d2ca1e4718c929a8f5f10d8bdf65b3",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -10,6 +10,7 @@
     "proof_defensibility": 4,
     "citational_care": 4,
     "reader_effort": 3,
+    "chad_lens": 3,
     "visual_evidence": 1,
     "resume_alignment": 4,
     "responsive_quality": 3,
@@ -20,52 +21,57 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening viewport immediately identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, explains his operating value, and exposes work, resume, and contact actions."
+      "observation": "The opening viewport immediately identifies Jamie, his Technical Project Manager role, Product Operations and Implementation focus, operating value, and direct work, resume, and contact paths."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The operations map and project proof map connect Jamie's experience directly to technical operations, implementation, product operations, stakeholder coordination, and durable handoffs."
+      "observation": "The page maps Jamie's work to delivery coordination, planning, risks, dependencies, onboarding, documentation, implementation, and durable handoffs using concrete project proof."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc",
-      "observation": "Specific accomplishments retain contribution language, collective attribution, archived-status warnings, and explicit claim boundaries while remaining useful to a hiring reader."
+      "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc, /work/kc-town-hall",
+      "observation": "Outcomes are stated directly while contribution language, collective credit, archived status, recommendation-versus-award limits, and protected-information boundaries remain explicit."
     },
     {
       "rubric": "citational_care",
       "route": "/work/callnyc",
-      "observation": "Occurrence-level citations provide inspectable sources, limits, accessible labels, and working backlinks without presenting the archived prototype as an official or current city service."
+      "observation": "Nine citation markers resolve to accessible source notes and backlinks that distinguish the independent archived prototype from official or current city services."
     },
     {
       "rubric": "reader_effort",
-      "route": "/resume, /work/harry-j-epstein",
-      "observation": "Internal phone and launch-approval narration has been removed while direct application actions and relevant public-evidence boundaries remain; longer case studies still require deliberate scanning."
+      "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc, /work/wowlist, /work/196-sunday-dinner, /work/kc-town-hall",
+      "observation": "Approval-pending narration has been replaced with settled omission and evidence-boundary language, reducing process noise while longer case studies remain information-dense."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/, /work/harry-j-epstein, /work/fair-rent-nyc, /work/kc-town-hall",
+      "observation": "Jamie remains visible as the actor, useful outcomes are stated without apology, specialized language is translated, and collective or bounded outcomes are right-sized without understating his contribution."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work/harry-j-epstein, /work/fair-rent-nyc, /work/callnyc",
-      "observation": "Artifact galleries describe outputs but do not yet show inspectable project imagery, which remains an explicit application-ready deferral."
+      "observation": "Artifact galleries describe outputs but do not show inspectable project imagery, an explicit application-ready deferral."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume, /contact",
-      "observation": "The website and downloadable PDF present consistent role framing, chronology, capabilities, and impact; the generic phone-pattern check confirms the PDF boundary without embedding the private value in public source."
+      "observation": "The website and downloadable resume reinforce the same role, chronology, capabilities, and outcomes, with direct application and contact paths and the phone retained outside public HTML."
     },
     {
       "rubric": "responsive_quality",
       "route": "all evaluated routes",
-      "observation": "Candidate-bound evidence shows no overflow across desktop, mobile, and 200%-equivalent viewports, with 24 of 24 real keyboard focus events visibly outlined, including all nine citation markers."
+      "observation": "Candidate-bound evidence reports no overflow across eight desktop, mobile, and 200%-equivalent routes, with visible outlines for all 24 keyboard focus events."
     },
     {
       "rubric": "sharing_quality",
-      "route": "/resume",
-      "observation": "Canonical metadata, Open Graph data, social imagery, route-specific descriptions, resume download, and contact links are present; verification used staging metadata defaults."
+      "route": "/work/technical-operations, /resume",
+      "observation": "Role-specific metadata describes Jamie's work directly, while canonical, Open Graph, social image, resume download, and contact behavior pass under staging defaults."
     },
     {
       "rubric": "operational_confidence",
       "route": "/api/health",
-      "observation": "Fingerprint-bound evaluation, profile-neutral immutable baseline comparison, privacy-preserving resume checks, documented checks, and health diagnostics support handoff, while production deployment, indexing, and rollback evidence remain explicit application deferrals."
+      "observation": "Fingerprint-bound evaluation, immutable baseline comparison, browser evidence, documented checks, and health diagnostics support handoff; production deployment and rollback remain declared deferrals."
     }
   ],
   "regressions": [],

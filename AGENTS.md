@@ -82,6 +82,10 @@ Minimize the reader's burden. Make Jamie visible as the actor, explain what the
 work made usable, translate specialized language for hiring and public-sector
 readers, and use collective-work language where the work was collective.
 
+The application eval requires a dedicated `chad-editorial` judgment in addition
+to deterministic phrase checks. A generic hiring-manager pass cannot substitute
+for this review.
+
 ## Recursive Evals
 
 Use `evals/portfolio-readiness/suite.json` as the frozen contract for an

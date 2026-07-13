@@ -1,8 +1,8 @@
 {
   "judgeId": "codex-independent-public-safety-editorial",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f",
-  "contract": "sha256:7ca78fd9e3d96878b6fa75dd38bfe6878ddc1e370e23534cd97f42f341691ec7",
+  "candidate": "sha256:d5f55c6294c5e87d41c3ae569d8c737e94e9a1d32e78e8585de4233954049986",
+  "contract": "sha256:9bef5618b28b88d07d88a1bc2ce283ded5d2ca1e4718c929a8f5f10d8bdf65b3",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -10,6 +10,7 @@
     "proof_defensibility": 4,
     "citational_care": 4,
     "reader_effort": 3,
+    "chad_lens": 3,
     "visual_evidence": 1,
     "resume_alignment": 4,
     "responsive_quality": 3,
@@ -19,43 +20,58 @@
   "evidence": [
     {
       "rubric": "proof_defensibility",
-      "route": "/work/callnyc",
-      "observation": "Canonical claims retain independent, archived, and unofficial boundaries; knowledge-bank, citation, public-safety, and anti-claim checks pass."
+      "route": "/work/harry-j-epstein",
+      "observation": "The revenue claim remains contribution-framed, identifies Jamie's systems work, and preserves private dashboard, customer-data, and internal-detail boundaries."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/kc-town-hall",
+      "observation": "The page identifies the documented public funding recommendation and explicitly avoids claiming final funding beyond it."
     },
     {
       "rubric": "citational_care",
       "route": "/work/callnyc",
-      "observation": "All citation-required projections have occurrence plans, and browser evidence confirms nine local citation markers, nine references, backlinks, and accessible labels."
+      "observation": "Nine citation markers and references have local links, backlinks, accessible labels, and candidate-bound keyboard verification."
     },
     {
       "rubric": "reader_effort",
-      "route": "/resume",
-      "observation": "Internal phone and approval narration is absent, leaving the role summary, resume download, contact path, and selected impact directly scannable."
+      "route": "/work",
+      "observation": "Status and evidence fields now state what is published or omitted without narrating pending approvals or internal launch governance."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Jamie's documentation, coordination, translation, co-founder, and web-infrastructure work is directly legible while policy leadership and outcomes remain correctly credited to the coalition."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/technical-operations",
+      "observation": "The page names Jamie as the actor, translates operating work into recognizable team needs, and connects those capabilities to concrete projects."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work",
-      "observation": "Approved project imagery remains limited and is explicitly deferred by the application-ready profile."
+      "observation": "Approved project imagery remains limited and is an explicit application-ready deferral; absent artifacts are described as omitted rather than pending."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume",
-      "observation": "The privacy-preserving generic US phone pattern confirms that contact information remains in the approved PDF and absent from evaluated public HTML without embedding the literal number in source."
+      "observation": "The public role, impact framing, chronology, resume download, and phone-outside-HTML boundary remain consistent with the approved PDF."
     },
     {
       "rubric": "responsive_quality",
       "route": "/work/callnyc",
-      "observation": "Eight routes pass desktop, mobile, and 200%-equivalent reflow checks without overflow; 24 real Tab events produced 24 visible focus outlines, including nine citation markers."
+      "observation": "Eight routes pass desktop, mobile, and 200%-equivalent reflow checks without overflow; all 24 keyboard focus states were visible."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "Canonical, Open Graph, and Twitter metadata are present and candidate-verified using staging defaults."
+      "observation": "Canonical, Open Graph, and Twitter metadata, the contact path, and the resume download are candidate-verified with staging defaults."
     },
     {
       "rubric": "operational_confidence",
       "route": "/api/health",
-      "observation": "Candidate and evaluation-contract fingerprints bind the public surface, evidence, baseline, runner, suite, and judgment contract; baseline regression protection now applies consistently to both profiles, while production deployment verification remains an explicit application deferral."
+      "observation": "Candidate and contract fingerprints bind the evaluated surface, baseline, evidence, suite, runner, and judgment requirements; production operations remain an explicit application deferral."
     }
   ],
   "regressions": [],

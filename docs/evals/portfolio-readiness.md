@@ -29,8 +29,9 @@ The production profile fails closed unless deployment and approval evidence are
 provided through the variables named by the runner.
 
 Application-ready also fails closed unless the candidate content fingerprint
-matches browser evidence and at least two passing judgments from unique judge
-IDs using distinct review lenses. Each judgment binds both the candidate
+matches browser evidence and at least three passing judgments from unique judge
+IDs using distinct review lenses. One must use the dedicated `chad-editorial`
+lens and score the Chad criterion at least 3. Each judgment binds both the candidate
 fingerprint and the evaluation-contract fingerprint, so changing either the
 public surface or the rules invalidates prior approvals. Judgment files live under
 `evals/portfolio-readiness/judgments/<profile>/`; changing an evaluated public
@@ -66,6 +67,15 @@ the underlying smoke, indexing, and rollback evidence.
 8. Record evidence, score movement, unresolved limits, and the next action.
 9. Require the configured number of consecutive passing runs.
 10. Stop. Additional improvements begin a new optimization cycle.
+
+## Chad Lens
+
+The Chad criterion asks whether the portfolio practices courageous precision:
+Jamie is visible, the actual work and useful outcome are legible in one pass,
+specialized language is translated, collective credit is preserved, and strong
+defensible results are neither apologized for nor inflated. Deterministic checks
+locate known meta-narration and unexplained terminology. The dedicated judge
+applies the broader editorial standard in `chad-lens-judge.md`.
 
 ## Editorial Review
 

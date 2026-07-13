@@ -1,0 +1,64 @@
+# Recursive Eval Run: Chad Lens
+
+Date: 2026-07-13
+
+## Scope
+
+- Branch: `feature/evals-C`
+- Prior accepted head: `93c49ff8f943c7497dbf51c117b3403543ad2bf4`
+- Baseline fingerprint: `sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f`
+- Candidate fingerprint: `sha256:d5f55c6294c5e87d41c3ae569d8c737e94e9a1d32e78e8585de4233954049986`
+- Evaluation-contract fingerprint: `sha256:9bef5618b28b88d07d88a1bc2ce283ded5d2ca1e4718c929a8f5f10d8bdf65b3`
+- Target profile: `application_ready`
+
+## Criterion
+
+The cycle required:
+
+- weighted application score of at least 86;
+- Chad-lens score of at least 3;
+- zero deterministic Chad-lens findings;
+- three candidate-bound judgments from distinct lenses;
+- one passing dedicated `chad-editorial` judgment;
+- no regression against the prior accepted candidate;
+- two consecutive passing runs.
+
+## Baseline
+
+The prior accepted candidate scored 83.5 under the expanded rubric. Chad's
+lens scored 2, with eight deterministic findings: an unexplained acronym,
+proof-surface narration, audience narration, claim-safety narration, and
+approval-process language inside public pages.
+
+## Hill Climb
+
+1. Replaced homepage and Technical Operations meta-language with direct role
+   and work descriptions. Findings moved from eight to five.
+2. Stated HJE's contribution to a period of 2x revenue growth directly while
+   preserving careful causality. Findings moved from five to three.
+3. Replaced FairRentNYC wording-process narration with a direct description of
+   Jamie's contribution and the coalition's ownership of policy outcomes.
+   Findings moved from three to one.
+4. Reframed KC Town Hall around the documented $490,539 recommendation and its
+   evidentiary limit. Findings moved from one to zero.
+5. Rendered-page review found additional approval-pending status narration.
+   The eval was strengthened to catch it, and work-page metadata was rewritten
+   as settled omission and public-evidence boundaries.
+
+## Result
+
+The final application-ready score is 86.5. Chad's lens scores 3 with zero
+deterministic findings. The candidate passed twice consecutively with three
+independent lenses:
+
+- hiring manager;
+- public-safety editorial;
+- Chad editorial.
+
+Candidate-bound browser evidence covers eight routes at desktop, mobile, and
+200%-equivalent reflow viewports; 24 real keyboard focus events; nine citation
+markers and backlinks; metadata; and the resume download.
+
+The next optimization cycle remains visual evidence: one rights-reviewed,
+public-safe screenshot of actual project work, beginning with CallNYC if its
+archived and unofficial status can remain adjacent to the image.

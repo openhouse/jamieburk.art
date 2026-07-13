@@ -22,9 +22,12 @@ not a prose description of it. Do not inspect private archives.
 4. Cite rendered text, route, and visible behavior for every score below 4.
 5. Preserve public-safety, attribution, collective-work, and anti-claim
    boundaries. More disclosure is not automatically better.
-6. Identify one highest-value failing criterion and one smallest defensible
+6. Score `chad_lens` separately: Jamie must be visible as the actor, the actual
+   work and useful outcome must be legible in one pass, specialized language
+   must be translated, and collective credit must remain right-sized.
+7. Identify one highest-value failing criterion and one smallest defensible
    patch. Do not propose a redesign unless the evidence requires it.
-7. Compare the candidate with the preceding accepted run without being told
+8. Compare the candidate with the preceding accepted run without being told
    which version is newer. Reject a candidate that improves one score by
    causing a public-safety, claim-integrity, accessibility, or reader-effort
    regression.
@@ -44,6 +47,7 @@ Return JSON:
     "proof_defensibility": 0,
     "citational_care": 0,
     "reader_effort": 0,
+    "chad_lens": 0,
     "visual_evidence": 0,
     "resume_alignment": 0,
     "responsive_quality": 0,

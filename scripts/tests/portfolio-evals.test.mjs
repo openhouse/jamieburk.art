@@ -6,6 +6,7 @@ import path from "node:path";
 import {
   baselineComparison,
   browserEvidenceMatches,
+  findChadLensFriction,
   findGovernanceNarration,
   profileStatus,
   validateSuite,
@@ -27,17 +28,18 @@ const baselineScores = {
   role_fit: 4,
   proof_defensibility: 4,
   citational_care: 4,
-  reader_effort: 2,
+  reader_effort: 3,
+  chad_lens: 2,
   visual_evidence: 1,
   resume_alignment: 4,
   responsive_quality: 3,
   sharing_quality: 3,
-  operational_confidence: 2
+  operational_confidence: 3
 };
 
 test("suite IDs, references, and weights are valid", () => {
   assert.deepEqual(validateSuite(suite), []);
-  assert.equal(weightedScore(suite.rubrics, baselineScores), 84.5);
+  assert.equal(weightedScore(suite.rubrics, baselineScores), 83.5);
 });
 
 test("reader-irrelevant governance narration is located with evidence", () => {
@@ -50,7 +52,20 @@ test("reader-irrelevant governance narration is located with evidence", () => {
   assert.equal(findings[0].line, 2);
 });
 
-test("baseline misses the application-ready reader-effort criterion", () => {
+test("Chad-lens friction is located with evidence", () => {
+  const findings = findChadLensFriction([
+    ["home.tsx", "The fastest role-fit proof surface for OTI."],
+    ["hje.mdx", "For a hiring manager, this is implementation proof. Screenshot approvals pending."]
+  ]);
+
+  assert.deepEqual(
+    findings.map((finding) => finding.id),
+    ["unexplained-acronym", "proof-surface-meta", "audience-meta", "pending-approval-meta"]
+  );
+  assert.equal(findings[0].file, "home.tsx");
+});
+
+test("baseline misses the application-ready Chad-lens criterion", () => {
   const result = profileStatus({
     suite,
     profileId: "application_ready",
@@ -59,11 +74,11 @@ test("baseline misses the application-ready reader-effort criterion", () => {
   });
 
   assert.equal(result.passed, false);
-  assert.deepEqual(result.failedRubrics, ["reader_effort"]);
+  assert.deepEqual(result.failedRubrics, ["chad_lens"]);
 });
 
-test("one bounded reader-effort improvement reaches application-ready", () => {
-  const candidateScores = { ...baselineScores, reader_effort: 3 };
+test("one bounded Chad-lens improvement reaches application-ready", () => {
+  const candidateScores = { ...baselineScores, chad_lens: 3 };
   const result = profileStatus({
     suite,
     profileId: "application_ready",
@@ -71,7 +86,7 @@ test("one bounded reader-effort improvement reaches application-ready", () => {
     scores: candidateScores
   });
 
-  assert.equal(weightedScore(suite.rubrics, candidateScores), 87);
+  assert.equal(weightedScore(suite.rubrics, candidateScores), 86.5);
   assert.equal(result.passed, true);
 });
 
@@ -81,7 +96,7 @@ test("application-ready does not falsely imply production-ready", () => {
     production_operations: { status: "blocked" },
     human_approval: { status: "blocked" }
   };
-  const candidateScores = { ...baselineScores, reader_effort: 3 };
+  const candidateScores = { ...baselineScores, chad_lens: 3 };
   const result = profileStatus({
     suite,
     profileId: "production_ready",
@@ -108,7 +123,7 @@ test("baseline comparison rejects fingerprint drift and rubric regression", () =
       commit: "base-sha",
       fingerprint: "sha256:base",
       profileId: "application_ready",
-      scores: { ...baselineScores, reader_effort: 3 }
+      scores: { ...baselineScores, chad_lens: 3 }
     }),
     true
   );
@@ -179,7 +194,7 @@ test("model judgments require matching candidates, passing scores, and no regres
     passes: true,
     evidence: [{ rubric: "reader_effort", observation: "Concise" }],
     regressions: [],
-    scores: { role_clarity: 3, reader_effort: 3 }
+    scores: { role_clarity: 3, reader_effort: 3, chad_lens: 3 }
   };
 
   assert.equal(
@@ -188,7 +203,7 @@ test("model judgments require matching candidates, passing scores, and no regres
       candidate: "sha256:candidate",
       contract: "sha256:contract",
       profileId: "application_ready",
-      requiredRubrics: ["role_clarity", "reader_effort"],
+      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens"],
       minimumScore: 3
     }).length,
     1
@@ -199,7 +214,7 @@ test("model judgments require matching candidates, passing scores, and no regres
       candidate: "sha256:candidate",
       contract: "sha256:contract",
       profileId: "application_ready",
-      requiredRubrics: ["role_clarity", "reader_effort"],
+      requiredRubrics: ["role_clarity", "reader_effort", "chad_lens"],
       minimumScore: 3
     }).length,
     0

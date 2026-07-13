@@ -73,6 +73,8 @@ public registry; `npm run test:citations` runs citation regressions; and
 and rubric adapters. `npm run evals:production` adds fail-closed deployment and
 human-approval requirements. See `docs/evals/portfolio-readiness.md` before
 changing evaluation definitions or beginning a recursive optimization run.
+Both profiles require the weighted Chad-lens criterion and a dedicated
+candidate-bound `chad-editorial` judgment.
 
 ## Environment
 

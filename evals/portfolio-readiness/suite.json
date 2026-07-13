@@ -17,6 +17,7 @@
         "repository_integrity",
         "baseline_improvement",
         "model_judgment",
+        "chad_lens_review",
         "public_safety",
         "claim_integrity",
         "resume_consistency",
@@ -30,6 +31,7 @@
         "proof_defensibility",
         "citational_care",
         "reader_effort",
+        "chad_lens",
         "resume_alignment",
         "responsive_quality",
         "sharing_quality"
@@ -48,6 +50,7 @@
         "repository_integrity",
         "baseline_improvement",
         "model_judgment",
+        "chad_lens_review",
         "public_safety",
         "claim_integrity",
         "resume_consistency",
@@ -63,6 +66,7 @@
         "proof_defensibility",
         "citational_care",
         "reader_effort",
+        "chad_lens",
         "visual_evidence",
         "resume_alignment",
         "responsive_quality",
@@ -84,7 +88,11 @@
     },
     {
       "id": "model_judgment",
-      "description": "At least two candidate-bound independent model judgments pass with no reported regression."
+      "description": "At least three candidate-bound independent model judgments pass with distinct lenses and no reported regression."
+    },
+    {
+      "id": "chad_lens_review",
+      "description": "A dedicated Chad-editorial judgment confirms courageous precision, legibility, visible agency, useful outcomes, and right-sized claims."
     },
     {
       "id": "public_safety",
@@ -122,42 +130,47 @@
   "rubrics": [
     {
       "id": "role_clarity",
-      "weight": 18,
+      "weight": 16,
       "question": "Can a hiring manager identify Jamie's role, value, and target work in 30 seconds?"
     },
     {
       "id": "role_fit",
-      "weight": 14,
+      "weight": 12,
       "question": "Does the selected entry page answer why Jamie fits technical operations, product operations, or implementation work?"
     },
     {
       "id": "proof_defensibility",
-      "weight": 18,
+      "weight": 16,
       "question": "Are accomplishments strong, specific, source-backed, and no stronger than the evidence?"
     },
     {
       "id": "citational_care",
-      "weight": 10,
+      "weight": 9,
       "question": "Can a reader inspect what each important source supports and where it stops?"
     },
     {
       "id": "reader_effort",
-      "weight": 10,
+      "weight": 8,
       "question": "Is the path concise, scannable, and free of internal governance narration?"
     },
     {
+      "id": "chad_lens",
+      "weight": 12,
+      "question": "Does the site make Jamie visible, name the actual work and useful outcome in one pass, translate specialized language, and preserve collective credit without understating or inflating the record?"
+    },
+    {
       "id": "visual_evidence",
-      "weight": 8,
+      "weight": 7,
       "question": "Do approved artifacts help readers see the work without exposing protected material?"
     },
     {
       "id": "resume_alignment",
-      "weight": 8,
+      "weight": 7,
       "question": "Do the website and resume reinforce one coherent professional history?"
     },
     {
       "id": "responsive_quality",
-      "weight": 6,
+      "weight": 5,
       "question": "Does hierarchy remain clear on mobile, desktop, keyboard navigation, and zoom?"
     },
     {

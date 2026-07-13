@@ -1,8 +1,8 @@
 {
-  "candidate": "sha256:c472c001210026abc05f1aac0c0ced64e4559677bb0597bfa80460b01142366f",
+  "candidate": "sha256:d5f55c6294c5e87d41c3ae569d8c737e94e9a1d32e78e8585de4233954049986",
   "profile": "application_ready",
-  "performedAt": "2026-07-12",
-  "method": "Local Next.js candidate inspected in the in-app browser at 1440x1000 and 390x844, with direct HTTP checks for routes and the resume PDF.",
+  "performedAt": "2026-07-13",
+  "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
   "routes": [
     {
       "route": "/",
@@ -54,16 +54,16 @@
     "referencesHeading": true
   },
   "focusVisible": true,
-  "focusEvidence": "Rendered styles include a 3px ochre :focus-visible outline and a citation-specific focus outline.",
+  "focusEvidence": "24 of 24 traversed controls exposed visible computed outlines.",
   "zoom200": {
     "passed": true,
-    "method": "Rendered each evaluated route at a 640x450 CSS-pixel viewport, the reflow equivalent of 200% browser zoom on a 1280x900 display, and measured document overflow.",
+    "method": "Rendered each route at a 640x450 CSS-pixel viewport, the reflow equivalent of 200% browser zoom on a 1280x900 display.",
     "routeCount": 8,
     "overflowCount": 0
   },
   "keyboard": {
     "passed": true,
-    "method": "Sent twenty-four real Tab key events through Playwright on /work/callnyc and inspected document.activeElement plus computed focus outlines.",
+    "method": "Sent twenty-four real Tab key events on /work/callnyc and inspected document.activeElement plus computed focus outlines.",
     "focusableCount": 24,
     "visibleFocusCount": 24,
     "citationFocusCount": 9

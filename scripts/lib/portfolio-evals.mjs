@@ -5,6 +5,21 @@ export const governanceNarrationPatterns = [
   /before launch/i
 ];
 
+export const chadLensFrictionPatterns = [
+  { id: "unexplained-acronym", pattern: /\bOTI\b/ },
+  { id: "proof-surface-meta", pattern: /\bproof surface\b/i },
+  { id: "audience-meta", pattern: /\bfor a hiring manager\b/i },
+  { id: "claim-safety-meta", pattern: /\bthe safe claim is\b/i },
+  { id: "proof-safety-meta", pattern: /\bthe public proof is intentionally careful\b/i },
+  { id: "approval-meta", pattern: /\bpublic wording should stay tied to\b/i },
+  { id: "page-governance-meta", pattern: /\bthis page uses collective-work language on purpose\b/i },
+  { id: "pending-approval-meta", pattern: /\bapprovals? pending\b/i },
+  { id: "pending-approval-meta", pattern: /\bpending (?:Jamie )?approval\b/i },
+  { id: "approval-required-meta", pattern: /\b(?:needs?|requires?) (?:consent and )?(?:Jamie )?approval\b/i },
+  { id: "approval-required-meta", pattern: /\bcollaborator review still required\b/i },
+  { id: "approval-conditional-meta", pattern: /\bunless (?:separately |Jamie )?approved?\b/i }
+];
+
 export function findGovernanceNarration(publicSources) {
   const findings = [];
 
@@ -14,6 +29,26 @@ export function findGovernanceNarration(publicSources) {
       if (!match) continue;
 
       findings.push({
+        file,
+        phrase: match[0],
+        line: content.slice(0, match.index).split("\n").length
+      });
+    }
+  }
+
+  return findings;
+}
+
+export function findChadLensFriction(publicSources) {
+  const findings = [];
+
+  for (const [file, content] of publicSources) {
+    for (const { id, pattern } of chadLensFrictionPatterns) {
+      const match = pattern.exec(content);
+      if (!match) continue;
+
+      findings.push({
+        id,
         file,
         phrase: match[0],
         line: content.slice(0, match.index).split("\n").length
