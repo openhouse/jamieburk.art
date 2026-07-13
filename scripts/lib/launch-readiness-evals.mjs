@@ -444,6 +444,77 @@ export function evaluateCampaignPressCorpus({
   return missing;
 }
 
+export function evaluateICloudArchiveProduction({
+  framework,
+  proofs,
+  technicalOperations,
+  archiveDoc
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "LEAD-ICLOUD-JAMIE-PROJECTS-HISTORY-PASS-2026",
+    "LEAD-ICLOUD-CRS-OPERATING-BACKBONE-PASS-2026",
+    "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026",
+    "SRC-CLAUDETTE-MICHAEL-REES",
+    "SRC-CLAUDETTE-MAKE-US-VISIBLE",
+    "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
+    "SRC-JOB-HUNT-PROOF-AUDIT-2026",
+    "CLM-CLAUDETTE-AR-COLLABORATION",
+    "CLM-CRS-OPERATING-BACKBONE-2026",
+    "INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT",
+    "PUB-CLAUDETTE-AR-COLLABORATION",
+    "PUB-CRS-OPERATING-BACKBONE-2026",
+    'coverage("fair-rent-campaign-memory", "partially-backed"',
+    "The plan establishes design intent; the running minutes establish subsequent use",
+    "private-support",
+    "renderCitation: false"
+  ]);
+  requireFragments("Fair Rent proof", proofs, [
+    'id: "fair-rent-campaign-memory"',
+    "Designed and maintained a lightweight operating backbone",
+    "running minutes, decision records, action ownership, open questions, source boundaries",
+    "Jamie completed every proposed operating deliverable"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    "I designed and maintained a lightweight operating backbone for multi-organization policy work",
+    "running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work"
+  ]);
+  requireFragments("Archive-pass documentation", archiveDoc, [
+    "Jamie Projects History",
+    "CRS",
+    "job-hunt",
+    "not recovered in this pass",
+    "does not mean it did not exist",
+    "Private material excluded from ingestion",
+    "Reserve",
+    "Technical Operations",
+    "INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT"
+  ]);
+
+  const publicBundle = [framework, proofs, technicalOperations, archiveDoc].join("\n");
+  const privatePathMarkers = [
+    /\/Users\//,
+    /\/Volumes\//,
+    /Mobile Documents/,
+    /com~apple~CloudDocs/,
+    /Library\/CloudStorage/
+  ];
+  if (privatePathMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public archive production contains a local filesystem path marker.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -475,6 +546,10 @@ export function runLaunchEvals(repoRoot) {
   const kcTownHallStewardshipTransitionDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-kc-town-hall-stewardship-transition.md"
+  );
+  const iCloudTeamsArchiveDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-icloud-teams-archive-pass.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -793,6 +868,28 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const iCloudArchiveProductionMissing = evaluateICloudArchiveProduction({
+    framework,
+    proofs,
+    technicalOperations,
+    archiveDoc: iCloudTeamsArchiveDoc
+  });
+  results.push(
+    result({
+      id: "icloud-teams-archive-production",
+      label: "iCloud Teams archival production matures evidence without leaking private records",
+      weight: 18,
+      hardGate: true,
+      missing: iCloudArchiveProductionMissing,
+      evidence: [
+        "Jamie Projects History, CRS, and job-hunt each produce a durable source, claim, or inquiry disposition.",
+        "A public cultural collaboration remains reserve while a protected-source-backed operating claim reaches Technical Operations.",
+        "First-party job-hunt material creates proof debt rather than self-corroboration.",
+        "Hydration uncertainty and local-path privacy are enforced explicitly."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -833,6 +930,8 @@ export function runLaunchEvals(repoRoot) {
       "Do not satisfy evidence expansion with duplicate, orphaned, self-authored-only, or boundary-free source records.",
       "Do not equate a Council appropriation or funding-negotiation authorization with an executed agreement, receipt, disbursement, project completion, or current status.",
       "Do not satisfy press-corpus completeness by dropping duplicates across campaigns, treating index membership as claim support, or marking unreviewed articles as close-read.",
+      "Do not satisfy archival-production coverage by exposing local paths, private records, or unhydrated files; not recovered is not evidence of nonexistence.",
+      "Do not use first-party job-hunt documents as independent corroboration or promote every mature archive claim to the public site.",
       "Production deployment always requires explicit human approval."
     ]
   };

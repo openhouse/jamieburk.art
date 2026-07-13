@@ -83,15 +83,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
-**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
+**Public wording:** Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.
+**Detailed public-safe wording:** Jamie turned meetings and source material into running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work that collaborators could use.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.
-**Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
+**Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work; Jamie completed every proposed operating deliverable.
 **Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 

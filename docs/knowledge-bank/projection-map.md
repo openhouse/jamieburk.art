@@ -65,6 +65,11 @@ Current selected citation projections now include:
 - KC Town Hall's unanimously recommended and Council-allocated $490,539
   proposal.
 
+Technical Operations also selects the protected-source-backed Commercial Rent
+Stabilization operating-backbone claim. It names the usable outputs without
+publishing raw coalition records or rendering a public citation to a protected
+source.
+
 These selections do not publish founding causality, event-production ownership,
 funding-agreement execution or disbursement, participant records, or a claim
 that MARCH was disbanded.
@@ -80,6 +85,10 @@ Open House, Great Accommodations, and the raft expedition are currently mature
 reserve claims. They remain available for future applications, public-program
 roles, cultural work, photo briefs, and longitudinal research without being
 automatically added to the current site.
+
+Claudette's Theatre on Wheels is also held in reserve: a public-source-backed
+augmented-reality collaboration that may become useful for cultural,
+public-memory, or creative-technology contexts after media-rights review.
 
 The participatory-systems longitudinal frame remains on hold pending broader
 cross-project corroboration.

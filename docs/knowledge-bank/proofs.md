@@ -15,7 +15,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - In early 2017, was publicly identified as an NYC Artist Coalition organizer while the coalition convened fire-safety, mutual-aid, and policy meetings.
 - Participated as a coalition speaker in an NYC Artist Coalition-led public town hall about what the new Office of Nightlife should do.
 - NYC Artist Coalition's records-request data on MARCH raids entered the Council's legislative record before adoption of reporting and advance-notice requirements.
-- Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
+- Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.

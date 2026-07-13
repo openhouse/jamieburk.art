@@ -55,6 +55,12 @@ Approved public artifact examples for this launch pass include:
 - Kansas City Council's Second Committee Substitute for Resolution No. 190649,
   accepting the board recommendation and authorizing funding-agreement
   negotiations on September 26, 2019.
+- Michael Rees's public Claudette's Theatre on Wheels collaboration page,
+  identifying Jamie and Rees as collaborators on an augmented-reality work for
+  #MakeUsVisible Munich and crediting Jamie with others for the source video.
+- ARORA / Make Us Visible's recovered Munich city-project page, which lists
+  Claudette's Theatre on Wheels and credits Michael Rees and Jamie Burkart. Its
+  current client-rendered route remains unverified.
 
 The NYC Artist Coalition campaign-press corpus also preserves 45 unique article
 identities across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent

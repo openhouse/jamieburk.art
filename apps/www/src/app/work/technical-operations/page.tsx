@@ -24,7 +24,7 @@ const proofMap = [
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     proof:
-      "I built and stewarded shared campaign memory, decision records, source maps, action trackers, and public/private review boundaries."
+      "I designed and maintained a lightweight operating backbone for multi-organization policy work: running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work."
   },
   {
     project: "CallNYC",

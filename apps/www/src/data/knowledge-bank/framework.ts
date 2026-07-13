@@ -399,6 +399,60 @@ export const frameworkIntake = [
     inquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
     notes: ["The professional handoff is retained as firsthand research context, not as a selected public claim.", "No personal circumstances are recorded or needed for professional publication.", "Do not name the receiving organization without permission and public-safe corroboration."]
   },
+  {
+    id: "LEAD-ICLOUD-JAMIE-PROJECTS-HISTORY-PASS-2026",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Codex archival review with Jamie Burkart",
+    kind: "document",
+    title: "Jamie Projects History archival pass",
+    summary: "A targeted review of project-history anchors and hydrated public-page captures surfaced a bounded record of Jamie's Claudette's Theatre on Wheels collaboration.",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["claudettes-theatre-on-wheels"],
+    sourceIds: ["SRC-CLAUDETTE-MICHAEL-REES", "SRC-CLAUDETTE-MAKE-US-VISIBLE"],
+    claimIds: ["CLM-CLAUDETTE-AR-COLLABORATION"],
+    inquiryIds: [],
+    notes: [
+      "The public claim uses only collaborator and institutional pages; private correspondence and family context remain excluded.",
+      "The Make Us Visible page was recovered in the local archive but its current client-rendered route was not durably readable in this pass."
+    ]
+  },
+  {
+    id: "LEAD-ICLOUD-CRS-OPERATING-BACKBONE-PASS-2026",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Codex archival review with Jamie Burkart",
+    kind: "document",
+    title: "Commercial Rent Stabilization operating-backbone archival pass",
+    summary: "A targeted review of a 90-day operating plan and subsequent running minutes supports a bounded claim that Jamie designed and maintained lightweight collaboration infrastructure for active Commercial Rent Stabilization work.",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked", "protected-from-publication"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026"],
+    claimIds: ["CLM-CRS-OPERATING-BACKBONE-2026"],
+    inquiryIds: [],
+    notes: [
+      "The public projection names usable operating outputs while omitting raw notes, participant details, legal review, strategy, contact data, and private correspondence.",
+      "The plan establishes design intent; the running minutes separately document ongoing use of decisions, action ownership, open questions, source boundaries, and follow-up."
+    ]
+  },
+  {
+    id: "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Codex archival review with Jamie Burkart",
+    kind: "document",
+    title: "Job-hunt evidence and proof-debt audit",
+    summary: "A targeted review of the current role-positioning outline and approved resume identified the strongest hiring frame and the quantified claims that still need independent or protected corroboration.",
+    status: "integrated",
+    dispositions: ["source-created", "inquiry-created", "project-linked", "protected-from-publication"],
+    projectIds: ["career-proof-system"],
+    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026"],
+    claimIds: [],
+    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT"],
+    notes: [
+      "First-party resume and positioning documents can prioritize research but do not independently verify metrics or causality.",
+      "Private proposal, transcript, correspondence, and contact context remain outside the repository."
+    ]
+  },
   ...campaignPressIntake
 ] satisfies IntakeRecord[];
 
@@ -467,13 +521,15 @@ export const frameworkProjects = [
       "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
       "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
       "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+      "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
       ...campaignPressNewSourceIds
     ],
     claimIds: [
       "CLM-NYCARTC-CABARET-ORGANIZING",
       "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
       "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
-      "CLM-NYCARTC-MARCH-TRANSPARENCY"
+      "CLM-NYCARTC-MARCH-TRANSPARENCY",
+      "CLM-CRS-OPERATING-BACKBONE-2026"
     ],
     inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS"],
     photoBrief: {
@@ -584,6 +640,46 @@ export const frameworkProjects = [
     }
   },
   {
+    id: "claudettes-theatre-on-wheels",
+    title: "Claudette's Theatre on Wheels",
+    aliases: ["Claudette's Theater on Wheels"],
+    period: "2017-2022",
+    status: "historical",
+    summary: "An augmented-reality collaboration honoring Claudette's women-centered theater practice through short video portraits presented with #MakeUsVisible Munich.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "reserve",
+    themes: ["augmented reality", "public memory", "collaborative media"],
+    sourceIds: ["SRC-CLAUDETTE-MICHAEL-REES", "SRC-CLAUDETTE-MAKE-US-VISIBLE"],
+    claimIds: ["CLM-CLAUDETTE-AR-COLLABORATION"],
+    inquiryIds: [],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion: "Which cleared image or interface view shows the augmented-reality work while keeping Claudette's authorship and Jamie's collaboration legible?",
+      evidenceNeeds: ["work view", "artist and collaborator credit", "display context", "media rights"],
+      rightsNotes: "Do not republish video, portraits, screenshots, or private family photographs without rights and context review."
+    }
+  },
+  {
+    id: "career-proof-system",
+    title: "Portfolio evidence system",
+    aliases: ["job-hunt proof audit"],
+    period: "2026-present",
+    status: "researching",
+    summary: "A private-to-public research process for testing resume and portfolio claims against public sources, protected records, and explicit uncertainty.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "hold",
+    themes: ["archival production", "evidence quality", "job applications"],
+    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026"],
+    claimIds: [],
+    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT"],
+    photoBrief: {
+      status: "not-applicable",
+      selectionQuestion: "What evidence diagram would help an editor understand proof maturity without exposing private records?",
+      evidenceNeeds: ["public-safe claim lineage"],
+      rightsNotes: "Raw resumes, correspondence, transcripts, and private archive screenshots are not publication assets."
+    }
+  },
+  {
     id: "participatory-public-practice",
     title: "Participatory public practice",
     aliases: ["participation systems", "public engagement practice"],
@@ -606,6 +702,90 @@ export const frameworkProjects = [
 ] satisfies ProjectRecord[];
 
 export const frameworkSources = [
+  {
+    id: "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
+    title: "Commercial Rent Stabilization operating-backbone archive review",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe archival review of Commercial Rent Stabilization operating documents, April-May 2026.",
+    publicNote: "The protected review covers a 90-day operating plan and subsequent running minutes without exposing raw coalition material.",
+    protectedLocatorId: "ARCHIVE-CRS-OPERATING-BACKBONE-2026-001",
+    supportsGenerally: [
+      "Jamie's operating-system design intent",
+      "running minutes used across multiple meetings",
+      "decision and action ownership",
+      "open-question and source-boundary practices",
+      "coordinated city and state work"
+    ],
+    doesNotEstablish: [
+      "Jamie as the whole movement or sole organizer",
+      "completion of every planned deliverable",
+      "legal authority",
+      "public permission for raw notes, participant data, strategy, or correspondence"
+    ]
+  },
+  {
+    id: "SRC-JOB-HUNT-PROOF-AUDIT-2026",
+    title: "Job-hunt evidence and proof-debt audit",
+    kind: "research-run",
+    visibility: "protected",
+    preservationStatus: "private",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe audit of current job-hunt positioning and proof debt, July 2026.",
+    publicNote: "The audit treats first-party resume and positioning materials as research maps rather than independent corroboration.",
+    protectedLocatorId: "ARCHIVE-JOB-HUNT-PROOF-AUDIT-2026-001",
+    supportsGenerally: [
+      "technical project management and product operations role frame",
+      "priority proof gaps",
+      "need for claim-level source mapping"
+    ],
+    doesNotEstablish: [
+      "independent verification of resume metrics",
+      "causality for business or policy outcomes",
+      "permission to publish private proposals, transcripts, correspondence, or contact data"
+    ]
+  },
+  {
+    id: "SRC-CLAUDETTE-MICHAEL-REES",
+    title: "Claudette's Theatre on Wheels",
+    organization: "Michael Rees",
+    author: "Michael Rees",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-13",
+    canonicalUrl: "https://michaelrees.org/claudette",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Michael Rees, 'Claudette's Theatre on Wheels.'",
+    publicNote: "The collaborator page identifies Jamie Burkart and Michael Rees as creators of an augmented-reality experience for #MakeUsVisible Munich and credits Jamie with others for producing the source video.",
+    supportsGenerally: [
+      "Jamie and Michael Rees collaborated on the augmented-reality work",
+      "#MakeUsVisible Munich presentation context",
+      "Jamie's shared video-production credit"
+    ],
+    doesNotEstablish: [
+      "Jamie as sole author",
+      "independent critical assessment",
+      "rights to republish the video or portraits",
+      "the complete exhibition history"
+    ]
+  },
+  {
+    id: "SRC-CLAUDETTE-MAKE-US-VISIBLE",
+    title: "#MakeUsVisible Munich city project page",
+    organization: "ARORA / Make Us Visible",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "unverified",
+    accessedAt: "2026-07-13",
+    canonicalUrl: "https://www.makeusvisible.io/events/cities?cityName=Munich%20(English)&cityId=5&page=1",
+    publicCitation: "ARORA / Make Us Visible, Munich city project page.",
+    publicNote: "A recovered public-page capture lists 'Claudette's Theatre On Wheels' and credits Michael Rees and Jamie Burkart; the current client-rendered route was not durably readable in this pass.",
+    supportsGenerally: ["institutional display listing", "Michael Rees and Jamie Burkart artist credit"],
+    doesNotEstablish: ["sole authorship", "complete production roles", "current display status", "media-republication rights"]
+  },
   {
     id: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
     title: "Open House",
@@ -873,6 +1053,87 @@ export const frameworkSources = [
 
 export const frameworkClaims = [
   {
+    id: "CLM-CRS-OPERATING-BACKBONE-2026",
+    project: "nyc-artist-coalition",
+    internalClaim: "Jamie's April 2026 operating plan defined a small set of shared public goods for Commercial Rent Stabilization work, and subsequent running minutes document his maintenance of decisions, action ownership, open questions, source boundaries, and coordinated city/state work across a multi-organization collaboration.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{
+      key: "technical-operations",
+      text: "Jamie designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration: running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work/technical-operations"]
+    }],
+    evidence: [{
+      sourceId: "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
+      relationship: "private-support",
+      supports: ["operating design", "running-minutes use", "action ownership", "open-question tracking", "source boundaries", "city/state coordination"],
+      locator: "Public-safe review of April-May 2026 operating documents",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: [
+      "The plan establishes design intent; the running minutes establish subsequent use of selected operating practices, not completion of every proposed deliverable.",
+      "This was collective work across multiple organizations; Jamie was not the whole movement, sole organizer, sole spokesperson, or legal authority.",
+      "Raw notes, participant details, legal review, strategy, contacts, and correspondence remain protected."
+    ],
+    antiClaims: [
+      "Jamie led the entire Commercial Rent Stabilization movement",
+      "Jamie completed every deliverable in the 90-day plan",
+      "Jamie provided legal advice",
+      "Jamie owned every coalition decision"
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-CLAUDETTE-AR-COLLABORATION",
+    project: "claudettes-theatre-on-wheels",
+    internalClaim: "Jamie Burkart collaborated with Michael Rees on an augmented-reality experience honoring Claudette's Theatre on Wheels for #MakeUsVisible Munich, using video Jamie produced with Anne Duffy Burkart and Julia Fredenburg with Claudette.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "reserve",
+    projections: [{
+      key: "archive-note",
+      text: "Jamie collaborated with Michael Rees on an augmented-reality work honoring Claudette's Theatre on Wheels for #MakeUsVisible Munich, using short video portraits Jamie produced with others.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["docs/knowledge-bank/projects/participatory-public-programs"]
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-CLAUDETTE-MICHAEL-REES",
+        relationship: "direct-support",
+        supports: ["Jamie and Michael Rees collaboration", "augmented-reality format", "Munich presentation", "shared video-production credit"],
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-CLAUDETTE-MAKE-US-VISIBLE",
+        relationship: "corroborating",
+        supports: ["institutional display listing", "artist credit"],
+        confidence: "moderate",
+        renderCitation: true
+      }
+    ],
+    boundaries: [
+      "Credit Michael Rees and the additional named video producers; do not turn a collaboration into a solo work.",
+      "Do not publish private family context or sensitive biographical details that are unnecessary to explain Jamie's contribution.",
+      "Image, video, audio, and interface republication requires a separate rights review."
+    ],
+    antiClaims: [
+      "Jamie solely created Claudette's Theatre on Wheels",
+      "Jamie solely produced the augmented-reality work",
+      "The archive establishes a complete exhibition history"
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
     id: "CLM-OPEN-HOUSE-PARTICIPATORY-PROGRAM",
     project: "open-house",
     internalClaim: "Jamie initiated and tended Open House, a ten-day gallery-as-house experiment organized around communal responsibility, public participation, and distributed documentation.",
@@ -1062,6 +1323,7 @@ const openInquiry = (
 ) => ({ id, project, question, methods, resultStatus: "open" as const, findings: [], limitations, sourceIds });
 
 export const frameworkInquiries = [
+  openInquiry("INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "career-proof-system", "Which quantified or causality-heavy resume claims should be promoted, narrowed, or held after a cross-archive audit?", ["Prioritize the Harry J. Epstein growth contribution, WOW List geographic reach, Sunday Dinner and residency aggregates, and any current-status language.", "Seek public sources, approved aggregate methods, and protected corroboration while keeping raw records private.", "Record not recovered separately from evidence that something did not exist."], ["The current resume and positioning outline are first-party research maps, not independent verification of their metrics or causality."], ["SRC-JOB-HUNT-PROOF-AUDIT-2026"]),
   openInquiry("INQ-NYCARTC-COFOUNDING-ROLE", "nyc-artist-coalition", "What do public formation records, launch materials, websites, correspondence, and collaborators establish about Jamie's role creating NYC Artist Coalition?", ["Recover dated public launch and formation materials.", "Map website authorship and coalition role language.", "Seek collaborator confirmation before broadening public wording."], ["The new sources establish an early organizer role, but not the complete founding group or co-founder wording."], ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017"]),
   openInquiry("INQ-NYCARTC-CABARET-OUTCOME-ROLE", "nyc-artist-coalition", "How did Jamie's documented fire-code education and public advocacy relate to the broader collective campaign and legislative repeal outcome?", ["Review remaining bill history and campaign records.", "Map coalition, partner, sponsor, and administration roles.", "Separate contribution, coalition action, sponsor action, and final legislative causality."], ["Press and Council testimony establish Jamie's contribution but not complete causality."], ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"]),
   openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
@@ -1103,6 +1365,8 @@ const publicationDecisionInputs: Array<[
   ["PUB-NYCARTC-MARCH-TRANSPARENCY", "CLM-NYCARTC-MARCH-TRANSPARENCY", "selected", ["/work/fair-rent-nyc"], "Adds a bounded collective outcome connecting public data, campaigning, and legislation."],
   ["PUB-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-SUNDAY-DINNER-WEEKLY-OPEN", "selected", ["/work/196-sunday-dinner"], "Provides external evidence of the recurring open-community practice without exposing participants."],
   ["PUB-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "selected", ["/work/kc-town-hall"], "Preserves the complete official public-record sequence while distinguishing allocation from agreement execution and disbursement."],
+  ["PUB-CRS-OPERATING-BACKBONE-2026", "CLM-CRS-OPERATING-BACKBONE-2026", "selected", ["/work/technical-operations"], "Adds a concrete product-operations proof while protecting coalition records and collective ownership."],
+  ["PUB-CLAUDETTE-AR-COLLABORATION", "CLM-CLAUDETTE-AR-COLLABORATION", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Preserves a public-source-backed collaboration for future cultural, public-memory, and creative-technology contexts without crowding the current hiring composition."],
   ["PUB-PARTICIPATORY-LONGITUDINAL", "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "hold", [], "Promising throughline requires broader cross-project research."]
 ];
 
@@ -1132,7 +1396,7 @@ export const frameworkProofCoverage = [
   coverage("hje-revenue-growth-contribution", "research-needed", "Retain careful causality while locating a public or approved corroborating source."),
   coverage("callnyc-civic-data-guidance", "source-backed", "Canonical CallNYC press and repository sources support this proof.", ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"], []),
   coverage("callnyc-council-member-amplification", "source-backed", "Five member-account actions and officeholding context are canonical.", ["SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28", "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170", "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648", "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208", "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304", "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"], []),
-  coverage("fair-rent-campaign-memory", "research-needed", "Convert approved public-safe archive summaries into bounded canonical source relationships."),
+  coverage("fair-rent-campaign-memory", "partially-backed", "A protected April-May 2026 archive review now supports Jamie's operating design and running-minutes practice; the 30-plus page aggregate and additional public corroboration remain open.", ["SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("fair-rent-source-map", "research-needed", "Identify the public records and approved artifact metadata that support the source-map claim."),
   coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
   coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records now support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; Fair Rent and individual systems authorship remain only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),

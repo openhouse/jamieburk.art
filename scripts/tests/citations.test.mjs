@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 24 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 27 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -88,6 +88,13 @@ test("intake has no silent loss and memories are not auto-promoted", () => {
   assert.equal(officeLead.status, "researching");
   assert.deepEqual(officeLead.claimIds, []);
   assert.deepEqual(officeLead.inquiryIds, ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]);
+  for (const intakeId of [
+    "LEAD-ICLOUD-JAMIE-PROJECTS-HISTORY-PASS-2026",
+    "LEAD-ICLOUD-CRS-OPERATING-BACKBONE-PASS-2026",
+    "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026"
+  ]) {
+    assert.ok(knowledgeBank.intake.some((item) => item.id === intakeId));
+  }
 });
 
 test("publication decisions keep reserve depth off the current site", () => {
@@ -210,8 +217,10 @@ test("unreviewed campaign press cannot silently become claim evidence", () => {
     (item) => item.id === "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS"
   );
   assert.equal(pressInquiry.sourceIds.length, 45);
+  const campaignPressIds = new Set(campaignPressEntries.map((entry) => entry.id));
   const unverified = knowledgeBank.sources.filter(
-    (source) => source.preservationStatus === "unverified"
+    (source) =>
+      campaignPressIds.has(source.id) && source.preservationStatus === "unverified"
   );
   assert.ok(unverified.length > 0);
   assert.ok(unverified.every((source) =>

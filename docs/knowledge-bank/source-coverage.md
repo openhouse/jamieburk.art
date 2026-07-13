@@ -65,3 +65,21 @@ historical. His account of transitioning stewardship to a mission-aligned
 organization is preserved separately as firsthand research context with an
 open corroboration inquiry. It does not alter the source-backed funding claim
 or enter the selected public projection.
+
+## 2026-07-13 iCloud Teams Archive Pass
+
+A targeted, privacy-bounded review covered the Jamie Projects History, CRS,
+and job-hunt working archives.
+
+- `fair-rent-campaign-memory` moves from research-needed to partially-backed.
+  A protected review of an April operating plan and April-May running minutes
+  supports Jamie's design and maintenance of a lightweight operating backbone;
+  the 30-plus-page aggregate and additional public corroboration remain open.
+- Claudette's Theatre on Wheels enters the reserve bank through a live
+  collaborator page and a recovered institutional project-page capture. The
+  claim preserves shared credit and requires separate media-rights review.
+- The job-hunt pass creates a proof-debt inquiry rather than treating
+  first-party resume and positioning material as independent corroboration.
+
+Files that had not materialized or could not be durably read were recorded as
+not recovered in this pass. That is not evidence that they did not exist.

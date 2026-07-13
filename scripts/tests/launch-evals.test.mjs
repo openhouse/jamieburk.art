@@ -4,6 +4,7 @@ import {
   evaluateChadLens,
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
+  evaluateICloudArchiveProduction,
   evaluateKcTownHallCouncilAllocation,
   evaluateKnowledgeLifecycle,
   summarizeLaunchEvals
@@ -335,4 +336,51 @@ test("campaign press corpus rejects dropped cross-campaign membership", () => {
   });
   assert.ok(failures.some((failure) => failure.includes("totalOccurrences: 46")));
   assert.ok(failures.some((failure) => failure.includes("fair-rent-nyc")));
+});
+
+const iCloudArchiveFixture = {
+  framework: [
+    "LEAD-ICLOUD-JAMIE-PROJECTS-HISTORY-PASS-2026",
+    "LEAD-ICLOUD-CRS-OPERATING-BACKBONE-PASS-2026",
+    "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026",
+    "SRC-CLAUDETTE-MICHAEL-REES SRC-CLAUDETTE-MAKE-US-VISIBLE",
+    "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
+    "SRC-JOB-HUNT-PROOF-AUDIT-2026",
+    "CLM-CLAUDETTE-AR-COLLABORATION CLM-CRS-OPERATING-BACKBONE-2026",
+    "INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT",
+    "PUB-CLAUDETTE-AR-COLLABORATION PUB-CRS-OPERATING-BACKBONE-2026",
+    'coverage("fair-rent-campaign-memory", "partially-backed"',
+    "The plan establishes design intent; the running minutes establish subsequent use",
+    "private-support renderCitation: false"
+  ].join(" "),
+  proofs: [
+    'id: "fair-rent-campaign-memory"',
+    "Designed and maintained a lightweight operating backbone",
+    "running minutes, decision records, action ownership, open questions, source boundaries",
+    "Jamie completed every proposed operating deliverable"
+  ].join(" "),
+  technicalOperations: [
+    "I designed and maintained a lightweight operating backbone for multi-organization policy work",
+    "running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work"
+  ].join(" "),
+  archiveDoc: [
+    "Jamie Projects History CRS job-hunt",
+    "not recovered in this pass does not mean it did not exist",
+    "Private material excluded from ingestion",
+    "Reserve Technical Operations INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT"
+  ].join(" ")
+};
+
+test("iCloud archive production passes with asymmetric dispositions and privacy", () => {
+  assert.deepEqual(evaluateICloudArchiveProduction(iCloudArchiveFixture), []);
+});
+
+test("iCloud archive production rejects local paths and missing archive lanes", () => {
+  const failures = evaluateICloudArchiveProduction({
+    ...iCloudArchiveFixture,
+    archiveDoc: `${iCloudArchiveFixture.archiveDoc.replace("job-hunt", "")} /Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("job-hunt")));
+  assert.ok(failures.some((failure) => failure.includes("local filesystem path")));
 });

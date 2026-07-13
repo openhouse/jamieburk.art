@@ -1,6 +1,6 @@
 # Participatory Public Programs
 
-**Reviewed:** 2026-07-12
+**Reviewed:** 2026-07-13
 
 This note preserves source-backed depth that is not currently required on the
 public portfolio site.
@@ -38,6 +38,18 @@ Mississippi Rivers that lasted four months, until the water tasted salt.
 The reviewed sources do not establish the exact final endpoint as the Gulf of
 Mexico or provide a complete crew and route record. Those questions remain
 open.
+
+## Claudette's Theatre on Wheels
+
+Michael Rees's public collaboration page identifies Jamie and Rees as creators
+of an augmented-reality experience for #MakeUsVisible Munich and credits Jamie
+with others for producing the source video. A recovered ARORA / Make Us Visible
+city-project page also lists the work and credits both artists.
+
+This supports a bounded collaboration claim, not sole authorship. Private
+family context is unnecessary to the professional record, and video, audio,
+portrait, screenshot, and interface republication requires a separate rights
+review.
 
 ## Candidate longitudinal frame
 

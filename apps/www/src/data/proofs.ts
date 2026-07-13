@@ -197,11 +197,12 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.",
+    shortWording: "A lightweight operating backbone for multi-organization policy work",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+      "Jamie turned meetings and source material into running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work that collaborators could use.",
+    sourceBasis:
+      "Approved resume language and a public-safe archival review of an April 2026 operating plan and April-May running minutes.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -211,7 +212,8 @@ export const proofClaims: ProofClaim[] = [
       "Jamie led the movement",
       "Jamie owned the campaign",
       "Jamie provided official legal analysis",
-      "Jamie single-handedly created the policy work"
+      "Jamie single-handedly created the policy work",
+      "Jamie completed every proposed operating deliverable"
     ],
     protectedBoundaries: [
       "Private coalition notes",
@@ -224,7 +226,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "fair-rent-source-map",
