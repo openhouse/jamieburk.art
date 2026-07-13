@@ -243,6 +243,66 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-facebook-complete-population - Surviving Page-post population
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public-platform review / public-safe population accounting
+**Public wording:** A terminal-cursor census recovered 57 unique WOW List Facebook records: 35 standalone posts and 22 reshared stories from April 2015 through March 2018.
+**Detailed public-safe wording:** The authenticated owner-timeline query reached `has_next_page: false` after 19 three-record pages with no duplicate IDs or repeated cursor; a no-date-ceiling control returned the same newest record.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Makes the scope and completion criterion of the surviving public record explicit.
+**Guardrail:** Complete means the currently accessible owner-timeline cursor reached its terminal flag, not that no post was deleted, hidden, or removed before capture.
+**Do not say:** Jamie authored all 57 records; the census contains every Facebook post ever published; 57 records measure adoption or impact.
+**Protected boundaries:** Raw authenticated responses, full post text, comments, account roles, private analytics, and media not separately reviewed remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## wowlist-facebook-distributed-use - Community calendars in use
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Contemporaneous public project records / external public organizer post
+**Public wording:** The archived public record shows the operating model in use: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later shared continued use of WOWList.
+**Detailed public-safe wording:** Selected records from the complete Page population make distributed calendar stewardship concrete across member introductions, event contribution, and later external organizer continuity.
+**Where to project:** WOW List case study.
+**Why it matters:** Shows that WOW List was not only software; it gave local organizers usable structures for maintaining and sharing community event knowledge.
+**Guardrail:** Use city-calendar or city-ecosystem language, not official chapters; retain shared-project and community-contributor credit.
+**Do not say:** WOW List operated official chapters in nine cities; Jamie entered the 41 Los Angeles events; three records establish the platform's complete adoption scale.
+**Protected boundaries:** Private user data, organizer contact lists, raw database records, and unreviewed community artifacts remain offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## wowlist-facebook-civic-routing - Civic and cultural-space routes
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Full-population public-platform review / selected public project records
+**Public wording:** The WOW List Facebook record extends from arts-event distribution into issue-based gathering routes and cultural-space care.
+**Detailed public-safe wording:** Recovered records route Women's March gatherings, Standing Rock actions, post-election organizing, Ghost Ship support resources, DIY-space funds, and emerging NYC cultural-space advocacy.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves the broader public-interest use of a community-calendar identity without claiming ownership of the efforts it amplified.
+**Guardrail:** Distribution and amplification do not establish organizing leadership, attendance, causality, or individual post authorship.
+**Do not say:** WOW List organized the Women's March or Standing Rock; Facebook posts prove mobilization impact; Jamie authored every civic or care post.
+**Protected boundaries:** Full text, comment identities, account roles, and unreviewed media remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## wowlist-facebook-interaction-signals - Mutable record-level response
+
+**Status:** Use with care
+**Support level:** Bounded
+**Evidence class:** Current public-platform displays / public-safe population accounting
+**Public wording:** Forty-seven of 57 recovered records retain at least one visible interaction; the strongest individual signal belongs to the nine-city calendar announcement, including 29 shares.
+**Detailed public-safe wording:** Across the recovered records, the current platform display contains 94 reactions, 16 comments, and 49 shares; the nine-city post displays 13 reactions, three comments, and 29 shares.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Retains response evidence without converting overlapping platform counters into people, reach, or impact.
+**Guardrail:** Treat all counts as mutable current record-level signals.
+**Do not say:** WOW List reached 159 people; the posts generated 159 unique engagements; interaction counts prove adoption or causal impact.
+**Protected boundaries:** Comment identities and text, audience analytics, impressions, and historical counter states remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## jamie-facebook-hosted-event-accounting - Personal hosted-event control
 
 **Status:** Confirmed with boundary

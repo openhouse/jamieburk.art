@@ -48,6 +48,13 @@ The WOWList record-level ledger is documented in
 [wowlist-population-2026-07-12.md](wowlist-population-2026-07-12.md). Its 38
 unique records close exactly against the live 38-post profile control.
 
+WOW List's Facebook Page is documented separately in the
+[Facebook post report](wowlist-facebook-posts-2026-07-13.md) and
+[57-row census](wowlist-facebook-post-census-2026-07-13.csv). The authenticated
+owner-timeline cursor reached its terminal flag with 35 standalone posts and 22
+reshared stories from April 2015 through March 2018. Page identity does not
+identify the teammate who wrote or published an individual record.
+
 The KC Town Hall record-level ledger is documented in
 [kctownhall-population-2026-07-12.md](kctownhall-population-2026-07-12.md). Its
 183 unique records close exactly against the live 183-post profile control.

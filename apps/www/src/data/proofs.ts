@@ -438,7 +438,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate historical summary, platform archive, and a complete 38-record census of the surviving @wowlist public account.",
+      "Approved resume language, public-safe aggregate historical summary, platform archive, a complete 38-record census of the surviving @wowlist account, and a terminal-cursor census of 57 surviving Facebook Page records.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -456,7 +456,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",

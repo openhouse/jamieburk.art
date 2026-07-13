@@ -86,6 +86,14 @@ the complete current profile control while withholding the raw personal
 timeline, historic contact and location detail, relationships, health
 references, and unreviewed media.
 
+WOW List's Facebook Page has a separate
+[57-row post census](wowlist-facebook-post-census-2026-07-13.csv) and
+[archival-production report](wowlist-facebook-posts-2026-07-13.md). The
+authenticated owner-timeline cursor reached its terminal flag with 57 unique
+records. The public repository retains metadata and selected source readings;
+raw responses, full text, comments, administration context, and individual
+post-authorship inferences remain outside it.
+
 The NYC Artist Coalition Facebook event surface has a separate
 [34-slot census](nycartc-facebook-event-census-2026-07-13.csv) and
 [archival-production report](nycartc-facebook-events-2026-07-13.md). The pass

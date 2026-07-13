@@ -167,6 +167,17 @@ current and legacy-route review, Facebook event search, association-surface
 checks, and bounded Wayback queries. No historical event record was recovered;
 the source explicitly does not establish that none ever existed.
 
+The July 13 WOW List Facebook post pass follows the authenticated owner-timeline
+cursor through its terminal `has_next_page: false` response. The resulting
+[57-record census](wowlist-facebook-post-census-2026-07-13.csv) accounts for 35
+standalone posts and 22 reshared stories from April 2015 through March 2018. The
+[archival-production report](wowlist-facebook-posts-2026-07-13.md) documents the
+terminal-cursor method, year and theme distributions, selected distributed-use
+evidence, mutable interaction signals, and the boundary between shared Page
+identity and individual authorship. Raw responses, full post text, comments,
+account-administration context, and private analytics remain outside the
+repository.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

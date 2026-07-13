@@ -113,6 +113,23 @@ effort, vigil, or resource it amplified.
 counter were recovered. It does not establish that no older post was deleted
 before capture.
 
+Do not say Jamie authored all 57 recovered WOW List Facebook records or managed
+all of the project's social presence as a settled fact. Jamie recalls managing
+the social presence, but the shared Page identifies only WOW List. Retain the
+management statement as research-needed until collaborator confirmation or
+account-level authorship records support it.
+
+Do not say the 57-record Facebook census contains every post ever published.
+It contains every record returned by the current owner-timeline cursor through
+Facebook's terminal `has_next_page: false` response. Earlier deleted, hidden,
+or removed records may be absent.
+
+Do not sum 94 reactions, 16 comments, and 49 shares as 159 people or describe
+them as reach, impressions, attendance, endorsement, adoption, or impact. They
+are overlapping, mutable current platform signals. Do not imply WOW List
+organized every movement, event, fund, vigil, or cultural-space resource it
+amplified.
+
 Do not say WOW List never created, hosted, co-hosted, promoted, or was
 associated with a Facebook event. Its authenticated event surface displayed
 zero event records on July 13, 2026, and bounded searches recovered no

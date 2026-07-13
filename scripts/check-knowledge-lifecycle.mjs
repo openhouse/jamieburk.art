@@ -417,6 +417,42 @@ const wowlistFacebookEventControlRows = wowlistFacebookEventControlText
   .slice(1)
   .map((line) => line.split(","));
 
+const wowlistFacebookPostSourceIds = [
+  "SRC-WOWLIST-FACEBOOK-LIVE-PROFILE-CONTROL-2026",
+  "SRC-WOWLIST-FACEBOOK-FULL-POPULATION-RUN-2026",
+  "SRC-WOWLIST-FACEBOOK-NINE-CITIES-2015",
+  "SRC-WOWLIST-FACEBOOK-LA-FORTY-ONE-EVENTS-2015",
+  "SRC-WOWLIST-FACEBOOK-COMMUNITY-VALUES-2016",
+  "SRC-WOWLIST-FACEBOOK-WOMENS-MARCH-2017",
+  "SRC-WOWLIST-FACEBOOK-PHXDIY-CONTINUITY-2018"
+];
+
+const wowlistFacebookPostCensusText = readFileSync(
+  "docs/knowledge-bank/wowlist-facebook-post-census-2026-07-13.csv",
+  "utf8"
+);
+const wowlistFacebookPostCensusRows = wowlistFacebookPostCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
+const wowlistFacebookPostExpectedYears = new Map([
+  ["2015", 22],
+  ["2016", 27],
+  ["2017", 7],
+  ["2018", 1]
+]);
+
+const wowlistFacebookPostExpectedThemes = new Map([
+  ["distributed-community-use", 12],
+  ["product-community-infrastructure", 6],
+  ["cultural-space-care", 19],
+  ["civic-routing", 8],
+  ["event-distribution", 11],
+  ["public-knowledge-and-storytelling", 1]
+]);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -1822,6 +1858,170 @@ const criteria = [
         selectedClaims.every(
           (claim) => claim && !renderedProjectionSources.includes(claim.id)
         )
+      );
+    })()
+  },
+  {
+    id: "wowlist-facebook-post-full-population-accounting",
+    label: "The terminal WOW List Facebook cursor is reconciled into a complete 57-record public-safe census",
+    pass: (() => {
+      const yearCounts = new Map();
+      const themeCounts = new Map();
+      let reactions = 0;
+      let comments = 0;
+      let shares = 0;
+      let recordsWithInteractions = 0;
+      for (const row of wowlistFacebookPostCensusRows) {
+        const year = row[2].slice(0, 4);
+        yearCounts.set(year, (yearCounts.get(year) ?? 0) + 1);
+        themeCounts.set(row[4], (themeCounts.get(row[4]) ?? 0) + 1);
+        reactions += Number(row[5]);
+        comments += Number(row[6]);
+        shares += Number(row[7]);
+        if (Number(row[5]) + Number(row[6]) + Number(row[7]) > 0) {
+          recordsWithInteractions += 1;
+        }
+      }
+      return (
+        wowlistFacebookPostCensusRows.length === 57 &&
+        wowlistFacebookPostCensusRows.every(
+          (row) =>
+            row.length === 11 &&
+            row[9] === "recovered" &&
+            row[10] === "metadata-only"
+        ) &&
+        new Set(wowlistFacebookPostCensusRows.map((row) => row[0])).size === 57 &&
+        new Set(wowlistFacebookPostCensusRows.map((row) => row[1])).size === 57 &&
+        wowlistFacebookPostCensusRows.filter((row) => row[3] === "standalone-post")
+          .length === 35 &&
+        wowlistFacebookPostCensusRows.filter((row) => row[3] === "reshared-story")
+          .length === 22 &&
+        [...wowlistFacebookPostExpectedYears].every(
+          ([year, expected]) => yearCounts.get(year) === expected
+        ) &&
+        [...wowlistFacebookPostExpectedThemes].every(
+          ([theme, expected]) => themeCounts.get(theme) === expected
+        ) &&
+        reactions === 94 &&
+        comments === 16 &&
+        shares === 49 &&
+        recordsWithInteractions === 47
+      );
+    })()
+  },
+  {
+    id: "wowlist-facebook-post-lifecycle-lineage",
+    label: "The WOW List Facebook population has intake, reading, inquiry, promotion, and hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026"
+      );
+      const promotedPairs = [
+        ["CND-WOWLIST-FACEBOOK-COMPLETE-POPULATION", "CLM-WOWLIST-FACEBOOK-COMPLETE-POPULATION"],
+        ["CND-WOWLIST-FACEBOOK-DISTRIBUTED-USE", "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE"],
+        ["CND-WOWLIST-FACEBOOK-CIVIC-ROUTING", "CLM-WOWLIST-FACEBOOK-CIVIC-ROUTING"],
+        ["CND-WOWLIST-FACEBOOK-INTERACTION-SIGNALS", "CLM-WOWLIST-FACEBOOK-INTERACTION-SIGNALS"]
+      ];
+      const socialManagement = candidateById.get(
+        "CND-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT"
+      );
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-13-WOWLIST-FACEBOOK-FULL-POPULATION"
+        ) &&
+        wowlistFacebookPostSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        inquiry.findings.some((item) => /19.*57.*no repeated cursor/i.test(item)) &&
+        inquiry.limitations.some((item) => /shared Page identity/i.test(item)) &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return candidate?.status === "promoted" && candidate.promotedClaimId === claimId;
+        }) &&
+        socialManagement?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === socialManagement.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "wowlist-facebook-post-public-boundaries",
+    label: "The WOW List Facebook census preserves authorship, interaction, and protected-capture boundaries",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-WOWLIST-FACEBOOK-FULL-POPULATION-RUN-2026"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-facebook-posts-2026-07-13.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        source?.visibility === "protected" &&
+        source.protectedLocatorId &&
+        /has_next_page: false/i.test(report) &&
+        /does not expose the individual administrator/i.test(report) &&
+        /raw authenticated responses/i.test(report) &&
+        /Do not say Jamie authored all 57/i.test(antiClaims) &&
+        /managed\s+all of (?:WOW List's|the project's) social presence/i.test(antiClaims) &&
+        wowlistFacebookPostCensusText.startsWith(
+          "ledger_id,post_id,date,record_type,primary_theme,reactions,comments,shares,source_url,accounting_status,public_detail_status"
+        ) &&
+        !/full_text|post_text|comment_identity|comment_text|account_role|request_token|protected_locator/i.test(
+          wowlistFacebookPostCensusText
+        ) &&
+        !publicRegistryText.includes("RESEARCH-WOWLIST-FACEBOOK-POSTS-2026-001")
+      );
+    })()
+  },
+  {
+    id: "wowlist-facebook-post-chad-projection",
+    label: "Chad's lens projects one hiring-legible distributed-use sentence and holds the archive detail",
+    pass: (() => {
+      const brief = editorialBriefs.find(
+        (item) => item.id === "BRIEF-WOWLIST-FACEBOOK-POSTS-EDITORIAL-2026"
+      );
+      const distributedUse = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE"
+      );
+      const archiveClaimIds = [
+        "CLM-WOWLIST-FACEBOOK-COMPLETE-POPULATION",
+        "CLM-WOWLIST-FACEBOOK-CIVIC-ROUTING",
+        "CLM-WOWLIST-FACEBOOK-INTERACTION-SIGNALS"
+      ];
+      const page = readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8");
+      const proofs = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+      return Boolean(
+        brief?.selectedClaimIds.length === 4 &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-WOWLIST-FACEBOOK-SOLE-SOCIAL-MANAGEMENT"
+        ) &&
+        brief.rationale.some((item) => /one compact distributed-use sentence/i.test(item)) &&
+        distributedUse?.projections.some(
+          (projection) =>
+            projection.key === "case-study" &&
+            projection.status === "active" &&
+            projection.citationRequired &&
+            projection.surfaces.includes("/work/wowlist") &&
+            /nine cities/i.test(projection.text) &&
+            /41 Los Angeles events/i.test(projection.text) &&
+            /Phoenix organizer/i.test(projection.text)
+        ) &&
+        /claimId="CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE"/.test(page) &&
+        /terminal-cursor census of 57 surviving Facebook Page records/i.test(proofs) &&
+        archiveClaimIds.every((id) => {
+          const claim = knowledgeBank.claims.find((item) => item.id === id);
+          return claim?.projections.every(
+            (projection) =>
+              projection.key === "archive-note" &&
+              projection.surfaces.every((surface) => !surface.startsWith("/"))
+          );
+        }) &&
+        !/src\/app\/(proofs|knowledge-bank|public-claims)/.test(renderedProjectionSources)
       );
     })()
   },

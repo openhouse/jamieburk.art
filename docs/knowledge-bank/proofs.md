@@ -14,6 +14,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Specified a smallest-serious, privacy-preserving pilot for geography-aggregated commercial vacancy and lease-cost indicators, including coverage and suppression reporting, a methods note, and explicit confidential-data exclusions.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- The surviving WOW List Facebook record documents the operating model in use: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later shared continued use.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation for a proposal that advanced from CCED Board recommendation to Council authorization and appropriation of $490,539; Jamie later transitioned the project to a mission-aligned organization, KC Town Hall withdrew from the original allocation, and the unused funds were returned.

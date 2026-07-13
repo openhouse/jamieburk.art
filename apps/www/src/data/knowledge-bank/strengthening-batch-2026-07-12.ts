@@ -413,7 +413,10 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
         "SRC-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
         "SRC-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
         "SRC-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
-        "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+        "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+        "SRC-WOWLIST-FACEBOOK-NINE-CITIES-2015",
+        "SRC-WOWLIST-FACEBOOK-LA-FORTY-ONE-EVENTS-2015",
+        "SRC-WOWLIST-FACEBOOK-PHXDIY-CONTINUITY-2018"
       ],
       occurrences: [
         {
@@ -434,6 +437,16 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
             "SRC-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
             "SRC-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
             "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+          ]
+        },
+        {
+          id: "wowlist-facebook-distributed-use",
+          claimId: "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-FACEBOOK-NINE-CITIES-2015",
+            "SRC-WOWLIST-FACEBOOK-LA-FORTY-ONE-EVENTS-2015",
+            "SRC-WOWLIST-FACEBOOK-PHXDIY-CONTINUITY-2018"
           ]
         }
       ]
