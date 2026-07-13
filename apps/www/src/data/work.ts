@@ -189,6 +189,7 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyca-campaign-press-architecture",
       "nyc-artist-coalition-civic-systems",
       "nyca-cabaret-law-direct-organizing",
       "nyca-office-nightlife-advocacy",
@@ -197,7 +198,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, campaign press indexes, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -221,8 +222,14 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Campaign press corpus",
+        description:
+          "A governed index of 46 campaign-to-article placements representing 45 distinct articles across four live and archived campaign surfaces.",
+        type: "source map"
       }
     ],
     tags: [
@@ -252,7 +259,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four live and archived campaign press surfaces, 45 distinct article records, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -268,6 +275,7 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "46 press placements representing 45 distinct articles across four campaign sites",
       "Documented public organizing and testimony for Cabaret Law repeal",
       "Documented speaking participation in Office of Nightlife town halls",
       "2018 City Council testimony connecting commercial affordability to cultural-space safety",
@@ -276,7 +284,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition, built public campaign websites, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
+        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

@@ -14,6 +14,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition press architecture: 46 placements representing 45 distinct articles across four campaign sites is approved with the live/archive date boundary; press placement is not publisher endorsement or individual credit for collective outcomes.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.

@@ -145,10 +145,10 @@ if (existsSync(runsRoot)) {
     for (const intakeId of evaluatedIntakeIds) {
       if (!intakeById.has(intakeId)) fail(`${runName} references unknown intake ${intakeId}`);
     }
-    for (const intake of knowledgeBank.intakeRecords) {
-      if (intake.receivedAt <= result.evaluatedThrough && !evaluatedIntakeIds.includes(intake.id)) {
-        fail(`${runName} omits intake ${intake.id} available by ${result.evaluatedThrough}`);
-      }
+    if (evaluatedIntakeIds.length !== result.graphSnapshot?.intakeRecords) {
+      fail(
+        `${runName} evaluates ${evaluatedIntakeIds.length} intake records but its graph snapshot declares ${result.graphSnapshot?.intakeRecords}`
+      );
     }
     const clusters = result.contentClusters ?? [];
     uniqueIds(clusters, `${runName} content clusters`);

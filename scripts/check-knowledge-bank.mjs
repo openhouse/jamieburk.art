@@ -4,6 +4,11 @@ import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  campaignPressDistinctSourceCount,
+  campaignPressPlacementCount,
+  campaignPressSourceIds
+} from "../apps/www/src/data/knowledge-bank/campaignPress.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -34,6 +39,7 @@ const requiredWorkProofs = new Map([
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyca-campaign-press-architecture",
       "nyc-artist-coalition-civic-systems"
     ]
   ],
@@ -57,7 +63,9 @@ const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
+const campaignPressIndexPath = path.join(docsRoot, "projects/nyca-campaign-press-index.md");
 const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+const sourcesById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
 
 function fail(message) {
   failures.push(message);
@@ -99,6 +107,49 @@ function extractStringField(block, field) {
 
 function assertIncludes(text, expected, label) {
   if (!text.includes(expected)) fail(`${label} is missing ${expected}`);
+}
+
+if (campaignPressPlacementCount !== 46) {
+  fail(`Campaign press corpus has ${campaignPressPlacementCount} placements; expected 46`);
+}
+
+if (campaignPressDistinctSourceCount !== 45) {
+  fail(`Campaign press corpus has ${campaignPressDistinctSourceCount} distinct articles; expected 45`);
+}
+
+for (const [campaign, sourceIds] of Object.entries(campaignPressSourceIds)) {
+  for (const sourceId of sourceIds) {
+    const source = sourcesById.get(sourceId);
+    if (!source) {
+      fail(`${campaign} press corpus references missing source ${sourceId}`);
+    } else if (source.kind !== "published-article") {
+      fail(`${campaign} press corpus source ${sourceId} is not a published article`);
+    }
+  }
+}
+
+const expectedCampaignPressCounts = {
+  "let-nyc-dance": 21,
+  "talks-not-raids": 7,
+  "save-nyc-spaces": 8,
+  "fair-rent-nyc": 10
+};
+for (const [campaign, expectedCount] of Object.entries(expectedCampaignPressCounts)) {
+  const actualCount = campaignPressSourceIds[campaign]?.length;
+  if (actualCount !== expectedCount) {
+    fail(`${campaign} press corpus has ${actualCount} placements; expected ${expectedCount}`);
+  }
+}
+
+if (!existsSync(campaignPressIndexPath)) {
+  fail("docs/knowledge-bank/projects/nyca-campaign-press-index.md is missing");
+} else {
+  const campaignPressIndex = read(campaignPressIndexPath);
+  for (const sourceId of new Set(Object.values(campaignPressSourceIds).flat())) {
+    if (!campaignPressIndex.includes(sourceId)) {
+      fail(`Campaign press index omits ${sourceId}`);
+    }
+  }
 }
 
 if (!existsSync(proofPath)) {

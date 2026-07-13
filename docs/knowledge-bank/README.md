@@ -67,3 +67,10 @@ pilot.
 
 See [lifecycle.md](lifecycle.md) for the intake-to-source-to-claim process,
 projection restraint, recursive eval, and photo-feedback loop.
+
+The campaign press corpus is normalized in
+`apps/www/src/data/knowledge-bank/campaignPress.ts` and documented for human
+review in
+[projects/nyca-campaign-press-index.md](projects/nyca-campaign-press-index.md).
+It preserves placements, distinct articles, archive state, and claim-use
+boundaries separately.

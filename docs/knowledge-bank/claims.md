@@ -374,3 +374,19 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private campaign strategy, unapproved coalition roles, private correspondence, and unreviewed enforcement records stay offline.
 **Review owner:** Jamie / research open
 **Last reviewed:** 2026-07-12
+
+## nyca-campaign-press-architecture - Campaign press source architecture
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / Jamie review confirmation
+**Structured claim IDs:** `CLM-NYCA-CAMPAIGN-PRESS-ARCHITECTURE`
+**Public wording:** Built press sections across four NYC Artist Coalition campaign sites, organizing 46 campaign-to-article placements representing 45 distinct articles into public source trails.
+**Detailed public-safe wording:** Jamie built press sections across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Surviving live and archived views contain 46 placements representing 45 distinct articles; one NPR article appears on two sites.
+**Where to project:** FairRentNYC case study and Technical Operations.
+**Why it matters:** Makes the information architecture inside Jamie's campaign websites legible: the sites did not only ask people to act; they helped readers follow the public source trail around each issue.
+**Guardrail:** Press placement documents source architecture. It does not imply publisher endorsement, Jamie's authorship of reporting, sole editorial selection, or sole credit for collective campaign outcomes.
+**Do not say:** Forty-five publishers endorsed NYC Artist Coalition; Jamie authored the listed reporting; Jamie alone selected every article; press coverage proves Jamie caused legislation or policy change.
+**Protected boundaries:** Private CMS records, private campaign strategy, unapproved editorial correspondence, private analytics, and unreviewed article-body claims stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13

@@ -46,6 +46,14 @@ Approved public artifact examples for this launch pass include:
 - KCUR's 2016 8th Street Tunnel reporting.
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
 - Michael Rees's Claudette's Theatre on Wheels project page.
+- The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
+
+The governed press inventory is documented in
+`docs/knowledge-bank/projects/nyca-campaign-press-index.md`. Each article has a
+canonical source record, access posture, campaign relationship, and explicit
+non-support boundaries. Article placement supports a claim about campaign
+source architecture; article-body claims require separate close reading before
+reuse.
 
 ### Public-Safe Archive Summary
 

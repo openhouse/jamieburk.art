@@ -274,10 +274,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
     publicWording:
-      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance public web surfaces.",
     shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
     detailedPublicWording:
-      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
     sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
@@ -301,7 +301,44 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "nyca-campaign-press-architecture",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Built press sections across four NYC Artist Coalition campaign sites, organizing 46 campaign-to-article placements representing 45 distinct articles into public source trails.",
+    shortWording: "Built public source trails across four campaign sites",
+    detailedPublicWording:
+      "Jamie built press sections across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Surviving live and archived views contain 46 placements representing 45 distinct articles; one NPR article appears on two sites.",
+    sourceBasis:
+      "Jamie review confirmation; surviving live campaign sites; the December 1, 2021 FairRentNYC Wayback capture; and the current FairRentNYC reference library.",
+    sourceNote:
+      "The inventory preserves each placement and each distinct article separately. Article bodies require claim-level review before their reporting is reused elsewhere.",
+    whyItMatters:
+      "Shows Jamie turning campaign context into navigable public evidence infrastructure, not merely publishing isolated calls to action.",
+    guardrail:
+      "Press placement documents source architecture. It does not imply publisher endorsement, Jamie's authorship of reporting, or sole credit for collective campaign outcomes.",
+    doNotSay: [
+      "Forty-five publishers endorsed NYC Artist Coalition",
+      "Jamie authored the listed reporting",
+      "Jamie alone selected every article",
+      "Press coverage proves Jamie caused legislative or policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Private CMS records",
+      "Private campaign strategy",
+      "Unapproved editorial correspondence",
+      "Private analytics",
+      "Unreviewed article-body claims"
+    ],
+    surfaces: ["case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc", "let-nyc-dance", "talks-not-raids", "save-nyc-spaces"],
+    relatedCapabilities: ["campaign-websites", "source-mapping", "information-architecture", "public-guidance"],
+    structuredClaimIds: ["CLM-NYCA-CAMPAIGN-PRESS-ARCHITECTURE"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyc-artist-coalition-civic-systems",

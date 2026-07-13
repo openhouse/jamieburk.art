@@ -9,6 +9,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
+- Built press sections across four NYC Artist Coalition campaign sites, organizing 46 placements representing 45 distinct articles into public source trails.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.

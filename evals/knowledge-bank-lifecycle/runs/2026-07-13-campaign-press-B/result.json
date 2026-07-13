@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-13-campaign-press-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-13",
+  "status": "passed",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "graphSnapshot": {
+    "intakeRecords": 22,
+    "sources": 74,
+    "claims": 25,
+    "researchInquiries": 6,
+    "activeProjections": 15,
+    "heldProjections": 14
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "nyca-campaign-press-architecture",
+      "sourceIds": [
+        "SRC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-TALKS-NOT-RAIDS-PROJECT",
+        "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-FAIR-RENT-NYC-PRESS-ARCHIVE-2021-12-01",
+        "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY-2026"
+      ],
+      "claimIds": [
+        "CLM-LET-NYC-DANCE-PRESS-CORPUS",
+        "CLM-TALKS-NOT-RAIDS-PRESS-CORPUS",
+        "CLM-SAVE-NYC-SPACES-PRESS-CORPUS",
+        "CLM-FAIR-RENT-NYC-PRESS-CORPUS",
+        "CLM-NYCA-CAMPAIGN-PRESS-ARCHITECTURE"
+      ],
+      "researchInquiryIds": [],
+      "projectionDecision": "Project Jamie's campaign press architecture and the audited 46-placement/45-article count in the FairRentNYC case study while retaining the archive-date, duplicate-source, no-endorsement, and collective-credit boundaries."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 84,
+      "editorialFutureUseScore": 86,
+      "result": "revise",
+      "finding": "The first pass flattened placements into unique articles, treated two FairRentNYC editorial states as simultaneous, left one dead campaign URL without a replacement search, and risked making press inclusion read as endorsement or policy proof."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 96,
+      "result": "qualifying-pass",
+      "finding": "The revised graph preserves 46 placements and 45 distinct articles, separates the 2021 and current FairRentNYC layers, recovers the moved Village Voice article by title, and limits the public claim to Jamie's source architecture."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 98,
+      "result": "qualifying-pass",
+      "finding": "An unchanged second pass confirmed complete intake traceability, public locations for all 45 distinct articles, deterministic counts, explicit article-level research debt, a calibrated active projection, and no privacy or collective-credit regression."
+    }
+  ],
+  "unresolvedCriteria": []
+}

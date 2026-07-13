@@ -43,6 +43,7 @@ Use claims that directly support operating-backbone fit:
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
 - `nyca-commercial-rent-testimony-2018`
+- `nyca-campaign-press-architecture`
 
 ## Lab / Source-Backed Team Memory
 
@@ -55,6 +56,10 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The FairRentNYC case study may project `nyca-campaign-press-architecture` with
+both audited denominators: 46 placements and 45 distinct articles. Keep the
+surviving live/archive time boundary and the no-endorsement guardrail visible.
 
 ## Bank-Only Depth
 

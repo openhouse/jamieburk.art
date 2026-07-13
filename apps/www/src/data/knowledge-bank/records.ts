@@ -1,4 +1,9 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  campaignPressClaims,
+  campaignPressIntakeRecords,
+  campaignPressSources
+} from "./campaignPress.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -289,7 +294,8 @@ const knowledgeBankInput = {
       nextActions: ["Recover implementation details and exhibition date before considering a technical-project projection."],
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
-    }
+    },
+    ...campaignPressIntakeRecords
   ],
   sources: [
     {
@@ -788,7 +794,8 @@ const knowledgeBankInput = {
       publicNote: "The collaborator's project page credits Jamie and Michael Rees with the augmented-reality experience and separately credits Jamie, Anne Dufy Burkart, and Julia Fredenburg with producing the source video.",
       supportsGenerally: ["Jamie collaborated with Michael Rees on an augmented-reality experience for MakeUseVisible Munich", "Jamie co-produced source video with Anne Dufy Burkart and Julia Fredenburg", "the source video was shot in 2017 with Claudette"],
       doesNotEstablish: ["Jamie's sole authorship of the AR implementation", "a complete technical stack", "the exhibition date", "sole production of the source video", "rights to republish the video"]
-    }
+    },
+    ...campaignPressSources
   ],
   claims: [
     {
@@ -1110,7 +1117,8 @@ const knowledgeBankInput = {
       researchInquiryIds: [],
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
-    }
+    },
+    ...campaignPressClaims
   ],
   researchInquiries: [
     {
