@@ -2,6 +2,10 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
+  campaignPressNewArticleSourceIds,
+  campaignPressPlacements
+} from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts";
+import {
   evaluateLifecycle,
   loadSuite,
   scoreAssessment,
@@ -197,6 +201,47 @@ test("July 13 source expansion ingests ten distinct bounded public sources", () 
   assert.ok(kcClaim.requiredSupportTags.includes("kc-town-hall-board-recommendation"));
   assert.equal(kcTask.priority, "high");
   assert.ok(kcTask.nextActions.length >= 3);
+});
+
+test("campaign press recovery preserves 45 placements and 44 distinct articles", () => {
+  const expectedByCampaign = {
+    letnycdance: 21,
+    talksnotraids: 7,
+    savenycspaces: 8,
+    fairrentnyc: 9
+  };
+
+  assert.equal(campaignPressPlacements.length, 45);
+  assert.equal(new Set(campaignPressPlacements.map((item) => item.sourceId)).size, 44);
+  assert.equal(campaignPressNewArticleSourceIds.length, 41);
+
+  for (const [campaign, expected] of Object.entries(expectedByCampaign)) {
+    const placements = campaignPressPlacements.filter((item) => item.campaign === campaign);
+    assert.equal(placements.length, expected);
+  }
+
+  for (const sourceId of new Set(campaignPressPlacements.map((item) => item.sourceId))) {
+    assert.ok(knowledgeBank.sources.some((item) => item.id === sourceId), `${sourceId} must resolve`);
+  }
+
+  const corpusClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS"
+  );
+  assert.equal(corpusClaim.maturity, "corroborated");
+  assert.equal(corpusClaim.projections.length, 0);
+
+  const fairRentIndex = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-FAIRRENTNYC-PRESS-INDEX-2021"
+  );
+  assert.equal(fairRentIndex.preservationStatus, "archived");
+  assert.match(fairRentIndex.archiveUrl, /web\.archive\.org/);
+
+  const queuedArticles = knowledgeBank.sourceReadings.filter((item) =>
+    campaignPressNewArticleSourceIds.includes(item.sourceId)
+  );
+  assert.equal(queuedArticles.length, 41);
+  assert.ok(queuedArticles.every((item) => item.status === "queued"));
+  assert.ok(queuedArticles.every((item) => item.researchTaskIds.length > 0));
 });
 
 test("judge evidence and floors are enforced", () => {

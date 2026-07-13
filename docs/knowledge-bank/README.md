@@ -65,3 +65,8 @@ workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot. See the
 [July 13 ten-source expansion](research/source-expansion-2026-07-13.md) for a
 complete example of a versioned research-ingestion batch.
+
+The
+[NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
+shows how campaign-curated press indexes, repeated placements, dead links,
+archived captures, and queued article-level readings enter the same lifecycle.

@@ -159,6 +159,14 @@ Town-Hall, and an augmented-reality collaboration. The batch is fully
 accessioned and closely read; its public-ready claims remain deferred until a
 future portfolio argument calls for them.
 
+The
+[NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
+preserves 45 placements across four campaign press sections as 44 distinct
+article identities. Campaign-index pages are closely read; article-level
+sources remain queued where propositions have not yet been extracted. Repeated
+placement stays visible without duplicating the source, and dead links retain
+their recovery status rather than disappearing from the record.
+
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing
 review status without pretending that a new proposition-level close reading

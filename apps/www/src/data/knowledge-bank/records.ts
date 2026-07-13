@@ -17,10 +17,17 @@ import {
   sourceExpansionResearchTasks,
   sourceExpansionSources
 } from "./source-expansion-2026-07-13.ts";
+import {
+  campaignPressClaims,
+  campaignPressIntake,
+  campaignPressReadings,
+  campaignPressResearchTasks,
+  campaignPressSources
+} from "./campaign-press-2026-07-13.ts";
 
 const knowledgeBankInput = {
   entities: [...lifecycleEntities, ...sourceExpansionEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -217,7 +224,8 @@ const knowledgeBankInput = {
       doesNotEstablish: ["user totals", "event totals", "city-ecosystem adoption", "Jamie's role", "current service availability"]
     },
     ...lifecycleSources,
-    ...sourceExpansionSources
+    ...sourceExpansionSources,
+    ...campaignPressSources
   ],
   claims: [
     {
@@ -376,10 +384,11 @@ const knowledgeBankInput = {
       researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
     ...lifecycleClaims,
-    ...sourceExpansionClaims
+    ...sourceExpansionClaims,
+    ...campaignPressClaims
   ],
-  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings],
-  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks],
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings],
+  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
