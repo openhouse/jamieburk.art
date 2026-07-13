@@ -142,16 +142,18 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
 **Public wording:** Jamie hosts Sunday Dinner and created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Source basis:** Approved resume language, public-safe aggregate project history, Jamie's confirmation that he hosts Sunday Dinner, a 2017 Greene Hill Food Co-op interview documenting weekly open hosting, and the current public Sunday Dinner project site.
+**Source note:** The public sources independently corroborate Jamie's hosting role and the recurring open-community form in 2017, but not the 300+ gathering or 20+ resident-artist aggregates.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-13
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
