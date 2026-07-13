@@ -53,6 +53,7 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public project artifact / public source
+**Structured claim IDs:** `CLM-CALLNYC-INDEPENDENT-FOLLOW-ON`
 **Public wording:** Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
@@ -68,6 +69,7 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Strong
 **Evidence class:** Public source / public-safe archive summary
+**Structured claim IDs:** `CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT`
 **Public wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices; 11 surviving public posts document engagement by accounts of 10 then-sitting NYC Council members.
 **Detailed public-safe wording:** CallNYC used CouncilStat data to create a public recognition and feedback loop with Council offices. Eleven surviving public posts document engagement by accounts of 10 then-sitting NYC Council members through interpretation, replies, amplification, acknowledgment, and a resident referral.
 **Where to project:** Technical Operations, Case study.
@@ -242,3 +244,83 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## participatory-open-house-public-program - Participatory art and shared space
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-PARTICIPATORY-OPEN-HOUSE-AND-SHOP-SHOWS`
+**Public wording:** Developed participatory art and shared-space formats through collaborative Shop Shows and the 2006 UC Santa Cruz Open House.
+**Detailed public-safe wording:** Jamie developed formats that invited people to contribute, revise, and live alongside art through collaborative Shop Shows and the UC Santa Cruz Open House.
+**Where to project:** Knowledge Bank only until the public portfolio composition calls for this history.
+**Why it matters:** Extends the operating-structure story into Jamie's early participatory practice without requiring immediate website projection.
+**Guardrail:** Preserve housemate and participant credit; do not present the work as a formal housing or social-service program.
+**Do not say:** Jamie solely authored every Shop Show activity; Open House was a formal public housing program; all historical participants approved contemporary portfolio use.
+**Protected boundaries:** Historical private addresses, unapproved participant identities, unapproved photographs, and private correspondence stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
+## waterways-participatory-practice - Participatory waterways projects
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES`
+**Public wording:** Conceived and helped organize a collaborative raft expedition, then developed Great Accommodations as participatory river-city installation and public programming.
+**Detailed public-safe wording:** Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.
+**Where to project:** Knowledge Bank only while route, roles, artifacts, and compositional relevance continue to develop.
+**Why it matters:** Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.
+**Guardrail:** Use collaborative language, name Suzanne Hogan for letter-based outreach, and do not claim a precise Gulf endpoint from the reviewed sources.
+**Do not say:** Jamie alone built and operated the raft; the reviewed sources prove a precise Gulf landing point; Jamie solely authored every Great Accommodations component.
+**Protected boundaries:** Unapproved participant identities, private host records, unapproved photographs, and incomplete route and responsibility data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
+## nyca-cabaret-law-direct-organizing - Direct Cabaret Law organizing
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / Jamie review confirmation
+**Structured claim IDs:** `CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING`
+**Public wording:** Organized fire-code study groups for DIY venues, rallied at City Hall, and testified as a NYC Artist Coalition member in support of repealing the Cabaret Law.
+**Detailed public-safe wording:** In 2017, Jamie organized fire-code study groups for DIY venues, rallied at City Hall, and testified before the City Council as part of the collective campaign to repeal the Cabaret Law.
+**Where to project:** Knowledge Bank now; candidate for future Resume, Technical Operations, or FairRentNYC composition after Chad-lens review.
+**Why it matters:** Makes Jamie's direct organizing legible while keeping the successful repeal a collective advocacy and legislative outcome.
+**Guardrail:** Claim the documented actions directly; do not claim sole campaign leadership, legal authorship, or sole causality for repeal.
+**Do not say:** Jamie single-handedly repealed the Cabaret Law; Jamie authored the repeal legislation; NYC Artist Coalition acted alone; Jamie provided legal advice.
+**Protected boundaries:** Private coalition strategy, unapproved collaborator records, legal-review materials, and private correspondence stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
+## nyca-office-nightlife-advocacy - Office of Nightlife advocacy
+
+**Status:** Pending
+**Support level:** Moderate
+**Evidence class:** Public source / Jamie review confirmation
+**Structured claim IDs:** `CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY`
+**Public wording:** NYC Artist Coalition advocated for an Office of Nightlife responsive to small cultural spaces and organized a public town hall; Jamie's specific role remains under research.
+**Detailed public-safe wording:** Public sources establish the coalition's advocacy and Save NYC Spaces town hall; Jamie's specific contribution remains under research.
+**Where to project:** Knowledge Bank only; no public website surface until the responsibility map is stronger.
+**Why it matters:** Retains a major role hypothesis without promoting it ahead of a responsibility map.
+**Guardrail:** Keep internal until event production, authored materials, public credits, or collaborator confirmation establish Jamie's role.
+**Do not say:** Jamie alone created the Office of Nightlife; NYC Artist Coalition authored the Office legislation; the town hall caused the Office to be enacted; every coalition recommendation was adopted.
+**Protected boundaries:** Private production records, private coalition strategy, unapproved collaborator attribution, and private correspondence stay offline.
+**Review owner:** Jamie / research open
+**Last reviewed:** 2026-07-12
+
+## talks-not-raids-transparency-to-phaseout - Talks Not Raids and MARCH reform
+
+**Status:** Pending
+**Support level:** Moderate
+**Evidence class:** Public source / Jamie review confirmation
+**Structured claim IDs:** `CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT`
+**Public wording:** Talks Not Raids advocated for MARCH transparency before later reporting requirements and the city's 2023 phaseout; Jamie's specific role remains under research.
+**Detailed public-safe wording:** The public record establishes campaign advocacy, later reporting and notice legislation, and the 2023 phaseout of MARCH; Jamie's role and the causal pathway remain under research.
+**Where to project:** Knowledge Bank only; no public website surface until personal role and causal contribution are independently sourced.
+**Why it matters:** Preserves a potentially important advocacy-to-government-change story while distinguishing chronology from causality.
+**Guardrail:** Keep internal until Jamie's individual work and the campaign's contribution to each later policy step are independently sourced.
+**Do not say:** Jamie single-handedly disbanded MARCH; Talks Not Raids alone caused the phaseout; the campaign authored Introduction 1156; MARCH ended immediately when the campaign launched.
+**Protected boundaries:** Private campaign strategy, unapproved coalition roles, private correspondence, and unreviewed enforcement records stay offline.
+**Review owner:** Jamie / research open
+**Last reviewed:** 2026-07-12

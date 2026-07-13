@@ -27,6 +27,15 @@ Approved public artifact examples for this launch pass include:
   attributable public posts.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
+- Good Times Santa Cruz's 2006 Open House profile.
+- The Pitch's 2007 raft-expedition reporting.
+- Charlotte Street's 2009 Great Accommodations event record.
+- Gothamist's June 2017 Cabaret Law reporting.
+- New York City Council Cabaret Law hearing transcripts and legislation.
+- NPR's September 2017 Office of Nightlife and Cabaret Law reporting.
+- The Village Voice's Save NYC Spaces town-hall reporting.
+- NYC Artist Coalition and Talks Not Raids public project archives.
+- The Mayor's Office 2023 MARCH phaseout announcement.
 
 ### Public-Safe Archive Summary
 

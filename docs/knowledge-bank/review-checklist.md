@@ -4,6 +4,9 @@ Use this checklist before staging review, production review, or any PR that
 changes public claims.
 
 - [ ] Every public claim has a matching entry in `docs/knowledge-bank/claims.md`.
+- [ ] Every new public-safe fragment has an intake record, next action, and projection intent.
+- [ ] Every supplied URL has been close-read into support and non-support boundaries before it is used as evidence.
+- [ ] Memories that exceed current evidence remain hypotheses linked to research inquiries.
 - [ ] Every structured proof in `apps/www/src/data/proofs.ts` has status,
   support level, evidence class, guardrail, protected boundaries, and review
   date.
@@ -15,6 +18,9 @@ changes public claims.
 - [ ] Pending and private claims are not projected onto public pages.
 - [ ] Careful claims preserve contribution, stewardship, or collective-work
   language.
+- [ ] Mature bank-only claims are not projected merely because they are interesting.
+- [ ] Existing consequential site claims have source-discovery inquiries when citation support is incomplete.
+- [ ] Photo discoveries return as leads and do not inherit identity, role, rights, consent, or publication approval.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
 - [ ] NYC Artist Coalition website authorship is visible without overstating

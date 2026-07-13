@@ -3,6 +3,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -56,6 +57,7 @@ const proofPath = path.join(repoRoot, "apps/www/src/data/proofs.ts");
 const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
+const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
 
 function fail(message) {
   failures.push(message);
@@ -159,6 +161,7 @@ if (existsSync(proofPath)) {
     const supportLevel = extractStringField(block, "supportLevel");
     const evidenceClasses = extractStrings(block, "evidenceClass");
     const surfaces = extractStrings(block, "surfaces");
+    const structuredClaimIds = extractStrings(block, "structuredClaimIds");
     const publicFieldBundle = [
       "publicWording",
       "shortWording",
@@ -196,6 +199,15 @@ if (existsSync(proofPath)) {
     }
     if (!surfaces.length) fail(`${id} is missing surfaces`);
 
+    for (const structuredClaimId of structuredClaimIds) {
+      const structuredClaim = structuredClaimsById.get(structuredClaimId);
+      if (!structuredClaim) {
+        fail(`${id} references missing structured claim ${structuredClaimId}`);
+      } else if (!structuredClaim.proofClaimIds.includes(id)) {
+        fail(`${id} and ${structuredClaimId} do not reference each other`);
+      }
+    }
+
     if ((status === "pending" || status === "private") && surfaces.some((surface) => publicSurfaces.has(surface))) {
       fail(`${id} is pending/private but projected to a public surface`);
     }
@@ -208,6 +220,19 @@ if (existsSync(proofPath)) {
 
     if (id === "source-backed-team-memory-method" && /Jonathan Marmor|pricing|private transcript|private company/i.test(publicFieldBundle)) {
       fail("source-backed-team-memory-method exposes private collaborator, pricing, transcript, or company context in public fields");
+    }
+  }
+}
+
+for (const claim of knowledgeBank.claims) {
+  for (const proofClaimId of claim.proofClaimIds) {
+    const proofBlock = proofBlocks.get(proofClaimId);
+    if (!proofBlock) {
+      fail(`${claim.id} references missing proof claim ${proofClaimId}`);
+      continue;
+    }
+    if (!extractStrings(proofBlock, "structuredClaimIds").includes(claim.id)) {
+      fail(`${claim.id} and ${proofClaimId} do not reference each other`);
     }
   }
 }
@@ -288,6 +313,7 @@ for (const file of walk(docsRoot)) {
 
 for (const requiredDoc of [
   "README.md",
+  "lifecycle.md",
   "chad-lens.md",
   "approval-register.md",
   "claims.md",

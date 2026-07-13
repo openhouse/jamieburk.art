@@ -33,6 +33,7 @@ npm run knowledge-bank
 npm run check:knowledge-bank
 npm run evals:portfolio
 npm run evals:chad-lens
+npm run evals:knowledge-bank-lifecycle
 npm run public-safety
 npm run check:routes
 npm run check:citations
@@ -85,6 +86,12 @@ criterion.
 burden, makes Jamie's bounded action visible, explains what became usable,
 translates specialist language, and preserves collective credit. Run
 `npm run evals:chad-lens` to validate that focused eval and its committed runs.
+
+`evals/knowledge-bank-lifecycle/evals.json` tests the full
+intake-to-source-to-claim-to-projection process, including bank-only material,
+open role hypotheses, citation maintenance, and photo discoveries that return
+as research leads. Run `npm run evals:knowledge-bank-lifecycle` to validate the
+suite, graph, and committed recursive runs.
 
 ## Environment
 

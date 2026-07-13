@@ -21,6 +21,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
+- Open House / Shop Shows: source-backed and safe for the bank; preserve housemate and participant credit.
+- Waterways work: source-backed and safe for the bank with collaborative language; the exact raft endpoint remains open.
+- Cabaret Law organizing: Jamie's fire-code study groups, City Hall rallying, and Council testimony are source-backed; repeal remains collective.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -35,3 +38,9 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.
+
+## Research Before Public Projection
+
+- Jamie's complete instrumental role in creating NYC Artist Coalition.
+- Jamie's individual contribution to Office of Nightlife advocacy and Save NYC Spaces town-hall production.
+- Jamie's individual role in Talks Not Raids and the causal pathway from advocacy to MARCH reform and phaseout.

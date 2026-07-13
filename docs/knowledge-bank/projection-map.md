@@ -54,3 +54,17 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Bank-Only Depth
+
+These claims are retained for future composition but are not selected for the
+current site:
+
+- `participatory-open-house-public-program`
+- `waterways-participatory-practice`
+- `nyca-cabaret-law-direct-organizing`
+- `nyca-office-nightlife-advocacy`
+- `talks-not-raids-transparency-to-phaseout`
+
+Bank-only does not mean weak or unimportant. It means the current public
+argument does not yet require the claim, the claim is still maturing, or both.

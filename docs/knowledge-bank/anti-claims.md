@@ -28,6 +28,24 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not claim that Jamie single-handedly repealed the Cabaret Law or alone
+created the Office of Nightlife. Do not convert coalition advocacy, later
+legislation, and administrative change into one unbroken personal-causality
+claim.
+
+## Talks Not Raids
+
+Do not claim that Jamie single-handedly disbanded MARCH, that Talks Not Raids
+authored Council legislation, or that chronology proves one campaign alone
+caused the 2023 phaseout.
+
+## Waterways And Participatory Practice
+
+Do not claim that Jamie alone built or operated the raft or that the reviewed
+sources establish a precise Gulf endpoint. Do not erase collaborators, hosts,
+participants, or contributors from Great Accommodations, Shop Shows, or Open
+House.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

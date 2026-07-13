@@ -41,6 +41,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry]));
 
   for (const [label, items] of [
+    ["intake record", knowledgeBank.intakeRecords],
     ["source", knowledgeBank.sources],
     ["claim", knowledgeBank.claims],
     ["research inquiry", knowledgeBank.researchInquiries],
@@ -50,8 +51,47 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
     for (const id of duplicateIds(items)) errors.push(`Duplicate ${label} ID: ${id}`);
   }
 
+  for (const intake of knowledgeBank.intakeRecords) {
+    for (const sourceId of intake.sourceIds) {
+      if (!sourceById.has(sourceId)) {
+        errors.push(`Intake ${intake.id} references unknown source ${sourceId}`);
+      }
+    }
+    for (const claimId of intake.claimIds) {
+      if (!claimById.has(claimId)) {
+        errors.push(`Intake ${intake.id} references unknown claim ${claimId}`);
+      }
+    }
+    for (const inquiryId of intake.researchInquiryIds) {
+      if (!inquiryById.has(inquiryId)) {
+        errors.push(`Intake ${intake.id} references unknown inquiry ${inquiryId}`);
+      }
+    }
+    if (intake.kind === "source-url" && !intake.sourceIds.length) {
+      errors.push(`Source URL intake ${intake.id} has not been associated with a source record`);
+    }
+    if (
+      ["memory", "claim-proposal", "photo-lead"].includes(intake.kind) &&
+      !intake.claimIds.length &&
+      !intake.researchInquiryIds.length
+    ) {
+      errors.push(`Intake ${intake.id} has no claim or research path`);
+    }
+    if (intake.projectionIntent === "candidate-for-public-surface") {
+      const hasMatureClaim = intake.claimIds.some((claimId) => {
+        const claim = claimById.get(claimId);
+        return claim && !["inference", "disallowed", "not-recovered"].includes(claim.status);
+      });
+      if (!hasMatureClaim) {
+        errors.push(`Public-surface intake ${intake.id} has no mature linked claim`);
+      }
+    }
+  }
+
   for (const source of knowledgeBank.sources) {
     if (!source.publicCitation.trim()) errors.push(`Source ${source.id} has no public citation text`);
+    if (!source.supportsGenerally.length) errors.push(`Source ${source.id} has no support scope`);
+    if (!source.doesNotEstablish.length) errors.push(`Source ${source.id} has no non-support boundary`);
     if (source.visibility !== "public" && (source.canonicalUrl || source.archiveUrl || source.assetUrl)) errors.push(`Non-public source ${source.id} exposes a URL`);
     if (source.visibility === "public" && ["archived", "live-and-archived"].includes(source.preservationStatus) && !source.archiveUrl) errors.push(`Archived public source ${source.id} has no archive URL`);
   }
@@ -152,12 +192,15 @@ export function citationReport() {
   }, {}));
   const citedClaimIds = new Set(knowledgeBank.pages.flatMap((page) => page.occurrences.map((item) => item.claimId)));
   const referencedSourceIds = new Set([
+    ...knowledgeBank.intakeRecords.flatMap((intake) => intake.sourceIds),
     ...knowledgeBank.claims.flatMap((claim) => claim.evidence.map((item) => item.sourceId)),
     ...knowledgeBank.researchInquiries.flatMap((inquiry) => inquiry.sourceIds)
   ]);
   const activeProjections = knowledgeBank.claims.flatMap((claim) => claim.projections.filter((item) => item.status === "active"));
   return {
     sourceKinds: countBy(knowledgeBank.sources, "kind"),
+    intakeStatuses: countBy(knowledgeBank.intakeRecords, "status"),
+    intakeRecords: knowledgeBank.intakeRecords.length,
     sourceVisibility: countBy(knowledgeBank.sources, "visibility"),
     preservation: countBy(knowledgeBank.sources, "preservationStatus"),
     activeProjections: activeProjections.length,

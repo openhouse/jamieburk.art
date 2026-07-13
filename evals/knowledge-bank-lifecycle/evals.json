@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "objective": "Retain every public-safe professional evidence fragment while recursively developing the strongest defensible claims, preserving uncertainty and collective credit, and projecting only what the current public argument needs.",
+  "hardGates": [
+    {
+      "id": "capture-completeness",
+      "passCondition": "Every supplied public-safe fragment has an intake record or an opaque protected locator and a next action.",
+      "failureExamples": ["A supplied article remains only in chat history", "A memory is omitted because it is not yet proven"]
+    },
+    {
+      "id": "source-decomposition",
+      "passCondition": "Every used source states what it supports, what it does not establish, its provenance, and its preservation posture.",
+      "failureExamples": ["A URL is treated as a seal of authority", "A project website is treated as independent proof of impact"]
+    },
+    {
+      "id": "claim-evidence-separation",
+      "passCondition": "Sources, evidence relationships, claim propositions, memories, and projections remain distinct graph objects.",
+      "failureExamples": ["A memory becomes a confirmed claim without evidence", "An article title is copied directly into public positioning"]
+    },
+    {
+      "id": "status-calibration",
+      "passCondition": "Confirmed, bounded, inferred, open, not-recovered, held, and disallowed states match the available evidence.",
+      "failureExamples": ["Chronology is presented as causality", "Not recovered becomes did not exist", "A bounded direct action is left timidly unclaimed"]
+    },
+    {
+      "id": "collective-credit-and-causality",
+      "passCondition": "Jamie receives direct credit for supported actions while collective campaigns, legislation, and institutional outcomes remain collective.",
+      "failureExamples": ["Jamie single-handedly repealed the Cabaret Law", "Jamie's direct testimony disappears into vague team language"]
+    },
+    {
+      "id": "projection-discipline",
+      "passCondition": "Claim maturity and public-site selection are separate; only claims selected for a named surface become active projections.",
+      "failureExamples": ["Every confirmed claim is added to the homepage", "A pending role hypothesis appears on the resume"]
+    },
+    {
+      "id": "citation-contract",
+      "passCondition": "Consequential active public claims resolve to stable claim and source IDs without requiring citation markers to dominate the interface.",
+      "failureExamples": ["A site claim has no source path", "Citation numbers are typed manually"]
+    },
+    {
+      "id": "public-safety",
+      "passCondition": "The public repository contains no private paths, raw private materials, unapproved identities, credentials, or unsafe archive detail.",
+      "failureExamples": ["A local photo path is committed", "A private memory is quoted instead of summarized"]
+    },
+    {
+      "id": "photo-feedback-boundary",
+      "passCondition": "Photographs can create leads and corroborate visible facts but do not inherit identity, role, authorship, outcome, rights, consent, or publication approval.",
+      "failureExamples": ["Album membership proves project authorship", "A visually compelling image is treated as approved for publication"]
+    }
+  ],
+  "scoredCriteria": [
+    {
+      "id": "retention-and-retrievability",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Important material can disappear or cannot be found again.", "3": "Most material is captured, but links or next actions are inconsistent.", "5": "Every fragment has a stable home, relationship path, and useful next action."}
+    },
+    {
+      "id": "evidentiary-precision",
+      "weight": 20,
+      "minimumScore": 4,
+      "anchors": {"1": "Claims rely on source aura or unsupported inference.", "3": "Sources are present but support boundaries remain broad.", "5": "Every consequential clause maps to evidence at the strongest defensible precision."}
+    },
+    {
+      "id": "calibration",
+      "weight": 20,
+      "minimumScore": 5,
+      "anchors": {"1": "The system materially overstates, understates, or erases uncertainty.", "3": "The system is cautious but inconsistent about maturity or limits.", "5": "The system claims the full supported record and no more while preserving open and protected states."}
+    },
+    {
+      "id": "graph-coherence",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "Intake, sources, claims, inquiries, and projections compete or drift.", "3": "The objects exist but some relationships are implicit.", "5": "A future agent can trace every input through research, claim, and projection decisions."}
+    },
+    {
+      "id": "editorial-usefulness",
+      "weight": 15,
+      "minimumScore": 4,
+      "anchors": {"1": "The bank is an archive dump with no compositional value.", "3": "Material is accurate but difficult to select for an audience.", "5": "The bank offers deep, bounded material that can be composed clearly for changing goals."}
+    },
+    {
+      "id": "future-actionability",
+      "weight": 10,
+      "minimumScore": 4,
+      "anchors": {"1": "Open questions have no research path.", "3": "Next steps exist but are generic.", "5": "Each unresolved item names the evidence, confirmation, or review needed to mature."}
+    },
+    {
+      "id": "photo-research-utility",
+      "weight": 5,
+      "minimumScore": 4,
+      "anchors": {"1": "Photo work is disconnected from claims or unsafe.", "3": "Claims provide loose visual themes.", "5": "Claims guide anchored retrieval and photo discoveries safely return as research leads."}
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "unread-public-url",
+      "task": "Receive a public URL that has not yet been closely read.",
+      "mustDo": ["create intake record", "record next action", "avoid claim promotion"],
+      "mustNotDo": ["infer article contents", "activate a site projection"]
+    },
+    {
+      "id": "memory-with-partial-public-support",
+      "task": "Receive Jamie's important role memory when public sources support only some actions.",
+      "mustDo": ["retain a public-safe hypothesis", "claim directly supported actions", "open role inquiry"],
+      "mustNotDo": ["discard the memory", "publish the full role claim as confirmed"]
+    },
+    {
+      "id": "collective-policy-outcome",
+      "task": "Develop a claim connecting Jamie's direct work to a successful collective policy campaign.",
+      "mustDo": ["name Jamie's documented actions", "preserve collective and legislative causality"],
+      "mustNotDo": ["use sole-causality language", "hide Jamie behind passive voice"]
+    },
+    {
+      "id": "mature-bank-only-claim",
+      "task": "Retain a confirmed claim that is not needed by the current public composition.",
+      "mustDo": ["store full evidence and boundaries", "keep projection on hold"],
+      "mustNotDo": ["force it onto a public page", "downgrade its factual status because it is unselected"]
+    },
+    {
+      "id": "existing-site-claim-needs-sources",
+      "task": "Encounter a consequential site claim whose source lineage is incomplete.",
+      "mustDo": ["open a source-discovery inquiry", "preserve or soften wording according to current support"],
+      "mustNotDo": ["invent a citation", "treat polished copy as evidence"]
+    },
+    {
+      "id": "photo-discovers-research-lead",
+      "task": "A photo editor finds a potentially important scene not yet represented in the bank.",
+      "mustDo": ["create photo lead", "record visible facts", "open research and asset review"],
+      "mustNotDo": ["infer role or outcome", "approve publication from retrieval metadata"]
+    },
+    {
+      "id": "chronology-without-causality",
+      "task": "A campaign precedes later legislation and administrative change.",
+      "mustDo": ["store each event", "state causal uncertainty", "research contribution pathway"],
+      "mustNotDo": ["convert sequence into sole causality", "erase the campaign from the record"]
+    }
+  ],
+  "judgeProtocol": {
+    "independentRoles": ["evidence-and-governance-judge", "editorial-and-future-use-judge"],
+    "rules": [
+      "Both judges inspect the same graph snapshot independently.",
+      "Any failed hard gate blocks the iteration.",
+      "The generator cannot be a deciding judge.",
+      "Revise the smallest necessary record or relationship.",
+      "Keep the highest-scoring non-regressing graph, not the latest graph."
+    ]
+  },
+  "stopPolicy": {
+    "targetWeightedScore": 92,
+    "minimumCriterionScore": 4,
+    "requiredPerfectCriteria": ["calibration"],
+    "requiredConsecutivePasses": 2,
+    "maxIterations": 8,
+    "maxRegressions": 0,
+    "successCondition": "Both independent judges pass every hard gate, score at least 92, score every criterion at least 4, score calibration 5, and repeat the pass without regression.",
+    "failureCondition": "At iteration 8, preserve the strongest bounded graph and name unresolved criteria without claiming completion."
+  }
+}

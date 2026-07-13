@@ -83,8 +83,8 @@ export const sourceRecordSchema = z
     preferredPublicUrl: z.enum(["canonical", "archive", "asset"]).optional(),
     publicCitation: z.string().min(1),
     publicNote: z.string().min(1).optional(),
-    supportsGenerally: z.array(z.string().min(1)).default([]),
-    doesNotEstablish: z.array(z.string().min(1)).default([]),
+    supportsGenerally: z.array(z.string().min(1)).min(1),
+    doesNotEstablish: z.array(z.string().min(1)).min(1),
     protectedLocatorId: stableIdSchema.optional(),
     media: mediaSchema.optional()
   })
@@ -169,6 +169,7 @@ export const claimRecordSchema = z.object({
   evidence: z.array(evidenceRelationshipSchema),
   boundaries: z.array(z.string().min(1)).default([]),
   antiClaims: z.array(z.string().min(1)).default([]),
+  proofClaimIds: z.array(stableIdSchema).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
   reviewedAt: z.iso.date(),
   reviewedBy: z.array(z.string().min(1)).default([])
@@ -192,6 +193,67 @@ export const researchInquirySchema = z.object({
   publicSummary: z.string().min(1).optional(),
   protectedLocatorId: stableIdSchema.optional()
 });
+
+export const intakeRecordSchema = z
+  .object({
+    id: stableIdSchema,
+    receivedAt: z.iso.date(),
+    kind: z.enum([
+      "source-url",
+      "artifact",
+      "memory",
+      "claim-proposal",
+      "photo-lead",
+      "correction"
+    ]),
+    project: stableIdSchema.optional(),
+    publicSummary: z.string().min(1),
+    privacy: z.enum(["public", "public-safe-summary", "protected"]),
+    status: z.enum([
+      "received",
+      "triaged",
+      "researched",
+      "claim-linked",
+      "held",
+      "rejected"
+    ]),
+    sourceIds: z.array(stableIdSchema).default([]),
+    claimIds: z.array(stableIdSchema).default([]),
+    researchInquiryIds: z.array(stableIdSchema).default([]),
+    projectionIntent: z.enum([
+      "bank-only",
+      "candidate-for-public-surface",
+      "no-public-projection",
+      "undecided"
+    ]),
+    nextActions: z.array(z.string().min(1)).min(1),
+    protectedLocatorId: stableIdSchema.optional(),
+    reviewedAt: z.iso.date(),
+    reviewedBy: z.array(z.string().min(1)).default([])
+  })
+  .superRefine((record, context) => {
+    if (record.status === "claim-linked" && !record.claimIds.length) {
+      context.addIssue({
+        code: "custom",
+        message: "Claim-linked intake records require at least one claim ID"
+      });
+    }
+    if (record.privacy === "protected" && !record.protectedLocatorId) {
+      context.addIssue({
+        code: "custom",
+        message: "Protected intake records require an opaque protected locator"
+      });
+    }
+    if (
+      record.projectionIntent === "candidate-for-public-surface" &&
+      !record.claimIds.length
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "Public-surface candidates must link to a claim"
+      });
+    }
+  });
 
 export const correctionRecordSchema = z.object({
   id: stableIdSchema,
@@ -219,6 +281,7 @@ export const citationPageSchema = z.object({
 });
 
 export const knowledgeBankSchema = z.object({
+  intakeRecords: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
@@ -231,6 +294,7 @@ export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
+export type IntakeRecord = z.infer<typeof intakeRecordSchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;

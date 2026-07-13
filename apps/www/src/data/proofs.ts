@@ -38,6 +38,7 @@ export type ProofClaim = {
   surfaces: ProofSurface[];
   relatedProjects: string[];
   relatedCapabilities: string[];
+  structuredClaimIds?: string[];
   lastReviewed: string;
 };
 
@@ -156,6 +157,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
+    structuredClaimIds: ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
     lastReviewed: "2026-07-11"
   },
   {
@@ -192,6 +194,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "stakeholder-engagement", "public-feedback-loops"],
+    structuredClaimIds: ["CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT"],
     lastReviewed: "2026-07-12"
   },
   {
@@ -572,6 +575,179 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "participatory-open-house-public-program",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Developed participatory art and shared-space formats through collaborative Shop Shows and the 2006 UC Santa Cruz Open House.",
+    shortWording: "Participatory art and shared-space formats, 2003-2006",
+    detailedPublicWording:
+      "Jamie developed formats that invited people to contribute, revise, and live alongside art through collaborative Shop Shows and the UC Santa Cruz Open House.",
+    sourceBasis:
+      "Independent 2006 Good Times Santa Cruz profile and public-safe source review.",
+    whyItMatters:
+      "Extends the operating-structure story into Jamie's early participatory practice without requiring immediate website projection.",
+    guardrail:
+      "Preserve housemate and participant credit; do not present the work as a formal housing or social-service program.",
+    doNotSay: [
+      "Jamie solely authored every Shop Show activity",
+      "Open House was a formal public housing program",
+      "All historical participants approved contemporary portfolio use"
+    ],
+    protectedBoundaries: [
+      "Historical private addresses",
+      "Unapproved participant identities",
+      "Unapproved photographs",
+      "Private correspondence"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["participatory-public-practice"],
+    relatedCapabilities: ["facilitation", "participation-design", "public-programming"],
+    structuredClaimIds: ["CLM-PARTICIPATORY-OPEN-HOUSE-AND-SHOP-SHOWS"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "waterways-participatory-practice",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Conceived and helped organize a collaborative raft expedition, then developed Great Accommodations as participatory river-city installation and public programming.",
+    shortWording: "Participatory waterways projects connecting river cities",
+    detailedPublicWording:
+      "Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.",
+    sourceBasis:
+      "Independent 2007 Pitch reporting and Charlotte Street's 2009 institutional event record.",
+    sourceNote:
+      "The sources support a four-month journey down the Missouri and Mississippi until the water tasted salty; the precise endpoint remains open.",
+    whyItMatters:
+      "Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.",
+    guardrail:
+      "Use collaborative language, name Suzanne Hogan for letter-based outreach, and do not claim a precise Gulf endpoint from the reviewed sources.",
+    doNotSay: [
+      "Jamie alone built and operated the raft",
+      "The reviewed sources prove a precise Gulf landing point",
+      "Jamie solely authored every Great Accommodations component"
+    ],
+    protectedBoundaries: [
+      "Unapproved participant identities",
+      "Private host records",
+      "Unapproved photographs",
+      "Incomplete route and responsibility data"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["waterways-participatory-practice"],
+    relatedCapabilities: ["public-programming", "participation-design", "facilitation"],
+    structuredClaimIds: [
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"
+    ],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "nyca-cabaret-law-direct-organizing",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Organized fire-code study groups for DIY venues, rallied at City Hall, and testified as a NYC Artist Coalition member in support of repealing the Cabaret Law.",
+    shortWording: "Direct organizing and testimony for Cabaret Law repeal",
+    detailedPublicWording:
+      "In 2017, Jamie organized fire-code study groups for DIY venues, rallied at City Hall, and testified before the City Council as part of the collective campaign to repeal the Cabaret Law.",
+    sourceBasis:
+      "Gothamist reporting and the official New York City Council hearing transcript.",
+    whyItMatters:
+      "Makes Jamie's direct organizing legible while keeping the successful repeal a collective advocacy and legislative outcome.",
+    guardrail:
+      "Claim the documented actions directly; do not claim sole campaign leadership, legal authorship, or sole causality for repeal.",
+    doNotSay: [
+      "Jamie single-handedly repealed the Cabaret Law",
+      "Jamie authored the repeal legislation",
+      "NYC Artist Coalition acted alone",
+      "Jamie provided legal advice"
+    ],
+    protectedBoundaries: [
+      "Private coalition strategy",
+      "Unapproved collaborator records",
+      "Legal-review materials",
+      "Private correspondence"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["nyc-artist-coalition", "let-nyc-dance"],
+    relatedCapabilities: ["coalition-operations", "public-testimony", "policy-communications"],
+    structuredClaimIds: ["CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "nyca-office-nightlife-advocacy",
+    status: "pending",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "NYC Artist Coalition advocated for an Office of Nightlife responsive to small cultural spaces and organized a public town hall; Jamie's specific role remains under research.",
+    shortWording: "Office of Nightlife advocacy and public input",
+    detailedPublicWording:
+      "Public sources establish the coalition's advocacy and Save NYC Spaces town hall; Jamie's specific contribution remains under research.",
+    sourceBasis:
+      "NPR context, Village Voice town-hall reporting, coalition public records, and Jamie's public-safe recollection.",
+    whyItMatters:
+      "Retains a major role hypothesis without promoting it ahead of a responsibility map.",
+    guardrail:
+      "Keep internal until event production, authored materials, public credits, or collaborator confirmation establish Jamie's role.",
+    doNotSay: [
+      "Jamie alone created the Office of Nightlife",
+      "NYC Artist Coalition authored the Office legislation",
+      "The town hall caused the Office to be enacted",
+      "Every coalition recommendation was adopted"
+    ],
+    protectedBoundaries: [
+      "Private production records",
+      "Private coalition strategy",
+      "Unapproved collaborator attribution",
+      "Private correspondence"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["nyc-artist-coalition", "save-nyc-spaces"],
+    relatedCapabilities: ["public-programming", "coalition-operations", "stakeholder-engagement"],
+    structuredClaimIds: ["CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY"],
+    lastReviewed: "2026-07-12"
+  },
+  {
+    id: "talks-not-raids-transparency-to-phaseout",
+    status: "pending",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Talks Not Raids advocated for MARCH transparency before later reporting requirements and the city's 2023 phaseout; Jamie's specific role remains under research.",
+    shortWording: "Talks Not Raids and the MARCH reform sequence",
+    detailedPublicWording:
+      "The public record establishes campaign advocacy, later reporting and notice legislation, and the 2023 phaseout of MARCH; Jamie's role and the causal pathway remain under research.",
+    sourceBasis:
+      "Talks Not Raids project archive, official Council legislation, the Mayor's Office phaseout announcement, and Jamie's public-safe recollection.",
+    whyItMatters:
+      "Preserves a potentially important advocacy-to-government-change story while distinguishing chronology from causality.",
+    guardrail:
+      "Keep internal until Jamie's individual work and the campaign's contribution to each later policy step are independently sourced.",
+    doNotSay: [
+      "Jamie single-handedly disbanded MARCH",
+      "Talks Not Raids alone caused the phaseout",
+      "The campaign authored Introduction 1156",
+      "MARCH ended immediately when the campaign launched"
+    ],
+    protectedBoundaries: [
+      "Private campaign strategy",
+      "Unapproved coalition roles",
+      "Private correspondence",
+      "Unreviewed enforcement records"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["talks-not-raids", "nyc-artist-coalition"],
+    relatedCapabilities: ["policy-communications", "public-data", "coalition-operations"],
+    structuredClaimIds: ["CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT"],
+    lastReviewed: "2026-07-12"
   }
 ];
 

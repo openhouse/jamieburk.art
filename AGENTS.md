@@ -87,6 +87,11 @@ Use `evals/chad-lens/eval.json` for focused hiring-language revisions. A Chad
 Lens pass requires all five dimensions together and two consecutive independent
 passes; do not trade collective credit or evidentiary scope for readability.
 
+Use `evals/knowledge-bank-lifecycle/evals.json` when new sources, memories,
+artifacts, corrections, or photo leads arrive. Capture first, decompose sources,
+separate claim maturity from projection selection, open explicit research paths,
+and stop only at the suite's independent two-pass threshold.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the

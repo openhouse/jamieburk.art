@@ -95,6 +95,20 @@
       "Jamie caused policy outcomes"
     ]
   },
+  "projectionContract": {
+    "exactCandidatePaths": [
+      "apps/www/src/data/work.ts",
+      "apps/www/src/content/work/fair-rent-nyc.mdx"
+    ],
+    "knowledgeBankClaimIds": [
+      "nyc-artist-coalition-public-web-infrastructure",
+      "nyc-artist-coalition-civic-systems"
+    ],
+    "knowledgeBankPaths": [
+      "apps/www/src/data/proofs.ts",
+      "docs/knowledge-bank/claims.md"
+    ]
+  },
   "judgeProtocol": {
     "independentRoles": [
       "evidence-judge",
@@ -112,6 +126,7 @@
     "targetScore": 5,
     "requiredConsecutivePasses": 2,
     "maxIterations": 8,
+    "maxRegressions": 0,
     "successCondition": "Both independent judges pass every hard gate and score the Chad-lens criterion 5 in two consecutive rounds.",
     "failureCondition": "At iteration 8, return the best passing candidate and unresolved dimensions without claiming completion."
   }

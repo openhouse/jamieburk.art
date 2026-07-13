@@ -1,6 +1,136 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
 
 const knowledgeBankInput = {
+  intakeRecords: [
+    {
+      id: "INTAKE-2026-07-12-PITCH-RAFT",
+      receivedAt: "2026-07-12",
+      kind: "source-url",
+      project: "waterways-participatory-practice",
+      publicSummary: "Independent 2007 reporting on Jamie's conception and organization of a collaborative raft expedition built from recycled materials.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-PITCH-HUCK-FINN-2007"],
+      claimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION"],
+      researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      projectionIntent: "bank-only",
+      nextActions: ["Recover additional route, participant, and project artifacts before considering a public case-study projection."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+      receivedAt: "2026-07-12",
+      kind: "source-url",
+      project: "waterways-participatory-practice",
+      publicSummary: "Charlotte Street's 2009 event record for Great Accommodations documents Jamie's river-city exhibition, participatory methods, collaborators, and public programs.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"],
+      claimIds: ["CLM-WATERWAYS-RAFT-EXPEDITION", "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"],
+      researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      projectionIntent: "bank-only",
+      nextActions: ["Inventory public program artifacts and independently review any candidate photographs before publication."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+      receivedAt: "2026-07-12",
+      kind: "source-url",
+      project: "participatory-public-practice",
+      publicSummary: "A 2006 profile documents Jamie's Open House at UC Santa Cruz and the earlier collaborative Shop Shows as participatory formats joining art, shared space, and public contribution.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-GOOD-TIMES-OPEN-HOUSE-2006"],
+      claimIds: ["CLM-PARTICIPATORY-OPEN-HOUSE-AND-SHOP-SHOWS"],
+      researchInquiryIds: [],
+      projectionIntent: "bank-only",
+      nextActions: ["Develop a longer participatory-practice chronology before deciding whether this belongs in the public portfolio composition."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+      receivedAt: "2026-07-12",
+      kind: "source-url",
+      project: "nyc-artist-coalition",
+      publicSummary: "Gothamist's June 2017 reporting directly identifies Jamie organizing fire-code study groups, rallying at City Hall, and speaking for Cabaret Law repeal as part of NYC Artist Coalition.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19"],
+      claimIds: ["CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING", "CLM-NYCA-JAMIE-INSTRUMENTAL-ROLE-HYPOTHESIS"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"],
+      projectionIntent: "candidate-for-public-surface",
+      nextActions: ["Corroborate the broader role across the coalition's formation and repeal campaign before strengthening beyond the documented actions."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+      receivedAt: "2026-07-12",
+      kind: "source-url",
+      project: "nyc-office-of-nightlife",
+      publicSummary: "NPR's September 2017 reporting supplies public context for creation of the Office of Nightlife and the broader Cabaret Law repeal campaign.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20"],
+      claimIds: ["CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE"],
+      projectionIntent: "bank-only",
+      nextActions: ["Use coalition and government records to distinguish Office creation, coalition advocacy, town-hall production, and Jamie's personal contribution."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+      receivedAt: "2026-07-12",
+      kind: "memory",
+      project: "nyc-artist-coalition",
+      publicSummary: "Jamie recalls an instrumental role in forming NYC Artist Coalition and contributing across Cabaret Law repeal, Office of Nightlife advocacy, town halls, and Talks Not Raids.",
+      privacy: "public-safe-summary",
+      status: "claim-linked",
+      sourceIds: ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19", "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19"],
+      claimIds: ["CLM-NYCA-JAMIE-INSTRUMENTAL-ROLE-HYPOTHESIS"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE", "INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE"],
+      projectionIntent: "bank-only",
+      nextActions: ["Associate project records and collaborator confirmation with each distinct role instead of promoting the omnibus memory as one claim."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+      receivedAt: "2026-07-12",
+      kind: "memory",
+      project: "talks-not-raids",
+      publicSummary: "Jamie identifies Talks Not Raids as a long arc from demands for MARCH transparency to the eventual phaseout of MARCH operations.",
+      privacy: "public-safe-summary",
+      status: "claim-linked",
+      sourceIds: ["SRC-TALKS-NOT-RAIDS-PROJECT", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-NYC-MAYOR-MARCH-PHASEOUT-2023"],
+      claimIds: ["CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE"],
+      projectionIntent: "bank-only",
+      nextActions: ["Research the campaign's authorship, coalition roles, legislative pathway, and causal limits before attributing the outcome to Jamie."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+      receivedAt: "2026-07-12",
+      kind: "claim-proposal",
+      project: "portfolio-source-coverage",
+      publicSummary: "Standing audit of consequential public portfolio claims whose prose source basis has not yet been decomposed into canonical source and evidence records.",
+      privacy: "public-safe-summary",
+      status: "researched",
+      sourceIds: [],
+      claimIds: [],
+      researchInquiryIds: ["INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      projectionIntent: "no-public-projection",
+      nextActions: ["Prioritize metric-bearing, causal, role, and institutional claims; add source records and reciprocal structured claim links before strengthening their public wording."],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source-coverage review"]
+    }
+  ],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -138,6 +268,203 @@ const knowledgeBankInput = {
       publicNote: "The review links each attributable public post and preserves account-level, institutional, and recovery boundaries.",
       supportsGenerally: ["11 attributable member-account posts", "10 sitting Council-member accounts", "interaction modes", "bounded timeline-recovery method"],
       doesNotEstablish: ["Council commissioning", "Council adoption", "Council partnership", "institutional endorsement", "personal authorship by each elected member", "complete account-history recovery"]
+    },
+    {
+      id: "SRC-PITCH-HUCK-FINN-2007",
+      title: "When Artists Turn Huck Finn",
+      organization: "The Pitch",
+      author: "Eric Barton",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2007-08-09",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Eric Barton, 'When Artists Turn Huck Finn,' The Pitch, August 9, 2007.",
+      publicNote: "The article attributes the expedition idea to Jamie and describes a collaborative raft built from recycled materials; its surviving page excerpt does not document the complete route to the Gulf.",
+      supportsGenerally: ["Jamie conceived an experiential boat expedition", "Jamie organized related public activity", "a collaborative recycled-material raft crossed Missouri"],
+      doesNotEstablish: ["a complete Kansas City-to-Gulf route", "sole construction or operation by Jamie", "a complete participant roster", "later Great Accommodations outcomes"]
+    },
+    {
+      id: "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009",
+      title: "Great Accommodations with Jamie Burkart - Imagining Lifestyles for Cities on the Water",
+      organization: "Charlotte Street",
+      author: "Charlotte Street Foundation",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2009-09-01",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Charlotte Street Foundation, 'Great Accommodations with Jamie Burkart - Imagining Lifestyles for Cities on the Water,' September 1, 2009.",
+      publicNote: "The institutional event record attributes the project to Jamie, names collaborator Suzanne Hogan, and documents participatory exhibition and public-program formats.",
+      supportsGenerally: ["Jamie spearheaded Great Accommodations", "Suzanne Hogan collaborated on river-city outreach", "hundreds of letters invited public stories", "the exhibition used interactive and participatory formats", "Jamie served as facilitator", "the earlier raft journey lasted four months and continued until the water tasted salty"],
+      doesNotEstablish: ["sole authorship of every component", "a complete collaborator roster", "the exact final geographic endpoint of the raft", "current operation of the project"]
+    },
+    {
+      id: "SRC-GOOD-TIMES-OPEN-HOUSE-2006",
+      title: "Open House: How Jamie Burkart turned a UCSC gallery into a 10-day experiment in communal living",
+      organization: "Good Times Santa Cruz",
+      author: "Laura Mattingly",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2006-06-28",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Laura Mattingly, 'Open House,' Good Times Santa Cruz, June 28, 2006.",
+      publicNote: "The profile documents Open House and the earlier Shop Shows as participatory experiments; it also makes housemate and participant contributions visible.",
+      supportsGenerally: ["Jamie instigated the UC Santa Cruz Open House", "Open House combined public art participation and temporary communal living", "Jamie and housemates held Shop Shows from 2003 to 2005", "participants could contribute and revise work"],
+      doesNotEstablish: ["sole authorship of every activity", "a formal housing or social-service program", "approval to republish participant names or photographs", "outcomes beyond the reported event"]
+    },
+    {
+      id: "SRC-GOTHAMIST-CABARET-LAW-2017-06-19",
+      title: "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      organization: "Gothamist",
+      author: "Emma Whitford",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-06-19",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      publicNote: "The reporting directly attributes fire-code study groups and City Hall repeal advocacy to Jamie while presenting the campaign as collective work involving venue operators, advocates, and elected officials.",
+      supportsGenerally: ["Jamie organized fire-code study groups for DIY venues", "Jamie rallied at City Hall for Cabaret Law repeal", "Jamie spoke as part of NYC Artist Coalition", "advocates connected licensing to venue safety concerns"],
+      doesNotEstablish: ["sole leadership of NYC Artist Coalition", "sole authorship of repeal legislation", "sole causality for repeal", "Jamie's role in every coalition campaign"]
+    },
+    {
+      id: "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20",
+      title: "With Its 'No Dancing' Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      organization: "NPR",
+      author: "Jane Lerner",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-09-20",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, September 20, 2017.",
+      publicNote: "The article documents enactment of the Office of Nightlife and contemporaneous Cabaret Law repeal context; it does not attribute those outcomes to Jamie individually.",
+      supportsGenerally: ["New York City enacted legislation establishing an Office of Nightlife and advisory board", "the Office was intended as a liaison", "Cabaret Law repeal advocacy was active in 2017"],
+      doesNotEstablish: ["Jamie's personal role in creating the Office", "NYC Artist Coalition as sole cause of the Office", "Jamie's sole causality for Cabaret Law repeal"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19",
+      title: "New York City Council Committee on Consumer Affairs Cabaret Law hearing transcript",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-06-19",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, Committee on Consumer Affairs Cabaret Law hearing transcript, June 19, 2017.",
+      publicNote: "The official transcript records Jamie identifying himself as a NYC Artist Coalition member and asking the Council to repeal the Cabaret Law.",
+      supportsGenerally: ["Jamie testified at the hearing", "Jamie identified himself as a NYC Artist Coalition member", "Jamie asked the Council to repeal the Cabaret Law", "Jamie advocated trust-based safety and representation for low-income communities"],
+      doesNotEstablish: ["sole authorship of coalition positions", "sole causality for repeal", "formal legal expertise", "a complete account of Jamie's coalition role"]
+    },
+    {
+      id: "SRC-VICE-NYCA-DIY-SPACES-2017-03-21",
+      title: "A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety",
+      organization: "Vice",
+      author: "Alexander Iadarola",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-03-21",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Alexander Iadarola, 'A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety,' Vice, March 21, 2017.",
+      publicNote: "The article documents the coalition's formation, collective advocacy priorities, and planned meeting with cultural officials; it does not assign founding credit among individuals.",
+      supportsGenerally: ["NYC Artist Coalition formed in January 2017", "the coalition advocated for informal cultural spaces", "the coalition planned policy discussion with cultural officials", "Cabaret Law and affordable-space concerns were collective priorities"],
+      doesNotEstablish: ["Jamie's individual founding role", "sole coalition leadership", "adoption of every proposal", "causality for later policy outcomes"]
+    },
+    {
+      id: "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17",
+      title: "Awaiting the Night Mayor",
+      organization: "The Village Voice",
+      author: "Roshan Abraham",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-11-17",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.villagevoice.com/awaiting-the-night-mayor/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Roshan Abraham, 'Awaiting the Night Mayor,' The Village Voice, November 17, 2017.",
+      publicNote: "The reporting attributes the Save NYC Spaces town hall to NYC Artist Coalition and documents its role connecting small venues with city agencies after the Office of Nightlife law was enacted.",
+      supportsGenerally: ["NYC Artist Coalition organized the Save NYC Spaces town hall", "about 100 people gathered", "small performance venues addressed city agencies", "the event sought input into the Office of Nightlife's implementation"],
+      doesNotEstablish: ["Jamie's individual production role", "coalition authorship of the Office legislation", "sole causality for Office creation", "adoption of every town-hall recommendation"]
+    },
+    {
+      id: "SRC-NYCA-PRIORITIES-2017",
+      title: "NYC Artist Coalition Priorities",
+      organization: "NYC Artist Coalition",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-12-02",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://nycartc.com/priorities/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'NYC Artist Coalition Priorities,' December 2, 2017.",
+      publicNote: "This is the coalition's own record of its priorities and advocacy framing, useful for project intent but not independent proof of causality.",
+      supportsGenerally: ["Talks Not Raids was a coalition priority", "the coalition sought MARCH transparency", "the coalition developed recommendations for the Office of Nightlife", "the coalition used meetings to prioritize action"],
+      doesNotEstablish: ["independent validation of policy impact", "Jamie's individual authorship", "sole causality for the Office of Nightlife", "sole causality for MARCH reform"]
+    },
+    {
+      id: "SRC-TALKS-NOT-RAIDS-PROJECT",
+      title: "Talks Not Raids: Transparency on MARCH Raids in NYC",
+      organization: "Talks Not Raids Coalition",
+      kind: "project-archive",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://talksnotraids.com/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Talks Not Raids Coalition, 'Talks Not Raids: Transparency on MARCH Raids in NYC.'",
+      publicNote: "The campaign archive documents its public framing and coalition context; it does not by itself establish individual authorship or causal credit for later policy change.",
+      supportsGenerally: ["the campaign opposed raid-style MARCH operations", "the campaign sought transparency and communication", "the campaign connected enforcement practices to vulnerable cultural spaces"],
+      doesNotEstablish: ["Jamie's individual role", "sole causality for transparency legislation", "sole causality for the phaseout of MARCH", "complete enforcement history"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-INT-1156-2018",
+      title: "New York City Council Introduction 1156-2018",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2018-10-17",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, Introduction 1156-2018, MARCH reporting and notice requirements.",
+      publicNote: "The official legislative record establishes reporting and notice requirements; it does not by itself identify which advocates caused the legislation.",
+      supportsGenerally: ["legislation required MARCH reporting", "legislation required advance written notification in defined circumstances", "the Office of Nightlife received a reporting role"],
+      doesNotEstablish: ["Jamie's authorship of the bill", "Talks Not Raids as sole cause", "immediate disbandment of MARCH"]
+    },
+    {
+      id: "SRC-NYC-MAYOR-MARCH-PHASEOUT-2023",
+      title: "Mayor Adams launches engagement-first nightlife safety effort and phases out MARCH enforcement",
+      organization: "New York City Mayor's Office",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://www.nyc.gov/mayors-office/news/2023/12/mayor-adams-launches-effort-enhance-nightlife-safety-strengthen-small-businesses-phasing",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Mayor's Office, announcement phasing out MARCH enforcement in favor of an engagement-first approach, December 2023.",
+      publicNote: "The official announcement documents the later phaseout of MARCH; it does not assign causal credit for that change to any one campaign or advocate.",
+      supportsGenerally: ["New York City phased out MARCH enforcement", "MARCH had used unannounced nighttime multi-agency inspections", "the replacement approach emphasized engagement"],
+      doesNotEstablish: ["Jamie's individual causality", "Talks Not Raids as sole cause", "the absence of all future multi-agency enforcement"]
     }
   ],
   claims: [
@@ -152,7 +479,7 @@ const knowledgeBankInput = {
         { sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "corroborating", supports: ["date", "venue", "CouncilStat context"], confidence: "high", renderCitation: true }
       ],
       boundaries: ["Do not describe the Wayback page as a recovered event calendar listing."],
-      antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+      antiClaims: [], proofClaimIds: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
@@ -163,6 +490,7 @@ const knowledgeBankInput = {
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], confidence: "high", renderCitation: true }],
       boundaries: [],
       antiClaims: ["first civic-data hackathon", "first civic-tech hackathon", "the Council's first hackathon of any kind"],
+      proofClaimIds: [],
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
@@ -173,7 +501,7 @@ const knowledgeBankInput = {
       projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
-      antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+      antiClaims: [], proofClaimIds: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
@@ -191,6 +519,7 @@ const knowledgeBankInput = {
       ],
       boundaries: ["CallNYC was an independent follow-on, not an official Council product, documented formal submission, or winner."],
       antiClaims: ["Jamie caused the CouncilStat release", "CallNYC was commissioned by the Council", "CallNYC was a winning hackathon submission"],
+      proofClaimIds: ["callnyc-civic-data-guidance"],
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
@@ -204,7 +533,7 @@ const knowledgeBankInput = {
         { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["contemporaneous independent-project framing"], confidence: "high", renderCitation: true }
       ],
       boundaries: ["Historical officeholders, statistics, categories, and contact information are not current guidance."],
-      antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+      antiClaims: [], proofClaimIds: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-COUNCIL-MEMBER-ENGAGEMENT",
@@ -215,6 +544,7 @@ const knowledgeBankInput = {
       evidence: [{ sourceId: "SRC-CALLNYC-MEMBER-ENGAGEMENT-REVIEW-2026", relationship: "direct-support", supports: ["11 attributable member-account posts", "10 sitting Council-member accounts", "interaction modes"], confidence: "high", renderCitation: true }],
       boundaries: ["This is account-level evidence and does not establish who personally typed each post.", "Three of the profile's 110 reported timeline entries remain unrecovered.", "Current counters are not contemporaneous impact analytics."],
       antiClaims: ["The New York City Council endorsed CallNYC", "Ten Council members formally endorsed CallNYC", "Every tagged Council member engaged", "The complete account history was recovered", "Jamie personally conversed with every member"],
+      proofClaimIds: ["callnyc-council-member-engagement"],
       researchInquiryIds: [], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
@@ -225,7 +555,7 @@ const knowledgeBankInput = {
       projections: [{ key: "photo-caption", text: "Participant photograph documenting the Digital District breakout table.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [{ sourceId: "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO", relationship: "private-support", supports: ["placard wording", "breakout-table context"], confidence: "high", renderCitation: false }],
       boundaries: ["Do not describe Digital District as the official event title.", "Do not publish the photograph before rights, consent, and editorial review."],
-      antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+      antiClaims: [], proofClaimIds: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
       id: "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
@@ -236,22 +566,203 @@ const knowledgeBankInput = {
       evidence: [{ sourceId: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026", relationship: "direct-support", supports: ["bounded negative search finding"], confidence: "high", renderCitation: false }],
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],
+      proofClaimIds: [],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-PARTICIPATORY-OPEN-HOUSE-AND-SHOP-SHOWS",
+      project: "participatory-public-practice",
+      internalClaim: "From 2003 through 2006, Jamie developed participatory formats that joined art, shared space, communal activity, and public contribution through collaborative Shop Shows and the UC Santa Cruz Open House.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "From 2003 through 2006, Jamie developed participatory formats that invited people to contribute, revise, and live alongside art through collaborative Shop Shows and the UC Santa Cruz Open House.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [{ sourceId: "SRC-GOOD-TIMES-OPEN-HOUSE-2006", relationship: "direct-support", supports: ["Jamie's instigation of Open House", "collaborative Shop Shows from 2003 to 2005", "public contribution and communal-living format"], confidence: "high", renderCitation: false }],
+      boundaries: ["Keep housemate and participant contributions visible.", "Do not present Open House as a formal housing or social-service program.", "Do not republish private addresses or participant identities from the historical article."],
+      antiClaims: ["Jamie solely authored every Shop Show activity", "Open House was a formal public housing program", "All participants approved contemporary portfolio use"],
+      proofClaimIds: ["participatory-open-house-public-program"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-WATERWAYS-RAFT-EXPEDITION",
+      project: "waterways-participatory-practice",
+      internalClaim: "Jamie conceived an experiential raft expedition and helped organize a collaborative, recycled-material journey that traveled from Kansas City down the Missouri and Mississippi rivers for four months until the water tasted salty.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Jamie conceived and helped organize a collaborative, recycled-material raft expedition that traveled from Kansas City down the Missouri and Mississippi rivers for four months, using the journey to explore how river systems connect cities and people.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-PITCH-HUCK-FINN-2007", relationship: "direct-support", supports: ["Jamie conceived the expedition", "collaborative recycled-material raft", "Jamie organized related public activity"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009", relationship: "corroborating", supports: ["four-month journey down the Missouri and Mississippi", "the water tasted salty", "river-city connection as later project context"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["Use collaborative language for construction, travel, and hosting.", "The reviewed sources do not establish a precise Gulf endpoint.", "Treat the 2009 account as a retrospective institutional description of the 2007 journey."],
+      antiClaims: ["Jamie alone built and operated the raft", "The reviewed sources prove a precise Gulf landing point", "Every participant and community role is recovered"],
+      proofClaimIds: ["waterways-participatory-practice"],
+      researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES",
+      project: "waterways-participatory-practice",
+      internalClaim: "Jamie spearheaded Great Accommodations, a 2009 participatory installation and public-program series that used river systems as a social network and invited people in river cities to contribute stories and imagine shared civic life on the water.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Jamie spearheaded Great Accommodations, a participatory installation and public-program series that invited people in river cities to contribute stories and imagine shared civic life on the water.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [{ sourceId: "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009", relationship: "direct-support", supports: ["Jamie spearheaded Great Accommodations", "participatory installation and public programs", "river-city outreach", "hundreds of letters with collaborator Suzanne Hogan", "Jamie's facilitator role"], confidence: "high", renderCitation: false }],
+      boundaries: ["Name Suzanne Hogan when describing the letter-based river-city outreach.", "Do not collapse all exhibition components or community contributions into sole authorship.", "The project is historical, not a current public program."],
+      antiClaims: ["Jamie alone produced every component", "All river-city participants are identified", "Great Accommodations remains active today"],
+      proofClaimIds: ["waterways-participatory-practice"],
+      researchInquiryIds: ["INQ-WATERWAYS-FULL-ROUTE-AND-ROLES"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING",
+      project: "nyc-artist-coalition",
+      internalClaim: "In 2017, Jamie organized fire-code study groups for DIY venues, rallied at City Hall, and testified as a NYC Artist Coalition member in support of repealing the Cabaret Law.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "In 2017, Jamie organized fire-code study groups for DIY venues, rallied at City Hall, and testified as a NYC Artist Coalition member in support of repealing the Cabaret Law. The successful repeal was a collective campaign and legislative outcome.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-GOTHAMIST-CABARET-LAW-2017-06-19", relationship: "direct-support", supports: ["Jamie organized fire-code study groups", "Jamie rallied at City Hall", "Jamie advocated for repeal as part of NYC Artist Coalition"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", relationship: "direct-support", supports: ["Jamie testified", "Jamie identified himself as a coalition member", "Jamie asked the Council to repeal the law", "Jamie advocated trust-based safety"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20", relationship: "context", supports: ["the broader 2017 repeal campaign and legislative context"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["Claim Jamie's documented organizing and testimony directly.", "Describe repeal as a collective advocacy and legislative outcome.", "Do not infer legal authorship or sole causality."],
+      antiClaims: ["Jamie single-handedly repealed the Cabaret Law", "Jamie authored the repeal legislation", "NYC Artist Coalition acted alone", "Jamie provided legal advice"],
+      proofClaimIds: ["nyca-cabaret-law-direct-organizing"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-NYCA-JAMIE-INSTRUMENTAL-ROLE-HYPOTHESIS",
+      project: "nyc-artist-coalition",
+      internalClaim: "Jamie recalls an instrumental role in creating NYC Artist Coalition and contributing across its early advocacy; current public sources directly establish several organizing actions but do not yet establish the complete founding and responsibility map.",
+      status: "inference",
+      projections: [{ key: "archive-note", text: "Jamie played an instrumental role in creating NYC Artist Coalition and shaping its early advocacy.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-GOTHAMIST-CABARET-LAW-2017-06-19", relationship: "context", supports: ["Jamie's public organizing role in June 2017"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", relationship: "context", supports: ["Jamie's public testimony as a coalition member"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-VICE-NYCA-DIY-SPACES-2017-03-21", relationship: "context", supports: ["the coalition's January 2017 formation and early priorities"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["This is a claim hypothesis, not approved public wording.", "Decompose founding, web authorship, convening, policy work, and campaign operations into separately sourced claims.", "Seek collaborator confirmation and contemporaneous project artifacts."],
+      antiClaims: ["Public sources already prove Jamie solely founded NYC Artist Coalition", "Jamie owned every coalition campaign", "Jamie's role can be inferred from website custody alone"],
+      proofClaimIds: [],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY",
+      project: "nyc-office-of-nightlife",
+      internalClaim: "NYC Artist Coalition advocated for an Office of Nightlife responsive to small and diverse cultural spaces and organized a public town hall to shape the new office's implementation; Jamie's individual role in that work remains under research.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "NYC Artist Coalition advocated for an Office of Nightlife responsive to small and diverse cultural spaces and organized a public town hall to shape the new office's implementation. Jamie's specific contribution remains under research.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20", relationship: "context", supports: ["enactment of the Office of Nightlife", "the Office's liaison purpose"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17", relationship: "direct-support", supports: ["coalition organization of the Save NYC Spaces town hall", "small-venue participation", "engagement with city agencies"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYCA-PRIORITIES-2017", relationship: "context", supports: ["the coalition's stated recommendations for the Office"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["Separate enactment of the Office from the later coalition town hall about implementation.", "The reviewed public sources do not yet establish Jamie's individual production role.", "Treat the coalition's self-description of influence as a project claim requiring independent corroboration."],
+      antiClaims: ["Jamie alone created the Office of Nightlife", "NYC Artist Coalition authored the Office legislation", "Every coalition recommendation was adopted", "The town hall caused the Office to be enacted"],
+      proofClaimIds: ["nyca-office-nightlife-advocacy"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-TALKS-NOT-RAIDS-TRANSPARENCY-TO-PHASEOUT",
+      project: "talks-not-raids",
+      internalClaim: "Talks Not Raids publicly advocated for transparency and communication around MARCH operations; later Council legislation required reporting and notice, and New York City announced the phaseout of MARCH in 2023. The reviewed sources establish the sequence, not sole campaign causality or Jamie's individual role.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Talks Not Raids advocated for transparency and communication around MARCH operations. Later Council legislation required reporting and notice, and New York City announced the phaseout of MARCH in 2023; the causal pathway and Jamie's individual role remain under research.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [
+        { sourceId: "SRC-TALKS-NOT-RAIDS-PROJECT", relationship: "direct-support", supports: ["campaign advocacy for transparency and communication", "campaign concern about raid-style operations"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-COUNCIL-INT-1156-2018", relationship: "direct-support", supports: ["later MARCH reporting and notice legislation"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYC-MAYOR-MARCH-PHASEOUT-2023", relationship: "direct-support", supports: ["the 2023 phaseout of MARCH", "replacement with an engagement-first approach"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-NYCA-PRIORITIES-2017", relationship: "context", supports: ["Talks Not Raids as a coalition priority"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["Chronology is not causality.", "Do not attribute Council legislation or the 2023 phaseout solely to Talks Not Raids.", "Jamie's individual authorship and operating role require further evidence."],
+      antiClaims: ["Jamie single-handedly disbanded MARCH", "Talks Not Raids alone caused the phaseout", "The campaign authored Introduction 1156", "MARCH ended immediately when the campaign launched"],
+      proofClaimIds: ["talks-not-raids-transparency-to-phaseout"],
+      researchInquiryIds: ["INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE"],
+      reviewedAt: "2026-07-12",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
     }
   ],
-  researchInquiries: [{
-    id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
-    project: "callnyc",
-    question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
-    methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
-    runAt: "2026-07-11",
-    resultStatus: "not-recovered",
-    findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
-    limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
-    sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
-    publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
-    protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+  researchInquiries: [
+    {
+      id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      project: "callnyc",
+      question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+      methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
+      runAt: "2026-07-11",
+      resultStatus: "not-recovered",
+      findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
+      limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
+      sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
+      publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
+    },
+    {
+      id: "INQ-WATERWAYS-FULL-ROUTE-AND-ROLES",
+      project: "waterways-participatory-practice",
+      question: "What route, dates, participants, public programs, community encounters, and artifacts can be independently established for the raft journey and its relationship to Great Accommodations?",
+      methods: ["Close-read the supplied Pitch and Charlotte Street records.", "Compare contemporaneous reporting with the 2009 retrospective institutional account.", "Identify additional public reporting, project artifacts, and independently anchored photographs for a future pass."],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: ["The Pitch directly attributes the expedition idea to Jamie and documents collaborative raft travel across Missouri.", "Charlotte Street documents a four-month journey down the Missouri and Mississippi until the water tasted salty and connects it to Great Accommodations.", "The reviewed sources support a long participatory waterways practice but do not provide a complete route or responsibility map."],
+      limitations: ["The exact final geographic endpoint remains unresolved.", "The complete participant and host roster has not been reconstructed.", "No photograph has been approved for publication through this inquiry."],
+      sourceIds: ["SRC-PITCH-HUCK-FINN-2007", "SRC-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"],
+      publicSummary: "Two public sources establish Jamie's conception of a collaborative raft expedition and its later development into participatory river-city work, while the complete route and roles remain open."
+    },
+    {
+      id: "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE",
+      project: "nyc-artist-coalition",
+      question: "Which specific founding, convening, research, web, operations, testimony, and campaign contributions establish Jamie's instrumental role in NYC Artist Coalition?",
+      methods: ["Close-read supplied and discovered public reporting.", "Use the official Council hearing transcript to establish direct testimony.", "Separate public evidence of Jamie's actions from collective coalition history and Jamie's broader recollection."],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: ["Public sources directly establish Jamie's fire-code study groups, City Hall rallying, and Council testimony as a coalition member.", "Public reporting establishes the coalition's January 2017 formation and early advocacy priorities without assigning individual founding roles.", "The existing proof register records co-founder and web-infrastructure claims, but a complete source-linked founding and responsibility map remains open."],
+      limitations: ["The reviewed public sources do not identify every founder or assign complete responsibility.", "Website authorship does not by itself establish coalition leadership.", "Collaborator confirmation and contemporaneous project records remain necessary for the strongest role claim."],
+      sourceIds: ["SRC-GOTHAMIST-CABARET-LAW-2017-06-19", "SRC-NYC-COUNCIL-CABARET-HEARING-2017-06-19", "SRC-VICE-NYCA-DIY-SPACES-2017-03-21"],
+      publicSummary: "Public sources establish several direct organizing actions by Jamie; research remains open on the coalition's complete founding and responsibility map."
+    },
+    {
+      id: "INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE",
+      project: "nyc-office-of-nightlife",
+      question: "What was Jamie's specific role in NYC Artist Coalition advocacy around creation and implementation of the Office of Nightlife and production of the Save NYC Spaces town hall?",
+      methods: ["Separate the date of Office enactment from the later town hall.", "Review national reporting, the coalition's public priorities, and independent town-hall coverage.", "Seek event production records, authored materials, public credits, and collaborator confirmation."],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: ["NPR documents enactment of the Office of Nightlife in September 2017.", "The Village Voice attributes the later Save NYC Spaces town hall to NYC Artist Coalition and describes its public purpose.", "The coalition's public record describes recommendations intended to make the Office responsive to diverse, small-scale spaces."],
+      limitations: ["The reviewed sources do not yet identify Jamie's personal town-hall production responsibilities.", "Coalition advocacy and Office enactment are related contexts but not interchangeable causal claims.", "The coalition's own account of influence requires independent corroboration."],
+      sourceIds: ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20", "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17", "SRC-NYCA-PRIORITIES-2017"],
+      publicSummary: "Public sources establish the Office's enactment and the coalition's subsequent town hall and recommendations; Jamie's individual role remains under research."
+    },
+    {
+      id: "INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE",
+      project: "talks-not-raids",
+      question: "What did Jamie personally build, research, publish, coordinate, or advocate within Talks Not Raids, and how did the campaign relate to MARCH transparency legislation and the later phaseout?",
+      methods: ["Close-read the public campaign archive.", "Review the official Council legislation and Mayor's Office phaseout announcement.", "Keep campaign advocacy, legislative action, and later administrative change as separate events until causal evidence is recovered."],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: ["Talks Not Raids publicly advocated for MARCH transparency and communication.", "Council legislation later required MARCH reporting and notice.", "New York City announced the phaseout of MARCH in 2023 in favor of an engagement-first approach."],
+      limitations: ["The reviewed sources do not yet establish Jamie's individual role.", "The evidence establishes chronology but not sole campaign causality.", "The full coalition, legislative, and administrative decision pathway remains open."],
+      sourceIds: ["SRC-TALKS-NOT-RAIDS-PROJECT", "SRC-NYC-COUNCIL-INT-1156-2018", "SRC-NYC-MAYOR-MARCH-PHASEOUT-2023", "SRC-NYCA-PRIORITIES-2017"],
+      publicSummary: "The public record establishes an advocacy-to-legislation-to-phaseout sequence while Jamie's individual role and the causal pathway remain open."
+    },
+    {
+      id: "INQ-PUBLIC-SITE-SOURCE-COVERAGE",
+      project: "portfolio-source-coverage",
+      question: "Which consequential public portfolio claims still rely on prose source-basis labels rather than canonical source, evidence, claim, and citation relationships?",
+      methods: ["Compared the structured proof register with the canonical citation Knowledge Bank.", "Confirmed reciprocal canonical links for the CallNYC civic-data and Council-member engagement proofs.", "Prioritized remaining metric-bearing, causal, role, and institutional claims for future source decomposition."],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: ["CallNYC now has canonical source and claim relationships for its core project and member-account engagement claims.", "The broader proof register still contains public claims whose source basis is descriptive rather than linked to canonical source IDs.", "Priority source-wiring targets include the HJE growth contribution, WOWList scale, Sunday Dinner and 196 scale, NYC Artist Coalition web and civic-systems roles, and other metric-bearing public work claims."],
+      limitations: ["A missing canonical source relationship does not mean the underlying claim is false.", "Some proof claims rely on approved resume or public-safe archive summaries that require careful public-source substitution or protected evidence boundaries.", "This pass did not attempt to research and wire every existing portfolio claim."],
+      sourceIds: [],
+      publicSummary: "CallNYC is the first fully wired citation pilot; a standing backlog now tracks other consequential public claims that need canonical source relationships."
+    }
+  ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },

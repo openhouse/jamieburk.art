@@ -22,6 +22,7 @@ The knowledge bank exists to:
 - separate verified scope from open questions;
 - make future edits easier to audit;
 - prevent both overstatement and understatement;
+- retain public-safe fragments before their eventual relevance is known;
 - reduce the risk that private evidence leaks into public pages;
 - make the Technical Operations / Product Operations / Implementation story
   easier to maintain.
@@ -63,3 +64,6 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See [lifecycle.md](lifecycle.md) for the intake-to-source-to-claim process,
+projection restraint, recursive eval, and photo-feedback loop.

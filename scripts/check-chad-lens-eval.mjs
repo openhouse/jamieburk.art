@@ -66,6 +66,20 @@ if ((evalDefinition.fixture?.mustNotClaim?.length ?? 0) < 4) {
   fail("Chad Lens fixture must include collective-work anti-claims");
 }
 
+const projection = evalDefinition.projectionContract ?? {};
+if (!(projection.exactCandidatePaths?.length > 0)) {
+  fail("Chad Lens eval must declare at least one exact candidate projection path");
+}
+if (!(projection.knowledgeBankClaimIds?.length > 0)) {
+  fail("Chad Lens eval must declare supporting Knowledge Bank claim IDs");
+}
+if (!(projection.knowledgeBankPaths?.length > 0)) {
+  fail("Chad Lens eval must declare Knowledge Bank paths");
+}
+if (!Number.isInteger(stop.maxRegressions) || stop.maxRegressions < 0) {
+  fail("Chad Lens maxRegressions must be a non-negative integer");
+}
+
 const privatePattern = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|file:\/\/|\.photoslibrary/i;
 if (privatePattern.test(source)) fail("Chad Lens eval contains a private path");
 
@@ -84,12 +98,37 @@ if (existsSync(runsRoot)) {
     }
 
     if (result.evalId !== evalDefinition.evalId) fail(`${runName} references the wrong evalId`);
-    if (!Number.isInteger(result.iterations) || result.iterations > stop.maxIterations) {
+    if (
+      !Number.isInteger(result.iterations) ||
+      result.iterations < 1 ||
+      result.iterations > stop.maxIterations
+    ) {
       fail(`${runName} exceeds the iteration limit`);
     }
+    if (result.rounds?.length !== result.iterations) {
+      fail(`${runName} must record every iteration`);
+    }
+    for (const [index, round] of (result.rounds ?? []).entries()) {
+      if (round.round !== index + 1) {
+        fail(`${runName} round numbers must be contiguous and one-based`);
+      }
+    }
     if (result.status === "complete") {
-      if ((result.qualifyingRounds?.length ?? 0) < stop.requiredConsecutivePasses) {
+      const qualifyingRounds = result.qualifyingRounds ?? [];
+      if (qualifyingRounds.length < stop.requiredConsecutivePasses) {
         fail(`${runName} is complete without enough qualifying rounds`);
+      }
+      if (
+        qualifyingRounds.slice(1).some((round, index) => round !== qualifyingRounds[index] + 1)
+      ) {
+        fail(`${runName} qualifying rounds must be consecutive`);
+      }
+      const expectedFinalRounds = Array.from(
+        { length: stop.requiredConsecutivePasses },
+        (_, index) => result.iterations - stop.requiredConsecutivePasses + index + 1
+      );
+      if (JSON.stringify(qualifyingRounds.slice(-stop.requiredConsecutivePasses)) !== JSON.stringify(expectedFinalRounds)) {
+        fail(`${runName} must end with its qualifying rounds`);
       }
       for (const judge of ["evidenceJudge", "hiringReaderJudge"]) {
         if (result.finalJudgments?.[judge]?.score !== evalDefinition.criterion.threshold) {
@@ -97,6 +136,22 @@ if (existsSync(runsRoot)) {
         }
         if (result.finalJudgments?.[judge]?.hardGatesPass !== true) {
           fail(`${runName} is complete with a failed hard gate from ${judge}`);
+        }
+        if (result.finalJudgments?.[judge]?.dimensionsPass !== dimensionIds.length) {
+          fail(`${runName} is complete without every Chad Lens dimension passing for ${judge}`);
+        }
+      }
+      if ((result.regressions?.length ?? 0) > stop.maxRegressions) {
+        fail(`${runName} exceeds the accepted regression limit`);
+      }
+      for (const roundNumber of expectedFinalRounds) {
+        const round = result.rounds?.[roundNumber - 1];
+        if (
+          round?.result !== "qualifying-pass" ||
+          round.evidenceJudgeScore !== evalDefinition.criterion.threshold ||
+          round.hiringReaderJudgeScore !== evalDefinition.criterion.threshold
+        ) {
+          fail(`${runName} round ${roundNumber} does not satisfy the qualifying-pass contract`);
         }
       }
       const wordCount = result.candidate.trim().split(/\s+/).length;
@@ -109,6 +164,30 @@ if (existsSync(runsRoot)) {
         sentenceCount > evalDefinition.candidateContract.maximumSentences
       ) {
         fail(`${runName} candidate violates its sentence-count contract`);
+      }
+
+      for (const relativePath of projection.exactCandidatePaths ?? []) {
+        const projectionPath = path.join(repoRoot, relativePath);
+        if (!existsSync(projectionPath)) {
+          fail(`${runName} projection path is missing: ${relativePath}`);
+          continue;
+        }
+        if (!readFileSync(projectionPath, "utf8").includes(result.candidate)) {
+          fail(`${runName} winning candidate is not projected exactly in ${relativePath}`);
+        }
+      }
+      for (const relativePath of projection.knowledgeBankPaths ?? []) {
+        const knowledgeBankPath = path.join(repoRoot, relativePath);
+        if (!existsSync(knowledgeBankPath)) {
+          fail(`${runName} Knowledge Bank path is missing: ${relativePath}`);
+          continue;
+        }
+        const knowledgeBankSource = readFileSync(knowledgeBankPath, "utf8");
+        for (const claimId of projection.knowledgeBankClaimIds ?? []) {
+          if (!knowledgeBankSource.includes(claimId)) {
+            fail(`${runName} Knowledge Bank claim ${claimId} is missing from ${relativePath}`);
+          }
+        }
       }
     }
     if (privatePattern.test(resultSource)) fail(`${runName}/result.json contains a private path`);
