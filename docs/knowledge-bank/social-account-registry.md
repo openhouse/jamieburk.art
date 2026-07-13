@@ -1,11 +1,11 @@
-# Project Social Account Registry
+# Social Account Registry
 
-Last reviewed: 2026-07-12
+Last reviewed: 2026-07-13
 
-This registry records project identities recovered from public project surfaces,
-public posts, and bounded archive research. It is an identity map, not an
-authorship ledger. A shared account name does not identify the person who wrote
-an individual post.
+This registry records project and personal account identities recovered from
+public surfaces, public posts, and bounded archive research. It is an identity
+map, not an authorship ledger. A shared account name does not identify the
+person who wrote an individual post.
 
 | Project or campaign | X / Twitter handle | Relationship | Evidence status |
 | --- | --- | --- | --- |
@@ -17,6 +17,7 @@ an individual post.
 | Fair Rent NYC | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Full 38-record live population recovered and classified: 22 account-authored records and 16 reposts |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Dedicated project account; archived service page identifies Julia and Jamie as authors | Full 183-record live population recovered: 155 account-authored records and 28 reposts; resident contact details omitted from the census |
+| Jamie Burkart | [@urbanhermit](https://x.com/urbanhermit) | Personal account authored and curated by Jamie; includes replies, reposts, professional traces, and ordinary life | Full 434-record live population recovered: 338 authored posts, 15 authored replies, and 81 reposts; public census is aggregate-only |
 
 No dedicated project X account was recovered in this pass for Harry J. Epstein,
 196 / Sunday Dinner, or Source-Backed Team Memory. That means "not
@@ -50,3 +51,10 @@ unique records close exactly against the live 38-post profile control.
 The KC Town Hall record-level ledger is documented in
 [kctownhall-population-2026-07-12.md](kctownhall-population-2026-07-12.md). Its
 183 unique records close exactly against the live 183-post profile control.
+
+Jamie's personal-account ledger is documented in
+[urbanhermit-population-2026-07-13.md](urbanhermit-population-2026-07-13.md).
+Its 434 unique records close exactly against the live 434-post profile control.
+Unlike project-account ledgers, its public census omits status IDs, URLs, exact
+dates, handles, and text to avoid creating a new public dossier from a personal
+record.

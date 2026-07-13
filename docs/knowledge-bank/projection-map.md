@@ -74,3 +74,15 @@ MARCH-disbanding causality candidates as settled claims.
 The About page may use Soundings to make the existing river-expedition
 throughline concrete at more than 1,000 miles. It must continue to hold the exact
 Gulf landing candidate until a final landing record is recovered.
+
+## Knowledge-Bank Depth, Not Current Projection
+
+`CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016` is strong, independently corroborated,
+and available for a future creative-technology or biographical composition. Do
+not add it to the current hiring site merely because it is newly recovered. The
+current composition already makes its role-fit argument without another project
+example.
+
+`CLM-URBANHERMIT-PRACTICE-THREADS` may orient future editors to recurring
+practice threads. It is not a license to expose the personal timeline, display
+social analytics, or treat record frequency as professional significance.

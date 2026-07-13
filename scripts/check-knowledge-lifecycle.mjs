@@ -249,6 +249,81 @@ const nycartcUnresolvedCensusRows = nycartcCensusRows.filter(
   (row) => row[9] === "unresolved"
 );
 
+const urbanhermitPopulationSourceIds = [
+  "SRC-URBANHERMIT-LIVE-PROFILE-CONTROL-2026",
+  "SRC-URBANHERMIT-FULL-POPULATION-RUN-2026",
+  "SRC-URBANHERMIT-RIVER-SOFTWARE-OFFICE-HOURS-2009",
+  "SRC-URBANHERMIT-HJE-WEB-PRACTICE-2010",
+  "SRC-URBANHERMIT-SUNDAY-DINNER-VIDEO-2013",
+  "SRC-URBANHERMIT-COUNCIL-PUBLIC-ENGAGEMENT-2015",
+  "SRC-URBANHERMIT-HORSE-LORDS-NPR-2016",
+  "SRC-URBANHERMIT-LET-NYC-DANCE-SAFETY-2017",
+  "SRC-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020",
+  "SRC-HORSE-LORDS-TRUTHERS-NPR-2016"
+];
+
+const urbanhermitCensusText = readFileSync(
+  "docs/knowledge-bank/urbanhermit-post-census-2026-07-13.csv",
+  "utf8"
+);
+const urbanhermitCensusRows = urbanhermitCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
+const urbanhermitExpectedYears = new Map([
+  ["2008", 1],
+  ["2009", 49],
+  ["2010", 6],
+  ["2011", 4],
+  ["2012", 12],
+  ["2013", 58],
+  ["2014", 114],
+  ["2015", 18],
+  ["2016", 37],
+  ["2017", 67],
+  ["2018", 25],
+  ["2019", 31],
+  ["2020", 8],
+  ["2021", 1],
+  ["2022", 2],
+  ["2023", 1]
+]);
+
+const urbanhermitExpectedThemes = new Map([
+  ["everyday-life-and-observation", 204],
+  ["civic-and-public-interest-work", 78],
+  ["culture-art-and-performance", 52],
+  ["community-and-hospitality", 37],
+  ["waterways-place-and-ecology", 20],
+  ["technical-and-digital-practice", 19],
+  ["care-memory-and-relationships", 14],
+  ["media-only-or-text-unavailable", 10]
+]);
+
+const urbanhermitExpectedAuthoredThemes = new Map([
+  ["everyday-life-and-observation", 195],
+  ["civic-and-public-interest-work", 34],
+  ["culture-art-and-performance", 34],
+  ["community-and-hospitality", 34],
+  ["waterways-place-and-ecology", 20],
+  ["technical-and-digital-practice", 14],
+  ["care-memory-and-relationships", 12],
+  ["media-only-or-text-unavailable", 10]
+]);
+
+const urbanhermitExpectedRepostThemes = new Map([
+  ["everyday-life-and-observation", 9],
+  ["civic-and-public-interest-work", 44],
+  ["culture-art-and-performance", 18],
+  ["community-and-hospitality", 3],
+  ["waterways-place-and-ecology", 0],
+  ["technical-and-digital-practice", 5],
+  ["care-memory-and-relationships", 2],
+  ["media-only-or-text-unavailable", 0]
+]);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -1172,6 +1247,146 @@ const criteria = [
         !/full_text|post_text|private_path|protected_locator/i.test(
           nycartcCensusText.split("\n")[0]
         )
+      );
+    })()
+  },
+  {
+    id: "urbanhermit-full-population-accounting",
+    label: "The complete 434-record personal-account control is recovered and reconciled without interpretive drift",
+    pass: (() => {
+      const yearCounts = new Map();
+      const themeCounts = new Map();
+      const authoredThemeCounts = new Map();
+      const repostThemeCounts = new Map();
+      for (const row of urbanhermitCensusRows) {
+        yearCounts.set(row[1], (yearCounts.get(row[1]) ?? 0) + 1);
+        themeCounts.set(row[3], (themeCounts.get(row[3]) ?? 0) + 1);
+        const target = row[2] === "repost" ? repostThemeCounts : authoredThemeCounts;
+        target.set(row[3], (target.get(row[3]) ?? 0) + 1);
+      }
+      const expectedThemes = new Set(urbanhermitExpectedThemes.keys());
+      return (
+        urbanhermitCensusRows.length === 434 &&
+        new Set(urbanhermitCensusRows.map((row) => row[0])).size === 434 &&
+        urbanhermitCensusRows.every(
+          (row) =>
+            row.length === 6 &&
+            /^recovered-\d{4}$/.test(row[0]) &&
+            expectedThemes.has(row[3]) &&
+            row[4] === "recovered" &&
+            row[5] === "aggregate-only"
+        ) &&
+        urbanhermitCensusRows.filter((row) => row[2] === "authored-post").length === 338 &&
+        urbanhermitCensusRows.filter((row) => row[2] === "authored-reply").length === 15 &&
+        urbanhermitCensusRows.filter((row) => row[2] === "repost").length === 81 &&
+        urbanhermitExpectedYears.size === yearCounts.size &&
+        [...urbanhermitExpectedYears].every(
+          ([year, expected]) => yearCounts.get(year) === expected
+        ) &&
+        [...urbanhermitExpectedThemes].every(
+          ([theme, expected]) => themeCounts.get(theme) === expected
+        ) &&
+        [...urbanhermitExpectedAuthoredThemes].every(
+          ([theme, expected]) => (authoredThemeCounts.get(theme) ?? 0) === expected
+        ) &&
+        [...urbanhermitExpectedRepostThemes].every(
+          ([theme, expected]) => (repostThemeCounts.get(theme) ?? 0) === expected
+        )
+      );
+    })()
+  },
+  {
+    id: "urbanhermit-full-population-lineage",
+    label: "Personal-account findings have intake, source, reading, inquiry, promotion, and hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-URBANHERMIT-FULL-POPULATION-2026"
+      );
+      const population = candidateById.get("CND-URBANHERMIT-POPULATION-ACCOUNTING");
+      const threads = candidateById.get("CND-URBANHERMIT-PRACTICE-THREADS");
+      const frequency = candidateById.get("CND-URBANHERMIT-FREQUENCY-EQUALS-IMPACT");
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-13-URBANHERMIT-FULL-POPULATION"
+        ) &&
+        urbanhermitPopulationSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        inquiry.findings.some((item) => /338.*15.*81/i.test(item)) &&
+        inquiry.limitations.some((item) => /deleted before capture/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId === "CLM-URBANHERMIT-POPULATION-ACCOUNTING" &&
+        threads?.status === "promoted" &&
+        threads.promotedClaimId === "CLM-URBANHERMIT-PRACTICE-THREADS" &&
+        frequency?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === frequency.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "urbanhermit-public-boundaries",
+    label: "Personal-account documentation preserves privacy, authorship, and non-instrumentalization boundaries",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-URBANHERMIT-FULL-POPULATION-RUN-2026"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-URBANHERMIT-POPULATION-ACCOUNTING"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/urbanhermit-population-2026-07-13.md",
+        "utf8"
+      );
+      return Boolean(
+        source?.visibility === "protected" &&
+        source.protectedLocatorId &&
+        /complete recovery of the current surviving profile population/i.test(report) &&
+        /new dossier/i.test(report) &&
+        /ordinary-life and relational material/i.test(report) &&
+        claim?.boundaries.some((item) => /deleted before capture/i.test(item)) &&
+        claim.antiClaims.some((item) => /public census reproduces/i.test(item)) &&
+        urbanhermitCensusText.startsWith(
+          "ledger_id,year,record_type,primary_theme,accounting_status,public_detail_status"
+        ) &&
+        !/status_id|status_url|exact_date|full_text|post_text|handle|protected_locator|@urbanhermit|https?:/i.test(
+          urbanhermitCensusText
+        ) &&
+        !publicRegistryText.includes("RESEARCH-URBANHERMIT-FULL-POPULATION-2026-001")
+      );
+    })()
+  },
+  {
+    id: "urbanhermit-independent-corroboration",
+    label: "The strongest new personal-archive lead is independently corroborated and held from automatic site projection",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-HORSE-LORDS-TRUTHERS-NPR-2016"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"
+      );
+      const candidate = candidateById.get("CND-HORSE-LORDS-TRUTHERS-VIDEO-2016");
+      return Boolean(
+        source?.organization === "NPR Music" &&
+        source.canonicalUrl?.includes("/476020413/") &&
+        claim?.status === "confirmed-with-boundary" &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === source.id && item.relationship === "direct-support"
+        ) &&
+        claim.boundaries.some((item) => /Credit Jamie and M\.C\. Schmidt together/i.test(item)) &&
+        claim.projections.every(
+          (projection) =>
+            projection.key === "archive-note" &&
+            projection.surfaces.every((surface) => !surface.startsWith("/"))
+        ) &&
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim.id
       );
     })()
   },

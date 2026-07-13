@@ -102,6 +102,30 @@ before capture.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+## Personal Social Archive
+
+Do not publish or reconstruct Jamie's full @urbanhermit timeline in the
+repository. The 434-row public ledger intentionally omits text, exact dates,
+handles, status IDs, URLs, historic contact details, locations, relationships,
+health references, and unreviewed media.
+
+Do not say the current 434-record control represents every post Jamie ever
+published. It represents the complete surviving profile population recovered on
+July 13, 2026; the profile counter cannot reveal earlier deletions.
+
+Do not say Jamie authored all 434 records. The population contains 338 authored
+standalone posts, 15 authored replies, and 81 reposts. Do not attribute reposted
+or quoted statements to Jamie.
+
+Do not convert theme, handle, hashtag, or year frequencies into measures of
+professional labor, priority, reach, causality, or impact. Do not turn
+ordinary-life and relational records into professional proof merely because
+they remain public.
+
+Credit Jamie Burkart and M.C. Schmidt jointly for Horse Lords' official 2016
+"Truthers" video. Do not claim sole authorship, an NPR commission, a known
+division of labor, commercial results, or audience reach.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

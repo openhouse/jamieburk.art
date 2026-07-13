@@ -23,6 +23,8 @@ import { kctownhallPopulationBatchRecords } from "./kctownhall-population-batch-
 import { kctownhallPopulationDevelopmentRecords } from "./kctownhall-population-development-2026-07-12.ts";
 import { nycartcPopulationBatchRecords } from "./nycartc-population-batch-2026-07-12.ts";
 import { nycartcPopulationDevelopmentRecords } from "./nycartc-population-development-2026-07-12.ts";
+import { urbanhermitPopulationBatchRecords } from "./urbanhermit-population-batch-2026-07-13.ts";
+import { urbanhermitPopulationDevelopmentRecords } from "./urbanhermit-population-development-2026-07-13.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -37,7 +39,8 @@ const knowledgeBankInput = {
     ...callnycPopulationDevelopmentRecords.intakeItems,
     ...wowlistPopulationDevelopmentRecords.intakeItems,
     ...kctownhallPopulationDevelopmentRecords.intakeItems,
-    ...nycartcPopulationDevelopmentRecords.intakeItems
+    ...nycartcPopulationDevelopmentRecords.intakeItems,
+    ...urbanhermitPopulationDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -51,7 +54,8 @@ const knowledgeBankInput = {
     ...callnycPopulationDevelopmentRecords.sourceReadings,
     ...wowlistPopulationDevelopmentRecords.sourceReadings,
     ...kctownhallPopulationDevelopmentRecords.sourceReadings,
-    ...nycartcPopulationDevelopmentRecords.sourceReadings
+    ...nycartcPopulationDevelopmentRecords.sourceReadings,
+    ...urbanhermitPopulationDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -65,7 +69,8 @@ const knowledgeBankInput = {
     ...callnycPopulationDevelopmentRecords.candidateClaims,
     ...wowlistPopulationDevelopmentRecords.candidateClaims,
     ...kctownhallPopulationDevelopmentRecords.candidateClaims,
-    ...nycartcPopulationDevelopmentRecords.candidateClaims
+    ...nycartcPopulationDevelopmentRecords.candidateClaims,
+    ...urbanhermitPopulationDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -79,7 +84,8 @@ const knowledgeBankInput = {
     ...callnycPopulationDevelopmentRecords.promotions,
     ...wowlistPopulationDevelopmentRecords.promotions,
     ...kctownhallPopulationDevelopmentRecords.promotions,
-    ...nycartcPopulationDevelopmentRecords.promotions
+    ...nycartcPopulationDevelopmentRecords.promotions,
+    ...urbanhermitPopulationDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -92,7 +98,8 @@ const knowledgeBankInput = {
     ...callnycPopulationDevelopmentRecords.editorialBriefs,
     ...wowlistPopulationDevelopmentRecords.editorialBriefs,
     ...kctownhallPopulationDevelopmentRecords.editorialBriefs,
-    ...nycartcPopulationDevelopmentRecords.editorialBriefs
+    ...nycartcPopulationDevelopmentRecords.editorialBriefs,
+    ...urbanhermitPopulationDevelopmentRecords.editorialBriefs
   ],
   discoveryNotes: [
     ...knowledgeDevelopmentRecords.discoveryNotes,
@@ -104,7 +111,8 @@ const knowledgeBankInput = {
     ...socialArchiveDevelopmentRecords.discoveryNotes,
     ...callnycPopulationDevelopmentRecords.discoveryNotes,
     ...kctownhallPopulationDevelopmentRecords.discoveryNotes,
-    ...nycartcPopulationDevelopmentRecords.discoveryNotes
+    ...nycartcPopulationDevelopmentRecords.discoveryNotes,
+    ...urbanhermitPopulationDevelopmentRecords.discoveryNotes
   ],
   sources: [
     {
@@ -239,7 +247,8 @@ const knowledgeBankInput = {
     ...callnycPopulationBatchRecords.sources,
     ...wowlistPopulationBatchRecords.sources,
     ...kctownhallPopulationBatchRecords.sources,
-    ...nycartcPopulationBatchRecords.sources
+    ...nycartcPopulationBatchRecords.sources,
+    ...urbanhermitPopulationBatchRecords.sources
   ],
   claims: [
     {
@@ -339,7 +348,8 @@ const knowledgeBankInput = {
     ...callnycPopulationBatchRecords.claims,
     ...wowlistPopulationBatchRecords.claims,
     ...kctownhallPopulationBatchRecords.claims,
-    ...nycartcPopulationBatchRecords.claims
+    ...nycartcPopulationBatchRecords.claims,
+    ...urbanhermitPopulationBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -353,7 +363,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries],
+  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries, ...urbanhermitPopulationBatchRecords.researchInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },

@@ -18,6 +18,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## horse-lords-truthers-video - Creative-technology collaboration
+
+**Status:** Ready in bank / Held from current site
+**Support level:** Strong
+**Evidence class:** Independent public coverage / contemporaneous public post
+**Public wording:** Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 "Truthers" video, featured by NPR Music.
+**Detailed public-safe wording:** NPR Music identifies Jamie and M.C. Schmidt as the video's makers and quotes the band describing how its simple visual materials, repetition, variation, text, and color mirror the music's construction.
+**Where to project:** Knowledge bank now; future creative-technology, About, or range composition only when the audience argument benefits.
+**Why it matters:** Adds independent, named evidence of Jamie's creative-technology practice and his ability to translate underlying structure across media.
+**Guardrail:** Use joint credit. NPR featured the finished video; the source does not establish that NPR commissioned it.
+**Do not say:** Jamie made the video alone; NPR commissioned it; the feature establishes audience reach or commercial performance.
+**Protected boundaries:** The broader personal timeline and unreviewed media remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  

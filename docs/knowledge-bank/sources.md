@@ -127,6 +127,18 @@ report](kctownhall-population-2026-07-12.md) pairs the social census with a
 Wayback-recovered service page identifying Julia and Jamie as authors and
 preserves project-reported outcome totals as uncorroborated research leads.
 
+The July 13 personal-account pass reconciles 421 Posts records with 13
+additional Jamie-authored Replies records against the live 434-post
+@urbanhermit control. The resulting
+[434-record aggregate census](urbanhermit-post-census-2026-07-13.csv) omits
+post text, exact dates, handles, status IDs, and URLs. The accompanying
+[archival-production report](urbanhermit-population-2026-07-13.md) records the
+method, complete type and year accounting, interpretive theme boundaries, and
+privacy disposition. Close reading also surfaced NPR Music's direct joint
+credit to Jamie Burkart and M.C. Schmidt for Horse Lords' official 2016
+"Truthers" video. The professional credit is retained; the raw personal
+timeline is not.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

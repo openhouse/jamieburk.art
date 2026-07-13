@@ -79,3 +79,9 @@ Project social identities have a separate
 [bounded archival inventory](social-archive-2026-07-12.md). These distinguish
 account identity from individual post authorship and recovered engagement
 minimums from comprehensive totals.
+
+Jamie's personal account has a stricter, aggregate-only
+[full-population report](urbanhermit-population-2026-07-13.md). It accounts for
+the complete current profile control while withholding the raw personal
+timeline, historic contact and location detail, relationships, health
+references, and unreviewed media.
