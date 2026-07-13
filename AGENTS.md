@@ -101,7 +101,7 @@ change for V1.
 
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v3/evals.json` before optimizing the public site
+- Read `evals/launch-readiness/v4/evals.json` before optimizing the public site
   for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when
