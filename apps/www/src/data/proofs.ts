@@ -340,6 +340,39 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-13"
   },
   {
+    id: "nyc-artist-coalition-campaign-press-corpus",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Four NYC Artist Coalition campaign press indexes preserve 45 listed references representing 44 distinct article URLs.",
+    shortWording: "A governed 44-article campaign press corpus",
+    detailedPublicWording:
+      "The Let NYC Dance, Save NYC Spaces, Talks Not Raids, and archived FairRentNYC press sections assemble public context spanning Cabaret Law repeal, nightlife governance, MARCH enforcement, storefront vacancy, and Commercial Rent Stabilization.",
+    sourceBasis:
+      "Three live campaign press indexes, the December 1, 2021 FairRentNYC Wayback capture, normalized article metadata, and a July 14, 2026 link-availability audit.",
+    whyItMatters:
+      "Makes the breadth of the public record reusable without overwhelming the portfolio page or treating campaign-curated links as automatic article-level proof.",
+    guardrail:
+      "Say press-index entries or listed references. Do not call every item an endorsement, a Jamie profile, or independent proof of campaign causation; close-read an article before promoting its specific claims.",
+    doNotSay: [
+      "Forty-five outlets endorsed Jamie",
+      "Every article is about Jamie",
+      "The press corpus proves Jamie caused the policy outcomes",
+      "Every historical article remains live"
+    ],
+    protectedBoundaries: [
+      "Private press correspondence",
+      "Unpublished pitches",
+      "Private analytics",
+      "Unapproved collaborator attribution"
+    ],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["campaign-websites", "source-mapping", "public-guidance", "knowledge-systems"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",

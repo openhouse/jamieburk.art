@@ -1,4 +1,5 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import { nacCampaignPressBatch20260714 } from "./batches/nac-campaign-press-2026-07-14.ts";
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 
 const knowledgeBankInput = {
@@ -195,7 +196,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
-    ...nacPublicSourceBatch20260713.intake
+    ...nacPublicSourceBatch20260713.intake,
+    ...nacCampaignPressBatch20260714.intake
   ],
   sources: [
     {
@@ -430,7 +432,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["Jamie's founding-era public web implementation", "campaign website and information-surface work", "civic systems and coalition operations across multiple advocacy efforts"],
       doesNotEstablish: ["the formal co-founder title without formation corroboration", "solo ownership of collective campaigns", "legislative authorship", "sole causation of policy or enforcement outcomes"]
     },
-    ...nacPublicSourceBatch20260713.sources
+    ...nacPublicSourceBatch20260713.sources,
+    ...nacCampaignPressBatch20260714.sources
   ],
   sourceAssertions: [
     {
@@ -613,7 +616,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
-    ...nacPublicSourceBatch20260713.sourceAssertions
+    ...nacPublicSourceBatch20260713.sourceAssertions,
+    ...nacCampaignPressBatch20260714.sourceAssertions
   ],
   claims: [
     {
@@ -956,7 +960,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
-    ...nacPublicSourceBatch20260713.claims
+    ...nacPublicSourceBatch20260713.claims,
+    ...nacCampaignPressBatch20260714.claims
   ],
   researchTasks: [
     {
@@ -1062,7 +1067,8 @@ const knowledgeBankInput = {
       claimIds: [],
       publicSummary: "Photo discoveries enter as metadata-only leads, then pass through research and rights review before supporting a public claim.",
       reviewedAt: "2026-07-12"
-    }
+    },
+    ...nacCampaignPressBatch20260714.researchTasks
   ],
   researchInquiries: [
     {
@@ -1078,7 +1084,8 @@ const knowledgeBankInput = {
       publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
     },
-    ...nacPublicSourceBatch20260713.researchInquiries
+    ...nacPublicSourceBatch20260713.researchInquiries,
+    ...nacCampaignPressBatch20260714.researchInquiries
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },

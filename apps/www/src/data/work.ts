@@ -190,7 +190,8 @@ const workItemsInput = [
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
-      "nyc-artist-coalition-public-outcome-arc"
+      "nyc-artist-coalition-public-outcome-arc",
+      "nyc-artist-coalition-campaign-press-corpus"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -219,7 +220,7 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance, including calls to action, public evidence, partner credit, and Council-facing tools.",
+          "Public-safe website infrastructure for Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC, including calls to action, public evidence, partner credit, Council-facing tools, and campaign press indexes.",
         type: "website"
       }
     ],
@@ -242,8 +243,10 @@ const workItemsInput = [
     links: [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
+      { label: "FairRentNYC 2021 archive", url: "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
       { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" },
       { label: "2017 interview", url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter" },
       { label: "Cabaret repeal record", url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319&Options=ID%7CText%7C&Search=cabaret" },
       { label: "Office of Nightlife", url: "https://www.nyc.gov/site/mome/news/091917-nightlife-office.page" },
@@ -252,7 +255,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four structured campaign press indexes, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -270,6 +273,7 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "45 campaign press-index entries representing 44 distinct article URLs",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],

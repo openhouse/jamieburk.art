@@ -41,6 +41,21 @@ public-data framing, policy communications, and follow-up systems. The formal
 co-founder title remains held for independent formation-record or collaborator
 corroboration.
 
+## Campaign Press Corpus
+
+The press sections on Let NYC Dance, Save NYC Spaces, Talks Not Raids, and the
+December 1, 2021 FairRentNYC Wayback capture contain 45 listed references to 44
+distinct article URLs. Let NYC Dance contributes 21 entries, Talks Not Raids 7,
+Save NYC Spaces 8, and FairRentNYC 9. The shared NPR article appears in two
+campaign indexes and is retained once as a source with both memberships.
+
+The governed [campaign press corpus](../sources/nyc-artist-coalition-campaign-press.md)
+preserves every title, outlet, URL, campaign membership, and available archive
+recovery. This establishes the breadth of public context assembled by the
+campaign sites. It does not make every article an endorsement, a Jamie profile,
+or article-level proof of campaign causation. Those stronger uses remain queued
+for close reading and atomic claim review.
+
 ## Sources
 
 - [Gothamist, DIY Venues Demand Repeal of Widely Reviled Cabaret Law](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law)
@@ -56,6 +71,10 @@ corroboration.
 - [Mayor's Office of Media and Entertainment, Office of Nightlife signing](https://www.nyc.gov/site/mome/news/091917-nightlife-office.page)
 - [New York City Council, Intro 1156-2018](https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156)
 - [Gothamist, NYC scrapping late-night MARCH raids](https://gothamist.com/news/nyc-scrapping-abusive-and-intrusive-late-night-raids-on-bars-and-clubs)
+- [Let NYC Dance press index](https://letnycdance.nycartc.com/)
+- [Save NYC Spaces press index](https://savenycspaces.nycartc.com/)
+- [Talks Not Raids press index](https://talksnotraids.com/)
+- [FairRentNYC press index, December 1, 2021 capture](https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/)
 
 ## Open Research
 

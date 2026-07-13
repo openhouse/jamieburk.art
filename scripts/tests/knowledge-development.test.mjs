@@ -27,6 +27,37 @@ test("current knowledge bank satisfies the frozen suite", () => {
   assert.ok(result.results.every((entry) => entry.pass));
 });
 
+test("campaign press corpus preserves all memberships without duplicating articles", () => {
+  const pressIntake = knowledgeBank.intake.filter((item) =>
+    item.id.includes("PRESS-CORPUS") && item.projects.includes("nyc-artist-coalition")
+  );
+  const indexIds = new Set([
+    "SRC-NAC-LET-NYC-DANCE-PRESS-INDEX",
+    "SRC-NAC-TALKS-NOT-RAIDS-PRESS-INDEX",
+    "SRC-NAC-SAVE-NYC-SPACES-PRESS-INDEX",
+    "SRC-NAC-FAIR-RENT-NYC-PRESS-INDEX-2021"
+  ]);
+  const articleMemberships = pressIntake.flatMap((item) =>
+    item.sourceIds.filter((sourceId) => !indexIds.has(sourceId))
+  );
+
+  assert.equal(pressIntake.length, 4);
+  assert.equal(articleMemberships.length, 45);
+  assert.equal(new Set(articleMemberships).size, 44);
+
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NAC-CAMPAIGN-PRESS-CLOSE-READ"
+  );
+  assert.deepEqual(new Set(task.sourceIds), new Set(articleMemberships));
+
+  const assertionSourceIds = new Set(
+    knowledgeBank.sourceAssertions.map((assertion) => assertion.sourceId)
+  );
+  for (const sourceId of articleMemberships) {
+    assert.equal(assertionSourceIds.has(sourceId), true, `${sourceId} lacks decomposition`);
+  }
+});
+
 test("an intake-linked source without decomposition fails KB-003", () => {
   const candidate = structuredClone(knowledgeBank);
   const sourceId = candidate.intake[0].sourceIds[0];

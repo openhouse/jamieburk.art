@@ -138,6 +138,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
 
+## nyc-artist-coalition-campaign-press-corpus - Campaign press corpus
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public sources
+**Public wording:** Four NYC Artist Coalition campaign press indexes preserve 45 listed references representing 44 distinct article URLs.
+**Detailed public-safe wording:** The Let NYC Dance, Save NYC Spaces, Talks Not Raids, and archived FairRentNYC press sections assemble public context spanning Cabaret Law repeal, nightlife governance, MARCH enforcement, storefront vacancy, and Commercial Rent Stabilization.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Makes the breadth of the public record reusable without overwhelming the portfolio page or treating campaign-curated links as automatic article-level proof.
+**Guardrail:** Say press-index entries or listed references. Do not call every item an endorsement, a Jamie profile, or independent proof of campaign causation; close-read an article before promoting its specific claims.
+**Do not say:** Forty-five outlets endorsed Jamie; every article is about Jamie; the press corpus proves Jamie caused the policy outcomes; every historical article remains live.
+**Protected boundaries:** Private press correspondence, unpublished pitches, private analytics, and unapproved collaborator attribution stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
