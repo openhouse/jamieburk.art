@@ -100,6 +100,67 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-PROJECT-MARK",
+      "title": "CallNYC project mark",
+      "organization": "CallNYC",
+      "kind": "promotional-graphic",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://github.com/openhouse/CallNYC/blob/main/android-icon-192x192.png",
+      "assetUrl": "https://raw.githubusercontent.com/openhouse/CallNYC/main/android-icon-192x192.png",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CallNYC project mark preserved in the public source repository.",
+      "publicNote": "The mark documents the independent prototype's public identity. It does not establish official New York City Council affiliation or current-service status.",
+      "doesNotEstablish": [
+        "official New York City Council ownership",
+        "official affiliation",
+        "formal submission status",
+        "current resident-service status"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Reports Jamie's fire-code study groups, City Hall repeal advocacy, NYC Artist Coalition identification, and public safety analysis.",
+      "doesNotEstablish": [
+        "Jamie solely caused repeal",
+        "Jamie solely created NYC Artist Coalition",
+        "Jamie created the Office of Nightlife",
+        "every venue's safety experience"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "Community profile connecting Jamie and Julia to NYC Artist Coalition advocacy, the Cabaret Law campaign, an Office of Nightlife town hall, Sunday Dinner, and WOW List.",
+      "doesNotEstablish": [
+        "sole causation of Cabaret Law repeal",
+        "Jamie's causal role in creating the Office of Nightlife",
+        "attendance totals",
+        "sole ownership of collective projects"
+      ]
     }
   ],
   "claims": [
@@ -299,6 +360,102 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-PROJECT-MARK",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "photo-caption",
+          "text": "The public source repository preserves this project mark from the archived CallNYC prototype.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-PROJECT-MARK",
+          "relationship": "direct-support",
+          "supports": [
+            "visible project mark",
+            "CALL NYC wording",
+            "public repository preservation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe this as the independent prototype's project mark, not evidence of Council ownership or affiliation."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public reporting from 2017 documents Jamie organizing fire-code study groups for DIY venues and rallying at City Hall for full repeal of the Cabaret Law.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie organized fire-code study groups",
+            "Jamie rallied at City Hall for full repeal",
+            "Jamie spoke as part of NYC Artist Coalition",
+            "Jamie's stated safety analysis"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Present repeal as collective advocacy and legislative action.",
+        "Attribute the safety analysis to Jamie rather than presenting it as a comprehensive venue survey."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-CABARET-TOWN-HALL",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A community profile also documented Jamie and Julia working through NYC Artist Coalition on Cabaret Law repeal and inviting residents to a September 28 town hall for dialogue with the new Office of Nightlife.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and Julia's NYC Artist Coalition participation",
+            "Cabaret Law repeal advocacy",
+            "September 28 town hall invitation",
+            "dialogue with the new Office of Nightlife"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The source documents participation and public invitation, not sole creation of the Office or town hall outcomes."
+      ]
     }
   ],
   "pages": [
@@ -362,6 +519,32 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+      ],
+      "occurrences": [
+        {
+          "id": "cabaret-safety-organizing",
+          "claimId": "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"
+          ]
+        },
+        {
+          "id": "cabaret-town-hall",
+          "claimId": "CLM-NYCAC-CABARET-TOWN-HALL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
           ]
         }
       ]

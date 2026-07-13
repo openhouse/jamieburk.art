@@ -1,6 +1,49 @@
-import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import { historicalKnowledge } from "./historical-knowledge.ts";
+import { proofCoverageTargets } from "./proof-coverage.ts";
+import { knowledgeBankSchema } from "./schema.ts";
 
 const knowledgeBankInput = {
+  intakeItems: [
+    {
+      id: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      kind: "photo-lead",
+      title: "Digital District participant photograph lead",
+      submittedAt: "2026-07-12",
+      submittedBy: "Jamie Burkart and photo-editor review",
+      projectIds: ["callnyc"],
+      reason: "Preserve a visual lead whose placard text may clarify the hackathon's breakout structure without treating the photograph as self-interpreting or cleared for publication.",
+      visibility: "protected",
+      disposition: "protected",
+      sourceIds: ["SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"],
+      observationIds: ["OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD"],
+      researchInquiryIds: ["INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO"],
+      boundaries: [
+        "Retain only public-safe visual metadata in the repository; the image, identities, and private locator stay outside the public web bundle.",
+        "Publication requires separate photographer, rights, represented-people, crop, and editorial review."
+      ]
+    },
+    ...historicalKnowledge.intakeItems
+  ],
+  observations: [
+    {
+      id: "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
+      intakeId: "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      sourceId: "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      project: "callnyc",
+      kind: "visual-observation",
+      text: "A visible placard reads 'Digital District - Help improve City Council District office operations' in a collaborative breakout-table setting.",
+      locator: "Protected participant photograph; placard area only.",
+      status: "verified",
+      publicSafe: true,
+      claimIds: ["CLM-CALLNYC-DIGITAL-DISTRICT"],
+      researchInquiryIds: ["INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO"],
+      limitations: [
+        "The image does not establish the full event title, facilitator, agenda, participant identities, or consent to publish.",
+        "The approximate timestamp is not used to establish event hours."
+      ]
+    },
+    ...historicalKnowledge.observations
+  ],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -122,7 +165,8 @@ const knowledgeBankInput = {
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001",
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
-    }
+    },
+    ...historicalKnowledge.sources
   ],
   claims: [
     {
@@ -198,7 +242,7 @@ const knowledgeBankInput = {
       projections: [{ key: "photo-caption", text: "Participant photograph documenting the Digital District breakout table.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [{ sourceId: "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO", relationship: "private-support", supports: ["placard wording", "breakout-table context"], confidence: "high", renderCitation: false }],
       boundaries: ["Do not describe Digital District as the official event title.", "Do not publish the photograph before rights, consent, and editorial review."],
-      antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
+      antiClaims: ["The photograph identifies a facilitator.", "The photograph establishes participant consent.", "Digital District was the formal event title."], researchInquiryIds: ["INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO"], reviewedAt: "2026-07-12", reviewedBy: ["Jamie Burkart", "Codex archival review", "photo-editor feedback review"]
     },
     {
       id: "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
@@ -210,21 +254,50 @@ const knowledgeBankInput = {
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
-    }
+    },
+    ...historicalKnowledge.claims
   ],
-  researchInquiries: [{
-    id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
-    project: "callnyc",
-    question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
-    methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
-    runAt: "2026-07-11",
-    resultStatus: "not-recovered",
-    findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
-    limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
-    sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
-    publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
-    protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+  researchInquiries: [
+    {
+      id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      project: "callnyc",
+      question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+      methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
+      runAt: "2026-07-11",
+      resultStatus: "not-recovered",
+      findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
+      limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
+      sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
+      publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
+    },
+    {
+      id: "INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      project: "callnyc",
+      question: "What public-safe context can be established from the Digital District photograph, and what rights, consent, and corroboration are required before any public use?",
+      methods: [
+        "Recorded only visible placard wording and generic breakout-table context.",
+        "Separated direct visual observation from inferred identities, roles, agenda, and event hours.",
+        "Compared the possible claim against the existing CallNYC chronology while preserving a publication hold."
+      ],
+      runAt: "2026-07-12",
+      resultStatus: "partially-recovered",
+      findings: [
+        "The placard wording and collaborative breakout setting are visually recoverable.",
+        "The photograph is not cleared for public display and cannot establish identities, facilitation, consent, or a complete agenda."
+      ],
+      limitations: [
+        "Photographer and rights-holder approval are unresolved.",
+        "Represented people and any appropriate crop require consent review.",
+        "A photograph is evidence of what is visibly present, not a complete account of the event."
+      ],
+      sourceIds: ["SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"],
+      publicSummary: "A protected participant photograph preserves the visible Digital District breakout wording; public display remains on hold pending rights, consent, and editorial review.",
+      protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
+    },
+    ...historicalKnowledge.researchInquiries
+  ],
+  proofCoverageTargets: [...proofCoverageTargets],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -248,7 +321,18 @@ const knowledgeBankInput = {
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
+  }, {
+    id: "fair-rent-nyc",
+    surface: "/work/fair-rent-nyc",
+    sourceOrder: [
+      "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+    ],
+    occurrences: [
+      { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"] },
+      { id: "cabaret-town-hall", claimId: "CLM-NYCAC-CABARET-TOWN-HALL", projection: "case-study", sourceIds: ["SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] }
+    ]
   }]
-} satisfies KnowledgeBank;
+};
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);
