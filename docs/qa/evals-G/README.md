@@ -1,15 +1,15 @@
 # Recursive Portfolio Eval Run: feature/evals-G
 
-- Date: 2026-07-12
+- Date: 2026-07-13
 - Base: `origin/develop` at `2ec37fe6e47d11e600ede204d19a98f7d3cff139`
-- Reviewed application candidate: `b772a6f3`
-- Protocol: `portfolio-production-readiness`, version 2
+- Reviewed application candidate: `5d872a92`
+- Protocol: `portfolio-production-readiness`, version 3
 - Decision: `stop_human_blocked`
 
 ## Result
 
 The candidate clears the deterministic and LLM-scored portion of the
-application-share profile with a normalized weighted score of `0.8354` against
+application-share profile with a normalized weighted score of `0.8537` against
 a minimum of `0.80`. It is not yet application-share eligible because the
 profile requires Jamie's approval of the exact resume, contact path, and public
 claim set.
@@ -29,6 +29,13 @@ qualitative criteria, hard constraints, and production gates did not change.
 The unchanged code candidate then passed the complete production preflight
 twice under version 2.
 
+Version 3 adds `PR-015`, a blocking Chad-lens criterion: can a warm referrer
+send the portfolio to a hiring manager with one accurate sentence and no
+apology? The initial substantive blind panel scored the prior projection
+`3, 4, 3` (median `3`). One bounded iteration moved linked, actor-led approved
+proof directly beneath the hero and strengthened two featured summaries. Two
+unchanged-candidate confirmation panels then scored `4, 4, 4` and `4, 4, 4`.
+
 ## Scorecard
 
 | Eval | Baseline | Final | State |
@@ -47,11 +54,13 @@ twice under version 2.
 | PR-012 Exact-candidate approval | Not observed | Not observed | Human decision remains |
 | PR-013 AI and memory proof | 2 | 4 | Improved |
 | PR-014 Application packet | 1 | 2 | Production URL check remains |
+| PR-015 Chad-lens professional legibility | 3 | 4 | Blocking pass; two consecutive three-judge medians of 4 |
 
 The final application profile includes `PR-001` through `PR-007`, `PR-009`,
-`PR-010`, `PR-013`, and `PR-014`; its included weights total `82`. The weighted
-points are `68.5`, yielding `68.5 / 82 = 0.8354`. The all-eval production score
-is `0.765`, before the unsatisfied launch and human-approval gates.
+`PR-010`, `PR-013`, `PR-014`, and `PR-015`; its included weights total `82`.
+The weighted points are `70`, yielding `70 / 82 = 0.8537`. The all-eval
+production score is `0.78`, before the unsatisfied launch and human-approval
+gates.
 
 ## Changes Accepted
 
@@ -68,26 +77,31 @@ is `0.765`, before the unsatisfied launch and human-approval gates.
 8. Reduced repeated public governance layers in case-study presentation.
 9. Aligned sitemap and route-specific indexing behavior, preserving `noindex`
    only on the phone-bearing resume PDF.
+10. Added and satisfied a blocking Chad-lens eval by placing five linked,
+    actor-led approved proofs directly beneath the hero and joining action,
+    usable result, consequence, and calibrated shared causality.
 
 ## Verification
 
 - Complete production preflight: passed twice on unchanged candidate
 - Citation tests: 9 passed
-- Portfolio eval schema tests: 8 passed
-- Application contract tests: 13 passed
+- Portfolio eval schema tests: 9 passed
+- Application contract tests: 14 passed
 - TypeScript, ESLint, Next.js production build: passed
 - Knowledge-bank and public-safety checks: passed with 10 intentional careful-
   claim guardrail warnings
 - Production Docker image: `jamieburk-art:evals-g`
-- Production container: `e2b054109004a5e773eab60c80b14b98891c21837454b1a104fca67982d1b1a2`
+- Production container: `55382ebcdb542c65f9dc33b6e453c209651d25df8c7a6eaccb243b529ba86498`
 - Canonical route smoke: 14 of 14 passed
 - Responsive matrix: 14 routes at 320, 375, 768, and 1280 pixels; 56 of 56
   passed with no overflow, duplicate IDs, broken fragments, or console errors
 - Production health, robots, sitemap, HTML resume, and PDF headers: passed
+- PR-015 blind panels: baseline median 3; two consecutive final medians of 4
 
 ## Visual Evidence
 
 - [Homepage, 1280 pixels](./homepage-1280.png)
+- [Homepage, 320 pixels](./homepage-320.png)
 - [Technical Operations, 320 pixels](./technical-operations-320.png)
 - [Source-Backed Team Memory, 320 pixels](./source-backed-memory-320.png)
 
