@@ -426,6 +426,35 @@
       ]
     },
     {
+      "id": "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I co-led planning and public-benefit documentation for the proposed mixed-use rehabilitation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "This is approved resume-backed role language; municipal records separately corroborate the proposal and presenter details, not the complete division of labor."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-PROPOSAL-2019",
       "status": "confirmed-with-boundary",
       "projections": [

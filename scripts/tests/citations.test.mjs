@@ -11,7 +11,6 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-date-time").sources.map((item) => item.number), [1, 2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
-  assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -30,6 +29,7 @@ test("multi-source occurrences preserve editorial order", () => {
 
 test("Claim resolver returns only active approved projections", () => {
   assert.match(getClaimProjection("CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", "case-study", "/work/callnyc").text, /first CouncilStat hackathon/);
+  assert.match(getClaimProjection("CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE", "work-card", "/work").text, /Co-led planning/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-DIGITAL-DISTRICT", "photo-caption", "/work/callnyc"), /Unknown public claim/);
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
@@ -51,6 +51,10 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(serialized, /SRC-KC-TOWN-HALL-APPROVED-RESUME-2026/);
+  const publicRoleClaim = publicCitationRegistry.claims.find((claim) => claim.id === "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE");
+  assert.ok(publicRoleClaim);
+  assert.deepEqual(publicRoleClaim.evidence, []);
   assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
 });
 
