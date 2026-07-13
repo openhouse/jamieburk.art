@@ -15,7 +15,7 @@ an individual post.
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Fair Rent NYC | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
-| WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Historical posts recovered; current account scope not comprehensively reverified |
+| WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Two November 2016 posts recovered through public oEmbed; current account scope not comprehensively reverified |
 
 No dedicated project X account was recovered in this pass for Harry J. Epstein,
 196 / Sunday Dinner, KC Town Hall, or Source-Backed Team Memory. That means "not

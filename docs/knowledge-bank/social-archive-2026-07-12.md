@@ -46,6 +46,21 @@ and Ydanis Rodriguez. Those posts are project-authored mentions with small
 captured reaction totals; they do not identify the reacting accounts and are
 not counted as Council-member engagement.
 
+## WOWList Inventory
+
+The bounded pass recovered two readable historical posts from @wowlist:
+
+- [A November 9, 2016 post](https://x.com/wowlist/status/796473557387575297)
+  distributed a WOWList route for marches across the United States.
+- [A November 14, 2016 post](https://x.com/wowlist/status/798274424763981824)
+  invited people to add events and receive updates about marches, meetings, and
+  local connection. Wayback also preserves this post.
+
+The CallNYC profile capture shows CallNYC reposting both posts. This is useful
+evidence of cross-project continuity among public identities Jamie established.
+Two surviving posts are not an account inventory, audience measure, adoption
+count, or basis for attributing individual authorship.
+
 ## NYC Artist Coalition Inventory
 
 The readable @NYCArtC corpus spans March 2017 through February 2023. Its 279
@@ -111,6 +126,8 @@ argument.
 - Wayback coverage is selective, and X oEmbed does not expose a complete reply,
   quote, repost, like, or impression history.
 - The CallNYC capture contains only the timeline segment loaded at capture time.
+- The authenticated X browser context was not programmatically readable in this
+  run; account-level searches remain a held method rather than hidden evidence.
 - Post-level authorship cannot be inferred from a shared account.
 - Exact Council engagement requires account exports or another reproducible
   full-history corpus plus a date-appropriate roster of Council handles.

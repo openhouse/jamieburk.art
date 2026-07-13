@@ -128,7 +128,9 @@ const socialArchiveSourceIds = [
   "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018",
   "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026",
   "SRC-SOCIAL-NYCAC-LINK-CENSUS-2026",
-  "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025"
+  "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025",
+  "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
+  "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016"
 ];
 
 const socialArchiveIntakeIds = [
@@ -719,6 +721,22 @@ const criteria = [
         inquiry.findings.some((item) => /193 unique/i.test(item)) &&
         inquiry.limitations.some((item) => /Wayback coverage is selective/i.test(item)) &&
         inquiry.limitations.some((item) => /post-level authorship cannot be inferred/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "social-account-inventory-coverage",
+    label: "Every recovered canonical project account has bounded source and reading coverage",
+    pass: (() => {
+      const registry = readFileSync("docs/knowledge-bank/social-account-registry.md", "utf8");
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-PROJECT-SOCIAL-ARCHIVE-2026"
+      );
+      return Boolean(
+        /@CallNYCapp/.test(registry) &&
+        /@NYCArtC/.test(registry) &&
+        /@wowlist/.test(registry) &&
+        inquiry?.findings.some((item) => /Two recovered @wowlist posts/i.test(item))
       );
     })()
   },

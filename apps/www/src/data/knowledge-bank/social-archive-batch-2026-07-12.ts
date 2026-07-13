@@ -351,6 +351,54 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
       ]
     },
     {
+      id: "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
+      title: "WOWList nationwide-marches post",
+      organization: "WOWList",
+      kind: "institutional-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-11-09",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/wowlist/status/796473557387575297",
+      preferredPublicUrl: "canonical",
+      publicCitation: "WOWList nationwide-marches post, November 9, 2016.",
+      supportsGenerally: [
+        "the historical @wowlist account distributed a nationwide event-discovery route",
+        "the post framed the project as public coordination infrastructure for collective action"
+      ],
+      doesNotEstablish: [
+        "a complete account history",
+        "the number of events or cities represented",
+        "individual post authorship",
+        "audience reach or event attendance"
+      ]
+    },
+    {
+      id: "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016",
+      title: "WOWList participation and updates post",
+      organization: "WOWList",
+      kind: "institutional-social-post",
+      visibility: "public",
+      preservationStatus: "live-and-archived",
+      publishedAt: "2016-11-14",
+      accessedAt: "2026-07-12",
+      canonicalUrl: "https://x.com/wowlist/status/798274424763981824",
+      archiveUrl:
+        "https://web.archive.org/web/20200626201704/https://twitter.com/wowlist/status/798274424763981824",
+      preferredPublicUrl: "canonical",
+      publicCitation: "WOWList participation and updates post, November 14, 2016.",
+      supportsGenerally: [
+        "the historical account invited people to add events and receive updates",
+        "the project connected marches, meetings, and local connection through a shared public identity"
+      ],
+      doesNotEstablish: [
+        "a complete account history",
+        "the number of contributors, events, or cities",
+        "individual post authorship",
+        "audience reach or sustained adoption"
+      ]
+    },
+    {
       id: "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026",
       title: "NYC Artist Coalition social-post corpus research run",
       kind: "research-run",
@@ -726,6 +774,7 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "Inspected a July 11 rendered CallNYC profile capture and recovered public status URLs from PDF link annotations.",
         "Queried the Internet Archive CDX index for distinct @NYCArtC status URLs.",
         "Requested public X oEmbed metadata for 286 distinct archived status URLs; 279 returned readable post metadata.",
+        "Queried Wayback CDX and public X oEmbed for the historical @wowlist account and recovered two readable November 2016 posts.",
         "Resolved all 193 unique short links in the readable @NYCArtC corpus and classified campaign, government, reporting, resource, and platform destinations.",
         "Reviewed the City of New York CreateNYC Twitter-data appendix and published reporting that reproduces Council-member posts."
       ],
@@ -738,7 +787,8 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "All 193 unique short links resolved; 59 distinct non-campaign external resource destinations across 42 domains were identified for deeper reading.",
         "Public evidence documents a recovered minimum of three then-sitting Council member accounts directly engaging with CallNYC or NYC Artist Coalition.",
         "The CreateNYC appendix preserves NYC Cultural Affairs crediting @NYCArtC with gathering a large crowd for a DIY-spaces discussion.",
-        "The shared @NYCArtC identity remained publicly active through at least August 2025."
+        "The shared @NYCArtC identity remained publicly active through at least August 2025.",
+        "Two recovered @wowlist posts show the project distributing nationwide marches and inviting people to add events and receive updates about marches, meetings, and local connection."
       ],
       limitations: [
         "No official X account export or complete authenticated search corpus was available to this run.",
@@ -756,10 +806,12 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
         "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018",
         "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026",
         "SRC-SOCIAL-NYCAC-LINK-CENSUS-2026",
-        "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025"
+        "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025",
+        "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
+        "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016"
       ],
       publicSummary:
-        "A bounded social-archive pass recovered three canonical project identities, 279 readable @NYCArtC posts from 286 archived URLs, 193 resolved source links, and a minimum of three direct Council-member account engagements while preserving the incomplete-coverage boundary.",
+        "A bounded social-archive pass recovered three canonical project identities, 279 readable @NYCArtC posts from 286 archived URLs, two readable historical @wowlist posts, 193 resolved source links, and a minimum of three direct Council-member account engagements while preserving the incomplete-coverage boundary.",
       protectedLocatorId: "RESEARCH-PROJECT-SOCIAL-ARCHIVE-2026-001"
     }
   ]

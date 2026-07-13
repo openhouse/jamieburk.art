@@ -26,6 +26,8 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
         "Created a bounded account registry, recovered a 279-post readable NYC Artist Coalition corpus, resolved its public links, and promoted only minimum-count and continuity claims.",
       linkedRecordIds: [
         "INQ-PROJECT-SOCIAL-ARCHIVE-2026",
+        "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
+        "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016",
         "CLM-NYCAC-PUBLIC-IDENTITY-SYSTEM",
         "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
         "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM"
@@ -404,6 +406,62 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       entityIds: ["NYC-Artist-Coalition"],
       themeIds: ["identity-continuity", "resource-distribution"],
       candidateClaimIds: ["CND-NYCAC-SOCIAL-IDENTITY-CONTINUITY"]
+    },
+    {
+      id: "READ-SOCIAL-WOWLIST-MARCHES-POST-2016",
+      sourceId: "SRC-SOCIAL-WOWLIST-MARCHES-POST-2016",
+      readAt: "2026-07-12",
+      reader: "Codex source review",
+      assertions: [
+        {
+          id: "ASSERT-WOWLIST-SOCIAL-NATIONWIDE-ROUTE",
+          statement:
+            "The historical @wowlist account distributed a route for finding marches across the United States on November 9, 2016.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-WOWLIST-SOCIAL-ACTION-FRAME",
+          statement:
+            "The post framed WOWList as infrastructure for collective action rather than only an event directory.",
+          confidence: "moderate",
+          publicSafe: true
+        }
+      ],
+      limitations: [
+        "One surviving post does not establish account completeness, event count, city count, attendance, reach, or individual authorship."
+      ],
+      entityIds: ["WOWList"],
+      themeIds: ["public-coordination", "event-discovery", "social-infrastructure"],
+      candidateClaimIds: []
+    },
+    {
+      id: "READ-SOCIAL-WOWLIST-PARTICIPATION-POST-2016",
+      sourceId: "SRC-SOCIAL-WOWLIST-PARTICIPATION-POST-2016",
+      readAt: "2026-07-12",
+      reader: "Codex source review",
+      assertions: [
+        {
+          id: "ASSERT-WOWLIST-SOCIAL-PARTICIPATION",
+          statement:
+            "The historical account invited people to add events and receive updates about marches, meetings, and local connection.",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "ASSERT-WOWLIST-SOCIAL-CROSS-PROJECT",
+          statement:
+            "The bounded CallNYC profile capture shows CallNYC reposting this WOWList post, connecting two project identities Jamie established.",
+          confidence: "high",
+          publicSafe: true
+        }
+      ],
+      limitations: [
+        "The surviving post and one cross-project repost do not establish a complete account history, sustained adoption, reach, or individual authorship."
+      ],
+      entityIds: ["WOWList", "CallNYC"],
+      themeIds: ["participatory-infrastructure", "cross-project-continuity"],
+      candidateClaimIds: []
     },
     {
       id: "READ-SOCIAL-CITY-LIMITS-CRS-COVID-2020",
