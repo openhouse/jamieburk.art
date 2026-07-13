@@ -23,8 +23,8 @@ claim beyond the wording and guardrails here.
 **Status:** Ready  
 **Support level:** Strong  
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary  
-**Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
-**Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
+**Public wording:** Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.
+**Detailed public-safe wording:** Jamie maintained and improved the company's web and e-commerce presence, coordinated incremental releases, and translated legacy operating knowledge into searchable content, analytics, marketing, and operational workflows while preserving its public voice.
 **Where to project:** Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
 **Guardrail:** Use stewardship and contribution language.  

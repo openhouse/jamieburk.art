@@ -5,7 +5,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 ## Strong Public-Safe Claims
 
 - 14+ years creating operating structure across civic, cultural, small-business, and technical environments.
-- Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.
+- Led long-running web, e-commerce, analytics, marketing, content, and operational workflow improvements that helped an 80+ year-old industrial business adapt online.
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.

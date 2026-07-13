@@ -22,48 +22,49 @@ const proofMap = [
     project: "HJE",
     href: "/work/harry-j-epstein",
     proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
+      "Jamie led long-running e-commerce and operations improvements that helped a legacy industrial business adapt online while preserving its voice."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "Jamie built and stewarded shared campaign memory so collaborators could recover decisions, track next steps, and protect private context."
   },
   {
     project: "CallNYC",
     href: "/work/callnyc",
     proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
+      "Jamie translated constituent-services data into issue pathways and next-step guidance residents could use."
   },
   {
     project: "WOWList",
     href: "/work/wowlist",
     proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
+      "Jamie co-built a community-calendar platform that helped local arts and music organizers distribute events across roughly 35 city ecosystems."
   },
   {
     project: "196 / Sunday Dinner",
     href: "/work/196-sunday-dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "Jamie created onboarding, hosting, facilitation, and continuity systems supporting 300+ gatherings and 20+ resident artists."
   },
   {
     project: "KC Spaces Fund",
     href: "/work/technical-operations#public-facing-launch-and-adoption",
     proof:
-      "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
+      "Jamie built behind-the-scenes web infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
   },
   {
     project: "KC Town Hall",
     href: "/work/kc-town-hall",
-    proof: "long-horizon project planning and public-benefit documentation."
+    proof:
+      "Jamie co-led redevelopment planning and public-benefit documentation for the proposed adaptive reuse of a long-vacant historic building."
   },
   {
     project: "Source-Backed Team Memory",
     href: "/lab/source-backed-team-memory",
     proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
+      "Jamie is developing a bounded lab method to preserve decision lineage, onboarding context, and human-reviewed operating memory."
   }
 ];
 
