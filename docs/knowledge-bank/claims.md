@@ -157,18 +157,19 @@ claim beyond the wording and guardrails here.
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
+**Structured claim IDs:** `CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING`
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public-safe archive summary / public profile / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Detailed public-safe wording:** Jamie and Julia Fredenberg hosted Sunday Dinner weekly and opened it to the community; Jamie made the recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
+**Guardrail:** The Greene Hill profile supports the weekly, shared-hosting, and open-community description. It does not establish the 300+ gathering or 20+ resident-artist counts. Keep the page summary-only and avoid turning community trust work into spectacle.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -187,18 +188,19 @@ claim beyond the wording and guardrails here.
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
+**Structured claim IDs:** `CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE`
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. A Kansas City board unanimously recommended $490,539 for the project in 2019; public records later show the award was withdrawn and the unused funds reappropriated in 2024.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The record preserves the complete public funding lifecycle rather than stopping at the favorable recommendation.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Attribute the 2019 recommendation and 2024 withdrawal to their respective public records. Do not infer why the award was withdrawn or imply the funds were disbursed.
+**Do not say:** Final funding received; reason for withdrawal; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 
@@ -271,11 +273,11 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.
 **Where to project:** Knowledge Bank only while route, roles, artifacts, and compositional relevance continue to develop.
 **Why it matters:** Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.
-**Guardrail:** Use collaborative language, name Suzanne Hogan for letter-based outreach, and do not claim a precise Gulf endpoint from the reviewed sources.
-**Do not say:** Jamie alone built and operated the raft; the reviewed sources prove a precise Gulf landing point; Jamie solely authored every Great Accommodations component.
+**Guardrail:** Use collaborative language, name Suzanne Hogan for letter-based outreach, and distinguish the broadly established Gulf of Mexico endpoint from an unrecovered exact landing place.
+**Do not say:** Jamie alone built and operated the raft; the reviewed sources prove the exact Gulf landing place; Jamie solely authored every Great Accommodations component.
 **Protected boundaries:** Unapproved participant identities, private host records, unapproved photographs, and incomplete route and responsibility data stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-13
 
 ## nyca-cabaret-law-direct-organizing - Direct Cabaret Law organizing
 
@@ -295,19 +297,67 @@ claim beyond the wording and guardrails here.
 
 ## nyca-office-nightlife-advocacy - Office of Nightlife advocacy
 
-**Status:** Pending
-**Support level:** Moderate
+**Status:** Careful
+**Support level:** Strong
 **Evidence class:** Public source / Jamie review confirmation
 **Structured claim IDs:** `CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY`
-**Public wording:** NYC Artist Coalition advocated for an Office of Nightlife responsive to small cultural spaces and organized a public town hall; Jamie's specific role remains under research.
-**Detailed public-safe wording:** Public sources establish the coalition's advocacy and Save NYC Spaces town hall; Jamie's specific contribution remains under research.
-**Where to project:** Knowledge Bank only; no public website surface until the responsibility map is stronger.
-**Why it matters:** Retains a major role hypothesis without promoting it ahead of a responsibility map.
-**Guardrail:** Keep internal until event production, authored materials, public credits, or collaborator confirmation establish Jamie's role.
+**Public wording:** Publicly invited participation in NYC Artist Coalition dialogue with the new Office of Nightlife and spoke at a coalition town hall about making the Office responsive to small and diverse cultural spaces.
+**Detailed public-safe wording:** In 2017, Jamie publicly invited community participation in coalition dialogue with the new Office of Nightlife and was identified among coalition speakers at an Office-focused town hall. The advocacy and event were collective; his complete production role remains under research.
+**Where to project:** FairRentNYC case study.
+**Why it matters:** Makes Jamie's documented public role visible without converting participation into sole production or policy causality.
+**Guardrail:** Claim Jamie's public invitation and speaking participation directly; keep overall production, coalition influence, and policy outcomes collective.
 **Do not say:** Jamie alone created the Office of Nightlife; NYC Artist Coalition authored the Office legislation; the town hall caused the Office to be enacted; every coalition recommendation was adopted.
 **Protected boundaries:** Private production records, private coalition strategy, unapproved collaborator attribution, and private correspondence stay offline.
-**Review owner:** Jamie / research open
-**Last reviewed:** 2026-07-12
+**Review owner:** Jamie / production-role research open
+**Last reviewed:** 2026-07-13
+
+## nyca-commercial-rent-testimony-2018 - Council testimony for commercial rent protections
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-NYCA-COMMERCIAL-RENT-TESTIMONY-2018`
+**Public wording:** Testified before the New York City Council's Small Business Committee as a NYC Artist Coalition member, connecting commercial affordability to cultural-space safety and calling for fair leases and commercial rent protections.
+**Detailed public-safe wording:** In October 2018, Jamie testified that cultural spaces are small businesses and commercial affordability is a safety issue, then asked the Council to support fair leases and the Small Business Jobs Survival Act.
+**Where to project:** FairRentNYC case study and Technical Operations.
+**Why it matters:** Establishes a documented throughline from Jamie's cultural-space advocacy to later commercial-rent research and coalition systems work.
+**Guardrail:** Describe Jamie's testimony and advocacy directly; do not imply legal authorship, legal advice, passage, or sole policy causality.
+**Do not say:** Jamie authored the Small Business Jobs Survival Act; Jamie provided legal advice; Jamie's testimony caused the bill to pass; the 2018 and current campaigns are the same project.
+**Protected boundaries:** Private coalition strategy, legal-review materials, private correspondence, and unapproved collaborator records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## kc-eighth-street-tunnel-public-program - Participatory public history
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-KC-EIGHTH-STREET-TUNNEL-PUBLIC-PROGRAM`
+**Public wording:** Led a downtown scavenger-hunt format and hosted a film screening in Kansas City's historic 8th Street Tunnel, connecting public art, transit history, and shared-space advocacy.
+**Detailed public-safe wording:** KCUR's retrospective identifies Jamie as the scavenger-hunt leader and records the three-film 2006 screening, while describing his educational framing around downtown history and the tunnel's public meaning.
+**Where to project:** Knowledge Bank only until the broader participatory-practice story calls for it.
+**Why it matters:** Shows Jamie designing accessible public participation around overlooked civic infrastructure and translating place history into a shared experience.
+**Guardrail:** Do not imply ownership, current access, current safety, or official long-term authorization.
+**Do not say:** Jamie opened the tunnel to the public; the tunnel is currently safe or open; event photographs are approved.
+**Protected boundaries:** Unapproved participant identities, photographs, current access details, and private event records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## claudette-ar-collaboration - Collaborative augmented-reality experience
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-CLAUDETTE-AR-COLLABORATION`
+**Public wording:** Collaborated with Michael Rees on an augmented-reality experience for MakeUseVisible Munich and co-produced its source video with Anne Dufy Burkart and Julia Fredenberg.
+**Detailed public-safe wording:** Michael Rees's project page credits Jamie as an augmented-reality collaborator and separately credits Jamie, Anne Dufy Burkart, and Julia Fredenberg with producing the source video shot in 2017.
+**Where to project:** Knowledge Bank only until the technical stack and exhibition date are recovered.
+**Why it matters:** Adds a documented collaborative technology project at the intersection of performance, moving image, and augmented reality while preserving the distinct production credits.
+**Guardrail:** Preserve collaborator credits; do not claim sole AR implementation or sole video production.
+**Do not say:** Jamie solely built the AR experience; Jamie solely produced the video; the video is cleared for publication.
+**Protected boundaries:** Unapproved source video, unrecovered technical records, private production correspondence, and unapproved images stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
 
 ## talks-not-raids-transparency-to-phaseout - Talks Not Raids and MARCH reform
 

@@ -410,7 +410,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-07"
+    structuredClaimIds: ["CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -465,18 +466,22 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 public-funding recommendation and City appropriation; the project later withdrew before the unused funds were reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records preserve both the award and the later withdrawal.",
+    sourceBasis: "Kansas City CCED Board minutes, Kansas City Ordinance 240317, approved resume language, and public-safe project context.",
+    sourceNote:
+      "The CCED Board unanimously recommended $490,539 and the City appropriated the award. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "State the award and later withdrawal together. Do not imply funds were disbursed, construction was completed, or the public record explains why the project withdrew.",
     doNotSay: [
-      "Final funding received",
-      "Current property status",
+      "KC Town Hall received and spent $490,539",
+      "The redevelopment was completed",
+      "Jamie alone developed the proposal",
+      "Why the project withdrew",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded recommendation and appropriation"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -488,7 +493,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    structuredClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",
@@ -620,16 +626,16 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie conceived a collaborative recycled-material raft expedition and later spearheaded Great Accommodations, inviting people in river cities to contribute stories and imagine shared civic life on the water.",
     sourceBasis:
-      "Independent 2007 Pitch reporting and Charlotte Street's 2009 institutional event record.",
+      "Independent 2007 and 2009 Pitch reporting and Charlotte Street's 2009 institutional event record.",
     sourceNote:
-      "The sources support a four-month journey down the Missouri and Mississippi until the water tasted salty; the precise endpoint remains open.",
+      "The sources support a four-month journey from Kansas City to the Gulf of Mexico; the exact landing place remains open.",
     whyItMatters:
       "Shows a long practice of using technical making, public programs, and participatory systems to reconnect people with shared civic infrastructure.",
     guardrail:
-      "Use collaborative language, name Suzanne Hogan for letter-based outreach, and do not claim a precise Gulf endpoint from the reviewed sources.",
+      "Use collaborative language, name Suzanne Hogan for letter-based outreach, and distinguish the broadly established Gulf endpoint from an unrecovered exact landing place.",
     doNotSay: [
       "Jamie alone built and operated the raft",
-      "The reviewed sources prove a precise Gulf landing point",
+      "The reviewed sources prove the exact Gulf landing place",
       "Jamie solely authored every Great Accommodations component"
     ],
     protectedBoundaries: [
@@ -645,7 +651,7 @@ export const proofClaims: ProofClaim[] = [
       "CLM-WATERWAYS-RAFT-EXPEDITION",
       "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-CITIES"
     ],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyca-cabaret-law-direct-organizing",
@@ -658,7 +664,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "In 2017, Jamie organized fire-code study groups for DIY venues, rallied at City Hall, and testified before the City Council as part of the collective campaign to repeal the Cabaret Law.",
     sourceBasis:
-      "Gothamist reporting and the official New York City Council hearing transcript.",
+      "Gothamist and Mixmag reporting, the Greene Hill Food Co-op interview, and the official New York City Council hearing transcript.",
     whyItMatters:
       "Makes Jamie's direct organizing legible while keeping the successful repeal a collective advocacy and legislative outcome.",
     guardrail:
@@ -679,24 +685,126 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["nyc-artist-coalition", "let-nyc-dance"],
     relatedCapabilities: ["coalition-operations", "public-testimony", "policy-communications"],
     structuredClaimIds: ["CLM-NYCA-CABARET-LAW-DIRECT-ORGANIZING"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "nyca-commercial-rent-testimony-2018",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Testified before the New York City Council's Small Business Committee as a NYC Artist Coalition member, connecting commercial affordability to cultural-space safety and calling for fair leases and commercial rent protections.",
+    shortWording: "Council testimony for commercial rent protections",
+    detailedPublicWording:
+      "In October 2018, Jamie testified as a NYC Artist Coalition member that cultural spaces are small businesses and that commercial affordability is a safety issue, then asked the Council to support fair leases and the Small Business Jobs Survival Act.",
+    sourceBasis:
+      "Official New York City Council Committee on Small Business hearing transcript, October 22, 2018.",
+    whyItMatters:
+      "Establishes a documented throughline from Jamie's cultural-space advocacy to his later commercial-rent research and coalition systems work.",
+    guardrail:
+      "Describe Jamie's testimony and advocacy directly; do not imply legal authorship, legal advice, passage, or sole policy causality.",
+    doNotSay: [
+      "Jamie authored the Small Business Jobs Survival Act",
+      "Jamie provided legal advice",
+      "Jamie's testimony caused the bill to pass",
+      "The 2018 and current campaigns are the same project"
+    ],
+    protectedBoundaries: [
+      "Private coalition strategy",
+      "Legal-review materials",
+      "Private correspondence",
+      "Unapproved collaborator records"
+    ],
+    surfaces: ["case-study", "technical-operations"],
+    relatedProjects: ["nyc-artist-coalition", "fair-rent-nyc"],
+    relatedCapabilities: ["public-testimony", "policy-communications", "stakeholder-context"],
+    structuredClaimIds: ["CLM-NYCA-COMMERCIAL-RENT-TESTIMONY-2018"],
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "kc-eighth-street-tunnel-public-program",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Led a downtown scavenger-hunt format and hosted a film screening in Kansas City's historic 8th Street Tunnel, connecting public art, transit history, and shared-space advocacy.",
+    shortWording: "Participatory public-history program in the 8th Street Tunnel",
+    detailedPublicWording:
+      "In 2006, Jamie led participants through downtown Kansas City and hosted a three-film screening in the historic 8th Street Tunnel, using an unusual public program to connect transit history with artistic and shared-space possibilities.",
+    sourceBasis:
+      "Independent KCUR reporting published September 15, 2016.",
+    whyItMatters:
+      "Extends Jamie's early record of designing participatory formats that help people encounter public infrastructure and imagine future uses.",
+    guardrail:
+      "Do not imply ownership, current access, current safety, or official long-term authorization; keep this bank-only until it fits a public composition.",
+    doNotSay: [
+      "Jamie opened the tunnel to the public",
+      "The tunnel is currently safe or open",
+      "Jamie owned or controlled the site",
+      "Event photographs are approved for publication"
+    ],
+    protectedBoundaries: [
+      "Unapproved participant identities",
+      "Unapproved photographs",
+      "Current access details",
+      "Private event records"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["participatory-public-practice"],
+    relatedCapabilities: ["public-programming", "participation-design", "public-history"],
+    structuredClaimIds: ["CLM-KC-EIGHTH-STREET-TUNNEL-PUBLIC-PROGRAM"],
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "claudette-ar-collaboration",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Collaborated with Michael Rees on an augmented-reality experience for MakeUseVisible Munich and co-produced its source video with Anne Dufy Burkart and Julia Fredenberg.",
+    shortWording: "Collaborative augmented-reality experience and source-video production",
+    detailedPublicWording:
+      "Jamie collaborated with Michael Rees on the AR experience and shared source-video production credit with Anne Dufy Burkart and Julia Fredenberg.",
+    sourceBasis:
+      "Michael Rees's public Claudette's Theatre on Wheels project page.",
+    whyItMatters:
+      "Adds a source-backed example of collaborative media implementation while preserving production and authorship boundaries.",
+    guardrail:
+      "Do not claim sole AR implementation or sole video production; recover the technical stack and exhibition date before public projection.",
+    doNotSay: [
+      "Jamie solely built the AR experience",
+      "Jamie solely produced the source video",
+      "The technical stack is recovered",
+      "The source video is cleared for publication"
+    ],
+    protectedBoundaries: [
+      "Unapproved source video",
+      "Unrecovered technical records",
+      "Private production correspondence",
+      "Unapproved images"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["claudette-theatre-on-wheels"],
+    relatedCapabilities: ["augmented-reality", "media-production", "collaboration"],
+    structuredClaimIds: ["CLM-CLAUDETTE-AR-COLLABORATION"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyca-office-nightlife-advocacy",
-    status: "pending",
-    supportLevel: "moderate",
+    status: "careful",
+    supportLevel: "strong",
     evidenceClass: ["public-source", "jamie-review-confirmation"],
     publicWording:
-      "NYC Artist Coalition advocated for an Office of Nightlife responsive to small cultural spaces and organized a public town hall; Jamie's specific role remains under research.",
+      "Publicly invited participation in NYC Artist Coalition dialogue with the new Office of Nightlife and spoke at a coalition town hall about making the Office responsive to small and diverse cultural spaces.",
     shortWording: "Office of Nightlife advocacy and public input",
     detailedPublicWording:
-      "Public sources establish the coalition's advocacy and Save NYC Spaces town hall; Jamie's specific contribution remains under research.",
+      "In 2017, Jamie publicly invited community participation in coalition dialogue with the new Office of Nightlife and was identified among coalition speakers at an Office-focused town hall. The advocacy and event were collective; his complete production role remains under research.",
     sourceBasis:
-      "NPR context, Village Voice town-hall reporting, coalition public records, and Jamie's public-safe recollection.",
+      "Greene Hill Food Co-op's member interview, Bedford + Bowery and Village Voice reporting, NPR context, and coalition public records.",
     whyItMatters:
-      "Retains a major role hypothesis without promoting it ahead of a responsibility map.",
+      "Makes Jamie's documented public role visible without converting participation into sole production or policy causality.",
     guardrail:
-      "Keep internal until event production, authored materials, public credits, or collaborator confirmation establish Jamie's role.",
+      "Claim Jamie's public invitation and speaking participation directly; keep overall production, coalition influence, and policy outcomes collective.",
     doNotSay: [
       "Jamie alone created the Office of Nightlife",
       "NYC Artist Coalition authored the Office legislation",
@@ -709,11 +817,11 @@ export const proofClaims: ProofClaim[] = [
       "Unapproved collaborator attribution",
       "Private correspondence"
     ],
-    surfaces: ["internal-only"],
+    surfaces: ["case-study"],
     relatedProjects: ["nyc-artist-coalition", "save-nyc-spaces"],
     relatedCapabilities: ["public-programming", "coalition-operations", "stakeholder-engagement"],
     structuredClaimIds: ["CLM-NYCA-OFFICE-NIGHTLIFE-ADVOCACY"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "talks-not-raids-transparency-to-phaseout",

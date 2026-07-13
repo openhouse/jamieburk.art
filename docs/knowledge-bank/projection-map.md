@@ -42,6 +42,7 @@ Use claims that directly support operating-backbone fit:
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
+- `nyca-commercial-rent-testimony-2018`
 
 ## Lab / Source-Backed Team Memory
 
@@ -63,8 +64,14 @@ current site:
 - `participatory-open-house-public-program`
 - `waterways-participatory-practice`
 - `nyca-cabaret-law-direct-organizing`
-- `nyca-office-nightlife-advocacy`
+- `kc-eighth-street-tunnel-public-program`
+- `claudette-ar-collaboration`
 - `talks-not-raids-transparency-to-phaseout`
+
+The Office of Nightlife claim now has a bounded active projection in the Fair
+Rent NYC case study: Jamie's documented public invitation and speaking role are
+stated directly, while creation of the office and the campaign's outcomes remain
+collective.
 
 Bank-only does not mean weak or unimportant. It means the current public
 argument does not yet require the claim, the claim is still maturing, or both.

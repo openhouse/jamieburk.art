@@ -36,6 +36,16 @@ Approved public artifact examples for this launch pass include:
 - The Village Voice's Save NYC Spaces town-hall reporting.
 - NYC Artist Coalition and Talks Not Raids public project archives.
 - The Mayor's Office 2023 MARCH phaseout announcement.
+- Greene Hill Food Co-op's 2017 interview with Jamie Burkart and Julia Fredenberg.
+- Save NYC Spaces public campaign archive.
+- Mixmag's September 2017 Cabaret Law hearing coverage.
+- Bedford + Bowery's October 2017 Office of Nightlife town-hall coverage.
+- New York City Council's October 2018 Small Business Committee transcript.
+- Kansas City CCED Board's June 2019 KC Town Hall records.
+- Kansas City Ordinance 240317 documenting the later KC Town Hall withdrawal.
+- KCUR's 2016 8th Street Tunnel reporting.
+- The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
+- Michael Rees's Claudette's Theatre on Wheels project page.
 
 ### Public-Safe Archive Summary
 

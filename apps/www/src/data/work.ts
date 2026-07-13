@@ -180,7 +180,7 @@ const workItemsInput = [
     summary:
       "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -189,7 +189,10 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyca-cabaret-law-direct-organizing",
+      "nyca-office-nightlife-advocacy",
+      "nyca-commercial-rent-testimony-2018"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -242,7 +245,9 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" },
+      { label: "2018 Council testimony", url: "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
@@ -263,12 +268,15 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "Documented public organizing and testimony for Cabaret Law repeal",
+      "Documented speaking participation in Office of Nightlife town halls",
+      "2018 City Council testimony connecting commercial affordability to cultural-space safety",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition, built public campaign websites, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -457,10 +465,13 @@ const workItemsInput = [
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
     capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
+    links: [
+      { label: "2017 Greene Hill profile", url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter" }
+    ],
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Greene Hill Food Co-op's 2017 member profile, public-safe aggregate history, and private records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -469,12 +480,13 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
+      "Weekly community-open Sunday dinners documented in a 2017 co-op profile",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A 2017 Greene Hill Food Co-op profile independently documents weekly Sunday dinners open to the community, co-hosted with Julia Fredenberg.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -487,7 +499,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 public-funding recommendation and City appropriation; the project later withdrew before the unused funds were reappropriated.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -510,12 +522,16 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      { label: "2019 CCED Board record", url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000" },
+      { label: "2024 withdrawal record", url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=" }
+    ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Kansas City CCED Board minutes, Kansas City Ordinance 240317, and public-safe project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus: "Project withdrawn; unused public funds were reappropriated in 2024.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -523,13 +539,14 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Unanimous $490,539 public funding recommendation and City appropriation",
+      "Documented withdrawal before unused funds were reappropriated"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal. The CCED Board unanimously recommended $490,539, the City appropriated the award, and the project later withdrew before the unused funds were reappropriated.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "The public records do not explain why the project withdrew or provide a complete responsibility map.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

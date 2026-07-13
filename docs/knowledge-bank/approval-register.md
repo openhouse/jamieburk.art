@@ -19,11 +19,14 @@ The repo is public. Approval here means approved for public-safe repository and 
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
-- KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- KC Town Hall funding: the unanimous $490,539 recommendation and City appropriation are public-record-backed; always state that the project later withdrew and the unused funds were reappropriated in 2024.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Open House / Shop Shows: source-backed and safe for the bank; preserve housemate and participant credit.
-- Waterways work: source-backed and safe for the bank with collaborative language; the exact raft endpoint remains open.
+- Waterways work: source-backed and safe for the bank with collaborative language; the Gulf of Mexico endpoint is recovered, while the exact landing place remains open.
 - Cabaret Law organizing: Jamie's fire-code study groups, City Hall rallying, and Council testimony are source-backed; repeal remains collective.
+- Office of Nightlife: Jamie's public invitation and speaking participation are source-backed; complete production responsibilities and policy causality remain open.
+- Commercial rent testimony: Jamie's October 2018 Council testimony is source-backed; legal authorship and policy causality are not.
+- Sunday Dinner: the weekly community-open format and Julia Fredenberg's co-host role are source-backed; aggregate 300+ scale remains separately supported.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -42,5 +45,5 @@ The repo is public. Approval here means approved for public-safe repository and 
 ## Research Before Public Projection
 
 - Jamie's complete instrumental role in creating NYC Artist Coalition.
-- Jamie's individual contribution to Office of Nightlife advocacy and Save NYC Spaces town-hall production.
+- Jamie's complete production contribution to Office of Nightlife advocacy and Save NYC Spaces town halls.
 - Jamie's individual role in Talks Not Raids and the causal pathway from advocacy to MARCH reform and phaseout.

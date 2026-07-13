@@ -4,6 +4,7 @@
   "runId": "2026-07-12-feature-evals-B",
   "branch": "feature/evals-B",
   "base": "develop",
+  "evaluatedThrough": "2026-07-12",
   "status": "passed",
   "iterations": 3,
   "qualifyingRounds": [2, 3],

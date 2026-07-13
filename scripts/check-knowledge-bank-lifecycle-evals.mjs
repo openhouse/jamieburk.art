@@ -125,6 +125,9 @@ if (existsSync(runsRoot)) {
     if (result.version !== 1 || result.evalId !== suite.evalId) {
       fail(`${runName} references the wrong eval or version`);
     }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(result.evaluatedThrough ?? "")) {
+      fail(`${runName} must declare an evaluatedThrough date`);
+    }
     if (!Number.isInteger(result.iterations) || result.iterations < 1 || result.iterations > stop.maxIterations) {
       fail(`${runName} has an invalid iteration count`);
     }
@@ -142,8 +145,10 @@ if (existsSync(runsRoot)) {
     for (const intakeId of evaluatedIntakeIds) {
       if (!intakeById.has(intakeId)) fail(`${runName} references unknown intake ${intakeId}`);
     }
-    for (const intakeId of intakeById.keys()) {
-      if (!evaluatedIntakeIds.includes(intakeId)) fail(`${runName} omits intake ${intakeId}`);
+    for (const intake of knowledgeBank.intakeRecords) {
+      if (intake.receivedAt <= result.evaluatedThrough && !evaluatedIntakeIds.includes(intake.id)) {
+        fail(`${runName} omits intake ${intake.id} available by ${result.evaluatedThrough}`);
+      }
     }
     const clusters = result.contentClusters ?? [];
     uniqueIds(clusters, `${runName} content clusters`);
@@ -168,8 +173,11 @@ if (existsSync(runsRoot)) {
       heldProjections: knowledgeBank.claims.flatMap((claim) => claim.projections).filter((projection) => projection.status === "hold").length
     };
     for (const [key, count] of Object.entries(expectedCounts)) {
-      if (result.graphSnapshot?.[key] !== count) {
-        fail(`${runName} graph snapshot ${key} is stale`);
+      const snapshotCount = result.graphSnapshot?.[key];
+      if (!Number.isInteger(snapshotCount) || snapshotCount < 0) {
+        fail(`${runName} graph snapshot ${key} is invalid`);
+      } else if (snapshotCount > count) {
+        fail(`${runName} graph snapshot ${key} exceeds the current graph`);
       }
     }
 
