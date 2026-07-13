@@ -82,4 +82,6 @@ function runCli() {
   if (!result.eligible) process.exit(1);
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1]).href) runCli();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  runCli();
+}
