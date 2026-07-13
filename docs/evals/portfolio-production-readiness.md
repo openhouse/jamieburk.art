@@ -41,6 +41,8 @@ A candidate is launch-eligible only when all of these conditions hold:
 - weighted score is at least `0.90`;
 - no individual eval scores below `3`;
 - the blind-reader comprehension median is at least `4`;
+- the Chad Lens professional-legibility median is at least `4`, with no reader
+  below `3`;
 - deterministic checks and the holdout regression pass;
 - Jamie has explicitly approved the exact production candidate.
 
@@ -82,6 +84,13 @@ Use three grader roles:
   evidence and returns only a score, pass/fail, concise rationale, and findings.
 - **Human approver:** public claims, collaborator-sensitive material, images,
   screenshots, contact information, resume artifact, and production cutover.
+
+The **Chad Lens judge panel** is a deliberately mixed blind-reader set: a
+human-resources gatekeeper, a public-sector generalist, and a technical delivery
+leader. They score whether the visible portfolio names Jamie's agency, the
+purpose of the work, and what became usable in language each audience can
+understand. They also check the opposite failure: cautious wording that erases
+documented stewardship or implementation responsibility.
 
 The optimizing agent must not grade its own patch. A holdout LLM judge receives
 only the frozen rubric, candidate URLs, and evidence bundle. It does not receive

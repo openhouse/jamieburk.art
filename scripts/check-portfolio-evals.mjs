@@ -8,7 +8,7 @@ function requireValue(condition, message) {
   if (!condition) errors.push(message);
 }
 
-requireValue(suite.version === 1, "suite.version must be 1");
+requireValue(suite.version === 2, "suite.version must be 2");
 requireValue(
   suite.suite_id === "portfolio-production-readiness",
   "suite.suite_id must be portfolio-production-readiness"
@@ -70,6 +70,12 @@ requireValue(
     thresholds.individual_score_minimum >= suite.score_scale.minimum &&
     thresholds.individual_score_minimum <= suite.score_scale.maximum,
   "launch threshold individual_score_minimum must fit the score scale"
+);
+requireValue(
+  Number.isInteger(thresholds.chad_lens_median_minimum) &&
+    thresholds.chad_lens_median_minimum >= suite.score_scale.minimum &&
+    thresholds.chad_lens_median_minimum <= suite.score_scale.maximum,
+  "Chad Lens median threshold must fit the score scale"
 );
 requireValue(thresholds.all_blocking_evals_must_pass === true,
   "all blocking evals must pass");

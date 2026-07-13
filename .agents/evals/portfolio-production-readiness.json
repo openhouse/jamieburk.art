@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "suite_id": "portfolio-production-readiness",
   "title": "Jamie Burkart portfolio production readiness",
   "objective": "Make the portfolio clear, inspectable, public-safe, application-ready, and production-safe without overstating Jamie's role or exposing protected material.",
@@ -23,6 +23,7 @@
     "weighted_score_minimum": 0.9,
     "individual_score_minimum": 3,
     "blind_reader_median_minimum": 4,
+    "chad_lens_median_minimum": 4,
     "all_blocking_evals_must_pass": true,
     "holdout_regression_must_pass": true,
     "human_production_approval_required": true
@@ -54,7 +55,7 @@
       "category": "positioning",
       "grader": "llm_judge",
       "blocking": true,
-      "weight": 12,
+      "weight": 10,
       "inputs": ["homepage", "technical operations page", "resume page"],
       "procedure": [
         "Give three blind judges no context beyond the candidate URLs.",
@@ -76,7 +77,7 @@
       "category": "proof",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 14,
+      "weight": 12,
       "inputs": ["Harry J. Epstein case study", "FairRentNYC case study", "CallNYC case study", "Source-Backed Team Memory lab"],
       "procedure": [
         "Inventory visible figures, screenshots, diagrams, downloads, and public artifacts.",
@@ -98,7 +99,7 @@
       "category": "application",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 10,
+      "weight": 9,
       "inputs": ["technical operations page", "knowledge-bank projections"],
       "procedure": [
         "Review each capability section.",
@@ -118,7 +119,7 @@
       "category": "editorial",
       "grader": "llm_judge",
       "blocking": false,
-      "weight": 7,
+      "weight": 6,
       "inputs": ["homepage", "work index", "lead case studies", "Jamie's writer voice guide"],
       "procedure": [
         "Judge the copy for warmth, precision, civic and relational awareness, structural clarity, and claim discipline.",
@@ -139,7 +140,7 @@
       "category": "trust",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 12,
+      "weight": 11,
       "inputs": ["public pages", "knowledge bank", "citation registry", "approval register"],
       "procedure": [
         "Run knowledge-bank, citation, and public-safety checks.",
@@ -161,7 +162,7 @@
       "category": "application",
       "grader": "hybrid",
       "blocking": true,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["resume PDF", "resume HTML page"],
       "procedure": [
         "Extract resume text and render every page.",
@@ -204,7 +205,7 @@
       "category": "production",
       "grader": "deterministic",
       "blocking": true,
-      "weight": 8,
+      "weight": 7,
       "inputs": ["staging responses", "production-mode responses", "robots.txt", "sitemap.xml", "metadata"],
       "procedure": [
         "Check headers and metadata for every canonical route in staging and production mode.",
@@ -313,7 +314,7 @@
       "category": "future_direction",
       "grader": "hybrid",
       "blocking": false,
-      "weight": 3,
+      "weight": 2,
       "inputs": ["resume page", "AI Evals credential", "Source-Backed Team Memory lab"],
       "procedure": [
         "Verify the course-completion evidence and wording.",
@@ -326,6 +327,46 @@
       ],
       "evidence_required": ["credential artifact", "worked example", "claim-boundary review"],
       "remediation_hint": "Show a bounded example and preserve the method's human-review and privacy limits."
+    },
+    {
+      "id": "PR-014",
+      "title": "Chad Lens professional legibility",
+      "category": "hiring_legibility",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 10,
+      "source_basis": "Public-safe synthesis of Chad Berkowitz's February and June 2026 resume-review guidance. The private review files are not part of the eval bundle or public repository.",
+      "inputs": [
+        "homepage",
+        "technical operations page",
+        "resume page and PDF",
+        "Harry J. Epstein case study",
+        "FairRentNYC case study",
+        "CallNYC case study"
+      ],
+      "procedure": [
+        "Give three blind judges the rendered candidate and no implementation discussion: one human-resources gatekeeper, one public-sector generalist, and one technical delivery leader.",
+        "Allow each judge ninety seconds for the homepage, Technical Operations page, and resume, followed by a scan of the three lead case studies.",
+        "Ask each judge to state Jamie's target role and added value, then identify the actor, action, purpose, and usable result in each lead project.",
+        "Ask each judge to flag unexplained acronyms, specialist terms, symbols, tool lists without Jamie's relationship to them, weak verbs that understate the role, and language that overstates ownership or causality.",
+        "Require each judge to cite visible wording for every finding and distinguish a consequential comprehension failure from a minor editorial preference."
+      ],
+      "pass_criteria": [
+        "All three judges identify Jamie as the actor and accurately describe his target role and added value without decoding specialist language.",
+        "Within the first 150 words of each lead project, a judge can identify what the project or organization is, what Jamie did, toward what end, and what became usable or observably changed.",
+        "At least 90 percent of sampled proof statements make actor, action, purpose, and usable result legible in the statement or immediate context.",
+        "No unexplained acronym, uncommon symbol, specialist term, or tool-only list creates a consequential comprehension failure for the human-resources or public-sector judge.",
+        "Contribution verbs neither hide Jamie's documented stewardship, facilitation, coordination, analysis, and implementation nor convert collective outcomes into solo ownership or causality.",
+        "The median score across the three judges is 4, and no judge scores below 3."
+      ],
+      "evidence_required": [
+        "three independent Chad Lens scorecards",
+        "reader summaries",
+        "actor-action-purpose-result sample audit",
+        "terminology and acronym findings",
+        "understatement and overstatement findings"
+      ],
+      "remediation_hint": "Reduce the reader's burden: name Jamie's action, the work's purpose, and the usable result in familiar language; strengthen a weak contribution verb only as far as the knowledge bank supports."
     }
   ]
 }
