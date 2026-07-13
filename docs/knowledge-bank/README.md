@@ -71,3 +71,8 @@ pilot.
 
 See [intake-and-maturation.md](intake-and-maturation.md) for the recursive intake,
 research, claim-maturation, selective-projection, and photo-feedback workflow.
+
+See
+[projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)
+for the complete, deduplicated press indexes from Let NYC Dance, Talks Not
+Raids, Save NYC Spaces, and the supplied Fair Rent NYC Wayback capture.

@@ -31,6 +31,13 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+The complete public-safe inventory of NYC Artist Coalition campaign press
+indexes lives in
+[projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md).
+Its article records are source-discovery leads until close reading establishes
+specific propositions; campaign selection alone does not establish article
+content, Jamie's individual role, or policy causation.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
@@ -42,9 +43,53 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const expansionObservations = expansionIntakes.flatMap((item) =>
     item?.observationIds.map((id) => observationById.get(id)) ?? []
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries];
+  const pressArchive = suite.pilot.pressArchive;
+  const pressIntakes = pressArchive.intakeIds.map((id) => intakeById.get(id));
+  const pressIndexSources = pressArchive.indexSourceIds.map((id) => sourceById.get(id));
+  const pressClaim = claimById.get(pressArchive.claimId);
+  const pressInquiry = inquiryById.get(pressArchive.inquiryId);
+  const pressEntries = campaignPressInventory.flatMap((campaign) => campaign.entries);
+  const uniquePressArticleSourceIds = [...new Set(pressEntries.map((entry) => entry.sourceId))];
+  const pressArticleSources = uniquePressArticleSourceIds.map((id) => sourceById.get(id));
+  const pressObservations = pressIntakes.flatMap((item) =>
+    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
+  const pressCounts = Object.fromEntries(
+    campaignPressInventory.map((campaign) => [campaign.id, campaign.entries.length])
+  );
+  const duplicateAppearanceCount = pressEntries.filter(
+    (entry) => entry.sourceId === pressArchive.duplicateSourceId
+  ).length;
+  const pressArchiveComplete = Boolean(
+    campaignPressInventory.length === pressArchive.expectedIndexCount &&
+      pressEntries.length === pressArchive.expectedAppearanceCount &&
+      uniquePressArticleSourceIds.length === pressArchive.expectedUniqueArticleCount &&
+      nycacPressArchive.sources.length === pressArchive.expectedNewSourceCount &&
+      nycacPressArchive.sources.filter((source) => source.kind === "published-article").length === pressArchive.expectedNewArticleSourceCount &&
+      Object.entries(pressArchive.campaignEntryCounts).every(
+        ([campaignId, expected]) => pressCounts[campaignId] === expected
+      ) &&
+      duplicateAppearanceCount === 2 &&
+      pressIntakes.length === pressArchive.expectedIndexCount &&
+      pressIntakes.every(
+        (intake) => intake?.disposition === "integrated" && intake.sourceIds.length === 1 && intake.boundaries.length >= 2
+      ) &&
+      pressIndexSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+      pressArticleSources.every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+      pressObservations.length === pressArchive.expectedAppearanceCount &&
+      pressObservations.every(
+        (observation) => observation?.locator && observation.limitations.length && observation.claimIds.includes(pressArchive.claimId) && observation.researchInquiryIds.includes(pressArchive.inquiryId)
+      ) &&
+      pressClaim?.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      pressClaim.evidence.length === pressArchive.expectedIndexCount &&
+      pressInquiry?.sourceIds.length === pressArchive.expectedIndexCount + pressArchive.expectedUniqueArticleCount &&
+      pressInquiry.limitations.length >= 4
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -100,9 +145,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       score: score(
         pilotIntakes.every((item) => item && item.boundaries.length && (item.sourceIds.length || item.researchInquiryIds.length)) &&
         expansionIntakes.length === expansion.expectedSourceCount &&
-        expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length)
+        expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
+        pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length)
       ),
-      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes plus ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion intakes retained with dispositions, observations, and boundaries`]
+      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
     {
       criterionId: "KB-EVAL-ATOMICITY",
@@ -115,11 +161,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     {
       criterionId: "KB-EVAL-SCOPE",
       score: score(
-        [...pilotSources, ...expansionSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
         expansionSources.length === expansion.expectedSourceCount &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
-      evidence: [`${expansionSources.filter(Boolean).length}/${expansion.expectedSourceCount} new sources and all original pilot sources have explicit support and doesNotEstablish boundaries`]
+      evidence: [`${expansionSources.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion records and ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles have explicit support and doesNotEstablish boundaries`]
     },
     {
       criterionId: "KB-EVAL-MATURATION",
@@ -164,11 +210,20 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         expansionInquiries.some((inquiry) => inquiry?.id === "INQ-NYCAC-PUBLIC-WEB-AUTHORSHIP") &&
         knowledgeBank.intakeItems.some((item) => item.kind === "memory-lead") &&
         existsSync(path.join(repoRoot, "docs/knowledge-bank/intake-and-maturation.md")) &&
-        photoChainComplete
+        photoChainComplete &&
+        pressClaim?.projections.every((projection) => projection.status === "hold") &&
+        pressInquiry?.resultStatus === "partially-recovered"
       ),
       evidence: [photoChainComplete
-        ? `${heldExpansionClaims.length} newly mature claims remain held beside open inquiries, memory leads, and the protected photo feedback chain`
+        ? `${heldExpansionClaims.length} newly mature claims and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
         : "The canonical photo-feedback chain is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-PRESS-ARCHIVE",
+      score: score(pressArchiveComplete),
+      evidence: [pressArchiveComplete
+        ? `${pressEntries.length} appearances across ${campaignPressInventory.length} campaign indexes resolve to ${uniquePressArticleSourceIds.length} distinct bounded article records; duplicate campaign selection is preserved`
+        : "Campaign press inventory is missing an appearance, source, boundary, disposition, or exact count"]
     }
   ];
 

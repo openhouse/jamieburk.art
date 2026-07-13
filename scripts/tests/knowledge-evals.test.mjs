@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
@@ -44,6 +45,54 @@ test("NYCAC source expansion rejects an unbounded source", () => {
   } finally {
     source.doesNotEstablish = original;
   }
+});
+
+test("campaign press archive retains every appearance and distinct article identity", () => {
+  const press = suite.pilot.pressArchive;
+  const entries = campaignPressInventory.flatMap((campaign) => campaign.entries);
+  const sourceIds = new Set(entries.map((entry) => entry.sourceId));
+
+  assert.equal(campaignPressInventory.length, press.expectedIndexCount);
+  assert.equal(entries.length, press.expectedAppearanceCount);
+  assert.equal(sourceIds.size, press.expectedUniqueArticleCount);
+  assert.deepEqual(
+    Object.fromEntries(campaignPressInventory.map((campaign) => [campaign.id, campaign.entries.length])),
+    press.campaignEntryCounts
+  );
+  assert.equal(
+    entries.filter((entry) => entry.sourceId === press.duplicateSourceId).length,
+    2
+  );
+  assert.equal(nycacPressArchive.sources.length, press.expectedNewSourceCount);
+  assert.equal(
+    nycacPressArchive.sources.filter((source) => source.kind === "published-article").length,
+    press.expectedNewArticleSourceCount
+  );
+});
+
+test("campaign press archive completeness is a hard evaluation gate", () => {
+  const press = suite.pilot.pressArchive;
+  const intake = knowledgeBank.intakeItems.find((item) => item.id === press.intakeIds[0]);
+  assert.ok(intake);
+  const removedObservationId = intake.observationIds.pop();
+
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PRESS-ARCHIVE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    intake.observationIds.push(removedObservationId);
+  }
+});
+
+test("campaign press articles remain bounded source leads until close reading", () => {
+  const press = suite.pilot.pressArchive;
+  const sourceIds = new Set(campaignPressInventory.flatMap((campaign) => campaign.entries.map((entry) => entry.sourceId)));
+  const sources = [...sourceIds].map((id) => knowledgeBank.sources.find((source) => source.id === id));
+  const claim = knowledgeBank.claims.find((item) => item.id === press.claimId);
+
+  assert.ok(sources.every((source) => source?.doesNotEstablish.length));
+  assert.ok(claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
 });
 
 test("photo feedback is instantiated as a protected research chain", () => {
