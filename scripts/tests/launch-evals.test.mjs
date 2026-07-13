@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   evaluateChadLens,
+  evaluateCampaignPressCorpus,
+  evaluateEvidenceExpansion,
   evaluateKnowledgeLifecycle,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
@@ -147,4 +149,92 @@ test("knowledge lifecycle catches lost intake and uncovered public proofs", () =
 
   assert.ok(failures.some((failure) => failure.includes("LEAD-RAFT-GULF-MEMORY")));
   assert.ok(failures.some((failure) => failure.includes("uncovered-proof")));
+});
+
+const evidenceExpansionFixture = {
+  framework: [
+    "SRC-GHFC-JAMIE-JULIA-QA-2017",
+    "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+    "SRC-VICE-NYCARTC-DCA-2017",
+    "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+    "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+    "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017",
+    "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+    "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
+    "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+    "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+    "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+    "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+    "CLM-NYCARTC-MARCH-TRANSPARENCY",
+    "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    'coverage("wowlist-community-platform", "partially-backed"',
+    'coverage("sunday-dinner-196-participation-infrastructure", "partially-backed"',
+    'coverage("kc-town-hall-public-benefit-documentation", "source-backed"'
+  ].join(" "),
+  fairRentCase: [
+    "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+    "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+    "CLM-NYCARTC-MARCH-TRANSPARENCY",
+    "early-mutual-aid-organizing nightlife-town-hall march-transparency"
+  ].join(" "),
+  sundayDinnerCase:
+    'CLM-SUNDAY-DINNER-WEEKLY-OPEN weekly-open-gathering pageId="196-sunday-dinner"',
+  kcTownHallCase:
+    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION funding-recommendation"
+};
+
+test("evidence expansion passes with ten integrated sources and selected projections", () => {
+  assert.deepEqual(evaluateEvidenceExpansion(evidenceExpansionFixture), []);
+});
+
+test("evidence expansion rejects source accumulation without public integration", () => {
+  const failures = evaluateEvidenceExpansion({
+    ...evidenceExpansionFixture,
+    framework: "SRC-GHFC-JAMIE-JULIA-QA-2017",
+    fairRentCase: ""
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("SRC-NYC-COUNCIL-MARCH")));
+  assert.ok(failures.some((failure) => failure.includes("march-transparency")));
+});
+
+test("evidence expansion rejects a citation page ID that cannot resolve on its route", () => {
+  const failures = evaluateEvidenceExpansion({
+    ...evidenceExpansionFixture,
+    sundayDinnerCase: "CLM-SUNDAY-DINNER-WEEKLY-OPEN weekly-open-gathering"
+  });
+
+  assert.ok(failures.some((failure) => failure.includes('pageId="196-sunday-dinner"')));
+});
+
+const campaignPressFixture = {
+  schema: "unverified",
+  campaignPress: [
+    "campaignPressEntries campaignPressIndexes campaignPressExpectedCounts",
+    '"let-nyc-dance": 21 "talks-not-raids": 7 "save-nyc-spaces": 8 "fair-rent-nyc": 10',
+    "totalOccurrences: 46 uniqueArticles: 45",
+    "https://letnycdance.nycartc.com/ https://talksnotraids.com/",
+    "https://savenycspaces.nycartc.com/",
+    "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+    "https://fairrentnyc.nycartc.com/library/",
+    "Press-index membership is not evidence that Jamie appears in or authored the article"
+  ].join(" "),
+  framework:
+    "campaignPressIntake campaignPressNewSourceIds campaignPressSources INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS Preserve campaign membership while deduplicating shared articles",
+  campaignPressDoc:
+    "46 index occurrences 45 unique articles Let NYC Dance Talks Not Raids Save NYC Spaces Fair Rent NYC Index membership is not claim support"
+};
+
+test("campaign press corpus passes when four indexes are complete and bounded", () => {
+  assert.deepEqual(evaluateCampaignPressCorpus(campaignPressFixture), []);
+});
+
+test("campaign press corpus rejects dropped cross-campaign membership", () => {
+  const failures = evaluateCampaignPressCorpus({
+    ...campaignPressFixture,
+    campaignPress: "campaignPressEntries uniqueArticles: 45"
+  });
+  assert.ok(failures.some((failure) => failure.includes("totalOccurrences: 46")));
+  assert.ok(failures.some((failure) => failure.includes("fair-rent-nyc")));
 });

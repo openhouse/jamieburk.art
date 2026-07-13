@@ -87,3 +87,54 @@ The implementation then:
 The semantic validator caught one misplaced project-link block. After repair,
 the lifecycle and launch suites returned to **100/100** with all hard gates
 passing.
+
+## Ten-source evidence-expansion recursive pass
+
+A third follow-up added an 18-point evidence-expansion hard gate. The baseline
+scored **87/100** and failed because none of the ten-source research set, five
+bounded claims, three proof-debt reductions, or selected page-local projections
+had yet entered the repository.
+
+The criterion rejects source accumulation without use: each source must be
+public, bounded, and linked to a claim or inquiry; research must reduce named
+proof debt; and only claims selected through publication decisions may reach
+the site.
+
+The hill climb integrated the ten-source set, created five bounded claims,
+reduced proof debt for NYC Artist Coalition, Sunday Dinner, WOW List, and KC
+Town Hall, and selected three useful page projections. The final run returned
+to **100/100**, with the evidence-expansion hard gate passing.
+
+## Campaign-press corpus recursive pass
+
+A fourth follow-up added an 18-point campaign-press hard gate. The first run
+scored **89/100** after the machine-readable corpus was in place but before a
+human-auditable intake note documented the source indexes, reconciliation, and
+editorial boundary.
+
+The completed corpus records:
+
+- 21 Let NYC Dance press-index appearances;
+- 7 Talks Not Raids appearances;
+- 8 Save NYC Spaces appearances;
+- 10 Fair Rent NYC appearances across the supplied 2021 Wayback capture and
+  current reference library;
+- 46 total appearances resolving to 45 unique articles because one NPR article
+  appears in both Let NYC Dance and Save NYC Spaces;
+- 42 new canonical source records and reuse of three existing close-read
+  records.
+
+The semantic validator enforces exact counts, canonical-source membership,
+cross-campaign deduplication, and the rule that an unread press-index entry
+cannot become claim evidence. The human-readable intake note preserves the
+full grouped inventory and its limitations. The final run scored **100/100**
+with every automated hard gate passing.
+
+Responsive browser QA at 1440px and 390px then exposed a reader-facing defect
+outside the first automated score: Sunday Dinner rendered a citation marker,
+but its citation page ID did not match the work-route slug, so the short proof
+page could not render its source note. The repair aligned the canonical page
+ID and MDX projection with `/work/196-sunday-dinner`. The validator and eval
+suite now enforce route-slug alignment. Fair Rent NYC, Sunday Dinner, and KC
+Town Hall were rechecked at desktop and mobile widths with no horizontal
+overflow and resolvable page-local source notes.

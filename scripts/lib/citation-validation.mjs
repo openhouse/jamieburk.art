@@ -1,5 +1,10 @@
 import { readFileSync } from "node:fs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  campaignPressEntries,
+  campaignPressExpectedCounts,
+  campaignPressIndexes
+} from "../../apps/www/src/data/knowledge-bank/campaign-press.ts";
 import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
 const publicSurfaceFiles = [
@@ -42,6 +47,30 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   const projectById = new Map(knowledgeBank.projects.map((project) => [project.id, project]));
   const decisionByClaimId = new Map();
 
+  const campaignPressEntryIds = campaignPressEntries.map((entry) => entry.id);
+  if (new Set(campaignPressEntryIds).size !== campaignPressExpectedCounts.uniqueArticles) {
+    errors.push(`Campaign press corpus must contain ${campaignPressExpectedCounts.uniqueArticles} unique articles`);
+  }
+  const pressOccurrenceCount = Object.values(campaignPressIndexes).reduce(
+    (sum, index) => sum + index.sourceIds.length,
+    0
+  );
+  if (pressOccurrenceCount !== campaignPressExpectedCounts.totalOccurrences) {
+    errors.push(`Campaign press indexes must contain ${campaignPressExpectedCounts.totalOccurrences} occurrences`);
+  }
+  for (const [campaignId, index] of Object.entries(campaignPressIndexes)) {
+    const expected = campaignPressExpectedCounts[campaignId];
+    if (index.sourceIds.length !== expected) {
+      errors.push(`Campaign press index ${campaignId} has ${index.sourceIds.length} sources; expected ${expected}`);
+    }
+    if (new Set(index.sourceIds).size !== index.sourceIds.length) {
+      errors.push(`Campaign press index ${campaignId} contains a duplicate source`);
+    }
+    for (const sourceId of index.sourceIds) {
+      if (!sourceById.has(sourceId)) errors.push(`Campaign press index ${campaignId} references unknown source ${sourceId}`);
+    }
+  }
+
   for (const [label, items] of [
     ["source", knowledgeBank.sources],
     ["claim", knowledgeBank.claims],
@@ -57,6 +86,12 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
 
   for (const proofId of duplicateIds(knowledgeBank.proofCoverage.map((item) => ({ id: item.proofId })))) {
     errors.push(`Duplicate proof-coverage ID: ${proofId}`);
+  }
+
+  for (const page of knowledgeBank.pages) {
+    if (page.surface.startsWith("/work/") && page.id !== page.surface.slice("/work/".length)) {
+      errors.push(`Citation page ${page.id} must match its work-route slug ${page.surface}`);
+    }
   }
 
   for (const intake of knowledgeBank.intake) {
@@ -218,6 +253,17 @@ export function citationReport() {
     projectionSurfaces: [...new Set(activeProjections.flatMap((item) => item.surfaces))].sort(),
     corrections: knowledgeBank.corrections.length,
     inquiries: knowledgeBank.researchInquiries.length,
+    campaignPress: {
+      uniqueArticles: campaignPressEntries.length,
+      totalOccurrences: Object.values(campaignPressIndexes).reduce(
+        (sum, index) => sum + index.sourceIds.length,
+        0
+      ),
+      indexes: Object.entries(campaignPressIndexes).map(([id, index]) => ({
+        id,
+        sources: index.sourceIds.length
+      }))
+    },
     citedClaims: citedClaimIds.size,
     uncitedPublicClaims: knowledgeBank.claims.filter((claim) => claim.projections.some((item) => item.status === "active" && item.surfaces.some((surface) => surface.startsWith("/"))) && !citedClaimIds.has(claim.id)).map((claim) => claim.id),
     orphanSources: knowledgeBank.sources.filter((source) => !referencedSourceIds.has(source.id)).map((source) => source.id),

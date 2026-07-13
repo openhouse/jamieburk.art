@@ -56,6 +56,17 @@ imply production SaaS.
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
 
+Current selected citation projections now include:
+
+- early NYC Artist Coalition mutual-aid and safety organizing;
+- the coalition-led Office of Nightlife town hall and Jamie's speaker role;
+- the coalition's MARCH records-request data and the bounded legislative result;
+- Sunday Dinner's externally documented weekly open-community practice; and
+- KC Town Hall's unanimously recommended $490,539 proposal.
+
+These selections do not publish founding causality, event-production ownership,
+final funding, participant records, or a claim that MARCH was disbanded.
+
 ## Reserve Depth
 
 Open House, Great Accommodations, and the raft expedition are currently mature

@@ -136,7 +136,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-12
 
 ## nyc-artist-coalition-cabaret-organizing - Cabaret Law organizing
 
@@ -157,7 +157,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
 **Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
@@ -166,13 +166,13 @@ claim beyond the wording and guardrails here.
 **Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-12
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
@@ -181,7 +181,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-12
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
@@ -200,18 +200,18 @@ claim beyond the wording and guardrails here.
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
-**Status:** Careful  
-**Support level:** Careful  
+**Status:** Ready
+**Support level:** Strong
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public funding process; the CCED board unanimously recommended $490,539 to City Council.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive-reuse effort; official minutes identify him as presenter and record the unanimous board recommendation.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
 **Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
 **Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-12
 
 ## source-backed-team-memory-method - Source-backed team memory
 

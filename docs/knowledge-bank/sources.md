@@ -32,6 +32,30 @@ Approved public artifact examples for this launch pass include:
 - Laura Mattingly's 2006 Good Times account of Open House.
 - Charlotte Street Foundation's 2009 Great Accommodations event record.
 - Emma Whitford's 2017 Gothamist reporting on Cabaret Law repeal organizing.
+- Greene Hill Food Co-op's 2017 member interview connecting weekly Sunday
+  dinners, WOW List, NYC Artist Coalition work, and an Office of Nightlife town
+  hall.
+- Cassidy Dawn Graves's February 2017 Bedford + Bowery reporting identifying
+  Jamie as an NYC Artist Coalition organizer.
+- Alexander Iadarola's March 2017 VICE reporting on the coalition's formation,
+  cultural-affairs meeting, and policy agenda.
+- Cassidy Dawn Graves's October 2017 Bedford + Bowery reporting on the
+  coalition-led Office of Nightlife town hall.
+- NYC Artist Coalition's Save NYC Spaces campaign website.
+- Kristine Villanueva's October 2017 Edge of Sound reporting on the town hall
+  and Jamie's public cultural-space framing.
+- New York City Council's September 14, 2017, Cabaret Law hearing transcript.
+- The Talks Not Raids campaign website.
+- New York City Council's November 14, 2019, report and vote on MARCH reporting
+  and advance-notice legislation.
+- Kansas City's Central City Economic Development Sales Tax Board Round 2
+  minutes and funding recommendations from June-July 2019.
+
+The NYC Artist Coalition campaign-press corpus also preserves 45 unique article
+identities across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent
+NYC. Newly indexed articles remain discovery records, not claim support, until
+they are close-read and promoted through the canonical evidence workflow. See
+`intake/2026-07-12-campaign-press-corpus.md` for the complete grouped inventory.
 
 ### Public-Safe Archive Summary
 

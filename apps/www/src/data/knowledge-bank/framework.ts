@@ -8,6 +8,13 @@ import type {
   ResearchInquiry,
   SourceRecord
 } from "./schema.ts";
+import {
+  campaignPressIndexes,
+  campaignPressIntake,
+  campaignPressNewSourceIds,
+  campaignPressSourceIds,
+  campaignPressSources
+} from "./campaign-press.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -38,7 +45,10 @@ export const frameworkIntake = [
     status: "researching",
     dispositions: ["project-linked", "claim-created", "inquiry-created"],
     projectIds: ["nyc-artist-coalition"],
-    sourceIds: ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"],
+    sourceIds: [
+      "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+      "SRC-NYC-COUNCIL-CABARET-HEARING-2017"
+    ],
     claimIds: ["CLM-NYCARTC-CABARET-ORGANIZING"],
     inquiryIds: ["INQ-NYCARTC-CABARET-OUTCOME-ROLE"],
     notes: ["The first mature claim covers documented organizing activity, not causality for repeal."]
@@ -188,16 +198,177 @@ export const frameworkIntake = [
     suppliedBy: "Jamie Burkart",
     kind: "article",
     title: "NPR Cabaret Law repeal article",
-    summary: "Potential source on the Cabaret Law repeal and the broader nightlife-policy context; close reading remains pending.",
+    summary: "NPR article indexed by both Let NYC Dance and Save NYC Spaces; article-level close reading remains pending.",
     sourceUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
-    status: "researching",
-    dispositions: ["project-linked", "inquiry-created"],
+    status: "integrated",
+    dispositions: ["source-created", "project-linked", "inquiry-created"],
     projectIds: ["nyc-artist-coalition"],
-    sourceIds: [],
+    sourceIds: ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"],
     claimIds: [],
     inquiryIds: ["INQ-NPR-CABARET-SOURCE-CAPTURE"],
-    notes: ["The page was not available for close reading in this research run and is not yet a canonical source record."]
-  }
+    notes: ["Canonical metadata and campaign membership are captured; do not use the article for claim support until close reading is complete."]
+  },
+  {
+    id: "LEAD-GHFC-JAMIE-JULIA-QA-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Jamie Burkart",
+    kind: "article",
+    title: "Greene Hill Food Co-op Q&A with Jamie Burkart and Julie Fredenberg",
+    summary: "A contemporaneous institutional interview connecting weekly open Sunday dinners, WOW List, NYC Artist Coalition advocacy, and an announced Office of Nightlife town hall.",
+    sourceUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["sunday-dinner-196", "wowlist", "nyc-artist-coalition"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
+    claimIds: ["CLM-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL"],
+    inquiryIds: [],
+    notes: ["The source supports a weekly open gathering and public project relationships, not the current aggregate gathering or residency counts."]
+  },
+  {
+    id: "LEAD-BEDFORD-BOWERY-DIY-SPACES-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "article",
+    title: "6 Things to Know About Making DIY Spaces Work",
+    summary: "Contemporaneous reporting identifies Jamie as an NYC Artist Coalition organizer and documents a coalition-organized fire-safety and policy meeting.",
+    sourceUrl: "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017"],
+    claimIds: ["CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING"],
+    inquiryIds: [],
+    notes: []
+  },
+  {
+    id: "LEAD-VICE-NYCARTC-DCA-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "article",
+    title: "NYC Artist Coalition and Dance Liberation Network meet cultural commissioner",
+    summary: "VICE reporting dates the coalition's formation and records its policy agenda and planned meeting with the cultural-affairs commissioner.",
+    sourceUrl: "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-VICE-NYCARTC-DCA-2017"],
+    claimIds: ["CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING"],
+    inquiryIds: [],
+    notes: ["This establishes coalition chronology and activity, not Jamie's individual founding status."]
+  },
+  {
+    id: "LEAD-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "article",
+    title: "What Can the Night Mayor Do? The DIY Scene Discusses",
+    summary: "Independent reporting says NYC Artist Coalition spearheaded an Office of Nightlife town hall and identifies Jamie as a speaker.",
+    sourceUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017"],
+    claimIds: ["CLM-NYCARTC-NIGHTLIFE-TOWN-HALL"],
+    inquiryIds: [],
+    notes: []
+  },
+  {
+    id: "LEAD-SAVE-NYC-SPACES-CAMPAIGN",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "website",
+    title: "Save NYC Spaces campaign",
+    summary: "The coalition campaign page preserves Jamie's public framing, coalition partners, media resources, and the Office of Nightlife town-hall context.",
+    sourceUrl: "https://savenycspaces.nycartc.com/",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-SAVE-NYC-SPACES-CAMPAIGN"],
+    claimIds: ["CLM-NYCARTC-NIGHTLIFE-TOWN-HALL"],
+    inquiryIds: [],
+    notes: ["Treat the campaign page as a primary artifact, not independent verification of outcome or individual authorship."]
+  },
+  {
+    id: "LEAD-EDGE-SAVE-NYC-SPACES-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "article",
+    title: "Save NYC Spaces Means Protecting the City's Most Vulnerable Populations",
+    summary: "Reporting identifies Jamie with the coalition that organized the town hall and records his public explanation of the cultural-space purpose.",
+    sourceUrl: "https://medium.com/edge-of-sound/savenycspaces-means-protecting-the-citys-most-vulnerable-populations-9f7395138bae",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"],
+    claimIds: ["CLM-NYCARTC-NIGHTLIFE-TOWN-HALL"],
+    inquiryIds: [],
+    notes: []
+  },
+  {
+    id: "LEAD-NYC-COUNCIL-CABARET-HEARING-2017",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "document",
+    title: "New York City Council Cabaret Law hearing transcript",
+    summary: "The official transcript records Jamie's public testimony, coalition affiliation, safety workshops, and fire-guard study groups.",
+    sourceUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=E8FF9F52-F802-49FB-92A8-0AF58EE0F37A&ID=5444681&M=F",
+    status: "integrated",
+    dispositions: ["source-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-NYC-COUNCIL-CABARET-HEARING-2017"],
+    claimIds: ["CLM-NYCARTC-CABARET-ORGANIZING"],
+    inquiryIds: [],
+    notes: ["The transcript contains a misspelling of Jamie's surname; self-reported metrics remain attributed testimony rather than independent measurement."]
+  },
+  {
+    id: "LEAD-TALKS-NOT-RAIDS-CAMPAIGN",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "website",
+    title: "Talks Not Raids campaign",
+    summary: "The public campaign surface explains MARCH, links the coalition, tracks Council sponsors, and directs residents to support Intro 1156.",
+    sourceUrl: "https://talksnotraids.com/",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-TALKS-NOT-RAIDS-CAMPAIGN"],
+    claimIds: ["CLM-NYCARTC-MARCH-TRANSPARENCY"],
+    inquiryIds: [],
+    notes: ["The campaign page establishes public strategy and coalition participation, not individual authorship or legislative causality."]
+  },
+  {
+    id: "LEAD-NYC-COUNCIL-MARCH-REPORTING-2019",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "document",
+    title: "New York City Council MARCH reporting legislative record",
+    summary: "The Council report credits NYC Artist Coalition's FOIL-derived MARCH data and records adoption of Intro 1156-A with reporting and advance-notice requirements.",
+    sourceUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=0C3B9F69-B958-48E9-9DCD-FB00125A173F&ID=8200738&M=F",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["nyc-artist-coalition"],
+    sourceIds: ["SRC-NYC-COUNCIL-MARCH-REPORTING-2019"],
+    claimIds: ["CLM-NYCARTC-MARCH-TRANSPARENCY"],
+    inquiryIds: [],
+    notes: ["The record supports coalition contribution and legislative sequence, not sole causality, Jamie's individual role, or disbandment of MARCH."]
+  },
+  {
+    id: "LEAD-KCMO-CCED-ROUND2-MINUTES-2019",
+    receivedAt: "2026-07-12",
+    suppliedBy: "Codex public-source research",
+    kind: "document",
+    title: "Kansas City CCED Round 2 meeting minutes and recommendations",
+    summary: "Official minutes identify Jamie as KC Town Hall's presenter and record the board's unanimous $490,539 funding recommendation to City Council.",
+    sourceUrl: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "project-linked"],
+    projectIds: ["kc-town-hall"],
+    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
+    claimIds: ["CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION"],
+    inquiryIds: [],
+    notes: ["Recommendation is not evidence of final City Council approval, contracting, disbursement, or current property status."]
+  },
+  ...campaignPressIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -254,14 +425,91 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["cultural-space advocacy", "coalition operations", "public policy"],
-    sourceIds: ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"],
-    claimIds: ["CLM-NYCARTC-CABARET-ORGANIZING"],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"],
+    sourceIds: [
+      "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+      "SRC-GHFC-JAMIE-JULIA-QA-2017",
+      "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+      "SRC-VICE-NYCARTC-DCA-2017",
+      "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+      "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+      "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017",
+      "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+      "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
+      "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+      ...campaignPressNewSourceIds
+    ],
+    claimIds: [
+      "CLM-NYCARTC-CABARET-ORGANIZING",
+      "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+      "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+      "CLM-NYCARTC-MARCH-TRANSPARENCY"
+    ],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
       evidenceNeeds: ["Jamie visibly working", "event or campaign context", "collaborator credit", "rights"],
       rightsNotes: "Use public press or campaign images only after rights, caption, and collaborator review."
+    }
+  },
+  {
+    id: "sunday-dinner-196",
+    title: "196 Artists Residency / Sunday Dinner",
+    aliases: ["Sunday Dinner", "196 Artists Residency"],
+    period: "2010s",
+    status: "historical",
+    summary: "Recurring community dinners and artist residencies supported by repeatable hosting, onboarding, facilitation, and continuity practices.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    themes: ["community infrastructure", "hosting", "participation"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
+    claimIds: ["CLM-SUNDAY-DINNER-WEEKLY-OPEN"],
+    inquiryIds: ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion: "Which images show repeatable hosting and participant agency without exposing a private home, guest identity, or vulnerable context?",
+      evidenceNeeds: ["hosting context", "participant consent", "date", "photographer rights"],
+      rightsNotes: "Guest lists, home details, and unapproved participant images remain protected."
+    }
+  },
+  {
+    id: "wowlist",
+    title: "WOW List",
+    aliases: ["WOWList.org"],
+    period: "2010s",
+    status: "historical",
+    summary: "Community-calendar and social-discovery infrastructure for local arts and music scenes.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    themes: ["community platforms", "event discovery", "participatory technology"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
+    claimIds: [],
+    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion: "Which interface or community image best demonstrates organizer use without exposing user data?",
+      evidenceNeeds: ["public interface", "organizer context", "date", "data and image rights"],
+      rightsNotes: "Use public interface captures or cleared community images; exclude private user records and location data."
+    }
+  },
+  {
+    id: "kc-town-hall",
+    title: "KC Town Hall",
+    aliases: ["KC Town-Hall LLC"],
+    period: "2019-present",
+    status: "active",
+    summary: "Adaptive-reuse planning and public-benefit documentation for a historic Kansas City building.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    themes: ["adaptive reuse", "public benefit", "long-horizon implementation"],
+    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
+    claimIds: ["CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION"],
+    inquiryIds: ["INQ-KC-TOWN-HALL-FINAL-FUNDING"],
+    photoBrief: {
+      status: "research-needed",
+      selectionQuestion: "Which public-safe building or planning image explains the adaptive-reuse proposition without exposing current legal, financial, or occupancy details?",
+      evidenceNeeds: ["historic context", "public-benefit use", "date", "rights"],
+      rightsNotes: "Current property, legal, financial, and stakeholder details require separate approval."
     }
   },
   {
@@ -393,7 +641,171 @@ export const frameworkSources = [
     publicNote: "The article identifies Jamie with NYC Artist Coalition, reports that he organized fire-code study groups for DIY venues, and documents his City Hall advocacy for full repeal.",
     supportsGenerally: ["Jamie organized fire-code study groups", "Jamie publicly advocated for full Cabaret Law repeal", "NYC Artist Coalition affiliation"],
     doesNotEstablish: ["Jamie solely caused repeal", "Jamie alone led the coalition", "Jamie authored the repeal legislation", "the full history of the collective campaign"]
-  }
+  },
+  {
+    id: "SRC-GHFC-JAMIE-JULIA-QA-2017",
+    title: "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+    organization: "Greene Hill Food Co-op",
+    author: "Outreach Committee",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-12-19",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+    publicNote: "The member interview describes Jamie and a co-host holding weekly Sunday dinners open to the community, publishing community events through WOW List, working with NYC Artist Coalition, and inviting readers to an Office of Nightlife town hall.",
+    supportsGenerally: ["weekly Sunday dinners open to the community", "WOW List as a community-event list", "Jamie's active NYC Artist Coalition involvement", "an announced Office of Nightlife town hall"],
+    doesNotEstablish: ["300 or more total gatherings", "20 or more resident artists", "NYC Artist Coalition co-founder status", "Jamie as sole organizer of the town hall", "the town hall's attendance or policy effect"]
+  },
+  {
+    id: "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+    title: "6 Things to Know About Making DIY Spaces Work",
+    organization: "Bedford + Bowery",
+    author: "Cassidy Dawn Graves",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-02-07",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Cassidy Dawn Graves, '6 Things to Know About Making DIY Spaces Work,' Bedford + Bowery, February 7, 2017.",
+    publicNote: "The contemporaneous report identifies Jamie as an NYC Artist Coalition organizer and documents a coalition meeting focused on fire safety, mutual aid, and policy proposals for cultural spaces.",
+    supportsGenerally: ["Jamie publicly identified as a coalition organizer", "coalition-organized fire-safety and policy meeting", "mutual-aid network activity", "early 2017 coalition operations"],
+    doesNotEstablish: ["Jamie as sole founder or leader", "independent verification of the reported signup count", "adoption of every proposal", "complete coalition membership"]
+  },
+  {
+    id: "SRC-VICE-NYCARTC-DCA-2017",
+    title: "A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety",
+    organization: "VICE",
+    author: "Alexander Iadarola",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-03-21",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Alexander Iadarola, 'A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety,' VICE, March 21, 2017.",
+    publicNote: "VICE dates NYC Artist Coalition's formation to January 2017 and records its planned meeting with the cultural-affairs commissioner and its affordability and cultural-space policy agenda.",
+    supportsGenerally: ["January 2017 coalition formation", "meeting with the cultural-affairs commissioner", "DIY venue-safety advocacy", "affordability and space-policy proposals"],
+    doesNotEstablish: ["Jamie's individual founding status", "Jamie as author of every proposal", "government adoption of the agenda", "the full formation history"]
+  },
+  {
+    id: "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+    title: "What Can the Night Mayor Do? The DIY Scene Discusses",
+    organization: "Bedford + Bowery",
+    author: "Cassidy Dawn Graves",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-10-12",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
+    publicNote: "The report says NYC Artist Coalition spearheaded the town hall, identifies Jamie and Olympia Kazi as speakers, and records participation by cultural organizations and three Council members.",
+    supportsGenerally: ["coalition spearheaded the Office of Nightlife town hall", "Jamie participated as a speaker", "diverse cultural-organization participation", "three Council members spoke"],
+    doesNotEstablish: ["Jamie as sole producer", "an exact attendance count", "sole coalition causality for creating the Office of Nightlife", "implementation of every request made at the event"]
+  },
+  {
+    id: "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+    title: "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures",
+    organization: "NYC Artist Coalition",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://savenycspaces.nycartc.com/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "NYC Artist Coalition, 'Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures,' campaign website.",
+    publicNote: "The campaign artifact preserves Jamie's public cultural-space framing, named coalition partners, town-hall media resources, and calls for an equitable Office of Nightlife.",
+    supportsGenerally: ["Save NYC Spaces campaign goals", "Jamie's public coalition affiliation", "coalition partners", "town-hall media artifacts"],
+    doesNotEstablish: ["independent verification of campaign outcomes", "Jamie's individual website authorship", "permission to republish press images", "sole causality for Office of Nightlife policy"]
+  },
+  {
+    id: "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017",
+    title: "#SaveNYCSpaces Means Protecting the City's Most Vulnerable Populations",
+    organization: "Edge of Sound",
+    author: "Kristine Villanueva",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-10-14",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://medium.com/edge-of-sound/savenycspaces-means-protecting-the-citys-most-vulnerable-populations-9f7395138bae",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Kristine Villanueva, '#SaveNYCSpaces Means Protecting the City's Most Vulnerable Populations,' Edge of Sound, October 14, 2017.",
+    publicNote: "The report identifies Jamie with the coalition that organized the town hall and records his public explanation of preserving grassroots spaces and maintaining continuing dialogue with the city.",
+    supportsGenerally: ["coalition organized the town hall", "Jamie's public role and purpose", "Office of Nightlife dialogue", "cultural-space affordability framing"],
+    doesNotEstablish: ["Jamie's sole production role", "the complete participant roster", "sole causality for public policy", "a verified attendance count"]
+  },
+  {
+    id: "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+    title: "Committee on Consumer Affairs Cabaret Law hearing transcript",
+    organization: "New York City Council",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2017-09-14",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=E8FF9F52-F802-49FB-92A8-0AF58EE0F37A&ID=5444681&M=F",
+    preferredPublicUrl: "canonical",
+    publicCitation: "New York City Council Committee on Consumer Affairs, Cabaret Law hearing transcript, September 14, 2017.",
+    publicNote: "The official transcript records Jamie's testimony as an NYC Artist Coalition member calling for repeal and describing community-space safety workshops and fire-guard study groups.",
+    supportsGenerally: ["Jamie's Council testimony", "NYC Artist Coalition affiliation", "public request for full repeal", "Jamie's description of safety workshops and study groups"],
+    doesNotEstablish: ["independent verification of the self-reported pass rate", "Jamie as sole organizer", "Jamie as author of legislation", "sole causality for repeal"]
+  },
+  {
+    id: "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
+    title: "Talks Not Raids: Transparency on M.A.R.C.H.",
+    organization: "NYC Artist Coalition and campaign partners",
+    kind: "institutional-web-page",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://talksnotraids.com/",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Talks Not Raids coalition, 'Transparency on M.A.R.C.H.,' campaign website.",
+    publicNote: "The campaign surface explains the enforcement problem, names coalition partners, links a public report and map, tracks Council sponsorship, and directs residents to support Intro 1156.",
+    supportsGenerally: ["public Talks Not Raids campaign", "Intro 1156 call to action", "coalition partners", "MARCH map and report artifacts"],
+    doesNotEstablish: ["Jamie's individual authorship", "independent verification of every campaign statistic", "legislative causality", "disbandment of MARCH"]
+  },
+  {
+    id: "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+    title: "Council report and vote on Intro 1156-A MARCH reporting",
+    organization: "New York City Council",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-11-14",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=0C3B9F69-B958-48E9-9DCD-FB00125A173F&ID=8200738&M=F",
+    preferredPublicUrl: "canonical",
+    publicCitation: "New York City Council, report and stated-meeting vote on Intro 1156-A, November 14, 2019.",
+    publicNote: "The Council report credits NYC Artist Coalition with obtaining MARCH data through a records request, incorporates its district-level graph, and records a 43-4 vote adopting reporting and advance-notice requirements.",
+    supportsGenerally: ["NYC Artist Coalition obtained MARCH data", "coalition data entered the Council record", "Intro 1156-A reporting and notice requirements", "43-4 Council adoption"],
+    doesNotEstablish: ["Jamie's individual role obtaining or analyzing the data", "sole coalition causality for passage", "disbandment of MARCH", "full implementation or agency compliance"]
+  },
+  {
+    id: "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+    title: "Central City Economic Development Sales Tax Board Round 2 minutes and recommendations",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-07-29",
+    accessedAt: "2026-07-12",
+    canonicalUrl: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Central City Economic Development Sales Tax Board, Round 2 meeting minutes and funding recommendations, June-July 2019.",
+    publicNote: "The official minutes identify Jamie as KC Town Hall's presenter and record the board's unanimous recommendation of the $490,539 adaptive-reuse proposal to City Council.",
+    supportsGenerally: ["Jamie as KC Town Hall presenter", "$490,539 request", "adaptive reuse for four retail and three residential spaces", "unanimous board recommendation to City Council"],
+    doesNotEstablish: ["final City Council approval", "contract execution", "receipt or disbursement of funds", "current property status"]
+  },
+  ...campaignPressSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -456,10 +868,99 @@ export const frameworkClaims = [
       { key: "case-study", text: "In 2017, Jamie organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] },
       { key: "technical-operations", text: "Organized fire-code study groups for DIY venues and supported public advocacy for Cabaret Law repeal.", status: "active", citationRequired: false, surfaces: ["/work/technical-operations"] }
     ],
-    evidence: [{ sourceId: "SRC-NYCARTC-CABARET-GOTHAMIST-2017", relationship: "direct-support", supports: ["fire-code study groups", "City Hall advocacy for full repeal", "NYC Artist Coalition affiliation"], confidence: "high", renderCitation: true }],
+    evidence: [
+      { sourceId: "SRC-NYCARTC-CABARET-GOTHAMIST-2017", relationship: "direct-support", supports: ["fire-code study groups", "City Hall advocacy for full repeal", "NYC Artist Coalition affiliation"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-NYC-COUNCIL-CABARET-HEARING-2017", relationship: "corroborating", supports: ["Jamie's Council testimony", "public request for full repeal", "Jamie's description of safety workshops and study groups"], confidence: "high", renderCitation: true }
+    ],
     boundaries: ["This establishes Jamie's documented organizing contribution, not sole causality for the collective repeal outcome."],
     antiClaims: ["Jamie alone repealed the Cabaret Law", "Jamie authored the repeal legislation", "Jamie solely led NYC Artist Coalition"],
     researchInquiryIds: ["INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NPR-CABARET-SOURCE-CAPTURE"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+    project: "nyc-artist-coalition",
+    internalClaim: "In early 2017, Jamie was publicly identified as an NYC Artist Coalition organizer while the coalition convened fire-safety, mutual-aid, and policy meetings for informal cultural spaces.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{ key: "case-study", text: "In early 2017, Jamie was publicly identified as an NYC Artist Coalition organizer while the coalition convened fire-safety, mutual-aid, and policy meetings for informal cultural spaces.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+    evidence: [
+      { sourceId: "SRC-BEDFORD-BOWERY-DIY-SPACES-2017", relationship: "direct-support", supports: ["Jamie publicly identified as a coalition organizer", "coalition-organized fire-safety and policy meeting", "mutual-aid network activity"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-VICE-NYCARTC-DCA-2017", relationship: "context", supports: ["January 2017 coalition formation", "meeting with the cultural-affairs commissioner", "affordability and space-policy proposals"], confidence: "high", renderCitation: false }
+    ],
+    boundaries: ["This supports an early organizer role, not sole founder or sole leader status.", "The reported mutual-aid signup count remains attributed to Jamie rather than independently audited."],
+    antiClaims: ["Jamie alone founded or led NYC Artist Coalition", "Every coalition proposal was adopted"],
+    researchInquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+    project: "nyc-artist-coalition",
+    internalClaim: "NYC Artist Coalition spearheaded a 2017 public town hall about what the new Office of Nightlife should do, and Jamie participated as a coalition speaker.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{ key: "case-study", text: "Later in 2017, NYC Artist Coalition spearheaded a public town hall about what the new Office of Nightlife should do; Jamie participated as a coalition speaker alongside cultural organizations and city officials.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+    evidence: [
+      { sourceId: "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", relationship: "direct-support", supports: ["coalition spearheaded the Office of Nightlife town hall", "Jamie participated as a speaker", "diverse cultural-organization participation", "three Council members spoke"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", relationship: "corroborating", supports: ["coalition organized the town hall", "Jamie's public role and purpose", "Office of Nightlife dialogue"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-SAVE-NYC-SPACES-CAMPAIGN", relationship: "context", supports: ["Save NYC Spaces campaign goals", "coalition partners", "town-hall media artifacts"], confidence: "moderate", renderCitation: false },
+      { sourceId: "SRC-GHFC-JAMIE-JULIA-QA-2017", relationship: "context", supports: ["an announced Office of Nightlife town hall", "Jamie's active NYC Artist Coalition involvement"], confidence: "moderate", renderCitation: false }
+    ],
+    boundaries: ["Spearheaded is attributed to the coalition; Jamie's independently documented role is speaker and public advocate.", "Do not convert coalition advocacy into sole causality for establishing the Office of Nightlife."],
+    antiClaims: ["Jamie alone produced the town hall", "Jamie alone created the Office of Nightlife", "Every town-hall request became policy"],
+    researchInquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-NYCARTC-MARCH-TRANSPARENCY",
+    project: "nyc-artist-coalition",
+    internalClaim: "NYC Artist Coalition's records-request data on MARCH raids entered the Council's legislative record; in 2019 the Council adopted Intro 1156-A, requiring recurring MARCH reporting and advance notice subject to law-enforcement exceptions.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{ key: "case-study", text: "NYC Artist Coalition's records-request data on MARCH raids entered the Council's legislative record; in 2019 the Council adopted a law requiring recurring MARCH reporting and advance notice subject to law-enforcement exceptions.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
+    evidence: [
+      { sourceId: "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", relationship: "direct-support", supports: ["NYC Artist Coalition obtained MARCH data", "coalition data entered the Council record", "Intro 1156-A reporting and notice requirements", "43-4 Council adoption"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-TALKS-NOT-RAIDS-CAMPAIGN", relationship: "context", supports: ["public Talks Not Raids campaign", "Intro 1156 call to action", "coalition partners", "MARCH map and report artifacts"], confidence: "moderate", renderCitation: false }
+    ],
+    boundaries: ["The record establishes collective data work, public campaigning, and legislative sequence, not sole causality.", "The reviewed sources do not establish Jamie's individual role in the records request or that MARCH was disbanded."],
+    antiClaims: ["Jamie alone passed Intro 1156-A", "NYC Artist Coalition alone caused passage", "Talks Not Raids disbanded MARCH"],
+    researchInquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+    project: "sunday-dinner-196",
+    internalClaim: "A 2017 Greene Hill Food Co-op interview described Jamie and a co-host as holding Sunday dinner every week in their Brooklyn apartment and opening it to the community.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{ key: "case-study", text: "By 2017, Sunday Dinner was publicly documented as a weekly gathering Jamie and a co-host opened to the community.", status: "active", citationRequired: true, surfaces: ["/work/196-sunday-dinner"] }],
+    evidence: [{ sourceId: "SRC-GHFC-JAMIE-JULIA-QA-2017", relationship: "direct-support", supports: ["weekly Sunday dinners open to the community"], confidence: "high", renderCitation: true }],
+    boundaries: ["This source confirms the weekly open practice at that time, not the 300-plus gathering or 20-plus residency totals.", "Do not publish the home address, guest identities, attendance records, or unapproved photographs."],
+    antiClaims: ["The public source verifies all aggregate participation counts", "Every gathering was public or identically structured"],
+    researchInquiryIds: ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"],
+    reviewedAt: "2026-07-12",
+    reviewedBy: ["Jamie Burkart", "Codex source review"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    project: "kc-town-hall",
+    internalClaim: "In July 2019, Kansas City's Central City Economic Development Sales Tax Board unanimously recommended KC Town Hall's $490,539 adaptive-reuse proposal to City Council; the minutes identify Jamie as the project presenter.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{ key: "case-study", text: "In July 2019, Kansas City's Central City Economic Development Sales Tax Board unanimously recommended KC Town Hall's $490,539 adaptive-reuse proposal to City Council; the public minutes identify Jamie as the project presenter.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
+    evidence: [{ sourceId: "SRC-KCMO-CCED-ROUND2-MINUTES-2019", relationship: "direct-support", supports: ["Jamie as KC Town Hall presenter", "$490,539 request", "adaptive reuse for four retail and three residential spaces", "unanimous board recommendation to City Council"], confidence: "high", renderCitation: true }],
+    boundaries: ["Recommendation is not final City Council approval, a contract, or evidence that funds were received.", "Do not infer current property, financial, legal, or occupancy status."],
+    antiClaims: ["KC Town Hall received $490,539", "The City Council finally approved or disbursed the award", "The project is complete"],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-FINAL-FUNDING"],
     reviewedAt: "2026-07-12",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
@@ -494,15 +995,19 @@ const openInquiry = (
 ) => ({ id, project, question, methods, resultStatus: "open" as const, findings: [], limitations, sourceIds });
 
 export const frameworkInquiries = [
-  openInquiry("INQ-NYCARTC-COFOUNDING-ROLE", "nyc-artist-coalition", "What do public formation records, launch materials, websites, correspondence, and collaborators establish about Jamie's role creating NYC Artist Coalition?", ["Recover dated public launch and formation materials.", "Map website authorship and coalition role language.", "Seek collaborator confirmation before broadening public wording."], ["Jamie's memory is a lead, not independent corroboration."]),
-  openInquiry("INQ-NYCARTC-CABARET-OUTCOME-ROLE", "nyc-artist-coalition", "How did Jamie's documented fire-code education and public advocacy relate to the broader collective campaign and legislative repeal outcome?", ["Review Council hearing records and bill history.", "Recover coalition campaign materials and press coverage.", "Separate contribution, coalition action, sponsor action, and final legislative causality."], ["One press article establishes organizing activity but not complete causality."], ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"]),
-  openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Do not infer causality from later affiliation or campaign proximity."]),
-  openInquiry("INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "nyc-artist-coalition", "Which nightlife town halls did Jamie produce, what was his role, who participated, and what public outputs followed?", ["Recover event pages, programs, recordings, photographs, and press.", "Map production tasks, collaborators, attendance, and outputs."], ["Attendance, organizer credit, and policy effects remain unverified."]),
-  openInquiry("INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "nyc-artist-coalition", "What did Talks Not Raids do, what role did Jamie play, what transparency was achieved, and what public record establishes changes to MARCH?", ["Archive the campaign website and linked public records.", "Review agency documents, hearings, reporting, and collaborator accounts.", "Define what disbanded means in the public record."], ["Campaign claims, agency structure, and causality require independent corroboration."]),
+  openInquiry("INQ-NYCARTC-COFOUNDING-ROLE", "nyc-artist-coalition", "What do public formation records, launch materials, websites, correspondence, and collaborators establish about Jamie's role creating NYC Artist Coalition?", ["Recover dated public launch and formation materials.", "Map website authorship and coalition role language.", "Seek collaborator confirmation before broadening public wording."], ["The new sources establish an early organizer role, but not the complete founding group or co-founder wording."], ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017"]),
+  openInquiry("INQ-NYCARTC-CABARET-OUTCOME-ROLE", "nyc-artist-coalition", "How did Jamie's documented fire-code education and public advocacy relate to the broader collective campaign and legislative repeal outcome?", ["Review remaining bill history and campaign records.", "Map coalition, partner, sponsor, and administration roles.", "Separate contribution, coalition action, sponsor action, and final legislative causality."], ["Press and Council testimony establish Jamie's contribution but not complete causality."], ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"]),
+  openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
+  openInquiry("INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "nyc-artist-coalition", "Which nightlife town halls did Jamie produce, what was his role, who participated, and what public outputs followed?", ["Recover event programs, recordings, photographs, and production records.", "Map production tasks, collaborators, attendance, and outputs."], ["One town hall is now externally documented; exact production ownership and attendance remain open."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
+  openInquiry("INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "nyc-artist-coalition", "What did Talks Not Raids do, what role did Jamie play, what transparency was achieved, and what public record establishes changes to MARCH?", ["Map Jamie's individual authorship and operational role.", "Review implementation reports and later agency structure.", "Define what disbanded means in the public record."], ["The campaign and legislative outcome are documented, but Jamie's individual role and any disbandment claim remain unverified."], ["SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]),
   openInquiry("INQ-RIVER-RAFT-EXACT-ROUTE", "great-accommodations", "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?", ["Recover route logs, contemporary press, photographs, correspondence, and collaborator accounts.", "Distinguish reaching salt water from a documented Gulf endpoint."], ["Current sources do not establish the exact final endpoint or complete crew."], ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
   openInquiry("INQ-WATERWAYS-PUBLIC-PROGRAMS", "great-accommodations", "What participatory programs did Jamie create to connect residents and river cities through shared waterways?", ["Inventory Great Accommodations programs, correspondence, software, walks, screenings, and community contributions.", "Recover dates, collaborators, attendance, artifacts, and public outcomes."], ["One institutional event record is not a complete program inventory."], ["SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
   openInquiry("INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL", "participatory-public-practice", "Does the wider record support a longitudinal professional claim connecting early participatory art, recurring cultural programs, civic systems, and source-backed team memory?", ["Build a dated cross-project source map.", "Test continuities and discontinuities in Jamie's role, methods, outputs, and participant agency.", "Seek counterexamples and collaborator perspectives."], ["A compelling pattern is not yet a confirmed public claim.", "Distinct communities must retain their own context."], ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
-  openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["The source was supplied but not available for close reading in this run."]),
+  openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["Canonical metadata and two campaign-index relationships are captured, but the article was not available for close reading in this run."], ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"]),
+  openInquiry("INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "sunday-dinner-196", "What public-safe records and calculations support the 300-plus gathering and 20-plus resident-artist totals?", ["Reconcile the private RSVP and attendance ledger with public-safe aggregate methods.", "Document the residency count methodology and date range.", "Keep identities and attendance rows protected."], ["The Greene Hill source confirms a weekly open practice, not the aggregate totals."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
+  openInquiry("INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "wowlist", "Which public sources independently establish WOW List's product function, technical implementation, organizer adoption, and geographic reach?", ["Recover contemporary coverage, public repositories, and preserved interface pages.", "Associate verified archive counts without exposing user records."], ["The Greene Hill source confirms a community-events function but not the platform's architecture, counts, or 35-city reach."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
+  openInquiry("INQ-KC-TOWN-HALL-FINAL-FUNDING", "kc-town-hall", "What later public record establishes whether the KC Town Hall recommendation received final Council approval, a contract, or disbursement?", ["Search ordinances, contracts, board updates, and public payment records.", "Keep current property, legal, and financial details outside the public repository unless approved."], ["The current government record ends at a unanimous board recommendation to City Council."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"]),
+  openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."])
 ] satisfies ResearchInquiry[];
 
@@ -525,6 +1030,11 @@ const publicationDecisionInputs: Array<[
   ["PUB-GREAT-ACCOMMODATIONS-PARTICIPATORY", "CLM-GREAT-ACCOMMODATIONS-PARTICIPATORY-RIVER-PROGRAM", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Strong source-backed depth held for future audience needs."],
   ["PUB-RIVER-RAFT-EXPEDITION", "CLM-RIVER-RAFT-EXPEDITION", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Compelling evidence retained with route and collective-work boundaries."],
   ["PUB-NYCARTC-CABARET-ORGANIZING", "CLM-NYCARTC-CABARET-ORGANIZING", "selected", ["/work/fair-rent-nyc", "/work/technical-operations"], "Adds concrete public evidence of Jamie's bounded organizing role."],
+  ["PUB-NYCARTC-EARLY-MUTUAL-AID", "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING", "selected", ["/work/fair-rent-nyc"], "Makes Jamie's early organizer role and the coalition's practical mutual-aid work legible."],
+  ["PUB-NYCARTC-NIGHTLIFE-TOWN-HALL", "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL", "selected", ["/work/fair-rent-nyc"], "Shows Jamie participating in a coalition-led public feedback structure for a new city office."],
+  ["PUB-NYCARTC-MARCH-TRANSPARENCY", "CLM-NYCARTC-MARCH-TRANSPARENCY", "selected", ["/work/fair-rent-nyc"], "Adds a bounded collective outcome connecting public data, campaigning, and legislation."],
+  ["PUB-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-SUNDAY-DINNER-WEEKLY-OPEN", "selected", ["/work/196-sunday-dinner"], "Provides external evidence of the recurring open-community practice without exposing participants."],
+  ["PUB-KC-TOWN-HALL-FUNDING-RECOMMENDATION", "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION", "selected", ["/work/kc-town-hall"], "Preserves the strongest official public-record proof with an explicit recommendation boundary."],
   ["PUB-PARTICIPATORY-LONGITUDINAL", "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "hold", [], "Promising throughline requires broader cross-project research."]
 ];
 
@@ -556,26 +1066,76 @@ export const frameworkProofCoverage = [
   coverage("callnyc-council-member-amplification", "source-backed", "Five member-account actions and officeholding context are canonical.", ["SRC-CALLNYC-COUNCIL-MINUTES-2016-09-28", "SRC-CALLNYC-HELEN-ROSENTHAL-780797474277511170", "SRC-CALLNYC-YDANIS-RODRIGUEZ-733089563334299648", "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208", "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304", "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328"], []),
   coverage("fair-rent-campaign-memory", "research-needed", "Convert approved public-safe archive summaries into bounded canonical source relationships."),
   coverage("fair-rent-source-map", "research-needed", "Identify the public records and approved artifact metadata that support the source-map claim."),
-  coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "Public campaign sites exist; authorship and role provenance require a canonical source map."),
-  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Gothamist now supports one concrete organizing strand; broader systems coverage remains open.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
-  coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist directly supports the bounded organizing claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"], []),
-  coverage("wowlist-community-platform", "research-needed", "Promote verified archive counts and architecture evidence into canonical public-safe source records."),
-  coverage("sunday-dinner-196-participation-infrastructure", "research-needed", "Build public-safe aggregate evidence while protecting attendance and guest records."),
+  coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
+  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records now support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; Fair Rent and individual systems authorship remain only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
+  coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist reporting and the official Council transcript directly support the bounded organizing and testimony claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"], []),
+  coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
+  coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; aggregate gathering and residency totals remain supported by protected records.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"]),
   coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
-  coverage("kc-town-hall-public-benefit-documentation", "research-needed", "Associate the public funding recommendation and public-benefit documents."),
+  coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City minutes identify Jamie as presenter and record the unanimous $490,539 recommendation; final funding remains explicitly open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"], ["INQ-KC-TOWN-HALL-FINAL-FUNDING"]),
   coverage("source-backed-team-memory-method", "research-needed", "Associate public lab materials without exposing private collaborator context."),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record.")
 ] satisfies ProofCoverage[];
 
-export const frameworkPages = [{
-  id: "fair-rent-nyc",
-  surface: "/work/fair-rent-nyc",
-  sourceOrder: ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"],
-  occurrences: [{
-    id: "cabaret-organizing",
-    claimId: "CLM-NYCARTC-CABARET-ORGANIZING",
-    projection: "case-study",
-    sourceIds: ["SRC-NYCARTC-CABARET-GOTHAMIST-2017"]
-  }]
-}] satisfies CitationPage[];
+export const frameworkPages = [
+  {
+    id: "fair-rent-nyc",
+    surface: "/work/fair-rent-nyc",
+    sourceOrder: [
+      "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+      "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+      "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+      "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+      "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"
+    ],
+    occurrences: [
+      {
+        id: "cabaret-organizing",
+        claimId: "CLM-NYCARTC-CABARET-ORGANIZING",
+        projection: "case-study",
+        sourceIds: ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"]
+      },
+      {
+        id: "early-mutual-aid-organizing",
+        claimId: "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+        projection: "case-study",
+        sourceIds: ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017"]
+      },
+      {
+        id: "nightlife-town-hall",
+        claimId: "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+        projection: "case-study",
+        sourceIds: ["SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017"]
+      },
+      {
+        id: "march-transparency",
+        claimId: "CLM-NYCARTC-MARCH-TRANSPARENCY",
+        projection: "case-study",
+        sourceIds: ["SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]
+      }
+    ]
+  },
+  {
+    id: "196-sunday-dinner",
+    surface: "/work/196-sunday-dinner",
+    sourceOrder: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
+    occurrences: [{
+      id: "weekly-open-gathering",
+      claimId: "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+      projection: "case-study",
+      sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"]
+    }]
+  },
+  {
+    id: "kc-town-hall",
+    surface: "/work/kc-town-hall",
+    sourceOrder: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
+    occurrences: [{
+      id: "funding-recommendation",
+      claimId: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+      projection: "case-study",
+      sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"]
+    }]
+  }
+] satisfies CitationPage[];

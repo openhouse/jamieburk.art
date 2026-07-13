@@ -8,9 +8,30 @@ Contemporaneous Gothamist reporting identifies Jamie with NYC Artist Coalition,
 reports that he organized fire-code study groups for DIY venues, and documents
 his City Hall advocacy for full repeal of the Cabaret Law in 2017.
 
+Additional reporting from February 2017 identifies Jamie as a coalition
+organizer while the group convened fire-safety, mutual-aid, and policy work.
+The official Council hearing transcript later records his public testimony and
+description of safety workshops and fire-guard study groups.
+
 This establishes a concrete organizing contribution. It does not independently
 establish Jamie as sole cause of repeal, sole coalition leader, or author of the
 legislation.
+
+## Confirmed collective outcomes
+
+- Bedford + Bowery reported that NYC Artist Coalition spearheaded a public
+  town hall about what the new Office of Nightlife should do and identified
+  Jamie as a coalition speaker.
+- A 2019 Council legislative report credited NYC Artist Coalition with
+  obtaining MARCH data through a records request and incorporated the
+  district-level data into its analysis.
+- The same Council record documents a 43-4 vote adopting Intro 1156-A, which
+  required recurring MARCH reporting and advance notice subject to stated
+  law-enforcement exceptions.
+
+These records support collective accomplishment and Jamie's documented public
+participation. They do not establish his individual role in the MARCH records
+request, sole causality for legislation, or a claim that MARCH was disbanded.
 
 ## Open research lanes
 

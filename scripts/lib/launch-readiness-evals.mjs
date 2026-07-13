@@ -244,6 +244,119 @@ export function evaluateKnowledgeLifecycle({
   return missing;
 }
 
+export function evaluateEvidenceExpansion({
+  framework,
+  fairRentCase,
+  sundayDinnerCase,
+  kcTownHallCase
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Ten-source research set", framework, [
+    "SRC-GHFC-JAMIE-JULIA-QA-2017",
+    "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
+    "SRC-VICE-NYCARTC-DCA-2017",
+    "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
+    "SRC-SAVE-NYC-SPACES-CAMPAIGN",
+    "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017",
+    "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
+    "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
+    "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+    "SRC-KCMO-CCED-ROUND2-MINUTES-2019"
+  ]);
+  requireFragments("Bounded claims", framework, [
+    "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+    "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+    "CLM-NYCARTC-MARCH-TRANSPARENCY",
+    "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    'coverage("wowlist-community-platform", "partially-backed"',
+    'coverage("sunday-dinner-196-participation-infrastructure", "partially-backed"',
+    'coverage("kc-town-hall-public-benefit-documentation", "source-backed"'
+  ]);
+  requireFragments("NYC Artist Coalition case study", fairRentCase, [
+    "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
+    "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
+    "CLM-NYCARTC-MARCH-TRANSPARENCY",
+    "early-mutual-aid-organizing",
+    "nightlife-town-hall",
+    "march-transparency"
+  ]);
+  requireFragments("Sunday Dinner case study", sundayDinnerCase, [
+    "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+    "weekly-open-gathering",
+    'pageId="196-sunday-dinner"'
+  ]);
+  requireFragments("KC Town Hall case study", kcTownHallCase, [
+    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    "funding-recommendation"
+  ]);
+
+  return missing;
+}
+
+export function evaluateCampaignPressCorpus({
+  schema,
+  framework,
+  campaignPress,
+  campaignPressDoc
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank schema", schema, ["unverified"]);
+  requireFragments("Campaign press corpus", campaignPress, [
+    "campaignPressEntries",
+    "campaignPressIndexes",
+    "campaignPressExpectedCounts",
+    '"let-nyc-dance": 21',
+    '"talks-not-raids": 7',
+    '"save-nyc-spaces": 8',
+    '"fair-rent-nyc": 10',
+    "totalOccurrences: 46",
+    "uniqueArticles: 45",
+    "https://letnycdance.nycartc.com/",
+    "https://talksnotraids.com/",
+    "https://savenycspaces.nycartc.com/",
+    "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+    "https://fairrentnyc.nycartc.com/library/",
+    "Press-index membership is not evidence that Jamie appears in or authored the article"
+  ]);
+  requireFragments("Knowledge-bank framework", framework, [
+    "campaignPressIntake",
+    "campaignPressNewSourceIds",
+    "campaignPressSources",
+    "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+    "Preserve campaign membership while deduplicating shared articles"
+  ]);
+  requireFragments("Campaign press documentation", campaignPressDoc, [
+    "46 index occurrences",
+    "45 unique articles",
+    "Let NYC Dance",
+    "Talks Not Raids",
+    "Save NYC Spaces",
+    "Fair Rent NYC",
+    "Index membership is not claim support"
+  ]);
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -258,9 +371,25 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "apps/www/src/data/knowledge-bank/framework.ts"
   );
+  const campaignPress = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/campaign-press.ts"
+  );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
+  const campaignPressDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-12-campaign-press-corpus.md"
+  );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
+  const sundayDinnerCase = read(
+    repoRoot,
+    "apps/www/src/content/work/196-sunday-dinner.mdx"
+  );
+  const kcTownHallCase = read(
+    repoRoot,
+    "apps/www/src/content/work/kc-town-hall.mdx"
+  );
   const proofs = read(repoRoot, "apps/www/src/data/proofs.ts");
   const technicalOperations = read(
     repoRoot,
@@ -502,6 +631,48 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const evidenceExpansionMissing = evaluateEvidenceExpansion({
+    framework,
+    fairRentCase,
+    sundayDinnerCase,
+    kcTownHallCase
+  });
+  results.push(
+    result({
+      id: "portfolio-evidence-expansion",
+      label: "Ten-source research strengthens proof coverage and selected public claims",
+      weight: 18,
+      hardGate: true,
+      missing: evidenceExpansionMissing,
+      evidence: [
+        "Ten new public sources span independent reporting, campaign artifacts, and government records.",
+        "Sources mature bounded claims and reduce proof debt instead of accumulating as orphans.",
+        "Only reader-useful claims selected through the publication layer reach cited portfolio surfaces."
+      ]
+    })
+  );
+
+  const campaignPressMissing = evaluateCampaignPressCorpus({
+    schema,
+    framework,
+    campaignPress,
+    campaignPressDoc
+  });
+  results.push(
+    result({
+      id: "campaign-press-corpus",
+      label: "All four campaign press indexes are complete, deduplicated, and bounded",
+      weight: 18,
+      hardGate: true,
+      missing: campaignPressMissing,
+      evidence: [
+        "The corpus preserves 46 campaign-index appearances across 45 unique articles.",
+        "Every unique article resolves to a canonical source or an existing close-read source record.",
+        "Unreviewed articles remain linked to a recovery inquiry and cannot support public claims merely by appearing in a campaign index."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -539,6 +710,8 @@ export function runLaunchEvals(repoRoot) {
       "Do not publish private sources to satisfy a citation requirement.",
       "Do not make copy shorter by hiding Jamie as actor, omitting the purpose, or replacing usable outcomes with generic systems language.",
       "Do not satisfy no-silent-loss by auto-publishing intake or converting memories directly into confirmed claims.",
+      "Do not satisfy evidence expansion with duplicate, orphaned, self-authored-only, or boundary-free source records.",
+      "Do not satisfy press-corpus completeness by dropping duplicates across campaigns, treating index membership as claim support, or marking unreviewed articles as close-read.",
       "Production deployment always requires explicit human approval."
     ]
   };

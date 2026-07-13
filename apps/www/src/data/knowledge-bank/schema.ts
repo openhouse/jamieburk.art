@@ -31,6 +31,7 @@ export const sourceKindSchema = z.enum([
 ]);
 
 export const preservationStatusSchema = z.enum([
+  "unverified",
   "live",
   "archived",
   "live-and-archived",

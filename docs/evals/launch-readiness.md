@@ -39,6 +39,8 @@ The canonical positioning sentence is:
 | Release gate wiring | 12 | Yes | Citation, knowledge-bank, public-safety, route, eval-test, and prelaunch commands exist. |
 | Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
 | Knowledge-bank lifecycle | 18 | Yes | Intake has no silent loss; evidence maturity, safety, and editorial selection remain separate; every public proof has source-coverage status. |
+| Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
+| Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -70,3 +72,8 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   or replacing concrete outputs with generic systems language.
 - Do not satisfy no-silent-loss by auto-publishing intake, treating memories as
   corroboration, or moving every mature reserve claim onto the current site.
+- Do not satisfy evidence expansion with duplicate, orphaned,
+  self-authored-only, or boundary-free source records.
+- Do not satisfy press-corpus completeness by dropping cross-campaign
+  duplicates, treating index membership as claim support, or marking
+  unreviewed articles as close-read.
