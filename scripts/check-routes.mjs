@@ -54,6 +54,13 @@ for (const slug of [
 }
 
 const nextConfigSource = read("apps/www/next.config.ts");
+const resumePdfRoute = "/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf";
+if (!nextConfigSource.includes(`source: "${resumePdfRoute}"`)) {
+  fail("resume PDF must have an exact noindex header rule");
+}
+if (nextConfigSource.includes('source: "/resume/:path*"')) {
+  fail("resume HTML must not inherit the resume PDF noindex header rule");
+}
 for (const legacyRoute of [
   "/work/fairrentnyc-commercial-rent-stabilization",
   "/work/fairrentnyc",

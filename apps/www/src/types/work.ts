@@ -42,6 +42,13 @@ export type Artifact = {
   title: string;
   description: string;
   type: ArtifactType;
+  media?: {
+    src: string;
+    alt: string;
+    caption: string;
+    href: string;
+    sourceLabel: string;
+  };
 };
 
 export type WorkMeta = {

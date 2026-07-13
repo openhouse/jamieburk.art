@@ -1,4 +1,6 @@
+import Link from "next/link";
 import type { Metadata } from "next";
+import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
@@ -18,44 +20,103 @@ const operationsMap = [
 const proofMap = [
   {
     project: "HJE",
+    href: "/work/harry-j-epstein",
     proof:
       "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
   },
   {
     project: "FairRentNYC / Commercial Rent Stabilization",
+    href: "/work/fair-rent-nyc",
     proof:
       "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
   },
   {
     project: "CallNYC",
+    href: "/work/callnyc",
     proof:
       "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
   },
   {
     project: "WOWList",
+    href: "/work/wowlist",
     proof:
       "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
   },
   {
     project: "196 / Sunday Dinner",
+    href: "/work/196-sunday-dinner",
     proof:
       "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
   },
   {
     project: "KC Spaces Fund",
+    href: "/work/technical-operations#public-facing-launch-and-adoption",
     proof:
       "behind-the-scenes digital infrastructure for a 2020 mutual-aid campaign supporting grassroots arts and culture spaces."
   },
   {
     project: "KC Town Hall",
+    href: "/work/kc-town-hall",
     proof: "long-horizon project planning and public-benefit documentation."
   },
   {
     project: "Source-Backed Team Memory",
+    href: "/lab/source-backed-team-memory",
     proof:
       "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
   }
 ];
+
+const proofDestinations: Record<string, { project: string; href: Route }> = {
+  "technical-operations-operating-backbone": {
+    project: "Cross-project operating pattern",
+    href: "/work"
+  },
+  "hje-modernization-stewardship": {
+    project: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein" as Route
+  },
+  "hje-revenue-growth-contribution": {
+    project: "Harry J. Epstein Company",
+    href: "/work/harry-j-epstein" as Route
+  },
+  "fair-rent-campaign-memory": {
+    project: "FairRentNYC",
+    href: "/work/fair-rent-nyc" as Route
+  },
+  "fair-rent-source-map": {
+    project: "FairRentNYC",
+    href: "/work/fair-rent-nyc" as Route
+  },
+  "nyc-artist-coalition-public-web-infrastructure": {
+    project: "NYC Artist Coalition",
+    href: "/work/fair-rent-nyc" as Route
+  },
+  "nyc-artist-coalition-civic-systems": {
+    project: "NYC Artist Coalition",
+    href: "/work/fair-rent-nyc" as Route
+  },
+  "callnyc-civic-data-guidance": {
+    project: "CallNYC",
+    href: "/work/callnyc" as Route
+  },
+  "wowlist-community-platform": {
+    project: "WOWList",
+    href: "/work/wowlist" as Route
+  },
+  "sunday-dinner-196-participation-infrastructure": {
+    project: "196 / Sunday Dinner",
+    href: "/work/196-sunday-dinner" as Route
+  },
+  "kc-town-hall-public-benefit-documentation": {
+    project: "KC Town Hall",
+    href: "/work/kc-town-hall" as Route
+  },
+  "source-backed-team-memory-method": {
+    project: "Source-Backed Team Memory",
+    href: "/lab/source-backed-team-memory"
+  }
+};
 
 export const metadata: Metadata = createMetadata({
   title: "Technical Operations & Implementation - Jamie Burkart",
@@ -68,7 +129,7 @@ export default function TechnicalOperationsPage() {
   return (
     <div className="jb-frame py-12">
       <div className="jb-reading">
-        <h1 className="text-5xl font-bold text-jb-ink">
+        <h1 className="text-4xl font-bold text-jb-ink sm:text-5xl">
           Technical Operations & Implementation
         </h1>
         <p className="mt-5 text-xl leading-8 text-jb-ink/76">
@@ -95,10 +156,17 @@ export default function TechnicalOperationsPage() {
         </JBCard>
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
-          <dl className="mt-5 space-y-4">
+          <dl className="mt-5 space-y-4" id="proof-map">
             {proofMap.map((item) => (
               <div key={item.project}>
-                <dt className="font-semibold text-jb-ink">{item.project}</dt>
+                <dt className="font-semibold">
+                  <Link
+                    className="text-jb-blue hover:text-jb-green"
+                    href={item.href as Route}
+                  >
+                    {item.project}
+                  </Link>
+                </dt>
                 <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
               </div>
             ))}
@@ -107,16 +175,38 @@ export default function TechnicalOperationsPage() {
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (
-          <JBCard key={row.capability}>
+          <JBCard id={row.capability.toLowerCase().replaceAll(" ", "-")} key={row.capability}>
             <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
             <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
-                <li className="flex gap-3" key={proof.id}>
-                  <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
-                  <span>{proof.shortWording ?? proof.publicWording}</span>
-                </li>
-              ))}
+              {row.proofs.map((proof) => {
+                const destination = proofDestinations[proof.id];
+                return (
+                  <li className="flex gap-3" key={proof.id}>
+                    <span
+                      aria-hidden="true"
+                      className="mt-2 h-2 w-2 rounded-full bg-jb-ochre"
+                    />
+                    <span>
+                      {destination ? (
+                        <Link
+                          className="font-semibold text-jb-blue hover:text-jb-green"
+                          href={destination.href}
+                        >
+                          {destination.project}
+                        </Link>
+                      ) : (
+                        <span className="font-semibold text-jb-ink">
+                          KC Spaces Fund
+                        </span>
+                      )}
+                      <span className="mt-1 block text-sm leading-6 text-jb-ink/72">
+                        {proof.shortWording ?? proof.publicWording}
+                      </span>
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </JBCard>
         ))}

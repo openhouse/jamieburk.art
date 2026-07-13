@@ -9,6 +9,12 @@ The repo is public. Approval here means approved for public-safe repository and 
 - LinkedIn: `https://linkedin.com/in/jamie-burkart` is approved for display.
 - GitHub: `https://github.com/openhouse` is approved for display.
 - Phone: do not display in website HTML. Phone may remain in the approved resume PDF.
+- AI Evals completion certificate: approved for public-safe display as
+  professional-development evidence.
+- Public-site screenshots captured from Harry J. Epstein Company,
+  FairRentNYC, and the archived CallNYC prototype for `feature/evals-H` are
+  approved for public PR review and portfolio projection. Captions must retain
+  source, scope, collective-credit, and archived-status boundaries.
 
 ## Approved With Guardrails
 
