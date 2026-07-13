@@ -8,7 +8,9 @@
 6. Convert every material gap into a prioritized research task with executable
    next actions.
 7. Decide publication separately: publish, defer, retire, or disallow.
-8. Ask an independent judge to score the repository with `judge-prompt.md`.
+8. Ask an independent judge to score the repository with `judge-prompt.md` and
+   copy the fresh deterministic report's `repositorySnapshot` into the
+   assessment.
 9. Change the smallest set of records or documentation that improves the
    weakest criterion without weakening factual scope, collective credit, or
    public safety.

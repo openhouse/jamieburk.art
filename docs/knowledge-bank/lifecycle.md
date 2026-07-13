@@ -160,6 +160,13 @@ accessioned and closely read; its public-ready claims remain deferred until a
 future portfolio argument calls for them.
 
 The
+[KC Town-Hall Council funding record](research/kc-town-hall-council-funding-2019-2024.md)
+resolves the batch's highest-priority downstream task. Official records now
+establish a September 26, 2019 Council appropriation and authorization to
+negotiate, followed by project withdrawal and a 2024 clawback of the unused
+allocation. The earlier board-only claim remains as a superseded record.
+
+The
 [NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
 preserves 45 placements across four campaign press sections as 44 distinct
 article identities. Campaign-index pages are closely read; article-level
@@ -189,6 +196,9 @@ permission.
 
 The gate command requires the checked-in independent assessment, verifies its
 file-and-record evidence against the repository, and enforces the score floors.
+It also compares the assessment's `repositorySnapshot` with a deterministic
+fingerprint of the canonical graph. Any graph change makes the prior assessment
+stale and requires a fresh deterministic run and independent review.
 Human claim approval, collaborator permission, and media rights cannot be
 authenticated by an agent-authored file; production release remains an
 external human process.

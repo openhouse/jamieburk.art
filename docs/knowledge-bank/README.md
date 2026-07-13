@@ -67,6 +67,12 @@ pilot. See the
 complete example of a versioned research-ingestion batch.
 
 The
+[KC Town-Hall Council funding record](research/kc-town-hall-council-funding-2019-2024.md)
+shows how a board-stage claim matures through official Council action and later
+disposition records without turning an appropriation into a disbursement or
+completed outcome.
+
+The
 [NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
 shows how campaign-curated press indexes, repeated placements, dead links,
 archived captures, and queued article-level readings enter the same lifecycle.

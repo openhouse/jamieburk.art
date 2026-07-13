@@ -177,11 +177,12 @@ claim beyond the wording and guardrails here.
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Source basis:** Approved resume language; the 2019 CCED Board packet; the September 26, 2019 Council record and Resolution 190649; Ordinance 240317; and public-safe project context.
+**Guardrail:** The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received or disbursed; it remained unused and was reclaimed after the project withdrew in 2024.
+**Do not say:** Funding received or disbursed; executed funding agreement; construction or completed development; known reason for the project's withdrawal; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 

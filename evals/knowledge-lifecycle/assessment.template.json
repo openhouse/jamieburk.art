@@ -1,6 +1,18 @@
 {
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
+  "repositorySnapshot": {
+    "fingerprint": "copy from the current deterministic eval report",
+    "counts": {
+      "entities": 0,
+      "intake": 0,
+      "sources": 0,
+      "sourceReadings": 0,
+      "claims": 0,
+      "researchTasks": 0,
+      "projectionDecisions": 0
+    }
+  },
   "judge": {
     "scores": [
       { "criterionId": "loss-resistance", "score": 0, "evidence": [] },

@@ -62,6 +62,13 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+The official record supports a $490,539 City Council appropriation and
+authorization to negotiate a funding agreement. Do not call the allocation
+received, paid, or disbursed. Do not claim an executed agreement, construction,
+completion, or measured neighborhood outcome. The project later withdrew and
+the Council reclaimed the unused allocation in 2024; do not infer or assign an
+individual reason for the withdrawal.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

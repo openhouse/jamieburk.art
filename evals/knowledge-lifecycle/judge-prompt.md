@@ -24,4 +24,7 @@ Pay special attention to:
 
 Return JSON matching `assessment.template.json`. Human gates remain pending
 unless their named owners have explicitly approved them; an agent cannot
-self-certify them.
+self-certify them. Copy `repositorySnapshot` exactly from a fresh deterministic
+eval report produced from the same repository state you inspected. An
+assessment for an earlier graph state is invalid even if its evidence paths
+still exist.

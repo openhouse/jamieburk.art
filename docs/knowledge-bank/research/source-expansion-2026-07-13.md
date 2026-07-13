@@ -33,8 +33,10 @@ projection pending later compositional review.
    names Jamie as presenter of a KC Town-Hall proposal for four retail spaces
    and three apartments, with a $490,539 request. The July 16 minutes record a
    unanimous board recommendation to City Council for approval and funding.
-   That recommendation is not final Council action, an executed agreement,
-   disbursement, or completed development.
+   [Council records recovered in a later pass](kc-town-hall-council-funding-2019-2024.md)
+   show that the Council then appropriated $490,539 and authorized
+   funding-agreement negotiations. The funds were not disbursed; the project
+   later withdrew, and the unused allocation was reclaimed in 2024.
 7. [KCUR on the Eighth Street Tunnel](https://www.kcur.org/arts-life/2016-09-15/the-8th-street-tunnel-is-a-gateway-to-kansas-citys-history-but-you-probably-cant-get-in)
    reports Jamie's 2006 participatory downtown route and three-film tunnel
    screening, including his public-history purpose. It does not establish
@@ -61,8 +63,9 @@ The pass adds public-ready but deferred claims concerning:
 - Jamie's participation in coalition-produced Office of Nightlife town halls;
 - Jamie's contribution to the Save NYC Spaces public platform;
 - 2018 cultural-space and commercial-rent testimony;
-- the KC Town-Hall proposal, exact requested program, and unanimous board
-  recommendation to City Council;
+- the KC Town-Hall proposal, exact requested program, unanimous board
+  recommendation, Council appropriation, later withdrawal, and unused-fund
+  clawback;
 - the Eighth Street Tunnel public-history screening;
 - Jamie's organizer role and collective completion of the river expedition;
 - the Claudette augmented-reality collaboration.
@@ -70,8 +73,8 @@ The pass adds public-ready but deferred claims concerning:
 The new evidence does not close the larger research questions about NYC Artist
 Coalition's full founding chronology, Jamie's precise causal contribution to
 creating the Office of Nightlife, the institutional outcome of Talks Not Raids,
-or the complete development history of KC Town-Hall.
+or private reasons for KC Town-Hall's later withdrawal.
 
-The typed KC Town-Hall research task now directs a future pass to recover any
-City Council action, executed agreement, disbursement record, and documented
-development outcome without collapsing those stages into the board vote.
+The typed KC Town-Hall downstream task is now resolved. The recovered records
+separate Council appropriation and negotiation authorization from execution,
+disbursement, construction, and later project disposition.

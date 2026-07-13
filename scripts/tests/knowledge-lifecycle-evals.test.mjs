@@ -6,6 +6,7 @@ import {
   campaignPressPlacements
 } from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts";
 import {
+  currentRepositorySnapshot,
   evaluateLifecycle,
   loadSuite,
   scoreAssessment,
@@ -168,7 +169,7 @@ test("public-safe records reject correspondence and contact patterns", () => {
   assert.equal(report.results.find((item) => item.id === "public-repo-boundary-is-enforced").passed, false);
 });
 
-test("July 13 source expansion ingests ten distinct bounded public sources", () => {
+test("July 13 source expansion preserves its original ten bounded public sources", () => {
   const sourceIds = [
     "SRC-GREENE-HILL-COOP-QA-2017",
     "SRC-BEDFORD-DIY-SPACES-2017",
@@ -200,7 +201,68 @@ test("July 13 source expansion ingests ten distinct bounded public sources", () 
   assert.ok(kcReading.propositions.some((item) => item.id === "PROP-KCTOWN-BOARD-RECOMMENDATION"));
   assert.ok(kcClaim.requiredSupportTags.includes("kc-town-hall-board-recommendation"));
   assert.equal(kcTask.priority, "high");
-  assert.ok(kcTask.nextActions.length >= 3);
+});
+
+test("KC Town Hall records Council appropriation and the later unused-fund clawback", () => {
+  const sourceIds = [
+    "SRC-KCMO-COUNCIL-MEETING-2019-09-26",
+    "SRC-KCMO-RESOLUTION-190649-2019",
+    "SRC-KCMO-ORDINANCE-240317-2024"
+  ];
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.ok(source, `${sourceId} must resolve`);
+    assert.equal(source.kind, "government-record");
+    assert.equal(reading?.status, "closely-read");
+    assert.ok(reading.propositions.length > 0);
+    assert.ok(reading.limitations.length > 0);
+  }
+
+  const priorClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-CCED-RECOMMENDATION-2019"
+  );
+  const completeClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-KC-TOWN-HALL-DOWNSTREAM-OUTCOME"
+  );
+
+  assert.equal(priorClaim.maturity, "superseded");
+  assert.ok(priorClaim.disposition.successorClaimIds.includes(completeClaim.id));
+  assert.equal(completeClaim.maturity, "public-ready");
+  assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-council-appropriation-confirmed"));
+  assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-funding-negotiation-authorized"));
+  assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-council-funding-conditions"));
+  assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-unused-funds-clawed-back"));
+  assert.match(completeClaim.composition.causalBoundary, /did not become a disbursement/i);
+  assert.ok(completeClaim.antiClaims.some((item) => /received or spent/i.test(item)));
+  assert.equal(task.status, "resolved");
+  assert.match(task.resolutionSummary, /no disbursement or completed development/i);
+});
+
+test("KC Town Hall Council semantics cannot lose proposition-level support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+  );
+  const resolutionEvidence = claim.evidence.find(
+    (item) => item.sourceId === "SRC-KCMO-RESOLUTION-190649-2019"
+  );
+  resolutionEvidence.propositionIds = resolutionEvidence.propositionIds.filter(
+    (id) => ![
+      "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION",
+      "PROP-KCTOWN-RESOLUTION-LIMITS-USES"
+    ].includes(id)
+  );
+
+  const report = evaluateLifecycle({ suite, bank });
+  assert.equal(
+    report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed,
+    false
+  );
 });
 
 test("campaign press recovery preserves 45 placements and 44 distinct articles", () => {
@@ -248,6 +310,7 @@ test("judge evidence and floors are enforced", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
     humanGates: suite.humanGates.map((item) => ({ gateId: item.id, status: "pending" }))
   };
@@ -263,6 +326,7 @@ test("judge evidence must be distinct", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: Array(item.minimumEvidence).fill({ file: "same.ts", record: "same" }) })) },
     humanGates: []
   };
@@ -273,9 +337,25 @@ test("judge evidence must resolve to repository records", () => {
   const assessment = {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    repositorySnapshot: currentRepositorySnapshot(),
     judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
     humanGates: []
   };
   assessment.judge.scores[0].evidence[0] = { file: "missing.ts", record: "invented" };
   assert.equal(scoreAssessment(assessment, suite).valid, false);
+});
+
+test("judge assessment is bound to the current knowledge-bank snapshot", () => {
+  const assessment = {
+    suiteId: suite.id,
+    suiteVersion: suite.version,
+    repositorySnapshot: currentRepositorySnapshot(),
+    judge: { scores: suite.judgeCriteria.map((item) => ({ criterionId: item.id, score: 4, evidence: validEvidence.slice(0, item.minimumEvidence) })) },
+    humanGates: []
+  };
+  assessment.repositorySnapshot.counts.intake -= 1;
+
+  const result = scoreAssessment(assessment, suite);
+  assert.equal(result.valid, false);
+  assert.ok(result.failures.includes("Assessment repository snapshot is missing or stale"));
 });

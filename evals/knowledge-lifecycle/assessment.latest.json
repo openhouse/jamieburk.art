@@ -1,79 +1,172 @@
 {
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
+  "repositorySnapshot": {
+    "fingerprint": "44205223725fbec88f07c1f10e57062fc6fd28e317303e458a9587ebeac8a232",
+    "counts": {
+      "entities": 17,
+      "intake": 74,
+      "sources": 76,
+      "sourceReadings": 67,
+      "claims": 36,
+      "researchTasks": 14,
+      "projectionDecisions": 29
+    }
+  },
   "judge": {
     "scores": [
       {
         "criterionId": "loss-resistance",
         "score": 4,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "INTAKE-NYCARTC-LETNYCDANCE-PRESS-INDEX-2026" },
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "SRC-PRESS-SFGATE-NO-DANCING-2017" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "intakeRecordSchema"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-NYCARTC-TALKS-NOT-RAIDS-MEMORY"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "INTAKE-KCMO-ORDINANCE-240317-2024"
+          }
         ]
       },
       {
         "criterionId": "source-decomposition",
         "score": 3,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "Campaign selection establishes that the article was presented as relevant press context" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "PROP-NYCARTC-FIRE-CODE-GROUPS" },
-          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "Close reading requires date, propositions, and limitations" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "relationToJamie"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "READ-KCMO-KC-TOWN-HALL-2019"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "READ-KCMO-RESOLUTION-190649-2019"
+          }
         ]
       },
       {
         "criterionId": "claim-defensibility",
         "score": 4,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-NYCARTC-CABARET-SAFETY-ORGANIZING" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-RIVER-GREAT-ACCOMMODATIONS" },
-          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "claim-promotion-is-evidence-backed" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "PROP-KCTOWN-UNUSED-FUNDS-REAPPROPRIATED"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-EXPEDITION-ORIGIN"
+          }
         ]
       },
       {
         "criterionId": "research-direction",
         "score": 4,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "TASK-NYCARTC-TALKSNOTRAIDS-PRESS-CLOSE-READ" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "TASK-KC-TOWN-HALL-DOWNSTREAM-OUTCOME"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          }
         ]
       },
       {
         "criterionId": "projection-discipline",
         "score": 4,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "DEC-NYCARTC-CABARET-ORGANIZING-DEFER" },
-          { "file": "scripts/evals/lib/knowledge-lifecycle.mjs", "record": "publication-is-an-independent-decision" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "this source-ingestion pass does not automatically change the live portfolio argument"
+          },
+          {
+            "file": "apps/www/src/data/proofs.ts",
+            "record": "kc-town-hall-public-benefit-documentation"
+          },
+          {
+            "file": "apps/www/src/data/work.ts",
+            "record": "KC Town Hall LLC"
+          }
         ]
       },
       {
         "criterionId": "public-safety",
         "score": 4,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "public-metadata-only" },
-          { "file": "apps/www/src/data/knowledge-bank/records.ts", "record": "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001" },
-          { "file": "docs/knowledge-bank/research/nycartc-campaign-press-2026-07-13.md", "record": "## Evidence posture" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "public-metadata-only"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
+          },
+          {
+            "file": "docs/knowledge-bank/research/kc-town-hall-council-funding-2019-2024.md",
+            "record": "Boundaries and anti-claims"
+          }
         ]
       },
       {
         "criterionId": "future-composability",
         "score": 3,
         "evidence": [
-          { "file": "apps/www/src/data/knowledge-bank/schema.ts", "record": "requiredSupportTags" },
-          { "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts", "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE" },
-          { "file": "apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts", "record": "TASK-FAIRRENTNYC-PRESS-CLOSE-READ" }
+          {
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "requiredSupportTags"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          }
         ]
       }
     ]
   },
   "humanGates": [
-    { "gateId": "jamie-claim-approval", "status": "pending", "confirmedBy": null },
-    { "gateId": "collaborator-credit-or-permission", "status": "pending", "confirmedBy": null },
-    { "gateId": "media-rights-and-consent", "status": "pending", "confirmedBy": null }
+    {
+      "gateId": "jamie-claim-approval",
+      "status": "pending",
+      "confirmedBy": null
+    },
+    {
+      "gateId": "collaborator-credit-or-permission",
+      "status": "pending",
+      "confirmedBy": null
+    },
+    {
+      "gateId": "media-rights-and-consent",
+      "status": "pending",
+      "confirmedBy": null
+    }
   ],
-  "summary": "Batch counts: 4 campaign indexes and 45 placements representing 44 distinct articles: Let NYC Dance 21, Talks Not Raids 7, Save NYC Spaces 8, and FairRentNYC 9. The corpus has 41 new article sources and 3 reused distinct article sources across 4 reused placement rows; the module adds 45 intake records and 45 source records total (41 article and 4 index). Preservation is 36 live, 7 archived, and 2 dead across the 45 new source records; among the 44 distinct articles it is 36 live, 6 archived, and 2 dead. Corpus-associated reading state is 48 records: 6 closely read (4 indexes and 2 reused articles), 1 needs access (reused NPR), and 41 queued (new articles). It adds 4 open research tasks (2 high and 2 medium), 1 corroborated claim, 0 claim projections, and 0 projection decisions. Fresh Node 26.5.0 results: contract check passed; lifecycle eval reported 0/7 hard-gate failures and 0/4 quality-target gaps, with 71 accessions, 64/64 bounded readings, 22 close readings, 29 mature claims, and 7 high/critical queued tasks; lifecycle tests passed 24/24; typecheck, lint, knowledge-bank, public-safety, citation checks, and citation tests passed after the single lint warning found during review was corrected. The remaining bounded evidence gap is that 41 new articles are honestly queued and one reused NPR article still needs access, so article contents are not yet proposition-level evidence; their placement evidence is not omitted, duplicated, inflated, stranded, or projected. Weighted score is 93.8/100; every release score threshold and criterion floor is met; all human gates remain pending."
+  "summary": "Fresh Node 26.5.0 deterministic results: 74 accessions, 67/67 bounded readings, 25 close readings, 29 mature claims, and research-queue depth 6; 0/7 hard gates failed and 0/4 quality targets remained open. Lifecycle tests passed 27/27; citation tests passed 10/10; the lifecycle contract, typecheck, lint, knowledge-bank, public-safety, and citation checks passed, with 10 expected careful-claim warnings. Independent inspection of the linked [CCED packet](https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000), [September 26 Council record](https://kansascity.legistar.com/MeetingDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GID=821&LEGID=14410), [Resolution 190649](https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=), and [Ordinance 240317](https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=) corroborated the complete KC chain. The revised action, intended end, usable result, collective credit, and causal boundary reduce interpretation without assigning Jamie the institutional decisions; receipt, disbursement, execution, construction, completion, sole causation, and withdrawal-reason claims remain excluded. Reciprocal predecessor/successor lineage, the resolved task, and an explicit defer decision are present. Legacy proof-bank source and guardrail metadata now acknowledge the Council record while website-facing wording remains at the earlier recommendation level. Removing the Resolution proposition links for negotiation authorization and funding-use limits made claim-promotion-is-evidence-backed fail with exactly 2 defects: missing kc-town-hall-funding-negotiation-authorized and kc-town-hall-council-funding-conditions support. A stale fingerprint made an otherwise 100.0 assessment invalid with Assessment repository snapshot is missing or stale. No material KC-chain defect was identified. The remaining bounded repository-wide defect is incomplete recursive composability: 41 article readings remain queued, one NPR reading needs access, and 10 legacy projected claims lack structured Chad-lens composition and migration-only semantic-support enforcement. Weighted score: 93.8/100; all score thresholds and floors are met, and all human gates remain pending."
 }

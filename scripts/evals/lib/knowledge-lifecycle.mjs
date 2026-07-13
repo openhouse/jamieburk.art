@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -95,6 +96,23 @@ function duplicateEvidence(collections) {
 
 function unknownReference(type, ownerId, id) {
   return { type, ownerId, id };
+}
+
+export function currentRepositorySnapshot(bank = knowledgeBank) {
+  const counts = {
+    entities: bank.entities.length,
+    intake: bank.intake.length,
+    sources: bank.sources.length,
+    sourceReadings: bank.sourceReadings.length,
+    claims: bank.claims.length,
+    researchTasks: bank.researchTasks.length,
+    projectionDecisions: bank.projectionDecisions.length
+  };
+  const fingerprint = createHash("sha256")
+    .update(JSON.stringify(bank))
+    .digest("hex");
+
+  return { fingerprint, counts };
 }
 
 export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } = {}) {
@@ -378,6 +396,7 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
   return {
     suiteId: suite.id,
     suiteVersion: suite.version,
+    repositorySnapshot: currentRepositorySnapshot(bank),
     results,
     summary: {
       hardGateFailures: hard.filter((item) => !item.passed).length,
@@ -392,6 +411,10 @@ export function scoreAssessment(assessment, suite = loadSuite()) {
   const failures = [];
   if (assessment.suiteId !== suite.id || assessment.suiteVersion !== suite.version) {
     failures.push("Assessment suite id/version does not match");
+  }
+  const expectedSnapshot = currentRepositorySnapshot();
+  if (JSON.stringify(assessment.repositorySnapshot) !== JSON.stringify(expectedSnapshot)) {
+    failures.push("Assessment repository snapshot is missing or stale");
   }
   const submitted = new Map((assessment.judge?.scores ?? []).map((item) => [item.criterionId, item]));
   let weighted = 0;
