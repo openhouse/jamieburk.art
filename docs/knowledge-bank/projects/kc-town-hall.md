@@ -16,5 +16,14 @@ a funding agreement for up to that amount.
 
 This establishes Council allocation and negotiation authority. It does not
 establish an executed agreement, receipt or disbursement, completed
-construction, Jamie's sole causality for the vote, or current property status.
-Those remain open research and protected-context questions.
+construction, Jamie's sole causality for the vote, or later property or
+operating status. Those remain open research and protected-context questions.
+
+## Stewardship transition
+
+Jamie has corrected the lifecycle record: his involvement concluded, and he
+transitioned project stewardship to a mission-aligned organization. This is a
+firsthand account retained in the research layer, not a selected public claim.
+The receiving organization remains unnamed pending permission and public-safe
+corroboration. No personal circumstances are recorded or needed for the
+professional account.

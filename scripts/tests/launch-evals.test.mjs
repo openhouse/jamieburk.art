@@ -216,10 +216,13 @@ const kcTownHallCouncilAllocationFixture = {
     "SRC-KCMO-RESOLUTION-190649-2019",
     "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
     "INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT",
+    "LEAD-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
+    "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
     "2019-09-26 $490,539",
     "Committee Substitute for Ordinance No. 190642",
     "Second Committee Substitute for Resolution No. 190649",
-    "executed funding agreement receipt or disbursement of funds"
+    "executed funding agreement receipt or disbursement of funds",
+    'id: "kc-town-hall" period: "2019" status: "historical"'
   ].join(" "),
   proofs: [
     'id: "kc-town-hall-public-benefit-documentation"',
@@ -242,11 +245,19 @@ const kcTownHallCouncilAllocationFixture = {
     "executed funding agreement",
     "receipt or disbursement"
   ].join(" "),
+  stewardshipTransitionDoc: [
+    "Jamie Burkart firsthand correction",
+    "mission-aligned organization",
+    "not selected for public projection",
+    "No personal circumstances are recorded",
+    "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
+  ].join(" "),
   workData: [
     "after a unanimous board recommendation, the Council allocated $490,539",
     "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649",
     "$490,539 Council allocation after unanimous board recommendation",
-    "Funding-agreement execution, receipt or disbursement, implementation, current status"
+    'currentStatus: "Historical project."',
+    "Funding-agreement execution, receipt or disbursement, later implementation, current property or operating status"
   ].join(" ")
 };
 
@@ -279,6 +290,20 @@ test("KC Town Hall Council allocation rejects receipt language", () => {
   });
 
   assert.ok(failures.some((failure) => failure.includes("conflates")));
+});
+
+test("KC Town Hall transition requires an explicit privacy boundary", () => {
+  const failures = evaluateKcTownHallCouncilAllocation({
+    ...kcTownHallCouncilAllocationFixture,
+    stewardshipTransitionDoc: kcTownHallCouncilAllocationFixture.stewardshipTransitionDoc.replace(
+      "No personal circumstances are recorded",
+      ""
+    )
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("No personal circumstances are recorded"))
+  );
 });
 
 const campaignPressFixture = {

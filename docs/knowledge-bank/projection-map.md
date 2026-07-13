@@ -69,6 +69,11 @@ These selections do not publish founding causality, event-production ownership,
 funding-agreement execution or disbursement, participant records, or a claim
 that MARCH was disbanded.
 
+KC Town Hall is modeled as historical for Jamie. His firsthand account of
+transitioning stewardship to a mission-aligned organization remains research
+context, not a selected site claim; personal circumstances and the receiving
+organization's identity are not projected.
+
 ## Reserve Depth
 
 Open House, Great Accommodations, and the raft expedition are currently mature

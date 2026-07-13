@@ -62,6 +62,11 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Treat Jamie's project involvement as historical. Do not publish personal
+reasons for the transition, name the receiving organization without permission
+and corroboration, or present the stewardship transition as part of the
+source-backed Council-allocation claim.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

@@ -516,7 +516,7 @@ const workItemsInput = [
     sourceLayer:
       "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus: "Historical project.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -530,7 +530,7 @@ const workItemsInput = [
       known:
         "Official records identify Jamie as KC Town Hall's presenter and document a unanimous board recommendation followed by the Council's $490,539 allocation.",
       open:
-        "Funding-agreement execution, receipt or disbursement, implementation, current status, and named-partner details remain open or require approval.",
+        "Funding-agreement execution, receipt or disbursement, later implementation, current property or operating status, and named-partner details remain open or require approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

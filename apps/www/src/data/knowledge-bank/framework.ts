@@ -384,6 +384,21 @@ export const frameworkIntake = [
     inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
     notes: ["Council allocation and negotiation authority do not establish an executed funding agreement, receipt or disbursement of funds, project completion, or current status."]
   },
+  {
+    id: "LEAD-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Jamie Burkart",
+    kind: "correction",
+    title: "KC Town Hall stewardship transition",
+    summary: "Jamie reports that he transitioned project stewardship to a mission-aligned organization when he stepped away.",
+    status: "researching",
+    dispositions: ["inquiry-created", "project-linked", "protected-from-publication"],
+    projectIds: ["kc-town-hall"],
+    sourceIds: [],
+    claimIds: [],
+    inquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+    notes: ["The professional handoff is retained as firsthand research context, not as a selected public claim.", "No personal circumstances are recorded or needed for professional publication.", "Do not name the receiving organization without permission and public-safe corroboration."]
+  },
   ...campaignPressIntake
 ] satisfies IntakeRecord[];
 
@@ -512,15 +527,15 @@ export const frameworkProjects = [
     id: "kc-town-hall",
     title: "KC Town Hall",
     aliases: ["KC Town-Hall LLC"],
-    period: "2019-present",
-    status: "active",
+    period: "2019",
+    status: "historical",
     summary: "Adaptive-reuse planning and public-benefit documentation for a historic Kansas City building.",
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["adaptive reuse", "public benefit", "long-horizon implementation"],
     sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
     claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"],
-    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
+    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public-safe building or planning image explains the adaptive-reuse proposition without exposing current legal, financial, or occupancy details?",
@@ -1010,7 +1025,7 @@ export const frameworkClaims = [
       { sourceId: "SRC-KCMO-ORDINANCE-190642-2019", relationship: "direct-support", supports: ["Council passage on September 26, 2019", "$490,539 KC Town Hall appropriation"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-KCMO-RESOLUTION-190649-2019", relationship: "direct-support", supports: ["Council acceptance of the board recommendation", "authorization to negotiate a funding agreement not to exceed $490,539"], confidence: "high", renderCitation: true }
     ],
-    boundaries: ["Council allocation and authorization do not establish an executed funding agreement, receipt or disbursement of funds, project completion, or current status.", "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.", "Do not infer current property, financial, legal, or occupancy status."],
+    boundaries: ["Council allocation and authorization do not establish an executed funding agreement, receipt or disbursement of funds, later implementation, project completion, or current property or operating status.", "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.", "Do not infer current property, financial, legal, or occupancy status."],
     antiClaims: ["KC Town Hall received or was disbursed $490,539", "Jamie caused the Council vote", "The funding agreement was executed", "The project is complete"],
     researchInquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
     reviewedAt: "2026-07-13",
@@ -1058,7 +1073,8 @@ export const frameworkInquiries = [
   openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["Canonical metadata and two campaign-index relationships are captured, but the article was not available for close reading in this run."], ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"]),
   openInquiry("INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "sunday-dinner-196", "What public-safe records and calculations support the 300-plus gathering and 20-plus resident-artist totals?", ["Reconcile the private RSVP and attendance ledger with public-safe aggregate methods.", "Document the residency count methodology and date range.", "Keep identities and attendance rows protected."], ["The Greene Hill source confirms a weekly open practice, not the aggregate totals."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
   openInquiry("INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "wowlist", "Which public sources independently establish WOW List's product function, technical implementation, organizer adoption, and geographic reach?", ["Recover contemporary coverage, public repositories, and preserved interface pages.", "Associate verified archive counts without exposing user records."], ["The Greene Hill source confirms a community-events function but not the platform's architecture, counts, or 35-city reach."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
-  openInquiry("INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "kc-town-hall", "What later public record establishes whether Kansas City and KC Town Hall executed a funding agreement, whether funds were received or disbursed, and what implementation followed?", ["Search executed agreements, contract records, Council and board updates, and public payment records.", "Distinguish allocation, agreement execution, payment, implementation, and current status.", "Keep current property, legal, and private financial details outside the public repository unless approved."], ["Council allocation and funding-agreement negotiation authority are documented; execution, receipt or disbursement, project completion, and current status are not established by these records."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]),
+  openInquiry("INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "kc-town-hall", "What later public record establishes whether Kansas City and KC Town Hall executed a funding agreement, whether funds were received or disbursed, and what implementation followed?", ["Search executed agreements, contract records, Council and board updates, and public payment records.", "Distinguish allocation, agreement execution, payment, implementation, and later property or operating status.", "Keep current property, legal, and private financial details outside the public repository unless approved."], ["Council allocation and funding-agreement negotiation authority are documented; execution, receipt or disbursement, project completion, and later property or operating status are not established by these records."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]),
+  openInquiry("INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "kc-town-hall", "What public-safe handoff record or recipient confirmation establishes Jamie's transition of project stewardship to a mission-aligned organization?", ["Recover a public-safe handoff artifact or receiving-organization confirmation.", "Ask Jamie whether naming the receiving organization would be useful and approved.", "Keep personal circumstances outside the professional record."], ["Jamie's firsthand correction establishes that his involvement is historical; the receiving organization and handoff details are not yet independently corroborated or selected for public projection."], []),
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."])
 ] satisfies ResearchInquiry[];

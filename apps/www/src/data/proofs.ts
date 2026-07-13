@@ -498,7 +498,7 @@ export const proofClaims: ProofClaim[] = [
     sourceBasis:
       "Approved resume language, City of Kansas City Central City Economic Development Sales Tax Board minutes, Committee Substitute for Ordinance No. 190642, Second Committee Substitute for Resolution No. 190649, and public-safe project context.",
     guardrail:
-      "Council allocation and negotiation authority do not establish an executed agreement, receipt or disbursement of funds, project completion, or Jamie's sole causality for the Council vote.",
+      "Council allocation and negotiation authority do not establish an executed agreement, receipt or disbursement of funds, later implementation, project completion, or Jamie's sole causality for the Council vote. Jamie's project involvement is historical; a later stewardship transition remains firsthand research context rather than part of this source-backed claim.",
     doNotSay: [
       "KC Town Hall received or was disbursed $490,539",
       "The funding agreement was executed",

@@ -170,3 +170,19 @@ Browser QA at 1440px and 390px confirmed three page-local source notes, no
 horizontal overflow, no stale pending-source copy, and no console warnings or
 errors. The mobile and desktop compositions remained legible after the stronger
 claim and adjacent metadata were aligned.
+
+### Lifecycle and privacy correction
+
+Jamie subsequently corrected the KC Town Hall lifecycle record: his involvement
+is historical, and he transitioned project stewardship to a mission-aligned
+organization. The prior `2019-present` and `active` fields were removed.
+
+The professional handoff now has a no-silent-loss intake record and a separate
+corroboration inquiry. It is labeled as firsthand research context, kept out of
+the source-backed Council claim, and not selected for site projection. The
+receiving organization remains unnamed pending permission and corroboration.
+No personal circumstances were entered into the repository.
+
+The existing KC Town Hall hard gate now requires historical lifecycle metadata,
+the bounded transition record, and an explicit privacy boundary. A new negative
+test demonstrates that the gate fails if the boundary is removed.

@@ -58,4 +58,10 @@ funding-agreement negotiations. Both Council actions occurred September 26,
 
 The proof remains `source-backed`, now through three linked government records.
 The open inquiry advances from Council approval to agreement execution, receipt
-or disbursement, implementation, and current status.
+or disbursement, implementation, and later property or operating status.
+
+Jamie's later correction also changes the project lifecycle from active to
+historical. His account of transitioning stewardship to a mission-aligned
+organization is preserved separately as firsthand research context with an
+open corroboration inquiry. It does not alter the source-backed funding claim
+or enter the selected public projection.

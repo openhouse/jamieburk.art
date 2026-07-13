@@ -308,6 +308,7 @@ export function evaluateKcTownHallCouncilAllocation({
   proofs,
   kcTownHallCase,
   councilAllocationDoc,
+  stewardshipTransitionDoc,
   workData
 }) {
   const missing = [];
@@ -326,6 +327,8 @@ export function evaluateKcTownHallCouncilAllocation({
     "SRC-KCMO-RESOLUTION-190649-2019",
     "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
     "INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT",
+    "LEAD-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
+    "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
     "2019-09-26",
     "$490,539",
     "Committee Substitute for Ordinance No. 190642",
@@ -349,7 +352,8 @@ export function evaluateKcTownHallCouncilAllocation({
     "after a unanimous board recommendation, the Council allocated $490,539",
     "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649",
     "$490,539 Council allocation after unanimous board recommendation",
-    "Funding-agreement execution, receipt or disbursement, implementation, current status"
+    'currentStatus: "Historical project."',
+    "Funding-agreement execution, receipt or disbursement, later implementation, current property or operating status"
   ]);
   requireFragments("Council-allocation intake note", councilAllocationDoc, [
     "Ordinance No. 190642",
@@ -360,6 +364,17 @@ export function evaluateKcTownHallCouncilAllocation({
     "executed funding agreement",
     "receipt or disbursement"
   ]);
+  requireFragments("Stewardship-transition intake note", stewardshipTransitionDoc, [
+    "Jamie Burkart firsthand correction",
+    "mission-aligned organization",
+    "not selected for public projection",
+    "No personal circumstances are recorded",
+    "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
+  ]);
+
+  if (!/id: "kc-town-hall"[\s\S]{0,180}period: "2019"[\s\S]{0,80}status: "historical"/.test(framework)) {
+    missing.push("KC Town Hall project metadata must record period 2019 and historical status.");
+  }
 
   if (/record stops at the board's recommendation/i.test(kcTownHallCase)) {
     missing.push(
@@ -456,6 +471,10 @@ export function runLaunchEvals(repoRoot) {
   const kcTownHallCouncilAllocationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-kc-town-hall-council-allocation.md"
+  );
+  const kcTownHallStewardshipTransitionDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-kc-town-hall-stewardship-transition.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -734,6 +753,7 @@ export function runLaunchEvals(repoRoot) {
     proofs,
     kcTownHallCase,
     councilAllocationDoc: kcTownHallCouncilAllocationDoc,
+    stewardshipTransitionDoc: kcTownHallStewardshipTransitionDoc,
     workData
   });
   results.push(
@@ -746,7 +766,8 @@ export function runLaunchEvals(repoRoot) {
       evidence: [
         "The board recommendation, appropriation ordinance, and accepting resolution form a dated public-record sequence.",
         "The selected projection distinguishes Jamie's documented presenter role from Council action and does not imply sole causation.",
-        "The claim distinguishes allocation and negotiation authority from agreement execution, receipt, disbursement, completion, and current status."
+        "The claim distinguishes allocation and negotiation authority from agreement execution, receipt, disbursement, completion, and later status.",
+        "Jamie's involvement is historical; the stewardship transition remains bounded firsthand research context with personal circumstances omitted."
       ]
     })
   );

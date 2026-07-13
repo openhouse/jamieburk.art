@@ -40,7 +40,7 @@ The canonical positioning sentence is:
 | Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
 | Knowledge-bank lifecycle | 18 | Yes | Intake has no silent loss; evidence maturity, safety, and editorial selection remain separate; every public proof has source-coverage status. |
 | Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
-| KC Town Hall Council allocation | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced while allocation remains distinct from agreement execution, receipt, and disbursement. |
+| KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
@@ -78,6 +78,8 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - Do not equate a Council appropriation or funding-negotiation authorization
   with an executed agreement, receipt, disbursement, project completion, or
   current status.
+- Do not encode private personal context to explain a professional transition or
+  silently convert an uncorroborated stewardship memory into a selected claim.
 - Do not satisfy press-corpus completeness by dropping cross-campaign
   duplicates, treating index membership as claim support, or marking
   unreviewed articles as close-read.
