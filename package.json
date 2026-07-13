@@ -22,7 +22,7 @@
     "report:citations": "node scripts/report-citations.mjs",
     "evals:portfolio": "node scripts/check-portfolio-evals.mjs",
     "test:portfolio-evals": "node --test scripts/tests/portfolio-evals.test.mjs",
-    "eval:knowledge-bank": "node scripts/check-knowledge-development.mjs --consecutive=2 --hybrid-report=.agents/evals/runs/knowledge-bank-development-hybrid-2026-07-12.json",
+    "eval:knowledge-bank": "node scripts/check-knowledge-development.mjs --consecutive=2 --hybrid-report=.agents/evals/runs/knowledge-bank-development-hybrid-2026-07-13.json",
     "test:knowledge-development": "node --test scripts/tests/knowledge-development.test.mjs",
     "check:chad-lens": "node scripts/check-chad-lens.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",

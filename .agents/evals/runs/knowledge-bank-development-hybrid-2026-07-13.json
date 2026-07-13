@@ -1,0 +1,35 @@
+{
+  "candidate_sha": "bea860273246e1cbb4e787842a8830a4359d7088",
+  "results": [
+    {
+      "eval_id": "KB-007",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "Fresh audit of all 14 collective-work claims found explicit Jamie actions, collective or institutional boundaries, and anti-claims for every record.",
+        "Claim maturity correctly separates protected archive support for Jamie-specific implementation from public campaign-artifact support for visible campaign surfaces.",
+        "CLM-NAC-CABARET-CIVIC-TOOLING and CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN use non-rendered protected direct support; separate public-surface claims use rendered public direct support.",
+        "Collective campaign and policy wording preserves collaborators, partner organizations, Council sponsors, officials, and agencies without converting outcomes into solo causation.",
+        "Citation, knowledge-bank, public-safety, and Chad-lens checks passed."
+      ],
+      "findings": [],
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "All 25 eligible claims have an explicit active or hold projection disposition; research-needed claims remain held.",
+        "Fair Rent MDX contains 15 Claim bindings: all 11 cited bindings exactly match the 11 registered occurrences, while the four protected-support projections correctly render without public citations.",
+        "The fair-rent-nyc page ID, /work/fair-rent-nyc surface, work-item slug, MDX bindings, and CaseStudyLayout reference resolution align.",
+        "All 13 Fair Rent source notes resolve to public registry sources with ordered numbering and valid backlinks.",
+        "Source-by-source review of every Fair Rent occurrence confirmed that each rendered citation supports the proposition or clause it follows; protected archive evidence is not represented by an unrelated public campaign citation.",
+        "check:citations, test:citations (11/11), check:routes, and test:knowledge-development (5/5) passed with a clean worktree."
+      ],
+      "findings": [],
+      "confidence": 0.99
+    }
+  ],
+  "overall_finding": "Exact commit bea860273246e1cbb4e787842a8830a4359d7088 passes fresh blind confirmation for KB-007 and KB-009 with no repair findings."
+}
