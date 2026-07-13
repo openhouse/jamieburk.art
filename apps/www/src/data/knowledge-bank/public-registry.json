@@ -100,6 +100,143 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The profile documents weekly community-open Sunday dinners, use of WOWList for community events, Jamie's NYC Artist Coalition advocacy, and an invitation to a public Office of Nightlife town hall.",
+      "doesNotEstablish": [
+        "300 or more Sunday Dinner gatherings",
+        "20 or more resident artists",
+        "WOWList's aggregate user, post, or city counts",
+        "Jamie's sole production of the Office of Nightlife town hall",
+        "sole causality for Cabaret Law repeal"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-SAVE-NYC-SPACES",
+      "title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures",
+      "organization": "NYC Artist Coalition / Save NYC Spaces coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Save NYC Spaces public campaign website.",
+      "publicNote": "The campaign page quotes Jamie on cultural traditions born in grassroots spaces, identifies NYC Artist Coalition among a broad partner group, and preserves public town-hall and media materials.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship or production of the campaign",
+        "the identity of every event participant",
+        "sole causality for Office of Nightlife policy",
+        "permission to republish campaign images"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22",
+      "title": "New York City Council Committee on Small Business hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-22",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Small Business hearing transcript, October 22, 2018, pp. 346-348.",
+      "publicNote": "The official transcript records Jamie testifying as an NYC Artist Coalition member, linking commercial affordability to cultural-space safety and advocating lease-renewal and rent protections.",
+      "doesNotEstablish": [
+        "independent verification of every example in the testimony",
+        "that Jamie authored the Small Business Jobs Survival Act",
+        "that Jamie spoke for every coalition member",
+        "sole causality for legislation"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      "title": "Central City Economic Development Sales Tax Board 2019 public-meeting record",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Central City Economic Development Sales Tax Board public-meeting record, 2019.",
+      "publicNote": "The municipal record identifies Jamie as KC Town-Hall's presenter, records a $490,539 request, describes four retail spaces and three apartments at 36th and Indiana, and records the later unanimous recommendation.",
+      "doesNotEstablish": [
+        "that Jamie acted alone",
+        "final receipt or disbursement of funds",
+        "current project or property status",
+        "private financial or legal details"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
+      "title": "Round Two Recommended Projects - Central City Economic Development Sales Tax Board",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=A318190A-A2D9-436E-8D10-85242BA4ED5F&ID=10628092&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Central City Economic Development Sales Tax Board, Round Two Recommended Projects presentation, Resolution 190649, 2019.",
+      "publicNote": "The official presentation records KC Town Hall's project description, $680,169 total budget, and $490,539 recommended funding amount.",
+      "doesNotEstablish": [
+        "final receipt or disbursement of funds",
+        "Jamie's sole ownership or authorship",
+        "current project or property status",
+        "that projected job estimates were realized"
+      ]
+    },
+    {
+      "id": "SRC-WOWLIST-SBDIY",
+      "title": "sbdiy community resources and WOWList calendar",
+      "organization": "sbdiy",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.sbdiy.org/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "sbdiy community website and WOWList calendar links.",
+      "publicNote": "The independent community page links directly to an sbdiy WOWList calendar and an add-event path, documenting one organizer-facing use of the platform.",
+      "doesNotEstablish": [
+        "WOWList's aggregate user, post, or city counts",
+        "current activity of the historical WOWList platform",
+        "Jamie's sole responsibility for the integration",
+        "official chapter status"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14",
+      "title": "Central City Economic Development Sales Tax Board minutes from September 14, 2021",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-10-12",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/7198/637696345156870000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Central City Economic Development Sales Tax Board, minutes from September 14, 2021, published October 12, 2021.",
+      "publicNote": "The official minutes list Jamie Burkart among community members and identify him with KC Town Hall, documenting continued public project representation in 2021.",
+      "doesNotEstablish": [
+        "Jamie's action at the meeting",
+        "current project or property status",
+        "final receipt or disbursement of funds",
+        "Jamie's sole ownership or control"
+      ]
     }
   ],
   "claims": [
@@ -306,6 +443,198 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Public community pages document WOWList in use as event infrastructure: Greene Hill Food Co-op described Jamie and a co-host posting community events there, while sbdiy linked to its own WOWList calendar and add-event flow.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ],
+          "rationale": "Add two compact external-use examples to the case study so hiring readers can inspect community adoption without exposing user data or relying on aggregate archive counts."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and a co-host posted community events on WOWList"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-WOWLIST-SBDIY",
+          "relationship": "direct-support",
+          "supports": [
+            "sbdiy used a WOWList community calendar",
+            "sbdiy linked an organizer-facing add-event path"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "These examples do not establish aggregate user, post, or city counts.",
+        "Treat WOWList as a historical platform unless current operation is separately verified."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2017 Greene Hill Food Co-op profile documented Jamie and a co-host hosting Sunday dinner every week and opening it to the community.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ],
+          "rationale": "Use one contemporaneous public description to make the recurring hosting practice inspectable while keeping guests, addresses, attendance data, and unapproved images private."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and a co-host hosted weekly Sunday dinners open to the community"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The source does not establish the 300-plus gathering or 20-plus resident-artist aggregate claims.",
+        "Do not publish addresses, guest identities, attendance records, or images from this source relationship."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SAVE-NYC-SPACES-PUBLIC-VOICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In the Save NYC Spaces campaign, Jamie publicly argued that New York's influential cultural traditions are born in small grassroots spaces; the campaign presented NYC Artist Coalition alongside a broad partner coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ],
+          "rationale": "Add Jamie's public voice and visible coalition context to the case study without converting a collective campaign into solo authorship or causality."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-SAVE-NYC-SPACES",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie publicly represented NYC Artist Coalition's cultural-space argument",
+            "NYC Artist Coalition participated in the Save NYC Spaces coalition",
+            "the public campaign named a broad partner group"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Campaign production and policy outcomes remain collectively credited.",
+        "Do not republish campaign images without separate rights review."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2018, Jamie testified before the New York City Council as an NYC Artist Coalition member, linking commercial affordability to cultural-space safety and urging lease-renewal protections.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ],
+          "rationale": "Use the official testimony to establish Jamie's direct public advocacy and the long-running safety-and-affordability throughline behind the current documentation work."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie testified before the New York City Council",
+            "Jamie identified himself as an NYC Artist Coalition member",
+            "Jamie linked commercial affordability to cultural-space safety",
+            "Jamie advocated lease-renewal and commercial-rent protections"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Testimony establishes Jamie's advocacy, not authorship or enactment of legislation.",
+        "Do not present testimony examples as independently verified findings without additional sources."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "KCMO records identify Jamie as the KC Town-Hall presenter in the 2019 proposal process, record a unanimous board recommendation of $490,539 for the project, and list him with KC Town Hall again in 2021.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ],
+          "rationale": "Make Jamie's public municipal-process role, the bounded recommendation outcome, and sustained project representation directly inspectable on the case study."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie was identified as the KC Town-Hall presenter",
+            "the proposal requested $490,539",
+            "the board unanimously recommended $490,539 to the City Council"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "KC Town Hall was a recommended Round Two project",
+            "recommended funding was $490,539"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14",
+          "relationship": "corroborating",
+          "supports": [
+            "the municipal record identified Jamie with KC Town Hall",
+            "KC Town Hall remained represented in the public process in 2021"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Recommendation is not proof of final receipt or disbursement.",
+        "Presenter identification and meeting attendance do not establish sole ownership, authorship, or current project status."
+      ]
     }
   ],
   "pages": [
@@ -369,6 +698,89 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+        "SRC-WOWLIST-SBDIY"
+      ],
+      "occurrences": [
+        {
+          "id": "public-community-use",
+          "claimId": "CLM-WOWLIST-PUBLIC-COMMUNITY-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19",
+            "SRC-WOWLIST-SBDIY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
+      ],
+      "occurrences": [
+        {
+          "id": "weekly-community-hosting",
+          "claimId": "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCAC-SAVE-NYC-SPACES",
+        "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"
+      ],
+      "occurrences": [
+        {
+          "id": "save-nyc-spaces-public-voice",
+          "claimId": "CLM-NYCAC-SAVE-NYC-SPACES-PUBLIC-VOICE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-SAVE-NYC-SPACES"
+          ]
+        },
+        {
+          "id": "commercial-rent-testimony",
+          "claimId": "CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+        "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
+        "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+      ],
+      "occurrences": [
+        {
+          "id": "municipal-process",
+          "claimId": "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+            "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
+            "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
           ]
         }
       ]

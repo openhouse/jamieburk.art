@@ -306,17 +306,18 @@ export const portfolioHistoryClaims = [
   {
     id: "CLM-WATERWAYS-RAFT-EXPEDITION",
     project: "waterways-participatory-practice",
-    internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described a four-month journey that reached salt water.",
+    internalClaim: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City.",
     status: "confirmed-with-boundary",
     projections: [
-      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the historical bank because it establishes initiative and scale; hold from hiring pages until an inspectable artifact and concise present-day bridge are ready." },
-      { key: "about", text: "Conceived and organized a collaborative raft project; in his published account, the four-month journey traveled from Kansas City down the Missouri and Mississippi rivers until the water reached salt.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
+      { key: "archive-note", text: "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/participatory-public-practice"], rationale: "Retain in the historical bank because it establishes initiative, duration, and independently corroborated terminus; hold from hiring pages until an inspectable artifact and concise present-day bridge are ready." },
+      { key: "about", text: "Conceived and organized a collaborative raft project whose crew reached the Gulf of Mexico four months after leaving Kansas City.", status: "hold", citationRequired: true, surfaces: [], rationale: "Strong historical depth, but hold from the current hiring narrative until a visual artifact and concise bridge to Jamie's present operating practice are ready." }
     ],
     evidence: [
       { sourceId: "SRC-WATERWAYS-PITCH-2007-08-09", relationship: "direct-support", supports: ["Jamie originated the raft expedition idea", "the project investigated Kansas City's relationship to the Missouri River"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie's published account that he organized the bicycle-powered raft project", "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"], publicNote: "Charlotte Street reproduces Jamie's first-person retrospective account; it is public evidence of his account, not an independent route log.", confidence: "moderate", renderCitation: true }
+      { sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", relationship: "direct-support", supports: ["Jamie's published account that he organized the bicycle-powered raft project", "Jamie's published account of traveling from Kansas City down the Missouri and Mississippi rivers for four months until the water reached salt"], publicNote: "Charlotte Street reproduces Jamie's first-person retrospective account; it is public evidence of his account, not an independent route log.", confidence: "moderate", renderCitation: true },
+      { sourceId: "SRC-WATERWAYS-PITCH-GULF-2009-09-03", relationship: "corroborating", supports: ["Jamie and the raft crew reached the Gulf of Mexico", "the journey lasted four months"], publicNote: "The Pitch independently corroborates the collaborative crew's Gulf terminus and four-month duration, but it is not a complete route log.", confidence: "high", renderCitation: true }
     ],
-    boundaries: ["Describe the expedition as collaborative.", "Route and duration details are Jamie's published first-person retrospective account, not an independently corroborated complete route log.", "Use 'reached salt water' rather than 'reached the Gulf of Mexico' unless a complete route log independently confirms that terminus."],
+    boundaries: ["Describe the expedition as collaborative.", "The later report independently corroborates the Gulf terminus and four-month duration, not every stop, participant, or route detail."],
     antiClaims: ["Jamie completed the expedition alone.", "The reviewed sources independently establish every stop or participant."],
     researchInquiryIds: ["INQ-WATERWAYS-FULL-PROGRAM-CORPUS"],
     reviewedAt: "2026-07-12",
@@ -447,7 +448,7 @@ export const portfolioHistoryInquiries = [
     project: "waterways-participatory-practice",
     question: "What is the complete chronology, route, collaborator network, public-program inventory, and surviving artifact set for Jamie's raft and waterways practice?",
     methods: [
-      "Reviewed the supplied Pitch article and Charlotte Street institutional event page.",
+      "Reviewed the supplied 2007 Pitch article, the 2009 Pitch follow-up, and the Charlotte Street institutional event page.",
       "Separated direct reporting from Jamie's quoted retrospective account.",
       "Recorded route, duration, program, and collaboration limits as claim boundaries."
     ],
@@ -456,15 +457,16 @@ export const portfolioHistoryInquiries = [
     findings: [
       "The Pitch attributes the expedition concept to Jamie and documents the recycled-material raft project.",
       "Charlotte Street documents Great Accommodations and quotes Jamie's account of a four-month journey reaching salt water.",
+      "The 2009 Pitch follow-up independently reports that Jamie and the collaborative crew reached the Gulf of Mexico four months after leaving Kansas City.",
       "The reviewed sources support a substantial participatory waterways practice but not its complete chronology or artifact corpus."
     ],
     limitations: [
       "No complete route log or participant roster was reviewed.",
-      "Some route details are preserved as Jamie's quoted account rather than independent contemporaneous reporting.",
+      "The Gulf terminus and four-month duration are independently corroborated, but the complete route remains unrecovered.",
       "Photographs, correspondence, video, and additional programs remain to be inventoried and reviewed for rights and consent."
     ],
-    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01"],
-    publicSummary: "Public reporting and an institutional exhibition record establish Jamie's collaborative raft expedition and participatory waterways practice; the complete route, collaborator, program, and artifact corpus remains under research."
+    sourceIds: ["SRC-WATERWAYS-PITCH-2007-08-09", "SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01", "SRC-WATERWAYS-PITCH-GULF-2009-09-03"],
+    publicSummary: "Public reporting and an institutional exhibition record establish Jamie's collaborative raft expedition, the crew's Gulf terminus after four months, and Jamie's participatory waterways practice; the complete route, collaborator, program, and artifact corpus remains under research."
   },
   {
     id: "INQ-NYCAC-JAMIE-ROLE-CAUSALITY",
@@ -473,13 +475,18 @@ export const portfolioHistoryInquiries = [
     methods: [
       "Reviewed supplied Gothamist and NPR reporting.",
       "Reviewed Bedford + Bowery reporting on the Office of Nightlife town hall.",
-      "Reviewed the Let NYC Dance campaign site and separated coalition outcomes from individual authorship."
+      "Reviewed the Greene Hill Food Co-op profile documenting Jamie's public community-space advocacy and invitation to the Office of Nightlife town hall.",
+      "Reviewed the Let NYC Dance and Save NYC Spaces campaign sites.",
+      "Reviewed Jamie's 2018 New York City Council Small Business testimony and separated direct advocacy from legislative authorship and collective outcomes."
     ],
     runAt: "2026-07-12",
     resultStatus: "partially-recovered",
     findings: [
       "Jamie is publicly identified as a founding member of NYC Artist Coalition and as an organizer and speaker for repeal.",
       "Bedford + Bowery described NYC Artist Coalition as instrumental in the advocacy and as spearheading the town hall.",
+      "Greene Hill Food Co-op documents Jamie articulating NYC Artist Coalition's community-space purpose and inviting readers to the Office of Nightlife town hall.",
+      "Save NYC Spaces preserves Jamie's public cultural-space argument within a broad partner coalition.",
+      "The 2018 Council transcript records Jamie linking commercial affordability to cultural-space safety and advocating lease protections.",
       "The sources support a significant collective coalition role more strongly than a complete individual production or legislative-authoring account."
     ],
     limitations: [
@@ -487,8 +494,8 @@ export const portfolioHistoryInquiries = [
       "Legislative sponsorship and drafting belonged to elected officials and government staff.",
       "Decades of prior advocacy and a broad coalition contributed to repeal."
     ],
-    sourceIds: ["SRC-NYCAC-GOTHAMIST-2017-06-19", "SRC-NYCAC-NPR-2017-09-20", "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR", "SRC-NYCAC-LET-NYC-DANCE"],
-    publicSummary: "Public reporting supports Jamie's founding, organizing, speaking, and coalition role, and describes NYC Artist Coalition as instrumental in the advocacy; exact individual production and causal attribution remains bounded and under research."
+    sourceIds: ["SRC-NYCAC-GOTHAMIST-2017-06-19", "SRC-NYCAC-NPR-2017-09-20", "SRC-NYCAC-BEDFORD-BOWERY-NIGHT-MAYOR", "SRC-NYCAC-LET-NYC-DANCE", "SRC-SUNDAY-WOWLIST-GREENE-HILL-2017-12-19", "SRC-NYCAC-SAVE-NYC-SPACES", "SRC-NYC-COUNCIL-SMALL-BUSINESS-2018-10-22"],
+    publicSummary: "Public reporting, campaign records, and Council testimony support Jamie's founding, organizing, speaking, commercial-affordability advocacy, and coalition role; exact individual production and causal attribution remains bounded and under research."
   },
   {
     id: "INQ-NYCAC-MARCH-TO-CURE-CAUSALITY",

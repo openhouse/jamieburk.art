@@ -28,9 +28,39 @@ available imagery, and remaining role-attribution inquiries are evaluated.
 
 **Status:** Careful
 **Support level:** Strong
-**Public wording:** Conceived and organized a collaborative raft expedition; in a published first-person account, described a four-month journey from Kansas City down the Missouri and Mississippi rivers until the water reached salt, then developed participatory public programs around how waterways connect cities, stories, and people.
-**Guardrail:** Describe the work as collaborative and use "reached salt water" unless a complete route record establishes a Gulf terminus.
+**Public wording:** Conceived and organized a collaborative raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.
+**Guardrail:** Describe the work as collaborative; follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.
 **Canonical claims:** `CLM-WATERWAYS-RAFT-EXPEDITION`, `CLM-WATERWAYS-GREAT-ACCOMMODATIONS`.
+
+# 2026-07-12 ten-source expansion
+
+Seven additional claims matured from ten newly reviewed public sources:
+
+- `CLM-WOWLIST-PUBLIC-COMMUNITY-USE` - two external community pages document
+  community-event publishing and an organizer-facing WOWList calendar.
+- `CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING` - a 2017 institutional profile
+  documents weekly Sunday dinners open to the community; it does not establish
+  the larger historical aggregate counts.
+- `CLM-KC-TUNNEL-PUBLIC-HISTORY-PROGRAM` - KCUR documents Jamie's participatory
+  route, three-film tunnel screening, and public-access argument; current access
+  and official permission are not claimed.
+- `CLM-NYCAC-SAVE-NYC-SPACES-PUBLIC-VOICE` - the campaign record preserves
+  Jamie's public argument inside a broad partner coalition.
+- `CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY` - the official Council transcript
+  documents Jamie's direct testimony, not legislative authorship or sole
+  causality.
+- `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS` - three municipal records document
+  Jamie's presenter role, the unanimous $490,539 recommendation, and continued
+  KC Town Hall identification in 2021; receipt and current status are not
+  claimed.
+- `CLM-CLAUDETTE-AR-COLLABORATION` - a collaborator-authored page documents an
+  augmented-reality collaboration and shared video production with explicit
+  credit and rights boundaries.
+
+The Gulf follow-up source also strengthens `CLM-WATERWAYS-RAFT-EXPEDITION`,
+replacing the earlier salt-water-only boundary with independently reported Gulf
+terminus language while preserving the collaborative and incomplete-route
+limits.
 
 ### open-house-participatory-practice
 

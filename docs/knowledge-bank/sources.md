@@ -31,11 +31,30 @@ Approved public artifact examples for this launch pass include:
 - Gothamist, NPR, and Bedford + Bowery reporting on NYC Artist Coalition work.
 - New York City Council hearing transcripts and legislative records.
 - New York City's public announcement replacing M.A.R.C.H. with CURE.
+- Greene Hill Food Co-op's 2017 profile of Sunday Dinner, WOWList, and NYC
+  Artist Coalition work.
+- KCUR reporting on Jamie's 8th Street Tunnel screening and public-history
+  program.
+- The Pitch's 2009 follow-up independently reporting the raft crew's Gulf of
+  Mexico terminus.
+- The Save NYC Spaces public campaign record.
+- New York City Council's 2018 Small Business hearing transcript.
+- Kansas City, Missouri, Central City Economic Development Sales Tax Board
+  proposal, recommendation, and 2021 meeting records.
+- Michael Rees's collaborator-authored record of the Claudette augmented-reality
+  project.
+- sbdiy's public WOWList calendar and add-event links.
 
 Typed source records include a public-safe summary, what the source supports,
 what it does not establish, preservation status, and claim or inquiry links.
 Adding a source without a disposition or association fails
 `npm run knowledge-lifecycle`.
+
+The July 12 source-expansion pass added exactly ten source records. Four cited
+claim groups project to the WOWList, Sunday Dinner, FairRentNYC, and KC Town
+Hall case studies. The tunnel, raft, and augmented-reality records remain as
+public-safe depth in the bank until a future composition has the right
+artifacts, rights review, and editorial space.
 
 ### Public-Safe Archive Summary
 

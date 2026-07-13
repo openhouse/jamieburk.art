@@ -546,16 +546,16 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Conceived and organized a collaborative raft expedition; in a published first-person account, described a four-month journey from Kansas City down the Missouri and Mississippi rivers until the water reached salt, then developed participatory public programs around how waterways connect cities, stories, and people.",
+      "Conceived and organized a collaborative raft expedition whose crew reached the Gulf of Mexico four months after leaving Kansas City, then developed participatory public programs around how waterways connect cities, stories, and people.",
     shortWording: "Built participatory public work around connected waterways",
     detailedPublicWording:
-      "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; in a published first-person account, he described traveling for four months until the water reached salt. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
+      "Jamie conceived and organized a collaborative bicycle-powered raft expedition from Kansas City down the Missouri and Mississippi rivers; a later independent report says the crew reached the Gulf of Mexico four months after leaving Kansas City. He later spearheaded Great Accommodations, a participatory exhibition and public-program system treating connected rivers as a social network.",
     sourceBasis:
-      "Contemporaneous reporting in The Pitch and a Charlotte Street institutional program page.",
+      "Contemporaneous and follow-up reporting in The Pitch and a Charlotte Street institutional program page.",
     whyItMatters:
       "Recovers a long-running participatory practice that connects expedition design, public programming, infrastructure, and civic imagination.",
     guardrail:
-      "Describe both projects as collaborative and use 'reached salt water' unless a complete route record establishes a Gulf terminus.",
+      "Describe both projects as collaborative; the follow-up reporting supports the Gulf terminus and four-month duration, not every stop or participant.",
     doNotSay: [
       "Jamie completed the raft expedition alone",
       "The reviewed sources establish every participant or stop",

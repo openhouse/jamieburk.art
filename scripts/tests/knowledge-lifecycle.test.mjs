@@ -4,6 +4,10 @@ import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import {
+  sourceExpansionIntake,
+  sourceExpansionSources
+} from "../../apps/www/src/data/knowledge-bank/source-expansion.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -12,6 +16,56 @@ const cloneBank = () => structuredClone(knowledgeBank);
 
 test("canonical knowledge lifecycle is valid", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
+});
+
+test("ten-source expansion is complete and dispositioned", () => {
+  assert.equal(sourceExpansionSources.length, 10);
+  assert.equal(sourceExpansionIntake.length, 10);
+  const sourceIds = new Set(sourceExpansionSources.map((source) => source.id));
+  assert.deepEqual(
+    new Set(sourceExpansionIntake.flatMap((record) => record.sourceIds)),
+    sourceIds
+  );
+  assert.ok(
+    sourceExpansionIntake.every(
+      (record) => record.status === "matured" && record.claimIds.length > 0
+    )
+  );
+});
+
+test("new evidence returns to every linked research inquiry", () => {
+  const inquiryById = new Map(
+    knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry])
+  );
+  const newSourceIds = new Set(sourceExpansionSources.map((source) => source.id));
+  const expandedClaims = knowledgeBank.claims.filter((claim) =>
+    claim.evidence.some((relationship) => newSourceIds.has(relationship.sourceId))
+  );
+
+  for (const claim of expandedClaims) {
+    for (const inquiryId of claim.researchInquiryIds) {
+      const inquiry = inquiryById.get(inquiryId);
+      const relevantSourceIds = claim.evidence
+        .map((relationship) => relationship.sourceId)
+        .filter((sourceId) => newSourceIds.has(sourceId));
+      assert.ok(inquiry, `Missing inquiry ${inquiryId}`);
+      assert.ok(
+        relevantSourceIds.every((sourceId) => inquiry.sourceIds.includes(sourceId)),
+        `${inquiryId} omits new evidence for ${claim.id}`
+      );
+    }
+  }
+
+  for (const intake of sourceExpansionIntake) {
+    for (const inquiryId of intake.inquiryIds ?? []) {
+      const inquiry = inquiryById.get(inquiryId);
+      assert.ok(inquiry, `Missing inquiry ${inquiryId}`);
+      assert.ok(
+        intake.sourceIds.every((sourceId) => inquiry.sourceIds.includes(sourceId)),
+        `${inquiryId} omits intake evidence for ${intake.id}`
+      );
+    }
+  }
 });
 
 test("intake cannot reference unknown sources", () => {
@@ -94,7 +148,7 @@ test("high-risk projections retain their evidence posture", () => {
   );
   assert.match(
     byId.get("CLM-WATERWAYS-RAFT-EXPEDITION").projections.find((item) => item.key === "about").text,
-    /published account/i
+    /Gulf of Mexico/i
   );
   assert.match(
     byId.get("CLM-TALKS-NOT-RAIDS-ADVOCACY").projections.find((item) => item.key === "case-study").text,
@@ -103,12 +157,37 @@ test("high-risk projections retain their evidence posture", () => {
   const waterwaysProof = proofClaims.find(
     (proof) => proof.id === "waterways-participatory-practice"
   );
-  assert.match(waterwaysProof.publicWording, /published first-person account/i);
+  assert.match(waterwaysProof.publicWording, /Gulf of Mexico/i);
   assert.ok(
     readFileSync("docs/knowledge-bank/claims.md", "utf8").includes(
       `**Public wording:** ${waterwaysProof.publicWording}`
     )
   );
+  const participatoryProject = readFileSync(
+    "docs/knowledge-bank/projects/participatory-public-practice.md",
+    "utf8"
+  );
+  assert.match(participatoryProject, /Gulf of Mexico/);
+  assert.match(participatoryProject, /8th Street Tunnel/);
+  assert.match(participatoryProject, /Claudette/);
+  assert.doesNotMatch(participatoryProject, /Use "reached salt water"/);
+  const claudetteAbout = byId
+    .get("CLM-CLAUDETTE-AR-COLLABORATION")
+    .projections.find((item) => item.key === "about").text;
+  for (const credit of [
+    "Michael Rees",
+    "Anne Dufy Burkart",
+    "Julia Fredenberg",
+    "Claudette"
+  ]) {
+    assert.match(claudetteAbout, new RegExp(credit));
+  }
+  const coalitionProject = readFileSync(
+    "docs/knowledge-bank/projects/nyc-artist-coalition.md",
+    "utf8"
+  );
+  assert.match(coalitionProject, /Save NYC Spaces/);
+  assert.match(coalitionProject, /commercial-rent protections/);
   const marchProof = proofClaims.find(
     (proof) => proof.id === "march-transparency-to-cure"
   );

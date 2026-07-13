@@ -26,6 +26,23 @@ test("repeated sources retain one note and unique backlinks", () => {
 
 test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "municipal-process").sources.map(
+      (item) => item.source.id
+    ),
+    [
+      "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
+      "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+    ]
+  );
+});
+
+test("new case-study citations expose only selected public sources", () => {
+  assert.equal(resolveCitationReferences("wowlist").length, 2);
+  assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
+  assert.equal(resolveCitationReferences("fair-rent-nyc").length, 2);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 3);
 });
 
 test("Claim resolver returns only active approved projections", () => {

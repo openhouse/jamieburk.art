@@ -5,9 +5,15 @@ import {
   portfolioHistoryInquiries,
   portfolioHistorySources
 } from "./portfolio-history.ts";
+import {
+  sourceExpansionClaims,
+  sourceExpansionIntake,
+  sourceExpansionPages,
+  sourceExpansionSources
+} from "./source-expansion.ts";
 
 const knowledgeBankInput = {
-  intake: intakeRecords,
+  intake: [...intakeRecords, ...sourceExpansionIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -130,7 +136,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
     },
-    ...portfolioHistorySources
+    ...portfolioHistorySources,
+    ...sourceExpansionSources
   ],
   claims: [
     {
@@ -219,7 +226,8 @@ const knowledgeBankInput = {
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
-    ...portfolioHistoryClaims
+    ...portfolioHistoryClaims,
+    ...sourceExpansionClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -257,7 +265,7 @@ const knowledgeBankInput = {
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
-  }]
+  }, ...sourceExpansionPages]
 } satisfies KnowledgeBankInput;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);
