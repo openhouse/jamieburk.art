@@ -48,6 +48,20 @@ test("sources must preserve affirmative and negative support boundaries", () => 
   assert.match(validateKnowledgeContent(candidate).join("\n"), /does not state what it cannot establish/);
 });
 
+test("candidate claims resolve to proposition-level source support", () => {
+  const candidate = cloneBank();
+  const waterways = candidate.intakeItems.find((item) => item.id.includes("WATERWAYS"));
+  waterways.candidateClaims.push("Jamie completed an unsupported accomplishment.");
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /not a supported proposition/);
+});
+
+test("proposition sources stay within the intake source set", () => {
+  const candidate = cloneBank();
+  const waterways = candidate.intakeItems.find((item) => item.id.includes("WATERWAYS"));
+  waterways.propositions[0].sourceIds = ["SRC-CALLNYC-GITHUB-REPOSITORY"];
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /outside its intake source set/);
+});
+
 function passingRun(target = "claim-development") {
   return {
     suite_id: suite.suite_id,

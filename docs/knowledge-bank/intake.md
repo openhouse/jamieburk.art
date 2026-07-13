@@ -43,6 +43,25 @@ the repo and use a protected locator or public-safe summary when appropriate.
 Maturity is not importance. A large accomplishment may remain `researching`;
 a small fact may become `claim-candidate` quickly.
 
+## Proposition Layer
+
+Each developed intake thread is decomposed into atomic propositions. A
+proposition records:
+
+- one bounded statement;
+- its maturity as direct support, supported with a boundary, bounded synthesis,
+  context only, memory lead, or research only;
+- the exact source records associated with that statement;
+- the specific support those sources provide;
+- what the proposition still must not imply;
+- the decision the proposition can inform;
+- a next research step when it is not claim-ready.
+
+Only direct, bounded, or bounded-synthesis propositions may appear in
+`candidateClaims`. Context, memory, and research propositions remain in the
+bank but cannot silently become claims. This is how the system preserves depth
+without asking one source to prove an entire project history.
+
 ## Intake Procedure
 
 1. **Safety check:** Decide whether the fragment itself is safe in a public
@@ -51,9 +70,9 @@ a small fact may become `claim-candidate` quickly.
    `apps/www/src/data/knowledge-bank/records.ts`.
 3. **Source registration:** Add public sources to `sources`. State both what
    each source supports and what it does not establish.
-4. **Decomposition:** Separate project existence, Jamie's role, actions,
-   outputs, outcomes, scale, collaborators, and causality. A source may support
-   only some of them.
+4. **Decomposition:** Create proposition-level records separating project
+   existence, Jamie's role, actions, outputs, outcomes, scale, collaborators,
+   and causality. A source may support only some of them.
 5. **Research:** Add concrete questions. Record `not recovered` separately from
    `did not exist`.
 6. **Claim formation:** Draft candidate wording with Chad's lens: Jamie as an

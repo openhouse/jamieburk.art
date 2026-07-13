@@ -329,8 +329,48 @@ const knowledgeBankInput = {
       ],
       relatedClaimIds: [],
       candidateClaims: [
-        "From 2003 through 2009, Jamie designed participatory cultural projects that turned homes, galleries, and waterways into shared spaces for communal authorship, public engagement, and experimentation.",
-        "Jamie conceived and organized a recycled-material river expedition from Kansas City and later developed Great Accommodations, a participatory exhibition connecting river cities through stories, public programs, collaborative outreach, and interactive installation."
+        "From 2003 to 2005, Jamie and his housemates held collectively produced Shop Shows in their Santa Cruz home, inviting participants to contribute art, performance, food, and unfinished work.",
+        "In 2006, Jamie turned Porter Bridge Gallery into Open House, a ten-day experiment in communal living and participatory art whose responsibility and decision-making he explicitly described as communal.",
+        "Jamie conceived an experiential river expedition; a group of Kansas City and California participants traveled across Missouri on a homemade raft built from recycled materials.",
+        "In 2009, Jamie spearheaded Great Accommodations and worked with Suzanne Hogan on outreach that invited river communities to contribute stories and perspectives to an interactive exhibition and its public programs."
+      ],
+      propositions: [
+        {
+          id: "PROP-WATERWAYS-SHOP-SHOWS-2003-2005",
+          text: "From 2003 to 2005, Jamie and his housemates held collectively produced Shop Shows in their Santa Cruz home, inviting participants to contribute art, performance, food, and unfinished work.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-PARTICIPATION-GOOD-TIMES-OPEN-HOUSE-2006"],
+          sourceSupport: ["2003-2005 dates", "Jamie and housemates", "open art show", "potluck", "participant performance and workshopping"],
+          boundaries: ["Keep the housemates visible as co-producers.", "Do not infer a complete event count, participant count, or program archive."],
+          decisionUse: "Supports a future claim about Jamie's early practice of building low-barrier participation structures in domestic cultural space."
+        },
+        {
+          id: "PROP-WATERWAYS-OPEN-HOUSE-2006",
+          text: "In 2006, Jamie turned Porter Bridge Gallery into Open House, a ten-day experiment in communal living and participatory art whose responsibility and decision-making he explicitly described as communal.",
+          status: "direct-support",
+          sourceIds: ["SRC-PARTICIPATION-GOOD-TIMES-OPEN-HOUSE-2006"],
+          sourceSupport: ["2006 publication and project context", "ten-day experiment", "communal living", "participatory art", "Jamie's explicit non-leader and communal-decision framing"],
+          boundaries: ["Do not describe Open House as a permanent housing program.", "Do not publish sensitive participant circumstances or identities as professional proof."],
+          decisionUse: "Supports a concrete facilitation and participatory-program claim while preserving the project's communal governance."
+        },
+        {
+          id: "PROP-WATERWAYS-RAFT-CONCEPTION-2007",
+          text: "Jamie conceived an experiential river expedition; a group of Kansas City and California participants traveled across Missouri on a homemade raft built from recycled materials.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-WATERWAYS-PITCH-HUCK-FINN-2007"],
+          sourceSupport: ["Jamie originated the idea", "experiential expedition", "Kansas City and California participants", "cross-Missouri travel", "homemade recycled-material raft"],
+          boundaries: ["Separate Jamie's conception from the group's collective travel and construction.", "This source does not establish completion to the Gulf, the exact endpoint, or a complete collaborator roster."],
+          decisionUse: "Supports a bounded claim about project conception and collective expedition design without overstating route completion."
+        },
+        {
+          id: "PROP-WATERWAYS-GREAT-ACCOMMODATIONS-2009",
+          text: "In 2009, Jamie spearheaded Great Accommodations and worked with Suzanne Hogan on outreach that invited river communities to contribute stories and perspectives to an interactive exhibition and its public programs.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-WATERWAYS-CHARLOTTE-STREET-GREAT-ACCOMMODATIONS-2009"],
+          sourceSupport: ["2009 exhibition", "Jamie spearheaded the project", "Suzanne Hogan collaboration", "river-community outreach", "contributed stories and perspectives", "interactive exhibition", "public programs"],
+          boundaries: ["Credit Suzanne Hogan for the documented outreach collaboration.", "Do not treat Jamie's retrospective raft account on the page as independent verification of every route detail."],
+          decisionUse: "Supports claims about public-engagement program design, collaborative outreach, facilitation, and interactive cultural production."
+        }
       ],
       researchQuestions: [
         "What route, dates, duration, collaborators, public programs, and stopping points can be independently established for the raft expedition?",
@@ -361,9 +401,78 @@ const knowledgeBankInput = {
       ],
       relatedClaimIds: [],
       candidateClaims: [
-        "Jamie played an instrumental role in creating NYC Artist Coalition and building its operating, public-engagement, and policy-communications infrastructure.",
-        "Through NYC Artist Coalition, Jamie organized fire-code study groups, public actions, campaign websites, town halls, policy communications, and public-accountability work around cultural-space safety and nightlife governance.",
-        "Jamie contributed materially to collective campaigns that helped repeal the Cabaret Law, establish the Office of Nightlife, improve nightlife-enforcement transparency, and end MARCH raids."
+        "In 2017, Jamie organized fire-code study groups for DIY venues and rallied at City Hall for full repeal of New York City's Cabaret Law.",
+        "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis."
+      ],
+      propositions: [
+        {
+          id: "PROP-NYCA-FIRE-CODE-STUDY-GROUPS-2017",
+          text: "In 2017, Jamie organized fire-code study groups for DIY venues and rallied at City Hall for full repeal of New York City's Cabaret Law.",
+          status: "direct-support",
+          sourceIds: ["SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19"],
+          sourceSupport: ["Jamie organized fire-code study groups", "DIY venue context", "Jamie rallied at City Hall", "full-repeal position"],
+          boundaries: ["Do not convert documented advocacy into sole causality for repeal.", "Do not infer the complete study-group curriculum, attendance, or duration from this article."],
+          decisionUse: "Supports a concrete public-safety organizing and policy-advocacy claim."
+        },
+        {
+          id: "PROP-NYCA-CABARET-SAFETY-ANALYSIS-2017",
+          text: "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis.",
+          status: "direct-support",
+          sourceIds: ["SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19"],
+          sourceSupport: ["Jamie's NYC Artist Coalition affiliation", "Jamie's public analysis", "licensing barrier", "Fire Department access", "safety-crisis framing"],
+          boundaries: ["Attribute the analysis to Jamie rather than presenting it as an adjudicated legal finding.", "Do not imply that this statement alone caused legislation or agency change."],
+          decisionUse: "Supports a claim about translating venue experience and regulation into a clear public-safety argument."
+        },
+        {
+          id: "PROP-NYCA-OFFICE-OF-NIGHTLIFE-CONTEXT-2017",
+          text: "The June 2017 policy context included Council Member Rafael Espinal's proposal for an Office of Nightlife intended to bridge venues, communities, and city government.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19"],
+          sourceSupport: ["Rafael Espinal introduced the proposal", "bridge role described in the article", "contemporaneous policy context"],
+          boundaries: ["The article does not establish Jamie's role in creating the office.", "Do not use this context proposition as proof of coalition or individual causality."],
+          decisionUse: "Preserves the institutional context while withholding a Jamie-specific claim.",
+          nextStep: "Review Council legislation, hearing records, campaign materials, town-hall records, and collaborator accounts for Jamie's documented contribution."
+        },
+        {
+          id: "PROP-NYCA-COALITION-FORMATION-MEMORY",
+          text: "Jamie remembers playing an instrumental role in creating NYC Artist Coalition and its operating infrastructure.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["This is Jamie's recollection, not a source-established formation claim.", "Formation credit requires collaborator and contemporaneous-record review."],
+          decisionUse: "Preserves a potentially central professional claim for focused formation research.",
+          nextStep: "Locate formation messages, early websites, meeting records, first public statements, and accounts from founding collaborators."
+        },
+        {
+          id: "PROP-NYCA-TOWN-HALLS-AND-CAMPAIGN-SYSTEMS-MEMORY",
+          text: "Jamie remembers producing large town halls and building campaign websites, policy communications, and coordination systems for NYC Artist Coalition work.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["No scale, event count, audience count, or comprehensive output list is yet established here.", "Preserve co-producer, convener, host, and institutional credit when records are recovered."],
+          decisionUse: "Preserves a high-value implementation and public-engagement thread for event-by-event research.",
+          nextStep: "Recover event listings, agendas, programs, recordings, press, campaign repositories, and collaborator accounts; map Jamie's action and each event's outcome."
+        },
+        {
+          id: "PROP-NYCA-TALKS-NOT-RAIDS-MARCH-MEMORY",
+          text: "Jamie remembers contributing to Talks Not Raids work that sought MARCH raid transparency and ultimately helped end the raid program.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["The campaign sequence, Jamie's mechanism of contribution, and the institutional decision to end MARCH are not yet established here.", "Do not claim sole or direct causality without public records and collective context."],
+          decisionUse: "Preserves an important public-accountability and enforcement-reform thread for targeted research.",
+          nextStep: "Recover MARCH policy and disbandment records, Council oversight materials, Talks Not Raids campaign artifacts, press, and collaborator accounts."
+        },
+        {
+          id: "PROP-NYCA-POLICY-OUTCOMES-MEMORY",
+          text: "Jamie remembers contributing materially to collective campaigns around Cabaret Law repeal, Office of Nightlife creation and accountability, nightlife-enforcement transparency, and MARCH disbandment.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["Treat each policy outcome as a separate causal question.", "Government decisions and collective advocacy outcomes require institutional and collaborator evidence."],
+          decisionUse: "Preserves the broader outcome hypothesis without allowing it to function as a current claim.",
+          nextStep: "Build a dated campaign-by-campaign source map connecting Jamie's documented actions, collective advocacy, legislation or agency decisions, and public outcomes."
+        }
       ],
       researchQuestions: [
         "Which formation records and collaborator accounts establish Jamie's role in creating NYC Artist Coalition?",
@@ -394,6 +503,28 @@ const knowledgeBankInput = {
       sourceIds: [],
       relatedClaimIds: [],
       candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-CALLNYC-COUNCIL-ENGAGEMENT-MEMORY",
+          text: "Jamie remembers meaningful engagement with @CallNYCapp by New York City Council member and institutional accounts.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["Meaningful engagement is not yet defined or counted.", "Historical account ownership, officeholder status, and interaction type require verification."],
+          decisionUse: "Preserves a potentially useful adoption and public-sector resonance signal without publishing an unsupported metric.",
+          nextStep: "Recover an authenticated export, API corpus, archive, or account-data download and classify every interaction by type, date, and account status."
+        },
+        {
+          id: "PROP-CALLNYC-ENGAGEMENT-METRIC-DEFINITION",
+          text: "Any future CallNYC Council-engagement metric must separate follows, replies, mentions, reposts, quote posts, likes, and link shares within a stated historical time window and denominator.",
+          status: "research-only",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["Do not combine unlike interaction types into one promotional total.", "Do not treat a partial visible timeline as a complete corpus."],
+          decisionUse: "Defines the minimum evidence contract for promoting the memory into a defensible metric claim.",
+          nextStep: "Choose the recoverable corpus first, then document inclusion rules, exclusions, account classification, denominator, and time window before counting."
+        }
+      ],
       researchQuestions: [
         "Which Council member and institutional Council accounts engaged with @CallNYCapp, in what ways, and on what dates?",
         "Can the complete account timeline and engagement graph be recovered from an authenticated export, API, archive, or Jamie's account data?",

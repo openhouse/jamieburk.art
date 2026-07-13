@@ -204,6 +204,52 @@ export const correctionRecordSchema = z.object({
   status: z.enum(["active", "superseded"])
 });
 
+export const intakePropositionSchema = z
+  .object({
+    id: stableIdSchema,
+    text: z.string().min(1),
+    status: z.enum([
+      "direct-support",
+      "supported-with-boundary",
+      "synthesis-with-boundary",
+      "context-only",
+      "memory-lead",
+      "research-only"
+    ]),
+    sourceIds: z.array(stableIdSchema).default([]),
+    sourceSupport: z.array(z.string().min(1)).default([]),
+    boundaries: z.array(z.string().min(1)).min(1),
+    decisionUse: z.string().min(1),
+    nextStep: z.string().min(1).optional()
+  })
+  .superRefine((proposition, context) => {
+    if (
+      [
+        "direct-support",
+        "supported-with-boundary",
+        "synthesis-with-boundary",
+        "context-only"
+      ].includes(proposition.status) &&
+      !proposition.sourceIds.length
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: `${proposition.status} propositions require a source`
+      });
+    }
+    if (
+      ["memory-lead", "research-only", "context-only"].includes(
+        proposition.status
+      ) &&
+      !proposition.nextStep
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: `${proposition.status} propositions require a next step`
+      });
+    }
+  });
+
 export const intakeItemSchema = z
   .object({
     id: stableIdSchema,
@@ -228,6 +274,7 @@ export const intakeItemSchema = z
     sourceIds: z.array(stableIdSchema).default([]),
     relatedClaimIds: z.array(stableIdSchema).default([]),
     candidateClaims: z.array(z.string().min(1)).default([]),
+    propositions: z.array(intakePropositionSchema).default([]),
     researchQuestions: z.array(z.string().min(1)).default([]),
     boundaries: z.array(z.string().min(1)).min(1),
     projectionStatus: z.literal("no-public-projection"),
@@ -247,6 +294,25 @@ export const intakeItemSchema = z
         code: "custom",
         message: "Claim-candidate intake requires candidate claim language"
       });
+    }
+    const candidatePropositionTexts = new Set(
+      item.propositions
+        .filter((proposition) =>
+          [
+            "direct-support",
+            "supported-with-boundary",
+            "synthesis-with-boundary"
+          ].includes(proposition.status)
+        )
+        .map((proposition) => proposition.text)
+    );
+    for (const claim of item.candidateClaims) {
+      if (!candidatePropositionTexts.has(claim)) {
+        context.addIssue({
+          code: "custom",
+          message: "Candidate claims must resolve to a supported proposition"
+        });
+      }
     }
     if (item.status === "integrated" && !item.relatedClaimIds.length) {
       context.addIssue({
@@ -285,6 +351,7 @@ export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
+export type IntakeProposition = z.infer<typeof intakePropositionSchema>;
 export type IntakeItem = z.infer<typeof intakeItemSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;

@@ -23,6 +23,9 @@ export function validateKnowledgeContent(bank = knowledgeBank, registry = public
   }
 
   for (const item of bank.intakeItems) {
+    const propositionIds = new Set();
+    const itemSourceIds = new Set(item.sourceIds);
+    const supportedPropositionTexts = new Set();
     if (item.projectionStatus !== "no-public-projection") {
       errors.push(`${item.id} is projectable directly from intake`);
     }
@@ -63,6 +66,31 @@ export function validateKnowledgeContent(bank = knowledgeBank, registry = public
       if (!/\bJamie\b/.test(claim)) errors.push(`${item.id} candidate claim does not name Jamie`);
       if (/Jamie (?:alone|single-handedly)|Jamie caused/i.test(claim)) {
         errors.push(`${item.id} candidate claim inflates sole causality`);
+      }
+    }
+    for (const proposition of item.propositions) {
+      if (propositionIds.has(proposition.id)) {
+        errors.push(`${item.id} repeats proposition ${proposition.id}`);
+      }
+      propositionIds.add(proposition.id);
+      for (const sourceId of proposition.sourceIds) {
+        if (!sourceIds.has(sourceId)) {
+          errors.push(`${proposition.id} references unknown source ${sourceId}`);
+        }
+        if (!itemSourceIds.has(sourceId)) {
+          errors.push(`${proposition.id} uses ${sourceId} outside its intake source set`);
+        }
+      }
+      if (proposition.sourceIds.length && !proposition.sourceSupport.length) {
+        errors.push(`${proposition.id} does not decompose source support`);
+      }
+      if (["direct-support", "supported-with-boundary", "synthesis-with-boundary"].includes(proposition.status)) {
+        supportedPropositionTexts.add(proposition.text);
+      }
+    }
+    for (const claim of item.candidateClaims) {
+      if (!supportedPropositionTexts.has(claim)) {
+        errors.push(`${item.id} candidate claim is not a supported proposition`);
       }
     }
   }
