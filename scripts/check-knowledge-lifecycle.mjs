@@ -201,6 +201,29 @@ const wowlistCensusRows = readFileSync(
   .slice(1)
   .map((line) => line.split(","));
 
+const kctownhallPopulationSourceIds = [
+  "SRC-KCTH-LIVE-PROFILE-CONTROL-2026",
+  "SRC-KCTH-FULL-POPULATION-RUN-2026",
+  "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+  "SRC-KCTH-SOCIAL-LAUNCH-2018",
+  "SRC-KCTH-SOCIAL-NEIGHBORHOOD-PROCESS-2018",
+  "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+  "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+  "SRC-KCTH-SOCIAL-TIRES-2019-RECAP",
+  "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+  "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
+];
+
+const kctownhallCensusText = readFileSync(
+  "docs/knowledge-bank/kctownhall-post-census-2026-07-12.csv",
+  "utf8"
+);
+const kctownhallCensusRows = kctownhallCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -984,6 +1007,72 @@ const criteria = [
         supportClaim?.boundaries.some((item) => /do not assign individual post authorship/i.test(item)) &&
         civicClaim?.boundaries.some((item) => /does not establish.*causality/i.test(item)) &&
         /claimId="CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE"/.test(wowlistMdx)
+      );
+    })()
+  },
+  {
+    id: "kctownhall-full-population-accounting",
+    label: "The complete 183-record KC Town Hall profile population is recovered and classified",
+    pass:
+      kctownhallCensusRows.length === 183 &&
+      kctownhallCensusRows.every((row) => row[9] === "recovered") &&
+      new Set(kctownhallCensusRows.map((row) => row[1])).size === 183 &&
+      kctownhallCensusRows.filter((row) => row[3] === "authored-post").length === 142 &&
+      kctownhallCensusRows.filter((row) => row[3] === "authored-reply").length === 13 &&
+      kctownhallCensusRows.filter((row) => row[3] === "repost").length === 28 &&
+      kctownhallCensusRows.filter(
+        (row) => row[5] === "resident-service-and-environmental-action"
+      ).length === 100
+  },
+  {
+    id: "kctownhall-full-population-lineage",
+    label: "KC Town Hall population findings have complete lifecycle and research-hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-KCTH-FULL-POPULATION-2026"
+      );
+      const population = candidateById.get("CND-KCTH-COMPLETE-SOCIAL-POPULATION");
+      const outcomes = candidateById.get("CND-KCTH-TIRES-OUTCOME-TOTALS");
+      return Boolean(
+        intakeItems.some((item) => item.id === "INT-2026-07-12-KCTH-FULL-POPULATION") &&
+        kctownhallPopulationSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        inquiry.findings.some((item) => /All 183 profile-counted records/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId === "CLM-KCTH-COMPLETE-SOCIAL-POPULATION" &&
+        outcomes?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === outcomes.id && promotion.decision === "held"
+        ) &&
+        discoveryNotes.some(
+          (note) => note.id === "DISC-KCTH-TIRES-INDEPENDENT-CORROBORATION-2026"
+        )
+      );
+    })()
+  },
+  {
+    id: "kctownhall-workflow-credit-and-privacy",
+    label: "The resident-service workflow preserves collective credit, metric boundaries, and resident privacy",
+    pass: (() => {
+      const workflow = candidateById.get("CND-KCTH-RESIDENT-SERVICE-WORKFLOW");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW"
+      );
+      const page = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
+      return Boolean(
+        workflow?.status === "promoted" &&
+        workflow.promotedClaimId === "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW" &&
+        claim?.boundaries.some(
+          (item) => /Julia and Jamie.*KC Town Hall.*Oak Park Neighborhood Association/i.test(item)
+        ) &&
+        claim.boundaries.some((item) => /project-reported|independently corroborated/i.test(item)) &&
+        /claimId="CLM-KCTH-RESIDENT-SERVICE-WORKFLOW"/.test(page) &&
+        !/\b816[- )]/.test(kctownhallCensusText) &&
+        !/resident-submitted location/i.test(kctownhallCensusText)
       );
     })()
   },

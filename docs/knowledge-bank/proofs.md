@@ -17,6 +17,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation for a proposal that advanced from CCED Board recommendation to Council authorization and appropriation of $490,539; Jamie later transitioned the project to a mission-aligned organization, KC Town Hall withdrew from the original allocation, and the unused funds were returned.
+- Co-authored with Julia the resident-facing workflow for Tired of Tires, a recurring service credited to KC Town Hall and Oak Park Neighborhood Association, connecting requests, volunteers, eligibility, pickup dates, and public follow-through.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 - Public reporting documents that Jamie and collaborators began a human-powered raft expedition in Kansas City, traveled more than 1,000 miles, and invited people encountered along the route to participate.
 - Monthly Music Hackathon NYC documents a 2013 Max/MSP program Jamie built to segment audio and sort clips by a selected feature. This mature source remains in the bank for future composition.

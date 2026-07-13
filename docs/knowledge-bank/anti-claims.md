@@ -117,6 +117,19 @@ Do not identify the receiving organization, publish reasons or terms of the
 transition, or say KC Town Hall received or spent the funds, executed the
 funding agreement, or completed construction.
 
+Do not say Jamie personally authored all 183 recovered @KCTownHall records or
+remained responsible for every post through 2022. The archived Tired of Tires
+page identifies Julia and Jamie as authors; it credits KC Town Hall and Oak
+Park Neighborhood Association with the program.
+
+Do not present project-account tire counts or avoided-disposal figures as
+independently audited outcomes. Preserve them as project-reported evidence
+until partner, recycling, disposal, municipal, or contemporaneous reporting
+corroborates the totals and calculation method.
+
+Do not reproduce resident-submitted locations, phone numbers, or contact-form
+information from the social or website record.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

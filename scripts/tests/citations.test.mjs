@@ -36,6 +36,18 @@ test("new editorial projections resolve through page-local citation plans", () =
     ).text,
     /direct support surface/
   );
+  assert.equal(
+    resolveCitationOccurrence("kc-town-hall", "resident-service-workflow").sources.length,
+    5
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW",
+      "case-study",
+      "/work/kc-town-hall"
+    ).text,
+    /Jamie and Julia published the resident-facing workflow/
+  );
   assert.deepEqual(
     resolveCitationOccurrence(
       "fair-rent-nyc",

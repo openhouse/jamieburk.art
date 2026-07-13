@@ -447,7 +447,12 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
         "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
         "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
-        "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+        "SRC-KCMO-CCED-CLAWBACK-240317-2024",
+        "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+        "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+        "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+        "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
       ],
       occurrences: [
         {
@@ -461,6 +466,18 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
             "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
             "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
             "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+          ]
+        },
+        {
+          id: "resident-service-workflow",
+          claimId: "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+            "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+            "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+            "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+            "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
           ]
         }
       ]

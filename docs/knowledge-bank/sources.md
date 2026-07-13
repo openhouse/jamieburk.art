@@ -109,6 +109,15 @@ accompanying [archival-production report](wowlist-population-2026-07-12.md)
 records product-lineage, support, event-distribution, and civic-care findings
 with shared-account authorship boundaries.
 
+The KC Town Hall full-population pass reconciles 170 Posts records with 13
+additional account-authored Replies records against the live 183-post control.
+The resulting [183-record census](kctownhall-post-census-2026-07-12.csv)
+classifies every status without reproducing full post text, phone numbers, or
+resident-submitted locations. The [archival-production
+report](kctownhall-population-2026-07-12.md) pairs the social census with a
+Wayback-recovered service page identifying Julia and Jamie as authors and
+preserves project-reported outcome totals as uncorroborated research leads.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

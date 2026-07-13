@@ -92,6 +92,26 @@ evidence of cross-project continuity among public identities Jamie established.
 The complete 38-record account population is not an audience measure, adoption
 count, or basis for attributing individual posts to Jamie or another teammate.
 
+## KC Town Hall Inventory
+
+The full-population pass recovered all 183 records represented by the live
+profile control: 142 authored standalone posts, 13 authored replies, and 28
+reposts from 16 other public accounts. See the [full-population archival
+production](kctownhall-population-2026-07-12.md) and [record-level
+census](kctownhall-post-census-2026-07-12.csv).
+
+One hundred records concern resident tire pickup or program follow-through; 98
+explicitly carry `#TiredOfTires`. The archived service page identifies Julia
+and Jamie as authors and credits KC Town Hall and Oak Park Neighborhood
+Association with the monthly program. The public workflow connected requests,
+volunteers, home-only eligibility, recurring dates, pickup updates, and
+follow-through.
+
+Project-reported tire and avoided-fee totals remain held pending independent
+corroboration. Full post text, phone numbers, and resident-submitted locations
+are omitted from the public census. The account continued through 2022, so the
+census does not assign Jamie responsibility after his documented transition.
+
 ## Council Engagement Inventory
 
 The date-aware recovered minimum is:

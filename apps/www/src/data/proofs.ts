@@ -509,8 +509,9 @@ export const proofClaims: ProofClaim[] = [
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the proposal advanced from unanimous CCED Board recommendation to Council authorization and appropriation of $490,539.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Official records show Council authorization and appropriation in 2019. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation, and the unused funds were reappropriated in 2024.",
-    sourceBasis: "Approved resume language and official Kansas City board, Council, appropriation, and clawback records.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Jamie and Julia also published the resident-facing workflow for a recurring tire-pickup service credited to KC Town Hall and Oak Park Neighborhood Association. Official records show Council authorization and appropriation in 2019. As his direct involvement concluded, Jamie transitioned the project to a mission-aligned organization; KC Town Hall later withdrew from the original allocation, and the unused funds were reappropriated in 2024.",
+    sourceBasis:
+      "Approved resume language; official Kansas City board, Council, appropriation, and clawback records; the archived Julia-and-Jamie service page; and a complete 183-record census of the surviving @KCTownHall public account.",
     guardrail:
       "Use Council authorization and appropriation language, not receipt or expenditure. Include the mission-aligned transition, later withdrawal, and reappropriation when describing the lifecycle. Do not publish reasons or terms of the transition.",
     doNotSay: [
@@ -519,7 +520,9 @@ export const proofClaims: ProofClaim[] = [
       "Completed construction",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the recorded actions"
+      "Official municipal endorsement beyond the recorded actions",
+      "Independently audited tire or savings totals",
+      "Jamie alone operated Tired of Tires"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -531,7 +534,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-12"
   },
   {
     id: "source-backed-team-memory-method",

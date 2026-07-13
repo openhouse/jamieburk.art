@@ -16,9 +16,10 @@ an individual post.
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Fair Rent NYC | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Full 38-record live population recovered and classified: 22 account-authored records and 16 reposts |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Dedicated project account; archived service page identifies Julia and Jamie as authors | Full 183-record live population recovered: 155 account-authored records and 28 reposts; resident contact details omitted from the census |
 
 No dedicated project X account was recovered in this pass for Harry J. Epstein,
-196 / Sunday Dinner, KC Town Hall, or Source-Backed Team Memory. That means "not
+196 / Sunday Dinner, or Source-Backed Team Memory. That means "not
 recovered in this pass," not "did not exist."
 
 ## Ownership Boundary
@@ -40,3 +41,7 @@ recovered records and three unresolved records.
 The WOWList record-level ledger is documented in
 [wowlist-population-2026-07-12.md](wowlist-population-2026-07-12.md). Its 38
 unique records close exactly against the live 38-post profile control.
+
+The KC Town Hall record-level ledger is documented in
+[kctownhall-population-2026-07-12.md](kctownhall-population-2026-07-12.md). Its
+183 unique records close exactly against the live 183-post profile control.

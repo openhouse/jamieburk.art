@@ -661,6 +661,99 @@
         "the individual teammate who authored the post",
         "platform-wide adoption or audience reach"
       ]
+    },
+    {
+      "id": "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+      "title": "Tired of Tires? Free Tire Pickup",
+      "organization": "KC Town Hall",
+      "author": "Julia and Jamie",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2019-05-02",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20210806195823id_/https://kctownhall.com/tires/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Julia and Jamie, “Tired of Tires? Free Tire Pickup,” KC Town Hall, published May 2, 2019; archived August 6, 2021.",
+      "publicNote": "The archived page credits KC Town Hall and Oak Park Neighborhood Association with the monthly service and provides request and volunteer forms, home-only eligibility, and recurring pickup dates.",
+      "doesNotEstablish": [
+        "independent auditing of the reported savings figure",
+        "solo authorship or operation by Jamie",
+        "the complete program history after the archived revision"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+      "title": "KC Town Hall Tired of Tires launch post",
+      "organization": "KC Town Hall",
+      "author": "KC Town Hall account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-05-03",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124416898064580608",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall post launching a free home tire-pickup pathway for Oak Park residents, May 3, 2019.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "independent auditing of project-reported outcome figures"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+      "title": "KC Town Hall first Tired of Tires results post",
+      "organization": "KC Town Hall",
+      "author": "KC Town Hall account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-05-04",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124810411302359040",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall post reporting the first monthly tire-pickup result and crediting neighborhood collaborators, May 4, 2019.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "independent auditing of project-reported outcome figures"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+      "title": "KC Town Hall Tired of Tires follow-through reply",
+      "organization": "KC Town Hall",
+      "author": "KC Town Hall account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-09-04",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1302003767831912448",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall reply documenting an after-update and inviting further pickup locations, September 4, 2020.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "independent auditing of project-reported outcome figures"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-SOCIAL-TIRES-2021-RECAP",
+      "title": "KC Town Hall 2021 Tired of Tires recap post",
+      "organization": "KC Town Hall",
+      "author": "KC Town Hall account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-11-07",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1457371688300056580",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall account-reported 2021 Tired of Tires recap and 2022 continuation notice, November 7, 2021.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "independent auditing of project-reported outcome figures"
+      ]
     }
   ],
   "claims": [
@@ -1398,6 +1491,82 @@
         "Credit Jamie with establishing the account and co-building the product; do not assign individual post authorship without direct evidence.",
         "The account record demonstrates public support behavior, not the full support workload."
       ]
+    },
+    {
+      "id": "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie and Julia published the resident-facing workflow for #TiredOfTires, a monthly service credited to KC Town Hall and the Oak Park Neighborhood Association: request and volunteer forms, home-only eligibility, recurring pickup dates, and account updates showing pickup and follow-through.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The Tired of Tires public surface connected resident intake, volunteer coordination, eligibility, recurring schedules, pickup documentation, and follow-through.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/kctownhall-population-2026-07-12"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "the resident-facing workflow or its public follow-through"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "the resident-facing workflow or its public follow-through"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "the resident-facing workflow or its public follow-through"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "the resident-facing workflow or its public follow-through"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-SOCIAL-TIRES-2021-RECAP",
+          "relationship": "direct-support",
+          "supports": [
+            "the resident-facing workflow or its public follow-through"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the public page to Julia and Jamie and the program to KC Town Hall and Oak Park Neighborhood Association.",
+        "Do not infer that Jamie personally authored every account update or operated the program alone.",
+        "Treat tire and savings totals as project-reported unless independently corroborated."
+      ]
     }
   ],
   "pages": [
@@ -1608,7 +1777,12 @@
         "SRC-KCMO-CCED-ORDINANCE-190642-2019",
         "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
         "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
-        "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+        "SRC-KCMO-CCED-CLAWBACK-240317-2024",
+        "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+        "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+        "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+        "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+        "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
       ],
       "occurrences": [
         {
@@ -1622,6 +1796,18 @@
             "SRC-KCMO-KC-TOWN-HALL-MINUTES-2021",
             "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
             "SRC-KCMO-CCED-CLAWBACK-240317-2024"
+          ]
+        },
+        {
+          "id": "resident-service-workflow",
+          "claimId": "CLM-KCTH-RESIDENT-SERVICE-WORKFLOW",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-TIRES-ARCHIVED-PAGE-2021",
+            "SRC-KCTH-SOCIAL-TIRES-LAUNCH-2019",
+            "SRC-KCTH-SOCIAL-TIRES-FIRST-MONTH-2019",
+            "SRC-KCTH-SOCIAL-TIRES-FOLLOWTHROUGH-2020",
+            "SRC-KCTH-SOCIAL-TIRES-2021-RECAP"
           ]
         }
       ]
