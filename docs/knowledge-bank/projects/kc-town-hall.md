@@ -20,6 +20,11 @@ mixed-use rehabilitation and presented the proposal in the public funding
 process. The project received a public funding recommendation and later
 withdrew before proceeding under that award.
 
+The approved resume uses the contribution wording "secured a $490,539 public
+funding recommendation." The knowledge bank preserves that as Jamie's approved
+self-report; it does not treat the verb as proof of sole causality, final funds
+received, or completed construction.
+
 ## Boundaries
 
 - Do not say the redevelopment was completed.

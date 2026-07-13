@@ -276,10 +276,11 @@ export const researchedSourceRecords20260713 = [
     preservationStatus: "private",
     capturedAt: "2026-07-11 approved public artifact",
     publicCitation: "Jamie Burkart, approved public resume, KC Town Hall role entry, July 2026.",
-    publicNote: "The approved resume supplies Jamie's self-reported planning and public-benefit documentation role; official municipal records separately support the proposal details and presenter role.",
+    publicNote: "The approved resume supplies Jamie's self-reported planning, public-benefit documentation, and funding-recommendation contribution language; official municipal records separately support the proposal details, presenter role, and later withdrawal.",
     supportsGenerally: [
       "Jamie's co-lead planning role",
-      "Jamie's public-benefit documentation role"
+      "Jamie's public-benefit documentation role",
+      "approved resume wording that Jamie secured a public funding recommendation"
     ],
     doesNotEstablish: [
       "independent corroboration of the complete division of labor",
@@ -588,6 +589,26 @@ export const researchedClaimRecords20260713 = [
     researchInquiryIds: [],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex public-source close reading"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION-CONTRIBUTION",
+    project: "kc-town-hall",
+    internalClaim: "Jamie's approved resume describes his contribution as securing a $490,539 public funding recommendation for KC Town Hall.",
+    status: "confirmed-with-boundary",
+    projections: [],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+      relationship: "private-support",
+      supports: ["the approved resume's contribution wording", "the stated recommendation amount"],
+      locator: "KC Town Hall entry on page 2",
+      confidence: "moderate",
+      renderCitation: false
+    }],
+    boundaries: ["Treat 'secured' as approved self-reported contribution language, not proof of sole causality, final funds received, or completed construction."],
+    antiClaims: ["Jamie alone caused the recommendation.", "Jamie personally received $490,539.", "The redevelopment was completed."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie-approved resume", "Codex evidence-boundary review"]
   },
   {
     id: "CLM-KC-TOWN-HALL-PLANNING-DOCUMENTATION-ROLE",
