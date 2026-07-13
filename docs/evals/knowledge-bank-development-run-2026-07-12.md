@@ -68,8 +68,9 @@ three source relationships.
 ## Iteration 3 - Stability Run
 
 Re-ran the deterministic suite, mutation tests, and blind hybrid review after
-the reconciliation. Two consecutive complete passing runs are required before
-status `threshold_met`.
+the reconciliation. The final blind pass scored `KB-007` and `KB-009` at `4/4`
+with no findings. Two consecutive complete passing runs reached weighted score
+`1.0000` and status `threshold_met`.
 
 Threshold applies to this knowledge-development batch. It does not constitute
 human approval to publish held claims on the website, and it does not declare
