@@ -344,6 +344,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: [
       "approved-resume",
+      "public-source",
       "public-safe-archive-summary",
       "jamie-review-confirmation"
     ],
@@ -353,7 +354,9 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate project history, and Jamie's confirmation that he hosts Sunday Dinner.",
+      "Approved resume language, public-safe aggregate project history, Jamie's confirmation that he hosts Sunday Dinner, a 2017 Greene Hill Food Co-op interview documenting weekly open hosting, and the current public Sunday Dinner project site.",
+    sourceNote:
+      "The public sources independently corroborate Jamie's hosting role and the recurring open-community form in 2017, but not the 300+ gathering or 20+ resident-artist aggregates.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -372,7 +375,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

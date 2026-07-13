@@ -206,6 +206,165 @@ const knowledgeBankInput = {
       publicNote: "Captured as national context for the Cabaret Law repeal movement. Direct access to the canonical page was blocked during this review, so person-specific use requires a later close reading.",
       supportsGenerally: ["national coverage of the 2017 Cabaret Law repeal movement", "nightlife and cultural-space policy context"],
       doesNotEstablish: ["Jamie's role in the repeal campaign", "NYC Artist Coalition's complete role", "Jamie's role in creating the Office of Nightlife", "causality for the final policy outcome"]
+    },
+    {
+      id: "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
+      title: "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      organization: "Greene Hill Food Co-op",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-12-19",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      publicNote: "A contemporaneous interview connecting Jamie's cooperative labor, weekly Sunday Dinner hosting, WOWList, and NYC Artist Coalition work. The title says Julie while the body says Julia; the knowledge bank preserves that source inconsistency rather than silently resolving it.",
+      supportsGenerally: ["Jamie and Julia hosted an open weekly Sunday dinner in their Brooklyn apartment in 2017", "Jamie worked as a Greene Hill Food Co-op cashier", "Jamie and Julia worked as part of NYC Artist Coalition", "Jamie's attributed Cabaret Law and cultural-space analysis", "NYC Artist Coalition mutual-aid and advocacy context"],
+      doesNotEstablish: ["300+ Sunday Dinner gatherings", "20+ resident artists", "Sunday Dinner's current frequency", "Jamie as sole creator of NYC Artist Coalition", "Jamie as sole producer of the September 2017 town hall", "resolution of the Julie and Julia name inconsistency"]
+    },
+    {
+      id: "SRC-SUNDAY-DINNER-NYC-HOMEPAGE-2026",
+      title: "Sunday Dinner NYC",
+      organization: "Sunday Dinner NYC",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://sundaydinnernyc.com/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Sunday Dinner NYC public project site, accessed July 13, 2026.",
+      publicNote: "The current project surface preserves public pathways for attending, contributing media, recipes, videos, drawings, and related WOWList context. Its sparse homepage is not a scale or continuity record.",
+      supportsGenerally: ["Sunday Dinner exists as a public project", "public participation and media-contribution pathways", "recipes, videos, drawings, and WOWList as project artifacts"],
+      doesNotEstablish: ["who currently hosts Sunday Dinner", "when the project began", "current frequency", "300+ gatherings", "20+ resident artists", "participant consent to republish names or media"]
+    },
+    {
+      id: "SRC-NYCA-LET-NYC-DANCE-2017-08-01",
+      title: "Tell NYC Council: Legalize Dance at Bars, Clubs & Restaurants",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-08-01",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://nycartc.com/cabaret/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'Tell NYC Council: Legalize Dance at Bars, Clubs & Restaurants,' August 1, 2017.",
+      publicNote: "A coalition campaign artifact documenting the Let NYC Dance call to action, Council letter, public maps, and source list. It establishes the public campaign surface, not its individual authorship.",
+      supportsGenerally: ["NYC Artist Coalition Cabaret Law campaign surface", "Let NYC Dance call to action", "Intro 1652 advocacy", "letter to Council Member Rafael Espinal", "public maps and source-guidance artifacts"],
+      doesNotEstablish: ["Jamie authored the page, letter, or maps", "Jamie alone organized the campaign", "the page caused repeal", "the independent accuracy of every campaign assertion", "a complete coalition contributor list"]
+    },
+    {
+      id: "SRC-NYCA-BEDFORD-BOWERY-OFFICE-NIGHTLIFE-2017-08-24",
+      title: "'Office of Nightlife' Bill Passes, Will Ease the Headache of Booze-Pouring",
+      organization: "Bedford + Bowery",
+      author: "Cassidy Dawn Graves",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-08-24",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://bedfordandbowery.com/2017/08/office-of-nightlife-bill-to-pass-ease-the-headache-of-booze-pouring/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Cassidy Dawn Graves, '\"Office of Nightlife\" Bill Passes, Will Ease the Headache of Booze-Pouring,' Bedford + Bowery, August 24, 2017.",
+      publicNote: "Independent contemporaneous reporting identifies NYC Artist Coalition among groups advocating both Cabaret Law repeal and creation of an Office of Nightlife.",
+      supportsGenerally: ["2017 passage of the Office of Nightlife bill", "NYC Artist Coalition advocacy for the office", "NYC Artist Coalition advocacy for Cabaret Law repeal", "Council and city-government context"],
+      doesNotEstablish: ["Jamie's individual role", "Jamie or NYC Artist Coalition as the sole cause of passage", "Jamie as author of the legislation", "the complete advocacy coalition", "implementation outcomes after passage"]
+    },
+    {
+      id: "SRC-NYCA-NIGHTLIFE-TOWN-HALL-2017-10-13",
+      title: "Office of Nightlife Town Hall",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-10-13",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://nycartc.com/nightmayor/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'Office of Nightlife Town Hall,' October 13, 2017.",
+      publicNote: "The event record documents an October 11 public town hall at Market Hotel and explicitly credits Anya Sapozhnikova as host alongside named artists, venue operators, advocates, and city officials.",
+      supportsGenerally: ["October 11, 2017 Office of Nightlife town hall", "Market Hotel venue", "artist-led public input", "Anya Sapozhnikova host credit", "named speakers and city officials", "public asks around enforcement, affordability, safety, and cultural support"],
+      doesNotEstablish: ["Jamie hosted the event", "Jamie produced the event", "Jamie authored the page or program", "attendance or audience scale", "the event's direct effect on agency policy"]
+    },
+    {
+      id: "SRC-NYCA-CREATENYC-RECOMMENDATIONS-2017",
+      title: "Preserve NYC's Community-Driven Spaces & Culture",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://nycartc.com/preserve-communitydriven/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'Preserve NYC's Community-Driven Spaces & Culture,' accessed July 13, 2026.",
+      publicNote: "A coalition record of a March 30 CreateNYC town hall and collective recommendations to the Department of Cultural Affairs. The page describes the recommendations as collectively developed.",
+      supportsGenerally: ["March 30 CreateNYC town hall at Market Hotel", "collectively developed cultural-plan recommendations", "recommendations on criminalization, MARCH transparency, permits, repairs, affordability, liaisons, and city space"],
+      doesNotEstablish: ["the page's publication date", "Jamie authored the recommendations", "Jamie produced or hosted the town hall", "attendance or audience scale", "adoption of the recommendations by the city"]
+    },
+    {
+      id: "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
+      title: "Venue Safety Resources",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-02-09",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://nycartc.com/safety/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'Venue Safety Resources,' February 9, 2017.",
+      publicNote: "A public safety-resource page that credits Tara Mc Manus for teaching a fire-safety course and compiles fire-guard and emergency-planning resources.",
+      supportsGenerally: ["NYC Artist Coalition venue-safety resource surface", "February 2017 fire-safety programming", "Tara Mc Manus teaching credit", "fire-guard and emergency-planning resources"],
+      doesNotEstablish: ["Jamie created the course", "Jamie taught the course", "Jamie authored the page", "the complete safety-program history", "participant attendance or outcomes"]
+    },
+    {
+      id: "SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12",
+      title: "End MARCH Raids / Talks Not Raids",
+      organization: "NYC Artist Coalition",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-02-12",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://nycartc.com/march/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "NYC Artist Coalition, 'End MARCH Raids / Talks Not Raids,' February 12, 2019.",
+      publicNote: "A campaign artifact documenting the Talks Not Raids call to action, Intro 1156, a multi-organization coalition, public sign-ons, and press materials. It does not identify Jamie's individual contribution.",
+      supportsGenerally: ["Talks Not Raids campaign surface", "MARCH transparency and advance-notice advocacy", "Intro 1156 campaign context", "multi-organization coalition", "public Council sponsor and sign-on list", "press-kit materials"],
+      doesNotEstablish: ["Jamie's individual role", "Jamie authored the page or campaign materials", "Jamie or NYC Artist Coalition alone caused enactment", "the campaign ended or disbanded MARCH", "the independent accuracy of every campaign statistic"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-INT-1652-2017",
+      title: "Int 1652-2017: Repeal of the Cabaret Law license requirement",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-06-21",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319&Options=ID%7CText%7C&Search=cabaret",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, Int 1652-2017, enacted November 27, 2017 as Local Law 214 of 2017.",
+      publicNote: "The official legislative record establishes enactment, sponsors, chronology, and the law's limited scope: repeal of the cabaret-license requirement while retaining specified security measures.",
+      supportsGenerally: ["Int 1652-2017 introduction", "enactment on November 27, 2017", "Local Law 214 of 2017", "Council sponsor list", "repeal of the cabaret-license requirement", "retention of specified security measures"],
+      doesNotEstablish: ["Jamie's role", "NYC Artist Coalition's role", "advocacy causality", "the complete historical rationale for the Cabaret Law", "elimination of every nightlife regulation or enforcement mechanism"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-INT-1156-2018",
+      title: "Int 1156-2018: Reporting and notice requirements for MARCH operations",
+      organization: "New York City Council",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2018-10-17",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, Int 1156-2018, enacted December 15, 2019 as Local Law 220 of 2019.",
+      publicNote: "The official legislative record establishes MARCH reporting, advance-notice, establishment-response, machine-readable publication, and privacy requirements. It does not say the program was disbanded.",
+      supportsGenerally: ["Int 1156-2018 introduction", "enactment on December 15, 2019", "Local Law 220 of 2019", "MARCH reporting requirements", "30-day notice with exceptions", "establishment opportunity to provide relevant information", "machine-readable public reporting", "privacy limits"],
+      doesNotEstablish: ["Jamie's role", "NYC Artist Coalition's role", "advocacy causality", "disbandment of MARCH", "elimination of all multi-agency nightlife enforcement"]
     }
   ],
   claims: [
@@ -391,6 +550,89 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
+      id: "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13",
+      title: "Sunday Dinner as recurring open community infrastructure",
+      project: "196-sunday-dinner",
+      kind: "claim-candidate",
+      summary: "A 2017 Greene Hill Food Co-op interview publicly documents Jamie and Julia as hosting an open Sunday dinner every week in their Brooklyn apartment. The current Sunday Dinner site preserves participation and media pathways, but neither source establishes the governed proof's aggregate counts or current cadence.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
+        "SRC-SUNDAY-DINNER-NYC-HOMEPAGE-2026"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["sunday-dinner-196-participation-infrastructure"],
+      candidateClaims: [
+        "By December 2017, Jamie and Julia were publicly documented as hosting an open Sunday dinner every week in their Brooklyn apartment."
+      ],
+      propositions: [
+        {
+          id: "PROP-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017",
+          text: "By December 2017, Jamie and Julia were publicly documented as hosting an open Sunday dinner every week in their Brooklyn apartment.",
+          status: "direct-support",
+          sourceIds: ["SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"],
+          sourceSupport: ["Jamie and Julia named together", "Sunday-night dinner", "weekly cadence in 2017", "Brooklyn apartment", "open community invitation"],
+          boundaries: ["The article title says Julie while its body says Julia; do not silently treat the source as resolving that inconsistency.", "Historical weekly cadence in 2017 does not establish current frequency.", "Do not infer aggregate event or resident-artist counts."],
+          decisionUse: "Adds contemporaneous public corroboration for Jamie's role as a recurring host and for Sunday Dinner's low-barrier community form."
+        },
+        {
+          id: "PROP-SUNDAY-DINNER-CURRENT-PUBLIC-SURFACE-2026",
+          text: "In July 2026, the Sunday Dinner project site retained public pathways for attending and contributing media alongside recipes, videos, drawings, and WOWList context.",
+          status: "context-only",
+          sourceIds: ["SRC-SUNDAY-DINNER-NYC-HOMEPAGE-2026"],
+          sourceSupport: ["current public project surface", "attend pathway", "media-submission pathway", "recipes", "videos", "drawings", "WOWList link"],
+          boundaries: ["The site does not name the current host or cadence.", "Do not republish participant names or media without rights and consent review."],
+          decisionUse: "Preserves the project's current public artifact ecology without treating a sparse homepage as proof of scale or continuity.",
+          nextStep: "Recover dated public project records, approved aggregate histories, and collaborator accounts before associating the current site with duration, event counts, or resident-artist counts."
+        }
+      ],
+      tensions: [
+        {
+          id: "TENSION-SUNDAY-DINNER-PUBLIC-CORROBORATION-AND-SCALE",
+          propositionIds: ["PROP-SUNDAY-DINNER-WEEKLY-OPEN-HOSTING-2017", "PROP-SUNDAY-DINNER-CURRENT-PUBLIC-SURFACE-2026"],
+          relatedProofIds: ["sunday-dinner-196-participation-infrastructure"],
+          description: "The governed proof combines Jamie's hosting role with 300+ gatherings, 20+ resident artists, and repeatable operating systems; the new public sources independently corroborate recurring open hosting in 2017 and a public project surface in 2026, but not those aggregate metrics or every system named.",
+          currentPosition: "Keep the approved aggregate proof careful. Treat the 2017 interview as strong independent corroboration for Jamie's hosting role and the form of the gathering, not as a substitute for the sources behind scale or operating-system claims.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-SUNDAY-DINNER-SCALE-CONFIRM",
+              targetProofId: "sunday-dinner-196-participation-infrastructure",
+              condition: "Public-safe dated records and at least one corroborating organizer or participant account establish the 300+ gathering and 20+ resident-artist aggregates and associate Jamie with the named continuity systems.",
+              action: "confirm",
+              requiredEvidence: ["dated public-safe aggregate record", "metric method and time window", "corroborating organizer or participant account", "role-to-system mapping"],
+              reason: "The governed proof would then have traceable support for both Jamie's hosting role and its stated scale and infrastructure."
+            },
+            {
+              id: "TRIGGER-SUNDAY-DINNER-SCALE-NARROW",
+              targetProofId: "sunday-dinner-196-participation-infrastructure",
+              condition: "A completed public-safe count or collaborator review supports recurring hosting but materially narrows either aggregate metric or Jamie's association with a named operating system.",
+              action: "narrow",
+              requiredEvidence: ["documented count method", "specific conflicting or narrowing evidence", "review with Jamie and relevant collaborators"],
+              reason: "The public proof should preserve the recurring community-hosting accomplishment without carrying a metric or system attribution the record cannot sustain.",
+              replacementGuidance: "Retain Jamie's hosting and the source-supported recurring community form; replace unsupported metrics or system labels with the narrower verified result."
+            }
+          ]
+        }
+      ],
+      researchQuestions: [
+        "Which dated invitations, calendars, menus, newsletters, or public posts establish Sunday Dinner's chronology and cadence without exposing guest records or addresses?",
+        "What public-safe method and time window produced the 300+ gathering and 20+ resident-artist aggregates?",
+        "Which collaborators can describe Jamie's hosting, onboarding, facilitation, documentation, and continuity work while retaining collective credit?",
+        "Which current project artifacts can be described or displayed with explicit rights and participant consent?"
+      ],
+      boundaries: [
+        "Keep guest lists, addresses, private messages, raw attendance records, and unapproved media outside the public repository.",
+        "Do not use the 2017 interview to establish the 300+ gathering or 20+ resident-artist metrics.",
+        "Treat the weekly cadence as historical to December 2017, not automatically current.",
+        "Do not project this intake item directly to the website; strengthen or create a governed claim and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-13",
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
       id: "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
       title: "NYC Artist Coalition formation and cultural-space policy campaigns",
       project: "nyc-artist-coalition",
@@ -399,7 +641,16 @@ const knowledgeBankInput = {
       status: "researching",
       sourceIds: [
         "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
-        "SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20"
+        "SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20",
+        "SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19",
+        "SRC-NYCA-LET-NYC-DANCE-2017-08-01",
+        "SRC-NYCA-BEDFORD-BOWERY-OFFICE-NIGHTLIFE-2017-08-24",
+        "SRC-NYCA-NIGHTLIFE-TOWN-HALL-2017-10-13",
+        "SRC-NYCA-CREATENYC-RECOMMENDATIONS-2017",
+        "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
+        "SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12",
+        "SRC-NYC-COUNCIL-INT-1652-2017",
+        "SRC-NYC-COUNCIL-INT-1156-2018"
       ],
       relatedClaimIds: [],
       relatedProofIds: [
@@ -408,7 +659,8 @@ const knowledgeBankInput = {
       ],
       candidateClaims: [
         "In 2017, Jamie organized fire-code study groups for DIY venues and rallied at City Hall for full repeal of New York City's Cabaret Law.",
-        "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis."
+        "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis.",
+        "In a December 2017 Greene Hill Food Co-op interview, Jamie and Julia were described as working as part of NYC Artist Coalition; Jamie connected Cabaret Law enforcement to barriers faced by community cultural spaces."
       ],
       propositions: [
         {
@@ -440,6 +692,95 @@ const knowledgeBankInput = {
           nextStep: "Review Council legislation, hearing records, campaign materials, town-hall records, and collaborator accounts for Jamie's documented contribution."
         },
         {
+          id: "PROP-NYCA-GREENE-HILL-PUBLIC-ROLE-2017",
+          text: "In a December 2017 Greene Hill Food Co-op interview, Jamie and Julia were described as working as part of NYC Artist Coalition; Jamie connected Cabaret Law enforcement to barriers faced by community cultural spaces.",
+          status: "direct-support",
+          sourceIds: ["SRC-GREENE-HILL-COOP-QA-BURKART-FREDENBERG-2017-12-19"],
+          sourceSupport: ["Jamie and Julia described as working as part of NYC Artist Coalition", "Jamie's attributed Cabaret Law analysis", "community cultural-space context", "contemporaneous 2017 publication"],
+          boundaries: ["The title says Julie while the article body says Julia; preserve the discrepancy.", "The interview supports coalition affiliation and public analysis, not formation title, campaign authorship, or policy causality."],
+          decisionUse: "Corroborates Jamie's public coalition role and his ability to translate regulation into the lived operating conditions of community cultural spaces."
+        },
+        {
+          id: "PROP-NYCA-LET-NYC-DANCE-PUBLIC-SURFACE-2017",
+          text: "By August 2017, NYC Artist Coalition maintained a Let NYC Dance campaign surface with a Council call to action, letter, maps, and source guidance supporting Cabaret Law repeal.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-LET-NYC-DANCE-2017-08-01"],
+          sourceSupport: ["August 2017 date", "campaign call to action", "Council letter", "maps", "source list", "Intro 1652 context"],
+          boundaries: ["The project page does not identify Jamie as author or implementer.", "Treat campaign assertions as advocacy unless independently corroborated."],
+          decisionUse: "Establishes the concrete public campaign artifact that future repository, CMS, or collaborator evidence may associate with Jamie's documented web work.",
+          nextStep: "Inspect the public repository, deployment history, CMS exports, and collaborator accounts for page authorship, implementation, and stewardship."
+        },
+        {
+          id: "PROP-NYCA-OFFICE-OF-NIGHTLIFE-ADVOCACY-AND-PASSAGE-2017",
+          text: "Independent reporting in August 2017 identified NYC Artist Coalition among groups advocating for Cabaret Law repeal and an Office of Nightlife as the office bill passed the City Council.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-BEDFORD-BOWERY-OFFICE-NIGHTLIFE-2017-08-24"],
+          sourceSupport: ["independent reporting", "NYC Artist Coalition advocacy", "Cabaret Law and Office of Nightlife relationship", "Council passage chronology"],
+          boundaries: ["The article does not identify Jamie's individual action.", "Coalition advocacy and institutional passage are not evidence of sole or direct causality."],
+          decisionUse: "Corroborates the coalition's place in the public advocacy ecology while leaving Jamie's individual mechanism open for research.",
+          nextStep: "Recover hearing testimony, event production records, early coalition communications, and collaborator accounts that associate Jamie with a specific contribution."
+        },
+        {
+          id: "PROP-NYCA-NIGHTLIFE-TOWN-HALL-PUBLIC-RECORD-2017",
+          text: "NYC Artist Coalition's public record documents an October 11, 2017 Office of Nightlife town hall at Market Hotel, hosted by Anya Sapozhnikova, with named cultural workers, advocates, and city officials.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-NIGHTLIFE-TOWN-HALL-2017-10-13"],
+          sourceSupport: ["event date", "Market Hotel", "Office of Nightlife focus", "Anya Sapozhnikova host credit", "named speakers and officials", "public policy asks"],
+          boundaries: ["The page does not name Jamie as host, producer, or author.", "Do not infer attendance, event scale, or policy effect."],
+          decisionUse: "Creates an event-specific research anchor and prevents Jamie's remembered production role from displacing the page's explicit host credit.",
+          nextStep: "Recover the event program, production correspondence, photographs, recordings, vendor or venue records, and accounts from Anya Sapozhnikova and other participants."
+        },
+        {
+          id: "PROP-NYCA-CREATENYC-COLLECTIVE-RECOMMENDATIONS-2017",
+          text: "NYC Artist Coalition published a record of a March 30 CreateNYC town hall and recommendations it described as collectively developed for New York City's cultural plan.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-CREATENYC-RECOMMENDATIONS-2017"],
+          sourceSupport: ["March 30 town hall", "Market Hotel", "collective-development language", "full recommendation artifact", "recommendation topics"],
+          boundaries: ["No publication year is visible on the recovered page.", "The page does not establish Jamie's authorship, production role, or the city's adoption of any recommendation."],
+          decisionUse: "Preserves a policy-communication artifact and collective authorship that can be mapped to individual implementation records later.",
+          nextStep: "Recover page metadata, event records, drafting history, and collaborator accounts to establish date, contributors, and Jamie's role."
+        },
+        {
+          id: "PROP-NYCA-SAFETY-RESOURCE-SURFACE-2017",
+          text: "In February 2017, NYC Artist Coalition published venue-safety resources connected to a fire-safety course taught by Tara Mc Manus and to fire-guard and emergency-planning guidance.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-SAFETY-RESOURCES-2017-02-09"],
+          sourceSupport: ["February 2017 date", "venue-safety resource surface", "Tara Mc Manus teaching credit", "fire-guard guidance", "emergency-planning resources"],
+          boundaries: ["The page credits Tara Mc Manus for the course and does not identify Jamie as teacher, author, or organizer.", "Do not merge this source with Gothamist's separate evidence that Jamie organized fire-code study groups."],
+          decisionUse: "Establishes the coalition's concrete public-safety resource context while preserving Tara Mc Manus's named contribution.",
+          nextStep: "Recover study-group invitations, curricula, facilitator records, and participant accounts to map the relationship between Jamie's documented study groups and the coalition resource page."
+        },
+        {
+          id: "PROP-NYCA-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN-2019",
+          text: "In February 2019, NYC Artist Coalition's Talks Not Raids page documented a multi-organization campaign for MARCH transparency, advance notice, and Intro 1156.",
+          status: "context-only",
+          sourceIds: ["SRC-NYCA-TALKS-NOT-RAIDS-MARCH-2019-02-12"],
+          sourceSupport: ["February 2019 date", "Talks Not Raids public campaign", "multi-organization coalition", "MARCH transparency and notice asks", "Intro 1156", "Council sign-ons", "press materials"],
+          boundaries: ["The page does not identify Jamie's individual contribution.", "The campaign artifact does not establish that MARCH was ended or disbanded.", "Do not treat campaign statistics as independently verified by the campaign page itself."],
+          decisionUse: "Establishes the campaign, its public apparatus, and its legislative target without promoting Jamie's memory of contribution or outcome into fact.",
+          nextStep: "Recover campaign repository history, authorship records, meeting notes summarized outside the public repo, collaborator accounts, and later agency records about MARCH's operational status."
+        },
+        {
+          id: "PROP-NYCA-CABARET-REPEAL-INSTITUTIONAL-OUTCOME-2017",
+          text: "New York City enacted Int 1652-2017 as Local Law 214 on November 27, 2017, repealing the Cabaret Law license requirement while retaining specified security measures.",
+          status: "context-only",
+          sourceIds: ["SRC-NYC-COUNCIL-INT-1652-2017"],
+          sourceSupport: ["official bill identity", "Council chronology", "enactment date", "law number", "scope of repeal", "retained security measures"],
+          boundaries: ["The legislative record does not establish Jamie's or NYC Artist Coalition's role.", "Repeal of the license requirement is not elimination of every nightlife rule or enforcement mechanism."],
+          decisionUse: "Pins the campaign's institutional outcome to an exact government record while separating outcome from advocacy causality.",
+          nextStep: "Map testimony, sponsor statements, committee reports, and campaign records to specific advocates and mechanisms of influence."
+        },
+        {
+          id: "PROP-NYCA-MARCH-REPORTING-INSTITUTIONAL-OUTCOME-2019",
+          text: "New York City enacted Int 1156-2018 as Local Law 220 on December 15, 2019, adding reporting, advance-notice, response, machine-readable publication, and privacy requirements for MARCH operations.",
+          status: "context-only",
+          sourceIds: ["SRC-NYC-COUNCIL-INT-1156-2018"],
+          sourceSupport: ["official bill identity", "Council chronology", "enactment date", "law number", "MARCH reporting", "advance-notice and response requirements", "machine-readable publication", "privacy requirements"],
+          boundaries: ["The legislative record does not establish Jamie's or NYC Artist Coalition's role.", "The law regulated and documented MARCH operations; it does not establish that the program was disbanded."],
+          decisionUse: "Establishes a concrete institutional result adjacent to Talks Not Raids while preventing the result from being compressed into an unsupported end-of-MARCH claim.",
+          nextStep: "Review committee testimony, sponsor statements, agency reports, implementation records, and later operational directives for campaign contribution and MARCH status."
+        },
+        {
           id: "PROP-NYCA-COALITION-FORMATION-MEMORY",
           text: "Jamie remembers playing an instrumental role in creating NYC Artist Coalition and its operating infrastructure.",
           status: "memory-lead",
@@ -465,9 +806,9 @@ const knowledgeBankInput = {
           status: "memory-lead",
           sourceIds: [],
           sourceSupport: [],
-          boundaries: ["The campaign sequence, Jamie's mechanism of contribution, and the institutional decision to end MARCH are not yet established here.", "Do not claim sole or direct causality without public records and collective context."],
+          boundaries: ["The public campaign page and enacted reporting law establish campaign and legislative context, not Jamie's mechanism of contribution or an institutional decision to end MARCH.", "Do not claim sole or direct causality without role-specific records and collective context."],
           decisionUse: "Preserves an important public-accountability and enforcement-reform thread for targeted research.",
-          nextStep: "Recover MARCH policy and disbandment records, Council oversight materials, Talks Not Raids campaign artifacts, press, and collaborator accounts."
+          nextStep: "Recover MARCH disbandment or operational-status records, agency implementation reports, campaign repository history, press, and collaborator accounts that identify Jamie's mechanism of contribution."
         },
         {
           id: "PROP-NYCA-POLICY-OUTCOMES-MEMORY",
@@ -529,7 +870,7 @@ const knowledgeBankInput = {
             "nyc-artist-coalition-civic-systems"
           ],
           description: "Existing careful proofs name campaign websites, coalition operations, policy communications, and work from 2017 onward; the new proposition layer has not yet associated every named output, date range, town hall, MARCH claim, or policy outcome with its own evidence.",
-          currentPosition: "Documented fire-code study groups, City Hall advocacy, coalition affiliation, and safety analysis are source-associated. Broader output and outcome language remains governed by prior approval and collective-credit guardrails while campaign-by-campaign evidence is developed.",
+          currentPosition: "Documented fire-code study groups, City Hall advocacy, coalition affiliation, and Jamie's safety analysis are source-associated. New campaign pages and government records now establish a sequence of public artifacts, named collaborators, and institutional outcomes, but they still do not identify Jamie's authorship, production role, or causal mechanism across every campaign named in the proofs.",
           status: "open",
           correctionTriggers: [
             {
@@ -563,21 +904,23 @@ const knowledgeBankInput = {
       ],
       researchQuestions: [
         "Which formation records and collaborator accounts establish Jamie's role in creating NYC Artist Coalition?",
-        "What did Jamie specifically initiate, produce, host, build, facilitate, document, or steward in each campaign?",
-        "Which legislation, hearing records, Council materials, agency records, campaign sites, press reports, and public statements establish the sequence from advocacy to policy outcome?",
-        "What public records establish the origin, mandate, transparency changes, and disbandment of MARCH?",
-        "Which town halls did Jamie produce, who convened them, how many people participated, and what changed because of them?"
+        "Which public repository commits, CMS records, deployment history, or collaborator accounts associate Jamie with implementation or stewardship of the Cabaret, town-hall, safety, CreateNYC, or Talks Not Raids web surfaces?",
+        "Which hearing testimony, sponsor statements, committee reports, and collaborator accounts connect Jamie's documented advocacy actions to a specific institutional decision without overstating causality?",
+        "Which agency reports, operational directives, or official statements establish whether MARCH continued, changed form, or ended after Local Law 220?",
+        "Which event programs, production records, recordings, venue records, and named participant accounts establish Jamie's role, audience scale, and practical outcomes for each town hall?"
       ],
       boundaries: [
         "Treat Jamie's recollection as a research lead, not self-authenticating proof of causality or scale.",
         "Use collective-credit language and distinguish instrumental contribution from sole causation.",
         "The Gothamist source directly supports fire-code study groups, City Hall advocacy, coalition affiliation, and Jamie's safety analysis; it does not establish the full campaign history.",
         "The NPR source is context only until it is closely read for person- and organization-specific evidence.",
+        "Coalition campaign pages establish public artifacts and collective positions, not individual authorship or causality unless Jamie is named.",
+        "The Council records establish enactment and statutory scope, not which advocates caused passage or whether MARCH was later disbanded.",
         "Do not project this intake item directly to the website; strengthen or create governed claims first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-12",
-      reviewedAt: "2026-07-12",
+      reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
