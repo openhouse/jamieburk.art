@@ -328,6 +328,7 @@ const knowledgeBankInput = {
         "SRC-PARTICIPATION-GOOD-TIMES-OPEN-HOUSE-2006"
       ],
       relatedClaimIds: [],
+      relatedProofIds: [],
       candidateClaims: [
         "From 2003 to 2005, Jamie and his housemates held collectively produced Shop Shows in their Santa Cruz home, inviting participants to contribute art, performance, food, and unfinished work.",
         "In 2006, Jamie turned Porter Bridge Gallery into Open House, a ten-day experiment in communal living and participatory art whose responsibility and decision-making he explicitly described as communal.",
@@ -372,6 +373,7 @@ const knowledgeBankInput = {
           decisionUse: "Supports claims about public-engagement program design, collaborative outreach, facilitation, and interactive cultural production."
         }
       ],
+      tensions: [],
       researchQuestions: [
         "What route, dates, duration, collaborators, public programs, and stopping points can be independently established for the raft expedition?",
         "Which additional institutional records, photographs, project sites, press accounts, and collaborator memories survive?",
@@ -400,6 +402,10 @@ const knowledgeBankInput = {
         "SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20"
       ],
       relatedClaimIds: [],
+      relatedProofIds: [
+        "nyc-artist-coalition-public-web-infrastructure",
+        "nyc-artist-coalition-civic-systems"
+      ],
       candidateClaims: [
         "In 2017, Jamie organized fire-code study groups for DIY venues and rallied at City Hall for full repeal of New York City's Cabaret Law.",
         "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis."
@@ -474,6 +480,87 @@ const knowledgeBankInput = {
           nextStep: "Build a dated campaign-by-campaign source map connecting Jamie's documented actions, collective advocacy, legislation or agency decisions, and public outcomes."
         }
       ],
+      tensions: [
+        {
+          id: "TENSION-NYCA-COFOUNDER-EVIDENCE",
+          propositionIds: ["PROP-NYCA-COALITION-FORMATION-MEMORY"],
+          relatedProofIds: ["nyc-artist-coalition-public-web-infrastructure"],
+          description: "The approved public proof uses 'Co-founded NYC Artist Coalition,' while the newly decomposed intake currently holds formation as Jamie's memory lead rather than as independently source-associated evidence.",
+          currentPosition: "The careful public proof remains approved through resume and Jamie-review governance. This intake does not independently re-verify or negate it; it opens a narrower formation-evidence lane.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-NYCA-COFOUNDER-CONFIRM",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Contemporaneous formation records or corroborating accounts from founding collaborators establish Jamie's role in initiating or constituting NYC Artist Coalition.",
+              action: "confirm",
+              requiredEvidence: ["dated formation artifact", "at least one corroborating collaborator or institutional source"],
+              reason: "Formation evidence would move co-founder wording from approved careful context to independently source-associated support."
+            },
+            {
+              id: "TRIGGER-NYCA-COFOUNDER-NARROW",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Recovered records establish substantial early coalition-building work by Jamie but do not establish co-founder status.",
+              action: "narrow",
+              requiredEvidence: ["dated early coalition records", "role-specific collaborator or institutional account"],
+              reason: "The strongest defensible wording should name the established contribution without preserving an unsupported title.",
+              replacementGuidance: "Replace 'Co-founded NYC Artist Coalition' with 'Helped build NYC Artist Coalition and built public campaign websites,' retaining only evidenced outputs."
+            },
+            {
+              id: "TRIGGER-NYCA-COFOUNDER-HOLD",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Credible contemporaneous records or multiple directly involved collaborators materially contradict Jamie's co-founder role.",
+              action: "hold",
+              requiredEvidence: ["specific contradictory formation evidence", "review with Jamie and directly involved collaborators"],
+              reason: "A material contradiction should stop continued projection while the historical record is reconciled.",
+              replacementGuidance: "Set the proof to pending, remove 'Co-founded' from public surfaces, and retain a bounded contribution claim only if separately supported."
+            }
+          ]
+        },
+        {
+          id: "TENSION-NYCA-CAMPAIGN-SYSTEMS-SCOPE",
+          propositionIds: [
+            "PROP-NYCA-TOWN-HALLS-AND-CAMPAIGN-SYSTEMS-MEMORY",
+            "PROP-NYCA-TALKS-NOT-RAIDS-MARCH-MEMORY",
+            "PROP-NYCA-POLICY-OUTCOMES-MEMORY"
+          ],
+          relatedProofIds: [
+            "nyc-artist-coalition-public-web-infrastructure",
+            "nyc-artist-coalition-civic-systems"
+          ],
+          description: "Existing careful proofs name campaign websites, coalition operations, policy communications, and work from 2017 onward; the new proposition layer has not yet associated every named output, date range, town hall, MARCH claim, or policy outcome with its own evidence.",
+          currentPosition: "Documented fire-code study groups, City Hall advocacy, coalition affiliation, and safety analysis are source-associated. Broader output and outcome language remains governed by prior approval and collective-credit guardrails while campaign-by-campaign evidence is developed.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-NYCA-CAMPAIGN-SYSTEMS-CONFIRM",
+              targetProofId: "nyc-artist-coalition-civic-systems",
+              condition: "Campaign repositories, event records, public artifacts, or collaborator accounts associate Jamie with the named websites, town halls, coordination systems, and policy-communication outputs over the stated period.",
+              action: "confirm",
+              requiredEvidence: ["project-specific public artifact or repository", "dated role or collaborator evidence", "campaign-to-output mapping"],
+              reason: "Project-level evidence would convert the broad systems summary into a traceable portfolio of contributions."
+            },
+            {
+              id: "TRIGGER-NYCA-CAMPAIGN-SYSTEMS-NARROW",
+              targetProofId: "nyc-artist-coalition-civic-systems",
+              condition: "Research supports only a subset of the currently named campaigns, outputs, or date range.",
+              action: "narrow",
+              requiredEvidence: ["completed campaign-by-campaign source map", "identified unsupported output or period"],
+              reason: "A broad systems claim should not retain components that cannot be associated with Jamie's documented work.",
+              replacementGuidance: "Split the proof into project-specific claims and remove unsupported campaigns, outputs, or chronology from the broad wording."
+            },
+            {
+              id: "TRIGGER-NYCA-CAMPAIGN-SYSTEMS-REPLACE",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Public repositories or collaborator evidence assign primary authorship of a named campaign surface to another person while showing a different Jamie contribution.",
+              action: "replace",
+              requiredEvidence: ["authorship or contribution record", "review with the credited collaborator when appropriate"],
+              reason: "Credit should follow the actual contribution rather than preserve a convenient but inaccurate output label.",
+              replacementGuidance: "Replace website-authorship wording with the specific evidenced role, such as implementation support, operations, documentation, facilitation, or campaign coordination, and credit the primary author."
+            }
+          ]
+        }
+      ],
       researchQuestions: [
         "Which formation records and collaborator accounts establish Jamie's role in creating NYC Artist Coalition?",
         "What did Jamie specifically initiate, produce, host, build, facilitate, document, or steward in each campaign?",
@@ -502,6 +589,7 @@ const knowledgeBankInput = {
       status: "captured",
       sourceIds: [],
       relatedClaimIds: [],
+      relatedProofIds: [],
       candidateClaims: [],
       propositions: [
         {
@@ -525,6 +613,7 @@ const knowledgeBankInput = {
           nextStep: "Choose the recoverable corpus first, then document inclusion rules, exclusions, account classification, denominator, and time window before counting."
         }
       ],
+      tensions: [],
       researchQuestions: [
         "Which Council member and institutional Council accounts engaged with @CallNYCapp, in what ways, and on what dates?",
         "Can the complete account timeline and engagement graph be recovered from an authenticated export, API, archive, or Jamie's account data?",

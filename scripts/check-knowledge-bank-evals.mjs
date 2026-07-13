@@ -3,14 +3,16 @@
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../apps/www/src/data/proofs.ts";
 import publicRegistry from "../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 
 const suitePath = ".agents/evals/knowledge-bank-development.json";
 
-export function validateKnowledgeContent(bank = knowledgeBank, registry = publicRegistry) {
+export function validateKnowledgeContent(bank = knowledgeBank, registry = publicRegistry, proofs = proofClaims) {
   const errors = [];
   const sourceIds = new Set(bank.sources.map((source) => source.id));
   const claimIds = new Set(bank.claims.map((claim) => claim.id));
+  const proofIds = new Set(proofs.map((proof) => proof.id));
   const publicText = JSON.stringify(registry);
 
   for (const source of bank.sources) {
@@ -43,6 +45,9 @@ export function validateKnowledgeContent(bank = knowledgeBank, registry = public
     }
     for (const claimId of item.relatedClaimIds) {
       if (!claimIds.has(claimId)) errors.push(`${item.id} references unknown claim ${claimId}`);
+    }
+    for (const proofId of item.relatedProofIds) {
+      if (!proofIds.has(proofId)) errors.push(`${item.id} references unknown proof ${proofId}`);
     }
     if (["source-associated", "researching", "claim-candidate"].includes(item.status) && !item.sourceIds.length) {
       errors.push(`${item.id} is ${item.status} without an associated source`);
@@ -91,6 +96,31 @@ export function validateKnowledgeContent(bank = knowledgeBank, registry = public
     for (const claim of item.candidateClaims) {
       if (!supportedPropositionTexts.has(claim)) {
         errors.push(`${item.id} candidate claim is not a supported proposition`);
+      }
+    }
+    const itemProofIds = new Set(item.relatedProofIds);
+    for (const tension of item.tensions) {
+      for (const propositionId of tension.propositionIds) {
+        if (!propositionIds.has(propositionId)) {
+          errors.push(`${tension.id} references unknown intake proposition ${propositionId}`);
+        }
+      }
+      for (const proofId of tension.relatedProofIds) {
+        if (!proofIds.has(proofId)) {
+          errors.push(`${tension.id} references unknown proof ${proofId}`);
+        }
+        if (!itemProofIds.has(proofId)) {
+          errors.push(`${tension.id} uses ${proofId} outside its intake proof set`);
+        }
+      }
+      const tensionProofIds = new Set(tension.relatedProofIds);
+      for (const trigger of tension.correctionTriggers) {
+        if (!proofIds.has(trigger.targetProofId)) {
+          errors.push(`${trigger.id} targets unknown proof ${trigger.targetProofId}`);
+        }
+        if (!tensionProofIds.has(trigger.targetProofId)) {
+          errors.push(`${trigger.id} targets ${trigger.targetProofId} outside its tension proof set`);
+        }
       }
     }
   }

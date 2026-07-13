@@ -250,6 +250,54 @@ export const intakePropositionSchema = z
     }
   });
 
+export const intakeCorrectionTriggerSchema = z
+  .object({
+    id: stableIdSchema,
+    targetProofId: stableIdSchema,
+    condition: z.string().min(1),
+    action: z.enum(["confirm", "narrow", "hold", "replace", "retire"]),
+    requiredEvidence: z.array(z.string().min(1)).min(1),
+    reason: z.string().min(1),
+    replacementGuidance: z.string().min(1).optional()
+  })
+  .superRefine((trigger, context) => {
+    if (trigger.action !== "confirm" && !trigger.replacementGuidance) {
+      context.addIssue({
+        code: "custom",
+        message: `${trigger.action} triggers require replacement guidance`
+      });
+    }
+  });
+
+export const intakeTensionSchema = z
+  .object({
+    id: stableIdSchema,
+    propositionIds: z.array(stableIdSchema).min(1),
+    relatedProofIds: z.array(stableIdSchema).min(1),
+    description: z.string().min(1),
+    currentPosition: z.string().min(1),
+    status: z.enum(["open", "reconciled"]),
+    correctionTriggers: z.array(intakeCorrectionTriggerSchema).min(2)
+  })
+  .superRefine((tension, context) => {
+    if (!tension.correctionTriggers.some((trigger) => trigger.action === "confirm")) {
+      context.addIssue({
+        code: "custom",
+        message: "Tensions require a confirmation trigger"
+      });
+    }
+    if (
+      !tension.correctionTriggers.some((trigger) =>
+        ["narrow", "hold", "replace", "retire"].includes(trigger.action)
+      )
+    ) {
+      context.addIssue({
+        code: "custom",
+        message: "Tensions require a corrective trigger"
+      });
+    }
+  });
+
 export const intakeItemSchema = z
   .object({
     id: stableIdSchema,
@@ -273,8 +321,10 @@ export const intakeItemSchema = z
     ]),
     sourceIds: z.array(stableIdSchema).default([]),
     relatedClaimIds: z.array(stableIdSchema).default([]),
+    relatedProofIds: z.array(stableIdSchema).default([]),
     candidateClaims: z.array(z.string().min(1)).default([]),
     propositions: z.array(intakePropositionSchema).default([]),
+    tensions: z.array(intakeTensionSchema).default([]),
     researchQuestions: z.array(z.string().min(1)).default([]),
     boundaries: z.array(z.string().min(1)).min(1),
     projectionStatus: z.literal("no-public-projection"),
@@ -352,6 +402,8 @@ export type ClaimRecord = z.infer<typeof claimRecordSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type IntakeProposition = z.infer<typeof intakePropositionSchema>;
+export type IntakeCorrectionTrigger = z.infer<typeof intakeCorrectionTriggerSchema>;
+export type IntakeTension = z.infer<typeof intakeTensionSchema>;
 export type IntakeItem = z.infer<typeof intakeItemSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;

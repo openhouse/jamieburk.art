@@ -62,6 +62,34 @@ test("proposition sources stay within the intake source set", () => {
   assert.match(validateKnowledgeContent(candidate).join("\n"), /outside its intake source set/);
 });
 
+test("intake proof links must resolve to governed proofs", () => {
+  const candidate = cloneBank();
+  const nyca = candidate.intakeItems.find((item) => item.id.includes("NYCA"));
+  nyca.relatedProofIds.push("unknown-governed-proof");
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /references unknown proof/);
+});
+
+test("tensions must resolve to propositions in the same intake item", () => {
+  const candidate = cloneBank();
+  const nyca = candidate.intakeItems.find((item) => item.id.includes("NYCA"));
+  nyca.tensions[0].propositionIds = ["PROP-FROM-ANOTHER-HISTORY"];
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /references unknown intake proposition/);
+});
+
+test("tension proofs stay within the intake proof set", () => {
+  const candidate = cloneBank();
+  const nyca = candidate.intakeItems.find((item) => item.id.includes("NYCA"));
+  nyca.relatedProofIds = ["nyc-artist-coalition-civic-systems"];
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /outside its intake proof set/);
+});
+
+test("correction triggers stay within their tension proof set", () => {
+  const candidate = cloneBank();
+  const nyca = candidate.intakeItems.find((item) => item.id.includes("NYCA"));
+  nyca.tensions[0].correctionTriggers[0].targetProofId = "nyc-artist-coalition-civic-systems";
+  assert.match(validateKnowledgeContent(candidate).join("\n"), /outside its tension proof set/);
+});
+
 function passingRun(target = "claim-development") {
   return {
     suite_id: suite.suite_id,

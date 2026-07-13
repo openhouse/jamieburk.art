@@ -62,6 +62,26 @@ Only direct, bounded, or bounded-synthesis propositions may appear in
 bank but cannot silently become claims. This is how the system preserves depth
 without asking one source to prove an entire project history.
 
+## Tensions And Correction Triggers
+
+New research may be narrower than an already approved proof, or may surface
+evidence that materially changes it. Intake records therefore link relevant
+governed proof IDs and describe the tension without silently downgrading or
+reaffirming either record.
+
+Each tension names:
+
+- the intake propositions and governed proofs being compared;
+- the current bounded position while research remains open;
+- evidence that would confirm the existing wording;
+- evidence conditions that would narrow, hold, replace, or retire it;
+- exact replacement guidance for every corrective action.
+
+This is a correction mechanism, not an automatic publication pipeline. A
+trigger makes the required decision visible; it does not alter a governed proof
+without review. The checker enforces that propositions, proof links, and trigger
+targets resolve within the same intake context.
+
 ## Intake Procedure
 
 1. **Safety check:** Decide whether the fragment itself is safe in a public
@@ -78,11 +98,14 @@ without asking one source to prove an entire project history.
 6. **Claim formation:** Draft candidate wording with Chad's lens: Jamie as an
    actor, a concrete action, a useful end, a named output, and no inflated
    ownership.
-7. **Governance:** Create or strengthen a governed claim, attach evidence and
+7. **Reconciliation:** Compare the intake against related governed proofs. Add
+   tensions and exact confirmation or correction triggers where the records do
+   not yet align.
+8. **Governance:** Create or strengthen a governed claim, attach evidence and
    anti-claims, and obtain the required review.
-8. **Composition:** Decide separately whether the claim belongs on a particular
+9. **Composition:** Decide separately whether the claim belongs on a particular
    website surface. Most bank depth should remain off the main site.
-9. **Validation:** Run `npm run check:citations`, `npm run test:citations`,
+10. **Validation:** Run `npm run check:citations`, `npm run test:citations`,
    `npm run knowledge-bank`, and `npm run public-safety`.
 
 ## LLM Agent Contract
