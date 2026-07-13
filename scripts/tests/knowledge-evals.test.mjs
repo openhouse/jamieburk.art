@@ -20,9 +20,35 @@ test("selected NYCAC claims improve existing-site citation coverage", () => {
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-COVERAGE")?.score, 5);
 });
 
+test("NYCAC source expansion retains exactly ten newly researched sources", () => {
+  const expansion = suite.pilot.sourceExpansion;
+  assert.equal(expansion.sourceIds.length, 10);
+  assert.equal(expansion.intakeIds.length, 10);
+  assert.equal(new Set(expansion.sourceIds).size, 10);
+  assert.ok(expansion.sourceIds.every((id) => knowledgeBank.sources.some((source) => source.id === id)));
+  assert.ok(expansion.intakeIds.every((id) => knowledgeBank.intakeItems.some((intake) => intake.id === id && intake.disposition === "integrated")));
+});
+
+test("NYCAC source expansion rejects an unbounded source", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.sourceExpansion.sourceIds[0]
+  );
+  assert.ok(source);
+  const original = source.doesNotEstablish;
+
+  try {
+    source.doesNotEstablish = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.doesNotEstablish = original;
+  }
+});
+
 test("photo feedback is instantiated as a protected research chain", () => {
   const result = evaluateKnowledgeBank(suite);
-  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 4);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 5);
 });
 
 test("photo feedback rejects an accidental publication-clearance mutation", () => {
