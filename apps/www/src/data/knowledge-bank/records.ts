@@ -1,4 +1,5 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
@@ -24,7 +25,8 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
-    ...nycacSourceExpansion.intakeItems
+    ...nycacSourceExpansion.intakeItems,
+    ...nycacPressArchive.intakeItems
   ],
   observations: [
     {
@@ -45,7 +47,8 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
-    ...nycacSourceExpansion.observations
+    ...nycacSourceExpansion.observations,
+    ...nycacPressArchive.observations
   ],
   sources: [
     {
@@ -193,7 +196,8 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
-    ...nycacSourceExpansion.sources
+    ...nycacSourceExpansion.sources,
+    ...nycacPressArchive.sources
   ],
   claims: [
     {
@@ -294,7 +298,8 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
-    ...nycacSourceExpansion.claims
+    ...nycacSourceExpansion.claims,
+    ...nycacPressArchive.claims
   ],
   researchInquiries: [
     {
@@ -335,7 +340,8 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...historicalKnowledge.researchInquiries,
-    ...nycacSourceExpansion.researchInquiries
+    ...nycacSourceExpansion.researchInquiries,
+    ...nycacPressArchive.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],
   corrections: [

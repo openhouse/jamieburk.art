@@ -98,6 +98,34 @@
         "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017",
         "CLM-NYCAC-SBJSA-TESTIMONY-2018"
       ]
+    },
+    "pressArchive": {
+      "expectedIndexCount": 4,
+      "expectedAppearanceCount": 45,
+      "expectedUniqueArticleCount": 44,
+      "expectedNewArticleSourceCount": 41,
+      "expectedNewSourceCount": 44,
+      "campaignEntryCounts": {
+        "LET-NYC-DANCE": 21,
+        "TALKS-NOT-RAIDS": 7,
+        "SAVE-NYC-SPACES": 8,
+        "FAIR-RENT-NYC": 9
+      },
+      "intakeIds": [
+        "INTAKE-NYCAC-PRESS-INDEX-LET-NYC-DANCE",
+        "INTAKE-NYCAC-PRESS-INDEX-TALKS-NOT-RAIDS",
+        "INTAKE-NYCAC-PRESS-INDEX-SAVE-NYC-SPACES",
+        "INTAKE-NYCAC-PRESS-INDEX-FAIR-RENT-NYC"
+      ],
+      "indexSourceIds": [
+        "SRC-NYCAC-PRESS-INDEX-LET-NYC-DANCE",
+        "SRC-NYCAC-PRESS-INDEX-TALKS-NOT-RAIDS",
+        "SRC-NYCAC-SAVE-NYC-SPACES",
+        "SRC-NYCAC-PRESS-INDEX-FAIR-RENT-NYC-2021-12-01"
+      ],
+      "claimId": "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
+      "inquiryId": "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
+      "duplicateSourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20"
     }
   },
   "criteria": [
@@ -156,6 +184,13 @@
       "weight": 0.1,
       "minimumScore": 4,
       "intent": "Unselected claims and open questions remain usable for future applications, site arguments, collaborator proofs, and photo-editor feedback loops."
+    },
+    {
+      "id": "KB-EVAL-PRESS-ARCHIVE",
+      "label": "Campaign press archive completeness",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every press-list appearance across the four campaign sites is preserved with campaign provenance, deduplicated article identity, availability context, scope boundaries, and a maturation disposition."
     }
   ],
   "hillClimb": {
