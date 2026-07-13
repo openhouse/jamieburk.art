@@ -143,6 +143,27 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-NPR-CABARET-2017-09-20",
+      "title": "With Its 'No Dancing' Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      "organization": "NPR, syndicated by WPRL",
+      "author": "Jane Lerner",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.wprl.org/npr-music/2017-09-20/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, September 20, 2017, syndicated by WPRL.",
+      "publicNote": "National reporting that describes Jamie as a founding member of 'NYC Arts Coalition' and quotes his community-space framing during the repeal campaign.",
+      "doesNotEstablish": [
+        "Jamie as sole founder",
+        "Jamie's sole responsibility for repeal",
+        "individual authorship of coalition websites",
+        "creation of the Office of Nightlife"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
       "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
       "organization": "Greene Hill Food Co-op",
@@ -160,6 +181,87 @@
         "Jamie's causal role in creating the Office of Nightlife",
         "attendance totals",
         "sole ownership of collective projects"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+      "title": "6 Things to Know About Making DIY Spaces Work",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-02-07",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, '6 Things to Know About Making DIY Spaces Work,' Bedford + Bowery, February 7, 2017.",
+      "publicNote": "Reports Jamie's organizer role, more than 100 mutual-aid signups, safety education, and coalition policy development.",
+      "doesNotEstablish": [
+        "current coalition membership",
+        "long-term network participation",
+        "Jamie's sole leadership",
+        "adoption of the proposals"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+      "title": "What Can the Night Mayor Do? The DIY Scene Discusses",
+      "organization": "Bedford + Bowery",
+      "author": "Cassidy Dawn Graves",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
+      "publicNote": "Reports that NYC Artist Coalition spearheaded the town hall, names Jamie and Olympia Kazi among speakers, and documents participation by cultural organizations and city officials.",
+      "doesNotEstablish": [
+        "a complete production-credit roster",
+        "an audited attendance total",
+        "Jamie's sole production role",
+        "sole causation of legislation"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-SUPPORTERS-LIST",
+      "title": "Supporters List",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://nycartc.com/supporters-list/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Supporters List,' accessed July 13, 2026.",
+      "publicNote": "Names Jamie Burkart with WOW List and documents public-member and members-only mutual-aid intake options.",
+      "doesNotEstablish": [
+        "founding status",
+        "leadership role",
+        "complete or dated membership",
+        "website authorship"
+      ]
+    },
+    {
+      "id": "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "title": "Committee on Small Business hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-22",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council Committee on Small Business hearing transcript, October 22, 2018, pp. 347-348.",
+      "publicNote": "Official transcript of Jamie's testimony as an NYC Artist Coalition member in support of commercial rent protections for cultural spaces.",
+      "doesNotEstablish": [
+        "enactment of the bill",
+        "Council agreement with the testimony",
+        "Jamie's sole authorship of the policy position",
+        "measured causal effects of rent increases"
       ]
     }
   ],
@@ -426,12 +528,12 @@
       ]
     },
     {
-      "id": "CLM-NYCAC-CABARET-TOWN-HALL",
+      "id": "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
         {
           "key": "case-study",
-          "text": "A community profile also documented Jamie and Julia working through NYC Artist Coalition on Cabaret Law repeal and inviting residents to a September 28 town hall for dialogue with the new Office of Nightlife.",
+          "text": "NPR described Jamie as a founding member of NYC Artist Coalition; contemporary local reporting also identified him as an organizer and documented the coalition's mutual-aid and public-advocacy work.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -441,20 +543,111 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "sourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20",
           "relationship": "direct-support",
           "supports": [
-            "Jamie and Julia's NYC Artist Coalition participation",
-            "Cabaret Law repeal advocacy",
-            "September 28 town hall invitation",
-            "dialogue with the new Office of Nightlife"
+            "NPR's founding-member description"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+          "relationship": "direct-support",
+          "supports": [
+            "organizer description",
+            "mutual-aid operating context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-SUPPORTERS-LIST",
+          "relationship": "corroborating",
+          "supports": [
+            "public affiliation with WOW List",
+            "mutual-aid intake structure"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "The source documents participation and public invitation, not sole creation of the Office or town hall outcomes."
+        "Attribute the founding description to NPR because that source uses the wording and prints the organization as 'NYC Arts Coalition.'",
+        "Keep coalition accomplishments collective."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition then spearheaded a public town hall about what communities needed from the new Office of Nightlife; Jamie was among the coalition speakers, alongside cultural organizations, Council members, and city officials.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+          "relationship": "direct-support",
+          "supports": [
+            "coalition-spearheaded town hall",
+            "Jamie's speaking role",
+            "institutional participation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "relationship": "corroborating",
+          "supports": [
+            "community invitation",
+            "dialogue with the new Office"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not assign every production responsibility to Jamie or infer an audited attendance count."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2018, Jamie testified before the Council's Committee on Small Business in support of commercial rent protections, connecting affordability to the safety and continuity of neighborhood cultural spaces.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-SBJSA-HEARING-2018-10-22",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's testimony",
+            "NYC Artist Coalition identification",
+            "support for commercial rent protections",
+            "affordability and safety framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Testimony documents Jamie's role and position, not enactment or Council endorsement."
       ]
     }
   ],
@@ -528,7 +721,12 @@
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
-        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+        "SRC-NYCAC-NPR-CABARET-2017-09-20",
+        "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+        "SRC-NYCAC-SUPPORTERS-LIST",
+        "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+        "SRC-NYC-SBJSA-HEARING-2018-10-22"
       ],
       "occurrences": [
         {
@@ -540,11 +738,30 @@
           ]
         },
         {
-          "id": "cabaret-town-hall",
-          "claimId": "CLM-NYCAC-CABARET-TOWN-HALL",
+          "id": "founder-operating-role",
+          "claimId": "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE",
           "projection": "case-study",
           "sourceIds": [
+            "SRC-NYCAC-NPR-CABARET-2017-09-20",
+            "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+            "SRC-NYCAC-SUPPORTERS-LIST"
+          ]
+        },
+        {
+          "id": "nightlife-town-hall",
+          "claimId": "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
             "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+          ]
+        },
+        {
+          "id": "sbjsa-testimony",
+          "claimId": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-SBJSA-HEARING-2018-10-22"
           ]
         }
       ]

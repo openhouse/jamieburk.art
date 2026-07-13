@@ -1,4 +1,5 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 
@@ -22,7 +23,8 @@ const knowledgeBankInput = {
         "Publication requires separate photographer, rights, represented-people, crop, and editorial review."
       ]
     },
-    ...historicalKnowledge.intakeItems
+    ...historicalKnowledge.intakeItems,
+    ...nycacSourceExpansion.intakeItems
   ],
   observations: [
     {
@@ -42,7 +44,8 @@ const knowledgeBankInput = {
         "The approximate timestamp is not used to establish event hours."
       ]
     },
-    ...historicalKnowledge.observations
+    ...historicalKnowledge.observations,
+    ...nycacSourceExpansion.observations
   ],
   sources: [
     {
@@ -166,7 +169,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
     },
-    ...historicalKnowledge.sources
+    ...historicalKnowledge.sources,
+    ...nycacSourceExpansion.sources
   ],
   claims: [
     {
@@ -255,7 +259,8 @@ const knowledgeBankInput = {
       antiClaims: ["No Civic Hall event page existed."],
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
-    ...historicalKnowledge.claims
+    ...historicalKnowledge.claims,
+    ...nycacSourceExpansion.claims
   ],
   researchInquiries: [
     {
@@ -295,7 +300,8 @@ const knowledgeBankInput = {
       publicSummary: "A protected participant photograph preserves the visible Digital District breakout wording; public display remains on hold pending rights, consent, and editorial review.",
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
-    ...historicalKnowledge.researchInquiries
+    ...historicalKnowledge.researchInquiries,
+    ...nycacSourceExpansion.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],
   corrections: [
@@ -326,11 +332,18 @@ const knowledgeBankInput = {
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
       "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
-      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+      "SRC-NYCAC-NPR-CABARET-2017-09-20",
+      "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
+      "SRC-NYCAC-SUPPORTERS-LIST",
+      "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+      "SRC-NYC-SBJSA-HEARING-2018-10-22"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"] },
-      { id: "cabaret-town-hall", claimId: "CLM-NYCAC-CABARET-TOWN-HALL", projection: "case-study", sourceIds: ["SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] }
+      { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
+      { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
+      { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] }
     ]
   }]
 };

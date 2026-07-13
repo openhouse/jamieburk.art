@@ -17,6 +17,11 @@ public GitHub repositories, or public project URLs.
 Approved public artifact examples for this launch pass include:
 
 - NYC Artist Coalition public website.
+- NYC Artist Coalition supporters, Cabaret Law, Save NYC Spaces, and repeal
+  campaign pages.
+- Contemporary reporting from Gothamist, NPR, Bedford + Bowery, and Mixmag.
+- Official New York City Council legislation and hearing records for the
+  Office of Nightlife, Cabaret Law repeal, and commercial-rent testimony.
 - FairRentNYC public website.
 - Talks Not Raids public website.
 - Let NYC Dance public website.

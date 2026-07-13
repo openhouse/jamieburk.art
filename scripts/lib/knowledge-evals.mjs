@@ -34,6 +34,24 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const pilotObservations = pilotIntakes.flatMap((item) =>
     item?.observationIds.map((id) => observationById.get(id)) ?? []
   );
+  const expansion = suite.pilot.sourceExpansion;
+  const expansionIntakes = expansion.intakeIds.map((id) => intakeById.get(id));
+  const expansionSources = expansion.sourceIds.map((id) => sourceById.get(id));
+  const expansionClaims = expansion.claimIds.map((id) => claimById.get(id));
+  const expansionInquiries = expansion.inquiryIds.map((id) => inquiryById.get(id));
+  const expansionObservations = expansionIntakes.flatMap((item) =>
+    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries];
+  const triangulatedExpansionClaims = expansionClaims.filter(
+    (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
+  );
+  const heldExpansionClaims = expansionClaims.filter((claim) =>
+    claim?.projections.some((projection) => projection.status === "hold")
+  );
+  const selectedExpansionClaims = expansion.selectedClaimIds.map((id) => claimById.get(id));
   const photoFeedback = suite.pilot.photoFeedbackChain;
   const photoIntake = intakeById.get(photoFeedback.intakeId);
   const photoObservation = observationById.get(photoFeedback.observationId);
@@ -79,33 +97,59 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const criteria = [
     {
       criterionId: "KB-EVAL-INTAKE",
-      score: score(pilotIntakes.every((item) => item && item.boundaries.length && (item.sourceIds.length || item.researchInquiryIds.length))),
-      evidence: [`${pilotIntakes.filter(Boolean).length}/${suite.pilot.intakeIds.length} pilot intake items retained with dispositions and boundaries`]
+      score: score(
+        pilotIntakes.every((item) => item && item.boundaries.length && (item.sourceIds.length || item.researchInquiryIds.length)) &&
+        expansionIntakes.length === expansion.expectedSourceCount &&
+        expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length)
+      ),
+      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes plus ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion intakes retained with dispositions, observations, and boundaries`]
     },
     {
       criterionId: "KB-EVAL-ATOMICITY",
-      score: score(pilotObservations.length >= 20 && pilotObservations.every((item) => item && item.limitations && (item.claimIds.length || item.researchInquiryIds.length)), false),
-      evidence: [`${pilotObservations.filter(Boolean).length} proposition-level observations linked to claims or inquiries`]
+      score: score(
+        allEvaluatedObservations.length >= 30 &&
+        allEvaluatedObservations.every((item) => item?.locator && item.limitations.length && (item.claimIds.length || item.researchInquiryIds.length))
+      ),
+      evidence: [`${allEvaluatedObservations.filter(Boolean).length} proposition-level observations have locators, limitations, and claim or inquiry links`]
     },
     {
       criterionId: "KB-EVAL-SCOPE",
-      score: score(pilotSources.every((source) => source?.doesNotEstablish.length) && !errors.some((error) => /does not establish|support a proposition/i.test(error))),
-      evidence: [`${pilotSources.filter(Boolean).length}/${suite.pilot.sourceIds.length} pilot sources have explicit doesNotEstablish boundaries`]
+      score: score(
+        [...pilotSources, ...expansionSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+        expansionSources.length === expansion.expectedSourceCount &&
+        !errors.some((error) => /does not establish|support a proposition/i.test(error))
+      ),
+      evidence: [`${expansionSources.filter(Boolean).length}/${expansion.expectedSourceCount} new sources and all original pilot sources have explicit support and doesNotEstablish boundaries`]
     },
     {
       criterionId: "KB-EVAL-MATURATION",
-      score: score(pilotClaims.every((claim) => claim?.evidence.length && claim.boundaries.length && claim.antiClaims.length) && pilotInquiries.every((inquiry) => inquiry?.limitations.length), false),
-      evidence: [`${pilotClaims.filter(Boolean).length} claims and ${pilotInquiries.filter(Boolean).length} inquiries carry evidence or limitations`]
+      score: score(
+        allEvaluatedClaims.every((claim) => claim?.evidence.length && claim.boundaries.length && claim.antiClaims.length && claim.reviewedBy.length) &&
+        allEvaluatedInquiries.every((inquiry) => inquiry?.limitations.length && inquiry.findings.length) &&
+        expansionClaims.length === expansion.claimIds.length,
+        triangulatedExpansionClaims.length >= 4
+      ),
+      evidence: [`${expansionClaims.filter(Boolean).length} new claims matured; ${triangulatedExpansionClaims.length} are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
     },
     {
       criterionId: "KB-EVAL-PROJECTION",
-      score: score(pilotClaims.every((claim) => claim?.projections.every((projection) => projection.status !== "hold" || projection.surfaces.length === 0)) && Boolean(fairRentPage)),
-      evidence: ["Held claims have no public surface; two selected NYCAC claims have an authorized FairRentNYC page plan"]
+      score: score(
+        allEvaluatedClaims.every((claim) => claim?.projections.every((projection) => projection.status !== "hold" || projection.surfaces.length === 0)) &&
+        selectedExpansionClaims.every((claim) => claim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc"))) &&
+        Boolean(fairRentPage)
+      ),
+      evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims have authorized FairRentNYC projections`]
     },
     {
       criterionId: "KB-EVAL-COVERAGE",
-      score: score(Boolean(fairRentPage) && fairRentMdx.includes("CLM-NYCAC-CABARET-SAFETY-ORGANIZING") && fairRentMdx.includes("CLM-NYCAC-CABARET-TOWN-HALL") && knowledgeBank.proofCoverageTargets.length === proofClaims.length),
-      evidence: [`Two NYCAC assertions now have canonical citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
+      score: score(
+        Boolean(fairRentPage) &&
+        fairRentMdx.includes("CLM-NYCAC-CABARET-SAFETY-ORGANIZING") &&
+        expansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
+        fairRentPage.occurrences.length >= 4 &&
+        knowledgeBank.proofCoverageTargets.length === proofClaims.length
+      ),
+      evidence: [`Four hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
@@ -114,9 +158,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     },
     {
       criterionId: "KB-EVAL-RECOMPOSITION",
-      score: score(pilotClaims.some((claim) => claim?.projections.some((projection) => projection.status === "hold")) && knowledgeBank.intakeItems.some((item) => item.kind === "memory-lead") && existsSync(path.join(repoRoot, "docs/knowledge-bank/intake-and-maturation.md")) && photoChainComplete, false),
+      score: score(
+        pilotClaims.some((claim) => claim?.projections.some((projection) => projection.status === "hold")) &&
+        heldExpansionClaims.length >= 3 &&
+        expansionInquiries.some((inquiry) => inquiry?.id === "INQ-NYCAC-PUBLIC-WEB-AUTHORSHIP") &&
+        knowledgeBank.intakeItems.some((item) => item.kind === "memory-lead") &&
+        existsSync(path.join(repoRoot, "docs/knowledge-bank/intake-and-maturation.md")) &&
+        photoChainComplete
+      ),
       evidence: [photoChainComplete
-        ? "Mature held claims, open memory leads, and a protected photo-to-observation-to-inquiry chain remain available for future composition"
+        ? `${heldExpansionClaims.length} newly mature claims remain held beside open inquiries, memory leads, and the protected photo feedback chain`
         : "The canonical photo-feedback chain is incomplete"]
     }
   ];
