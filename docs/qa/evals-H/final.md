@@ -1,14 +1,14 @@
 # Portfolio Evals H - Final Pre-Release Result
 
-Candidate application commit: `071407dc0d2758f803fde170c1464e3d932f82c0`
+Candidate application commit: `281f6294bab5c068777a184eb601e6aa2d4b66c3`
 
 Base: `origin/develop` at `2ec37fe6e47d11e600ede204d19a98f7d3cff139`
 
-Rubric: `portfolio-production-readiness` version 1
+Rubric: `portfolio-production-readiness` version 2
 
 ## Result
 
-Weighted score: **0.8500** (baseline: **0.5125**)
+Weighted score: **0.8625** (version 1 baseline: **0.5125**)
 
 Launch eligible: **No - stopped at the required human and production gates**
 
@@ -16,7 +16,7 @@ All agent-verifiable criteria score at least 3. The remaining blocking criteria
 are PR-011, which requires a real public cutover and post-deploy evidence, and
 PR-012, which requires Jamie to approve the exact candidate commit and indexing
 state. If both gates score 4 without regression, the weighted score becomes
-**0.9150**, above the 0.90 threshold.
+**0.9275**, above the 0.90 threshold.
 
 | Eval | Score | Pass | Final evidence |
 | --- | ---: | :---: | --- |
@@ -33,6 +33,7 @@ state. If both gates score 4 without regression, the weighted score becomes
 | PR-011 Production cutover | 1 | No | Production-mode artifacts and Docker runtime are ready, but the reviewed commit has not been deployed to the public apex and verified with DNS, TLS, `www`, `npr`, health, and rollback evidence. |
 | PR-012 Approval ledger | 2 | No | Public decisions and new assets are reconciled; exact-commit production and indexing approval remains intentionally open. |
 | PR-013 AI and memory proof | 3 | Yes | The approved certificate, bounded professional-development wording, synthetic Known/Open/Protected example, and explicit non-SaaS limits are visible. |
+| PR-014 Chad Lens professional legibility | 4 | Yes | Three fresh HR, public-sector, and technical holdouts scored 4, with 95.0%, 94.4%, and 94.4% statement-audit pass rates and no consequential comprehension failures. |
 
 ## Blind Holdout
 
@@ -52,6 +53,21 @@ Implementation as the role family, described the value as turning ambiguous
 work into operating structure, named at least three bounded project proofs, and
 recommended a resume review, interview, or screening conversation.
 
+## Chad Lens Holdout
+
+The version 2 suite adds PR-014 as a blocking professional-legibility eval. A
+baseline panel scored **4 / 3 / 3**, median **3**. After one focused iteration,
+three fresh holdouts scored **4 / 4 / 4**, median **4**. Their sampled
+actor-action-purpose-result pass rates were **95.0%**, **94.4%**, and **94.4%**.
+
+The iteration rewrote high-visibility metric and proof-map fragments to name
+Jamie, his action, the work's purpose, and the usable result; removed
+unexplained `OTI`; spelled out quality assurance and user acceptance testing;
+and aligned HJE's lead wording with supported long-running leadership while
+retaining careful revenue causality. Full scorecards are recorded in
+`chad-holdout-hr.json`, `chad-holdout-public.json`, and
+`chad-holdout-technical.json`.
+
 ## Iterations
 
 1. **Baseline - 0.5125.** Positioning and governance were strong, but lead work
@@ -67,6 +83,10 @@ recommended a resume review, interview, or screening conversation.
    The lead narratives were cut by 52 percent, repeated governance panels were
    consolidated, and detailed source notes were collapsed. Three fresh holdout
    readers then scored PR-004 at 3.
+5. **Chad Lens professional legibility.** The new blocking eval established a
+   4 / 3 / 3 baseline. One focused pass converted fast-scan fragments into
+   actor-action-purpose-result statements and reconciled supported HJE agency.
+   Three fresh holdouts scored 4 / 4 / 4, meeting the criterion.
 
 ## Verification
 
@@ -78,6 +98,8 @@ recommended a resume review, interview, or screening conversation.
 - 56 route/viewport responsive checks
 - PDF metadata, text, URL, and two-page render inspection
 - three independent structured blind holdout reviews
+- three independent Chad Lens baseline reviews and three fresh Chad Lens
+  holdouts
 
 ## Required Human Finish
 
