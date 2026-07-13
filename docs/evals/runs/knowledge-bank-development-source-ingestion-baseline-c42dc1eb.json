@@ -1,0 +1,180 @@
+{
+  "suite_id": "knowledge-bank-development",
+  "target": "claim-development",
+  "candidate_sha": "c42dc1ebfe79eca443171240667eaeac97ca1eae",
+  "rubric_sha": "2216610afa01637ef81d95c1a69112cc2acdc090",
+  "content_scope": [
+    "INTAKE-WATERWAYS-PARTICIPATORY-PRACTICE-2026-07-12",
+    "INTAKE-SUNDAY-DINNER-COMMUNITY-HOSTING-2026-07-13",
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12",
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  ],
+  "consecutive_passing_runs": 1,
+  "results": [
+    {
+      "eval_id": "KB-001",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "`PATH=/Users/jburkart/.nvm/versions/node/v26.4.0/bin:$PATH npm run public-safety` exited 0 with `Public-safety check passed.`",
+        "`npm run check:citations` exited 0 with `Public citation registry is current and redacted.`; `npm run evals:knowledge-bank` also exited 0 and checks every intake ID for registry exclusion.",
+        "`apps/www/src/data/knowledge-bank/records.ts` gives all four intake records a provenance kind, review context, material boundaries, and `projectionStatus: no-public-projection`; the protected photograph and research run expose only protected locator IDs.",
+        "`apps/www/src/data/knowledge-bank/public-registry.json` contains only the five renderable CallNYC public sources and no intake ID or newly ingested Sunday Dinner/NYCAC source."
+      ],
+      "findings": [
+        "No private path, raw private record, participant record, credential, unapproved media, intake identifier, or intake-only source was observed in the public registry.",
+        "`npm run test:citations` has one count-only failure (`4 !== 3`); the failing assertion does not reveal a safety leak, and the actual four-item exclusion is independently checked by `npm run evals:knowledge-bank`."
+      ],
+      "recommended_next_move": null,
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-002",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` decomposes the four intake threads into proposition-level `sourceIds`, `sourceSupport`, boundaries, decision use, and required next steps; context-only sources are not admitted to `candidateClaims`.",
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` supplies a ten-source support/non-support matrix, data-quality assessment, and actor/artifact/outcome separation.",
+        "The [Greene Hill Q&A](https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter) directly supports weekly open co-hosting and coalition affiliation, while [Gothamist](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law) directly supports Jamie's fire-code study groups, City Hall advocacy, affiliation, and attributed safety analysis.",
+        "The [NYCAC town-hall page](https://nycartc.com/nightmayor/) names Anya Sapozhnikova as host and not Jamie; the candidate correctly keeps it context-only."
+      ],
+      "findings": [
+        "The blocked NPR page is labeled context-only, but its source record does not itself carry a source-specific recovery step; the broader intake supplies only adjacent next-source classes.",
+        "The Greene Hill record preserves the Julie/Julia inconsistency in boundaries, yet the standalone Sunday Dinner candidate sentence selects `Julia`; that wording remains safe only when read with its proposition boundary.",
+        "Several NYCAC source-record titles are normalized rather than transcribed from the live page headers, and proposition evidence lacks passage-level locators; this limits exceptional traceability without changing the substantive support fit."
+      ],
+      "recommended_next_move": "Use exact source titles and passage locators, attach a direct recovery step to the unread NPR source, and keep the Julie/Julia uncertainty inside any portable candidate wording until independently resolved.",
+      "confidence": 0.96
+    },
+    {
+      "eval_id": "KB-003",
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` contains an explicit actor/action/artifact/outcome matrix separating Jamie, Julia, Anya Sapozhnikova, Tara Mc Manus, the coalition, and city institutions.",
+        "`apps/www/src/data/knowledge-bank/records.ts` separates Jamie's raft conception from collective construction/travel, credits housemates and Suzanne Hogan, credits Julia as Sunday Dinner co-host, and withholds Jamie-specific authorship from NYCAC campaign pages and government records.",
+        "The [Gothamist report](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law) supplies Jamie-specific actions, while the [NYC Council Int 1652 record](https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6FDA3305-06B3-47B3-9DF6-21B605C5A8EE&ID=3086319) supplies the institutional outcome; the candidate never converts their adjacency into solo causality.",
+        "`apps/www/src/data/knowledge-bank/records.ts` tensions `TENSION-NYCA-COFOUNDER-EVIDENCE`, `TENSION-NYCA-CAMPAIGN-SYSTEMS-SCOPE`, and `TENSION-SUNDAY-DINNER-PUBLIC-CORROBORATION-AND-SCALE` keep stronger governed proofs distinct from the narrower source-associated layer."
+      ],
+      "findings": [
+        "The governed NYCA and Sunday Dinner proofs remain stronger than this new public source set can independently establish, but the candidate names that gap, preserves prior governance rather than laundering context sources into role proof, and provides role-specific correction triggers."
+      ],
+      "recommended_next_move": "Follow the ranked collaborator, repository, and event-record research before confirming or narrowing the stronger governed proof wording.",
+      "confidence": 0.98
+    },
+    {
+      "eval_id": "KB-004",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` candidate claims name Jamie, concrete acts, named projects, collaborators, and tangible forms such as Shop Shows, Open House, the raft, Great Accommodations, weekly Sunday Dinner hosting, fire-code study groups, and City Hall advocacy.",
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` translates the new material into hiring-legible roles such as recurring host, public-safety organizer, policy translator, and public-engagement producer while preserving uncertainty."
+      ],
+      "findings": [
+        "Several candidate sentences stop at actor/action/artifact; the useful end or consequence is carried in `decisionUse` metadata rather than in wording a context-free hiring reader would see.",
+        "The Sunday Dinner candidate is precise about 2017 cadence but does not itself explain what the recurring open form made usable."
+      ],
+      "recommended_next_move": "Draft bounded specimens that retain the current evidence limits while moving one concrete useful end from `decisionUse` into each portable candidate claim.",
+      "confidence": 0.93
+    },
+    {
+      "eval_id": "KB-005",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` provides a dated 2017-2026 chronology and explicitly says adjacency and continuity do not establish project-to-project or Jamie-to-policy causation.",
+        "`apps/www/src/data/knowledge-bank/records.ts` distinguishes historical weekly Sunday Dinner hosting in 2017 from a reachable 2026 project surface, exact 2017 and 2019 legislative outcomes from advocacy, and incomplete Waterways route history from documented events.",
+        "`apps/www/src/data/knowledge-bank/records.ts` and `docs/knowledge-bank/projects/callnyc.md` preserve `not-recovered` separately from nonexistence and retain the corrected 2016 CallNYC chronology.",
+        "The [NYCAC CreateNYC page](https://nycartc.com/preserve-communitydriven/) shows March 30 without a visible publication year, and the [NYCAC safety page](https://nycartc.com/safety/) combines a February 9, 2017 page date with a yearless `Sunday February 24` event date; the candidate mostly avoids turning those ambiguities into event-year claims."
+      ],
+      "findings": [
+        "The consolidated chronology assigns the CreateNYC town hall to 2017 even though the source record says the page's publication date is unestablished; the proposition text is narrower than the timeline.",
+        "The safety-page day/date ambiguity is not recorded as a chronology gap, and several long arcs outside the new research note remain distributed across propositions rather than consolidated."
+      ],
+      "recommended_next_move": "Add explicit chronology-gap entries for the CreateNYC year and safety-course date, and keep inferred dates out of timeline headings and stable IDs unless another source establishes them.",
+      "confidence": 0.94
+    },
+    {
+      "eval_id": "KB-006",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`npm run evals:knowledge-bank` exited 0; `npm run test:knowledge-bank-evals` passed 16/16 tests, including maturity, proof-link, trigger, and direct-projection contracts.",
+        "`apps/www/src/data/knowledge-bank/records.ts` has two `claim-candidate`, one `researching`, and one `captured` intake, each satisfying its schema and each retaining `no-public-projection`; no item is incorrectly marked `integrated`.",
+        "`git diff c42dc1eb^..c42dc1eb -- apps/www/src/data/knowledge-bank/public-registry.json` was empty, and `npm run check:citations` confirmed the generated registry is current.",
+        "`git diff --name-status 2216610a..c42dc1eb` and the candidate-local diff show no public route or page-copy change caused by intake maturation; the only governed-proof change adds bounded provenance to the existing Sunday Dinner proof."
+      ],
+      "findings": [
+        "`npm run test:citations` fails 1 of 12 tests because `scripts/tests/citations.test.mjs` still asserts exactly three intake items; this is a deterministic regression even though the actual non-projection contract passes elsewhere.",
+        "`apps/www/src/data/proofs.ts` updates the Sunday Dinner evidence class, source basis, source note, and review date, while the declared canonical human register in `docs/knowledge-bank/claims.md` still shows the pre-ingestion evidence class and July 12 review date."
+      ],
+      "recommended_next_move": "Update the deterministic intake inventory expectation to four and synchronize the Sunday Dinner entry in the human-readable claim register without changing public wording or projection.",
+      "confidence": 0.99
+    },
+    {
+      "eval_id": "KB-007",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` gives every unresolved context, memory, and research proposition a concrete next step and gives each non-integrated intake at least three answerable research questions.",
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` ranks five consequential lanes: campaign authorship, coalition formation, town-hall roles/outcomes, Sunday Dinner scale/systems, and Talks Not Raids/MARCH status.",
+        "CallNYC questions specify authenticated export/API/archive methods, interaction taxonomy, historical account classification, denominator, and time window; Waterways questions name route, dates, collaborators, institutional records, press, photographs, and collaborator memories."
+      ],
+      "findings": [
+        "The committed ranked queue covers Sunday Dinner and NYCAC but does not rank Waterways or CallNYC against those lanes across the full four-intake scope.",
+        "Some top-level research questions name a source and fact but leave the exact proof or wording decision implicit; the proposition-level `decisionUse` and correction triggers supply that missing consequence."
+      ],
+      "recommended_next_move": "Create one four-thread priority queue that maps each question to the source class, recoverable fact, and exact claim/proof decision it would change.",
+      "confidence": 0.95
+    },
+    {
+      "eval_id": "KB-008",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` retains domestic cultural space, communal governance, recycled-material expedition design, river-community outreach, recurring hosting, venue safety, campaign web artifacts, policy records, and adoption-metric research rather than compressing them into resume abstractions.",
+        "Each proposition includes a `decisionUse`, and all four intake records defer projection, allowing hiring, civic, cultural, facilitation, technical, and artistic uses without requiring the current website to display them.",
+        "`docs/knowledge-bank/research/2026-07-13-sunday-dinner-nyca-source-ingestion.md` explicitly limits non-uses such as Jamie-specific campaign authorship, policy causality, Sunday Dinner scale, and MARCH disbandment."
+      ],
+      "findings": [
+        "Future uses are legible proposition by proposition, but there is no complete audience-use matrix testing all four threads across the rubric's hiring, civic, cultural, technical, facilitation, and artistic audiences."
+      ],
+      "recommended_next_move": "Add a compact four-thread audience-use and non-use matrix while preserving the present no-projection decisions.",
+      "confidence": 0.94
+    },
+    {
+      "eval_id": "KB-009",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`apps/www/src/data/knowledge-bank/records.ts` preserves the Julie/Julia conflict, the unestablished CreateNYC publication date, context-only source limits, the unresolved MARCH status, and CallNYC negative-search limits.",
+        "`TENSION-SUNDAY-DINNER-PUBLIC-CORROBORATION-AND-SCALE`, `TENSION-NYCA-COFOUNDER-EVIDENCE`, and `TENSION-NYCA-CAMPAIGN-SYSTEMS-SCOPE` define confirm plus narrow/hold/replace triggers with required evidence and replacement guidance against exact governed proof IDs.",
+        "`apps/www/src/data/knowledge-bank/records.ts` retains three CallNYC correction records with prior wording, replacement wording, reasons, affected surfaces, and active status, demonstrating retirement without provenance deletion.",
+        "`npm run test:citations` passed the negative-research and correction-retirement tests before failing only on the stale intake count."
+      ],
+      "findings": [
+        "The Sunday Dinner corrective trigger narrows metrics or system attribution but its replacement guidance still retains Jamie's hosting; it does not explicitly cover evidence that would contradict the present-tense `Jamie hosts` wording.",
+        "Normalized NYCAC source titles and the safety-page day/date ambiguity are not entered into a contradiction register, so source-metadata correction readiness is weaker than claim-level correction readiness."
+      ],
+      "recommended_next_move": "Add a current-host/status trigger for the Sunday Dinner proof and record source-title/date discrepancies with exact correction actions while preserving the existing provenance.",
+      "confidence": 0.97
+    },
+    {
+      "eval_id": "KB-010",
+      "score": 3,
+      "pass": true,
+      "evidence": [
+        "`docs/evals/runs/feature-evals-J-knowledge-bank-iteration-01.md`, `feature-evals-J-knowledge-bank-iteration-02.md`, and `feature-evals-J-knowledge-bank-stop.md` preserve frozen inputs, one selected failure per iteration, before/after evidence, regressions, decisions, and the two-pass rule for the earlier three-intake run.",
+        "`npm run evals:knowledge-bank:score -- docs/evals/runs/knowledge-bank-development-certification-02-4e0ac83c.json` exited 0 at weighted score 0.85; certification 01 was correctly ineligible only because it had one consecutive pass.",
+        "`git log` and the process artifacts show that the old stop applies to unchanged content candidate `4e0ac83c62b7066500d11ffb477728724c60bf68`, not expanded candidate `c42dc1ebfe79eca443171240667eaeac97ca1eae` with a fourth intake.",
+        "This run names the exact frozen rubric and candidate, is performed by a fresh read-only evaluator, includes all four current intake IDs, and records `consecutive_passing_runs: 1`, so it does not reuse the old two-pass stop or claim success prematurely."
+      ],
+      "findings": [
+        "No committed run artifact at candidate `c42dc1eb` covers the expanded four-intake scope; this returned record is therefore the first judgment, not a continuation of the two certifications for `4e0ac83c`.",
+        "A second pass can count only if the candidate remains exactly unchanged and a distinct fresh evaluator independently reaches a passing judgment."
+      ],
+      "recommended_next_move": "Persist this exact first-run record, preserve candidate `c42dc1eb` unchanged, and obtain one additional independent passing judgment before any stop-threshold decision.",
+      "confidence": 0.98
+    }
+  ]
+}
