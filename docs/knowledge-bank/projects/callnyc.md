@@ -82,7 +82,11 @@ agenda, facilitator, event time, or the identity and consent status of everyone
 depicted.
 
 Rights require permission, consent requires review, and public display remains
-on hold. The photograph is not committed or rendered.
+on hold. The photograph is not committed or rendered. Its canonical feedback
+chain is recorded as a protected photo lead, a visual observation limited to
+the placard and generic table context, and a research inquiry covering
+corroboration, rights, consent, and any appropriate future crop. The held claim
+cannot enter the public registry merely because the visible text was verified.
 
 ## Cleared project mark
 

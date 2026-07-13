@@ -33,6 +33,9 @@ workspaces, Dockerfile, Dokku.
 - `npm run check:launch-evals`
 - `npm run test:launch-evals`
 - `npm run report:launch-evals`
+- `npm run check:knowledge-evals`
+- `npm run test:knowledge-evals`
+- `npm run report:knowledge-evals`
 
 ## Public-Safety Rules
 
@@ -55,6 +58,12 @@ Citational claims use `apps/www/src/data/knowledge-bank/records.ts` as their
 canonical machine-readable source. Do not add or strengthen a public factual
 claim without updating the canonical claim, evidence relationship, and source
 records.
+
+New fragments enter through stable intake records and atomic observations. Give
+every public-safe item a disposition; do not silently discard it. Keep factual
+maturity separate from compositional selection: a defensible claim may remain a
+held projection with no public surface. Memory and photo leads require research
+inquiries before they become claims.
 
 Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
 authored prose. Do not type citation numbers manually.
@@ -91,6 +100,11 @@ case, and keep the change only when the objective improves without weakening
 truth, consent, collective credit, accessibility, or exact-commit release
 discipline. Follow `evals/launch-readiness/judge.md`; do not expose private
 evidence to an evaluator.
+
+Use `evals/knowledge-bank/evals.json` for recursive intake and claim maturation.
+Run its deterministic checks before promoting a claim or source into a public
+page. The bank should become deeper with each pass while the public site remains
+selective.
 
 ## Scope Rules
 

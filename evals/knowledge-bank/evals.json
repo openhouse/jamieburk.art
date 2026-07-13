@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "jamieburk-art-knowledge-bank-maturation",
+  "objective": "Capture every public-safe fragment with a disposition, mature sources into bounded observations and claims, preserve unselected depth, and project only audience-relevant claims with traceable evidence.",
+  "targets": {
+    "allCriteriaMeetMinimum": true,
+    "weightedScoreAtLeast": 4.5,
+    "consecutivePassingRuns": 2
+  },
+  "pilot": {
+    "intakeIds": [
+      "INTAKE-WATERWAYS-PITCH-2007",
+      "INTAKE-WATERWAYS-CHARLOTTE-2009",
+      "INTAKE-OPEN-HOUSE-GOOD-TIMES-2006",
+      "INTAKE-NYCAC-GOTHAMIST-CABARET-2017",
+      "INTAKE-NYCAC-NPR-CABARET-2017",
+      "INTAKE-NYCAC-GREENE-HILL-QA-2017",
+      "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-LEAD",
+      "INTAKE-NYCAC-OFFICE-NIGHTLIFE-ROLE-LEAD",
+      "INTAKE-NYCAC-MARCH-RAIDS-LEAD",
+      "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD"
+    ],
+    "sourceIds": [
+      "SRC-WATERWAYS-PITCH-2007-08-09",
+      "SRC-WATERWAYS-CHARLOTTE-STREET-2009",
+      "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
+      "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "SRC-NYCAC-NPR-CABARET-2017-09-20",
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+    ],
+    "claimIds": [
+      "CLM-WATERWAYS-RAFT-EXPEDITION",
+      "CLM-WATERWAYS-GREAT-ACCOMMODATIONS",
+      "CLM-OPEN-HOUSE-PARTICIPATORY-GALLERY",
+      "CLM-SHOP-SHOWS-PARTICIPATORY-PROGRAM",
+      "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
+      "CLM-NYCAC-CABARET-TOWN-HALL",
+      "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017"
+    ],
+    "inquiryIds": [
+      "INQ-WATERWAYS-RAFT-TERMINUS",
+      "INQ-WATERWAYS-PARTICIPATORY-PROGRAMS",
+      "INQ-NYCAC-CABARET-CONTRIBUTION",
+      "INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION",
+      "INQ-NYCAC-MARCH-RAIDS",
+      "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
+    ],
+    "photoFeedbackChain": {
+      "intakeId": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      "observationId": "OBS-CALLNYC-DIGITAL-DISTRICT-PLACARD",
+      "sourceId": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
+      "claimId": "CLM-CALLNYC-DIGITAL-DISTRICT",
+      "inquiryId": "INQ-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+    }
+  },
+  "criteria": [
+    {
+      "id": "KB-EVAL-INTAKE",
+      "label": "Lossless public-safe intake",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Every supplied fragment receives a stable ID, project association, disposition, boundary, and next relationship rather than disappearing silently."
+    },
+    {
+      "id": "KB-EVAL-ATOMICITY",
+      "label": "Observation atomicity",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Sources are decomposed into proposition-level observations with locators, limitations, and explicit links to claims or research questions."
+    },
+    {
+      "id": "KB-EVAL-SCOPE",
+      "label": "Evidence scope integrity",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Every source records what it establishes and does not establish; evidence relationships never silently broaden a source."
+    },
+    {
+      "id": "KB-EVAL-MATURATION",
+      "label": "Claim maturation",
+      "weight": 0.15,
+      "minimumScore": 4,
+      "intent": "Defensible claims carry evidence, boundaries, anti-claims, review data, and open inquiries where material uncertainty remains."
+    },
+    {
+      "id": "KB-EVAL-PROJECTION",
+      "label": "Projection discipline",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Epistemic readiness remains separate from compositional selection; held claims have no public surface and active claims have an authorized page plan."
+    },
+    {
+      "id": "KB-EVAL-COVERAGE",
+      "label": "Existing-site evidence coverage",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "The framework improves support for consequential claims already represented on the public site, without overloading the composition."
+    },
+    {
+      "id": "KB-EVAL-SAFETY",
+      "label": "Public safety and collective credit",
+      "weight": 0.1,
+      "minimumScore": 5,
+      "intent": "No private locator or raw archive leaks; participant detail, policy causation, and collective outcomes remain explicitly bounded."
+    },
+    {
+      "id": "KB-EVAL-RECOMPOSITION",
+      "label": "Recomposition and feedback readiness",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Unselected claims and open questions remain usable for future applications, site arguments, collaborator proofs, and photo-editor feedback loops."
+    }
+  ],
+  "hillClimb": {
+    "iteration": [
+      "Run deterministic checks and a fresh editorial judge against the current bank.",
+      "Select the lowest criterion and state one bounded maturation hypothesis.",
+      "Improve structure, research, or projection without deleting protected boundaries.",
+      "Rerun checks, public-safety validation, and the affected public projection.",
+      "Keep only iterations that improve the lowest criterion without regressions."
+    ],
+    "antiGaming": [
+      "Never call a memory a verified claim without a source relationship.",
+      "Never improve completeness by placing private paths or raw evidence in the public repo.",
+      "Never improve projection coverage by publishing every mature claim.",
+      "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
+      "Never treat a photograph as self-interpreting proof or consent to publish."
+    ],
+    "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
+  }
+}

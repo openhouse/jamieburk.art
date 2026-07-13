@@ -25,11 +25,16 @@ The knowledge bank exists to:
 - reduce the risk that private evidence leaks into public pages;
 - make the Technical Operations / Product Operations / Implementation story
   easier to maintain.
+- retain public-safe fragments and research leads that may matter to a future
+  application, argument, or photo brief even when they do not belong on today's
+  site.
 
 ## Publication Model
 
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
+- **Intake and observations:** lossless public-safe capture and proposition-level
+  source reading in `historical-knowledge.ts`.
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
@@ -63,3 +68,6 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See [intake-and-maturation.md](intake-and-maturation.md) for the recursive intake,
+research, claim-maturation, selective-projection, and photo-feedback workflow.
