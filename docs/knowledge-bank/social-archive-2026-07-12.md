@@ -67,7 +67,19 @@ not counted as Council-member engagement.
 
 ## WOWList Inventory
 
-The bounded pass recovered two readable historical posts from @wowlist:
+The full-population pass recovered all 38 records represented by the live
+profile control: 16 authored standalone posts, six authored replies, and 16
+reposts from 13 other public accounts. See the [full-population archival
+production](wowlist-population-2026-07-12.md) and [record-level
+census](wowlist-post-census-2026-07-12.csv).
+
+The six account-authored replies show the public identity functioning as a
+product-support and onboarding surface. The complete record also connects the
+platform's origin to Sunday Dinner calendars, distributes events and local
+calendar identities, and preserves a later turn toward civic mobilization and
+care.
+
+Two records also establish cross-project continuity through CallNYC:
 
 - [A November 9, 2016 post](https://x.com/wowlist/status/796473557387575297)
   distributed a WOWList route for marches across the United States.
@@ -77,8 +89,8 @@ The bounded pass recovered two readable historical posts from @wowlist:
 
 The CallNYC profile capture shows CallNYC reposting both posts. This is useful
 evidence of cross-project continuity among public identities Jamie established.
-Two surviving posts are not an account inventory, audience measure, adoption
-count, or basis for attributing individual authorship.
+The complete 38-record account population is not an audience measure, adoption
+count, or basis for attributing individual posts to Jamie or another teammate.
 
 ## Council Engagement Inventory
 

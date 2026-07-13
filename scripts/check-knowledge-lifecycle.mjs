@@ -180,6 +180,27 @@ const callnycUnresolvedCensusRows = callnycCensusRows.filter(
   (row) => row[10] === "unrecovered"
 );
 
+const wowlistPopulationSourceIds = [
+  "SRC-WOWLIST-LIVE-PROFILE-CONTROL-2026",
+  "SRC-WOWLIST-FULL-POPULATION-RUN-2026",
+  "SRC-WOWLIST-ORIGIN-SUNDAY-DINNER-2014",
+  "SRC-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+  "SRC-WOWLIST-SUPPORT-PROFILE-2015",
+  "SRC-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+  "SRC-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+  "SRC-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+  "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+];
+
+const wowlistCensusRows = readFileSync(
+  "docs/knowledge-bank/wowlist-post-census-2026-07-12.csv",
+  "utf8"
+)
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -900,6 +921,69 @@ const criteria = [
         /72.*92.*26.*66/i.test(candidate.text) &&
         claim?.boundaries.some((item) => /not proof.*engaged|not direct.*engagement/i.test(item)) &&
         claim.antiClaims.some((item) => /Twenty-six Council members directly engaged/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "wowlist-full-population-accounting",
+    label: "The complete 38-record WOWList profile population is recovered and classified",
+    pass:
+      wowlistCensusRows.length === 38 &&
+      wowlistCensusRows.every((row) => row[9] === "recovered") &&
+      new Set(wowlistCensusRows.map((row) => row[1])).size === 38 &&
+      wowlistCensusRows.filter((row) => row[3] === "authored-post").length === 16 &&
+      wowlistCensusRows.filter((row) => row[3] === "authored-reply").length === 6 &&
+      wowlistCensusRows.filter((row) => row[3] === "repost").length === 16
+  },
+  {
+    id: "wowlist-full-population-lineage",
+    label: "WOWList population findings have complete intake, source, reading, inquiry, and promotion lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-WOWLIST-FULL-POPULATION-2026"
+      );
+      const population = candidateById.get("CND-WOWLIST-COMPLETE-SOCIAL-POPULATION");
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-12-WOWLIST-FULL-POPULATION"
+        ) &&
+        wowlistPopulationSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        inquiry.findings.some((item) => /All 38 profile-counted records/i.test(item)) &&
+        inquiry.limitations.some((item) => /shared account.*teammate/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId === "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION"
+      );
+    })()
+  },
+  {
+    id: "wowlist-support-and-care-boundaries",
+    label: "WOWList support and civic-care patterns are projected with shared-authorship and impact boundaries",
+    pass: (() => {
+      const support = candidateById.get("CND-WOWLIST-PUBLIC-SUPPORT-SURFACE");
+      const supportClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE"
+      );
+      const civicClaim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-WOWLIST-CIVIC-CARE-CONTINUITY"
+      );
+      const wowlistMdx = readFileSync("apps/www/src/content/work/wowlist.mdx", "utf8");
+      return Boolean(
+        wowlistCensusRows.filter(
+          (row) => row[5] === "product-support-and-onboarding"
+        ).length === 6 &&
+        wowlistCensusRows.filter(
+          (row) => row[5] === "civic-mobilization-and-care"
+        ).length === 5 &&
+        wowlistCensusRows.filter((row) => row[5] === "civic-care-amplification")
+          .length === 5 &&
+        support?.status === "promoted" &&
+        supportClaim?.boundaries.some((item) => /do not assign individual post authorship/i.test(item)) &&
+        civicClaim?.boundaries.some((item) => /does not establish.*causality/i.test(item)) &&
+        /claimId="CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE"/.test(wowlistMdx)
       );
     })()
   },

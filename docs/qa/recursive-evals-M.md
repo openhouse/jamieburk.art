@@ -30,9 +30,10 @@ public-safe, and ready to act from.
 6. **Knowledge-lifecycle pass:** run `npm run check:knowledge-lifecycle`.
    Continue intake, reading, research, promotion, and editorial selection until
    every criterion passes without promoting unresolved claims. The current
-   suite contains 46 deterministic lifecycle criteria, including bounded Teams,
+   suite contains 49 deterministic lifecycle criteria, including bounded Teams,
    Shared Drive, project-social, authenticated-search, collaborator-credit,
-   city-dialogue, and full-population CallNYC archival-production gates.
+   city-dialogue, and full-population CallNYC and WOWList archival-production
+   gates.
 7. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
 8. **Automation pass:** run `npm run check`, `npm run check:evals`,

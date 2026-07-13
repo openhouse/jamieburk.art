@@ -100,6 +100,15 @@ status records and three unresolved slots. The accompanying
 method, aggregate findings, and the official-export requirement without
 reproducing full post text.
 
+The WOWList full-population pass reconciles both authenticated profile timelines
+against the live 38-post control. The resulting
+[38-record census](wowlist-post-census-2026-07-12.csv) recovers every current
+profile-counted status and classifies account authorship, publication type,
+primary theme, mentions, and hashtags without reproducing full post text. The
+accompanying [archival-production report](wowlist-population-2026-07-12.md)
+records product-lineage, support, event-distribution, and civic-care findings
+with shared-account authorship boundaries.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

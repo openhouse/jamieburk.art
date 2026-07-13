@@ -78,6 +78,19 @@ selected, or a winner without new evidence and review.
 
 Do not name collaborators unless approved.
 
+Do not say Jamie personally authored all 38 recovered @wowlist records. Jamie
+established the account and co-built the product; the shared account does not
+identify the teammate who wrote each post.
+
+Do not use the 38-record social population as a measure of WOWList's total
+users, events, city adoption, support workload, audience, impressions, or
+impact. Do not imply WOWList organized every event, mobilization, mutual-aid
+effort, vigil, or resource it amplified.
+
+“Complete” means all 38 records represented by the July 2026 live profile
+counter were recovered. It does not establish that no older post was deleted
+before capture.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

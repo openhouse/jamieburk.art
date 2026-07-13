@@ -24,6 +24,18 @@ test("new editorial projections resolve through page-local citation plans", () =
     ["SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-NYC-COUNCIL-MARCH-HEARING-2019"]
   );
   assert.equal(resolveCitationOccurrence("wowlist", "sbdiy-calendar-use").sources.length, 1);
+  assert.equal(
+    resolveCitationOccurrence("wowlist", "wowlist-public-support-surface").sources.length,
+    7
+  );
+  assert.match(
+    getClaimProjection(
+      "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      "case-study",
+      "/work/wowlist"
+    ).text,
+    /direct support surface/
+  );
   assert.deepEqual(
     resolveCitationOccurrence(
       "fair-rent-nyc",

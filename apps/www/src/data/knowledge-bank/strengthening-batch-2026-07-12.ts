@@ -405,13 +405,36 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-SBDIY-WOWLIST-CALENDAR"],
+      sourceOrder: [
+        "SRC-SBDIY-WOWLIST-CALENDAR",
+        "SRC-WOWLIST-ORIGIN-SUNDAY-DINNER-2014",
+        "SRC-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+        "SRC-WOWLIST-SUPPORT-PROFILE-2015",
+        "SRC-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+        "SRC-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+        "SRC-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+        "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+      ],
       occurrences: [
         {
           id: "sbdiy-calendar-use",
           claimId: "CLM-WOWLIST-SBDIY-CALENDAR-USE",
           projection: "case-study",
           sourceIds: ["SRC-SBDIY-WOWLIST-CALENDAR"]
+        },
+        {
+          id: "wowlist-public-support-surface",
+          claimId: "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-WOWLIST-ORIGIN-SUNDAY-DINNER-2014",
+            "SRC-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+            "SRC-WOWLIST-SUPPORT-PROFILE-2015",
+            "SRC-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+            "SRC-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+            "SRC-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+            "SRC-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+          ]
         }
       ]
     },

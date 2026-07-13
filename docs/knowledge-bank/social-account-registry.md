@@ -15,7 +15,7 @@ an individual post.
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Fair Rent NYC | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
-| WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Two November 2016 posts recovered through public oEmbed; current account scope not comprehensively reverified |
+| WOWList | [@wowlist](https://x.com/wowlist) | Historical project account established by Jamie | Full 38-record live population recovered and classified: 22 account-authored records and 16 reposts |
 
 No dedicated project X account was recovered in this pass for Harry J. Epstein,
 196 / Sunday Dinner, KC Town Hall, or Source-Backed Team Memory. That means "not
@@ -36,3 +36,7 @@ The CallNYC record-level ledger is documented in
 [callnyc-population-2026-07-12.md](callnyc-population-2026-07-12.md). It accounts
 for all 110 profile-counted slots while preserving the distinction between 107
 recovered records and three unresolved records.
+
+The WOWList record-level ledger is documented in
+[wowlist-population-2026-07-12.md](wowlist-population-2026-07-12.md). Its 38
+unique records close exactly against the live 38-post profile control.
