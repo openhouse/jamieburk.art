@@ -100,6 +100,15 @@ status records and three unresolved slots. The accompanying
 method, aggregate findings, and the official-export requirement without
 reproducing full post text.
 
+The NYC Artist Coalition full-population pass uses the live 5,124-post profile
+counter as its control and reconciles an authenticated live-timeline harvest,
+bounded authenticated search, Wayback CDX, and X oEmbed records. The resulting
+[5,124-slot census](nycartc-post-census-2026-07-12.csv) contains 892 recovered
+public records and 4,232 unresolved placeholders. The accompanying
+[archival-production report](nycartc-population-2026-07-12.md) records method,
+aggregate findings, and strict non-extrapolation boundaries without reproducing
+full post text.
+
 The WOWList full-population pass reconciles both authenticated profile timelines
 against the live 38-post control. The resulting
 [38-record census](wowlist-post-census-2026-07-12.csv) recovers every current

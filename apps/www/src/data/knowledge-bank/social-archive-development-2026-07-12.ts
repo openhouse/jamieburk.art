@@ -602,17 +602,19 @@ export const socialArchiveDevelopmentRecords: SocialArchiveDevelopment = {
       id: "CND-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
       project: "nyc-artist-coalition",
       text:
-        "The shared @NYCArtC identity carried campaign action, public accountability, and cultural-space resources from 2017 through at least 2025.",
+        "The shared @NYCArtC identity carried campaign action, public accountability, artist resources, and labor action from 2017 through 2026.",
       status: "promoted",
       sourceIds: [
         "SRC-SOCIAL-NYCAC-TOWN-HALL-POST-2017",
         "SRC-SOCIAL-NYCAC-TALKS-NOT-RAIDS-POST-2019",
         "SRC-SOCIAL-NYCAC-FAIR-RENT-POST-2024",
-        "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025"
+        "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025",
+        "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+        "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026"
       ],
       researchInquiryIds: ["INQ-PROJECT-SOCIAL-ARCHIVE-2026"],
       supportSummary:
-        "Public posts establish cross-campaign use and endpoints in 2017, 2019, 2024, and 2025.",
+        "Public posts establish cross-campaign use and endpoints from 2017 through 2026.",
       missingEvidence: [],
       boundaries: [
         "Continuity belongs to the shared identity and does not establish one person's uninterrupted operation or authorship."

@@ -144,11 +144,11 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
 **Public wording:** Established NYC Artist Coalition's public identity system across its logo, campaign website family, and shared @NYCArtC account; collaborators sustained and used that collective identity over time.
-**Detailed public-safe wording:** Jamie created a durable public interface across the coalition logo, campaign websites, and shared account. Public records show collaborators carrying that identity across years of advocacy, public process, accountability, and cultural-space resources.
+**Detailed public-safe wording:** Jamie created a durable public interface across the coalition logo, campaign websites, and shared account. Surviving public records span 2017 through 2026 and show that identity carrying campaign advocacy, artist resources, labor actions, public process, and nightlife accountability.
 **Where to project:** Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Shows that Jamie's design and implementation work created public infrastructure other people could use and sustain.
-**Guardrail:** Identity-system authorship is Jamie's direct contribution. Treat campaign voice, individual posts, and policy outcomes as collective unless independently attributed.
-**Do not say:** Jamie authored every @NYCArtC post; Jamie solely operated NYC Artist Coalition; the recovered archive is a complete account export; mentions equal engagement.
+**Guardrail:** Identity-system authorship is Jamie's direct contribution. Treat campaign voice, individual posts, and policy outcomes as collective unless independently attributed; do not extrapolate recovered-record patterns to unresolved slots.
+**Do not say:** Jamie authored every @NYCArtC post; Jamie solely operated NYC Artist Coalition; the recovered archive is a complete account export; all 5,124 posts were recovered; mentions equal engagement.
 **Protected boundaries:** Account administration, collaborator correspondence, unconfirmed post authorship, private analytics, and credentials stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-12

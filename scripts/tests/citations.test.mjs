@@ -56,6 +56,26 @@ test("new editorial projections resolve through page-local citation plans", () =
     ["SRC-CRS-FULLER-PUBLIC-BASELINE-2026"]
   );
   assert.deepEqual(
+    resolveCitationOccurrence(
+      "fair-rent-nyc",
+      "nycac-resource-and-advocacy-surface"
+    ).sources.map((item) => item.source.id),
+    [
+      "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+      "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+      "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+      "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
+    ]
+  );
+  assert.equal(
+    getClaimProjection(
+      "CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE",
+      "case-study",
+      "/work/fair-rent-nyc"
+    ).text,
+    "The shared identity remained active through 2026, carrying Fair Rent advocacy, artist-resource pathways, labor actions, and nightlife accountability across one collective public surface."
+  );
+  assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "municipal-record").sources.map(
       (item) => item.source.id
     ),

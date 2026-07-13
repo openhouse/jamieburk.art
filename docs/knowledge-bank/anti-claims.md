@@ -33,6 +33,12 @@ logo, campaign website family, and shared account identity while preserving
 collective campaign voice and collaborator authorship. Do not attribute a
 particular post to a named collaborator without direct confirmation.
 
+Do not say all 5,124 @NYCArtC posts were recovered. The population ledger
+accounts for all 5,124 profile-counted slots, but only 892 surviving public
+records were recovered; 4,232 remain unresolved. Do not extrapolate themes,
+record types, authorship, or activity patterns from the recovered 17.4 percent
+to the unresolved population.
+
 Do not treat outbound mentions as engagement, captured likes or repost totals as
 identified Council-member interactions, or the recovered 13-member / 29-post
 minimum across CallNYC and NYC Artist Coalition as a comprehensive total.

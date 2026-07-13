@@ -608,13 +608,13 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
       id: "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
       project: "nyc-artist-coalition",
       internalClaim:
-        "The @NYCArtC identity carried coalition convening, Cabaret Law repeal, Talks Not Raids, Fair Rent NYC, resource distribution, and public accountability work from 2017 through at least 2025.",
+        "The @NYCArtC identity carried coalition convening, Cabaret Law repeal, Talks Not Raids, Fair Rent NYC, resource distribution, artist-labor action, and public accountability work from 2017 through 2026.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "archive-note",
           text:
-            "The shared @NYCArtC identity carried coalition convening, campaign action, public accountability, and cultural-space resources from 2017 through at least 2025.",
+            "The shared @NYCArtC identity carried coalition convening, campaign action, public accountability, artist resources, and labor action from 2017 through 2026.",
           status: "active",
           citationRequired: false,
           surfaces: ["docs/knowledge-bank/social-archive-2026-07-12"]
@@ -648,6 +648,20 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
           supports: ["2025 resource-distribution use"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+          relationship: "direct-support",
+          supports: ["2026 Fair Rent NYC use"],
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+          relationship: "direct-support",
+          supports: ["2026 artist-resource distribution"],
+          confidence: "high",
+          renderCitation: false
         }
       ],
       boundaries: [
@@ -656,7 +670,7 @@ export const socialArchiveBatchRecords: SocialArchiveBatch = {
       ],
       antiClaims: [
         "Jamie wrote every @NYCArtC post",
-        "the account was active every day or month from 2017 through 2025",
+        "the account was active every day or month from 2017 through 2026",
         "social posting alone caused campaign outcomes"
       ],
       researchInquiryIds: ["INQ-PROJECT-SOCIAL-ARCHIVE-2026"],

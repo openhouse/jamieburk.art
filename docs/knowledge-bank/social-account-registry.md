@@ -10,7 +10,7 @@ an individual post.
 | Project or campaign | X / Twitter handle | Relationship | Evidence status |
 | --- | --- | --- | --- |
 | CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated project account established by Jamie | 110-slot population accounted: 107 surviving records classified, three unresolved; six-member direct Council-engagement minimum retained separately |
-| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity established by Jamie and used by collaborators | Authenticated search, 279 authored posts, 395 mention results, seven-member Council minimum, City dialogue, and collaborator continuity recovered |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity established by Jamie and used by collaborators | 5,124-slot population accounted: 892 surviving records recovered, 4,232 unresolved; seven-member direct Council-engagement minimum retained separately |
 | Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
@@ -37,6 +37,11 @@ The CallNYC record-level ledger is documented in
 [callnyc-population-2026-07-12.md](callnyc-population-2026-07-12.md). It accounts
 for all 110 profile-counted slots while preserving the distinction between 107
 recovered records and three unresolved records.
+
+The NYC Artist Coalition record-level ledger is documented in
+[nycartc-population-2026-07-12.md](nycartc-population-2026-07-12.md). It
+accounts for all 5,124 profile-counted slots while preserving the distinction
+between 892 recovered public records and 4,232 unresolved slots.
 
 The WOWList record-level ledger is documented in
 [wowlist-population-2026-07-12.md](wowlist-population-2026-07-12.md). Its 38

@@ -316,18 +316,19 @@ export const proofClaims: ProofClaim[] = [
       "Established NYC Artist Coalition's public identity system across its logo, campaign website family, and shared @NYCArtC account; collaborators sustained and used that collective identity over time.",
     shortWording: "Established NYC Artist Coalition's public identity system",
     detailedPublicWording:
-      "Jamie created a durable public identity across the coalition logo, campaign website family, and shared social account. The account's public record shows collaborators carrying that identity across years of advocacy, resources, public process, and coalition continuity.",
+      "Jamie created a durable public identity across the coalition logo, campaign website family, and shared social account. Surviving public records span 2017 through 2026 and show that identity carrying campaign advocacy, artist resources, labor actions, public process, and nightlife accountability.",
     sourceBasis:
-      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, public posts, published reporting, a bounded Wayback-indexed account corpus, and authenticated X searches across project, Council, city-agency, and collaborator accounts.",
+      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, published reporting, public posts, authenticated X research, a 5,124-slot population ledger with 892 recovered records and 4,232 unresolved slots, and bounded Council, city-agency, and collaborator studies.",
     whyItMatters:
       "Shows that Jamie's design and implementation work created a public interface other people could use and sustain, not only a set of one-time pages.",
     guardrail:
-      "Identity-system authorship is Jamie's direct contribution. Treat the campaign voice, individual posts, and policy outcomes as collective unless a post's author is independently confirmed.",
+      "Identity-system authorship is Jamie's direct contribution. Treat the campaign voice, individual posts, and policy outcomes as collective unless independently confirmed; do not extrapolate recovered-record patterns to unresolved slots.",
     doNotSay: [
       "Jamie authored every @NYCArtC post",
       "Jamie solely operated NYC Artist Coalition",
       "Social mentions equal engagement",
-      "The recovered archive is a complete account export"
+      "The recovered archive is a complete account export",
+      "All 5,124 @NYCArtC posts were recovered"
     ],
     protectedBoundaries: [
       "Private account administration",

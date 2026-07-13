@@ -24,6 +24,11 @@ Council members are not counted as direct Council-member engagement.
 - Queried the Internet Archive CDX index for distinct @NYCArtC status URLs.
 - Requested public X oEmbed metadata for 286 archived status URLs; 279 returned
   readable post metadata.
+- Used the authenticated live @NYCArtC profile's 5,124-post display as a
+  population control; recovered 607 distinct records from the Posts timeline
+  before pagination stopped and 49 more through bounded 2022 search.
+- Deduplicated live, search, Wayback, and oEmbed records into 892 recovered
+  public status IDs, then retained 4,232 explicit unresolved ledger slots.
 - Ran authenticated X searches for project mentions, replies, authored posts,
   and domain links in an isolated browser profile.
 - Queried 60 historical Council handles in date-aware batches and deduplicated
@@ -137,23 +142,35 @@ then-sitting count.
 
 ## NYC Artist Coalition Inventory
 
-The readable @NYCArtC corpus spans March 2017 through February 2023. Its 279
-posts break down by year as follows: 2017: 3; 2018: 2; 2019: 31; 2020: 104;
-2021: 82; 2022: 54; 2023: 3.
+The live profile displayed 5,124 posts. The full-population pass represents all
+5,124 profile-counted slots in a record-level ledger: 892 surviving public
+records recovered and 4,232 unresolved. This is complete accounting, not
+complete recovery. See the [full-population archival
+production](nycartc-population-2026-07-12.md) and [record-level
+census](nycartc-post-census-2026-07-12.csv).
 
-Overlapping keyword coding identified:
+The recovered record spans March 2017 through May 2026: 2017: 3; 2018: 2;
+2019: 31; 2020: 104; 2021: 82; 2022: 61; 2023: 258; 2024: 178; 2025: 74;
+2026: 99. This uneven distribution reflects selective recovery mechanisms as
+well as account activity and is not an activity trend.
 
-| Theme | Readable posts |
+Primary-theme coding within the 892 recovered records identified:
+
+| Theme | Recovered records |
 | --- | ---: |
-| Fair Rent NYC | 144 |
-| Public process | 70 |
-| COVID / mutual aid | 41 |
-| Save NYC Spaces | 34 |
-| Talks Not Raids | 12 |
-| Let NYC Dance | 11 |
+| Coalition ecosystem and amplification | 304 |
+| Fair Rent and storefront stability | 233 |
+| Artist labor and economic justice | 101 |
+| Public process and government dialogue | 78 |
+| Artist resources and opportunities | 61 |
+| Nightlife and cultural-space policy | 44 |
+| Housing, land, and community ownership | 36 |
+| Mutual aid and pandemic response | 35 |
 
-The groups overlap and describe the recovered corpus. They are not mutually
-exclusive campaign totals or measures of impact.
+Overlapping campaign coding found 201 recovered Fair Rent records, 31 Save NYC
+Spaces records, 15 Talks Not Raids records, and five Let NYC Dance records.
+These groups describe only the recovered 17.4 percent. They are not full
+campaign totals, population estimates, or measures of impact.
 
 Selected records show the identity carrying:
 
@@ -163,6 +180,8 @@ Selected records show the identity carrying:
 - [Fair Rent NYC hearing documentation in 2021](https://x.com/NYCArtC/status/1440383492315963392).
 - [Fair Rent NYC accountability work in 2024](https://x.com/NYCArtC/status/1845643222011273429).
 - [Cultural-space resource distribution in 2025](https://x.com/NYCArtC/status/1959523347596808245).
+- [Fair Rent advocacy in 2026](https://x.com/NYCArtC/status/2054892314493911211).
+- [An artist-labor action for AI protections and fair pay in 2026](https://x.com/NYCArtC/status/2031705790210269485).
 
 The [City of New York's CreateNYC appendix](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect3_Twitter-data.pdf)
 preserves multiple @NYCArtC posts and NYC Cultural Affairs crediting the
@@ -222,9 +241,11 @@ image caption; the pictured person is Jamie Burkart.
 The strongest portfolio claim is about infrastructure and continuity: Jamie
 created a coalition identity system across the logo, campaign website family,
 and shared account that collaborators could use with excellence over time. The
-website projects that concise claim. Council engagement counts and the fuller
-social history remain in the knowledge bank until they serve a clear public
-argument.
+website projects one concise consequence: the identity remained active through
+2026 across advocacy, artist resources, labor action, and nightlife
+accountability. Council engagement counts, the 5,124-slot population ledger,
+and the fuller social history remain in the knowledge bank until they serve a
+clear public argument.
 
 ## Limits And Next Research
 
@@ -234,6 +255,9 @@ argument.
 - Authenticated X search is indexed and selective, not an official export; it
   does not expose all deleted posts, historical handle changes, likes, repost
   identities, or impressions.
+- Of 5,124 profile-counted slots, 4,232 remain unresolved. Recovered theme,
+  year, type, and account-amplification counts cannot be extrapolated to those
+  slots.
 - Post-level authorship cannot be inferred from a shared account.
 - Exact Council engagement requires account exports or another reproducible
   full-history corpus plus a date-appropriate roster of Council handles.

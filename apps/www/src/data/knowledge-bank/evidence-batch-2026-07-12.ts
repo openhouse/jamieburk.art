@@ -668,7 +668,11 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
         "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
-        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
+        "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+        "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+        "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+        "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
       ],
       occurrences: [
         {
@@ -721,6 +725,17 @@ export const evidenceBatchRecords: EvidenceBatch = {
           claimId: "CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT",
           projection: "case-study",
           sourceIds: ["SRC-CRS-FULLER-PUBLIC-BASELINE-2026"]
+        },
+        {
+          id: "nycac-resource-and-advocacy-surface",
+          claimId: "CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+            "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+            "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+            "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
+          ]
         }
       ]
     }

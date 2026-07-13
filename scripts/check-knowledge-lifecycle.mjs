@@ -224,6 +224,31 @@ const kctownhallCensusRows = kctownhallCensusText
   .slice(1)
   .map((line) => line.split(","));
 
+const nycartcPopulationSourceIds = [
+  "SRC-NYCAC-LIVE-PROFILE-CONTROL-2026",
+  "SRC-NYCAC-FULL-POPULATION-RUN-2026",
+  "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+  "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+  "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+  "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
+];
+
+const nycartcCensusText = readFileSync(
+  "docs/knowledge-bank/nycartc-post-census-2026-07-12.csv",
+  "utf8"
+);
+const nycartcCensusRows = nycartcCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+const nycartcRecoveredCensusRows = nycartcCensusRows.filter(
+  (row) => row[9] === "recovered"
+);
+const nycartcUnresolvedCensusRows = nycartcCensusRows.filter(
+  (row) => row[9] === "unresolved"
+);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -1073,6 +1098,80 @@ const criteria = [
         /claimId="CLM-KCTH-RESIDENT-SERVICE-WORKFLOW"/.test(page) &&
         !/\b816[- )]/.test(kctownhallCensusText) &&
         !/resident-submitted location/i.test(kctownhallCensusText)
+      );
+    })()
+  },
+  {
+    id: "nycartc-full-population-accounting",
+    label: "The complete 5,124-slot NYC Artist Coalition control is accounted without overstating recovery",
+    pass:
+      nycartcCensusRows.length === 5124 &&
+      nycartcRecoveredCensusRows.length === 892 &&
+      nycartcUnresolvedCensusRows.length === 4232 &&
+      new Set(nycartcRecoveredCensusRows.map((row) => row[1])).size === 892 &&
+      nycartcUnresolvedCensusRows.every((row) => !row[1]) &&
+      nycartcRecoveredCensusRows.filter((row) => row[3] === "repost").length === 541 &&
+      nycartcRecoveredCensusRows.filter((row) => row[3] === "authored-post").length === 103 &&
+      nycartcRecoveredCensusRows.filter((row) => row[3] === "authored-reply").length === 12 &&
+      nycartcRecoveredCensusRows.filter((row) => row[3] === "authored-record").length === 236
+  },
+  {
+    id: "nycartc-full-population-lineage",
+    label: "NYC Artist Coalition population findings have intake, source, reading, inquiry, promotion, and hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NYCAC-FULL-POPULATION-2026"
+      );
+      const population = candidateById.get("CND-NYCAC-POPULATION-ACCOUNTING");
+      const continuation = candidateById.get("CND-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE");
+      const proportions = candidateById.get("CND-NYCAC-POPULATION-THEME-PROPORTIONS");
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-12-NYCAC-FULL-POPULATION"
+        ) &&
+        nycartcPopulationSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        inquiry.findings.some((item) => /5,124.*892/i.test(item)) &&
+        inquiry.limitations.some((item) => /4,232 unresolved/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId === "CLM-NYCAC-POPULATION-ACCOUNTING" &&
+        continuation?.status === "promoted" &&
+        continuation.promotedClaimId === "CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE" &&
+        proportions?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === proportions.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "nycartc-public-boundaries",
+    label: "NYC Artist Coalition population documentation preserves absence, privacy, and non-extrapolation boundaries",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-POPULATION-ACCOUNTING"
+      );
+      const page = readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8");
+      const report = readFileSync(
+        "docs/knowledge-bank/nycartc-population-2026-07-12.md",
+        "utf8"
+      );
+      return Boolean(
+        /complete accounting, not complete recovery/i.test(report) &&
+        /17\.4\s+percent/i.test(report) &&
+        claim?.boundaries.some((item) => /82\.6 percent.*unresolved/i.test(item)) &&
+        claim.antiClaims.some((item) => /All 5,124 records were recovered/i.test(item)) &&
+        /claimId="CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE"/.test(page) &&
+        /^ledger_id,status_id,date,record_type,account,primary_theme,mentioned_handles,hashtags,status_url,accounting_status/m.test(
+          nycartcCensusText
+        ) &&
+        !/full_text|post_text|private_path|protected_locator/i.test(
+          nycartcCensusText.split("\n")[0]
+        )
       );
     })()
   },

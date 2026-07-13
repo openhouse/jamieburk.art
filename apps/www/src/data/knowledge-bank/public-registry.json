@@ -754,6 +754,82 @@
         "the individual teammate who authored the post",
         "independent auditing of project-reported outcome figures"
       ]
+    },
+    {
+      "id": "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+      "title": "NYC Artist Coalition Fair Rent advocacy post",
+      "organization": "NYC Artist Coalition",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-05-14",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/NYCArtC/status/2054892314493911211",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition post continuing Fair Rent NYC advocacy, May 14, 2026.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "Jamie's uninterrupted operation of the shared account",
+        "policy causality or audience reach"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+      "title": "NYC Artist Coalition Create in Place resource post",
+      "organization": "NYC Artist Coalition",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-03-13",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/NYCArtC/status/2032442113439256843",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition post routing creative small businesses and nonprofit arts organizations to a City capacity-building webinar series, March 13, 2026.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "Jamie's uninterrupted operation of the shared account",
+        "policy causality or audience reach"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+      "title": "NYC Artist Coalition artist-labor action post",
+      "organization": "NYC Artist Coalition",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-03-11",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/NYCArtC/status/2031705790210269485",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition post distributing an artist-labor rally for AI protections and fair pay, March 11, 2026.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "Jamie's uninterrupted operation of the shared account",
+        "policy causality or audience reach"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025",
+      "title": "NYC Artist Coalition Talks Not Raids accountability post",
+      "organization": "NYC Artist Coalition",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2025-10-03",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://x.com/NYCArtC/status/1974171303675637872",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition post connecting current nightlife enforcement concerns to Talks Not Raids, October 3, 2025.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the post",
+        "Jamie's uninterrupted operation of the shared account",
+        "policy causality or audience reach"
+      ]
     }
   ],
   "claims": [
@@ -1567,6 +1643,73 @@
         "Do not infer that Jamie personally authored every account update or operated the program alone.",
         "Treat tire and savings totals as project-reported unless independently corroborated."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The shared identity remained active through 2026, carrying Fair Rent advocacy, artist-resource pathways, labor actions, and nightlife accountability across one collective public surface.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Recovered records show the shared account continuing to connect coalition campaigns, artist opportunities, labor action, and civic accountability through 2026.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/nycartc-population-2026-07-12"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented mode of continued shared-account use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented mode of continued shared-account use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented mode of continued shared-account use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025",
+          "relationship": "direct-support",
+          "supports": [
+            "one documented mode of continued shared-account use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account is a shared coalition surface; do not infer the individual author of a post.",
+        "Continuity of the identity does not establish Jamie's uninterrupted account operation.",
+        "Distribution and advocacy records do not by themselves establish adoption, outcomes, or audience reach."
+      ]
     }
   ],
   "pages": [
@@ -1672,7 +1815,11 @@
         "SRC-LET-NYC-DANCE-CAMPAIGN-SITE",
         "SRC-SAVE-NYC-SPACES-CAMPAIGN-SITE",
         "SRC-FAIR-RENT-NYC-REFERENCE-LIBRARY",
-        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-2026",
+        "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+        "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+        "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+        "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
       ],
       "occurrences": [
         {
@@ -1726,6 +1873,17 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CRS-FULLER-PUBLIC-BASELINE-2026"
+          ]
+        },
+        {
+          "id": "nycac-resource-and-advocacy-surface",
+          "claimId": "CLM-NYCAC-RESOURCE-AND-ADVOCACY-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-SOCIAL-FAIR-RENT-2026",
+            "SRC-NYCAC-SOCIAL-CREATE-IN-PLACE-2026",
+            "SRC-NYCAC-SOCIAL-ARTIST-LABOR-2026",
+            "SRC-NYCAC-SOCIAL-NIGHTLIFE-ACCOUNTABILITY-2025"
           ]
         }
       ]
