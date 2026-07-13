@@ -66,6 +66,19 @@ Unlike project-account ledgers, its public census omits status IDs, URLs, exact
 dates, handles, and text to avoid creating a new public dossier from a personal
 record.
 
+## Facebook Post Surface
+
+Jamie's personal Facebook post surface is documented separately from his X
+account and Facebook events. The authenticated `Manage Posts > Posted by: You`
+cursor reached `has_next_page: false` after 621 pages and 3,728 returned nodes.
+Stable-story deduplication resolved the platform's near-threefold replay into
+1,243 unique records. The
+[archival-production report](jamie-facebook-posts-2026-07-13.md) and
+[aggregate census](jamie-facebook-post-census-2026-07-13.csv) retain population
+accounting and public-safe professional patterns without exposing personal
+text, IDs, URLs, exact dates, people, locations, privacy context, interactions,
+or media.
+
 ## Facebook Event Surface
 
 NYC Artist Coalition's public Facebook event surface is documented separately

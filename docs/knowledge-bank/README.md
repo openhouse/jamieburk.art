@@ -86,6 +86,15 @@ the complete current profile control while withholding the raw personal
 timeline, historic contact and location detail, relationships, health
 references, and unreviewed media.
 
+Jamie's personal Facebook authored-post surface has its own aggregate-only
+[1,243-row census](jamie-facebook-post-census-2026-07-13.csv) and
+[archival-production report](jamie-facebook-posts-2026-07-13.md). The
+authenticated `Posted by: You` cursor reached its terminal flag after 621
+pages and 3,728 returned nodes; stable-story deduplication reconciled the
+platform's near-threefold replay into 1,243 unique records. Raw text, IDs,
+URLs, exact dates, people, locations, privacy context, interactions, and media
+remain outside the public repository.
+
 WOW List's Facebook Page has a separate
 [57-row post census](wowlist-facebook-post-census-2026-07-13.csv) and
 [archival-production report](wowlist-facebook-posts-2026-07-13.md). The

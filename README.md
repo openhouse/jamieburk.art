@@ -81,6 +81,11 @@ artifacts, repositories, and photo discoveries enter the knowledge bank,
 develop through research, and remain available even when they are not selected
 for the current public site.
 
+The personal Facebook archival pass is documented through an aggregate-only
+[1,243-record census](docs/knowledge-bank/jamie-facebook-post-census-2026-07-13.csv)
+and [bounded research report](docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md).
+The raw personal corpus stays outside the repository.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:

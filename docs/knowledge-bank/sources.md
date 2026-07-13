@@ -178,6 +178,18 @@ identity and individual authorship. Raw responses, full post text, comments,
 account-administration context, and private analytics remain outside the
 repository.
 
+The July 13 personal Facebook post pass uses the authenticated Manage Posts
+`Posted by: You` control. Facebook returned 3,728 nodes across 621 cursor pages
+before its terminal flag; stable-story deduplication reconciled the observed
+near-threefold replay into 1,243 unique records. The
+[aggregate census](jamie-facebook-post-census-2026-07-13.csv) records only
+year, primary form, broad theme, professional-relevance disposition, and
+accounting status. The [archival-production
+report](jamie-facebook-posts-2026-07-13.md) preserves method, data-quality
+limits, privacy boundaries, and professionally relevant patterns. Raw text,
+identifiers, URLs, exact dates, names, locations, privacy labels, interactions,
+and media remain in protected research storage outside the repository.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

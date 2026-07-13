@@ -176,6 +176,28 @@ every event Jamie ever hosted. Do not convert host attribution into sole
 production, erase collaborators, or use event-response surfaces as attendance,
 reach, endorsement, or impact.
 
+Do not describe the 1,243-record personal Facebook census as every post Jamie
+ever created. It is the complete surviving `Manage Posts > Posted by: You`
+population returned in the authenticated July 13, 2026 session. The current
+interface cannot reveal earlier deletions, hidden records, removals, or other
+historical omissions.
+
+Do not describe 3,728 returned nodes as 3,728 unique posts. Facebook replayed
+1,242 records three times and one record twice before returning its terminal
+flag; stable-story deduplication produced 1,243 unique records.
+
+Do not say all 1,243 personal Facebook records were public. Privacy labels were
+not recovered for most records, so the raw corpus remains protected as a whole.
+Do not publish or reconstruct post text, identifiers, URLs, exact dates, people,
+locations, addresses, phone numbers, relationship context, comments,
+interactions, or media.
+
+Do not convert Facebook year, form, theme, project, or professional-relevance
+frequencies into measures of effort, priority, reach, attendance, endorsement,
+adoption, causality, or impact. Jamie's own posts are useful contemporaneous
+role evidence; use independent sources for outcomes and preserve collective
+credit.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

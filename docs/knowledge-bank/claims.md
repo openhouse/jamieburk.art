@@ -333,6 +333,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
 
+## jamie-facebook-post-population-accounting - Surviving authored-post control
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for the authenticated current control
+**Evidence class:** Protected authenticated research run / aggregate-only census
+**Public wording:** A terminal-cursor census accounted for 1,243 unique records in Jamie's surviving Facebook `Posted by: You` population.
+**Detailed public-safe wording:** Facebook returned 3,728 nodes across 621 pages before its terminal flag. Stable-story deduplication reconciled an observed near-threefold replay into 1,243 unique records dated from 2006 through 2022.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Creates a reproducible population control and makes the difference between platform responses and unique records explicit.
+**Guardrail:** Complete means the surviving owner-filtered population exposed in the July 13, 2026 authenticated session, not every post ever created.
+**Do not say:** All 1,243 records were public; 3,728 unique posts; absent years prove no posts existed; the census is an official Facebook export.
+**Protected boundaries:** Raw text, IDs, URLs, exact dates, people, locations, privacy context, interactions, media, and authenticated requests stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## jamie-facebook-project-operations-thread - First-person implementation record
+
+**Status:** Confirmed with boundary
+**Support level:** Moderate
+**Evidence class:** Protected first-person contemporaneous record / public-safe close reading
+**Public wording:** Jamie's authored record preserves a long implementation throughline: participation routes, usable instructions, recurring-program operations, public identity, documentation, and follow-through across civic, cultural, community, and technical work.
+**Detailed public-safe wording:** A protected close reading of 222 project-specific or practice-related candidates found recurring operating patterns across WOW List, Sunday Dinner, NYC Artist Coalition campaigns, waterways and place-based work, and technical practice.
+**Where to project:** Knowledge bank only; retain for future role-specific compositions after independent source review.
+**Why it matters:** Makes Jamie visible as the person translating emerging collective work into usable public structure.
+**Guardrail:** Jamie's posts support role understanding; use independent public sources for external outcomes, policy causality, audience, attendance, and contested credit.
+**Do not say:** Every candidate record is a separate project; frequency measures labor or impact; Jamie's authored record proves sole leadership or policy causality.
+**Protected boundaries:** Personal and relational records, raw wording, exact dates, locations, people, and unreviewed media stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## jamie-facebook-nycac-implementation-practice - Coalition implementation record
+
+**Status:** Confirmed with boundary
+**Support level:** Moderate
+**Evidence class:** Protected first-person contemporaneous record / independent campaign sources retained separately
+**Public wording:** Jamie's contemporaneous authored record documents coalition implementation through meetings, hearings, action routes, safety training, public-input workflows, milestone communication, and collective credit.
+**Detailed public-safe wording:** Thirty-three selected NYC Artist Coalition and campaign-related records show Jamie convening participation, translating legislation and process into usable actions, supporting safety and input workflows, communicating public milestones, and naming coalition partners.
+**Where to project:** Knowledge bank only; existing public pages continue to rely on stronger independent press and government sources.
+**Why it matters:** Clarifies Jamie's operational role without reducing coalition work to campaign outcomes or absorbing collective credit.
+**Guardrail:** Treat as first-person role evidence, not independent proof of attendance, outcomes, causality, or sole leadership.
+**Do not say:** Jamie alone created or led every campaign; thirty-three posts prove policy impact; every person, location, or image in the corpus is approved for publication.
+**Protected boundaries:** Personal-account URLs, raw text, phone numbers, addresses, relationship context, and unreviewed media stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## wowlist-facebook-event-live-control - Current zero and historical non-recovery
 
 **Status:** Confirmed with boundary

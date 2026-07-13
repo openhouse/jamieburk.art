@@ -453,6 +453,70 @@ const wowlistFacebookPostExpectedThemes = new Map([
   ["public-knowledge-and-storytelling", 1]
 ]);
 
+const jamieFacebookPostSourceIds = [
+  "SRC-JAMIE-FACEBOOK-MANAGE-POSTS-CONTROL-2026",
+  "SRC-JAMIE-FACEBOOK-FULL-POST-POPULATION-RUN-2026",
+  "SRC-JAMIE-FACEBOOK-PROFESSIONAL-CLOSE-READ-2026"
+];
+
+const jamieFacebookPostCensusText = readFileSync(
+  "docs/knowledge-bank/jamie-facebook-post-census-2026-07-13.csv",
+  "utf8"
+);
+const jamieFacebookPostCensusRows = jamieFacebookPostCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
+const jamieFacebookPostExpectedYears = new Map([
+  ["2006", 2],
+  ["2007", 5],
+  ["2008", 4],
+  ["2009", 218],
+  ["2010", 82],
+  ["2011", 88],
+  ["2012", 153],
+  ["2013", 184],
+  ["2014", 109],
+  ["2015", 68],
+  ["2016", 122],
+  ["2017", 118],
+  ["2018", 27],
+  ["2019", 42],
+  ["2020", 19],
+  ["2022", 2]
+]);
+
+const jamieFacebookPostExpectedForms = new Map([
+  ["event", 58],
+  ["external-link", 55],
+  ["media-or-text-unavailable", 159],
+  ["photo", 221],
+  ["photo-album", 135],
+  ["shared-story", 244],
+  ["text", 335],
+  ["video", 36]
+]);
+
+const jamieFacebookPostExpectedThemes = new Map([
+  ["care-memory-and-relationships", 45],
+  ["civic-and-public-interest-work", 78],
+  ["community-and-hospitality", 97],
+  ["culture-art-and-performance", 134],
+  ["everyday-life-and-observation", 620],
+  ["media-only-or-text-unavailable", 235],
+  ["small-business-and-commerce", 1],
+  ["technical-and-digital-practice", 12],
+  ["waterways-place-and-ecology", 21]
+]);
+
+const jamieFacebookPostExpectedRelevance = new Map([
+  ["contextual", 1021],
+  ["practice-related", 64],
+  ["project-specific", 158]
+]);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -2022,6 +2086,175 @@ const criteria = [
           );
         }) &&
         !/src\/app\/(proofs|knowledge-bank|public-claims)/.test(renderedProjectionSources)
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-post-full-population-accounting",
+    label: "The terminal personal Facebook author control is reconciled into a complete 1,243-record aggregate census",
+    pass: (() => {
+      const count = (index) => {
+        const result = new Map();
+        for (const row of jamieFacebookPostCensusRows) {
+          result.set(row[index], (result.get(row[index]) ?? 0) + 1);
+        }
+        return result;
+      };
+      const yearCounts = count(1);
+      const formCounts = count(2);
+      const themeCounts = count(3);
+      const relevanceCounts = count(4);
+      const matches = (actual, expected) =>
+        actual.size === expected.size &&
+        [...expected].every(([key, value]) => actual.get(key) === value);
+      return (
+        jamieFacebookPostCensusRows.length === 1243 &&
+        new Set(jamieFacebookPostCensusRows.map((row) => row[0])).size === 1243 &&
+        jamieFacebookPostCensusRows.every(
+          (row) =>
+            row.length === 7 &&
+            /^recovered-\d{4}$/.test(row[0]) &&
+            row[5] === "recovered" &&
+            row[6] === "aggregate-only"
+        ) &&
+        matches(yearCounts, jamieFacebookPostExpectedYears) &&
+        matches(formCounts, jamieFacebookPostExpectedForms) &&
+        matches(themeCounts, jamieFacebookPostExpectedThemes) &&
+        matches(relevanceCounts, jamieFacebookPostExpectedRelevance)
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-post-lifecycle-lineage",
+    label: "Personal Facebook post findings have intake, source, reading, inquiry, promotion, and research-hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-JAMIE-FACEBOOK-FULL-POST-POPULATION-2026"
+      );
+      const promotedPairs = [
+        [
+          "CND-JAMIE-FACEBOOK-POST-POPULATION-ACCOUNTING",
+          "CLM-JAMIE-FACEBOOK-POST-POPULATION-ACCOUNTING-2026"
+        ],
+        [
+          "CND-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD",
+          "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020"
+        ],
+        [
+          "CND-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE",
+          "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019"
+        ]
+      ];
+      const heldCandidateIds = [
+        "CND-JAMIE-FACEBOOK-COMPLETE-LIFETIME-HISTORY",
+        "CND-JAMIE-FACEBOOK-FREQUENCY-EQUALS-IMPACT"
+      ];
+      return Boolean(
+        intakeItems.some(
+          (item) =>
+            item.id === "INT-2026-07-13-JAMIE-FACEBOOK-FULL-POST-POPULATION"
+        ) &&
+        jamieFacebookPostSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "recovered" &&
+        inquiry.findings.some((item) => /621.*3,728.*1,243/i.test(item)) &&
+        inquiry.findings.some((item) => /replayed 1,242.*three times/i.test(item)) &&
+        inquiry.limitations.some((item) => /privacy labels were unavailable/i.test(item)) &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return candidate?.status === "promoted" && candidate.promotedClaimId === claimId;
+        }) &&
+        heldCandidateIds.every((candidateId) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "research-needed" &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.decision === "held"
+            )
+          );
+        })
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-post-public-boundaries",
+    label: "The personal Facebook corpus remains protected while the public repository contains only aggregate accounting",
+    pass: (() => {
+      const populationSource = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-JAMIE-FACEBOOK-FULL-POST-POPULATION-RUN-2026"
+      );
+      const closeReadSource = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-JAMIE-FACEBOOK-PROFESSIONAL-CLOSE-READ-2026"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md",
+        "utf8"
+      );
+      return Boolean(
+        populationSource?.visibility === "protected" &&
+        populationSource.protectedLocatorId &&
+        closeReadSource?.visibility === "protected" &&
+        closeReadSource.protectedLocatorId &&
+        /1,242 unique records appeared three times/i.test(report) &&
+        /privacy labels were recovered for only a minority/i.test(report) &&
+        /protected corpus is a research source, not a new dossier/i.test(report) &&
+        /did not recover complete\s+interaction metrics/i.test(report) &&
+        jamieFacebookPostCensusText.startsWith(
+          "ledger_id,year,record_type,primary_theme,professional_relevance,accounting_status,public_detail_status"
+        ) &&
+        !/story_id|post_id|status_id|source_url|facebook\.com|exact_date|post_text|full_text|privacy|interaction|comment|email|phone|address|protected_locator/i.test(
+          jamieFacebookPostCensusText
+        ) &&
+        !publicRegistryText.includes("RESEARCH-JAMIE-FACEBOOK-POSTS-2026-001") &&
+        !publicRegistryText.includes("RESEARCH-JAMIE-FACEBOOK-POSTS-2026-002") &&
+        !publicRegistryText.includes("RESEARCH-JAMIE-FACEBOOK-POSTS-2026-003")
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-post-chad-editorial-restraint",
+    label: "Chad's lens preserves the research depth without projecting a personal timeline into the live portfolio",
+    pass: (() => {
+      const brief = editorialBriefs.find(
+        (item) => item.id === "BRIEF-JAMIE-FACEBOOK-POSTS-EDITORIAL-2026"
+      );
+      const selectedClaims = [
+        "CLM-JAMIE-FACEBOOK-POST-POPULATION-ACCOUNTING-2026",
+        "CLM-JAMIE-FACEBOOK-PROJECT-OPERATIONS-THREAD-2009-2020",
+        "CLM-JAMIE-FACEBOOK-NYCAC-IMPLEMENTATION-PRACTICE-2017-2019"
+      ].map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
+      const report = readFileSync(
+        "docs/knowledge-bank/jamie-facebook-posts-2026-07-13.md",
+        "utf8"
+      );
+      return Boolean(
+        brief?.selectedClaimIds.length === 3 &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-JAMIE-FACEBOOK-COMPLETE-LIFETIME-HISTORY"
+        ) &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-JAMIE-FACEBOOK-FREQUENCY-EQUALS-IMPACT"
+        ) &&
+        brief.rationale.some((item) => /no immediate website change/i.test(item)) &&
+        selectedClaims.every(
+          (claim) =>
+            claim &&
+            claim.projections.every(
+              (projection) =>
+                projection.key === "archive-note" &&
+                projection.surfaces.every((surface) => !surface.startsWith("/"))
+            )
+        ) &&
+        selectedClaims.every(
+          (claim) => claim && !renderedProjectionSources.includes(claim.id)
+        ) &&
+        /There is no public Facebook archive route, proofs route, knowledge-bank route/i.test(
+          report
+        )
       );
     })()
   },
