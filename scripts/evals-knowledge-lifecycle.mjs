@@ -58,11 +58,26 @@ const suppliedSourceIds = [
   "SRC-NYCA-NPR-CABARET-2017-09-20"
 ];
 
+const portfolioExpansionSourceIds = [
+  "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+  "SRC-NYCA-BEDFORD-BOWERY-DIY-SPACES-2017-02-07",
+  "SRC-NYCA-SAVE-NYC-SPACES-SITE",
+  "SRC-NYCA-EDGE-OF-SOUND-TOWN-HALL-2017-10-14",
+  "SRC-NYCA-MIXMAG-CABARET-2017-09-20",
+  "SRC-CLAUDETTE-MICHAEL-REES-AR",
+  "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+  "SRC-KC-EIGHTH-STREET-TUNNEL-KCUR-2016-09-15",
+  "SRC-WATERWAYS-PITCH-GULF-2009-09-03",
+  "SRC-KC-FRONTIER-DREAMERS-2012-05-17"
+];
+
 check(
   "Source quality",
-  "Every supplied URL has a canonical source record",
+  "Every supplied and portfolio-expansion URL has a canonical source record",
   6,
-  suppliedSourceIds.every((id) => sourceById.has(id)),
+  suppliedSourceIds.every((id) => sourceById.has(id)) &&
+    portfolioExpansionSourceIds.length === 10 &&
+    portfolioExpansionSourceIds.every((id) => sourceById.has(id)),
   true
 );
 check(
@@ -153,12 +168,13 @@ check(
 );
 check(
   "Claim maturity",
-  "Open co-founder and bounded CallNYC engagement claims retain distinct states",
+  "Recovered co-founder and bounded CallNYC engagement claims retain distinct states",
   4,
-  claimById.get("CLM-NYCA-COFOUNDER-ROLE")?.status === "inference" &&
+  claimById.get("CLM-NYCA-COFOUNDER-ROLE")?.status ===
+      "confirmed-with-boundary" &&
     claimById
       .get("CLM-NYCA-COFOUNDER-ROLE")
-      ?.projections.every((projection) => projection.status !== "active") &&
+      ?.boundaries.some((boundary) => /division of labor|chronology/i.test(boundary)) &&
     claimById.get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")?.status ===
       "use-with-care" &&
     claimById

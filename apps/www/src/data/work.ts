@@ -178,9 +178,9 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy, FairRentNYC, Commercial Rent Stabilization, and storefront stability.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
-    years: "2024-Present",
+      "Co-founded NYC Artist Coalition, organized safety and mutual-aid work, and built public-facing civic systems, campaign websites, coalition memory, source maps, and coordination infrastructure for cultural-space advocacy and Commercial Rent Stabilization.",
+    role: "Co-Founder, Organizer, Civic Systems & Policy Communications",
+    years: "2017-Present",
     status: "Full case study",
     featured: true,
     priority: 2,
@@ -242,12 +242,13 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "Save NYC Spaces", url: "https://savenycspaces.nycartc.com/" }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, meeting-memory summaries, and protected coalition context.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -258,6 +259,7 @@ const workItemsInput = [
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
       "Co-founder role in NYC Artist Coalition",
+      "Independent 2017 organizer attribution and 100+ mutual-aid network sign-ups at that time",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
@@ -268,7 +270,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. He helped structure safety and mutual-aid work, public-safe civic systems, campaign memory, source maps, policy communications, and follow-through systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -431,8 +433,8 @@ const workItemsInput = [
     series: "Participation Infrastructure",
     subtitle: "Hosting, onboarding, facilitation, and continuity systems",
     summary:
-      "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
-    role: "Host, Organizer & Systems Steward",
+      "Co-hosted a weekly community-open Sunday dinner and created repeatable hosting, onboarding, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
+    role: "Co-Host, Organizer & Systems Steward",
     years: "2010s",
     status: "Short proof page",
     featured: true,
@@ -454,16 +456,23 @@ const workItemsInput = [
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
     capabilities: ["Onboarding", "Facilitation", "Hospitality Systems", "Artist Support"],
+    links: [
+      {
+        label: "Greene Hill Food Co-op profile",
+        url: "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter"
+      }
+    ],
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Greene Hill Food Co-op's public 2017 profile, public-safe aggregate history, and private participant records intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
     roleFit:
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
+      "Weekly community-open Sunday dinners independently documented in 2017",
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "Onboarding and participation systems",
@@ -471,7 +480,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie and Julie Fredenberg co-hosted a weekly community-open dinner; Jamie created and sustained participation infrastructure across the longer-running gathering and artist-residency context.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
@@ -507,16 +516,23 @@ const workItemsInput = [
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      {
+        label: "Official board minutes",
+        url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000"
+      }
+    ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Official Kansas City board minutes, public-safe summary, and protected project records.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
+      "Jamie identified as proposal presenter in official board minutes",
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",

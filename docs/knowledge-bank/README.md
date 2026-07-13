@@ -66,5 +66,6 @@ pilot.
 
 See [framework.md](framework.md) for the intake-to-projection lifecycle,
 [intake/README.md](intake/README.md) for the agent filing protocol, and the
-[July 12 intake receipt](intake/2026-07-12-waterways-nightlife.md) for a complete
-worked example that promotes some claims while holding others for research.
+[July 12 waterways/nightlife receipt](intake/2026-07-12-waterways-nightlife.md)
+and [ten-source portfolio-strengthening receipt](intake/2026-07-12-portfolio-strengthening.md)
+for worked examples that promote some claims while holding others for research.

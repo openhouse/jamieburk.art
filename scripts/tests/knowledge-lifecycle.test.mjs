@@ -36,6 +36,22 @@ test("atomic observations remain source-linked", () => {
   );
 });
 
+test("portfolio expansion ingests exactly ten new public sources", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-2026-07-12-PORTFOLIO-STRENGTHENING-SOURCES"
+  );
+  assert.ok(intake);
+  assert.equal(intake.sourceIds.length, 10);
+  assert.equal(new Set(intake.sourceIds).size, 10);
+  assert.ok(
+    intake.sourceIds.every((id) =>
+      knowledgeBank.sources.some(
+        (source) => source.id === id && source.visibility === "public"
+      )
+    )
+  );
+});
+
 test("claim maturity matches recovered evidence", () => {
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   assert.equal(
@@ -52,7 +68,7 @@ test("claim maturity matches recovered evidence", () => {
   );
   assert.equal(
     claimById.get("CLM-NYCA-COFOUNDER-ROLE")?.status,
-    "inference"
+    "confirmed-with-boundary"
   );
   assert.equal(
     claimById.get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")?.status,
@@ -77,7 +93,7 @@ test("open research distinguishes queued from partially recovered", () => {
     (inquiry) => inquiry.resultStatus === "partially-recovered"
   );
   assert.ok(queued.length >= 1);
-  assert.ok(partial.length >= 3);
+  assert.ok(partial.length >= 4);
   assert.equal(
     knowledgeBank.researchInquiries.find(
       (inquiry) => inquiry.id === "INQ-CALLNYC-COUNCIL-ENGAGEMENT-2026"

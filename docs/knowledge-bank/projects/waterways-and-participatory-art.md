@@ -17,12 +17,13 @@ from recycled materials.
 
 Charlotte Street's later project history describes the earlier work as a
 four-month, bicycle-powered paddle-wheel raft journey from Kansas City down the
-Missouri and Mississippi until the water tasted salty. The strongest wording is
-therefore a long collaborative river expedition toward the Gulf, without
-asserting a precise final landing point that the recovered sources do not name.
+Missouri and Mississippi until the water tasted salty. A 2009 Pitch follow-up
+independently reports that Jamie and collaborators reached the Gulf of Mexico
+four months after leaving Kansas City.
 
 Sources: `SRC-WATERWAYS-PITCH-2007-08-09`,
-`SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01`.
+`SRC-WATERWAYS-CHARLOTTE-STREET-2009-09-01`,
+`SRC-WATERWAYS-PITCH-GULF-2009-09-03`.
 
 ### Great Accommodations
 
