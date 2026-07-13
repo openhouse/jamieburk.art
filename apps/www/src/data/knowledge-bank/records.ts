@@ -11,6 +11,8 @@ import { archivalProductionBatchRecords } from "./archival-production-batch-2026
 import { archivalProductionDevelopmentRecords } from "./archival-production-development-2026-07-12.ts";
 import { sharedDriveArchivalBatchRecords } from "./shared-drive-archival-batch-2026-07-12.ts";
 import { sharedDriveArchivalDevelopmentRecords } from "./shared-drive-archival-development-2026-07-12.ts";
+import { socialArchiveBatchRecords } from "./social-archive-batch-2026-07-12.ts";
+import { socialArchiveDevelopmentRecords } from "./social-archive-development-2026-07-12.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -19,7 +21,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.intakeItems,
     ...kcTownHallCouncilDevelopmentRecords.intakeItems,
     ...archivalProductionDevelopmentRecords.intakeItems,
-    ...sharedDriveArchivalDevelopmentRecords.intakeItems
+    ...sharedDriveArchivalDevelopmentRecords.intakeItems,
+    ...socialArchiveDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -27,7 +30,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.sourceReadings,
     ...kcTownHallCouncilDevelopmentRecords.sourceReadings,
     ...archivalProductionDevelopmentRecords.sourceReadings,
-    ...sharedDriveArchivalDevelopmentRecords.sourceReadings
+    ...sharedDriveArchivalDevelopmentRecords.sourceReadings,
+    ...socialArchiveDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -35,7 +39,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.candidateClaims,
     ...kcTownHallCouncilDevelopmentRecords.candidateClaims,
     ...archivalProductionDevelopmentRecords.candidateClaims,
-    ...sharedDriveArchivalDevelopmentRecords.candidateClaims
+    ...sharedDriveArchivalDevelopmentRecords.candidateClaims,
+    ...socialArchiveDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -43,7 +48,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.promotions,
     ...kcTownHallCouncilDevelopmentRecords.promotions,
     ...archivalProductionDevelopmentRecords.promotions,
-    ...sharedDriveArchivalDevelopmentRecords.promotions
+    ...sharedDriveArchivalDevelopmentRecords.promotions,
+    ...socialArchiveDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -51,7 +57,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.editorialBriefs,
     ...kcTownHallCouncilDevelopmentRecords.editorialBriefs,
     ...archivalProductionDevelopmentRecords.editorialBriefs,
-    ...sharedDriveArchivalDevelopmentRecords.editorialBriefs
+    ...sharedDriveArchivalDevelopmentRecords.editorialBriefs,
+    ...socialArchiveDevelopmentRecords.editorialBriefs
   ],
   discoveryNotes: [
     ...knowledgeDevelopmentRecords.discoveryNotes,
@@ -59,7 +66,8 @@ const knowledgeBankInput = {
     ...campaignPressDevelopmentRecords.discoveryNotes,
     ...kcTownHallCouncilDevelopmentRecords.discoveryNotes,
     ...archivalProductionDevelopmentRecords.discoveryNotes,
-    ...sharedDriveArchivalDevelopmentRecords.discoveryNotes
+    ...sharedDriveArchivalDevelopmentRecords.discoveryNotes,
+    ...socialArchiveDevelopmentRecords.discoveryNotes
   ],
   sources: [
     {
@@ -188,7 +196,8 @@ const knowledgeBankInput = {
     ...campaignPressBatchRecords.sources,
     ...kcTownHallCouncilBatchRecords.sources,
     ...archivalProductionBatchRecords.sources,
-    ...sharedDriveArchivalBatchRecords.sources
+    ...sharedDriveArchivalBatchRecords.sources,
+    ...socialArchiveBatchRecords.sources
   ],
   claims: [
     {
@@ -282,7 +291,8 @@ const knowledgeBankInput = {
     ...campaignPressBatchRecords.claims,
     ...kcTownHallCouncilBatchRecords.claims,
     ...archivalProductionBatchRecords.claims,
-    ...sharedDriveArchivalBatchRecords.claims
+    ...sharedDriveArchivalBatchRecords.claims,
+    ...socialArchiveBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -296,7 +306,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries],
+  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },

@@ -138,6 +138,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-12
 
+## nyc-artist-coalition-public-identity-system - Durable collective identity
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Established NYC Artist Coalition's public identity system across its logo, campaign website family, and shared @NYCArtC account; collaborators sustained and used that collective identity over time.
+**Detailed public-safe wording:** Jamie created a durable public interface across the coalition logo, campaign websites, and shared account. Public records show collaborators carrying that identity across years of advocacy, public process, accountability, and cultural-space resources.
+**Where to project:** Technical Operations, Work card, FairRentNYC case study.
+**Why it matters:** Shows that Jamie's design and implementation work created public infrastructure other people could use and sustain.
+**Guardrail:** Identity-system authorship is Jamie's direct contribution. Treat campaign voice, individual posts, and policy outcomes as collective unless independently attributed.
+**Do not say:** Jamie authored every @NYCArtC post; Jamie solely operated NYC Artist Coalition; the recovered archive is a complete account export; mentions equal engagement.
+**Protected boundaries:** Account administration, collaborator correspondence, unconfirmed post authorship, private analytics, and credentials stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-12
+
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
 **Status:** Careful

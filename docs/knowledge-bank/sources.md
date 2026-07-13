@@ -77,6 +77,17 @@ keeping stakeholder rows, participant records, meeting contents, working links,
 and Drive coordinates outside the public registry. See
 [shared-drive-archival-production-2026-07-12.md](shared-drive-archival-production-2026-07-12.md).
 
+The July 12 project-social pass adds public and protected records for
+@CallNYCapp, @NYCArtC, and historical @wowlist use. It recovered 279 readable
+@NYCArtC posts from 286 archived status URLs, resolved 193 unique source links,
+and identified a bounded minimum of three direct then-sitting Council-member
+account engagements across CallNYC and NYC Artist Coalition. The source layer
+also adds the City of New York's CreateNYC Twitter-data appendix, Brooklyn Daily
+Eagle reporting that reproduces Rafael Espinal's post, and four public articles
+surfaced through the account corpus. See the
+[social account registry](social-account-registry.md) and
+[social archive inventory](social-archive-2026-07-12.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

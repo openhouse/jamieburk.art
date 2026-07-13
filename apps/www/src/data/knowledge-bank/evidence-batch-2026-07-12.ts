@@ -605,20 +605,28 @@ export const evidenceBatchRecords: EvidenceBatch = {
         "What comprehensive engagement by New York City Council member accounts with the CallNYC account can be recovered and verified?",
       methods: [
         "Preserved the research question as an intake-backed inquiry.",
-        "Deferred quantitative reporting until authenticated timeline or export access can produce a reproducible corpus."
+        "Reviewed a bounded rendered profile capture and recovered its public post links.",
+        "Separated direct replies and amplifications from outbound mentions, anonymous reaction totals, and project-authored posts naming Council members.",
+        "Deferred exact quantitative reporting until an account export or another complete interaction corpus is available."
       ],
       runAt: "2026-07-12",
-      resultStatus: "inconclusive",
+      resultStatus: "partially-recovered",
       findings: [
-        "No comprehensive authenticated engagement dataset is part of the current public-source batch."
+        "Helen Rosenthal's account directly directed residents to CallNYC.",
+        "Mathieu Eugene's account amplified a CallNYC housing-service recognition.",
+        "These sources establish a minimum of two distinct then-sitting Council-member accounts engaging directly with CallNYC, not a comprehensive total."
       ],
       limitations: [
-        "Public search snippets and a rendered profile PDF are not sufficient for comprehensive engagement statistics.",
+        "The rendered profile capture contains only the timeline segment loaded at capture time.",
         "Deleted posts, quote posts, replies, likes, and account renames may require archive or platform-export research."
       ],
-      sourceIds: [],
+      sourceIds: [
+        "SRC-SOCIAL-CALLNYC-PROFILE-CAPTURE-2026",
+        "SRC-SOCIAL-CALLNYC-HELEN-ROSENTHAL-2016",
+        "SRC-SOCIAL-CALLNYC-MATHIEU-EUGENE-2016"
+      ],
       publicSummary:
-        "CallNYC Council-account engagement remains a defined research inquiry; no comprehensive public statistic has been promoted."
+        "At least two then-sitting Council-member accounts directly engaged with CallNYC in the recovered record; no comprehensive account total has been promoted."
     }
   ],
   pages: [

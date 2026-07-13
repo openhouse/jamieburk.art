@@ -74,3 +74,8 @@ Archive-production reports record bounded collection work without publishing
 private source coordinates. The current reports cover the
 [Teams working archive](archival-production-2026-07-12.md) and the
 [Shared Google Drive archive](shared-drive-archival-production-2026-07-12.md).
+Project social identities have a separate
+[account registry](social-account-registry.md) and
+[bounded archival inventory](social-archive-2026-07-12.md). These distinguish
+account identity from individual post authorship and recovered engagement
+minimums from comprehensive totals.

@@ -28,6 +28,15 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Jamie authored every @NYCArtC post. Credit Jamie for establishing the
+logo, campaign website family, and shared account identity while preserving
+collective campaign voice and collaborator authorship. Do not attribute a
+particular post to a named collaborator without direct confirmation.
+
+Do not treat outbound mentions as engagement, captured likes or repost totals as
+identified Council-member interactions, or the recovered three-member minimum
+across CallNYC and NYC Artist Coalition as a comprehensive total.
+
 Do not describe the commercial vacancy and lease-cost pilot as adopted,
 implemented, commissioned by the City, or based on Jamie's access to
 confidential RPIE filings. Do not publish the legislative provenance working
@@ -36,6 +45,9 @@ document or treat it as legal advice or official legislative history.
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
+
+Do not describe two recovered direct Council-member engagements as a complete
+CallNYC engagement total or as proof of broad official endorsement.
 
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology

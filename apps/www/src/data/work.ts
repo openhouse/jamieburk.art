@@ -190,12 +190,13 @@ const workItemsInput = [
       "fair-rent-source-map",
       "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyc-artist-coalition-public-identity-system",
       "nyc-artist-coalition-civic-systems"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving public-data pilot brief, stakeholder follow-up notes, public-safe explanations, a shared public identity system, campaign websites, and durable campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -225,7 +226,7 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
+          "A shared public identity across the coalition logo, @NYCArtC account, and website infrastructure for NYC Artist Coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
         type: "website"
       }
     ],
@@ -242,6 +243,7 @@ const workItemsInput = [
       "Source Mapping",
       "Action Tracking",
       "Campaign Websites",
+      "Public Identity Systems",
       "Public Guidance",
       "Decision Records"
     ],

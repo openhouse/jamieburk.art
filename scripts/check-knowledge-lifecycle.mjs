@@ -120,6 +120,24 @@ const sharedDriveHeldCandidateIds = [
   "CND-CRS-MULTILINGUAL-MEETING-MEMORY"
 ];
 
+const socialArchiveSourceIds = [
+  "SRC-SOCIAL-CALLNYC-PROFILE-CAPTURE-2026",
+  "SRC-SOCIAL-CALLNYC-HELEN-ROSENTHAL-2016",
+  "SRC-SOCIAL-CALLNYC-MATHIEU-EUGENE-2016",
+  "SRC-SOCIAL-NYCAC-CREATENYC-TWITTER-DATA-2017",
+  "SRC-SOCIAL-NYCAC-ESPINAL-NIGHTLIFE-2018",
+  "SRC-SOCIAL-NYCAC-CORPUS-RUN-2026",
+  "SRC-SOCIAL-NYCAC-LINK-CENSUS-2026",
+  "SRC-SOCIAL-NYCAC-CONTINUITY-POST-2025"
+];
+
+const socialArchiveIntakeIds = [
+  "INT-2026-07-12-PROJECT-SOCIAL-ARCHIVE",
+  "INT-2026-07-12-CALLNYC-PROFILE-CAPTURE",
+  "INT-2026-07-12-NYCAC-SOCIAL-CORPUS",
+  "INT-2026-07-12-SOCIAL-IDENTITY-CONFIRMATION"
+];
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -134,6 +152,14 @@ const claimIds = new Set(knowledgeBank.claims.map((claim) => claim.id));
 const candidateById = new Map(candidateClaims.map((claim) => [claim.id, claim]));
 const readingBySourceId = new Map(sourceReadings.map((reading) => [reading.sourceId, reading]));
 const promotedCandidates = candidateClaims.filter((candidate) => candidate.status === "promoted");
+const publicSitePromotedCandidates = promotedCandidates.filter((candidate) =>
+  knowledgeBank.claims
+    .find((claim) => claim.id === candidate.promotedClaimId)
+    ?.projections.some(
+      (projection) =>
+        projection.status === "active" && projection.surfaces.some((surface) => surface.startsWith("/"))
+    )
+);
 const renderedProjectionSources = [
   readFileSync("apps/www/src/app/about/page.tsx", "utf8"),
   readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
@@ -245,8 +271,8 @@ const criteria = [
     id: "public-citation-plan",
     label: "Every newly promoted public claim has a page occurrence rendered on its surface",
     pass:
-      promotedCandidates.length > 0 &&
-      promotedCandidates.every((candidate) => {
+      publicSitePromotedCandidates.length > 0 &&
+      publicSitePromotedCandidates.every((candidate) => {
         const occurrence = knowledgeBank.pages
           .flatMap((page) => page.occurrences)
           .find((item) => item.claimId === candidate.promotedClaimId);
@@ -670,6 +696,70 @@ const criteria = [
         return Boolean(candidate && candidate.status !== "promoted" && !candidate.promotedClaimId);
       }) &&
       !/SRC-GDRIVE|ARCHIVE-GDRIVE|RESEARCH-GDRIVE/.test(publicRegistryText)
+  },
+  {
+    id: "social-archive-lineage",
+    label: "Project social-account evidence has complete intake, source, and reading lineage",
+    pass:
+      socialArchiveIntakeIds.every((id) => intakeItems.some((item) => item.id === id)) &&
+      socialArchiveSourceIds.every((id) => {
+        const reading = readingBySourceId.get(id);
+        return sourceIds.has(id) && reading && reading.assertions.length >= 1 && reading.limitations.length >= 1;
+      })
+  },
+  {
+    id: "social-archive-bounded-corpus",
+    label: "Social corpus findings record coverage, resolved links, and platform limits",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-PROJECT-SOCIAL-ARCHIVE-2026"
+      );
+      return Boolean(
+        inquiry?.findings.some((item) => /286 distinct.*279/i.test(item)) &&
+        inquiry.findings.some((item) => /193 unique/i.test(item)) &&
+        inquiry.limitations.some((item) => /Wayback coverage is selective/i.test(item)) &&
+        inquiry.limitations.some((item) => /post-level authorship cannot be inferred/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "social-council-minimum-not-total",
+    label: "Direct Council engagement is promoted only as a recovered minimum",
+    pass: (() => {
+      const minimum = candidateById.get("CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM");
+      const exact = candidateById.get("CND-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-EXACT");
+      const legacyBroadClaim = candidateById.get("CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS");
+      return Boolean(
+        minimum?.status === "promoted" &&
+        minimum.promotedClaimId === "CLM-PROJECT-SOCIAL-COUNCIL-ENGAGEMENT-MINIMUM" &&
+        exact?.status !== "promoted" &&
+        !exact?.promotedClaimId &&
+        legacyBroadClaim?.status === "partially-supported" &&
+        !legacyBroadClaim.promotedClaimId
+      );
+    })()
+  },
+  {
+    id: "social-identity-collective-authorship",
+    label: "Identity-system authorship is visible while post authorship remains collective",
+    pass: (() => {
+      const identity = candidateById.get("CND-NYCAC-PUBLIC-IDENTITY-SYSTEM");
+      const namedStewardship = candidateById.get(
+        "CND-NYCAC-NAMED-COLLABORATOR-SOCIAL-STEWARDSHIP"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-PUBLIC-IDENTITY-SYSTEM"
+      );
+      return Boolean(
+        identity?.status === "promoted" &&
+        claim?.boundaries.some((item) => /individual authorship|every post/i.test(item)) &&
+        namedStewardship?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === namedStewardship.id && promotion.decision === "held"
+        )
+      );
+    })()
   }
 ];
 

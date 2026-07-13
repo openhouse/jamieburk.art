@@ -378,12 +378,16 @@ export const knowledgeDevelopmentRecords: KnowledgeDevelopmentRecords = {
       id: "CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS",
       project: "callnyc",
       text: "New York City Council member accounts engaged substantially with the CallNYC account on Twitter.",
-      status: "research-needed",
-      sourceIds: [],
+      status: "partially-supported",
+      sourceIds: [
+        "SRC-SOCIAL-CALLNYC-PROFILE-CAPTURE-2026",
+        "SRC-SOCIAL-CALLNYC-HELEN-ROSENTHAL-2016",
+        "SRC-SOCIAL-CALLNYC-MATHIEU-EUGENE-2016"
+      ],
       researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT-2026"],
-      supportSummary: "The memory and research question are preserved, but no comprehensive reproducible engagement corpus has been assembled.",
-      missingEvidence: ["Authenticated timeline or account export", "Council-member account roster for the relevant period", "Deduplicated interaction definitions and counts", "Archive coverage for deleted or renamed accounts"],
-      boundaries: ["Do not publish engagement totals derived from partial search or screenshots."],
+      supportSummary: "Two direct then-sitting Council-member engagements are recovered and source-backed, but 'substantially' and any exact or comprehensive total remain unsupported.",
+      missingEvidence: ["Account export or another complete interaction corpus", "Council-member account roster for the relevant period", "Deduplicated reply, repost, quote-post, and like counts", "Archive coverage for deleted or renamed accounts"],
+      boundaries: ["Do not convert a two-account recovered minimum into a comprehensive total or broad reach claim."],
       reviewedAt: "2026-07-12"
     }
   ],
@@ -394,7 +398,7 @@ export const knowledgeDevelopmentRecords: KnowledgeDevelopmentRecords = {
     { id: "PROM-RIVER-GULF-HOLD-2026", candidateClaimId: "CND-RIVER-RAFT-KC-GULF", decision: "held", reason: "The reviewed sources establish the river journey but not an exact Gulf landing point.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-NYCAC-INSTRUMENTAL-HOLD-2026", candidateClaimId: "CND-NYCAC-OFFICE-NIGHTLIFE-INSTRUMENTAL-ROLE", decision: "held", reason: "Coalition influence and Jamie's participation are supported; stronger individual causal allocation needs more evidence.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
     { id: "PROM-MARCH-CAUSALITY-HOLD-2026", candidateClaimId: "CND-TALKS-NOT-RAIDS-DISBAND-CAUSALITY", decision: "held", reason: "Chronology is established but causal attribution is not.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] },
-    { id: "PROM-CALLNYC-ENGAGEMENT-HOLD-2026", candidateClaimId: "CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS", decision: "held", reason: "No comprehensive reproducible engagement corpus is available.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] }
+    { id: "PROM-CALLNYC-ENGAGEMENT-HOLD-2026", candidateClaimId: "CND-CALLNYC-COUNCIL-ENGAGEMENT-STATS", decision: "held", reason: "Two direct engagements support a minimum, but no comprehensive reproducible corpus supports 'substantially' or an exact total.", decidedAt: "2026-07-12", decidedBy: ["Codex source review"] }
   ],
   editorialBriefs: [
     {

@@ -308,6 +308,40 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "nyc-artist-coalition-public-identity-system",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Established NYC Artist Coalition's public identity system across its logo, campaign website family, and shared @NYCArtC account; collaborators sustained and used that collective identity over time.",
+    shortWording: "Established NYC Artist Coalition's public identity system",
+    detailedPublicWording:
+      "Jamie created a durable public identity across the coalition logo, campaign website family, and shared social account. The account's public record shows collaborators carrying that identity across years of advocacy, resources, public process, and coalition continuity.",
+    sourceBasis:
+      "Jamie confirmation, live campaign surfaces, a City of New York social-data appendix, public posts, published reporting, and a bounded Wayback-indexed account corpus.",
+    whyItMatters:
+      "Shows that Jamie's design and implementation work created a public interface other people could use and sustain, not only a set of one-time pages.",
+    guardrail:
+      "Identity-system authorship is Jamie's direct contribution. Treat the campaign voice, individual posts, and policy outcomes as collective unless a post's author is independently confirmed.",
+    doNotSay: [
+      "Jamie authored every @NYCArtC post",
+      "Jamie solely operated NYC Artist Coalition",
+      "Social mentions equal engagement",
+      "The recovered archive is a complete account export"
+    ],
+    protectedBoundaries: [
+      "Private account administration",
+      "Private collaborator correspondence",
+      "Unconfirmed post-level authorship",
+      "Private analytics",
+      "Credentials"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-identity-systems", "campaign-websites", "information-architecture"],
+    lastReviewed: "2026-07-12"
+  },
+  {
     id: "nyc-artist-coalition-civic-systems",
     status: "careful",
     supportLevel: "careful",
