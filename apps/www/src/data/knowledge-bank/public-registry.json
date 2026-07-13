@@ -100,6 +100,87 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "author": "Outreach Committee",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op Outreach Committee, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The co-op profile connects weekly community dinners, WOW List, co-op participation, and NYC Artist Coalition advocacy in one contemporaneous public account.",
+      "doesNotEstablish": [
+        "the total number or complete duration of Sunday Dinner gatherings",
+        "WOW List adoption or product metrics",
+        "Jamie's precise founding role in NYC Artist Coalition",
+        "that Jamie or the coalition alone caused Cabaret Law repeal or Office of Nightlife creation"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+      "title": "New York City Council Committee on Small Business hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-10-22",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Small Business hearing transcript, October 22, 2018, pp. 346-348.",
+      "publicNote": "The official transcript identifies Jamie as an NYC Artist Coalition member and preserves his public testimony supporting Intro 737 and commercial rent protections for cultural spaces.",
+      "doesNotEstablish": [
+        "that Jamie drafted Intro 737",
+        "that NYC Artist Coalition alone led the SBJSA campaign",
+        "passage or implementation of the bill",
+        "the accuracy of every example named in extemporaneous testimony"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+      "title": "Central City Economic Development Sales Tax Board minutes",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-06-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board minutes, June 12, 2019.",
+      "publicNote": "The public minutes identify Jamie as KC Town Hall's presenter and record the proposed $490,539 request for four retail spaces and three apartments at 36th and Indiana.",
+      "doesNotEstablish": [
+        "that the request was final funding received",
+        "that construction was completed",
+        "Jamie's sole ownership or authorship of the proposal",
+        "the project's later status"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+      "title": "Kansas City Ordinance 240317",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The ordinance states that KC Town Hall withdrew and would no longer proceed, then reappropriates the unused $490,539 allocation.",
+      "doesNotEstablish": [
+        "the reasons for withdrawal",
+        "the disposition of private planning work",
+        "fault by any participant",
+        "that no future project could occur at the property"
+      ]
     }
   ],
   "claims": [
@@ -299,6 +380,182 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2017 Greene Hill Food Co-op profile described the dinners as weekly and open to the community.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "weekly cadence",
+            "community-open invitation",
+            "Jamie and Julie's shared hosting role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This source does not establish the total gathering count or complete project duration."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-COMMUNITY-EVENTS-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2017 Greene Hill Food Co-op profile described WOW List as a place where Jamie and Julie shared community events.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "community-event sharing through WOW List",
+            "Jamie and Julie's public association with the project"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The profile does not establish user, event, or city-scale metrics."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On October 22, 2018, I testified before the New York City Council as an NYC Artist Coalition member in support of Intro 737 and commercial rent protections for cultural spaces.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "date",
+            "Council hearing",
+            "Jamie's coalition affiliation",
+            "support for Intro 737 and commercial rent protections"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Public testimony does not establish legislative authorship, passage, or sole campaign leadership."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PROPOSAL-2019",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In June 2019, Kansas City public minutes identified me as KC Town Hall's presenter for a $490,539 proposal to renovate a building at 36th and Indiana into four retail spaces and three apartments.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation and presented the $490,539 proposal in a public funding process.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's presenter role",
+            "requested amount",
+            "proposed location",
+            "proposed retail and apartment scope"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "A proposal and public funding recommendation are not completed construction or final funds received."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-WITHDRAWN-2024",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2024 Kansas City ordinance records that KC Town Hall withdrew and would no longer proceed under that award; the unused $490,539 was reappropriated.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "The project later withdrew before proceeding under the award, and the unused allocation was reappropriated.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+          "relationship": "direct-support",
+          "supports": [
+            "project withdrawal",
+            "non-proceeding status under the award",
+            "reappropriation of unused funds"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The ordinance does not state the reasons for withdrawal or assign fault."
+      ]
     }
   ],
   "pages": [
@@ -363,6 +620,68 @@
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+      ],
+      "occurrences": [
+        {
+          "id": "weekly-community-dinners",
+          "claimId": "CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-2017",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+      ],
+      "occurrences": [
+        {
+          "id": "community-event-sharing",
+          "claimId": "CLM-WOWLIST-COMMUNITY-EVENTS-2017",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"
+      ],
+      "occurrences": [
+        {
+          "id": "sbjsa-testimony",
+          "claimId": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+        "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"
+      ],
+      "occurrences": [
+        {
+          "id": "public-proposal",
+          "claimId": "CLM-KC-TOWN-HALL-PROPOSAL-2019",
+          "projection": "case-study"
+        },
+        {
+          "id": "project-withdrawal",
+          "claimId": "CLM-KC-TOWN-HALL-WITHDRAWN-2024",
+          "projection": "case-study"
         }
       ]
     }

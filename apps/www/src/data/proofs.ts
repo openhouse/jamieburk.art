@@ -426,15 +426,17 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation; Jamie presented the $490,539 proposal in 2019, and official records show the project later withdrew before proceeding under that award.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. The project received a public funding recommendation and later withdrew; the unused allocation was reappropriated.",
+    sourceBasis: "Approved resume language, Kansas City CCED public minutes from June 12, 2019, Kansas City Ordinance 240317, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Keep the amount tied to the public proposal and recommendation. State the later withdrawal. Do not imply completed construction, final funds received, or fault.",
     doNotSay: [
       "Final funding received",
+      "The redevelopment was completed",
+      "The project remains active under the award",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -449,7 +451,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",

@@ -531,11 +531,11 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Proposed adaptive reuse and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation that received a $490,539 public funding recommendation and was later withdrawn before proceeding under that award.",
     role: "Project Planning & Documentation Support",
-    years: "2020s",
+    years: "2019-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -544,38 +544,49 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "A reviewable mixed-use proposal, public-benefit case, stakeholder context, and municipal funding record, with the later withdrawal clearly documented.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
         title: "Public-benefit documentation set",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
+          "Planning materials and public records describing the proposed use, intended public value, funding context, and later project status.",
         type: "guide"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
     capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    links: [
+      {
+        label: "2019 CCED public minutes",
+        url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000"
+      },
+      {
+        label: "2024 withdrawal ordinance",
+        url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search="
+      }
+    ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Official Kansas City public meeting and legislation records, with private project records omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus: "Project withdrawn in 2024; the unused public allocation was reappropriated.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
-      "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Jamie identified as the public proposal presenter",
+      "$490,539 public funding recommendation",
+      "2024 withdrawal and reappropriation record"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported planning and documentation, presented the $490,539 mixed-use proposal in 2019, and the project later withdrew before proceeding under that award.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "The public withdrawal record does not state the reasons or define every collaborator's role.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
