@@ -503,22 +503,24 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 public-funding recommendation and City appropriation; the project later withdrew before the unused funds were reappropriated.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 CCED Board recommendation; Kansas City Council then accepted the recommendation and appropriated $490,539. The project later withdrew before the unused funds were reappropriated.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records preserve both the award and the later withdrawal.",
-    sourceBasis: "Kansas City CCED Board minutes, Kansas City Ordinance 240317, approved resume language, and public-safe project context.",
+      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records preserve the Board recommendation, Council acceptance and appropriation, and later withdrawal.",
+    sourceBasis: "Kansas City CCED Board meeting records, Kansas City Resolution 190649, Ordinances 190642 and 240317, approved resume language, and public-safe project context.",
     sourceNote:
-      "The CCED Board unanimously recommended $490,539 and the City appropriated the award. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.",
+      "All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council adopted substituted Resolution 190649 accepting the recommendation and passed substituted Ordinance 190642 appropriating $490,539. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.",
     guardrail:
-      "State the award and later withdrawal together. Do not imply funds were disbursed, construction was completed, or the public record explains why the project withdrew.",
+      "Keep the Board recommendation, Council acceptance, appropriation, later withdrawal, and reappropriation distinct. Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, construction was completed, or the public record explains why the project withdrew.",
     doNotSay: [
+      "The City Council unanimously approved KC Town Hall",
       "KC Town Hall received and spent $490,539",
+      "A funding agreement was executed",
       "The redevelopment was completed",
       "Jamie alone developed the proposal",
       "Why the project withdrew",
       "Private financial details",
-      "Official municipal endorsement beyond the recorded recommendation and appropriation"
+      "Official municipal endorsement beyond the recorded Council actions"
     ],
     protectedBoundaries: [
       "Private financial details",

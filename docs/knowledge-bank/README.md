@@ -74,3 +74,8 @@ review in
 [projects/nyca-campaign-press-index.md](projects/nyca-campaign-press-index.md).
 It preserves placements, distinct articles, archive state, and claim-use
 boundaries separately.
+
+The recovered KC Town Hall public-funding sequence is documented in
+[projects/kc-town-hall-council-allocation-2019.md](projects/kc-town-hall-council-allocation-2019.md).
+It keeps the Board recommendation, Council acceptance, appropriation, later
+withdrawal, and reappropriation as distinct evidence-bearing events.

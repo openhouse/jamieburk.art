@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-13-kc-town-hall-council-allocation-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-13",
+  "status": "passed",
+  "iterations": 3,
+  "qualifyingRounds": [2, 3],
+  "graphSnapshot": {
+    "intakeRecords": 23,
+    "sources": 76,
+    "claims": 25,
+    "researchInquiries": 6,
+    "activeProjections": 15,
+    "heldProjections": 14
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS"
+  ],
+  "contentClusters": [
+    {
+      "id": "kc-town-hall-council-allocation",
+      "sourceIds": [
+        "SRC-KCMO-CCED-KC-TOWN-HALL-2019-06",
+        "SRC-KCMO-COUNCIL-KC-TOWN-HALL-RESOLUTION-190649",
+        "SRC-KCMO-COUNCIL-CCED-APPROPRIATION-190642",
+        "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28"
+      ],
+      "claimIds": ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE"],
+      "researchInquiryIds": [],
+      "projectionDecision": "Project the complete public sequence: Jamie presented; all four CCED Board members recommended $490,539; the Council accepted the recommendation and appropriated $490,539; the project later withdrew and the unused funds were reappropriated. Do not infer a unanimous Council vote, executed agreement, disbursement, completion, or cause for withdrawal."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 99,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 98,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 89,
+      "editorialFutureUseScore": 91,
+      "result": "revise",
+      "finding": "The claim named a City appropriation but relied on a 2024 withdrawal ordinance as retrospective support, omitted the 2019 Council acceptance instrument and direct appropriation record, and mislabeled the multi-meeting Board packet as June minutes."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 98,
+      "editorialFutureUseScore": 97,
+      "result": "qualifying-pass",
+      "finding": "The revised graph adds direct records for Resolution 190649 and Ordinance 190642, corrects the Board packet metadata, and separates presentation, recommendation, Council acceptance, appropriation, withdrawal, and reappropriation without implying disbursement or a unanimous Council vote."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 99,
+      "editorialFutureUseScore": 98,
+      "result": "qualifying-pass",
+      "finding": "An unchanged second pass confirmed clause-level source coverage, stable graph relationships, precise institutional attribution, preserved non-launch boundaries, clear public prose, and no regression across prior claims or photo controls."
+    }
+  ],
+  "unresolvedCriteria": []
+}

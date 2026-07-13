@@ -41,7 +41,9 @@ Approved public artifact examples for this launch pass include:
 - Mixmag's September 2017 Cabaret Law hearing coverage.
 - Bedford + Bowery's October 2017 Office of Nightlife town-hall coverage.
 - New York City Council's October 2018 Small Business Committee transcript.
-- Kansas City CCED Board's June 2019 KC Town Hall records.
+- Kansas City CCED Board's June and July 2019 KC Town Hall records.
+- Kansas City Council Resolution 190649 accepting the Board's recommendation.
+- Kansas City Council Ordinance 190642 appropriating Round Two CCED project funds.
 - Kansas City Ordinance 240317 documenting the later KC Town Hall withdrawal.
 - KCUR's 2016 8th Street Tunnel reporting.
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
@@ -54,6 +56,12 @@ canonical source record, access posture, campaign relationship, and explicit
 non-support boundaries. Article placement supports a claim about campaign
 source architecture; article-body claims require separate close reading before
 reuse.
+
+The KC Town Hall funding sequence is documented in
+`docs/knowledge-bank/projects/kc-town-hall-council-allocation-2019.md`. The
+Board recommendation, Council acceptance, Council appropriation, later
+withdrawal, and reappropriation remain separate events with separate source
+records and claim boundaries.
 
 ### Public-Safe Archive Summary
 

@@ -232,6 +232,25 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
+      id: "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+      receivedAt: "2026-07-13",
+      kind: "source-url",
+      project: "kc-town-hall",
+      publicSummary: "Kansas City Council records show that on September 26, 2019, the Council adopted substituted Resolution 190649 accepting the CCED Board's $490,539 KC Town Hall recommendation and passed substituted Ordinance 190642 appropriating that amount for the project.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: [
+        "SRC-KCMO-COUNCIL-KC-TOWN-HALL-RESOLUTION-190649",
+        "SRC-KCMO-COUNCIL-CCED-APPROPRIATION-190642"
+      ],
+      claimIds: ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE"],
+      researchInquiryIds: [],
+      projectionIntent: "candidate-for-public-surface",
+      nextActions: ["Keep the Board recommendation, Council acceptance, Council appropriation, later withdrawal, and reappropriation as distinct public-record events; do not infer a unanimous Council vote, executed funding agreement, or disbursement."],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
       id: "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
       receivedAt: "2026-07-13",
       kind: "source-url",
@@ -715,19 +734,52 @@ const knowledgeBankInput = {
     },
     {
       id: "SRC-KCMO-CCED-KC-TOWN-HALL-2019-06",
-      title: "Central City Economic Development Sales Tax Board June 2019 minutes",
+      title: "Central City Economic Development Sales Tax Board May-July 2019 meeting packet",
       organization: "City of Kansas City, Missouri",
       kind: "government-record",
       visibility: "public",
       preservationStatus: "live",
-      publishedAt: "2019-06-13",
       accessedAt: "2026-07-13",
       canonicalUrl: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
       preferredPublicUrl: "canonical",
-      publicCitation: "Kansas City Central City Economic Development Sales Tax Board, June 2019 meeting minutes.",
-      publicNote: "The record identifies Jamie as KC Town Hall's presenter, describes the proposed mixed-use redevelopment, and records the board's unanimous recommendation. It does not show disbursement or completion.",
-      supportsGenerally: ["Jamie presented the KC Town Hall proposal", "the proposal concerned renovation for four retail spaces and three apartments", "the requested amount was $490,539", "the CCED Board unanimously recommended the project and amount to City Council"],
+      publicCitation: "Kansas City Central City Economic Development Sales Tax Board meeting packet, including June 12 and July 16, 2019 minutes.",
+      publicNote: "The June 12 minutes identify Jamie as KC Town Hall's presenter and describe the proposal. The July 16 minutes record all four Board members voting to recommend $490,539 to City Council. The packet does not show Council action, disbursement, or completion.",
+      supportsGenerally: ["Jamie presented the KC Town Hall proposal on June 12, 2019", "the proposal concerned renovation for four retail spaces and three apartments", "the requested amount was $490,539", "all four CCED Board members voted on July 16, 2019 to recommend the project and amount to City Council"],
       doesNotEstablish: ["that funds were disbursed", "that construction began or finished", "sole project authorship by Jamie", "current property status", "private financial terms"]
+    },
+    {
+      id: "SRC-KCMO-COUNCIL-KC-TOWN-HALL-RESOLUTION-190649",
+      title: "Kansas City Committee Substitute for Resolution 190649 accepting the KC Town Hall funding recommendation",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-09-26",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+      assetUrl: "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Kansas City Committee Substitute for Resolution 190649, adopted September 26, 2019.",
+      publicNote: "The Council adopted the substituted resolution accepting the CCED Board's $490,539 recommendation for KC Town Hall and authorizing negotiation of a funding agreement.",
+      supportsGenerally: ["the City Council adopted substituted Resolution 190649 on September 26, 2019", "the Council accepted the CCED Board's $490,539 KC Town Hall funding recommendation", "the Council authorized the City Manager to negotiate a funding agreement"],
+      doesNotEstablish: ["a member-by-member Council vote or unanimous Council action", "that a funding agreement was executed", "that funds were disbursed", "that construction began or finished", "sole project authorship by Jamie"]
+    },
+    {
+      id: "SRC-KCMO-COUNCIL-CCED-APPROPRIATION-190642",
+      title: "Kansas City Committee Substitute for Ordinance 190642 appropriating Round Two CCED project funds",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-09-26",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+      assetUrl: "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Kansas City Committee Substitute for Ordinance 190642, passed September 26, 2019.",
+      publicNote: "The Council passed the substituted ordinance appropriating Round Two CCED funds. Section 2 itemizes $490,539 for KC Town Hall's proposed redevelopment.",
+      supportsGenerally: ["the City Council passed substituted Ordinance 190642 on September 26, 2019", "the ordinance appropriated $490,539 for KC Town Hall", "the appropriation followed the CCED Board recommendation and Council acceptance recorded in Resolution 190649"],
+      doesNotEstablish: ["a member-by-member Council vote or unanimous Council action", "that a funding agreement was executed", "that funds were disbursed to KC Town Hall", "that construction began or finished", "that Jamie controlled the Council action"]
     },
     {
       id: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28",
@@ -1065,18 +1117,20 @@ const knowledgeBankInput = {
     {
       id: "CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE",
       project: "kc-town-hall",
-      internalClaim: "Jamie presented KC Town Hall's mixed-use adaptive-reuse proposal; the CCED Board unanimously recommended $490,539 and the City later appropriated the award. The project subsequently withdrew without proceeding, and the unused funds were reappropriated in 2024.",
+      internalClaim: "Jamie presented KC Town Hall's mixed-use adaptive-reuse proposal. On July 16, 2019, all four CCED Board members voted to recommend $490,539 to City Council. On September 26, the Council adopted substituted Resolution 190649 accepting the recommendation and passed substituted Ordinance 190642 appropriating $490,539. The project subsequently withdrew without proceeding, and the unused funds were reappropriated in 2024.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "Jamie presented a mixed-use adaptive-reuse proposal that received a unanimous $490,539 recommendation from Kansas City's CCED Board and a subsequent City appropriation. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.", status: "active", citationRequired: false, surfaces: ["/work/kc-town-hall"] },
-        { key: "work-card", text: "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 public-funding recommendation; the project later withdrew before funds were used.", status: "active", citationRequired: false, surfaces: ["/work", "/work/kc-town-hall"] }
+        { key: "case-study", text: "Jamie presented a mixed-use adaptive-reuse proposal that received a unanimous $490,539 recommendation from Kansas City's CCED Board. The City Council then accepted the recommendation and appropriated $490,539 in September 2019. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.", status: "active", citationRequired: false, surfaces: ["/work/kc-town-hall"] },
+        { key: "work-card", text: "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation; the project later withdrew before funds were used.", status: "active", citationRequired: false, surfaces: ["/work", "/work/kc-town-hall"] }
       ],
       evidence: [
         { sourceId: "SRC-KCMO-CCED-KC-TOWN-HALL-2019-06", relationship: "direct-support", supports: ["Jamie as project presenter", "mixed-use adaptive-reuse scope", "unanimous $490,539 CCED Board recommendation"], confidence: "high", renderCitation: false },
-        { sourceId: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28", relationship: "direct-support", supports: ["City appropriation of the $490,539 award", "later project withdrawal", "reappropriation of unused funds in 2024"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-KCMO-COUNCIL-KC-TOWN-HALL-RESOLUTION-190649", relationship: "direct-support", supports: ["September 26, 2019 Council acceptance of the Board recommendation", "authorization to negotiate a funding agreement"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-COUNCIL-CCED-APPROPRIATION-190642", relationship: "direct-support", supports: ["September 26, 2019 Council passage of the appropriation ordinance", "$490,539 KC Town Hall appropriation line item"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28", relationship: "direct-support", supports: ["later project withdrawal", "reappropriation of unused funds in 2024"], confidence: "high", renderCitation: false }
       ],
-      boundaries: ["State both the award and later withdrawal wherever the funding outcome is material.", "Do not imply funds were disbursed or construction completed.", "Do not speculate about reasons or responsibility for withdrawal.", "Keep collaborative project credit visible."],
-      antiClaims: ["KC Town Hall received and spent $490,539", "The redevelopment was completed", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
+      boundaries: ["Keep the Board recommendation, Council acceptance, Council appropriation, later withdrawal, and reappropriation distinct.", "State both the favorable funding actions and later withdrawal wherever the funding outcome is material.", "Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, or construction was completed.", "Do not speculate about reasons or responsibility for withdrawal.", "Keep collaborative project credit visible."],
+      antiClaims: ["The City Council unanimously approved KC Town Hall", "KC Town Hall received and spent $490,539", "A funding agreement was executed", "The redevelopment was completed", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
       proofClaimIds: ["kc-town-hall-public-benefit-documentation"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-13",
