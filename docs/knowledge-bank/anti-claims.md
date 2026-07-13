@@ -59,8 +59,11 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Do not say the redevelopment was completed, Jamie personally received
+$490,539, the project remains active under the award, or the 2024 withdrawal
+record assigns fault. Prefer "supported planning and public-benefit
+documentation" or "co-led the proposal" unless stronger role language is
+separately supported.
 
 ## Source-Backed Team Memory
 

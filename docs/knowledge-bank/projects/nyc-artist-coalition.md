@@ -1,8 +1,8 @@
 # NYC Artist Coalition and nightlife policy
 
-Status: developing knowledge cluster with some public support and several open
-role questions. New records in this pass are not selected for website
-projection.
+Status: developing knowledge cluster with strong public support and several
+open role questions. One new official-testimony claim is selected for the
+FairRentNYC case study; other new records remain unsurfaced.
 
 The governing distinction is between documented contribution and collective
 causality. Public reporting can establish particular actions, affiliations,
@@ -15,6 +15,11 @@ one person or organization.
 | --- | --- | --- |
 | Gothamist, June 2017 | Jamie organized fire-code study groups for DIY venues and rallied for Cabaret Law repeal as part of NYC Artist Coalition; Olympia Kazi spoke for the coalition about discriminatory enforcement; an Office of Nightlife proposal was active. | Sole causality for repeal, legislative authorship, creation of the Office of Nightlife, or later office outcomes. |
 | NPR, September 2017 | New York City enacted an Office of Nightlife and Nightlife Advisory Board; NYC Artist Coalition participated in Let NYC Dance mobilization; NPR identified Jamie as a founding coalition member and quoted his support for repeal. | The complete founding process, Jamie's precise legislative role, leadership of every campaign activity, or sole causality. |
+| Greene Hill Food Co-op, 2017 | Jamie and Julie publicly described coalition advocacy and invited members to an Office of Nightlife town hall. | Event-production duties, attendance, or policy implementation. |
+| Mixmag, September 2017 | Jamie testified at a Council hearing as an NYC Artist Coalition member about discriminatory Cabaret Law enforcement. | Hearing production, legislative authorship, or individual causality for repeal. |
+| Bedford + Bowery, October 2017 | NYC Artist Coalition spearheaded a Market Hotel town hall; Jamie and Olympia Kazi were named among coalition speakers. | Jamie's exact production or facilitation duties and later office outcomes. |
+| CreateNYC public appendix, March 2017 | The coalition collectively requested Cabaret Law repeal, MARCH transparency, cultural liaisons, urgent repairs support, and affordability measures. | Individual authorship, implementation, or MARCH disbanding. |
+| NYC Council transcript, October 2018 | Jamie testified as an NYC Artist Coalition member for Intro 737 and commercial rent protections for cultural spaces. | Legislative authorship, passage, or sole campaign leadership. |
 
 NPR uses a variant coalition name in its published identification. The bank
 preserves that source-level qualification while using the verified project name
@@ -27,6 +32,14 @@ for the knowledge cluster.
 - `CLM-NYCAC-LET-NYC-DANCE-PARTICIPATION-2017`
 - `CLM-NYC-OFFICE-NIGHTLIFE-ESTABLISHED-2017`
 - `CLM-NYCAC-FOUNDING-MEMBER-PRESS-2017`
+- `CLM-NYCAC-GREENE-HILL-TOWN-HALL-INVITATION-2017`
+- `CLM-NYCAC-MIXMAG-HEARING-TESTIMONY-2017`
+- `CLM-NYCAC-BEDFORD-TOWN-HALL-2017`
+- `CLM-NYCAC-BEDFORD-JAMIE-SPEAKER-2017`
+- `CLM-NYCAC-CREATENYC-RECOMMENDATIONS-2017`
+- `CLM-NYCAC-CREATENYC-MARCH-TRANSPARENCY-2017`
+- `CLM-NYCAC-CREATENYC-SUPPORT-PROPOSALS-2017`
+- `CLM-NYCAC-SBJSA-TESTIMONY-2018`
 
 The strongest current public-source formulation is that reporting documents
 Jamie performing specific safety-education and repeal-advocacy work as part of
@@ -49,7 +62,8 @@ role.
 
 ## Editorial position
 
-The supplied articles materially strengthen the internal record, but they do
-not automatically create new public copy. Current claim candidates remain
-unsurfaced while the open role questions are researched and the overall site
-argument is composed with collective credit intact.
+The source set materially strengthens the internal record, but it does not
+automatically create public copy. The official 2018 testimony is selected
+because it gives the current case study one precise, role-specific action. The
+other claims remain unsurfaced while open role questions are researched and
+the site argument is composed with collective credit intact.

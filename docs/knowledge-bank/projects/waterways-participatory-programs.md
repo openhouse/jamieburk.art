@@ -12,6 +12,8 @@ same method or produced the same result.
 | Source | Supports | Stops short of |
 | --- | --- | --- |
 | The Pitch, 2007 | Jamie originated an experiential homemade-raft idea; a Kansas City and California group traveled across Missouri; transportation history and Kansas City's relationship to the Missouri River informed the project. | The complete route, a Gulf endpoint, four-month duration, or full participant roster. |
+| WLBT, 2007 | Jamie was identified as the journey organizer; the bicycle-powered raft, three-person crew, reported 1,000-plus miles, and Vicksburg interruption are documented. | A Gulf endpoint, complete route, sole authorship, or final resolution of every Coast Guard issue. |
+| The Pitch, 2009 | A follow-up report says the crew reached the Gulf four months after leaving Kansas City and connects the expedition to Great Accommodations. | A day-by-day route, precise landing location, or sole authorship. |
 | Good Times / Metro Santa Cruz, 2006 | Jamie organized a ten-day Open House experiment combining communal living, open contribution, facilitation, and live documentation; it developed from the participatory Shop Shows. | A formal housing service, municipal sponsorship, participant outcomes, or sole authorship of participant work. |
 | Charlotte Street Foundation, 2009 | Jamie spearheaded Great Accommodations; Jamie and Suzanne Hogan conducted broad river-city outreach; the installation and programs used interactive media, participation, community projects, and working documentation. | Measured attendance, long-term civic outcomes, sole authorship, or independent verification of every detail in Jamie's published raft account. |
 
@@ -23,6 +25,10 @@ same method or produced the same result.
 - `CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM-2009`
 - `CLM-WATERWAYS-GREAT-ACCOMMODATIONS-FACILITATION-2009`
 - `CLM-WATERWAYS-RAFT-ROUTE-PUBLISHED-ACCOUNT-2009`
+- `CLM-WATERWAYS-WLBT-ORGANIZER-2007`
+- `CLM-WATERWAYS-WLBT-MILEAGE-INTERRUPTION-2007`
+- `CLM-WATERWAYS-PITCH-GULF-ACCOUNT-2009`
+- `CLM-WATERWAYS-PITCH-GREAT-ACCOMMODATIONS-CONTINUITY-2009`
 - `CLM-OPEN-HOUSE-FORMAT-2006`
 - `CLM-OPEN-HOUSE-SHOP-SHOWS-LINEAGE-2006`
 - `CLM-OPEN-HOUSE-PARTICIPANT-AUTHORITY-2006`
@@ -35,8 +41,9 @@ claim of uniform impact.
 
 ## Open research
 
-- Establish the raft's route, dates, participants, stops, and endpoint from
-  independent records.
+- Establish the raft's detailed route, dates, stops, and precise endpoint from
+  route-level records. Public reporting now supports a bounded Gulf endpoint
+  claim, but it is not a complete expedition log.
 - Build a dated inventory of participatory programs rather than treating three
   recovered sources as the complete record.
 - Locate public-safe programs, photographs, route logs, participant accounts,

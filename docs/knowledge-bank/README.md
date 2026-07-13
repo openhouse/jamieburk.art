@@ -31,7 +31,8 @@ The knowledge bank exists to:
 ## Publication Model
 
 - **Intake layer:** lossless public-safe capture, disposition, and next action
-  for new fragments in `apps/www/src/data/knowledge-bank/intake.ts`.
+  for new fragments in `apps/www/src/data/knowledge-bank/intake.ts` and dated
+  supplemental intake modules in the same directory.
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Citation registry:** canonical sources, evidence relationships, claims,
@@ -66,5 +67,8 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow, [intake-workflow.md](intake-workflow.md) for the front-door protocol,
-and [projects/callnyc.md](projects/callnyc.md) for the first complete citation
-pilot.
+[projects/callnyc.md](projects/callnyc.md) for the first complete citation
+pilot, and
+[research/2026-07-13-ten-source-intake.md](research/2026-07-13-ten-source-intake.md)
+for a worked example of research, decomposition, selection, and deliberate
+non-projection.

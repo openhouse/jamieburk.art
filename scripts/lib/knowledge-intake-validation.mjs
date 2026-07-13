@@ -13,7 +13,30 @@ export const requiredSeedIntakeIds = [
   "INTAKE-NYCAC-TOWN-HALLS-2026",
   "INTAKE-NYCAC-TALKS-NOT-RAIDS-2026",
   "INTAKE-WATERWAYS-RAFT-TO-GULF-2026",
-  "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-2026"
+  "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-2026",
+  "INTAKE-GREENE-HILL-QA-2026",
+  "INTAKE-WATERWAYS-WLBT-VICKSBURG-2026",
+  "INTAKE-WATERWAYS-PITCH-GULF-FOLLOWUP-2026",
+  "INTAKE-NYCAC-MIXMAG-CABARET-2026",
+  "INTAKE-NYCAC-BEDFORD-TOWN-HALL-2026",
+  "INTAKE-NYCAC-CREATENYC-APPENDIX-2026",
+  "INTAKE-NYCAC-SBJSA-TRANSCRIPT-2026",
+  "INTAKE-KC-TOWN-HALL-CCED-MINUTES-2026",
+  "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
+  "INTAKE-CLAUDETTE-AR-COLLABORATION-2026"
+];
+
+export const requiredResearchSourceIds = [
+  "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+  "SRC-WATERWAYS-WLBT-VICKSBURG-2007",
+  "SRC-WATERWAYS-PITCH-GULF-FOLLOWUP-2009",
+  "SRC-NYCAC-MIXMAG-CABARET-HEARING-2017",
+  "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-TOWN-HALL-2017",
+  "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+  "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+  "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+  "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
+  "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION"
 ];
 
 const blockedPublicRepoMarkers = [
@@ -32,6 +55,7 @@ function duplicates(values) {
 export function validateKnowledgeIntake() {
   const errors = [];
   const coverageErrors = [];
+  const researchErrors = [];
   const dispositionErrors = [];
   const projectionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
@@ -48,6 +72,36 @@ export function validateKnowledgeIntake() {
 
   for (const id of requiredSeedIntakeIds) {
     if (!intakeIdSet.has(id)) coverageErrors.push(`Missing required intake: ${id}`);
+  }
+
+  const researchedUrls = new Set();
+  for (const sourceId of requiredResearchSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (!source) {
+      researchErrors.push(`Missing required researched source: ${sourceId}`);
+      continue;
+    }
+
+    if (source.visibility !== "public" || !source.canonicalUrl) {
+      researchErrors.push(`${sourceId} must be public and expose a canonical URL`);
+    }
+    if (source.canonicalUrl && researchedUrls.has(source.canonicalUrl)) {
+      researchErrors.push(`${sourceId} duplicates a researched canonical URL`);
+    }
+    if (source.canonicalUrl) researchedUrls.add(source.canonicalUrl);
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      researchErrors.push(`${sourceId} needs explicit support and does-not-establish boundaries`);
+    }
+
+    const linkedIntakes = knowledgeBank.intakes.filter((intake) =>
+      intake.sourceIds.includes(sourceId)
+    );
+    const linkedClaims = knowledgeBank.claims.filter((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === sourceId)
+    );
+    if (!linkedIntakes.length || !linkedClaims.length) {
+      researchErrors.push(`${sourceId} needs at least one intake and one atomic claim edge`);
+    }
   }
 
   for (const intake of knowledgeBank.intakes) {
@@ -127,14 +181,19 @@ export function validateKnowledgeIntake() {
     }
   }
 
-  errors.push(...coverageErrors, ...dispositionErrors, ...projectionErrors);
+  errors.push(...coverageErrors, ...researchErrors, ...dispositionErrors, ...projectionErrors);
   return {
     errors,
     checks: {
       coverage: {
         passed: coverageErrors.length === 0,
         errors: coverageErrors,
-        evidence: `${knowledgeBank.intakes.length} intake records include all ${requiredSeedIntakeIds.length} required submitted fragments.`
+        evidence: `${knowledgeBank.intakes.length} intake records include all ${requiredSeedIntakeIds.length} required fragments.`
+      },
+      research: {
+        passed: researchErrors.length === 0,
+        errors: researchErrors,
+        evidence: `${requiredResearchSourceIds.length} newly researched public sources have unique URLs, support boundaries, and claim edges.`
       },
       disposition: {
         passed: dispositionErrors.length === 0,
