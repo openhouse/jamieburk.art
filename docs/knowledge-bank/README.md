@@ -60,6 +60,7 @@ usable, what Jamie did, and what boundary remains protected.
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
-See [citational-care.md](citational-care.md) for the authoring and validation
-workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+See [knowledge-lifecycle.md](knowledge-lifecycle.md) for intake, research,
+promotion, retrieval, and visual-feedback operations;
+[citational-care.md](citational-care.md) for public citation authoring; and
+[projects/callnyc.md](projects/callnyc.md) for the first complete citation pilot.
