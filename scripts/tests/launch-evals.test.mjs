@@ -4,6 +4,7 @@ import {
   evaluateChadLens,
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
+  evaluateKcTownHallCouncilAllocation,
   evaluateKnowledgeLifecycle,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
@@ -167,7 +168,7 @@ const evidenceExpansionFixture = {
     "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
     "CLM-NYCARTC-MARCH-TRANSPARENCY",
     "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
-    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
     'coverage("wowlist-community-platform", "partially-backed"',
     'coverage("sunday-dinner-196-participation-infrastructure", "partially-backed"',
     'coverage("kc-town-hall-public-benefit-documentation", "source-backed"'
@@ -181,7 +182,7 @@ const evidenceExpansionFixture = {
   sundayDinnerCase:
     'CLM-SUNDAY-DINNER-WEEKLY-OPEN weekly-open-gathering pageId="196-sunday-dinner"',
   kcTownHallCase:
-    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION funding-recommendation"
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION council-allocation"
 };
 
 test("evidence expansion passes with ten integrated sources and selected projections", () => {
@@ -206,6 +207,78 @@ test("evidence expansion rejects a citation page ID that cannot resolve on its r
   });
 
   assert.ok(failures.some((failure) => failure.includes('pageId="196-sunday-dinner"')));
+});
+
+const kcTownHallCouncilAllocationFixture = {
+  framework: [
+    "LEAD-KCMO-KC-TOWN-HALL-COUNCIL-ACTION-2019",
+    "SRC-KCMO-ORDINANCE-190642-2019",
+    "SRC-KCMO-RESOLUTION-190649-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+    "INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT",
+    "2019-09-26 $490,539",
+    "Committee Substitute for Ordinance No. 190642",
+    "Second Committee Substitute for Resolution No. 190649",
+    "executed funding agreement receipt or disbursement of funds"
+  ].join(" "),
+  proofs: [
+    'id: "kc-town-hall-public-benefit-documentation"',
+    "Council allocated $490,539",
+    "executed agreement",
+    "receipt or disbursement"
+  ].join(" "),
+  kcTownHallCase: [
+    'claimId="CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"',
+    'occurrenceId="council-allocation"',
+    "Council allocated $490,539",
+    "does not establish an executed funding agreement, receipt or disbursement"
+  ].join(" "),
+  councilAllocationDoc: [
+    "Ordinance No. 190642",
+    "Resolution No. 190649",
+    "September 26, 2019",
+    "$490,539",
+    "Council allocation",
+    "executed funding agreement",
+    "receipt or disbursement"
+  ].join(" "),
+  workData: [
+    "after a unanimous board recommendation, the Council allocated $490,539",
+    "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649",
+    "$490,539 Council allocation after unanimous board recommendation",
+    "Funding-agreement execution, receipt or disbursement, implementation, current status"
+  ].join(" ")
+};
+
+test("KC Town Hall Council allocation passes with primary records and boundaries", () => {
+  assert.deepEqual(
+    evaluateKcTownHallCouncilAllocation(kcTownHallCouncilAllocationFixture),
+    []
+  );
+});
+
+test("KC Town Hall Council allocation rejects a missing ordinance", () => {
+  const failures = evaluateKcTownHallCouncilAllocation({
+    ...kcTownHallCouncilAllocationFixture,
+    framework: kcTownHallCouncilAllocationFixture.framework.replace(
+      "SRC-KCMO-ORDINANCE-190642-2019",
+      ""
+    )
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("SRC-KCMO-ORDINANCE-190642-2019"))
+  );
+});
+
+test("KC Town Hall Council allocation rejects receipt language", () => {
+  const failures = evaluateKcTownHallCouncilAllocation({
+    ...kcTownHallCouncilAllocationFixture,
+    kcTownHallCase:
+      `${kcTownHallCouncilAllocationFixture.kcTownHallCase} Jamie received $490,539.`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("conflates")));
 });
 
 const campaignPressFixture = {

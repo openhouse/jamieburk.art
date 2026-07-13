@@ -62,10 +62,12 @@ Current selected citation projections now include:
 - the coalition-led Office of Nightlife town hall and Jamie's speaker role;
 - the coalition's MARCH records-request data and the bounded legislative result;
 - Sunday Dinner's externally documented weekly open-community practice; and
-- KC Town Hall's unanimously recommended $490,539 proposal.
+- KC Town Hall's unanimously recommended and Council-allocated $490,539
+  proposal.
 
 These selections do not publish founding causality, event-production ownership,
-final funding, participant records, or a claim that MARCH was disbanded.
+funding-agreement execution or disbursement, participant records, or a claim
+that MARCH was disbanded.
 
 ## Reserve Depth
 

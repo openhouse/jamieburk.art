@@ -491,19 +491,21 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public funding process; the CCED board unanimously recommended $490,539 to City Council.",
-    shortWording: "Publicly presented a $490,539 recommended adaptive-reuse proposal",
+      "Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process; after the CCED board's unanimous recommendation, the Council allocated $490,539 and authorized funding-agreement negotiations.",
+    shortWording: "Presented the $490,539 Council-allocated KC Town Hall proposal",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive-reuse effort; official minutes identify him as presenter and record the unanimous board recommendation.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive-reuse effort. Official records identify him as presenter, record the board's unanimous recommendation, and show that the Council allocated $490,539 on September 26, 2019, and authorized funding-agreement negotiations.",
     sourceBasis:
-      "Approved resume language, City of Kansas City Central City Economic Development Sales Tax Board minutes, and public-safe project context.",
+      "Approved resume language, City of Kansas City Central City Economic Development Sales Tax Board minutes, Committee Substitute for Ordinance No. 190642, Second Committee Substitute for Resolution No. 190649, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Council allocation and negotiation authority do not establish an executed agreement, receipt or disbursement of funds, project completion, or Jamie's sole causality for the Council vote.",
     doNotSay: [
-      "Final funding received",
+      "KC Town Hall received or was disbursed $490,539",
+      "The funding agreement was executed",
+      "Jamie caused the Council vote",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Project completion or official municipal endorsement beyond the public record"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -515,7 +517,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",

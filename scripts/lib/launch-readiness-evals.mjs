@@ -277,7 +277,7 @@ export function evaluateEvidenceExpansion({
     "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
     "CLM-NYCARTC-MARCH-TRANSPARENCY",
     "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
-    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
     'coverage("wowlist-community-platform", "partially-backed"',
     'coverage("sunday-dinner-196-participation-infrastructure", "partially-backed"',
     'coverage("kc-town-hall-public-benefit-documentation", "source-backed"'
@@ -296,9 +296,81 @@ export function evaluateEvidenceExpansion({
     'pageId="196-sunday-dinner"'
   ]);
   requireFragments("KC Town Hall case study", kcTownHallCase, [
-    "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
-    "funding-recommendation"
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+    "council-allocation"
   ]);
+
+  return missing;
+}
+
+export function evaluateKcTownHallCouncilAllocation({
+  framework,
+  proofs,
+  kcTownHallCase,
+  councilAllocationDoc,
+  workData
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "LEAD-KCMO-KC-TOWN-HALL-COUNCIL-ACTION-2019",
+    "SRC-KCMO-ORDINANCE-190642-2019",
+    "SRC-KCMO-RESOLUTION-190649-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+    "INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT",
+    "2019-09-26",
+    "$490,539",
+    "Committee Substitute for Ordinance No. 190642",
+    "Second Committee Substitute for Resolution No. 190649",
+    "executed funding agreement",
+    "receipt or disbursement of funds"
+  ]);
+  requireFragments("KC Town Hall proof", proofs, [
+    'id: "kc-town-hall-public-benefit-documentation"',
+    "Council allocated $490,539",
+    "executed agreement",
+    "receipt or disbursement"
+  ]);
+  requireFragments("KC Town Hall case study", kcTownHallCase, [
+    'claimId="CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"',
+    'occurrenceId="council-allocation"',
+    "Council allocated $490,539",
+    "does not establish an executed funding agreement, receipt or disbursement"
+  ]);
+  requireFragments("KC Town Hall work metadata", workData, [
+    "after a unanimous board recommendation, the Council allocated $490,539",
+    "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649",
+    "$490,539 Council allocation after unanimous board recommendation",
+    "Funding-agreement execution, receipt or disbursement, implementation, current status"
+  ]);
+  requireFragments("Council-allocation intake note", councilAllocationDoc, [
+    "Ordinance No. 190642",
+    "Resolution No. 190649",
+    "September 26, 2019",
+    "$490,539",
+    "Council allocation",
+    "executed funding agreement",
+    "receipt or disbursement"
+  ]);
+
+  if (/record stops at the board's recommendation/i.test(kcTownHallCase)) {
+    missing.push(
+      "KC Town Hall case study still says the public record stops at the board recommendation."
+    );
+  }
+  if (/received\s+\$490,539|disbursed\s+\$490,539/i.test(kcTownHallCase)) {
+    missing.push(
+      "KC Town Hall case study conflates Council allocation with receipt or disbursement."
+    );
+  }
 
   return missing;
 }
@@ -363,6 +435,7 @@ export function runLaunchEvals(repoRoot) {
   const resumePage = read(repoRoot, "apps/www/src/app/resume/page.tsx");
   const ogImage = read(repoRoot, "apps/www/src/app/opengraph-image.tsx");
   const siteData = read(repoRoot, "apps/www/src/data/site.ts");
+  const workData = read(repoRoot, "apps/www/src/data/work.ts");
   const agentGuide = read(repoRoot, "AGENTS.md");
   const readme = read(repoRoot, "README.md");
   const records = read(repoRoot, "apps/www/src/data/knowledge-bank/records.ts");
@@ -379,6 +452,10 @@ export function runLaunchEvals(repoRoot) {
   const campaignPressDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-12-campaign-press-corpus.md"
+  );
+  const kcTownHallCouncilAllocationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-kc-town-hall-council-allocation.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -652,6 +729,28 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const kcTownHallCouncilAllocationMissing = evaluateKcTownHallCouncilAllocation({
+    framework,
+    proofs,
+    kcTownHallCase,
+    councilAllocationDoc: kcTownHallCouncilAllocationDoc,
+    workData
+  });
+  results.push(
+    result({
+      id: "kc-town-hall-council-allocation",
+      label: "KC Town Hall Council allocation is primary-sourced and bounded",
+      weight: 18,
+      hardGate: true,
+      missing: kcTownHallCouncilAllocationMissing,
+      evidence: [
+        "The board recommendation, appropriation ordinance, and accepting resolution form a dated public-record sequence.",
+        "The selected projection distinguishes Jamie's documented presenter role from Council action and does not imply sole causation.",
+        "The claim distinguishes allocation and negotiation authority from agreement execution, receipt, disbursement, completion, and current status."
+      ]
+    })
+  );
+
   const campaignPressMissing = evaluateCampaignPressCorpus({
     schema,
     framework,
@@ -711,6 +810,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not make copy shorter by hiding Jamie as actor, omitting the purpose, or replacing usable outcomes with generic systems language.",
       "Do not satisfy no-silent-loss by auto-publishing intake or converting memories directly into confirmed claims.",
       "Do not satisfy evidence expansion with duplicate, orphaned, self-authored-only, or boundary-free source records.",
+      "Do not equate a Council appropriation or funding-negotiation authorization with an executed agreement, receipt, disbursement, project completion, or current status.",
       "Do not satisfy press-corpus completeness by dropping duplicates across campaigns, treating index membership as claim support, or marking unreviewed articles as close-read.",
       "Production deployment always requires explicit human approval."
     ]

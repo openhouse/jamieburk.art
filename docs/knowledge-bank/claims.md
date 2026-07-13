@@ -203,15 +203,15 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public funding process; the CCED board unanimously recommended $490,539 to City Council.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive-reuse effort; official minutes identify him as presenter and record the unanimous board recommendation.
+**Public wording:** Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process; after the CCED board's unanimous recommendation, the Council allocated $490,539 and authorized funding-agreement negotiations.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive-reuse effort. Official records identify him as presenter, record the board's unanimous recommendation, and show that the Council allocated $490,539 on September 26, 2019, and authorized funding-agreement negotiations.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Council allocation and negotiation authority do not establish an executed agreement, receipt or disbursement of funds, project completion, or Jamie's sole causality for the Council vote.
+**Do not say:** KC Town Hall received or was disbursed $490,539; the funding agreement was executed; Jamie caused the Council vote; current property status; private financial details; project completion or official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 

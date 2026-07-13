@@ -17,7 +17,7 @@ has a canonical record with explicit support and non-support boundaries.
 | `SRC-NYC-COUNCIL-CABARET-HEARING-2017` | Records Jamie's testimony, coalition affiliation, and description of safety workshops and study groups. | Self-reported metrics remain testimony; the record does not prove sole repeal causality. |
 | `SRC-TALKS-NOT-RAIDS-CAMPAIGN` | Preserves the public campaign, coalition, map/report artifacts, sponsor tracking, and Intro 1156 call to action. | Does not establish Jamie's individual authorship, legislative causality, or MARCH disbandment. |
 | `SRC-NYC-COUNCIL-MARCH-REPORTING-2019` | Credits coalition records-request data and records adoption of reporting and advance-notice legislation. | Does not establish Jamie's individual data role, sole coalition causality, implementation, or disbandment. |
-| `SRC-KCMO-CCED-ROUND2-MINUTES-2019` | Identifies Jamie as KC Town Hall presenter and records a unanimous $490,539 recommendation. | Does not establish final Council approval, contracting, disbursement, or current status. |
+| `SRC-KCMO-CCED-ROUND2-MINUTES-2019` | Identifies Jamie as KC Town Hall presenter and records a unanimous $490,539 recommendation. | The later Council action is established separately by Ordinance No. 190642 and Resolution No. 190649; the minutes do not establish contracting, disbursement, or current status. |
 
 ## Editorial result
 

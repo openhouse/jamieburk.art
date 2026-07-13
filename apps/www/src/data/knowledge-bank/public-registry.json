@@ -354,9 +354,51 @@
       "publicCitation": "Central City Economic Development Sales Tax Board, Round 2 meeting minutes and funding recommendations, June-July 2019.",
       "publicNote": "The official minutes identify Jamie as KC Town Hall's presenter and record the board's unanimous recommendation of the $490,539 adaptive-reuse proposal to City Council.",
       "doesNotEstablish": [
-        "final City Council approval",
+        "Council action without the later ordinance and resolution",
         "contract execution",
         "receipt or disbursement of funds",
+        "current property status"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-ORDINANCE-190642-2019",
+      "title": "Committee Substitute for Ordinance No. 190642",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kansas City Council, Committee Substitute for Ordinance No. 190642, passed September 26, 2019.",
+      "publicNote": "The Council passed the ordinance as substituted, appropriating Round Two Central City Economic Development Sales Tax funds and listing $490,539 for KC Town Hall's adaptive-reuse project.",
+      "doesNotEstablish": [
+        "executed funding agreement",
+        "receipt or disbursement of funds",
+        "project completion",
+        "Jamie's sole causality for the Council vote",
+        "current property status"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-RESOLUTION-190649-2019",
+      "title": "Second Committee Substitute for Resolution No. 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Kansas City Council, Second Committee Substitute for Resolution No. 190649, adopted September 26, 2019.",
+      "publicNote": "The Council adopted the resolution as substituted, accepting the CCED Board recommendation for up to $490,539 in KC Town Hall project costs and authorizing the City Manager to negotiate a funding agreement.",
+      "doesNotEstablish": [
+        "executed funding agreement",
+        "receipt or disbursement of funds",
+        "project completion",
+        "Jamie's sole causality for the Council vote",
         "current property status"
       ]
     }
@@ -832,12 +874,12 @@
       ]
     },
     {
-      "id": "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
       "status": "confirmed-with-boundary",
       "projections": [
         {
           "key": "case-study",
-          "text": "In July 2019, Kansas City's Central City Economic Development Sales Tax Board unanimously recommended KC Town Hall's $490,539 adaptive-reuse proposal to City Council; the public minutes identify Jamie as the project presenter.",
+          "text": "Jamie presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process. After the CCED Board unanimously recommended it, the Council allocated $490,539 on September 26, 2019, and authorized funding-agreement negotiations.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -852,15 +894,35 @@
           "supports": [
             "Jamie as KC Town Hall presenter",
             "$490,539 request",
-            "adaptive reuse for four retail and three residential spaces",
             "unanimous board recommendation to City Council"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-ORDINANCE-190642-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council passage on September 26, 2019",
+            "$490,539 KC Town Hall appropriation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-RESOLUTION-190649-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council acceptance of the board recommendation",
+            "authorization to negotiate a funding agreement not to exceed $490,539"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Recommendation is not final City Council approval, a contract, or evidence that funds were received.",
+        "Council allocation and authorization do not establish an executed funding agreement, receipt or disbursement of funds, project completion, or current status.",
+        "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.",
         "Do not infer current property, financial, legal, or occupancy status."
       ]
     }
@@ -1016,15 +1078,19 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
-        "SRC-KCMO-CCED-ROUND2-MINUTES-2019"
+        "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+        "SRC-KCMO-ORDINANCE-190642-2019",
+        "SRC-KCMO-RESOLUTION-190649-2019"
       ],
       "occurrences": [
         {
-          "id": "funding-recommendation",
-          "claimId": "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+          "id": "council-allocation",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-KCMO-CCED-ROUND2-MINUTES-2019"
+            "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+            "SRC-KCMO-ORDINANCE-190642-2019",
+            "SRC-KCMO-RESOLUTION-190649-2019"
           ]
         }
       ]

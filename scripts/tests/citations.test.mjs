@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 22 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 23 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -153,12 +153,14 @@ test("evidence expansion selectively strengthens three public case studies", () 
   const early = resolveCitationOccurrence("fair-rent-nyc", "early-mutual-aid-organizing");
   const march = resolveCitationOccurrence("fair-rent-nyc", "march-transparency");
   const sunday = resolveCitationOccurrence("196-sunday-dinner", "weekly-open-gathering");
-  const kc = resolveCitationOccurrence("kc-town-hall", "funding-recommendation");
+  const kc = resolveCitationOccurrence("kc-town-hall", "council-allocation");
 
   assert.match(early.claim.boundaries.join(" "), /not sole founder/i);
   assert.match(march.claim.boundaries.join(" "), /not sole causality/i);
   assert.match(sunday.claim.boundaries.join(" "), /not the 300-plus/i);
-  assert.match(kc.claim.boundaries.join(" "), /not final City Council approval/i);
+  assert.deepEqual(kc.sources.map((item) => item.number), [1, 2, 3]);
+  assert.match(kc.claim.boundaries.join(" "), /executed funding agreement/i);
+  assert.match(kc.claim.boundaries.join(" "), /receipt or disbursement/i);
 });
 
 test("new evidence reduces proof debt without erasing open questions", () => {
@@ -175,7 +177,7 @@ test("new evidence reduces proof debt without erasing open questions", () => {
     "source-backed"
   );
   assert.ok(coverage.get("kc-town-hall-public-benefit-documentation").inquiryIds.includes(
-    "INQ-KC-TOWN-HALL-FINAL-FUNDING"
+    "INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"
   ));
 });
 

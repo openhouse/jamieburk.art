@@ -364,9 +364,25 @@ export const frameworkIntake = [
     dispositions: ["source-created", "claim-created", "project-linked"],
     projectIds: ["kc-town-hall"],
     sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
-    claimIds: ["CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"],
     inquiryIds: [],
-    notes: ["Recommendation is not evidence of final City Council approval, contracting, disbursement, or current property status."]
+    notes: ["The board recommendation is one step in a public-record sequence completed by separate Council ordinance and resolution records."]
+  },
+  {
+    id: "LEAD-KCMO-KC-TOWN-HALL-COUNCIL-ACTION-2019",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Codex primary-source research",
+    kind: "document",
+    title: "Kansas City Council KC Town Hall appropriation and resolution",
+    summary: "On September 26, 2019, the Council passed an ordinance allocating $490,539 to KC Town Hall and adopted a resolution accepting the CCED recommendation and authorizing funding-agreement negotiations.",
+    sourceUrl: "https://kansascity.legistar.com/MeetingDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GID=821&LEGID=14410",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "inquiry-created", "project-linked"],
+    projectIds: ["kc-town-hall"],
+    sourceIds: ["SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"],
+    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
+    notes: ["Council allocation and negotiation authority do not establish an executed funding agreement, receipt or disbursement of funds, project completion, or current status."]
   },
   ...campaignPressIntake
 ] satisfies IntakeRecord[];
@@ -502,9 +518,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["adaptive reuse", "public benefit", "long-horizon implementation"],
-    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
-    claimIds: ["CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION"],
-    inquiryIds: ["INQ-KC-TOWN-HALL-FINAL-FUNDING"],
+    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"],
+    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public-safe building or planning image explains the adaptive-reuse proposition without exposing current legal, financial, or occupancy details?",
@@ -803,7 +819,39 @@ export const frameworkSources = [
     publicCitation: "Central City Economic Development Sales Tax Board, Round 2 meeting minutes and funding recommendations, June-July 2019.",
     publicNote: "The official minutes identify Jamie as KC Town Hall's presenter and record the board's unanimous recommendation of the $490,539 adaptive-reuse proposal to City Council.",
     supportsGenerally: ["Jamie as KC Town Hall presenter", "$490,539 request", "adaptive reuse for four retail and three residential spaces", "unanimous board recommendation to City Council"],
-    doesNotEstablish: ["final City Council approval", "contract execution", "receipt or disbursement of funds", "current property status"]
+    doesNotEstablish: ["Council action without the later ordinance and resolution", "contract execution", "receipt or disbursement of funds", "current property status"]
+  },
+  {
+    id: "SRC-KCMO-ORDINANCE-190642-2019",
+    title: "Committee Substitute for Ordinance No. 190642",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-09-26",
+    accessedAt: "2026-07-13",
+    canonicalUrl: "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Kansas City Council, Committee Substitute for Ordinance No. 190642, passed September 26, 2019.",
+    publicNote: "The Council passed the ordinance as substituted, appropriating Round Two Central City Economic Development Sales Tax funds and listing $490,539 for KC Town Hall's adaptive-reuse project.",
+    supportsGenerally: ["Council passage on September 26, 2019", "$490,539 KC Town Hall appropriation", "adaptive reuse of an abandoned building at Indiana Avenue and 36th Street"],
+    doesNotEstablish: ["executed funding agreement", "receipt or disbursement of funds", "project completion", "Jamie's sole causality for the Council vote", "current property status"]
+  },
+  {
+    id: "SRC-KCMO-RESOLUTION-190649-2019",
+    title: "Second Committee Substitute for Resolution No. 190649",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-09-26",
+    accessedAt: "2026-07-13",
+    canonicalUrl: "https://clerk.kcmo.gov/LegislationDetail.aspx?FullText=1&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Kansas City Council, Second Committee Substitute for Resolution No. 190649, adopted September 26, 2019.",
+    publicNote: "The Council adopted the resolution as substituted, accepting the CCED Board recommendation for up to $490,539 in KC Town Hall project costs and authorizing the City Manager to negotiate a funding agreement.",
+    supportsGenerally: ["Council adoption on September 26, 2019", "acceptance of the CCED Board recommendation", "authorization to negotiate a funding agreement not to exceed $490,539"],
+    doesNotEstablish: ["executed funding agreement", "receipt or disbursement of funds", "project completion", "Jamie's sole causality for the Council vote", "current property status"]
   },
   ...campaignPressSources
 ] satisfies SourceRecord[];
@@ -950,18 +998,22 @@ export const frameworkClaims = [
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
   {
-    id: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+    id: "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
     project: "kc-town-hall",
-    internalClaim: "In July 2019, Kansas City's Central City Economic Development Sales Tax Board unanimously recommended KC Town Hall's $490,539 adaptive-reuse proposal to City Council; the minutes identify Jamie as the project presenter.",
+    internalClaim: "Official records identify Jamie as the presenter of KC Town Hall's $490,539 adaptive-reuse proposal, document the CCED Board's unanimous recommendation, and show that the Kansas City Council allocated the amount and authorized funding-agreement negotiations on September 26, 2019.",
     status: "confirmed-with-boundary",
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
-    projections: [{ key: "case-study", text: "In July 2019, Kansas City's Central City Economic Development Sales Tax Board unanimously recommended KC Town Hall's $490,539 adaptive-reuse proposal to City Council; the public minutes identify Jamie as the project presenter.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
-    evidence: [{ sourceId: "SRC-KCMO-CCED-ROUND2-MINUTES-2019", relationship: "direct-support", supports: ["Jamie as KC Town Hall presenter", "$490,539 request", "adaptive reuse for four retail and three residential spaces", "unanimous board recommendation to City Council"], confidence: "high", renderCitation: true }],
-    boundaries: ["Recommendation is not final City Council approval, a contract, or evidence that funds were received.", "Do not infer current property, financial, legal, or occupancy status."],
-    antiClaims: ["KC Town Hall received $490,539", "The City Council finally approved or disbursed the award", "The project is complete"],
-    researchInquiryIds: ["INQ-KC-TOWN-HALL-FINAL-FUNDING"],
-    reviewedAt: "2026-07-12",
+    projections: [{ key: "case-study", text: "Jamie presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process. After the CCED Board unanimously recommended it, the Council allocated $490,539 on September 26, 2019, and authorized funding-agreement negotiations.", status: "active", citationRequired: true, surfaces: ["/work/kc-town-hall"] }],
+    evidence: [
+      { sourceId: "SRC-KCMO-CCED-ROUND2-MINUTES-2019", relationship: "direct-support", supports: ["Jamie as KC Town Hall presenter", "$490,539 request", "unanimous board recommendation to City Council"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KCMO-ORDINANCE-190642-2019", relationship: "direct-support", supports: ["Council passage on September 26, 2019", "$490,539 KC Town Hall appropriation"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KCMO-RESOLUTION-190649-2019", relationship: "direct-support", supports: ["Council acceptance of the board recommendation", "authorization to negotiate a funding agreement not to exceed $490,539"], confidence: "high", renderCitation: true }
+    ],
+    boundaries: ["Council allocation and authorization do not establish an executed funding agreement, receipt or disbursement of funds, project completion, or current status.", "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.", "Do not infer current property, financial, legal, or occupancy status."],
+    antiClaims: ["KC Town Hall received or was disbursed $490,539", "Jamie caused the Council vote", "The funding agreement was executed", "The project is complete"],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"],
+    reviewedAt: "2026-07-13",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
   {
@@ -1006,7 +1058,7 @@ export const frameworkInquiries = [
   openInquiry("INQ-NPR-CABARET-SOURCE-CAPTURE", "nyc-artist-coalition", "What claims and context does the supplied NPR Cabaret Law article support after durable capture and close reading?", ["Recover the article through a stable public or archived copy.", "Record exact attribution, date, supported propositions, and limitations."], ["Canonical metadata and two campaign-index relationships are captured, but the article was not available for close reading in this run."], ["SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017"]),
   openInquiry("INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "sunday-dinner-196", "What public-safe records and calculations support the 300-plus gathering and 20-plus resident-artist totals?", ["Reconcile the private RSVP and attendance ledger with public-safe aggregate methods.", "Document the residency count methodology and date range.", "Keep identities and attendance rows protected."], ["The Greene Hill source confirms a weekly open practice, not the aggregate totals."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
   openInquiry("INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "wowlist", "Which public sources independently establish WOW List's product function, technical implementation, organizer adoption, and geographic reach?", ["Recover contemporary coverage, public repositories, and preserved interface pages.", "Associate verified archive counts without exposing user records."], ["The Greene Hill source confirms a community-events function but not the platform's architecture, counts, or 35-city reach."], ["SRC-GHFC-JAMIE-JULIA-QA-2017"]),
-  openInquiry("INQ-KC-TOWN-HALL-FINAL-FUNDING", "kc-town-hall", "What later public record establishes whether the KC Town Hall recommendation received final Council approval, a contract, or disbursement?", ["Search ordinances, contracts, board updates, and public payment records.", "Keep current property, legal, and financial details outside the public repository unless approved."], ["The current government record ends at a unanimous board recommendation to City Council."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"]),
+  openInquiry("INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "kc-town-hall", "What later public record establishes whether Kansas City and KC Town Hall executed a funding agreement, whether funds were received or disbursed, and what implementation followed?", ["Search executed agreements, contract records, Council and board updates, and public payment records.", "Distinguish allocation, agreement execution, payment, implementation, and current status.", "Keep current property, legal, and private financial details outside the public repository unless approved."], ["Council allocation and funding-agreement negotiation authority are documented; execution, receipt or disbursement, project completion, and current status are not established by these records."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]),
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."])
 ] satisfies ResearchInquiry[];
@@ -1034,7 +1086,7 @@ const publicationDecisionInputs: Array<[
   ["PUB-NYCARTC-NIGHTLIFE-TOWN-HALL", "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL", "selected", ["/work/fair-rent-nyc"], "Shows Jamie participating in a coalition-led public feedback structure for a new city office."],
   ["PUB-NYCARTC-MARCH-TRANSPARENCY", "CLM-NYCARTC-MARCH-TRANSPARENCY", "selected", ["/work/fair-rent-nyc"], "Adds a bounded collective outcome connecting public data, campaigning, and legislation."],
   ["PUB-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-SUNDAY-DINNER-WEEKLY-OPEN", "selected", ["/work/196-sunday-dinner"], "Provides external evidence of the recurring open-community practice without exposing participants."],
-  ["PUB-KC-TOWN-HALL-FUNDING-RECOMMENDATION", "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION", "selected", ["/work/kc-town-hall"], "Preserves the strongest official public-record proof with an explicit recommendation boundary."],
+  ["PUB-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "selected", ["/work/kc-town-hall"], "Preserves the complete official public-record sequence while distinguishing allocation from agreement execution and disbursement."],
   ["PUB-PARTICIPATORY-LONGITUDINAL", "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "hold", [], "Promising throughline requires broader cross-project research."]
 ];
 
@@ -1072,7 +1124,7 @@ export const frameworkProofCoverage = [
   coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
   coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; aggregate gathering and residency totals remain supported by protected records.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"]),
   coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
-  coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City minutes identify Jamie as presenter and record the unanimous $490,539 recommendation; final funding remains explicitly open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"], ["INQ-KC-TOWN-HALL-FINAL-FUNDING"]),
+  coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City records identify Jamie as presenter, record the unanimous recommendation, and show the Council's $490,539 allocation and authorization of funding-agreement negotiations; execution and disbursement remain open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"], ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"]),
   coverage("source-backed-team-memory-method", "research-needed", "Associate public lab materials without exposing private collaborator context."),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record.")
@@ -1130,12 +1182,12 @@ export const frameworkPages = [
   {
     id: "kc-town-hall",
     surface: "/work/kc-town-hall",
-    sourceOrder: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"],
+    sourceOrder: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
     occurrences: [{
-      id: "funding-recommendation",
-      claimId: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
+      id: "council-allocation",
+      claimId: "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
       projection: "case-study",
-      sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019"]
+      sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]
     }]
   }
 ] satisfies CitationPage[];

@@ -488,9 +488,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Helped shape adaptive-reuse planning and public-benefit documentation for a long-vacant historic building; after a unanimous board recommendation, the Council allocated $490,539.",
     role: "Project Planning & Documentation Support",
-    years: "2020s",
+    years: "2019",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -514,7 +514,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Official Kansas City board minutes, Ordinance No. 190642, and Resolution No. 190649.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -524,13 +524,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 Council allocation after unanimous board recommendation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Official records identify Jamie as KC Town Hall's presenter and document a unanimous board recommendation followed by the Council's $490,539 allocation.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Funding-agreement execution, receipt or disbursement, implementation, current status, and named-partner details remain open or require approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

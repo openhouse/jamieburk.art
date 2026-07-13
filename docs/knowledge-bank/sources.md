@@ -50,6 +50,11 @@ Approved public artifact examples for this launch pass include:
   and advance-notice legislation.
 - Kansas City's Central City Economic Development Sales Tax Board Round 2
   minutes and funding recommendations from June-July 2019.
+- Kansas City Council's Committee Substitute for Ordinance No. 190642,
+  appropriating $490,539 to KC Town Hall on September 26, 2019.
+- Kansas City Council's Second Committee Substitute for Resolution No. 190649,
+  accepting the board recommendation and authorizing funding-agreement
+  negotiations on September 26, 2019.
 
 The NYC Artist Coalition campaign-press corpus also preserves 45 unique article
 identities across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent

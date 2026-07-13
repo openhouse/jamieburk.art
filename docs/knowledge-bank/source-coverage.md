@@ -46,3 +46,16 @@ membership establishes that a campaign linked an article. It does not establish
 the article's propositions, Jamie's presence or role, or campaign causality.
 Agents may promote an article only after close reading, recording its durable
 URL or capture, exact support, explicit limitations, and claim relationship.
+
+## 2026-07-13 KC Town Hall Council Action
+
+Two additional Kansas City primary records complete the public funding-process
+sequence. Committee Substitute for Ordinance No. 190642 records the Council's
+$490,539 appropriation to KC Town Hall, and Second Committee Substitute for
+Resolution No. 190649 accepts the CCED Board recommendation and authorizes
+funding-agreement negotiations. Both Council actions occurred September 26,
+2019.
+
+The proof remains `source-backed`, now through three linked government records.
+The open inquiry advances from Council approval to agreement execution, receipt
+or disbursement, implementation, and current status.

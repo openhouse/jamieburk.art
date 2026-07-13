@@ -138,3 +138,35 @@ ID and MDX projection with `/work/196-sunday-dinner`. The validator and eval
 suite now enforce route-slug alignment. Fair Rent NYC, Sunday Dinner, and KC
 Town Hall were rechecked at desktop and mobile widths with no horizontal
 overflow and resolvable page-local source notes.
+
+## KC Town Hall Council-allocation recursive pass
+
+A fifth follow-up added an 18-point KC Town Hall Council-allocation hard gate.
+The baseline scored **90/100** because the bank stopped at the CCED Board's
+recommendation and the public page still said that no later Council record had
+been established.
+
+Primary-source review recovered the September 26, 2019 Council sequence:
+
+- Committee Substitute for Ordinance No. 190642 appropriated $490,539 to KC
+  Town Hall in the Round Two project table; and
+- Second Committee Substitute for Resolution No. 190649 accepted the board's
+  recommendation and authorized the City Manager to negotiate a funding
+  agreement for up to $490,539.
+
+The hill climb added both government sources, a durable intake record, a
+three-source claim, a revised publication decision, source coverage, and an
+open inquiry focused on agreement execution, receipt or disbursement,
+implementation, and current status. It updated the KC Town Hall proof, case
+study, work metadata, source notes, and repository guidance while retaining the
+boundary that Council action does not establish those later outcomes or Jamie's
+sole causality for the vote.
+
+Negative tests reject a missing appropriation source and reject public wording
+that turns allocation into receipt or disbursement. The final evaluator scored
+**100/100**, with every automated hard gate passing.
+
+Browser QA at 1440px and 390px confirmed three page-local source notes, no
+horizontal overflow, no stale pending-source copy, and no console warnings or
+errors. The mobile and desktop compositions remained legible after the stronger
+claim and adjacent metadata were aligned.
