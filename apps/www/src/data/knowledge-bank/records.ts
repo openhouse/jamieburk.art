@@ -815,7 +815,7 @@ const knowledgeBankInput = {
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
       collectiveWork: true,
-      projections: [{ key: "archive-note", text: "Working with NYC Artist Coalition, Jamie organized fire-code study groups for DIY venues after the Ghost Ship fire, helping venue operators engage safety requirements directly.", status: "hold", citationRequired: true, surfaces: [] }],
+      projections: [{ key: "case-study", text: "Working with NYC Artist Coalition, Jamie organized fire-code study groups for DIY venues after the Ghost Ship fire, helping venue operators engage safety requirements directly.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
       evidence: [{ sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "direct-support", supports: ["NYC Artist Coalition affiliation", "Jamie organized fire-code study groups", "DIY venue context"], confidence: "high", renderCitation: true }],
       boundaries: ["Describe this as Jamie's documented contribution within collective venue-safety and nightlife advocacy."],
       antiClaims: ["Jamie alone represented New York City's DIY venues", "The study groups replaced professional fire-safety guidance", "Jamie created NYC Artist Coalition alone"],
@@ -831,7 +831,7 @@ const knowledgeBankInput = {
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
       collectiveWork: true,
-      projections: [{ key: "archive-note", text: "Jamie participated in Cabaret Law repeal advocacy with NYC Artist Coalition; national reporting placed the coalition among the groups mobilizing together through Let NYC Dance.", status: "hold", citationRequired: true, surfaces: [] }],
+      projections: [{ key: "case-study", text: "Jamie participated in Cabaret Law repeal advocacy with NYC Artist Coalition; national reporting placed the coalition among the groups mobilizing together through Let NYC Dance.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
       evidence: [
         { sourceId: "SRC-NAC-GOTHAMIST-CABARET-2017", relationship: "direct-support", supports: ["Jamie's affiliation", "Jamie's repeal-rally participation"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-NAC-NPR-NIGHTLIFE-2017", relationship: "corroborating", supports: ["NYC Artist Coalition participation in the Let NYC Dance mobilization", "repeal and Office of Nightlife policy context"], confidence: "high", renderCitation: true }
