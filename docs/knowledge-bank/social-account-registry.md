@@ -70,3 +70,18 @@ not establish individual authorship, attendance, unique participation, or
 policy causality. See the
 [event report](nycartc-facebook-events-2026-07-13.md) and
 [34-slot census](nycartc-facebook-event-census-2026-07-13.csv).
+
+Jamie's personal Facebook event surface is documented separately from both his
+personal X account and NYC Artist Coalition. Its 21-slot hosted-event control
+contains 20 recovered pages and one unresolved slot. The wider 502-card event-
+association surface remains protected and is not treated as a record of
+authorship, production, attendance, endorsement, or professional work. See the
+[hosted-event report](jamie-facebook-events-2026-07-13.md) and
+[aggregate census](jamie-facebook-hosted-event-census-2026-07-13.csv).
+
+WOW List's authenticated Facebook event surface displayed zero event records
+on July 13, 2026. Bounded current, legacy, event-search, association-surface,
+and Wayback checks recovered no historical record. This is a current zero and
+a historical non-recovery finding, not evidence that no event ever existed.
+See the [WOW List event report](wowlist-facebook-events-2026-07-13.md) and
+[live control](wowlist-facebook-event-control-2026-07-13.csv).

@@ -93,3 +93,17 @@ recovers 33 page-listed event records and preserves the remaining host-card
 control slot as unresolved. It documents the coalition's recurring
 participation system without publishing guest identities, comments, invite
 context, access credentials, or private account data.
+
+Jamie's personal Facebook event surface has a separate aggregate-only
+[21-slot hosted-event census](jamie-facebook-hosted-event-census-2026-07-13.csv)
+and [archival-production report](jamie-facebook-events-2026-07-13.md). The pass
+separates 20 recovered Jamie-hosted pages and one unresolved host-control slot
+from a wider 502-record event-association surface. The wider association record
+remains protected because association does not establish authorship,
+production, attendance, endorsement, or professional significance.
+
+WOW List's current Facebook event surface is documented through a
+[zero-record live control](wowlist-facebook-event-control-2026-07-13.csv) and
+[bounded recovery report](wowlist-facebook-events-2026-07-13.md). No historical
+event record was recovered in the searched surfaces; that means `not
+recovered`, not `did not exist`.

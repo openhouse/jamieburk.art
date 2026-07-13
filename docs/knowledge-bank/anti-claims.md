@@ -113,6 +113,13 @@ effort, vigil, or resource it amplified.
 counter were recovered. It does not establish that no older post was deleted
 before capture.
 
+Do not say WOW List never created, hosted, co-hosted, promoted, or was
+associated with a Facebook event. Its authenticated event surface displayed
+zero event records on July 13, 2026, and bounded searches recovered no
+historical event record. That is a current zero and a historical non-recovery
+finding, not proof of nonexistence or a measure of WOW List's wider community
+activity.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or
@@ -141,6 +148,16 @@ they remain public.
 Credit Jamie Burkart and M.C. Schmidt jointly for Horse Lords' official 2016
 "Truthers" video. Do not claim sole authorship, an NPR commission, a known
 division of labor, commercial results, or audience reach.
+
+Do not treat the 502 events visible on Jamie's personal Facebook event surface
+as Jamie's projects, attendance history, endorsements, or professional record.
+The hosted-event control is separate: 20 Jamie-hosted pages were recovered and
+one of 21 control slots remains unresolved.
+
+Do not say all 21 hosted-event pages were recovered or that the control captures
+every event Jamie ever hosted. Do not convert host attribution into sole
+production, erase collaborators, or use event-response surfaces as attendance,
+reach, endorsement, or impact.
 
 ## KC Spaces Fund
 

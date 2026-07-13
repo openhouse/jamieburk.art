@@ -150,6 +150,23 @@ role confirmation. Guest identities, comments, invite context, account
 administration, event credentials, and raw capture data remain outside the
 repository.
 
+The July 13 personal Facebook event pass separates a 502-record event-
+association surface from a 21-slot Jamie-hosted event control. The resulting
+[aggregate hosted-event census](jamie-facebook-hosted-event-census-2026-07-13.csv)
+accounts for 20 recovered pages and one unresolved slot while omitting titles,
+IDs, URLs, exact dates, hosts, addresses, responses, guests, comments, and
+relationship context. The [archival-production
+report](jamie-facebook-events-2026-07-13.md) preserves representative public
+source records and a five-form event-practice analysis without publishing the
+wider personal association inventory.
+
+The WOW List Facebook event surface supplies a current zero-record control.
+The [live control](wowlist-facebook-event-control-2026-07-13.csv) and
+[recovery report](wowlist-facebook-events-2026-07-13.md) document authenticated
+current and legacy-route review, Facebook event search, association-surface
+checks, and bounded Wayback queries. No historical event record was recovered;
+the source explicitly does not establish that none ever existed.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

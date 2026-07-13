@@ -27,6 +27,8 @@ import { urbanhermitPopulationBatchRecords } from "./urbanhermit-population-batc
 import { urbanhermitPopulationDevelopmentRecords } from "./urbanhermit-population-development-2026-07-13.ts";
 import { nycartcFacebookEventsBatchRecords } from "./nycartc-facebook-events-batch-2026-07-13.ts";
 import { nycartcFacebookEventsDevelopmentRecords } from "./nycartc-facebook-events-development-2026-07-13.ts";
+import { facebookEventSurfacesBatchRecords } from "./facebook-event-surfaces-batch-2026-07-13.ts";
+import { facebookEventSurfacesDevelopmentRecords } from "./facebook-event-surfaces-development-2026-07-13.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -43,7 +45,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.intakeItems,
     ...nycartcPopulationDevelopmentRecords.intakeItems,
     ...urbanhermitPopulationDevelopmentRecords.intakeItems,
-    ...nycartcFacebookEventsDevelopmentRecords.intakeItems
+    ...nycartcFacebookEventsDevelopmentRecords.intakeItems,
+    ...facebookEventSurfacesDevelopmentRecords.intakeItems
   ],
   sourceReadings: [
     ...knowledgeDevelopmentRecords.sourceReadings,
@@ -59,7 +62,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.sourceReadings,
     ...nycartcPopulationDevelopmentRecords.sourceReadings,
     ...urbanhermitPopulationDevelopmentRecords.sourceReadings,
-    ...nycartcFacebookEventsDevelopmentRecords.sourceReadings
+    ...nycartcFacebookEventsDevelopmentRecords.sourceReadings,
+    ...facebookEventSurfacesDevelopmentRecords.sourceReadings
   ],
   candidateClaims: [
     ...knowledgeDevelopmentRecords.candidateClaims,
@@ -75,7 +79,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.candidateClaims,
     ...nycartcPopulationDevelopmentRecords.candidateClaims,
     ...urbanhermitPopulationDevelopmentRecords.candidateClaims,
-    ...nycartcFacebookEventsDevelopmentRecords.candidateClaims
+    ...nycartcFacebookEventsDevelopmentRecords.candidateClaims,
+    ...facebookEventSurfacesDevelopmentRecords.candidateClaims
   ],
   promotions: [
     ...knowledgeDevelopmentRecords.promotions,
@@ -91,7 +96,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.promotions,
     ...nycartcPopulationDevelopmentRecords.promotions,
     ...urbanhermitPopulationDevelopmentRecords.promotions,
-    ...nycartcFacebookEventsDevelopmentRecords.promotions
+    ...nycartcFacebookEventsDevelopmentRecords.promotions,
+    ...facebookEventSurfacesDevelopmentRecords.promotions
   ],
   editorialBriefs: [
     ...knowledgeDevelopmentRecords.editorialBriefs,
@@ -106,7 +112,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.editorialBriefs,
     ...nycartcPopulationDevelopmentRecords.editorialBriefs,
     ...urbanhermitPopulationDevelopmentRecords.editorialBriefs,
-    ...nycartcFacebookEventsDevelopmentRecords.editorialBriefs
+    ...nycartcFacebookEventsDevelopmentRecords.editorialBriefs,
+    ...facebookEventSurfacesDevelopmentRecords.editorialBriefs
   ],
   discoveryNotes: [
     ...knowledgeDevelopmentRecords.discoveryNotes,
@@ -120,7 +127,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationDevelopmentRecords.discoveryNotes,
     ...nycartcPopulationDevelopmentRecords.discoveryNotes,
     ...urbanhermitPopulationDevelopmentRecords.discoveryNotes,
-    ...nycartcFacebookEventsDevelopmentRecords.discoveryNotes
+    ...nycartcFacebookEventsDevelopmentRecords.discoveryNotes,
+    ...facebookEventSurfacesDevelopmentRecords.discoveryNotes
   ],
   sources: [
     {
@@ -257,7 +265,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationBatchRecords.sources,
     ...nycartcPopulationBatchRecords.sources,
     ...urbanhermitPopulationBatchRecords.sources,
-    ...nycartcFacebookEventsBatchRecords.sources
+    ...nycartcFacebookEventsBatchRecords.sources,
+    ...facebookEventSurfacesBatchRecords.sources
   ],
   claims: [
     {
@@ -359,7 +368,8 @@ const knowledgeBankInput = {
     ...kctownhallPopulationBatchRecords.claims,
     ...nycartcPopulationBatchRecords.claims,
     ...urbanhermitPopulationBatchRecords.claims,
-    ...nycartcFacebookEventsBatchRecords.claims
+    ...nycartcFacebookEventsBatchRecords.claims,
+    ...facebookEventSurfacesBatchRecords.claims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -373,7 +383,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries, ...urbanhermitPopulationBatchRecords.researchInquiries, ...nycartcFacebookEventsBatchRecords.researchInquiries],
+  }, ...evidenceBatchRecords.researchInquiries, ...strengtheningBatchRecords.researchInquiries, ...campaignPressBatchRecords.researchInquiries, ...kcTownHallCouncilBatchRecords.researchInquiries, ...archivalProductionBatchRecords.researchInquiries, ...sharedDriveArchivalBatchRecords.researchInquiries, ...socialArchiveBatchRecords.researchInquiries, ...callnycPopulationBatchRecords.researchInquiries, ...wowlistPopulationBatchRecords.researchInquiries, ...kctownhallPopulationBatchRecords.researchInquiries, ...nycartcPopulationBatchRecords.researchInquiries, ...urbanhermitPopulationBatchRecords.researchInquiries, ...nycartcFacebookEventsBatchRecords.researchInquiries, ...facebookEventSurfacesBatchRecords.researchInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },

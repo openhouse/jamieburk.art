@@ -16,6 +16,20 @@ together.
 The About page uses this pattern once as professional context. It does not turn
 the projects into formal employment history or claim solo authorship.
 
+## Hosted-Event Record
+
+A July 2026 authenticated review adds a bounded longitudinal source surface:
+20 recovered Facebook event pages hosted by Jamie from 2006 through 2017, with
+one additional host-control slot unresolved. The recovered pages document five
+recurring forms: cultural production; hospitality and care; participatory
+place, travel, and water work; networked culture and public history; and civic
+learning and making.
+
+This evidence strengthens the participatory-public-systems throughline without
+turning the 502-record personal event-association surface into professional
+proof. Host attribution supports Jamie's event-making role but does not
+establish sole production, attendance, reach, or impact.
+
 ## Open Research
 
 The supplied sources document a journey from Kansas City down the Missouri and

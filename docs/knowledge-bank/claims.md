@@ -243,6 +243,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## jamie-facebook-hosted-event-accounting - Personal hosted-event control
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Authenticated public-platform review / public-safe population accounting
+**Public wording:** A July 2026 census accounts for Jamie's 21-event Facebook host control with 20 recovered hosted-event pages and one unresolved historical slot.
+**Detailed public-safe wording:** The recovered pages span December 2006 through February 2017. The public census retains one aggregate-only row per host-control slot and withholds the wider personal event-association record.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Makes completeness measurable while separating events Jamie hosted from 482 visible associations displaying another host.
+**Guardrail:** Say `21 slots accounted for`, not `21 event pages recovered` or `every event Jamie ever hosted`.
+**Do not say:** All 21 event pages were recovered; this is an official Facebook export; all 502 associated events were Jamie's projects, attendance, or endorsements.
+**Protected boundaries:** Full event associations, titles, IDs, URLs, exact dates, hosts, addresses, responses, guests, comments, relationship context, and raw capture data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## jamie-facebook-hosted-event-practice - Participatory event-making throughline
+
+**Status:** Confirmed with boundary
+**Support level:** Strong
+**Evidence class:** Public event pages / public-safe full-population review
+**Public wording:** Twenty recovered event pages hosted by Jamie from 2006 through 2017 document recurring structures for cultural production, hospitality, place-based participation, civic learning, and networked public culture.
+**Detailed public-safe wording:** The primary classification contains seven cultural-performance-and-production pages, four recurring-hospitality-and-care pages, four participatory-place-travel-and-water pages, three networked-culture-and-public-history pages, and two civic-learning-and-making pages.
+**Where to project:** Knowledge bank only; retain for future role-specific portfolio compositions.
+**Why it matters:** Shows a long practice of designing conditions in which people can gather, make, learn, share responsibility, and engage with place.
+**Guardrail:** Treat the five forms as interpretive classifications and preserve collaborators, performers, venues, and participants.
+**Do not say:** Jamie solely produced every event; page count measures attendance, reach, endorsement, or impact; the 20 pages are a complete career chronology.
+**Protected boundaries:** Personal and relational context outside selected professional public pages stays offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## wowlist-facebook-event-live-control - Current zero and historical non-recovery
+
+**Status:** Confirmed with boundary
+**Support level:** Strong for current display; bounded for historical recovery
+**Evidence class:** Authenticated public-platform review / bounded archive search
+**Public wording:** WOW List's Facebook event surface displayed zero event records on July 13, 2026, and bounded recovery searches found no historical event record.
+**Detailed public-safe wording:** Current and legacy page-event routes displayed `No events to show`; exact-name Facebook event search, Jamie's visible association control, and bounded Wayback queries recovered no historical record.
+**Where to project:** Knowledge bank only.
+**Why it matters:** Preserves a reproducible negative finding without turning absence into an unsupported historical conclusion.
+**Guardrail:** Say `not recovered`, not `did not exist`; keep Facebook events separate from WOW List's own platform and community record.
+**Do not say:** WOW List never used Facebook events; no historical event ever existed; the current empty display measures WOW List's wider activity or impact.
+**Protected boundaries:** Raw authenticated capture and account-administration context stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

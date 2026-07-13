@@ -356,6 +356,67 @@ const nycartcFacebookUnresolvedEventRows = nycartcFacebookEventCensusRows.filter
   (row) => row[9] === "unresolved-control-slot"
 );
 
+const facebookEventSurfaceSourceIds = [
+  "SRC-JAMIE-FACEBOOK-HOST-CONTROL-2026",
+  "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026",
+  "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026",
+  "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006",
+  "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+  "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+  "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010",
+  "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+  "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017",
+  "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017",
+  "SRC-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+  "SRC-WOWLIST-FACEBOOK-EVENT-RECOVERY-RUN-2026"
+];
+
+const jamieFacebookHostedEventCensusText = readFileSync(
+  "docs/knowledge-bank/jamie-facebook-hosted-event-census-2026-07-13.csv",
+  "utf8"
+);
+const jamieFacebookHostedEventCensusRows = jamieFacebookHostedEventCensusText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+const jamieFacebookRecoveredHostedEventRows = jamieFacebookHostedEventCensusRows.filter(
+  (row) => row[4] === "recovered"
+);
+const jamieFacebookUnresolvedHostedEventRows = jamieFacebookHostedEventCensusRows.filter(
+  (row) => row[4] === "unresolved"
+);
+
+const jamieFacebookExpectedHostedEventYears = new Map([
+  ["2006", 1],
+  ["2007", 4],
+  ["2010", 1],
+  ["2011", 3],
+  ["2012", 2],
+  ["2013", 2],
+  ["2014", 3],
+  ["2016", 2],
+  ["2017", 2]
+]);
+
+const jamieFacebookExpectedHostedEventThemes = new Map([
+  ["civic-learning-and-making", 2],
+  ["cultural-performance-and-production", 7],
+  ["recurring-hospitality-and-care", 4],
+  ["participatory-place-travel-and-water", 4],
+  ["networked-culture-and-public-history", 3]
+]);
+
+const wowlistFacebookEventControlText = readFileSync(
+  "docs/knowledge-bank/wowlist-facebook-event-control-2026-07-13.csv",
+  "utf8"
+);
+const wowlistFacebookEventControlRows = wowlistFacebookEventControlText
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -1569,6 +1630,198 @@ const criteria = [
         ) &&
         candidate?.status === "promoted" &&
         candidate.promotedClaimId === claim.id
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-hosted-event-full-population-accounting",
+    label: "The 21-slot personal hosted-event control is fully reconciled with one unresolved slot",
+    pass: (() => {
+      const yearCounts = new Map();
+      const themeCounts = new Map();
+      for (const row of jamieFacebookRecoveredHostedEventRows) {
+        yearCounts.set(row[1], (yearCounts.get(row[1]) ?? 0) + 1);
+        themeCounts.set(row[3], (themeCounts.get(row[3]) ?? 0) + 1);
+      }
+      return (
+        jamieFacebookHostedEventCensusRows.length === 21 &&
+        jamieFacebookHostedEventCensusRows.every((row) => row.length === 6) &&
+        new Set(jamieFacebookHostedEventCensusRows.map((row) => row[0])).size === 21 &&
+        jamieFacebookRecoveredHostedEventRows.length === 20 &&
+        jamieFacebookRecoveredHostedEventRows.every(
+          (row) =>
+            row[2] === "jamie-host-card" &&
+            row[5] === "aggregate-only" &&
+            jamieFacebookExpectedHostedEventThemes.has(row[3])
+        ) &&
+        jamieFacebookUnresolvedHostedEventRows.length === 1 &&
+        jamieFacebookUnresolvedHostedEventRows[0][0] === "unresolved-021" &&
+        jamieFacebookExpectedHostedEventYears.size === yearCounts.size &&
+        [...jamieFacebookExpectedHostedEventYears].every(
+          ([year, expected]) => yearCounts.get(year) === expected
+        ) &&
+        [...jamieFacebookExpectedHostedEventThemes].every(
+          ([theme, expected]) => themeCounts.get(theme) === expected
+        )
+      );
+    })()
+  },
+  {
+    id: "facebook-personal-wowlist-event-lifecycle-lineage",
+    label: "Personal and WOW List event findings have intake, reading, inquiry, promotion, and hold lineage",
+    pass: (() => {
+      const personalInquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026"
+      );
+      const wowlistInquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-WOWLIST-FACEBOOK-EVENTS-2026"
+      );
+      const population = candidateById.get(
+        "CND-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION"
+      );
+      const practice = candidateById.get("CND-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE");
+      const association = candidateById.get(
+        "CND-JAMIE-FACEBOOK-ASSOCIATION-EQUALS-PARTICIPATION"
+      );
+      const wowlistControl = candidateById.get(
+        "CND-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL"
+      );
+      const wowlistNever = candidateById.get(
+        "CND-WOWLIST-NEVER-HOSTED-FACEBOOK-EVENTS"
+      );
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-13-FACEBOOK-PERSONAL-WOWLIST-EVENTS"
+        ) &&
+        facebookEventSurfaceSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        personalInquiry?.resultStatus === "partially-recovered" &&
+        personalInquiry.findings.some((item) => /21.*20.*one unresolved/i.test(item)) &&
+        personalInquiry.limitations.some((item) => /association does not establish/i.test(item)) &&
+        wowlistInquiry?.resultStatus === "partially-recovered" &&
+        wowlistInquiry.limitations.some((item) => /does not establish.*historical/i.test(item)) &&
+        population?.status === "promoted" &&
+        population.promotedClaimId ===
+          "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026" &&
+        practice?.status === "promoted" &&
+        practice.promotedClaimId ===
+          "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017" &&
+        wowlistControl?.status === "promoted" &&
+        wowlistControl.promotedClaimId ===
+          "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026" &&
+        association?.status === "research-needed" &&
+        wowlistNever?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === association.id && promotion.decision === "held"
+        ) &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === wowlistNever.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "jamie-facebook-hosted-event-public-boundaries",
+    label: "The personal hosted-event archive remains aggregate-only and does not become a relational dossier",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026"
+      );
+      const associationSource = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-RUN-2026"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/jamie-facebook-events-2026-07-13.md",
+        "utf8"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      return Boolean(
+        source?.visibility === "protected" &&
+        source.protectedLocatorId &&
+        associationSource?.visibility === "protected" &&
+        associationSource.protectedLocatorId &&
+        /502 distinct public event\s+associations/i.test(report) &&
+        /20 hosted-event pages[\s\S]{0,120}one\s+historical slot as unresolved/i.test(report) &&
+        /new dossier/i.test(report) &&
+        /Do not treat the 502 events/i.test(antiClaims) &&
+        claim?.boundaries.some((item) => /does not establish sole production/i.test(item)) &&
+        jamieFacebookHostedEventCensusText.startsWith(
+          "slot_id,year,host_relationship,primary_theme,accounting_status,public_detail_status"
+        ) &&
+        !/event_id|event_url|source_url|exact_date|event_title|address|guest|comment|response|email|phone|https?:/i.test(
+          jamieFacebookHostedEventCensusText
+        ) &&
+        !publicRegistryText.includes("RESEARCH-JAMIE-FACEBOOK-HOSTED-EVENTS-2026-001") &&
+        !publicRegistryText.includes("RESEARCH-JAMIE-FACEBOOK-EVENT-ASSOCIATIONS-2026-001")
+      );
+    })()
+  },
+  {
+    id: "wowlist-facebook-event-zero-control-boundary",
+    label: "WOW List's current zero-record event control is preserved without becoming a never-existed claim",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/wowlist-facebook-events-2026-07-13.md",
+        "utf8"
+      );
+      return Boolean(
+        wowlistFacebookEventControlRows.length === 1 &&
+        wowlistFacebookEventControlRows[0].length === 5 &&
+        wowlistFacebookEventControlRows[0][1] === "0" &&
+        wowlistFacebookEventControlRows[0][2] === "no-events-to-show" &&
+        wowlistFacebookEventControlRows[0][3] ===
+          "no-historical-event-records-recovered" &&
+        /not proof that WOW List never/i.test(report) &&
+        /not recovered`, not `did not exist/i.test(report) &&
+        claim?.boundaries.some((item) => /Negative recovery is not proof/i.test(item)) &&
+        claim.antiClaims.some((item) => /never used Facebook events/i.test(item)) &&
+        !publicRegistryText.includes("RESEARCH-WOWLIST-FACEBOOK-EVENTS-2026-001")
+      );
+    })()
+  },
+  {
+    id: "facebook-personal-wowlist-chad-editorial-restraint",
+    label: "Chad's lens keeps the event findings available without adding reader burden to the live portfolio",
+    pass: (() => {
+      const brief = editorialBriefs.find(
+        (item) => item.id === "BRIEF-FACEBOOK-PERSONAL-WOWLIST-EVENTS-EDITORIAL-2026"
+      );
+      const selectedClaims = [
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+        "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"
+      ].map((id) => knowledgeBank.claims.find((claim) => claim.id === id));
+      return Boolean(
+        brief?.selectedClaimIds.length === 3 &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-JAMIE-FACEBOOK-ASSOCIATION-EQUALS-PARTICIPATION"
+        ) &&
+        brief.heldCandidateClaimIds.includes(
+          "CND-WOWLIST-NEVER-HOSTED-FACEBOOK-EVENTS"
+        ) &&
+        brief.rationale.some((item) => /no immediate website change/i.test(item)) &&
+        selectedClaims.every(
+          (claim) =>
+            claim &&
+            claim.projections.every(
+              (projection) =>
+                projection.key === "archive-note" &&
+                projection.surfaces.every((surface) => !surface.startsWith("/"))
+            )
+        ) &&
+        selectedClaims.every(
+          (claim) => claim && !renderedProjectionSources.includes(claim.id)
+        )
       );
     })()
   },
