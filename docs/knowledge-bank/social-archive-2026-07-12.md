@@ -37,9 +37,18 @@ Council members are not counted as direct Council-member engagement.
 
 ## CallNYC Inventory
 
-The July 11, 2026, bounded profile capture displayed 110 posts, 69 followers,
-194 following, and a March 2016 join date. Those are capture-time profile
-figures, not historical reach metrics.
+The live profile displayed 110 posts, 69 followers, 194 following, and a March
+2016 join date. A subsequent fine-grained pass recovered 107 distinct surviving
+timeline records: 86 authored standalone posts, six authored replies, and 15
+reposts. The 110-slot census retains three unresolved records rather than
+calling the 107-record recovery complete. See the [full-population archival
+production](callnyc-population-2026-07-12.md) and [record-level
+census](callnyc-post-census-2026-07-12.csv).
+
+Within the 92 recovered CallNYC-authored records, 72 are service-recognition
+posts naming 26 distinct then-sitting Council members across 66 service-issue
+hashtag labels. These are CallNYC-authored data interpretations and outbound
+recognitions, not 26 instances of Council-member engagement.
 
 Recovered public records include:
 

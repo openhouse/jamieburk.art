@@ -91,6 +91,15 @@ of the Cabaret Law repeal effort. See the
 [social account registry](social-account-registry.md) and
 [social archive inventory](social-archive-2026-07-12.md).
 
+The CallNYC full-population pass uses the live 110-post profile counter as a
+control and reconciles both authenticated profile timelines, date-bounded X
+search, Wayback CDX, and local public captures. The resulting
+[110-slot census](callnyc-post-census-2026-07-12.csv) contains 107 recovered
+status records and three unresolved slots. The accompanying
+[archival-production report](callnyc-population-2026-07-12.md) records the
+method, aggregate findings, and the official-export requirement without
+reproducing full post text.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

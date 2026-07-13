@@ -55,8 +55,19 @@ document or treat it as legal advice or official legislative history.
 
 Do not imply CallNYC is an official or current City service.
 
-Do not describe two recovered direct Council-member engagements as a complete
-CallNYC engagement total or as proof of broad official endorsement.
+Do not describe the six recovered direct Council-member engagements as a
+complete CallNYC engagement total or as proof of broad official endorsement.
+
+Do not say all 110 profile-counted CallNYC post contents were recovered. The
+record-level census recovers 107 distinct surviving records and retains three
+unresolved control-gap slots. Do not label those three records deleted or assign
+them dates, IDs, authorship, or content without an official export or equivalent
+evidence.
+
+Do not convert 72 CallNYC-authored service-recognition posts naming 26 Council
+members into 26 instances of direct engagement. Outbound recognition is project
+authorship. It does not independently validate every service calculation or
+prove that the named member interacted with the account.
 
 Do not broaden “first CouncilStat hackathon” into a claim about the Council's
 first hackathon, first civic-data hackathon, or first civic-technology

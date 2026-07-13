@@ -159,6 +159,27 @@ const authenticatedSocialSourceIds = [
   "SRC-SOCIAL-DOCUMENT-JOURNAL-NIGHTLIFE-2018"
 ];
 
+const callnycPopulationSourceIds = [
+  "SRC-CALLNYC-LIVE-PROFILE-CONTROL-2026",
+  "SRC-CALLNYC-FULL-POPULATION-RUN-2026"
+];
+
+const callnycCensusRows = readFileSync(
+  "docs/knowledge-bank/callnyc-post-census-2026-07-12.csv",
+  "utf8"
+)
+  .trim()
+  .split("\n")
+  .slice(1)
+  .map((line) => line.split(","));
+
+const callnycRecoveredCensusRows = callnycCensusRows.filter(
+  (row) => row[10] === "recovered"
+);
+const callnycUnresolvedCensusRows = callnycCensusRows.filter(
+  (row) => row[10] === "unrecovered"
+);
+
 const requiredCandidateIds = [
   "CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
   "CND-RIVER-RAFT-KC-GULF",
@@ -819,6 +840,66 @@ const criteria = [
         /Seventeen authenticated-search posts/i.test(candidate.supportSummary) &&
         claim?.boundaries.some((item) => /do not equal adoption/i.test(item)) &&
         claim.antiClaims.some((item) => /adopted every coalition recommendation/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "callnyc-full-population-accounting",
+    label: "The complete 110-slot CallNYC control is accounted without hiding the recovery gap",
+    pass:
+      callnycCensusRows.length === 110 &&
+      callnycRecoveredCensusRows.length === 107 &&
+      callnycUnresolvedCensusRows.length === 3 &&
+      new Set(callnycRecoveredCensusRows.map((row) => row[1])).size === 107 &&
+      callnycRecoveredCensusRows.filter((row) => row[3] === "authored-post").length === 86 &&
+      callnycRecoveredCensusRows.filter((row) => row[3] === "authored-reply").length === 6 &&
+      callnycRecoveredCensusRows.filter((row) => row[3] === "repost").length === 15
+  },
+  {
+    id: "callnyc-full-population-lineage",
+    label: "CallNYC population findings have intake, source, reading, inquiry, and hold lineage",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-CALLNYC-FULL-POPULATION-2026"
+      );
+      const exact = candidateById.get("CND-CALLNYC-EXACT-EXPORT-COMPLETION");
+      return Boolean(
+        intakeItems.some(
+          (item) => item.id === "INT-2026-07-12-CALLNYC-FULL-POPULATION"
+        ) &&
+        callnycPopulationSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        inquiry.findings.some((item) => /110-slot.*107 recovered.*three unresolved/i.test(item)) &&
+        inquiry.limitations.some((item) => /official account export/i.test(item)) &&
+        exact?.status === "research-needed" &&
+        promotions.some(
+          (promotion) =>
+            promotion.candidateClaimId === exact.id && promotion.decision === "held"
+        )
+      );
+    })()
+  },
+  {
+    id: "callnyc-service-pattern-boundary",
+    label: "Record-level service findings are promoted without converting mentions into engagement",
+    pass: (() => {
+      const candidate = candidateById.get(
+        "CND-CALLNYC-SERVICE-RECOGNITION-PATTERN"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CALLNYC-SERVICE-RECOGNITION-PATTERN"
+      );
+      return Boolean(
+        callnycRecoveredCensusRows.filter(
+          (row) => row[3].startsWith("authored-") && row[6] === "true"
+        ).length === 72 &&
+        candidate?.status === "promoted" &&
+        /72.*92.*26.*66/i.test(candidate.text) &&
+        claim?.boundaries.some((item) => /not proof.*engaged|not direct.*engagement/i.test(item)) &&
+        claim.antiClaims.some((item) => /Twenty-six Council members directly engaged/i.test(item))
       );
     })()
   },

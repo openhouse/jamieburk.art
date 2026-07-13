@@ -9,7 +9,7 @@ an individual post.
 
 | Project or campaign | X / Twitter handle | Relationship | Evidence status |
 | --- | --- | --- | --- |
-| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated project account established by Jamie | Authenticated search, live posts, bounded capture, and six-member Council minimum recovered |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | Dedicated project account established by Jamie | 110-slot population accounted: 107 surviving records classified, three unresolved; six-member direct Council-engagement minimum retained separately |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition identity established by Jamie and used by collaborators | Authenticated search, 279 authored posts, 395 mention results, seven-member Council minimum, City dialogue, and collaborator continuity recovered |
 | Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Used the shared NYC Artist Coalition account | Campaign posts recovered within the shared corpus |
@@ -31,3 +31,8 @@ person only when direct evidence or collaborator confirmation supports it.
 
 See [social-archive-2026-07-12.md](social-archive-2026-07-12.md) for the bounded
 inventory, findings, sources, and research limits.
+
+The CallNYC record-level ledger is documented in
+[callnyc-population-2026-07-12.md](callnyc-population-2026-07-12.md). It accounts
+for all 110 profile-counted slots while preserving the distinction between 107
+recovered records and three unresolved records.
