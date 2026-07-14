@@ -12,8 +12,8 @@ site argument.
 
 Every intake records three dimensions that must not be collapsed:
 
-1. **Maturity:** captured, triaged, source-reviewed, decomposed,
-   research-needed, or superseded.
+1. **Maturity:** captured, triaged, metadata-reviewed, source-reviewed,
+   decomposed, research-needed, or superseded.
 2. **Public use:** public-linkable, cite-with-care, approval-required, or
    protected.
 3. **Editorial state:** unsurfaced, candidate, selected, or retired.
@@ -28,8 +28,10 @@ When Jamie supplies a fragment:
 
 1. Assign one stable `INTAKE-` ID and record a public-safe summary.
 2. State why the fragment matters and which projects it may concern.
-3. If it is a public source, close-read it before marking it source-reviewed.
-4. Normalize the source as `SRC-` and decompose only the propositions it can
+3. If it is a public source, verify its identity and preservation before
+   marking it metadata-reviewed.
+4. Close-read it before marking it source-reviewed. Normalize the source as
+   `SRC-` and decompose only the propositions it can
    support into `CLM-` records.
 5. Record source-specific support, locator, evidence role, boundaries, and
    anti-claims.
@@ -56,6 +58,11 @@ evidence relationships determine what the source is actually allowed to prove.
 The `doesNotEstablish` field prevents a related source from becoming evidence
 for every desirable conclusion about a project.
 
+A campaign press index is a finding aid. Its placement edge can establish that
+an article appeared in the campaign's Press section, but not what the article
+proves. Keep such articles `metadata-reviewed` until a human or agent has read
+the source closely enough to create bounded claim relationships.
+
 ## Projection gate
 
 An intake-linked claim may receive an active public projection only when the
@@ -81,12 +88,13 @@ and opaque protected locator.
 ## Validation and evals
 
 `npm run check:knowledge-intake` validates required intake coverage, stable
-destinations, canonical links, projection discipline, and blocked local-path
-markers. The launch-readiness v3 suite adds:
+destinations, canonical links, projection discipline, campaign press
+provenance, and blocked local-path markers. The launch-readiness v5 suite adds:
 
 - `INTAKE-001` for lossless public-safe capture;
 - `DISPOSITION-001` for resolvable destinations;
 - `PROJECTION-001` for separation of maturity, public safety, and selection;
+- `PRESS-001` for complete, deduplicated, archive-backed campaign indexes;
 - `DECOMP-001` for independent semantic review of source decomposition.
 
 The deterministic gates can prove structural completeness. Two independent

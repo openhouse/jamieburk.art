@@ -71,4 +71,7 @@ workflow, [intake-workflow.md](intake-workflow.md) for the front-door protocol,
 pilot, and
 [research/2026-07-13-ten-source-intake.md](research/2026-07-13-ten-source-intake.md)
 for a worked example of research, decomposition, selection, and deliberate
-non-projection.
+non-projection, and
+[research/2026-07-14-nycac-campaign-press-catalog.md](research/2026-07-14-nycac-campaign-press-catalog.md)
+for campaign press intake that preserves source discovery without premature
+claim promotion.

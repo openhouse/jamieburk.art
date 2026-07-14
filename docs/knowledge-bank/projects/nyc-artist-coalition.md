@@ -4,6 +4,13 @@ Status: developing knowledge cluster with strong public support and several
 open role questions. One new official-testimony claim is selected for the
 FairRentNYC case study; other new records remain unsurfaced.
 
+The campaign press catalog now preserves 45 placements across Let NYC Dance,
+Talks Not Raids, Save NYC Spaces, and Fair Rent NYC as 44 canonical article
+sources. The catalog is an internal research finding aid. Campaign-site
+placement is stored as its own evidence relationship and does not automatically
+make an article claim-bearing or website-ready. See
+`docs/knowledge-bank/research/2026-07-14-nycac-campaign-press-catalog.md`.
+
 The governing distinction is between documented contribution and collective
 causality. Public reporting can establish particular actions, affiliations,
 and statements without assigning an entire movement or legislative result to
@@ -49,6 +56,10 @@ role.
 
 ## Open research
 
+- Close-read the campaign press catalog selectively, beginning with sources
+  most likely to clarify Jamie's concrete role, operating methods, or
+  institution-facing outcomes. Do not decompose all 44 articles merely to
+  increase record count.
 - Reconstruct the coalition's founding process and division of labor from
   dated public records and collaborator review.
 - Map Jamie's concrete contribution to the collective Cabaret Law repeal

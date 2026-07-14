@@ -70,6 +70,12 @@ the bank with source basis, status, guardrail, and public-use boundary.
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
 
+Treat campaign press sections as finding aids. A placement edge can establish
+that a campaign site listed an article, but it cannot establish what the
+article proves. Preserve original and archival URLs, deduplicate shared
+articles, and require a separate close-read evidence relationship before using
+an article for a claim or public projection.
+
 The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.

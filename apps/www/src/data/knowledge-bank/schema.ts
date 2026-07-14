@@ -21,6 +21,7 @@ export const intakeKindSchema = z.enum([
 export const intakeMaturitySchema = z.enum([
   "captured",
   "triaged",
+  "metadata-reviewed",
   "source-reviewed",
   "decomposed",
   "research-needed",
@@ -80,8 +81,11 @@ export const intakeRecordSchema = z
       addIssue("Public URL intakes require a canonical URL");
     }
 
-    if (intake.maturity === "source-reviewed" && !intake.sourceIds.length) {
-      addIssue("Source-reviewed intakes require a normalized source");
+    if (
+      ["metadata-reviewed", "source-reviewed"].includes(intake.maturity) &&
+      !intake.sourceIds.length
+    ) {
+      addIssue("Metadata- and source-reviewed intakes require a normalized source");
     }
 
     if (
@@ -204,6 +208,10 @@ export const sourceRecordSchema = z
     preferredPublicUrl: z.enum(["canonical", "archive", "asset"]).optional(),
     publicCitation: z.string().min(1),
     publicNote: z.string().min(1).optional(),
+    captureFingerprint: z
+      .string()
+      .regex(/^sha256:[a-f0-9]{64}$/, "Use a SHA-256 capture fingerprint")
+      .optional(),
     supportsGenerally: z.array(z.string().min(1)).default([]),
     doesNotEstablish: z.array(z.string().min(1)).default([]),
     protectedLocatorId: stableIdSchema.optional(),
@@ -339,13 +347,36 @@ export const citationPageSchema = z.object({
   occurrences: z.array(citationOccurrenceSchema)
 });
 
+export const campaignPressPlacementSchema = z.object({
+  id: stableIdSchema,
+  campaign: stableIdSchema,
+  indexSourceId: stableIdSchema,
+  articleSourceId: stableIdSchema,
+  position: z.number().int().positive(),
+  listedPublisher: z.string().min(1),
+  listedTitle: z.string().min(1),
+  listedUrl: publicUrlSchema,
+  relationship: z.literal("listed-in-campaign-press-section"),
+  identityStatus: z.enum([
+    "verified-live",
+    "verified-redirect",
+    "archive-backed",
+    "access-restricted-with-archive"
+  ]),
+  reviewStatus: z.enum(["metadata-reviewed", "decomposed"]),
+  editorialState: z.enum(["unsurfaced", "candidate", "selected", "retired"]),
+  limitations: z.array(z.string().min(1)).min(1),
+  reviewedAt: z.iso.date()
+});
+
 export const knowledgeBankSchema = z.object({
   intakes: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
-  pages: z.array(citationPageSchema)
+  pages: z.array(citationPageSchema),
+  campaignPressPlacements: z.array(campaignPressPlacementSchema)
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
@@ -357,4 +388,5 @@ export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
+export type CampaignPressPlacement = z.infer<typeof campaignPressPlacementSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;
