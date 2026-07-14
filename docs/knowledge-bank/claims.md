@@ -153,6 +153,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-public-support-surface - Shared public support surface
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated full-population audit / public-safe archive summary
+**Public wording:** WOW List's shared public account became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY ran on WOW List from the Sunday Dinner potluck.
+**Detailed public-safe wording:** A July 2026 authenticated review reconciled all 38 items in the surviving `@wowlist` profile population. Every one of the six account replies performed product support, onboarding, or calendar-identity work.
+**Where to project:** WOW List case study only.
+**Why it matters:** Shows that the public identity Jamie established with teammates functioned as operating infrastructure: people could ask how the system worked and receive usable guidance in public.
+**Guardrail:** Credit the account as shared project infrastructure. A shared account does not reveal which teammate composed a post, and the surviving social record does not establish total support workload, adoption, satisfaction, audience, or impact.
+**Do not say:** Jamie personally wrote all six replies; X was WOW List's only support channel; the social record proves adoption scale or impact; the 38-item population is a complete platform export.
+**Protected boundaries:** No account credentials, private analytics, direct messages, private user data, or raw authenticated-session material enters the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

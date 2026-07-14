@@ -319,7 +319,7 @@
       "accountSnapshots": {
         "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 107, "recoveredAuthoredPosts": 92 },
         "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": null, "recoveredAuthoredPosts": null },
-        "@wowlist": { "profilePosts": 38, "recoveredStatuses": 37, "recoveredAuthoredPosts": 21 },
+        "@wowlist": { "profilePosts": 38, "recoveredStatuses": 38, "recoveredAuthoredPosts": 22 },
         "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
         "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 170, "recoveredAuthoredPosts": 142 }
       },
@@ -413,6 +413,51 @@
       "roleSourceId": "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
       "repliesOnlySourceId": "SRC-X-CALLNYC-JSON-API-722837286476390401",
       "proofId": "callnyc-public-engagement-architecture"
+    },
+    "wowlistFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/wowlist-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md",
+      "expectedProfileCount": 38,
+      "expectedPostsTabCount": 37,
+      "expectedRepliesTabCount": 38,
+      "expectedUniqueItems": 38,
+      "expectedAccountPosts": 16,
+      "expectedAccountReplies": 6,
+      "expectedAuthoredStatuses": 22,
+      "expectedReposts": 16,
+      "expectedRepostSourceAccounts": 13,
+      "expectedUnresolvedSlots": 0,
+      "expectedSupportReplies": 6,
+      "expectedEventDistributionPosts": 5,
+      "expectedSceneKnowledgePosts": 3,
+      "expectedProductInfrastructurePosts": 3,
+      "expectedCivicCareAuthoredPosts": 5,
+      "expectedCivicCareReposts": 5,
+      "expectedPlatformUseReposts": 5,
+      "expectedExternalHandles": 14,
+      "expectedShortUrlOccurrences": 35,
+      "expectedUniqueShortUrls": 35,
+      "expectedResolvedDestinations": 34,
+      "expectedProjectOrLineageDestinations": 19,
+      "expectedExternalDestinations": 15,
+      "expectedAuthoredStatusesWithReaction": 12,
+      "expectedAuthoredVisibleReplies": 2,
+      "expectedAuthoredVisibleReposts": 20,
+      "expectedAuthoredVisibleLikes": 21,
+      "expectedSourceCount": 12,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "activeClaimId": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      "heldClaimIds": [
+        "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION",
+        "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING",
+        "CLM-WOWLIST-CIVIC-CARE-CONTINUITY",
+        "CLM-WOWLIST-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
+      "repliesOnlySourceId": "SRC-X-WOWLIST-MEMBERS-MEETING-665520472461860864",
+      "proofId": "wowlist-public-support-surface"
     }
   },
   "criteria": [
@@ -513,6 +558,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every recoverable @CallNYCApp item and posted URL is preserved in an item-level ledger; all 110 observed profile-count slots receive honest dispositions; stakeholder outreach remains distinct from reciprocal engagement; mission-relevant sources and claims mature without inflating tags, rows, links, or visible metrics into outcomes."
+    },
+    {
+      "id": "KB-EVAL-WOWLIST-FULL-POPULATION",
+      "label": "WOW List full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving @wowlist item and posted URL is dispositioned; support and stakeholder patterns are reproducible; current reactions remain bounded; collective authorship is preserved; and only the clearest operational claim is composed into the site."
     }
   ],
   "hillClimb": {
@@ -533,6 +585,7 @@
       "Never count a project account tagging an official as engagement authored by that official.",
       "Never count candidate-era or former-member posts as sitting-officeholder engagement.",
       "Never treat profile post totals as stable impact metrics or individual authorship records.",
+      "Never count reactions on a reposted source status as engagement earned by the project account's repost action.",
       "Never turn an unrecovered account or status into proof that it never existed."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."

@@ -40,6 +40,22 @@ Its article records are source-discovery leads until close reading establishes
 specific propositions; campaign selection alone does not establish article
 content, Jamie's individual role, or policy causation.
 
+The WOW List social-corpus audit reconciles the complete 38-item population
+visible on the authenticated `@wowlist` profile in July 2026. The public-safe
+ledger retains status identifiers, bounded summaries, source and destination
+URLs, relationship types, mutable visible-reaction snapshots, and digests. It
+does not retain raw post text, session material, private analytics, messages,
+or credentials. The current population is not represented as a complete
+platform export or proof that no earlier post was deleted. See
+[intake/2026-07-14-wowlist-full-population-social-corpus.md](intake/2026-07-14-wowlist-full-population-social-corpus.md).
+
+Four public articles linked or reposted by the account are retained as context
+sources: Grasstronaut on DIY organization and community infrastructure, *Good
+Times* on zines connecting geographically separated DIY spaces, KQED on the
+Lake Merritt Ghost Ship vigil, and Meow Wolf on its post-fire DIY Fund. Their
+appearance in the feed establishes circulation and context, not WOW List
+authorship, endorsement, participation, causality, or impact.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

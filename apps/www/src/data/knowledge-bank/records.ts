@@ -8,6 +8,7 @@ import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 import { socialMediaArchiveProduction } from "./social-media-archive-production.ts";
 import { teamsArchiveProduction } from "./teams-archive-production.ts";
+import { wowlistSocialCorpus } from "./wowlist-social-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -36,6 +37,7 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems,
     ...callNycSocialCorpus.intakeItems,
+    ...wowlistSocialCorpus.intakeItems,
     ...socialMediaArchiveProduction.intakeItems
   ],
   observations: [
@@ -63,6 +65,7 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations,
     ...callNycSocialCorpus.observations,
+    ...wowlistSocialCorpus.observations,
     ...socialMediaArchiveProduction.observations
   ],
   sources: [
@@ -217,6 +220,7 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources,
     ...callNycSocialCorpus.sources,
+    ...wowlistSocialCorpus.sources,
     ...socialMediaArchiveProduction.sources
   ],
   claims: [
@@ -324,6 +328,7 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims,
     ...callNycSocialCorpus.claims,
+    ...wowlistSocialCorpus.claims,
     ...socialMediaArchiveProduction.claims
   ],
   researchInquiries: [
@@ -371,6 +376,7 @@ const knowledgeBankInput = {
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
+    ...wowlistSocialCorpus.researchInquiries,
     ...socialMediaArchiveProduction.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],
@@ -408,6 +414,32 @@ const knowledgeBankInput = {
       { id: "social-engagement-architecture", claimId: "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE", projection: "case-study", sourceIds: ["SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026", "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
+  }, {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: [
+      "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+      "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+      "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+      "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+      "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+      "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+    ],
+    occurrences: [{
+      id: "public-support-surface",
+      claimId: "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      projection: "case-study",
+      sourceIds: [
+        "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
+        "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+        "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+        "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+      ]
+    }]
   }, {
     id: "fair-rent-nyc",
     surface: "/work/fair-rent-nyc",

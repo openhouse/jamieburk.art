@@ -41,6 +41,14 @@ selected, or a winner without new evidence and review.
 
 Do not name collaborators unless approved.
 
+Do not infer that Jamie personally authored every post or reply on a shared
+project account. Do not treat 38 surviving profile items as a complete X export
+or proof against earlier deletion. Do not count engagement displayed on
+reposted source statuses as engagement earned by WOW List. Do not turn a link
+or repost into a claim of authorship, endorsement, participation, causality, or
+impact. July 2026 visible reaction totals are mutable snapshots, not historical
+analytics or adoption measures.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

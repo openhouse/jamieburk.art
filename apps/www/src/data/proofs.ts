@@ -374,6 +374,38 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "wowlist-public-support-surface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "WOW List's shared public account became a direct support surface for feed navigation, event submission, local-calendar onboarding, and community lineage.",
+    shortWording: "Shared public support and onboarding for WOW List communities",
+    detailedPublicWording:
+      "The complete surviving account corpus includes six replies explaining feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY related to WOW List and Sunday Dinner.",
+    sourceBasis:
+      "A 38-record authenticated public-post ledger and the six surviving public account replies.",
+    whyItMatters:
+      "Shows a community platform operating in public through support, onboarding, and relationship-aware explanation rather than only through feature delivery.",
+    guardrail:
+      "Attribute the replies to the shared account unless individual authorship is independently established; do not turn the social record into adoption or impact analytics.",
+    doNotSay: [
+      "Jamie personally wrote every WOW List reply",
+      "X was the platform's only support channel",
+      "The account record proves platform-wide adoption or impact"
+    ],
+    protectedBoundaries: [
+      "Account credentials and administrator history",
+      "Private messages",
+      "Private analytics",
+      "Individual teammate authorship without direct evidence"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["product-support", "onboarding", "community-platforms", "public-identity-systems"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "sunday-dinner-196-participation-infrastructure",
     status: "careful",
     supportLevel: "careful",

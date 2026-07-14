@@ -25,7 +25,7 @@ overstated impact claims.
 | --- | --- | --- | --- |
 | CallNYC | `@CallNYCapp` | 110 posts | 86 visible statuses; 72 project-authored |
 | NYC Artist Coalition | `@NYCArtC` | 5,124 posts | targeted authenticated samples; no complete export |
-| WOW List | `@wowlist` | 38 posts | 37 visible statuses; 21 project-authored |
+| WOW List | `@wowlist` | 38 posts | 38 surviving statuses; 22 project-account-authored |
 | KC Spaces Fund | `@KCSpacesFund` | 35 posts | 34 visible statuses; 27 project-authored |
 | KC Town Hall | `@KCTownHall` | 183 posts | 170 visible statuses; 142 project-authored |
 

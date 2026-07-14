@@ -378,7 +378,7 @@ const workItemsInput = [
     featured: true,
     priority: 4,
     visibility: "public-safe",
-    proofBankIds: ["wowlist-community-platform"],
+    proofBankIds: ["wowlist-community-platform", "wowlist-public-support-surface"],
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:

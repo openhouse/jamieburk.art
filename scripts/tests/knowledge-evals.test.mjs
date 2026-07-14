@@ -5,11 +5,16 @@ import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } fr
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
+import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
 const callNycLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/callnyc-public-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const wowlistLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/wowlist-public-post-ledger.json", import.meta.url),
   "utf8"
 ));
 
@@ -725,6 +730,61 @@ test("CallNYC engagement floor includes the authenticated Ydanis quote-post", ()
 test("CallNYC reserve depth stays off public surfaces", () => {
   const heldIds = suite.pilot.callNycFullPopulation.heldClaimIds;
   const heldClaims = callNycSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(
+    heldClaims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      )
+    )
+  );
+});
+
+test("WOW List full-population ledger reconciles every surviving profile item", () => {
+  assert.equal(wowlistPopulationAudit.profileCountObserved, 38);
+  assert.equal(wowlistLedger.records.length, 38);
+  assert.equal(new Set(wowlistLedger.records.map((record) => record.statusId)).size, 38);
+  assert.equal(wowlistLedger.populationAudit.unresolvedPopulationSlots, 0);
+  assert.equal(wowlistLedger.method.freshVerification.repliesOnlyStatusId, "665520472461860864");
+});
+
+test("WOW List source-status reactions cannot become project-account traction", () => {
+  const reposts = wowlistLedger.records.filter((record) => record.relationship === "repost");
+  const authored = wowlistLedger.records.filter((record) => record.relationship !== "repost");
+
+  assert.equal(reposts.length, 16);
+  assert.ok(reposts.every((record) => record.metricOwner === "source-status"));
+  assert.ok(authored.every((record) => record.metricOwner === "wowlist-status"));
+  assert.equal(wowlistLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes, 21);
+  assert.equal(wowlistLedger.aggregateFindings.repostSourceVisibleReactionSnapshot.likes, 516);
+});
+
+test("WOW List shared-account authorship boundary is a hard gate", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE"
+  );
+  assert.ok(claim);
+  const original = [...claim.antiClaims];
+
+  try {
+    claim.antiClaims = claim.antiClaims.filter(
+      (antiClaim) => !/personally wrote all six replies/i.test(antiClaim)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = original;
+  }
+});
+
+test("WOW List reserve depth stays off public surfaces", () => {
+  const heldIds = suite.pilot.wowlistFullPopulation.heldClaimIds;
+  const heldClaims = wowlistSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
 
   assert.equal(heldClaims.length, heldIds.length);
   assert.ok(

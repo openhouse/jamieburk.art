@@ -16,7 +16,7 @@ official as proof of impact.
 | --- | --- | --- | --- |
 | CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 posts; joined March 2016 | 107 unique items: 92 authored statuses and 15 reposts; 3 count slots unresolved |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | Targeted authenticated samples; no complete export |
-| WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 37 unique visible statuses; 21 authored by the project |
+| WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 38 unique surviving statuses; 22 authored by the project account |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 posts; joined April 2020 | 34 unique visible statuses; 27 authored by the project |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 170 unique visible statuses; 142 authored by the project |
 
