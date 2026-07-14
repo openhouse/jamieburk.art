@@ -101,6 +101,12 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
     (item) => item.id === "INQ-KCTH-COUNCIL-ACTION-190649-2026"
   );
   const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
+  const handoffClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-MISSION-ALIGNED-HANDOFF"
+  );
+  const handoffSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026"
+  );
 
   assert.equal(claim.maturity, "confirmed-with-boundary");
   assert.equal(claim.projectionEligibility, "eligible");
@@ -115,13 +121,33 @@ test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", (
     "SRC-KCTH-KCMO-LEGISTAR-190649"
   ]);
   assert.equal(page.occurrences[0].claimId, claim.id);
+  assert.equal(handoffClaim.maturity, "confirmed-with-boundary");
+  assert.equal(handoffClaim.projectionEligibility, "eligible");
+  assert.equal(handoffClaim.projections[0].citationRequired, false);
+  assert.match(handoffClaim.projections[0].text, /mission-aligned organization/);
+  assert.equal(handoffSource.visibility, "protected");
+  assert.ok(handoffClaim.boundaries.some((item) => /private transition context/i.test(item)));
 
   const mdx = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
   const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const kcTownHallWork = work.slice(work.indexOf('title: "KC Town Hall LLC"'));
+  const publicRegistry = JSON.parse(
+    readFileSync("apps/www/src/data/knowledge-bank/public-registry.json", "utf8")
+  );
+  const publicHandoffClaim = publicRegistry.claims.find(
+    (item) => item.id === handoffClaim.id
+  );
   assert.match(mdx, /occurrenceId="cced-council-approval"/);
   assert.match(mdx, /does not by itself establish that a funding agreement was executed/);
-  assert.match(work, /years: "2017 onward"/);
+  assert.match(mdx, /claimId="CLM-KCTH-MISSION-ALIGNED-HANDOFF"/);
+  assert.match(work, /years: "Beginning in 2017"/);
+  assert.doesNotMatch(kcTownHallWork, /\blater\b/);
   assert.doesNotMatch(work, /Council later accepted/);
+  assert.equal(
+    publicRegistry.sources.some((item) => item.id === handoffSource.id),
+    false
+  );
+  assert.deepEqual(publicHandoffClaim.evidence, []);
 });
 
 test("an intake-linked source without decomposition fails KB-003", () => {

@@ -492,22 +492,29 @@ export const proofClaims: ProofClaim[] = [
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    evidenceClass: [
+      "approved-resume",
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
     publicWording:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.",
     sourceBasis:
-      "Approved resume language, public-safe project context, Kansas City Legistar history, and authenticated Resolution 190649.",
+      "Approved resume language, public-safe project context, Kansas City Legistar history, authenticated Resolution 190649, and Jamie's July 14, 2026 handoff confirmation.",
     guardrail:
-      "Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion.",
+      "Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion. Present the handoff as Jamie's first-person account without identifying the recipient or publishing private transition context.",
     doNotSay: [
       "$490,539 received or disbursed",
       "Funding agreement executed",
       "Jamie alone secured the Council action",
       "Project completed as proposed",
       "Current property status",
+      "Recipient organization identity",
+      "Handoff date or terms",
       "Private financial details"
     ],
     protectedBoundaries: [
@@ -515,12 +522,13 @@ export const proofClaims: ProofClaim[] = [
       "Legal details",
       "Property details",
       "Banking details",
-      "Stakeholder details"
+      "Stakeholder details",
+      "Private transition context"
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",

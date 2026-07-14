@@ -202,18 +202,18 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
+**Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
 **Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.
 
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion.
+**Guardrail:** Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion. Present the handoff as Jamie's first-person account without identifying the recipient or publishing private transition context.
 
-**Do not say:** $490,539 received or disbursed; funding agreement executed; Jamie alone secured the Council action; project completed as proposed; current property status; private financial details.
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
-**Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Do not say:** $490,539 received or disbursed; funding agreement executed; Jamie alone secured the Council action; project completed as proposed; current property status; recipient identity; handoff date or terms; private financial details.
+**Protected boundaries:** Private transition, financial, legal, property, banking, and stakeholder details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

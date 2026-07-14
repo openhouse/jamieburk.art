@@ -67,6 +67,11 @@ and authority to negotiate an agreement. Do not say the agreement was executed,
 the funds were disbursed or received, the project was completed as proposed, or
 Jamie alone secured the Council action.
 
+Jamie confirms that he transitioned the project to a mission-aligned
+organization. Do not identify the recipient, infer the handoff date or terms,
+publish private transition context, or claim knowledge of present operations
+without separate evidence and authorization.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

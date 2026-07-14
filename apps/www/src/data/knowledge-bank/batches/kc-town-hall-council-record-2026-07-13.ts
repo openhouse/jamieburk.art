@@ -39,6 +39,25 @@ export const kcTownHallCouncilRecordBatch20260713: {
       ],
       reviewedAt: "2026-07-13",
       reviewedBy
+    },
+    {
+      id: "INT-KCTH-MISSION-ALIGNED-HANDOFF-2026",
+      kind: "recollection",
+      capturedAt: "2026-07-14",
+      capturedFrom: "Jamie Burkart portfolio working session",
+      publicSafeSummary:
+        "Jamie transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded.",
+      projects: ["kc-town-hall"],
+      status: "integrated",
+      disposition: "claim-created",
+      sourceIds: ["SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026"],
+      claimIds: ["CLM-KCTH-MISSION-ALIGNED-HANDOFF"],
+      researchTaskIds: [],
+      notes: [
+        "Scope is limited to the professional handoff; recipient identity, timing, terms, and present status remain unverified and unprojected."
+      ],
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex public-safe review"]
     }
   ],
   sources: [
@@ -100,6 +119,25 @@ export const kcTownHallCouncilRecordBatch20260713: {
         "that every proposed project element was completed",
         "that Jamie alone secured the Council action"
       ]
+    },
+    {
+      id: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
+      title: "Jamie Burkart KC Town Hall handoff confirmation",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-14",
+      publicCitation:
+        "Jamie Burkart, first-person confirmation of the KC Town Hall project handoff, July 14, 2026. Underlying context not published.",
+      supportsGenerally: [
+        "Jamie transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded"
+      ],
+      doesNotEstablish: [
+        "the recipient organization's identity",
+        "the handoff date or terms",
+        "the project's present status under the receiving organization"
+      ]
     }
   ],
   sourceAssertions: [
@@ -154,6 +192,19 @@ export const kcTownHallCouncilRecordBatch20260713: {
       publicSafe: true,
       reviewedAt: "2026-07-13",
       reviewedBy
+    },
+    {
+      id: "AST-KCTH-MISSION-ALIGNED-HANDOFF",
+      sourceId: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
+      project: "kc-town-hall",
+      assertion:
+        "Jamie states that he transitioned KC Town Hall to a mission-aligned organization when his stewardship concluded.",
+      relationship: "supports",
+      confidence: "high",
+      candidateClaimIds: ["CLM-KCTH-MISSION-ALIGNED-HANDOFF"],
+      publicSafe: true,
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex public-safe review"]
     }
   ],
   claims: [
@@ -215,6 +266,48 @@ export const kcTownHallCouncilRecordBatch20260713: {
       researchInquiryIds: ["INQ-KCTH-COUNCIL-ACTION-190649-2026"],
       reviewedAt: "2026-07-13",
       reviewedBy
+    },
+    {
+      id: "CLM-KCTH-MISSION-ALIGNED-HANDOFF",
+      project: "kc-town-hall",
+      internalClaim:
+        "Jamie reports that, when his KC Town Hall stewardship concluded, he transitioned the project to a mission-aligned organization.",
+      status: "confirmed-with-boundary",
+      maturity: "confirmed-with-boundary",
+      projectionEligibility: "eligible",
+      collectiveWork: true,
+      projections: [
+        {
+          key: "case-study",
+          text:
+            "When Jamie's stewardship of KC Town Hall concluded, he transitioned the project to a mission-aligned organization.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["/work/kc-town-hall"]
+        }
+      ],
+      evidence: [
+        {
+          sourceId: "SRC-KCTH-JAMIE-HANDOFF-ATTESTATION-2026",
+          relationship: "direct-support",
+          supports: ["Jamie's first-person account of the mission-aligned handoff"],
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "Present this as Jamie's first-person account unless a public organizational record or collaborator corroboration is added.",
+        "Do not identify the recipient organization, infer the handoff date or terms, describe private transition context, or claim present-day project status."
+      ],
+      antiClaims: [
+        "The recipient organization is identified by this record",
+        "The handoff terms or date are established",
+        "The receiving organization's present operations are established",
+        "Private transition context belongs in the public portfolio"
+      ],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex public-safe review"]
     }
   ],
   researchInquiries: [

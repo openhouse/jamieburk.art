@@ -862,6 +862,26 @@
       ]
     },
     {
+      "id": "CLM-KCTH-MISSION-ALIGNED-HANDOFF",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "When Jamie's stewardship of KC Town Hall concluded, he transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Present this as Jamie's first-person account unless a public organizational record or collaborator corroboration is added.",
+        "Do not identify the recipient organization, infer the handoff date or terms, describe private transition context, or claim present-day project status."
+      ]
+    },
+    {
       "id": "CLM-NAC-COALITION-PURPOSE",
       "status": "confirmed-with-boundary",
       "projections": [

@@ -497,7 +497,7 @@ const workItemsInput = [
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
     role: "Project Planning & Documentation Support",
-    years: "2017 onward",
+    years: "Beginning in 2017",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -521,7 +521,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary, official Kansas City legislative record, and authenticated Resolution 190649.",
+      "Public-safe summary, official Kansas City legislative record, authenticated Resolution 190649, and Jamie's public-safe handoff confirmation.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -537,9 +537,9 @@ const workItemsInput = [
       known:
         "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; in 2019, the Council accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
       open:
-        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status.",
+        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status. The recipient organization's identity, handoff timing and terms, and present status are not established for publication.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "Private transition context and private financial, legal, property, banking, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];
