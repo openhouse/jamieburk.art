@@ -6,7 +6,7 @@ type NycArtistCoalitionFacebookEventsBatch = Pick<
 >;
 
 const reportRoot =
-  "https://github.com/openhouse/jamieburk.art/blob/feature/evals-B";
+  "https://github.com/openhouse/jamieburk.art/blob/13b8a266a453e977acb99f0125af1e2c269d38c1";
 
 const selectedEventSources = [
   {

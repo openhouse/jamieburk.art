@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "evalId": "knowledge-bank-lifecycle",
+  "runId": "2026-07-14-z-nycartc-facebook-events-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "evaluatedThrough": "2026-07-14",
+  "status": "passed",
+  "iterations": 5,
+  "qualifyingRounds": [
+    4,
+    5
+  ],
+  "graphSnapshot": {
+    "intakeRecords": 41,
+    "sources": 146,
+    "claims": 51,
+    "researchInquiries": 15,
+    "activeProjections": 37,
+    "heldProjections": 21
+  },
+  "evaluatedIntakeIds": [
+    "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
+    "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
+    "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-OPERATING-RECORDS",
+    "INTAKE-2026-07-14-GDRIVE-NYCA-CONTEXT-RECORDS-HOLD",
+    "INTAKE-2026-07-14-GDRIVE-196-RESIDENCY-OPERATIONS",
+    "INTAKE-2026-07-14-GDRIVE-COMMERCIAL-VACANCY-PILOT",
+    "INTAKE-2026-07-14-GDRIVE-SOURCE-BACKED-MEMORY-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+    "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+    "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+    "INTAKE-2026-07-12-PITCH-RAFT",
+    "INTAKE-2026-07-12-CHARLOTTE-STREET-WATER",
+    "INTAKE-2026-07-12-GOOD-TIMES-OPEN-HOUSE",
+    "INTAKE-2026-07-12-GOTHAMIST-CABARET",
+    "INTAKE-2026-07-12-NPR-NIGHTLIFE",
+    "INTAKE-2026-07-12-NYCA-ROLE-MEMORY",
+    "INTAKE-2026-07-12-TALKS-NOT-RAIDS-MEMORY",
+    "INTAKE-2026-07-12-PUBLIC-SITE-SOURCE-COVERAGE",
+    "INTAKE-2026-07-13-GREENE-HILL-QA",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES",
+    "INTAKE-2026-07-13-MIXMAG-LET-NYC-DANCE",
+    "INTAKE-2026-07-13-BEDFORD-BOWERY-NIGHT-MAYOR",
+    "INTAKE-2026-07-13-NYC-COUNCIL-SBJSA-TESTIMONY",
+    "INTAKE-2026-07-13-KCMO-CCED-AWARD",
+    "INTAKE-2026-07-13-KCMO-COUNCIL-KC-TOWN-HALL-ALLOCATION",
+    "INTAKE-2026-07-13-KCMO-KC-TOWN-HALL-WITHDRAWAL",
+    "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+    "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+    "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
+    "INTAKE-2026-07-13-PITCH-GREAT-ACCOMMODATIONS",
+    "INTAKE-2026-07-13-CLAUDETTE-AR",
+    "INTAKE-2026-07-13-LET-NYC-DANCE-PRESS",
+    "INTAKE-2026-07-13-TALKS-NOT-RAIDS-PRESS",
+    "INTAKE-2026-07-13-SAVE-NYC-SPACES-PRESS",
+    "INTAKE-2026-07-13-FAIR-RENT-NYC-PRESS",
+    "INTAKE-2026-07-14-URBANHERMIT-X-FULL-POPULATION",
+    "INTAKE-2026-07-14-NYCAC-FACEBOOK-EVENTS"
+  ],
+  "contentClusters": [
+    {
+      "id": "nycartc-facebook-event-participation-system",
+      "sourceIds": [
+        "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026",
+        "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026",
+        "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-REPORT-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-LEDGER-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-LINK-LEDGER-2026",
+        "SRC-GOTHAMIST-COMMERCIAL-RENT-BILL-2019-11-06",
+        "SRC-NYPOST-FOOTLOOSE-CABARET-2017-04-08",
+        "SRC-NYCAC-FACEBOOK-EVENT-GENERAL-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-HEARING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NOVEMBER-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHT-MAYOR-PANEL-2018",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-HEARING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-SUMMER-MEETING-2019",
+        "SRC-NYCAC-FACEBOOK-EVENT-COVID-RELIEF-2020"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+        "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
+        "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK",
+        "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE"
+      ],
+      "researchInquiryIds": [
+        "INQ-NYCAC-FACEBOOK-EVENTS-2026"
+      ],
+      "projectionDecision": "Project Jamie's bounded contribution to a recurring participation system on the FairRentNYC case study. Retain the full event census, response signals, source network, preservation drift, and democratic-listening interpretation as governed bank depth with their separate evidence states."
+    }
+  ],
+  "finalJudgments": {
+    "evidenceGovernanceJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 100,
+      "minimumCriterionScore": 5,
+      "calibration": 5,
+      "regressions": []
+    },
+    "editorialFutureUseJudge": {
+      "allHardGatesPassed": true,
+      "weightedScore": 99,
+      "minimumCriterionScore": 4,
+      "calibration": 5,
+      "regressions": []
+    }
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceGovernanceScore": 82,
+      "editorialFutureUseScore": 79,
+      "result": "revise",
+      "finding": "Stale citations, movable repository references, aggregate-only preservation drift, incomplete row-derived checks, and a crowded public candidate blocked acceptance."
+    },
+    {
+      "round": 2,
+      "evidenceGovernanceScore": 95,
+      "editorialFutureUseScore": 95,
+      "result": "qualifying-pass",
+      "finding": "Immutable citations, row-derived invariants, explicit preservation identifiers, clearer composition, and public-safety boundaries passed every gate."
+    },
+    {
+      "round": 3,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every hard-gate, calibration, future-use, and public-safety pass without regression."
+    },
+    {
+      "round": 4,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "The citation-only composition removed duplicate rendered copy while preserving the canonical occurrence and reference plan."
+    },
+    {
+      "round": 5,
+      "evidenceGovernanceScore": 100,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every lifecycle, citation, calibration, and page-composition pass without regression."
+    }
+  ],
+  "unresolvedCriteria": []
+}
