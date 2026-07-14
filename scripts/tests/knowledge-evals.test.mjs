@@ -5,6 +5,7 @@ import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } fr
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
@@ -20,6 +21,10 @@ const wowlistLedger = JSON.parse(readFileSync(
 ));
 const kcTownHallLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/kctownhall-public-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const nycacLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/nycartc-public-post-ledger.json", import.meta.url),
   "utf8"
 ));
 
@@ -929,6 +934,137 @@ test("KC Town Hall official-engagement floor cannot absorb outreach or reposts",
 test("KC Town Hall reserve depth stays off public surfaces", () => {
   const heldIds = suite.pilot.kcTownHallFullPopulation.heldClaimIds;
   const heldClaims = kcTownHallSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(
+    heldClaims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      )
+    )
+  );
+});
+
+test("NYC Artist Coalition population ledger reconciles every displayed profile slot", () => {
+  assert.equal(nycacPopulationAudit.profileCountObserved, 5124);
+  assert.equal(nycacLedger.records.length, 1026);
+  assert.equal(new Set(nycacLedger.records.map((record) => record.statusId)).size, 1026);
+  assert.equal(nycacLedger.population.unresolvedProfileCountSlots, 4098);
+  assert.equal(
+    nycacLedger.population.itemLevelRecordsRecovered + nycacLedger.population.unresolvedProfileCountSlots,
+    nycacLedger.population.displayedProfileCount
+  );
+  assert.match(
+    nycacLedger.population.completenessStatement,
+    /100 percent population reconciliation, not 100 percent item-level recovery/i
+  );
+});
+
+test("NYC Artist Coalition aggregate findings are recomputed from item-level records", () => {
+  const records = nycacLedger.records;
+  const authored = records.filter((record) => record.relationship !== "native-repost-source");
+  const repostSources = records.filter((record) => record.relationship === "native-repost-source");
+  const links = records.flatMap((record) => record.postedUrls);
+  const reactionSnapshot = authored.reduce(
+    (totals, record) => ({
+      records: totals.records + 1,
+      recordsWithVisibleReaction: totals.recordsWithVisibleReaction +
+        (record.reactionSnapshot.replies + record.reactionSnapshot.reposts + record.reactionSnapshot.likes > 0 ? 1 : 0),
+      replies: totals.replies + record.reactionSnapshot.replies,
+      reposts: totals.reposts + record.reactionSnapshot.reposts,
+      likes: totals.likes + record.reactionSnapshot.likes
+    }),
+    { records: 0, recordsWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+
+  assert.deepEqual(
+    {
+      records: nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.records,
+      recordsWithVisibleReaction:
+        nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.recordsWithVisibleReaction,
+      replies: nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.replies,
+      reposts: nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.reposts,
+      likes: nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes
+    },
+    reactionSnapshot
+  );
+  assert.equal(nycacLedger.aggregateFindings.postedLinks.shortUrlOccurrences, links.length);
+  assert.equal(
+    nycacLedger.aggregateFindings.postedLinks.uniqueShortUrls,
+    new Set(links.map((link) => link.shortUrl)).size
+  );
+  assert.equal(nycacLedger.aggregateFindings.repostNetwork.statuses, repostSources.length);
+  assert.equal(
+    nycacLedger.aggregateFindings.repostNetwork.directMentionStatuses,
+    repostSources.filter((record) => record.directMentionOfAccount).length
+  );
+});
+
+test("NYC Artist Coalition population eval rejects aggregate-only drift", () => {
+  const alteredLedger = structuredClone(nycacLedger);
+  alteredLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes += 1;
+  const result = evaluateKnowledgeBank(suite, { nycacLedger: alteredLedger });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-POPULATION-DISPOSITION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("NYC Artist Coalition source-status reactions cannot become account traction", () => {
+  const repostSources = nycacLedger.records.filter(
+    (record) => record.relationship === "native-repost-source"
+  );
+  const authored = nycacLedger.records.filter(
+    (record) => record.relationship !== "native-repost-source"
+  );
+
+  assert.equal(repostSources.length, 684);
+  assert.ok(
+    repostSources.every(
+      (record) => record.reactionSnapshot === null && record.metricOwner === "source-status-excluded"
+    )
+  );
+  assert.ok(authored.every((record) => record.metricOwner === "nycartc-status"));
+  assert.equal(nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes, 1111);
+});
+
+test("NYC Artist Coalition linked articles mature into source-specific observations", () => {
+  const articleSources = nycacSocialCorpus.intakeItems[0].sourceIds
+    .map((sourceId) => knowledgeBank.sources.find((source) => source.id === sourceId))
+    .filter((source) => source?.kind === "published-article");
+  const articleObservations = nycacSocialCorpus.observations.filter(
+    (observation) => articleSources.some((source) => source.id === observation.sourceId)
+  );
+
+  assert.equal(articleSources.length, 10);
+  assert.equal(articleObservations.length, 10);
+  assert.equal(new Set(articleObservations.map((observation) => observation.sourceId)).size, 10);
+  assert.equal(
+    knowledgeBank.sources.filter(
+      (source) => source.canonicalUrl === "https://thebaffler.com/latest/cut-the-music-pelly"
+    ).length,
+    1
+  );
+  assert.ok(
+    articleObservations.every(
+      (observation) => observation.limitations.length && observation.claimIds.length
+    )
+  );
+});
+
+test("NYC Artist Coalition direct mentions cannot support the Council-member claim", () => {
+  const observation = nycacSocialCorpus.observations.find(
+    (item) => item.id === "OBS-NYCAC-DIRECT-MENTION-FLOOR"
+  );
+
+  assert.deepEqual(observation?.claimIds, ["CLM-NYCAC-SOCIAL-EDITORIAL-NETWORK"]);
+  assert.ok(!observation?.claimIds.includes("CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT"));
+});
+
+test("NYC Artist Coalition reserve depth stays off public surfaces", () => {
+  const heldIds = suite.pilot.nycacPopulationDisposition.heldClaimIds;
+  const heldClaims = nycacSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
 
   assert.equal(heldClaims.length, heldIds.length);
   assert.ok(

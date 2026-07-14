@@ -15,7 +15,7 @@ official as proof of impact.
 | Project | Handle | Profile snapshot | Recovered public record |
 | --- | --- | --- | --- |
 | CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 posts; joined March 2016 | 107 unique items: 92 authored statuses and 15 reposts; 3 count slots unresolved |
-| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | Targeted authenticated samples; no complete export |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | 1,026 item-level records; 4,098 explicit unresolved slots; no complete export |
 | WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 38 unique surviving statuses; 22 authored by the project account |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 posts; joined April 2020 | 34 unique visible statuses; 27 authored by the project |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 183 unique surviving items; 155 authored by the project account |
@@ -24,7 +24,8 @@ Counts are accessed-at snapshots and recovered floors. For CallNYC, the 107
 recovered item records plus three explicit unresolved slots disposition all 110
 observed profile-count slots; this is not a platform export. For KC Town Hall,
 Posts and Replies reconciliation recovered all 183 surviving profile-counted
-items. X pagination,
+items. For NYC Artist Coalition, 1,026 item-level records plus 4,098 explicit
+unresolved slots disposition the 5,124-post control. X pagination,
 virtualization, search behavior, deletions, privacy settings, and unavailable
 posts prevent these from being described as complete exports.
 
@@ -35,6 +36,12 @@ accounts were verified. The current `@fairrentnyc` and `@sundaydinnernyc`
 profiles were not attributed to Jamie's projects because their dates and
 content do not corroborate the connection. This is not proof that another
 account never existed.
+
+The [population-reconciled archival note](../intake/2026-07-14-nycartc-population-reconciled-social-corpus.md)
+and [1,026-record public-safe ledger](../data/nycartc-public-post-ledger.json)
+preserve all four campaign signals, 408 posted short URLs, 345 currently
+resolved destinations, and a 216-account source network. They also preserve the
+4,098-item carrier gap instead of converting it into invented completeness.
 
 ## CallNYC Council-account engagement
 
@@ -91,9 +98,10 @@ and the
 
 ## NYC Artist Coalition Council-account engagement
 
-The 5,124-post coalition account was too large for a complete scroll export.
-Broad, dated, campaign, and mention searches recovered posts authored by **at
-least five sitting Council members**:
+The population pass did not recover a complete item-level export: 1,026 records
+were recovered and 4,098 profile-count slots remain explicitly unresolved.
+Broad, dated, campaign, and mention searches nevertheless recovered posts
+authored by **at least five sitting Council members**:
 
 | Member | Date | Recovered engagement |
 | --- | --- | --- |
@@ -103,10 +111,12 @@ least five sitting Council members**:
 | [Jimmy Van Bramer](https://x.com/JimmyVanBramer/status/1320792543773282304) | 2020-10-26 | Named the coalition while calling for support for artists and culture |
 | [Brad Lander](https://x.com/bradlander/status/1354840336330330116) | 2021-01-28 | Commercial-rent-stabilization exchange in a recovered coalition thread |
 
-The search recovered 260 unique visible statuses from a March 2020-March 2025
-mention pass, 60 from a 2018-2019 dated pass, and additional targeted campaign
-results. Pre-November 2018 retrieval was incomplete. Posts outside a person's
-Council term were excluded from the sitting-member floor.
+The earlier search recovered 260 unique visible statuses from a March
+2020-March 2025 mention pass, 60 from a 2018-2019 dated pass, and additional
+targeted campaign results. The later population pass preserved 1,026 unique
+records from 2017-2018 and 2023-2026, but X did not expose a stable carrier for
+the 2019-2022 gap or older native reposts. Posts outside a person's Council term
+were excluded from the sitting-member floor.
 
 ## Other mission-relevant findings
 

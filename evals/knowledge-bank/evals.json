@@ -318,7 +318,7 @@
       "expectedInquiryCount": 3,
       "accountSnapshots": {
         "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 107, "recoveredAuthoredPosts": 92 },
-        "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": null, "recoveredAuthoredPosts": null },
+        "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": 1026, "recoveredAuthoredPosts": 342 },
         "@wowlist": { "profilePosts": 38, "recoveredStatuses": 38, "recoveredAuthoredPosts": 22 },
         "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
         "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 183, "recoveredAuthoredPosts": 155 }
@@ -510,6 +510,46 @@
       ],
       "auditSourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
       "proofId": "kc-town-hall-public-service-interface"
+    },
+    "nycacPopulationDisposition": {
+      "ledgerPath": "docs/knowledge-bank/data/nycartc-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-nycartc-population-reconciled-social-corpus.md",
+      "expectedProfileCount": 5124,
+      "expectedUniqueItems": 1026,
+      "expectedAccountPosts": 309,
+      "expectedAccountReplies": 33,
+      "expectedAuthoredStatuses": 342,
+      "expectedRepostSourceStatuses": 684,
+      "expectedRepostSourceAccounts": 216,
+      "expectedUnresolvedSlots": 4098,
+      "expectedFairRentSignals": 104,
+      "expectedLetDanceSignals": 101,
+      "expectedSaveSpacesSignals": 98,
+      "expectedTalksNotRaidsSignals": 16,
+      "expectedDirectMentionStatuses": 25,
+      "expectedDirectMentionAccounts": 13,
+      "expectedShortUrlOccurrences": 536,
+      "expectedUniqueShortUrls": 408,
+      "expectedResolvedShortUrls": 384,
+      "expectedUnresolvedShortUrls": 24,
+      "expectedResolvedDestinations": 345,
+      "expectedAuthoredStatusesWithReaction": 311,
+      "expectedAuthoredVisibleReplies": 11,
+      "expectedAuthoredVisibleReposts": 544,
+      "expectedAuthoredVisibleLikes": 1111,
+      "expectedSourceCount": 10,
+      "expectedLinkedArticleCount": 10,
+      "expectedObservationCount": 16,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 3,
+      "heldClaimIds": [
+        "CLM-NYCAC-SOCIAL-POPULATION-DISPOSITION",
+        "CLM-NYCAC-SOCIAL-CAMPAIGN-CONTINUITY",
+        "CLM-NYCAC-SOCIAL-EDITORIAL-NETWORK",
+        "CLM-NYCAC-SOCIAL-SOURCE-ROUTING",
+        "CLM-NYCAC-SOCIAL-VISIBLE-REACTIONS"
+      ],
+      "auditSourceId": "SRC-X-NYCAC-POPULATION-AUDIT-2026-07-14"
     }
   },
   "criteria": [
@@ -624,6 +664,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every surviving @KCTownHall item and posted URL is dispositioned; resident-service, source-routing, and stakeholder patterns are reproducible; outreach, direct response, amplification, and current reactions remain distinct; private contact and service data stay absent; collective authorship is preserved; and only the clearest operational claim is composed into the site."
+    },
+    {
+      "id": "KB-EVAL-NYCAC-POPULATION-DISPOSITION",
+      "label": "NYC Artist Coalition population-reconciled archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 5,124 displayed @NYCArtC profile-count slots receive honest dispositions; every recovered item and posted URL is preserved without raw text; unresolved carrier gaps remain explicit; source authorship, coalition amplification, direct mention, current reactions, and Council-member engagement remain distinct; and the deeper account record stays available for recomposition without burdening the public portfolio."
     }
   ],
   "hillClimb": {

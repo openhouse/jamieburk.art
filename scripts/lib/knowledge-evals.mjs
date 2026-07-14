@@ -5,6 +5,7 @@ import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } fr
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
+import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
@@ -1239,9 +1240,182 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       publicRegistryText.includes(kcthFull.activeClaimId) &&
       kcthFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries];
+  const nycacFull = suite.pilot.nycacPopulationDisposition;
+  const nycacLedgerPath = path.join(repoRoot, nycacFull.ledgerPath);
+  const nycacDocumentation = existsSync(path.join(repoRoot, nycacFull.documentationPath))
+    ? readFileSync(path.join(repoRoot, nycacFull.documentationPath), "utf8")
+    : "";
+  const nycacLedger = fixtures.nycacLedger ?? (existsSync(nycacLedgerPath)
+    ? JSON.parse(readFileSync(nycacLedgerPath, "utf8"))
+    : null);
+  const nycacRecords = nycacLedger?.records ?? [];
+  const nycacRecordIds = nycacRecords.map((record) => record.statusId);
+  const nycacRecordUrls = nycacRecords.map((record) => record.statusUrl);
+  const nycacRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(nycacRecords, (record) => record.relationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const nycacAuthoredRecords = nycacRecords.filter((record) => record.relationship !== "native-repost-source");
+  const nycacRepostSourceRecords = nycacRecords.filter((record) => record.relationship === "native-repost-source");
+  const nycacRepostSourceAccounts = new Set(nycacRepostSourceRecords.map((record) => record.sourceAccount));
+  const nycacDirectMentionRecords = nycacRepostSourceRecords.filter((record) => record.directMentionOfAccount);
+  const nycacDirectMentionAccounts = new Set(nycacDirectMentionRecords.map((record) => record.sourceAccount));
+  const nycacLinks = nycacRecords.flatMap((record) => record.postedUrls ?? []);
+  const nycacUniqueShortUrls = new Set(nycacLinks.map((link) => link.shortUrl));
+  const nycacResolvedShortUrls = new Set(
+    nycacLinks.filter((link) => link.resolvedUrl).map((link) => link.shortUrl)
+  );
+  const nycacUnresolvedShortUrls = new Set(
+    nycacLinks.filter((link) => !link.resolvedUrl).map((link) => link.shortUrl)
+  );
+  const nycacResolvedDestinations = new Set(
+    nycacLinks.map((link) => link.resolvedUrl).filter(Boolean)
+  );
+  const countNycacCampaignSignal = (signal) => nycacRecords.filter(
+    (record) => record.campaignSignals.includes(signal)
+  ).length;
+  const nycacAuthoredReactionSnapshot = nycacAuthoredRecords.reduce(
+    (totals, record) => {
+      const metrics = record.reactionSnapshot;
+      totals.records += 1;
+      totals.recordsWithVisibleReaction += metrics.replies + metrics.reposts + metrics.likes > 0 ? 1 : 0;
+      totals.replies += metrics.replies;
+      totals.reposts += metrics.reposts;
+      totals.likes += metrics.likes;
+      return totals;
+    },
+    { records: 0, recordsWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+  const nycacFullSources = nycacSocialCorpus.sources.map((source) => sourceById.get(source.id));
+  const nycacLinkedArticleSources = nycacSocialCorpus.intakeItems[0].sourceIds
+    .map((sourceId) => sourceById.get(sourceId))
+    .filter((source) => source?.kind === "published-article");
+  const nycacFullClaims = nycacSocialCorpus.claims.map((claim) => claimById.get(claim.id));
+  const nycacHeldClaims = nycacFull.heldClaimIds.map((id) => claimById.get(id));
+  const nycacFullInquiries = nycacSocialCorpus.researchInquiries.map((inquiry) => inquiryById.get(inquiry.id));
+  const nycacAuditSource = sourceById.get(nycacFull.auditSourceId);
+  const nycacFullInquiry = inquiryById.get("INQ-NYCAC-FULL-POPULATION-2026");
+  const nycacCarrierInquiry = inquiryById.get("INQ-NYCAC-HISTORICAL-CARRIER-RECOVERY");
+  const nycacContinuityInquiry = inquiryById.get("INQ-NYCAC-SOCIAL-EDITORIAL-CONTINUITY");
+  const nycacSharedIdentityClaim = claimById.get("CLM-NYCAC-SHARED-SOCIAL-IDENTITY");
+  const nycacLedgerText = nycacLedger ? JSON.stringify(nycacLedger) : "";
+  const nycacPopulationDispositionComplete = Boolean(
+    nycacLedger &&
+      nycacLedger.account === "@NYCArtC" &&
+      nycacLedger.observedAt === "2026-07-14" &&
+      nycacLedger.population.displayedProfileCount === nycacFull.expectedProfileCount &&
+      nycacLedger.population.itemLevelRecordsRecovered === nycacFull.expectedUniqueItems &&
+      nycacLedger.population.unresolvedProfileCountSlots === nycacFull.expectedUnresolvedSlots &&
+      nycacLedger.population.dispositionTotal === nycacFull.expectedProfileCount &&
+      nycacLedger.population.itemLevelRecordsRecovered + nycacLedger.population.unresolvedProfileCountSlots === nycacFull.expectedProfileCount &&
+      nycacLedger.population.relationshipCounts["account-post"] === nycacFull.expectedAccountPosts &&
+      nycacLedger.population.relationshipCounts["account-reply"] === nycacFull.expectedAccountReplies &&
+      nycacLedger.population.relationshipCounts["native-repost-source"] === nycacFull.expectedRepostSourceStatuses &&
+      nycacLedger.unresolvedItems.length === 1 &&
+      nycacLedger.unresolvedItems[0].count === nycacFull.expectedUnresolvedSlots &&
+      nycacLedger.unresolvedItems[0].doesNotProve.length >= 4 &&
+      /100 percent population reconciliation, not 100 percent item-level recovery/i.test(nycacLedger.population.completenessStatement) &&
+      /No credential, cookie, direct message, private analytics/i.test(nycacLedger.method.authenticationBoundary) &&
+      nycacRecords.length === nycacFull.expectedUniqueItems &&
+      new Set(nycacRecordIds).size === nycacFull.expectedUniqueItems &&
+      new Set(nycacRecordUrls).size === nycacFull.expectedUniqueItems &&
+      nycacRecords.every((record) =>
+        /^\d+$/.test(record.statusId) &&
+          record.statusUrl.endsWith(`/status/${record.statusId}`) &&
+          ["account-post", "account-reply", "native-repost-source"].includes(record.relationship) &&
+          typeof record.sourceAccount === "string" && record.sourceAccount.startsWith("@") &&
+          typeof record.publicSummary === "string" && record.publicSummary.length &&
+          typeof record.contentDigest === "string" && /^[a-f0-9]{64}$/.test(record.contentDigest) &&
+          !("text" in record) &&
+          Array.isArray(record.campaignSignals) &&
+          Array.isArray(record.hashtags) &&
+          Array.isArray(record.publicMentions) &&
+          Array.isArray(record.postedUrls) &&
+          record.postedUrls.every((link) =>
+            /^https?:\/\/t\.co\//.test(link.shortUrl) &&
+              (link.resolvedUrl === null || /^https?:\/\//.test(link.resolvedUrl)) &&
+              ["resolved-currently", "not-resolved"].includes(link.resolutionStatus)
+          ) &&
+          Number.isInteger(record.mediaSignals?.imageCount) &&
+          (record.relationship === "native-repost-source"
+            ? record.reactionSnapshot === null && record.metricOwner === "source-status-excluded"
+            : Number.isInteger(record.reactionSnapshot?.replies) &&
+              Number.isInteger(record.reactionSnapshot?.reposts) &&
+              Number.isInteger(record.reactionSnapshot?.likes) &&
+              record.metricOwner === "nycartc-status")
+      ) &&
+      nycacRelationshipCounts["account-post"] === nycacFull.expectedAccountPosts &&
+      nycacRelationshipCounts["account-reply"] === nycacFull.expectedAccountReplies &&
+      nycacRelationshipCounts["native-repost-source"] === nycacFull.expectedRepostSourceStatuses &&
+      nycacAuthoredRecords.length === nycacFull.expectedAuthoredStatuses &&
+      nycacRepostSourceAccounts.size === nycacFull.expectedRepostSourceAccounts &&
+      nycacDirectMentionRecords.length === nycacFull.expectedDirectMentionStatuses &&
+      nycacDirectMentionAccounts.size === nycacFull.expectedDirectMentionAccounts &&
+      countNycacCampaignSignal("fair-rent-nyc") === nycacFull.expectedFairRentSignals &&
+      countNycacCampaignSignal("let-nyc-dance") === nycacFull.expectedLetDanceSignals &&
+      countNycacCampaignSignal("save-nyc-spaces") === nycacFull.expectedSaveSpacesSignals &&
+      countNycacCampaignSignal("talks-not-raids") === nycacFull.expectedTalksNotRaidsSignals &&
+      nycacLinks.length === nycacFull.expectedShortUrlOccurrences &&
+      nycacUniqueShortUrls.size === nycacFull.expectedUniqueShortUrls &&
+      nycacResolvedShortUrls.size === nycacFull.expectedResolvedShortUrls &&
+      nycacUnresolvedShortUrls.size === nycacFull.expectedUnresolvedShortUrls &&
+      nycacResolvedDestinations.size === nycacFull.expectedResolvedDestinations &&
+      nycacAuthoredReactionSnapshot.recordsWithVisibleReaction === nycacFull.expectedAuthoredStatusesWithReaction &&
+      nycacAuthoredReactionSnapshot.replies === nycacFull.expectedAuthoredVisibleReplies &&
+      nycacAuthoredReactionSnapshot.reposts === nycacFull.expectedAuthoredVisibleReposts &&
+      nycacAuthoredReactionSnapshot.likes === nycacFull.expectedAuthoredVisibleLikes &&
+      nycacLedger.aggregateFindings.postedLinks.shortUrlOccurrences === nycacLinks.length &&
+      nycacLedger.aggregateFindings.postedLinks.uniqueShortUrls === nycacUniqueShortUrls.size &&
+      nycacLedger.aggregateFindings.postedLinks.resolvedShortUrls === nycacResolvedShortUrls.size &&
+      nycacLedger.aggregateFindings.postedLinks.unresolvedShortUrls === nycacUnresolvedShortUrls.size &&
+      nycacLedger.aggregateFindings.postedLinks.uniqueResolvedDestinations === nycacResolvedDestinations.size &&
+      nycacLedger.aggregateFindings.repostNetwork.statuses === nycacFull.expectedRepostSourceStatuses &&
+      nycacLedger.aggregateFindings.repostNetwork.distinctSourceAccounts === nycacRepostSourceAccounts.size &&
+      nycacLedger.aggregateFindings.repostNetwork.directMentionStatuses === nycacDirectMentionRecords.length &&
+      nycacLedger.aggregateFindings.repostNetwork.directMentionAccounts === nycacDirectMentionAccounts.size &&
+      nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.records === nycacAuthoredReactionSnapshot.records &&
+      nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.recordsWithVisibleReaction === nycacAuthoredReactionSnapshot.recordsWithVisibleReaction &&
+      nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.replies === nycacAuthoredReactionSnapshot.replies &&
+      nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.reposts === nycacAuthoredReactionSnapshot.reposts &&
+      nycacLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes === nycacAuthoredReactionSnapshot.likes &&
+      nycacPopulationAudit.profileCountObserved === nycacFull.expectedProfileCount &&
+      nycacPopulationAudit.uniqueItemsRecovered === nycacFull.expectedUniqueItems &&
+      nycacPopulationAudit.unresolvedPopulationSlots === nycacFull.expectedUnresolvedSlots &&
+      nycacPopulationAudit.dispositionTotal === nycacFull.expectedProfileCount &&
+      nycacCorpusFindings.uniqueShortUrls === nycacFull.expectedUniqueShortUrls &&
+      nycacCorpusFindings.linkedSourcesCloselyRead === nycacFull.expectedLinkedArticleCount &&
+      nycacSocialCorpus.sources.length === nycacFull.expectedSourceCount &&
+      nycacLinkedArticleSources.length === nycacFull.expectedLinkedArticleCount &&
+      nycacSocialCorpus.observations.length === nycacFull.expectedObservationCount &&
+      nycacSocialCorpus.claims.length === nycacFull.expectedClaimCount &&
+      nycacSocialCorpus.researchInquiries.length === nycacFull.expectedInquiryCount &&
+      [...nycacFullSources, ...nycacLinkedArticleSources].every((source) =>
+        source?.visibility === "public" && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      nycacAuditSource?.kind === "research-run" &&
+      nycacAuditSource.canonicalUrl?.includes(nycacFull.ledgerPath) &&
+      nycacAuditSource.doesNotEstablish.some((boundary) => /100 percent item-level recovery/i.test(boundary)) &&
+      nycacHeldClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      nycacFullClaims.every((claim) => claim?.antiClaims.length >= 3 && claim.boundaries.length >= 2) &&
+      nycacFullInquiry?.resultStatus === "partially-recovered" &&
+      nycacFullInquiry.findings.some((finding) => /4,098 explicit unresolved slots/i.test(finding)) &&
+      nycacCarrierInquiry?.resultStatus === "not-recovered" &&
+      nycacCarrierInquiry.limitations.some((limitation) => /Not recovered does not mean no archive exists/i.test(limitation)) &&
+      nycacContinuityInquiry?.resultStatus === "partially-recovered" &&
+      nycacSharedIdentityClaim?.evidence.some((evidence) => evidence.sourceId === nycacFull.auditSourceId) &&
+      nycacDocumentation.includes("1,026 + 4,098 = 5,124") &&
+      nycacDocumentation.includes("population disposition") &&
+      nycacDocumentation.includes("carrier gap, not a claim of inactivity") &&
+      nycacDocumentation.includes("Most of these are mission context, not coverage of NYC Artist Coalition") &&
+      nycacDocumentation.includes("Nothing from this pass is added automatically") &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(nycacLedgerText) &&
+      nycacFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -1440,6 +1614,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [kcthFullPopulationComplete
         ? `All ${kcthFull.expectedProfileCount} surviving profile-count items are recovered through ${kcthRecords.length} unique records; the ledger preserves ${kcthUniqueShortUrls.size} posted short URLs, ${kcthFull.expectedTireWorkflowRecords} tire-workflow records, ${kcthExternalHandles.size} outside-account touchpoints, and a ${kcthFull.expectedDirectCouncilResponses}-member direct-response floor while keeping outreach, amplification, mutable reactions, collective authorship, and private service data bounded`
         : "KC Town Hall ledger reconciliation, item uniqueness, link and source inventory, tire-workflow classification, direct-response derivation, metric parsing, source-status metric exclusion, collective authorship, private-data exclusion, held depth, public projection, proof coverage, or public safety is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-NYCAC-POPULATION-DISPOSITION",
+      score: score(nycacPopulationDispositionComplete),
+      evidence: [nycacPopulationDispositionComplete
+        ? `All ${nycacFull.expectedProfileCount} displayed profile-count slots are dispositioned through ${nycacRecords.length} unique item records and ${nycacFull.expectedUnresolvedSlots} explicit carrier-limited slots; the ledger preserves ${nycacUniqueShortUrls.size} posted short URLs, ${nycacResolvedDestinations.size} current destinations, ${nycacRepostSourceAccounts.size} source accounts, ${nycacDirectMentionAccounts.size} direct-mention accounts, ten closely read sources, collective authorship, and source-status metric ownership without overloading the public portfolio`
+        : "NYC Artist Coalition population arithmetic, item uniqueness, unresolved carrier limits, campaign and source classifications, link inventory, direct-mention distinctions, source-status metric exclusion, collective authorship, held composition, or public safety is incomplete"]
     }
   ];
 

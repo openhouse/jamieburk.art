@@ -1,6 +1,25 @@
 const reviewedAt = "2026-07-13";
 const inquiryId = "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE";
 const claimId = "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE";
+const closeReadArticleOverrides = {
+  "SRC-NYCAC-BAFFLER-MARCH": {
+    author: "Liz Pelly",
+    publishedAt: "2018-02-12",
+    publicCitation: "Liz Pelly, 'Cut the Music,' The Baffler, February 12, 2018.",
+    publicNote: "Reporting on M.A.R.C.H. opacity, multi-agency venue inspections, and arguments for transparent, recoverable safety processes rather than punitive closure.",
+    supportsGenerally: [
+      "public reporting on M.A.R.C.H. operations",
+      "venue-safety and enforcement context",
+      "calls for transparency and non-punitive correction"
+    ],
+    doesNotEstablish: [
+      "Jamie's authorship",
+      "NYC Artist Coalition's complete role",
+      "that the article was caused by Talks Not Raids",
+      "the later end of M.A.R.C.H."
+    ]
+  }
+} as const;
 
 type PreservationStatus = "live" | "archived" | "live-and-archived";
 
@@ -173,30 +192,38 @@ const articleSources = campaignPressInventory
   .flatMap((campaign) => campaign.entries.map((entry) => ({ campaign, entry })))
   .filter(({ entry }) => !entry.existingSource)
   .filter(({ entry }, index, entries) => entries.findIndex((candidate) => candidate.entry.sourceId === entry.sourceId) === index)
-  .map(({ campaign, entry }) => ({
-    id: entry.sourceId,
-    title: entry.title,
-    organization: entry.publisher,
-    kind: "published-article",
-    visibility: "public",
-    preservationStatus: entry.preservationStatus,
-    ...(entry.publishedAt ? { publishedAt: entry.publishedAt } : {}),
-    accessedAt: reviewedAt,
-    canonicalUrl: entry.canonicalUrl,
-    ...(entry.archiveUrl ? { archiveUrl: entry.archiveUrl } : {}),
-    preferredPublicUrl: entry.preservationStatus === "archived" ? "archive" : "canonical",
-    publicCitation: `${entry.publisher}, '${entry.title}'${entry.publishedAt ? `, ${entry.publishedAt}` : ""}.`,
-    publicNote: `Listed in the ${campaign.name} Press section. Retained as a source lead until proposition-level close reading connects it to a bounded claim.`,
-    supportsGenerally: [
-      "the article's publication metadata and issue context represented by its title"
-    ],
-    doesNotEstablish: [
-      "Jamie's individual role",
-      "campaign-site authorship",
-      "sole causation of a policy or institutional outcome",
-      "the accuracy of every reported proposition without proposition-level close reading"
-    ]
-  }));
+  .map(({ campaign, entry }) => {
+    const closeReadOverride = closeReadArticleOverrides[
+      entry.sourceId as keyof typeof closeReadArticleOverrides
+    ];
+
+    const source = {
+      id: entry.sourceId,
+      title: entry.title,
+      organization: entry.publisher,
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: entry.preservationStatus,
+      ...(entry.publishedAt ? { publishedAt: entry.publishedAt } : {}),
+      accessedAt: reviewedAt,
+      canonicalUrl: entry.canonicalUrl,
+      ...(entry.archiveUrl ? { archiveUrl: entry.archiveUrl } : {}),
+      preferredPublicUrl: entry.preservationStatus === "archived" ? "archive" : "canonical",
+      publicCitation: `${entry.publisher}, '${entry.title}'${entry.publishedAt ? `, ${entry.publishedAt}` : ""}.`,
+      publicNote: `Listed in the ${campaign.name} Press section. Retained as a source lead until proposition-level close reading connects it to a bounded claim.`,
+      supportsGenerally: [
+        "the article's publication metadata and issue context represented by its title"
+      ],
+      doesNotEstablish: [
+        "Jamie's individual role",
+        "campaign-site authorship",
+        "sole causation of a policy or institutional outcome",
+        "the accuracy of every reported proposition without proposition-level close reading"
+      ]
+    };
+
+    return closeReadOverride ? { ...source, ...closeReadOverride } : source;
+  });
 
 const observations = campaignPressInventory.flatMap((campaign) =>
   campaign.entries.map((entry, index) => ({
