@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-r7",
+  "judgeId": "codex-independent-hiring-manager-r9",
   "lens": "hiring-manager",
-  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
-  "contract": "sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d",
+  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
+  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,52 +21,57 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening immediately names Jamie as a Technical Project Manager focused on Product Operations and Implementation, states his operating-structure value, and provides direct work, resume, and contact actions."
+      "observation": "The opening identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states his operating-structure value, and provides immediate work, resume, and contact actions."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The operations map connects Jamie's experience to delivery coordination, risk surfacing, cross-functional dependencies, documentation, adoption, and durable handoffs."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "Jamie's approved resume supports only his attributed role account. The Board packet separately records him as presenter and four affirmative Board votes; the Council record shows Resolution 190649 adopted and Ordinance 190642 passed; Ordinance 240317 records withdrawal and reappropriation of the unused allocation. The page rejects agreement, receipt, expenditure, construction, and completion inferences."
+      "observation": "The page distinguishes Jamie's resume-attributed planning role and documented presenter role from the Board recommendation and Council actions, ending with the appropriation and its explicit downstream limits."
     },
     {
       "rubric": "citational_care",
       "route": "/work/kc-town-hall",
-      "observation": "Six distinct source notes separate the first-party resume account, Board recommendation, Council acceptance, Council appropriation, and later unused-funds record; each source states what it does not establish."
+      "observation": "Five ordered public sources support the role account, presenter role, Board recommendation, Council acceptance, and appropriation. The later disposition and transition memory are not projected publicly."
     },
     {
       "rubric": "reader_effort",
-      "route": "/work",
-      "observation": "The application path is direct and headings remain scannable, but the KC Town Hall card repeats its provenance-and-outcome wording and FairRentNYC remains citation-dense."
+      "route": "/work/fair-rent-nyc",
+      "observation": "Headings and outcomes are scannable, but FairRentNYC remains a long, citation-dense operating record."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/kc-town-hall",
-      "observation": "Jamie is visible as co-founder, project manager, planning co-lead, documentation contributor, and named Board presenter. Institutional actions retain Board and Council credit, though the evidence-heavy chronology requires a second pass."
+      "observation": "Jamie remains visible while institutional credit is right-sized; the page now ends at the relevant appropriation boundary."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work",
-      "observation": "The portfolio still relies on diagrams, prose, and artifact descriptions rather than an approved, inspectable project screenshot or primary work artifact; this remains the explicit application-ready deferral."
+      "observation": "The portfolio still lacks an approved inspectable project screenshot or primary work artifact; this remains the declared application-ready deferral."
     },
     {
       "rubric": "responsive_quality",
       "route": "all 10 evaluated routes",
-      "observation": "Candidate-bound evidence reports 200 responses without desktop, mobile, or 200%-equivalent overflow, plus visible focus for all 24 traversed controls; coverage remains local rather than exhaustive across devices."
+      "observation": "Candidate-bound evidence reports successful desktop, mobile, and 200%-equivalent renders without overflow, visible focus on all 24 traversed controls, and working citation targets and backlinks."
     },
     {
       "rubric": "sharing_quality",
-      "route": "/resume",
-      "observation": "Canonical metadata, Open Graph data, Twitter card, resume download, and contact paths are present, but supplied verification uses staging metadata defaults."
+      "route": "/resume, /contact",
+      "observation": "Canonical metadata, social metadata, resume download, email, LinkedIn, and GitHub paths are present; verification uses staging defaults."
     },
     {
       "rubric": "operational_confidence",
-      "route": "candidate-bound evaluation evidence",
-      "observation": "Candidate and contract fingerprints recompute exactly, and repository, citation, knowledge-bank, public-safety, route, resume, application-path, and responsive gates pass. Production deployment controls remain deferred."
+      "route": "candidate-bound evaluation",
+      "observation": "Candidate and contract fingerprints recompute and application-stage repository, safety, citation, route, resume, and browser checks pass; production controls remain deferred."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of a system Jamie directly built, with an adjacent caption naming his contribution and preserving collective credit.",
+  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of a system Jamie directly built with an ownership and source-boundary caption.",
   "passes": true,
   "confidence": "high"
 }

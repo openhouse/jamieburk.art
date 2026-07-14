@@ -67,9 +67,12 @@ Do not convert appropriation or authorization to negotiate into an executed
 funding agreement, disbursement, receipt, expenditure, completed construction,
 or current property status. Do not call the Council action unanimous because
 the public meeting record does not provide an individual roll-call tally. Do
-not attribute the Council action or the later project withdrawal solely to
-Jamie. Ordinance 240317 records withdrawal and reclamation of the unused
-allocation without assigning individual responsibility.
+not attribute the Council action or the later administrative disposition solely
+to Jamie, and do not describe Jamie as abandoning the project. Ordinance 240317
+records withdrawal and reclamation of the unused allocation without describing
+how project stewardship changed. Jamie's recollection of a transition to a
+mission-aligned organization is a deferred first-party research lead, not active
+public copy.
 
 ## Source-Backed Team Memory
 

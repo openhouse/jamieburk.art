@@ -116,6 +116,23 @@ export const kcTownHallIntakes = [
     sourceIds: ["SRC-KC-TOWN-HALL-ORDINANCE-240317"],
     claimIds: ["CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"],
     inquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE"]
+  },
+  {
+    id: "INT-2026-07-14-KC-TOWN-HALL-PROJECT-TRANSITION-MEMORY",
+    kind: "memory",
+    capturedAt: "2026-07-14",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "Jamie's first-party recollection that he transitioned KC Town Hall project stewardship to a mission-aligned organization.",
+    projectIds: ["kc-town-hall"],
+    entityIds: [],
+    dateHints: ["later project period"],
+    sensitivity: "public-safe",
+    availability: "unknown",
+    status: "deferred",
+    sourceIds: [],
+    claimIds: [],
+    inquiryIds: ["INQ-KC-TOWN-HALL-PROJECT-TRANSITION"],
+    dispositionReason: "The recollection is public-safe but remains first-party. Corroborating public evidence and recipient confirmation should precede public projection."
   }
 ] satisfies IntakeItem[];
 
@@ -576,14 +593,14 @@ export const kcTownHallClaims = [
     internalClaim: "Ordinance 240317 records that KC Town Hall later withdrew and that the City reclaimed the unused $490,539 allocation in 2024.",
     status: "confirmed-with-boundary",
     publicationStatus: "qualified",
-    editorialStatus: "active",
+    editorialStatus: "unused",
     projections: [
       {
         key: "case-study",
         text: "A 2024 ordinance records that the project later withdrew and that the City reclaimed the unused $490,539 allocation.",
-        status: "active",
-        citationRequired: true,
-        surfaces: ["/work/kc-town-hall"]
+        status: "hold",
+        citationRequired: false,
+        surfaces: []
       }
     ],
     evidence: [
@@ -598,14 +615,19 @@ export const kcTownHallClaims = [
     ],
     boundaries: [
       "The ordinance does not state why the project withdrew or assign individual responsibility.",
-      "The later withdrawal does not erase the earlier Board recommendation, Council adoption, or appropriation."
+      "The later withdrawal does not erase the earlier Board recommendation, Council adoption, or appropriation.",
+      "The City's administrative record does not describe how project stewardship changed."
     ],
     antiClaims: [
       "Jamie caused the project withdrawal.",
+      "Jamie abandoned the project.",
       "The appropriation was disbursed before it was reclaimed.",
       "The source establishes current property status."
     ],
-    researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE"],
+    researchInquiryIds: [
+      "INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE",
+      "INQ-KC-TOWN-HALL-PROJECT-TRANSITION"
+    ],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex public-record review"]
   }
@@ -615,7 +637,7 @@ export const kcTownHallInquiry = {
   id: "INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE",
   project: "kc-town-hall",
   intakeIds: kcTownHallIntakes
-    .filter((item) => item.id !== "INT-2026-07-14-KC-TOWN-HALL-APPROVED-RESUME")
+    .filter((item) => item.kind === "url")
     .map((item) => item.id),
   question: "What public records establish the KC Town Hall sequence from Jamie's presentation and the CCED Board recommendation through City Council action and later disposition?",
   methods: [
@@ -642,6 +664,29 @@ export const kcTownHallInquiry = {
   publicSummary: "Official records establish a four-member CCED Board recommendation followed by City Council adoption and a $490,539 appropriation; a later ordinance records that the project withdrew and the allocation remained unused."
 } satisfies ResearchInquiry;
 
+export const kcTownHallTransitionInquiry = {
+  id: "INQ-KC-TOWN-HALL-PROJECT-TRANSITION",
+  project: "kc-town-hall",
+  intakeIds: ["INT-2026-07-14-KC-TOWN-HALL-PROJECT-TRANSITION-MEMORY"],
+  question: "What public-safe evidence can corroborate Jamie's recollection that he transitioned KC Town Hall project stewardship to a mission-aligned organization, and how should the recipient and timing be described?",
+  methods: [
+    "Identify public-facing records of the organizational transition.",
+    "Seek collaborator or recipient confirmation suitable for public attribution.",
+    "Compare the transition chronology with the municipal record without treating them as the same legal event."
+  ],
+  runAt: "2026-07-14",
+  resultStatus: "inconclusive",
+  findings: [
+    "Jamie supplied a public-safe first-party recollection that he transitioned project stewardship to a mission-aligned organization."
+  ],
+  limitations: [
+    "No corroborating public source or recipient confirmation has been linked.",
+    "The receiving organization and transition date have not been verified for public attribution.",
+    "The municipal withdrawal record does not describe any organizational transition."
+  ],
+  sourceIds: []
+} satisfies ResearchInquiry;
+
 export const kcTownHallCorrections = [
   {
     id: "COR-KC-TOWN-HALL-FUNDING-STAGE-2026",
@@ -663,8 +708,7 @@ export const kcTownHallPage = {
     "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
     "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
     "SRC-KC-TOWN-HALL-RESOLUTION-190649",
-    "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-    "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+    "SRC-KC-TOWN-HALL-ORDINANCE-190642"
   ],
   occurrences: [
     {
@@ -702,12 +746,6 @@ export const kcTownHallPage = {
         "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
         "SRC-KC-TOWN-HALL-ORDINANCE-190642"
       ]
-    },
-    {
-      id: "unused-allocation",
-      claimId: "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
-      projection: "case-study",
-      sourceIds: ["SRC-KC-TOWN-HALL-ORDINANCE-240317"]
     }
   ]
 } satisfies CitationPage;

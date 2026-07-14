@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-chad-editor-r7",
+  "judgeId": "codex-independent-chad-editor-r9",
   "lens": "chad-editorial",
-  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
-  "contract": "sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d",
+  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
+  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -13,7 +13,7 @@
     "chad_lens": 3,
     "visual_evidence": 1,
     "resume_alignment": 4,
-    "responsive_quality": 4,
+    "responsive_quality": 3,
     "sharing_quality": 3,
     "operational_confidence": 3
   },
@@ -21,47 +21,52 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The first viewport names Jamie, the target role, his operating-structure value, and direct work, resume, and contact actions."
+      "observation": "The first viewport names Jamie, the Technical Project Manager target, his operating-structure value, and direct application actions."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The operations map connects Jamie's work directly to delivery coordination, risk surfacing, dependencies, onboarding, reporting, and durable handoffs."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "The sequence matches the official Board packet, Council record, and later ordinance: Jamie is the presenter; four Board members recommended $490,539; the Council adopted the resolution and passed the appropriation ordinance; the project later withdrew and the allocation remained unused."
+      "observation": "Jamie's attributed planning and presenter roles remain distinct from Board and Council actions; no personal cause is assigned."
     },
     {
       "rubric": "citational_care",
       "route": "/work/kc-town-hall",
-      "observation": "The page separately cites the resume role account, Board presentation and recommendation, Council acceptance, Council appropriation, and later reappropriation, with explicit limits against inferring receipt, expenditure, construction, unanimity, or Jamie's causality."
+      "observation": "Separate citations support the role account, presenter record, four-member Board recommendation, Council adoption, and appropriation, each with explicit limits."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "The application path is scannable and outcome-led, but the long cited operating record retains enough source-governance narration to prevent an exceptional score."
+      "observation": "The case is structured and scannable, but its long operating record and extensive source notes require more reading than an exceptional one-pass surface."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/kc-town-hall",
-      "observation": "Compared with the accepted baseline, the page replaces recommendation-only understatement with the actual Council appropriation while keeping Jamie's work, his presenter role, the Board vote, and the Council actions distinct."
+      "observation": "The page states the Council appropriation directly, ends with the no-disbursement boundary, and omits the later administrative disposition from the page, registry, and artifact caption."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work",
-      "observation": "Project imagery remains sparse; additional approved visual evidence is the existing application-stage deferral."
+      "observation": "Project evidence remains primarily textual; approved visual evidence remains the declared application-stage deferral."
     },
     {
       "rubric": "responsive_quality",
       "route": "candidate-bound browser evidence",
-      "observation": "Ten routes pass desktop, mobile, and 200%-equivalent reflow without overflow; all 24 traversed controls expose visible focus and citation backlinks work."
+      "observation": "Ten routes returned 200 without overflow, all 24 traversed controls displayed focus, citation backlinks worked, and 200%-equivalent reflow passed."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "Canonical, Open Graph, Twitter-card, resume-download, email, LinkedIn, and GitHub paths are present; staging defaults and generic shared imagery keep this strong rather than exceptional."
+      "observation": "Canonical, social, resume-download, email, LinkedIn, and GitHub paths are present; staging defaults keep this below exceptional."
     },
     {
       "rubric": "operational_confidence",
       "route": "/contact",
-      "observation": "The candidate has route, accessibility, metadata, citation, and resume evidence sufficient for application use; production cutover, indexing, and deployed-commit verification remain explicit application-profile deferrals."
+      "observation": "Candidate-bound route, accessibility, citation, metadata, contact, and resume checks pass; production controls remain deferred."
     }
   ],
   "regressions": [],

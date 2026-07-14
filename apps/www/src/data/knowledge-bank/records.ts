@@ -13,6 +13,7 @@ import {
   kcTownHallClaims,
   kcTownHallCorrections,
   kcTownHallInquiry,
+  kcTownHallTransitionInquiry,
   kcTownHallIntakes,
   kcTownHallPage,
   kcTownHallProject,
@@ -893,6 +894,7 @@ const knowledgeBankInput = {
   ],
   researchInquiries: [
     kcTownHallInquiry,
+    kcTownHallTransitionInquiry,
     {
       id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
       project: "callnyc",

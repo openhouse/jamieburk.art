@@ -115,29 +115,6 @@
       ]
     },
     {
-      "id": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-      "title": "Ordinance 240317",
-      "organization": "City of Kansas City, Missouri",
-      "kind": "government-record",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2024-03-28",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
-      "publicNote": "The later ordinance confirms the 2019 KC Town Hall appropriation, records that the project withdrew, and reappropriates the unused $490,539 allocation.",
-      "locator": "Legislation text, first and third WHEREAS clauses and Sections 1-2.",
-      "reviewDepth": "close-reading",
-      "doesNotEstablish": [
-        "why the project withdrew",
-        "individual responsibility for the withdrawal",
-        "an executed funding agreement",
-        "any disbursement, receipt, or expenditure",
-        "current property status"
-      ]
-    },
-    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -703,38 +680,6 @@
         "Appropriation does not establish an executed funding agreement, disbursement, receipt, expenditure, construction, or completion.",
         "The official meeting record does not supply an individual roll-call tally for this Council action.",
         "Government action should not be converted into sole causality by Jamie or KC Town Hall."
-      ]
-    },
-    {
-      "id": "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "A 2024 ordinance records that the project later withdrew and that the City reclaimed the unused $490,539 allocation.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/kc-town-hall"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
-          "relationship": "direct-support",
-          "supports": [
-            "project withdrawal",
-            "unused $490,539 allocation",
-            "2024 reappropriation"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "The ordinance does not state why the project withdrew or assign individual responsibility.",
-        "The later withdrawal does not erase the earlier Board recommendation, Council adoption, or appropriation."
       ]
     },
     {
@@ -1309,8 +1254,7 @@
         "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
         "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
         "SRC-KC-TOWN-HALL-RESOLUTION-190649",
-        "SRC-KC-TOWN-HALL-ORDINANCE-190642",
-        "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+        "SRC-KC-TOWN-HALL-ORDINANCE-190642"
       ],
       "occurrences": [
         {
@@ -1353,14 +1297,6 @@
           "sourceIds": [
             "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
             "SRC-KC-TOWN-HALL-ORDINANCE-190642"
-          ]
-        },
-        {
-          "id": "unused-allocation",
-          "claimId": "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
-          "projection": "case-study",
-          "sourceIds": [
-            "SRC-KC-TOWN-HALL-ORDINANCE-240317"
           ]
         }
       ]

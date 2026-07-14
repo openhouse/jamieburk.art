@@ -515,7 +515,7 @@ const workItemsInput = [
       {
         title: "Board-to-Council public-record sequence",
         description:
-          "A source-backed chronology separating the Board recommendation, Council adoption, appropriation, and later reappropriation of unused funds.",
+          "A source-backed chronology separating the Board recommendation, Council adoption, appropriation, and downstream limits.",
         type: "source map"
       }
     ],
@@ -541,7 +541,7 @@ const workItemsInput = [
       known:
         "Jamie's approved public resume describes his KC Town Hall planning and documentation role; official records separately name him as presenter and show the proposal advancing to City Council adoption and appropriation.",
       open:
-        "The public records do not establish an executed funding agreement, disbursement, receipt, expenditure, or construction. A 2024 ordinance records withdrawal and reclamation of the unused allocation.",
+        "The public records do not establish an executed funding agreement, disbursement, receipt, expenditure, or construction.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

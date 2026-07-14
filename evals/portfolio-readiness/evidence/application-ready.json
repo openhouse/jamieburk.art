@@ -1,5 +1,5 @@
 {
-  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
+  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
   "profile": "application_ready",
   "performedAt": "2026-07-14",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",

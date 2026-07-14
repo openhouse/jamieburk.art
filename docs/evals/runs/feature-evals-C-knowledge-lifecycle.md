@@ -159,16 +159,24 @@ layers remain deliberately separate:
 - Resolution 190649 accepts the Board recommendation and authorizes negotiation
   of a funding agreement for eligible costs up to $490,539;
 - Ordinance 190642 appropriates $490,539 for KC Town Hall; and
-- Ordinance 240317 records that the project later withdrew and reappropriates
-  the unused allocation.
+- Ordinance 240317 separately records a later administrative disposition of
+  the unused allocation. That mature source-backed record remains in the
+  canonical bank but is editorially unused on the public site.
 
-The public case study now uses six atomic claims: attributed planning role,
-presenter role, Board recommendation, Council acceptance, Council appropriation,
-and unused-funds disposition. It states explicitly that appropriation is not an
-executed agreement, disbursement, receipt, expenditure, construction, or
-completion. It does not call the Council vote unanimous, assign Jamie causal
-credit for the Council action, or infer a reason or individual responsibility
-for the later withdrawal.
+The public case study now uses five atomic claims: attributed planning role,
+presenter role, Board recommendation, Council acceptance, and Council
+appropriation. It states explicitly that appropriation is not an executed
+agreement, disbursement, receipt, expenditure, construction, or completion. It
+does not call the Council vote unanimous, assign Jamie causal credit for the
+Council action, or use the later administrative disposition as the conclusion
+of Jamie's project account.
+
+Jamie then clarified that he remembers transitioning the project to a
+mission-aligned organization. The public-safe professional recollection is now
+captured as a deferred first-party memory linked only to a dedicated,
+inconclusive inquiry. It has no source record, claim promotion, or public
+projection until the recipient, timing, and terms can be corroborated. No
+private rationale is encoded.
 
 The recursive cycle exposed and repaired four issues before stopping:
 
@@ -183,13 +191,24 @@ The recursive cycle exposed and repaired four issues before stopping:
 4. Presenter/recommendation and acceptance/appropriation were initially paired,
    so the sequence was decomposed into six source-specific atomic claims.
 
+The clarification cycle exposed and repaired three further projection defects:
+
+1. An initial patch attached the new editorial status to the wrong KC claim;
+   claim-level regression tests caught and corrected it.
+2. A work artifact caption still mentioned reappropriation and unused funds;
+   the public-surface composition check caught the leak and now guards all KC
+   work metadata.
+3. The transition memory was initially swept into the municipal-record inquiry
+   by a broad intake filter; graph-closure checks now require it to resolve only
+   to its own inquiry.
+
 After those repairs, the knowledge-ready profile passed twice at 100/100 with
 independent archival-editorial and public-safety-composition judgments.
 
 - Baseline: `92.5`
-- Candidate: `sha256:afe03a5023695af5ba115d2edb9bb6246e1dabc95b81781bd0b4e5ca24e0c8b8`
-- Contract: `sha256:b7e483e1da05fc202b3a579cecd22cfec08b17c523eca3b640f329bdd3232039`
-- Knowledge-lifecycle regression tests: `24/24`
+- Candidate: `sha256:3b0fcff93c764088bcbea5e417b21f1f54e878b3b6f2bff6a62b4e82838fef8d`
+- Contract: `sha256:79d0470581d3c4e5ae1af21c8c32dfc25252f73274a42b29accebe4a7e7d4fb4`
+- Knowledge-lifecycle regression tests: `25/25`
 - Citation tests: `10/10`
 
 The exact public candidate was then inspected on ten routes, including KC Town
@@ -198,8 +217,8 @@ Hall, at desktop, mobile, and 200%-equivalent reflow sizes. All routes returned
 fresh hiring-manager, public-safety-editorial, and Chad-editorial judgments
 reported no regressions. The application-ready profile passed twice at 86.5.
 
-- Application candidate: `sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87`
-- Application contract: `sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d`
+- Application candidate: `sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb`
+- Application contract: `sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab`
 
 ## Next Cycle
 

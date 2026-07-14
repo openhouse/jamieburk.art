@@ -27,6 +27,10 @@ Ask:
     refusing unsupported claims of Council unanimity, executed agreement,
     disbursement, receipt, expenditure, completion, or individual withdrawal
     causality?
+11. Does Jamie's first-party recollection of transitioning project stewardship
+    to a mission-aligned organization remain a deferred research lead pending
+    public-safe corroboration, while the later municipal disposition remains
+    mature but editorially unused?
 
 Return JSON with:
 

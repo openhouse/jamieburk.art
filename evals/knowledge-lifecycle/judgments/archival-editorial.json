@@ -1,1 +1,53 @@
-{"judgeId":"lifecycle-archival-kc-town-hall-2026-07-14-r5","lens":"archival-editorial","candidate":"sha256:afe03a5023695af5ba115d2edb9bb6246e1dabc95b81781bd0b4e5ca24e0c8b8","contract":"sha256:b7e483e1da05fc202b3a579cecd22cfec08b17c523eca3b640f329bdd3232039","passes":true,"scores":{"capture_integrity":4,"source_decomposition":4,"claim_atomicity":4,"provenance_closure":4,"status_separation":4,"project_context":3,"research_honesty":4,"projection_restraint":3},"evidence":[{"rubric":"capture_integrity","observation":"All six KC Town Hall submissions have stable intake IDs, promoted dispositions, and reciprocal source, claim, and inquiry links. The approved-resume intake is deliberately separate from the five-record government inquiry."},{"rubric":"source_decomposition","observation":"Each source has a close-reading status, public URL, audit locator, support scope, and explicit non-support boundaries. The official Board packet independently confirms Jamie as presenter and the four affirmative Board votes; the Council and ordinance records distinguish adoption, appropriation, and later disposition."},{"rubric":"claim_atomicity","observation":"The candidate uses six distinct claims for the attributed planning role, presenter role, Board recommendation, Council acceptance, Council appropriation, and later unused allocation. It does not collapse Board votes into Council unanimity or acceptance into appropriation, execution, or payment."},{"rubric":"provenance_closure","observation":"Jamie's planning and documentation role resolves directly to the approved resume while every active projection preserves first-party attribution and denies independent corroboration. Presenter, recommendation, acceptance, appropriation, and disposition resolve to their respective government sources and page-local citation occurrences."},{"rubric":"status_separation","observation":"KC claims independently encode confirmed-with-boundary knowledge status, qualified publication status, and active editorial status. COR-KC-TOWN-HALL-FUNDING-STAGE-2026 preserves the correction from recommendation-only language to the later documented appropriation stage."},{"rubric":"project_context","observation":"The project record supplies a 2015–2024 period, historical status, public-surface candidates, a bounded summary, and a useful photo-research prompt. Entity modeling remains sparse because KC Town Hall, the CCED Board, and the City are not represented as linked entity records."},{"rubric":"research_honesty","observation":"INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE excludes both the resume intake and resume source. Its methods, findings, and limitations expressly withhold Council unanimity, executed agreement, disbursement, receipt, expenditure, construction, completion, withdrawal rationale, and individual causality."},{"rubric":"projection_restraint","observation":"The case study places the Board recommendation, Council acceptance, appropriation, and later disposition under “What the public record shows,” outside “What I did.” Work-card summary and usable-outcome text resolve through canonical role and appropriation projections, and the generated registry exposes only public sources with protected fields redacted."},{"rubric":"verification","observation":"Fresh verification passed all 24 knowledge-lifecycle tests and all 10 citation tests; the generated registry check reported current and redacted. The evaluator independently reproduced the required candidate and contract hashes with zero deterministic findings."}],"regressions":[],"nextAction":"No required patch. A future non-blocking improvement would link KC Town Hall, the CCED Board, and the City through explicit entity records and render the existing page-level source locators in public endnotes."}
+{
+  "judgeId": "lifecycle-archival-kc-town-hall-transition-2026-07-14-r8",
+  "lens": "archival-editorial",
+  "candidate": "sha256:3b0fcff93c764088bcbea5e417b21f1f54e878b3b6f2bff6a62b4e82838fef8d",
+  "contract": "sha256:79d0470581d3c4e5ae1af21c8c32dfc25252f73274a42b29accebe4a7e7d4fb4",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 3,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "The transition memory has a stable public-safe intake, deferred status, no source or claim promotion, and exactly one link to its dedicated transition inquiry."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "The approved resume remains first-party project-archive evidence, while the Council-sequence inquiry resolves exclusively to five close-read government records with explicit support and non-support boundaries."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Presenter role, four-member Board recommendation, Council acceptance, Council appropriation, and later unused-allocation disposition remain separate claims; no claim attributes personal causation to Jamie."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The recovered Council-sequence inquiry contains exactly five URL intakes and their five government-record sources, excluding both the resume artifact and transition memory. Ordinance 240317 directly supports only the bounded disposition claim."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The transition lead is deferred and inconclusive with zero sources, while the later disposition is confirmed-with-boundary and qualified but editorially unused, with a hold projection and no public surfaces."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The project record, 2015-2024 period, research note, source chronology, public-surface candidates, and photo-research prompt provide usable orientation. Explicit linked entity records remain sparse."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The transition inquiry states that no corroborating public source, recipient confirmation, verified recipient, or verified date exists and refuses to equate organizational transition with municipal withdrawal."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The case study, work metadata, proof wording, citation page, and public registry stop at appropriation and downstream limits. Ordinance 240317, the unused-allocation claim, and the transition memory are absent from public composition."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Persist this candidate-bound judgment; no KC content change is required."
+}

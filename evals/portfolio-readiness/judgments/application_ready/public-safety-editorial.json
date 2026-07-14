@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-public-safety-editorial-r7",
+  "judgeId": "codex-independent-public-safety-editorial-r9",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
-  "contract": "sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d",
+  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
+  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,62 +21,62 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening names Jamie, the target role, and the operating-structure value proposition, then provides direct paths to selected work, resume, and contact."
+      "observation": "The first viewport names Jamie, the target role, his operating-structure value, and direct work, resume, and contact paths."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "Jamie's co-founder, project-manager, planning, and documentation account is explicitly attributed to his approved resume. His presenter role and the four affirmative Board votes are separately supported by the CCED Board packet."
+      "observation": "The page separates Jamie's attributed role, documented presenter role, Board recommendation, Council adoption, and $490,539 appropriation."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/kc-town-hall",
-      "observation": "The municipal sequence is properly divided: the Council record documents adoption and passage; the resolution accepts the recommendation and authorizes negotiations; the ordinance appropriates the amount. The page states that appropriation is not agreement execution, disbursement, receipt, expenditure, or completion."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "The later record documents project withdrawal and reappropriation of unused funds without assigning a reason or individual responsibility."
+      "observation": "The public conclusion stops at appropriation and states that the record does not establish an agreement, disbursement, receipt, expenditure, construction, or completion."
     },
     {
       "rubric": "citational_care",
       "route": "/work/kc-town-hall",
-      "observation": "Six ordered source records distinguish the resume, Board packet, Council meeting record, resolution, appropriation ordinance, and later reappropriation ordinance. Claim-level citations and does-not-establish boundaries make support and stopping points inspectable."
+      "observation": "Five distinct public sources support the active KC sequence, each with an explicit does-not-establish boundary."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "public registry",
+      "observation": "The registry excludes the later-disposition source, unused-allocation claim, transition memory, and any personal-causality projection."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "Headings preserve navigation, but the long chronology, numerous source notes, and repeated boundary explanations prevent exceptional one-pass concision."
+      "observation": "Clear headings support scanning, but the long chronology and extensive references require more than one pass."
     },
     {
       "rubric": "chad_lens",
-      "route": "/work/kc-town-hall",
-      "observation": "Jamie is visible as the resume-attributed co-founder and project manager and as the officially named presenter, while Board and Council actions retain institutional ownership."
+      "route": "/work",
+      "observation": "Jamie is visible as builder, co-founder, project manager, and contributor, while institutional and collective credit remains right-sized."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work",
-      "observation": "The portfolio still lacks an approved, inspectable project screenshot or primary work artifact. This is the explicit existing application-stage deferral."
+      "observation": "The portfolio relies on prose and descriptive artifacts rather than an approved inspectable project image."
     },
     {
       "rubric": "responsive_quality",
       "route": "candidate-bound browser evidence",
-      "observation": "All ten inspected routes returned 200 without desktop, mobile, or 200%-equivalent reflow overflow. Twenty-four traversed controls showed visible focus, and citation targets and backlinks remained keyboard accessible."
+      "observation": "All ten routes returned 200 without desktop, mobile, or 200%-equivalent overflow; all 24 traversed controls showed visible focus."
     },
     {
       "rubric": "sharing_quality",
-      "route": "/resume",
-      "observation": "Resume download, contact paths, canonical metadata, Open Graph data, and Twitter card metadata are present under staging defaults."
+      "route": "/work/kc-town-hall",
+      "observation": "Canonical and social metadata repeat only the attributed role and Council appropriation under staging defaults."
     },
     {
       "rubric": "operational_confidence",
-      "route": "candidate-bound deterministic evaluation",
-      "observation": "Repository integrity, baseline comparison, public safety, claim and citation integrity, resume consistency, routes, application paths, and responsive evidence passed; production controls remain deferred."
+      "route": "candidate-bound evaluation",
+      "observation": "Candidate-bound repository, knowledge-bank, citation, public-safety, route, resume, and browser gates pass; production deployment controls remain deferred."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "After rights and public-safety review, add one approved, inspectable project artifact image with an adjacent ownership and source-boundary caption; do not use municipal outcome records as a substitute for evidence of Jamie's own work.",
+  "smallestDefensiblePatch": "After rights and public-safety review, add one inspectable artifact image from work Jamie directly performed with an ownership and source-boundary caption.",
   "passes": true,
   "confidence": "high"
 }

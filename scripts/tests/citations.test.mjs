@@ -28,13 +28,13 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("KC Town Hall citations preserve role, Board, Council, and disposition order", () => {
+test("KC Town Hall citations preserve role, Board, and Council order", () => {
   assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "planning-and-documentation-role").sources.map((item) => item.number), [1]);
   assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "presenter-role").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "board-recommendation").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "council-acceptance").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "council-appropriation").sources.map((item) => item.number), [3, 5]);
-  assert.deepEqual(resolveCitationOccurrence("kc-town-hall", "unused-allocation").sources.map((item) => item.number), [6]);
+  assert.throws(() => resolveCitationOccurrence("kc-town-hall", "unused-allocation"), /Unknown citation occurrence/);
 });
 
 test("Claim resolver returns only active approved projections", () => {

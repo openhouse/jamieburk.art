@@ -431,14 +431,15 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Resume-described co-leadership of adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation. The Board packet names him as presenter; official Council records document adoption of the recommendation and the appropriation.",
-    sourceBasis: "Canonical approved-resume source SRC-KC-TOWN-HALL-APPROVED-RESUME-2026; the 2019 CCED Board packet; the September 26, 2019, Council meeting record; authenticated Ordinance 190642 and Resolution 190649; Ordinance 240317; and public-safe project context.",
+    sourceBasis: "Canonical approved-resume source SRC-KC-TOWN-HALL-APPROVED-RESUME-2026; the 2019 CCED Board packet; the September 26, 2019, Council meeting record; authenticated Ordinance 190642 and Resolution 190649; and public-safe project context.",
     guardrail:
-      "The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received, disbursed, or spent; a 2024 ordinance records withdrawal and reclamation of the unused amount.",
+      "The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received, disbursed, or spent. Keep later administrative disposition distinct from Jamie's role and from the still-uncorroborated account of how project stewardship changed.",
     doNotSay: [
       "Funding agreement executed",
       "Funds received, disbursed, or spent",
       "Council vote was unanimous",
       "Jamie caused or controlled the Council action",
+      "Jamie abandoned the project",
       "Project completed",
       "Current property status",
       "Private financial details",

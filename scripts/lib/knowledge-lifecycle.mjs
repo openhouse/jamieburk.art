@@ -206,7 +206,41 @@ export function validateKnowledgeLifecycle(bank, suite) {
     const unusedClaim = bank.claims.find(
       (claim) => claim.id === "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"
     );
+    const transitionIntake = bank.intakeItems.find(
+      (item) => item.id === required.transitionIntakeId
+    );
+    const transitionInquiry = bank.researchInquiries.find(
+      (item) => item.id === required.transitionInquiryId
+    );
+    const councilSequenceInquiry = bank.researchInquiries.find(
+      (item) => item.id === "INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE"
+    );
     const page = bank.pages.find((item) => item.id === required.pageId);
+
+    if (!transitionIntake) {
+      add("capture_integrity", "kc-transition-intake", `Missing ${required.transitionIntakeId}`);
+    } else if (
+      transitionIntake.kind !== "memory" ||
+      transitionIntake.status !== "deferred" ||
+      transitionIntake.sensitivity !== "public-safe" ||
+      !transitionIntake.publicSafeDescription.includes("mission-aligned organization") ||
+      transitionIntake.inquiryIds.length !== 1 ||
+      transitionIntake.inquiryIds[0] !== required.transitionInquiryId
+    ) {
+      add("capture_integrity", "kc-transition-intake", `${required.transitionIntakeId} does not preserve the public-safe deferred memory posture`);
+    }
+    if (!transitionInquiry) {
+      add("research_honesty", "kc-transition-inquiry", `Missing ${required.transitionInquiryId}`);
+    } else if (
+      transitionInquiry.resultStatus !== "inconclusive" ||
+      transitionInquiry.sourceIds.length > 0 ||
+      !transitionInquiry.limitations.some((item) => /corroborating public source|recipient confirmation/i.test(item))
+    ) {
+      add("research_honesty", "kc-transition-inquiry", `${required.transitionInquiryId} overstates the uncorroborated transition memory`);
+    }
+    if (councilSequenceInquiry?.intakeIds.includes(required.transitionIntakeId)) {
+      add("provenance_closure", "kc-transition-inquiry-crosslink", `${required.transitionIntakeId} is incorrectly attached to the recovered Council-sequence inquiry`);
+    }
 
     if (
       roleClaim &&
@@ -313,13 +347,26 @@ export function validateKnowledgeLifecycle(bank, suite) {
     if (unusedClaim && !unusedClaim.boundaries.some((boundary) => /responsibility|why/i.test(boundary))) {
       add("research_honesty", "kc-withdrawal-causality", `${unusedClaim.id} does not preserve the withdrawal-causality boundary`);
     }
+    if (
+      unusedClaim &&
+      (unusedClaim.editorialStatus !== "unused" ||
+        unusedClaim.projections.some((projection) => projection.status === "active"))
+    ) {
+      add("projection_restraint", "kc-disposition-public-conclusion", `${unusedClaim.id} should remain mature but editorially unused`);
+    }
 
     if (page) {
       const occurrenceClaimIds = new Set(page.occurrences.map((occurrence) => occurrence.claimId));
-      for (const claimId of required.claimIds) {
+      for (const claimId of required.publicClaimIds) {
         if (!occurrenceClaimIds.has(claimId)) {
           add("projection_restraint", "kc-missing-citation", `${required.pageId} does not cite ${claimId}`);
         }
+      }
+      if (
+        occurrenceClaimIds.has("CLM-KC-TOWN-HALL-UNUSED-ALLOCATION") ||
+        page.sourceOrder.includes("SRC-KC-TOWN-HALL-ORDINANCE-240317")
+      ) {
+        add("projection_restraint", "kc-disposition-public-conclusion", `${required.pageId} composes the later administrative disposition as its public conclusion`);
       }
     }
   }

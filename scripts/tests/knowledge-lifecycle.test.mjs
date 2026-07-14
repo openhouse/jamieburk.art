@@ -232,7 +232,7 @@ test("KC Town Hall preserves the full Board-to-Council funding sequence", () => 
   assert.ok(page);
   assert.deepEqual(
     page.occurrences.map((occurrence) => occurrence.claimId),
-    required.claimIds
+    required.publicClaimIds
   );
   assert.equal(
     knowledgeBank.corrections.some((correction) => correction.id === required.correctionId),
@@ -288,11 +288,13 @@ test("KC Town Hall public composition separates Jamie's role from government act
   assert.ok(whatIDid < roleOccurrence && roleOccurrence < publicRecord);
   assert.ok(whatIDid < presenterOccurrence && presenterOccurrence < publicRecord);
   assert.ok(publicRecord < boardOccurrence && boardOccurrence < acceptanceOccurrence);
-  assert.ok(acceptanceOccurrence < councilOccurrence && councilOccurrence < unusedOccurrence);
+  assert.ok(acceptanceOccurrence < councilOccurrence);
+  assert.equal(unusedOccurrence, -1);
   assert.match(work, /years: "2015–2024"/);
   assert.match(work, /CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE/);
   assert.match(work, /CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION/);
   assert.doesNotMatch(work, /stakeholder coordination, and implementation support/i);
+  assert.doesNotMatch(work, /reappropriat|unused allocation|unused funds|project withdrew/i);
 });
 
 test("KC Town Hall keeps presenter, Board recommendation, acceptance, and appropriation atomic", () => {
@@ -340,6 +342,44 @@ test("KC Town Hall withdrawal remains bounded and directly sourced", () => {
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.equal(result.findings.some((item) => item.code === "kc-unused-allocation-evidence"), true);
   assert.equal(result.findings.some((item) => item.code === "kc-withdrawal-causality"), true);
+});
+
+test("KC Town Hall transition memory remains deferred and outside public composition", () => {
+  const required = suite.requiredKcTownHallSequence;
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === required.transitionIntakeId
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === required.transitionInquiryId
+  );
+  const councilInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KC-TOWN-HALL-COUNCIL-SEQUENCE"
+  );
+  const disposition = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === required.pageId);
+
+  assert.equal(intake?.kind, "memory");
+  assert.equal(intake?.status, "deferred");
+  assert.match(intake?.publicSafeDescription ?? "", /mission-aligned organization/);
+  assert.deepEqual(intake?.inquiryIds, [required.transitionInquiryId]);
+  assert.equal(inquiry?.resultStatus, "inconclusive");
+  assert.deepEqual(inquiry?.sourceIds, []);
+  assert.equal(councilInquiry?.intakeIds.includes(required.transitionIntakeId), false);
+  assert.equal(disposition?.editorialStatus, "unused");
+  assert.equal(disposition?.projections.some((projection) => projection.status === "active"), false);
+  assert.equal(page?.occurrences.some((occurrence) => occurrence.claimId === disposition?.id), false);
+
+  const bank = structuredClone(knowledgeBank);
+  const changedIntake = bank.intakeItems.find((item) => item.id === required.transitionIntakeId);
+  const changedDisposition = bank.claims.find((item) => item.id === disposition?.id);
+  changedIntake.status = "promoted";
+  changedDisposition.editorialStatus = "active";
+  changedDisposition.projections[0].status = "active";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-transition-intake"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-disposition-public-conclusion"), true);
 });
 
 test("missing supplied URLs fail capture integrity", () => {

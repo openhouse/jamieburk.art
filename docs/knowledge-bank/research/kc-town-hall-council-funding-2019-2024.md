@@ -23,6 +23,18 @@ The defensible public claim is **Council appropriation**, not only Board
 recommendation. Appropriation does not establish an executed funding agreement,
 disbursement, receipt, expenditure, construction, or completion.
 
+## Project Transition Lead
+
+Jamie recalls transitioning project stewardship to a mission-aligned
+organization. That recollection is captured as a public-safe, first-party lead,
+but no corroborating public source or recipient confirmation has yet been
+linked. It is therefore not active portfolio copy.
+
+The later municipal record and the organizational transition should not be
+treated as the same event. The public case study stops at the appropriation and
+its downstream limits; the administrative disposition remains available in the
+knowledge bank without serving as the public conclusion.
+
 ## Public Sources
 
 Jamie's role account comes from his [approved public resume](https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf), page 2. It is first-party evidence and is not part of the government-record inquiry below.
@@ -44,5 +56,7 @@ Jamie's role account comes from his [approved public resume](https://jamieburk.a
   funding agreement.
 - Ordinance 240317 does not state why the project withdrew or assign individual
   responsibility.
+- The City's administrative wording does not establish that Jamie abandoned
+  the project or describe how project stewardship changed.
 - The later unused-funds record does not erase the earlier recommendation,
   adoption, or appropriation.

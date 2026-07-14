@@ -1,1 +1,53 @@
-{"judgeId":"lifecycle-composition-kc-town-hall-2026-07-14-r5","lens":"public-safety-composition","candidate":"sha256:afe03a5023695af5ba115d2edb9bb6246e1dabc95b81781bd0b4e5ca24e0c8b8","contract":"sha256:b7e483e1da05fc202b3a579cecd22cfec08b17c523eca3b640f329bdd3232039","passes":true,"scores":{"capture_integrity":4,"source_decomposition":4,"claim_atomicity":4,"provenance_closure":4,"status_separation":4,"project_context":4,"research_honesty":4,"projection_restraint":4},"evidence":[{"rubric":"capture_integrity","observation":"All six KC Town Hall inputs have stable promoted intake IDs, explicit source and claim links, public-safe descriptions, dates, and dispositions; the full lifecycle suite reports 33 completed intake records with no deterministic findings."},{"rubric":"source_decomposition","observation":"The approved resume, Board packet, Council meeting record, authenticated resolution and ordinance, and 2024 ordinance are separately close-read with support scopes, non-support fields, review metadata, and precise locators. The resume is explicitly identified as first-party role evidence rather than independent corroboration."},{"rubric":"claim_atomicity","observation":"Jamie's planning role, Jamie's presenter role, the four-member Board recommendation, Council acceptance, Council appropriation, and later unused-allocation disposition are six distinct claims. Each action is assigned to its documented actor and stage."},{"rubric":"provenance_closure","observation":"Every KC Town Hall claim resolves to the appropriate direct source relationship: the resume supports the attributed role; the Board packet supports presenter and Board-vote claims; Resolution 190649 and the meeting record support Council acceptance; Ordinance 190642 directly supports the $490,539 appropriation; Ordinance 240317 supports withdrawal and reclamation of unused funds."},{"rubric":"status_separation","observation":"Knowledge maturity, publication safety, and editorial selection remain independent. All projected KC claims are confirmed-with-boundary, qualified, and active, while the correction record preserves the change from recommendation-only wording to the later Council appropriation stage."},{"rubric":"project_context","observation":"The project record supplies a 2015–2024 period, adaptive-reuse context, related public surfaces, and a bounded photo-research prompt. The research note and inquiry preserve the Board-to-Council chronology and later disposition for future continuation."},{"rubric":"research_honesty","observation":"The candidate refuses unsupported Council unanimity, executed agreement, disbursement, receipt, expenditure, completion, and individual causality. It also states that the 2024 ordinance does not explain why the project withdrew or assign responsibility."},{"rubric":"projection_restraint","observation":"The page keeps Jamie's attributed planning and presenter roles under “What I did” and places every Board and Council action under “What the public record shows.” The work card names the Council as actor and states the $490,539 appropriation directly. The page remains concise and hiring-relevant while including the material downstream boundary and later unused-funds disposition."},{"rubric":"projection_restraint","observation":"The generated public registry is current and redacted, exposes no protected locator, private filesystem path, private source URL, internal excerpt, or protected material, and preserves first-party attribution and claim boundaries."}],"regressions":[],"nextAction":"Accept this candidate and record the candidate-bound judgment; no content patch is required."}
+{
+  "judgeId": "lifecycle-composition-kc-town-hall-transition-2026-07-14-r8",
+  "lens": "public-safety-composition",
+  "candidate": "sha256:3b0fcff93c764088bcbea5e417b21f1f54e878b3b6f2bff6a62b4e82838fef8d",
+  "contract": "sha256:79d0470581d3c4e5ae1af21c8c32dfc25252f73274a42b29accebe4a7e7d4fb4",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "The transition recollection has a stable memory intake marked public-safe and deferred, with no source or claim promotion and exactly one link to its dedicated inquiry."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "Each KC municipal record has close-reading support and non-support fields; Ordinance 240317 supports the administrative disposition without establishing motive, responsibility, payment, or current property status."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Presenter role, Board recommendation, Council acceptance, Council appropriation, and later unused-allocation disposition remain separate claims with stage-specific wording and boundaries."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "The recovered Council-sequence inquiry contains exactly the five URL intakes and their five municipal sources; the transition memory resolves only to its own inconclusive zero-source inquiry."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "The disposition is mature and qualified but editorially unused, with a held projection, no surfaces, and no public citation occurrence; the transition recollection remains deferred rather than becoming a claim."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The dossier preserves the Board-to-Council sequence, administrative disposition, separate transition lead, chronology, public-surface candidates, and bounded future research prompts."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The transition inquiry is inconclusive with zero sources and explicit missing-corroboration, recipient, and date limitations; no personal cause is encoded."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The public registry, citation page, KC MDX, work metadata, proof wording, and technical-operations presentation stop at Council appropriation and downstream limits."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Preserve the transition lead and mature disposition as non-rendered lifecycle records until corroboration or a later explicit editorial decision."
+}

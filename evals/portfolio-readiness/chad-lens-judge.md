@@ -26,8 +26,10 @@ Ask:
    approval, or evaluation process?
 8. On KC Town Hall, does the page replace the old recommendation-only
    understatement with the sourced Council appropriation while keeping Jamie's
-   role distinct from the Board's and Council's decisions and keeping unused
-   funds distinct from money received?
+   role distinct from the Board's and Council's decisions, keeping appropriation
+   distinct from money received, and avoiding the later administrative
+   disposition as the public conclusion while the stewardship transition
+   remains under-researched?
 
 ## Scoring
 
