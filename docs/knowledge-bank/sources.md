@@ -19,9 +19,17 @@ Approved public artifact examples for this launch pass include:
 - NYC Artist Coalition public website.
 - NYC Artist Coalition supporters, Cabaret Law, Save NYC Spaces, and repeal
   campaign pages.
-- Contemporary reporting from Gothamist, NPR, Bedford + Bowery, and Mixmag.
+- Contemporary reporting from Gothamist, NPR, Bedford + Bowery, Mixmag, and
+  VICE.
 - Official New York City Council legislation and hearing records for the
-  Office of Nightlife, Cabaret Law repeal, and commercial-rent testimony.
+  Office of Nightlife, Cabaret Law repeal and testimony, M.A.R.C.H. reporting
+  and notice, Cultural Affairs testimony, and commercial-rent testimony.
+- The City-preserved NYC Artist Coalition CreateNYC submission and the final
+  CreateNYC cultural plan.
+- NYC Office of Nightlife annual reports documenting implementation of Local
+  Law 220 and the December 2023 replacement of M.A.R.C.H. with CURE.
+- NYC Government Publications Portal record for the first biannual M.A.R.C.H.
+  report under Local Law 220.
 - FairRentNYC public website.
 - Talks Not Raids public website.
 - Let NYC Dance public website.

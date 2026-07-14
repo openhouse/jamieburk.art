@@ -45,6 +45,14 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const expansionObservations = expansionIntakes.flatMap((item) =>
     item?.observationIds.map((id) => observationById.get(id)) ?? []
   );
+  const secondExpansion = suite.pilot.secondSourceExpansion;
+  const secondExpansionIntakes = secondExpansion.intakeIds.map((id) => intakeById.get(id));
+  const secondExpansionSources = secondExpansion.sourceIds.map((id) => sourceById.get(id));
+  const secondExpansionClaims = secondExpansion.claimIds.map((id) => claimById.get(id));
+  const secondExpansionInquiries = secondExpansion.inquiryIds.map((id) => inquiryById.get(id));
+  const secondExpansionObservations = secondExpansionIntakes.flatMap((item) =>
+    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
   const pressArchive = suite.pilot.pressArchive;
   const pressIntakes = pressArchive.intakeIds.map((id) => intakeById.get(id));
   const pressIndexSources = pressArchive.indexSourceIds.map((id) => sourceById.get(id));
@@ -89,16 +97,17 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       pressInquiry?.sourceIds.length === pressArchive.expectedIndexCount + pressArchive.expectedUniqueArticleCount &&
       pressInquiry.limitations.length >= 4
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry];
-  const triangulatedExpansionClaims = expansionClaims.filter(
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...pressObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, pressClaim];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, pressInquiry];
+  const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
+  const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
-  const heldExpansionClaims = expansionClaims.filter((claim) =>
+  const heldExpansionClaims = allExpansionClaims.filter((claim) =>
     claim?.projections.some((projection) => projection.status === "hold")
   );
-  const selectedExpansionClaims = expansion.selectedClaimIds.map((id) => claimById.get(id));
+  const selectedExpansionClaims = [...expansion.selectedClaimIds, ...secondExpansion.selectedClaimIds].map((id) => claimById.get(id));
   const photoFeedback = suite.pilot.photoFeedbackChain;
   const photoIntake = intakeById.get(photoFeedback.intakeId);
   const photoObservation = observationById.get(photoFeedback.observationId);
@@ -177,6 +186,41 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       !fairRentMdx.includes("Jamie co-founded NYC Artist Coalition and built public campaign websites") &&
       legacyWebProof?.sourceBasis.includes("retained Git histories")
   );
+  const marchInquiry = inquiryById.get("INQ-NYCAC-MARCH-RAIDS");
+  const marchPolicyClaim = claimById.get("CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC");
+  const requiredMarchInquirySourceIds = [
+    "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
+    "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+    "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+    "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+    "SRC-NYC-ONL-REPORT-2022",
+    "SRC-NYC-ONL-REPORT-2023-24"
+  ];
+  const requiredMarchClaimSourceIds = requiredMarchInquirySourceIds.filter(
+    (sourceId) => sourceId !== "SRC-NYC-ONL-REPORT-2022"
+  );
+  const marchProjectionText = marchPolicyClaim?.projections
+    .filter((projection) => projection.status === "active")
+    .map((projection) => projection.text)
+    .join(" ") ?? "";
+  const marchResearchAligned = Boolean(
+    marchInquiry?.resultStatus === "recovered" &&
+      requiredMarchInquirySourceIds.every((sourceId) => marchInquiry.sourceIds.includes(sourceId)) &&
+      requiredMarchClaimSourceIds.every((sourceId) =>
+        marchPolicyClaim?.evidence.some((evidence) => evidence.sourceId === sourceId)
+      ) &&
+      marchPolicyClaim?.projections.some(
+        (projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc")
+      ) &&
+      marchPolicyClaim.antiClaims.some((antiClaim) => /disbanded M\.A\.R\.C\.H\./i.test(antiClaim)) &&
+      !marchPolicyClaim.projections.some((projection) =>
+        /Jamie[^.]{0,50}(?:caused|disbanded|ended|replaced) M\.A\.R\.C\.H\./i.test(projection.text)
+      ) &&
+      /NYPD-led inspection program/.test(marchProjectionText) &&
+      /criminal-investigation and serious health-or-safety exceptions/.test(marchProjectionText) &&
+      !/notice-based alternatives/.test(marchProjectionText) &&
+      fairRentMdx.includes("CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC")
+  );
   const agencyGraphComplete = Boolean(
     knowledgeBank.entities.length === agency.expectedEntityCount &&
       new Set(knowledgeBank.entities.map((entity) => entity.id)).size === agency.expectedEntityCount &&
@@ -212,6 +256,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       ["individual", "shared", "collective", "institutional"].every((creditScope) =>
         knowledgeBank.agencyRelations.some((relation) => relation.creditScope === creditScope)
       ) &&
+      marchResearchAligned &&
       openAgencyInquiries.every((inquiry) => inquiry?.resultStatus === "inconclusive") &&
       existsSync(path.join(repoRoot, "docs/knowledge-bank/agency-and-collective-credit.md"))
   );
@@ -223,9 +268,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         pilotIntakes.every((item) => item && item.boundaries.length && (item.sourceIds.length || item.researchInquiryIds.length)) &&
         expansionIntakes.length === expansion.expectedSourceCount &&
         expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
+        secondExpansionIntakes.length === secondExpansion.expectedSourceCount &&
+        secondExpansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length)
       ),
-      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
+      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
     {
       criterionId: "KB-EVAL-ATOMICITY",
@@ -238,21 +285,23 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     {
       criterionId: "KB-EVAL-SCOPE",
       score: score(
-        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+        [...pilotSources, ...expansionSources, ...secondExpansionSources, ...pressIndexSources, ...pressArticleSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
         expansionSources.length === expansion.expectedSourceCount &&
+        secondExpansionSources.length === secondExpansion.expectedSourceCount &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
-      evidence: [`${expansionSources.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion records and ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles have explicit support and doesNotEstablish boundaries`]
+      evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records and ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles have explicit support and doesNotEstablish boundaries`]
     },
     {
       criterionId: "KB-EVAL-MATURATION",
       score: score(
         allEvaluatedClaims.every((claim) => claim?.evidence.length && claim.boundaries.length && claim.antiClaims.length && claim.reviewedBy.length) &&
         allEvaluatedInquiries.every((inquiry) => inquiry?.limitations.length && inquiry.findings.length) &&
-        expansionClaims.length === expansion.claimIds.length,
-        triangulatedExpansionClaims.length >= 4
+        expansionClaims.length === expansion.claimIds.length &&
+        secondExpansionClaims.length === secondExpansion.claimIds.length,
+        triangulatedExpansionClaims.length >= 8
       ),
-      evidence: [`${expansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
+      evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
     },
     {
       criterionId: "KB-EVAL-PROJECTION",
@@ -260,6 +309,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         allEvaluatedClaims.every((claim) => claim?.projections.every((projection) => projection.status !== "hold" || projection.surfaces.length === 0)) &&
         selectedExpansionClaims.every((claim) => claim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc"))) &&
         webAuthorshipAligned &&
+        marchResearchAligned &&
         Boolean(fairRentPage)
       ),
       evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections`]
@@ -271,10 +321,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         fairRentMdx.includes("CLM-NYCAC-CABARET-SAFETY-ORGANIZING") &&
         fairRentMdx.includes("CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION") &&
         expansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
-        fairRentPage.occurrences.length >= 5 &&
+        secondExpansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
+        fairRentPage.occurrences.length >= 6 &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
-      evidence: [`Five hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
+      evidence: [`Six hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",

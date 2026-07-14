@@ -114,14 +114,14 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
+**Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability. Retained Git history documents his implementation of Talks Not Raids; official records separately establish a 19-sponsor reporting-and-notice law with criminal-investigation and serious health-or-safety exceptions and the City's later replacement of M.A.R.C.H. with CURE.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
 **Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-13
 
 ## wowlist-community-platform - Followable community platform
 

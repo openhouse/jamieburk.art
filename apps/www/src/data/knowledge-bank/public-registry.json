@@ -281,6 +281,105 @@
         "Jamie's sole authorship of the policy position",
         "measured causal effects of rent increases"
       ]
+    },
+    {
+      "id": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+      "title": "Committee on Consumer Affairs Cabaret Law oversight hearing transcript",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=817A7573-F329-49C4-849A-347B6D00CBC5&ID=5444683&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council Committee on Consumer Affairs, Cabaret Law oversight hearing transcript, June 19, 2017, pp. 71-74.",
+      "publicNote": "Official transcript directly documenting Jamie's coalition affiliation, repeal testimony, and fire-safety organizing; the transcript misspells his surname as Burkhart.",
+      "doesNotEstablish": [
+        "independent verification of the self-reported pass rate",
+        "sole authorship of the repeal campaign",
+        "sole causation of repeal",
+        "complete program participation or outcomes"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+      "title": "Preserve Community-Driven Spaces: NYC Artist Coalition recommendations for CreateNYC",
+      "organization": "NYC Artist Coalition, preserved by NYC Department of Cultural Affairs",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-17",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Preserve Community-Driven Spaces,' recommendations for the CreateNYC Cultural Plan, captured March 17, 2017, preserved by the New York City Department of Cultural Affairs.",
+      "publicNote": "City-preserved coalition artifact documenting collective recommendations, public-input pathways, and an early M.A.R.C.H. transparency proposal.",
+      "doesNotEstablish": [
+        "individual authorship",
+        "adoption of every proposal",
+        "later Talks Not Raids campaign causation",
+        "attendance produced by the event links"
+      ]
+    },
+    {
+      "id": "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+      "title": "Multi-Agency Response to Community Hotspots Operations Report Q1-Q2, 2020",
+      "organization": "NYC Government Publications Portal",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-09-01",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://a860-gpp.nyc.gov/concern/nyc_government_publications/s4655j422?locale=en",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Mayor's Office of Media and Entertainment, 'Multi-Agency Response to Community Hotspots Operations Report Q1-Q2, 2020,' published September 1, 2020.",
+      "publicNote": "Official publication record defining M.A.R.C.H. as an NYPD-led multi-agency inspection program and preserving the first biannual reporting period under Local Law 220.",
+      "doesNotEstablish": [
+        "complete data quality",
+        "independent program evaluation",
+        "advocate-specific causal credit",
+        "the experience or result of every operation"
+      ]
+    },
+    {
+      "id": "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+      "title": "Int 1156-2018: M.A.R.C.H. reporting and establishment notice",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-12-15",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Int 1156-A, enacted as Local Law 220 of 2019, December 15, 2019.",
+      "publicNote": "Official legislative history establishing semiannual M.A.R.C.H. reporting, machine-readable public data, and 30-day notice with specified exceptions.",
+      "doesNotEstablish": [
+        "which advocate caused enactment",
+        "complete implementation quality",
+        "elimination of M.A.R.C.H. in 2019",
+        "Jamie's authorship of the bill"
+      ]
+    },
+    {
+      "id": "SRC-NYC-ONL-REPORT-2023-24",
+      "title": "NYC Office of Nightlife Annual Report 2023-2024",
+      "organization": "NYC Office of Nightlife",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.nyc.gov/assets/sbs/downloads/pdf/about/reports/nightlife-report-2023-24.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Office of Nightlife, 'Annual Report 2023-2024,' p. 11.",
+      "publicNote": "Official report stating that CURE replaced M.A.R.C.H. operations in December 2023 and describing direct communication before enforcement.",
+      "doesNotEstablish": [
+        "sole causal credit for any advocate",
+        "universal implementation",
+        "outcomes for every venue",
+        "that M.A.R.C.H. ended before December 2023"
+      ]
     }
   ],
   "claims": [
@@ -487,7 +586,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Public reporting from 2017 documents Jamie organizing fire-code study groups for DIY venues and rallying at City Hall for full repeal of the Cabaret Law.",
+          "text": "Official Council testimony and public reporting document Jamie organizing fire-safety walk-throughs, workshops, and Fire Guard study groups for DIY venues, then advocating for full repeal of the Cabaret Law.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -507,11 +606,23 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's official testimony",
+            "fire-safety walk-throughs and workshops",
+            "Fire Guard study groups",
+            "trust-and-safety analysis"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
         "Present repeal as collective advocacy and legislative action.",
-        "Attribute the safety analysis to Jamie rather than presenting it as a comprehensive venue survey."
+        "Attribute the safety analysis and reported pass rate to Jamie's testimony rather than presenting them as independent program evaluation."
       ]
     },
     {
@@ -675,6 +786,72 @@
       "boundaries": [
         "Testimony documents Jamie's role and position, not enactment or Council endorsement."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie implemented and maintained Talks Not Raids, giving the coalition's demand for transparency and alternatives to raids a durable public campaign site. The campaign concerned Multi-Agency Response to Community Hotspots (M.A.R.C.H.), an NYPD-led inspection program. The Council later required semiannual reports and 30 days' advance notice, with criminal-investigation and serious health-or-safety exceptions. The Office of Nightlife reports that the City replaced M.A.R.C.H. with direct engagement before enforcement in 2023.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's Talks Not Raids site implementation and maintenance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+          "relationship": "direct-support",
+          "supports": [
+            "coalition transparency and alternative-remedy agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+          "relationship": "context",
+          "supports": [
+            "M.A.R.C.H. program definition and NYPD leadership"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+          "relationship": "context",
+          "supports": [
+            "Council enactment of reporting and notice requirements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-ONL-REPORT-2023-24",
+          "relationship": "context",
+          "supports": [
+            "City replacement of M.A.R.C.H. with CURE"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The sequence connects Jamie's implementation work, collective advocacy, Council enactment, and later City action without claiming that one caused the next.",
+        "Use 'replaced' from the Office report rather than saying Jamie or the coalition disbanded M.A.R.C.H."
+      ]
     }
   ],
   "pages": [
@@ -747,6 +924,7 @@
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
         "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
         "SRC-NYCAC-NPR-CABARET-2017-09-20",
         "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
         "SRC-NYCAC-SUPPORTERS-LIST",
@@ -754,7 +932,11 @@
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYC-SBJSA-HEARING-2018-10-22",
         "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
-        "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
+        "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
+        "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+        "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+        "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+        "SRC-NYC-ONL-REPORT-2023-24"
       ],
       "occurrences": [
         {
@@ -762,7 +944,8 @@
           "claimId": "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"
+            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19"
           ]
         },
         {
@@ -799,6 +982,18 @@
           "sourceIds": [
             "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
             "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
+          ]
+        },
+        {
+          "id": "talks-not-raids-policy-arc",
+          "claimId": "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
+            "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+            "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+            "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+            "SRC-NYC-ONL-REPORT-2023-24"
           ]
         }
       ]

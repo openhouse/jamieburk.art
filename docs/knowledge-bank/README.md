@@ -84,3 +84,9 @@ See
 [projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)
 for the complete, deduplicated press indexes from Let NYC Dance, Talks Not
 Raids, Save NYC Spaces, and the supplied Fair Rent NYC Wayback capture.
+
+See
+[projects/talks-not-raids.md](projects/talks-not-raids.md)
+for the bounded sequence from the coalition's 2017 transparency proposal,
+through Jamie's campaign-site implementation and Local Law 220, to the City's
+reported replacement of M.A.R.C.H. with CURE in December 2023.

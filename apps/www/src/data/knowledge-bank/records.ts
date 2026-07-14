@@ -3,6 +3,7 @@ import { historicalKnowledge } from "./historical-knowledge.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
+import { nycacSourceExpansionII } from "./nycac-source-expansion-ii.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
 
@@ -29,6 +30,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacSourceExpansion.intakeItems,
+    ...nycacSourceExpansionII.intakeItems,
     ...nycacPressArchive.intakeItems
   ],
   observations: [
@@ -52,6 +54,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacSourceExpansion.observations,
+    ...nycacSourceExpansionII.observations,
     ...nycacPressArchive.observations
   ],
   sources: [
@@ -179,6 +182,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
+    ...nycacSourceExpansionII.sources,
     ...nycacPressArchive.sources
   ],
   entities: [...agencyGraph.entities],
@@ -273,6 +277,7 @@ const knowledgeBankInput = {
     ...historicalKnowledge.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacSourceExpansion.claims,
+    ...nycacSourceExpansionII.claims,
     ...nycacPressArchive.claims
   ],
   researchInquiries: [
@@ -315,6 +320,7 @@ const knowledgeBankInput = {
     },
     ...historicalKnowledge.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
+    ...nycacSourceExpansionII.researchInquiries,
     ...nycacPressArchive.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],
@@ -346,6 +352,7 @@ const knowledgeBankInput = {
     surface: "/work/fair-rent-nyc",
     sourceOrder: [
       "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
       "SRC-NYCAC-NPR-CABARET-2017-09-20",
       "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07",
       "SRC-NYCAC-SUPPORTERS-LIST",
@@ -353,14 +360,19 @@ const knowledgeBankInput = {
       "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
       "SRC-NYC-SBJSA-HEARING-2018-10-22",
       "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
-      "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
+      "SRC-FAIRRENTNYC-GITHUB-REPOSITORY",
+      "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+      "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+      "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+      "SRC-NYC-ONL-REPORT-2023-24"
     ],
     occurrences: [
-      { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"] },
+      { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19"] },
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
-      { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] }
+      { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] },
+      { id: "talks-not-raids-policy-arc", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17", "SRC-NYC-MARCH-REPORT-Q1-Q2-2020", "SRC-NYC-MARCH-LOCAL-LAW-220-2019", "SRC-NYC-ONL-REPORT-2023-24"] }
     ]
   }]
 };

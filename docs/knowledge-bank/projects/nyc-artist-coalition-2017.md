@@ -2,7 +2,7 @@
 
 **Reviewed:** 2026-07-13
 
-**Public projection:** Four bounded claims selected for
+**Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
 composition.
 
@@ -31,6 +31,25 @@ machine-readable bank:
 The previously captured NPR lead was also recovered through a public-radio
 syndication page and promoted from research lead to close-read source.
 
+A second, non-duplicate cohort of ten sources was then close-read:
+
+1. The official June 19, 2017 Cabaret Law hearing transcript.
+2. The official May 19, 2017 Cultural Affairs budget hearing transcript.
+3. NYC Artist Coalition's City-preserved CreateNYC recommendations.
+4. The final CreateNYC cultural plan.
+5. The NYC Government Publications Portal record for the first biannual
+   M.A.R.C.H. operations report under Local Law 220.
+6. VICE's March 31 report from the Market Hotel forum.
+7. The Mayor's 2018 announcement of the first Office of Nightlife director.
+8. The official record for Int 1156-A / Local Law 220 of 2019.
+9. The NYC Office of Nightlife Annual Report 2022.
+10. The NYC Office of Nightlife Annual Report 2023-2024.
+
+The two cohorts are disjoint and sit outside the separately deduplicated
+44-article campaign press archive. A canonical-identity test now compares
+article URL slugs, normalized titles, and author-date signatures as well as
+source IDs so a renamed or migrated article cannot be counted twice silently.
+
 ## Campaign press indexes
 
 The campaign sites also preserve a larger source-discovery layer: **45 press
@@ -54,6 +73,19 @@ for the complete ledger and maturation rules.
 - Gothamist documented Jamie organizing fire-code study groups for DIY venues,
   rallying at City Hall for full Cabaret Law repeal, and articulating how
   licensing fear could deter spaces from seeking fire-safety guidance.
+- The official Council transcript independently documents Jamie's testimony
+  about fire-safety walk-throughs, workshops, Fire Guard study groups, and the
+  trust barrier created by Cabaret licensing. Its 100 percent pass-rate line
+  remains attributed testimony, not an audited metric.
+- Official DCLA testimony and CreateNYC trace the coalition's formation to a
+  January 2017 DIY-spaces meeting and credit the coalition with developing
+  recommendations and driving public dialogue.
+- The City-preserved recommendations organize the coalition's agenda around
+  criminalization, administrative and financial support, and affordability;
+  the artifact also routes public-input events through WOW List links.
+- VICE reported hundreds of residents at the March 2017 Market Hotel forum
+  with coalition partners, the Cultural Affairs commissioner, and Council
+  members. The figure is a reported estimate, not an audited count.
 - NPR described Jamie as a founding member of the coalition. Because the
   article prints the name as "NYC Arts Coalition," public use attributes the
   description to NPR and does not convert it into a sole-founder claim.
@@ -76,12 +108,17 @@ for the complete ledger and maturation rules.
 - An official 2018 Council transcript documents Jamie testifying as an NYC
   Artist Coalition member in support of commercial-rent protections and
   connecting affordability with cultural-space safety and continuity.
+- Retained Git history documents Jamie implementing and maintaining the Talks
+  Not Raids campaign site. Official records separately establish Local Law
+  220's reporting and notice requirements and the Office of Nightlife's account
+  that M.A.R.C.H. was replaced by CURE in December 2023.
 
 ## Boundaries
 
 The sources support a clear record of founding attribution, organizing,
 mutual-aid infrastructure, public communication, testimony, town-hall work,
-and policy-facing participation. They do not establish that Jamie alone
+policy development, campaign-site implementation, and policy-facing
+participation. They do not establish that Jamie alone
 founded or led the coalition, caused either law, wrote the legislation,
 produced every event, authored every campaign component, or spoke for every
 collaborator.
@@ -101,16 +138,17 @@ improving the current page enough to justify the added reader burden:
 - the enacted Office of Nightlife and Nightlife Advisory Board;
 - the enacted repeal of the Cabaret Law licensing requirement and the
   coalition's collective outcome account;
+- the complete CreateNYC recommendation set and March 2017 forum detail;
+- the government-only Local Law 220 and CURE outcome records apart from the
+  selected Jamie-centered Talks Not Raids trajectory;
 - the Greene Hill link between Sunday Dinner and WOW List.
 
 ## Open research
 
-- public Git history or collaborator proof for Jamie's component-level web
-  implementation;
+- collaborator proof for finer policy, copy, data, image, and design
+  attribution within the repository-backed campaign implementations;
 - the complete coalition formation and division-of-labor chronology;
 - direct legislative drafting, negotiation, and lobbying contributions;
 - town-hall production responsibilities and resulting agency commitments;
-- Talks Not Raids, M.A.R.C.H. transparency work, and the raids' institutional
-  end.
 - proposition-level close reading of the 44 distinct campaign press articles,
   with article-specific claims promoted only when the text supports them.

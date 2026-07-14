@@ -103,6 +103,48 @@
         "CLM-NYCAC-SBJSA-TESTIMONY-2018"
       ]
     },
+    "secondSourceExpansion": {
+      "expectedSourceCount": 10,
+      "intakeIds": [
+        "INTAKE-NYCAC-COUNCIL-CABARET-HEARING-2017",
+        "INTAKE-NYCAC-DCLA-BUDGET-HEARING-2017",
+        "INTAKE-NYCAC-CREATENYC-SUBMISSION-2017",
+        "INTAKE-NYCAC-CREATENYC-FINAL-PLAN-2017",
+        "INTAKE-NYC-MARCH-REPORT-Q1-Q2-2020",
+        "INTAKE-NYCAC-VICE-MARKET-HOTEL-REPORT-2017",
+        "INTAKE-NYC-OFFICE-NIGHTLIFE-DIRECTOR-2018",
+        "INTAKE-NYC-MARCH-LOCAL-LAW-220-2019",
+        "INTAKE-NYC-ONL-REPORT-2022",
+        "INTAKE-NYC-ONL-REPORT-2023-24"
+      ],
+      "sourceIds": [
+        "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19",
+        "SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19",
+        "SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17",
+        "SRC-NYCAC-CREATENYC-FINAL-PLAN-2017-07-19",
+        "SRC-NYC-MARCH-REPORT-Q1-Q2-2020",
+        "SRC-NYCAC-VICE-MARKET-HOTEL-2017-03-31",
+        "SRC-NYC-OFFICE-NIGHTLIFE-DIRECTOR-2018-03-07",
+        "SRC-NYC-MARCH-LOCAL-LAW-220-2019",
+        "SRC-NYC-ONL-REPORT-2022",
+        "SRC-NYC-ONL-REPORT-2023-24"
+      ],
+      "claimIds": [
+        "CLM-NYCAC-CREATENYC-POLICY-DEVELOPMENT-2017",
+        "CLM-NYCAC-MARKET-HOTEL-CIVIC-FORUM-2017",
+        "CLM-NYCAC-MARCH-TRANSPARENCY-LAW-2019",
+        "CLM-NYCAC-MARCH-REPLACED-BY-CURE-2023",
+        "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC"
+      ],
+      "inquiryIds": [
+        "INQ-NYCAC-CABARET-CONTRIBUTION",
+        "INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION",
+        "INQ-NYCAC-MARCH-RAIDS"
+      ],
+      "selectedClaimIds": [
+        "CLM-NYCAC-TALKS-NOT-RAIDS-POLICY-ARC"
+      ]
+    },
     "pressArchive": {
       "expectedIndexCount": 4,
       "expectedAppearanceCount": 45,
@@ -132,8 +174,8 @@
       "duplicateSourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20"
     },
     "agencyGraph": {
-      "expectedEntityCount": 18,
-      "expectedRelationCount": 17,
+      "expectedEntityCount": 21,
+      "expectedRelationCount": 21,
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
@@ -150,15 +192,19 @@
         "REL-NYCAC-OFFICE-AGENDA",
         "REL-COUNCIL-OFFICE-ENACTMENT",
         "REL-COUNCIL-CABARET-REPEAL",
+        "REL-NYCAC-CREATENYC-RECOMMENDATIONS",
+        "REL-NYCAC-MARCH-TRANSPARENCY-ADVOCACY",
+        "REL-COUNCIL-MARCH-TRANSPARENCY-LAW",
+        "REL-OFFICE-NIGHTLIFE-CURE-IMPLEMENTATION",
         "REL-SUNDAY-DINNER-COHOSTED",
         "REL-JAMIE-COMMERCIAL-RENT-TESTIMONY"
       ],
       "enactedRelationIds": [
         "REL-COUNCIL-OFFICE-ENACTMENT",
-        "REL-COUNCIL-CABARET-REPEAL"
+        "REL-COUNCIL-CABARET-REPEAL",
+        "REL-COUNCIL-MARCH-TRANSPARENCY-LAW"
       ],
       "openInquiryIds": [
-        "INQ-NYCAC-MARCH-RAIDS",
         "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
       ]
     }

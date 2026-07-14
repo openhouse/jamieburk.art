@@ -281,12 +281,12 @@ export const nycacSourceExpansion = {
     {
       id: "CLM-NYCAC-CABARET-TESTIMONY-2017",
       project: "cabaret-law",
-      internalClaim: "Mixmag reported Jamie's 2017 City Council testimony as an NYC Artist Coalition member about the Cabaret Law's vulnerability to discriminatory weaponization.",
+      internalClaim: "The official Council transcript and independent reporting document Jamie's 2017 testimony as an NYC Artist Coalition member about fire-safety work, trust barriers, and the Cabaret Law's vulnerability to discriminatory weaponization.",
       status: "confirmed-with-boundary",
-      projections: [{ key: "archive-note", text: "Mixmag documented Jamie testifying before the City Council about how the Cabaret Law could be weaponized to close community spaces.", status: "hold", citationRequired: true, surfaces: [] }],
-      evidence: [{ sourceId: "SRC-NYCAC-MIXMAG-LET-NYC-DANCE-2017-09-20", relationship: "direct-support", supports: ["Jamie's hearing testimony", "NYC Artist Coalition affiliation", "discriminatory-enforcement analysis"], locator: "Cabaret Law hearing section", confidence: "high", renderCitation: true }],
-      boundaries: ["Present this as Jamie's documented testimony and analysis, not an independent measure of enforcement or sole basis for repeal."],
-      antiClaims: ["Jamie authored the repeal bill", "Jamie proved every instance of discriminatory enforcement", "Jamie's testimony alone caused repeal"],
+      projections: [{ key: "archive-note", text: "The official Council transcript documents Jamie testifying about fire-safety work, trust barriers, and the risk that the Cabaret Law could be weaponized against community spaces.", status: "hold", citationRequired: true, surfaces: [] }],
+      evidence: [{ sourceId: "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-06-19", relationship: "direct-support", supports: ["Jamie's official hearing testimony", "NYC Artist Coalition affiliation", "fire-safety work", "trust barriers", "discriminatory-enforcement analysis"], locator: "Transcript pp. 71-74", confidence: "high", renderCitation: true }, { sourceId: "SRC-NYCAC-MIXMAG-LET-NYC-DANCE-2017-09-20", relationship: "corroborating", supports: ["Jamie's hearing testimony", "NYC Artist Coalition affiliation", "discriminatory-enforcement analysis"], locator: "Cabaret Law hearing section", confidence: "high", renderCitation: true }],
+      boundaries: ["Present this as Jamie's documented testimony and analysis, not an independent measure of enforcement or sole basis for repeal.", "The transcript's pass-rate statement is self-reported and remains out of public composition without independent corroboration."],
+      antiClaims: ["Jamie authored the repeal bill", "Jamie proved every instance of discriminatory enforcement", "Jamie's testimony alone caused repeal", "the official transcript independently audited the safety program"],
       researchInquiryIds: [],
       reviewedAt,
       reviewedBy: ["Codex public-source review"]
