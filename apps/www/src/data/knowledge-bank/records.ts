@@ -306,9 +306,16 @@ const knowledgeBankInput = {
     {
       id: "kc-town-hall",
       surface: "/work/kc-town-hall",
-      sourceOrder: ["SRC-KC-TOWN-HALL-CCED-MINUTES-2019", "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"],
+      sourceOrder: [
+        "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+        "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+        "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"
+      ],
       occurrences: [
         { id: "public-proposal", claimId: "CLM-KC-TOWN-HALL-PROPOSAL-2019", projection: "case-study" },
+        { id: "council-acceptance", claimId: "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019", projection: "case-study" },
+        { id: "council-appropriation", claimId: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019", projection: "case-study" },
         { id: "project-withdrawal", claimId: "CLM-KC-TOWN-HALL-WITHDRAWN-2024", projection: "case-study" }
       ]
     }

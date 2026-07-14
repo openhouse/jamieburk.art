@@ -539,6 +539,11 @@ const workItemsInput = [
         "/work"
       ).text,
       getClaimProjection("CLM-KC-TOWN-HALL-PROPOSAL-2019", "work-card", "/work").text,
+      getClaimProjection(
+        "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+        "work-card",
+        "/work"
+      ).text,
       getClaimProjection("CLM-KC-TOWN-HALL-WITHDRAWN-2024", "work-card", "/work").text
     ].join(" "),
     role: "Project Planning & Documentation Support",
@@ -569,6 +574,14 @@ const workItemsInput = [
         url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000"
       },
       {
+        label: "2019 Council resolution",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search="
+      },
+      {
+        label: "2019 appropriation ordinance",
+        url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search="
+      },
+      {
         label: "2024 withdrawal ordinance",
         url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search="
       }
@@ -586,14 +599,15 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Jamie identified as the public proposal presenter",
-      "$490,539 public funding recommendation",
+      "Council acceptance of the $490,539 recommendation",
+      "$490,539 project appropriation",
       "2024 withdrawal and reappropriation record"
     ],
     knownOpenProtected: {
       known:
-        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, and the later withdrawal.",
+        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal.",
       open:
-        "The public withdrawal record does not state the reasons or define every collaborator's role.",
+        "The records do not establish an executed funding agreement, disbursement, construction, reasons for withdrawal, or every collaborator's role.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

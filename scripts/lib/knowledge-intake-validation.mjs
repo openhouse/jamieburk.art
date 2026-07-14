@@ -23,6 +23,8 @@ export const requiredSeedIntakeIds = [
   "INTAKE-NYCAC-CREATENYC-APPENDIX-2026",
   "INTAKE-NYCAC-SBJSA-TRANSCRIPT-2026",
   "INTAKE-KC-TOWN-HALL-CCED-MINUTES-2026",
+  "INTAKE-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649-2026",
+  "INTAKE-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642-2026",
   "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026"
 ];
@@ -36,6 +38,8 @@ export const requiredResearchSourceIds = [
   "SRC-NYCAC-CREATENYC-APPENDIX-2017",
   "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
   "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+  "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+  "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
   "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
   "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION"
 ];
@@ -71,6 +75,7 @@ export function validateKnowledgeIntake() {
   const dispositionErrors = [];
   const projectionErrors = [];
   const pressErrors = [];
+  const kcTownHallErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -323,12 +328,91 @@ export function validateKnowledgeIntake() {
     }
   }
 
+  const requiredKcTownHallSourceIds = [
+    "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
+    "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+    "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+    "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"
+  ];
+  const requiredKcTownHallClaimIds = [
+    "CLM-KC-TOWN-HALL-PROPOSAL-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
+    "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+    "CLM-KC-TOWN-HALL-WITHDRAWN-2024"
+  ];
+
+  for (const sourceId of requiredKcTownHallSourceIds) {
+    if (!sourceById.has(sourceId)) kcTownHallErrors.push(`KC Town Hall sequence is missing ${sourceId}`);
+  }
+  for (const claimId of requiredKcTownHallClaimIds) {
+    if (!claimById.has(claimId)) kcTownHallErrors.push(`KC Town Hall sequence is missing ${claimId}`);
+  }
+
+  const acceptanceClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019");
+  const appropriationClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019");
+  const withdrawalClaim = claimById.get("CLM-KC-TOWN-HALL-WITHDRAWN-2024");
+  const activeAcceptance = acceptanceClaim?.projections.find(
+    (projection) => projection.key === "case-study" && projection.status === "active"
+  );
+  const activeAppropriation = appropriationClaim?.projections.find(
+    (projection) => projection.key === "case-study" && projection.status === "active"
+  );
+  const acceptanceText = activeAcceptance?.text ?? "";
+  const appropriationText = activeAppropriation?.text ?? "";
+
+  if (!/Council accepted the CCED Board's recommendation of up to \$490,539/i.test(acceptanceText)) {
+    kcTownHallErrors.push("KC Town Hall public acceptance claim must name the Council, CCED Board recommendation, and bounded amount");
+  }
+  if (!/Council passed Ordinance 190642, appropriating \$490,539 to KC Town Hall/i.test(appropriationText)) {
+    kcTownHallErrors.push("KC Town Hall public appropriation claim must name Ordinance 190642 and the $490,539 project appropriation");
+  }
+  if (!activeAcceptance?.citationRequired || !activeAppropriation?.citationRequired) {
+    kcTownHallErrors.push("KC Town Hall Council acceptance and appropriation projections must require citations");
+  }
+
+  const municipalBoundaryText = JSON.stringify([
+    sourceById.get("SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649")?.doesNotEstablish,
+    sourceById.get("SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642")?.doesNotEstablish,
+    acceptanceClaim?.boundaries,
+    acceptanceClaim?.antiClaims,
+    appropriationClaim?.boundaries,
+    appropriationClaim?.antiClaims
+  ]).toLowerCase();
+  for (const requiredBoundary of ["executed", "disburs", "completed", "alone caused"]) {
+    if (!municipalBoundaryText.includes(requiredBoundary)) {
+      kcTownHallErrors.push(`KC Town Hall municipal evidence is missing the ${requiredBoundary} boundary`);
+    }
+  }
+
+  const kcTownHallPage = knowledgeBank.pages.find((page) => page.id === "kc-town-hall");
+  if (!kcTownHallPage) {
+    kcTownHallErrors.push("KC Town Hall citation page plan is missing");
+  } else {
+    const occurrenceClaimIds = new Set(
+      kcTownHallPage.occurrences.map((occurrence) => occurrence.claimId)
+    );
+    for (const claimId of requiredKcTownHallClaimIds) {
+      if (!occurrenceClaimIds.has(claimId)) {
+        kcTownHallErrors.push(`KC Town Hall page plan does not render ${claimId}`);
+      }
+    }
+    if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(requiredKcTownHallSourceIds)) {
+      kcTownHallErrors.push("KC Town Hall source order must preserve proposal, acceptance, appropriation, and withdrawal chronology");
+    }
+  }
+  if (!withdrawalClaim?.projections.some(
+    (projection) => projection.key === "case-study" && projection.status === "active"
+  )) {
+    kcTownHallErrors.push("KC Town Hall withdrawal and reappropriation context must remain active");
+  }
+
   errors.push(
     ...coverageErrors,
     ...researchErrors,
     ...dispositionErrors,
     ...projectionErrors,
-    ...pressErrors
+    ...pressErrors,
+    ...kcTownHallErrors
   );
   return {
     errors,
@@ -357,6 +441,11 @@ export function validateKnowledgeIntake() {
         passed: pressErrors.length === 0,
         errors: pressErrors,
         evidence: `${pressPlacements.length} campaign press placements resolve to ${articleSourceIds.size} canonical article sources across four archive-backed indexes without automatic claim projection.`
+      },
+      kcTownHall: {
+        passed: kcTownHallErrors.length === 0,
+        errors: kcTownHallErrors,
+        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, withdrawal, and reappropriation sequence with explicit non-disbursement and non-completion boundaries."
       }
     }
   };

@@ -173,15 +173,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation; Jamie presented the $490,539 proposal in 2019, and official records show the project later withdrew before proceeding under that award.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. The project received a public funding recommendation and later withdrew; the unused allocation was reappropriated.
+**Public wording:** Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation; Jamie presented the $490,539 proposal in 2019, the Council accepted the CCED recommendation and appropriated the project amount, and official records show the project later withdrew before proceeding under that award.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. On September 26, 2019, the Council accepted the CCED Board's recommendation of up to $490,539 and passed an ordinance appropriating $490,539 to KC Town Hall. The project later withdrew, and the unused allocation was reappropriated.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Keep the amount tied to the public proposal and recommendation. State the later withdrawal. Do not imply completed construction, final funds received, or fault.
-**Do not say:** Final funding received; the redevelopment was completed; the project remains active under the award; current property status; private financial details; official municipal endorsement beyond the public record.
+**Guardrail:** Distinguish the proposal, Board recommendation, Council acceptance, appropriation, and later withdrawal. Do not imply an executed funding agreement, payment or disbursement, completed construction, sole causality, or fault.
+**Do not say:** Final funding received; a funding agreement was executed; the appropriation was paid or disbursed; Jamie alone caused the Council action; the redevelopment was completed; the project remains active under the award; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

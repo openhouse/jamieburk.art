@@ -218,6 +218,59 @@ export const researchedSourceRecords20260713 = [
     ]
   },
   {
+    id: "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+    title: "Kansas City Resolution 190649",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-09-26",
+    accessedAt: "2026-07-14",
+    canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+    assetUrl: "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&ID=10628240&M=F",
+    preferredPublicUrl: "canonical",
+    publicCitation: "City of Kansas City, Missouri, Resolution 190649, adopted September 26, 2019.",
+    publicNote: "The authenticated resolution accepts the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizes funding-agreement negotiations; it does not document an executed agreement or payment.",
+    supportsGenerally: [
+      "the CCED Board recommended $490,539 for KC Town Hall on July 16, 2019",
+      "the City Council accepted the recommendation of up to $490,539 on September 26, 2019",
+      "the City Council authorized funding-agreement negotiations"
+    ],
+    doesNotEstablish: [
+      "that a funding agreement was executed",
+      "that funds were paid or disbursed",
+      "that construction began or was completed",
+      "that Jamie alone caused the Council action"
+    ]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+    title: "Kansas City Ordinance 190642",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2019-09-26",
+    accessedAt: "2026-07-14",
+    canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+    assetUrl: "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&ID=10628353&M=F",
+    preferredPublicUrl: "canonical",
+    publicCitation: "City of Kansas City, Missouri, Ordinance 190642, passed September 26, 2019.",
+    publicNote: "The authenticated ordinance's Round Two project table appropriates $490,539 to KC Town Hall. Appropriation is not evidence that the money was disbursed or that the project was completed.",
+    supportsGenerally: [
+      "the City Council passed Ordinance 190642 on September 26, 2019",
+      "the Round Two project table appropriated $490,539 to KC Town Hall",
+      "the City Council made the final municipal appropriation decision reflected in the ordinance"
+    ],
+    doesNotEstablish: [
+      "that funds were paid or disbursed",
+      "that a funding agreement was executed",
+      "that construction began or was completed",
+      "that Jamie personally received the appropriation",
+      "that Jamie alone caused the Council action"
+    ]
+  },
+  {
     id: "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
     title: "Kansas City Ordinance 240317",
     organization: "City of Kansas City, Missouri",
@@ -675,6 +728,64 @@ export const researchedClaimRecords20260713 = [
     reviewedBy: ["Codex public-source close reading"]
   },
   {
+    id: "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
+    project: "kc-town-hall",
+    internalClaim: "On September 26, 2019, the Kansas City Council adopted Resolution 190649, accepting the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorizing funding-agreement negotiations.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "On September 26, 2019, the Kansas City Council accepted the CCED Board's recommendation of up to $490,539 for KC Town Hall and authorized funding-agreement negotiations.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/kc-town-hall"]
+    }],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+      relationship: "direct-support",
+      supports: ["Council adoption date", "acceptance of the CCED Board recommendation", "amount of up to $490,539", "authorization of funding-agreement negotiations"],
+      locator: "authenticated Resolution 190649, sections 1-2 and authentication page",
+      confidence: "high",
+      renderCitation: true
+    }],
+    boundaries: ["Acceptance and negotiation authority do not establish an executed agreement, payment, construction, or Jamie's sole causality."],
+    antiClaims: ["A funding agreement was executed.", "KC Town Hall received or spent the money.", "The Council action completed the redevelopment.", "Jamie alone caused the Council action."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex public-source close reading of authenticated Resolution 190649"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+    project: "kc-town-hall",
+    internalClaim: "At the same September 26, 2019, meeting, the Kansas City Council passed Ordinance 190642, whose Round Two project table appropriated $490,539 to KC Town Hall.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "At the same meeting, the Council passed Ordinance 190642, appropriating $490,539 to KC Town Hall in the Round Two project table.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/kc-town-hall"]
+    }, {
+      key: "work-card",
+      text: "The Council accepted the CCED recommendation and appropriated $490,539 for the project; this did not establish disbursement or completed construction.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work", "/work/kc-town-hall"]
+    }],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+      relationship: "direct-support",
+      supports: ["Council passage date", "KC Town Hall project identity", "$490,539 appropriation", "Round Two project table"],
+      locator: "authenticated Ordinance 190642, section 2 project table on page 2 and authentication page",
+      confidence: "high",
+      renderCitation: true
+    }],
+    boundaries: ["The appropriation does not establish payment, disbursement, an executed agreement, construction, or Jamie's sole causality."],
+    antiClaims: ["KC Town Hall received or spent $490,539.", "Jamie personally received $490,539.", "The redevelopment was completed.", "Jamie alone caused the appropriation."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex public-source close reading of authenticated Ordinance 190642"]
+  },
+  {
     id: "CLM-KC-TOWN-HALL-WITHDRAWN-2024",
     project: "kc-town-hall",
     internalClaim: "Kansas City Ordinance 240317 records that KC Town Hall withdrew and would no longer proceed under the CCED award, and that the unused $490,539 was reappropriated.",
@@ -908,6 +1019,46 @@ export const researchedIntakeRecords20260713 = [
     inquiryIds: [],
     limitations: ["The minutes document a proposal and requested amount, not final receipt or completion."],
     nextActions: ["Project the public role and proposal scope with an explicit citation and completion boundary."]
+  },
+  {
+    id: "INTAKE-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649-2026",
+    capturedAt: "2026-07-14",
+    capturedBy: "Codex public-source research",
+    kind: "public-url",
+    title: "Kansas City Council acceptance of the KC Town Hall recommendation",
+    publicSafeSummary: "Authenticated Resolution 190649 records the Council's acceptance of the CCED Board recommendation of up to $490,539 for KC Town Hall and authorization of funding-agreement negotiations.",
+    whyItMatters: "Completes the municipal decision sequence between the Board recommendation and the companion appropriation ordinance.",
+    projectHints: ["kc-town-hall"],
+    maturity: "decomposed",
+    publicUse: "public-linkable",
+    editorialState: "selected",
+    disposition: "claim-candidate-created",
+    canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+    sourceIds: ["SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019"],
+    inquiryIds: [],
+    limitations: ["The resolution authorizes negotiations; it does not document an executed funding agreement, disbursement, or construction."],
+    nextActions: ["Project the Council acceptance as a cited, bounded step in the case-study chronology."]
+  },
+  {
+    id: "INTAKE-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642-2026",
+    capturedAt: "2026-07-14",
+    capturedBy: "Codex public-source research",
+    kind: "public-url",
+    title: "Kansas City Council appropriation for KC Town Hall",
+    publicSafeSummary: "Authenticated Ordinance 190642 records a $490,539 appropriation to KC Town Hall in the Round Two project table.",
+    whyItMatters: "Supports the stronger and more precise claim that the Council appropriated the project amount after the CCED recommendation.",
+    projectHints: ["kc-town-hall"],
+    maturity: "decomposed",
+    publicUse: "public-linkable",
+    editorialState: "selected",
+    disposition: "claim-candidate-created",
+    canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+    sourceIds: ["SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019"],
+    inquiryIds: [],
+    limitations: ["Appropriation does not establish that funds were disbursed, an agreement was executed, or construction occurred."],
+    nextActions: ["Project the appropriation with an explicit citation and preserve the payment and completion boundaries."]
   },
   {
     id: "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
