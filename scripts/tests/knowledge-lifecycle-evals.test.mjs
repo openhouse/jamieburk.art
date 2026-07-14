@@ -13,6 +13,7 @@ import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/k
 import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts";
 import { nycArtCFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts";
 import { personalWowListFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts";
+import { wowListFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
@@ -1287,6 +1288,118 @@ test("WOW List Facebook non-recovery cannot become a nonexistence claim", () => 
   assert.ok(claim.antiClaims.some((item) => /never had a Facebook event/i.test(item)));
   assert.equal(task.status, "open");
   assert.ok(task.nextActions.some((item) => /native WOW List Page export/i.test(item)));
+});
+
+test("WOW List Facebook post census dispositions reproduce the two-pass control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/wowlist-facebook-post-ledger.json", "utf8")
+  );
+
+  assert.deepEqual(
+    ledger.population.renderedRecordsPerPass,
+    wowListFacebookPostCensus.traversal.renderedRecordsPerPass
+  );
+  assert.deepEqual(
+    ledger.population.renderedRecordsWithJamiePublisherAttributionPerPass,
+    wowListFacebookPostCensus.traversal.renderedRecordsWithJamiePublisherAttributionPerPass
+  );
+  assert.equal(ledger.records.length, 53);
+  assert.equal(new Set(ledger.records.map((item) => item.id)).size, 53);
+  assert.equal(new Set(ledger.records.map((item) => item.timelineSlot)).size, 53);
+  assert.ok(!ledger.records.some((item) => item.timelineSlot === 34));
+  assert.equal(ledger.duplicateDisposition.timelineSlot, undefined);
+  assert.equal(ledger.duplicateDisposition.renderedTimelineSlot, 34);
+  assert.equal(ledger.duplicateDisposition.duplicateOf, "FB-WOWLIST-033");
+
+  const computedThemes = Object.fromEntries(
+    Object.keys(ledger.primaryThemeCounts).map((theme) => [
+      theme,
+      ledger.records.filter((item) => item.primaryTheme === theme).length
+    ])
+  );
+  assert.deepEqual(computedThemes, ledger.primaryThemeCounts);
+  assert.deepEqual(ledger.primaryThemeCounts, {
+    "product-onboarding-and-community-governance": wowListFacebookPostCensus.primaryThemeCounts.productOnboardingAndCommunityGovernance,
+    "event-and-participant-amplification": wowListFacebookPostCensus.primaryThemeCounts.eventAndParticipantAmplification,
+    "cultural-space-care-and-safety": wowListFacebookPostCensus.primaryThemeCounts.culturalSpaceCareAndSafety,
+    "civic-mobilization-and-public-care": wowListFacebookPostCensus.primaryThemeCounts.civicMobilizationAndPublicCare,
+    "adjacent-cultural-knowledge-and-opportunity": wowListFacebookPostCensus.primaryThemeCounts.adjacentCulturalKnowledgeAndOpportunity
+  });
+  assert.equal(
+    ledger.destinationInventory.canonicalDestinations.length,
+    wowListFacebookPostCensus.destinationInventory.uniqueCanonicalDestinations
+  );
+});
+
+test("WOW List Facebook publisher claim is strong, collective, and bounded", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+  const censusEvidence = claim.evidence.find(
+    (item) => item.sourceId === "SRC-FACEBOOK-WOWLIST-POST-CENSUS-RUN-2026"
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.internalClaim, /all 54 rendered records representing 53 distinct posts/i);
+  assert.match(claim.composition.action, /operated WOW List's Facebook Page publishing surface/i);
+  assert.match(claim.composition.intendedEnd, /show up for one another in physical places/i);
+  assert.match(claim.composition.collectiveCredit, /Jamie and Richard's project/i);
+  assert.match(claim.composition.collectiveCredit, /members.*organizers.*artists.*venues/i);
+  assert.match(claim.composition.causalBoundary, /not sole lifetime administration/i);
+  assert.equal(censusEvidence.relationship, "private-support");
+  assert.ok(claim.antiClaims.some((item) => /sole lifetime administrator/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /every sentence.*quotation.*image.*event.*linked source/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /adoption or impact/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("WOW List Facebook mission, source, and traction patterns retain credit limits", () => {
+  const claimIds = [
+    "CLM-WOWLIST-FACEBOOK-SURVIVING-POST-POPULATION",
+    "CLM-WOWLIST-FACEBOOK-MISSION-PRACTICE",
+    "CLM-WOWLIST-FACEBOOK-STAKEHOLDER-PARTICIPATION",
+    "CLM-WOWLIST-FACEBOOK-DESTINATION-NETWORK"
+  ];
+  const missionSources = [
+    "SRC-FACEBOOK-WOWLIST-COMMUNITY-PHILOSOPHY-2016",
+    "SRC-FACEBOOK-WOWLIST-WOMENS-MARCH-2017",
+    "SRC-FACEBOOK-WOWLIST-LET-NYC-DANCE-2017",
+    "SRC-WESTWORD-DENVER-DIY-SPACES-FUND-2017",
+    "SRC-WILLAMETTE-WEEK-THE-KNOW-CLOSING-2016"
+  ];
+  const resolvedTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-WOWLIST-FACEBOOK-POST-CENSUS"
+  );
+  const openTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-WOWLIST-FACEBOOK-NATIVE-EXPORT-AND-ROLE-CORROBORATION"
+  );
+
+  for (const claimId of claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claimId);
+    assert.equal(claim.projections.length, 0);
+    assert.equal(decision.decision, "defer");
+  }
+  for (const sourceId of missionSources) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.ok(source);
+    assert.equal(reading.status, "closely-read");
+    assert.ok(source.doesNotEstablish.some((item) => /adoption|impact|organization|coverage|authorship|stakeholder/i.test(item)));
+  }
+  const stakeholderClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-FACEBOOK-STAKEHOLDER-PARTICIPATION"
+  );
+  assert.ok(stakeholderClaim.boundaries.some((item) => /not a complete user census/i.test(item)));
+  assert.ok(stakeholderClaim.antiClaims.some((item) => /national adoption/i.test(item)));
+  assert.equal(resolvedTask.status, "resolved");
+  assert.match(resolvedTask.resolutionSummary, /53 distinct surviving posts/i);
+  assert.equal(openTask.status, "open");
+  assert.ok(openTask.nextActions.some((item) => /native Meta Page export/i.test(item)));
 });
 
 test("NYC Artist Coalition event census preserves rotating-meeting and stakeholder boundaries", () => {

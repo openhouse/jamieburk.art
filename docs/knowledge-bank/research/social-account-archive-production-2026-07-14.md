@@ -259,6 +259,33 @@ While acting as the WOW List Page, the current event surface displayed zero
 event records. Bounded historical recovery found none. This is a negative
 research control, not evidence that no WOW List Facebook event ever existed.
 
+## WOW List Facebook Page Posts
+
+The [full Page-post census](wowlist-facebook-posts-2026-07-14.md) uses the
+surviving Page timeline as a separate denominator from both the 38-item X
+profile and the zero-record Facebook event surface. Two authenticated terminal
+traversals each recover 54 rendered Page-post records. One community-philosophy
+post appears in both Featured and chronology, leaving 53 distinct posts; all 53
+receive public-safe dispositions.
+
+Facebook's manager-only interface attributes every rendered record in both
+passes to Jamie as publisher. This promotes a bounded public-ready reserve
+claim that Jamie operated WOW List's Facebook Page publishing surface. It does
+not establish sole lifetime administration or authorship of shared sources,
+campaign material, quotations, images, events, or participant work.
+
+The 53-post record contains 13 product/onboarding/community-governance posts,
+12 event/participant-amplification posts, 18 cultural-space care/safety posts,
+seven civic-mobilization/public-care posts, and three adjacent cultural-
+knowledge/opportunity posts. Twenty-nine destination occurrences resolve to 27
+canonical routes, including 19 WOW List surfaces and eight external routes.
+
+The strongest mission traction is participatory: local-scene maintainers and
+members publicly promoted WOW List, updated calendars, added events, made a
+tutorial, and articulated community-first values. That is bounded public-use
+evidence, not a user census, representative satisfaction measure, adoption
+claim, or impact claim.
+
 ## Source Articles Surfaced
 
 The Talks Not Raids stream surfaced two later Hell Gate articles that have been
@@ -283,6 +310,9 @@ equivalent.
 - The personal Facebook association graph stays aggregate-only. The narrower
   hosted-event practice is public-ready reserve depth with a defer decision,
   and the WOW List zero display remains a non-recovery control.
+- The complete WOW List Facebook Page-post census promotes Jamie's bounded
+  publishing practice to public-ready reserve depth while leaving all five new
+  claims deferred from the website.
 - The complete WOW List census strengthens the existing origin-and-support
   claim, while its population, network, scene-knowledge, care, and reaction
   findings remain reserve knowledge rather than automatic website copy.

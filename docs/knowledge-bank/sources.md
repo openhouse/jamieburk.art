@@ -115,6 +115,29 @@ locations, raw descriptions, responses, and browser state remain protected.
 See
 `docs/knowledge-bank/research/personal-wowlist-facebook-events-2026-07-14.md`.
 
+## WOW List Facebook Page Posts
+
+The July 14 authenticated Page-manager review traverses the WOW List Page-post
+timeline twice. Both passes recover 54 rendered records; one post appears in
+both Featured and chronology, leaving 53 distinct surviving posts. The public
+ledger assigns every distinct post one primary-theme disposition without
+publishing raw post text or comments.
+
+Facebook's manager-only label attributes publication of all 54 rendered
+records in both passes to Jamie. This supports a bounded claim that Jamie
+operated the Page publishing surface. It does not establish sole lifetime
+administration, authorship of shared sources and participant material, a native
+Meta export, deleted-post completeness, adoption, or impact.
+
+The corpus exposes 27 canonical destinations and surfaces public source routes
+about cultural-space safety, affordability, mutual aid, civic gathering, and
+community calendars. Denver Westword and Willamette Week articles received new
+close readings; existing New Yorker, KQED, and Meow Wolf sources remain in
+their original knowledge-bank records.
+
+See
+`docs/knowledge-bank/research/wowlist-facebook-posts-2026-07-14.md`.
+
 ## Personal Public Social Sources
 
 Personal social records may enter the source bank after individual close

@@ -123,3 +123,12 @@ surface remains aggregate-only, the narrower 21-slot Jamie-hosted control is
 dispositioned as 20 recovered pages and one unresolved slot, and the active WOW
 List Page event surface exposes zero records. The pass preserves event-making
 depth without turning Jamie's personal association graph into a portfolio.
+
+The
+[WOW List Facebook Page-post census](research/wowlist-facebook-posts-2026-07-14.md)
+assigns a disposition to all 53 distinct posts on the surviving Page timeline.
+Two terminal traversals each recover 54 rendered records, including one
+Featured/chronology duplicate, and Facebook's manager view attributes every
+rendered record to Jamie as publisher. The pass promotes a bounded Page-
+publishing practice while preserving shared authorship, collective credit,
+mutable-metric, and native-export limits.

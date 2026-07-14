@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "49cb7c712e6702c65c098581325a85f9faaec8f71e138cfb5293f5ac1825d6a8",
+    "fingerprint": "c90e4874f15a1307cb44838257f2ceb9875fc9a192de67998426723a6922d5d8",
     "counts": {
       "entities": 25,
-      "intake": 107,
-      "sources": 209,
-      "sourceReadings": 209,
-      "claims": 84,
-      "researchTasks": 34,
-      "projectionDecisions": 66
+      "intake": 108,
+      "sources": 217,
+      "sourceReadings": 217,
+      "claims": 89,
+      "researchTasks": 36,
+      "projectionDecisions": 71
     }
   },
   "judge": {
@@ -24,16 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "INTAKE-PERSONAL-WOWLIST-FACEBOOK-EVENT-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
             "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
           },
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "intake-is-accounted-for"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "INTAKE-WOWLIST-FACEBOOK-POST-CENSUS-2026"
           }
         ]
       },
@@ -42,16 +42,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "atomicPropositionSchema"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-RIVER-PITCH-2007"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "READ-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "PROP-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "READ-FACEBOOK-WOWLIST-POST-CENSUS-RUN-2026"
           }
         ]
       },
@@ -60,20 +60,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "claim-promotion-is-evidence-backed"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "hosted-event throughline keeps Chad's lens, collective credit, and a defer decision"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"
           }
         ]
       },
@@ -82,16 +82,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "researchTaskSchema"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "TASK-JAMIE-FACEBOOK-EVENT-EXPORT-AND-CREDIT"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "TASK-WOWLIST-FACEBOOK-HISTORICAL-EVENT-RECOVERY"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "TASK-WOWLIST-FACEBOOK-NATIVE-EXPORT-AND-ROLE-CORROBORATION"
           }
         ]
       },
@@ -100,16 +100,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Publication decisions"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "wowListFacebookPostDecisions"
           },
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "publication-is-an-independent-decision"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "personalWowListFacebookEventDecisions"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-PUBLISH-CALLNYC-DATE"
           }
         ]
       },
@@ -118,16 +118,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
-            "record": "\"recordLevelAssociationLedgerPublished\": false"
+            "file": "docs/knowledge-bank/data/wowlist-facebook-post-ledger.json",
+            "record": "publicSafety"
           },
           {
-            "file": "scripts/check-public-safety.mjs",
-            "record": "const textExtensions"
+            "file": "docs/knowledge-bank/approval-register.md",
+            "record": "WOW List Facebook Page posts"
           },
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "repositoryBoundaryTextExtensions"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
+            "record": "SRC-FACEBOOK-WOWLIST-POST-CENSUS-RUN-2026"
           }
         ]
       },
@@ -137,15 +137,15 @@
         "evidence": [
           {
             "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "composition: z.object"
+            "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts",
-            "record": "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Publication is compositional."
           },
           {
-            "file": "docs/knowledge-bank/research/personal-wowlist-facebook-events-2026-07-14.md",
-            "record": "Historic Plot Points"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           }
         ]
       }
@@ -168,5 +168,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent read-only assessment of the current canonical graph: weighted judge score 100/100. The Node 26 deterministic report cleared all 7 hard gates and all 4 quality targets; 78 knowledge-lifecycle regression tests, 10 citation tests, the knowledge-bank check, and the public-safety check passed. Inspection covered captured, researching, corroborated, public-ready, projected, rejected, and superseded claims. The personal and WOW List Facebook event batch accounts for the 502-record personal association control at aggregate level, dispositions all 21 hosted-event slots as 20 recovered pages and one unresolved slot, decomposes host attribution from event context, keeps mutable response values out of traction claims, and preserves WOW List historical non-recovery without inferring nonexistence. All four batch claims have explicit defer decisions and no active projection. No raw association rows, guest identities, local paths, private locators, or authentication material were found in the public repository. Human approval, collaborator credit or permission, and media rights or consent remain pending."
+  "summary": "All seven criteria score 4/4. The fresh deterministic eval reports 0 of 7 hard gates failing and 0 of 4 quality targets open; the lifecycle test suite passes 81 of 81 tests. All critical floors and the 90-point weighted threshold are met. Human gates remain pending."
 }
