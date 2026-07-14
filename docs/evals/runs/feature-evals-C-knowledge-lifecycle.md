@@ -77,9 +77,46 @@ visual evidence, matching deployed-SHA and production smoke evidence, rollback
 and indexing verification, and Jamie's approval of the exact production
 candidate.
 
+## Ten-Source Research Cycle
+
+The next recursive pass froze `c41f782e5018f7a57144d889e861e24ff8388bba`
+as its baseline and expanded the contract to require ten newly researched NYC
+Artist Coalition sources.
+
+- Baseline fingerprint: `sha256:e4c41db2eb70992cd1b4b2893061213ac6f8950c1d4d21afa6326429e4b1ba51`
+- Candidate fingerprint: `sha256:efea66c4c8ce2d96b760e66cda3fe31e7dc852816e542ddac86c60fcc6a1f397`
+- Contract fingerprint: `sha256:9ca4f87a74601d6f897dfd244d44af4ac31182ba07229793906434f5d7fc492e`
+- Deterministic score: `92.5 -> 100`
+
+The cycle added ten stable intake records, ten closely reviewed source records,
+eleven bounded claims, five new entity records, and more developed Office of
+Nightlife, town-hall, Talks Not Raids, and Cabaret Law inquiries. The canonical
+bank now contains 22 intake records. Eight NYC Artist Coalition claims are
+active on FairRentNYC; twelve mature lifecycle claims remain unused.
+
+The first independent archival run exposed a page-plan defect: source order did
+not follow first public appearance. The order was corrected, the citation
+registry regenerated, and citation checks rerun before both candidate-bound
+judges were repeated. The corrected candidate passed twice at 100 with
+archival-editorial and public-safety-composition scores of 4 on every rubric.
+
+The application profile was then rebound to fresh browser evidence and three
+new judgments. The exact candidate
+`sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154`
+passed twice at 86.5. The dedicated Chad-editorial judgment scored the Chad
+criterion 4; hiring-manager and public-safety-editorial judgments reported no
+regressions.
+
+Browser evidence covers eight routes at desktop, mobile, and 200%-equivalent
+reflow; 24 of 24 visible keyboard-focus states; CallNYC citation semantics; and
+the expanded FairRentNYC surface with 13 references, 13 backlinks, nine source
+notes, and working reference/backlink round trips.
+
 ## Next Cycle
 
 Add durable archived captures for live sources, migrate the remaining high-value
-legacy proof claims into the canonical lifecycle, and continue the open Office
-of Nightlife, town-hall, Talks Not Raids, M.A.R.C.H., CallNYC engagement, and
-Cabaret Law causality research without changing their current public status.
+legacy proof claims into the canonical lifecycle, and continue the narrower open
+questions: Jamie's exact Office of Nightlife contribution, town-hall production
+responsibilities, Talks Not Raids implementation role, M.A.R.C.H. disposition,
+CallNYC engagement, and Cabaret Law causal allocation. Do not strengthen those
+claims until the source relationships support it.

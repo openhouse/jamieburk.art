@@ -1,1 +1,92 @@
-{"judgeId":"codex-independent-hiring-manager-r3","lens":"hiring-manager","candidate":"sha256:f9a847fb84894f3b84ac9a520c5f80d8cbbdc04e015e80faf75a5c7099cbb6ee","contract":"sha256:ca6d5f3ec36641e65bddb33e4d55514c101a02ddf7884a2d6e09a30a4395b628","profile":"application_ready","scores":{"role_clarity":4,"role_fit":4,"proof_defensibility":4,"citational_care":4,"reader_effort":3,"chad_lens":3,"visual_evidence":1,"resume_alignment":4,"responsive_quality":3,"sharing_quality":3,"operational_confidence":3},"evidence":[{"rubric":"role_clarity","route":"/","observation":"The opening viewport identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and provides direct work, resume, and contact paths."},{"rubric":"role_fit","route":"/work/technical-operations","observation":"The page translates Jamie's experience into delivery coordination, requirements, risks, dependencies, onboarding, documentation, implementation, and durable handoffs, supported by a concrete project proof map."},{"rubric":"proof_defensibility","route":"/work/fair-rent-nyc, /work/callnyc, /work/harry-j-epstein, /work/kc-town-hall","observation":"Claims retain contribution language, collective credit, archived or unofficial boundaries, and recommendation-versus-award limits. The two new FairRentNYC claims are canonical, source-backed, and explicitly stop short of sole policy causality."},{"rubric":"citational_care","route":"/work/fair-rent-nyc, /work/callnyc","observation":"The new NYC Artist Coalition founding and Cabaret Law advocacy statements render through canonical Claim records with local citations, source notes, backlinks, support descriptions, and explicit non-support boundaries, extending the established CallNYC citation pattern."},{"rubric":"reader_effort","route":"/work/fair-rent-nyc, /work/callnyc","observation":"Headings and at-a-glance summaries make the cases scannable, and internal approval narration is absent, although both evidence-rich civic case studies remain information-dense."},{"rubric":"chad_lens","route":"/, /work/fair-rent-nyc, /work/harry-j-epstein, /work/kc-town-hall","observation":"Jamie is visible as the actor and useful outcomes are named directly; specialized work is translated for hiring readers while coalition, business-growth, and funding outcomes retain right-sized collective or contribution language."},{"rubric":"visual_evidence","route":"/work/fair-rent-nyc, /work/callnyc, /work/harry-j-epstein","observation":"Artifact cards describe outputs but do not show inspectable project imagery. This is the existing application-ready visual-evidence deferral, not a candidate regression."},{"rubric":"resume_alignment","route":"/work/fair-rent-nyc, /resume","observation":"The rendered at-a-glance chronology now distinguishes NYC Artist Coalition work beginning in 2017 from the later CRS collaboration beginning in 2024, correcting the prior combined-date ambiguity and aligning with the resume's 2017-present coalition history and later CRS impact."},{"rubric":"responsive_quality","route":"all candidate-bound browser-evidence routes","observation":"Candidate-bound evidence reports no desktop, mobile, or 200%-equivalent reflow overflow across eight routes and visible focus for all 24 traversed controls; this supports a strong application-ready score rather than an exceptional exhaustive-device score."},{"rubric":"sharing_quality","route":"/resume, /contact, /work/technical-operations","observation":"Canonical metadata, Open Graph data, social preview, resume download, contact links, and role-specific descriptions are present and trustworthy under staging defaults."},{"rubric":"operational_confidence","route":"/api/health","observation":"Fresh deterministic evaluation confirmed the exact candidate and contract fingerprints, repository integrity, public safety, claim integrity, resume consistency, routes, application paths, and responsive evidence; production deployment, rollback, indexing, and human approval remain outside this profile."}],"regressions":[],"highestValueFailure":"visual_evidence","smallestDefensiblePatch":"Add one rights-approved, public-safe screenshot of the actual CallNYC interface while preserving its archived and unofficial status.","passes":true,"confidence":"high"}
+{
+  "judgeId": "codex-independent-hiring-manager-r4",
+  "lens": "hiring-manager",
+  "candidate": "sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154",
+  "contract": "sha256:70e722e6ae95c9d8d65b9e47abba4450254363df59f20cb1a9494683273b9c3c",
+  "profile": "application_ready",
+  "scores": {
+    "role_clarity": 4,
+    "role_fit": 4,
+    "proof_defensibility": 4,
+    "citational_care": 4,
+    "reader_effort": 3,
+    "chad_lens": 3,
+    "visual_evidence": 1,
+    "resume_alignment": 4,
+    "responsive_quality": 3,
+    "sharing_quality": 3,
+    "operational_confidence": 3
+  },
+  "evidence": [
+    {
+      "rubric": "role_clarity",
+      "route": "/",
+      "observation": "The opening positioning identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and provides direct paths to selected work, resume, and contact."
+    },
+    {
+      "rubric": "role_fit",
+      "route": "/work/technical-operations",
+      "observation": "The role-fit page translates Jamie's work into requirements, coordination, risk and dependency management, implementation, onboarding, documentation, and durable handoffs."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/fair-rent-nyc",
+      "observation": "The expansion adds source-backed founding affiliation, organizing, public testimony, campaign-web, and coalition-operating evidence while repeatedly preserving collective ownership and excluding sole policy causality."
+    },
+    {
+      "rubric": "citational_care",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Candidate-bound evidence records 13 local references and backlinks, nine source notes, accessible labels, successful reference targeting, and canonical registry boundaries describing both support and non-support."
+    },
+    {
+      "rubric": "reader_effort",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Clear headings and a usable work-to-outcome sequence keep the expanded case navigable, but the added claim chronology and repeated public/private and collective-credit qualifications make it substantially denser than a one-pass hiring summary."
+    },
+    {
+      "rubric": "chad_lens",
+      "route": "/work/fair-rent-nyc",
+      "observation": "Jamie is visible as documentation architect, organizer, translator, website builder, and coordination contributor, with useful outputs named directly; repeated boundary language keeps the presentation strong rather than exceptional."
+    },
+    {
+      "rubric": "visual_evidence",
+      "route": "/work/fair-rent-nyc, /work/callnyc",
+      "observation": "The cases still describe artifacts primarily through text rather than showing an approved, inspectable interface or work artifact. This is the existing application-ready deferral, not a regression."
+    },
+    {
+      "rubric": "resume_alignment",
+      "route": "/resume, /work/fair-rent-nyc",
+      "observation": "The expanded coalition record reinforces the established professional throughline and maintains the distinction between longer-running NYC Artist Coalition work and later Commercial Rent Stabilization collaboration."
+    },
+    {
+      "rubric": "responsive_quality",
+      "route": "candidate-bound browser evidence for eight declared routes",
+      "observation": "Evidence reports status 200 and no overflow at desktop, mobile, and 200%-equivalent reflow across all required routes, plus visible focus on all 24 traversed controls; the evidence remains local rather than exhaustive device coverage."
+    },
+    {
+      "rubric": "sharing_quality",
+      "route": "/resume, /contact",
+      "observation": "Resume download, contact paths, canonical metadata, Open Graph image and title, and Twitter card are present under staging defaults; production sharing behavior remains outside this profile."
+    },
+    {
+      "rubric": "operational_confidence",
+      "route": "candidate-bound evaluation evidence",
+      "observation": "The exact requested candidate is bound to route, responsive, keyboard, citation, metadata, and resume-download evidence. The generated aggregate report present in the workspace references an earlier candidate and contract, while production smoke, rollback, indexing, and deployed-commit verification remain deferred."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/callnyc",
+      "observation": "CallNYC remains framed as an independent, archived, unofficial follow-on, with boundaries against official-product, formal-submission, winner, and unsupported historical-superlative claims."
+    },
+    {
+      "rubric": "proof_defensibility",
+      "route": "/work/harry-j-epstein",
+      "observation": "The business-growth evidence retains contribution language rather than converting a period of growth into sole causality."
+    }
+  ],
+  "regressions": [],
+  "highestValueFailure": "visual_evidence",
+  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface with its archived and unofficial boundary adjacent to it.",
+  "passes": true,
+  "confidence": "medium"
+}

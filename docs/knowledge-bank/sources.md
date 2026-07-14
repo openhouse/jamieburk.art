@@ -45,6 +45,27 @@ close reading, and bounded claim. Its town-hall invitation does not establish
 that the event occurred, its scale, Jamie's complete production role, or policy
 effects.
 
+## NYC Artist Coalition Research Round Two
+
+The July 13, 2026 follow-up added ten new public sources:
+
+- [Bedford + Bowery: 6 Things to Know About Making DIY Spaces Work](https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/), identifying Jamie as an NYC Artist Coalition organizer and attributing to him a more-than-100 mutual-aid signup count.
+- [Mixmag: Let NYC Dance](https://mixmag.net/feature/let-nyc-dance-the-battle-to-save-new-york-citys-nightlife), documenting Jamie speaking as a coalition member at a Cabaret Law hearing.
+- [NYC Artist Coalition priorities](https://nycartc.com/priorities/), preserving the coalition's own account of mutual aid, safety, advocacy, M.A.R.C.H. transparency, Office accountability, and affordability.
+- [NYC Artist Coalition letter to MOME and DCLA](https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf), preserving collective Office of Nightlife recommendations and an October 11 Market Hotel town-hall invitation.
+- [Bedford + Bowery: What Can the Night Mayor Do?](https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/), confirming that the Market Hotel event occurred and identifying Jamie among coalition participants.
+- [NYC Office of Nightlife Report, 2018-2021](https://www.nyc.gov/assets/sbs/downloads/pdf/about/reports/nightlife-report-june-2021.pdf), documenting a separate March 2018 coalition town hall introducing the first nightlife director to broad stakeholders.
+- [NYC Council Small Business hearing transcript](https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F), directly documenting Jamie's October 22, 2018 testimony as a coalition member.
+- [Talks Not Raids](https://talksnotraids.com/), preserving the public campaign interface, issue framing, support tracker, call script, coalition credits, and media kit.
+- [NYC Council Intro 1156 record](https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156), establishing nineteen sponsors and enactment as Local Law 220 of 2019 with reporting and specified notice requirements.
+- [Save NYC Spaces](https://savenycspaces.nycartc.com/), preserving Office of Nightlife priorities, coalition credits, attributed statements, and campaign media assets.
+
+Each source record separately states what it supports and what it does not
+establish. Coalition-authored surfaces support attributed public positions and
+interface facts; they are not independent proof of impact or Jamie's individual
+authorship. Official records establish hearings and enacted provisions; they do
+not allocate causal credit among advocates, legislators, agencies, or partners.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

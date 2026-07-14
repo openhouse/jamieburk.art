@@ -1,57 +1,53 @@
 {
-  "judgeId": "lifecycle-composition-2026-07-13-r2",
+  "judgeId": "lifecycle-composition-2026-07-13-r3",
   "lens": "public-safety-composition",
-  "candidate": "sha256:e4c41db2eb70992cd1b4b2893061213ac6f8950c1d4d21afa6326429e4b1ba51",
-  "contract": "sha256:a1dc71747d6e136cbbfef5890090b2abe903dc7f4739636edaebe86567440ea0",
+  "candidate": "sha256:efea66c4c8ce2d96b760e66cda3fe31e7dc852816e542ddac86c60fcc6a1f397",
+  "contract": "sha256:9ca4f87a74601d6f897dfd244d44af4ac31182ba07229793906434f5d7fc492e",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
     "source_decomposition": 4,
-    "claim_atomicity": 3,
+    "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
     "project_context": 4,
     "research_honesty": 4,
-    "projection_restraint": 3
+    "projection_restraint": 4
   },
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All six required submitted URLs have stable intake IDs, project placement, availability, promotion links, and dispositions; unresolved memories and the CallNYC metric are explicitly deferred into inquiries rather than silently discarded."
+      "observation": "All ten second-round sources have stable intake and source IDs, public-safe descriptions, dispositions, and explicit links to claims or inquiries. Unverified memories remain deferred research leads."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Each newly promoted source records review provenance, preservation state, public citation, supported propositions, and explicit non-support. The records distinguish institutional descriptions and Jamie's attributed recollections from independent verification."
+      "observation": "Each promoted source records provenance, review metadata, locators, affirmative support, and explicit non-support. Coalition-authored, journalistic, and government sources retain distinct evidentiary roles."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "The founding-role, institutional-outcome, invitation, and chronology claims are narrowly bounded. The Cabaret Law advocacy and participatory-project claims combine several activities, but their component support and limits remain inspectable within the evidence relationships."
+      "observation": "Organizer role, attributed signup count, advocacy, town-hall participation, testimony, campaign interface, and legislative outcome are separate claims with individual boundaries and anti-claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Every mature new claim resolves through evidence relationships to reviewed sources and a project; causal or event-completion gaps resolve to named inquiries. Active FairRentNYC occurrences resolve to the two cited claims and their renderable sources."
+      "observation": "Every selected FairRentNYC claim resolves through the page plan to canonical claims and public sources. The generated registry preserves those relationships without exposing protected source paths or private artifacts."
     },
     {
       "rubric": "status_separation",
-      "observation": "Knowledge status, publication status, editorial status, and per-projection status are independent. Confirmed Open House and Water Publics material remains unused, while unresolved Office of Nightlife, town-hall, M.A.R.C.H., and engagement memories remain inquiries."
+      "observation": "Knowledge maturity, publication safety, editorial selection, and projection status remain independent. Confirmed but unused Office, March 2018, priorities, and Save NYC Spaces material is not automatically projected."
     },
     {
       "rubric": "project_context",
-      "observation": "The three dossiers provide chronology, boundaries, projection decisions, open research, and photo prompts. Project and media schemas give future agents and photo editors explicit rights, consent, display, entity, and intake pathways."
+      "observation": "The dossier situates the corpus across early organizing, Cabaret Law advocacy, Office of Nightlife accountability, town halls, affordability testimony, and Talks Not Raids, with collective-credit boundaries and future photo-research prompts."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The candidate preserves negative and partial findings without converting them into nonexistence or causality claims. The Greene Hill record distinguishes an invitation from a completed event, and the Council press release is not treated as final enactment or proof of advocacy causality."
+      "observation": "The more-than-100 count remains explicitly attributed to Jamie rather than audited. Event scale, exact production shares, Office-creation causality, M.A.R.C.H. disbandment, and final Cabaret enactment evidence remain openly unresolved."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The public page selects only founding-member attribution and directly documented Cabaret Law advocacy from the new lifecycle material. Open House, Water Publics, institutional outcomes, and unresolved memories remain off-site. The generated registry contains only active public citation records and exposes no protected locator, private path, internal excerpt, or protected source."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The FairRentNYC sentence grouping Jamie's infrastructure work with campaigns around Office of Nightlife creation is close to the unresolved causality boundary, but it explicitly assigns policy outcomes to the collective and does not claim that Jamie created the office."
+      "observation": "The page selects eight purposeful claims supported by nine sources, using seven of the ten new sources while retaining three as contextual or unused research. Institutional outcomes are stated separately from advocacy activity and causal credit. Jamie's documented actions are visible without converting coalition accomplishments into solo achievements, and no protected material is exposed."
     }
   ],
   "regressions": [],
-  "nextAction": "No blocking patch. Clarify older FairRentNYC operating-language boundaries as those claims migrate into the canonical lifecycle."
+  "nextAction": "Accept the candidate under the version-2 lifecycle composition contract."
 }

@@ -33,6 +33,26 @@ test("every supplied URL has a completed intake disposition", () => {
   }
 });
 
+test("the second research round contains ten unique promoted sources", () => {
+  assert.equal(suite.requiredResearchUrls.length, 10);
+  assert.equal(new Set(suite.requiredResearchUrls).size, 10);
+  const intakeByUrl = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.submittedUrl, item])
+  );
+  for (const url of suite.requiredResearchUrls) {
+    const item = intakeByUrl.get(url);
+    assert.ok(item, url);
+    assert.equal(item.status, "promoted");
+    assert.equal(item.sourceIds.length, 1);
+    const source = knowledgeBank.sources.find((candidate) => candidate.id === item.sourceIds[0]);
+    assert.ok(source, item.sourceIds[0]);
+    assert.equal(source.reviewStatus, "reviewed");
+    assert.equal(source.supportsGenerally.length > 0, true);
+    assert.equal(source.doesNotEstablish.length > 0, true);
+    assert.equal(Boolean(source.locator), true);
+  }
+});
+
 test("memory leads remain inquiries rather than confirmed claims", () => {
   const memoryItems = knowledgeBank.intakeItems.filter((item) =>
     item.id.startsWith("INT-2026-07-13-MEMORY")
@@ -47,9 +67,15 @@ test("memory leads remain inquiries rather than confirmed claims", () => {
 });
 
 test("the first lifecycle corpus preserves source support and non-support", () => {
-  const lifecycleSources = knowledgeBank.sources.filter((source) =>
-    source.intakeIds.some((id) => id.startsWith("INT-2026-07-13"))
-  );
+  const researchUrls = new Set(suite.requiredResearchUrls);
+  const lifecycleSources = knowledgeBank.sources.filter((source) => {
+    const intake = knowledgeBank.intakeItems.find((item) => source.intakeIds.includes(item.id));
+    return Boolean(
+      intake?.submittedUrl &&
+      intake.id.startsWith("INT-2026-07-13") &&
+      !researchUrls.has(intake.submittedUrl)
+    );
+  });
   assert.equal(lifecycleSources.length, 8);
   for (const source of lifecycleSources.filter((item) => item.reviewStatus === "reviewed")) {
     assert.equal(source.supportsGenerally.length > 0, true);
@@ -71,9 +97,18 @@ test("mature unused claims remain out of public composition", () => {
   const unused = lifecycleClaims.filter((claim) => claim.editorialStatus === "unused");
   assert.deepEqual(
     active.map((claim) => claim.id).sort(),
-    ["CLM-NYCARTC-CABARET-LAW-ADVOCACY", "CLM-NYCARTC-FOUNDING-ROLE"]
+    [
+      "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+      "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+      "CLM-NYCARTC-FOUNDING-ROLE",
+      "CLM-NYCARTC-MUTUAL-AID-SIGNUPS",
+      "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+      "CLM-NYCARTC-SBJSA-TESTIMONY-2018",
+      "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+      "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
+    ]
   );
-  assert.equal(unused.length, 7);
+  assert.equal(unused.length, 12);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 

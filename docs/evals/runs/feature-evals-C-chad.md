@@ -62,3 +62,18 @@ markers and backlinks; metadata; and the resume download.
 The next optimization cycle remains visual evidence: one rights-reviewed,
 public-safe screenshot of actual project work, beginning with CallNYC if its
 archived and unofficial status can remain adjacent to the image.
+
+## Research-Round Revalidation
+
+The ten-source NYC Artist Coalition research pass changed the FairRentNYC public
+surface, invalidating the prior browser evidence and model judgments. Fresh
+evidence and three independent judgments were bound to candidate
+`sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154`
+and contract
+`sha256:70e722e6ae95c9d8d65b9e47abba4450254363df59f20cb1a9494683273b9c3c`.
+
+The application-ready score remains 86.5 and passed twice consecutively. The
+dedicated Chad-editorial judgment now scores Chad's lens 4: Jamie is visibly the
+organizer, documentation steward, website builder, public advocate, and Council
+testifier, while town-hall organization, coalition campaigns, and legislative
+outcomes retain their documented collective or institutional credit.

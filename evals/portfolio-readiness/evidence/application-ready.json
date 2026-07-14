@@ -1,5 +1,5 @@
 {
-  "candidate": "sha256:f9a847fb84894f3b84ac9a520c5f80d8cbbdc04e015e80faf75a5c7099cbb6ee",
+  "candidate": "sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154",
   "profile": "application_ready",
   "performedAt": "2026-07-13",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
@@ -52,6 +52,17 @@
     "backlinks": true,
     "accessibleLabels": true,
     "referencesHeading": true
+  },
+  "fairRentCitations": {
+    "referenceCount": 13,
+    "backlinkCount": 13,
+    "sourceNoteCount": 9,
+    "localLinks": true,
+    "accessibleLabels": true,
+    "referencesHeading": true,
+    "firstTarget": "#cite-fair-rent-nyc-1",
+    "referenceTargetReached": true,
+    "backlinkTargetReached": true
   },
   "focusVisible": true,
   "focusEvidence": "24 of 24 traversed controls exposed visible computed outlines.",

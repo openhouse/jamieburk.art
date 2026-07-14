@@ -157,6 +157,205 @@ const knowledgeBankInput = {
       inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
     },
     {
+      id: "INT-2026-07-13-BNB-DIY-SPACES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Bedford + Bowery reporting on an early NYC Artist Coalition meeting, Jamie's organizer role, and his attributed count of mutual-aid network signups.",
+      submittedUrl: "https://bedfordandbowery.com/2017/02/6-things-to-know-about-making-diy-spaces-work/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition"],
+      dateHints: ["2017-02-07"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"],
+      claimIds: [
+        "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+        "CLM-NYCARTC-MUTUAL-AID-SIGNUPS"
+      ],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-MIXMAG-CABARET-HEARING",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Mixmag reporting from a 2017 City Council hearing that identifies Jamie as an NYC Artist Coalition member and records his Cabaret Law testimony.",
+      submittedUrl: "https://mixmag.net/feature/let-nyc-dance-the-battle-to-save-new-york-citys-nightlife",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-cabaret-law", "new-york-city-council"],
+      dateHints: ["2017-09-20"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"],
+      claimIds: [
+        "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+        "CLM-NYCARTC-CABARET-HEARING-TESTIMONY"
+      ],
+      inquiryIds: ["INQ-NYCARTC-CABARET-REPEAL-CAUSALITY"]
+    },
+    {
+      id: "INT-2026-07-13-NYCARTC-PRIORITIES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "NYC Artist Coalition's public 2017 priorities page connecting mutual aid, Cabaret Law repeal, M.A.R.C.H. transparency, Office of Nightlife recommendations, and commercial affordability.",
+      submittedUrl: "https://nycartc.com/priorities/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "nyc-cabaret-law",
+        "nyc-office-of-nightlife",
+        "talks-not-raids"
+      ],
+      dateHints: ["2017-12-02"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-PRIORITIES-2017"],
+      claimIds: ["CLM-NYCARTC-PUBLIC-PRIORITIES"],
+      inquiryIds: [
+        "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+        "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"
+      ]
+    },
+    {
+      id: "INT-2026-07-13-NIGHT-MAYOR-LETTER",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "NYC Artist Coalition's September 2017 letter to city cultural officials with Office of Nightlife recommendations and an October 11 Market Hotel town-hall invitation.",
+      submittedUrl: "https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife", "market-hotel"],
+      dateHints: ["2017-09-08", "2017-10-11"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017"],
+      claimIds: [
+        "CLM-NYCARTC-OFFICE-NIGHTLIFE-RECOMMENDATIONS",
+        "CLM-NYCARTC-OCTOBER-TOWN-HALL"
+      ],
+      inquiryIds: [
+        "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",
+        "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"
+      ]
+    },
+    {
+      id: "INT-2026-07-13-BNB-NIGHT-MAYOR-TOWN-HALL",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Bedford + Bowery's contemporaneous report on the October 11, 2017 Office of Nightlife town hall spearheaded by NYC Artist Coalition, with Jamie among coalition participants.",
+      submittedUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "nyc-office-of-nightlife",
+        "market-hotel",
+        "new-york-city-council"
+      ],
+      dateHints: ["2017-10-11", "2017-10-12"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"],
+      claimIds: ["CLM-NYCARTC-OCTOBER-TOWN-HALL"],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"]
+    },
+    {
+      id: "INT-2026-07-13-NYC-NIGHTLIFE-REPORT",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The Office of Nightlife's 2018-2021 report, which identifies a March 2018 NYC Artist Coalition town hall introducing the first nightlife director to broad stakeholders.",
+      submittedUrl: "https://www.nyc.gov/assets/sbs/downloads/pdf/about/reports/nightlife-report-june-2021.pdf",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife"],
+      dateHints: ["2018-03", "2021-06"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-NIGHTLIFE-REPORT-2021"],
+      claimIds: ["CLM-NYCARTC-MARCH-2018-TOWN-HALL"],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"]
+    },
+    {
+      id: "INT-2026-07-13-COUNCIL-SBJSA-TRANSCRIPT",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official October 22, 2018 City Council Small Business hearing transcript documenting Jamie's NYC Artist Coalition testimony on cultural-space safety, commercial affordability, and Intro 737.",
+      submittedUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=3BAD981A-69D8-4D99-A882-52442F36F5A2&ID=6792384&M=F",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: [
+        "nyc-artist-coalition",
+        "new-york-city-council",
+        "small-business-jobs-survival-act"
+      ],
+      dateHints: ["2018-10-22"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"],
+      claimIds: ["CLM-NYCARTC-SBJSA-TESTIMONY-2018"],
+      inquiryIds: []
+    },
+    {
+      id: "INT-2026-07-13-TALKS-NOT-RAIDS",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The public Talks Not Raids campaign surface, including its M.A.R.C.H. explainer, call script, Council-support tracker, coalition credits, and media kit.",
+      submittedUrl: "https://talksnotraids.com/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "talks-not-raids"],
+      dateHints: ["2018 onward"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"],
+      claimIds: ["CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"],
+      inquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]
+    },
+    {
+      id: "INT-2026-07-13-COUNCIL-INTRO-1156",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "Official City Council record for Intro 1156-2018, enacted as Local Law 220 of 2019 with M.A.R.C.H. reporting and notice provisions.",
+      submittedUrl: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["new-york-city-council", "talks-not-raids", "local-law-220-2019"],
+      dateHints: ["2018-10-17", "2019-12-15"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"],
+      claimIds: ["CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME"],
+      inquiryIds: ["INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]
+    },
+    {
+      id: "INT-2026-07-13-SAVE-NYC-SPACES",
+      kind: "url",
+      capturedAt: "2026-07-13",
+      submittedBy: "Codex source discovery",
+      publicSafeDescription: "The public Save NYC Spaces campaign surface, including coalition credits, Jamie's attributed statement, Office of Nightlife priorities, press links, and downloadable media assets.",
+      submittedUrl: "https://savenycspaces.nycartc.com/",
+      projectIds: ["nyc-artist-coalition"],
+      entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife", "save-nyc-spaces"],
+      dateHints: ["2017 onward"],
+      sensitivity: "public-safe",
+      availability: "live",
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN"],
+      claimIds: ["CLM-SAVE-NYC-SPACES-PUBLIC-CAMPAIGN"],
+      inquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"]
+    },
+    {
       id: "INT-2026-07-13-MEMORY-CALLNYC-COUNCIL-ENGAGEMENT",
       kind: "metric",
       capturedAt: "2026-07-13",
@@ -241,6 +440,20 @@ const knowledgeBankInput = {
       publicDescription: "Collective campaign banner used by organizations advocating Cabaret Law repeal."
     },
     {
+      id: "local-law-220-2019",
+      kind: "law",
+      name: "Local Law 220 of 2019",
+      aliases: ["Intro 1156-2018", "Introduction 1156"],
+      publicDescription: "New York City law requiring specified reporting and notice related to M.A.R.C.H. operations and nightlife-establishment inspections."
+    },
+    {
+      id: "market-hotel",
+      kind: "venue",
+      name: "Market Hotel",
+      aliases: [],
+      publicDescription: "Brooklyn venue that hosted a documented October 2017 Office of Nightlife town hall."
+    },
+    {
       id: "mississippi-river",
       kind: "place",
       name: "Mississippi River",
@@ -288,6 +501,27 @@ const knowledgeBankInput = {
       name: "Porter Bridge Gallery",
       aliases: [],
       publicDescription: "University of California, Santa Cruz gallery where Open House took place in 2006."
+    },
+    {
+      id: "save-nyc-spaces",
+      kind: "campaign",
+      name: "Save NYC Spaces",
+      aliases: [],
+      publicDescription: "Coalition campaign asking the Office of Nightlife to support small, diverse cultural spaces."
+    },
+    {
+      id: "small-business-jobs-survival-act",
+      kind: "law",
+      name: "Small Business Jobs Survival Act",
+      aliases: ["SBJSA", "Intro 737"],
+      publicDescription: "Commercial lease-renewal proposal discussed at the October 22, 2018 City Council Small Business hearing."
+    },
+    {
+      id: "talks-not-raids",
+      kind: "campaign",
+      name: "Talks Not Raids",
+      aliases: ["#TalksNotRaids"],
+      publicDescription: "Coalition campaign seeking transparency and notice around M.A.R.C.H. operations."
     }
   ],
   projects: [
@@ -314,11 +548,18 @@ const knowledgeBankInput = {
         "let-nyc-dance",
         "nyc-cabaret-law",
         "nyc-office-of-nightlife",
-        "new-york-city-council"
+        "new-york-city-council",
+        "market-hotel",
+        "save-nyc-spaces",
+        "small-business-jobs-survival-act",
+        "talks-not-raids",
+        "local-law-220-2019"
       ],
       publicSurfaceCandidates: ["/work/fair-rent-nyc", "/work/technical-operations"],
       photoResearchPrompts: [
-        "Public rallies, hearings, town halls, working sessions, campaign sites, and facilitation moments that show Jamie's role without converting collective work into solo credit."
+        "Public rallies, hearings, town halls, working sessions, campaign sites, and facilitation moments that show Jamie's role without converting collective work into solo credit.",
+        "The October 11, 2017 Market Hotel town hall, the March 2018 Office of Nightlife introduction, and the October 22, 2018 Small Business hearing, with event identity and participant rights verified.",
+        "Talks Not Raids and Save NYC Spaces interface captures that show issue explanation, council-support tracking, calls to action, coalition credit, and media assets."
       ]
     },
     {
@@ -669,7 +910,14 @@ const knowledgeBankInput = {
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
         "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
-        "SRC-NYCARTC-GOTHAMIST-CABARET-2017"
+        "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+        "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+        "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
+        "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
       ],
       occurrences: [
         {
@@ -682,7 +930,47 @@ const knowledgeBankInput = {
           id: "nycartc-cabaret-advocacy",
           claimId: "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
           projection: "case-study",
-          sourceIds: ["SRC-NYCARTC-GOTHAMIST-CABARET-2017", "SRC-NYCARTC-NPR-NIGHTLIFE-2017"]
+          sourceIds: [
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+            "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          id: "nycartc-early-organizer",
+          claimId: "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"]
+        },
+        {
+          id: "nycartc-mutual-aid-signups",
+          claimId: "CLM-NYCARTC-MUTUAL-AID-SIGNUPS",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-BNB-DIY-SPACES-2017"]
+        },
+        {
+          id: "nycartc-october-town-hall",
+          claimId: "CLM-NYCARTC-OCTOBER-TOWN-HALL",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017", "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"]
+        },
+        {
+          id: "nycartc-sbjsa-testimony",
+          claimId: "CLM-NYCARTC-SBJSA-TESTIMONY-2018",
+          projection: "case-study",
+          sourceIds: ["SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"]
+        },
+        {
+          id: "talks-not-raids-campaign",
+          claimId: "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN"]
+        },
+        {
+          id: "talks-not-raids-outcome",
+          claimId: "CLM-TALKS-NOT-RAIDS-LEGISLATIVE-OUTCOME",
+          projection: "case-study",
+          sourceIds: ["SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"]
         }
       ]
     }

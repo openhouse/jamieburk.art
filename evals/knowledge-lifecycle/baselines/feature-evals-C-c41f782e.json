@@ -1,0 +1,20 @@
+{
+  "commit": "c41f782e5018f7a57144d889e861e24ff8388bba",
+  "fingerprint": "sha256:e4c41db2eb70992cd1b4b2893061213ac6f8950c1d4d21afa6326429e4b1ba51",
+  "score": 92.5,
+  "scores": {
+    "capture_integrity": 2,
+    "source_decomposition": 4,
+    "claim_atomicity": 4,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "observations": [
+    "The accepted PR head passed the first knowledge-lifecycle cycle at 100 under the version 1 contract.",
+    "Under the version 2 contract, it retains complete lifecycle structure but has not captured the ten newly required research sources.",
+    "The second cycle must add all ten sources without weakening the mature claim, public-safety, or editorial-selection boundaries."
+  ]
+}
