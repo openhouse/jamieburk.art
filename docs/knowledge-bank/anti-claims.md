@@ -62,6 +62,11 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Resolution 190649 supports Council acceptance of the CCED Board's recommendation
+and authority to negotiate an agreement. Do not say the agreement was executed,
+the funds were disbursed or received, the project was completed as proposed, or
+Jamie alone secured the Council action.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

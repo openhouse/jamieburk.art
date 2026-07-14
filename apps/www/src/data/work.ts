@@ -495,7 +495,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Historic adaptive reuse planning in Kansas City",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -521,7 +521,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Public-safe summary, official Kansas City legislative record, and authenticated Resolution 190649.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -531,13 +531,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Council-adopted $490,539 CCED funding path"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; the Council later accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

@@ -1,4 +1,5 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import { kcTownHallCouncilRecordBatch20260713 } from "./batches/kc-town-hall-council-record-2026-07-13.ts";
 import { nacCampaignPressBatch20260713 } from "./batches/nac-campaign-press-2026-07-13.ts";
 import { nacPublicSourceBatch20260713 } from "./batches/nac-public-sources-2026-07-13.ts";
 
@@ -196,6 +197,7 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
+    ...kcTownHallCouncilRecordBatch20260713.intake,
     ...nacPublicSourceBatch20260713.intake,
     ...nacCampaignPressBatch20260713.intake
   ],
@@ -432,6 +434,7 @@ const knowledgeBankInput = {
       supportsGenerally: ["Jamie's founding-era public web implementation", "campaign website and information-surface work", "civic systems and coalition operations across multiple advocacy efforts"],
       doesNotEstablish: ["the formal co-founder title without formation corroboration", "solo ownership of collective campaigns", "legislative authorship", "sole causation of policy or enforcement outcomes"]
     },
+    ...kcTownHallCouncilRecordBatch20260713.sources,
     ...nacPublicSourceBatch20260713.sources,
     ...nacCampaignPressBatch20260713.sources
   ],
@@ -616,6 +619,7 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
+    ...kcTownHallCouncilRecordBatch20260713.sourceAssertions,
     ...nacPublicSourceBatch20260713.sourceAssertions,
     ...nacCampaignPressBatch20260713.sourceAssertions
   ],
@@ -960,6 +964,7 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex public-source review"]
     },
+    ...kcTownHallCouncilRecordBatch20260713.claims,
     ...nacPublicSourceBatch20260713.claims,
     ...nacCampaignPressBatch20260713.claims
   ],
@@ -1084,6 +1089,7 @@ const knowledgeBankInput = {
       publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
       protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
     },
+    ...kcTownHallCouncilRecordBatch20260713.researchInquiries,
     ...nacPublicSourceBatch20260713.researchInquiries,
     ...nacCampaignPressBatch20260713.researchInquiries
   ],
@@ -1112,6 +1118,7 @@ const knowledgeBankInput = {
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
       ]
     },
+    ...kcTownHallCouncilRecordBatch20260713.pages,
     ...nacPublicSourceBatch20260713.pages
   ]
 } satisfies KnowledgeBank;

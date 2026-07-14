@@ -85,6 +85,34 @@ test("campaign press corpus preserves all memberships without duplicating articl
   assert.ok(accessRestrictedSources.every((source) => source.archiveUrl));
 });
 
+test("KC Town Hall preserves the CCED recommendation-to-Council-action chain", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-COUNCIL-APPROVAL-190649"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KCTH-COUNCIL-ACTION-190649-2026"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
+
+  assert.equal(claim.maturity, "confirmed-with-boundary");
+  assert.equal(claim.projectionEligibility, "eligible");
+  assert.match(claim.internalClaim, /CCED Board voted on July 16, 2019/);
+  assert.match(claim.internalClaim, /Council adopted Resolution 190649/);
+  assert.ok(claim.antiClaims.some((item) => /received \$490,539/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /alone secured/i.test(item)));
+  assert.equal(inquiry.resultStatus, "recovered");
+  assert.ok(inquiry.limitations.some((item) => /does not itself establish an executed funding agreement/i.test(item)));
+  assert.deepEqual(page.sourceOrder, [
+    "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+    "SRC-KCTH-KCMO-LEGISTAR-190649"
+  ]);
+  assert.equal(page.occurrences[0].claimId, claim.id);
+
+  const mdx = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
+  assert.match(mdx, /occurrenceId="cced-council-approval"/);
+  assert.match(mdx, /does not by itself establish that a funding agreement was executed/);
+});
+
 test("an intake-linked source without decomposition fails KB-003", () => {
   const candidate = structuredClone(knowledgeBank);
   const sourceId = candidate.intake[0].sourceIds[0];

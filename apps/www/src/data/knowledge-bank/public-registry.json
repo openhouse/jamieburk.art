@@ -164,6 +164,46 @@
       ]
     },
     {
+      "id": "SRC-KCTH-KCMO-LEGISTAR-190649",
+      "title": "Legislation Details: Resolution 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?ID=5515936&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Resolution 190649 legislative record, adopted as substituted September 26, 2019.",
+      "publicNote": "The legislative history records Council adoption and links the fiscal note, fact sheet, presentation, speaker cards, and authenticated resolution.",
+      "doesNotEstablish": [
+        "an executed funding agreement",
+        "disbursement or receipt of funds",
+        "project completion",
+        "Jamie's sole responsibility for the Council action"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+      "title": "Second Committee Substitute for Resolution No. 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-13",
+      "assetUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "City of Kansas City, Missouri, Second Committee Substitute for Resolution No. 190649, authenticated as passed September 26, 2019.",
+      "publicNote": "The authenticated resolution records the CCED Board's July 16, 2019 vote, accepts its recommendation for an amount not to exceed $490,539, and authorizes funding-agreement negotiations subject to stated public-benefit conditions.",
+      "doesNotEstablish": [
+        "that a funding agreement was executed",
+        "that CCED funds were disbursed or received",
+        "that every proposed project element was completed",
+        "that Jamie alone secured the Council action"
+      ]
+    },
+    {
       "id": "SRC-NAC-NYCARTC-ABOUT-2017",
       "title": "About & Contact",
       "organization": "NYC Artist Coalition",
@@ -778,6 +818,50 @@
       ]
     },
     {
+      "id": "CLM-KCTH-COUNCIL-APPROVAL-190649",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "After the CCED Board recommended $490,539 for KC Town Hall, the Kansas City Council adopted Resolution 190649 on September 26, 2019, accepting the recommendation and authorizing funding-agreement negotiations for an amount not to exceed $490,539.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+          "relationship": "direct-support",
+          "supports": [
+            "CCED Board recommendation vote",
+            "Council acceptance",
+            "amount not to exceed $490,539",
+            "funding-agreement negotiation authority"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO-LEGISTAR-190649",
+          "relationship": "corroborating",
+          "supports": [
+            "Resolution number",
+            "September 26, 2019 Council action",
+            "adopted as substituted status"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the CCED Board for the recommendation and the Kansas City Council for the resolution; describe Jamie's planning and documentation role separately.",
+        "Council acceptance and authority to negotiate are not evidence that an agreement was executed, funds were disbursed or received, or the project was completed."
+      ]
+    },
+    {
       "id": "CLM-NAC-COALITION-PURPOSE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1229,6 +1313,25 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+        "SRC-KCTH-KCMO-LEGISTAR-190649"
+      ],
+      "occurrences": [
+        {
+          "id": "cced-council-approval",
+          "claimId": "CLM-KCTH-COUNCIL-APPROVAL-190649",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-KCMO-AUTHENTICATED-190649",
+            "SRC-KCTH-KCMO-LEGISTAR-190649"
           ]
         }
       ]
