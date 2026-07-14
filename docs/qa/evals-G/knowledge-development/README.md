@@ -5,7 +5,7 @@
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: `stop_threshold_met`
 - Final candidate fingerprint:
-  `cb8ccc6747119d273841e959bb9c96ebd7791b530aa111ea114e235982d321e8`
+  `d477405928aaa56cb6b8261e1d8a671c1a10a7c9850b07097549ad02fe08c8d5`
 
 ## Result
 
@@ -22,7 +22,19 @@ two fresh blind holdouts. Both scored the ten deterministic or hybrid evals
 `4/4` and the two LLM-judged evals `3/4`, producing two consecutive weighted
 scores of `0.9725`.
 
-The runner binds each judgment to the eleven reviewed files with a SHA-256
+The campaign-press expansion then transcribed the Press sections of Let NYC
+Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC as an ordered,
+deduplicated research corpus. It preserves 45 placements representing 44
+unique articles, including the NPR article listed by two campaigns. Every
+article identity has a canonical source record and a retrievable Wayback path.
+
+The expanded candidate was held unchanged for two more fresh blind holdouts.
+Both independently reconstructed the corpus, found the sole duplicate, and
+scored collective-credit calibration and Chad's lens `4/4`. Each final
+scorecard reached `1.0000`, with all twelve criteria met and no blocking or
+nonblocking failures.
+
+The runner binds each judgment to the sixteen reviewed files with a SHA-256
 fingerprint. `npm run check` fails if evaluated content changes without a new
 matching judgment.
 
@@ -32,12 +44,14 @@ authorize production deployment.
 
 ## Corpus Developed
 
-- 22 public-safe captures, all integrated or routed;
-- 15 normalized development sources, including 10 added in this pass;
-- 33 located, limited atomic observations;
-- 15 developed claims, plus selected claims in the canonical registry;
-- 9 prioritized research tasks;
+- 26 public-safe captures, all integrated or routed;
+- 60 normalized development sources, including 41 new article records and 4
+  campaign Press indexes in the campaign-press expansion;
+- 78 located, limited atomic observations;
+- 16 developed claims, plus selected claims in the canonical registry;
+- 10 prioritized research tasks;
 - 0 canonical validation errors;
+- 45 ordered campaign-press placements representing 44 unique articles;
 - 7 selected civic-case-study claims and 0 prohibited public routes.
 
 The source-backed direct claims cover:
@@ -72,6 +86,9 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 | Source-precision revision | `3/4-4/4`, `3/4` | Accept findings and freeze candidate |
 | Final holdout 1 | `0.9725` | Pass |
 | Final holdout 2 | `0.9725` | Pass; stop threshold met |
+| Campaign-press deterministic pass | `0.8900` | Continue: independent judgments required |
+| Campaign-press holdout 1 | `1.0000` | Pass |
+| Campaign-press holdout 2 | `1.0000` | Pass; stop threshold met |
 
 ## Accepted Improvements
 
@@ -102,6 +119,17 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
     FOIL research.
 15. Preserved the exact Fireguard result as an attributed, held claim with a
     bounded corroboration task.
+16. Reproduced all four campaign Press sections as 45 ordered placements and
+    44 unique article identities.
+17. Recorded campaign-page provenance, original article URLs, immutable
+    campaign captures, and a retrievable Wayback path for every article.
+18. Reused three existing canonical article records and added 41 normalized
+    article records without duplicating source identities.
+19. Kept unread article metadata out of personal accomplishment claims and
+    routed all article-level interpretation through one bounded close-reading
+    task.
+20. Added exact-order, exact-count, deduplication, archive-coverage, and
+    anti-promotion tests for the campaign corpus.
 
 ## Evidence
 
@@ -120,6 +148,11 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [Final holdout 1 scorecard](./holdout-1-final.json)
 - [Final holdout 2 judgment](./holdout-2-judge.json)
 - [Final holdout 2 scorecard](./holdout-2-final.json)
+- [Campaign-press hill-climb record](./2026-07-14-campaign-press-hill-climb.md)
+- [Campaign-press holdout 1 judgment](./campaign-press-holdout-1-judge.json)
+- [Campaign-press holdout 1 scorecard](./campaign-press-holdout-1-final.json)
+- [Campaign-press holdout 2 judgment](./campaign-press-holdout-2-judge.json)
+- [Campaign-press holdout 2 scorecard](./campaign-press-holdout-2-final.json)
 
 ## Verification Contract
 

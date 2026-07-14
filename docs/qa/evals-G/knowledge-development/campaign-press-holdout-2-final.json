@@ -1,0 +1,259 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "campaign-press-holdout-2",
+  "run_at": "2026-07-14T19:16:08.899Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "scripts/run-knowledge-development.mjs",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/campaign-press.ts",
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/sources.md",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "d477405928aaa56cb6b8261e1d8a671c1a10a7c9850b07097549ad02fe08c8d5",
+  "judgment_fingerprint": "d477405928aaa56cb6b8261e1d8a671c1a10a7c9850b07097549ad02fe08c8d5",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 26,
+    "routedCaptures": 26,
+    "sources": 67,
+    "developmentSources": 60,
+    "observations": 78,
+    "developmentClaims": 16,
+    "researchTasks": 10,
+    "campaignPressPlacements": 45,
+    "campaignPressUniqueArticles": 44,
+    "validationErrors": 0
+  },
+  "weighted_score": 1,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "26/26 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "20/20 URL captures routed",
+        "60 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "60/60 development sources decomposed",
+        "78 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "23 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "16 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json and apps/www/src/data/knowledge-bank/campaign-press.ts: CLM-NYCAC-CAMPAIGN-PRESS-CORPUS reconstructs 21 + 7 + 8 + 9 = 45 placements and 44 identities; SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20 is the sole cross-campaign duplicate.",
+        "apps/www/src/data/knowledge-bank/campaign-press.ts: CLM-NYCAC-CAMPAIGN-PRESS-CORPUS cites only the four Press-index sources; metadata observations OBS-PRESS-METADATA-* support no claims, and RT-NYCAC-CAMPAIGN-PRESS-CLOSE-READING requires proposition-level review before promotion.",
+        "apps/www/src/data/knowledge-bank/development-records.ts and apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts: CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY, and CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY name Jamie's organizing, rallying, and testimony while bounding individual causality.",
+        "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts: SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20, SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31, SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019, and SRC-NYCAC-MAYOR-CURE-2023-12-28 keep journalist, coalition, Council, and City credit distinct; CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM separately preserves Suzanne Hogan's collaborator credit."
+      ],
+      "findings": [
+        "Jamie's direct actions remain unusually clear and confident: he started study groups, rallied, testified, co-founded the coalition, built campaign sites, and stewarded operating infrastructure.",
+        "Collective campaigns, named partner organizations, Council Member Rafael Espinal, the Council, the Mayor, journalists, and collaborators retain distinct roles; sequence is not converted into personal causality.",
+        "Created, caused, passed, and disbanded formulations are either rejected by anti-claims or held behind explicit research tasks.",
+        "No material collective-credit or causal-calibration issue requires another iteration."
+      ],
+      "recommended_next_move": "No corrective iteration is required; continue RT-NYCAC-CAMPAIGN-PRESS-CLOSE-READING and promote only article-level propositions that preserve actor-specific credit.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "10 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths",
+        "45 campaign press placements / 44 unique articles",
+        "0 campaign press integrity violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes",
+        "0 campaign press promotion violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/fair-rent-nyc.mdx: selected projections for CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE, CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY, CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY, CLM-NYCAC-MARCH-TRANSPARENCY-LAW, and CLM-NYCAC-MARCH-REPLACED-BY-CURE distinguish direct action, coalition infrastructure, and government outcomes.",
+        "apps/www/src/data/work.ts and apps/www/src/data/proofs.ts: nyc-artist-coalition-public-web-infrastructure, nyc-artist-coalition-civic-systems, and fair-rent-campaign-memory state what Jamie built and what became usable for collaborators without assigning collective policy outcomes to him.",
+        "docs/knowledge-bank/promotion-slate.md: CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE and CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED remain research items, while CLM-NYCAC-CAMPAIGN-PRESS-CORPUS is explicitly retained as knowledge depth rather than projected accomplishment evidence.",
+        "apps/www/src/data/knowledge-bank/campaign-press.ts and docs/knowledge-bank/projects/nyc-artist-coalition-press.md: CLM-NYCAC-CAMPAIGN-PRESS-CORPUS remains dormant with a held, surface-free projection; the 45/44 bibliography is absent from the hiring-site case study."
+      ],
+      "findings": [
+        "The material is strong through Chad's lens: direct actions are specific, their civic purpose is clear, and the case study explains what became usable for collaborators and public institutions.",
+        "The public selection is purposeful: it projects founding role, concrete organizing, testimony, operating infrastructure, and bounded institutional chronology while excluding the full press bibliography.",
+        "Unresolved high-value claims remain visible as prioritized research instead of being weakened into vague copy or prematurely promoted.",
+        "No material professional-legibility or editorial-selection issue requires another iteration."
+      ],
+      "recommended_next_move": "Keep the current public-site selection; use future press close reading to add only high-value role, collaborator, or outcome propositions that materially sharpen the hiring argument.",
+      "confidence": "high"
+    }
+  ]
+}

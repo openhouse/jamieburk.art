@@ -57,5 +57,12 @@ website selection. It is a recommendation, not publication approval.
 - CallNYC Council-account engagement: complete its reproducible account-universe
   and missing-data work before creating an engagement metric.
 
+## Knowledge Depth, Not Current Projection
+
+- `CLM-NYCAC-CAMPAIGN-PRESS-CORPUS`: retain the complete 45-placement,
+  44-article bibliography in the bank. Promote only article-level propositions
+  that survive close reading, collaborator-credit review, and claim-specific
+  corroboration; do not add the full press list to the current hiring site.
+
 No item in this slate creates a public route or changes the current site's
 composition by itself.

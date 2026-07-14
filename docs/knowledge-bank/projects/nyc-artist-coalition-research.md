@@ -6,6 +6,12 @@ Talks Not Raids testimony, MARCH-transparency law, and later MARCH replacement
 claims are developed. Individual causality for Office creation, legislation, or
 MARCH replacement remains held.
 
+The companion [campaign press corpus](./nyc-artist-coalition-press.md) now
+preserves all 45 placements from four recovered campaign Press sections as 44
+unique article identities. The corpus is complete for those four inspected
+captures and remains a research field, not a claim that every article centers
+Jamie or proves an individual accomplishment.
+
 ## What Matured
 
 ### Founding role

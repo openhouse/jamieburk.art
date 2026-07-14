@@ -1,22 +1,40 @@
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  campaignPressArchiveUrlFor,
+  campaignPressClaims,
+  campaignPressManifests,
+  campaignPressSources
+} from "../apps/www/src/data/knowledge-bank/campaign-press.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 
 const suite = JSON.parse(readFileSync(".agents/evals/knowledge-development.json", "utf8"));
 const candidateFiles = [
   ".agents/evals/knowledge-development.json",
+  "scripts/run-knowledge-development.mjs",
   "apps/www/src/data/knowledge-bank/development-records.ts",
   "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+  "apps/www/src/data/knowledge-bank/campaign-press.ts",
+  "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "docs/knowledge-bank/claims.md",
+  "docs/knowledge-bank/sources.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/promotion-slate.md"
 ];
+
+const campaignPressInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "utf8"
+  )
+);
 
 function candidateFingerprint() {
   const hash = createHash("sha256");
@@ -76,6 +94,65 @@ function deterministicResults(judgments) {
   const sourcesWithObservations = developmentSources.filter((source) =>
     developmentObservations.some((observation) => observation.sourceId === source.id)
   );
+  const campaignPressIntegrityViolations = [];
+  const inventoryPlacements = campaignPressInventory.placements ?? [];
+  const uniqueCampaignPressArticleIds = new Set(
+    campaignPressManifests.flatMap((manifest) => manifest.articleSourceIds)
+  );
+
+  if ((campaignPressInventory.captures ?? []).length !== 4) {
+    campaignPressIntegrityViolations.push("Campaign press fixture must retain four captured indexes");
+  }
+  if (inventoryPlacements.length !== 45 || uniqueCampaignPressArticleIds.size !== 44) {
+    campaignPressIntegrityViolations.push("Campaign press corpus must retain 45 placements and 44 unique article identities");
+  }
+  for (const manifest of campaignPressManifests) {
+    const placements = inventoryPlacements.filter(
+      (item) => item.campaignId === manifest.campaignId
+    );
+    const capture = campaignPressInventory.captures.find(
+      (item) => item.campaignId === manifest.campaignId
+    );
+    if (!capture || capture.indexSourceId !== manifest.indexSourceId) {
+      campaignPressIntegrityViolations.push(`Missing captured index for ${manifest.campaignId}`);
+    }
+    if (
+      JSON.stringify(placements.map((item) => item.sourceId)) !==
+      JSON.stringify(manifest.articleSourceIds)
+    ) {
+      campaignPressIntegrityViolations.push(`Source-page order mismatch for ${manifest.campaignId}`);
+    }
+    for (const sourceId of manifest.articleSourceIds) {
+      if (!sourceById.has(sourceId)) {
+        campaignPressIntegrityViolations.push(`Missing normalized campaign press source ${sourceId}`);
+      }
+      if (!campaignPressArchiveUrlFor(sourceId)?.startsWith("https://web.archive.org/web/")) {
+        campaignPressIntegrityViolations.push(`Missing Wayback recovery path for ${sourceId}`);
+      }
+    }
+  }
+  const pressClaim = campaignPressClaims[0];
+  const newPressArticleIds = new Set(
+    campaignPressSources
+      .filter((source) => source.kind === "published-article")
+      .map((source) => source.id)
+  );
+  const campaignPressSafetyViolations = [
+    ...knowledgeBank.claims.flatMap((claim) =>
+      claim.evidence
+        .filter((relationship) => newPressArticleIds.has(relationship.sourceId))
+        .map((relationship) => `${claim.id} promotes unread source ${relationship.sourceId}`)
+    ),
+    ...(pressClaim.selectionState !== "dormant" || pressClaim.publicationState !== "public-safe"
+      ? ["Campaign press aggregate must remain public-safe and dormant"]
+      : []),
+    ...pressClaim.projections
+      .filter((projection) => projection.status !== "hold" || projection.surfaces.length)
+      .map(() => "Campaign press aggregate must remain held from public surfaces"),
+    ...pressClaim.evidence
+      .filter((relationship) => !campaignPressManifests.some((manifest) => manifest.indexSourceId === relationship.sourceId))
+      .map((relationship) => `Campaign press aggregate improperly cites article ${relationship.sourceId}`)
+  ];
 
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
@@ -198,15 +275,15 @@ function deterministicResults(judgments) {
     "Keep developed claims dormant or held until a purpose-specific surface selects approved wording."
   ));
   results.set("KD-009", result(
-    brokenCaptureRefs.length || brokenObservationRefs.length || integratedWithoutPath.length ? 0 : routedCaptures.length === knowledgeBank.captures.length ? 4 : 2,
-    [`${brokenCaptureRefs.length + brokenObservationRefs.length} broken references`, `${integratedWithoutPath.length} integrated captures without paths`],
-    [...brokenCaptureRefs, ...brokenObservationRefs, ...integratedWithoutPath.map((item) => item.id)],
+    brokenCaptureRefs.length || brokenObservationRefs.length || integratedWithoutPath.length || campaignPressIntegrityViolations.length ? 0 : routedCaptures.length === knowledgeBank.captures.length ? 4 : 2,
+    [`${brokenCaptureRefs.length + brokenObservationRefs.length} broken references`, `${integratedWithoutPath.length} integrated captures without paths`, `${inventoryPlacements.length} campaign press placements / ${uniqueCampaignPressArticleIds.size} unique articles`, `${campaignPressIntegrityViolations.length} campaign press integrity violations`],
+    [...brokenCaptureRefs, ...brokenObservationRefs, ...integratedWithoutPath.map((item) => item.id), ...campaignPressIntegrityViolations],
     "Repair broken references and ensure each integrated capture has a traversable path."
   ));
   results.set("KD-010", result(
-    validationErrors.length || privateMarkerHits.length || routeViolations.length ? 0 : 4,
-    [`${validationErrors.length} canonical validation errors`, `${privateMarkerHits.length} private-marker hits`, `${routeViolations.length} prohibited routes`],
-    [...validationErrors, ...privateMarkerHits, ...routeViolations],
+    validationErrors.length || privateMarkerHits.length || routeViolations.length || campaignPressSafetyViolations.length ? 0 : 4,
+    [`${validationErrors.length} canonical validation errors`, `${privateMarkerHits.length} private-marker hits`, `${routeViolations.length} prohibited routes`, `${campaignPressSafetyViolations.length} campaign press promotion violations`],
+    [...validationErrors, ...privateMarkerHits, ...routeViolations, ...campaignPressSafetyViolations],
     "Remove unsafe payloads and satisfy canonical citation validation."
   ));
   const photoCapture = knowledgeBank.captures.find((capture) => capture.kind === "photo-lead");
@@ -227,6 +304,8 @@ function deterministicResults(judgments) {
     observations: knowledgeBank.observations.length,
     developmentClaims: developmentClaims.length,
     researchTasks: knowledgeBank.researchTasks.length,
+    campaignPressPlacements: inventoryPlacements.length,
+    campaignPressUniqueArticles: uniqueCampaignPressArticleIds.size,
     validationErrors: validationErrors.length
   } };
 }

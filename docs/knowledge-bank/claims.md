@@ -123,6 +123,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nyc-artist-coalition-campaign-press-corpus - Campaign press corpus
+
+**Status:** Held archive note
+**Support level:** Strong for the bounded bibliography; not yet article-level proof
+**Evidence class:** Four dated campaign-site captures / 44 normalized public article identities
+**Public wording:** Four captured campaign Press sections preserve 45 article placements representing 44 unique articles.
+**Detailed public-safe wording:** The recovered Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC Press sections contain 21, 7, 8, and 9 placements respectively. One NPR article appears in two campaign sections.
+**Where to project:** Knowledge bank only. No current website surface selected.
+**Why it matters:** Preserves a deep research field for future role, collaborator, chronology, outcome, and contradiction work without making the hiring site carry the full bibliography.
+**Guardrail:** Campaign selection establishes that a campaign listed an article. It does not establish every article proposition, that every article names Jamie, or individual causality for collective policy outcomes.
+**Do not say:** Forty-five independent articles prove Jamie's individual impact; every listed article is about Jamie; the four captures are a complete history of each issue.
+**Protected boundaries:** Only public article metadata and public archive paths are retained. Private strategy, correspondence, and unpublished source material remain outside the repository.
+**Review owner:** Jamie / article-level close reading before promotion
+**Last reviewed:** 2026-07-14
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
