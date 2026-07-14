@@ -403,26 +403,6 @@
       ]
     },
     {
-      "id": "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
-      "title": "Authenticated NYC Artist Coalition public-profile inventory",
-      "organization": "X (formerly Twitter)",
-      "kind": "research-run",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "capturedAt": "2026-07-13",
-      "accessedAt": "2026-07-13",
-      "canonicalUrl": "https://x.com/NYCArtC",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Authenticated read-only review of the public @NYCArtC profile, campaign queries, and Council-member interactions, July 13, 2026.",
-      "publicNote": "The active profile named #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. Authenticated query recovery found direct mentions, replies, or quote amplification from at least six contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine.",
-      "doesNotEstablish": [
-        "a complete account export",
-        "authorship of every post",
-        "sole credit for campaigns or outcomes",
-        "official Council endorsement"
-      ]
-    },
-    {
       "id": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
       "title": "WOW List public Sunday Dinner origin post",
       "organization": "X (formerly Twitter)",
@@ -458,6 +438,26 @@
         "broad adoption",
         "the tutorial's current availability",
         "the creator's motivation or representative status"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+      "title": "Authenticated @NYCArtC public inbound-engagement recovery",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/search?q=%40NYCArtC%20-from%3ANYCArtC&src=typed_query&f=live",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only recovery of 501 public inbound-search records from 178 accounts around @NYCArtC, July 14, 2026.",
+      "publicNote": "The recoverable Latest-search floor spans February 2017 through March 2025. Of 501 rendered records, 347 explicitly name @NYCArtC and 154 are marked as search or thread context. The set includes 24 reviewable Council-member-account posts across at least seven accounts, 16 city-agency-account posts across two accounts, and 235 coalition, civic, or cultural partner posts across 15 identified accounts.",
+      "doesNotEstablish": [
+        "an absolute historical engagement census or platform export",
+        "likes, impressions, unique people, private analytics, or audience reach",
+        "official Council or agency endorsement",
+        "policy causality or Jamie's authorship of the shared-account posts"
       ]
     },
     {
@@ -1252,7 +1252,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+          "text": "Authenticated archival review recovered 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1261,7 +1261,7 @@
         },
         {
           "key": "technical-operations",
-          "text": "The shared coalition identity earned direct public interaction from at least six contemporaneous NYC Council-member accounts across multiple campaigns.",
+          "text": "The shared coalition identity earned 24 recovered public interactions from at least seven contemporaneous NYC Council-member accounts across multiple campaigns.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -1271,22 +1271,21 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
-          "relationship": "context",
+          "sourceId": "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+          "relationship": "direct-support",
           "supports": [
-            "authenticated query method",
-            "six-account recovery floor",
-            "four-campaign account identity"
+            "authenticated full inbound-search method",
+            "24-interaction and seven-account recovery floor",
+            "501 rendered records from 178 accounts with explicit-mention and context distinctions"
           ],
-          "confidence": "moderate",
+          "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "At least six is a recovered minimum, not a complete historical census.",
-        "The count includes direct mentions, replies, or quote amplification; it does not treat tags by @NYCArtC as reciprocal engagement.",
+        "At least seven is a recovered minimum, not a complete historical census.",
+        "The 24-post count includes direct mentions, replies, or quote interactions; it does not treat one-way tags by @NYCArtC as reciprocal engagement.",
         "Mark Levine's reply supports account interaction only, not mission-specific endorsement.",
-        "Brad Lander's documented FairRentNYC campaign engagement is retained outside the direct-@NYCArtC count because the recovered wrapper did not itself mention the handle.",
         "This is individual-account activity, not an official NYC Council endorsement, policy outcome, or proof that Jamie authored the underlying posts."
       ]
     },
@@ -1672,7 +1671,7 @@
         "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
-        "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
+        "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
       ],
       "occurrences": [
         {
@@ -1713,7 +1712,7 @@
           "claimId": "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
+            "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
           ]
         },
         {

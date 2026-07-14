@@ -32,6 +32,14 @@ import {
   callNycSocialCorpusSources
 } from "./callnyc-social-corpus.ts";
 import {
+  nycArtCSocialCorpusClaims,
+  nycArtCSocialCorpusInquiries,
+  nycArtCSocialCorpusIntake,
+  nycArtCSocialCorpusProofCoverage,
+  nycArtCSocialCorpusPublicationDecisions,
+  nycArtCSocialCorpusSources
+} from "./nycartc-social-corpus.ts";
+import {
   wowlistSocialCorpusClaims,
   wowlistSocialCorpusInquiries,
   wowlistSocialCorpusIntake,
@@ -522,6 +530,7 @@ export const frameworkIntake = [
   },
   ...campaignPressIntake,
   ...socialArchiveIntake,
+  ...nycArtCSocialCorpusIntake,
   ...callNycSocialCorpusIntake,
   ...wowlistSocialCorpusIntake,
   ...kcTownHallSocialCorpusIntake
@@ -620,6 +629,17 @@ export const frameworkProjects = [
       "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020",
       "SRC-X-NYCARTC-MADE-IN-NY-TOWN-HALL-2017",
       "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022",
+      "SRC-X-NYCARTC-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+      "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021",
+      "SRC-HELL-GATE-WHO-LEADS-NIGHTCLUB-RAIDS-2023",
+      "SRC-NYT-COMMERCIAL-RENTS-SURGING-2023",
+      "SRC-HELL-GATE-LUCYS-EVICTION-2024",
+      "SRC-HELL-GATE-SAINT-VITUS-RAID-2024",
+      "SRC-HELL-GATE-NIGHTCLUB-RAIDS-2025",
+      "SRC-CITY-STATE-COMMERCIAL-RENT-2026",
+      "SRC-GOTHAMIST-SMALL-BUSINESS-RENT-CONTROL-2026",
+      "SRC-BUSHWICK-DAILY-LEASE-RENEWALS-2026",
       "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
       "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
       ...campaignPressNewSourceIds
@@ -631,9 +651,11 @@ export const frameworkProjects = [
       "CLM-NYCARTC-MARCH-TRANSPARENCY",
       "CLM-CRS-OPERATING-BACKBONE-2026",
       "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
-      "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT"
+      "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "CLM-NYCARTC-COMPLETE-SOCIAL-POPULATION",
+      "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY"
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -1303,6 +1325,7 @@ export const frameworkSources = [
   },
   ...campaignPressSources,
   ...socialArchiveSources,
+  ...nycArtCSocialCorpusSources,
   ...callNycSocialCorpusSources,
   ...wowlistSocialCorpusSources,
   ...kcTownHallSocialCorpusSources
@@ -1670,6 +1693,7 @@ export const frameworkClaims = [
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
   ...socialArchiveClaims,
+  ...nycArtCSocialCorpusClaims,
   ...callNycSocialCorpusClaims,
   ...wowlistSocialCorpusClaims,
   ...kcTownHallSocialCorpusClaims
@@ -1705,6 +1729,7 @@ export const frameworkInquiries = [
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
   ...socialArchiveInquiries,
+  ...nycArtCSocialCorpusInquiries,
   ...callNycSocialCorpusInquiries,
   ...wowlistSocialCorpusInquiries,
   ...kcTownHallSocialCorpusInquiries
@@ -1758,6 +1783,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   })
 ).concat(
   socialArchivePublicationDecisions,
+  nycArtCSocialCorpusPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
   wowlistSocialCorpusPublicationDecisions,
   kcTownHallSocialCorpusPublicationDecisions
@@ -1791,6 +1817,7 @@ export const frameworkProofCoverage = [
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
   ...socialArchiveProofCoverage,
+  ...nycArtCSocialCorpusProofCoverage,
   ...callNycSocialCorpusProofCoverage,
   ...wowlistSocialCorpusProofCoverage,
   ...kcTownHallSocialCorpusProofCoverage
@@ -1806,7 +1833,7 @@ export const frameworkPages = [
       "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
       "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
       "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
-      "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
+      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
     ],
     occurrences: [
       {
@@ -1837,7 +1864,7 @@ export const frameworkPages = [
         id: "council-social-engagement",
         claimId: "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
         projection: "case-study",
-        sourceIds: ["SRC-X-NYCARTC-PROFILE-INVENTORY-2026"]
+        sourceIds: ["SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"]
       },
       {
         id: "commercial-vacancy-public-data-brief",

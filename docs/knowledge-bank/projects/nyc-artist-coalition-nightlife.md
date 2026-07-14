@@ -48,17 +48,22 @@ outcomes.
 ## Public identity and engagement record
 
 Jamie confirms that he established `@NYCArtC` as shared public-facing identity
-infrastructure. The public profile and campaign searches corroborate long-running
-use across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC.
-Multiple teammates posted, so account establishment and continuity do not imply
+infrastructure. A full public-account pass recovered 3,367 surviving items
+spanning February 2017 through May 2026 and retained 1,757 profile-count slots
+as explicit unresolved debt. The record corroborates long-running use across
+Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC. Multiple
+teammates posted, so account establishment and continuity do not imply
 post-by-post Jamie authorship.
 
-An authenticated read-only pass recovered direct interactions from at least six
-contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina
-Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine. Five representative
+An authenticated read-only inbound pass recovered 501 rendered search records
+from 178 accounts, including 347 explicit handle mentions and 154 separately
+marked search or thread-context records. That floor includes 24 posts from at
+least seven contemporaneous
+Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin
+Brannan, Jimmy Van Bramer, Mark Levine, and Brad Lander. Six representative
 interactions are mission-specific; Levine's recovered reply establishes direct
-account interaction only. The six-member figure is a floor, not a complete
-historical census, official Council endorsement, or evidence of policy causality.
+account interaction only. The figures are floors, not complete historical
+censuses, official Council endorsement, or evidence of policy causality.
 
 Document Journal's 2018 nightlife feature independently names and pictures
 Jamie with NYC Artist Coalition and names Olympia Kazi with the coalition and
@@ -79,8 +84,9 @@ identity and campaign vocabulary in later Council-hearing contexts.
   recommending machine-readable small-business violation reporting across two
   Council bills.
 - Durable capture and close reading of the supplied NPR article.
-- First-party account-export recovery, additional Council-member interactions,
-  and post-level authorship only where explicit evidence supports attribution.
+- Privacy-preserving first-party account-export recovery for the 1,757
+  unresolved profile-count slots, additional Council-member interactions, and
+  post-level authorship only where explicit evidence supports attribution.
 
 Each lane should separate Jamie's direct role, collective accomplishments,
 government decisions, and causal claims.

@@ -28,17 +28,19 @@ Approved public artifact examples for this launch pass include:
   2016, including an archived post and resolvable retweet object.
 - Authenticated read-only public-profile inventories for `@CallNYCApp`,
   `@NYCArtC`, and `@wowlist`. The CallNYC full-population audit dispositions
-  107 recovered items and three unresolved count slots; the WOWList audit
-  recovers all 38 items in its current live-profile control. Neither is
-  presented as a complete platform export.
+  107 recovered items and three unresolved count slots; the NYC Artist
+  Coalition audit dispositions 3,367 recovered items and 1,757 unresolved
+  slots; the WOWList audit recovers all 38 items in its current live-profile
+  control. None is presented as a complete platform export.
 - A public 107-record CallNYC status and URL ledger preserving every
   recoverable public item from the 110-item observed population.
 - Noel Hidalgo's March 2016 NYC School of Data recap, which featured CallNYC
   among civic hacks using constituent-services open data.
 - Current City Council Constituent Services dataset metadata distinguishing
   issue rows from cases and unique people.
-- Public posts from six contemporaneous NYC Council-member accounts directly
-  interacting with `@NYCArtC` across coalition campaign contexts.
+- A public 3,367-record NYC Artist Coalition status ledger, a 501-record inbound
+  engagement ledger, and 24 recovered interactions from at least seven
+  contemporaneous NYC Council-member accounts.
 - WOW List's 2014 public Sunday Dinner origin post and 2015 public
   community-created tutorial post.
 - A public 38-record WOWList status and URL ledger, six support and onboarding
@@ -96,6 +98,12 @@ information, private messages, or private analytics belongs in this repo.
 The CallNYC full-population method, findings, and research debt are documented
 in `intake/2026-07-13-callnyc-full-population-social-corpus.md`; item-level data
 is in `data/callnyc-public-post-ledger.json`.
+The NYC Artist Coalition full-population method, engagement distinctions,
+selected source close reads, and research debt are documented in
+`intake/2026-07-14-nycartc-full-population-social-corpus.md`; its 5,124 slot
+dispositions and 501 inbound-search records are in
+`data/nycartc-public-post-ledger.json` and
+`data/nycartc-public-engagement-ledger.json`.
 The WOWList full-population method, mission-relevant destinations, findings,
 and boundaries are documented in
 `intake/2026-07-14-wowlist-full-population-social-corpus.md`; its 38 item-level

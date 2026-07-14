@@ -32,9 +32,12 @@ Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
 Do not say Jamie authored every `@NYCArtC` post, that every official tagged by
-the coalition engaged, that six is the complete historical Council-member
+the coalition engaged, that seven is the complete historical Council-member
 count, or that individual-account interaction is an official Council
-endorsement or caused a policy outcome.
+endorsement or caused a policy outcome. Do not call the 3,367-record ledger a
+complete platform export, erase the 1,757 unresolved profile-count slots, or
+turn 501 rendered inbound-search records into 501 explicit mentions, unique
+people, audience reach, or independently audited impact.
 
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE

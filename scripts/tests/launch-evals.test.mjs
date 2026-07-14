@@ -11,6 +11,7 @@ import {
   evaluateKcTownHallCouncilAllocation,
   evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
+  evaluateNycArtCFullPopulationArchive,
   evaluateProjectSocialArchiveProduction,
   evaluateWowlistFullPopulationArchive,
   summarizeLaunchEvals
@@ -470,7 +471,7 @@ const projectSocialArchiveFixture = {
     "socialArchiveAccountMap",
     'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist" handle: "@KCTownHall"',
     "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 107",
-    "profilePostsObserved: 5124 followersObserved: 1338",
+    "profilePostsObserved: 5124 followersObserved: 1339 timelineItemsRecovered: 3367",
     "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 38",
     "profilePostsObserved: 183 followersObserved: 132 timelineItemsRecovered: 181",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
@@ -486,8 +487,8 @@ const projectSocialArchiveFixture = {
     "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
     "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
     "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP",
-    "53 #LetNYCDance 40 #SaveNYCSpaces 34 #TalksNotRaids 27 #FairRentNYC",
-    "At least six is a recovered minimum Multiple teammates posted post-by-post authorship",
+    "3,367 item-level recoveries 1,757 explicit unresolved",
+    "At least seven is a recovered minimum Multiple teammates posted post-by-post authorship",
     "not a complete platform export official NYC Council endorsement"
   ].join(" "),
   framework:
@@ -496,7 +497,7 @@ const projectSocialArchiveFixture = {
     'id: "project-social-identity-systems"',
     'id: "nyc-artist-coalition-social-engagement"',
     "shared systems collaborators carried across campaigns, programs, and changing stewardship",
-    "at least six contemporaneous NYC Council-member accounts",
+    "24 direct public interactions from at least seven contemporaneous NYC Council-member accounts",
     "Jamie authored every @NYCArtC post"
   ].join(" "),
   technicalOperations:
@@ -508,16 +509,15 @@ const projectSocialArchiveFixture = {
   archiveDoc: [
     "Verified Account Map @CallNYCApp @NYCArtC @wowlist @KCTownHall",
     "No verified dedicated account was recovered",
-    "Authenticated recovery found direct interactions from **at least six**",
+    "Authenticated recovery found **24 direct interactions from at least seven**",
     "Carlina Rivera not yet serving on the Council",
     "Profile count observed: 5,124 posts",
-    "1,338 followers observed",
-    "53 `#LetNYCDance` results 40 `#SaveNYCSpaces` results",
-    "34 `#TalksNotRaids` results 27 `#FairRentNYC` results",
-    "The six-member figure is a recovery floor multiple teammates posted Public-Safety Exclusions"
+    "1,339 followers observed",
+    "3,367 public items 1,757 profile-count slots remain explicitly unresolved",
+    "The seven-member and 24-post figures are recovery floors multiple teammates posted Public-Safety Exclusions"
   ].join(" "),
   antiClaims:
-    "complete platform export Jamie authored every `@NYCArtC` post six is the complete historical Council-member count official Council endorsement"
+    "complete platform export Jamie authored every `@NYCArtC` post seven is the complete historical Council-member count official Council endorsement"
 };
 
 test("project social archive passes with account map, engagement floor, and authorship boundaries", () => {
@@ -611,6 +611,91 @@ test("CallNYC full-population archive rejects authentication and private-path ma
     archiveDoc: `${callNycFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
   });
 
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+const nycArtCFullPopulationFixture = {
+  populationLedger: readRepoFile("docs/knowledge-bank/data/nycartc-public-post-ledger.json"),
+  engagementLedger: readRepoFile("docs/knowledge-bank/data/nycartc-public-engagement-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/nycartc-social-corpus.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  socialArchive: readRepoFile("apps/www/src/data/knowledge-bank/social-archive.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+  fairRentCase: readRepoFile("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-14-nycartc-full-population-social-corpus.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("NYC Artist Coalition full-population archive passes slot, engagement, and source reconciliation", () => {
+  assert.deepEqual(
+    evaluateNycArtCFullPopulationArchive(nycArtCFullPopulationFixture),
+    []
+  );
+});
+
+test("NYC Artist Coalition full-population archive rejects erased unresolved slots", () => {
+  const ledger = JSON.parse(nycArtCFullPopulationFixture.populationLedger);
+  ledger.populationAudit.unresolvedPopulationSlots = 0;
+  ledger.items = ledger.items.filter(
+    (item) => item.status !== "unresolved-profile-count-slot"
+  );
+  const failures = evaluateNycArtCFullPopulationArchive({
+    ...nycArtCFullPopulationFixture,
+    populationLedger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("1,757 explicit unresolved")));
+  assert.ok(failures.some((failure) => failure.includes("5,124 disposition records")));
+});
+
+test("NYC Artist Coalition full-population archive rejects a silently dropped recovered item", () => {
+  const ledger = JSON.parse(nycArtCFullPopulationFixture.populationLedger);
+  const index = ledger.items.findIndex((item) => item.status === "recovered-public-status");
+  ledger.items.splice(index, 1);
+  const failures = evaluateNycArtCFullPopulationArchive({
+    ...nycArtCFullPopulationFixture,
+    populationLedger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("5,124 disposition records")));
+  assert.ok(failures.some((failure) => failure.includes("3,367 recovered public items")));
+});
+
+test("NYC Artist Coalition full-population archive rejects theme drift and stakeholder inflation", () => {
+  const population = JSON.parse(nycArtCFullPopulationFixture.populationLedger);
+  const engagement = JSON.parse(nycArtCFullPopulationFixture.engagementLedger);
+  population.items.find((item) => item.status === "recovered-public-status").primaryTheme =
+    "fair-rent-and-commercial-tenancy";
+  engagement.records.find(
+    (item) => item.stakeholderGroup === "other-public-account"
+  ).stakeholderGroup = "nyc-council-member-account";
+  const failures = evaluateNycArtCFullPopulationArchive({
+    ...nycArtCFullPopulationFixture,
+    populationLedger: JSON.stringify(population),
+    engagementLedger: JSON.stringify(engagement)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("count must recompute")));
+  assert.ok(failures.some((failure) => failure.includes("must remain 24 records")));
+});
+
+test("NYC Artist Coalition full-population archive rejects collapsed context and private browser material", () => {
+  const engagement = JSON.parse(nycArtCFullPopulationFixture.engagementLedger);
+  engagement.records[0].fullText = "Copied public post text";
+  engagement.records.find(
+    (item) => item.evidenceDisposition === "search-or-thread-context"
+  ).evidenceDisposition = "explicit-account-mention";
+  const failures = evaluateNycArtCFullPopulationArchive({
+    ...nycArtCFullPopulationFixture,
+    engagementLedger: JSON.stringify(engagement),
+    archiveDoc: `${nycArtCFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("347 explicit account mentions")));
+  assert.ok(failures.some((failure) => failure.includes("must not reproduce full account")));
   assert.ok(
     failures.some((failure) => failure.includes("authentication, session, or private-path"))
   );

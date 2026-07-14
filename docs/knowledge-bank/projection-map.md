@@ -64,7 +64,7 @@ Current selected citation projections now include:
 - early NYC Artist Coalition mutual-aid and safety organizing;
 - the coalition-led Office of Nightlife town hall and Jamie's speaker role;
 - the coalition's MARCH records-request data and the bounded legislative result;
-- a recovered floor of direct `@NYCArtC` interactions from at least six
+- a recovered floor of 24 direct `@NYCArtC` interactions from at least seven
   contemporaneous Council-member accounts;
 - WOW List's public Sunday Dinner origin statement and one community-created
   instructional artifact;

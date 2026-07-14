@@ -452,7 +452,7 @@ export const proofClaims: ProofClaim[] = [
       "Established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship.",
     shortWording: "Established durable public identities collaborators could carry forward",
     detailedPublicWording:
-      "Jamie established the project accounts and shared identity systems; public timelines show durable use across CallNYC, WOW List, KC Town Hall, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
+      "Jamie established the project accounts and shared identity systems; public timelines show durable use across CallNYC, WOW List, KC Town Hall, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. The recovered NYC Artist Coalition record spans February 2017 through May 2026 while preserving shared authorship and changing stewardship.",
     sourceBasis:
       "Jamie's firsthand confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles and campaign timelines.",
     whyItMatters:
@@ -481,18 +481,18 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source"],
     publicWording:
-      "Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.",
-    shortWording: "At least six Council-member accounts directly engaged @NYCArtC",
+      "Authenticated archival review recovered 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.",
+    shortWording: "24 interactions from at least seven Council-member accounts",
     detailedPublicWording:
-      "The recovered interactions span Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the count is a documented minimum, not a complete census.",
+      "The full inbound pass recovered 501 rendered public search records from 178 accounts, including 347 explicit @NYCArtC mentions and 154 separately marked search or thread-context records. The Council-member subset spans Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the figures are documented recovery floors, not complete historical censuses.",
     sourceBasis:
-      "Six public member-account status pages, authenticated public-profile review, and contemporaneous Council context.",
+      "A 501-record public engagement ledger, seven representative member-account status pages, authenticated public-profile review, and contemporaneous Council context.",
     whyItMatters:
       "Shows that the shared campaign identity reached relevant public officials across distinct policy and cultural-space efforts.",
     guardrail:
       "Describe individual-account interaction as a recovered minimum, never as official Council endorsement, policy causality, or proof of Jamie's post authorship.",
     doNotSay: [
-      "Only six Council members engaged",
+      "Only seven Council members engaged",
       "The NYC Council endorsed NYC Artist Coalition",
       "Social engagement caused policy outcomes",
       "Jamie authored every @NYCArtC post"
@@ -506,7 +506,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["public-engagement", "stakeholder-adoption", "campaign-infrastructure"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-community-platform",
@@ -907,6 +907,8 @@ export const technicalOperationsProofRows = [
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-cabaret-organizing",
+      "project-social-identity-systems",
+      "nyc-artist-coalition-social-engagement",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "callnyc-council-member-amplification",

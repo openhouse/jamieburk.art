@@ -74,23 +74,28 @@ review date. CallNYC now has a separate full-population disposition ledger.
 
 ### NYC Artist Coalition - @NYCArtC
 
-- Joined January 2017; 568 following and 1,338 followers observed on the review
+- Joined January 2017; 569 following and 1,339 followers observed on the review
   date.
 - Profile count observed: 5,124 posts.
 - The profile explicitly names `#SaveNYCSpaces`, `#LetNYCDance`,
   `#TalksNotRaids`, and `#FairRentNYC` as one coalition campaign family.
-- The active account was sampled through campaign and actor queries rather than
-  treated as a scrolling export.
-- Recovered account-authored search floors: 53 `#LetNYCDance` results, 40
-  `#SaveNYCSpaces` results, 34 `#TalksNotRaids` results, and 27 `#FairRentNYC`
-  results.
-- The recovered campaign record spans 2017-2025 and shows one public identity
+- Cross-surface reconciliation recovered 3,367 public items: 715
+  account-authored statuses and 2,652 reposts. Another 1,757 profile-count
+  slots remain explicitly unresolved, so all 5,124 slots have a disposition.
+- This is 100 percent slot disposition, not 100 percent item-level recovery or
+  a complete platform export.
+- The recovered campaign record spans 2017-2026 and shows one public identity
   carrying research, public-hearing invitations, town halls, rally and meeting
   calls, bill sponsorship and co-sponsorship context, campaign reporting, and
   long-running commercial-rent advocacy.
+- The recovered population carries 1,772 posted link occurrences across 1,241
+  unique public URLs; the item ledger preserves these as source leads rather
+  than automatic claim support.
 - Public collaborator posts show Olympia Kazi continuing to use the coalition
   identity and campaign vocabulary in Council-hearing and policy contexts in
   2022 and later.
+- The detailed method, source close reads, and boundaries live in the July 14
+  full-population intake and two public ledgers.
 
 #### Council-Member Engagement Definition
 
@@ -99,7 +104,7 @@ mention of `@NYCArtC`, reply to it, or quote amplification of its post. It does
 not count a one-way tag by the coalition account, a like that cannot be reliably
 recovered, or an interaction that occurred outside the person's Council term.
 
-Authenticated recovery found direct interactions from **at least six**
+Authenticated recovery found **24 direct interactions from at least seven**
 contemporaneous Council-member accounts:
 
 | Council member | Representative public interaction | Mission context |
@@ -110,17 +115,25 @@ contemporaneous Council-member accounts:
 | Justin Brannan | [June 17, 2019](https://x.com/JustinBrannan/status/1140698679394938883) | Quote-amplified a Talks Not Raids message |
 | Jimmy Van Bramer | [October 26, 2020](https://x.com/JimmyVanBramer/status/1320792543773282304) | Mentioned the coalition in arts-and-culture support context |
 | Mark Levine | [March 20, 2020](https://x.com/MarkLevineNYC/status/1241027587947876352) | Direct account reply; not treated as mission-specific endorsement |
+| Brad Lander | [January 28, 2021](https://x.com/bradlander/status/1354840336330330116) | Stated that he spoke for Commercial Rent Stabilization in committee and directly addressed the account |
 
-Five of those six representative interactions are mission-specific. Mark
+Six of those seven representative interactions are mission-specific. Mark
 Levine's recovered reply establishes direct account interaction only. Brad
-Lander supplied additional FairRentNYC campaign-level engagement, but the
-recovered wrapper did not itself mention `@NYCArtC`, so he remains outside the
-direct-handle count under this definition.
+Lander enters the direct-handle floor because the full inbound-account search
+recovered a post that addressed `@NYCArtC` directly.
 
-The six-member figure is a recovery floor, not a complete historical census.
+The seven-member and 24-post figures are recovery floors, not complete
+historical censuses.
 It is individual-account activity, not an official NYC Council endorsement,
 evidence of policy causality, or proof that Jamie authored the underlying team
 posts.
+
+The wider inbound pass recovered 501 rendered public search records from 178
+accounts, including 347 explicit handle mentions and 154 separately marked
+search or thread-context records. It includes 16 city-agency-account records
+across two accounts and 235 coalition, civic, or cultural partner records
+across 15 identified accounts. These are public-account recovery floors, not
+unique people, reach, or independently audited impact.
 
 #### Institutional and Source-Discovery Findings
 
@@ -198,7 +211,8 @@ Jamie authored her words or owned the campaign voice.
   with the establishment claim supported by Jamie's firsthand confirmation and
   the continuity claim supported by public account evidence.
 - `CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT`: selected for the civic case study
-  and Technical Operations as an at-least-six direct-interaction floor.
+  and Technical Operations as a 24-interaction floor across at least seven
+  Council-member accounts.
 - `CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE`: selected for the WOW List proof page as
   bounded evidence of its Sunday Dinner origin and one community-created
   instructional artifact.
@@ -212,8 +226,9 @@ Jamie authored her words or owned the campaign voice.
   reviewed without exposing private data.
 - Attribute individual team posts only when drafts, exports, explicit signing,
   repository history, or collaborator confirmation support attribution.
-- Continue Council-roster and post recovery so the six-member coalition count
-  can mature without losing its current minimum boundary.
+- Seek a first-party export only through a privacy-preserving workflow so the
+  1,757 unresolved profile-count slots can be narrowed without exposing private
+  account or collaborator data.
 - Close-read linked articles, reports, event pages, and media for claim-level
   support rather than treating a social link as automatic corroboration.
 - Preserve `not recovered` separately from `did not exist`.

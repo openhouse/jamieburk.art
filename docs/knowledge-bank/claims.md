@@ -233,15 +233,15 @@ claim beyond the wording and guardrails here.
 **Status:** Ready
 **Support level:** Strong
 **Evidence class:** Public source
-**Public wording:** Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.
-**Detailed public-safe wording:** The recovered interactions span Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the count is a documented minimum, not a complete census.
+**Public wording:** Authenticated archival review recovered 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.
+**Detailed public-safe wording:** A full inbound pass recovered 501 rendered public search records from 178 accounts, including 347 explicit @NYCArtC mentions and 154 separately marked search or thread-context records. The Council-member subset spans Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the figures are documented recovery floors, not complete historical censuses.
 **Where to project:** Technical Operations and NYC Artist Coalition / FairRentNYC case study.
 **Why it matters:** Shows that the shared campaign identity reached relevant public officials across distinct policy and cultural-space efforts.
 **Guardrail:** Describe individual-account interaction as a recovered minimum, never as official Council endorsement, policy causality, or proof of Jamie's post authorship.
-**Do not say:** Only six Council members engaged; the NYC Council endorsed NYC Artist Coalition; social engagement caused policy outcomes; Jamie authored every @NYCArtC post.
+**Do not say:** Only seven Council members engaged; the NYC Council endorsed NYC Artist Coalition; social engagement caused policy outcomes; Jamie authored every @NYCArtC post.
 **Protected boundaries:** Authentication details, private analytics, private messages, and unrecoverable team-post authorship stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-14
 
 ## wowlist-community-platform - Followable community platform
 

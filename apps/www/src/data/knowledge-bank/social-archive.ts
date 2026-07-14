@@ -25,10 +25,10 @@ export const socialArchiveAccountMap = [
     url: "https://x.com/NYCArtC",
     joined: "January 2017",
     profilePostsObserved: 5124,
-    followingObserved: 568,
-    followersObserved: 1338,
-    timelineItemsRecovered: null,
-    recoveryNote: "The active account was sampled through campaign and actor queries; no complete profile export was attempted."
+    followingObserved: 569,
+    followersObserved: 1339,
+    timelineItemsRecovered: 3367,
+    recoveryNote: "Authenticated cross-surface reconciliation dispositioned all 5,124 live-profile count slots as 3,367 item-level recoveries and 1,757 explicit unresolved historical slots."
   },
   {
     projects: ["WOW List"],
@@ -68,6 +68,8 @@ export const socialArchiveIntake = [
     sourceIds: [
       "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
       "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+      "SRC-X-NYCARTC-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
       "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
       "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026",
       "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026",
@@ -88,7 +90,7 @@ export const socialArchiveIntake = [
     ],
     notes: [
       "Authenticated read-only recovery was necessary to see historical timelines, but no session, credential, cookie, account-recovery, or private-message data entered the repository.",
-      "Recovered counts are documented item-level results, not claims of platform-export completeness; full-population audits preserve recovered and unresolved slots for CallNYC, WOW List, and KC Town Hall.",
+      "Recovered counts are documented item-level results, not claims of platform-export completeness; full-population audits preserve recovered and unresolved slots for CallNYC, NYC Artist Coalition, WOW List, and KC Town Hall.",
       "Jamie confirms establishing the accounts; public timelines do not identify who authored every team post."
     ]
   }
@@ -144,14 +146,14 @@ export const socialArchiveSources = [
     kind: "research-run",
     visibility: "public",
     preservationStatus: "live",
-    capturedAt: "2026-07-13",
-    accessedAt: "2026-07-13",
+    capturedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
     canonicalUrl: "https://x.com/NYCArtC",
     preferredPublicUrl: "canonical",
-    publicCitation: "Authenticated read-only review of the public @NYCArtC profile, campaign queries, and Council-member interactions, July 13, 2026.",
-    publicNote: "The active profile named #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. Authenticated query recovery found direct mentions, replies, or quote amplification from at least six contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine.",
-    supportsGenerally: ["the verified coalition handle", "a shared four-campaign identity", "long-running public use", "a bounded engagement-recovery floor"],
-    doesNotEstablish: ["a complete account export", "authorship of every post", "sole credit for campaigns or outcomes", "official Council endorsement"]
+    publicCitation: "Authenticated read-only review of the public @NYCArtC profile, full-population recovery, and inbound public interactions, July 14, 2026.",
+    publicNote: "The active profile named #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. The full archival pass dispositioned all 5,124 live-profile count slots as 3,367 item-level recoveries and 1,757 explicit unresolved slots; inbound recovery rendered 501 public search records from 178 accounts, including 347 explicit account mentions and 154 search or thread-context records.",
+    supportsGenerally: ["the verified coalition handle", "a shared four-campaign identity", "long-running public use", "5,124-slot profile disposition", "a bounded 501-record inbound-search floor"],
+    doesNotEstablish: ["a complete account export or deletion history", "the contents of 1,757 unresolved slots", "authorship of every post", "sole credit for campaigns or outcomes", "official Council endorsement"]
   },
   {
     id: "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
@@ -375,37 +377,38 @@ export const socialArchiveClaims = [
   {
     id: "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
     project: "nyc-artist-coalition",
-    internalClaim: "Authenticated recovery found direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+    internalClaim: "Authenticated recovery found 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
     status: "confirmed-with-boundary",
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     projections: [
       {
         key: "case-study",
-        text: "Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+        text: "Authenticated archival review recovered 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/fair-rent-nyc"]
       },
       {
         key: "technical-operations",
-        text: "The shared coalition identity earned direct public interaction from at least six contemporaneous NYC Council-member accounts across multiple campaigns.",
+        text: "The shared coalition identity earned 24 recovered public interactions from at least seven contemporaneous NYC Council-member accounts across multiple campaigns.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/technical-operations"]
       }
     ],
     evidence: [
-      { sourceId: "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", relationship: "context", supports: ["authenticated query method", "six-account recovery floor", "four-campaign account identity"], confidence: "moderate", renderCitation: true },
+      { sourceId: "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026", relationship: "direct-support", supports: ["authenticated full inbound-search method", "24-interaction and seven-account recovery floor", "501 rendered records from 178 accounts with explicit-mention and context distinctions"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-X-NYCARTC-ESPINAL-CABARET-2017", relationship: "direct-support", supports: ["Rafael Espinal interaction"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-NYCARTC-LEVIN-MARCH-2019", relationship: "direct-support", supports: ["Stephen Levin interaction"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021", relationship: "direct-support", supports: ["Carlina Rivera interaction"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-NYCARTC-BRANNAN-MARCH-2019", relationship: "direct-support", supports: ["Justin Brannan interaction"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020", relationship: "direct-support", supports: ["Jimmy Van Bramer interaction"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020", relationship: "direct-support", supports: ["Mark Levine account interaction"], confidence: "high", renderCitation: false }
+      { sourceId: "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020", relationship: "direct-support", supports: ["Mark Levine account interaction"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021", relationship: "direct-support", supports: ["Brad Lander FairRentNYC interaction"], confidence: "high", renderCitation: false }
     ],
-    boundaries: ["At least six is a recovered minimum, not a complete historical census.", "The count includes direct mentions, replies, or quote amplification; it does not treat tags by @NYCArtC as reciprocal engagement.", "Mark Levine's reply supports account interaction only, not mission-specific endorsement.", "Brad Lander's documented FairRentNYC campaign engagement is retained outside the direct-@NYCArtC count because the recovered wrapper did not itself mention the handle.", "This is individual-account activity, not an official NYC Council endorsement, policy outcome, or proof that Jamie authored the underlying posts."],
-    antiClaims: ["Only six Council members engaged", "The NYC Council endorsed NYC Artist Coalition", "Every tagged official engaged", "Jamie authored every coalition post", "Social engagement caused the policy outcomes"],
+    boundaries: ["At least seven is a recovered minimum, not a complete historical census.", "The 24-post count includes direct mentions, replies, or quote interactions; it does not treat one-way tags by @NYCArtC as reciprocal engagement.", "Mark Levine's reply supports account interaction only, not mission-specific endorsement.", "This is individual-account activity, not an official NYC Council endorsement, policy outcome, or proof that Jamie authored the underlying posts."],
+    antiClaims: ["Only seven Council members engaged", "The NYC Council endorsed NYC Artist Coalition", "Every tagged official engaged", "Jamie authored every coalition post", "Social engagement caused the policy outcomes"],
     researchInquiryIds: ["INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026"],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
@@ -443,25 +446,25 @@ export const socialArchiveInquiries = [
     id: "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
     project: "career-proof-system",
     question: "What public project-account material can be recovered without mistaking an authenticated visible timeline for a complete platform export?",
-    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 107 of 110 profile-count items for @CallNYCApp and all 38 current-profile items for @wowlist across the Posts and Replies surfaces.", "Sampled @NYCArtC through campaign and public-actor queries because its 5,124-post active profile was not practical to treat as a scrolling export."],
+    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 107 of 110 profile-count items for @CallNYCApp and all 38 current-profile items for @wowlist across the Posts and Replies surfaces.", "Dispositioned all 5,124 @NYCArtC profile-count slots through cross-surface reconciliation as 3,367 item-level recoveries and 1,757 explicit unresolved slots."],
     runAt: "2026-07-13",
     resultStatus: "partially-recovered",
-    findings: ["Verified @CallNYCApp, @NYCArtC, and @wowlist as public project accounts.", "Verified that Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC used the shared @NYCArtC identity.", "Recovered 53 #LetNYCDance, 40 #SaveNYCSpaces, 34 #TalksNotRaids, and 27 #FairRentNYC account-authored search results as non-exhaustive floors.", "No verified dedicated account was recovered for the other portfolio projects reviewed in this pass."],
+    findings: ["Verified @CallNYCApp, @NYCArtC, and @wowlist as public project accounts.", "Verified that Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC used the shared @NYCArtC identity.", "Recovered 715 account-authored @NYCArtC statuses and 2,652 reposts spanning February 2017 through May 2026.", "No verified dedicated account was recovered for the other portfolio projects reviewed in this pass."],
     limitations: ["X search and scrolling are incomplete and can change over time.", "Profile post totals can include items not returned by visible scrolling.", "No account export, analytics dashboard, private messages, or nonpublic engagement data was accessed.", "Reposts by a project account do not establish that the original author endorsed the project."],
     sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026"],
-    publicSummary: "An authenticated read-only pass verified four project accounts and recovered bounded public timeline evidence; separate population audits disposition the CallNYC, WOW List, and KC Town Hall live-profile controls without presenting any as a platform export."
+    publicSummary: "An authenticated read-only pass verified four project accounts and recovered bounded public timeline evidence; separate population audits disposition the CallNYC, NYC Artist Coalition, WOW List, and KC Town Hall live-profile controls without presenting any as a platform export."
   },
   {
     id: "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
     project: "nyc-artist-coalition",
     question: "How many NYC Council-member accounts directly interacted with @NYCArtC, and what mission-relevant patterns are supported by the recovered posts?",
-    methods: ["Queried contemporaneous Council-member handles against @NYCArtC in an authenticated live-search session.", "Opened representative status pages and separated direct mention, reply, and quote amplification from one-way tags by the coalition account.", "Checked campaign, date, and officeholding context against public Council and project records."],
+    methods: ["Ran an authenticated full Latest-search pass around public posts mentioning, replying to, quoting, or appearing in thread context with @NYCArtC.", "Recovered 501 rendered records from 178 accounts, separating 347 explicit account mentions from 154 search or thread-context records.", "Checked representative Council-member posts, campaign context, dates, and contemporaneous officeholding."],
     runAt: "2026-07-13",
     resultStatus: "partially-recovered",
-    findings: ["Recovered direct interactions from at least six contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine.", "Five of the six representative interactions are mission-specific; Mark Levine's recovered reply establishes account interaction only.", "The mission-specific pattern spans Cabaret Law repeal, nightlife town halls, MARCH transparency, arts-and-culture support, and FairRentNYC.", "Brad Lander supplied additional FairRentNYC campaign-level engagement but remains outside the direct-handle count under the chosen definition."],
-    limitations: ["The six-account count is a recovery floor, not a complete historical census.", "Likes and impressions were not counted because the current public interface does not provide a reliable historical actor-level export.", "Individual-account engagement is not an official Council endorsement or proof of policy causality.", "Team-post authorship generally cannot be attributed from the public interface."],
-    sourceIds: ["SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-ESPINAL-CABARET-2017", "SRC-X-NYCARTC-LEVIN-MARCH-2019", "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021", "SRC-X-NYCARTC-BRANNAN-MARCH-2019", "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020", "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020"],
-    publicSummary: "Authenticated recovery found direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC; the result is a bounded floor, not an endorsement claim or complete census."
+    findings: ["Recovered 24 direct public interactions from at least seven contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin Brannan, Jimmy Van Bramer, Mark Levine, and Brad Lander.", "The 501-record inbound-search floor also includes 16 city-agency-account records across two accounts and 235 coalition, civic, or cultural partner records across 15 identified accounts.", "The mission-specific Council pattern spans Cabaret Law repeal, nightlife town halls, MARCH transparency, arts-and-culture support, and FairRentNYC.", "Mark Levine's recovered reply establishes account interaction only; it is not treated as mission-specific endorsement."],
+    limitations: ["The seven-account count is a recovery floor, not a complete historical census.", "Likes and impressions were not counted because the current public interface does not provide a reliable historical actor-level export.", "Individual-account engagement is not an official Council endorsement or proof of policy causality.", "Team-post authorship generally cannot be attributed from the public interface."],
+    sourceIds: ["SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-CABARET-2017", "SRC-X-NYCARTC-LEVIN-MARCH-2019", "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021", "SRC-X-NYCARTC-BRANNAN-MARCH-2019", "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020", "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020", "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021"],
+    publicSummary: "Authenticated recovery found 24 direct public interactions from at least seven contemporaneous NYC Council-member accounts with @NYCArtC; the result is a bounded floor, not an endorsement claim or complete census."
   },
   {
     id: "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP",
@@ -517,9 +520,9 @@ export const socialArchiveProofCoverage = [
   {
     proofId: "nyc-artist-coalition-social-engagement",
     status: "source-backed",
-    sourceIds: ["SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-ESPINAL-CABARET-2017", "SRC-X-NYCARTC-LEVIN-MARCH-2019", "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021", "SRC-X-NYCARTC-BRANNAN-MARCH-2019", "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020", "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020"],
+    sourceIds: ["SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-CABARET-2017", "SRC-X-NYCARTC-LEVIN-MARCH-2019", "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021", "SRC-X-NYCARTC-BRANNAN-MARCH-2019", "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020", "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020", "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021"],
     inquiryIds: ["INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026"],
-    note: "Six direct public account interactions support a bounded minimum; a continuing inquiry protects against completeness and endorsement inflation.",
-    reviewedAt: "2026-07-13"
+    note: "Twenty-four direct public interactions from at least seven Council-member accounts support a bounded minimum; a continuing inquiry protects against completeness and endorsement inflation.",
+    reviewedAt: "2026-07-14"
   }
 ] satisfies ProofCoverage[];

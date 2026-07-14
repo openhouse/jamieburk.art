@@ -14,8 +14,8 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   constituent-service categories.
 - Established public-facing identities for CallNYC, WOW List, and NYC Artist
   Coalition that collaborators could use and carry forward.
-- Authenticated archival review recovered direct public interactions from at
-  least six contemporaneous NYC Council-member accounts with `@NYCArtC`.
+- Authenticated archival review recovered 24 direct public interactions from at
+  least seven contemporaneous NYC Council-member accounts with `@NYCArtC`.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - In 2017, organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.

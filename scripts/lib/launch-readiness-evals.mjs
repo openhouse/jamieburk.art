@@ -640,7 +640,8 @@ export function evaluateProjectSocialArchiveProduction({
     "followersObserved: 69",
     "timelineItemsRecovered: 107",
     "profilePostsObserved: 5124",
-    "followersObserved: 1338",
+    "followersObserved: 1339",
+    "timelineItemsRecovered: 3367",
     "profilePostsObserved: 38",
     "followersObserved: 47",
     "timelineItemsRecovered: 38",
@@ -660,11 +661,9 @@ export function evaluateProjectSocialArchiveProduction({
     "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
     "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
     "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP",
-    "53 #LetNYCDance",
-    "40 #SaveNYCSpaces",
-    "34 #TalksNotRaids",
-    "27 #FairRentNYC",
-    "At least six is a recovered minimum",
+    "3,367 item-level recoveries",
+    "1,757 explicit unresolved",
+    "At least seven is a recovered minimum",
     "Multiple teammates posted",
     "post-by-post authorship",
     "a complete platform export",
@@ -684,7 +683,7 @@ export function evaluateProjectSocialArchiveProduction({
     'id: "project-social-identity-systems"',
     'id: "nyc-artist-coalition-social-engagement"',
     "shared systems collaborators carried across campaigns, programs, and changing stewardship",
-    "at least six contemporaneous NYC Council-member accounts",
+    "24 direct public interactions from at least seven contemporaneous NYC Council-member accounts",
     "Jamie authored every @NYCArtC post"
   ]);
   requireFragments("Technical Operations", technicalOperations, [
@@ -709,23 +708,21 @@ export function evaluateProjectSocialArchiveProduction({
     "@wowlist",
     "@KCTownHall",
     "No verified dedicated account was recovered",
-    "Authenticated recovery found direct interactions from **at least six**",
+    "Authenticated recovery found **24 direct interactions from at least seven**",
     "Carlina Rivera",
     "not yet serving on the Council",
     "Profile count observed: 5,124 posts",
-    "1,338 followers observed",
-    "53 `#LetNYCDance` results",
-    "40 `#SaveNYCSpaces` results",
-    "34 `#TalksNotRaids` results",
-    "27 `#FairRentNYC` results",
-    "The six-member figure is a recovery floor",
+    "1,339 followers observed",
+    "3,367 public items",
+    "1,757 profile-count slots remain explicitly unresolved",
+    "The seven-member and 24-post figures are recovery floors",
     "multiple teammates posted",
     "Public-Safety Exclusions"
   ]);
   requireFragments("Social anti-claims", antiClaims, [
     "complete platform export",
     "Jamie authored every `@NYCArtC` post",
-    "six is the complete historical Council-member count",
+    "seven is the complete historical Council-member count",
     "official Council endorsement"
   ]);
 
@@ -1482,6 +1479,342 @@ export function evaluateKcTownHallFullPopulationArchive({
   return missing;
 }
 
+export function evaluateNycArtCFullPopulationArchive({
+  populationLedger,
+  engagementLedger,
+  corpusModel,
+  framework,
+  socialArchive,
+  proofs,
+  technicalOperations,
+  fairRentCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let populationParsed;
+  let engagementParsed;
+  try {
+    populationParsed = JSON.parse(populationLedger);
+  } catch {
+    missing.push("NYC Artist Coalition public-post ledger is not valid JSON.");
+    return missing;
+  }
+  try {
+    engagementParsed = JSON.parse(engagementLedger);
+  } catch {
+    missing.push("NYC Artist Coalition engagement ledger is not valid JSON.");
+    return missing;
+  }
+
+  const population = populationParsed.populationAudit ?? {};
+  const aggregate = populationParsed.aggregateFindings ?? {};
+  const dispositions = populationParsed.items ?? [];
+  const recovered = dispositions.filter((item) => item.status === "recovered-public-status");
+  const unresolved = dispositions.filter(
+    (item) => item.status === "unresolved-profile-count-slot"
+  );
+  const engagement = engagementParsed.records ?? [];
+  const engagementAggregate = engagementParsed.aggregateFindings ?? {};
+
+  expect(population.profileCountObserved === 5124, "NYC Artist Coalition observed profile control must remain 5,124.");
+  expect(population.repliesTabPopulationRecovered === 3007, "NYC Artist Coalition Replies-tab population recovery must remain 3,007.");
+  expect(population.historicalAuthoredSearchRecovered === 358, "NYC Artist Coalition historical authored-search recovery must remain 358.");
+  expect(population.postsTabCrosscheckRecovered === 764, "NYC Artist Coalition Posts-tab crosscheck must retain 764 records.");
+  expect(population.postsTabNewItems === 2, "NYC Artist Coalition Posts-tab crosscheck must retain two new items.");
+  expect(population.accountAuthoredStatusesRecovered === 715, "NYC Artist Coalition account-authored count must remain 715.");
+  expect(population.repostsRecovered === 2652, "NYC Artist Coalition repost count must remain 2,652.");
+  expect(population.uniqueItemsRecovered === 3367, "NYC Artist Coalition unique item-level recovery must remain 3,367.");
+  expect(population.contextualConversationRecordsExcluded === 22, "NYC Artist Coalition contextual exclusions must remain 22.");
+  expect(population.unresolvedPopulationSlots === 1757, "NYC Artist Coalition must retain 1,757 explicit unresolved slots.");
+  expect(population.dispositionTotal === 5124, "NYC Artist Coalition disposition total must remain 5,124.");
+  expect(
+    population.uniqueItemsRecovered + population.unresolvedPopulationSlots === population.profileCountObserved,
+    "Recovered and unresolved NYC Artist Coalition slots must reconcile to the 5,124-post profile control."
+  );
+  expect(
+    population.accountAuthoredStatusesRecovered + population.repostsRecovered === population.uniqueItemsRecovered,
+    "NYC Artist Coalition account-authored statuses and reposts must reconcile to recovered items."
+  );
+  expect(dispositions.length === 5124, "NYC Artist Coalition ledger must contain all 5,124 disposition records.");
+  expect(recovered.length === 3367, "NYC Artist Coalition ledger must contain 3,367 recovered public items.");
+  expect(unresolved.length === 1757, "NYC Artist Coalition ledger must contain 1,757 unresolved placeholder dispositions.");
+  expect(
+    unresolved.every(
+      (item) =>
+        item.statusId === null &&
+        item.statusUrl === null &&
+        item.publishedAt === null &&
+        item.primaryTheme === "unresolved" &&
+        /No status ID, date, type, text, theme, author, or deletion reason is inferred/.test(item.reason ?? "")
+    ),
+    "Unresolved NYC Artist Coalition slots must remain explicit and inference-free."
+  );
+  expect(
+    new Set(recovered.map((item) => item.statusId)).size === recovered.length,
+    "NYC Artist Coalition recovered status IDs must be unique."
+  );
+  expect(
+    new Set(recovered.map((item) => item.statusUrl)).size === recovered.length,
+    "NYC Artist Coalition recovered status URLs must be unique."
+  );
+  expect(
+    recovered.every(
+      (item) =>
+        typeof item.contentSummary === "string" &&
+        item.contentSummary.length > 12 &&
+        typeof item.publishedAt === "string" &&
+        /^https:\/\/x\.com\//.test(item.statusUrl) &&
+        /^[a-f0-9]{64}$/.test(item.contentDigestSha256 ?? "")
+    ),
+    "Every recovered NYC Artist Coalition item must retain a public-safe summary, date, URL, and content digest."
+  );
+  expect(
+    dispositions.every(
+      (item) => !("text" in item) && !("fullText" in item) && !("rawText" in item)
+    ) &&
+      engagement.every(
+        (item) => !("text" in item) && !("fullText" in item) && !("rawText" in item)
+      ),
+    "NYC Artist Coalition public ledgers must not reproduce full account or third-party post text."
+  );
+
+  const relationshipCount = (relationship) =>
+    recovered.filter((item) => item.relationship === relationship).length;
+  expect(relationshipCount("account-status") === 715, "NYC Artist Coalition ledger must contain 715 account-authored statuses.");
+  expect(relationshipCount("repost") === 2652, "NYC Artist Coalition ledger must contain 2,652 reposts.");
+  const expectedThemes = {
+    "artist-labor-and-cultural-work": 132,
+    "civic-participation": 210,
+    "fair-rent-and-commercial-tenancy": 558,
+    "general-cultural-and-civic-amplification": 1705,
+    "let-nyc-dance-and-nightlife-policy": 119,
+    "public-resources-and-opportunities": 415,
+    "save-spaces-and-cultural-displacement": 86,
+    "talks-not-raids-and-enforcement-accountability": 142
+  };
+  for (const [theme, count] of Object.entries(expectedThemes)) {
+    expect(
+      recovered.filter((item) => item.primaryTheme === theme).length === count,
+      `NYC Artist Coalition ${theme} count must recompute to ${count}.`
+    );
+    expect(
+      aggregate.byPrimaryTheme?.[theme] === count,
+      `NYC Artist Coalition stored ${theme} aggregate must remain ${count}.`
+    );
+  }
+  expect(
+    Object.values(expectedThemes).reduce((sum, count) => sum + count, 0) === recovered.length,
+    "NYC Artist Coalition theme dispositions must reconcile to all 3,367 recovered items."
+  );
+
+  const expectedAuthoredHashtags = {
+    "#FairRentNYC": 191,
+    "#SaveNYCSpaces": 110,
+    "#LetNYCDance": 90,
+    "#TalksNotRaids": 56
+  };
+  for (const [hashtag, count] of Object.entries(expectedAuthoredHashtags)) {
+    const recomputed = recovered.filter(
+      (item) =>
+        item.relationship === "account-status" &&
+        (item.hashtags ?? []).some(
+          (candidate) => candidate.toLowerCase() === hashtag.toLowerCase()
+        )
+    ).length;
+    expect(recomputed === count, `NYC Artist Coalition authored ${hashtag} floor must recompute to ${count}.`);
+    expect(
+      aggregate.campaignHashtagAuthoredStatusFloors?.[hashtag] === count,
+      `NYC Artist Coalition stored authored ${hashtag} floor must remain ${count}.`
+    );
+  }
+
+  const outbound = recovered.flatMap((item) => item.outboundLinks ?? []);
+  const uniqueOutboundUrls = new Set(outbound.map((link) => link.shortUrl));
+  expect(aggregate.outboundLinkOccurrences === 1772, "NYC Artist Coalition raw posted-link occurrence count must remain 1,772.");
+  expect(uniqueOutboundUrls.size === 1241, "NYC Artist Coalition unique outbound URLs must recompute to 1,241.");
+  expect(aggregate.uniqueOutboundUrls === 1241, "NYC Artist Coalition stored unique outbound URL count must remain 1,241.");
+
+  expect(engagement.length === 501, "NYC Artist Coalition engagement ledger must retain 501 rendered search records.");
+  expect(
+    new Set(engagement.map((item) => item.statusId)).size === engagement.length,
+    "NYC Artist Coalition engagement-ledger status IDs must be unique."
+  );
+  const explicitCount = engagement.filter(
+    (item) => item.evidenceDisposition === "explicit-account-mention"
+  ).length;
+  const contextCount = engagement.filter(
+    (item) => item.evidenceDisposition === "search-or-thread-context"
+  ).length;
+  expect(explicitCount === 347, "NYC Artist Coalition engagement ledger must retain 347 explicit account mentions.");
+  expect(contextCount === 154, "NYC Artist Coalition engagement ledger must retain 154 search or thread-context records.");
+  expect(explicitCount + contextCount === engagement.length, "NYC Artist Coalition engagement evidence dispositions must reconcile to 501 records.");
+  expect(
+    new Set(engagement.map((item) => item.authorHandle.toLowerCase())).size === 178,
+    "NYC Artist Coalition engagement ledger must retain 178 distinct public accounts."
+  );
+  expect(engagementAggregate.renderedSearchRecords === 501, "NYC Artist Coalition stored inbound-search count must remain 501.");
+  expect(engagementAggregate.explicitAccountMentionRecords === 347, "NYC Artist Coalition stored explicit-mention count must remain 347.");
+  expect(engagementAggregate.searchOrThreadContextRecords === 154, "NYC Artist Coalition stored context count must remain 154.");
+  expect(engagementAggregate.distinctPublicAccounts === 178, "NYC Artist Coalition stored distinct-account count must remain 178.");
+
+  const council = engagement.filter(
+    (item) => item.stakeholderGroup === "nyc-council-member-account"
+  );
+  const expectedCouncilHandles = new Set([
+    "@rlespinal",
+    "@stephenlevin33",
+    "@justinbrannan",
+    "@carlinarivera",
+    "@jimmyvanbramer",
+    "@marklevinenyc",
+    "@bradlander"
+  ]);
+  const recoveredCouncilHandles = new Set(
+    council.map((item) => item.authorHandle.toLowerCase())
+  );
+  expect(council.length === 24, "NYC Artist Coalition Council-member-account floor must remain 24 records.");
+  expect(recoveredCouncilHandles.size === 7, "NYC Artist Coalition Council-member-account floor must remain seven accounts.");
+  expect(
+    [...expectedCouncilHandles].every((handle) => recoveredCouncilHandles.has(handle)),
+    "NYC Artist Coalition Council-member-account floor must retain all seven reviewed handles."
+  );
+  expect(
+    engagementAggregate.councilMemberAccountFloor?.recoveredInteractions === 24 &&
+      engagementAggregate.councilMemberAccountFloor?.distinctAccounts === 7,
+    "NYC Artist Coalition stored Council-member-account aggregates must remain 24 records across seven accounts."
+  );
+  const agencies = engagement.filter(
+    (item) => item.stakeholderGroup === "nyc-city-agency-account"
+  );
+  expect(agencies.length === 16, "NYC Artist Coalition city-agency-account floor must remain 16 records.");
+  expect(
+    new Set(agencies.map((item) => item.authorHandle.toLowerCase())).size === 2,
+    "NYC Artist Coalition city-agency-account floor must remain two accounts."
+  );
+
+  requireFragments("NYC Artist Coalition corpus model", corpusModel, [
+    "nycArtCPopulationAudit",
+    "profileCountObserved: 5124",
+    "uniqueItemsRecovered: 3367",
+    "unresolvedPopulationSlots: 1757",
+    "explicitAccountMentionRecords: 347",
+    "LEAD-NYCARTC-FULL-POPULATION-CORPUS-2026",
+    "SRC-X-NYCARTC-FULL-POPULATION-AUDIT-2026",
+    "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+    "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021",
+    "SRC-HELL-GATE-WHO-LEADS-NIGHTCLUB-RAIDS-2023",
+    "SRC-NYT-COMMERCIAL-RENTS-SURGING-2023",
+    "SRC-HELL-GATE-LUCYS-EVICTION-2024",
+    "SRC-HELL-GATE-SAINT-VITUS-RAID-2024",
+    "SRC-HELL-GATE-NIGHTCLUB-RAIDS-2025",
+    "SRC-CITY-STATE-COMMERCIAL-RENT-2026",
+    "SRC-GOTHAMIST-SMALL-BUSINESS-RENT-CONTROL-2026",
+    "SRC-BUSHWICK-DAILY-LEASE-RENEWALS-2026",
+    "CLM-NYCARTC-COMPLETE-SOCIAL-POPULATION",
+    "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY",
+    "INQ-NYCARTC-FULL-POPULATION-2026",
+    "100 percent disposition",
+    "not 100 percent item-level recovery",
+    "shared-account posts"
+  ]);
+  requireFragments("Knowledge-bank integration", framework, [
+    "nycArtCSocialCorpusIntake",
+    "nycArtCSocialCorpusSources",
+    "nycArtCSocialCorpusClaims",
+    "nycArtCSocialCorpusInquiries",
+    "nycArtCSocialCorpusPublicationDecisions",
+    "INQ-NYCARTC-FULL-POPULATION-2026"
+  ]);
+  requireFragments("Social archive model", socialArchive, [
+    "timelineItemsRecovered: 3367",
+    "24 direct public interactions from at least seven contemporaneous NYC Council-member accounts",
+    "347 explicit account mentions",
+    "154 search or thread-context records",
+    "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021"
+  ]);
+  requireFragments("Proof bank", proofs, [
+    'id: "nyc-artist-coalition-social-engagement"',
+    "24 direct public interactions from at least seven contemporaneous NYC Council-member accounts",
+    "501 rendered public search records from 178 accounts",
+    "347 explicit @NYCArtC mentions",
+    "154 separately marked search or thread-context records",
+    "Only seven Council members engaged"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    "technicalOperationsProofRows"
+  ]);
+  requireFragments("NYC Artist Coalition case study", fairRentCase, [
+    "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+    "council-social-engagement",
+    "not an official Council endorsement"
+  ]);
+  requireFragments("NYC Artist Coalition full-population documentation", archiveDoc, [
+    "3,367",
+    "1,757",
+    "5,124",
+    "100 percent disposition",
+    "not 100 percent item-level recovery",
+    "501",
+    "347",
+    "154",
+    "178",
+    "24 from at least 7 accounts",
+    "Olympia Kazi",
+    "1,772 posted link occurrences",
+    "1,241 unique public URLs",
+    "not a first-party platform export or deletion history",
+    "Keep `not recovered` distinct from `did not exist`"
+  ]);
+  requireFragments("NYC Artist Coalition anti-claims", antiClaims, [
+    "Jamie authored every `@NYCArtC` post",
+    "seven is the complete historical Council-member count",
+    "1,757 unresolved profile-count slots",
+    "501 rendered inbound-search records into 501 explicit mentions",
+    "official Council endorsement"
+  ]);
+
+  const publicBundle = [
+    populationLedger,
+    engagementLedger,
+    corpusModel,
+    framework,
+    socialArchive,
+    proofs,
+    technicalOperations,
+    fairRentCase,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public NYC Artist Coalition corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -1512,6 +1845,18 @@ export function runLaunchEvals(repoRoot) {
   const callNycPostLedger = readOptional(
     repoRoot,
     "docs/knowledge-bank/data/callnyc-public-post-ledger.json"
+  );
+  const nycArtCSocialCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/nycartc-social-corpus.ts"
+  );
+  const nycArtCPostLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/nycartc-public-post-ledger.json"
+  );
+  const nycArtCEngagementLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/nycartc-public-engagement-ledger.json"
   );
   const wowlistSocialCorpus = readOptional(
     repoRoot,
@@ -1557,6 +1902,10 @@ export function runLaunchEvals(repoRoot) {
   const callNycFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-callnyc-full-population-social-corpus.md"
+  );
+  const nycArtCFullPopulationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-nycartc-full-population-social-corpus.md"
   );
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
@@ -1984,6 +2333,34 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies post types, recognition posts, Council-member handles, issue pages, categories, and outbound URLs.",
         "Selected public claims distinguish intended reach from reciprocal engagement and issue rows from people or outcomes.",
         "Independent NYC School of Data recognition is selected while API announcements and unverifiable historical metrics remain reserve or research debt."
+      ]
+    })
+  );
+
+  const nycArtCFullPopulationMissing = evaluateNycArtCFullPopulationArchive({
+    populationLedger: nycArtCPostLedger,
+    engagementLedger: nycArtCEngagementLedger,
+    corpusModel: nycArtCSocialCorpus,
+    framework,
+    socialArchive,
+    proofs,
+    technicalOperations,
+    fairRentCase,
+    archiveDoc: nycArtCFullPopulationDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "nycartc-full-population-archive",
+      label: "NYC Artist Coalition full-population archive dispositions every slot and bounds engagement",
+      weight: 20,
+      hardGate: true,
+      missing: nycArtCFullPopulationMissing,
+      evidence: [
+        "All 5,124 current profile-count slots are dispositioned as 3,367 item-level recoveries and 1,757 explicit unresolved slots.",
+        "Item-level recomputation verifies relationships, eight theme families, campaign-hashtag floors, 1,241 unique outbound URLs, and all unresolved placeholders.",
+        "The inbound ledger distinguishes 347 explicit account mentions from 154 search or thread-context records within 501 rendered results from 178 accounts.",
+        "The selected public claim retains a 24-record floor across at least seven Council-member accounts without converting interaction into endorsement or causality."
       ]
     })
   );
