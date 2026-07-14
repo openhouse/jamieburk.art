@@ -18,6 +18,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## cross-project-material-operating-practice - Giving emerging work usable form
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public-safe archive summary / curated visual archive summary / Jamie review confirmation
+**Public wording:** Across civic, cultural, small-business, and technical work, Jamie gives emerging work usable form through documents, interfaces, facilitation artifacts, tools, spaces, and repeatable routines.
+**Detailed public-safe wording:** Jamie's work repeatedly connects abstract needs to material forms people can use: a mapped workflow, a public interface, a working document, a meeting artifact, a maintained space, or a repeatable hosting and handoff practice.
+**Where to project:** Internal proof bank only for now; possible future About or Colophon use after editorial review.
+**Why it matters:** Names the material continuity across projects without forcing every setting into one job title or treating collaborators as background.
+**Guardrail:** Treat photographs as corroborating context, not standalone proof of authorship, leadership, impact, consent, or publication rights. Project records remain the basis for project-specific claims.
+**Do not say:** The photo archive independently verifies every project claim; Jamie created every visible artifact; Jamie led every visible gathering; album membership is publication approval.
+**Protected boundaries:** Raw photographs and previews, private album and People metadata, unapproved identities and locations, images of minors or private life, and unapproved collaborator likenesses stay outside the repo.
+**Review owner:** Jamie / collaborator review required before publishing identifiable people
+**Last reviewed:** 2026-07-11
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  

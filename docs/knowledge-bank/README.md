@@ -13,6 +13,9 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+See `visual-evidence.md` for the public-safe findings and publication boundaries
+from the 2026 whole-library photo curation.
+
 ## Purpose
 
 The knowledge bank exists to:
@@ -38,6 +41,8 @@ The knowledge bank exists to:
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+- **Visual evidence note:** public-safe aggregate discoveries and editorial
+  limits, never raw photos or private library metadata.
 
 ## Core Rule
 
