@@ -77,4 +77,7 @@ workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot. The [NYC Artist Coalition campaign press
 index](projects/nyca-campaign-press-index.md) demonstrates time-bounded press
 corpus accession, placement deduplication, and article-level research queuing
-without automatic website projection.
+without automatic website projection. The [KC Town Hall CCED allocation
+note](research/2026-07-13-kc-town-hall-cced-allocation.md) demonstrates how to
+separate a recommendation, Council acceptance, appropriation, later withdrawal,
+and reappropriation without confusing allocation with receipt or expenditure.

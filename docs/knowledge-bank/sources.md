@@ -42,6 +42,26 @@ Article-body claims remain research leads until a close reading records atomic
 support, locators, uncertainty, and non-support. See
 [projects/nyca-campaign-press-index.md](projects/nyca-campaign-press-index.md).
 
+### Government Allocation Records
+
+Legislation detail pages, authenticated resolutions and ordinances, meeting
+actions, appropriation tables, agreements, payment records, and later
+reappropriation records establish different stages of a public-funding process.
+Keep those stages separate:
+
+- a board recommendation is not a Council vote;
+- Council acceptance is not an appropriation;
+- an appropriation is not an executed funding agreement;
+- an agreement is not a disbursement;
+- a disbursement is not expenditure or project completion.
+
+For KC Town Hall, Resolution 190649 records the CCED Board recommendation and
+Council acceptance; Ordinance 190642 records the $490,539 appropriation; and
+Ordinance 240317 later records withdrawal and reappropriation of the unused
+funds. Together they support a Council-approved allocation sequence, not a
+claim that KC Town Hall received or spent the money. See
+[the dated research note](research/2026-07-13-kc-town-hall-cced-allocation.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

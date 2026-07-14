@@ -173,6 +173,68 @@ test("campaign press census preserves every placement and its limits", () => {
   assert.doesNotMatch(pressIndex, /gothamist\.com\/news\/punk-blaz-signs-bill/);
 });
 
+test("KC Town Hall intake separates recommendation, appropriation, and use", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const intake = knowledgeBank.intakeItems.find(
+    (item) =>
+      item.id === "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13"
+  );
+
+  assert.ok(intake);
+  assert.equal(intake.status, "researching");
+  assert.equal(intake.projectionStatus, "no-public-projection");
+  assert.deepEqual(intake.relatedProofIds, [
+    "kc-town-hall-public-benefit-documentation"
+  ]);
+  assert.equal(intake.sourceIds.length, 3);
+  assert.equal(intake.candidateClaims.length, 0);
+
+  const resolution = sourceById.get(
+    "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26"
+  );
+  const appropriation = sourceById.get(
+    "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26"
+  );
+  const reappropriation = sourceById.get(
+    "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"
+  );
+  assert.ok(resolution);
+  assert.ok(appropriation);
+  assert.ok(reappropriation);
+  assert.ok(
+    resolution.doesNotEstablish.some((item) => /receipt or disbursement/i.test(item))
+  );
+  assert.ok(
+    appropriation.doesNotEstablish.some((item) => /expenditure/i.test(item))
+  );
+  assert.ok(
+    reappropriation.supportsGenerally.some((item) => /remained unused/i.test(item))
+  );
+
+  const propositionById = new Map(
+    intake.propositions.map((proposition) => [proposition.id, proposition])
+  );
+  assert.match(
+    propositionById.get("PROP-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019").text,
+    /appropriating \$490,539/
+  );
+  assert.match(
+    propositionById.get("PROP-KC-TOWN-HALL-WITHDRAWAL-REAPPROPRIATION-2024").text,
+    /remained unused/
+  );
+  assert.ok(
+    intake.tensions[0].correctionTriggers.some(
+      (trigger) => trigger.action === "replace"
+    )
+  );
+
+  const publicProof = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+  assert.match(publicProof, /\$490,539 public funding recommendation/);
+  assert.doesNotMatch(JSON.stringify(publicCitationRegistry), /SRC-KCMO-CCED/);
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");

@@ -373,6 +373,56 @@ const knowledgeBankInput = {
       supportsGenerally: ["Int 1156-2018 introduction", "enactment on December 15, 2019", "Local Law 220 of 2019", "MARCH reporting requirements", "30-day notice with exceptions", "establishment opportunity to provide relevant information", "machine-readable public reporting", "privacy limits"],
       doesNotEstablish: ["Jamie's role", "NYC Artist Coalition's role", "advocacy causality", "disbandment of MARCH", "elimination of all multi-agency nightlife enforcement"]
     },
+    {
+      id: "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+      title: "Resolution 190649: KC Town Hall CCED recommendation",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-09-26",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
+      assetUrl: "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      preferredPublicUrl: "canonical",
+      publicCitation: "City of Kansas City, Missouri, Resolution 190649, adopted as substituted September 26, 2019.",
+      publicNote: "The authenticated resolution records the CCED Sales Tax Board's July 16, 2019, vote to recommend $490,539 for KC Town Hall, the Council's acceptance of that recommendation, and authorization to negotiate a funding agreement of up to that amount with public-purpose and use restrictions.",
+      supportsGenerally: ["CCED Sales Tax Board recommendation of $490,539", "July 16, 2019 Board vote", "Council adoption on September 26, 2019", "Council acceptance of the Board recommendation", "authorization to negotiate a funding agreement up to $490,539"],
+      doesNotEstablish: ["Jamie's individual role", "execution of a funding agreement", "receipt or disbursement of funds", "expenditure of funds", "completion of the redevelopment project"]
+    },
+    {
+      id: "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+      title: "Ordinance 190642: Round Two CCED project appropriations",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-09-26",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=",
+      assetUrl: "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      preferredPublicUrl: "canonical",
+      publicCitation: "City of Kansas City, Missouri, Ordinance 190642, passed as substituted September 26, 2019.",
+      publicNote: "The authenticated ordinance appropriates Round Two CCED funds and lists $490,539 for KC Town Hall. Appropriation is a Council allocation decision, not evidence that KC Town Hall received or spent the funds.",
+      supportsGenerally: ["Council passage on September 26, 2019", "Round Two CCED project appropriations", "$490,539 appropriation for KC Town Hall", "Council allocation following the CCED recommendation"],
+      doesNotEstablish: ["Jamie's individual role", "execution of a funding agreement", "receipt or disbursement of funds", "expenditure of funds", "completion of the redevelopment project"]
+    },
+    {
+      id: "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28",
+      title: "Ordinance 240317: Reappropriation of unused KC Town Hall funds",
+      organization: "City of Kansas City, Missouri",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2024-03-28",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      preferredPublicUrl: "canonical",
+      publicCitation: "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      publicNote: "The later Council record says Ordinance 190642 appropriated $490,539 to the KC Town Hall project account, that KC Town Hall subsequently withdrew from the project, and that the funds remained unused before being reappropriated to the Housing Budget Fund.",
+      supportsGenerally: ["Ordinance 190642 appropriated $490,539 to the KC Town Hall project account", "KC Town Hall later withdrew", "the allocation remained unused", "Council reappropriated the unused funds in 2024"],
+      doesNotEstablish: ["why KC Town Hall withdrew", "Jamie's individual role in the withdrawal", "receipt or expenditure of the allocation", "whether a funding agreement was ever executed", "the property's current status"]
+    },
     ...campaignPressSources
   ],
   claims: [
@@ -1121,6 +1171,124 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-12",
       reviewedAt: "2026-07-12",
       reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13",
+      title: "KC Town Hall CCED recommendation, Council appropriation, and later reappropriation",
+      project: "kc-town-hall",
+      kind: "source-link",
+      summary: "Official Kansas City records show that the CCED Sales Tax Board recommended $490,539 for KC Town Hall, the City Council accepted the recommendation and appropriated that amount in 2019, and the Council later recorded that KC Town Hall withdrew and the unused funds were reappropriated in 2024.",
+      status: "researching",
+      sourceIds: [
+        "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+        "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-KC-TOWN-HALL-CCED-BOARD-RECOMMENDATION-2019",
+          text: "On July 16, 2019, the CCED Sales Tax Board voted to recommend $490,539 in funding for KC Town Hall.",
+          status: "direct-support",
+          sourceIds: ["SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26"],
+          sourceSupport: ["authenticated resolution recital identifying the Board vote date, project, and recommended amount"],
+          boundaries: ["The Board recommendation was not itself a Council appropriation, executed agreement, disbursement, or expenditure."],
+          decisionUse: "Establishes the formal recommendation that preceded the Council's allocation decision."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
+          text: "On September 26, 2019, the Kansas City Council adopted Resolution 190649, accepting the CCED Board's recommendation and authorizing negotiation of a funding agreement with KC Town Hall for up to $490,539.",
+          status: "direct-support",
+          sourceIds: ["SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26"],
+          sourceSupport: ["official legislation status and authenticated resolution sections accepting the recommendation and authorizing negotiation"],
+          boundaries: ["Authorization to negotiate does not establish that an agreement was executed or that funds were received or spent.", "The source does not establish Jamie's individual role in securing the vote."],
+          decisionUse: "Shows that the proposal advanced from advisory recommendation to formal Council acceptance."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+          text: "On September 26, 2019, the Kansas City Council passed Ordinance 190642, appropriating $490,539 to the KC Town Hall project account as part of the Round Two CCED awards.",
+          status: "direct-support",
+          sourceIds: ["SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26", "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"],
+          sourceSupport: ["authenticated 2019 appropriation table listing KC Town Hall and $490,539", "2024 Council recital identifying the same project-account appropriation"],
+          boundaries: ["Appropriation is a Council allocation decision, not proof of an executed agreement, receipt, disbursement, expenditure, construction, or project completion.", "The official records do not provide a member-by-member roll call, so do not describe the vote as unanimous."],
+          decisionUse: "Corrects recommendation-only understatement while retaining the legal and operational distinction between appropriation and use."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-WITHDRAWAL-REAPPROPRIATION-2024",
+          text: "A 2024 Council record states that KC Town Hall later withdrew, the $490,539 allocation remained unused, and the Council reappropriated those funds to the Housing Budget Fund.",
+          status: "direct-support",
+          sourceIds: ["SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"],
+          sourceSupport: ["official 2024 ordinance recitals and reappropriation action"],
+          boundaries: ["The record does not explain why KC Town Hall withdrew or establish the property's current status.", "Do not imply that the allocation was received, spent, or clawed back from KC Town Hall."],
+          decisionUse: "Prevents the 2019 appropriation from being misrepresented as a completed funding or redevelopment outcome."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-ALLOCATION-SEQUENCE-BOUNDED",
+          text: "KC Town Hall advanced from a CCED Board recommendation to Council acceptance and appropriation of $490,539, but the public record does not establish receipt or expenditure and later says the project withdrew and the unused allocation was reappropriated.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-KCMO-CCED-RESOLUTION-190649-2019-09-26",
+            "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26",
+            "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28"
+          ],
+          sourceSupport: ["Board recommendation", "Council acceptance", "Council appropriation", "later withdrawal and reappropriation of unused funds"],
+          boundaries: ["This institutional sequence does not establish Jamie's individual contribution or policy causality.", "Do not compress recommendation, appropriation, agreement, receipt, spending, and completion into a single funding claim."],
+          decisionUse: "Provides the strongest currently defensible outcome wording for a future governed-proof review without projecting it directly to the website."
+        }
+      ],
+      tensions: [
+        {
+          id: "TENSION-KC-TOWN-HALL-RECOMMENDATION-VS-APPROPRIATION",
+          propositionIds: [
+            "PROP-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
+            "PROP-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+            "PROP-KC-TOWN-HALL-WITHDRAWAL-REAPPROPRIATION-2024",
+            "PROP-KC-TOWN-HALL-ALLOCATION-SEQUENCE-BOUNDED"
+          ],
+          relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
+          description: "The governed proof currently says the work included a $490,539 public funding recommendation and instructs editors to retain recommendation-only language unless final funding is confirmed. Official records now establish Council acceptance and appropriation, while also establishing that the allocation was later unused and reappropriated.",
+          currentPosition: "The recommendation wording remains technically true but materially understates the 2019 Council action. A stronger public claim must say Council accepted and appropriated the amount while explicitly withholding receipt, spending, and completion and preserving the 2024 withdrawal outcome.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-KC-TOWN-HALL-RECOMMENDATION-CONFIRM",
+              targetProofId: "kc-town-hall-public-benefit-documentation",
+              condition: "A projection review deliberately retains recommendation-only wording as a conservative summary after considering the 2019 and 2024 Council records.",
+              action: "confirm",
+              requiredEvidence: ["Resolution 190649", "Ordinance 190642", "Ordinance 240317", "documented editorial decision"],
+              reason: "Recommendation-only wording is narrower than the complete record but does not falsely imply receipt, expenditure, or completion."
+            },
+            {
+              id: "TRIGGER-KC-TOWN-HALL-APPROPRIATION-REPLACE",
+              targetProofId: "kc-town-hall-public-benefit-documentation",
+              condition: "A governed-proof review approves the fuller institutional sequence for public use.",
+              action: "replace",
+              requiredEvidence: ["authenticated Resolution 190649", "authenticated Ordinance 190642", "Ordinance 240317", "review of all affected projections"],
+              reason: "The official record supports Council acceptance and appropriation, making recommendation-only wording an avoidable understatement when the later unused-funds boundary is also visible.",
+              replacementGuidance: "Replace recommendation-only language with wording that the Council accepted the CCED Board's recommendation and appropriated $490,539, while stating or otherwise preserving that the records do not establish receipt or spending and that KC Town Hall later withdrew and the unused funds were reappropriated."
+            }
+          ]
+        }
+      ],
+      researchQuestions: [
+        "Does a public funding agreement establish whether an agreement with KC Town Hall was executed after Resolution 190649?",
+        "Do public finance or contract records establish whether any portion of the allocation was ever disbursed before the 2024 reappropriation?",
+        "Do public minutes or project records explain the timing and reason for KC Town Hall's withdrawal without exposing private legal, financial, property, or stakeholder information?",
+        "Which public records or collaborator accounts establish Jamie's specific contribution to the proposal, planning, documentation, and municipal-review process?"
+      ],
+      boundaries: [
+        "Use Council-approved and appropriated language, not grant received, funded, disbursed, spent, constructed, or completed.",
+        "Keep the 2024 withdrawal and unused-funds reappropriation attached to any outcome summary.",
+        "Do not infer Jamie's individual causality from government records that name the project but not his contribution.",
+        "Do not publish private legal, financial, property, banking, or stakeholder records.",
+        "Do not project this intake item directly to the website; reconcile and approve the governed proof first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-13",
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex public-record review"]
     }
   ],
   pages: [{
