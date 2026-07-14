@@ -545,6 +545,39 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-12"
   },
   {
+    id: "wowlist-public-support-surface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "The public account Jamie established became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, local-calendar onboarding, and project lineage.",
+    shortWording: "Turned a shared project identity into a direct public support surface",
+    detailedPublicWording:
+      "A full-population review recovered all 38 items in the current @wowlist profile control. All six account replies functioned as product support, onboarding, or local-calendar identity guidance, while account establishment and individual post authorship remain separately bounded.",
+    sourceBasis:
+      "Six public @wowlist replies, a 38-record authenticated public-profile ledger, and Jamie's separately held account-establishment confirmation.",
+    whyItMatters:
+      "Shows product operations in use: public identity, information architecture, onboarding, event submission, and community handoff worked together as one service surface.",
+    guardrail:
+      "Credit Jamie with establishing the account and co-building the product; do not assign individual post authorship, adoption, or impact from the social corpus.",
+    doNotSay: [
+      "Jamie personally wrote all six replies",
+      "X was WOWList's only support channel",
+      "The current 38-post population is a complete platform export",
+      "The social record proves adoption scale or impact"
+    ],
+    protectedBoundaries: [
+      "Authentication details",
+      "Private messages",
+      "Account analytics",
+      "Unrecoverable individual post authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["product-support", "onboarding", "public-identity-systems", "event-workflows"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "sunday-dinner-196-participation-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -808,7 +841,8 @@ export const technicalOperationsProofRows = [
       "technical-operations-operating-backbone",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
-      "wowlist-community-platform"
+      "wowlist-community-platform",
+      "wowlist-public-support-surface"
     ]
   },
   {

@@ -11,6 +11,7 @@ import {
   evaluateKcTownHallCouncilAllocation,
   evaluateKnowledgeLifecycle,
   evaluateProjectSocialArchiveProduction,
+  evaluateWowlistFullPopulationArchive,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
 
@@ -469,7 +470,7 @@ const projectSocialArchiveFixture = {
     'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist"',
     "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 107",
     "profilePostsObserved: 5124 followersObserved: 1338",
-    "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 37",
+    "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 38",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
     "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
     "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
@@ -607,6 +608,67 @@ test("CallNYC full-population archive rejects authentication and private-path ma
     archiveDoc: `${callNycFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
   });
 
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+const wowlistFullPopulationFixture = {
+  ledger: readRepoFile("docs/knowledge-bank/data/wowlist-public-post-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  wowlistCase: readRepoFile("apps/www/src/content/work/wowlist.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("WOWList full-population archive passes item-level reconciliation and public boundaries", () => {
+  assert.deepEqual(
+    evaluateWowlistFullPopulationArchive(wowlistFullPopulationFixture),
+    []
+  );
+});
+
+test("WOWList full-population archive rejects a silently dropped item", () => {
+  const ledger = JSON.parse(wowlistFullPopulationFixture.ledger);
+  ledger.records.pop();
+  const failures = evaluateWowlistFullPopulationArchive({
+    ...wowlistFullPopulationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("38 item-level records")));
+  assert.ok(failures.some((failure) => failure.includes("must contain")));
+});
+
+test("WOWList full-population archive rejects inflated aggregates and erased authorship boundaries", () => {
+  const ledger = JSON.parse(wowlistFullPopulationFixture.ledger);
+  ledger.aggregateFindings.directProductSupportReplies = 38;
+  const failures = evaluateWowlistFullPopulationArchive({
+    ...wowlistFullPopulationFixture,
+    ledger: JSON.stringify(ledger),
+    antiClaims: wowlistFullPopulationFixture.antiClaims
+      .replace("assign shared-account posts to Jamie without direct evidence", "")
+      .replace("proof of broad adoption, support volume, satisfaction, audience, or impact", "")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("stored aggregate findings")));
+  assert.ok(failures.some((failure) => failure.includes("assign shared-account posts")));
+  assert.ok(failures.some((failure) => failure.includes("proof of broad adoption")));
+});
+
+test("WOWList full-population archive rejects full post text and private browser material", () => {
+  const ledger = JSON.parse(wowlistFullPopulationFixture.ledger);
+  ledger.records[0].fullText = "A copied third-party status";
+  const failures = evaluateWowlistFullPopulationArchive({
+    ...wowlistFullPopulationFixture,
+    ledger: JSON.stringify(ledger),
+    archiveDoc: `${wowlistFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must not reproduce full post")));
   assert.ok(
     failures.some((failure) => failure.includes("authentication, session, or private-path"))
   );

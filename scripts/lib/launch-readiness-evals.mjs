@@ -641,7 +641,7 @@ export function evaluateProjectSocialArchiveProduction({
     "followersObserved: 1338",
     "profilePostsObserved: 38",
     "followersObserved: 47",
-    "timelineItemsRecovered: 37",
+    "timelineItemsRecovered: 38",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
     "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
     "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
@@ -967,6 +967,241 @@ export function evaluateCallNycFullPopulationArchive({
   return missing;
 }
 
+export function evaluateWowlistFullPopulationArchive({
+  ledger,
+  corpusModel,
+  framework,
+  proofs,
+  workData,
+  wowlistCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("WOWList public-post ledger is not valid JSON.");
+    return missing;
+  }
+
+  const population = parsed.populationAudit ?? {};
+  const aggregate = parsed.aggregateFindings ?? {};
+  const corpus = parsed.records ?? [];
+  const relationshipCount = (relationship) =>
+    corpus.filter((item) => item.relationship === relationship).length;
+  const themeCount = (theme) =>
+    corpus.filter((item) => item.primaryTheme === theme).length;
+
+  expect(population.profileCountObserved === 38, "WOWList observed profile population must remain 38.");
+  expect(population.postsTabItemsRecovered === 37, "WOWList Posts-tab recovery must remain 37.");
+  expect(population.repliesTabItemsRecovered === 38, "WOWList Replies-tab recovery must remain 38.");
+  expect(population.accountPostsRecovered === 16, "WOWList account-post count must remain 16.");
+  expect(population.accountRepliesRecovered === 6, "WOWList account-reply count must remain 6.");
+  expect(population.accountAuthoredStatusesRecovered === 22, "WOWList account-authored count must remain 22.");
+  expect(population.repostsRecovered === 16, "WOWList repost count must remain 16.");
+  expect(population.distinctRepostSourceAccounts === 13, "WOWList distinct repost-source count must remain 13.");
+  expect(population.uniqueItemsRecovered === 38, "WOWList unique item-level recovery must remain 38.");
+  expect(population.unresolvedPopulationSlots === 0, "WOWList current-profile audit must retain zero unresolved slots.");
+  expect(population.dispositionTotal === 38, "WOWList disposition total must remain 38.");
+  expect(
+    population.uniqueItemsRecovered + population.unresolvedPopulationSlots === population.profileCountObserved,
+    "Recovered and unresolved WOWList slots must reconcile to the observed profile count."
+  );
+  expect(
+    population.accountPostsRecovered + population.accountRepliesRecovered === population.accountAuthoredStatusesRecovered,
+    "WOWList posts and replies must reconcile to account-authored statuses."
+  );
+  expect(
+    population.accountAuthoredStatusesRecovered + population.repostsRecovered === population.uniqueItemsRecovered,
+    "WOWList account-authored statuses and reposts must reconcile to recovered items."
+  );
+
+  expect(corpus.length === 38, "WOWList ledger must contain 38 item-level records.");
+  expect(relationshipCount("account-post") === 16, "WOWList ledger must contain 16 account posts.");
+  expect(relationshipCount("account-reply") === 6, "WOWList ledger must contain six account replies.");
+  expect(relationshipCount("repost") === 16, "WOWList ledger must contain 16 reposts.");
+  expect(new Set(corpus.map((item) => item.statusId)).size === corpus.length, "WOWList ledger status IDs must be unique.");
+  expect(new Set(corpus.map((item) => item.statusUrl)).size === corpus.length, "WOWList ledger status URLs must be unique.");
+  expect(
+    corpus.every(
+      (item) =>
+        typeof item.contentSummary === "string" &&
+        item.contentSummary.length > 12 &&
+        typeof item.publishedAt === "string" &&
+        /^https:\/\/x\.com\//.test(item.statusUrl)
+    ),
+    "Every WOWList record must retain a public-safe summary, date, and canonical status URL."
+  );
+  expect(
+    corpus.every(
+      (item) =>
+        !("text" in item) &&
+        !("fullText" in item) &&
+        !("rawText" in item)
+    ),
+    "WOWList public ledger must not reproduce full post or third-party repost text."
+  );
+
+  const expectedThemes = {
+    "product-support-and-onboarding": 6,
+    "product-community-infrastructure": 3,
+    "event-distribution": 5,
+    "scene-knowledge-and-connection": 3,
+    "civic-mobilization-and-care": 5,
+    "civic-care-amplification": 5,
+    "platform-use-and-event-amplification": 5,
+    "community-scene-context": 6
+  };
+  for (const [theme, count] of Object.entries(expectedThemes)) {
+    expect(themeCount(theme) === count, `WOWList ${theme} count must recompute to ${count}.`);
+    expect(aggregate.themeCounts?.[theme] === count, `WOWList stored ${theme} aggregate must remain ${count}.`);
+  }
+  expect(
+    Object.values(expectedThemes).reduce((sum, count) => sum + count, 0) === corpus.length,
+    "WOWList theme dispositions must reconcile to all 38 records."
+  );
+
+  const repostAuthors = new Set(
+    corpus
+      .filter((item) => item.relationship === "repost")
+      .map((item) => item.authorHandle.toLowerCase())
+  );
+  const allOutbound = corpus.flatMap((item) => item.outboundLinks ?? []);
+  const uniqueShortUrls = new Set(allOutbound.map((link) => link.shortUrl));
+  const uniqueDestinations = new Set(allOutbound.map((link) => link.destinationUrl));
+  expect(repostAuthors.size === 13, "WOWList repost-source accounts must recompute to 13.");
+  expect(allOutbound.length === 35, "WOWList short-link occurrences must recompute to 35.");
+  expect(uniqueShortUrls.size === 35, "WOWList unique short URLs must recompute to 35.");
+  expect(uniqueDestinations.size === 34, "WOWList unique resolved destinations must recompute to 34.");
+  expect(
+    allOutbound.every(
+      (link) =>
+        /^https?:\/\/t\.co\//.test(link.shortUrl) &&
+        /^https?:\/\//.test(link.destinationUrl) &&
+        Number.isInteger(link.observedHttpStatus)
+    ),
+    "Every WOWList outbound short link must retain a public destination and observed HTTP status."
+  );
+  expect(
+    aggregate.directProductSupportReplies === themeCount("product-support-and-onboarding") &&
+      aggregate.eventDistributionPosts === themeCount("event-distribution") &&
+      aggregate.sceneKnowledgePosts === themeCount("scene-knowledge-and-connection") &&
+      aggregate.productCommunityInfrastructurePosts === themeCount("product-community-infrastructure") &&
+      aggregate.civicCareAuthoredPosts === themeCount("civic-mobilization-and-care") &&
+      aggregate.civicCareReposts === themeCount("civic-care-amplification") &&
+      aggregate.platformUseAndEventAmplificationReposts === themeCount("platform-use-and-event-amplification") &&
+      aggregate.shortUrlOccurrences === allOutbound.length &&
+      aggregate.uniqueShortUrls === uniqueShortUrls.size &&
+      aggregate.uniqueResolvedDestinations === uniqueDestinations.size,
+    "WOWList stored aggregate findings must match the item-level ledger."
+  );
+
+  requireFragments("WOWList corpus model", corpusModel, [
+    "wowlistPopulationAudit",
+    "uniqueItemsRecovered: 38",
+    "unresolvedPopulationSlots: 0",
+    "directProductSupportReplies: 6",
+    "LEAD-WOWLIST-FULL-POPULATION-CORPUS-2026",
+    "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
+    "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015",
+    "SRC-GOOD-TIMES-ZINES-2-2015",
+    "SRC-KQED-GHOST-SHIP-VIGIL-2016",
+    "SRC-MEOW-WOLF-DIY-FUND-2016",
+    "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION",
+    "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+    "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING",
+    "CLM-WOWLIST-CIVIC-CARE-CONTINUITY",
+    "INQ-WOWLIST-FULL-POPULATION-2026",
+    "not a platform export",
+    "do not assign individual post authorship",
+    "does not make WOWList the author or organizer"
+  ]);
+  requireFragments("WOWList framework integration", framework, [
+    "wowlistSocialCorpusIntake",
+    "wowlistSocialCorpusSources",
+    "wowlistSocialCorpusClaims",
+    "wowlistSocialCorpusInquiries",
+    "wowlistSocialCorpusPublicationDecisions",
+    "wowlistSocialCorpusProofCoverage",
+    "public-support-surface"
+  ]);
+  requireFragments("WOWList proof bank", proofs, [
+    'id: "wowlist-public-support-surface"',
+    "six surviving replies",
+    "Jamie personally wrote all six replies",
+    "The social record proves adoption scale or impact"
+  ]);
+  requireFragments("WOWList work metadata", workData, [
+    '"wowlist-public-support-surface"',
+    "Public support surface",
+    "six direct support and onboarding replies"
+  ]);
+  requireFragments("WOWList case study", wowlistCase, [
+    "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+    "public-support-surface",
+    "complete census of the 38 items",
+    "does not identify which teammate composed each post"
+  ]);
+  requireFragments("WOWList full-population documentation", archiveDoc, [
+    "100 percent recovery",
+    "16 account posts",
+    "6 account replies",
+    "16 reposts from 13 other public accounts",
+    "35 posted `t.co` URLs to 34 unique destinations",
+    "All six account replies",
+    "Scene knowledge",
+    "Civic mobilization and care",
+    "not press coverage, reviews, or endorsements of WOWList",
+    "does not make WOWList or Jamie their organizer"
+  ]);
+  requireFragments("WOWList anti-claims", antiClaims, [
+    "complete platform export or deletion history",
+    "assign shared-account posts to Jamie without direct evidence",
+    "proof of broad adoption, support volume, satisfaction, audience, or impact",
+    "reposted and linked work as something WOWList organized or authored"
+  ]);
+
+  const publicBundle = [
+    ledger,
+    corpusModel,
+    framework,
+    proofs,
+    workData,
+    wowlistCase,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public WOWList corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -998,6 +1233,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/callnyc-public-post-ledger.json"
   );
+  const wowlistSocialCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts"
+  );
+  const wowlistPostLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/wowlist-public-post-ledger.json"
+  );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const campaignPressDoc = readOptional(
     repoRoot,
@@ -1026,6 +1269,10 @@ export function runLaunchEvals(repoRoot) {
   const callNycFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-callnyc-full-population-social-corpus.md"
+  );
+  const wowlistFullPopulationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -1261,7 +1508,7 @@ export function runLaunchEvals(repoRoot) {
     schema,
     records,
     framework,
-    socialArchive: `${socialArchive}\n${callNycSocialCorpus}`,
+    socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -1413,7 +1660,7 @@ export function runLaunchEvals(repoRoot) {
       missing: projectSocialArchiveMissing,
       evidence: [
         "Three verified project handles and four coalition campaign identities are mapped without inventing accounts for other projects.",
-        "Authenticated recovery counts are explicit floors, with near-complete visible timelines distinguished from full platform exports.",
+        "Authenticated recovery counts retain explicit population controls, unresolved slots, and platform-export boundaries.",
         "Council-member interaction counts distinguish direct engagement, campaign ecology, officeholding, and official endorsement.",
         "Jamie's account-establishment role remains distinct from shared post authorship and collective campaign outcomes."
       ]
@@ -1444,6 +1691,32 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies post types, recognition posts, Council-member handles, issue pages, categories, and outbound URLs.",
         "Selected public claims distinguish intended reach from reciprocal engagement and issue rows from people or outcomes.",
         "Independent NYC School of Data recognition is selected while API announcements and unverifiable historical metrics remain reserve or research debt."
+      ]
+    })
+  );
+
+  const wowlistFullPopulationMissing = evaluateWowlistFullPopulationArchive({
+    ledger: wowlistPostLedger,
+    corpusModel: wowlistSocialCorpus,
+    framework,
+    proofs,
+    workData,
+    wowlistCase,
+    archiveDoc: wowlistFullPopulationDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "wowlist-full-population-archive",
+      label: "WOWList full-population archive reconciles every current-profile item and bounds use claims",
+      weight: 20,
+      hardGate: true,
+      missing: wowlistFullPopulationMissing,
+      evidence: [
+        "All 38 items in the current live-profile control are recovered and classified at item level.",
+        "Item-level recomputation verifies post types, themes, repost sources, and all 35 posted short URLs.",
+        "The selected portfolio claim makes public support and onboarding concrete without assigning individual post authorship.",
+        "Scene knowledge and civic-care findings remain available in reserve without converting shared resources into authorship, adoption, or impact."
       ]
     })
   );

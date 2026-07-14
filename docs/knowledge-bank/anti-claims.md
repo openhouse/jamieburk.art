@@ -70,8 +70,11 @@ use are independently recovered.
 ## WOWList
 
 Do not name collaborators unless approved.
-Do not use one community-created tutorial as proof of broad adoption or treat
-the social profile as a complete historical export.
+Do not use one community-created tutorial or the 38-record social corpus as
+proof of broad adoption, support volume, satisfaction, audience, or impact.
+Do not call the current-profile census a complete platform export or deletion
+history, assign shared-account posts to Jamie without direct evidence, or treat
+reposted and linked work as something WOWList organized or authored.
 
 ## 196 / Sunday Dinner
 

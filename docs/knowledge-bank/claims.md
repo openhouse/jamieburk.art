@@ -258,6 +258,66 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-12
 
+## wowlist-public-support-surface - Public product support and onboarding
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Public wording:** The public account Jamie established became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, local-calendar onboarding, and project lineage.
+**Detailed public-safe wording:** Full-population review recovered all 38 items in the current `@wowlist` profile control. All six account replies functioned as product support, onboarding, or local-calendar identity guidance.
+**Where to project:** WOWList case study and Technical Operations.
+**Why it matters:** Makes product operations visible through real public support behaviors rather than architecture alone.
+**Guardrail:** Credit Jamie with account establishment and co-building the product; do not assign individual post authorship or infer the full support workload.
+**Do not say:** Jamie wrote all six replies; X was the only support channel; 38 posts prove adoption or impact; the census is a platform export.
+**Protected boundaries:** Authentication, private messages, account analytics, and unrecoverable individual authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-complete-social-population - Current-profile census
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public-source research run
+**Public wording:** All 38 items in the July 2026 live-profile control were recovered: 16 account posts, six account replies, and 16 reposts from 13 other public accounts.
+**Detailed public-safe wording:** Cross-tab reconciliation recovered every item in the current profile control and preserved one item-level disposition per status ID.
+**Where to project:** Knowledge-bank reserve and archival method documentation.
+**Why it matters:** Establishes a closed, auditable research population for future composition without turning profile count into impact.
+**Guardrail:** Complete means the current profile control is fully reconciled; it is not a platform export or deletion history.
+**Do not say:** No older post was deleted; Jamie authored every item; 38 posts measure adoption or impact.
+**Protected boundaries:** Authentication, private messages, account analytics, raw browser state, and full third-party post text stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-scene-knowledge-routing - DIY scene knowledge routing
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public source / archived public source
+**Public wording:** Three account posts routed practical and historical knowledge about grassroots cultural infrastructure and connections among DIY scenes.
+**Detailed public-safe wording:** Recovered posts linked an all-ages music manual and reporting about documenting and connecting geographically separated grassroots arts spaces.
+**Where to project:** Knowledge-bank reserve for cultural-infrastructure, public-memory, and community-platform contexts.
+**Why it matters:** Shows that the account functioned as a knowledge-routing surface in addition to distributing events.
+**Guardrail:** The linked Grasstronaut and Good Times articles supply mission context; they are not coverage or endorsements of WOWList.
+**Do not say:** WOWList authored the articles; the publications reviewed WOWList; three links prove nationwide impact.
+**Protected boundaries:** Do not add private organizer context or imply endorsement, authorship, adoption, or audience analytics.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-civic-care-continuity - Public gathering and care
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public source
+**Public wording:** Five account posts and five reposts center public gathering, mutual aid, mourning, DIY-space safety, or cultural-space support.
+**Detailed public-safe wording:** The public corpus routes demonstrations, organizing calendars, Standing Rock support, Ghost Ship mutual aid and memorials, DIY-space safety advocacy, and a cultural-space fund.
+**Where to project:** Knowledge-bank reserve for cultural-infrastructure, civic-care, and social-practice contexts.
+**Why it matters:** Preserves a bounded continuity between event-distribution infrastructure and the public conditions in which cultural communities gather and survive.
+**Guardrail:** Sharing and reposting document public routing; they do not establish organizing credit, authorship, participation, causality, or impact.
+**Do not say:** WOWList organized every amplified effort; Jamie authored every resource; social posts alone demonstrate civic impact.
+**Protected boundaries:** Do not publish private participation, organizer, beneficiary, donor, account, or analytics data.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
 **Status:** Careful  

@@ -38,8 +38,8 @@ export const socialArchiveAccountMap = [
     profilePostsObserved: 38,
     followingObserved: 57,
     followersObserved: 47,
-    timelineItemsRecovered: 37,
-    recoveryNote: "A near-complete visible historical profile recovery; one of the 38 profile-count items was not recovered."
+    timelineItemsRecovered: 38,
+    recoveryNote: "Cross-tab reconciliation recovered all 38 items in the July 2026 live-profile control: 16 account posts, six account replies, and 16 reposts from 13 public accounts."
   }
 ] as const;
 
@@ -76,7 +76,7 @@ export const socialArchiveIntake = [
     ],
     notes: [
       "Authenticated read-only recovery was necessary to see historical timelines, but no session, credential, cookie, account-recovery, or private-message data entered the repository.",
-      "Recovered counts are documented item-level results, not claims of platform-export completeness; the full CallNYC population audit now dispositions 107 recovered items and three unresolved count slots.",
+      "Recovered counts are documented item-level results, not claims of platform-export completeness; the full CallNYC population audit dispositions 107 recovered items and three unresolved count slots, while the WOWList audit recovers all 38 items in its current live-profile control.",
       "Jamie confirms establishing the accounts; public timelines do not identify who authored every team post."
     ]
   }
@@ -116,8 +116,8 @@ export const socialArchiveSources = [
     kind: "research-run",
     visibility: "public",
     preservationStatus: "live",
-    capturedAt: "2026-07-13",
-    accessedAt: "2026-07-13",
+    capturedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
     canonicalUrl: "https://x.com/CallNYCapp",
     preferredPublicUrl: "canonical",
     publicCitation: "Authenticated read-only review of the public @CallNYCApp profile and timeline, July 13, 2026.",
@@ -152,10 +152,10 @@ export const socialArchiveSources = [
     accessedAt: "2026-07-13",
     canonicalUrl: "https://x.com/wowlist",
     preferredPublicUrl: "canonical",
-    publicCitation: "Authenticated read-only review of the public @wowlist profile and timeline, July 13, 2026.",
-    publicNote: "The profile showed 38 posts; scrolling recovered 37 visible timeline items, including the public Sunday Dinner origin statement and a community-created tutorial.",
-    supportsGenerally: ["the verified WOW List handle", "near-complete visible timeline recovery", "Sunday Dinner origin context", "community-created tutorial evidence"],
-    doesNotEstablish: ["a complete platform export", "broad adoption by itself", "authorship of every post", "current platform activity"]
+    publicCitation: "Authenticated read-only review of the public @wowlist profile and timeline, July 14, 2026.",
+    publicNote: "The profile showed 38 posts. Cross-tab reconciliation recovered all 38 current-profile items: 16 account posts, six account replies, and 16 reposts from 13 other public accounts.",
+    supportsGenerally: ["the verified WOW List handle", "complete recovery of the 38-item live-profile control", "Sunday Dinner origin context", "community-created tutorial evidence"],
+    doesNotEstablish: ["a complete platform export or deletion history", "broad adoption by itself", "authorship of every post", "current platform activity"]
   },
   {
     id: "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026",
@@ -414,13 +414,13 @@ export const socialArchiveInquiries = [
     id: "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
     project: "career-proof-system",
     question: "What public project-account material can be recovered without mistaking an authenticated visible timeline for a complete platform export?",
-    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 107 of 110 profile-count items for @CallNYCApp across the Posts and Replies surfaces and 37 of 38 for @wowlist.", "Sampled @NYCArtC through campaign and public-actor queries because its 5,124-post active profile was not practical to treat as a scrolling export."],
+    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 107 of 110 profile-count items for @CallNYCApp and all 38 current-profile items for @wowlist across the Posts and Replies surfaces.", "Sampled @NYCArtC through campaign and public-actor queries because its 5,124-post active profile was not practical to treat as a scrolling export."],
     runAt: "2026-07-13",
     resultStatus: "partially-recovered",
     findings: ["Verified @CallNYCApp, @NYCArtC, and @wowlist as public project accounts.", "Verified that Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC used the shared @NYCArtC identity.", "Recovered 53 #LetNYCDance, 40 #SaveNYCSpaces, 34 #TalksNotRaids, and 27 #FairRentNYC account-authored search results as non-exhaustive floors.", "No verified dedicated account was recovered for the other portfolio projects reviewed in this pass."],
     limitations: ["X search and scrolling are incomplete and can change over time.", "Profile post totals can include items not returned by visible scrolling.", "No account export, analytics dashboard, private messages, or nonpublic engagement data was accessed.", "Reposts by a project account do not establish that the original author endorsed the project."],
     sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026"],
-    publicSummary: "An authenticated read-only pass verified three project accounts and recovered bounded public timeline evidence; CallNYC has a separate full-population disposition audit, while no result is presented as a platform export."
+    publicSummary: "An authenticated read-only pass verified three project accounts and recovered bounded public timeline evidence; separate population audits disposition CallNYC's 110-item profile control and recover all 38 items in WOWList's current profile control, while neither is presented as a platform export."
   },
   {
     id: "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",

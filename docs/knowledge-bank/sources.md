@@ -28,8 +28,9 @@ Approved public artifact examples for this launch pass include:
   2016, including an archived post and resolvable retweet object.
 - Authenticated read-only public-profile inventories for `@CallNYCApp`,
   `@NYCArtC`, and `@wowlist`. The CallNYC full-population audit dispositions
-  107 recovered items and three unresolved count slots; none is presented as a
-  complete platform export.
+  107 recovered items and three unresolved count slots; the WOWList audit
+  recovers all 38 items in its current live-profile control. Neither is
+  presented as a complete platform export.
 - A public 107-record CallNYC status and URL ledger preserving every
   recoverable public item from the 110-item observed population.
 - Noel Hidalgo's March 2016 NYC School of Data recap, which featured CallNYC
@@ -40,6 +41,9 @@ Approved public artifact examples for this launch pass include:
   interacting with `@NYCArtC` across coalition campaign contexts.
 - WOW List's 2014 public Sunday Dinner origin post and 2015 public
   community-created tutorial post.
+- A public 38-record WOWList status and URL ledger, six support and onboarding
+  replies, and close-read source context from Grasstronaut, Good Times, KQED,
+  and Meow Wolf.
 - Daisy Prince's 2018 Document Journal account of the Cabaret Law repeal and
   Office of Nightlife movement, which names and pictures Jamie and Olympia Kazi
   with NYC Artist Coalition.
@@ -92,6 +96,10 @@ information, private messages, or private analytics belongs in this repo.
 The CallNYC full-population method, findings, and research debt are documented
 in `intake/2026-07-13-callnyc-full-population-social-corpus.md`; item-level data
 is in `data/callnyc-public-post-ledger.json`.
+The WOWList full-population method, mission-relevant destinations, findings,
+and boundaries are documented in
+`intake/2026-07-14-wowlist-full-population-social-corpus.md`; its 38 item-level
+dispositions are in `data/wowlist-public-post-ledger.json`.
 
 ### Public-Safe Archive Summary
 

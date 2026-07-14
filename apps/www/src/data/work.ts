@@ -405,7 +405,7 @@ const workItemsInput = [
     featured: true,
     priority: 4,
     visibility: "public-safe",
-    proofBankIds: ["wowlist-community-platform", "project-social-identity-systems"],
+    proofBankIds: ["wowlist-community-platform", "project-social-identity-systems", "wowlist-public-support-surface"],
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
@@ -417,6 +417,12 @@ const workItemsInput = [
         description:
           "A lightweight distribution pattern for followable arts, music, and local-interest communities.",
         type: "diagram"
+      },
+      {
+        title: "Public support surface",
+        description:
+          "Six surviving account replies document feed, profile, submission, onboarding, and local-calendar guidance.",
+        type: "workflow"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -441,13 +447,14 @@ const workItemsInput = [
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "Roughly 35 city ecosystems reached",
+      "All six surviving account replies provided product support, onboarding, or local-calendar identity guidance"
     ],
     knownOpenProtected: {
       known:
-        "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
+        "WOWList was a co-built community-calendar platform organized around followable keyword communities; all 38 items in the current public-profile control are dispositioned in a source-backed ledger, including six direct support and onboarding replies.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots and further independent public evidence for the historical scale claims remain open.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

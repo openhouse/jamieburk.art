@@ -21,6 +21,10 @@ public portfolio surface.
   gate: 107 recovered items plus three unresolved slots reconcile to the 110
   observed profile count, and stakeholder and outcome boundaries are
   item-level recomputed.
+- [x] WOWList full-population archival production passes as an automated hard
+  gate: all 38 items in the current live-profile control reconcile at item
+  level, posted URLs resolve, and authorship, adoption, and impact boundaries
+  remain explicit.
 
 ## Human gates
 

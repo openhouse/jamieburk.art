@@ -138,7 +138,9 @@ posts.
 - Joined February 2014; 57 following and 47 followers observed on the review
   date.
 - Profile count observed: 38 posts.
-- Visible timeline items recovered: 37.
+- Current-profile items recovered: 38 of 38 through cross-tab reconciliation,
+  including 16 account posts, six account replies, and 16 reposts from 13
+  public accounts.
 - The first recovered account-authored post, from
   [February 12, 2014](https://x.com/wowlist/status/433671630837919744),
   publicly names Richard and Jamie and describes the project as based on the
@@ -147,10 +149,10 @@ posts.
   thanks a community member for making a public tutorial about using WOW List.
   This is one concrete sign of participant use and documentation, not proof of
   broad adoption.
-- Other recovered posts show public onboarding replies, cross-city event
-  calendars, Allied Media Conference participation, and use for civic and
-  mutual-aid event discovery. Those items remain reserve depth until their
-  linked pages and exact context are close-read.
+- The complete corpus shows six support and onboarding replies, event
+  distribution, scene-knowledge routing, Allied Media Conference participation,
+  and civic-care resources. See the separate July 14 full-population intake and
+  ledger for item-level dispositions and source boundaries.
 
 ## Jamie's Role and the Team Boundary
 

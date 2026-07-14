@@ -68,6 +68,8 @@ Current selected citation projections now include:
   contemporaneous Council-member accounts;
 - WOW List's public Sunday Dinner origin statement and one community-created
   instructional artifact;
+- WOW List's complete current-profile census and the six account replies that
+  document product support, onboarding, and local-calendar identity guidance;
 - Sunday Dinner's externally documented weekly open-community practice; and
 - KC Town Hall's unanimously recommended and Council-allocated $490,539
   proposal.

@@ -31,6 +31,14 @@ import {
   callNycSocialCorpusPublicationDecisions,
   callNycSocialCorpusSources
 } from "./callnyc-social-corpus.ts";
+import {
+  wowlistSocialCorpusClaims,
+  wowlistSocialCorpusInquiries,
+  wowlistSocialCorpusIntake,
+  wowlistSocialCorpusProofCoverage,
+  wowlistSocialCorpusPublicationDecisions,
+  wowlistSocialCorpusSources
+} from "./wowlist-social-corpus.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -506,7 +514,8 @@ export const frameworkIntake = [
   },
   ...campaignPressIntake,
   ...socialArchiveIntake,
-  ...callNycSocialCorpusIntake
+  ...callNycSocialCorpusIntake,
+  ...wowlistSocialCorpusIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -673,9 +682,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["community platforms", "event discovery", "participatory technology"],
-    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"],
-    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE"],
-    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015", "SRC-GOOD-TIMES-ZINES-2-2015", "SRC-KQED-GHOST-SHIP-VIGIL-2016", "SRC-MEOW-WOLF-DIY-FUND-2016"],
+    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION", "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE", "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING", "CLM-WOWLIST-CIVIC-CARE-CONTINUITY"],
+    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-FULL-POPULATION-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which interface or community image best demonstrates organizer use without exposing user data?",
@@ -1285,7 +1294,8 @@ export const frameworkSources = [
   },
   ...campaignPressSources,
   ...socialArchiveSources,
-  ...callNycSocialCorpusSources
+  ...callNycSocialCorpusSources,
+  ...wowlistSocialCorpusSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -1650,7 +1660,8 @@ export const frameworkClaims = [
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
   ...socialArchiveClaims,
-  ...callNycSocialCorpusClaims
+  ...callNycSocialCorpusClaims,
+  ...wowlistSocialCorpusClaims
 ] satisfies ClaimRecord[];
 
 const openInquiry = (
@@ -1683,7 +1694,8 @@ export const frameworkInquiries = [
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
   ...socialArchiveInquiries,
-  ...callNycSocialCorpusInquiries
+  ...callNycSocialCorpusInquiries,
+  ...wowlistSocialCorpusInquiries
 ] satisfies ResearchInquiry[];
 
 const publicationDecisionInputs: Array<[
@@ -1734,7 +1746,8 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   })
 ).concat(
   socialArchivePublicationDecisions,
-  callNycSocialCorpusPublicationDecisions
+  callNycSocialCorpusPublicationDecisions,
+  wowlistSocialCorpusPublicationDecisions
 ) satisfies PublicationDecision[];
 
 const coverage = (
@@ -1765,7 +1778,8 @@ export const frameworkProofCoverage = [
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
   ...socialArchiveProofCoverage,
-  ...callNycSocialCorpusProofCoverage
+  ...callNycSocialCorpusProofCoverage,
+  ...wowlistSocialCorpusProofCoverage
 ] satisfies ProofCoverage[];
 
 export const frameworkPages = [
@@ -1821,13 +1835,19 @@ export const frameworkPages = [
   {
     id: "wowlist",
     surface: "/work/wowlist",
-    sourceOrder: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"],
+    sourceOrder: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"],
     occurrences: [
       {
         id: "public-origin-and-use",
         claimId: "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
         projection: "case-study",
         sourceIds: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"]
+      },
+      {
+        id: "public-support-surface",
+        claimId: "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+        projection: "case-study",
+        sourceIds: ["SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"]
       }
     ]
   },

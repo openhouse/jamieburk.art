@@ -523,6 +523,114 @@
         "case resolution or service quality",
         "comparability across offices or reporting practices"
       ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+      "title": "WOWList reply explaining followed-calendar feed scope",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining followed-calendar feed scope and a planned local/everywhere control, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+      "title": "WOWList reply explaining profile navigation",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591666366215811073",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining where a person could find their WOW Lists on their profile, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+      "title": "WOWList reply explaining multi-list event submission",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591668857670148096",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining how to add an event and place it on multiple WOW Lists, April 24, 2015.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+      "title": "WOWList reply identifying NYCDIY",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771412862191407104",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply identifying NYCDIY.org as a local calendar identity, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+      "title": "WOWList reply explaining how to join NYCDIY",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771455571501416448",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining how people could join NYCDIY, add shows, and receive a weekly email, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+      "title": "WOWList reply connecting NYCDIY, WOWList, and Sunday Dinner",
+      "organization": "WOWList",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOWList public reply explaining that NYCDIY ran on WOWList and connecting the project to the Sunday Dinner potluck, September 1, 2016.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "the platform's total support workload",
+        "platform-wide adoption, audience reach, satisfaction, or impact"
+      ]
     }
   ],
   "claims": [
@@ -1277,6 +1385,90 @@
       "boundaries": [
         "The recap featured CallNYC; it does not document an award, official endorsement, presentation, or Jamie's attendance."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public account Jamie established became a direct support surface: its six surviving replies explained feed scope, profile navigation, multi-list event submission, joining local calendars, and how NYCDIY ran on WOWList from the Sunday Dinner potluck.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Established a shared public identity that supported people through product navigation, event submission, local-calendar onboarding, and community lineage.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "public product support, onboarding, or calendar-identity guidance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit Jamie with establishing the account and co-building the product; do not assign individual post authorship without direct evidence.",
+        "The account record demonstrates public support behavior, not the full support workload, adoption, satisfaction, audience, or impact."
+      ]
     }
   ],
   "pages": [
@@ -1449,7 +1641,13 @@
       "surface": "/work/wowlist",
       "sourceOrder": [
         "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-        "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+        "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+        "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+        "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
       ],
       "occurrences": [
         {
@@ -1459,6 +1657,19 @@
           "sourceIds": [
             "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
             "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+          ]
+        },
+        {
+          "id": "public-support-surface",
+          "claimId": "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015",
+            "SRC-X-WOWLIST-SUPPORT-PROFILE-2015",
+            "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
+            "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
           ]
         }
       ]
