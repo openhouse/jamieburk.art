@@ -74,4 +74,9 @@ for a worked example of research, decomposition, selection, and deliberate
 non-projection, and
 [research/2026-07-14-nycac-campaign-press-catalog.md](research/2026-07-14-nycac-campaign-press-catalog.md)
 for campaign press intake that preserves source discovery without premature
-claim promotion.
+claim promotion,
+[research/2026-07-14-icloud-teams-archive-production.md](research/2026-07-14-icloud-teams-archive-production.md)
+for source-aware close reading of materialized iCloud working records, and
+[research/2026-07-14-google-shared-drive-archive-production.md](research/2026-07-14-google-shared-drive-archive-production.md)
+for governed Shared Drive inventory, selection, protected locators, and
+public-safe workflow projections.

@@ -86,6 +86,46 @@ export const requiredArchiveInquiryIds = [
   "INQ-ICLOUD-TEAMS-MATERIALIZATION-2026"
 ];
 
+export const requiredSharedDriveSourceIds = [
+  "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026-07-14",
+  "SRC-GDRIVE-FAIR-RENT-WEB-NOTES-2023",
+  "SRC-GDRIVE-CRS-OUTREACH-TRACKER-2026-02",
+  "SRC-GDRIVE-FAIR-RENT-ACTION-LAB-MINUTES-2026-02-25",
+  "SRC-GDRIVE-COMPTROLLER-DATA-BRIEF-2026-05",
+  "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+  "SRC-GDRIVE-SUNDAY-DINNER-OPERATIONS-2025-2026",
+  "SRC-GDRIVE-NYCAC-RESEARCH-DRAFT-2025",
+  "SRC-GDRIVE-VISUAL-ASSET-SAMPLE-2026-07-14"
+];
+
+export const requiredSharedDriveClaimIds = [
+  "CLM-FAIR-RENT-WEB-LAUNCH-RUNBOOK-2023",
+  "CLM-CRS-STAKEHOLDER-OPS-TRACKER-2026",
+  "CLM-CRS-ALIGNMENT-RECORD-2026",
+  "CLM-CRS-COMPTROLLER-SCOPING-BRIEF-2026",
+  "CLM-196-RESIDENCY-ONBOARDING-2023",
+  "CLM-SUNDAY-DINNER-CONTINUITY-SYSTEM-2025"
+];
+
+export const requiredSharedDriveIntakeIds = [
+  "INTAKE-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+  "INTAKE-GDRIVE-FAIR-RENT-WEB-NOTES-2023",
+  "INTAKE-GDRIVE-CRS-OUTREACH-TRACKER-2026",
+  "INTAKE-GDRIVE-FAIR-RENT-ACTION-LAB-MINUTES-2026",
+  "INTAKE-GDRIVE-COMPTROLLER-DATA-BRIEF-2026",
+  "INTAKE-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+  "INTAKE-GDRIVE-SUNDAY-DINNER-OPERATIONS-2025",
+  "INTAKE-GDRIVE-NYCAC-RESEARCH-DRAFT-2025",
+  "INTAKE-GDRIVE-VISUAL-ASSET-SAMPLE-2026"
+];
+
+export const requiredSharedDriveInquiryIds = [
+  "INQ-GDRIVE-PROFESSIONAL-COVERAGE-2026",
+  "INQ-GDRIVE-NYCAC-SOURCE-DECOMPOSITION-2026",
+  "INQ-GDRIVE-VISUAL-ASSET-RIGHTS-2026",
+  "INQ-GDRIVE-QUANTIFIED-PARTICIPATION-CLAIMS-2026"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -119,6 +159,7 @@ export function validateKnowledgeIntake() {
   const pressErrors = [];
   const kcTownHallErrors = [];
   const archiveProductionErrors = [];
+  const sharedDriveProductionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -253,6 +294,174 @@ export function validateKnowledgeIntake() {
     !materializationBoundaryText.includes("not evidence")
   ) {
     archiveProductionErrors.push("iCloud placeholders must remain partially recovered with an explicit not-materialized boundary");
+  }
+
+  for (const id of requiredSharedDriveIntakeIds) {
+    if (!intakeIdSet.has(id)) {
+      sharedDriveProductionErrors.push(`Missing required Shared Drive intake: ${id}`);
+    }
+  }
+
+  for (const id of requiredSharedDriveSourceIds) {
+    const source = sourceById.get(id);
+    if (!source) {
+      sharedDriveProductionErrors.push(`Missing required Shared Drive source: ${id}`);
+      continue;
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      sharedDriveProductionErrors.push(`${id} needs explicit support and does-not-establish boundaries`);
+    }
+    if (source.visibility === "public" || !source.protectedLocatorId) {
+      sharedDriveProductionErrors.push(`${id} must remain protected or metadata-only with a protected locator`);
+    }
+    if (source.canonicalUrl || source.archiveUrl || source.assetUrl) {
+      sharedDriveProductionErrors.push(`${id} must not expose a Shared Drive source URL`);
+    }
+    const linkedIntakes = knowledgeBank.intakes.filter((intake) => intake.sourceIds.includes(id));
+    const linkedClaims = knowledgeBank.claims.filter((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === id)
+    );
+    const linkedInquiries = knowledgeBank.researchInquiries.filter((inquiry) =>
+      inquiry.sourceIds.includes(id)
+    );
+    if (!linkedIntakes.length || (!linkedClaims.length && !linkedInquiries.length)) {
+      sharedDriveProductionErrors.push(`${id} needs an intake edge and a claim or inquiry edge`);
+    }
+  }
+
+  for (const id of requiredSharedDriveClaimIds) {
+    if (!claimById.has(id)) {
+      sharedDriveProductionErrors.push(`Missing required Shared Drive claim: ${id}`);
+    }
+  }
+  for (const id of requiredSharedDriveInquiryIds) {
+    if (!inquiryById.has(id)) {
+      sharedDriveProductionErrors.push(`Missing required Shared Drive inquiry: ${id}`);
+    }
+  }
+
+  const sharedDriveRecordSet = [
+    ...requiredSharedDriveIntakeIds.map((id) => knowledgeBank.intakes.find((record) => record.id === id)),
+    ...requiredSharedDriveSourceIds.map((id) => sourceById.get(id)),
+    ...requiredSharedDriveClaimIds.map((id) => claimById.get(id)),
+    ...requiredSharedDriveInquiryIds.map((id) => inquiryById.get(id))
+  ].filter(Boolean);
+  const serializedSharedDriveRecords = JSON.stringify(sharedDriveRecordSet).toLowerCase();
+  for (const marker of [
+    ...blockedPublicRepoMarkers,
+    "drive.google.com",
+    "docs.google.com",
+    "spreadsheets/d/",
+    "shared drive id",
+    "file id",
+    "zoom.us",
+    "password:"
+  ]) {
+    if (serializedSharedDriveRecords.includes(marker.toLowerCase())) {
+      sharedDriveProductionErrors.push(`Shared Drive records contain blocked public-repo marker: ${marker}`);
+    }
+  }
+
+  const selectedSharedDriveClaimIds = new Set([
+    "CLM-CRS-STAKEHOLDER-OPS-TRACKER-2026",
+    "CLM-CRS-ALIGNMENT-RECORD-2026",
+    "CLM-196-RESIDENCY-ONBOARDING-2023",
+    "CLM-SUNDAY-DINNER-CONTINUITY-SYSTEM-2025"
+  ]);
+  for (const claimId of requiredSharedDriveClaimIds) {
+    const claim = claimById.get(claimId);
+    const activeProjections = claim?.projections.filter((projection) => projection.status === "active") ?? [];
+    if (selectedSharedDriveClaimIds.has(claimId) && activeProjections.length !== 1) {
+      sharedDriveProductionErrors.push(`${claimId} must have exactly one selected active projection`);
+    }
+    if (!selectedSharedDriveClaimIds.has(claimId) && activeProjections.length) {
+      sharedDriveProductionErrors.push(`${claimId} must remain held or unsurfaced`);
+    }
+    if (selectedSharedDriveClaimIds.has(claimId)) {
+      const projection = activeProjections[0];
+      const evidence = claim?.evidence[0];
+      if (
+        evidence?.relationship !== "private-support" ||
+        evidence.renderCitation ||
+        projection?.citationRequired
+      ) {
+        sharedDriveProductionErrors.push(`${claimId} must project only a non-cited public-safe summary of private support`);
+      }
+    }
+  }
+
+  const selectedSharedDriveIntakes = requiredSharedDriveIntakeIds
+    .map((id) => knowledgeBank.intakes.find((intake) => intake.id === id))
+    .filter((intake) => intake?.editorialState === "selected");
+  if (selectedSharedDriveIntakes.length !== selectedSharedDriveClaimIds.size) {
+    sharedDriveProductionErrors.push("Shared Drive production must select exactly four public-safe workflow claims");
+  }
+
+  const inventoryInquiry = inquiryById.get("INQ-GDRIVE-PROFESSIONAL-COVERAGE-2026");
+  const inventoryText = JSON.stringify([
+    inventoryInquiry?.findings,
+    inventoryInquiry?.limitations
+  ]).toLowerCase();
+  if (
+    inventoryInquiry?.resultStatus !== "partially-recovered" ||
+    !inventoryText.includes("110") ||
+    !inventoryText.includes("not close-read every file") ||
+    !inventoryText.includes("access does not establish")
+  ) {
+    sharedDriveProductionErrors.push("Shared Drive inventory must preserve its dated 110-drive scope and bounded selection limits");
+  }
+
+  const trackerClaim = claimById.get("CLM-CRS-STAKEHOLDER-OPS-TRACKER-2026");
+  const trackerBoundaries = JSON.stringify([
+    trackerClaim?.boundaries,
+    trackerClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["contact details", "row-level", "relationship"]) {
+    if (!trackerBoundaries.includes(boundary)) {
+      sharedDriveProductionErrors.push(`The stakeholder tracker claim is missing its ${boundary} boundary`);
+    }
+  }
+
+  const alignmentClaim = claimById.get("CLM-CRS-ALIGNMENT-RECORD-2026");
+  const alignmentBoundaries = JSON.stringify([
+    alignmentClaim?.boundaries,
+    alignmentClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["translated", "consensus", "completed"]) {
+    if (!alignmentBoundaries.includes(boundary)) {
+      sharedDriveProductionErrors.push(`The alignment record is missing its ${boundary} boundary`);
+    }
+  }
+
+  const webLaunchClaim = claimById.get("CLM-FAIR-RENT-WEB-LAUNCH-RUNBOOK-2023");
+  const webLaunchText = JSON.stringify(webLaunchClaim).toLowerCase();
+  if (!webLaunchText.includes("olympia kazi") || webLaunchClaim?.projections.some((item) => item.status === "active")) {
+    sharedDriveProductionErrors.push("The Fair Rent web launch record must retain Olympia Kazi's credit and remain held");
+  }
+
+  const comptrollerClaim = claimById.get("CLM-CRS-COMPTROLLER-SCOPING-BRIEF-2026");
+  const comptrollerBoundaryText = JSON.stringify([
+    comptrollerClaim?.boundaries,
+    comptrollerClaim?.antiClaims
+  ]).toLowerCase();
+  if (!comptrollerBoundaryText.includes("adopt") || comptrollerClaim?.projections.some((item) => item.status === "active")) {
+    sharedDriveProductionErrors.push("The Comptroller brief must remain a held proposal with an explicit non-adoption boundary");
+  }
+
+  const quantifiedParticipationInquiry = inquiryById.get("INQ-GDRIVE-QUANTIFIED-PARTICIPATION-CLAIMS-2026");
+  if (
+    quantifiedParticipationInquiry?.resultStatus !== "partially-recovered" ||
+    !JSON.stringify(quantifiedParticipationInquiry?.findings).toLowerCase().includes("do not independently establish")
+  ) {
+    sharedDriveProductionErrors.push("The Sunday Dinner and residency aggregate counts must remain only partially recovered");
+  }
+
+  const visualInquiry = inquiryById.get("INQ-GDRIVE-VISUAL-ASSET-RIGHTS-2026");
+  if (
+    visualInquiry?.resultStatus !== "partially-recovered" ||
+    !JSON.stringify(visualInquiry?.limitations).toLowerCase().includes("does not establish jamie's role")
+  ) {
+    sharedDriveProductionErrors.push("Visual-only holdings must remain a protected rights-and-role research queue");
   }
 
   const researchedUrls = new Set();
@@ -650,7 +859,8 @@ export function validateKnowledgeIntake() {
     ...projectionErrors,
     ...pressErrors,
     ...kcTownHallErrors,
-    ...archiveProductionErrors
+    ...archiveProductionErrors,
+    ...sharedDriveProductionErrors
   );
   return {
     errors,
@@ -689,6 +899,11 @@ export function validateKnowledgeIntake() {
         passed: archiveProductionErrors.length === 0,
         errors: archiveProductionErrors,
         evidence: `${requiredArchiveSourceIds.length} sources, ${requiredArchiveClaimIds.length} claims, ${requiredArchiveInquiryIds.length} inquiries, and ${requiredArchiveIntakeIds.length} intakes preserve close-read archival production across Jamie Projects History, CRS, and job-hunt with only three selected public projections.`
+      },
+      sharedDriveProduction: {
+        passed: sharedDriveProductionErrors.length === 0,
+        errors: sharedDriveProductionErrors,
+        evidence: `${requiredSharedDriveSourceIds.length} sources, ${requiredSharedDriveClaimIds.length} claims, ${requiredSharedDriveInquiryIds.length} inquiries, and ${requiredSharedDriveIntakeIds.length} intakes preserve a governed 110-drive inventory, selective close reading, protected Drive locators, and exactly four selected public-safe workflow projections.`
       }
     }
   };

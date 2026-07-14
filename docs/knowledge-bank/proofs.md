@@ -11,10 +11,14 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, workstreams, consent boundaries, and reusable templates.
+- Created a privacy-aware stakeholder tracker connecting outreach and asks to relationship ownership, action ownership, due dates, consent, public-quotation permission, and data-quality flags.
+- Facilitated and documented an alignment session, producing a multilingual record that connected discussion to action items, governance questions, and public-share boundaries.
 - Prepared a legislative provenance redline tracing Commercial Rent Stabilization language from Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and S8319 revisions.
 - Prepared a privacy-preserving open-data pilot proposal for geography-aggregated commercial vacancy and lease-cost indicators, with coverage, suppression, and methods documentation.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- Directly handled a documented residency workflow spanning acceptance, pre-arrival coordination, space configuration, and independent access.
+- Maintained a recurring invitation and continuity system spanning event themes, invitations, replies, attendance signals, and follow-up.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation, presented the $490,539 public proposal, and now states the project's later withdrawal and reappropriation boundary.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.

@@ -320,6 +320,8 @@ const workItemsInput = [
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "A shared running-memory system connecting recurring meetings to decisions, owners, open questions, consent boundaries, and reusable templates",
+      "A privacy-aware stakeholder tracker connecting outreach lanes and asks to ownership, due dates, consent, and data-quality flags",
+      "A multilingual alignment record connecting facilitation to action items, governance questions, and public-share boundaries",
       "A legislative provenance redline tracing public policy source layers through S8319",
       "A public, privacy-preserving commercial-data pilot proposal",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -328,7 +330,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "A public campaign capture, official Council transcript, and two-page handout substantiate the web, testimony, and data-product work described in this case study.",
+        "Public artifacts and protected operating records substantiate the web, testimony, data-product, stakeholder-tracking, and meeting-documentation work described in this case study.",
       open:
         "Additional named collaborators, meeting materials, photographs, and internal campaign artifacts require separate approval.",
       protected:
@@ -445,7 +447,7 @@ const workItemsInput = [
     summary:
       "Co-built a Django / PostgreSQL / PostGIS and Ember community-calendar platform organized around followable keyword communities, adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     role: "Co-builder & Product Operator",
-    years: "2010s",
+    years: "2010s-2020s",
     status: "Short proof page",
     featured: true,
     priority: 4,
@@ -529,7 +531,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary, a surviving public RSVP page, and protected source relationships for residency onboarding and recurring-event operations; raw records remain omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -538,12 +540,12 @@ const workItemsInput = [
     evidence: [
       "300+ hosted gatherings",
       "20+ resident artists supported",
-      "Onboarding and participation systems",
-      "Recurring operations and continuity structures"
+      "A documented residency workflow covering acceptance, pre-arrival coordination, space configuration, and independent access",
+      "A recurring invitation and continuity system covering event themes, invitations, replies, attendance signals, and follow-up"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts; protected operating records directly document onboarding and continuity workflows.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:

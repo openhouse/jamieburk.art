@@ -69,12 +69,12 @@ claim beyond the wording and guardrails here.
 **Support level:** Strong
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.
-**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
+**Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A separate privacy-aware tracker connected outreach and asks to owners, due dates, consent, public-quotation permission, and data-quality flags.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
-**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
+**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, row-level tracker records, contact details, relationship notes, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
 **Last reviewed:** 2026-07-14
 
@@ -159,11 +159,11 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. Protected primary records directly document a residency acceptance and access workflow and a recurring invitation, response, attendance-signal, and follow-up system.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
-**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
+**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database; independent verification of the 300+ gathering or 20+ resident-artist aggregate from the reviewed Shared Drive records.
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07

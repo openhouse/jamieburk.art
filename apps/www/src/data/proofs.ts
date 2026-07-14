@@ -171,9 +171,9 @@ export const proofClaims: ProofClaim[] = [
       "Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.",
     shortWording: "Built a shared civic campaign-memory system in active use",
     detailedPublicWording:
-      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
+      "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams. A separate privacy-aware tracker connected outreach and asks to owners, due dates, consent, public-quotation permission, and data-quality flags.",
     sourceBasis:
-      "Approved resume language plus close reading of the May 14, 2026, collaboration running-minutes system and April 2026 operating plan.",
+      "Approved resume language plus close reading of the May 14, 2026, collaboration running-minutes system, a February 2026 stakeholder operations tracker and alignment record, and the April 2026 operating plan.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -189,6 +189,8 @@ export const proofClaims: ProofClaim[] = [
       "Private coalition notes",
       "Legal-review materials",
       "Stakeholder lists",
+      "Row-level tracker records",
+      "Contact details and relationship notes",
       "Private emails",
       "Raw strategy context",
       "Unapproved quotes"
@@ -386,14 +388,16 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. Protected primary records directly document a residency acceptance and access workflow and a recurring invitation, response, attendance-signal, and follow-up system.",
+    sourceBasis:
+      "Approved resume language, Jamie review confirmation, the public Sunday Dinner RSVP page, a July 2023 residency onboarding letter, and a 2025-2026 invitation and continuity workbook.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
-      "Attendance database"
+      "Attendance database",
+      "Independent verification of the 300+ gathering or 20+ resident-artist aggregate from the reviewed Shared Drive records"
     ],
     protectedBoundaries: [
       "Guest lists",

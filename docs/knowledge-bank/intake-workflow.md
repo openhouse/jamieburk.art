@@ -63,6 +63,13 @@ an article appeared in the campaign's Press section, but not what the article
 proves. Keep such articles `metadata-reviewed` until a human or agent has read
 the source closely enough to create bounded claim relationships.
 
+A cloud-drive inventory is also a finding aid. Inventory every accessible
+container for governed coverage, then close-read professionally relevant
+records selectively. File presence, revision access, or a drive title does not
+by itself establish authorship, role, consent, outcomes, or publication rights.
+Keep private Drive and file identifiers, links, credentials, contacts, and
+row-level data outside this public repository; use an opaque protected locator.
+
 ## Projection gate
 
 An intake-linked claim may receive an active public projection only when the
@@ -89,12 +96,17 @@ and opaque protected locator.
 
 `npm run check:knowledge-intake` validates required intake coverage, stable
 destinations, canonical links, projection discipline, campaign press
-provenance, and blocked local-path markers. The launch-readiness v5 suite adds:
+provenance, protected cloud-source boundaries, and blocked path or link
+markers. The launch-readiness v10 suite includes:
 
 - `INTAKE-001` for lossless public-safe capture;
 - `DISPOSITION-001` for resolvable destinations;
 - `PROJECTION-001` for separation of maturity, public safety, and selection;
 - `PRESS-001` for complete, deduplicated, archive-backed campaign indexes;
+- `RESEARCH-001` for normalized, close-read public sources;
+- `ARCHIVE-001` for bounded iCloud archival production;
+- `GDRIVE-001` for governed Shared Drive inventory, close reading, and selective projection;
+- `KCTH-001` for the bounded KC Town Hall municipal and stewardship sequence;
 - `DECOMP-001` for independent semantic review of source decomposition.
 
 The deterministic gates can prove structural completeness. Two independent

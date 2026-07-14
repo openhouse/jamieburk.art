@@ -70,6 +70,11 @@ the bank with source basis, status, guardrail, and public-use boundary.
 Every structured claim needs status, support level, evidence class, public
 wording, guardrail, protected boundaries, and last-reviewed date.
 
+Treat Google Drive and iCloud inventories as research maps, not role evidence
+or publication permission. Do not commit private Drive or file identifiers,
+private links, synced paths, credentials, contact records, or row-level data.
+Use opaque protected locators and public-safe structural summaries.
+
 Treat campaign press sections as finding aids. A placement edge can establish
 that a campaign site listed an article, but it cannot establish what the
 article proves. Preserve original and archival URLs, deduplicate shared

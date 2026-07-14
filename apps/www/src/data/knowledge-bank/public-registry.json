@@ -827,6 +827,86 @@
         "Describe this as a proposal shared at School of Data, not a City program or adopted release.",
         "Preserve its complement-not-replacement relationship to existing storefront data."
       ]
+    },
+    {
+      "id": "CLM-CRS-STAKEHOLDER-OPS-TRACKER-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I created and maintained a stakeholder operations tracker connecting outreach lanes and asks to relationship ownership, action ownership, due dates, consent-to-contact, public-quotation permission, and data-quality flags.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Do not publish names, contact details, relationship notes, quotes, row counts, or row-level records.",
+        "Describe the operating system, not sole ownership of coalition relationships."
+      ]
+    },
+    {
+      "id": "CLM-CRS-ALIGNMENT-RECORD-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I facilitated and documented a Fair Rent NYC / Action Lab alignment session, producing a multilingual record that turned discussion into action items, governance questions, and a public-share-only reference library.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Do not claim Jamie personally translated every language section.",
+        "Do not treat self-authored minutes as proof of consensus or completed actions."
+      ]
+    },
+    {
+      "id": "CLM-196-RESIDENCY-ONBOARDING-2023",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For resident artists, I handled acceptance, pre-arrival coordination, space configuration, and independent access.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The source documents one residency workflow, not the aggregate resident-artist count.",
+        "Do not expose the artist's identity, contact details, dates, or access instructions."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-CONTINUITY-SYSTEM-2025",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For recurring dinners, I maintained an invitation and continuity system connecting event dates and themes to invitations, replies, attendance signals, and follow-up.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Do not expose names, contact details, invitation histories, attendance signals, or response records.",
+        "The workbook does not independently verify 300 or more completed gatherings."
+      ]
     }
   ],
   "pages": [
