@@ -1350,6 +1350,12 @@
         "likes": 20
       },
       "metricOwner": "source-status-not-kctownhall-repost-action",
+      "outsideAuthoredInteraction": {
+        "targetAccount": "@KCTownHall",
+        "interactionType": "quote-post",
+        "stakeholderRole": "sitting-kansas-city-council-member",
+        "roleSourceId": "SRC-KCMO-COUNCIL-ROSTER-2018"
+      },
       "mediaSignals": {
         "photoCount": 0,
         "hasVideoOrGif": false
@@ -1435,6 +1441,12 @@
         "likes": 3
       },
       "metricOwner": "source-status-not-kctownhall-repost-action",
+      "outsideAuthoredInteraction": {
+        "targetAccount": "@KCTownHall",
+        "interactionType": "reply",
+        "stakeholderRole": "sitting-kansas-city-council-member",
+        "roleSourceId": "SRC-KCMO-COUNCIL-ROSTER-2018"
+      },
       "mediaSignals": {
         "photoCount": 0,
         "hasVideoOrGif": false

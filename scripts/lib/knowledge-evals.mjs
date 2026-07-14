@@ -25,7 +25,7 @@ function score(passed, strong = true) {
   return passed ? (strong ? 5 : 4) : 1;
 }
 
-export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
+export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures = {}) {
   const intakeById = new Map(knowledgeBank.intakeItems.map((item) => [item.id, item]));
   const observationById = new Map(knowledgeBank.observations.map((item) => [item.id, item]));
   const sourceById = new Map(knowledgeBank.sources.map((item) => [item.id, item]));
@@ -953,9 +953,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const kcthDocumentation = existsSync(path.join(repoRoot, kcthFull.documentationPath))
     ? readFileSync(path.join(repoRoot, kcthFull.documentationPath), "utf8")
     : "";
-  const kcthLedger = existsSync(kcthLedgerPath)
+  const kcthLedger = fixtures.kcTownHallLedger ?? (existsSync(kcthLedgerPath)
     ? JSON.parse(readFileSync(kcthLedgerPath, "utf8"))
-    : null;
+    : null);
   const kcthRecords = kcthLedger?.records ?? [];
   const kcthRecordIds = kcthRecords.map((record) => record.statusId);
   const kcthRecordUrls = kcthRecords.map((record) => record.statusUrl);
@@ -1005,12 +1005,23 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     },
     { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
   );
-  const kcthDirectResponseIds = new Set([
-    "1122866432130334720",
-    "1122883010582466560"
-  ]);
+  const kcthRepostReactionSnapshot = kcthRepostRecords.reduce(
+    (aggregate, record) => {
+      const metrics = record.currentVisibleMetrics;
+      aggregate.statuses += 1;
+      aggregate.statusesWithVisibleReaction += metrics.replies + metrics.reposts + metrics.likes > 0 ? 1 : 0;
+      aggregate.replies += metrics.replies;
+      aggregate.reposts += metrics.reposts;
+      aggregate.likes += metrics.likes;
+      return aggregate;
+    },
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
   const kcthDirectResponseRecords = kcthRecords.filter((record) =>
-    kcthDirectResponseIds.has(record.statusId)
+    record.outsideAuthoredInteraction?.targetAccount?.toLowerCase() === "@kctownhall" &&
+      ["quote-post", "reply"].includes(record.outsideAuthoredInteraction?.interactionType) &&
+      record.outsideAuthoredInteraction?.stakeholderRole === "sitting-kansas-city-council-member" &&
+      record.outsideAuthoredInteraction?.roleSourceId === "SRC-KCMO-COUNCIL-ROSTER-2018"
   );
   const kcthCityPoliticalHandles = new Set([
     "@QuintonLucasKC",
@@ -1021,6 +1032,58 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     [...kcthCityPoliticalHandles].some(
       (handle) => handle.toLowerCase() === record.statusOwner.toLowerCase()
     )
+  );
+  const kcthStoredThemeCounts = Object.fromEntries(
+    kcthLedger?.aggregateFindings?.primaryThemeCounts?.map(({ value, count }) => [value, count]) ?? []
+  );
+  const kcthStoredRepostSourceCounts = Object.fromEntries(
+    kcthLedger?.aggregateFindings?.repostNetwork?.sourceAccounts?.map(({ value, count }) => [value.toLowerCase(), count]) ?? []
+  );
+  const kcthRepostSourceCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRepostRecords, (record) => record.statusOwner.toLowerCase()))
+      .map(([handle, records]) => [handle, records.length])
+  );
+  const equalCountMaps = (left, right) => {
+    const keys = new Set([...Object.keys(left), ...Object.keys(right)]);
+    return [...keys].every((key) => left[key] === right[key]);
+  };
+  const equalStringSets = (left, right) =>
+    left.size === right.size && [...left].every((value) => right.has(value));
+  const kcthTireHashtagOccurrences = kcthTireRecords.reduce(
+    (total, record) => total + record.hashtags.filter((hashtag) => hashtag.toLowerCase() === "#tiredoftires").length,
+    0
+  );
+  const kcthTireHashtagBearingRecords = kcthTireRecords.filter((record) =>
+    record.hashtags.some((hashtag) => hashtag.toLowerCase() === "#tiredoftires")
+  ).length;
+  const kcthAggregateFindingsRecompute = Boolean(
+    kcthLedger &&
+      equalCountMaps(kcthStoredThemeCounts, kcthThemeCounts) &&
+      kcthLedger.aggregateFindings.tireWorkflow.classifiedRecords === kcthTireRecords.length &&
+      kcthLedger.aggregateFindings.tireWorkflow.hashtagBearingRecords === kcthTireHashtagBearingRecords &&
+      kcthLedger.aggregateFindings.tireWorkflow.hashtagOccurrences === kcthTireHashtagOccurrences &&
+      kcthLedger.aggregateFindings.tireWorkflow.accountPosts === kcthTireRecords.filter((record) => record.relationship === "account-post").length &&
+      kcthLedger.aggregateFindings.tireWorkflow.accountReplies === kcthTireRecords.filter((record) => record.relationship === "account-reply").length &&
+      kcthLedger.aggregateFindings.tireWorkflow.reposts === kcthTireRecords.filter((record) => record.relationship === "repost").length &&
+      kcthLedger.aggregateFindings.repostNetwork.statuses === kcthRepostRecords.length &&
+      kcthLedger.aggregateFindings.repostNetwork.distinctSourceAccounts === kcthRepostSourceHandles.size &&
+      equalCountMaps(kcthStoredRepostSourceCounts, kcthRepostSourceCounts) &&
+      kcthLedger.aggregateFindings.repostNetwork.cityCouncilFigureSourceStatuses === kcthCityPoliticalReposts.length &&
+      equalStringSets(
+        new Set(kcthLedger.aggregateFindings.repostNetwork.cityCouncilFigureSourceAccounts.map((handle) => handle.toLowerCase())),
+        new Set(kcthCityPoliticalReposts.map((record) => record.statusOwner.toLowerCase()))
+      ) &&
+      kcthLedger.aggregateFindings.postedLinks.occurrences === kcthLinks.length &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueShortUrls === kcthUniqueShortUrls.size &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueResolvedDestinations === kcthUniqueDestinations.size &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueProjectOrLineageDestinations === kcthProjectDestinations.size &&
+      equalStringSets(
+        new Set(kcthLedger.aggregateFindings.postedLinks.resolvedDestinations),
+        kcthUniqueDestinations
+      ) &&
+      JSON.stringify(kcthLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot) === JSON.stringify(kcthAuthoredReactionSnapshot) &&
+      JSON.stringify(kcthLedger.aggregateFindings.repostSourceVisibleReactionSnapshot) === JSON.stringify(kcthRepostReactionSnapshot) &&
+      /Metrics on reposted statuses belong to their source statuses/i.test(kcthLedger.aggregateFindings.metricBoundary)
   );
   const kcthFullSources = kcTownHallSocialCorpus.sources.map((source) => sourceById.get(source.id));
   const kcthFullClaims = kcTownHallSocialCorpus.claims.map((claim) => claimById.get(claim.id));
@@ -1080,8 +1143,20 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
             ? "source-status-not-kctownhall-repost-action"
             : "account-authored-status") &&
           Number.isInteger(record.mediaSignals?.photoCount) &&
-          typeof record.mediaSignals?.hasVideoOrGif === "boolean"
+          typeof record.mediaSignals?.hasVideoOrGif === "boolean" &&
+          (!record.outsideAuthoredInteraction || (
+            record.relationship === "repost" &&
+            record.outsideAuthoredInteraction.targetAccount === "@KCTownHall" &&
+            ["quote-post", "reply"].includes(record.outsideAuthoredInteraction.interactionType) &&
+            record.outsideAuthoredInteraction.stakeholderRole === "sitting-kansas-city-council-member" &&
+            record.outsideAuthoredInteraction.roleSourceId === "SRC-KCMO-COUNCIL-ROSTER-2018"
+          ))
       ) &&
+      kcthDirectResponseRecords.every((record) =>
+        record.relationship === "repost" &&
+          record.metricOwner === "source-status-not-kctownhall-repost-action"
+      ) &&
+      kcthAggregateFindingsRecompute &&
       kcthRelationshipCounts["account-post"] === kcthFull.expectedAccountPosts &&
       kcthRelationshipCounts["account-reply"] === kcthFull.expectedAccountReplies &&
       kcthRelationshipCounts.repost === kcthFull.expectedReposts &&

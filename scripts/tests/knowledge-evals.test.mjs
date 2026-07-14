@@ -807,6 +807,68 @@ test("KC Town Hall full-population ledger reconciles every surviving profile ite
   assert.equal(new Set(kcTownHallLedger.records.map((record) => record.statusId)).size, 183);
   assert.equal(kcTownHallLedger.population.unresolvedProfileCountSlots, 0);
   assert.equal(kcTownHallLedger.population.excludedConversationContextArticles, 5);
+  const directCouncilResponses = kcTownHallLedger.records.filter(
+    (record) => record.outsideAuthoredInteraction?.targetAccount === "@KCTownHall"
+  );
+  assert.deepEqual(
+    directCouncilResponses.map((record) => record.outsideAuthoredInteraction.interactionType).sort(),
+    ["quote-post", "reply"]
+  );
+  assert.ok(
+    directCouncilResponses.every(
+      (record) =>
+        record.outsideAuthoredInteraction.stakeholderRole === "sitting-kansas-city-council-member" &&
+        record.outsideAuthoredInteraction.roleSourceId === "SRC-KCMO-COUNCIL-ROSTER-2018"
+    )
+  );
+});
+
+test("KC Town Hall aggregate findings are recomputed from item-level records", () => {
+  const records = kcTownHallLedger.records;
+  const authored = records.filter((record) => record.relationship !== "repost");
+  const reposts = records.filter((record) => record.relationship === "repost");
+  const sumMetrics = (items) => items.reduce(
+    (totals, record) => ({
+      statuses: totals.statuses + 1,
+      statusesWithVisibleReaction: totals.statusesWithVisibleReaction +
+        (record.currentVisibleMetrics.replies + record.currentVisibleMetrics.reposts + record.currentVisibleMetrics.likes > 0 ? 1 : 0),
+      replies: totals.replies + record.currentVisibleMetrics.replies,
+      reposts: totals.reposts + record.currentVisibleMetrics.reposts,
+      likes: totals.likes + record.currentVisibleMetrics.likes
+    }),
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+
+  assert.deepEqual(kcTownHallLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot, sumMetrics(authored));
+  assert.deepEqual(kcTownHallLedger.aggregateFindings.repostSourceVisibleReactionSnapshot, sumMetrics(reposts));
+  assert.equal(kcTownHallLedger.aggregateFindings.postedLinks.occurrences, records.flatMap((record) => record.postedUrls).length);
+  assert.equal(kcTownHallLedger.aggregateFindings.tireWorkflow.classifiedRecords, records.filter((record) => record.primaryTheme === "resident-tire-intake-and-operations").length);
+});
+
+test("KC Town Hall full-population eval rejects aggregate-only drift", () => {
+  const alteredLedger = structuredClone(kcTownHallLedger);
+  alteredLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes += 1;
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: alteredLedger });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall official-response floor is derived from ledger annotations", () => {
+  const alteredLedger = structuredClone(kcTownHallLedger);
+  const record = alteredLedger.records.find(
+    (item) => item.outsideAuthoredInteraction?.interactionType === "quote-post"
+  );
+  assert.ok(record);
+  delete record.outsideAuthoredInteraction;
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: alteredLedger });
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score,
+    1
+  );
+  assert.equal(result.accepted, false);
 });
 
 test("KC Town Hall source-status reactions cannot become project-account traction", () => {
