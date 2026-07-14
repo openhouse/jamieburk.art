@@ -14,8 +14,9 @@ causal credit.
 
 ## Ten-source cohort
 
-1. New York City Council Cabaret Law oversight hearing transcript, June 19,
-   2017.
+1. New York City Council Cabaret Law oversight hearing transcript, September
+   14, 2017. The source ID and citation date were corrected on July 14 after
+   checking the transcript title page.
 2. New York City Council Cultural Affairs executive budget hearing transcript,
    May 19, 2017.
 3. NYC Artist Coalition's City-preserved CreateNYC recommendations.

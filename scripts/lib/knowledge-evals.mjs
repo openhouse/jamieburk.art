@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -8,6 +9,7 @@ import { validateKnowledgeBank } from "./citation-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
+const holdoutRunsPath = path.join(repoRoot, "evals/knowledge-bank/holdout-runs.json");
 const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json");
 
 export function loadKnowledgeEvalSuite() {
@@ -19,6 +21,18 @@ function score(passed, strong = true) {
 }
 
 export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
+  const holdoutLedger = JSON.parse(readFileSync(holdoutRunsPath, "utf8"));
+  let consecutivePassingRuns = 0;
+  for (const run of holdoutLedger.runs.toReversed()) {
+    const passed = run.accepted === true &&
+      run.weightedScore === 5 &&
+      run.blockers.length === 0 &&
+      run.criterionScores.length === suite.criteria.length &&
+      run.criterionScores.every((criterionScore) => criterionScore === 5);
+    if (!passed) break;
+    consecutivePassingRuns += 1;
+  }
+  const holdoutEvidenceComplete = consecutivePassingRuns >= suite.targets.consecutivePassingRuns;
   const intakeById = new Map(knowledgeBank.intakeItems.map((item) => [item.id, item]));
   const observationById = new Map(knowledgeBank.observations.map((item) => [item.id, item]));
   const sourceById = new Map(knowledgeBank.sources.map((item) => [item.id, item]));
@@ -26,6 +40,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const entityById = new Map(knowledgeBank.entities.map((item) => [item.id, item]));
   const relationById = new Map(knowledgeBank.agencyRelations.map((item) => [item.id, item]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((item) => [item.id, item]));
+  const correctionById = new Map(knowledgeBank.corrections.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
   const errors = validateKnowledgeBank();
@@ -52,6 +67,223 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const secondExpansionInquiries = secondExpansion.inquiryIds.map((id) => inquiryById.get(id));
   const secondExpansionObservations = secondExpansionIntakes.flatMap((item) =>
     item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
+  const institutional = suite.pilot.institutionalCapacity;
+  const institutionalIntake = intakeById.get(institutional.intakeId);
+  const institutionalClaim = claimById.get(institutional.claimId);
+  const institutionalInquiry = inquiryById.get(institutional.inquiryId);
+  const institutionalSource = sourceById.get(institutional.correctedSourceId);
+  const institutionalCorrection = correctionById.get(institutional.correctionId);
+  const institutionalObservations = institutional.observationIds.map((id) => observationById.get(id));
+  const institutionalRelations = institutional.relationIds.map((id) => relationById.get(id));
+  const institutionalAffirmativeText = [
+    institutionalClaim?.internalClaim,
+    ...(institutionalClaim?.projections.map((projection) => projection.text) ?? []),
+    ...(institutionalClaim?.evidence.flatMap((evidence) => evidence.supports) ?? []),
+    ...institutionalObservations.map((observation) => observation?.text),
+    ...institutionalRelations.flatMap((relation) => [relation?.purpose, relation?.result]),
+    ...(institutionalInquiry?.findings ?? []),
+    institutionalInquiry?.publicSummary
+  ].filter(Boolean).join("\n");
+  const institutionalPublicText = [
+    fairRentMdx,
+    ...knowledgeBank.claims.flatMap((claim) =>
+      claim.projections.filter((projection) => projection.status === "active").map((projection) => projection.text)
+    )
+  ].join("\n");
+  const institutionalRelevantProjects = new Set([
+    "nyc-artist-coalition",
+    "createnyc",
+    "cabaret-law",
+    "office-of-nightlife",
+    "talks-not-raids"
+  ]);
+  const institutionalRelevantClaimText = knowledgeBank.claims
+    .filter((claim) => institutionalRelevantProjects.has(claim.project))
+    .flatMap((claim) => [claim.internalClaim, ...claim.projections.map((projection) => projection.text)])
+    .join("\n");
+  const agencyAffirmativeText = knowledgeBank.agencyRelations
+    .flatMap((relation) => [relation.purpose, relation.result])
+    .join("\n");
+  const institutionalRelatedClaimsSha256 = createHash("sha256").update(JSON.stringify(
+    knowledgeBank.claims
+      .filter((claim) => institutionalRelevantProjects.has(claim.project))
+      .map((claim) => ({
+        id: claim.id,
+        project: claim.project,
+        internalClaim: claim.internalClaim,
+        status: claim.status,
+        projections: claim.projections.map(({ key, text, status, surfaces }) => ({ key, text, status, surfaces })),
+        boundaries: claim.boundaries,
+        antiClaims: claim.antiClaims
+      }))
+  )).digest("hex");
+  const institutionalRelatedClaimsApproved =
+    institutionalRelatedClaimsSha256 === institutional.approvedRelatedClaimsSha256;
+  const institutionalContentSha256 = createHash("sha256").update(JSON.stringify({
+    claim: institutionalClaim && {
+      internalClaim: institutionalClaim.internalClaim,
+      projections: institutionalClaim.projections.map(({ key, text, status, surfaces }) => ({ key, text, status, surfaces })),
+      evidence: institutionalClaim.evidence.map(({ sourceId, relationship, supports, locator }) => ({ sourceId, relationship, supports, locator }))
+    },
+    observations: institutionalObservations.map((observation) => observation && ({
+      id: observation.id,
+      text: observation.text,
+      limitations: observation.limitations
+    })),
+    relations: institutionalRelations.map((relation) => relation && ({
+      id: relation.id,
+      actorIds: relation.actorIds,
+      action: relation.action,
+      objectId: relation.objectId,
+      purpose: relation.purpose,
+      result: relation.result,
+      creditScope: relation.creditScope,
+      sourceIds: relation.sourceIds,
+      sourceSupportKeys: relation.sourceSupportKeys,
+      boundaries: relation.boundaries
+    })),
+    inquiry: institutionalInquiry && {
+      findings: institutionalInquiry.findings,
+      limitations: institutionalInquiry.limitations,
+      publicSummary: institutionalInquiry.publicSummary
+    }
+  })).digest("hex");
+  const institutionalContentApproved = institutionalContentSha256 === institutional.approvedContentSha256;
+  const institutionalOverclaimPatterns = [
+    /\b(?:depend(?:ed|ent|ence|ency|s|ing)?|indispensable|essential|necessary|vital|only validation|no alternative|could not act|unable to act|relied(?: entirely)? on|required (?:NYC Artist Coalition|the coalition))\b/i,
+    /\b(?:Finkelpearl|(?:Rafael )?Espinal|DCLA|(?:the )?(?:New York )?City Council)\b[^.]{0,120}\b(?:needed|wanted|required|relied(?: entirely)? on|depended(?: entirely)? on|could not act without|political cover)\b/i,
+    /\bprivate motive (?:is|was) known\b/i,
+    /\b(?:Jamie|NYC Artist Coalition|Finkelpearl|(?:Rafael )?Espinal)\b[^.]{0,100}\b(?:authored|wrote|drafted|enacted|passed|created|secured|delivered)\b[^.]{0,80}\b(?:law|local law|repeal|office|reform)\b/i,
+    /\b(?:Jamie|NYC Artist Coalition)\b[^.]{0,100}\b(?:caused|made possible)\b[^.]{0,80}\b(?:law|repeal|office|reform)\b/i,
+    /\b(?:NYC Artist Coalition|the coalition)\b[^.]{0,100}\b(?:was |were )?(?:indispensable|essential|necessary)\b[^.]{0,80}\b(?:Council|DCLA|Finkelpearl|Espinal)\b/i,
+    /\b(?:Finkelpearl|(?:Rafael )?Espinal|DCLA|(?:the )?(?:New York )?City Council)\b[^.]{0,120}\b(?:indispensable|essential|necessary|only because|unstated reason|decisive evidence)\b/i,
+    /\b(?:enabled\b[^.]{0,100}\benact|decisive reason|(?:would have been|was) unable\b[^.]{0,100}\bwithout|privately sought\b[^.]{0,100}\bvalidation|guaranteed passage|owed the success of)\b/i,
+    /\b(?:only because|unstated reason|decisive evidence|resulted from|verbatim)\b/i,
+    /\bin response to\b[^.]{0,120}\b(?:NYC Artist Coalition|coalition) testimony\b/i,
+    /\b(?:furnished|supplied|gave)\b[^.]{0,120}\b(?:Council|repeal|enacted policy)\b[^.]{0,80}\b(?:rationale|basis|policy)\b/i,
+    /\b(?:Finkelpearl|DCLA)\b[^.]{0,100}\bused\b[^.]{0,100}\b(?:rescue|legitimacy)\b/i,
+    /\b(?:Council|Espinal)\b[^.]{0,100}\b(?:followed|adopted)\b[^.]{0,80}\b(?:coalition|NYC Artist Coalition)\b[^.]{0,40}\b(?:blueprint|agenda)\b/i,
+    /\b(?:NYC Artist Coalition|coalition) testimony\b[^.]{0,80}\bmoved\b[^.]{0,40}\bEspinal\b/i,
+    /\bpolicy alignment proves\b/i
+  ];
+  const institutionalOverclaimFree = institutionalOverclaimPatterns.every(
+    (pattern) => !pattern.test(institutionalAffirmativeText) &&
+      !pattern.test(institutionalRelevantClaimText) &&
+      !pattern.test(institutionalPublicText) &&
+      !pattern.test(agencyAffirmativeText)
+  );
+  const staleCabaretHearingDateFree = !(
+    /\bJune 19, 2017\b[^.]{0,100}\b(?:Council|Cabaret|hearing)\b/i.test(institutionalRelevantClaimText) ||
+    /\b(?:Council|Cabaret|hearing)\b[^.]{0,100}\bJune 19, 2017\b/i.test(institutionalRelevantClaimText)
+  );
+  const institutionalEvidenceClosed = Boolean(
+    institutionalClaim?.evidence.length === institutionalIntake?.sourceIds.length &&
+    institutionalClaim.evidence.every((evidence) =>
+      evidence.supports.length && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const cabaretAlignment = observationById.get("OBS-NYCAC-CABARET-POLICY-ALIGNMENT");
+  const officeAlignment = observationById.get("OBS-NYCAC-OFFICE-POLICY-ALIGNMENT");
+  const hearingEvidence = institutionalClaim?.evidence.find(
+    (evidence) => evidence.sourceId === institutional.correctedSourceId
+  );
+  const expectedInstitutionalRelations = new Map([
+    ["REL-DCLA-CONVENED-DIY-MEETING", { actorId: "ENT-NYC-DCLA", action: "convened", objectId: "ENT-DCLA-DIY-MEETING-2017", creditScope: "institutional" }],
+    ["REL-FINKELPEARL-CITED-NYCAC-PUBLIC-PROCESS-OUTCOME", { actorId: "ENT-TOM-FINKELPEARL", action: "cited-as-public-process-outcome", objectId: "ENT-NYC-ARTIST-COALITION", creditScope: "individual" }],
+    ["REL-ESPINAL-CHAIRED-CABARET-REFORM-HEARING", { actorId: "ENT-RAFAEL-ESPINAL", action: "chaired-hearing-for", objectId: "ENT-CABARET-REFORM-HEARING-2017", creditScope: "individual" }],
+    ["REL-COUNCIL-CONVENED-CABARET-REFORM-HEARING", { actorId: "ENT-NYC-COUNCIL", action: "convened", objectId: "ENT-CABARET-REFORM-HEARING-2017", creditScope: "institutional" }]
+  ]);
+  const institutionalCapacityComplete = Boolean(
+    institutionalIntake?.kind === "analysis-note" &&
+      institutionalIntake.disposition === "integrated" &&
+      institutionalIntake.visibility === "public-safe" &&
+      institutionalIntake.sourceIds.length >= 7 &&
+      institutionalIntake.boundaries.some((boundary) => /private motive/i.test(boundary)) &&
+      institutionalIntake.boundaries.some((boundary) => /dependency|sole causation/i.test(boundary)) &&
+      institutionalObservations.every(
+        (observation) => observation?.kind === "bounded-inference" &&
+          (observation.comparisonSourceIds.length
+            ? observation.status === "corroborated"
+            : observation.status === "extracted") &&
+          observation.locator &&
+          observation.limitations.length &&
+          observation.claimIds.includes(institutional.claimId) &&
+          observation.researchInquiryIds.includes(institutional.inquiryId) &&
+          observation.comparisonSourceIds.every((sourceId) => institutionalIntake.sourceIds.includes(sourceId))
+      ) &&
+      cabaretAlignment?.comparisonSourceIds.includes(institutional.correctedSourceId) &&
+      officeAlignment?.comparisonSourceIds.includes("SRC-NYCAC-CREATENYC-SUBMISSION-2017-03-17") &&
+      officeAlignment.comparisonSourceIds.includes("SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12") &&
+      institutionalClaim?.status === "inference" &&
+      institutionalClaim.projections.length > 0 &&
+      institutionalClaim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      institutionalClaim.evidence.some(
+        (evidence) => evidence.sourceId === "SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19"
+      ) &&
+      institutionalClaim.evidence.some(
+        (evidence) => evidence.sourceId === institutional.correctedSourceId
+      ) &&
+      hearingEvidence?.supports.some((supported) => /request for stakeholder testimony/i.test(supported)) &&
+      !hearingEvidence?.supports.some((supported) => /stated need/i.test(supported)) &&
+      institutionalClaim.boundaries.some((boundary) => /private|privately/i.test(boundary)) &&
+      institutionalClaim.boundaries.some((boundary) => /caus|agency|enactment/i.test(boundary)) &&
+      institutionalClaim.antiClaims.some((antiClaim) => /depended|could not act/i.test(antiClaim)) &&
+      institutionalClaim.antiClaims.some((antiClaim) => /private motive/i.test(antiClaim)) &&
+      institutionalClaim.antiClaims.some((antiClaim) => /authored or enacted|caused/i.test(antiClaim)) &&
+      institutionalInquiry?.resultStatus === "partially-recovered" &&
+      institutionalInquiry.sourceIds.length >= 7 &&
+      institutionalInquiry.limitations.some((limitation) => /private communications|personal motive/i.test(limitation)) &&
+      institutionalInquiry.limitations.some((limitation) => /causal|causation/i.test(limitation)) &&
+      institutionalSource?.publishedAt === "2017-09-14" &&
+      /September 14, 2017/.test(institutionalSource.publicCitation) &&
+      institutionalSource.doesNotEstablish.some((boundary) => /private motive/i.test(boundary)) &&
+      sourceById.get("SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19")?.doesNotEstablish.some(
+        (boundary) => /private motive/i.test(boundary)
+      ) &&
+      sourceById.get("SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19")?.doesNotEstablish.some(
+        (boundary) => /dependency/i.test(boundary)
+      ) &&
+      institutionalCorrection?.status === "active" &&
+      institutionalCorrection.claimId === "CLM-NYCAC-CABARET-TESTIMONY-2017" &&
+      institutionalCorrection.previousText === "June 19, 2017" &&
+      institutionalCorrection.replacementText === "September 14, 2017" &&
+      /official transcript title page/i.test(institutionalCorrection.reason) &&
+      /September 14, 2017/.test(institutionalCorrection.reason) &&
+      ["/work/fair-rent-nyc", "knowledge-bank", "public-citation-registry"].every(
+        (surface) => institutionalCorrection.affectedSurfaces.includes(surface)
+      ) &&
+      institutionalCorrection.affectedSurfaces.length === 3 &&
+      institutionalContentApproved &&
+      institutionalRelatedClaimsApproved &&
+      institutionalOverclaimFree &&
+      staleCabaretHearingDateFree &&
+      institutionalEvidenceClosed &&
+      institutionalRelations.length === expectedInstitutionalRelations.size &&
+      institutionalRelations.every(
+        (relation) => {
+          const expected = relation && expectedInstitutionalRelations.get(relation.id);
+          return Boolean(expected && relation.actorIds.length === 1 &&
+          relation.actorIds[0] === expected.actorId &&
+          relation.action === expected.action &&
+          relation.objectId === expected.objectId &&
+          relation.creditScope === expected.creditScope &&
+          relation.status === "confirmed-with-boundary" &&
+          relation.claimIds.includes(institutional.claimId) &&
+          relation.boundaries.length &&
+          relation.sourceSupportKeys.length &&
+          relation.sourceSupportKeys.every((supportKey) => relation.sourceIds.some(
+            (sourceId) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+          )));
+        }
+      ) &&
+      institutionalRelations.some((relation) => relation?.creditScope === "individual") &&
+      institutionalRelations.some((relation) => relation?.creditScope === "institutional") &&
+      holdoutEvidenceComplete
   );
   const pressArchive = suite.pilot.pressArchive;
   const pressIntakes = pressArchive.intakeIds.map((id) => intakeById.get(id));
@@ -97,9 +329,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       pressInquiry?.sourceIds.length === pressArchive.expectedIndexCount + pressArchive.expectedUniqueArticleCount &&
       pressInquiry.limitations.length >= 4
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...pressObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, pressClaim];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, pressInquiry];
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -151,6 +383,23 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   );
   const agency = suite.pilot.agencyGraph;
   const agencyRelations = agency.relationIds.map((id) => relationById.get(id));
+  const agencyGraphSha256 = createHash("sha256").update(JSON.stringify(
+    knowledgeBank.agencyRelations.map((relation) => ({
+      id: relation.id,
+      actorIds: relation.actorIds,
+      action: relation.action,
+      objectId: relation.objectId,
+      purpose: relation.purpose,
+      result: relation.result,
+      creditScope: relation.creditScope,
+      status: relation.status,
+      claimIds: relation.claimIds,
+      sourceIds: relation.sourceIds,
+      sourceSupportKeys: relation.sourceSupportKeys,
+      boundaries: relation.boundaries
+    }))
+  )).digest("hex");
+  const agencyGraphApproved = agencyGraphSha256 === agency.approvedGraphSha256;
   const enactedRelations = knowledgeBank.agencyRelations.filter(
     (relation) => relation.action === "enacted"
   );
@@ -227,6 +476,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       knowledgeBank.agencyRelations.length === agency.expectedRelationCount &&
       new Set(knowledgeBank.agencyRelations.map((relation) => relation.id)).size === agency.expectedRelationCount &&
       agencyRelations.every(Boolean) &&
+      agencyGraphApproved &&
       agencyRelations.every((relation) =>
         relation.actorIds.every((actorId) => entityById.get(actorId)?.publicSafe) &&
         entityById.get(relation.objectId)?.publicSafe &&
@@ -237,6 +487,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
             claimById.get(claimId)?.evidence.some((evidence) => evidence.sourceId === sourceId)
           )
         ) &&
+        relation.sourceSupportKeys.length > 0 &&
+        relation.sourceSupportKeys.every((supportKey) => relation.sourceIds.some(
+          (sourceId) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+        )) &&
+        relation.sourceIds.every((sourceId) => relation.sourceSupportKeys.some(
+          (supportKey) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+        )) &&
         relation.purpose &&
         relation.result &&
         relation.boundaries.length &&
@@ -257,6 +514,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         knowledgeBank.agencyRelations.some((relation) => relation.creditScope === creditScope)
       ) &&
       marchResearchAligned &&
+      institutionalCapacityComplete &&
       openAgencyInquiries.every((inquiry) => inquiry?.resultStatus === "inconclusive") &&
       existsSync(path.join(repoRoot, "docs/knowledge-bank/agency-and-collective-credit.md"))
   );
@@ -270,9 +528,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
         secondExpansionIntakes.length === secondExpansion.expectedSourceCount &&
         secondExpansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
+        institutionalCapacityComplete &&
         pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length)
       ),
-      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
+      evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} first-expansion intakes, ${secondExpansionIntakes.filter(Boolean).length}/${secondExpansion.expectedSourceCount} second-expansion intakes, one institutional-capacity analysis, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
     {
       criterionId: "KB-EVAL-ATOMICITY",
@@ -288,6 +547,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         [...pilotSources, ...expansionSources, ...secondExpansionSources, ...pressIndexSources, ...pressArticleSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
         expansionSources.length === expansion.expectedSourceCount &&
         secondExpansionSources.length === secondExpansion.expectedSourceCount &&
+        institutionalCapacityComplete &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
       evidence: [`${expansionSources.filter(Boolean).length + secondExpansionSources.filter(Boolean).length}/${expansion.expectedSourceCount + secondExpansion.expectedSourceCount} source-expansion records and ${pressArticleSources.filter(Boolean).length}/${pressArchive.expectedUniqueArticleCount} distinct press articles have explicit support and doesNotEstablish boundaries`]
@@ -298,7 +558,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         allEvaluatedClaims.every((claim) => claim?.evidence.length && claim.boundaries.length && claim.antiClaims.length && claim.reviewedBy.length) &&
         allEvaluatedInquiries.every((inquiry) => inquiry?.limitations.length && inquiry.findings.length) &&
         expansionClaims.length === expansion.claimIds.length &&
-        secondExpansionClaims.length === secondExpansion.claimIds.length,
+        secondExpansionClaims.length === secondExpansion.claimIds.length &&
+        institutionalCapacityComplete,
         triangulatedExpansionClaims.length >= 8
       ),
       evidence: [`${allExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
@@ -310,6 +571,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         selectedExpansionClaims.every((claim) => claim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc"))) &&
         webAuthorshipAligned &&
         marchResearchAligned &&
+        institutionalCapacityComplete &&
         Boolean(fairRentPage)
       ),
       evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections`]
@@ -329,7 +591,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     },
     {
       criterionId: "KB-EVAL-SAFETY",
-      score: score(errors.length === 0 && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
+      score: score(errors.length === 0 && institutionalCapacityComplete && knowledgeBank.intakeItems.every((item) => !item.sourceUrl || /^https:\/\//.test(item.sourceUrl))),
       evidence: [errors.length ? `${errors.length} canonical validation errors` : "Canonical validation passes with no private-path or protected-locator leak"]
     },
     {
@@ -341,6 +603,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         knowledgeBank.intakeItems.some((item) => item.kind === "memory-lead") &&
         existsSync(path.join(repoRoot, "docs/knowledge-bank/intake-and-maturation.md")) &&
         photoChainComplete &&
+        institutionalClaim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0) &&
         pressClaim?.projections.every((projection) => projection.status === "hold") &&
         pressInquiry?.resultStatus === "partially-recovered"
       ),
@@ -379,6 +642,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     weightedScore,
     belowMinimum,
     errors,
-    accepted: errors.length === 0 && belowMinimum.length === 0 && weightedScore >= suite.targets.weightedScoreAtLeast
+    holdout: {
+      requiredConsecutivePassingRuns: suite.targets.consecutivePassingRuns,
+      consecutivePassingRuns,
+      complete: holdoutEvidenceComplete,
+      judgeIds: holdoutLedger.runs.slice(-consecutivePassingRuns).map((run) => run.judgeId)
+    },
+    accepted: errors.length === 0 &&
+      belowMinimum.length === 0 &&
+      weightedScore >= suite.targets.weightedScoreAtLeast &&
+      holdoutEvidenceComplete
   };
 }

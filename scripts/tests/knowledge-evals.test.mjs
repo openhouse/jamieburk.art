@@ -1,10 +1,21 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
+
+test("knowledge-bank gate records two consecutive independent 5/5 holdouts", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.holdout.complete, true);
+  assert.equal(result.holdout.consecutivePassingRuns, 2);
+  assert.deepEqual(result.holdout.judgeIds, [
+    "independent-run-1-public-interest-red-team",
+    "candidate-independent-run-2"
+  ]);
+});
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
   const result = evaluateKnowledgeBank(suite);
@@ -285,6 +296,479 @@ test("agency graph rejects a public but unrelated source", () => {
     assert.equal(result.accepted, false);
   } finally {
     relation.sourceIds = originalSourceIds;
+  }
+});
+
+test("institutional-capacity analysis preserves public function without inventing private motive", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 5);
+
+  const institutional = suite.pilot.institutionalCapacity;
+  const claim = knowledgeBank.claims.find((item) => item.id === institutional.claimId);
+  assert.equal(claim?.status, "inference");
+  assert.ok(claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
+  assert.ok(claim?.antiClaims.some((antiClaim) => /private motive/i.test(antiClaim)));
+  assert.ok(claim?.antiClaims.some((antiClaim) => /depended|could not act/i.test(antiClaim)));
+});
+
+test("institutional-capacity analysis rejects a missing motive boundary", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.institutionalCapacity.claimId
+  );
+  assert.ok(claim);
+  const originalAntiClaims = claim.antiClaims;
+
+  try {
+    claim.antiClaims = claim.antiClaims.filter((antiClaim) => !/private motive/i.test(antiClaim));
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = originalAntiClaims;
+  }
+});
+
+test("institutional-capacity analysis rejects blind-holdout motive, dependence, and enactment overclaims", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.institutionalCapacity.claimId
+  );
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-NYCAC-DCLA-INSTITUTIONAL-USE"
+  );
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-ESPINAL-CHAIRED-CABARET-REFORM-HEARING"
+  );
+  assert.ok(claim && observation && relation);
+  const originalClaim = claim.internalClaim;
+  const originalObservation = observation.text;
+  const originalResult = relation.result;
+  const blindHoldoutOverclaims = [
+    "Finkelpearl needed NYC Artist Coalition to validate CreateNYC.",
+    "Espinal wanted NYC Artist Coalition to provide political cover.",
+    "The City Council relied entirely on NYC Artist Coalition.",
+    "NYC Artist Coalition wrote Local Law 214.",
+    "Rafael Espinal passed the Cabaret repeal law.",
+    "The coalition was indispensable to the Council.",
+    "NYC Artist Coalition enabled the Council to enact the Cabaret repeal.",
+    "NYC Artist Coalition was the decisive reason Espinal advanced the reform.",
+    "The Council would have been unable to legislate without NYC Artist Coalition.",
+    "Espinal privately sought NYC Artist Coalition as validation for his agenda.",
+    "The coalition guaranteed passage of the Cabaret repeal.",
+    "DCLA owed the success of CreateNYC to NYC Artist Coalition."
+  ];
+
+  try {
+    for (const overclaim of blindHoldoutOverclaims) {
+      claim.internalClaim = overclaim;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score,
+        1,
+        `expected evaluator to reject: ${overclaim}`
+      );
+      assert.equal(
+        result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score,
+        1,
+        `expected scope evaluator to reject: ${overclaim}`
+      );
+      assert.equal(result.accepted, false, `expected evaluator to reject: ${overclaim}`);
+    }
+
+    claim.internalClaim = originalClaim;
+    observation.text = "DCLA could not act without NYC Artist Coalition.";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    observation.text = originalObservation;
+    relation.result = "Espinal and NYC Artist Coalition authored and enacted the Cabaret repeal law.";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.internalClaim = originalClaim;
+    observation.text = originalObservation;
+    relation.result = originalResult;
+  }
+});
+
+test("comparative policy alignment requires both sides of the comparison", () => {
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === "OBS-NYCAC-CABARET-POLICY-ALIGNMENT"
+  );
+  assert.ok(observation);
+  const originalComparisonSourceIds = observation.comparisonSourceIds;
+
+  try {
+    observation.comparisonSourceIds = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    observation.comparisonSourceIds = originalComparisonSourceIds;
+  }
+});
+
+test("hearing agency separates the individual chair from the Council", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-ESPINAL-CHAIRED-CABARET-REFORM-HEARING"
+  );
+  assert.ok(relation);
+  const originalActorIds = relation.actorIds;
+
+  try {
+    relation.actorIds = ["ENT-RAFAEL-ESPINAL", "ENT-NYC-COUNCIL"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.actorIds = originalActorIds;
+  }
+});
+
+test("hearing agency requires the exact actor, action, event, and credit tuple", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-COUNCIL-CONVENED-CABARET-REFORM-HEARING"
+  );
+  assert.ok(relation);
+  const originalAction = relation.action;
+  const originalObjectId = relation.objectId;
+
+  try {
+    relation.action = "advocated-for";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    relation.action = originalAction;
+    relation.objectId = "ENT-CABARET-LICENSE-REPEAL";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.action = originalAction;
+    relation.objectId = originalObjectId;
+  }
+});
+
+test("institutional overclaim scan covers every NYCAC-related claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CREATENYC-POLICY-DEVELOPMENT-2017"
+  );
+  assert.ok(claim);
+  const originalClaim = claim.internalClaim;
+
+  const escapedHoldoutOverclaims = [
+    "DCLA needed NYC Artist Coalition to validate CreateNYC, and Finkelpearl depended on the coalition.",
+    "DCLA regarded NYC Artist Coalition as indispensable to CreateNYC.",
+    "Espinal advanced the repeal only because NYC Artist Coalition asked him to.",
+    "Finkelpearl's unstated reason for embracing the coalition was to rescue CreateNYC."
+  ];
+
+  try {
+    for (const overclaim of escapedHoldoutOverclaims) {
+      claim.internalClaim = overclaim;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+      assert.equal(result.accepted, false, `expected evaluator to reject: ${overclaim}`);
+    }
+  } finally {
+    claim.internalClaim = originalClaim;
+  }
+});
+
+test("institutional dependency remains rejected after deliberate approval-hash refresh", () => {
+  const institutional = suite.pilot.institutionalCapacity;
+  const claim = knowledgeBank.claims.find((item) => item.id === institutional.claimId);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === institutional.inquiryId);
+  const observations = institutional.observationIds.map((id) =>
+    knowledgeBank.observations.find((item) => item.id === id)
+  );
+  const relations = institutional.relationIds.map((id) =>
+    knowledgeBank.agencyRelations.find((item) => item.id === id)
+  );
+  assert.ok(claim && inquiry && observations.every(Boolean) && relations.every(Boolean));
+  const originalClaim = claim.internalClaim;
+  const originalContentHash = institutional.approvedContentSha256;
+  const originalRelatedClaimsHash = institutional.approvedRelatedClaimsSha256;
+  const relevantProjects = new Set([
+    "nyc-artist-coalition",
+    "createnyc",
+    "cabaret-law",
+    "office-of-nightlife",
+    "talks-not-raids"
+  ]);
+  const hash = (value) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
+  const refreshApprovalHashes = () => {
+    institutional.approvedContentSha256 = hash({
+      claim: {
+        internalClaim: claim.internalClaim,
+        projections: claim.projections.map(({ key, text, status, surfaces }) => ({ key, text, status, surfaces })),
+        evidence: claim.evidence.map(({ sourceId, relationship, supports, locator }) => ({ sourceId, relationship, supports, locator }))
+      },
+      observations: observations.map((observation) => ({
+        id: observation.id,
+        text: observation.text,
+        limitations: observation.limitations
+      })),
+      relations: relations.map((relation) => ({
+        id: relation.id,
+        actorIds: relation.actorIds,
+        action: relation.action,
+        objectId: relation.objectId,
+        purpose: relation.purpose,
+        result: relation.result,
+        creditScope: relation.creditScope,
+        sourceIds: relation.sourceIds,
+        sourceSupportKeys: relation.sourceSupportKeys,
+        boundaries: relation.boundaries
+      })),
+      inquiry: {
+        findings: inquiry.findings,
+        limitations: inquiry.limitations,
+        publicSummary: inquiry.publicSummary
+      }
+    });
+    institutional.approvedRelatedClaimsSha256 = hash(
+      knowledgeBank.claims
+        .filter((item) => relevantProjects.has(item.project))
+        .map((item) => ({
+          id: item.id,
+          project: item.project,
+          internalClaim: item.internalClaim,
+          status: item.status,
+          projections: item.projections.map(({ key, text, status, surfaces }) => ({ key, text, status, surfaces })),
+          boundaries: item.boundaries,
+          antiClaims: item.antiClaims
+        }))
+    );
+  };
+  const hashRefreshedOverclaims = [
+    "The coalition provided the only validation DCLA could accept, making the agency dependent on NYC Artist Coalition.",
+    "Finkelpearl viewed NYC Artist Coalition as vital to the success of CreateNYC.",
+    "The Council Cabaret repeal resulted from NYC Artist Coalition advocacy.",
+    "The Council enacted the coalition proposal verbatim.",
+    "Espinal advanced repeal in response to NYC Artist Coalition testimony.",
+    "The coalition furnished the Council rationale for enacting Local Law 214.",
+    "Finkelpearl used NYC Artist Coalition to rescue CreateNYC legitimacy.",
+    "The Council followed the coalition blueprint in repealing the Cabaret Law.",
+    "NYC Artist Coalition testimony moved Espinal to advance repeal."
+  ];
+
+  try {
+    for (const overclaim of hashRefreshedOverclaims) {
+      claim.internalClaim = overclaim;
+      refreshApprovalHashes();
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+      assert.equal(result.accepted, false, `expected semantic rejection after hash refresh: ${overclaim}`);
+    }
+  } finally {
+    claim.internalClaim = originalClaim;
+    institutional.approvedContentSha256 = originalContentHash;
+    institutional.approvedRelatedClaimsSha256 = originalRelatedClaimsHash;
+  }
+});
+
+test("agency graph rejects the holdout's actor, object, and causal-result mutations", () => {
+  const mutations = [
+    {
+      id: "REL-JAMIE-CABARET-ADVOCACY",
+      key: "result",
+      value: "Jamie advocacy supplied the Council basis for repeal."
+    },
+    {
+      id: "REL-NYCAC-MARCH-TRANSPARENCY-ADVOCACY",
+      key: "result",
+      value: "The coalition gave the Council its enacted Local Law 220 policy."
+    },
+    {
+      id: "REL-NYCAC-MARCH-TRANSPARENCY-ADVOCACY",
+      key: "objectId",
+      value: "ENT-CABARET-LICENSE-REPEAL"
+    },
+    {
+      id: "REL-NYCAC-MARCH-TRANSPARENCY-ADVOCACY",
+      key: "actorIds",
+      value: ["ENT-JAMIE-BURKART"]
+    }
+  ];
+
+  for (const mutation of mutations) {
+    const relation = knowledgeBank.agencyRelations.find((item) => item.id === mutation.id);
+    assert.ok(relation);
+    const original = relation[mutation.key];
+    try {
+      relation[mutation.key] = mutation.value;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+      assert.equal(result.accepted, false, `expected rejection for ${mutation.id}.${mutation.key}`);
+    } finally {
+      relation[mutation.key] = original;
+    }
+  }
+});
+
+test("every agency relation has source-closed support propositions", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+
+  for (const relation of knowledgeBank.agencyRelations) {
+    assert.ok(relation.sourceSupportKeys.length, `${relation.id} has no source support keys`);
+    assert.ok(
+      relation.sourceSupportKeys.every((supportKey) => relation.sourceIds.some(
+        (sourceId) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+      )),
+      `${relation.id} contains a support proposition its sources do not declare`
+    );
+    assert.ok(
+      relation.sourceIds.every((sourceId) => relation.sourceSupportKeys.some(
+        (supportKey) => sourceById.get(sourceId)?.supportsGenerally.includes(supportKey)
+      )),
+      `${relation.id} contains a source with no declared proposition`
+    );
+  }
+});
+
+test("institutional evidence propositions remain source-closed after approval-hash refresh", () => {
+  const institutional = suite.pilot.institutionalCapacity;
+  const claim = knowledgeBank.claims.find((item) => item.id === institutional.claimId);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === institutional.inquiryId);
+  const evidence = claim?.evidence.find(
+    (item) => item.sourceId === "SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19"
+  );
+  const observations = institutional.observationIds.map((id) =>
+    knowledgeBank.observations.find((item) => item.id === id)
+  );
+  const relations = institutional.relationIds.map((id) =>
+    knowledgeBank.agencyRelations.find((item) => item.id === id)
+  );
+  assert.ok(claim && inquiry && evidence && observations.every(Boolean) && relations.every(Boolean));
+  const originalSupports = evidence.supports;
+  const originalContentHash = institutional.approvedContentSha256;
+  const hash = (value) => createHash("sha256").update(JSON.stringify(value)).digest("hex");
+
+  try {
+    evidence.supports = ["Finkelpearl privately sought NYC Artist Coalition to validate CreateNYC"];
+    institutional.approvedContentSha256 = hash({
+      claim: {
+        internalClaim: claim.internalClaim,
+        projections: claim.projections.map(({ key, text, status, surfaces }) => ({ key, text, status, surfaces })),
+        evidence: claim.evidence.map(({ sourceId, relationship, supports, locator }) => ({ sourceId, relationship, supports, locator }))
+      },
+      observations: observations.map((observation) => ({ id: observation.id, text: observation.text, limitations: observation.limitations })),
+      relations: relations.map((relation) => ({
+        id: relation.id,
+        actorIds: relation.actorIds,
+        action: relation.action,
+        objectId: relation.objectId,
+        purpose: relation.purpose,
+        result: relation.result,
+        creditScope: relation.creditScope,
+        sourceIds: relation.sourceIds,
+        sourceSupportKeys: relation.sourceSupportKeys,
+        boundaries: relation.boundaries
+      })),
+      inquiry: { findings: inquiry.findings, limitations: inquiry.limitations, publicSummary: inquiry.publicSummary }
+    });
+
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    evidence.supports = originalSupports;
+    institutional.approvedContentSha256 = originalContentHash;
+  }
+});
+
+test("Cabaret hearing correction rejects stale dates and decisive-causation copy on related projections", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CABARET-SAFETY-ORGANIZING"
+  );
+  const projection = claim?.projections.find((item) => item.status === "active");
+  assert.ok(projection);
+  const originalText = projection.text;
+
+  try {
+    projection.text = "Jamie testified at the June 19, 2017 Council Cabaret hearing and supplied decisive evidence for repeal.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SCOPE")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
+test("institutional role relations require source-declared support", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-ESPINAL-CHAIRED-CABARET-REFORM-HEARING"
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.institutionalCapacity.correctedSourceId
+  );
+  assert.ok(relation && source);
+  const originalSupportKeys = relation.sourceSupportKeys;
+  const originalSupportsGenerally = source.supportsGenerally;
+
+  try {
+    relation.sourceSupportKeys = [];
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    relation.sourceSupportKeys = originalSupportKeys;
+    source.supportsGenerally = source.supportsGenerally.filter(
+      (support) => support !== "Espinal chaired the September 14 hearing"
+    );
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.sourceSupportKeys = originalSupportKeys;
+    source.supportsGenerally = originalSupportsGenerally;
+  }
+});
+
+test("Cabaret hearing date correction is a complete traceability gate", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.institutionalCapacity.correctedSourceId
+  );
+  const correction = knowledgeBank.corrections.find(
+    (item) => item.id === suite.pilot.institutionalCapacity.correctionId
+  );
+  assert.ok(source && correction);
+  const originalDate = source.publishedAt;
+  const originalClaimId = correction.claimId;
+  const originalReason = correction.reason;
+  const originalAffectedSurfaces = correction.affectedSurfaces;
+
+  try {
+    source.publishedAt = "2017-06-19";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    source.publishedAt = originalDate;
+    correction.claimId = "CLM-NYCAC-INSTITUTIONAL-CAPACITY-2017";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    correction.claimId = originalClaimId;
+    correction.reason = "Date changed.";
+    correction.affectedSurfaces = ["knowledge-bank"];
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-SAFETY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    source.publishedAt = originalDate;
+    correction.claimId = originalClaimId;
+    correction.reason = originalReason;
+    correction.affectedSurfaces = originalAffectedSurfaces;
   }
 });
 

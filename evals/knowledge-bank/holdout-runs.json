@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "runs": [
+    {
+      "judgeId": "independent-run-1-public-interest-red-team",
+      "completedAt": "2026-07-14T16:15:58Z",
+      "lens": "Fresh, skeptical public-interest portfolio editor and evaluation red-team reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "candidate-independent-run-2",
+      "completedAt": "2026-07-14T16:20:16Z",
+      "lens": "Skeptical civic-policy researcher and adversarial evaluation engineer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    }
+  ]
+}

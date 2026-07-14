@@ -12,6 +12,8 @@ const lines = [
   "",
   `Weighted score: **${result.weightedScore} / 5**`,
   `Accepted: **${result.accepted ? "yes" : "no"}**`,
+  `Consecutive independent holdout passes: **${result.holdout.consecutivePassingRuns} / ${result.holdout.requiredConsecutivePassingRuns}**`,
+  `Accepted holdout judges: **${result.holdout.judgeIds.join(", ") || "none"}**`,
   "",
   "| Criterion | Score | Evidence |",
   "| --- | ---: | --- |",

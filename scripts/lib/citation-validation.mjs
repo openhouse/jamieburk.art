@@ -83,6 +83,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   for (const observation of knowledgeBank.observations) {
     if (!intakeById.has(observation.intakeId)) errors.push(`Observation ${observation.id} references unknown intake ${observation.intakeId}`);
     if (observation.sourceId && !sourceById.has(observation.sourceId)) errors.push(`Observation ${observation.id} references unknown source ${observation.sourceId}`);
+    for (const sourceId of observation.comparisonSourceIds) if (!sourceById.has(sourceId)) errors.push(`Observation ${observation.id} references unknown comparison source ${sourceId}`);
     for (const claimId of observation.claimIds) if (!claimById.has(claimId)) errors.push(`Observation ${observation.id} references unknown claim ${claimId}`);
     for (const inquiryId of observation.researchInquiryIds) if (!inquiryById.has(inquiryId)) errors.push(`Observation ${observation.id} references unknown inquiry ${inquiryId}`);
     if (["corroborated", "verified"].includes(observation.status) && !observation.sourceId) errors.push(`Verified observation ${observation.id} has no source`);
@@ -135,6 +136,15 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   for (const inquiry of knowledgeBank.researchInquiries) {
     for (const sourceId of inquiry.sourceIds) if (!sourceById.has(sourceId)) errors.push(`Inquiry ${inquiry.id} references unknown source ${sourceId}`);
     if (inquiry.resultStatus === "not-recovered" && !inquiry.limitations.length) errors.push(`Not-recovered inquiry ${inquiry.id} has no limitations`);
+  }
+
+  for (const relation of knowledgeBank.agencyRelations) {
+    const declaredSupport = relation.sourceIds.flatMap(
+      (sourceId) => sourceById.get(sourceId)?.supportsGenerally.map(normalize) ?? []
+    );
+    for (const supportKey of relation.sourceSupportKeys) {
+      if (!declaredSupport.includes(normalize(supportKey))) errors.push(`Agency relation ${relation.id} uses undeclared source support: ${supportKey}`);
+    }
   }
 
   const proofIds = new Set(proofClaims.map((proof) => proof.id));

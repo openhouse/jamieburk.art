@@ -39,16 +39,25 @@ as authoring legislation, enacting a law, or solely causing a collective outcome
 | Office of Nightlife town hall | NYC Artist Coalition | Spearheaded the public forum | Reporting supports the coalition role without assigning every production responsibility or an audited attendance count. |
 | Office of Nightlife town hall | Jamie | Spoke as a coalition representative | A speaking role does not establish sole production or creation of the Office. |
 | Office of Nightlife agenda | NYC Artist Coalition | Advocated for community-space priorities | The campaign establishes a public agenda, not adoption or implementation of every proposal. |
+| CreateNYC public process | DCLA | Convened a January DIY and alternative art-spaces meeting | Official records establish the meeting and subsequent coalition formation, not sole City creation of the coalition. |
+| CreateNYC public process | Tom Finkelpearl | Cited NYC Artist Coalition as a public-process outcome | Official testimony supports Finkelpearl's public framing, not his private motive or personal dependency. |
+| Cabaret reform hearing | Rafael Espinal | Chaired the September 14 hearing | The transcript establishes Espinal's chair role and public reform frame, not his private motive or legislative action by him alone. |
+| Cabaret reform hearing | New York City Council | Convened the public hearing | The transcript establishes the institutional forum and invitation for stakeholder evidence, not dependence on one constituency or enactment at the hearing. |
 | Office of Nightlife | New York City Council | Enacted Local Law 178 | The official record establishes the institution; it does not allocate causal credit among advocates. |
 | Cabaret licensing repeal | New York City Council | Enacted Local Law 214 | The official record establishes repeal and retained security provisions; advocacy credit remains collective. |
 | Sunday Dinner | Jamie and Julia | Co-hosted weekly community dinners | Hosting credit stays shared, and the 2017 profile does not establish full duration or attendance totals. |
 | Commercial rent protections | Jamie | Testified before the Council | The transcript establishes Jamie's position and participation, not enactment or Council endorsement. |
+| CreateNYC recommendations | NYC Artist Coalition | Co-created a structured policy agenda | City-preserved records establish collective recommendations and dialogue, not individual authorship or implementation of every proposal. |
+| M.A.R.C.H. transparency | NYC Artist Coalition | Advocated for transparency and alternatives | The 2017 recommendation establishes the agenda, not authorship or sole causation of Local Law 220. |
+| M.A.R.C.H. transparency law | New York City Council | Enacted Local Law 220 | The official record establishes reporting and notice requirements; enactment remains institutional. |
+| CURE | Office of Nightlife | Implemented the replacement for M.A.R.C.H. | The Office's report establishes institutional replacement in December 2023, not sole causal credit for Jamie or the coalition. |
 
 ## Intentionally unresolved
 
-- **Talks Not Raids / M.A.R.C.H.:** the public campaign priority is recovered,
-  but Jamie's contribution and the later institutional outcome remain an open
-  inquiry.
+- **Institutional private motive and causal allocation:** public records show
+  how DCLA, the Council, and Espinal used participation, testimony, and public
+  forums. They do not reveal private motive, exclusive dependency, or the
+  causal weight of any one intervention.
 - **CallNYC Council-account engagement:** the memory lead is retained, but
   account identities, interaction types, date range, authenticated collection,
   deduplication, and reproducible counts remain unresolved.

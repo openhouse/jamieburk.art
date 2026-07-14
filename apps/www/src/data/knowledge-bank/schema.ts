@@ -41,6 +41,7 @@ export const preservationStatusSchema = z.enum([
 export const intakeKindSchema = z.enum([
   "public-url",
   "public-artifact",
+  "analysis-note",
   "memory-lead",
   "photo-lead",
   "collaborator-note"
@@ -77,9 +78,11 @@ export const observationSchema = z.object({
   id: stableIdSchema,
   intakeId: stableIdSchema,
   sourceId: stableIdSchema.optional(),
+  comparisonSourceIds: z.array(stableIdSchema).default([]),
   project: stableIdSchema,
   kind: z.enum([
     "source-fact",
+    "bounded-inference",
     "context",
     "limitation",
     "research-lead",
@@ -275,6 +278,9 @@ export const agencyRelationSchema = z.object({
     "testified-for",
     "spoke-at",
     "co-hosted",
+    "convened",
+    "cited-as-public-process-outcome",
+    "chaired-hearing-for",
     "enacted"
   ]),
   objectId: stableIdSchema,
@@ -284,6 +290,7 @@ export const agencyRelationSchema = z.object({
   status: z.enum(["confirmed", "confirmed-with-boundary", "use-with-care"]),
   claimIds: z.array(stableIdSchema).min(1),
   sourceIds: z.array(stableIdSchema).min(1),
+  sourceSupportKeys: z.array(z.string().min(1)).default([]),
   boundaries: z.array(z.string().min(1)).min(1),
   reviewedAt: z.iso.date(),
   reviewedBy: z.array(z.string().min(1)).min(1)

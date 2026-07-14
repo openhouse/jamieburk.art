@@ -1,6 +1,6 @@
 # NYC Artist Coalition: 2017-2018 public record
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-14
 
 **Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
@@ -33,7 +33,7 @@ syndication page and promoted from research lead to close-read source.
 
 A second, non-duplicate cohort of ten sources was then close-read:
 
-1. The official June 19, 2017 Cabaret Law hearing transcript.
+1. The official September 14, 2017 Cabaret Law hearing transcript.
 2. The official May 19, 2017 Cultural Affairs budget hearing transcript.
 3. NYC Artist Coalition's City-preserved CreateNYC recommendations.
 4. The final CreateNYC cultural plan.
@@ -113,6 +113,32 @@ for the complete ledger and maturation rules.
   220's reporting and notice requirements and the Office of Nightlife's account
   that M.A.R.C.H. was replaced by CURE in December 2023.
 
+## Institutional capacity, not private motive
+
+The public record supports a bounded interpretation of why this work mattered
+to DCLA, the City Council, and Rafael Espinal:
+
+- Finkelpearl placed NYC Artist Coalition within budget testimony about direct
+  public feedback and the power of convening. That supports treating the
+  coalition as a durable outcome of DCLA's public process and an organized
+  civic counterpart, not as proof of his private motive or dependence.
+- Espinal opened the September 14 Cabaret Law hearing by seeking evidence from
+  advocates, agencies, industry, and other interested parties. Jamie's
+  testimony supplied situated evidence linking licensing fear, voluntary
+  safety work, and regulatory trust.
+- Espinal publicly linked the Office of Nightlife and Cabaret License repeal to
+  communication among artists, residents, nightlife participants, and
+  government. The coalition supplied an identifiable grassroots constituency
+  and a public forum for testing what those reforms should protect.
+- The enacted laws align with parts of the coalition's safety, liaison, and
+  public-input framing. Alignment is useful context, not proof of authorship,
+  institutional dependency, or causal weight.
+
+This synthesis is encoded as
+`CLM-NYCAC-INSTITUTIONAL-CAPACITY-2017`, an inference held off public surfaces
+until a future composition has a clear audience need and editorial reason to
+use it.
+
 ## Boundaries
 
 The sources support a clear record of founding attribution, organizing,
@@ -139,6 +165,8 @@ improving the current page enough to justify the added reader burden:
 - the enacted repeal of the Cabaret Law licensing requirement and the
   coalition's collective outcome account;
 - the complete CreateNYC recommendation set and March 2017 forum detail;
+- the institutional-capacity interpretation connecting public process,
+  situated evidence, and grassroots constituency;
 - the government-only Local Law 220 and CURE outcome records apart from the
   selected Jamie-centered Talks Not Raids trajectory;
 - the Greene Hill link between Sunday Dinner and WOW List.
