@@ -1,7 +1,7 @@
 # iCloud Teams archive production
 
-**Research date:** 2026-07-14  
-**Collections:** Jamie Projects History, CRS, and job-hunt  
+**Research date:** 2026-07-14
+**Collections:** Jamie Projects History, CRS, and job-hunt
 **Method:** anchor-first close reading, source normalization, atomic claim decomposition, public-safety review, editorial selection, and eval-backed validation
 
 ## Purpose
