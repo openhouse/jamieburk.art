@@ -67,3 +67,14 @@ project later withdrew and that the unused $490,539 was reappropriated. The
 complete public sequence is proposal, recommendation, Council acceptance and
 appropriation, a May 2022 interim negotiation and non-disbursement status, then
 later withdrawal and reappropriation.
+
+## Separate first-person record
+
+The municipal record ends with withdrawal from the CCED award and
+reappropriation of the unused allocation. Jamie separately confirms that he
+then transitioned the project to a mission-aligned organization. That
+first-person confirmation supports Jamie's stewardship action and the broad
+description of the receiving organization; it does not establish the
+organization's identity, the date or legal form of the transition, any transfer
+of public funds or property, the project's current status, or the circumstances
+that led to the transition.

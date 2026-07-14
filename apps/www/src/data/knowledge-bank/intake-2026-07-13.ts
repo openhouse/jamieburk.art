@@ -364,6 +364,29 @@ export const researchedSourceRecords20260713 = [
       "completed construction or final funds received",
       "the reason the project later withdrew"
     ]
+  },
+  {
+    id: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+    title: "Jamie Burkart public-use confirmation, KC Town Hall transition",
+    organization: "Jamie Burkart",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    capturedAt: "2026-07-14 public-use confirmation",
+    publicCitation: "Jamie Burkart, public-use confirmation regarding the KC Town Hall transition, July 14, 2026.",
+    publicNote: "Jamie confirms that, after the project stopped proceeding under the CCED award, he transitioned it to a mission-aligned organization.",
+    supportsGenerally: [
+      "Jamie's direct role in transitioning the project",
+      "the broad mission-aligned character of the receiving organization"
+    ],
+    doesNotEstablish: [
+      "the organization's identity",
+      "the transition date or legal mechanism",
+      "a transfer of public funds, real property, or project assets",
+      "the project's current ownership, operation, or status",
+      "the circumstances that led to the transition"
+    ]
   }
 ] satisfies SourceRecord[];
 
@@ -867,6 +890,47 @@ export const researchedClaimRecords20260713 = [
     reviewedBy: ["Codex public-source close reading"]
   },
   {
+    id: "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+    project: "kc-town-hall",
+    internalClaim: "After the project stopped proceeding under the CCED award, Jamie transitioned it to a mission-aligned organization.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "After the project stopped proceeding under the CCED award, I transitioned it to a mission-aligned organization.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work/kc-town-hall"]
+    }, {
+      key: "work-card",
+      text: "Jamie subsequently transitioned the project to a mission-aligned organization.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work", "/work/kc-town-hall"]
+    }],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026",
+      relationship: "private-support",
+      supports: ["Jamie's transition role", "the broad description of the receiving organization"],
+      locator: "Jamie public-use confirmation, July 14, 2026",
+      confidence: "moderate",
+      renderCitation: false
+    }],
+    boundaries: [
+      "Jamie's first-person confirmation supports the transition and broad recipient description, not the organization's identity, the transition's legal form or date, any transfer of public funds or property, the project's current status, or the circumstances that led to the transition.",
+      "The municipal withdrawal and reappropriation records do not document this separate transition."
+    ],
+    antiClaims: [
+      "The City ordinance documents the transition.",
+      "Public funding was transferred to the organization.",
+      "Ownership of real property or project assets was transferred.",
+      "The receiving organization currently operates the project.",
+      "The public repository explains why the transition occurred."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Jamie public-use confirmation", "Codex evidence-boundary review"]
+  },
+  {
     id: "CLM-CLAUDETTE-AR-COLLABORATION",
     project: "claudette-theatre-on-wheels",
     internalClaim: "Michael Rees's project page credits Jamie and Michael Rees with creating an augmented-reality experience for MakeUseVisible Munich.",
@@ -1148,6 +1212,30 @@ export const researchedIntakeRecords20260713 = [
     inquiryIds: [],
     limitations: ["The ordinance does not state the reasons for withdrawal or assign fault."],
     nextActions: ["State the withdrawal plainly and keep the transferable proof focused on planning, documentation, and municipal review."]
+  },
+  {
+    id: "INTAKE-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
+    capturedAt: "2026-07-14",
+    capturedBy: "Jamie Burkart via Codex",
+    kind: "memory",
+    title: "KC Town Hall transition to a mission-aligned organization",
+    publicSafeSummary: "Jamie confirms that he transitioned the project to a mission-aligned organization after it stopped proceeding under the CCED award.",
+    whyItMatters: "Completes the stewardship chronology without misreading the municipal withdrawal record as the full disposition of the project.",
+    projectHints: ["kc-town-hall"],
+    maturity: "decomposed",
+    publicUse: "public-linkable",
+    editorialState: "selected",
+    disposition: "claim-candidate-created",
+    sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026"],
+    claimIds: ["CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION"],
+    inquiryIds: [],
+    limitations: [
+      "The public-safe record does not name the organization or establish the transition date, legal mechanism, current project status, or circumstances.",
+      "The municipal records document withdrawal and reappropriation, not the separate transition."
+    ],
+    nextActions: [
+      "Use concise first-person wording and seek corroboration before naming the organization or adding transfer details."
+    ]
   },
   {
     id: "INTAKE-CLAUDETTE-AR-COLLABORATION-2026",

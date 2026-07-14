@@ -544,7 +544,12 @@ const workItemsInput = [
         "work-card",
         "/work"
       ).text,
-      getClaimProjection("CLM-KC-TOWN-HALL-WITHDRAWN-2024", "work-card", "/work").text
+      getClaimProjection("CLM-KC-TOWN-HALL-WITHDRAWN-2024", "work-card", "/work").text,
+      getClaimProjection(
+        "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+        "work-card",
+        "/work"
+      ).text
     ].join(" "),
     role: "Project Planning & Documentation Support",
     years: "2019-2024",
@@ -556,7 +561,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "A reviewable mixed-use proposal, public-benefit case, stakeholder context, and municipal funding record, with the later withdrawal clearly documented.",
+      "A reviewable mixed-use proposal, public-benefit case, stakeholder context, municipal funding record, and documented stewardship transition.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -589,9 +594,10 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City public meeting and legislation records, with private project records omitted.",
+      "Official Kansas City public meeting and legislation records plus Jamie's public-use confirmation of the later transition, with private project records omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Project withdrawn in 2024; the unused public allocation was reappropriated.",
+    currentStatus:
+      "The project stopped proceeding under the CCED award, the unused public allocation was reappropriated, and Jamie transitioned the project to a mission-aligned organization.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -601,13 +607,14 @@ const workItemsInput = [
       "Jamie identified as the public proposal presenter",
       "Council acceptance of the $490,539 recommendation",
       "$490,539 project appropriation",
-      "2024 withdrawal and reappropriation record"
+      "2024 withdrawal and reappropriation record",
+      "Jamie-confirmed transition to a mission-aligned organization"
     ],
     knownOpenProtected: {
       known:
-        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal.",
+        "Jamie's approved resume supports the planning and documentation role; official records support his presenter role, the $490,539 proposal, the Council's acceptance and appropriation, and the later withdrawal; Jamie's public-use confirmation supports the subsequent transition to a mission-aligned organization.",
       open:
-        "The records do not establish an executed funding agreement, disbursement, construction, reasons for withdrawal, or every collaborator's role.",
+        "The records do not establish an executed funding agreement, disbursement, construction, every collaborator's role, the receiving organization's identity, the form or timing of the transition, or the project's current status.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

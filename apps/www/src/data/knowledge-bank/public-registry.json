@@ -703,6 +703,36 @@
       "boundaries": [
         "The ordinance does not state the reasons for withdrawal or assign fault."
       ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "After the project stopped proceeding under the CCED award, I transitioned it to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie subsequently transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Jamie's first-person confirmation supports the transition and broad recipient description, not the organization's identity, the transition's legal form or date, any transfer of public funds or property, the project's current status, or the circumstances that led to the transition.",
+        "The municipal withdrawal and reappropriation records do not document this separate transition."
+      ]
     }
   ],
   "pages": [

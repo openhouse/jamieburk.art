@@ -67,7 +67,11 @@ under the award, or the 2024 withdrawal record assigns fault. Prefer
 proposal" unless stronger role language is separately supported. The May 17,
 2022, status table reports no disbursement amount at that point; do not turn
 that dated snapshot into an unsupported claim that funds were never disbursed
-later.
+later. Jamie separately confirms that he transitioned the project to a
+mission-aligned organization. Do not attribute that transition to the City
+record, name the organization, infer a transfer of public funds, property, or
+assets, claim current operation, or publish the circumstances of the
+transition without separate evidence and approval.
 
 ## Source-Backed Team Memory
 

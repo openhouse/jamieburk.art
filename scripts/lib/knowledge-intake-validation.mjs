@@ -27,6 +27,7 @@ export const requiredSeedIntakeIds = [
   "INTAKE-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642-2026",
   "INTAKE-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022-2026",
   "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
+  "INTAKE-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION-2026",
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026"
 ];
 
@@ -356,6 +357,8 @@ export function validateKnowledgeIntake() {
   const appropriationClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019");
   const interimStatusClaim = claimById.get("CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022");
   const withdrawalClaim = claimById.get("CLM-KC-TOWN-HALL-WITHDRAWN-2024");
+  const transitionSource = sourceById.get("SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026");
+  const transitionClaim = claimById.get("CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION");
   const activeAcceptance = acceptanceClaim?.projections.find(
     (projection) => projection.key === "case-study" && projection.status === "active"
   );
@@ -363,6 +366,9 @@ export function validateKnowledgeIntake() {
     (projection) => projection.key === "case-study" && projection.status === "active"
   );
   const activeInterimStatus = interimStatusClaim?.projections.find(
+    (projection) => projection.key === "case-study" && projection.status === "active"
+  );
+  const activeTransition = transitionClaim?.projections.find(
     (projection) => projection.key === "case-study" && projection.status === "active"
   );
   const acceptanceText = activeAcceptance?.text ?? "";
@@ -380,6 +386,56 @@ export function validateKnowledgeIntake() {
   }
   if (!activeAcceptance?.citationRequired || !activeAppropriation?.citationRequired || !activeInterimStatus?.citationRequired) {
     kcTownHallErrors.push("KC Town Hall Council acceptance, appropriation, and interim-status projections must require citations");
+  }
+
+  if (!transitionSource || !transitionClaim || !activeTransition) {
+    kcTownHallErrors.push("KC Town Hall must preserve Jamie's separately sourced mission-aligned transition");
+  } else {
+    if (
+      transitionSource.visibility !== "public-metadata-only" ||
+      transitionSource.preservationStatus !== "private" ||
+      transitionSource.canonicalUrl ||
+      transitionSource.archiveUrl ||
+      transitionSource.assetUrl
+    ) {
+      kcTownHallErrors.push("KC Town Hall transition confirmation must remain public metadata only without an exposed source URL");
+    }
+    if (!/I transitioned it to a mission-aligned organization/i.test(activeTransition.text)) {
+      kcTownHallErrors.push("KC Town Hall case study must state Jamie's mission-aligned transition in direct, bounded language");
+    }
+    if (activeTransition.citationRequired) {
+      kcTownHallErrors.push("KC Town Hall transition must not project a private-support source as a public citation");
+    }
+    const transitionEvidence = transitionClaim.evidence.find(
+      (evidence) => evidence.sourceId === transitionSource.id
+    );
+    if (
+      !transitionEvidence ||
+      transitionEvidence.relationship !== "private-support" ||
+      transitionEvidence.renderCitation
+    ) {
+      kcTownHallErrors.push("KC Town Hall transition needs a non-rendered private-support evidence relationship");
+    }
+    const transitionBoundaryText = JSON.stringify([
+      transitionSource.doesNotEstablish,
+      transitionClaim.boundaries,
+      transitionClaim.antiClaims
+    ]).toLowerCase();
+    for (const requiredBoundary of [
+      "organization's identity",
+      "public funds",
+      "property",
+      "current status",
+      "circumstances",
+      "municipal"
+    ]) {
+      if (!transitionBoundaryText.includes(requiredBoundary)) {
+        kcTownHallErrors.push(`KC Town Hall transition evidence is missing the ${requiredBoundary} boundary`);
+      }
+    }
+    if (/\b(?:because|due to|reason for)\b/i.test(activeTransition.text)) {
+      kcTownHallErrors.push("KC Town Hall public transition wording must not encode a causal explanation");
+    }
   }
 
   const municipalBoundaryText = JSON.stringify([
@@ -413,6 +469,12 @@ export function validateKnowledgeIntake() {
     }
     if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(requiredKcTownHallSourceIds)) {
       kcTownHallErrors.push("KC Town Hall source order must preserve proposal, acceptance, appropriation, interim status, and withdrawal chronology");
+    }
+    if (
+      kcTownHallPage.sourceOrder.includes("SRC-KC-TOWN-HALL-JAMIE-TRANSITION-CONFIRMATION-2026") ||
+      occurrenceClaimIds.has("CLM-KC-TOWN-HALL-MISSION-ALIGNED-TRANSITION")
+    ) {
+      kcTownHallErrors.push("KC Town Hall must not project the first-person transition confirmation into the public citation plan");
     }
   }
   if (!withdrawalClaim?.projections.some(
@@ -460,7 +522,7 @@ export function validateKnowledgeIntake() {
       kcTownHall: {
         passed: kcTownHallErrors.length === 0,
         errors: kcTownHallErrors,
-        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, May 2022 negotiation and no-reported-disbursement-amount status, withdrawal, and reappropriation sequence with explicit dated-status and non-completion boundaries."
+        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, May 2022 negotiation and no-reported-disbursement-amount status, withdrawal, and reappropriation sequence, then separately records Jamie's bounded transition to a mission-aligned organization without exposing private circumstances or treating the City record as proof of that transition."
       }
     }
   };
