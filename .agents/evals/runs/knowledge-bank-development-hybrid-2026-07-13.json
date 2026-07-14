@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "e12e5bc436dfe32131de09b9db288ad92ce7c42f",
+  "candidate_sha": "a96134ab5b784da298af4269eb8b50e4723d49d3",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders confirmed that the KC Town Hall records separately attribute the July 16, 2019 recommendation to the CCED Board and the September 26 adoption, acceptance, and negotiation authority to the Kansas City Council.",
-        "The canonical collective-work claim includes explicit boundaries and anti-claims against an executed agreement, disbursement, receipt, project completion, current status, or Jamie-alone causation.",
-        "The case study and work metadata describe Jamie's planning, public-benefit documentation, stakeholder-context, and municipal-review support separately from the institutional actions and credit KC Town Hall LLC collaborators.",
-        "Repository-wide review found the challenged outcome language only in limitations and do-not-say records, not as affirmative public claims.",
-        "Both graders scored KB-007 at 4/4 with no deficiencies and found that Jamie's supported contribution remains visible without absorbing collective or governmental credit."
+        "Two fresh independent graders verified the exact clean candidate and scored collective-credit integrity at 4/4 with no deficiencies.",
+        "The canonical handoff claim credits Jamie's specific action as a protected first-person confirmation and includes boundaries and anti-claims against inventing recipient identity, handoff date or terms, present operations, or private transition context.",
+        "KC Town Hall collaborators, the CCED Board recommendation, the Kansas City Council action, Jamie's planning and documentation role, and Jamie's handoff remain distinct across the bank and public presentation.",
+        "The work period now says Beginning in 2017, and the bounded handoff wording avoids implying either abandonment or ongoing stewardship.",
+        "Repository review found no private cause, invented recipient, or unsupported relative handoff chronology in the candidate."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,16 +20,15 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "The consequential Council action is present in the canonical bank, public registry, proof layer, work metadata, cited case study, and human-readable source note without material contradiction.",
-        "The authenticated resolution supports the Board recommendation, Council acceptance for an amount not to exceed $490,539, and negotiation authority; the Legistar history supports adoption as substituted on September 26, 2019.",
-        "Runtime citation resolution returned the KC Town Hall occurrence with both official sources in registered order, valid public URLs, numbered citations, and matching endnotes.",
-        "The public projection combines a hiring-facing account of Jamie's implementation work with the municipal action while withholding unsupported agreement, payment, completion, and sole-causation claims.",
-        "Candidate binding correctly rejected the prior stale scorecard, tests consume the checked-in hybrid results, and an independent score-2 probe confirmed that a below-minimum nonblocking criterion forces another iteration.",
-        "Both independent graders scored KB-009 at 4/4 with no deficiencies after inspecting the records, projection, citation path, and recursive-evaluation controls."
+        "Both independent graders scored selective public projection at 4/4 after inspecting source, claim, proof, metadata, documentation, registry, and rendered-page paths.",
+        "The active handoff projection is approved only for /work/kc-town-hall and appears once under Continuity; the work card and Technical Operations retain their existing concise proof wording.",
+        "Runtime checks confirmed that the protected attestation source is absent from the public registry, the public claim exposes zero evidence records, and the bounded projection remains resolvable only on its approved surface.",
+        "The Continuity statement adds a useful professional conclusion without crowding the separately cited municipal proof or exposing protected context.",
+        "The generated registry is current and redacted, the focused KC Town Hall regression passes, and the stale-report rejection was correctly limited to the expected pre-score state."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit e12e5bc436dfe32131de09b9db288ad92ce7c42f passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The KC Town Hall Council action is fully ingested, selectively projected, and bounded against unsupported claims."
+  "overall_finding": "Exact commit a96134ab5b784da298af4269eb8b50e4723d49d3 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The KC Town Hall handoff is credited to Jamie, selectively projected, and bounded against organizational, governmental, chronological, current-status, and protected-context overclaiming."
 }

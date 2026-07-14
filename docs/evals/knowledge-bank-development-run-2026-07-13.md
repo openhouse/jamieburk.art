@@ -116,3 +116,26 @@ Council action, and Jamie's documented implementation contribution remain
 distinct; both official citations resolve; unsupported agreement, payment,
 completion, and sole-causation claims remain withheld; and stale or
 below-minimum hybrid results cannot produce a passing threshold.
+
+## KC Town Hall Handoff Pass - 2026-07-14
+
+Jamie clarified that his KC Town Hall stewardship concluded with a transition
+of the project to a mission-aligned organization. The professional handoff was
+integrated as a first-person claim backed by a protected source record. The
+recipient's identity, handoff date and terms, present operations, and private
+transition context remain withheld.
+
+The first pre-publication review rejected the candidate for two reasons: a
+regression test encoded the protected detail it intended to exclude, and several
+public surfaces added unsupported relative chronology. A second grader also
+found that the handoff was repeated too broadly across the page. The repair
+removed the protected detail from the test, removed unsupported chronology,
+changed the work period from `2017 onward` to `Beginning in 2017`, and limited
+the active website projection to one `Continuity` statement. The rejected local
+candidate was rewritten before the branch was pushed.
+
+Two fresh independent graders evaluated immutable content commit
+`a96134ab5b784da298af4269eb8b50e4723d49d3`. Both scored `KB-007` and `KB-009`
+at `4/4` with no deficiencies. Runtime checks confirmed that the protected
+attestation and its evidence are absent from the public registry while the
+bounded projection resolves only on the KC Town Hall case study.
