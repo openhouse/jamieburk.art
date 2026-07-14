@@ -58,7 +58,7 @@ Campaign surface: [Let NYC Dance](https://letnycdance.nycartc.com/)
 
 Campaign surface: [Talks Not Raids](https://talksnotraids.com/)
 
-1. `SRC-GOTHAMIST-MARCH-2019-02-12` - [Gothamist, "Nightlife Proprietors Say MARCH Raids Disproportionately Target Bars Favored by LGBTQ Patrons, People of Color"](https://gothamist.com/news/march-nightlife-raids-city-council)
+1. `SRC-GOTHAMIST-MARCH-2019-02-12` - [Gothamist, "Nightlife Proprietors Say MARCH Raids Disproportionately Target Bars Favored by LGBTQ Patrons, People of Color"](https://gothamist.com/arts-entertainment/lawmakers-demand-transparency-on-surprise-multi-agency-raids-on-local-bars-and-clubs)
 2. `SRC-VILLAGE-VOICE-PALISADES-2016-12-08` - [The Village Voice, "Palisades Owners Explain Why the Beloved Venue Was Shut Down"](https://www.villagevoice.com/2016/12/08/palisades-owners-explain-why-the-beloved-venue-was-shut-down/)
 3. `SRC-BEDFORD-BOWERY-MARCH-2019-02-12` - [Bedford + Bowery, "Disco Discord: NYPD and Nightlife Owners Clash over Party-Crashing 'Raids'"](https://bedfordandbowery.com/2019/02/disco-discord-nypd-and-nightlife-operators-clash-over-party-crashing-raids/)
 4. `SRC-BAFFLER-MARCH-2018-02-12` - [The Baffler, "Cut the Music"](https://web.archive.org/web/20190109043138/https://thebaffler.com/latest/cut-the-music-pelly)
@@ -72,7 +72,7 @@ Campaign surface: [Save NYC Spaces](https://savenycspaces.nycartc.com/)
 
 1. `SRC-NYDAILYNEWS-OFFICE-NIGHTLIFE-2017-09-19` - [New York Daily News, "NYC creates office to manage issues affecting nightlife industry"](https://www.nydailynews.com/news/politics/nyc-creates-office-manage-issues-affecting-nightlife-industry-article-1.3507451)
 2. `SRC-NYPOST-OFFICE-NIGHTLIFE-2017-09-19` - [New York Post, "De Blasio's newest city agency: Office of Nightlife"](https://nypost.com/2017/09/19/de-blasios-newest-city-agency-office-of-nightlife/)
-3. `SRC-GOTHAMIST-OFFICE-NIGHTLIFE-2017-09-20` - [Gothamist, "De Blasio Signs Bill Creating Office of Nightlife"](https://gothamist.com/news/punk-blaz-signs-bill)
+3. `SRC-GOTHAMIST-OFFICE-NIGHTLIFE-2017-09-20` - [Gothamist, "De Blasio Signs Bill Creating Office of Nightlife"](https://gothamist.com/arts-entertainment/de-blasio-praising-punk-rock-signs-bill-establishing-nyc-night-mayor)
 4. `SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20` - [NPR, "With Its 'No Dancing' Law Verging on Repeal, New York Legitimizes Its Nightlife"](https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife)
 5. `SRC-BROOKLYN-EAGLE-OFFICE-NIGHTLIFE-2017-09-20` - [Brooklyn Daily Eagle, "New era: Mayor de Blasio signs bill to create NYC Office of Nightlife"](https://www.brooklyneagle.com/articles/2017/9/20/new-era-mayor-de-blasio-signs-bill-create-nyc-office-nightlife)
 6. `SRC-CITYLAB-NIGHT-MAYOR-2017-09` - [CityLab, "America Discovers the 'Night Mayor'"](https://web.archive.org/web/20170930191543/https://www.citylab.com/solutions/2017/09/america-discovers-the-night-mayor/539505/)

@@ -15,6 +15,7 @@ type ArticleSeed = {
   canonicalUrl: string;
   archiveUrl?: string;
   preservationStatus?: "live" | "archived" | "dead";
+  accessNote?: string;
   campaigns: CampaignId[];
 };
 
@@ -417,6 +418,7 @@ const articleSeeds: ArticleSeed[] = [
     author: "Stefanos Chen",
     publishedAt: "2023-05-08",
     canonicalUrl: "https://www.nytimes.com/2023/05/08/nyregion/small-businesses-rent-hikes-nyc.html",
+    accessNote: "Automated verification returned an access restriction on July 13, 2026. The publisher URL and campaign placement remain usable metadata; no paywall was bypassed.",
     campaigns: ["fair-rent-nyc"]
   }
 ];
@@ -441,7 +443,7 @@ const articleSources: KnowledgeBank["sources"] = articleSeeds.map((article) => {
     publicCitation: `${article.author ? `${article.author}, ` : ""}'${article.title},' ${article.organization}${article.publishedAt ? `, ${article.publishedAt}` : ""}.`,
     publicNote: preservationStatus === "dead"
       ? `Listed in the ${campaignNames.join(" and ")} press or reference section. The publisher URL returned 404 and no Wayback capture was recovered on July 13, 2026; retain this as campaign-index metadata, not recovered article text.`
-      : `Listed in the ${campaignNames.join(" and ")} press or reference section. Ingested at article level; reuse of claims from the article requires separate close reading.`,
+      : `Listed in the ${campaignNames.join(" and ")} press or reference section. Ingested at article level; reuse of claims from the article requires separate close reading.${article.accessNote ? ` ${article.accessNote}` : ""}`,
     supportsGenerally: [
       preservationStatus === "dead"
         ? "the campaign-listed article title, publisher, and dead publisher URL"

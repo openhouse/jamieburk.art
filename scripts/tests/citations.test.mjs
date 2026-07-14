@@ -152,6 +152,25 @@ test("campaign press census preserves every placement and its limits", () => {
     sourceById.get("SRC-SFGATE-CABARET-LAW-2017").publicNote,
     /no Wayback capture was recovered/i
   );
+  assert.match(
+    sourceById.get("SRC-NYT-SMALL-BUSINESS-RENTS-2023-05-08").publicNote,
+    /access restriction/i
+  );
+
+  const pressIndex = readFileSync(
+    "docs/knowledge-bank/projects/nyca-campaign-press-index.md",
+    "utf8"
+  );
+  assert.match(
+    pressIndex,
+    /gothamist\.com\/arts-entertainment\/lawmakers-demand-transparency/
+  );
+  assert.match(
+    pressIndex,
+    /gothamist\.com\/arts-entertainment\/de-blasio-praising-punk-rock/
+  );
+  assert.doesNotMatch(pressIndex, /gothamist\.com\/news\/march-nightlife-raids-city-council/);
+  assert.doesNotMatch(pressIndex, /gothamist\.com\/news\/punk-blaz-signs-bill/);
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {
