@@ -188,17 +188,17 @@ claim beyond the wording and guardrails here.
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
-**Structured claim IDs:** `CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE`
+**Structured claim IDs:** `CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE`, `CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION`
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. All four CCED Board members voted to recommend $490,539; Kansas City Council then accepted the recommendation and appropriated $490,539. The project later withdrew before the unused funds were reappropriated.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. The record preserves the Board recommendation, Council acceptance and appropriation, later withdrawal, and reappropriation rather than stopping at the favorable milestone.
+**Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. All four CCED Board members voted to recommend $490,539; Kansas City Council then accepted the recommendation and appropriated $490,539. After years of public review, Jamie transitioned stewardship to a mission-aligned organization. City records later closed the unused award as withdrawn.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Independent reporting documents the prolonged City-contract process. Jamie confirms that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the administrative withdrawal and reappropriation.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Keep the July 2019 Board recommendation, September 2019 Council acceptance and appropriation, and March 2024 withdrawal and reappropriation distinct. Do not infer a unanimous Council vote, an executed funding agreement, disbursement, or why the project withdrew.
-**Do not say:** The City Council voted unanimously; final funding received; funding agreement executed; reason for withdrawal; current property status; private financial details; official municipal endorsement beyond the recorded Council actions.
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
+**Guardrail:** Keep the July 2019 Board recommendation, September 2019 Council acceptance and appropriation, December 2021 contract-delay state, Jamie's first-person stewardship transition, and March 2024 City withdrawal and reappropriation distinct. Do not infer a unanimous Council vote, an executed funding agreement, disbursement, City transfer of the award, successor identity, transition terms, or completion.
+**Do not say:** Jamie abandoned KC Town Hall; the City Council voted unanimously; final funding received; funding agreement executed; the City transferred the award to the successor; reason for transition or withdrawal; current property status; private financial details; official municipal endorsement beyond the recorded Council actions.
+**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline. Do not store or project a reason for the transition.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-13
 

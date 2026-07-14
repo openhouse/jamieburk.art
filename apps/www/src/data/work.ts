@@ -507,7 +507,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation; the project later withdrew before the unused funds were reappropriated.",
+      "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation. After years of public review, transitioned stewardship to a mission-aligned organization; City records later closed the unused award as withdrawn.",
     role: "Project Planning & Documentation Support",
     years: "2019-2024",
     status: "Short proof page",
@@ -534,14 +534,15 @@ const workItemsInput = [
       { label: "2019 CCED Board meeting packet", url: "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000" },
       { label: "Council Resolution 190649", url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=" },
       { label: "Council Ordinance 190642", url: "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=" },
+      { label: "2021 Kansas City Star reporting", url: "https://www.kansascity.com/news/politics-government/article256377677.html" },
       { label: "2024 withdrawal record", url: "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=" }
     ],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Kansas City CCED Board meeting records, City Council Resolution 190649, Ordinances 190642 and 240317, and public-safe project context.",
+      "Kansas City CCED Board meeting records, City Council Resolution 190649, Ordinances 190642 and 240317, independent 2021 reporting, Jamie's public-safe first-person correction, and public-safe project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Project withdrawn; unused public funds were reappropriated in 2024.",
+    currentStatus: "Jamie transitioned stewardship to a mission-aligned organization; City records later closed the original unused CCED award as withdrawn and reappropriated it in 2024.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -550,13 +551,14 @@ const workItemsInput = [
       "Public-benefit documentation",
       "Historic preservation context",
       "Unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation",
-      "Documented withdrawal before unused funds were reappropriated"
+      "Years-long City-contract process documented by independent reporting",
+      "Stewardship transition separated from the City's later withdrawal record"
     ],
     knownOpenProtected: {
       known:
-        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The project later withdrew before the unused funds were reappropriated.",
+        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
       open:
-        "The public records do not explain why the project withdrew or provide a complete responsibility map.",
+        "Public sources reviewed so far do not independently identify the successor organization or establish the timing and terms of transition. City records do not provide a complete stewardship or responsibility map.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

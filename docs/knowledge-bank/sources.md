@@ -44,6 +44,7 @@ Approved public artifact examples for this launch pass include:
 - Kansas City CCED Board's June and July 2019 KC Town Hall records.
 - Kansas City Council Resolution 190649 accepting the Board's recommendation.
 - Kansas City Council Ordinance 190642 appropriating Round Two CCED project funds.
+- The Kansas City Star's December 2021 reporting on the KC Town Hall project and City-contract delays.
 - Kansas City Ordinance 240317 documenting the later KC Town Hall withdrawal.
 - KCUR's 2016 8th Street Tunnel reporting.
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
@@ -60,8 +61,9 @@ reuse.
 The KC Town Hall funding sequence is documented in
 `docs/knowledge-bank/projects/kc-town-hall-council-allocation-2019.md`. The
 Board recommendation, Council acceptance, Council appropriation, later
-withdrawal, and reappropriation remain separate events with separate source
-records and claim boundaries.
+contract-delay state, Jamie's first-person stewardship transition, City
+withdrawal, and reappropriation remain separate events with separate evidence
+states and claim boundaries.
 
 ### Public-Safe Archive Summary
 

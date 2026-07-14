@@ -85,6 +85,16 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not say Jamie abandoned KC Town Hall. Jamie's first-person account is that he
+transitioned stewardship to a mission-aligned organization. Keep that account
+distinct from the City's later administrative withdrawal of the original CCED
+project.
+
+Do not say the City transferred the CCED award to a successor organization, the
+successor received or spent the $490,539, or public sources establish the
+successor identity or transition terms. Do not store or project a reason for
+the transition.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

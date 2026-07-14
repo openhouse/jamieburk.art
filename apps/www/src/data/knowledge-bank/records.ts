@@ -267,6 +267,38 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
+      id: "INTAKE-2026-07-13-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      receivedAt: "2026-07-13",
+      kind: "memory",
+      project: "kc-town-hall",
+      publicSummary: "Jamie states that he transitioned stewardship of the KC Town Hall project to a mission-aligned organization before the original CCED-backed redevelopment ended.",
+      privacy: "public-safe-summary",
+      status: "claim-linked",
+      sourceIds: [],
+      claimIds: ["CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      projectionIntent: "candidate-for-public-surface",
+      nextActions: ["Preserve the transition as Jamie's first-person account, do not store or project a reason for it, and seek a public artifact or collaborator confirmation before naming the successor organization or asserting transfer terms."],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "INTAKE-2026-07-13-KC-STAR-KC-TOWN-HALL-DELAYS",
+      receivedAt: "2026-07-13",
+      kind: "source-url",
+      project: "kc-town-hall",
+      publicSummary: "Independent December 2021 reporting documents KC Town Hall's intended neighborhood use and that the project still lacked a final City contract more than two years after the Board recommendation.",
+      privacy: "public",
+      status: "claim-linked",
+      sourceIds: ["SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27"],
+      claimIds: ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE", "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      projectionIntent: "candidate-for-public-surface",
+      nextActions: ["Use the article for intended public benefit and the December 2021 contract-delay state, not as proof of the later stewardship transition, its circumstances, or the successor organization."],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
       id: "INTAKE-2026-07-13-KCUR-EIGHTH-STREET-TUNNEL",
       receivedAt: "2026-07-13",
       kind: "source-url",
@@ -798,6 +830,23 @@ const knowledgeBankInput = {
       doesNotEstablish: ["why the project withdrew", "fault or responsibility for withdrawal", "that funds were disbursed to the project", "current property ownership or condition"]
     },
     {
+      id: "SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27",
+      title: "Advocates say City Hall has moved too slow with special tax meant to improve East Side",
+      organization: "The Kansas City Star",
+      author: "Kevin Hardy, Mike Hendricks, and Cortlynn Stark",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2021-12-27",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://www.kansascity.com/news/politics-government/article256377677.html",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Kevin Hardy, Mike Hendricks, and Cortlynn Stark, 'Advocates say City Hall has moved too slow with special tax meant to improve East Side,' The Kansas City Star, December 27, 2021.",
+      publicNote: "The independent report describes KC Town Hall's intended neighborhood-resource, retail, and apartment uses and records that the project still lacked a final City contract more than two years after the Board recommendation.",
+      supportsGenerally: ["KC Town Hall was intended as a neighborhood resource and cultural center with four retail spaces and three apartments", "the project had not received a final City contract by December 27, 2021", "CCED Board members publicly described broader delays in moving East Side projects through City review"],
+      doesNotEstablish: ["the later stewardship transition", "the identity or role of a successor organization", "the circumstances or terms of transition", "an executed funding agreement", "disbursement", "construction or completion", "current property status"]
+    },
+    {
       id: "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15",
       title: "The 8th Street Tunnel Is A Gateway To Kansas City's History - But You Probably Can't Get In",
       organization: "KCUR 89.3",
@@ -1117,24 +1166,45 @@ const knowledgeBankInput = {
     {
       id: "CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE",
       project: "kc-town-hall",
-      internalClaim: "Jamie presented KC Town Hall's mixed-use adaptive-reuse proposal. On July 16, 2019, all four CCED Board members voted to recommend $490,539 to City Council. On September 26, the Council adopted substituted Resolution 190649 accepting the recommendation and passed substituted Ordinance 190642 appropriating $490,539. The project subsequently withdrew without proceeding, and the unused funds were reappropriated in 2024.",
+      internalClaim: "Jamie presented KC Town Hall's mixed-use adaptive-reuse proposal. On July 16, 2019, all four CCED Board members voted to recommend $490,539 to City Council. On September 26, the Council adopted substituted Resolution 190649 accepting the recommendation and passed substituted Ordinance 190642 appropriating $490,539. Independent reporting documented that the project still lacked a final City contract in December 2021. City records later described KC Town Hall as withdrawn and reappropriated the unused funds in 2024.",
       status: "confirmed-with-boundary",
       projections: [
-        { key: "case-study", text: "Jamie presented a mixed-use adaptive-reuse proposal that received a unanimous $490,539 recommendation from Kansas City's CCED Board. The City Council then accepted the recommendation and appropriated $490,539 in September 2019. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.", status: "active", citationRequired: false, surfaces: ["/work/kc-town-hall"] },
-        { key: "work-card", text: "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation; the project later withdrew before funds were used.", status: "active", citationRequired: false, surfaces: ["/work", "/work/kc-town-hall"] }
+        { key: "case-study", text: "Jamie presented a mixed-use adaptive-reuse proposal that received a unanimous $490,539 recommendation from Kansas City's CCED Board. The City Council then accepted the recommendation and appropriated $490,539 in September 2019. The project still lacked a final City contract in December 2021; City records later described KC Town Hall as withdrawn and reappropriated the unused funds in 2024.", status: "active", citationRequired: false, surfaces: ["/work/kc-town-hall"] },
+        { key: "work-card", text: "Presented a mixed-use adaptive-reuse proposal that earned a unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation; City records later closed the unused award as withdrawn.", status: "active", citationRequired: false, surfaces: ["/work", "/work/kc-town-hall"] }
       ],
       evidence: [
         { sourceId: "SRC-KCMO-CCED-KC-TOWN-HALL-2019-06", relationship: "direct-support", supports: ["Jamie as project presenter", "mixed-use adaptive-reuse scope", "unanimous $490,539 CCED Board recommendation"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-KCMO-COUNCIL-KC-TOWN-HALL-RESOLUTION-190649", relationship: "direct-support", supports: ["September 26, 2019 Council acceptance of the Board recommendation", "authorization to negotiate a funding agreement"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-KCMO-COUNCIL-CCED-APPROPRIATION-190642", relationship: "direct-support", supports: ["September 26, 2019 Council passage of the appropriation ordinance", "$490,539 KC Town Hall appropriation line item"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27", relationship: "direct-support", supports: ["December 2021 project purpose and public-benefit framing", "absence of a final City contract more than two years after the Board recommendation"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28", relationship: "direct-support", supports: ["later project withdrawal", "reappropriation of unused funds in 2024"], confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Keep the Board recommendation, Council acceptance, Council appropriation, later withdrawal, and reappropriation distinct.", "State both the favorable funding actions and later withdrawal wherever the funding outcome is material.", "Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, or construction was completed.", "Do not speculate about reasons or responsibility for withdrawal.", "Keep collaborative project credit visible."],
-      antiClaims: ["The City Council unanimously approved KC Town Hall", "KC Town Hall received and spent $490,539", "A funding agreement was executed", "The redevelopment was completed", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
+      boundaries: ["Keep the Board recommendation, Council acceptance, Council appropriation, contract-delay state, City withdrawal record, and reappropriation distinct.", "State both the favorable funding actions and later City withdrawal wherever the funding outcome is material.", "Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, or construction was completed.", "Do not equate the City's withdrawal record with project abandonment or treat it as the complete account of stewardship.", "Do not speculate about circumstances or responsibility for withdrawal.", "Keep collaborative project credit visible."],
+      antiClaims: ["The City Council unanimously approved KC Town Hall", "KC Town Hall received and spent $490,539", "A funding agreement was executed", "The redevelopment was completed", "Jamie abandoned the project", "Jamie alone developed the proposal", "The City record explains why the project withdrew"],
       proofClaimIds: ["kc-town-hall-public-benefit-documentation"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      internalClaim: "Jamie states that he later transitioned stewardship of KC Town Hall to a mission-aligned organization. Public reporting and City records establish the surrounding project timeline but do not independently identify the successor organization or establish the timing, circumstances, or terms of transition.",
+      status: "use-with-care",
+      projections: [
+        { key: "case-study", text: "Jamie later transitioned stewardship of KC Town Hall to a mission-aligned organization. The original CCED-backed redevelopment did not proceed under that award; City records later described KC Town Hall as withdrawn and reappropriated the unused funds.", status: "active", citationRequired: false, surfaces: ["/work/kc-town-hall"] },
+        { key: "work-card", text: "Later transitioned stewardship to a mission-aligned organization; City records subsequently closed the unused CCED award as withdrawn.", status: "active", citationRequired: false, surfaces: ["/work", "/work/kc-town-hall"] }
+      ],
+      evidence: [
+        { sourceId: "SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27", relationship: "context", supports: ["the project remained active but without a final City contract in December 2021", "the intended neighborhood-resource and cultural-center purpose"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28", relationship: "supports-boundary", supports: ["the City's later administrative description of KC Town Hall as withdrawn", "reappropriation of unused CCED funds"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["Present the stewardship transition as Jamie's first-person account unless independent corroboration is recovered.", "Do not name the successor organization without Jamie's approval and a public-safe support record.", "Do not store, project, imply, or invite speculation about a reason for the transition.", "Do not imply that the City transferred the CCED award to the successor organization or that the successor received public funds.", "Keep transition of stewardship distinct from the City's later administrative withdrawal of the original CCED project."],
+      antiClaims: ["Jamie abandoned KC Town Hall", "Kansas City transferred the award to the successor organization", "The successor organization received or spent the $490,539", "The public record establishes the reason or terms of transition", "The successor organization completed the original redevelopment"],
+      proofClaimIds: ["kc-town-hall-public-benefit-documentation"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex source and correction review"]
     },
     {
       id: "CLM-KC-EIGHTH-STREET-TUNNEL-PUBLIC-PROGRAM",
@@ -1247,12 +1317,25 @@ const knowledgeBankInput = {
       limitations: ["A missing canonical source relationship does not mean the underlying claim is false.", "Some proof claims rely on approved resume or public-safe archive summaries that require careful public-source substitution or protected evidence boundaries.", "This pass did not attempt to research and wire every existing portfolio claim."],
       sourceIds: [],
       publicSummary: "CallNYC remains the first fully rendered citation pilot; canonical source coverage now also reaches Sunday Dinner, multiple NYC Artist Coalition actions, and the KC Town Hall public-award lifecycle, with a standing backlog for remaining consequential claims."
+    },
+    {
+      id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      question: "What public-safe record can establish the successor organization, timing, and terms of Jamie's transition of KC Town Hall stewardship without storing or projecting a reason for it?",
+      methods: ["Recorded Jamie's first-person correction as a public-safe memory intake.", "Reviewed the public KC Town Hall project archive, contemporary independent reporting, and Kansas City funding records.", "Searched the public web and Wayback capture inventory for transition or successor language without storing or projecting a reason for the transition."],
+      runAt: "2026-07-13",
+      resultStatus: "partially-recovered",
+      findings: ["Jamie's first-person account establishes that he transitioned stewardship to a mission-aligned organization.", "The December 2021 Kansas City Star report documents that the project still lacked a final City contract more than two years after the Board recommendation.", "The public KC Town Hall archive documents continued project and neighborhood programming through its March 2022 capture.", "The 2024 City ordinance establishes only the later administrative withdrawal and reappropriation; no public source reviewed in this pass independently identified the successor organization or transfer terms."],
+      limitations: ["A first-person account is not independent corroboration.", "No public transfer agreement, successor announcement, or collaborator confirmation was recovered in this pass.", "The City's withdrawal record is not evidence that Jamie abandoned the project and is not a complete account of the stewardship transition.", "A reason for the transition is outside the scope of this public repository."],
+      sourceIds: ["SRC-KC-STAR-KC-TOWN-HALL-DELAYS-2021-12-27", "SRC-KCMO-KC-TOWN-HALL-WITHDRAWAL-2024-03-28"],
+      publicSummary: "Jamie's first-person account supplies the stewardship transition; public sources establish the surrounding timeline but do not yet identify the successor organization or establish transition timing and terms."
     }
   ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
+    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    { id: "COR-KC-TOWN-HALL-STEWARDSHIP-2026", claimId: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", previousText: "The project later withdrew without proceeding.", replacementText: "Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn.", reason: "Jamie's first-person correction distinguishes his stewardship handoff from the City's later administrative withdrawal record without storing or projecting a reason for the transition.", decidedAt: "2026-07-13", affectedSurfaces: ["/work", "/work/kc-town-hall", "knowledge-bank"], status: "active" }
   ],
   pages: [{
     id: "callnyc",

@@ -501,22 +501,24 @@ export const proofClaims: ProofClaim[] = [
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 CCED Board recommendation; Kansas City Council then accepted the recommendation and appropriated $490,539. The project later withdrew before the unused funds were reappropriated.",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 CCED Board recommendation; Kansas City Council then accepted the recommendation and appropriated $490,539. After years of public review, Jamie transitioned stewardship to a mission-aligned organization. City records later closed the unused award as withdrawn.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official records preserve the Board recommendation, Council acceptance and appropriation, and later withdrawal.",
-    sourceBasis: "Kansas City CCED Board meeting records, Kansas City Resolution 190649, Ordinances 190642 and 240317, approved resume language, and public-safe project context.",
+      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Independent reporting documents the prolonged City-contract process. Jamie confirms that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the later administrative withdrawal and reappropriation.",
+    sourceBasis: "Kansas City CCED Board meeting records, Kansas City Resolution 190649, Ordinances 190642 and 240317, December 2021 Kansas City Star reporting, approved resume language, public-safe project context, and Jamie review confirmation.",
     sourceNote:
-      "All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council adopted substituted Resolution 190649 accepting the recommendation and passed substituted Ordinance 190642 appropriating $490,539. The project later withdrew without proceeding, and the unused funds were reappropriated in 2024.",
+      "All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The project still lacked a final City contract in December 2021. Jamie confirms a later stewardship transition; the public record independently establishes only the surrounding timeline and the City's 2024 withdrawal and reappropriation actions.",
     guardrail:
-      "Keep the Board recommendation, Council acceptance, appropriation, later withdrawal, and reappropriation distinct. Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, construction was completed, or the public record explains why the project withdrew.",
+      "Keep the Board recommendation, Council acceptance, appropriation, contract-delay state, Jamie's first-person stewardship transition, City withdrawal record, and reappropriation distinct. Do not imply the Council vote was unanimous, a funding agreement was executed, funds were disbursed, the City transferred the award, construction was completed, or public sources establish the successor organization or transition terms.",
     doNotSay: [
       "The City Council unanimously approved KC Town Hall",
       "KC Town Hall received and spent $490,539",
       "A funding agreement was executed",
       "The redevelopment was completed",
+      "Jamie abandoned KC Town Hall",
+      "The City transferred the CCED award to the successor organization",
       "Jamie alone developed the proposal",
       "Why the project withdrew",
       "Private financial details",
@@ -527,12 +529,13 @@ export const proofClaims: ProofClaim[] = [
       "Legal details",
       "Property details",
       "Banking details",
-      "Stakeholder details"
+      "Stakeholder details",
+      "Reason for the stewardship transition"
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    structuredClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE"],
+    structuredClaimIds: ["CLM-KC-TOWN-HALL-PUBLIC-AWARD-LIFECYCLE", "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
     lastReviewed: "2026-07-13"
   },
   {

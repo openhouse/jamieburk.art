@@ -36,9 +36,20 @@ test("Claim resolver returns only active approved projections", () => {
 });
 
 test("corrections retire old wording from public surfaces", () => {
-  const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
-  assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  const publicText = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/content/work/kc-town-hall.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
+  assert.doesNotMatch(publicText, /first civic-data hackathon|2014[-–]2015/i);
+  assert.doesNotMatch(publicText, /The project did not proceed\. It later withdrew/i);
+  assert.match(publicText, /transitioned stewardship/i);
+
+  const correctionIds = new Set(knowledgeBank.corrections.map(({ id }) => id));
+  for (const id of [
+    "COR-CALLNYC-CHRONOLOGY-2026",
+    "COR-CALLNYC-SUPERLATIVE-2026",
+    "COR-CALLNYC-EVENT-TIME-2026",
+    "COR-KC-TOWN-HALL-STEWARDSHIP-2026"
+  ]) {
+    assert.ok(correctionIds.has(id), `Missing correction ${id}`);
+  }
 });
 
 test("negative research preserves scope and limitations", () => {

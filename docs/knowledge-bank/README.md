@@ -78,4 +78,5 @@ boundaries separately.
 The recovered KC Town Hall public-funding sequence is documented in
 [projects/kc-town-hall-council-allocation-2019.md](projects/kc-town-hall-council-allocation-2019.md).
 It keeps the Board recommendation, Council acceptance, appropriation, later
+contract-delay state, Jamie's first-person stewardship transition, City
 withdrawal, and reappropriation as distinct evidence-bearing events.
