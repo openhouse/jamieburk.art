@@ -2,20 +2,22 @@
 
 **Date:** 2026-07-14
 
-**Result:** Passed after four recursive rounds and two final unchanged passes
+**Result:** Passed after five recursive rounds and two final unchanged passes
 
-All eight standing fixtures retained their accepted candidates and passed every
-hard gate twice without regression. The scoped audit evaluated new social-account
-claims across CallNYC, NYC Artist Coalition and its campaigns, WOWList, KC Spaces
-Fund, and KC Town Hall.
+The run retained all eight standing fixtures and added a ninth governed fixture
+for the full `@NYCArtC` population review. The population fixture remains
+bank-only: it accounts for all 5,124 observed profile-count slots while keeping
+3,367 recovered public items and 1,757 unresolved slots together.
 
-The early rounds found unresolved public-claim wiring, a missing item-level
-Council-account manifest, source and human-register drift, and copy that led with
-an engagement count rather than the publishing system Jamie made usable. The
-revisions repaired the graph, added deterministic MDX Claim checks, preserved
-bank-only KC Spaces material, and made the durable shared identity the public
-headline while retaining the 20-post and seven-account result as bounded support.
+Early rounds moved the public argument from archive counting to the system Jamie
+made usable, replaced movable repo-source URLs with existing immutable commit
+references, and added live semantic checks. Adversarial review then expanded
+those checks to cover slash-notation recovery claims, personal-authorship and
+communication variants, endorsement, reach, causality, the public research
+note, and both ledgers.
 
-Rounds three and four independently scored 95, passed calibration at 5, and
-found no regression. Individual post authorship, institutional endorsement,
-campaign causality, and collective outcomes remain outside Jamie's claim.
+Rounds four and five independently passed every hard gate without regression.
+The final evidence judge scored 95 and the hiring reader scored 98, with every
+minimum criterion at least 4 and calibration at 5. Individual post authorship,
+institutional endorsement, campaign causality, and collective outcomes remain
+outside Jamie's claim.

@@ -6,19 +6,20 @@
   "base": "develop",
   "evaluatedThrough": "2026-07-14",
   "status": "passed",
-  "iterations": 4,
-  "qualifyingRounds": [3, 4],
+  "iterations": 5,
+  "qualifyingRounds": [4, 5],
   "graphSnapshot": {
-    "intakeRecords": 38,
-    "sources": 104,
-    "claims": 39,
-    "researchInquiries": 11,
+    "intakeRecords": 39,
+    "sources": 111,
+    "claims": 40,
+    "researchInquiries": 12,
     "activeProjections": 27,
-    "heldProjections": 18
+    "heldProjections": 19
   },
   "evaluatedIntakeIds": [
     "INTAKE-2026-07-14-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
     "INTAKE-2026-07-14-NYCA-X-ENGAGEMENT",
+    "INTAKE-2026-07-14-NYCA-X-FULL-POPULATION",
     "INTAKE-2026-07-14-KCSPACES-X-TIMELINE",
     "INTAKE-2026-07-14-KCTOWNHALL-X-TIMELINE",
     "INTAKE-2026-07-14-GDRIVE-SHARED-DRIVE-MAP",
@@ -72,6 +73,13 @@
       "projectionDecision": "Project the shared identity and its bounded account-level engagement as evidence of a durable public address. Do not infer personal authorship, formal endorsement, commissioning, adoption, partnership, or policy causality."
     },
     {
+      "id": "nyca-full-population-and-source-trail",
+      "sourceIds": ["SRC-NYCA-X-FULL-POPULATION-REVIEW-2026", "SRC-NYCA-X-PUBLIC-POST-LEDGER-2026", "SRC-NYCA-X-PUBLIC-ENGAGEMENT-LEDGER-2026", "SRC-GOTHAMIST-MARCH-TRANSPARENCY-2019", "SRC-GOTHAMIST-COMMERCIAL-RENTS-2021", "SRC-CITY-LIMITS-COMMERCIAL-RENT-2020", "SRC-NYC-COMPTROLLER-RETAIL-VACANCY-2019"],
+      "claimIds": ["CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE"],
+      "researchInquiryIds": ["INQ-NYCA-X-FULL-POPULATION-2026-07-14"],
+      "projectionDecision": "Keep the complete 5,124-slot disposition, source trail, and stakeholder patterns as held Knowledge Bank depth. Preserve 3,367 recovered items and 1,757 unresolved slots together; do not infer personal authorship, endorsement, reach, or causality."
+    },
+    {
       "id": "kc-spaces-fund-public-operations-timeline",
       "sourceIds": ["SRC-KCSPACES-X-PROFILE-2026", "SRC-KCSPACES-X-TIMELINE-REVIEW-2026"],
       "claimIds": ["CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE"],
@@ -89,14 +97,14 @@
   "finalJudgments": {
     "evidenceGovernanceJudge": {
       "allHardGatesPassed": true,
-      "weightedScore": 94,
+      "weightedScore": 97,
       "minimumCriterionScore": 4,
       "calibration": 5,
       "regressions": []
     },
     "editorialFutureUseJudge": {
       "allHardGatesPassed": true,
-      "weightedScore": 96,
+      "weightedScore": 99,
       "minimumCriterionScore": 4,
       "calibration": 5,
       "regressions": []
@@ -105,31 +113,38 @@
   "rounds": [
     {
       "round": 1,
-      "evidenceGovernanceScore": 81,
-      "editorialFutureUseScore": 80,
+      "evidenceGovernanceScore": 90,
+      "editorialFutureUseScore": 91,
       "result": "revise",
-      "finding": "The first graph left active claims outside citation page plans, lacked a public item-level Council-account manifest, mixed bank-only and public evidence, and allowed human and machine registers to drift."
+      "finding": "The graph was calibrated, but public emphasis and repo-local provenance still needed revision."
     },
     {
       "round": 2,
-      "evidenceGovernanceScore": 93,
-      "editorialFutureUseScore": 94,
+      "evidenceGovernanceScore": 91,
+      "editorialFutureUseScore": 95,
       "result": "revise",
-      "finding": "The repaired graph passed its evidence gates, but the public copy foregrounded the engagement count and partial recovery states still needed explicit retrieval actions."
+      "finding": "The copy passed, but immutable-source and live semantic gates were not yet complete."
     },
     {
       "round": 3,
-      "evidenceGovernanceScore": 94,
-      "editorialFutureUseScore": 96,
-      "result": "qualifying-pass",
-      "finding": "The complete graph made the shared public identity and collaborator use legible, kept every count auditable and bounded, and preserved public, held, and not-recovered states with concrete next actions."
+      "evidenceGovernanceScore": 88,
+      "editorialFutureUseScore": 97,
+      "result": "revise",
+      "finding": "Adversarial review found slash-notation and personal-communication variants plus archival surfaces outside the semantic scan."
     },
     {
       "round": 4,
       "evidenceGovernanceScore": 94,
-      "editorialFutureUseScore": 96,
+      "editorialFutureUseScore": 99,
       "result": "qualifying-pass",
-      "finding": "An unchanged independent recheck confirmed source decomposition, graph coherence, public safety, collective credit, citation contracts, and future editorial retrievability without regression."
+      "finding": "The repaired graph, immutable refs, adversarial fixtures, research note, and ledgers passed every gate without regression."
+    },
+    {
+      "round": 5,
+      "evidenceGovernanceScore": 97,
+      "editorialFutureUseScore": 99,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck repeated every hard-gate, threshold, calibration, public-safety, and future-use pass without a recommended material edit."
     }
   ],
   "unresolvedCriteria": []

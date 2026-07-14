@@ -1,9 +1,14 @@
 import assert from "node:assert/strict";
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
+import {
+  findNycaOverclaims,
+  nycaResearchClaimText
+} from "../lib/nyca-claim-guard.mjs";
 
 test("canonical registry passes deterministic validation", () => assert.deepEqual(validateKnowledgeBank(), []));
 
@@ -83,6 +88,78 @@ test("member engagement remains account-level and institutionally bounded", () =
   assert.match(claim.internalClaim, /11 posts.*10 sitting NYC Council members/i);
   assert.ok(claim.boundaries.some((item) => /account-level/i.test(item)));
   assert.ok(claim.antiClaims.some((item) => /endorsed CallNYC/i.test(item)));
+});
+
+test("NYC Artist Coalition social claims preserve recovery and authorship boundaries", () => {
+  const byId = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const sharedIdentity = byId.get("CLM-NYCA-SHARED-SOCIAL-IDENTITY");
+  const councilEngagement = byId.get("CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT");
+  const populationRange = byId.get("CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE");
+
+  assert.ok(sharedIdentity);
+  assert.ok(councilEngagement);
+  assert.ok(populationRange);
+
+  const sharedProjection = sharedIdentity.projections.find((projection) => projection.status === "active");
+  const councilProjection = councilEngagement.projections.find((projection) => projection.status === "active");
+  assert.match(sharedProjection.text, /Teammates also published.*not attributed to Jamie/is);
+  assert.match(councilProjection.text, /account-level evidence.*not formal endorsement.*personal authorship/is);
+  assert.ok(populationRange.projections.every((projection) => projection.status !== "active" && projection.surfaces.length === 0));
+  assert.ok(populationRange.boundaries.some((boundary) => /complete disposition is not complete item recovery/i.test(boundary)));
+
+  const liveText = [sharedIdentity, councilEngagement, populationRange]
+    .flatMap((claim) => [claim.internalClaim, ...claim.projections.filter((projection) => projection.status === "active").map((projection) => projection.text)])
+    .join("\n");
+  assert.deepEqual(findNycaOverclaims(liveText), []);
+});
+
+test("NYC Artist Coalition guard catches representative semantic regressions", () => {
+  const overclaims = [
+    "All 5,124 tweets were recovered.",
+    "5,124/5,124 tweets recovered.",
+    "100 percent of the posts were recovered.",
+    "Jamie authored all 5,124 posts.",
+    "Jamie selected every repost.",
+    "Current profile counters prove reach.",
+    "The New York City Council formally endorsed NYC Artist Coalition.",
+    "Seven Council members formally endorsed the coalition.",
+    "Jamie personally communicated with all seven Council members.",
+    "The social corpus alone proves policy causality."
+  ];
+
+  for (const sample of overclaims) {
+    assert.notDeepEqual(findNycaOverclaims(sample), [], `Expected guard to reject: ${sample}`);
+  }
+});
+
+test("NYC Artist Coalition public research artifacts pass the semantic guard", () => {
+  const text = [
+    nycaResearchClaimText(
+      readFileSync("docs/knowledge-bank/projects/nycartc-x-population-2026-07-14.md", "utf8")
+    ),
+    readFileSync("docs/knowledge-bank/data/nycartc-public-post-ledger.json", "utf8"),
+    readFileSync("docs/knowledge-bank/data/nycartc-public-engagement-ledger.json", "utf8")
+  ].join("\n");
+
+  assert.deepEqual(findNycaOverclaims(text), []);
+});
+
+test("repo-local knowledge-bank sources use immutable existing commit refs", () => {
+  const repoBlobPattern =
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/([^/]+)\/([^#?]+)(?:[#?].*)?$/i;
+  const repoSources = knowledgeBank.sources
+    .map((source) => ({ source, match: source.canonicalUrl?.match(repoBlobPattern) }))
+    .filter(({ match }) => Boolean(match));
+
+  assert.ok(repoSources.length > 0);
+  for (const { source, match } of repoSources) {
+    const [, revision, sourcePath] = match;
+    assert.match(revision, /^[0-9a-f]{40}$/i, `${source.id} must use a full commit SHA`);
+    assert.doesNotThrow(
+      () => execFileSync("git", ["cat-file", "-e", `${revision}:${decodeURIComponent(sourcePath)}`], { stdio: "ignore" }),
+      `${source.id} must resolve to a file in the pinned commit`
+    );
+  }
 });
 
 test("private and metadata-only evidence is absent from the public registry", () => {
