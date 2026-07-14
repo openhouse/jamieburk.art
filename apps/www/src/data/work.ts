@@ -516,21 +516,24 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Adaptive reuse, public-benefit documentation, and participation systems",
     summary:
-      "Helped shape adaptive-reuse planning and public-benefit documentation for a long-vacant historic building; after a unanimous board recommendation, the Council allocated $490,539.",
-    role: "Project Planning & Documentation Support",
-    years: "2019",
+      "Established a public project identity and helped shape adaptive-reuse planning and public-benefit documentation for a long-vacant historic building; after a unanimous board recommendation, the Council allocated $490,539.",
+    role: "Project Planning, Documentation & Public Systems",
+    years: "2018-2019",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-public-benefit-documentation",
+      "kc-town-hall-public-identity-infrastructure"
+    ],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A durable public identity and participation surface, planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+    artifactTypes: ["workflow", "guide", "source map", "template"],
     artifacts: [
       {
         title: "Public-benefit documentation set",
@@ -539,8 +542,8 @@ const workItemsInput = [
         type: "guide"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: ["Implementation", "Documentation", "Participation Infrastructure", "Public-Facing Tools"],
+    capabilities: ["Public Identity Systems", "Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
@@ -549,8 +552,10 @@ const workItemsInput = [
     currentStatus: "Historical project.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, public identity systems, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
+      "Durable public identity and participation surface",
+      "181 recovered public account records across resident input, neighborhood operations, and civic information",
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
@@ -558,9 +563,9 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Official records identify Jamie as KC Town Hall's presenter and document a unanimous board recommendation followed by the Council's $490,539 allocation.",
+        "Jamie established the public project identity; official records identify him as KC Town Hall's presenter and document a unanimous board recommendation followed by the Council's $490,539 allocation.",
       open:
-        "Funding-agreement execution, receipt or disbursement, later implementation, current property or operating status, and named-partner details remain open or require approval.",
+        "Funding-agreement execution, receipt or disbursement, later implementation, current property or operating status, two social-profile count slots, shared-post authorship, later program operations, and named-partner details remain open or require approval.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

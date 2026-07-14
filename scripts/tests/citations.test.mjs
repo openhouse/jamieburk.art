@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 31 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 32 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -96,6 +96,11 @@ test("intake has no silent loss and memories are not auto-promoted", () => {
   assert.ok(
     knowledgeBank.intake.some(
       (item) => item.id === "LEAD-WOWLIST-FULL-POPULATION-CORPUS-2026"
+    )
+  );
+  assert.ok(
+    knowledgeBank.intake.some(
+      (item) => item.id === "LEAD-KC-TOWN-HALL-FULL-POPULATION-CORPUS-2026"
     )
   );
   for (const intakeId of [
@@ -175,9 +180,17 @@ test("evidence expansion selectively strengthens three public case studies", () 
   assert.match(early.claim.boundaries.join(" "), /not sole founder/i);
   assert.match(march.claim.boundaries.join(" "), /not sole causality/i);
   assert.match(sunday.claim.boundaries.join(" "), /not the 300-plus/i);
-  assert.deepEqual(kc.sources.map((item) => item.number), [1, 2, 3]);
+  assert.deepEqual(kc.sources.map((item) => item.number), [3, 4, 5]);
   assert.match(kc.claim.boundaries.join(" "), /executed funding agreement/i);
   assert.match(kc.claim.boundaries.join(" "), /receipt or disbursement/i);
+});
+
+test("KC Town Hall public identity evidence precedes the allocation record", () => {
+  const identity = resolveCitationOccurrence("kc-town-hall", "durable-public-identity");
+  assert.equal(identity.claim.id, "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY");
+  assert.deepEqual(identity.sources.map((item) => item.number), [1, 2]);
+  assert.match(identity.claim.boundaries.join(" "), /account was shared/i);
+  assert.match(identity.claim.boundaries.join(" "), /not assigned to him without direct evidence/i);
 });
 
 test("new evidence reduces proof debt without erasing open questions", () => {

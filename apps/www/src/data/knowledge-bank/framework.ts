@@ -39,6 +39,14 @@ import {
   wowlistSocialCorpusPublicationDecisions,
   wowlistSocialCorpusSources
 } from "./wowlist-social-corpus.ts";
+import {
+  kcTownHallSocialCorpusClaims,
+  kcTownHallSocialCorpusInquiries,
+  kcTownHallSocialCorpusIntake,
+  kcTownHallSocialCorpusProofCoverage,
+  kcTownHallSocialCorpusPublicationDecisions,
+  kcTownHallSocialCorpusSources
+} from "./kc-town-hall-social-corpus.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -515,7 +523,8 @@ export const frameworkIntake = [
   ...campaignPressIntake,
   ...socialArchiveIntake,
   ...callNycSocialCorpusIntake,
-  ...wowlistSocialCorpusIntake
+  ...wowlistSocialCorpusIntake,
+  ...kcTownHallSocialCorpusIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -696,15 +705,15 @@ export const frameworkProjects = [
     id: "kc-town-hall",
     title: "KC Town Hall",
     aliases: ["KC Town-Hall LLC"],
-    period: "2019",
+    period: "2018-2022 public record",
     status: "historical",
-    summary: "Adaptive-reuse planning and public-benefit documentation for a historic Kansas City building.",
+    summary: "Adaptive-reuse planning, public-benefit documentation, and a durable participation identity for a historic Kansas City building and neighborhood work.",
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
-    themes: ["adaptive reuse", "public benefit", "long-horizon implementation"],
-    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
-    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION"],
-    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"],
+    themes: ["adaptive reuse", "public benefit", "participation infrastructure", "long-horizon implementation"],
+    sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019", "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026", "SRC-X-KC-TOWN-HALL-LAUNCH-2018"],
+    claimIds: ["CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COMPLETE-SOCIAL-POPULATION", "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY", "CLM-KC-TOWN-HALL-TIRED-OF-TIRES-RECORD", "CLM-KC-TOWN-HALL-CIVIC-EXCHANGE"],
+    inquiryIds: ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "INQ-KC-TOWN-HALL-FULL-POPULATION-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public-safe building or planning image explains the adaptive-reuse proposition without exposing current legal, financial, or occupancy details?",
@@ -1295,7 +1304,8 @@ export const frameworkSources = [
   ...campaignPressSources,
   ...socialArchiveSources,
   ...callNycSocialCorpusSources,
-  ...wowlistSocialCorpusSources
+  ...wowlistSocialCorpusSources,
+  ...kcTownHallSocialCorpusSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -1661,7 +1671,8 @@ export const frameworkClaims = [
   },
   ...socialArchiveClaims,
   ...callNycSocialCorpusClaims,
-  ...wowlistSocialCorpusClaims
+  ...wowlistSocialCorpusClaims,
+  ...kcTownHallSocialCorpusClaims
 ] satisfies ClaimRecord[];
 
 const openInquiry = (
@@ -1695,7 +1706,8 @@ export const frameworkInquiries = [
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
   ...socialArchiveInquiries,
   ...callNycSocialCorpusInquiries,
-  ...wowlistSocialCorpusInquiries
+  ...wowlistSocialCorpusInquiries,
+  ...kcTownHallSocialCorpusInquiries
 ] satisfies ResearchInquiry[];
 
 const publicationDecisionInputs: Array<[
@@ -1747,7 +1759,8 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
 ).concat(
   socialArchivePublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
-  wowlistSocialCorpusPublicationDecisions
+  wowlistSocialCorpusPublicationDecisions,
+  kcTownHallSocialCorpusPublicationDecisions
 ) satisfies PublicationDecision[];
 
 const coverage = (
@@ -1779,7 +1792,8 @@ export const frameworkProofCoverage = [
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
   ...socialArchiveProofCoverage,
   ...callNycSocialCorpusProofCoverage,
-  ...wowlistSocialCorpusProofCoverage
+  ...wowlistSocialCorpusProofCoverage,
+  ...kcTownHallSocialCorpusProofCoverage
 ] satisfies ProofCoverage[];
 
 export const frameworkPages = [
@@ -1872,12 +1886,29 @@ export const frameworkPages = [
   {
     id: "kc-town-hall",
     surface: "/work/kc-town-hall",
-    sourceOrder: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"],
-    occurrences: [{
-      id: "council-allocation",
-      claimId: "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
-      projection: "case-study",
-      sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]
-    }]
+    sourceOrder: [
+      "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+      "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+      "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
+      "SRC-KCMO-ORDINANCE-190642-2019",
+      "SRC-KCMO-RESOLUTION-190649-2019"
+    ],
+    occurrences: [
+      {
+        id: "durable-public-identity",
+        claimId: "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+          "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026"
+        ]
+      },
+      {
+        id: "council-allocation",
+        claimId: "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",
+        projection: "case-study",
+        sourceIds: ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]
+      }
+    ]
   }
 ] satisfies CitationPage[];

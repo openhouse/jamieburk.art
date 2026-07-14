@@ -9,6 +9,7 @@ import {
   evaluateGoogleSharedDriveArchiveProduction,
   evaluateICloudArchiveProduction,
   evaluateKcTownHallCouncilAllocation,
+  evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
   evaluateProjectSocialArchiveProduction,
   evaluateWowlistFullPopulationArchive,
@@ -228,7 +229,7 @@ const kcTownHallCouncilAllocationFixture = {
     "Committee Substitute for Ordinance No. 190642",
     "Second Committee Substitute for Resolution No. 190649",
     "executed funding agreement receipt or disbursement of funds",
-    'id: "kc-town-hall" period: "2019" status: "historical"'
+    'id: "kc-town-hall" period: "2018-2022 public record" status: "historical"'
   ].join(" "),
   proofs: [
     'id: "kc-town-hall-public-benefit-documentation"',
@@ -467,14 +468,16 @@ test("Google Shared Drive archive production rejects private links and missing c
 const projectSocialArchiveFixture = {
   socialArchive: [
     "socialArchiveAccountMap",
-    'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist"',
+    'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist" handle: "@KCTownHall"',
     "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 107",
     "profilePostsObserved: 5124 followersObserved: 1338",
     "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 38",
+    "profilePostsObserved: 183 followersObserved: 132 timelineItemsRecovered: 181",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
     "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
     "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
     "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
+    "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026",
     "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
     "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
     "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
@@ -492,18 +495,18 @@ const projectSocialArchiveFixture = {
   proofs: [
     'id: "project-social-identity-systems"',
     'id: "nyc-artist-coalition-social-engagement"',
-    "collaborators used across four campaigns over years",
+    "shared systems collaborators carried across campaigns, programs, and changing stewardship",
     "at least six contemporaneous NYC Council-member accounts",
     "Jamie authored every @NYCArtC post"
   ].join(" "),
   technicalOperations:
-    'project: "Project identity systems" I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition',
+    'project: "Project identity systems" I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall',
   fairRentCase:
     "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT council-social-engagement account establishment and continuity remain distinct from post-by-post authorship not an official Council endorsement",
   wowlistCase:
     "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE public-origin-and-use do not independently verify the larger historical user, event, or geographic totals",
   archiveDoc: [
-    "Verified Account Map @CallNYCApp @NYCArtC @wowlist",
+    "Verified Account Map @CallNYCApp @NYCArtC @wowlist @KCTownHall",
     "No verified dedicated account was recovered",
     "Authenticated recovery found direct interactions from **at least six**",
     "Carlina Rivera not yet serving on the Council",
@@ -669,6 +672,78 @@ test("WOWList full-population archive rejects full post text and private browser
   });
 
   assert.ok(failures.some((failure) => failure.includes("must not reproduce full post")));
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+const kcTownHallFullPopulationFixture = {
+  ledger: readRepoFile("docs/knowledge-bank/data/kc-town-hall-public-post-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/kc-town-hall-social-corpus.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+  kcTownHallCase: readRepoFile("apps/www/src/content/work/kc-town-hall.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-14-kc-town-hall-full-population-social-corpus.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("KC Town Hall full-population archive passes slot disposition and stewardship boundaries", () => {
+  assert.deepEqual(
+    evaluateKcTownHallFullPopulationArchive(kcTownHallFullPopulationFixture),
+    []
+  );
+});
+
+test("KC Town Hall full-population archive rejects erased unresolved slots", () => {
+  const ledger = JSON.parse(kcTownHallFullPopulationFixture.ledger);
+  ledger.populationAudit.unresolvedPopulationSlots = 0;
+  const failures = evaluateKcTownHallFullPopulationArchive({
+    ...kcTownHallFullPopulationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("retain two explicit unresolved slots")));
+  assert.ok(failures.some((failure) => failure.includes("reconcile to the 183-post profile control")));
+});
+
+test("KC Town Hall full-population archive rejects a truncated recovery range", () => {
+  const ledger = JSON.parse(kcTownHallFullPopulationFixture.ledger);
+  ledger.populationAudit.lastRecoveredAt = "2022-09-03T22:54:00.000Z";
+  const failures = evaluateKcTownHallFullPopulationArchive({
+    ...kcTownHallFullPopulationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("latest recovered item, including reposts"))
+  );
+});
+
+test("KC Town Hall full-population archive rejects theme drift and stakeholder inflation", () => {
+  const ledger = JSON.parse(kcTownHallFullPopulationFixture.ledger);
+  ledger.records[0].primaryTheme = "tired-of-tires-operations";
+  ledger.aggregateFindings.directPublicConversationStakeholderFloor.electedOrCityServiceAccounts.push("@UnverifiedActor");
+  const failures = evaluateKcTownHallFullPopulationArchive({
+    ...kcTownHallFullPopulationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("count must recompute")));
+  assert.ok(failures.some((failure) => failure.includes("floor must remain four")));
+});
+
+test("KC Town Hall full-population archive rejects full post text and private browser material", () => {
+  const ledger = JSON.parse(kcTownHallFullPopulationFixture.ledger);
+  ledger.records[0].fullText = "Copied account text";
+  const failures = evaluateKcTownHallFullPopulationArchive({
+    ...kcTownHallFullPopulationFixture,
+    ledger: JSON.stringify(ledger),
+    archiveDoc: `${kcTownHallFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must not reproduce full account")));
   assert.ok(
     failures.some((failure) => failure.includes("authentication, session, or private-path"))
   );

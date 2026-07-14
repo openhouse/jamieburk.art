@@ -449,12 +449,12 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source", "jamie-review-confirmation"],
     publicWording:
-      "Established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years.",
+      "Established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship.",
     shortWording: "Established durable public identities collaborators could carry forward",
     detailedPublicWording:
-      "Jamie established the project accounts and the shared coalition identity system; public timelines show durable use across CallNYC, WOW List, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
+      "Jamie established the project accounts and shared identity systems; public timelines show durable use across CallNYC, WOW List, KC Town Hall, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
     sourceBasis:
-      "Jamie's firsthand confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, and @wowlist profiles and campaign timelines.",
+      "Jamie's firsthand confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles and campaign timelines.",
     whyItMatters:
       "Shows a systems contribution that made public work recognizable, reusable, and maintainable by collaborators beyond one person's posting activity.",
     guardrail:
@@ -471,9 +471,9 @@ export const proofClaims: ProofClaim[] = [
       "Post-level authorship without evidence"
     ],
     surfaces: ["technical-operations", "case-study"],
-    relatedProjects: ["callnyc", "wowlist", "fair-rent-nyc"],
+    relatedProjects: ["callnyc", "wowlist", "fair-rent-nyc", "kc-town-hall"],
     relatedCapabilities: ["public-identity-systems", "handoffs", "campaign-infrastructure"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-social-engagement",
@@ -697,6 +697,42 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-13"
   },
   {
+    id: "kc-town-hall-public-identity-infrastructure",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["jamie-review-confirmation", "public-source"],
+    publicWording:
+      "Established KC Town Hall's public-facing identity and participation surface; collaborators carried it forward across resident input, neighborhood operations, civic information, and public exchange.",
+    shortWording: "Established a durable public identity and participation system",
+    detailedPublicWording:
+      "Jamie established KC Town Hall's public-facing identity and participation surface. The surviving shared-account record shows that system carrying resident-input, restoration, neighborhood-operations, public-service, and civic-exchange records from 2018 through 2022.",
+    sourceBasis:
+      "Jamie's firsthand account-establishment confirmation, the public July 2018 launch post, and a July 2026 authenticated full-population audit of the surviving @KCTownHall profile.",
+    guardrail:
+      "Credit Jamie with establishing the identity system. Do not assign him every shared-account post or later program operation; project stewardship continued after his historical involvement ended. The audit dispositions 181 recovered items and two explicit unresolved profile-count slots and is not a platform export.",
+    doNotSay: [
+      "Jamie authored every @KCTownHall post",
+      "Jamie operated every later KC Town Hall program",
+      "All 183 profile-count slots were recovered at item level",
+      "Social interaction proves endorsement, funding support, audience scale, or impact"
+    ],
+    protectedBoundaries: [
+      "Authentication and session material",
+      "Private messages and account analytics",
+      "Personal transition circumstances",
+      "Unapproved receiving-organization identity"
+    ],
+    surfaces: ["technical-operations", "work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "public-facing-web-systems",
+      "participation-infrastructure",
+      "stakeholder-context",
+      "technical-operations"
+    ],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",
@@ -876,6 +912,7 @@ export const technicalOperationsProofRows = [
       "callnyc-council-member-amplification",
       "callnyc-public-engagement-architecture",
       "wowlist-community-platform",
+      "kc-town-hall-public-identity-infrastructure",
       "hje-revenue-growth-contribution"
     ]
   }

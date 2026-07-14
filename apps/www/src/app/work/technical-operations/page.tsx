@@ -39,7 +39,7 @@ const proofMap = [
   {
     project: "Project identity systems",
     proof:
-      "I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years."
+      "I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship."
   },
   {
     project: "WOWList",

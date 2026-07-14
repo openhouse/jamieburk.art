@@ -393,6 +393,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-13
 
+## kc-town-hall-public-identity-infrastructure - Durable public identity and participation system
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Jamie review confirmation / public source
+**Public wording:** Established KC Town Hall's public-facing identity and participation surface; collaborators carried it forward across resident input, neighborhood operations, civic information, and public exchange.
+**Detailed public-safe wording:** Jamie established KC Town Hall's public-facing identity and participation surface. The surviving shared-account record shows that system carrying resident-input, restoration, neighborhood-operations, public-service, and civic-exchange records from 2018 through 2022.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows Jamie creating a public system that remained legible and useful across changing programs, collaborators, and stewardship.
+**Guardrail:** Credit Jamie with establishing the identity system. Do not assign him every shared-account post or later program operation; project stewardship continued after his historical involvement ended. The audit dispositions 181 recovered items and two explicit unresolved profile-count slots and is not a platform export.
+**Do not say:** Jamie authored every `@KCTownHall` post; Jamie operated every later KC Town Hall program; all 183 profile-count slots were recovered at item level; social interaction proves endorsement, funding support, audience scale, or impact.
+**Protected boundaries:** Authentication and session material, private messages and account analytics, personal transition circumstances, and the unapproved receiving-organization identity stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

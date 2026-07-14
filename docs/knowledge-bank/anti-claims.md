@@ -117,6 +117,18 @@ reasons for the transition, name the receiving organization without permission
 and corroboration, or present the stewardship transition as part of the
 source-backed Council-allocation claim.
 
+Do not assign every `@KCTownHall` post or later Tired of Tires operation to
+Jamie. Do not call the 181-record ledger a complete platform export, erase the
+two unresolved profile-count slots, or treat visible reactions and public
+threads as historical reach, unique people, endorsement, funding support, or
+Council-allocation causality.
+
+Treat the October 2020 `$20,023` Tired of Tires savings figure as
+project-reported, not independently audited. Ninety-nine is the number of surviving
+account-authored Tired of Tires records, not pickups, households, participants,
+tires, or unique program events. Outbound articles are mission context unless
+they explicitly report on KC Town Hall.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

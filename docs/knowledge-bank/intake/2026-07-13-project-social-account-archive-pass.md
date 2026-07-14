@@ -20,9 +20,10 @@ establishment role from collective post authorship and campaign outcomes.
 | Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
 | FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
 | WOW List | [@wowlist](https://x.com/wowlist) | Dedicated historical project account |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Dedicated historical project account with later shared stewardship |
 
 No verified dedicated account was recovered in this pass for Sunday Dinner / 196
-Artists Residency, Harry J. Epstein Company, KC Town Hall, KC Spaces Fund, or
+Artists Residency, Harry J. Epstein Company, KC Spaces Fund, or
 Source-Backed Team Memory. That is a bounded recovery finding, not proof that no
 account or project-related social activity ever existed.
 
@@ -154,10 +155,32 @@ posts.
   and civic-care resources. See the separate July 14 full-population intake and
   ledger for item-level dispositions and source boundaries.
 
+### KC Town Hall - @KCTownHall
+
+- Joined March 2018; 225 following and 132 followers observed on the review
+  date.
+- Profile count observed: 183 posts.
+- Unique primary timeline items recovered: 181, comprising 155 account-authored
+  statuses and 26 reposts from 16 public accounts.
+- Two profile-count slots remain explicitly unresolved; all 183 slots have a
+  durable disposition.
+- Seven third-party conversation-context records were used to understand reply
+  threads and excluded from the account population.
+- Ninety-nine account-authored records concern the recurring Tired of Tires
+  program; the corpus also carries restoration, resident-input, mutual-support,
+  public-service, and civic-participation records from 2018 through 2022.
+- Recoverable public threads include direct exchange with at least four elected
+  or city-service accounts. This is interaction evidence, not endorsement,
+  funding support, or Council-allocation causality.
+- Jamie confirms establishing the account. Shared authorship and later program
+  stewardship remain separate from that setup role.
+- The item ledger and full boundaries live at
+  `docs/knowledge-bank/data/kc-town-hall-public-post-ledger.json`.
+
 ## Jamie's Role and the Team Boundary
 
-Jamie confirms that he established the CallNYC, NYC Artist Coalition, and WOW
-List project accounts as public-facing identity infrastructure. The public
+Jamie confirms that he established the CallNYC, NYC Artist Coalition, WOW List,
+and KC Town Hall project accounts as public-facing identity infrastructure. The public
 record corroborates the accounts' existence, mission, use, and continuity. It
 does not independently expose the setup action or identify who composed every
 team post.
@@ -179,6 +202,9 @@ Jamie authored her words or owned the campaign voice.
 - `CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE`: selected for the WOW List proof page as
   bounded evidence of its Sunday Dinner origin and one community-created
   instructional artifact.
+- `CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY`: selected for the KC Town Hall
+  proof page and Technical Operations as a bounded account-establishment and
+  continuity claim.
 
 ## Research Debt Preserved
 

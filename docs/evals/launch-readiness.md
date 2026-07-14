@@ -44,6 +44,8 @@ The canonical positioning sentence is:
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 | Project social archive production | 18 | Yes | Verified account identities, authenticated recovery floors, direct engagement definitions, collective authorship boundaries, and selected public projections remain linked and privacy-safe. |
 | CallNYC full-population archive | 20 | Yes | All 110 observed profile-count slots reconcile to 107 item-level recoveries and three explicit unresolved slots; post types, stakeholder patterns, issue links, external URLs, claims, and boundaries recompute from the ledger. |
+| WOWList full-population archive | 20 | Yes | All 38 current-profile items reconcile at item level; account posts, support replies, reposts, themes, links, claims, and collective-authorship boundaries recompute from the ledger. |
+| KC Town Hall full-population archive | 20 | Yes | All 183 observed profile-count slots reconcile to 181 item-level recoveries and two explicit unresolved slots; account relationships, themes, links, reactions, stakeholder patterns, shared authorship, later stewardship, and selected public projections recompute from the ledger. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -88,7 +90,10 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - Do not treat an authenticated visible social timeline as a complete export,
   count one-way tags as reciprocal engagement, attribute every team post to
   Jamie, expose authentication material, or convert individual-account
-  interactions into official endorsement or policy causality.
+  interaction into endorsement, funding support, or measured impact.
+- Do not erase unresolved social-profile slots, assign later KC Town Hall
+  operations to Jamie, or promote project-reported Tired of Tires outcomes as
+  independently audited results.
 - Do not satisfy CallNYC population completeness by erasing unresolved slots,
   inventing missing status IDs, trusting stored aggregates without item-level
   recomputation, converting Council tags into responses, converting issue rows

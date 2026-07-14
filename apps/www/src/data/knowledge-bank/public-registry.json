@@ -631,6 +631,45 @@
         "the platform's total support workload",
         "platform-wide adoption, audience reach, satisfaction, or impact"
       ]
+    },
+    {
+      "id": "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts and Replies surfaces, with a 181-record public ledger and two explicit unresolved profile-count slots, July 14, 2026.",
+      "publicNote": "The profile displayed 183 posts. Fine-grained cross-tab reconciliation recovered 181 surviving public timeline items: 155 account-authored statuses and 26 reposts from 16 public accounts. Seven contextual conversation statuses were excluded from the population, and two profile-count slots remain unresolved.",
+      "doesNotEstablish": [
+        "a complete platform export or deletion history",
+        "the identity of two unresolved profile-count slots",
+        "Jamie's authorship of every shared-account status",
+        "Jamie's operation of later programs after stewardship transitioned",
+        "historical impressions, unique people, endorsement, funding support, or independently audited impact"
+      ]
+    },
+    {
+      "id": "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+      "title": "KC Town Hall public identity launch post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-07-02",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall public post inviting participation in building a neighborhood resource and cultural center, July 2, 2018.",
+      "publicNote": "The pinned launch record frames the account as a participation surface around a permanent neighborhood resource and cultural center on Indiana Avenue.",
+      "doesNotEstablish": [
+        "the individual teammate who authored the shared-account post",
+        "official endorsement, funding support, causality, or independently audited impact"
+      ]
     }
   ],
   "claims": [
@@ -1469,6 +1508,54 @@
         "Credit Jamie with establishing the account and co-building the product; do not assign individual post authorship without direct evidence.",
         "The account record demonstrates public support behavior, not the full support workload, adoption, satisfaction, audience, or impact."
       ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie established a public project identity and participation surface that collaborators could carry forward across resident input, neighborhood operations, civic information, and public exchange.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Established a durable public identity and participation system that remained useful across changing programs and stewardship.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+          "relationship": "direct-support",
+          "supports": [
+            "public launch framing and participation invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "public continuity across resident input, neighborhood operations, civic routing, and exchange"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public record corroborates the identity's use and continuity, while Jamie's setup action is a firsthand source.",
+        "The account was shared and later stewardship continued after Jamie's involvement ended; individual posts and later program operations are not assigned to him without direct evidence."
+      ]
     }
   ],
   "pages": [
@@ -1700,11 +1787,22 @@
       "id": "kc-town-hall",
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
+        "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+        "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
         "SRC-KCMO-CCED-ROUND2-MINUTES-2019",
         "SRC-KCMO-ORDINANCE-190642-2019",
         "SRC-KCMO-RESOLUTION-190649-2019"
       ],
       "occurrences": [
+        {
+          "id": "durable-public-identity",
+          "claimId": "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-KC-TOWN-HALL-LAUNCH-2018",
+            "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026"
+          ]
+        },
         {
           "id": "council-allocation",
           "claimId": "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION",

@@ -1,6 +1,23 @@
 # KC Town Hall
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-14
+
+Jamie confirms that he established the KC Town Hall public account and project
+identity. The public July 2018 launch record frames that identity as an
+invitation to follow and participate in creating a neighborhood resource and
+cultural center. A full-population audit of the surviving profile dispositions
+all 183 observed count slots as 181 item-level recoveries and two explicit
+unresolved slots.
+
+The 181 recovered account-timeline items comprise 155 account-authored statuses
+and 26 reposts from 16 public accounts. The account record shows the public
+identity carrying restoration context, resident-input questions, recurring
+neighborhood operations, civic information, and public exchange through 2022.
+Ninety-nine account-authored records concern the recurring Tired of Tires
+program. Direct public thread context includes at least four elected or city-
+service accounts. These are shared-account and project-level findings, not
+post-by-post Jamie authorship, endorsement, funding support, or proof that Jamie
+operated later programs after stewardship transitioned.
 
 Kansas City's Central City Economic Development Sales Tax Board minutes provide
 a strong public milestone. The June 2019 presentation table identifies Jamie as
@@ -18,6 +35,12 @@ This establishes Council allocation and negotiation authority. It does not
 establish an executed agreement, receipt or disbursement, completed
 construction, Jamie's sole causality for the vote, or later property or
 operating status. Those remain open research and protected-context questions.
+
+The selected portfolio argument joins these two evidence layers without
+collapsing them: Jamie established a durable public identity and participation
+surface, and official records later identify him as presenter in the municipal
+funding process. The social record does not cause or independently corroborate
+the Council allocation.
 
 ## Stewardship transition
 

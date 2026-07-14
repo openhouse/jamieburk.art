@@ -40,6 +40,17 @@ export const socialArchiveAccountMap = [
     followersObserved: 47,
     timelineItemsRecovered: 38,
     recoveryNote: "Cross-tab reconciliation recovered all 38 items in the July 2026 live-profile control: 16 account posts, six account replies, and 16 reposts from 13 public accounts."
+  },
+  {
+    projects: ["KC Town Hall"],
+    handle: "@KCTownHall",
+    url: "https://x.com/KCTownHall",
+    joined: "March 2018",
+    profilePostsObserved: 183,
+    followingObserved: 225,
+    followersObserved: 132,
+    timelineItemsRecovered: 181,
+    recoveryNote: "Cross-tab reconciliation dispositioned all 183 live-profile slots as 181 item-level recoveries and two explicit unresolved slots: 155 account-authored statuses and 26 reposts from 16 public accounts."
   }
 ] as const;
 
@@ -53,11 +64,12 @@ export const socialArchiveIntake = [
     summary: "Inventory the verified project accounts, recover mission-relevant public engagement and linked sources, and separate Jamie's identity-system contribution from collective post authorship.",
     status: "integrated",
     dispositions: ["source-created", "claim-created", "inquiry-created", "project-linked", "protected-from-publication"],
-    projectIds: ["callnyc", "nyc-artist-coalition", "wowlist", "career-proof-system"],
+    projectIds: ["callnyc", "nyc-artist-coalition", "wowlist", "kc-town-hall", "career-proof-system"],
     sourceIds: [
       "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
       "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
       "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
+      "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026",
       "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026",
       "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
       "SRC-X-WOWLIST-USER-TUTORIAL-2015",
@@ -76,7 +88,7 @@ export const socialArchiveIntake = [
     ],
     notes: [
       "Authenticated read-only recovery was necessary to see historical timelines, but no session, credential, cookie, account-recovery, or private-message data entered the repository.",
-      "Recovered counts are documented item-level results, not claims of platform-export completeness; the full CallNYC population audit dispositions 107 recovered items and three unresolved count slots, while the WOWList audit recovers all 38 items in its current live-profile control.",
+      "Recovered counts are documented item-level results, not claims of platform-export completeness; full-population audits preserve recovered and unresolved slots for CallNYC, WOW List, and KC Town Hall.",
       "Jamie confirms establishing the accounts; public timelines do not identify who authored every team post."
     ]
   }
@@ -158,6 +170,22 @@ export const socialArchiveSources = [
     doesNotEstablish: ["a complete platform export or deletion history", "broad adoption by itself", "authorship of every post", "current platform activity"]
   },
   {
+    id: "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026",
+    title: "Authenticated KC Town Hall public-profile inventory",
+    organization: "X (formerly Twitter)",
+    kind: "research-run",
+    visibility: "public",
+    preservationStatus: "live",
+    capturedAt: "2026-07-14",
+    accessedAt: "2026-07-14",
+    canonicalUrl: "https://x.com/KCTownHall",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Authenticated read-only review of the public @KCTownHall profile and timeline, July 14, 2026.",
+    publicNote: "The profile showed 183 posts. Cross-tab reconciliation recovered 181 item-level public records: 155 account-authored statuses and 26 reposts from 16 public accounts; two profile-count slots remain explicitly unresolved.",
+    supportsGenerally: ["the verified KC Town Hall handle", "181 item-level recoveries", "resident-input, neighborhood-operations, and civic-information patterns"],
+    doesNotEstablish: ["a complete platform export or deletion history", "the identity of two unresolved slots", "Jamie's authorship of every post", "Jamie's operation of later programs"]
+  },
+  {
     id: "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026",
     title: "Jamie Burkart firsthand account-establishment confirmation",
     author: "Jamie Burkart",
@@ -166,7 +194,7 @@ export const socialArchiveSources = [
     preservationStatus: "private",
     capturedAt: "2026-07-13",
     publicCitation: "Jamie Burkart firsthand confirmation, July 13, 2026.",
-    publicNote: "Jamie confirms that he established the CallNYC, NYC Artist Coalition, and WOW List project accounts as public-facing identity infrastructure.",
+    publicNote: "Jamie confirms that he established the CallNYC, NYC Artist Coalition, WOW List, and KC Town Hall project accounts as public-facing identity infrastructure.",
     supportsGenerally: ["Jamie's account-establishment role", "the intended shared identity and handoff function"],
     doesNotEstablish: ["authorship of every post", "sole ownership of team communications", "sole causality for public outcomes"],
     protectedLocatorId: "MEMORY-SOCIAL-IDENTITY-ESTABLISHMENT-2026-001"
@@ -310,14 +338,14 @@ export const socialArchiveClaims = [
   {
     id: "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
     project: "career-proof-system",
-    internalClaim: "Jamie established public-facing account identities for CallNYC, WOW List, and NYC Artist Coalition; the coalition identity became a durable shared campaign surface used by collaborators over years.",
+    internalClaim: "Jamie established public-facing account identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall; those identities became durable shared surfaces that collaborators could carry forward.",
     status: "confirmed-with-boundary",
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     projections: [
       {
         key: "technical-operations",
-        text: "I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years.",
+        text: "I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/technical-operations"]
@@ -335,6 +363,7 @@ export const socialArchiveClaims = [
       { sourceId: "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", relationship: "corroborating", supports: ["CallNYC account existence and historical public use"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", relationship: "corroborating", supports: ["shared four-campaign identity and long-running public use"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", relationship: "corroborating", supports: ["WOW List account existence and historical public use"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026", relationship: "corroborating", supports: ["KC Town Hall account existence, public use, and continuity"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022", relationship: "corroborating", supports: ["collaborator stewardship and campaign continuity"], confidence: "high", renderCitation: true }
     ],
     boundaries: ["Jamie confirms establishing the accounts; public profile evidence corroborates their existence and continuity but not the initial setup action by itself.", "Multiple teammates posted. Do not assign Jamie authorship of an individual team post without post-level evidence.", "Campaign and policy outcomes remain collective."],
@@ -420,7 +449,7 @@ export const socialArchiveInquiries = [
     findings: ["Verified @CallNYCApp, @NYCArtC, and @wowlist as public project accounts.", "Verified that Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC used the shared @NYCArtC identity.", "Recovered 53 #LetNYCDance, 40 #SaveNYCSpaces, 34 #TalksNotRaids, and 27 #FairRentNYC account-authored search results as non-exhaustive floors.", "No verified dedicated account was recovered for the other portfolio projects reviewed in this pass."],
     limitations: ["X search and scrolling are incomplete and can change over time.", "Profile post totals can include items not returned by visible scrolling.", "No account export, analytics dashboard, private messages, or nonpublic engagement data was accessed.", "Reposts by a project account do not establish that the original author endorsed the project."],
     sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026"],
-    publicSummary: "An authenticated read-only pass verified three project accounts and recovered bounded public timeline evidence; separate population audits disposition CallNYC's 110-item profile control and recover all 38 items in WOWList's current profile control, while neither is presented as a platform export."
+    publicSummary: "An authenticated read-only pass verified four project accounts and recovered bounded public timeline evidence; separate population audits disposition the CallNYC, WOW List, and KC Town Hall live-profile controls without presenting any as a platform export."
   },
   {
     id: "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",

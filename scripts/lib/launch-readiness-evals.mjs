@@ -162,6 +162,7 @@ export function evaluateKnowledgeLifecycle({
   records,
   framework,
   socialArchive = "",
+  coverageExtensions = "",
   knowledgeReadme,
   fairRentCase,
   proofs
@@ -233,7 +234,7 @@ export function evaluateKnowledgeLifecycle({
   const proofIds = [...proofs.matchAll(/^\s+id:\s*"([^"]+)"/gm)].map(
     (match) => match[1]
   );
-  const coverageSources = `${framework}\n${socialArchive}`;
+  const coverageSources = `${framework}\n${socialArchive}\n${coverageExtensions}`;
   for (const proofId of proofIds) {
     if (
       !coverageSources.includes(`proofId: "${proofId}"`) &&
@@ -374,8 +375,8 @@ export function evaluateKcTownHallCouncilAllocation({
     "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION"
   ]);
 
-  if (!/id: "kc-town-hall"[\s\S]{0,180}period: "2019"[\s\S]{0,80}status: "historical"/.test(framework)) {
-    missing.push("KC Town Hall project metadata must record period 2019 and historical status.");
+  if (!/id: "kc-town-hall"[\s\S]{0,180}period: "2018-2022 public record"[\s\S]{0,80}status: "historical"/.test(framework)) {
+    missing.push("KC Town Hall project metadata must record the 2018-2022 public record and historical status.");
   }
 
   if (/record stops at the board's recommendation/i.test(kcTownHallCase)) {
@@ -634,6 +635,7 @@ export function evaluateProjectSocialArchiveProduction({
     'handle: "@CallNYCApp"',
     'handle: "@NYCArtC"',
     'handle: "@wowlist"',
+    'handle: "@KCTownHall"',
     "profilePostsObserved: 110",
     "followersObserved: 69",
     "timelineItemsRecovered: 107",
@@ -642,10 +644,14 @@ export function evaluateProjectSocialArchiveProduction({
     "profilePostsObserved: 38",
     "followersObserved: 47",
     "timelineItemsRecovered: 38",
+    "profilePostsObserved: 183",
+    "followersObserved: 132",
+    "timelineItemsRecovered: 181",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
     "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
     "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
     "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
+    "SRC-X-KC-TOWN-HALL-PROFILE-INVENTORY-2026",
     "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
     "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
     "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
@@ -677,13 +683,13 @@ export function evaluateProjectSocialArchiveProduction({
   requireFragments("Proof bank", proofs, [
     'id: "project-social-identity-systems"',
     'id: "nyc-artist-coalition-social-engagement"',
-    "collaborators used across four campaigns over years",
+    "shared systems collaborators carried across campaigns, programs, and changing stewardship",
     "at least six contemporaneous NYC Council-member accounts",
     "Jamie authored every @NYCArtC post"
   ]);
   requireFragments("Technical Operations", technicalOperations, [
     'project: "Project identity systems"',
-    "I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition"
+    "I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall"
   ]);
   requireFragments("NYC Artist Coalition case study", fairRentCase, [
     "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
@@ -701,6 +707,7 @@ export function evaluateProjectSocialArchiveProduction({
     "@CallNYCApp",
     "@NYCArtC",
     "@wowlist",
+    "@KCTownHall",
     "No verified dedicated account was recovered",
     "Authenticated recovery found direct interactions from **at least six**",
     "Carlina Rivera",
@@ -1202,6 +1209,279 @@ export function evaluateWowlistFullPopulationArchive({
   return missing;
 }
 
+export function evaluateKcTownHallFullPopulationArchive({
+  ledger,
+  corpusModel,
+  framework,
+  proofs,
+  workData,
+  technicalOperations,
+  kcTownHallCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("KC Town Hall public-post ledger is not valid JSON.");
+    return missing;
+  }
+
+  const population = parsed.populationAudit ?? {};
+  const aggregate = parsed.aggregateFindings ?? {};
+  const corpus = parsed.records ?? [];
+  const relationshipCount = (relationship) =>
+    corpus.filter((item) => item.relationship === relationship).length;
+  const themeCount = (theme, relationship = null) =>
+    corpus.filter(
+      (item) =>
+        item.primaryTheme === theme &&
+        (!relationship || item.relationship === relationship)
+    ).length;
+
+  expect(population.profileCountObserved === 183, "KC Town Hall observed profile control must remain 183.");
+  expect(population.postsTabItemsRecovered === 121, "KC Town Hall Posts-tab recovery must remain 121.");
+  expect(population.repliesTabPrimaryItemsRecovered === 181, "KC Town Hall Replies-tab primary recovery must remain 181.");
+  expect(population.accountAuthoredStatusesRecovered === 155, "KC Town Hall account-authored count must remain 155.");
+  expect(population.repostsRecovered === 26, "KC Town Hall repost count must remain 26.");
+  expect(population.distinctRepostSourceAccounts === 16, "KC Town Hall distinct repost-source count must remain 16.");
+  expect(population.uniqueItemsRecovered === 181, "KC Town Hall unique item-level recovery must remain 181.");
+  expect(population.contextualConversationRecordsExcluded === 7, "KC Town Hall contextual conversation exclusion must remain seven.");
+  expect(population.unresolvedPopulationSlots === 2, "KC Town Hall must retain two explicit unresolved slots.");
+  expect(population.dispositionTotal === 183, "KC Town Hall disposition total must remain 183.");
+  expect(
+    population.uniqueItemsRecovered + population.unresolvedPopulationSlots === population.profileCountObserved,
+    "Recovered and unresolved KC Town Hall slots must reconcile to the 183-post profile control."
+  );
+  expect(
+    population.accountAuthoredStatusesRecovered + population.repostsRecovered === population.uniqueItemsRecovered,
+    "KC Town Hall account-authored statuses and reposts must reconcile to recovered items."
+  );
+
+  expect(corpus.length === 181, "KC Town Hall ledger must contain 181 item-level records.");
+  expect(relationshipCount("account-status") === 155, "KC Town Hall ledger must contain 155 account-authored statuses.");
+  expect(relationshipCount("repost") === 26, "KC Town Hall ledger must contain 26 reposts.");
+  const recoveredDates = corpus.map((item) => item.publishedAt).sort();
+  expect(
+    population.firstRecoveredAt === recoveredDates[0],
+    "KC Town Hall population start must match the earliest recovered item."
+  );
+  expect(
+    population.lastRecoveredAt === recoveredDates.at(-1),
+    "KC Town Hall population end must match the latest recovered item, including reposts."
+  );
+  expect(new Set(corpus.map((item) => item.statusId)).size === corpus.length, "KC Town Hall ledger status IDs must be unique.");
+  expect(new Set(corpus.map((item) => item.statusUrl)).size === corpus.length, "KC Town Hall ledger status URLs must be unique.");
+  expect(
+    corpus.every(
+      (item) =>
+        typeof item.contentSummary === "string" &&
+        item.contentSummary.length > 12 &&
+        typeof item.publishedAt === "string" &&
+        /^https:\/\/x\.com\//.test(item.statusUrl)
+    ),
+    "Every KC Town Hall record must retain a public-safe summary, date, and canonical status URL."
+  );
+  expect(
+    corpus.every(
+      (item) =>
+        !("text" in item) &&
+        !("fullText" in item) &&
+        !("rawText" in item)
+    ),
+    "KC Town Hall public ledger must not reproduce full account or third-party post text."
+  );
+
+  const expectedThemes = {
+    "civic-information-and-public-participation": 9,
+    "neighborhood-mutual-support": 13,
+    "place-restoration-and-resident-input": 22,
+    "project-conversation-and-context": 38,
+    "tired-of-tires-operations": 99
+  };
+  const expectedAuthoredThemes = {
+    "civic-information-and-public-participation": 6,
+    "neighborhood-mutual-support": 5,
+    "place-restoration-and-resident-input": 18,
+    "project-conversation-and-context": 27,
+    "tired-of-tires-operations": 99
+  };
+  for (const [theme, count] of Object.entries(expectedThemes)) {
+    expect(themeCount(theme) === count, `KC Town Hall ${theme} count must recompute to ${count}.`);
+    expect(aggregate.themeCounts?.[theme] === count, `KC Town Hall stored ${theme} aggregate must remain ${count}.`);
+  }
+  for (const [theme, count] of Object.entries(expectedAuthoredThemes)) {
+    expect(themeCount(theme, "account-status") === count, `KC Town Hall authored ${theme} count must recompute to ${count}.`);
+    expect(aggregate.authoredThemeCounts?.[theme] === count, `KC Town Hall stored authored ${theme} aggregate must remain ${count}.`);
+  }
+  expect(
+    Object.values(expectedThemes).reduce((sum, count) => sum + count, 0) === corpus.length,
+    "KC Town Hall theme dispositions must reconcile to all 181 records."
+  );
+
+  const repostAuthors = new Set(
+    corpus
+      .filter((item) => item.relationship === "repost")
+      .map((item) => item.authorHandle.toLowerCase())
+  );
+  const authored = corpus.filter((item) => item.relationship === "account-status");
+  const allOutbound = corpus.flatMap((item) => item.outboundLinks ?? []);
+  const authoredOutbound = authored.flatMap((item) => item.outboundLinks ?? []);
+  const uniqueShortUrls = new Set(allOutbound.map((link) => link.shortUrl));
+  const authoredUniqueShortUrls = new Set(authoredOutbound.map((link) => link.shortUrl));
+  const uniqueDestinations = new Set(allOutbound.map((link) => link.destinationUrl));
+  expect(repostAuthors.size === 16, "KC Town Hall repost-source accounts must recompute to 16.");
+  expect(authoredOutbound.length === 130, "KC Town Hall account-authored short-link occurrences must recompute to 130.");
+  expect(authoredUniqueShortUrls.size === 28, "KC Town Hall account-authored unique short URLs must recompute to 28.");
+  expect(allOutbound.length === 133, "KC Town Hall all-record short-link occurrences must recompute to 133.");
+  expect(uniqueShortUrls.size === 31, "KC Town Hall all-record unique short URLs must recompute to 31.");
+  expect(uniqueDestinations.size === 20, "KC Town Hall unique resolved destinations must recompute to 20.");
+  expect(
+    allOutbound.every(
+      (link) =>
+        /^https?:\/\/t\.co\//.test(link.shortUrl) &&
+        /^https?:\/\//.test(link.destinationUrl)
+    ),
+    "Every KC Town Hall outbound short link must retain a public destination."
+  );
+
+  const visibleMetrics = authored.reduce(
+    (totals, item) => {
+      for (const key of Object.keys(totals)) {
+        totals[key] += item.visibleMetricsObserved2026?.[key] ?? 0;
+      }
+      return totals;
+    },
+    { replies: 0, reposts: 0, likes: 0, bookmarks: 0 }
+  );
+  expect(visibleMetrics.replies === 22, "KC Town Hall visible reply total must recompute to 22.");
+  expect(visibleMetrics.reposts === 70, "KC Town Hall visible repost total must recompute to 70.");
+  expect(visibleMetrics.likes === 174, "KC Town Hall visible like total must recompute to 174.");
+  expect(
+    JSON.stringify(visibleMetrics) === JSON.stringify(aggregate.visibleAuthoredMetrics),
+    "KC Town Hall stored visible metrics must match the item ledger."
+  );
+
+  const stakeholderFloor = aggregate.directPublicConversationStakeholderFloor?.electedOrCityServiceAccounts ?? [];
+  expect(stakeholderFloor.length === 4, "KC Town Hall direct elected-or-service-account floor must remain four.");
+  expect(
+    ["@QuintonLucasKC", "@joliejustus", "@Robinson4kc", "@KCMO311"].every((handle) => stakeholderFloor.includes(handle)),
+    "KC Town Hall stakeholder floor must preserve the four directly observed public accounts."
+  );
+  expect(aggregate.authoredMentionCounts?.["@quintonlucaskc"] === 25, "KC Town Hall Quinton Lucas outbound mention count must remain 25.");
+  expect(aggregate.authoredMentionCounts?.["@robinson4kc"] === 22, "KC Town Hall Melissa Robinson outbound mention count must remain 22.");
+
+  requireFragments("KC Town Hall corpus model", corpusModel, [
+    "kcTownHallPopulationAudit",
+    "profileCountObserved: 183",
+    "uniqueItemsRecovered: 181",
+    "unresolvedPopulationSlots: 2",
+    "tiredOfTiresAuthoredStatuses: 99",
+    "LEAD-KC-TOWN-HALL-FULL-POPULATION-CORPUS-2026",
+    "SRC-X-KC-TOWN-HALL-FULL-POPULATION-AUDIT-2026",
+    "SRC-X-KC-TOWN-HALL-TIRED-OF-TIRES-SAVINGS-2020",
+    "SRC-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018",
+    "SRC-KCUR-MISSOURI-PRIMARY-GUIDE-2018",
+    "CLM-KC-TOWN-HALL-COMPLETE-SOCIAL-POPULATION",
+    "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+    "CLM-KC-TOWN-HALL-TIRED-OF-TIRES-RECORD",
+    "CLM-KC-TOWN-HALL-CIVIC-EXCHANGE",
+    "INQ-KC-TOWN-HALL-FULL-POPULATION-2026",
+    "not a platform export",
+    "later stewardship continued",
+    "project-reported",
+    "does not establish endorsement"
+  ]);
+  requireFragments("KC Town Hall framework integration", framework, [
+    "kcTownHallSocialCorpusIntake",
+    "kcTownHallSocialCorpusSources",
+    "kcTownHallSocialCorpusClaims",
+    "kcTownHallSocialCorpusInquiries",
+    "kcTownHallSocialCorpusPublicationDecisions",
+    "kcTownHallSocialCorpusProofCoverage",
+    "durable-public-identity"
+  ]);
+  requireFragments("KC Town Hall proof bank", proofs, [
+    'id: "kc-town-hall-public-identity-infrastructure"',
+    "Established KC Town Hall's public-facing identity and participation surface",
+    "Do not assign him every shared-account post or later program operation",
+    "All 183 profile-count slots were recovered at item level"
+  ]);
+  requireFragments("KC Town Hall work metadata", workData, [
+    '"kc-town-hall-public-identity-infrastructure"',
+    "Durable public identity and participation surface",
+    "181 recovered public account records"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    "I established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall"
+  ]);
+  requireFragments("KC Town Hall case study", kcTownHallCase, [
+    "CLM-KC-TOWN-HALL-DURABLE-PUBLIC-IDENTITY",
+    "durable-public-identity",
+    "spans 2018 to 2022",
+    "not with authoring every post or operating every later program"
+  ]);
+  requireFragments("KC Town Hall full-population documentation", archiveDoc, [
+    "100 percent disposition",
+    "155 account-authored statuses",
+    "26 reposts from 16 public accounts",
+    "2 profile-count slots not recovered",
+    "99 surviving account-authored records",
+    "at least four elected or city-service accounts",
+    "outbound mentions and cannot be recast as reciprocal engagement",
+    "not press coverage, reviews, or endorsements of KC Town Hall",
+    "not with writing every post or operating every later program"
+  ]);
+  requireFragments("KC Town Hall anti-claims", antiClaims, [
+    "Do not assign every `@KCTownHall` post or later Tired of Tires operation to Jamie",
+    "erase the two unresolved profile-count slots",
+    "project-reported, not independently audited",
+    "not pickups, households, participants, tires, or unique program events",
+    "Outbound articles are mission context"
+  ]);
+
+  const publicBundle = [
+    ledger,
+    corpusModel,
+    framework,
+    proofs,
+    workData,
+    technicalOperations,
+    kcTownHallCase,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public KC Town Hall corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -1241,6 +1521,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/wowlist-public-post-ledger.json"
   );
+  const kcTownHallSocialCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/kc-town-hall-social-corpus.ts"
+  );
+  const kcTownHallPostLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/kc-town-hall-public-post-ledger.json"
+  );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const campaignPressDoc = readOptional(
     repoRoot,
@@ -1273,6 +1561,10 @@ export function runLaunchEvals(repoRoot) {
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md"
+  );
+  const kcTownHallFullPopulationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-full-population-social-corpus.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -1509,6 +1801,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
+    coverageExtensions: kcTownHallSocialCorpus,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -1659,7 +1952,7 @@ export function runLaunchEvals(repoRoot) {
       hardGate: true,
       missing: projectSocialArchiveMissing,
       evidence: [
-        "Three verified project handles and four coalition campaign identities are mapped without inventing accounts for other projects.",
+        "Four verified project handles and four coalition campaign identities are mapped without inventing accounts for other projects.",
         "Authenticated recovery counts retain explicit population controls, unresolved slots, and platform-export boundaries.",
         "Council-member interaction counts distinguish direct engagement, campaign ecology, officeholding, and official endorsement.",
         "Jamie's account-establishment role remains distinct from shared post authorship and collective campaign outcomes."
@@ -1717,6 +2010,33 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies post types, themes, repost sources, and all 35 posted short URLs.",
         "The selected portfolio claim makes public support and onboarding concrete without assigning individual post authorship.",
         "Scene knowledge and civic-care findings remain available in reserve without converting shared resources into authorship, adoption, or impact."
+      ]
+    })
+  );
+
+  const kcTownHallFullPopulationMissing = evaluateKcTownHallFullPopulationArchive({
+    ledger: kcTownHallPostLedger,
+    corpusModel: kcTownHallSocialCorpus,
+    framework,
+    proofs,
+    workData,
+    technicalOperations,
+    kcTownHallCase,
+    archiveDoc: kcTownHallFullPopulationDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "kc-town-hall-full-population-archive",
+      label: "KC Town Hall full-population archive dispositions every profile slot and preserves stewardship boundaries",
+      weight: 20,
+      hardGate: true,
+      missing: kcTownHallFullPopulationMissing,
+      evidence: [
+        "All 183 current-profile count slots are dispositioned as 181 item-level recoveries and two explicit unresolved slots.",
+        "Item-level recomputation verifies account relationships, five theme families, 133 short-link occurrences, visible reactions, and stakeholder patterns.",
+        "The selected portfolio claim credits Jamie with establishing a durable public identity while keeping shared authorship and later stewardship explicit.",
+        "Tired of Tires and civic-exchange findings remain in reserve with project-reported, non-endorsement, and non-causality boundaries."
       ]
     })
   );
