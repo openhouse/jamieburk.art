@@ -5,6 +5,7 @@ import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowl
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { teamsArchiveProduction } from "../../apps/www/src/data/knowledge-bank/teams-archive-production.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
@@ -410,9 +411,150 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       ) &&
       existsSync(path.join(repoRoot, "docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md"))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries];
+  const social = suite.pilot.socialMediaArchiveProduction;
+  const socialProfileSources = social.profileSourceIds.map((id) => sourceById.get(id));
+  const socialAuditSources = social.auditSourceIds.map((id) => sourceById.get(id));
+  const socialRosterSource = sourceById.get(social.officialRosterSourceId);
+  const socialCallSources = social.callnycCouncilPostIds.map((id) => sourceById.get(id));
+  const socialNycacSources = social.nycacCouncilPostIds.map((id) => sourceById.get(id));
+  const socialClaims = [...social.activeClaimIds, ...social.heldClaimIds].map((id) => claimById.get(id));
+  const socialActiveClaims = social.activeClaimIds.map((id) => claimById.get(id));
+  const socialHeldClaims = social.heldClaimIds.map((id) => claimById.get(id));
+  const socialInquiries = social.inquiryIds.map((id) => inquiryById.get(id));
+  const socialCallClaim = claimById.get("CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT");
+  const socialNycacClaim = claimById.get("CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT");
+  const socialEstablishmentClaim = claimById.get("CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT");
+  const socialOlympiaObservation = observationById.get("OBS-X-NYCAC-OLYMPIA-COLLABORATION");
+  const socialMainInquiry = inquiryById.get("INQ-PROJECT-SOCIAL-ARCHIVE-PRODUCTION-2026-07-14");
+  const socialCallInquiry = inquiryById.get("INQ-CALLNYC-COUNCIL-ENGAGEMENT");
+  const socialNycacInquiry = inquiryById.get("INQ-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT");
+  const socialCallPage = knowledgeBank.pages.find((page) => page.id === social.callnycPageId);
+  const socialCallOccurrence = socialCallPage?.occurrences.find(
+    (occurrence) => occurrence.id === social.callnycOccurrenceId
+  );
+  const socialDocumentation = existsSync(path.join(repoRoot, social.documentationPath))
+    ? readFileSync(path.join(repoRoot, social.documentationPath), "utf8")
+    : "";
+  const accountSnapshotsMatch = Object.entries(social.accountSnapshots).every(
+    ([handle, expected]) => {
+      const account = socialMediaArchiveProduction.inventory.accounts.find(
+        (item) => item.handle === handle
+      );
+      return account &&
+        account.profilePosts === expected.profilePosts &&
+        account.recoveredStatuses === expected.recoveredStatuses &&
+        account.recoveredAuthoredPosts === expected.recoveredAuthoredPosts;
+    }
+  );
+  const socialSourceBoundariesComplete = [
+    ...socialProfileSources,
+    ...socialAuditSources,
+    socialRosterSource,
+    ...socialCallSources,
+    ...socialNycacSources
+  ].every(
+    (source) => source?.visibility === "public" &&
+      source.supportsGenerally.length &&
+      source.doesNotEstablish.length &&
+      !source.protectedLocatorId
+  );
+  const socialArchiveComplete = Boolean(
+    socialMediaArchiveProduction.inventory.accounts.length === social.expectedAccountCount &&
+      socialMediaArchiveProduction.intakeItems.length === social.expectedIntakeCount &&
+      socialMediaArchiveProduction.observations.length === social.expectedObservationCount &&
+      socialMediaArchiveProduction.sources.length === social.expectedSourceCount &&
+      socialMediaArchiveProduction.claims.length === social.expectedClaimCount &&
+      socialMediaArchiveProduction.researchInquiries.length === social.expectedInquiryCount &&
+      accountSnapshotsMatch &&
+      socialProfileSources.length === social.expectedAccountCount &&
+      socialProfileSources.every(
+        (source) => source?.canonicalUrl?.startsWith("https://x.com/") &&
+          source.publicNote &&
+          source.doesNotEstablish.some((boundary) => /authorship|complete|stable|scale/i.test(boundary))
+      ) &&
+      socialAuditSources.length === 3 &&
+      socialAuditSources.every(
+        (source) => source?.kind === "research-run" &&
+          source.canonicalUrl?.includes("docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md") &&
+          source.publicNote &&
+          source.doesNotEstablish.length >= 3
+      ) &&
+      socialRosterSource?.kind === "government-record" &&
+      socialRosterSource.canonicalUrl?.includes("data.cityofnewyork.us") &&
+      socialSourceBoundariesComplete &&
+      new Set(social.callnycCouncilPostIds).size === social.callnycCouncilMemberCount &&
+      new Set(social.nycacCouncilPostIds).size === social.nycacCouncilMemberFloor &&
+      socialCallSources.every(
+        (source) => source?.kind === "government-social-post" && source.canonicalUrl?.includes("/status/")
+      ) &&
+      socialNycacSources.every(
+        (source) => source?.kind === "government-social-post" && source.canonicalUrl?.includes("/status/")
+      ) &&
+      socialMediaArchiveProduction.inventory.callnycCouncilMemberCount === social.callnycCouncilMemberCount &&
+      socialMediaArchiveProduction.inventory.nycacCouncilMemberFloor === social.nycacCouncilMemberFloor &&
+      socialCallClaim?.status === "confirmed-with-boundary" &&
+      socialCallClaim.projections.some(
+        (projection) => projection.status === "active" &&
+          projection.citationRequired &&
+          projection.surfaces.includes("/work/callnyc") &&
+          /seven sitting New York City Council members/i.test(projection.text) &&
+          /independent CallNYC prototype Jamie built/i.test(projection.text)
+      ) &&
+      socialCallClaim.boundaries.some((boundary) => /outreach tagging/i.test(boundary)) &&
+      socialCallClaim.boundaries.some((boundary) => /Carlina Rivera.*predates her Council service/i.test(boundary)) &&
+      socialCallClaim.antiClaims.some((antiClaim) => /adopted CallNYC/i.test(antiClaim)) &&
+      socialNycacClaim?.status === "confirmed-with-boundary" &&
+      socialNycacClaim.projections.some(
+        (projection) => projection.status === "hold" &&
+          !projection.citationRequired &&
+          projection.surfaces.length === 0 &&
+          /at least five sitting Council members/i.test(projection.text)
+      ) &&
+      socialNycacClaim.boundaries.some((boundary) => /candidate-era or former-member/i.test(boundary)) &&
+      socialActiveClaims.every((claim) =>
+        claim?.evidence.some((evidence) => evidence.renderCitation) &&
+          claim.projections.every((projection) => projection.status === "active")
+      ) &&
+      socialHeldClaims.every((claim) =>
+        claim?.projections.every(
+          (projection) => projection.status === "hold" && projection.surfaces.length === 0
+        )
+      ) &&
+      socialEstablishmentClaim?.status === "use-with-care" &&
+      socialEstablishmentClaim.evidence.length === 0 &&
+      socialEstablishmentClaim.boundaries.some((boundary) => /participant memory/i.test(boundary)) &&
+      socialOlympiaObservation?.limitations.some((limitation) =>
+        /do not establish.*authored posts|do not establish.*account access/i.test(limitation)
+      ) &&
+      socialInquiries.length === social.expectedInquiryCount &&
+      socialInquiries.every(
+        (inquiry) => inquiry?.methods.length >= 3 && inquiry.findings.length && inquiry.limitations.length >= 3
+      ) &&
+      socialMainInquiry?.limitations.some((limitation) => /deleted, private, search-suppressed/i.test(limitation)) &&
+      socialCallInquiry?.findings.some((finding) => /Seven sitting members/i.test(finding)) &&
+      socialCallInquiry?.findings.some((finding) => /tagging.*not counted/i.test(finding)) &&
+      socialNycacInquiry?.resultStatus === "partially-recovered" &&
+      socialMediaArchiveProduction.inventory.excludedHandles.length === social.excludedHandles.length &&
+      social.excludedHandles.every((handle) =>
+        socialMediaArchiveProduction.inventory.excludedHandles.includes(handle) &&
+          socialDocumentation.includes(handle)
+      ) &&
+      socialCallOccurrence?.claimId === social.activeClaimIds[0] &&
+      socialCallOccurrence.sourceIds.includes(social.auditSourceIds[1]) &&
+      socialCallOccurrence.sourceIds.includes(social.officialRosterSourceId) &&
+      socialCallPage?.sourceOrder.includes(social.auditSourceIds[1]) &&
+      callnycMdx.includes(social.activeClaimIds[0]) &&
+      callnycMdx.includes(social.callnycOccurrenceId) &&
+      !fairRentMdx.includes("CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT") &&
+      socialDocumentation.includes("authenticated") &&
+      socialDocumentation.includes("recovered floor") &&
+      socialDocumentation.includes("collective") &&
+      social.activeClaimIds.every((id) => publicRegistryText.includes(id)) &&
+      social.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -583,6 +725,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [sharedDriveComplete
         ? `${sharedDriveSources.length} protected sources from a ${sharedDrives.expectedDriveCount}-drive inventory and ${sharedDrives.expectedInspectedRootCount}-root sample produced ${sharedDriveObservations.length} atomic observations and ${sharedDriveClaims.length} mature claims; the existing Sunday Dinner projection gained aggregate support while five claims remain held`
         : "Shared Drives counts, non-exhaustive method, deduplication, private-source redaction, collective credit, held claims, Sunday Dinner projection, proof coverage, or documentation is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION",
+      score: score(socialArchiveComplete),
+      evidence: [socialArchiveComplete
+        ? `Five authenticated project-account inventories produced ${socialMediaArchiveProduction.sources.length} bounded sources, a seven-member CallNYC count, an at-least-five-member NYC Artist Coalition floor, one inspectable public claim, and six held claims with collective-authorship and completeness limits`
+        : "Social-account identity, recovered counts, official-at-date verification, outreach distinction, collective authorship, excluded-handle boundaries, selected projections, held depth, public safety, or documentation is incomplete"]
     }
   ];
 

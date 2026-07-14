@@ -308,6 +308,72 @@
       "activeClaimId": "CLM-SUNDAY-DINNER-RECORDED-GATHERINGS-AND-MEALS",
       "sundayDinnerSourceId": "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER",
       "proofId": "sunday-dinner-196-participation-infrastructure"
+    },
+    "socialMediaArchiveProduction": {
+      "expectedAccountCount": 5,
+      "expectedIntakeCount": 6,
+      "expectedObservationCount": 13,
+      "expectedSourceCount": 29,
+      "expectedClaimCount": 7,
+      "expectedInquiryCount": 3,
+      "accountSnapshots": {
+        "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 86, "recoveredAuthoredPosts": 72 },
+        "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": null, "recoveredAuthoredPosts": null },
+        "@wowlist": { "profilePosts": 38, "recoveredStatuses": 37, "recoveredAuthoredPosts": 21 },
+        "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
+        "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 170, "recoveredAuthoredPosts": 142 }
+      },
+      "profileSourceIds": [
+        "SRC-X-PROFILE-CALLNYCAPP",
+        "SRC-X-PROFILE-NYCARTC",
+        "SRC-X-PROFILE-WOWLIST",
+        "SRC-X-PROFILE-KCSPACESFUND",
+        "SRC-X-PROFILE-KCTOWNHALL"
+      ],
+      "auditSourceIds": [
+        "SRC-X-AUDIT-PROJECT-ACCOUNTS-2026-07-14",
+        "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+        "SRC-X-AUDIT-NYCAC-ENGAGEMENT-2026-07-14"
+      ],
+      "officialRosterSourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+      "callnycCouncilMemberCount": 7,
+      "callnycCouncilPostIds": [
+        "SRC-X-CALLNYC-PETER-KOO-2016-04-27",
+        "SRC-X-CALLNYC-STEVEN-MATTEO-2016-05-03",
+        "SRC-X-CALLNYC-RUBEN-WILLS-2016-05-17",
+        "SRC-X-CALLNYC-ROSIE-MENDEZ-2016-05-19",
+        "SRC-X-CALLNYC-HELEN-ROSENTHAL-2016-09-27",
+        "SRC-X-CALLNYC-MATHIEU-EUGENE-2016-10-04",
+        "SRC-X-CALLNYC-MARGARET-CHIN-2017-07-11"
+      ],
+      "nycacCouncilMemberFloor": 5,
+      "nycacCouncilPostIds": [
+        "SRC-X-NYCAC-RAFAEL-ESPINAL-2019-02-21",
+        "SRC-X-NYCAC-STEPHEN-LEVIN-2019-02-11",
+        "SRC-X-NYCAC-JUSTIN-BRANNAN-2019-08-30",
+        "SRC-X-NYCAC-JIMMY-VAN-BRAMER-2020-10-26",
+        "SRC-X-NYCAC-BRAD-LANDER-2021-01-28"
+      ],
+      "activeClaimIds": [
+        "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
+      ],
+      "heldClaimIds": [
+        "CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "CLM-NYCAC-SHARED-SOCIAL-IDENTITY",
+        "CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT",
+        "CLM-WOWLIST-SOCIAL-PROJECT-ORIGIN",
+        "CLM-KCSPACES-SOCIAL-GRANTEE-REPORTING",
+        "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
+      ],
+      "inquiryIds": [
+        "INQ-PROJECT-SOCIAL-ARCHIVE-PRODUCTION-2026-07-14",
+        "INQ-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "INQ-PROJECT-SOCIAL-ACCOUNT-AUTHORSHIP"
+      ],
+      "callnycPageId": "callnyc",
+      "callnycOccurrenceId": "council-account-engagement",
+      "excludedHandles": ["@fairrentnyc", "@sundaydinnernyc"],
+      "documentationPath": "docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md"
     }
   },
   "criteria": [
@@ -394,6 +460,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "The 110-drive corpus receives a bounded non-exhaustive map, high-signal close reading, cross-carrier deduplication, protected source handling, collective credit, one strengthened existing projection, and held depth without exposing Shared Drive identifiers or participant records."
+    },
+    {
+      "id": "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION",
+      "label": "Project social-media archive production integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Five verified project accounts receive bounded authenticated inventories, official-at-date engagement counts, source and authorship limits, collective credit, one inspectable CallNYC projection, and held archival depth without exposing private account data or mistaking project outreach for official engagement."
     }
   ],
   "hillClimb": {
@@ -410,7 +483,11 @@
       "Never improve projection coverage by publishing every mature claim.",
       "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
       "Never treat a photograph as self-interpreting proof or consent to publish.",
-      "Never turn an appropriation into money received, omit a material later disposition, or erase a documented approval because the project later changed course."
+      "Never turn an appropriation into money received, omit a material later disposition, or erase a documented approval because the project later changed course.",
+      "Never count a project account tagging an official as engagement authored by that official.",
+      "Never count candidate-era or former-member posts as sitting-officeholder engagement.",
+      "Never treat profile post totals as stable impact metrics or individual authorship records.",
+      "Never turn an unrecovered account or status into proof that it never existed."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
   }

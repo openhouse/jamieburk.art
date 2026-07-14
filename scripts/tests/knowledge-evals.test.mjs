@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
@@ -469,6 +470,128 @@ test("photo feedback requires an explicit hold and protected locator", () => {
   } finally {
     projection.status = originalStatus;
     source.protectedLocatorId = originalLocator;
+  }
+});
+
+test("social archive production preserves five accounts and bounded official engagement", () => {
+  const pilot = suite.pilot.socialMediaArchiveProduction;
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(socialMediaArchiveProduction.inventory.accounts.length, 5);
+  assert.equal(socialMediaArchiveProduction.sources.length, pilot.expectedSourceCount);
+  assert.equal(pilot.callnycCouncilPostIds.length, 7);
+  assert.equal(pilot.nycacCouncilPostIds.length, 5);
+  assert.equal(
+    result.criteria.find(
+      (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+    )?.score,
+    5
+  );
+});
+
+test("social archive eval rejects an inflated CallNYC Council count", () => {
+  const original = socialMediaArchiveProduction.inventory.callnycCouncilMemberCount;
+
+  try {
+    socialMediaArchiveProduction.inventory.callnycCouncilMemberCount = 8;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    socialMediaArchiveProduction.inventory.callnycCouncilMemberCount = original;
+  }
+});
+
+test("social archive eval requires the pre-Council Carlina Rivera exclusion", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
+  );
+  assert.ok(claim);
+  const original = [...claim.boundaries];
+
+  try {
+    claim.boundaries = claim.boundaries.filter((boundary) => !/Carlina Rivera/i.test(boundary));
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.boundaries = original;
+  }
+});
+
+test("social archive eval rejects a falsely complete NYC Artist Coalition count", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT"
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = projection.text;
+
+  try {
+    projection.text = projection.text.replace("at least five", "five");
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = original;
+  }
+});
+
+test("social archive eval keeps Jamie's account-establishment memory held", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT"
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = { status: projection.status, surfaces: [...projection.surfaces] };
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/fair-rent-nyc"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.status = original.status;
+    projection.surfaces = original.surfaces;
+  }
+});
+
+test("social archive eval preserves excluded-handle uncertainty", () => {
+  const original = [...socialMediaArchiveProduction.inventory.excludedHandles];
+
+  try {
+    socialMediaArchiveProduction.inventory.excludedHandles = ["@sundaydinnernyc"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    socialMediaArchiveProduction.inventory.excludedHandles = original;
   }
 });
 

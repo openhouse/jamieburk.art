@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-14
 
 **Public surface:** `/work/callnyc`
 
@@ -38,6 +38,8 @@ product, a documented formal submission, or a documented winner.
   portfolio with an explicit non-affiliation boundary.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
+- Authenticated July 2026 social-account audit and official NYC Open Data
+  Council-member term records.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
@@ -45,6 +47,26 @@ Civic Hall calendar listing or dedicated event-detail page.
 The BetaNYC recap is independent public recognition of what the prototype did.
 It does not establish that BetaNYC or the Council commissioned, adopted, or
 formally presented CallNYC.
+
+## Council-account engagement
+
+A bounded authenticated review recovered posts from seven people who were
+sitting Council members on the post dates: Peter Koo, Steven Matteo, Ruben
+Wills, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin. The
+interaction set includes replies, quote-posts, an explicit repost, and an
+independently authored link to CallNYC.org.
+
+The review recovered 86 unique visible status records from a profile reporting
+110 posts. The count is therefore a recovered floor, not proof of endorsement,
+formal adoption, office use, or complete lifetime engagement. CallNYC posts
+tagging members were classified as project outreach rather than engagement by
+the tagged official. Carlina Rivera's 2016 post remains public engagement
+context but is excluded from the Council-member count because it predates her
+Council service.
+
+See
+[social-media-archive-production-2026-07-14.md](social-media-archive-production-2026-07-14.md)
+for the project-account inventory, status links, method, and limitations.
 
 ## Bounded research finding
 

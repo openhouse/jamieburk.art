@@ -1,6 +1,6 @@
 # NYC Artist Coalition: 2017-2018 public record
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-14
 
 **Public projection:** Four bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
@@ -90,6 +90,28 @@ The 100-plus figure is a signup count reported in February 2017. It is not a
 current membership count, an active-participation count, or a measure of people
 served.
 
+## Shared social identity
+
+The authenticated `@NYCArtC` profile carries `#SaveNYCSpaces`,
+`#LetNYCDance`, `#TalksNotRaids`, and `#FairRentNYC` as one coalition identity.
+Targeted review of the large account recovered authored public engagement from
+at least five people who were sitting Council members on the post dates:
+Stephen Levin, Rafael Espinal, Justin Brannan, Jimmy Van Bramer, and Brad
+Lander. The strongest posts connect the coalition to M.A.R.C.H. hearing
+testimony, cultural-space protection, commercial rent stabilization, and
+support for artists.
+
+This is a floor from an incomplete recovery, not a lifetime total, endorsement
+count, or claim that Jamie authored every coalition post. Candidate-era and
+former-member posts are excluded from the sitting-member count. Jamie's memory
+that he established the accounts is retained as a held research lead until
+collaborator or minimized administrative evidence corroborates account
+creation and handoff.
+
+See
+[social-media-archive-production-2026-07-14.md](social-media-archive-production-2026-07-14.md)
+for the complete public-safe inventory and method.
+
 ## Held depth
 
 The following source-backed claims remain held because they add depth without
@@ -114,3 +136,5 @@ improving the current page enough to justify the added reader burden:
   end.
 - proposition-level close reading of the 44 distinct campaign press articles,
   with article-specific claims promoted only when the text supports them.
+- collaborator or minimized administrative evidence for project-account
+  creation, access, handoff, and individual post authorship.

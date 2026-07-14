@@ -83,6 +83,30 @@ Photo editors may discover placards, prototypes, recurring collaborators,
 sequences of activity, or public programs worth researching. Agents must not
 infer identity, consent, causation, or ownership from an image alone.
 
+## Social-account archive production
+
+Project social accounts can preserve identity systems, public-service routing,
+collaboration, source discovery, official response, and longitudinal project
+documentation. Treat them as bounded archival carriers:
+
+- record profile metadata as an accessed-at snapshot, never a stable lifetime
+  metric;
+- separate project-authored outreach from engagement authored by another
+  account;
+- verify an official's role on the exact post date before counting the post as
+  official engagement;
+- retain candidate-era and former-member activity as context without including
+  it in sitting-officeholder counts;
+- deduplicate by canonical status URL and document search, date, pagination,
+  and recovery limits;
+- keep shared-account output collective unless individual authorship is
+  independently established;
+- treat an unrecovered account or post as not recovered, not proof that it
+  never existed;
+- never retain private messages, security or administrator data, private
+  analytics, cookies, resident submissions, or protected participant data in
+  the public repository.
+
 ## Commands
 
 ```bash

@@ -367,6 +367,44 @@
         "Jamie's sole authorship of the policy position",
         "measured causal effects of rent increases"
       ]
+    },
+    {
+      "id": "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+      "title": "Authenticated CallNYC Council-account engagement audit",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md#callnyc-council-account-engagement",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated review of public Council-member engagement with @CallNYCapp, July 14, 2026.",
+      "publicNote": "The linked public ledger includes all seven underlying status URLs. The audit deduplicated visible authored statuses, separated CallNYC outreach from official-account response, and cross-checked post dates against official Council term dates. Seven sitting members were recovered: Peter Koo, Steven Matteo, Ruben Wills, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
+      "doesNotEstablish": [
+        "all historical engagement",
+        "deleted, private, or search-suppressed posts",
+        "identities behind likes or repost counts",
+        "formal adoption or endorsement",
+        "use by every Council office"
+      ]
+    },
+    {
+      "id": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+      "title": "City Council Members (1999 to 2025)",
+      "organization": "New York City Council / NYC Open Data",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://data.cityofnewyork.us/City-Government/City-Council-Members-1999-to-Present-/uvw5-9znb/about_data",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council and NYC Open Data, 'City Council Members (1999 to 2025),' accessed July 14, 2026.",
+      "publicNote": "Official term records used to determine whether the author of a recovered social post was serving on the Council on the post date.",
+      "doesNotEstablish": [
+        "control of a social account",
+        "authorship of a particular post",
+        "engagement with a project",
+        "endorsement or adoption"
+      ]
     }
   ],
   "claims": [
@@ -864,6 +902,49 @@
       "boundaries": [
         "Testimony documents Jamie's role and position, not enactment or Council endorsement."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The independent CallNYC prototype Jamie built drew public engagement from seven sitting New York City Council members through replies, quote-posts, reposts, and direct links.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+          "relationship": "direct-support",
+          "supports": [
+            "deduplicated seven-member count",
+            "interaction types",
+            "collection method",
+            "exclusions and limitations"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+          "relationship": "corroborating",
+          "supports": [
+            "member-at-post-date term verification"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Say seven recovered sitting-member accounts, not seven endorsements, adopters, offices using the product, or all lifetime engagement.",
+        "Count only posts authored by the member account; project outreach tagging a member is not member engagement.",
+        "Carlina Rivera's 2016 post is retained as public engagement but excluded because it predates her Council service."
+      ]
     }
   ],
   "pages": [
@@ -877,7 +958,9 @@
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
         "SRC-CALLNYC-PROJECT-MARK",
-        "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"
+        "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+        "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+        "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
       ],
       "occurrences": [
         {
@@ -936,6 +1019,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"
+          ]
+        },
+        {
+          "id": "council-account-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+            "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
           ]
         },
         {
