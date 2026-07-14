@@ -340,13 +340,13 @@ export const nycacSourceExpansion = {
       id: "INQ-NYCAC-PUBLIC-WEB-AUTHORSHIP",
       project: "nyc-artist-coalition",
       question: "Which NYC Artist Coalition public sites, data transforms, and campaign components can be directly attributed to Jamie's implementation work?",
-      methods: ["Close-read public coalition surfaces for functionality and attribution.", "Separate what the public pages visibly do from who authored code, copy, data, and design.", "Identify public repository history or collaborator proof needed for direct implementation attribution."],
+      methods: ["Close-read public coalition surfaces for functionality and attribution.", "Separate what the public pages visibly do from who authored code, copy, data, and design.", "Inspect retained repository author summaries and chronological commit histories.", "Use public repository history or collaborator proof for component-specific attribution."],
       runAt: reviewedAt,
       resultStatus: "partially-recovered",
-      findings: ["The public sites document a substantial advocacy system spanning intake, source links, public data, district contact pathways, calls to action, and cross-issue campaigns.", "Contemporary reporting identifies Jamie as a coalition organizer, while the public pages themselves do not assign component authorship."],
-      limitations: ["Public Git history or collaborator confirmation is still needed to attribute specific implementation components to Jamie.", "A site footer or organizational byline is not individual authorship evidence."],
-      sourceIds: ["SRC-NYCAC-CABARET-CAMPAIGN-2017-08-01", "SRC-NYCAC-SUPPORTERS-LIST", "SRC-NYCAC-SAVE-NYC-SPACES", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07"],
-      publicSummary: "The coalition's public sites preserve a strong operating and advocacy system; direct component authorship remains a separate research question."
+      findings: ["The public sites document a substantial advocacy system spanning intake, source links, public data, district contact pathways, calls to action, and cross-issue campaigns.", "Contemporary reporting identifies Jamie as a coalition organizer, while the public pages themselves do not assign component authorship.", "Retained Git histories establish Jamie's repository-level implementation and maintenance of FairRentNYC, Talks Not Raids, Let NYC Dance, and the coalition site's Ghost deployment."],
+      limitations: ["Repository history establishes implementation and maintenance, not sole authorship of every policy position, line of copy, dataset, image, or design decision.", "Component-specific collaborator roles still require public history or collaborator confirmation.", "A site footer or organizational byline is not individual authorship evidence."],
+      sourceIds: ["SRC-NYCAC-CABARET-CAMPAIGN-2017-08-01", "SRC-NYCAC-SUPPORTERS-LIST", "SRC-NYCAC-SAVE-NYC-SPACES", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"],
+      publicSummary: "Retained Git histories establish Jamie's direct campaign-site implementation and maintenance; authorship of specific policy, copy, data, image, and design contributions remains separately bounded."
     }
   ]
 };

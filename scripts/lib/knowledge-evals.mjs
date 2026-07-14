@@ -23,6 +23,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const observationById = new Map(knowledgeBank.observations.map((item) => [item.id, item]));
   const sourceById = new Map(knowledgeBank.sources.map((item) => [item.id, item]));
   const claimById = new Map(knowledgeBank.claims.map((item) => [item.id, item]));
+  const entityById = new Map(knowledgeBank.entities.map((item) => [item.id, item]));
+  const relationById = new Map(knowledgeBank.agencyRelations.map((item) => [item.id, item]));
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
@@ -138,6 +140,81 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       Boolean(photoSource.protectedLocatorId) &&
       !publicRegistryText.includes(photoSource.protectedLocatorId)
   );
+  const agency = suite.pilot.agencyGraph;
+  const agencyRelations = agency.relationIds.map((id) => relationById.get(id));
+  const enactedRelations = knowledgeBank.agencyRelations.filter(
+    (relation) => relation.action === "enacted"
+  );
+  const expectedEnactedIds = new Set(agency.enactedRelationIds);
+  const openAgencyInquiries = agency.openInquiryIds.map((id) => inquiryById.get(id));
+  const webImplementationClaim = claimById.get("CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION");
+  const webAuthorshipInquiry = inquiryById.get("INQ-NYCAC-PUBLIC-WEB-AUTHORSHIP");
+  const legacyWebProof = proofClaims.find(
+    (claim) => claim.id === "nyc-artist-coalition-public-web-infrastructure"
+  );
+  const webAuthorshipAligned = Boolean(
+    webImplementationClaim?.evidence.some(
+      (evidence) => evidence.sourceId === "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE"
+    ) &&
+      webImplementationClaim.evidence.some(
+        (evidence) => evidence.sourceId === "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
+      ) &&
+      webImplementationClaim.projections.some(
+        (projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc")
+      ) &&
+      !webImplementationClaim.projections.some((projection) =>
+        /sole(?:ly)?[^.]{0,40}(?:policy|copy|data|design)/i.test(projection.text)
+      ) &&
+      ["policy", "copy", "data", "design"].every((term) =>
+        webImplementationClaim.antiClaims.some((antiClaim) =>
+          antiClaim.toLowerCase().includes(term)
+        )
+      ) &&
+      webAuthorshipInquiry?.sourceIds.includes("SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE") &&
+      webAuthorshipInquiry.resultStatus === "partially-recovered" &&
+      webAuthorshipInquiry.limitations.some((limitation) => /copy|data|design/i.test(limitation)) &&
+      fairRentMdx.includes("CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION") &&
+      !fairRentMdx.includes("Jamie co-founded NYC Artist Coalition and built public campaign websites") &&
+      legacyWebProof?.sourceBasis.includes("retained Git histories")
+  );
+  const agencyGraphComplete = Boolean(
+    knowledgeBank.entities.length === agency.expectedEntityCount &&
+      new Set(knowledgeBank.entities.map((entity) => entity.id)).size === agency.expectedEntityCount &&
+      knowledgeBank.agencyRelations.length === agency.expectedRelationCount &&
+      new Set(knowledgeBank.agencyRelations.map((relation) => relation.id)).size === agency.expectedRelationCount &&
+      agencyRelations.every(Boolean) &&
+      agencyRelations.every((relation) =>
+        relation.actorIds.every((actorId) => entityById.get(actorId)?.publicSafe) &&
+        entityById.get(relation.objectId)?.publicSafe &&
+        relation.claimIds.every((claimId) => claimById.has(claimId)) &&
+        relation.sourceIds.every((sourceId) => sourceById.get(sourceId)?.visibility === "public") &&
+        relation.sourceIds.every((sourceId) =>
+          relation.claimIds.some((claimId) =>
+            claimById.get(claimId)?.evidence.some((evidence) => evidence.sourceId === sourceId)
+          )
+        ) &&
+        relation.purpose &&
+        relation.result &&
+        relation.boundaries.length &&
+        relation.reviewedBy.length
+      ) &&
+      enactedRelations.length === agency.enactedRelationIds.length &&
+      enactedRelations.every((relation) =>
+        expectedEnactedIds.has(relation.id) &&
+        relation.actorIds.length === 1 &&
+        relation.actorIds[0] === "ENT-NYC-COUNCIL" &&
+        relation.creditScope === "institutional" &&
+        relation.sourceIds.every((sourceId) => sourceById.get(sourceId)?.kind === "government-record")
+      ) &&
+      !knowledgeBank.agencyRelations.some(
+        (relation) => relation.actorIds.includes("ENT-JAMIE-BURKART") && relation.action === "enacted"
+      ) &&
+      ["individual", "shared", "collective", "institutional"].every((creditScope) =>
+        knowledgeBank.agencyRelations.some((relation) => relation.creditScope === creditScope)
+      ) &&
+      openAgencyInquiries.every((inquiry) => inquiry?.resultStatus === "inconclusive") &&
+      existsSync(path.join(repoRoot, "docs/knowledge-bank/agency-and-collective-credit.md"))
+  );
 
   const criteria = [
     {
@@ -175,27 +252,29 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         expansionClaims.length === expansion.claimIds.length,
         triangulatedExpansionClaims.length >= 4
       ),
-      evidence: [`${expansionClaims.filter(Boolean).length} new claims matured; ${triangulatedExpansionClaims.length} are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
+      evidence: [`${expansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim matured; ${triangulatedExpansionClaims.length} source-expansion claims are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
     },
     {
       criterionId: "KB-EVAL-PROJECTION",
       score: score(
         allEvaluatedClaims.every((claim) => claim?.projections.every((projection) => projection.status !== "hold" || projection.surfaces.length === 0)) &&
         selectedExpansionClaims.every((claim) => claim?.projections.some((projection) => projection.status === "active" && projection.surfaces.includes("/work/fair-rent-nyc"))) &&
+        webAuthorshipAligned &&
         Boolean(fairRentPage)
       ),
-      evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims have authorized FairRentNYC projections`]
+      evidence: [`Held claims have no public surface; ${selectedExpansionClaims.filter(Boolean).length} source-expansion claims and one repository-backed implementation claim have authorized FairRentNYC projections`]
     },
     {
       criterionId: "KB-EVAL-COVERAGE",
       score: score(
         Boolean(fairRentPage) &&
         fairRentMdx.includes("CLM-NYCAC-CABARET-SAFETY-ORGANIZING") &&
+        fairRentMdx.includes("CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION") &&
         expansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
-        fairRentPage.occurrences.length >= 4 &&
+        fairRentPage.occurrences.length >= 5 &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
-      evidence: [`Four hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
+      evidence: [`Five hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
     },
     {
       criterionId: "KB-EVAL-SAFETY",
@@ -217,6 +296,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [photoChainComplete
         ? `${heldExpansionClaims.length} newly mature claims and the complete press-archive claim remain held beside open inquiries, memory leads, and the protected photo feedback chain`
         : "The canonical photo-feedback chain is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-AGENCY",
+      score: score(agencyGraphComplete),
+      evidence: [agencyGraphComplete
+        ? `${agencyRelations.length} source-linked relations distinguish individual, shared, collective, and institutional agency; enactment remains assigned only to the Council`
+        : "The agency graph has a missing relation, broken reference, unbounded credit claim, or advocacy-to-enactment distortion"]
     },
     {
       criterionId: "KB-EVAL-PRESS-ARCHIVE",

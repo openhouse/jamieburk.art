@@ -8,6 +8,11 @@ honest uncertainty, useful research questions, and selective projection. Penaliz
 lost intake, bookmark-only sources, claims stronger than their evidence,
 unbounded collective outcomes, and publishing content merely because it matured.
 
+Treat agency as a hard editorial question. Verify that each consequential
+relation identifies actor, action, purpose, result, source, credit scope, and
+boundary. Reject any candidate that turns advocacy, testimony, participation,
+or coalition work into legislative enactment or sole causation.
+
 Return concise JSON containing the suite ID, commit, deterministic-gate status,
 scores with evidence and rationale, weighted score, minimums status, acceptance,
 lowest criterion, one bounded next action, and regressions.

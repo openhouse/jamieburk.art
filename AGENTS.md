@@ -62,6 +62,10 @@ maturity separate from compositional selection: a defensible claim may remain a
 held projection with no public surface. Memory and photo leads require research
 inquiries before they become claims.
 
+Use `agency-graph.ts` to keep actor, action, purpose, result, and credit scope
+explicit. Advocacy, testimony, participation, and coalition work are not
+legislative enactment or sole causation. Unresolved agency remains an inquiry.
+
 Use `<Claim>` for high-risk canonical wording and `<Cite>` for supported
 authored prose. Do not type citation numbers manually.
 

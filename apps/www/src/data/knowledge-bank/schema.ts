@@ -238,6 +238,57 @@ export const claimRecordSchema = z.object({
   reviewedBy: z.array(z.string().min(1)).default([])
 });
 
+export const knowledgeEntitySchema = z.object({
+  id: stableIdSchema,
+  name: z.string().min(1),
+  kind: z.enum([
+    "person",
+    "collective",
+    "project",
+    "system",
+    "campaign",
+    "program",
+    "event",
+    "public-body",
+    "public-institution",
+    "law",
+    "policy"
+  ]),
+  aliases: z.array(z.string().min(1)).default([]),
+  publicSafe: z.boolean()
+});
+
+export const agencyRelationSchema = z.object({
+  id: stableIdSchema,
+  project: stableIdSchema,
+  actorIds: z.array(stableIdSchema).min(1),
+  action: z.enum([
+    "originated",
+    "spearheaded",
+    "initiated",
+    "co-governed",
+    "co-created",
+    "founding-member-of",
+    "implemented-and-maintained",
+    "organized",
+    "advocated-for",
+    "testified-for",
+    "spoke-at",
+    "co-hosted",
+    "enacted"
+  ]),
+  objectId: stableIdSchema,
+  purpose: z.string().min(1),
+  result: z.string().min(1),
+  creditScope: z.enum(["individual", "shared", "collective", "institutional"]),
+  status: z.enum(["confirmed", "confirmed-with-boundary", "use-with-care"]),
+  claimIds: z.array(stableIdSchema).min(1),
+  sourceIds: z.array(stableIdSchema).min(1),
+  boundaries: z.array(z.string().min(1)).min(1),
+  reviewedAt: z.iso.date(),
+  reviewedBy: z.array(z.string().min(1)).min(1)
+});
+
 export const researchInquirySchema = z.object({
   id: stableIdSchema,
   project: stableIdSchema,
@@ -302,6 +353,8 @@ export const knowledgeBankSchema = z.object({
   observations: z.array(observationSchema),
   sources: z.array(sourceRecordSchema),
   claims: z.array(claimRecordSchema),
+  entities: z.array(knowledgeEntitySchema),
+  agencyRelations: z.array(agencyRelationSchema),
   researchInquiries: z.array(researchInquirySchema),
   proofCoverageTargets: z.array(proofCoverageTargetSchema),
   corrections: z.array(correctionRecordSchema),
@@ -314,6 +367,8 @@ export type KnowledgeObservation = z.infer<typeof observationSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
+export type KnowledgeEntity = z.infer<typeof knowledgeEntitySchema>;
+export type AgencyRelation = z.infer<typeof agencyRelationSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type ProofCoverageTarget = z.infer<typeof proofCoverageTargetSchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;

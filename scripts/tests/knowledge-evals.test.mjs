@@ -155,6 +155,104 @@ test("photo feedback requires an explicit hold and protected locator", () => {
   }
 });
 
+test("agency graph distinguishes contribution from institutional enactment", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 5);
+});
+
+test("agency graph rejects advocacy rewritten as enactment", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-JAMIE-CABARET-ADVOCACY"
+  );
+  assert.ok(relation);
+  const originalAction = relation.action;
+
+  try {
+    relation.action = "enacted";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.action = originalAction;
+  }
+});
+
+test("agency graph rejects an attribution with no boundary", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-NYCAC-FOUNDING-MEMBER"
+  );
+  assert.ok(relation);
+  const originalBoundaries = relation.boundaries;
+
+  try {
+    relation.boundaries = [];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.boundaries = originalBoundaries;
+  }
+});
+
+test("agency graph rejects a public but unrelated source", () => {
+  const relation = knowledgeBank.agencyRelations.find(
+    (item) => item.id === "REL-JAMIE-CABARET-ADVOCACY"
+  );
+  assert.ok(relation);
+  const originalSourceIds = relation.sourceIds;
+
+  try {
+    relation.sourceIds = ["SRC-CALLNYC-GITHUB-REPOSITORY"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    relation.sourceIds = originalSourceIds;
+  }
+});
+
+test("public website authorship is reconciled with repository evidence", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 5);
+});
+
+test("public website authorship rejects removal of archival Git support", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION"
+  );
+  assert.ok(claim);
+  const originalEvidence = claim.evidence;
+
+  try {
+    claim.evidence = claim.evidence.filter(
+      (evidence) => evidence.sourceId !== "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE"
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.evidence = originalEvidence;
+  }
+});
+
+test("repository authorship cannot become sole policy, copy, data, or design credit", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION"
+  );
+  assert.ok(claim?.projections.length);
+  const projection = claim.projections[0];
+  const originalText = projection.text;
+
+  try {
+    projection.text = "Jamie solely authored every policy, copy, data, and design decision.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-PROJECTION")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
 test("complete maturation pilot meets every floor", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.deepEqual(result.errors, []);

@@ -240,16 +240,16 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
     publicWording:
-      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.",
+      "Served as a founding member and organizer of NYC Artist Coalition and directly implemented and maintained campaign websites including FairRentNYC, Talks Not Raids, Let NYC Dance, and the coalition site's Ghost deployment.",
     shortWording:
-      "Jamie co-founded NYC Artist Coalition and built public campaign websites",
+      "Jamie was a founding member and organizer who implemented and maintained campaign websites",
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
-    sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
+    sourceBasis: "Contemporary reporting, Jamie confirmation, retained Git histories, and the public FairRentNYC repository.",
     whyItMatters:
-      "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
+      "Makes Jamie's founding-member, organizer, and direct implementation role visible without overstating collective campaign accomplishments.",
     guardrail:
-      "Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.",
+      "Founding-member language follows contemporary reporting; repository history supports implementation and maintenance, while policy, copy, data, design, and campaign accomplishments remain collective.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",

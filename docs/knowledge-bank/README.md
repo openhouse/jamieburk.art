@@ -38,6 +38,9 @@ The knowledge bank exists to:
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
+- **Agency graph:** source-linked actor, action, purpose, result, and
+  collective-credit relations in
+  `apps/www/src/data/knowledge-bank/agency-graph.ts`.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
@@ -71,6 +74,11 @@ pilot.
 
 See [intake-and-maturation.md](intake-and-maturation.md) for the recursive intake,
 research, claim-maturation, selective-projection, and photo-feedback workflow.
+
+See
+[agency-and-collective-credit.md](agency-and-collective-credit.md)
+for the rule that separates individual contribution, shared production,
+coalition action, and institutional enactment.
 
 See
 [projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)

@@ -28,6 +28,7 @@ intake item
   -> source
   -> atomic observation
   -> research inquiry
+  -> actor-action-purpose-result relation
   -> claim and evidence relationship
   -> surface-specific projection
   -> page-local citation
@@ -54,15 +55,31 @@ to say more than its evidence establishes.
 3. Close-read public sources into proposition-level observations with locators
    and limitations. Do not store full copyrighted articles.
 4. Associate each observation with a claim or research inquiry.
-5. Search for corroboration, counterevidence, chronology, collaborators, and
+5. Resolve agency explicitly: who acted, what they did, why, what became usable,
+   and whether credit is individual, shared, collective, or institutional.
+6. Search for corroboration, counterevidence, chronology, collaborators, and
    public records.
-6. Mature only the propositions supported by the current evidence.
-7. Record anti-claims and what each source does not establish.
-8. Select projections according to audience, purpose, reader burden, and Chad's
+7. Mature only the propositions supported by the current evidence.
+8. Record anti-claims and what each source does not establish.
+9. Select projections according to audience, purpose, reader burden, and Chad's
    lens. Mature but unselected claims remain held in the bank.
-9. Generate citations only for active public projections.
-10. Run deterministic checks and fresh editorial judges; retain only improving
+10. Generate citations only for active public projections.
+11. Run deterministic checks and fresh editorial judges; retain only improving
     iterations.
+
+## Agency and collective credit
+
+The contribution graph keeps four kinds of credit separate:
+
+- **individual:** a directly supported action by Jamie or another person;
+- **shared:** work performed with named or bounded collaborators;
+- **collective:** action by a coalition, participant group, or campaign;
+- **institutional:** an official act such as Council enactment.
+
+Relations link back to public sources and mature claims. They carry their own
+boundaries so an agent cannot convert participation into sole causation merely
+by writing a more forceful sentence. See
+`agency-and-collective-credit.md` for the current resolved field.
 
 ## Photo feedback
 

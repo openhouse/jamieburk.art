@@ -1,5 +1,7 @@
+import { agencyGraph } from "./agency-graph.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
+import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
@@ -25,6 +27,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
+    ...nycacImplementationEvidence.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems
   ],
@@ -47,6 +50,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
+    ...nycacImplementationEvidence.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations
   ],
@@ -173,9 +177,12 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
+    ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources
   ],
+  entities: [...agencyGraph.entities],
+  agencyRelations: [...agencyGraph.agencyRelations],
   claims: [
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -264,6 +271,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
+    ...nycacImplementationEvidence.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims
   ],
@@ -343,13 +351,16 @@ const knowledgeBankInput = {
       "SRC-NYCAC-SUPPORTERS-LIST",
       "SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12",
       "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
-      "SRC-NYC-SBJSA-HEARING-2018-10-22"
+      "SRC-NYC-SBJSA-HEARING-2018-10-22",
+      "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
+      "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
     ],
     occurrences: [
       { id: "cabaret-safety-organizing", claimId: "CLM-NYCAC-CABARET-SAFETY-ORGANIZING", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19"] },
       { id: "founder-operating-role", claimId: "CLM-NYCAC-FOUNDER-AND-OPERATING-ROLE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-CABARET-2017-09-20", "SRC-NYCAC-BEDFORD-DIY-SPACES-2017-02-07", "SRC-NYCAC-SUPPORTERS-LIST"] },
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
-      { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] }
+      { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] },
+      { id: "campaign-web-implementation", claimId: "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION", projection: "case-study", sourceIds: ["SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE", "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"] }
     ]
   }]
 };

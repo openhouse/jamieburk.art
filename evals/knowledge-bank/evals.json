@@ -18,7 +18,8 @@
       "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-LEAD",
       "INTAKE-NYCAC-OFFICE-NIGHTLIFE-ROLE-LEAD",
       "INTAKE-NYCAC-MARCH-RAIDS-LEAD",
-      "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD"
+      "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD",
+      "INTAKE-NYCAC-CAMPAIGN-GIT-HISTORIES"
     ],
     "sourceIds": [
       "SRC-WATERWAYS-PITCH-2007-08-09",
@@ -26,7 +27,9 @@
       "SRC-OPEN-HOUSE-GOOD-TIMES-2006-06-28",
       "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
       "SRC-NYCAC-NPR-CABARET-2017-09-20",
-      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"
+      "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+      "SRC-NYCAC-CAMPAIGN-GIT-HISTORIES-ARCHIVE",
+      "SRC-FAIRRENTNYC-GITHUB-REPOSITORY"
     ],
     "claimIds": [
       "CLM-WATERWAYS-RAFT-EXPEDITION",
@@ -35,7 +38,8 @@
       "CLM-SHOP-SHOWS-PARTICIPATORY-PROGRAM",
       "CLM-NYCAC-CABARET-SAFETY-ORGANIZING",
       "CLM-NYCAC-CABARET-TOWN-HALL",
-      "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017"
+      "CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017",
+      "CLM-NYCAC-CAMPAIGN-WEB-IMPLEMENTATION"
     ],
     "inquiryIds": [
       "INQ-WATERWAYS-RAFT-TERMINUS",
@@ -126,13 +130,44 @@
       "claimId": "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
       "inquiryId": "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
       "duplicateSourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20"
+    },
+    "agencyGraph": {
+      "expectedEntityCount": 18,
+      "expectedRelationCount": 17,
+      "relationIds": [
+        "REL-WATERWAYS-RAFT-ORIGIN",
+        "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",
+        "REL-OPEN-HOUSE-INITIATED",
+        "REL-OPEN-HOUSE-COLLECTIVE-GOVERNANCE",
+        "REL-SHOP-SHOWS-COCREATED",
+        "REL-NYCAC-FOUNDING-MEMBER",
+        "REL-JAMIE-NYCAC-WEB-IMPLEMENTATION",
+        "REL-NYCAC-FIRE-CODE-STUDY-GROUPS",
+        "REL-JAMIE-CABARET-ADVOCACY",
+        "REL-JAMIE-CABARET-TESTIMONY",
+        "REL-NYCAC-NIGHTLIFE-TOWN-HALL",
+        "REL-JAMIE-NIGHTLIFE-TOWN-HALL-SPEAKER",
+        "REL-NYCAC-OFFICE-AGENDA",
+        "REL-COUNCIL-OFFICE-ENACTMENT",
+        "REL-COUNCIL-CABARET-REPEAL",
+        "REL-SUNDAY-DINNER-COHOSTED",
+        "REL-JAMIE-COMMERCIAL-RENT-TESTIMONY"
+      ],
+      "enactedRelationIds": [
+        "REL-COUNCIL-OFFICE-ENACTMENT",
+        "REL-COUNCIL-CABARET-REPEAL"
+      ],
+      "openInquiryIds": [
+        "INQ-NYCAC-MARCH-RAIDS",
+        "INQ-CALLNYC-COUNCIL-ENGAGEMENT"
+      ]
     }
   },
   "criteria": [
     {
       "id": "KB-EVAL-INTAKE",
       "label": "Lossless public-safe intake",
-      "weight": 0.15,
+      "weight": 0.1,
       "minimumScore": 5,
       "intent": "Every supplied fragment receives a stable ID, project association, disposition, boundary, and next relationship rather than disappearing silently."
     },
@@ -146,7 +181,7 @@
     {
       "id": "KB-EVAL-SCOPE",
       "label": "Evidence scope integrity",
-      "weight": 0.15,
+      "weight": 0.1,
       "minimumScore": 5,
       "intent": "Every source records what it establishes and does not establish; evidence relationships never silently broaden a source."
     },
@@ -160,7 +195,7 @@
     {
       "id": "KB-EVAL-PROJECTION",
       "label": "Projection discipline",
-      "weight": 0.15,
+      "weight": 0.1,
       "minimumScore": 5,
       "intent": "Epistemic readiness remains separate from compositional selection; held claims have no public surface and active claims have an authorized page plan."
     },
@@ -186,6 +221,13 @@
       "intent": "Unselected claims and open questions remain usable for future applications, site arguments, collaborator proofs, and photo-editor feedback loops."
     },
     {
+      "id": "KB-EVAL-AGENCY",
+      "label": "Actor, action, purpose, result, and collective credit",
+      "weight": 0.15,
+      "minimumScore": 5,
+      "intent": "Contribution records make each actor, action, purpose, result, source, and boundary explicit while separating Jamie's work, shared work, coalition action, and institutional enactment."
+    },
+    {
       "id": "KB-EVAL-PRESS-ARCHIVE",
       "label": "Campaign press archive completeness",
       "weight": 0,
@@ -206,6 +248,7 @@
       "Never improve completeness by placing private paths or raw evidence in the public repo.",
       "Never improve projection coverage by publishing every mature claim.",
       "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
+      "Never turn advocacy, testimony, participation, or coalition work into legislative enactment or sole causation.",
       "Never treat a photograph as self-interpreting proof or consent to publish."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
