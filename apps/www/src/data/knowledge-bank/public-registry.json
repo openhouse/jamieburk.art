@@ -243,6 +243,312 @@
         "that Jamie represented NYC School of Data or a city agency",
         "that the proposal replaces existing storefront data"
       ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+      "title": "Authenticated NYC Artist Coalition public-account inventory",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/NYCArtC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @NYCArtC profile, timeline recoveries, and inbound public interactions, July 14, 2026.",
+      "publicNote": "The profile names #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. A cross-surface archival pass dispositioned the 5,124-post profile control as 3,367 item-level recoveries and 1,757 unresolved historical slots.",
+      "doesNotEstablish": [
+        "a complete platform export or deletion history",
+        "the contents of unresolved slots",
+        "Jamie's authorship of team posts",
+        "official Council endorsement, reach, or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+      "title": "Steven Matteo reply to CallNYC pothole recognition",
+      "organization": "Steven Matteo",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-03",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StevenMatteo/status/727621921341358081",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Steven Matteo, public reply to @CallNYCApp about potholes, May 3, 2016.",
+      "publicNote": "The rendered thread preserves Matteo's reply and CallNYC's public response the next day.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "Council adoption",
+        "the identity of every reacting account"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+      "title": "Ydanis Rodriguez quote post of CallNYC recognition",
+      "organization": "Ydanis Rodriguez",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-18",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/ydanis/status/733089563334299648",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Ydanis Rodriguez, quote post of a CallNYC rent-overcharge recognition, May 18, 2016.",
+      "publicNote": "Rodriguez connected the project recognition to protecting tenant rights in northern Manhattan and citywide.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "Council adoption",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+      "title": "Rosie Mendez quote post of CallNYC recognition",
+      "organization": "Rosie Mendez",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-05-19",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Rosie Mendez, quote post of a CallNYC emergency-repairs recognition, May 19, 2016.",
+      "publicNote": "Mendez thanked her staff while quote-amplifying CallNYC's recognition of the office's constituent-service activity.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "Council adoption",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+      "title": "Helen Rosenthal public CallNYC promotion",
+      "organization": "Helen Rosenthal",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-27",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Helen Rosenthal, public post directing residents to callnyc.org, September 27, 2016.",
+      "publicNote": "Rosenthal told readers Council offices were available to help and directed them to the CallNYC tool.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "Council adoption",
+        "continued currency of the archived tool"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-EUGENE-QUOTE-2016",
+      "title": "Mathieu Eugene quote post of CallNYC recognition",
+      "organization": "Mathieu Eugene",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-10-04",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Mathieu Eugene, quote post of a CallNYC housing-lottery recognition, October 4, 2016.",
+      "publicNote": "Eugene connected the recognition to helping constituents improve their housing options.",
+      "doesNotEstablish": [
+        "formal endorsement",
+        "Council adoption",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-ESPINAL-2017",
+      "title": "Rafael Espinal NYC Artist Coalition Cabaret Law post",
+      "organization": "Rafael Espinal",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-30",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/RLEspinal/status/924972124628049920",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Rafael Espinal, public post naming NYC Artist Coalition and Dance Liberation Network in the Cabaret Law repeal effort, October 30, 2017.",
+      "publicNote": "A contemporaneous Council-member account publicly identified the coalition within the collective repeal effort.",
+      "doesNotEstablish": [
+        "Jamie's authorship",
+        "sole coalition causality",
+        "Council endorsement of every coalition campaign"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-LEVIN-2019",
+      "title": "Stephen Levin Talks Not Raids testimony post",
+      "organization": "Stephen Levin",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/StephenLevin33/status/1095020293112979457",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Stephen Levin, public post thanking NYC Artist Coalition and venues after testimony about MARCH raids, February 11, 2019.",
+      "publicNote": "A contemporaneous member account credited coalition and venue participation after a public hearing.",
+      "doesNotEstablish": [
+        "Jamie's individual attendance",
+        "a completed enforcement outcome",
+        "official endorsement"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-RIVERA-2021",
+      "title": "Carlina Rivera FairRentNYC quote post",
+      "organization": "Carlina Rivera",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-09-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CarlinaRivera/status/1438843816732151813",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Carlina Rivera, public quote post amplifying an @NYCArtC FairRentNYC message, September 17, 2021.",
+      "publicNote": "Rivera quote-amplified the coalition's commercial-rent campaign message.",
+      "doesNotEstablish": [
+        "bill passage",
+        "official Council endorsement",
+        "Jamie's authorship"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-BRANNAN-2019",
+      "title": "Justin Brannan Talks Not Raids quote post",
+      "organization": "Justin Brannan",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-06-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/JustinBrannan/status/1140698679394938883",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Justin Brannan, public quote post amplifying an @NYCArtC Talks Not Raids message, June 17, 2019.",
+      "publicNote": "Brannan argued that MARCH operations required precision and oversight and should not target community and cultural spaces.",
+      "doesNotEstablish": [
+        "a completed enforcement outcome",
+        "official endorsement",
+        "Jamie's authorship"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-VAN-BRAMER-2020",
+      "title": "Jimmy Van Bramer cultural-support post naming NYC Artist Coalition",
+      "organization": "Jimmy Van Bramer",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-10-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/JimmyVanBramer/status/1320792543773282304",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jimmy Van Bramer, public arts-and-culture support post naming NYC Artist Coalition, October 26, 2020.",
+      "publicNote": "A contemporaneous member account directly mentioned the coalition in a mission-relevant public post.",
+      "doesNotEstablish": [
+        "official endorsement",
+        "a specific policy outcome",
+        "Jamie's authorship"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-LEVINE-REPLY-2020",
+      "title": "Mark Levine public reply in an NYC Artist Coalition thread",
+      "organization": "Mark Levine",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-03-20",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/MarkLevineNYC/status/1241027587947876352",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Mark Levine, public reply to an @NYCArtC question about the effective date of pandemic restrictions, March 20, 2020.",
+      "publicNote": "The thread establishes direct account-level exchange while remaining outside the selected campaign-outcome claims.",
+      "doesNotEstablish": [
+        "mission-specific endorsement",
+        "policy outcome",
+        "Jamie's authorship"
+      ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-LANDER-REPLY-2021",
+      "title": "Brad Lander commercial-rent reply in an NYC Artist Coalition thread",
+      "organization": "Brad Lander",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-01-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/bradlander/status/1354840336330330116",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Brad Lander, public reply in a thread naming @NYCArtC and FairRentNYC, January 28, 2021.",
+      "publicNote": "Lander stated that he had spoken in committee about moving forward with Commercial Rent Stabilization.",
+      "doesNotEstablish": [
+        "bill passage",
+        "official Council endorsement",
+        "Jamie's authorship"
+      ]
+    },
+    {
+      "id": "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+      "title": "Taking back New York City's nightlife",
+      "organization": "Document Journal",
+      "author": "Daisy Prince",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-02-27",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Daisy Prince, 'Taking back New York City's nightlife,' Document Journal, February 27, 2018.",
+      "publicNote": "The article names and pictures Jamie with NYC Artist Coalition, names Olympia Kazi with NYC Artist Coalition and Let NYC Dance, and describes the broader collective nightlife-policy movement.",
+      "doesNotEstablish": [
+        "Jamie's social-account establishment role",
+        "sole causality for Cabaret Law repeal or the Office of Nightlife",
+        "post-level authorship"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+      "title": "WOW List public Sunday Dinner origin post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List, public post naming Richard and Jamie and describing the project as based on calendars made at Sunday Dinner, February 12, 2014.",
+      "publicNote": "The account's contemporaneous description connects Jamie, a collaborator named Richard, WOW List, and Sunday Dinner.",
+      "doesNotEstablish": [
+        "complete product authorship",
+        "the collaborator's full identity",
+        "later adoption scale"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+      "title": "WOW List community-created tutorial post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-08-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/632168285291835392",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List, public post thanking a community member for creating a tutorial about using the platform, August 14, 2015.",
+      "publicNote": "The post directly documents someone outside the account team creating an instructional artifact for other users.",
+      "doesNotEstablish": [
+        "broad adoption",
+        "the tutorial's current availability",
+        "representative user sentiment"
+      ]
     }
   ],
   "claims": [
@@ -907,6 +1213,294 @@
         "Do not expose names, contact details, invitation histories, attendance signals, or response records.",
         "The workbook does not independently verify 300 or more completed gatherings."
       ]
+    },
+    {
+      "id": "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "Established durable public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including a shared coalition identity that collaborators carried across campaigns and years.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Account establishment is distinct from authorship of every post.",
+        "NYC Artist Coalition and later KC Town Hall activity had shared or changing stewardship.",
+        "Project and policy outcomes remain collective."
+      ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Surviving account evidence documents direct public interaction from five sitting Council members in 2016: Helen Rosenthal promoted the tool; Mathieu Eugene, Rosie Mendez, and Ydanis Rodriguez quote-posted project recognitions; Steven Matteo replied and received a project response.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "member-authored promotion, quote amplification, or direct reply involving CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "member-authored promotion, quote amplification, or direct reply involving CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "member-authored promotion, quote amplification, or direct reply involving CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "member-authored promotion, quote amplification, or direct reply involving CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-CALLNYC-EUGENE-QUOTE-2016",
+          "relationship": "direct-support",
+          "supports": [
+            "member-authored promotion, quote amplification, or direct reply involving CallNYC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Five is a verified recovery floor, not a complete historical engagement census.",
+        "Member-authored interaction is stronger than a one-way tag and narrower than formal endorsement or adoption.",
+        "Current visible reaction counts are mutable and are not used as 2016 reach measures."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The coalition used one public account identity across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC, giving collaborators a durable surface they could steward across campaigns and years.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the shared handle",
+            "the four named campaign hashtags",
+            "multiyear continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie and Olympia Kazi's public coalition affiliations",
+            "Let NYC Dance context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The shared identity had collective post authorship and stewardship.",
+        "Continuity does not establish Jamie's authorship of Olympia Kazi's or another teammate's posts."
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Authenticated archival review recovered 24 public interaction records from at least seven contemporaneous Council-member accounts across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the 24-record recovery floor",
+            "the seven-account floor",
+            "bounded authenticated method"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-ESPINAL-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-LEVIN-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-RIVERA-2021",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-BRANNAN-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-VAN-BRAMER-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-LEVINE-REPLY-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-NYCARTC-LANDER-REPLY-2021",
+          "relationship": "corroborating",
+          "supports": [
+            "representative member-authored public interaction involving @NYCArtC"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Twenty-four records across at least seven accounts is a recovery floor, not a complete historical census.",
+        "Some direct exchanges are preserved through reply or thread context rather than an explicit handle in the reply text.",
+        "Individual-account activity is not official Council endorsement, reach, policy causality, or Jamie-only authorship."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Contemporaneous account evidence connects WOW List to calendars made at Sunday Dinner and documents a community member creating a public tutorial for other users.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "publicly named project participants",
+            "Sunday Dinner calendar origin"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "community-created instructional artifact",
+            "public platform use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The origin post does not establish complete product authorship.",
+        "One community-created tutorial is evidence of use, not broad adoption."
+      ]
+    },
+    {
+      "id": "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "The account preserved a public project identity and a 2018-2022 record of restoration, resident-input, neighborhood-operations, civic-information, and later activity under changing stewardship.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/research/2026-07-14-project-social-media-archive-production"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Jamie confirms establishing the account, but the account does not identify the author of every post.",
+        "Later Tired of Tires activity must not be assigned to Jamie without post-level authorship or role evidence.",
+        "Social interaction does not prove municipal endorsement, funding, or project completion."
+      ]
     }
   ],
   "pages": [
@@ -917,7 +1511,12 @@
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY"
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+        "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+        "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+        "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+        "SRC-X-CALLNYC-EUGENE-QUOTE-2016"
       ],
       "occurrences": [
         {
@@ -955,6 +1554,18 @@
           ]
         },
         {
+          "id": "council-account-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+            "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+            "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+            "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+            "SRC-X-CALLNYC-EUGENE-QUOTE-2016"
+          ]
+        },
+        {
           "id": "archived-status",
           "claimId": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
           "projection": "case-study",
@@ -983,13 +1594,24 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
-        "SRC-COMMUNITY-GREENE-HILL-QA-2017"
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015"
       ],
       "occurrences": [
         {
           "id": "community-event-sharing",
           "claimId": "CLM-WOWLIST-COMMUNITY-EVENTS-2017",
           "projection": "case-study"
+        },
+        {
+          "id": "public-origin-and-use",
+          "claimId": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+            "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+          ]
         }
       ]
     },
@@ -998,7 +1620,16 @@
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
         "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
-        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27"
+        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+        "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+        "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+        "SRC-X-NYCARTC-ESPINAL-2017",
+        "SRC-X-NYCARTC-LEVIN-2019",
+        "SRC-X-NYCARTC-RIVERA-2021",
+        "SRC-X-NYCARTC-BRANNAN-2019",
+        "SRC-X-NYCARTC-VAN-BRAMER-2020",
+        "SRC-X-NYCARTC-LEVINE-REPLY-2020",
+        "SRC-X-NYCARTC-LANDER-REPLY-2021"
       ],
       "occurrences": [
         {
@@ -1010,6 +1641,30 @@
           "id": "public-baseline-pilot",
           "claimId": "CLM-CRS-PUBLIC-BASELINE-PILOT-2026",
           "projection": "case-study"
+        },
+        {
+          "id": "shared-campaign-identity",
+          "claimId": "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+            "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018"
+          ]
+        },
+        {
+          "id": "council-account-engagement",
+          "claimId": "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+            "SRC-X-NYCARTC-ESPINAL-2017",
+            "SRC-X-NYCARTC-LEVIN-2019",
+            "SRC-X-NYCARTC-RIVERA-2021",
+            "SRC-X-NYCARTC-BRANNAN-2019",
+            "SRC-X-NYCARTC-VAN-BRAMER-2020",
+            "SRC-X-NYCARTC-LEVINE-REPLY-2020",
+            "SRC-X-NYCARTC-LANDER-REPLY-2021"
+          ]
         }
       ]
     },

@@ -63,3 +63,19 @@ multi-stakeholder idea into a documented proposal that could enter municipal
 review, while preserving an accurate account when the project stopped
 proceeding under the award and Jamie transitioned it to mission-aligned
 stewardship.
+
+## Social-account boundary
+
+The dedicated public identity is
+[`@KCTownHall`](https://x.com/KCTownHall). The July 2026 recovery retained 183
+unique public status records against the current 183-post profile control,
+spanning July 2018 through September 2022. A launch post documents the account's
+participatory invitation to help build a neighborhood resource and cultural
+center.
+
+Jamie confirms establishing the account. The later account record reflects
+changing stewardship, and later posts or programs are not assigned to Jamie
+without post-level role evidence. Account activity does not establish municipal
+endorsement, funding receipt, completed redevelopment, or causality for the
+Council action. See
+[the social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md).

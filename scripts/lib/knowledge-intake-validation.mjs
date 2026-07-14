@@ -126,6 +126,30 @@ export const requiredSharedDriveInquiryIds = [
   "INQ-GDRIVE-QUANTIFIED-PARTICIPATION-CLAIMS-2026"
 ];
 
+export const requiredSocialAccountIds = [
+  "SOCIAL-CALLNYC-X",
+  "SOCIAL-NYCARTC-X",
+  "SOCIAL-WOWLIST-X",
+  "SOCIAL-KCTOWNHALL-X"
+];
+
+export const requiredSocialClaimIds = [
+  "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+  "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
+  "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
+  "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+  "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+  "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
+];
+
+export const requiredSocialInquiryIds = [
+  "INQ-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+  "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
+  "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP-2026",
+  "INQ-WOWLIST-SOCIAL-ARCHIVE-2026",
+  "INQ-KCTOWNHALL-SOCIAL-ARCHIVE-2026"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -160,12 +184,16 @@ export function validateKnowledgeIntake() {
   const kcTownHallErrors = [];
   const archiveProductionErrors = [];
   const sharedDriveProductionErrors = [];
+  const socialMediaProductionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
   const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
   const inquiryById = new Map(
     knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry])
+  );
+  const socialAccountById = new Map(
+    knowledgeBank.socialAccounts.map((account) => [account.id, account])
   );
 
   for (const id of duplicates(intakeIds)) {
@@ -852,6 +880,136 @@ export function validateKnowledgeIntake() {
     kcTownHallErrors.push("KC Town Hall withdrawal and reappropriation context must remain active");
   }
 
+  const expectedSocialAccounts = new Map([
+    ["SOCIAL-CALLNYC-X", { handle: "@CallNYCApp", observed: 110, recovered: 107, unresolved: 3 }],
+    ["SOCIAL-NYCARTC-X", { handle: "@NYCArtC", observed: 5124, recovered: 3367, unresolved: 1757 }],
+    ["SOCIAL-WOWLIST-X", { handle: "@wowlist", observed: 38, recovered: 38, unresolved: 0 }],
+    ["SOCIAL-KCTOWNHALL-X", { handle: "@KCTownHall", observed: 183, recovered: 183, unresolved: 0 }]
+  ]);
+  if (knowledgeBank.socialAccounts.length !== expectedSocialAccounts.size) {
+    socialMediaProductionErrors.push("Social-account inventory must contain exactly four verified project accounts");
+  }
+  for (const duplicateId of duplicates(knowledgeBank.socialAccounts.map(({ id }) => id))) {
+    socialMediaProductionErrors.push(`Duplicate social-account ID: ${duplicateId}`);
+  }
+  for (const duplicateHandle of duplicates(
+    knowledgeBank.socialAccounts.map(({ handle }) => handle.toLowerCase())
+  )) {
+    socialMediaProductionErrors.push(`Duplicate social-account handle: ${duplicateHandle}`);
+  }
+  for (const [id, expected] of expectedSocialAccounts) {
+    const account = socialAccountById.get(id);
+    if (!account) {
+      socialMediaProductionErrors.push(`Missing required social account: ${id}`);
+      continue;
+    }
+    if (
+      account.handle !== expected.handle ||
+      account.profilePostsObserved !== expected.observed ||
+      account.recoveredItems !== expected.recovered ||
+      account.unresolvedItems !== expected.unresolved
+    ) {
+      socialMediaProductionErrors.push(`${id} no longer matches its dated profile-control reconciliation`);
+    }
+    if (account.recoveredItems + account.unresolvedItems !== account.profilePostsObserved) {
+      socialMediaProductionErrors.push(`${id} recovered and unresolved slots must reconcile to the profile control`);
+    }
+    for (const sourceId of account.sourceIds) {
+      if (!sourceById.has(sourceId)) socialMediaProductionErrors.push(`${id} references unknown source ${sourceId}`);
+    }
+    for (const claimId of account.claimIds) {
+      if (!claimById.has(claimId)) socialMediaProductionErrors.push(`${id} references unknown claim ${claimId}`);
+    }
+    for (const inquiryId of account.inquiryIds) {
+      if (!inquiryById.has(inquiryId)) socialMediaProductionErrors.push(`${id} references unknown inquiry ${inquiryId}`);
+    }
+  }
+
+  const nycArtCAccount = socialAccountById.get("SOCIAL-NYCARTC-X");
+  for (const projectId of [
+    "nyc-artist-coalition",
+    "let-nyc-dance",
+    "talks-not-raids",
+    "save-nyc-spaces",
+    "fair-rent-nyc"
+  ]) {
+    if (!nycArtCAccount?.projectIds.includes(projectId)) {
+      socialMediaProductionErrors.push(`@NYCArtC must retain the ${projectId} shared-identity edge`);
+    }
+  }
+  if (nycArtCAccount?.accountRelationship !== "shared-coalition") {
+    socialMediaProductionErrors.push("@NYCArtC must remain a shared coalition identity");
+  }
+
+  for (const id of requiredSocialClaimIds) {
+    if (!claimById.has(id)) socialMediaProductionErrors.push(`Missing required social-media claim: ${id}`);
+  }
+  for (const id of requiredSocialInquiryIds) {
+    if (!inquiryById.has(id)) socialMediaProductionErrors.push(`Missing required social-media inquiry: ${id}`);
+  }
+  if (!intakeIdSet.has("INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026")) {
+    socialMediaProductionErrors.push("Missing project social-account archival intake");
+  }
+
+  const requiredSocialSourceIds = new Set([
+    ...knowledgeBank.socialAccounts.flatMap((account) => account.sourceIds),
+    "SRC-JAMIE-SOCIAL-ACCOUNT-ESTABLISHMENT-2026",
+    "SRC-X-NYCARTC-MADEINNY-TOWN-HALL-2017",
+    "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+    "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021"
+  ]);
+  for (const id of requiredSocialSourceIds) {
+    const source = sourceById.get(id);
+    if (!source) {
+      socialMediaProductionErrors.push(`Missing required social-media source: ${id}`);
+    } else if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      socialMediaProductionErrors.push(`${id} needs explicit support and does-not-establish boundaries`);
+    }
+  }
+
+  const socialBoundaryText = JSON.stringify([
+    ...requiredSocialClaimIds.map((id) => claimById.get(id)),
+    ...knowledgeBank.socialAccounts
+  ]).toLowerCase();
+  for (const boundary of [
+    "jamie wrote every",
+    "official council endorsement",
+    "policy causality",
+    "recovery floor",
+    "changing stewardship",
+    "unresolved"
+  ]) {
+    if (!socialBoundaryText.includes(boundary)) {
+      socialMediaProductionErrors.push(`Social-media production is missing the ${boundary} boundary`);
+    }
+  }
+
+  const expectedActiveSocialClaims = new Set([
+    "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
+    "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
+    "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
+    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+    "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
+  ]);
+  for (const claimId of expectedActiveSocialClaims) {
+    const active = claimById.get(claimId)?.projections.filter((projection) => projection.status === "active") ?? [];
+    if (active.length !== 1) socialMediaProductionErrors.push(`${claimId} must have exactly one selected active projection`);
+  }
+
+  const serializedSocialRecords = JSON.stringify([
+    ...knowledgeBank.socialAccounts,
+    ...requiredSocialClaimIds.map((id) => claimById.get(id)),
+    ...requiredSocialInquiryIds.map((id) => inquiryById.get(id)),
+    ...[...requiredSocialSourceIds].map((id) => sourceById.get(id)),
+    knowledgeBank.intakes.find((intake) => intake.id === "INTAKE-PROJECT-SOCIAL-ACCOUNT-ARCHIVE-2026")
+  ]);
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedSocialRecords.toLowerCase().includes(marker.toLowerCase())) {
+      socialMediaProductionErrors.push(`Social-media production records contain blocked public-repo marker: ${marker}`);
+    }
+  }
+
   errors.push(
     ...coverageErrors,
     ...researchErrors,
@@ -860,7 +1018,8 @@ export function validateKnowledgeIntake() {
     ...pressErrors,
     ...kcTownHallErrors,
     ...archiveProductionErrors,
-    ...sharedDriveProductionErrors
+    ...sharedDriveProductionErrors,
+    ...socialMediaProductionErrors
   );
   return {
     errors,
@@ -904,6 +1063,11 @@ export function validateKnowledgeIntake() {
         passed: sharedDriveProductionErrors.length === 0,
         errors: sharedDriveProductionErrors,
         evidence: `${requiredSharedDriveSourceIds.length} sources, ${requiredSharedDriveClaimIds.length} claims, ${requiredSharedDriveInquiryIds.length} inquiries, and ${requiredSharedDriveIntakeIds.length} intakes preserve a governed 110-drive inventory, selective close reading, protected Drive locators, and exactly four selected public-safe workflow projections.`
+      },
+      socialMediaProduction: {
+        passed: socialMediaProductionErrors.length === 0,
+        errors: socialMediaProductionErrors,
+        evidence: "Four project accounts reconcile dated profile controls to recovered and unresolved slots; shared campaign identity, Council-member interaction floors, collective authorship, source discoveries, and selected projections retain explicit public-safety boundaries."
       }
     }
   };

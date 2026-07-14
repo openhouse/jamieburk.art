@@ -302,6 +302,40 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "project-social-identity-systems",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Established durable public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including a shared coalition identity that collaborators carried across campaigns and years.",
+    shortWording:
+      "Established durable project identities collaborators carried forward",
+    detailedPublicWording:
+      "Jamie established four public project accounts as identity infrastructure. The accounts then became shared operating surfaces: NYC Artist Coalition carried four campaign identities through one handle, and collaborators used the system in their own voices over years.",
+    sourceBasis:
+      "Jamie confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles and selected post-level records.",
+    whyItMatters:
+      "Shows brand and communications infrastructure designed for real team use and durable handoff, rather than a one-person promotional channel.",
+    guardrail:
+      "Keep account establishment separate from post-level authorship, collective outcomes, endorsement, reach, and policy causality.",
+    doNotSay: [
+      "Jamie wrote every project-account post",
+      "Jamie controlled every coalition message",
+      "Social engagement proves project adoption or policy causality"
+    ],
+    protectedBoundaries: [
+      "Authentication material",
+      "Private messages",
+      "Private analytics",
+      "Credentials",
+      "Unattributed teammate authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc", "fair-rent-nyc", "wowlist", "kc-town-hall"],
+    relatedCapabilities: ["communications-infrastructure", "launch-support", "handoffs"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "nyc-artist-coalition-civic-systems",
     status: "careful",
     supportLevel: "careful",
@@ -672,6 +706,7 @@ export const technicalOperationsProofRows = [
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
       "nyc-artist-coalition-public-web-infrastructure",
+      "project-social-identity-systems",
       "nyc-artist-coalition-civic-systems",
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",

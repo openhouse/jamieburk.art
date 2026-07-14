@@ -123,6 +123,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
+## project-social-identity-systems - Durable project identities
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public source / Jamie review confirmation
+**Public wording:** Established durable public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including a shared coalition identity that collaborators carried across campaigns and years.
+**Detailed public-safe wording:** Jamie established four public project accounts as identity infrastructure. The accounts then became shared operating surfaces: NYC Artist Coalition carried four campaign identities through one handle, and collaborators used the system in their own voices over years.
+**Where to project:** Technical Operations and selected case studies.
+**Why it matters:** Shows brand and communications infrastructure designed for real team use and durable handoff, rather than a one-person promotional channel.
+**Guardrail:** Keep account establishment separate from post-level authorship, collective outcomes, endorsement, reach, and policy causality.
+**Do not say:** Jamie wrote every project-account post; Jamie controlled every coalition message; social engagement proves project adoption or policy causality.
+**Protected boundaries:** Authentication material, private messages, private analytics, credentials, and unattributed teammate authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
 **Status:** Careful

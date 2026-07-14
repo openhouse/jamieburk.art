@@ -78,3 +78,28 @@ automatically create public copy. The official 2018 testimony is selected
 because it gives the current case study one precise, role-specific action. The
 other claims remain unsurfaced while open role questions are researched and
 the site argument is composed with collective credit intact.
+
+## Shared social identity
+
+[`@NYCArtC`](https://x.com/NYCArtC) is the coalition account and the shared
+Twitter identity linked by the Let NYC Dance, Talks Not Raids, Save NYC Spaces,
+and FairRentNYC campaign sites. Jamie confirms that he established the account
+as public-facing project infrastructure. The account then became a team surface
+used and stewarded by collaborators, including Olympia Kazi; it is not evidence
+that Jamie wrote every post.
+
+An authenticated July 2026 archival pass dispositioned the current 5,124-post
+profile control as 3,367 item-level recoveries and 1,757 unresolved historical
+slots. Inbound recovery classified 24 public interaction records across at
+least seven contemporaneous Council-member accounts: Rafael Espinal, Stephen
+Levin, Justin Brannan, Carlina Rivera, Jimmy Van Bramer, Mark Levine, and Brad
+Lander. This is a bounded recovery floor, not a complete census, official
+Council endorsement, reach measure, authorship claim, or proof of policy
+causality.
+
+The recovered interactions span Cabaret Law repeal, MARCH transparency,
+arts-and-culture support, pandemic information, and commercial-rent advocacy.
+The same pass added a Made in NY Nightlife Town Hall post, a Document Journal
+profile, and the public Nightlife Advisory Board report as source or research
+records. See
+[the social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md).

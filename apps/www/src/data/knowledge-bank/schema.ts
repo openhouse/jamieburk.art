@@ -369,6 +369,31 @@ export const campaignPressPlacementSchema = z.object({
   reviewedAt: z.iso.date()
 });
 
+export const socialAccountRecordSchema = z.object({
+  id: stableIdSchema,
+  handle: z
+    .string()
+    .regex(/^@[A-Za-z0-9_]{1,15}$/, "Use a valid X account handle"),
+  canonicalUrl: publicUrlSchema,
+  projectIds: z.array(stableIdSchema).min(1),
+  accountRelationship: z.enum(["dedicated-project", "shared-coalition"]),
+  joined: z.string().min(1),
+  observedAt: z.iso.date(),
+  profilePostsObserved: z.number().int().nonnegative(),
+  recoveredItems: z.number().int().nonnegative(),
+  unresolvedItems: z.number().int().nonnegative(),
+  recoveryStatus: z.enum([
+    "current-profile-control-recovered",
+    "near-complete-current-profile",
+    "partial-with-all-slots-dispositioned"
+  ]),
+  sourceIds: z.array(stableIdSchema).min(1),
+  claimIds: z.array(stableIdSchema).default([]),
+  inquiryIds: z.array(stableIdSchema).default([]),
+  authorshipBoundary: z.string().min(1),
+  limitations: z.array(z.string().min(1)).min(1)
+});
+
 export const knowledgeBankSchema = z.object({
   intakes: z.array(intakeRecordSchema),
   sources: z.array(sourceRecordSchema),
@@ -376,7 +401,8 @@ export const knowledgeBankSchema = z.object({
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
   pages: z.array(citationPageSchema),
-  campaignPressPlacements: z.array(campaignPressPlacementSchema)
+  campaignPressPlacements: z.array(campaignPressPlacementSchema),
+  socialAccounts: z.array(socialAccountRecordSchema)
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
@@ -388,5 +414,6 @@ export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
+export type SocialAccountRecord = z.infer<typeof socialAccountRecordSchema>;
 export type CampaignPressPlacement = z.infer<typeof campaignPressPlacementSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

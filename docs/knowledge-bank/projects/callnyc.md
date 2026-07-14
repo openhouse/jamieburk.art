@@ -82,3 +82,22 @@ depicted.
 
 Rights require permission, consent requires review, and public display remains
 on hold. The photograph is not committed or rendered.
+
+## Social-account record
+
+The dedicated public identity is
+[`@CallNYCApp`](https://x.com/CallNYCApp). An authenticated July 2026 pass
+recovered 107 item-level public records against the current 110-post profile
+control and retained three unresolved slots.
+
+Five sitting Council members are directly documented in 2016 member-authored
+interaction: Helen Rosenthal promoted the tool; Mathieu Eugene, Rosie Mendez,
+and Ydanis Rodriguez quote-posted project recognitions; Steven Matteo replied
+and received a public CallNYC response. Five is a recovery floor, not a complete
+historical census. The interactions do not establish official Council
+endorsement, adoption, reach, policy causality, or authorship of every project
+post.
+
+See
+[the social-media archive-production note](../research/2026-07-14-project-social-media-archive-production.md)
+for the account controls, direct status pages, and engagement rule.

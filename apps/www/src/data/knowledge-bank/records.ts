@@ -30,6 +30,13 @@ import {
   sharedDriveResearchInquiries20260714,
   sharedDriveSourceRecords20260714
 } from "./shared-drive-intake-2026-07-14.ts";
+import {
+  socialAccountRecords20260714,
+  socialMediaClaimRecords20260714,
+  socialMediaIntakeRecords20260714,
+  socialMediaResearchInquiries20260714,
+  socialMediaSourceRecords20260714
+} from "./social-media-intake-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intakes: [
@@ -37,7 +44,8 @@ const knowledgeBankInput = {
     ...researchedIntakeRecords20260713,
     ...campaignPressIntakeRecords,
     ...archiveIntakeRecords20260714,
-    ...sharedDriveIntakeRecords20260714
+    ...sharedDriveIntakeRecords20260714,
+    ...socialMediaIntakeRecords20260714
   ],
   sources: [
     {
@@ -166,7 +174,8 @@ const knowledgeBankInput = {
     ...campaignPressIndexSourceRecords,
     ...campaignPressArticleSourceRecords,
     ...archiveSourceRecords20260714,
-    ...sharedDriveSourceRecords20260714
+    ...sharedDriveSourceRecords20260714,
+    ...socialMediaSourceRecords20260714
   ],
   claims: [
     {
@@ -259,7 +268,8 @@ const knowledgeBankInput = {
     ...researchedClaimRecords20260713,
     ...campaignPressClaimRecords,
     ...archiveClaimRecords20260714,
-    ...sharedDriveClaimRecords20260714
+    ...sharedDriveClaimRecords20260714,
+    ...socialMediaClaimRecords20260714
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -273,7 +283,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714, ...sharedDriveResearchInquiries20260714],
+  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714, ...sharedDriveResearchInquiries20260714, ...socialMediaResearchInquiries20260714],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -287,13 +297,19 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY"
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+        "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+        "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+        "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+        "SRC-X-CALLNYC-EUGENE-QUOTE-2016"
       ],
       occurrences: [
         { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
         { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "council-account-engagement", claimId: "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016", projection: "case-study", sourceIds: ["SRC-X-CALLNYC-MATTEO-REPLY-2016", "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016", "SRC-X-CALLNYC-MENDEZ-QUOTE-2016", "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016", "SRC-X-CALLNYC-EUGENE-QUOTE-2016"] },
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
       ]
     },
@@ -308,9 +324,14 @@ const knowledgeBankInput = {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-COMMUNITY-GREENE-HILL-QA-2017"],
+      sourceOrder: [
+        "SRC-COMMUNITY-GREENE-HILL-QA-2017",
+        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+      ],
       occurrences: [
-        { id: "community-event-sharing", claimId: "CLM-WOWLIST-COMMUNITY-EVENTS-2017", projection: "case-study" }
+        { id: "community-event-sharing", claimId: "CLM-WOWLIST-COMMUNITY-EVENTS-2017", projection: "case-study" },
+        { id: "public-origin-and-use", claimId: "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", projection: "case-study", sourceIds: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"] }
       ]
     },
     {
@@ -318,11 +339,22 @@ const knowledgeBankInput = {
       surface: "/work/fair-rent-nyc",
       sourceOrder: [
         "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
-        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27"
+        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+        "SRC-X-NYCARTC-PROFILE-AUDIT-2026",
+        "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+        "SRC-X-NYCARTC-ESPINAL-2017",
+        "SRC-X-NYCARTC-LEVIN-2019",
+        "SRC-X-NYCARTC-RIVERA-2021",
+        "SRC-X-NYCARTC-BRANNAN-2019",
+        "SRC-X-NYCARTC-VAN-BRAMER-2020",
+        "SRC-X-NYCARTC-LEVINE-REPLY-2020",
+        "SRC-X-NYCARTC-LANDER-REPLY-2021"
       ],
       occurrences: [
         { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study" },
-        { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" }
+        { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" },
+        { id: "shared-campaign-identity", claimId: "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018"] },
+        { id: "council-account-engagement", claimId: "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-X-NYCARTC-PROFILE-AUDIT-2026", "SRC-X-NYCARTC-ESPINAL-2017", "SRC-X-NYCARTC-LEVIN-2019", "SRC-X-NYCARTC-RIVERA-2021", "SRC-X-NYCARTC-BRANNAN-2019", "SRC-X-NYCARTC-VAN-BRAMER-2020", "SRC-X-NYCARTC-LEVINE-REPLY-2020", "SRC-X-NYCARTC-LANDER-REPLY-2021"] }
       ]
     },
     {
@@ -344,7 +376,8 @@ const knowledgeBankInput = {
       ]
     }
   ],
-  campaignPressPlacements: campaignPressPlacementRecords
+  campaignPressPlacements: campaignPressPlacementRecords,
+  socialAccounts: socialAccountRecords20260714
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

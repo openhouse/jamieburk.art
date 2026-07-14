@@ -110,9 +110,27 @@ Do not add a CMS, database, auth, search, analytics, AI chatbot, archive browser
 private document browser, full photo archive, heavy animation, or major framework
 change for V1.
 
+## Social-Media Archival Production
+
+- Use authenticated access only for read-only review of public records unless
+  Jamie explicitly requests a private-data operation.
+- Never publish private messages, analytics, drafts, credentials, cookies,
+  session material, or private collaborator records.
+- Treat an account as project infrastructure, not proof that Jamie authored
+  every post. Preserve collective authorship and changing stewardship.
+- Count direct engagement only from recoverable account-authored replies,
+  reposts, quote posts, mentions, or thread participation. A one-way tag,
+  follow, unattributed aggregate reaction, or inferred view is not engagement.
+- Store current profile counts as mutable reconciliation controls, not reach
+  measures or deletion histories. Keep unresolved timeline slots explicit.
+- Council-member-account activity is not official Council endorsement,
+  adoption, reach, or policy causality.
+- No verified account recovered means only that the bounded pass did not
+  recover one; it never means no account existed.
+
 ## Launch-Readiness Evals
 
-- Read `evals/launch-readiness/v4/evals.json` before optimizing the public site
+- Read `evals/launch-readiness/v11/evals.json` before optimizing the public site
   for production or job applications.
 - Run `npm run eval:launch-readiness` to establish the current baseline.
 - Improve one failing mutable criterion at a time and keep a change only when

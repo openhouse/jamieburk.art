@@ -38,6 +38,9 @@ The knowledge bank exists to:
 - **Citation registry:** canonical sources, evidence relationships, claims,
   projections, inquiries, corrections, and page plans in
   `apps/www/src/data/knowledge-bank/records.ts`.
+- **Social-account inventory:** project-to-handle relationships, recovery
+  controls, unresolved slots, authorship boundaries, and source/claim links in
+  dated social-media intake modules.
 - **Structured proof data:** broader professional claim layer in
   `apps/www/src/data/proofs.ts`.
 - **Public website:** purpose-built projection that selects, sequences, and
@@ -79,4 +82,7 @@ claim promotion,
 for source-aware close reading of materialized iCloud working records, and
 [research/2026-07-14-google-shared-drive-archive-production.md](research/2026-07-14-google-shared-drive-archive-production.md)
 for governed Shared Drive inventory, selection, protected locators, and
-public-safe workflow projections.
+public-safe workflow projections, and
+[research/2026-07-14-project-social-media-archive-production.md](research/2026-07-14-project-social-media-archive-production.md)
+for authenticated public-account inventory, bounded interaction recovery,
+collective-authorship rules, and selected public projections.

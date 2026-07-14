@@ -552,13 +552,31 @@ export const intakeResearchInquiries = [
     id: "INQ-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT-2026",
     project: "callnyc",
     question: "Which New York City Council member accounts engaged with CallNYC, through which actions, during what period, and with what archive completeness?",
-    methods: ["Preserve the engagement-stat memory and supplied account lead.", "Next: obtain a complete account archive or authorized API export, define the Council-account roster and date window, deduplicate actions, and retain post-level locators."],
-    runAt: "2026-07-12",
-    resultStatus: "inconclusive",
-    findings: ["A public account and prior PDF capture exist as research leads."],
-    limitations: ["X timeline access may be incomplete or blocked; engagement does not by itself establish endorsement, adoption, or institutional use."],
-    sourceIds: [],
-    publicSummary: "Council-member engagement with CallNYC remains an open, method-bounded research question."
+    methods: [
+      "Traversed the authenticated public Posts and Replies timelines and deduplicated status records.",
+      "Separated account-authored posts from reposts and opened every recoverable member-authored promotion, quote post, and reply.",
+      "Excluded one-way tags, media tags, and unattributed aggregate reactions from the direct-member count."
+    ],
+    runAt: "2026-07-14",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The public profile displayed 110 posts; 107 unique records were recovered and three profile-count slots remain unresolved.",
+      "Five sitting Council members are directly documented in member-authored or reciprocal public interaction: Helen Rosenthal, Mathieu Eugene, Rosie Mendez, Ydanis Rodriguez, and Steven Matteo."
+    ],
+    limitations: [
+      "Five is a verified recovery floor, not a complete historical census.",
+      "Current reaction totals are mutable and do not establish 2016 reach.",
+      "Engagement does not establish endorsement, adoption, institutional use, or policy causality."
+    ],
+    sourceIds: [
+      "SRC-X-CALLNYC-PROFILE-AUDIT-2026",
+      "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+      "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+      "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+      "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+      "SRC-X-CALLNYC-EUGENE-QUOTE-2016"
+    ],
+    publicSummary: "Authenticated recovery documents direct public interaction from at least five sitting Council members in 2016; the result is a bounded floor, not an endorsement claim."
   }
 ] satisfies ResearchInquiry[];
 
@@ -669,18 +687,25 @@ export const intakeRecords = [
     capturedBy: "Jamie Burkart via Codex",
     kind: "engagement-lead",
     title: "NYC Council member engagement with CallNYC account",
-    publicSafeSummary: "Research lead concerning engagement by New York City Council member accounts with the public CallNYC account.",
-    whyItMatters: "Could document public-official attention to the prototype if the account roster, actions, dates, and archive completeness are verified.",
+    publicSafeSummary: "Authenticated archival review documenting member-authored promotions, quote posts, and reciprocal replies involving the public CallNYC account.",
+    whyItMatters: "Documents a bounded public feedback loop between a civic-data prototype and Council offices without converting interaction into endorsement or adoption.",
     projectHints: ["callnyc"],
-    maturity: "research-needed",
-    publicUse: "approval-required",
-    editorialState: "unsurfaced",
-    disposition: "research-inquiry-created",
-    sourceIds: [],
-    claimIds: [],
+    maturity: "decomposed",
+    publicUse: "public-linkable",
+    editorialState: "selected",
+    disposition: "claim-candidate-created",
+    sourceIds: [
+      "SRC-X-CALLNYC-PROFILE-AUDIT-2026",
+      "SRC-X-CALLNYC-MATTEO-REPLY-2016",
+      "SRC-X-CALLNYC-RODRIGUEZ-QUOTE-2016",
+      "SRC-X-CALLNYC-MENDEZ-QUOTE-2016",
+      "SRC-X-CALLNYC-ROSENTHAL-PROMOTION-2016",
+      "SRC-X-CALLNYC-EUGENE-QUOTE-2016"
+    ],
+    claimIds: ["CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016"],
     inquiryIds: ["INQ-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT-2026"],
-    limitations: ["Engagement is not endorsement, adoption, or institutional use; X access may be incomplete."],
-    nextActions: ["Acquire an authorized export or complete archive and define the Council-account roster and date window."]
+    limitations: ["Five is a recovery floor; engagement is not endorsement, adoption, institutional use, reach, or causality."],
+    nextActions: ["Seek a privacy-preserving first-party export only if it can reconcile the three unresolved profile-count slots."]
   },
   {
     id: "INTAKE-NYCAC-FOUNDING-ROLE-2026",
