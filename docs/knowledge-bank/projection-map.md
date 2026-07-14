@@ -69,6 +69,8 @@ Current selected citation projections now include:
 - Jamie's bounded contribution to a recurring NYC Artist Coalition
   participation system spanning cultural-space meetings, practical support,
   public hearings, town halls, and campaign action;
+- the coalition's shared civic publication system across 441 surviving
+  Facebook timeline records, with post-level publisher attribution unresolved;
 - WOW List's public Sunday Dinner origin statement and one community-created
   instructional artifact;
 - WOW List's complete current-profile census and the six account replies that

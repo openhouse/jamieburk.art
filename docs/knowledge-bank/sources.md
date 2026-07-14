@@ -243,6 +243,32 @@ sources, not automatic independent corroboration of the product's full scale.
 Raw responses, authentication state, full text, comments, Page administration,
 and per-record manager attribution remain protected.
 
+### NYC Artist Coalition Facebook Posts
+
+The July 14 pass preserves three source layers:
+
+- the public [NYC Artist Coalition Page](https://www.facebook.com/nycartc) as
+  the organizational identity and surviving owner-timeline control;
+- a protected checkpointed research run with a 441-row public-safe census; and
+- a protected first-party managed-content crosscheck showing that the public
+  timeline is not equivalent to all Page-managed content.
+
+Selected public records preserve a Cabaret Law repeal event route, an Office
+of Nightlife event route, a MARCH transparency route, and the September 2021
+FairRentNYC virtual-house action. The complete corpus also supplies discovery
+routes into existing campaign press, Council records, public resources, and
+coalition sites. Direct URL extraction is a lower bound because Facebook-owned
+attachment routes can hide the publisher destination.
+
+Jamie's recollection that he predominantly operated the Page is retained as a
+research lead. The inspected surfaces did not expose individual publisher
+attribution, so the public source model preserves a shared coalition identity
+and does not assign record-level authorship.
+
+Raw responses, full text, comments, actor identities, authentication,
+administrative locators, Page-management context, and post-level publisher data
+remain protected.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

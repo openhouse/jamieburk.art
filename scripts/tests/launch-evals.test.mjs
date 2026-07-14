@@ -13,6 +13,7 @@ import {
   evaluateKnowledgeLifecycle,
   evaluateNycArtCFullPopulationArchive,
   evaluateNycArtCFacebookEventArchive,
+  evaluateNycArtCFacebookPostArchive,
   evaluatePersonalWowlistFacebookEventArchive,
   evaluateProjectSocialArchiveProduction,
   evaluateUrbanHermitFullPopulationArchive,
@@ -1109,6 +1110,126 @@ test("NYC Artist Coalition Facebook event archive rejects sole authorship and si
 
   assert.ok(failures.some((failure) => failure.includes("not sole organization or authorship")));
   assert.ok(failures.some((failure) => failure.includes('claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"')));
+});
+
+const nycArtCFacebookPostFixture = {
+  census: readRepoFile(
+    "docs/knowledge-bank/data/nycartc-facebook-post-census-2026-07-14.csv"
+  ),
+  corpusModel: readRepoFile(
+    "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+  ),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  fairRentCase: readRepoFile("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  archiveDoc: readRepoFile(
+    "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts.md"
+  ),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("NYC Artist Coalition Facebook post archive passes population, publication, and authorship boundaries", () => {
+  assert.deepEqual(
+    evaluateNycArtCFacebookPostArchive(nycArtCFacebookPostFixture),
+    []
+  );
+});
+
+test("NYC Artist Coalition Facebook post archive rejects a silently dropped record", () => {
+  const lines = nycArtCFacebookPostFixture.census.trim().split("\n");
+  lines.pop();
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("441 post records")));
+  assert.ok(failures.some((failure) => failure.includes("sequence must remain complete")));
+});
+
+test("NYC Artist Coalition Facebook post archive rejects duplicate identities and form drift", () => {
+  const lines = nycArtCFacebookPostFixture.census.trim().split("\n");
+  const first = lines[1].split(",");
+  const second = lines[2].split(",");
+  second[0] = first[0];
+  second[2] = "standalone-post";
+  lines[2] = second.join(",");
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("record IDs must remain unique")));
+  assert.ok(failures.some((failure) => failure.includes("event-route count")));
+});
+
+test("NYC Artist Coalition Facebook post archive rejects interaction inflation and people semantics", () => {
+  const lines = nycArtCFacebookPostFixture.census.trim().split("\n");
+  const values = lines[1].split(",");
+  values[7] = String(Number(values[7]) + 100);
+  lines[1] = values.join(",");
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    census: `${lines.join("\n")}\n`,
+    archiveDoc: nycArtCFacebookPostFixture.archiveDoc.replace(
+      /not unique\s+people/,
+      "proof of unique people"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("reaction total must remain 2,366")));
+  assert.ok(failures.some((failure) => failure.includes("not unique people")));
+});
+
+test("NYC Artist Coalition Facebook post archive rejects publisher inflation and erased collective credit", () => {
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    corpusModel: nycArtCFacebookPostFixture.corpusModel
+      .replace('status: "unresolved"', 'status: "resolved-to-jamie"')
+      .replace("individuallyAttributedRecords: 0", "individuallyAttributedRecords: 441"),
+    fairRentCase: nycArtCFacebookPostFixture.fairRentCase.replace(
+      "remains research context rather than a public claim",
+      "proves Jamie published every record"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes('status: "unresolved"')));
+  assert.ok(failures.some((failure) => failure.includes("individuallyAttributedRecords: 0")));
+  assert.ok(failures.some((failure) => failure.includes("remains research context")));
+});
+
+test("NYC Artist Coalition Facebook post archive rejects managed-content collapse and Council-reference inflation", () => {
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    corpusModel: nycArtCFacebookPostFixture.corpusModel.replace(
+      "equivalentToPublicTimeline: false",
+      "equivalentToPublicTimeline: true"
+    ),
+    fairRentCase: `${nycArtCFacebookPostFixture.fairRentCase}\n86 Council members engaged with the Facebook Page.`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("equivalentToPublicTimeline: false")));
+  assert.ok(failures.some((failure) => failure.includes("must not convert Council references")));
+});
+
+test("NYC Artist Coalition Facebook post archive rejects publisher columns and private management material", () => {
+  const census = nycArtCFacebookPostFixture.census
+    .replace("public_locator", "public_locator,publisher")
+    .replace(/$/gm, ",Jamie Burkart");
+  const failures = evaluateNycArtCFacebookPostArchive({
+    ...nycArtCFacebookPostFixture,
+    census,
+    archiveDoc: `${nycArtCFacebookPostFixture.archiveDoc}\n__cft__=not-a-real-token\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("11 public-safe columns")));
+  assert.ok(failures.some((failure) => failure.includes("must not expose publisher rows")));
+  assert.ok(
+    failures.some((failure) =>
+      failure.includes("authentication, Page-session, management-locator, or private-path")
+    )
+  );
 });
 
 const personalWowlistFacebookEventFixture = {

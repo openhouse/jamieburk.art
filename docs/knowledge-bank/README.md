@@ -89,6 +89,15 @@ post ID. A protected Page-management audit attributes 51 matching records to
 Jamie, leaves six unavailable or redirected records unresolved, and exposes no
 per-record administrator data in this public repository.
 
+The NYC Artist Coalition Facebook post pass accounts for all 441 unique records
+in the surviving public owner timeline exposed by the current interface.
+`intake/2026-07-14-nycartc-facebook-posts.md` interprets the civic-publication,
+source-routing, stakeholder-reference, and mutable-interaction patterns;
+`data/nycartc-facebook-post-census-2026-07-14.csv` gives every recovered record
+a public-safe disposition. A first-party crosscheck showed that managed Page
+content and the public timeline are not equivalent, and individual publisher
+attribution remains unresolved.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

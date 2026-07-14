@@ -1397,6 +1397,235 @@ export function evaluateWowlistFacebookPostArchive({
   return missing;
 }
 
+export function evaluateNycArtCFacebookPostArchive({
+  census,
+  corpusModel,
+  framework,
+  proofs,
+  workData,
+  fairRentCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  const lines = census.trim().split(/\r?\n/).filter(Boolean);
+  const headers = lines.shift()?.split(",") ?? [];
+  const rows = lines.map((line) => {
+    const values = line.split(",");
+    return Object.fromEntries(headers.map((header, index) => [header, values[index]]));
+  });
+  const count = (field, value) => rows.filter((row) => row[field] === value).length;
+  const sum = (field) =>
+    rows.reduce((total, row) => total + Number(row[field] ?? 0), 0);
+
+  expect(headers.length === 11, "NYC Artist Coalition Facebook census must retain 11 public-safe columns.");
+  expect(rows.length === 441, "NYC Artist Coalition Facebook census must contain 441 post records.");
+  expect(
+    new Set(rows.map((row) => row.record_id)).size === rows.length,
+    "NYC Artist Coalition Facebook census record IDs must remain unique."
+  );
+  expect(
+    rows.every((row, index) => Number(row.sequence_newest_to_oldest) === index + 1),
+    "NYC Artist Coalition Facebook census sequence must remain complete from 1 through 441."
+  );
+  expect(
+    Number(rows.at(-1)?.sequence_newest_to_oldest) === 441,
+    "NYC Artist Coalition Facebook census sequence must remain complete through record 441."
+  );
+  for (const [form, expected] of Object.entries({
+    "event-route": 148,
+    "standalone-post": 136,
+    "original-media-post": 78,
+    "reshared-story": 53,
+    "source-or-resource-route": 26
+  })) {
+    expect(
+      count("record_form", form) === expected,
+      `NYC Artist Coalition Facebook ${form} count must recompute to ${expected}.`
+    );
+  }
+  for (const [theme, expected] of Object.entries({
+    "nightlife-enforcement-and-governance": 157,
+    "general-coalition-communication": 92,
+    "commercial-rent-and-tenancy": 71,
+    "cultural-space-care": 47,
+    "public-meetings-and-participation": 25,
+    "funding-and-operational-resources": 21,
+    "event-and-cultural-distribution": 15,
+    "press-and-public-knowledge": 11,
+    "equity-solidarity-and-mutual-aid": 2
+  })) {
+    expect(
+      count("primary_theme", theme) === expected,
+      `NYC Artist Coalition Facebook ${theme} count must recompute to ${expected}.`
+    );
+  }
+  expect(
+    sum("outbound_url_count") === 64,
+    "NYC Artist Coalition Facebook direct outbound-link occurrence total must remain 64."
+  );
+  expect(
+    sum("reactions_observed_2026_07_14") === 2366,
+    "NYC Artist Coalition Facebook reaction total must remain 2,366."
+  );
+  expect(
+    sum("comments_observed_2026_07_14") === 212,
+    "NYC Artist Coalition Facebook comment total must remain 212."
+  );
+  expect(
+    sum("shares_observed_2026_07_14") === 611,
+    "NYC Artist Coalition Facebook share total must remain 611."
+  );
+  expect(
+    rows.filter(
+      (row) =>
+        Number(row.reactions_observed_2026_07_14) +
+          Number(row.comments_observed_2026_07_14) +
+          Number(row.shares_observed_2026_07_14) >
+        0
+    ).length === 386,
+    "NYC Artist Coalition Facebook census must retain 386 records with a visible interaction."
+  );
+  expect(
+    rows.filter((row) => row.public_locator?.includes("/photo/?fbid=")).length === 84,
+    "NYC Artist Coalition Facebook census must retain 84 stable coalition-owned photo locators."
+  );
+  expect(
+    rows.every(
+      (row) =>
+        /^nycac-fb-[a-f0-9]{16}$/.test(row.record_id) &&
+        /^https:\/\/www\.facebook\.com\//.test(row.public_locator)
+    ),
+    "Every NYC Artist Coalition Facebook census row must retain an opaque record ID and public Facebook locator."
+  );
+  expect(
+    !census.includes("publisher") &&
+      !census.includes("full_text") &&
+      !census.includes("commenter") &&
+      !census.includes("asset_id") &&
+      !census.includes("admin"),
+    "Public NYC Artist Coalition Facebook census must not expose publisher rows, full text, commenters, asset IDs, or administration data."
+  );
+
+  requireFragments("NYC Artist Coalition Facebook corpus model", corpusModel, [
+    "ownerTimelineRecords: 441",
+    "startBoundary: \"2017-01-29\"",
+    "endBoundary: \"2021-09-15\"",
+    "terminalScrollsWithoutAddition: 40",
+    "eventRoutes: 148",
+    "sourceOrResourceRoutes: 26",
+    "nycCouncilMembersAndCouncil: 86",
+    "recordsWithVisibleInteraction: 386",
+    "reactions: 2366",
+    "comments: 212",
+    "shares: 611",
+    "status: \"unresolved\"",
+    "individuallyAttributedRecords: 0",
+    "equivalentToPublicTimeline: false",
+    "LEAD-NYCAC-FACEBOOK-FULL-POPULATION-2026",
+    "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
+    "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+    "Jamie recalls being the predominant account operator",
+    "individual publisher attribution remained unresolved",
+    "not equivalent to all managed Page content"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook framework integration", framework, [
+    "nycartcFacebookPostIntake",
+    "nycartcFacebookPostSources",
+    "nycartcFacebookPostClaims",
+    "nycartcFacebookPostInquiries",
+    "nycartcFacebookPostPublicationDecisions",
+    "INQ-NYCAC-FACEBOOK-POSTS-2026",
+    "facebook-publication-system"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook proof bank", proofs, [
+    "441-record census of the surviving NYC Artist Coalition Facebook timeline",
+    "did not expose individual publisher attribution",
+    "Jamie published all 441 NYC Artist Coalition Facebook records"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook work metadata", workData, [
+    "Shared civic publication layer",
+    "A 441-record census of the surviving coalition Facebook timeline",
+    "individual Facebook publisher attribution remains unresolved"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook case study", fairRentCase, [
+    "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+    "facebook-publication-system",
+    "predominant Page operator",
+    "remains research context rather than a public claim"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook archival documentation", archiveDoc, [
+    "441 unique records",
+    "100 percent of the surviving public owner-timeline population",
+    "not an official Meta export",
+    "Event route | 148",
+    "NYC Council members or the Council | 86",
+    "outgoing references and routes",
+    "2,366",
+    "not unique people",
+    "predominant person who operated the Page",
+    "not yet a public publisher-attribution claim",
+    "later event-maintenance activity outside the 441-record public timeline"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook anti-claims", antiClaims, [
+    "complete managed-content population",
+    "predominantly published them as a settled fact",
+    "individual publisher attribution remains unresolved",
+    "86 Council-member engagements",
+    "2,366 reactions, 212 comments, and 611 shares",
+    "post-level publisher data"
+  ]);
+
+  expect(
+    !/Jamie (?:authored|published) all 441/.test(fairRentCase),
+    "NYC Artist Coalition case study must not assign all 441 Facebook records to Jamie."
+  );
+  expect(
+    !/(?:86|eighty-six) Council members engaged/i.test(fairRentCase),
+    "NYC Artist Coalition case study must not convert Council references into Council-member engagement."
+  );
+
+  const publicBundle = [
+    census,
+    corpusModel,
+    framework,
+    proofs,
+    workData,
+    fairRentCase,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /__cft__/i,
+    /asset_id\s*[:=]/i,
+    /\/latest\/posts\/published_posts/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push(
+      "Public NYC Artist Coalition Facebook bundle contains authentication, Page-session, management-locator, or private-path material."
+    );
+  }
+
+  return missing;
+}
+
 export function evaluateKcTownHallFullPopulationArchive({
   ledger,
   corpusModel,
@@ -2797,6 +3026,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json"
   );
+  const nycArtCFacebookPostCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts"
+  );
+  const nycArtCFacebookPostCensus = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/nycartc-facebook-post-census-2026-07-14.csv"
+  );
   const personalWowlistFacebookEventCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-batch-2026-07-14.ts"
@@ -2881,6 +3118,10 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCFacebookEventDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md"
+  );
+  const nycArtCFacebookPostDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts.md"
   );
   const personalWowlistFacebookEventDoc = readOptional(
     repoRoot,
@@ -3141,7 +3382,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -3405,6 +3646,32 @@ export function runLaunchEvals(repoRoot) {
         "Recomputation verifies the year distribution, 12 recurring meetings, ten physical venues, two virtual meetings, and bounded response signals.",
         "Sixty-one outbound-link occurrences become a privacy-reviewed 38-row source and action-routing ledger rather than automatic claim evidence.",
         "The selected portfolio claim credits Jamie's substantial participation-system contribution while preserving collective authorship and policy-causality boundaries."
+      ]
+    })
+  );
+
+  const nycArtCFacebookPostMissing = evaluateNycArtCFacebookPostArchive({
+    census: nycArtCFacebookPostCensus,
+    corpusModel: nycArtCFacebookPostCorpus,
+    framework,
+    proofs,
+    workData,
+    fairRentCase,
+    archiveDoc: nycArtCFacebookPostDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "nycartc-facebook-post-archive",
+      label: "NYC Artist Coalition Facebook posts close the surviving public timeline and preserve shared authorship",
+      weight: 20,
+      hardGate: true,
+      missing: nycArtCFacebookPostMissing,
+      evidence: [
+        "All 441 unique records in the current surviving public owner timeline are dispositioned after a checkpointed terminal-scroll and wait check.",
+        "Item-level recomputation verifies five record forms, nine primary themes, direct outbound-link counts, and mutable interaction totals.",
+        "The selected portfolio claim presents the Page as cross-campaign civic publication infrastructure while keeping stakeholder references distinct from inbound engagement.",
+        "A first-party crosscheck preserves the public-timeline versus managed-content boundary, and individual publisher attribution remains unresolved."
       ]
     })
   );

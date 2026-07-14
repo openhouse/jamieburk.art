@@ -48,6 +48,14 @@ import {
   nycartcFacebookEventSources
 } from "./nycartc-facebook-events-batch-2026-07-13.ts";
 import {
+  nycartcFacebookPostClaims,
+  nycartcFacebookPostInquiries,
+  nycartcFacebookPostIntake,
+  nycartcFacebookPostProofCoverage,
+  nycartcFacebookPostPublicationDecisions,
+  nycartcFacebookPostSources
+} from "./nycartc-facebook-posts-batch-2026-07-14.ts";
+import {
   personalWowlistFacebookEventClaims,
   personalWowlistFacebookEventInquiries,
   personalWowlistFacebookEventIntake,
@@ -564,6 +572,7 @@ export const frameworkIntake = [
   ...socialArchiveIntake,
   ...nycArtCSocialCorpusIntake,
   ...nycartcFacebookEventIntake,
+  ...nycartcFacebookPostIntake,
   ...personalWowlistFacebookEventIntake,
   ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
@@ -671,6 +680,13 @@ export const frameworkProjects = [
       "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026",
       "SRC-NYCAC-FACEBOOK-EVENT-LINK-INVENTORY-2026",
       "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+      "SRC-FB-NYCAC-PAGE-CONTROL-2026",
+      "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026",
+      "SRC-FB-NYCAC-MANAGED-CONTENT-CROSSCHECK-2026",
+      "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+      "SRC-FB-NYCAC-NIGHT-MAYOR-ROUTE-2018",
+      "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+      "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
       "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
       "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
       "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
@@ -702,9 +718,13 @@ export const frameworkProjects = [
       "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
       "CLM-NYCAC-PARTICIPATION-SYSTEM",
       "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
-      "CLM-NYCAC-FACEBOOK-EVENT-LINK-ROUTING"
+      "CLM-NYCAC-FACEBOOK-EVENT-LINK-ROUTING",
+      "CLM-NYCAC-FACEBOOK-SURVIVING-PUBLIC-TIMELINE",
+      "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+      "CLM-NYCAC-FACEBOOK-STAKEHOLDER-ROUTING",
+      "CLM-NYCAC-FACEBOOK-INTERACTION-SIGNALS"
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026", "INQ-NYCAC-FACEBOOK-POSTS-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -1383,6 +1403,7 @@ export const frameworkSources = [
   ...socialArchiveSources,
   ...nycArtCSocialCorpusSources,
   ...nycartcFacebookEventSources,
+  ...nycartcFacebookPostSources,
   ...personalWowlistFacebookEventSources,
   ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
@@ -1756,6 +1777,7 @@ export const frameworkClaims = [
   ...socialArchiveClaims,
   ...nycArtCSocialCorpusClaims,
   ...nycartcFacebookEventClaims,
+  ...nycartcFacebookPostClaims,
   ...personalWowlistFacebookEventClaims,
   ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
@@ -1796,6 +1818,7 @@ export const frameworkInquiries = [
   ...socialArchiveInquiries,
   ...nycArtCSocialCorpusInquiries,
   ...nycartcFacebookEventInquiries,
+  ...nycartcFacebookPostInquiries,
   ...personalWowlistFacebookEventInquiries,
   ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
@@ -1854,6 +1877,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   socialArchivePublicationDecisions,
   nycArtCSocialCorpusPublicationDecisions,
   nycartcFacebookEventPublicationDecisions,
+  nycartcFacebookPostPublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
   wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
@@ -1892,6 +1916,7 @@ export const frameworkProofCoverage = [
   ...socialArchiveProofCoverage,
   ...nycArtCSocialCorpusProofCoverage,
   ...nycartcFacebookEventProofCoverage,
+  ...nycartcFacebookPostProofCoverage,
   ...personalWowlistFacebookEventProofCoverage,
   ...wowlistFacebookPostProofCoverage,
   ...callNycSocialCorpusProofCoverage,
@@ -1914,7 +1939,10 @@ export const frameworkPages = [
       "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
       "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
       "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
-      "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
+      "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+      "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+      "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
     ],
     occurrences: [
       {
@@ -1957,6 +1985,16 @@ export const frameworkPages = [
           "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
           "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
           "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
+        ]
+      },
+      {
+        id: "facebook-publication-system",
+        claimId: "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+          "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+          "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
         ]
       },
       {

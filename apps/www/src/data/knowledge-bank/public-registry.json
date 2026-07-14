@@ -538,6 +538,65 @@
       ]
     },
     {
+      "id": "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+      "title": "Cabaret Law repeal event route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-30",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/133554860735306/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, Cabaret Law repeal event route, Facebook, October 30, 2017.",
+      "doesNotEstablish": [
+        "unique people reached or historical peak engagement",
+        "physical attendance, endorsement, or policy causality",
+        "individual publisher or drafter identity",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+      "title": "MARCH transparency report route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-07-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/photo/?fbid=2686676394920065&set=a.544849644343446",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, MARCH transparency report route, Facebook, July 2020.",
+      "doesNotEstablish": [
+        "Jamie's individual role in obtaining or analyzing the records",
+        "that MARCH was disbanded",
+        "sole coalition causality for legislation or agency change",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
+      "title": "FairRentNYC virtual-house action route",
+      "organization": "NYC Artist Coalition and campaign partners",
+      "author": "NYC Artist Coalition account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2021-09-15",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/photo/?fbid=2960969320824103&set=a.544849644343446",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, FairRentNYC virtual-house action route, Facebook, September 15, 2021.",
+      "doesNotEstablish": [
+        "individual publisher or drafter identity",
+        "bill passage, attendance, reach, endorsement, or policy causality",
+        "sole coalition ownership of partner work or quoted source material"
+      ]
+    },
+    {
       "id": "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
       "title": "WOW List members introduce calendars in nine cities",
       "organization": "WOW List",
@@ -1545,6 +1604,64 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across 441 surviving Facebook timeline records from 2017 through 2021, the coalition's shared identity connected events, public meetings, campaign calls, source routes, and partner voices across Cabaret Law repeal, nightlife governance, cultural-space care, MARCH transparency, and Commercial Rent Stabilization.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The public timeline contains 148 event routes and 26 source-or-resource routes inside a broader 441-record civic publication system.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-nycartc-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Cabaret Law event and press routing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "MARCH public-information routing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "FairRentNYC campaign continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account is a shared coalition surface; the review does not assign individual authorship or publisher identity record by record.",
+        "Campaign and partner work remains collective even when the coalition account routed or amplified it.",
+        "The 441-record count describes surviving public timeline records, not impact."
+      ]
+    },
+    {
       "id": "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1977,7 +2094,10 @@
         "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
-        "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
+        "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+        "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+        "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+        "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
       ],
       "occurrences": [
         {
@@ -2031,6 +2151,16 @@
             "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
             "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
             "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
+          ]
+        },
+        {
+          "id": "facebook-publication-system",
+          "claimId": "CLM-NYCAC-FACEBOOK-PUBLICATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017",
+            "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020",
+            "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"
           ]
         },
         {

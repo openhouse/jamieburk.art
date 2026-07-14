@@ -237,6 +237,12 @@ const workItemsInput = [
         description:
           "Recurring meetings across cultural spaces, practical safety and advocacy sessions, and public paths into hearings, town halls, and campaign action.",
         type: "workflow"
+      },
+      {
+        title: "Shared civic publication layer",
+        description:
+          "A durable coalition identity connecting events, public meetings, campaign calls, source routes, and partner voices across multiple advocacy efforts.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -283,14 +289,15 @@ const workItemsInput = [
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Twelve recovered recurring-meeting records across ten named physical venues and two virtual meetings",
       "A documented path from artist concerns and practical support to public hearings and campaign action",
+      "A 441-record census of the surviving coalition Facebook timeline from 2017 through 2021",
       "Legal/policy questions organized for collaborators",
       "Privacy-preserving public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped establish its recurring participation system while structuring public-safe civic systems, campaign memory, source maps, policy communications, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition, established its shared public identity, and helped build recurring participation and publication systems while structuring public-safe civic systems, campaign memory, source maps, policy communications, and follow-up systems.",
       open:
-        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
+        "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval; individual Facebook publisher attribution remains unresolved.",
       protected:
         "Private coalition notes, legal-review materials, stakeholder lists, raw strategy context, private emails, and unapproved quotes are omitted."
     }

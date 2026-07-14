@@ -122,6 +122,32 @@ not recovered does not mean did not exist. Do not use this negative Facebook
 control to characterize WOW List's own platform, organizer use, event sharing,
 public posts, or community activity.
 
+## NYC Artist Coalition Facebook Posts
+
+Do not call the 441-record census an official Meta export, a deletion history,
+every item ever published, or the complete managed-content population. It is
+the complete surviving public owner timeline exposed by the current interface;
+a first-party crosscheck found later managed event-maintenance activity outside
+that timeline.
+
+Do not say Jamie authored or published all 441 records, predominantly published
+them as a settled fact, or solely owned the coalition voice. Jamie recalls being
+the predominant Page operator while others also used it, but individual
+publisher attribution remains unresolved on the inspected surfaces.
+
+Do not convert 86 records referencing Council members or the Council into 86
+Council-member engagements, endorsement, attendance, partnership, or policy
+causality. Keep these outgoing stakeholder routes separate from the audited X
+inbound-engagement claim.
+
+Do not add 2,366 reactions, 212 comments, and 611 shares into a unique-people,
+reach, attendance, engagement, adoption, causality, or impact figure. These are
+mutable current record-level signals.
+
+Do not publish raw responses, full post text, comments, actor identities,
+authentication state, administrative locators, Page-management context, or
+post-level publisher data.
+
 ## Personal Facebook Events
 
 Do not describe the current 502-record personal association surface as every

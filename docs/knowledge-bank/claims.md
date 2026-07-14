@@ -243,6 +243,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nycac-facebook-publication-system - Shared civic publication infrastructure
+
+**Status:** Selected
+**Support level:** Strong with population and authorship boundaries
+**Evidence class:** Authenticated public-interface census / selected public posts / protected research run
+**Public wording:** Across 441 surviving Facebook timeline records from 2017 through 2021, the coalition's shared identity connected events, public meetings, campaign calls, source routes, and partner voices across Cabaret Law repeal, nightlife governance, cultural-space care, MARCH transparency, and Commercial Rent Stabilization.
+**Detailed public-safe wording:** The census contains 148 event routes, 136 standalone posts, 78 original-media posts, 53 reshared stories, and 26 source-or-resource routes. Eighty-six records reference Council members or the Council, 40 reference cultural or nightlife agencies, and 38 reference cultural or advocacy partners; those are outgoing routes, not inbound engagement.
+**Where to project:** Fair Rent / NYC Artist Coalition case study.
+**Why it matters:** Shows a durable shared identity operating as civic communications infrastructure across campaigns, institutions, cultural spaces, and public action.
+**Guardrail:** This is the complete surviving public owner-timeline population exposed by the current interface, not an official Meta export, deletion history, or complete managed-content population. Preserve collective authorship and partner credit.
+**Do not say:** Jamie authored or published all 441 records; 86 Council members engaged on Facebook; visible interactions measure reach, attendance, endorsement, causality, or impact.
+**Protected boundaries:** Full text, comments, actor identities, authentication, administration, managed-content locators, and post-level publisher data stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## jamie-facebook-event-association-population - Personal association control
 
 **Status:** Reserve

@@ -142,3 +142,24 @@ evidence: 51 matching records identify him as publisher, six remain
 unresolved, and none identifies another publisher. This supports sustained
 Facebook publishing responsibility, not all 57 records, sole product ownership,
 sole drafting, source authorship, or management of every social channel.
+
+## 2026-07-14 NYC Artist Coalition Facebook Posts
+
+The 441-record surviving-public-timeline census strengthens
+`project-social-identity-systems` while leaving the proof `partially-backed`:
+it establishes durable cross-campaign use of the shared identity, but account
+establishment still includes Jamie's protected firsthand confirmation and
+individual Facebook publisher attribution remains unresolved.
+
+The selected site claim treats the Page as civic publication infrastructure:
+148 event routes sit within a larger system of public meetings, campaign calls,
+source and resource routes, partner voices, cultural-space care, MARCH
+transparency, and Commercial Rent Stabilization. The population count is
+bounded to the current public owner timeline because first-party managed
+content includes later activity outside it.
+
+Stakeholder-reference and interaction findings remain reserve depth. Eighty-six
+records referencing Council members or the Council are outgoing routes, not 86
+inbound engagements. The 2,366 reactions, 212 comments, and 611 shares are
+mutable record-level signals, not unique people, reach, attendance,
+endorsement, adoption, causality, or impact.

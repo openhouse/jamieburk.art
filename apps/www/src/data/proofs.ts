@@ -452,16 +452,17 @@ export const proofClaims: ProofClaim[] = [
       "Established public-facing identities for CallNYC, WOW List, NYC Artist Coalition, and KC Town Hall, including shared systems collaborators carried across campaigns, programs, and changing stewardship.",
     shortWording: "Established durable public identities collaborators could carry forward",
     detailedPublicWording:
-      "Jamie established the project accounts and shared identity systems; public timelines show durable use across CallNYC, WOW List, KC Town Hall, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. The recovered NYC Artist Coalition record spans February 2017 through May 2026 while preserving shared authorship and changing stewardship.",
+      "Jamie established the project accounts and shared identity systems; public timelines show durable use across CallNYC, WOW List, KC Town Hall, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. A 441-record census of the surviving NYC Artist Coalition Facebook timeline shows the identity functioning across events, public meetings, campaign calls, source routes, and partner voices from 2017 through 2021; the recovered X record spans February 2017 through May 2026.",
     sourceBasis:
-      "Jamie's firsthand confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles and campaign timelines.",
+      "Jamie's firsthand confirmation; authenticated read-only review of the public @CallNYCApp, @NYCArtC, @wowlist, and @KCTownHall profiles; and a 441-record public-safe census of the surviving NYC Artist Coalition Facebook timeline.",
     whyItMatters:
       "Shows a systems contribution that made public work recognizable, reusable, and maintainable by collaborators beyond one person's posting activity.",
     guardrail:
-      "Account establishment is Jamie's contribution; post authorship, campaign authorship, and outcomes remain collective unless separately sourced.",
+      "Account establishment is Jamie's contribution; post authorship, campaign authorship, and outcomes remain collective unless separately sourced. Jamie's recollection that he predominantly operated the Facebook Page remains an open research lead because the inspected surfaces did not expose individual publisher attribution.",
     doNotSay: [
       "Jamie authored every project-account post",
       "Jamie solely owned the coalition voice",
+      "Jamie published all 441 NYC Artist Coalition Facebook records",
       "Creating an account proves sole credit for campaign outcomes"
     ],
     protectedBoundaries: [

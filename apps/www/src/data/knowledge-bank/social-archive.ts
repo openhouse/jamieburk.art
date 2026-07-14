@@ -512,10 +512,10 @@ export const socialArchiveProofCoverage = [
   {
     proofId: "project-social-identity-systems",
     status: "partially-backed",
-    sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022"],
-    inquiryIds: ["INQ-PROJECT-SOCIAL-POST-AUTHORSHIP"],
-    note: "Public profiles establish the identities and continuity; Jamie's protected firsthand confirmation supports establishment, while post-level authorship remains open.",
-    reviewedAt: "2026-07-13"
+    sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022", "SRC-FB-NYCAC-FULL-PUBLIC-TIMELINE-RUN-2026", "SRC-FB-NYCAC-CABARET-REPEAL-EVENT-2017", "SRC-FB-NYCAC-MARCH-TRANSPARENCY-2020", "SRC-FB-NYCAC-FAIR-RENT-VIRTUAL-HOUSE-2021"],
+    inquiryIds: ["INQ-PROJECT-SOCIAL-POST-AUTHORSHIP", "INQ-NYCAC-FACEBOOK-POSTS-2026"],
+    note: "Public profiles establish the identities and continuity; the 441-record Facebook timeline adds complete surviving-population evidence of cross-campaign use. Jamie's protected firsthand confirmation supports establishment, while post-level publisher and author identity remain open.",
+    reviewedAt: "2026-07-14"
   },
   {
     proofId: "nyc-artist-coalition-social-engagement",
