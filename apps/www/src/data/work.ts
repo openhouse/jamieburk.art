@@ -178,7 +178,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+      "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He helped establish and produce a recurring participation system spanning public event pages, meetings across cultural spaces, practical safety and advocacy sessions, and paths from artist concerns to public action. These pages and workflows gave artists and organizers places to gather, find resources, and participate. Campaign decisions and accomplishments remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2017-Present",
     status: "Full case study",
@@ -194,6 +194,7 @@ const workItemsInput = [
       "nyca-council-member-account-engagement",
       "nyca-campaign-press-architecture",
       "nyc-artist-coalition-civic-systems",
+      "nyca-participation-system",
       "nyca-cabaret-law-direct-organizing",
       "nyca-office-nightlife-advocacy",
       "nyca-commercial-rent-testimony-2018",
@@ -245,6 +246,12 @@ const workItemsInput = [
         type: "website"
       },
       {
+        title: "Recurring participation system",
+        description:
+          "Public event pages, cultural-space meetings, practical safety and advocacy sessions, and paths from artist concerns to hearings and campaign action.",
+        type: "meeting memory"
+      },
+      {
         title: "Campaign press corpus",
         description:
           "A governed index of 46 campaign-to-article placements representing 45 distinct articles across four live and archived campaign surfaces.",
@@ -270,6 +277,8 @@ const workItemsInput = [
       "Source Mapping",
       "Action Tracking",
       "Campaign Websites",
+      "Stakeholder Convening",
+      "Participation Systems",
       "Public Guidance",
       "Decision Records"
     ],

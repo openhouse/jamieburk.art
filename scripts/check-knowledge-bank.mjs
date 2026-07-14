@@ -23,6 +23,7 @@ const requiredProofIds = [
   "callnyc-civic-data-guidance",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "nyca-participation-system",
   "nyc-artist-coalition-civic-systems",
   "wowlist-community-platform",
   "sunday-dinner-196-participation-infrastructure",
@@ -40,6 +41,7 @@ const requiredWorkProofs = new Map([
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyca-campaign-press-architecture",
+      "nyca-participation-system",
       "nyc-artist-coalition-civic-systems"
     ]
   ],
@@ -64,6 +66,22 @@ const workPath = path.join(repoRoot, "apps/www/src/data/work.ts");
 const claimsPath = path.join(repoRoot, "docs/knowledge-bank/claims.md");
 const docsRoot = path.join(repoRoot, "docs/knowledge-bank");
 const campaignPressIndexPath = path.join(docsRoot, "projects/nyca-campaign-press-index.md");
+const nycartcFacebookEventReportPath = path.join(
+  docsRoot,
+  "nycartc-facebook-events-2026-07-13.md"
+);
+const nycartcFacebookEventLedgerPath = path.join(
+  docsRoot,
+  "data/nycartc-public-facebook-event-ledger.json"
+);
+const nycartcFacebookEventLinkLedgerPath = path.join(
+  docsRoot,
+  "data/nycartc-public-facebook-event-link-ledger.json"
+);
+const nycartcFacebookEventCensusPath = path.join(
+  docsRoot,
+  "nycartc-facebook-event-census-2026-07-13.csv"
+);
 const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
 const sourcesById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
 
@@ -109,8 +127,241 @@ function assertIncludes(text, expected, label) {
   if (!text.includes(expected)) fail(`${label} is missing ${expected}`);
 }
 
+function readJson(file, label) {
+  try {
+    return JSON.parse(read(file));
+  } catch (error) {
+    fail(`${label} is not valid JSON: ${error instanceof Error ? error.message : String(error)}`);
+    return null;
+  }
+}
+
+function assertEqual(actual, expected, label) {
+  if (actual !== expected) fail(`${label} is ${JSON.stringify(actual)}; expected ${JSON.stringify(expected)}`);
+}
+
+function csvCell(value) {
+  const text = value === null || value === undefined ? "" : String(value);
+  return /[",\n\r]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
+}
+
 if (campaignPressPlacementCount !== 46) {
   fail(`Campaign press corpus has ${campaignPressPlacementCount} placements; expected 46`);
+}
+
+if (!existsSync(nycartcFacebookEventLedgerPath)) {
+  fail("NYC Artist Coalition Facebook event ledger is missing");
+} else {
+  const ledger = readJson(nycartcFacebookEventLedgerPath, "NYC Artist Coalition Facebook event ledger");
+  if (ledger) {
+    const records = Array.isArray(ledger.records) ? ledger.records : [];
+    const recovered = records.filter((record) => record.recoveryStatus !== "unresolved-control-slot");
+    const unresolved = records.filter((record) => record.recoveryStatus === "unresolved-control-slot");
+    const recurring = recovered.filter((record) => record.isRecurringMeeting);
+    const physicalRecurring = recurring.filter((record) => record.venueOrMode !== "Virtual");
+    const virtualRecurring = recurring.filter((record) => record.venueOrMode === "Virtual");
+    const physicalVenues = new Set(physicalRecurring.map((record) => record.venueOrMode));
+    const ids = records.map((record) => record.slotId);
+    const eventIds = recovered.map((record) => record.eventId);
+    const sourceUrls = recovered.map((record) => record.sourceUrl);
+    const responseValues = recovered
+      .map((record) => record.responseValue)
+      .filter((value) => Number.isFinite(value));
+
+    assertEqual(ledger.accounting?.controlSlots, 34, "Facebook event control-slot count");
+    assertEqual(records.length, 34, "Facebook event ledger row count");
+    assertEqual(new Set(ids).size, 34, "Facebook event unique slot-ID count");
+    assertEqual(new Set(eventIds).size, 33, "Facebook event unique event-ID count");
+    assertEqual(new Set(sourceUrls).size, 33, "Facebook event unique source-URL count");
+    assertEqual(ledger.accounting?.recoveredRecords, 33, "Facebook recovered-event count");
+    assertEqual(recovered.length, 33, "Facebook recovered-event row count");
+    assertEqual(ledger.accounting?.unresolvedSlots, 1, "Facebook unresolved-slot count");
+    assertEqual(unresolved.length, 1, "Facebook unresolved-slot row count");
+
+    for (const [year, expected] of Object.entries({ 2017: 17, 2018: 3, 2019: 6, 2020: 6, 2021: 1 })) {
+      assertEqual(ledger.accounting?.yearCounts?.[year], expected, `Facebook ${year} event count`);
+      assertEqual(
+        recovered.filter((record) => record.date?.startsWith(`${year}-`)).length,
+        expected,
+        `Facebook ${year} row count`
+      );
+    }
+
+    assertEqual(recurring.length, 12, "Facebook recurring-meeting row count");
+    assertEqual(physicalRecurring.length, 10, "Facebook physical recurring-meeting count");
+    assertEqual(physicalVenues.size, 10, "Facebook distinct recurring physical-venue count");
+    assertEqual(virtualRecurring.length, 2, "Facebook virtual recurring-meeting count");
+
+    const responseSignals = ledger.accounting?.responseSignals;
+    for (const [field, expected] of Object.entries({
+      displayed: 32,
+      missing: 1,
+      minimum: 9,
+      maximum: 1700,
+      atLeast100: 19,
+      atLeast400: 9,
+      atLeast1000: 3
+    })) {
+      assertEqual(responseSignals?.[field], expected, `Facebook response-signal ${field}`);
+    }
+    assertEqual(responseValues.length, responseSignals?.displayed, "Facebook derived response-display count");
+    assertEqual(recovered.length - responseValues.length, responseSignals?.missing, "Facebook derived missing-response count");
+    assertEqual(Math.min(...responseValues), responseSignals?.minimum, "Facebook derived minimum response");
+    assertEqual(Math.max(...responseValues), responseSignals?.maximum, "Facebook derived maximum response");
+    assertEqual(responseValues.filter((value) => value >= 100).length, responseSignals?.atLeast100, "Facebook derived 100-response threshold");
+    assertEqual(responseValues.filter((value) => value >= 400).length, responseSignals?.atLeast400, "Facebook derived 400-response threshold");
+    assertEqual(responseValues.filter((value) => value >= 1000).length, responseSignals?.atLeast1000, "Facebook derived 1,000-response threshold");
+    for (const record of recovered) {
+      if ((record.responseDisplay === null) !== (record.responseValue === null)) {
+        fail(`Facebook event ${record.slotId} has inconsistent response display and numeric value`);
+      }
+    }
+    if (!/not unique people, attendance[\s\S]*must not be summed/i.test(responseSignals?.boundary ?? "")) {
+      fail("Facebook response-signal boundary must reject unique-person, attendance, and summed interpretations");
+    }
+
+    for (const [field, expected] of Object.entries({
+      authenticatedUrlsOpened: 33,
+      eventHeadersRecovered: 33,
+      currentFullDetailModules: 28,
+      currentHeaderOnlyUnavailableModules: 5
+    })) {
+      assertEqual(ledger.liveReplay?.[field], expected, `Facebook live-replay ${field}`);
+    }
+    const unavailableEventIds = ledger.liveReplay?.currentHeaderOnlyUnavailableEventIds ?? [];
+    assertEqual(unavailableEventIds.length, 5, "Facebook header-only replay event-ID count");
+    assertEqual(new Set(unavailableEventIds).size, 5, "Facebook unique header-only replay event-ID count");
+    for (const eventId of unavailableEventIds) {
+      if (!eventIds.includes(eventId)) fail(`Facebook header-only replay references unknown event ${eventId}`);
+    }
+
+    const unresolvedRecord = unresolved[0];
+    for (const field of ["eventId", "date", "title", "venueOrMode", "eventFormat", "primaryProgram", "sourceUrl"]) {
+      if (unresolvedRecord?.[field] !== null) fail(`Facebook unresolved slot must keep ${field} null`);
+    }
+    if (unresolvedRecord?.isRecurringMeeting !== false || unresolvedRecord?.pageRelationship !== "control-only") {
+      fail("Facebook unresolved slot must not infer recurring-meeting or page-relationship metadata");
+    }
+
+    for (const record of recovered) {
+      if (!/^https:\/\/www\.facebook\.com\/events\/\d+\/$/.test(record.sourceUrl ?? "")) {
+        fail(`Facebook recovered event ${record.slotId} has an invalid public event URL`);
+      }
+    }
+
+    if (!existsSync(nycartcFacebookEventCensusPath)) {
+      fail("NYC Artist Coalition Facebook event census CSV is missing");
+    } else {
+      const header = [
+        "slot_id",
+        "event_id",
+        "event_date",
+        "event_title",
+        "page_relationship",
+        "venue_or_mode",
+        "event_format",
+        "primary_program",
+        "response_display",
+        "recovery_status",
+        "source_url"
+      ];
+      const csvRows = records.map((record) => [
+        record.slotId,
+        record.eventId,
+        record.date,
+        record.title,
+        record.pageRelationship,
+        record.venueOrMode,
+        record.eventFormat,
+        record.primaryProgram,
+        record.responseDisplay,
+        record.recoveryStatus,
+        record.sourceUrl
+      ]);
+      const expectedCsv = `${[header, ...csvRows].map((row) => row.map(csvCell).join(",")).join("\n")}\n`;
+      if (read(nycartcFacebookEventCensusPath) !== expectedCsv) {
+        fail("NYC Artist Coalition Facebook event census CSV does not match the governed JSON ledger");
+      }
+    }
+  }
+}
+
+if (!existsSync(nycartcFacebookEventLinkLedgerPath)) {
+  fail("NYC Artist Coalition Facebook event outbound-link ledger is missing");
+} else {
+  const ledger = readJson(
+    nycartcFacebookEventLinkLedgerPath,
+    "NYC Artist Coalition Facebook event outbound-link ledger"
+  );
+  if (ledger) {
+    const rows = Array.isArray(ledger.rows) ? ledger.rows : [];
+    for (const [field, expected] of Object.entries({
+      linkOccurrences: 61,
+      normalizedUrlRows: 38,
+      eventsWithOutboundLinks: 25,
+      sourceArticles: 7,
+      protectedRows: 1,
+      researchNeededRows: 4
+    })) {
+      assertEqual(ledger.accounting?.[field], expected, `Facebook outbound-link ${field}`);
+    }
+    assertEqual(rows.length, 38, "Facebook outbound-link row count");
+    assertEqual(new Set(rows.map((row) => row.rowId)).size, 38, "Facebook outbound-link unique row-ID count");
+    assertEqual(rows.filter((row) => row.category === "published-article").length, 7, "Facebook article-route row count");
+    assertEqual(rows.filter((row) => row.disposition === "protected").length, 1, "Facebook protected-link row count");
+    assertEqual(rows.filter((row) => row.disposition === "research-needed").length, 4, "Facebook unresolved-link row count");
+    assertEqual(
+      rows.reduce((total, row) => total + row.occurrences, 0),
+      ledger.accounting?.linkOccurrences,
+      "Facebook derived outbound-link occurrence count"
+    );
+    const linkedEventIds = new Set(rows.flatMap((row) => row.eventIds));
+    assertEqual(
+      linkedEventIds.size,
+      ledger.accounting?.eventsWithOutboundLinks,
+      "Facebook derived linked-event count"
+    );
+    const governedEventIds = new Set(
+      readJson(nycartcFacebookEventLedgerPath, "NYC Artist Coalition Facebook event ledger for link reconciliation")
+        ?.records?.filter((record) => record.eventId)
+        .map((record) => record.eventId) ?? []
+    );
+    for (const eventId of linkedEventIds) {
+      if (!governedEventIds.has(eventId)) fail(`Facebook outbound-link ledger references unknown event ${eventId}`);
+    }
+    for (const row of rows) {
+      if (!row.eventIds.length || !row.eventTitles.length) {
+        fail(`Facebook outbound-link ${row.rowId} is missing its event relationship`);
+      }
+      if (!Number.isInteger(row.occurrences) || row.occurrences < 1) {
+        fail(`Facebook outbound-link ${row.rowId} has an invalid occurrence count`);
+      }
+    }
+
+    for (const row of rows.filter((item) => item.disposition === "protected" || item.host === "goo.gl")) {
+      if (row.publicUrl !== null) fail(`Facebook protected/unresolved link ${row.rowId} exposes a locator`);
+    }
+    for (const row of rows) {
+      if (/docs\.google\.com|drive\.google\.com|zoom\.us/i.test(row.publicUrl ?? "")) {
+        fail(`Facebook link ${row.rowId} exposes a working-document or meeting-access URL`);
+      }
+    }
+  }
+}
+
+if (!existsSync(nycartcFacebookEventReportPath)) {
+  fail("NYC Artist Coalition Facebook event archival-production report is missing");
+} else {
+  const report = read(nycartcFacebookEventReportPath);
+  for (const phrase of [
+    "100 percent control-slot accounting, not 100 percent content recovery",
+    "helped establish and produce",
+    "not unique-person or attendance counts",
+    "The pages are collective event surfaces",
+    "held interpretive claim"
+  ]) {
+    assertIncludes(report, phrase, "NYC Artist Coalition Facebook event report");
+  }
 }
 
 if (campaignPressDistinctSourceCount !== 45) {

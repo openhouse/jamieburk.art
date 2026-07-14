@@ -455,6 +455,55 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "nyca-participation-system",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: [
+      "public-source",
+      "public-safe-archive-summary",
+      "firsthand-collaborator-context"
+    ],
+    publicWording:
+      "Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, cultural-space meetings, practical safety and advocacy sessions, and paths into hearings and campaign action.",
+    shortWording: "Recurring participation system for NYC Artist Coalition",
+    detailedPublicWording:
+      "Jamie helped establish and produce a recurring participation system that made it easier for artists and organizers to gather, surface needs, find practical support, and move shared concerns into public hearings and campaign action. The events, pages, campaigns, and outcomes remained collective.",
+    sourceBasis:
+      "Jamie's first-person account; a 34-slot authenticated Facebook event census with 33 recovered records and one unresolved slot; selected public event pages; a protected public-meeting workflow with Jamie-attributed revision history; and independent reporting on Jamie's coalition advocacy and a Market Hotel town hall.",
+    sourceNote:
+      "The census establishes the recurring public system and event history. It does not assign Jamie authorship of every event page or turn Facebook response displays into attendance.",
+    whyItMatters:
+      "Shows Jamie designing and sustaining participation infrastructure that translated cultural-space concerns into usable public paths.",
+    guardrail:
+      "Use helped establish and produce. Preserve collective event authorship, distinguish rotating-venue practice from an uninterrupted monthly schedule, and keep attendance and policy causality separate.",
+    doNotSay: [
+      "Jamie alone organized every NYC Artist Coalition event",
+      "Jamie authored every event page",
+      "Every meeting happened monthly or at a different venue",
+      "Facebook response totals equal attendance or unique people",
+      "The event system alone caused legislation or agency change"
+    ],
+    protectedBoundaries: [
+      "Guest and attendee identities",
+      "Invite and friend context",
+      "Comments and private analytics",
+      "Working-document and meeting-access locators",
+      "Private account administration",
+      "Event-level divisions of labor not established by public records"
+    ],
+    surfaces: ["work-card", "case-study", "technical-operations"],
+    relatedProjects: ["fair-rent-nyc", "let-nyc-dance", "talks-not-raids", "save-nyc-spaces"],
+    relatedCapabilities: [
+      "stakeholder-convening",
+      "participation-systems",
+      "event-operations",
+      "public-guidance",
+      "civic-systems"
+    ],
+    structuredClaimIds: ["CLM-NYCAC-PARTICIPATION-SYSTEM"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",

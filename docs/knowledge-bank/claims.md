@@ -205,6 +205,34 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nyca-participation-system - Recurring participation system
+
+**Structured claim IDs:** `CLM-NYCAC-PARTICIPATION-SYSTEM`
+
+**Status:** Careful
+
+**Support level:** Careful
+
+**Evidence class:** Public source / public-safe archive summary / Jamie review confirmation
+
+**Public wording:** Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, cultural-space meetings, practical safety and advocacy sessions, and paths into hearings and campaign action.
+
+**Detailed public-safe wording:** Jamie helped establish and produce a recurring participation system that made it easier for artists and organizers to gather, surface needs, find practical support, and move shared concerns into public hearings and campaign action. The events, pages, campaigns, and outcomes remained collective.
+
+**Where to project:** Work card, FairRentNYC case study, Technical Operations.
+
+**Why it matters:** Shows Jamie designing and sustaining participation infrastructure that translated cultural-space concerns into usable public paths.
+
+**Guardrail:** Use helped establish and produce. Preserve collective event authorship, distinguish a rotating-venue practice from an uninterrupted monthly schedule, and keep attendance and policy causality separate.
+
+**Do not say:** Jamie alone organized every event; Jamie authored every event page; every meeting happened monthly or at a different venue; Facebook responses equal attendance; the event system alone caused legislation or agency change.
+
+**Protected boundaries:** Guest and attendee identities, invite and friend context, comments, private analytics, working-document and meeting-access locators, account administration, and unverified divisions of labor stay offline.
+
+**Review owner:** Jamie / Collaborator confirmation useful for event-level credit
+
+**Last reviewed:** 2026-07-14
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

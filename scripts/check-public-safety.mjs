@@ -153,6 +153,9 @@ const publicSocialLedgerFiles = textFiles.filter((file) =>
 const urbanHermitPublicLedgerFiles = publicSocialLedgerFiles.filter((file) =>
   /urbanhermit-public-.*\.json$/i.test(relative(file))
 );
+const nycartcFacebookEventLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /nycartc-public-facebook-event.*\.json$/i.test(relative(file))
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -210,6 +213,18 @@ scanPattern(
   urbanHermitPublicLedgerFiles,
   "personal social ledger exposes raw post, author, URL, date, or per-record metric fields",
   /"(?:statusId|statusUrl|fullText|authorHandle|postedAt|publishedAt|exactDate|visibleMetricsObserved2026)"\s*:/i
+);
+
+scanPattern(
+  nycartcFacebookEventLedgerFiles,
+  "public Facebook event ledger exposes raw participant, description, private-metric, meeting-access, or account-admin fields",
+  /"(?:detailsText|fullText|guestIdentities|attendeeIdentities|friendContext|inviteContext|comments|reactions|profileUrl|email|phone|meetingUrl|zoomUrl|passcode|dialIn|accountAdmin|workingDocumentUrl|privateAnalytics)"\s*:/i
+);
+
+scanPattern(
+  nycartcFacebookEventLedgerFiles,
+  "public Facebook event ledger contains an invalid aggregate response or attendance field",
+  /"(?:responseSum|totalResponses|peopleReached|attendance|uniqueResponders)"\s*:/i
 );
 
 scanPattern(

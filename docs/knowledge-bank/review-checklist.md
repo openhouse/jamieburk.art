@@ -22,6 +22,10 @@ changes public claims.
 - [ ] Existing consequential site claims have source-discovery inquiries when citation support is incomplete.
 - [ ] Photo discoveries return as leads and do not inherit identity, role, rights, consent, or publication approval.
 - [ ] Metrics are approved, softened, or explicitly bounded.
+- [ ] Facebook event responses remain event-level platform signals and are not summed or described as attendance, unique people, reach, endorsement, or impact.
+- [ ] Complete event-control accounting is not described as complete content recovery, a native platform export, or a complete lifetime history.
+- [ ] Event pages are not used to assign individual authorship, sole organization, or policy causality without separate evidence.
+- [ ] Public event ledgers exclude guest and attendee identities, invite context, comments, working-document locators, meeting access, credentials, and private analytics.
 - [ ] Collaborator-sensitive claims are approved or omitted.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.

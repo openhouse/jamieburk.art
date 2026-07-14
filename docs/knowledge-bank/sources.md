@@ -79,6 +79,9 @@ Approved public artifact examples for this launch pass include:
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
 - Michael Rees's Claudette's Theatre on Wheels project page.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
+- NYC Artist Coalition's authenticated Facebook past-events surface, a public-safe 34-slot event disposition ledger, and a routed outbound-link ledger.
+- Melkorka Licea's April 2017 New York Post reporting on Cabaret Law repeal advocacy by Dance Liberation Network and NYC Artist Coalition.
+- Elizabeth Kim's November 2019 Gothamist reporting on the proposed Commercial Rent Stabilization bill and United for Small Business NYC input.
 
 The governed press inventory is documented in
 `docs/knowledge-bank/projects/nyca-campaign-press-index.md`. Each article has a
@@ -86,6 +89,15 @@ canonical source record, access posture, campaign relationship, and explicit
 non-support boundaries. Article placement supports a claim about campaign
 source architecture; article-body claims require separate close reading before
 reuse.
+
+The governed Facebook event inventory is documented in
+`docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md`. It retains each
+public event as a historical plot point while withholding guest identities,
+invite context, comments, meeting access, working-document locators, and
+private analytics. A 34-event host-card control reconciles to 33 recovered
+event records and one unresolved slot. The ledgers do not convert platform
+responses into attendance, assign every event page to Jamie, or attribute
+policy outcomes to the event system alone.
 
 The governed `@NYCArtC` population and posted-link review is documented in
 `docs/knowledge-bank/projects/nycartc-x-population-2026-07-14.md`. Its public

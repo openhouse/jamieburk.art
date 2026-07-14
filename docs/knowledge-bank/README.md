@@ -75,6 +75,16 @@ review in
 It preserves placements, distinct articles, archive state, and claim-use
 boundaries separately.
 
+The NYC Artist Coalition Facebook event production is documented in
+[nycartc-facebook-events-2026-07-13.md](nycartc-facebook-events-2026-07-13.md).
+Its public event and outbound-link ledgers live under `data/`. The 34-slot
+control is fully disposed as 33 recovered event records and one metadata-free
+unresolved slot. This is complete control accounting, not complete content or
+lifetime-history recovery. Facebook response displays remain mutable
+event-level platform signals rather than attendance, unique-person, reach, or
+impact measures. Event pages establish collective public surfaces; they do not
+assign individual authorship or policy causality.
+
 The recovered KC Town Hall public-funding sequence is documented in
 [projects/kc-town-hall-council-allocation-2019.md](projects/kc-town-hall-council-allocation-2019.md).
 It keeps the Board recommendation, Council acceptance, appropriation, later

@@ -10,6 +10,7 @@ import {
   urbanHermitSocialCorpusIntake,
   urbanHermitSocialCorpusSources
 } from "./urbanhermitSocial.ts";
+import { nycartcFacebookEventsBatchRecords } from "./nycartc-facebook-events-batch-2026-07-13.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -583,7 +584,8 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     ...campaignPressIntakeRecords,
-    ...urbanHermitSocialCorpusIntake
+    ...urbanHermitSocialCorpusIntake,
+    ...nycartcFacebookEventsBatchRecords.intakeRecords
   ],
   sources: [
     {
@@ -1657,7 +1659,8 @@ const knowledgeBankInput = {
       doesNotEstablish: ["Jamie's sole authorship of the AR implementation", "a complete technical stack", "the exhibition date", "sole production of the source video", "rights to republish the video"]
     },
     ...campaignPressSources,
-    ...urbanHermitSocialCorpusSources
+    ...urbanHermitSocialCorpusSources,
+    ...nycartcFacebookEventsBatchRecords.sources
   ],
   claims: [
     {
@@ -2251,10 +2254,12 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     ...campaignPressClaims,
-    ...urbanHermitSocialCorpusClaims
+    ...urbanHermitSocialCorpusClaims,
+    ...nycartcFacebookEventsBatchRecords.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
+    ...nycartcFacebookEventsBatchRecords.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",
@@ -2415,12 +2420,18 @@ const knowledgeBankInput = {
       "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
       "SRC-NYCA-X-PROFILE-2026",
       "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026",
-      "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT"
+      "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT",
+      "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+      "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17",
+      "SRC-GOTHAMIST-CABARET-LAW-2017-06-19"
     ],
     occurrences: [
       { id: "shared-operating-layer", claimId: "CLM-CRS-SHARED-OPERATING-LAYER-2026", projection: "case-study" },
       { id: "shared-social-identity", claimId: "CLM-NYCA-SHARED-SOCIAL-IDENTITY", projection: "case-study", sourceIds: ["SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "SRC-NYCA-X-PROFILE-2026"] },
-      { id: "council-member-account-engagement", claimId: "CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT"] }
+      { id: "council-member-account-engagement", claimId: "CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026", "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT"] },
+      { id: "participation-system", claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017", "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017", "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017", "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017-11-17", "SRC-GOTHAMIST-CABARET-LAW-2017-06-19"] }
     ]
   }, {
     id: "kc-town-hall",

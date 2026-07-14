@@ -66,7 +66,8 @@
         "Jamie co-founded NYC Artist Coalition.",
         "Jamie built public campaign websites, including NYC Artist Coalition, FairRentNYC, Talks Not Raids, and Let NYC Dance web surfaces.",
         "Jamie established a shared public publishing identity that collaborators used across coalition campaigns.",
-        "Jamie built and stewarded civic systems, coalition operations, and policy-communications infrastructure."
+        "Jamie built and stewarded civic systems, coalition operations, and policy-communications infrastructure.",
+        "Jamie helped establish and produce a recurring participation system across public event pages, cultural-space meetings, practical safety and advocacy sessions, hearings, and campaign action."
       ],
       "usableOutputs": [
         "campaign websites",
@@ -75,7 +76,11 @@
         "public resources",
         "support paths",
         "coordination materials",
-        "shared public publishing identity"
+        "shared public publishing identity",
+        "public event pages",
+        "recurring cultural-space meetings",
+        "practical safety and advocacy sessions",
+        "hearing and campaign action paths"
       ],
       "audience": "Hiring and public-sector readers evaluating technical project management, product operations, implementation, civic delivery, and public-facing systems work.",
       "collectiveBoundaries": [
@@ -83,7 +88,7 @@
         "Do not claim sole campaign leadership, policy authorship, legal authority, or sole causality for policy outcomes."
       ]
     },
-    "startingCandidate": "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
+    "startingCandidate": "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He helped establish and produce a recurring participation system spanning public event pages, meetings across cultural spaces, practical safety and advocacy sessions, and paths from artist concerns to public action. These pages and workflows gave artists and organizers places to gather, find resources, and participate. Campaign decisions and accomplishments remained collective.",
     "mustInclude": [
       "Jamie as the direct actor",
       "at least two concrete usable outputs",
@@ -104,7 +109,8 @@
     ],
     "knowledgeBankClaimIds": [
       "nyc-artist-coalition-public-web-infrastructure",
-      "nyc-artist-coalition-civic-systems"
+      "nyc-artist-coalition-civic-systems",
+      "nyca-participation-system"
     ],
     "knowledgeBankPaths": [
       "apps/www/src/data/proofs.ts",
