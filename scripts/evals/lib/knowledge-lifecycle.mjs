@@ -265,6 +265,14 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
     if (claim.maturity === "public-ready" && !claim.composition) {
       promotionFailures.push({ id: claim.id, reason: "public-ready claim lacks Chad-lens composition fields" });
     }
+    if (claim.maturity === "public-ready" && claim.composition) {
+      const linkedRolePropositions = claim.evidence
+        .flatMap((evidence) => evidence.propositionIds.map((id) => propositionsById.get(id)))
+        .filter((proposition) => proposition && ["direct-role", "collective-role"].includes(proposition.relationToJamie));
+      if (!linkedRolePropositions.length) {
+        promotionFailures.push({ id: claim.id, reason: "public-ready Chad-lens action lacks a linked direct-role or collective-role proposition" });
+      }
+    }
   }
   for (const claim of bank.claims.filter((item) => ["rejected", "superseded"].includes(item.maturity))) {
     if (!claim.disposition?.reason || !claim.disposition?.decidedAt) promotionFailures.push({ id: claim.id, reason: `${claim.maturity} claim lacks disposition history` });

@@ -336,11 +336,22 @@ export const lifecycleIntake = [
     id: "INTAKE-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT",
     receivedAt: "2026-07-12",
     kind: "public-memory",
-    publicSafeSummary: "Potential engagement between NYC Council member accounts and @CallNYCapp should be recovered and counted before any adoption claim is made.",
+    publicSafeSummary: "Authenticated review recovered a bounded minimum of NYC Council member account interactions with @CallNYCapp while preserving the distinction between engagement and adoption.",
     submittedBy: "Jamie Burkart",
     entityIds: ["ENT-CALLNYC"],
-    disposition: "research-open",
-    sourceIds: [],
+    disposition: "source-created",
+    sourceIds: [
+      "SRC-X-PROFILE-CALLNYCAPP-2026",
+      "SRC-X-REVIEW-CALLNYC-2026",
+      "SRC-X-CALLNYC-CHIN-2017",
+      "SRC-X-CALLNYC-WILLS-2016",
+      "SRC-X-CALLNYC-MATTEO-2016",
+      "SRC-X-CALLNYC-KOO-2016",
+      "SRC-X-CALLNYC-EUGENE-2016",
+      "SRC-X-CALLNYC-ROSENTHAL-2016",
+      "SRC-X-CALLNYC-MENDEZ-2016",
+      "SRC-X-CALLNYC-RODRIGUEZ-2016"
+    ],
     claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED", "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED"],
     researchTaskIds: ["TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"],
     rawMaterialPolicy: "protected-outside-repo"
@@ -779,15 +790,34 @@ export const lifecycleClaims = [
   {
     id: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED",
     project: "callnyc",
-    internalClaim: "Determine which verified NYC Council member accounts engaged with @CallNYCapp and what bounded descriptive claim the recovered records support.",
-    status: "claim-seed",
-    maturity: "captured",
+    internalClaim: "An authenticated review recovered at least eight then-serving NYC Council member accounts that publicly replied to, reposted, quoted, or directly shared CallNYC between April 2016 and July 2017.",
+    status: "confirmed-with-boundary",
+    maturity: "public-ready",
     intakeIds: ["INTAKE-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT"],
-    requiredSupportTags: [],
+    requiredSupportTags: ["callnyc-council-eight-recovered", "callnyc-council-member-engagement", "callnyc-independent-follow-on"],
+    composition: {
+      action: "Built and publicly explained an independent civic-data prototype legible enough for direct exchange with Council offices.",
+      intendedEnd: "Help residents find issue-oriented constituent-service pathways and make the underlying CouncilStat records easier to discuss.",
+      usableResult: "The recovered public record includes replies, quotes, reposts, or direct shares from at least eight then-serving Council member accounts.",
+      audience: "Hiring readers evaluating Jamie's civic-data implementation, public communication, and stakeholder traction.",
+      collectiveCredit: "Council members and staff own their responses; the recovered record documents interaction with CallNYC rather than transferring their work or endorsement to Jamie.",
+      causalBoundary: "Social engagement documents recognition and exchange, not institutional adoption, endorsement, constituent use, or measured service impact."
+    },
     projections: [],
-    evidence: [],
-    boundaries: ["Count only recovered, account-verified interactions and preserve access and denominator limits."],
-    antiClaims: ["Social engagement proves adoption, endorsement, constituent use, or public impact."],
+    evidence: [
+      { sourceId: "SRC-X-REVIEW-CALLNYC-2026", relationship: "direct-support", supports: ["a recovered minimum of eight then-serving Council-member account interactions"], propositionIds: ["PROP-X-CALLNYC-EIGHT-COUNCIL-MEMBERS"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-CHIN-2017", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-CHIN-2017"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-WILLS-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-WILLS-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-MATTEO-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-MATTEO-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-KOO-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-KOO-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-EUGENE-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-EUGENE-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-ROSENTHAL-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-ROSENTHAL-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-MENDEZ-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-MENDEZ-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-CALLNYC-RODRIGUEZ-2016", relationship: "corroborating", supports: ["a recovered Council-member account interaction"], propositionIds: ["PROP-X-CALLNYC-RODRIGUEZ-2016"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "direct-support", supports: ["Jamie's independent CallNYC development and public explanation"], propositionIds: ["PROP-CALLNYC-POLITICO-INDEPENDENT-FOLLOW-ON"], confidence: "high", renderCitation: false }
+    ],
+    boundaries: ["Count only recovered, account-verified interactions and preserve access and denominator limits.", "Carlina Rivera's May 2016 quote is recorded separately as a Council staff and later-member interaction, not counted among then-serving members."],
+    antiClaims: ["Social engagement proves adoption, endorsement, constituent use, institutional deployment, or public impact.", "The recovered minimum is an exhaustive lifetime interaction count."],
     disposition: {
       reason: "This researchable claim replaces an overbroad adoption inference.",
       predecessorClaimIds: ["CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED"],
@@ -795,8 +825,8 @@ export const lifecycleClaims = [
       decidedAt: "2026-07-12"
     },
     researchInquiryIds: [],
-    reviewedAt: "2026-07-12",
-    reviewedBy: ["Codex triage"]
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex authenticated social-archive review"]
   },
   {
     id: "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED",
@@ -936,8 +966,8 @@ export const lifecycleResearchTasks = [
     status: "open",
     priority: "critical",
     openedAt: "2026-07-12",
-    intakeIds: ["INTAKE-NYCARTC-TALKS-NOT-RAIDS-MEMORY"],
-    sourceIds: [],
+    intakeIds: ["INTAKE-NYCARTC-TALKS-NOT-RAIDS-MEMORY", "INTAKE-HELLGATE-NIGHTCLUB-RAIDS-2023", "INTAKE-HELLGATE-CURE-MARCH-2025"],
+    sourceIds: ["SRC-HELLGATE-NIGHTCLUB-RAIDS-2023", "SRC-HELLGATE-CURE-MARCH-2025"],
     claimIds: ["CLM-NYCARTC-MARCH-TRANSPARENCY-SEED"],
     nextActions: ["Recover the campaign site, press, public-record requests, agency documents, and dated coalition materials.", "Identify the agency action that changed or ended the initiative.", "Build an evidence chain that distinguishes transparency gains, policy change, collective contribution, and causation."]
   },
@@ -945,13 +975,24 @@ export const lifecycleResearchTasks = [
     id: "TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
     project: "callnyc",
     question: "Which verified NYC Council member accounts engaged with @CallNYCapp, through which actions, and what bounded claim can those records support?",
-    status: "open",
+    status: "resolved",
     priority: "medium",
     openedAt: "2026-07-12",
     intakeIds: ["INTAKE-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT"],
-    sourceIds: [],
+    sourceIds: [
+      "SRC-X-REVIEW-CALLNYC-2026",
+      "SRC-X-CALLNYC-CHIN-2017",
+      "SRC-X-CALLNYC-WILLS-2016",
+      "SRC-X-CALLNYC-MATTEO-2016",
+      "SRC-X-CALLNYC-KOO-2016",
+      "SRC-X-CALLNYC-EUGENE-2016",
+      "SRC-X-CALLNYC-ROSENTHAL-2016",
+      "SRC-X-CALLNYC-MENDEZ-2016",
+      "SRC-X-CALLNYC-RODRIGUEZ-2016"
+    ],
     claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"],
-    nextActions: ["Recover the complete account timeline and engagement records without relying on a blocked view.", "Verify account ownership and officeholder dates.", "Deduplicate likes, reposts, replies, and follows and preserve the denominator and access limits.", "Do not translate engagement into adoption, endorsement, or resident impact without separate evidence."]
+    nextActions: ["Preserve the eight-member result as a recovered minimum and repeat the review if X indexing or exported account data becomes more complete."],
+    resolutionSummary: "Authenticated review recovered 106 visible timeline items and verified a recovered minimum of eight then-serving Council member accounts with replies, quotes, reposts, or direct CallNYC shares. The result excludes incomplete like and follower histories and does not imply adoption or endorsement."
   }
 ] satisfies ResearchTask[];
 

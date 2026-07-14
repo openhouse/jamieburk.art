@@ -93,6 +93,11 @@ Public-ready claims also store the
 action, intended end, usable result, audience, collective credit, and causal
 boundary needed for later composition with Chad's lens.
 
+That action must be supported by at least one linked atomic proposition marked
+as Jamie's `direct-role` or a `collective-role`. Project context and outcome
+evidence can establish why the work mattered, but they cannot by themselves be
+rewritten as Jamie's agency. This contract is enforced by the lifecycle gate.
+
 Rejected and superseded claims retain a dated reason and predecessor/successor
 links. They cannot have an active projection. This keeps discarded
 interpretations inspectable without allowing them to drift back into public
@@ -173,6 +178,14 @@ article identities. Campaign-index pages are closely read; article-level
 sources remain queued where propositions have not yet been extracted. Repeated
 placement stays visible without duplicating the source, and dead links retain
 their recovery status rather than disappearing from the record.
+
+The
+[July 14 social-account archive production](research/social-account-archive-production-2026-07-14.md)
+maps five project accounts, recovers bounded engagement and campaign patterns,
+and routes authorship and account-establishment memories into further research.
+It preserves recovered-minimum counts rather than treating incomplete timelines
+as exhaustive, and it keeps every newly mature social claim deferred from the
+website pending a later compositional decision.
 
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing

@@ -23,6 +23,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Teams archive production: public-safe source descriptions and bounded claims may remain in the knowledge bank. Private raw files, archive paths, prospective-client identity, commercial terms, and sensitive coalition material remain outside the repository. The four July 13 archive-derived claims are deferred from website projection pending later editorial selection.
 - Google Drive Shared Drives production: public-safe source descriptions, bounded claims, and research tasks may remain in the knowledge bank. Raw Drive files, private links and identifiers, contact details, collaborator-specific records, unread media content, and sensitive administrative context remain outside the repository. The four July 13 Drive-derived claims are deferred from website projection pending later editorial selection.
+- Social account archive production: public profiles, public posts, bounded authenticated-search findings, and public-safe source readings may remain in the knowledge bank. Treat observed profile and search counts as dated recovered minimums. Jamie's account-establishment role remains research-stage pending creation records and collaborator confirmation. Do not publish session details, credentials, direct messages, administrator records, or inferred individual post authorship. The July 14 mature social claims are deferred from website projection pending later editorial selection.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -37,3 +38,4 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.
+- Authenticated-session details, credentials, direct messages, private account exports, or nonpublic administrator records.

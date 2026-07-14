@@ -88,3 +88,9 @@ The
 extends that method to collaborative cloud workspaces: central project records
 can strengthen authored and collective-role claims, while unread recordings and
 photographs remain routed research leads rather than implied evidence.
+
+The
+[social account archive production record](research/social-account-archive-production-2026-07-14.md)
+shows how authenticated review of public project accounts can recover bounded
+engagement, campaign continuity, operational workflows, and source leads while
+keeping shared authorship, mutable metrics, and adoption limits explicit.

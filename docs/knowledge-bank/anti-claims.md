@@ -37,6 +37,23 @@ first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
 selected, or a winner without new evidence and review.
 
+Do not translate recovered Council-member replies, quotes, reposts, or direct
+shares into institutional adoption, endorsement, resident use, or measured
+service impact. “At least eight then-serving Council member accounts” is a
+recovered minimum, not a complete lifetime engagement count.
+
+## Social Project Identities
+
+Do not say Jamie authored every post from a project account, operated each
+account alone, or deserves individual credit for collaborators' communications.
+Do not treat mutable profile totals or indexed-search counts as stable lifetime
+denominators. Do not infer authorship from account identity.
+
+For NYC Artist Coalition, distinguish Olympia Kazi's sustained public use of
+the coalition identity from authorship of posts on the coalition account. Keep
+Jamie's account-establishment role at research stage until account-creation and
+collaborator records support it.
+
 ## WOWList
 
 Do not name collaborators unless approved.

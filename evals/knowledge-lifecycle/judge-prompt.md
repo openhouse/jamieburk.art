@@ -20,7 +20,12 @@ Pay special attention to:
 - whether photo observations have a documented route into research;
 - whether the public repository exposes any private path or raw archive detail;
 - whether the records reduce interpretive burden for future writers using
-  Chad's lens.
+  Chad's lens;
+- whether every public-ready Chad-lens action is supported by a linked
+  direct-role or collective-role proposition, rather than converting project
+  context or outcomes into unsupported personal agency;
+- whether social-account continuity, engagement, authorship, administration,
+  and campaign outcomes remain distinct claims with recovered-minimum limits.
 
 Return JSON matching `assessment.template.json`. Human gates remain pending
 unless their named owners have explicitly approved them; an agent cannot

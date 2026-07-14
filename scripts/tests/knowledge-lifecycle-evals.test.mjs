@@ -5,6 +5,7 @@ import {
   campaignPressNewArticleSourceIds,
   campaignPressPlacements
 } from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts";
+import { projectTwitterAccountInventory } from "../../apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -147,6 +148,23 @@ test("proposition links must satisfy required semantic support tags", () => {
   claim.evidence[0].propositionIds = ["PROP-RIVER-PITCH-CROSSING"];
   const report = evaluateLifecycle({ suite, bank });
   assert.equal(report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed, false);
+});
+
+test("public-ready Chad-lens action requires proposition-level role support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+  );
+  claim.evidence = claim.evidence.filter(
+    (item) => item.sourceId !== "SRC-BEDFORD-DIY-SPACES-2017"
+  );
+
+  const report = evaluateLifecycle({ suite, bank });
+  const promotion = report.results.find(
+    (item) => item.id === "claim-promotion-is-evidence-backed"
+  );
+  assert.equal(promotion.passed, false);
+  assert.ok(promotion.evidence.some((item) => /Chad-lens action/i.test(item.reason)));
 });
 
 test("intake and claim links are reciprocal", () => {
@@ -544,6 +562,103 @@ test("campaign press recovery preserves 45 placements and 44 distinct articles",
   assert.equal(queuedArticles.length, 41);
   assert.ok(queuedArticles.every((item) => item.status === "queued"));
   assert.ok(queuedArticles.every((item) => item.researchTaskIds.length > 0));
+});
+
+test("social archive inventories the confirmed project handles with bounded denominators", () => {
+  assert.deepEqual(
+    projectTwitterAccountInventory.accounts.map((item) => item.handle),
+    ["@CallNYCapp", "@NYCArtC", "@wowlist", "@KCTownHall", "@KCSpacesFund"]
+  );
+  assert.deepEqual(
+    projectTwitterAccountInventory.sharedCampaignHandle.campaigns,
+    ["Let NYC Dance", "Talks Not Raids", "Save NYC Spaces", "FairRentNYC"]
+  );
+  assert.ok(projectTwitterAccountInventory.limits.some((item) => /incomplete denominators/i.test(item)));
+  assert.ok(projectTwitterAccountInventory.limits.some((item) => /multiple authors/i.test(item)));
+});
+
+test("CallNYC Council engagement is promoted only as a recovered minimum", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
+  );
+  const councilSources = knowledgeBank.sources.filter((item) =>
+    item.id.startsWith("SRC-X-CALLNYC-")
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.equal(councilSources.length, 8);
+  assert.match(claim.internalClaim, /at least eight then-serving/i);
+  assert.ok(claim.antiClaims.some((item) => /adoption/i.test(item)));
+  assert.ok(claim.boundaries.some((item) => /Carlina Rivera/i.test(item)));
+  assert.equal(task.status, "resolved");
+  assert.match(task.resolutionSummary, /recovered minimum/i);
+  assert.match(task.resolutionSummary, /does not imply adoption or endorsement/i);
+});
+
+test("NYC Artist Coalition social claims preserve shared authorship and campaign continuity", () => {
+  const identityClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+  );
+  const councilClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT"
+  );
+  const establishmentClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-SOCIAL-ACCOUNT-ESTABLISHMENT-SEED"
+  );
+  const establishmentTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
+  );
+
+  assert.equal(identityClaim.maturity, "public-ready");
+  assert.match(identityClaim.composition.collectiveCredit, /collective/i);
+  assert.match(identityClaim.composition.collectiveCredit, /Olympia Kazi/i);
+  assert.ok(identityClaim.antiClaims.some((item) => /every @NYCArtC post/i.test(item)));
+  assert.equal(councilClaim.maturity, "public-ready");
+  assert.match(councilClaim.internalClaim, /at least five then-serving/i);
+  assert.equal(establishmentClaim.maturity, "researching");
+  assert.equal(establishmentClaim.evidence.length, 0);
+  assert.equal(establishmentTask.status, "in-progress");
+});
+
+test("operational social claims retain metric and role boundaries", () => {
+  const kcSpaces = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION"
+  );
+  const kcTownHall = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"
+  );
+  const wowList = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
+  );
+
+  assert.match(kcSpaces.internalClaim, /at least 11/i);
+  assert.ok(kcSpaces.antiClaims.some((item) => /grant decisions/i.test(item)));
+  assert.ok(kcTownHall.boundaries.some((item) => /self-reports/i.test(item)));
+  assert.ok(kcTownHall.antiClaims.some((item) => /audited/i.test(item)));
+  assert.match(wowList.composition.collectiveCredit, /Richard and Jamie together/i);
+});
+
+test("social discovery routes later MARCH reporting without resolving causation", () => {
+  const sourceIds = [
+    "SRC-HELLGATE-NIGHTCLUB-RAIDS-2023",
+    "SRC-HELLGATE-CURE-MARCH-2025"
+  ];
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+  );
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.equal(source.visibility, "public");
+    assert.equal(reading.status, "closely-read");
+    assert.ok(reading.limitations.some((item) => /does not|not establish/i.test(item)));
+    assert.ok(task.sourceIds.includes(sourceId));
+  }
+  assert.equal(task.status, "open");
 });
 
 test("judge evidence and floors are enforced", () => {
