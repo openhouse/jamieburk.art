@@ -29,6 +29,8 @@ export function validateKnowledgeLifecycle(bank, suite) {
   const sourceById = new Map(bank.sources.map((item) => [item.id, item]));
   const claimIds = new Set(bank.claims.map((item) => item.id));
   const inquiryIds = new Set(bank.researchInquiries.map((item) => item.id));
+  const correctionIds = new Set(bank.corrections.map((item) => item.id));
+  const pageIds = new Set(bank.pages.map((item) => item.id));
 
   for (const [label, records] of [
     ["intake", bank.intakeItems],
@@ -37,6 +39,8 @@ export function validateKnowledgeLifecycle(bank, suite) {
     ["source", bank.sources],
     ["claim", bank.claims],
     ["inquiry", bank.researchInquiries],
+    ["correction", bank.corrections],
+    ["citation page", bank.pages],
     ["press collection", bank.pressCollections]
   ]) {
     for (const id of duplicateIds(records)) {
@@ -164,6 +168,162 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredKcTownHallSequence) {
+    const required = suite.requiredKcTownHallSequence;
+    if (!projectIds.has(required.projectId)) {
+      add("project_context", "missing-kc-town-hall-project", `Missing ${required.projectId}`);
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        add("source_decomposition", "missing-kc-town-hall-source", `Missing ${sourceId}`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) {
+        add("provenance_closure", "missing-kc-town-hall-claim", `Missing ${claimId}`);
+      }
+    }
+    if (!correctionIds.has(required.correctionId)) {
+      add("status_separation", "missing-kc-town-hall-correction", `Missing ${required.correctionId}`);
+    }
+    if (!pageIds.has(required.pageId)) {
+      add("projection_restraint", "missing-kc-town-hall-page", `Missing citation page ${required.pageId}`);
+    }
+
+    const presenterClaim = bank.claims.find(
+      (claim) => claim.id === "CLM-KC-TOWN-HALL-PRESENTER-ROLE"
+    );
+    const boardClaim = bank.claims.find(
+      (claim) => claim.id === "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION"
+    );
+    const acceptanceClaim = bank.claims.find(
+      (claim) => claim.id === "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE"
+    );
+    const roleClaim = bank.claims.find((claim) => claim.id === required.roleClaimId);
+    const councilClaim = bank.claims.find(
+      (claim) => claim.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"
+    );
+    const unusedClaim = bank.claims.find(
+      (claim) => claim.id === "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"
+    );
+    const page = bank.pages.find((item) => item.id === required.pageId);
+
+    if (
+      roleClaim &&
+      !roleClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === required.roleSourceId &&
+          evidence.relationship === "direct-support"
+      )
+    ) {
+      add("provenance_closure", "kc-role-evidence", `${roleClaim.id} lacks direct support from ${required.roleSourceId}`);
+    }
+    if (roleClaim) {
+      const publicText = roleClaim.projections.map((projection) => projection.text).join(" ");
+      if (/\b(solely|single-handedly|independently verified)\b/i.test(publicText)) {
+        add("projection_restraint", "kc-role-overclaim", `${roleClaim.id} strengthens an attributed role into an unsupported exclusive or independently verified claim`);
+      }
+      if (!roleClaim.boundaries.some((boundary) => /approved public account|not independent/i.test(boundary))) {
+        add("research_honesty", "kc-role-attribution-boundary", `${roleClaim.id} does not identify the approved resume as a first-party account`);
+      }
+      if (
+        roleClaim.projections.some(
+          (projection) =>
+            projection.status === "active" &&
+            !/approved public resume|resume describes|according to/i.test(projection.text)
+        )
+      ) {
+        add("projection_restraint", "kc-role-attribution-loss", `${roleClaim.id} drops first-party attribution from an active public projection`);
+      }
+    }
+
+    if (
+      presenterClaim &&
+      !presenterClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019" &&
+          evidence.relationship === "direct-support"
+      )
+    ) {
+      add("provenance_closure", "kc-presenter-evidence", "KC Town Hall presenter claim lacks direct Board-packet support");
+    }
+    if (
+      boardClaim &&
+      !boardClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019" &&
+          evidence.relationship === "direct-support"
+      )
+    ) {
+      add("provenance_closure", "kc-board-recommendation-evidence", "KC Town Hall Board recommendation claim lacks direct Board-packet support");
+    }
+    if (boardClaim && !boardClaim.boundaries.some((boundary) => /Board, not.*City Council|belong to the CCED Board/i.test(boundary))) {
+      add("research_honesty", "kc-board-council-actor-boundary", `${boardClaim.id} does not separate the Board vote from the Council action`);
+    }
+
+    if (acceptanceClaim) {
+      const evidenceIds = new Set(
+        acceptanceClaim.evidence
+          .filter((evidence) => evidence.relationship === "direct-support")
+          .map((evidence) => evidence.sourceId)
+      );
+      for (const sourceId of required.requiredAcceptanceEvidenceIds) {
+        if (!evidenceIds.has(sourceId)) {
+          add("provenance_closure", "kc-council-acceptance-evidence", `${acceptanceClaim.id} lacks direct support from ${sourceId}`);
+        }
+      }
+    }
+
+    if (councilClaim) {
+      const evidenceIds = new Set(councilClaim.evidence.map((evidence) => evidence.sourceId));
+      for (const sourceId of required.requiredAppropriationEvidenceIds) {
+        if (!evidenceIds.has(sourceId)) {
+          add("provenance_closure", "kc-council-evidence", `${councilClaim.id} lacks direct support from ${sourceId}`);
+        }
+      }
+      if (!councilClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === "SRC-KC-TOWN-HALL-ORDINANCE-190642" &&
+          evidence.relationship === "direct-support"
+      )) {
+        add("provenance_closure", "kc-appropriation-ordinance-evidence", `${councilClaim.id} lacks direct ordinance support for appropriation`);
+      }
+      if (!councilClaim.boundaries.some((boundary) => /disbursement|receipt/i.test(boundary))) {
+        add("status_separation", "kc-appropriation-boundary", `${councilClaim.id} does not separate appropriation from disbursement or receipt`);
+      }
+      if (!councilClaim.antiClaims.some((antiClaim) => /unanimous/i.test(antiClaim))) {
+        add("research_honesty", "kc-council-vote-boundary", `${councilClaim.id} does not block an unsupported Council unanimity claim`);
+      }
+      const publicText = councilClaim.projections.map((projection) => projection.text).join(" ");
+      if (/\b(received|disbursed|spent|completed|unanimous)\b/i.test(publicText)) {
+        add("projection_restraint", "kc-funding-overclaim", `${councilClaim.id} strengthens appropriation into an unsupported downstream claim`);
+      }
+    }
+
+    if (
+      unusedClaim &&
+      !unusedClaim.evidence.some(
+        (evidence) =>
+          evidence.sourceId === "SRC-KC-TOWN-HALL-ORDINANCE-240317" &&
+          evidence.relationship === "direct-support"
+      )
+    ) {
+      add("provenance_closure", "kc-unused-allocation-evidence", `${unusedClaim.id} lacks direct Ordinance 240317 support`);
+    }
+    if (unusedClaim && !unusedClaim.boundaries.some((boundary) => /responsibility|why/i.test(boundary))) {
+      add("research_honesty", "kc-withdrawal-causality", `${unusedClaim.id} does not preserve the withdrawal-causality boundary`);
+    }
+
+    if (page) {
+      const occurrenceClaimIds = new Set(page.occurrences.map((occurrence) => occurrence.claimId));
+      for (const claimId of required.claimIds) {
+        if (!occurrenceClaimIds.has(claimId)) {
+          add("projection_restraint", "kc-missing-citation", `${required.pageId} does not cite ${claimId}`);
+        }
+      }
+    }
+  }
+
   for (const claim of bank.claims) {
     if (!projectIds.has(claim.project)) add("project_context", "unknown-project", `${claim.id} references ${claim.project}`);
     if (!claim.evidence.length && !["not-recovered", "disallowed"].includes(claim.status)) {
@@ -221,6 +381,30 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
     if (!inquiry.methods.length || !inquiry.limitations.length) {
       add("research_honesty", "unbounded-inquiry", `${inquiry.id} lacks method or limitations`);
+    }
+  }
+
+  for (const correction of bank.corrections) {
+    if (!claimIds.has(correction.claimId)) {
+      add("referential_integrity", "unknown-correction-claim", `${correction.id} references ${correction.claimId}`);
+    }
+  }
+
+  for (const page of bank.pages) {
+    for (const sourceId of page.sourceOrder) {
+      if (!sourceIds.has(sourceId)) {
+        add("referential_integrity", "unknown-page-source", `${page.id} references ${sourceId}`);
+      }
+    }
+    for (const occurrence of page.occurrences) {
+      if (!claimIds.has(occurrence.claimId)) {
+        add("referential_integrity", "unknown-page-claim", `${page.id}/${occurrence.id} references ${occurrence.claimId}`);
+      }
+      for (const sourceId of occurrence.sourceIds ?? []) {
+        if (!sourceIds.has(sourceId)) {
+          add("referential_integrity", "unknown-occurrence-source", `${page.id}/${occurrence.id} references ${sourceId}`);
+        }
+      }
     }
   }
 

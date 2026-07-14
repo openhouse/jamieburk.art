@@ -209,6 +209,139 @@ test("historical FairRentNYC press inventory uses the archived campaign surface"
   assert.equal(archived?.availability, "archived");
 });
 
+test("KC Town Hall preserves the full Board-to-Council funding sequence", () => {
+  const required = suite.requiredKcTownHallSequence;
+  const sourceIds = new Set(knowledgeBank.sources.map((source) => source.id));
+  const claimIds = new Set(knowledgeBank.claims.map((claim) => claim.id));
+  for (const sourceId of required.sourceIds) assert.equal(sourceIds.has(sourceId), true, sourceId);
+  for (const claimId of required.claimIds) assert.equal(claimIds.has(claimId), true, claimId);
+
+  const councilClaim = knowledgeBank.claims.find(
+    (claim) => claim.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"
+  );
+  assert.ok(councilClaim);
+  assert.deepEqual(
+    councilClaim.evidence
+      .map((evidence) => evidence.sourceId),
+    required.requiredAppropriationEvidenceIds
+  );
+  assert.equal(councilClaim.boundaries.some((boundary) => /disbursement|receipt/i.test(boundary)), true);
+  assert.equal(councilClaim.antiClaims.some((antiClaim) => /unanimous/i.test(antiClaim)), true);
+
+  const page = knowledgeBank.pages.find((item) => item.id === required.pageId);
+  assert.ok(page);
+  assert.deepEqual(
+    page.occurrences.map((occurrence) => occurrence.claimId),
+    required.claimIds
+  );
+  assert.equal(
+    knowledgeBank.corrections.some((correction) => correction.id === required.correctionId),
+    true
+  );
+});
+
+test("KC Town Hall planning role requires canonical approved-resume evidence", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === suite.requiredKcTownHallSequence.roleClaimId
+  );
+  claim.evidence = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-role-evidence"), true);
+});
+
+test("KC Town Hall planning role cannot drift into exclusive leadership", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === suite.requiredKcTownHallSequence.roleClaimId
+  );
+  claim.projections[0].text = "Jamie single-handedly led and independently verified every part of KC Town Hall.";
+  claim.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-role-overclaim"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-role-attribution-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-role-attribution-loss"), true);
+});
+
+test("KC Town Hall planning role cannot lose first-party attribution", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === suite.requiredKcTownHallSequence.roleClaimId
+  );
+  claim.projections[1].text = "Co-led redevelopment planning and public-benefit documentation.";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-role-attribution-loss"), true);
+});
+
+test("KC Town Hall public composition separates Jamie's role from government action", () => {
+  const mdx = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const whatIDid = mdx.indexOf("## What I did");
+  const publicRecord = mdx.indexOf("## What the public record shows");
+  const roleOccurrence = mdx.indexOf('occurrenceId="planning-and-documentation-role"');
+  const presenterOccurrence = mdx.indexOf('occurrenceId="presenter-role"');
+  const boardOccurrence = mdx.indexOf('occurrenceId="board-recommendation"');
+  const acceptanceOccurrence = mdx.indexOf('occurrenceId="council-acceptance"');
+  const councilOccurrence = mdx.indexOf('occurrenceId="council-appropriation"');
+  const unusedOccurrence = mdx.indexOf('occurrenceId="unused-allocation"');
+
+  assert.ok(whatIDid < roleOccurrence && roleOccurrence < publicRecord);
+  assert.ok(whatIDid < presenterOccurrence && presenterOccurrence < publicRecord);
+  assert.ok(publicRecord < boardOccurrence && boardOccurrence < acceptanceOccurrence);
+  assert.ok(acceptanceOccurrence < councilOccurrence && councilOccurrence < unusedOccurrence);
+  assert.match(work, /years: "2015–2024"/);
+  assert.match(work, /CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE/);
+  assert.match(work, /CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION/);
+  assert.doesNotMatch(work, /stakeholder coordination, and implementation support/i);
+});
+
+test("KC Town Hall keeps presenter, Board recommendation, acceptance, and appropriation atomic", () => {
+  const ids = new Set(knowledgeBank.claims.map((claim) => claim.id));
+  assert.equal(ids.has("CLM-KC-TOWN-HALL-PRESENTER-ROLE"), true);
+  assert.equal(ids.has("CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION"), true);
+  assert.equal(ids.has("CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE"), true);
+  assert.equal(ids.has("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"), true);
+  assert.equal(ids.has("CLM-KC-TOWN-HALL-PRESENTATION-AND-RECOMMENDATION"), false);
+});
+
+test("KC Town Hall Council appropriation cannot lose direct ordinance support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"
+  );
+  claim.evidence = claim.evidence.filter(
+    (evidence) => evidence.sourceId !== "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+  );
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-council-evidence"), true);
+});
+
+test("KC Town Hall appropriation cannot drift into receipt or Council unanimity", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION"
+  );
+  claim.projections[0].text = "The Council unanimously awarded and disbursed $490,539 to KC Town Hall.";
+  claim.boundaries = claim.boundaries.filter((boundary) => !/disbursement|receipt/i.test(boundary));
+  claim.antiClaims = claim.antiClaims.filter((antiClaim) => !/unanimous/i.test(antiClaim));
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-funding-overclaim"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-appropriation-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-council-vote-boundary"), true);
+});
+
+test("KC Town Hall withdrawal remains bounded and directly sourced", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION"
+  );
+  claim.evidence[0].relationship = "context";
+  claim.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "kc-unused-allocation-evidence"), true);
+  assert.equal(result.findings.some((item) => item.code === "kc-withdrawal-causality"), true);
+});
+
 test("missing supplied URLs fail capture integrity", () => {
   const result = validateKnowledgeLifecycle({ ...knowledgeBank, intakeItems: [] }, suite);
   assert.equal(result.findings.filter((item) => item.code === "missing-required-intake").length, suite.requiredIntakeUrls.length);

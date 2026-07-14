@@ -24,6 +24,10 @@ Ask:
    ownership, causality, authority, or institutional credit?
 7. Does the public page serve the reader instead of narrating its own proof,
    approval, or evaluation process?
+8. On KC Town Hall, does the page replace the old recommendation-only
+   understatement with the sourced Council appropriation while keeping Jamie's
+   role distinct from the Board's and Council's decisions and keeping unused
+   funds distinct from money received?
 
 ## Scoring
 

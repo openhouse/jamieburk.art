@@ -170,18 +170,19 @@ claim beyond the wording and guardrails here.
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
-**Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public source / public-safe archive summary
+**Public wording:** Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation; official records separately name Jamie as presenter and show the proposal advancing from a four-member CCED Board recommendation to City Council adoption and a $490,539 appropriation.
+**Detailed public-safe wording:** Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation. The Board packet names him as presenter; official Council records document adoption of the recommendation and the appropriation.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.
+**Source basis:** Canonical approved-resume source `SRC-KC-TOWN-HALL-APPROVED-RESUME-2026`; the 2019 CCED Board packet; the September 26, 2019, Council meeting record; authenticated Ordinance 190642 and Resolution 190649; Ordinance 240317; and public-safe project context.
+**Guardrail:** The approved resume is Jamie's public first-party account of his role, not independent verification. The City record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received, disbursed, or spent; a 2024 ordinance records withdrawal and reclamation of the unused amount.
+**Do not say:** Independently verified role; sole leadership or ownership; funding agreement executed; funds received, disbursed, or spent; Council vote was unanimous; Jamie caused or controlled the Council action; project completed; current property status; private financial details; official municipal endorsement beyond the recorded Board and Council actions.
+**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

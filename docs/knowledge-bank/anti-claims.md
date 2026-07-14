@@ -59,8 +59,17 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+The public record supports Jamie's presenter role, four affirmative CCED Board
+votes recommending $490,539, City Council adoption of Resolution 190649, and a
+$490,539 appropriation through Ordinance 190642.
+
+Do not convert appropriation or authorization to negotiate into an executed
+funding agreement, disbursement, receipt, expenditure, completed construction,
+or current property status. Do not call the Council action unanimous because
+the public meeting record does not provide an individual roll-call tally. Do
+not attribute the Council action or the later project withdrawal solely to
+Jamie. Ordinance 240317 records withdrawal and reclamation of the unused
+allocation without assigning individual responsibility.
 
 ## Source-Backed Team Memory
 

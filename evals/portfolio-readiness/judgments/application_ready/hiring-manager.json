@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-r5",
+  "judgeId": "codex-independent-hiring-manager-r7",
   "lens": "hiring-manager",
-  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
-  "contract": "sha256:a1344df9f14e5edcaebff228b319c654036d03811ad4f584093cddc3d0ced0f1",
+  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
+  "contract": "sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,72 +21,52 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening names Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and exposes work, resume, and contact actions."
-    },
-    {
-      "rubric": "role_fit",
-      "route": "/work/technical-operations",
-      "observation": "The page maps Jamie to delivery coordination, risk surfacing, cross-functional dependencies, onboarding, operating documentation, launch support, and durable handoffs, then connects those responsibilities to named projects."
+      "observation": "The opening immediately names Jamie as a Technical Project Manager focused on Product Operations and Implementation, states his operating-structure value, and provides direct work, resume, and contact actions."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/fair-rent-nyc",
-      "observation": "The new sentence says only that four recovered campaign Press sections catalog 45 placements linking 44 distinct article identities. Its canonical boundaries explain the duplicate and explicitly reject inferences about Jamie mentions, endorsement, reach, or policy causality; metadata-only article records are not used as substantive support."
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie's approved resume supports only his attributed role account. The Board packet separately records him as presenter and four affirmative Board votes; the Council record shows Resolution 190649 adopted and Ordinance 190642 passed; Ordinance 240317 records withdrawal and reappropriation of the unused allocation. The page rejects agreement, receipt, expenditure, construction, and completion inferences."
     },
     {
       "rubric": "citational_care",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Candidate-bound evidence records 17 local references, 17 backlinks, and 12 source notes. The new claim cites the four close-read campaign index surfaces, while the public registry excludes metadata-only article records and states what the collection evidence does not establish."
+      "route": "/work/kc-town-hall",
+      "observation": "Six distinct source notes separate the first-party resume account, Board recommendation, Council acceptance, Council appropriation, and later unused-funds record; each source states what it does not establish."
     },
     {
       "rubric": "reader_effort",
-      "route": "/work/fair-rent-nyc",
-      "observation": "The work-to-outcome headings keep the case navigable, and the new Press-corpus claim adds only one public sentence. The already long case and its necessary source and collective-credit boundaries remain too dense for exceptional one-pass concision."
+      "route": "/work",
+      "observation": "The application path is direct and headings remain scannable, but the KC Town Hall card repeats its provenance-and-outcome wording and FairRentNYC remains citation-dense."
     },
     {
       "rubric": "chad_lens",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Jamie remains visible as co-founder, organizer, website builder, documentation architect, translator, and testifier, with usable outputs named directly. The collection-level Press sentence adds context but not evidence of Jamie's individual contribution, and repeated boundary language keeps the page strong rather than exceptional."
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie is visible as co-founder, project manager, planning co-lead, documentation contributor, and named Board presenter. Institutional actions retain Board and Council credit, though the evidence-heavy chronology requires a second pass."
     },
     {
       "rubric": "visual_evidence",
-      "route": "/work/fair-rent-nyc, /work/callnyc, /work/harry-j-epstein",
-      "observation": "The artifact galleries describe interfaces, maps, workflows, and summaries in text but show no approved project imagery or inspectable work artifact. This remains the permitted application-ready deferral and is unchanged from r4."
-    },
-    {
-      "rubric": "resume_alignment",
-      "route": "/resume",
-      "observation": "The HTML summary and approved two-page PDF reinforce the same 14+ year Technical Project Manager positioning, HJE contribution framing, CallNYC chronology, NYC Artist Coalition role, and public-safe Commercial Rent Stabilization work."
+      "route": "/work",
+      "observation": "The portfolio still relies on diagrams, prose, and artifact descriptions rather than an approved, inspectable project screenshot or primary work artifact; this remains the explicit application-ready deferral."
     },
     {
       "rubric": "responsive_quality",
-      "route": "candidate-bound browser evidence for eight declared routes",
-      "observation": "The exact candidate returned 200 without overflow on desktop, mobile, or 200%-equivalent reflow across all eight routes; all 24 traversed controls had visible focus and citation round trips worked. Evidence remains local rather than broad device coverage."
+      "route": "all 10 evaluated routes",
+      "observation": "Candidate-bound evidence reports 200 responses without desktop, mobile, or 200%-equivalent overflow, plus visible focus for all 24 traversed controls; coverage remains local rather than exhaustive across devices."
     },
     {
       "rubric": "sharing_quality",
-      "route": "/resume, /contact",
-      "observation": "The resume download, email, LinkedIn, GitHub, canonical URL, Open Graph image and title, and Twitter card are present under staging defaults. Production sharing behavior remains outside this profile."
+      "route": "/resume",
+      "observation": "Canonical metadata, Open Graph data, Twitter card, resume download, and contact paths are present, but supplied verification uses staging metadata defaults."
     },
     {
       "rubric": "operational_confidence",
       "route": "candidate-bound evaluation evidence",
-      "observation": "Fresh read-only evaluation recomputed the exact candidate and contract hashes and passed repository, public-safety, claim-integrity, resume, route, application-path, and responsive gates. Production smoke, deploy verification, indexing approval, and rollback evidence remain deferred."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/callnyc",
-      "observation": "CallNYC remains an independent archived follow-on with explicit boundaries against official-product, formal-submission, winner, and current-guidance claims."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/harry-j-epstein",
-      "observation": "The case continues to frame the 2x growth period as an outcome Jamie contributed to, not as sole causality."
+      "observation": "Candidate and contract fingerprints recompute exactly, and repository, citation, knowledge-bank, public-safety, route, resume, application-path, and responsive gates pass. Production deployment controls remain deferred."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-approved, public-safe screenshot of the actual CallNYC interface with its archived and unofficial boundary adjacent to it.",
+  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of a system Jamie directly built, with an adjacent caption naming his contribution and preserving collective credit.",
   "passes": true,
-  "confidence": "medium"
+  "confidence": "high"
 }

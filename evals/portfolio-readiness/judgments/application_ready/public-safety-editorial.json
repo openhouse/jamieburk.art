@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-public-safety-editorial-r5",
+  "judgeId": "codex-independent-public-safety-editorial-r7",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
-  "contract": "sha256:a1344df9f14e5edcaebff228b319c654036d03811ad4f584093cddc3d0ced0f1",
+  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
+  "contract": "sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,72 +21,62 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and provides direct work, resume, and contact paths."
-    },
-    {
-      "rubric": "role_fit",
-      "route": "/work/technical-operations",
-      "observation": "The role-fit page translates Jamie's experience into planning, requirements, risk and dependency coordination, documentation, implementation, onboarding, launch support, and durable handoffs, then maps those capabilities to named projects."
+      "observation": "The opening names Jamie, the target role, and the operating-structure value proposition, then provides direct paths to selected work, resume, and contact."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/fair-rent-nyc",
-      "observation": "The r5 addition limits its new metric to four campaign Press indexes: 45 placements linking 44 distinct articles. It preserves coalition ownership, identifies FairRentNYC as an archived campaign source, and does not convert index inclusion into article endorsement, audience reach, policy effect, or Jamie-specific credit."
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie's co-founder, project-manager, planning, and documentation account is explicitly attributed to his approved resume. His presenter role and the four affirmative Board votes are separately supported by the CCED Board packet."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/callnyc",
-      "observation": "CallNYC remains an independent, archived, unofficial follow-on rather than a Council commission, formal hackathon submission, or current constituent-service tool; the archive disclaimer warns against using historical officeholders, statistics, categories, or contacts as current guidance."
+      "route": "/work/kc-town-hall",
+      "observation": "The municipal sequence is properly divided: the Council record documents adoption and passage; the resolution accepts the recommendation and authorizes negotiations; the ordinance appropriates the amount. The page states that appropriation is not agreement execution, disbursement, receipt, expenditure, or completion."
     },
     {
       "rubric": "proof_defensibility",
-      "route": "/work/harry-j-epstein",
-      "observation": "The 2x revenue-growth statement remains contribution language rather than sole causality, while private dashboards, revenue breakdowns, customer data, vendor information, and internal operating details remain excluded."
+      "route": "/work/kc-town-hall",
+      "observation": "The later record documents project withdrawal and reappropriation of unused funds without assigning a reason or individual responsibility."
     },
     {
       "rubric": "citational_care",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Candidate-bound evidence records 17 references, 17 backlinks, and 12 source notes with accessible local navigation. The registry separates close reading of campaign Press indexes from metadata-only review of article bodies and directs the FairRentNYC citation to the December 1, 2021 archive rather than treating the live domain as historical evidence."
+      "route": "/work/kc-town-hall",
+      "observation": "Six ordered source records distinguish the resume, Board packet, Council meeting record, resolution, appropriation ordinance, and later reappropriation ordinance. Claim-level citations and does-not-establish boundaries make support and stopping points inspectable."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "Clear headings keep the case navigable, but the long chronology, 17 citation markers, 12 source notes, repeated boundary explanations, and reference to what the knowledge bank holds prevent exceptional one-pass concision."
+      "observation": "Headings preserve navigation, but the long chronology, numerous source notes, and repeated boundary explanations prevent exceptional one-pass concision."
     },
     {
       "rubric": "chad_lens",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Jamie is visible as a documentation architect, organizer, translator, website builder, and coordination contributor, with usable outputs named directly. Coalition campaigns, Press indexes, policy leadership, and legislative outcomes retain collective or institutional credit, although repeated qualifications and the new corpus metric dilute one-pass clarity."
+      "route": "/work/kc-town-hall",
+      "observation": "Jamie is visible as the resume-attributed co-founder and project manager and as the officially named presenter, while Board and Council actions retain institutional ownership."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work",
-      "observation": "The site provides representative diagrams and textual artifact descriptions but still lacks an approved, inspectable project screenshot or primary work artifact. This remains the permitted application-ready deferral and is unchanged from r4."
-    },
-    {
-      "rubric": "resume_alignment",
-      "route": "/resume",
-      "observation": "The HTML page and approved PDF reinforce the same Technical Project Manager positioning, long-running Harry J. Epstein and NYC Artist Coalition chronology, collective WOWList credit, CallNYC independent-follow-on boundary, and public/private contact separation."
+      "observation": "The portfolio still lacks an approved, inspectable project screenshot or primary work artifact. This is the explicit existing application-stage deferral."
     },
     {
       "rubric": "responsive_quality",
-      "route": "candidate-bound evidence for eight declared routes",
-      "observation": "All required routes returned 200 without desktop, mobile, or 200%-equivalent reflow overflow; all 24 traversed controls exposed visible focus, and citation targets and backlinks worked. Evidence remains local rather than exhaustive device coverage."
+      "route": "candidate-bound browser evidence",
+      "observation": "All ten inspected routes returned 200 without desktop, mobile, or 200%-equivalent reflow overflow. Twenty-four traversed controls showed visible focus, and citation targets and backlinks remained keyboard accessible."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "The resume download, contact paths, canonical URL, Open Graph title and image, and Twitter card are present under explicit staging metadata. Production-domain sharing and indexing remain outside this profile."
+      "observation": "Resume download, contact paths, canonical metadata, Open Graph data, and Twitter card metadata are present under staging defaults."
     },
     {
       "rubric": "operational_confidence",
-      "route": "candidate-bound evaluation evidence",
-      "observation": "A fresh read-only evaluation recomputed the exact candidate and contract and passed repository integrity, baseline comparison, public safety, claim integrity, resume consistency, route health, application paths, and responsive evidence. Production smoke, deployed-commit verification, monitoring, indexing approval, and rollback proof remain permitted production-stage deferrals."
+      "route": "candidate-bound deterministic evaluation",
+      "observation": "Repository integrity, baseline comparison, public safety, claim and citation integrity, resume consistency, routes, application paths, and responsive evidence passed; production controls remain deferred."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "After rights and public-safety review, add one screenshot of the December 1, 2021 archived FairRentNYC Press section, captioned as an archived coalition-owned campaign index rather than the current live domain or article-body close reading, with the source boundary adjacent.",
+  "smallestDefensiblePatch": "After rights and public-safety review, add one approved, inspectable project artifact image with an adjacent ownership and source-boundary caption; do not use municipal outcome records as a substitute for evidence of Jamie's own work.",
   "passes": true,
   "confidence": "high"
 }

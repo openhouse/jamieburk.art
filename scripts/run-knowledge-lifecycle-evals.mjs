@@ -19,15 +19,23 @@ const noReport = process.argv.includes("--no-report");
 const jsonOnly = process.argv.includes("--json");
 
 const candidatePaths = [
+  "apps/www/src/content/work/kc-town-hall.mdx",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/data/knowledge-bank/kc-town-hall-council-action.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
   "apps/www/src/data/knowledge-bank/press-catalog.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/work.ts",
   "docs/knowledge-bank/README.md",
+  "docs/knowledge-bank/anti-claims.md",
+  "docs/knowledge-bank/approval-register.md",
+  "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/lifecycle.md",
+  "docs/knowledge-bank/proofs.md",
+  "docs/knowledge-bank/research/kc-town-hall-council-funding-2019-2024.md",
   "docs/knowledge-bank/sources.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/open-house.md",

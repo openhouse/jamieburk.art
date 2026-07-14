@@ -1,49 +1,19 @@
 {
-  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
+  "candidate": "sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87",
   "profile": "application_ready",
   "performedAt": "2026-07-14",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
   "routes": [
-    {
-      "route": "/",
-      "desktop": { "status": 200, "overflow": false, "h1": "Jamie Burkart" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Jamie Burkart" }
-    },
-    {
-      "route": "/work",
-      "desktop": { "status": 200, "overflow": false, "h1": "Selected work" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Selected work" }
-    },
-    {
-      "route": "/work/technical-operations",
-      "desktop": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" }
-    },
-    {
-      "route": "/resume",
-      "desktop": { "status": 200, "overflow": false, "h1": "Resume" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Resume" }
-    },
-    {
-      "route": "/contact",
-      "desktop": { "status": 200, "overflow": false, "h1": "Contact" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Contact" }
-    },
-    {
-      "route": "/work/harry-j-epstein",
-      "desktop": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" },
-      "mobile": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" }
-    },
-    {
-      "route": "/work/fair-rent-nyc",
-      "desktop": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" },
-      "mobile": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" }
-    },
-    {
-      "route": "/work/callnyc",
-      "desktop": { "status": 200, "overflow": false, "h1": "CallNYC.org" },
-      "mobile": { "status": 200, "overflow": false, "h1": "CallNYC.org" }
-    }
+    { "route": "/", "desktop": { "status": 200, "overflow": false, "h1": "Jamie Burkart" }, "mobile": { "status": 200, "overflow": false, "h1": "Jamie Burkart" } },
+    { "route": "/work", "desktop": { "status": 200, "overflow": false, "h1": "Selected work" }, "mobile": { "status": 200, "overflow": false, "h1": "Selected work" } },
+    { "route": "/work/technical-operations", "desktop": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" }, "mobile": { "status": 200, "overflow": false, "h1": "Technical Operations & Implementation" } },
+    { "route": "/resume", "desktop": { "status": 200, "overflow": false, "h1": "Resume" }, "mobile": { "status": 200, "overflow": false, "h1": "Resume" } },
+    { "route": "/contact", "desktop": { "status": 200, "overflow": false, "h1": "Contact" }, "mobile": { "status": 200, "overflow": false, "h1": "Contact" } },
+    { "route": "/work/harry-j-epstein", "desktop": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" }, "mobile": { "status": 200, "overflow": false, "h1": "Harry J. Epstein Company" } },
+    { "route": "/work/fair-rent-nyc", "desktop": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" }, "mobile": { "status": 200, "overflow": false, "h1": "NYC Artist Coalition / FairRentNYC" } },
+    { "route": "/work/callnyc", "desktop": { "status": 200, "overflow": false, "h1": "CallNYC.org" }, "mobile": { "status": 200, "overflow": false, "h1": "CallNYC.org" } },
+    { "route": "/work/kc-town-hall", "desktop": { "status": 200, "overflow": false, "h1": "KC Town Hall LLC" }, "mobile": { "status": 200, "overflow": false, "h1": "KC Town Hall LLC" } },
+    { "route": "/work/wowlist", "desktop": { "status": 200, "overflow": false, "h1": "WOWList.org" }, "mobile": { "status": 200, "overflow": false, "h1": "WOWList.org" } }
   ],
   "citations": {
     "referenceCount": 9,
@@ -69,7 +39,7 @@
   "zoom200": {
     "passed": true,
     "method": "Rendered each route at a 640x450 CSS-pixel viewport, the reflow equivalent of 200% browser zoom on a 1280x900 display.",
-    "routeCount": 8,
+    "routeCount": 10,
     "overflowCount": 0
   },
   "keyboard": {

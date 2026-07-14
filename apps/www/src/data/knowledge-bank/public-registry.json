@@ -1,6 +1,143 @@
 {
   "sources": [
     {
+      "id": "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+      "title": "Jamie Burkart approved public resume",
+      "organization": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://jamieburk.art/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, approved public resume, KC Town Hall LLC experience entry, 2026.",
+      "publicNote": "In his approved public resume, Jamie describes serving as KC Town Hall co-founder and project manager and co-leading redevelopment planning and public-benefit documentation.",
+      "locator": "PDF p. 2, KC Town Hall LLC section.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "independent corroboration of Jamie's role description",
+        "City Council action or appropriation",
+        "an executed funding agreement",
+        "disbursement or receipt",
+        "construction or completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+      "title": "Central City Economic Development Sales Tax Board meeting packet",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-29",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Board meeting packet, 2019.",
+      "publicNote": "The packet names Jamie as the presenter for the KC Town Hall proposal and records all four participating Board members voting to recommend $490,539 to the City Council.",
+      "locator": "PDF pp. 6 and 13: June 12 presentation table and July 16 recommendation minutes.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "City Council action",
+        "a funding agreement",
+        "disbursement or receipt",
+        "sole ownership or sole authorship of the proposal",
+        "completed construction"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+      "title": "Kansas City Council meeting record, September 26, 2019",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/MeetingDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GID=821&LEGID=14410",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Council meeting record, September 26, 2019, files 190642 and 190649.",
+      "publicNote": "The record shows the Council passed Ordinance 190642 as substituted and adopted Resolution 190649 as substituted.",
+      "locator": "Meeting Items, files 190642 and 190649.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "an individual roll-call tally",
+        "execution of a funding agreement",
+        "disbursement or receipt",
+        "construction or completion",
+        "Jamie's role in the Council's decision"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+      "title": "Authenticated Committee Substitute for Ordinance 190642",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Committee Substitute for Ordinance 190642, passed September 26, 2019.",
+      "publicNote": "The authenticated ordinance appropriates Round Two CCED project funds and lists a $490,539 KC Town Hall award.",
+      "locator": "Authenticated ordinance pp. 1-2, Section 2 and KC Town Hall project line.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "execution of a funding agreement",
+        "disbursement or receipt",
+        "expenditure",
+        "construction or completion",
+        "individual causality for the Council action"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+      "title": "Authenticated Second Committee Substitute for Resolution 190649",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628240&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Second Committee Substitute for Resolution 190649, adopted September 26, 2019.",
+      "publicNote": "The resolution accepts the Board recommendation for up to $490,539 in eligible KC Town Hall costs and authorizes funding-agreement negotiations subject to specified uses and conditions.",
+      "locator": "Authenticated resolution pp. 1-2, title and Sections 1-3.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "an executed funding agreement",
+        "disbursement or receipt",
+        "eligibility of every element in the original proposal",
+        "construction or completion"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "title": "Ordinance 240317",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The later ordinance confirms the 2019 KC Town Hall appropriation, records that the project withdrew, and reappropriates the unused $490,539 allocation.",
+      "locator": "Legislation text, first and third WHEREAS clauses and Sections 1-2.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "why the project withdrew",
+        "individual responsibility for the withdrawal",
+        "an executed funding agreement",
+        "any disbursement, receipt, or expenditure",
+        "current property status"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -368,6 +505,238 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In his approved public resume, Jamie describes serving as KC Town Hall co-founder and project manager and co-leading redevelopment planning and public-benefit documentation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "attributed co-founder and project-manager role",
+            "attributed co-leadership of redevelopment planning and public-benefit documentation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is Jamie's approved public account of his role, not independent third-party corroboration.",
+        "The resume supports the role description but does not establish the Board recommendation, Council action, appropriation, disbursement, or completion."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PRESENTER-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Official Board records name Jamie as the KC Town Hall presenter.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's presenter role",
+            "$490,539 request"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Presenter does not mean sole author, owner, or organizer of the collective project."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On July 16, 2019, all four participating CCED Board members voted to recommend the $490,539 KC Town Hall proposal to the City Council for approval and funding.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "July 16, 2019 recommendation",
+            "$490,539 amount",
+            "four affirmative Board votes",
+            "recommendation to City Council"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The four affirmative votes belong to the CCED Board, not to the City Council.",
+        "The recommendation was not a Council appropriation, funding agreement, disbursement, or receipt."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "On September 26, 2019, the Kansas City Council adopted Resolution 190649, accepting the Board recommendation for up to $490,539 in eligible KC Town Hall costs and authorizing funding-agreement negotiations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council action date",
+            "adoption of Resolution 190649"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+          "relationship": "direct-support",
+          "supports": [
+            "acceptance of Board recommendation",
+            "$490,539 limit",
+            "authorization to negotiate"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Acceptance and authorization to negotiate do not establish an executed funding agreement, appropriation by themselves, disbursement, receipt, expenditure, or construction.",
+        "The official meeting record does not supply an individual roll-call tally for these Council actions.",
+        "Government action should not be converted into sole causality by Jamie or KC Town Hall."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "That day, the Council also passed Ordinance 190642, which appropriated $490,539 for KC Town Hall.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Official records show that the City Council appropriated $490,539 for KC Town Hall.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "Council action date",
+            "passage of Ordinance 190642"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+          "relationship": "direct-support",
+          "supports": [
+            "appropriation",
+            "KC Town Hall project line",
+            "$490,539 amount"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Appropriation does not establish an executed funding agreement, disbursement, receipt, expenditure, construction, or completion.",
+        "The official meeting record does not supply an individual roll-call tally for this Council action.",
+        "Government action should not be converted into sole causality by Jamie or KC Town Hall."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2024 ordinance records that the project later withdrew and that the City reclaimed the unused $490,539 allocation.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+          "relationship": "direct-support",
+          "supports": [
+            "project withdrawal",
+            "unused $490,539 allocation",
+            "2024 reappropriation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The ordinance does not state why the project withdrew or assign individual responsibility.",
+        "The later withdrawal does not erase the earlier Board recommendation, Council adoption, or appropriation."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -932,6 +1301,70 @@
     }
   ],
   "pages": [
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
+        "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019",
+        "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+        "SRC-KC-TOWN-HALL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-ORDINANCE-190642",
+        "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+      ],
+      "occurrences": [
+        {
+          "id": "planning-and-documentation-role",
+          "claimId": "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026"
+          ]
+        },
+        {
+          "id": "presenter-role",
+          "claimId": "CLM-KC-TOWN-HALL-PRESENTER-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019"
+          ]
+        },
+        {
+          "id": "board-recommendation",
+          "claimId": "CLM-KC-TOWN-HALL-BOARD-RECOMMENDATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-BOARD-PACKET-2019"
+          ]
+        },
+        {
+          "id": "council-acceptance",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+            "SRC-KC-TOWN-HALL-RESOLUTION-190649"
+          ]
+        },
+        {
+          "id": "council-appropriation",
+          "claimId": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019",
+            "SRC-KC-TOWN-HALL-ORDINANCE-190642"
+          ]
+        },
+        {
+          "id": "unused-allocation",
+          "claimId": "CLM-KC-TOWN-HALL-UNUSED-ALLOCATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-ORDINANCE-240317"
+          ]
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",

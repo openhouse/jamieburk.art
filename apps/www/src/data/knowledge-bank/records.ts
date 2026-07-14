@@ -9,10 +9,20 @@ import {
   campaignPressIntakes,
   campaignPressSources
 } from "./press-catalog.ts";
+import {
+  kcTownHallClaims,
+  kcTownHallCorrections,
+  kcTownHallInquiry,
+  kcTownHallIntakes,
+  kcTownHallPage,
+  kcTownHallProject,
+  kcTownHallSources
+} from "./kc-town-hall-council-action.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
     ...campaignPressIntakes,
+    ...kcTownHallIntakes,
     {
       id: "INT-2026-07-13-PITCH-RAFT",
       kind: "url",
@@ -538,6 +548,7 @@ const knowledgeBankInput = {
     }
   ],
   projects: [
+    kcTownHallProject,
     {
       id: "callnyc",
       title: "CallNYC",
@@ -602,6 +613,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...kcTownHallSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -769,6 +781,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...kcTownHallClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -879,6 +892,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    kcTownHallInquiry,
     {
       id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
       project: "callnyc",
@@ -896,11 +910,13 @@ const knowledgeBankInput = {
     ...lifecycleResearchInquiries
   ],
   corrections: [
+    ...kcTownHallCorrections,
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
   ],
   pages: [
+    kcTownHallPage,
     {
       id: "callnyc",
       surface: "/work/callnyc",

@@ -483,10 +483,17 @@ const workItemsInput = [
     slug: "kc-town-hall",
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
-    summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+    summary: `${getClaimProjection(
+      "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+      "work-card",
+      "/work"
+    ).text} ${getClaimProjection(
+      "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "work-card",
+      "/work"
+    ).text}`,
+    role: "Co-Founder & Project Manager (approved public resume)",
+    years: "2015–2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -494,39 +501,47 @@ const workItemsInput = [
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
-    whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+    whatBecameUsable: `${getClaimProjection(
+      "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
+      "work-card",
+      "/work"
+    ).text} ${getClaimProjection(
+      "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
+      "work-card",
+      "/work"
+    ).text}`,
+    artifactTypes: ["source map", "decision record"],
     artifacts: [
       {
-        title: "Public-benefit documentation set",
+        title: "Board-to-Council public-record sequence",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
-        type: "guide"
+          "A source-backed chronology separating the Board recommendation, Council adoption, appropriation, and later reappropriation of unused funds.",
+        type: "source map"
       }
     ],
     tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    capabilities: ["Project Management", "Public-Benefit Documentation", "Board Presentation"],
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary with named partner and private project materials omitted.",
+      "Official Board and Council records support the presentation, recommendation, adoption, and appropriation sequence. Private project materials remain omitted.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Jamie's approved public resume describes project management and public-benefit documentation; official records separately document his Board presentation and the later municipal sequence.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
+      "Approved public resume: co-founder, project manager, redevelopment planning, and public-benefit documentation",
+      "Official Board record: Jamie named as presenter",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "Four-member CCED Board recommendation",
+      "$490,539 City Council appropriation"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie's approved public resume describes his KC Town Hall planning and documentation role; official records separately name him as presenter and show the proposal advancing to City Council adoption and appropriation.",
       open:
-        "Specific funding documents, named partners, and current project-status detail are not published here.",
+        "The public records do not establish an executed funding agreement, disbursement, receipt, expenditure, or construction. A 2024 ordinance records withdrawal and reclamation of the unused allocation.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

@@ -1,6 +1,6 @@
 # Recursive Eval Run: Knowledge Lifecycle
 
-Date: 2026-07-13
+Date: 2026-07-13 through 2026-07-14
 
 ## Scope
 
@@ -143,6 +143,63 @@ sources used as direct or corroborating claim evidence.
 The public composition adds one bounded aggregate claim to FairRentNYC. It says
 what the four campaign sites catalogued; it does not imply that every article
 names Jamie, endorses the campaigns, measures reach, or proves policy effects.
+
+## KC Town Hall Council-Action Cycle
+
+The July 14 pass resolved the earlier recommendation-only account through five
+official Kansas City records and Jamie's approved public resume. The source
+layers remain deliberately separate:
+
+- Jamie's approved resume supports an attributed account of his co-founder,
+  project-manager, redevelopment-planning, and public-benefit-documentation role;
+- the CCED Board packet names Jamie as presenter and records four participating
+  Board members voting to recommend $490,539 to the City Council;
+- the September 26, 2019, Council record shows Resolution 190649 adopted and
+  Ordinance 190642 passed as substituted;
+- Resolution 190649 accepts the Board recommendation and authorizes negotiation
+  of a funding agreement for eligible costs up to $490,539;
+- Ordinance 190642 appropriates $490,539 for KC Town Hall; and
+- Ordinance 240317 records that the project later withdrew and reappropriates
+  the unused allocation.
+
+The public case study now uses six atomic claims: attributed planning role,
+presenter role, Board recommendation, Council acceptance, Council appropriation,
+and unused-funds disposition. It states explicitly that appropriation is not an
+executed agreement, disbursement, receipt, expenditure, construction, or
+completion. It does not call the Council vote unanimous, assign Jamie causal
+credit for the Council action, or infer a reason or individual responsibility
+for the later withdrawal.
+
+The recursive cycle exposed and repaired four issues before stopping:
+
+1. The attributed role initially lacked canonical evidence, so the approved
+   public resume became its own source and intake record.
+2. A work-card projection dropped the first-party attribution, so attribution
+   became mandatory on every active role projection and a mutation test now
+   rejects its loss.
+3. Government action initially appeared beneath `What I did`, so the page now
+   separates Jamie's role from `What the public record shows` and the eval
+   rejects actor-boundary collapse.
+4. Presenter/recommendation and acceptance/appropriation were initially paired,
+   so the sequence was decomposed into six source-specific atomic claims.
+
+After those repairs, the knowledge-ready profile passed twice at 100/100 with
+independent archival-editorial and public-safety-composition judgments.
+
+- Baseline: `92.5`
+- Candidate: `sha256:afe03a5023695af5ba115d2edb9bb6246e1dabc95b81781bd0b4e5ca24e0c8b8`
+- Contract: `sha256:b7e483e1da05fc202b3a579cecd22cfec08b17c523eca3b640f329bdd3232039`
+- Knowledge-lifecycle regression tests: `24/24`
+- Citation tests: `10/10`
+
+The exact public candidate was then inspected on ten routes, including KC Town
+Hall, at desktop, mobile, and 200%-equivalent reflow sizes. All routes returned
+200 without overflow; all 24 traversed controls exposed visible focus. Three
+fresh hiring-manager, public-safety-editorial, and Chad-editorial judgments
+reported no regressions. The application-ready profile passed twice at 86.5.
+
+- Application candidate: `sha256:5ddbf966a38cc89ff9a8ce8e019140db72de73a7e87420dc701bf98a962faf87`
+- Application contract: `sha256:7aa4670b04d6f863ef7a0e53f187c70cc6ca8a64ebbaf10ab983a11d83a7217d`
 
 ## Next Cycle
 

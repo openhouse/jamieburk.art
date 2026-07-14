@@ -20,6 +20,13 @@ Ask:
 7. Are private originals represented only by opaque protected locators?
 8. Can another agent continue the work without repeating the research or
    weakening its boundaries?
+9. For KC Town Hall, are Jamie's presenter role, the four-member CCED Board
+   recommendation, the Council's September 26, 2019 adoption and appropriation,
+   and the later unused-funds record represented as separate sourced stages?
+10. Does the KC Town Hall composition say $490,539 appropriation directly while
+    refusing unsupported claims of Council unanimity, executed agreement,
+    disbursement, receipt, expenditure, completion, or individual withdrawal
+    causality?
 
 Return JSON with:
 

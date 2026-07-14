@@ -427,18 +427,22 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation; official records separately name Jamie as presenter and show the proposal advancing from a four-member CCED Board recommendation to City Council adoption and a $490,539 appropriation.",
+    shortWording: "Resume-described co-leadership of adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie's approved public resume describes him as KC Town Hall co-founder and project manager who co-led redevelopment planning and public-benefit documentation. The Board packet names him as presenter; official Council records document adoption of the recommendation and the appropriation.",
+    sourceBasis: "Canonical approved-resume source SRC-KC-TOWN-HALL-APPROVED-RESUME-2026; the 2019 CCED Board packet; the September 26, 2019, Council meeting record; authenticated Ordinance 190642 and Resolution 190649; Ordinance 240317; and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received, disbursed, or spent; a 2024 ordinance records withdrawal and reclamation of the unused amount.",
     doNotSay: [
-      "Final funding received",
+      "Funding agreement executed",
+      "Funds received, disbursed, or spent",
+      "Council vote was unanimous",
+      "Jamie caused or controlled the Council action",
+      "Project completed",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "Official municipal endorsement beyond the recorded Board and Council actions"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -450,7 +454,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",
