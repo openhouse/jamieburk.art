@@ -132,3 +132,13 @@ Featured/chronology duplicate, and Facebook's manager view attributes every
 rendered record to Jamie as publisher. The pass promotes a bounded Page-
 publishing practice while preserving shared authorship, collective credit,
 mutable-metric, and native-export limits.
+
+The
+[NYC Artist Coalition Facebook Page-post census](research/nycartc-facebook-posts-2026-07-14.md)
+dispositions all 441 records on the surviving 2017-2021 Page timeline. It
+documents a sustained collective system for meetings, campaigns, sources,
+stakeholder addressing, and practical resources while keeping Page identity,
+human publisher attribution, mutable response signals, and policy impact
+separate. A second ledger normalizes the corpus's 39 unique URLs into 33
+public-safe source and action routes while protecting historical meeting-access
+and form destinations.

@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "c90e4874f15a1307cb44838257f2ceb9875fc9a192de67998426723a6922d5d8",
+    "fingerprint": "c47640b1986a180a8b2a39aebdbb8de2e320577c37e0baa101112f42efa64add",
     "counts": {
       "entities": 25,
-      "intake": 108,
-      "sources": 217,
-      "sourceReadings": 217,
-      "claims": 89,
-      "researchTasks": 36,
-      "projectionDecisions": 71
+      "intake": 109,
+      "sources": 226,
+      "sourceReadings": 226,
+      "claims": 95,
+      "researchTasks": 39,
+      "projectionDecisions": 76
     }
   },
   "judge": {
@@ -24,6 +24,10 @@
             "record": "intakeRecordSchema"
           },
           {
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "A photo editor may submit an observation"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
@@ -32,8 +36,8 @@
             "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "INTAKE-WOWLIST-FACEBOOK-POST-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-PUBLISHER-SEED"
           }
         ]
       },
@@ -42,16 +46,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-RIVER-PITCH-2007"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "relationToJamie"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "READ-FACEBOOK-NYCARTC-POST-CENSUS-RUN-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
+            "record": "READ-NYC-OFFICE-NIGHTLIFE-LAW-2017"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "READ-FACEBOOK-WOWLIST-POST-CENSUS-RUN-2026"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "READ-SEATTLE-TIMES-ARTS-RELIEF-2020"
           }
         ]
       },
@@ -60,8 +68,8 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "CLM-WOWLIST-FACEBOOK-JAMIE-PUBLISHING-PRACTICE"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -73,7 +81,11 @@
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"
+            "record": "CLM-NYCARTC-CABARET-REPEAL-OUTCOME"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED"
           }
         ]
       },
@@ -82,16 +94,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-CREATION-ROLE"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "TASK-NYCARTC-FACEBOOK-NATIVE-EXPORT-AND-PUBLISHER-CREDIT"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "TASK-WOWLIST-FACEBOOK-NATIVE-EXPORT-AND-ROLE-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "TASK-NYCARTC-FACEBOOK-POSTED-SOURCE-RECOVERY"
           }
         ]
       },
@@ -100,16 +120,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "wowListFacebookPostDecisions"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Publication is compositional."
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "future-portfolio-composition"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-PUBLISH-CALLNYC-DATE"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "CLM-CALLNYC-HACKATHON-DATE-TIME"
+          },
+          {
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "defer decisions block active projections"
           }
         ]
       },
@@ -118,16 +146,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/wowlist-facebook-post-ledger.json",
-            "record": "publicSafety"
+            "file": "docs/knowledge-bank/data/nycartc-facebook-post-ledger.json",
+            "record": "nycartc-fb-3ff7f29f2e6416bc"
+          },
+          {
+            "file": "docs/knowledge-bank/data/nycartc-facebook-post-route-ledger.json",
+            "record": "nycartc-fb-route-24"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "SRC-FACEBOOK-NYCARTC-POST-CENSUS-RUN-2026"
           },
           {
             "file": "docs/knowledge-bank/approval-register.md",
-            "record": "WOW List Facebook Page posts"
+            "record": "NYC Artist Coalition Facebook Page posts"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts",
-            "record": "SRC-FACEBOOK-WOWLIST-POST-CENSUS-RUN-2026"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "scanPublicRepositoryBoundary"
           }
         ]
       },
@@ -137,15 +173,27 @@
         "evidence": [
           {
             "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "claimRecordSchema"
+            "record": "composition"
           },
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Publication is compositional."
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts",
+            "record": "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
+          },
+          {
+            "file": "docs/knowledge-bank/data/nycartc-facebook-post-route-ledger.json",
+            "record": "nycartc-fb-route-26"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "record": "TASK-OPEN-HOUSE-PARTICIPANT-RECORD"
+          },
+          {
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Public-ready claims also store the"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "nycArtCFacebookPostClaims"
           }
         ]
       }
@@ -168,5 +216,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "All seven criteria score 4/4. The fresh deterministic eval reports 0 of 7 hard gates failing and 0 of 4 quality targets open; the lifecycle test suite passes 81 of 81 tests. All critical floors and the 90-point weighted threshold are met. Human gates remain pending."
+  "summary": "Fresh independent review of snapshot c47640b1986a180a8b2a39aebdbb8de2e320577c37e0baa101112f42efa64add found an explicit, traversable, bounded, and public-safe lifecycle. The deterministic evaluator reports 0 hard-gate failures and 0 quality-target gaps, and all 88 knowledge-lifecycle tests pass. The 441-item Page ledger and 33-route ledger preserve aggregate evidence without exposing protected detail; authorship, administration, continuity, engagement, and outcomes remain distinct. All human gates remain pending."
 }

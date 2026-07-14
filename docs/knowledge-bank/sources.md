@@ -138,6 +138,34 @@ their original knowledge-bank records.
 See
 `docs/knowledge-bank/research/wowlist-facebook-posts-2026-07-14.md`.
 
+## NYC Artist Coalition Facebook Page Posts
+
+The July 14 authenticated review assigns a public-safe disposition to all 441
+records on the surviving NYC Artist Coalition Facebook Page chronology. A
+redacted ledger retains record form, primary theme, classification counts, and
+a visible-interaction boolean without exposing raw text, comments, names,
+per-record metrics, manager state, or sensitive action links.
+
+A second public-safe ledger normalizes 39 raw unique URLs into 33 route
+records. It withholds two historical meeting-access or form destinations,
+reuses existing New York Times and WNYC records, closely reads Rafael Espinal's
+City & State Agent of Change opinion as policy context, and queues an
+inaccessible Seattle Times cultural-relief article for recovery.
+
+The typed source layer includes the Page surface, a protected census run, a
+separate protected Meta content-control review, Jamie's protected first-person
+publisher memory, and three selected public Page records spanning Cabaret Law
+safety and trust, Talks Not Raids, and COVID-19 practical support. Existing
+campaign-press and event sources are reused rather than duplicated.
+
+The 441-record Page-level control does not expose human publisher attribution.
+Jamie remembers predominantly using the Page while remembering shared use;
+that division of labor remains research-stage pending a native export and
+collaborator proof notes.
+
+See
+`docs/knowledge-bank/research/nycartc-facebook-posts-2026-07-14.md`.
+
 ## Personal Public Social Sources
 
 Personal social records may enter the source bank after individual close

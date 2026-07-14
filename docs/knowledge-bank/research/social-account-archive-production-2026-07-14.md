@@ -286,6 +286,37 @@ tutorial, and articulated community-first values. That is bounded public-use
 evidence, not a user census, representative satisfaction measure, adoption
 claim, or impact claim.
 
+## NYC Artist Coalition Facebook Page Posts
+
+The [full Page-post census](nycartc-facebook-posts-2026-07-14.md) traverses the
+surviving NYC Artist Coalition Page chronology to a 40-scroll terminal
+condition and assigns all 441 recovered records a public-safe disposition. The
+record spans January 2017 through September 2021 and contains 148 event routes,
+136 standalone posts, 78 original-media posts, 53 reshared stories, and 26
+source-or-resource routes.
+
+The strongest finding is structural: the Page repeatedly connected recurring
+meetings, Cabaret Law and nightlife governance, Talks Not Raids, commercial
+rent, cultural-space care, COVID-19 support, public hearings, campaign sites,
+press, and practical resources through a coherent collective identity. The
+rendered record exposes 64 outbound-link occurrences resolving to 39 unique
+URLs and 33 normalized public-safe routes. Two historical meeting-access or
+form destinations remain protected; existing New York Times and WNYC records
+are reused, one City & State policy source is newly close read, and one
+inaccessible Seattle Times relief article remains queued.
+
+All 441 records expose Page-level action controls for NYC Artist Coalition,
+not human publisher attribution. Jamie's memory that he predominantly used the
+Page while others also used it remains research-stage pending a native Meta
+export and collaborator proof notes. Selected public sources strengthen his
+separate, public-ready practical safety and Cabaret Law advocacy record without
+assigning him authorship of the Page corpus.
+
+Rule-matched stakeholder routes and current visible response counters remain
+bounded: tags are not verified engagement, and 2,366 reactions, 212 comments,
+and 611 shares are mutable July 2026 floors rather than historical analytics,
+unique people, reach, endorsement, causality, or impact.
+
 ## Source Articles Surfaced
 
 The Talks Not Raids stream surfaced two later Hell Gate articles that have been

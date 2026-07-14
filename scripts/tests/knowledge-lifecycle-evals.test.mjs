@@ -14,6 +14,7 @@ import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nyca
 import { nycArtCFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts";
 import { personalWowListFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts";
 import { wowListFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-facebook-posts-2026-07-14.ts";
+import { nycArtCFacebookPostCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
@@ -1681,6 +1682,178 @@ test("unreviewed personal media remains a captured claim seed with a research ro
   assert.ok(claim.antiClaims.some((item) => /cleared for publication/i.test(item)));
   assert.equal(task.status, "open");
   assert.ok(task.claimIds.includes(claim.id));
+});
+
+test("NYC Artist Coalition Facebook post ledger dispositions the complete surviving control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-facebook-post-ledger.json", "utf8")
+  );
+
+  assert.equal(ledger.records.length, 441);
+  assert.equal(new Set(ledger.records.map((item) => item.recordId)).size, 441);
+  assert.equal(ledger.population.distinctSurvivingPosts, 441);
+  assert.equal(ledger.population.terminalScrollsWithoutAddition, 40);
+  assert.equal(ledger.population.pageActionControlsObserved, 441);
+  assert.equal(ledger.population.humanPublisherAttribution, "not-exposed");
+  assert.equal(nycArtCFacebookPostCensus.traversal.distinctSurvivingPosts, 441);
+  assert.equal(
+    Object.values(ledger.forms).reduce((sum, count) => sum + count, 0),
+    441
+  );
+  assert.equal(
+    Object.values(ledger.primaryThemes).reduce((sum, count) => sum + count, 0),
+    441
+  );
+});
+
+test("NYC Artist Coalition Facebook public ledger is aggregate-only and public-safe", () => {
+  const ledgerText = readFileSync(
+    "docs/knowledge-bank/data/nycartc-facebook-post-ledger.json",
+    "utf8"
+  );
+  const ledger = JSON.parse(ledgerText);
+  const forbiddenFields = [
+    "text",
+    "message",
+    "raw",
+    "postUrl",
+    "canonicalUrl",
+    "person",
+    "reactions",
+    "comments",
+    "shares",
+    "publisher"
+  ];
+
+  for (const item of ledger.records) {
+    for (const field of forbiddenFields) {
+      assert.equal(field in item, false, `${field} must remain protected`);
+    }
+    assert.equal(item.publicDetailStatus, "aggregate-only");
+  }
+  assert.doesNotMatch(ledgerText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+  assert.match(ledger.publicSafety.withheld, /Raw post text.*comments.*names.*post URLs/i);
+});
+
+test("NYC Artist Coalition Facebook route ledger preserves posted sources safely", () => {
+  const ledgerText = readFileSync(
+    "docs/knowledge-bank/data/nycartc-facebook-post-route-ledger.json",
+    "utf8"
+  );
+  const ledger = JSON.parse(ledgerText);
+  const protectedRows = ledger.rows.filter((item) => item.disposition === "protected");
+  const cityAndState = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === "SRC-CITY-AND-STATE-AGENT-OF-CHANGE-2018"
+  );
+  const seattle = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === "SRC-SEATTLE-TIMES-ARTS-RELIEF-2020"
+  );
+  const recoveryTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NYCARTC-FACEBOOK-POSTED-SOURCE-RECOVERY"
+  );
+
+  assert.deepEqual(ledger.accounting, {
+    rawOutboundLinkOccurrences: 64,
+    rawUniqueUrls: 39,
+    normalizedRoutes: 33,
+    protectedRoutes: 2,
+    sourceRecords: 4
+  });
+  assert.equal(protectedRows.length, 2);
+  assert.ok(protectedRows.every((item) => item.publicUrl === null));
+  assert.ok(ledger.rows.every((item) => /not automatic corroboration/i.test(item.interpretationBoundary)));
+  assert.equal(cityAndState.status, "closely-read");
+  assert.equal(cityAndState.propositions.length, 2);
+  assert.equal(seattle.status, "revisit");
+  assert.equal(seattle.propositions.length, 0);
+  assert.equal(recoveryTask.status, "open");
+  assert.ok(recoveryTask.sourceIds.includes("SRC-SEATTLE-TIMES-ARTS-RELIEF-2020"));
+  assert.doesNotMatch(ledgerText, /zoom\.us|formstack|\/private\/|\/tmp\/|\/Users\//i);
+});
+
+test("NYC Artist Coalition Facebook stakeholder and response claims retain interpretation limits", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-facebook-post-ledger.json", "utf8")
+  );
+  const stakeholderClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FACEBOOK-STAKEHOLDER-ROUTING"
+  );
+  const responseClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FACEBOOK-VISIBLE-RESPONSE-FLOOR"
+  );
+
+  assert.deepEqual(ledger.stakeholderRouting.recordOccurrences, {
+    "NYC Council members and Council": 86,
+    "NYC cultural and nightlife agencies": 40,
+    "Cultural and advocacy partners": 38,
+    "NYC business and enforcement agencies": 13,
+    "Press and public-information organizations": 11
+  });
+  assert.match(ledger.stakeholderRouting.boundary, /do not establish.*saw.*endorsed/i);
+  assert.ok(stakeholderClaim.antiClaims.some((item) => /Eighty-six Council members engaged/i.test(item)));
+  assert.equal(ledger.visibleInteractionSnapshot.recordsWithAtLeastOneVisibleSignal, 386);
+  assert.deepEqual(ledger.visibleInteractionSnapshot.datedAggregateFloor, {
+    reactions: 2366,
+    comments: 212,
+    shares: 611
+  });
+  assert.ok(responseClaim.boundaries.some((item) => /not unique people.*historical reach/i.test(item)));
+  assert.ok(responseClaim.antiClaims.some((item) => /policy influence.*public impact/i.test(item)));
+});
+
+test("NYC Artist Coalition Facebook publisher memory remains research-stage", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FACEBOOK-JAMIE-PUBLISHER-SEED"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NYCARTC-FACEBOOK-NATIVE-EXPORT-AND-PUBLISHER-CREDIT"
+  );
+
+  assert.equal(claim.status, "researching");
+  assert.equal(claim.maturity, "researching");
+  assert.equal(claim.projections.length, 0);
+  assert.ok(claim.boundaries.some((item) => /Do not quantify Jamie's share/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /all 441/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.claimIds.includes(claim.id));
+  assert.ok(task.nextActions.some((item) => /Olympia Kazi.*other coalition participants/i.test(item)));
+});
+
+test("NYC Artist Coalition named-practice claim is strong, collective, and deferred", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.composition.action, /Fire Guard study groups.*venue-safety.*Cabaret Law repeal/i);
+  assert.match(claim.composition.intendedEnd, /Help small cultural spaces pursue safety/i);
+  assert.match(claim.composition.collectiveCredit, /venue operators.*artists.*organizers.*advocates/i);
+  assert.match(claim.composition.causalBoundary, /not individual authorship.*sole campaign leadership/i);
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-NYCARTC-GOTHAMIST-CABARET-2017"));
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-FACEBOOK-NYCARTC-CABARET-BRIDGE-OF-TRUST-POST"));
+  assert.ok(claim.antiClaims.some((item) => /Jamie alone repealed/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("NYC Artist Coalition Facebook census and mature claims remain deferred", () => {
+  const matureClaimIds = [
+    "CLM-NYCARTC-FACEBOOK-SURVIVING-POST-POPULATION",
+    "CLM-NYCARTC-FACEBOOK-PARTICIPATION-AND-CAMPAIGN-ROUTING",
+    "CLM-NYCARTC-FACEBOOK-STAKEHOLDER-ROUTING",
+    "CLM-NYCARTC-FACEBOOK-VISIBLE-RESPONSE-FLOOR",
+    "CLM-NYCARTC-FACEBOOK-JAMIE-NAMED-PRACTICE"
+  ];
+
+  for (const claimId of matureClaimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claimId);
+    assert.equal(claim.projections.length, 0);
+    assert.equal(decision.decision, "defer");
+  }
 });
 
 test("judge evidence and floors are enforced", () => {
