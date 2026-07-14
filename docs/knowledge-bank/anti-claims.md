@@ -108,6 +108,33 @@ Do not call the current-profile census a complete platform export or deletion
 history, assign shared-account posts to Jamie without direct evidence, or treat
 reposted and linked work as something WOWList organized or authored.
 
+Do not say WOW List never created or used a Facebook event. The current event
+surface displayed zero records and bounded historical recovery found none;
+not recovered does not mean did not exist. Do not use this negative Facebook
+control to characterize WOW List's own platform, organizer use, event sharing,
+public posts, or community activity.
+
+## Personal Facebook Events
+
+Do not describe the current 502-record personal association surface as every
+event Jamie ever attended, hosted, produced, endorsed, authored, or cared
+about. Association does not establish attendance, endorsement, participation,
+production, authorship, or professional significance.
+
+Do not erase the unresolved slot from the separate 21-event hosted control,
+infer its title or date, or call the interface an official Meta export. Do not
+describe Jamie as sole producer of the 20 recovered events or erase
+collaborators, performers, venues, and participants.
+
+Do not sum or compare unstable response displays as unique people, attendance,
+reach, endorsement, causality, or impact. A URL posted in an event description
+is a source route, not automatic corroboration, authorship, endorsement,
+readership, conversion, or impact.
+
+Do not publish the record-level personal association graph, guest identities,
+friend or invite context, exact private locations, raw descriptions, comments,
+account administration, or authentication material.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

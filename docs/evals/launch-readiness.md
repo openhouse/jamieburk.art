@@ -46,6 +46,7 @@ The canonical positioning sentence is:
 | CallNYC full-population archive | 20 | Yes | All 110 observed profile-count slots reconcile to 107 item-level recoveries and three explicit unresolved slots; post types, stakeholder patterns, issue links, external URLs, claims, and boundaries recompute from the ledger. |
 | NYC Artist Coalition full-population archive | 20 | Yes | All 5,124 current profile-count slots reconcile to 3,367 item-level recoveries and 1,757 unresolved slots; themes, links, inbound engagement floors, Council-member interactions, claims, and collective-authorship boundaries recompute from the ledgers. |
 | NYC Artist Coalition Facebook event archive | 20 | Yes | All 34 current past-event control slots reconcile to 33 recovered records and one unresolved slot; recurring-meeting, venue, response, posted-link, source-routing, role, collective-credit, and privacy boundaries recompute from the ledgers. |
+| Personal and WOW List Facebook event archive | 20 | Yes | Both authenticated personal traversals reconcile to the same 502 association IDs; all 21 hosted-event slots reconcile as 20 recovered and one unresolved; WOW List's current zero display remains distinct from historical nonexistence; privacy, attribution, response-signal, and reserve-publication boundaries remain enforced. |
 | Personal social full-population archive | 20 | Yes | All 434 records in the current `@urbanhermit` live-profile control reconcile as 338 authored posts, 15 authored replies, and 81 reposts; aggregate years, themes, links, inbound stakeholder groups, and interaction contexts recompute without exposing the personal timeline or misassigning repost reactions. |
 | WOWList full-population archive | 20 | Yes | All 38 current-profile items reconcile at item level; account posts, support replies, reposts, themes, links, claims, and collective-authorship boundaries recompute from the ledger. |
 | KC Town Hall full-population archive | 20 | Yes | All 183 observed profile-count slots reconcile to 181 item-level recoveries and two explicit unresolved slots; account relationships, themes, links, reactions, stakeholder patterns, shared authorship, later stewardship, and selected public projections recompute from the ledger. |
@@ -112,3 +113,9 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   responses, assigning every event page to Jamie, treating posted links as
   automatic corroboration, publishing participant or access data, or converting
   an event chronology into sole policy causality.
+- Do not convert a personal Facebook event association into attendance,
+  endorsement, authorship, production, or professional proof; expose the
+  record-level relationship graph; erase the unresolved hosted-event slot;
+  sum unstable response displays; infer that WOW List never had an event from
+  a current zero display; or silently promote reserve event claims onto the
+  public site.

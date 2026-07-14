@@ -132,3 +132,12 @@ public-memory, or creative-technology contexts after media-rights review.
 
 The participatory-systems longitudinal frame remains on hold pending broader
 cross-project corroboration.
+
+The personal and WOW List Facebook event pass remains reserve depth. It
+strengthens the Sunday Dinner proof basis with public pages documenting the
+hundredth dinner, a rotating eight-week New York City format, and a civic
+sign-making potluck. It does not add visible site copy: the 502-record personal
+association control is provenance rather than a portfolio, the 20 recovered
+hosted pages are available for audience-specific future composition, and the
+WOW List zero display is a negative archival control rather than an
+accomplishment.

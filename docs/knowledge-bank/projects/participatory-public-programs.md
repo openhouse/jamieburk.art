@@ -1,6 +1,6 @@
 # Participatory Public Programs
 
-**Reviewed:** 2026-07-13
+**Reviewed:** 2026-07-14
 
 This note preserves source-backed depth that is not currently required on the
 public portfolio site.
@@ -58,6 +58,27 @@ participatory structures in which strangers enter an unfamiliar public
 situation, develop agency together, and leave behind shared records. That is a
 research hypothesis, not current site copy. It should be tested across later
 cultural, civic, community, and knowledge-system projects before promotion.
+
+## Hosted Facebook event record
+
+A full-population control of Jamie's current Facebook-hosted events adds a
+dated, public-event layer to the longitudinal inquiry. The current interface
+displayed 21 hosted-event slots; 20 pages were recovered and one remains
+unresolved. The recovered pages span December 2006 through February 2017.
+
+One primary-form disposition per recovered page yields seven cultural
+performance and production events, four recurring hospitality and care events,
+four participatory place, travel, and water events, three networked culture and
+public history events, and two civic learning and making events. Selected pages
+connect this chronology to the 8th Street Tunnel, the river-raft expedition,
+Night Walk, Sunday Dinner, civic sign making, and public documentary
+discussion.
+
+This strengthens the candidate throughline but does not automatically promote
+it. Facebook host attribution supports Jamie's event-making role, not sole
+production. The wider 502-record personal event surface is an association
+control, not evidence that Jamie attended, endorsed, authored, produced, or had
+a professional relationship to every event.
 
 ## Photo-editor direction
 

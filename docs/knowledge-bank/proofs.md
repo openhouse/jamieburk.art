@@ -50,6 +50,13 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - A complete accounting of the current `@urbanhermit` live profile is retained
   as aggregate-only archival provenance, not as a public portfolio route or
   traction claim.
+- A 21-slot Facebook hosted-event control is fully dispositioned as 20 recovered
+  pages and one unresolved slot. The recovered 2006-2017 pages document a
+  recurring event-making practice across cultural production, hospitality,
+  place and water work, civic learning, and networked public culture.
+- The current WOW List Facebook event surface displayed zero records and a
+  bounded historical search recovered none. This is a research control, not a
+  claim that no historical event existed or that WOW List lacked event use.
 
 ## Projection Rule
 

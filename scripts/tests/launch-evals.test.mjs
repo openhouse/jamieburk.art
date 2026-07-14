@@ -13,6 +13,7 @@ import {
   evaluateKnowledgeLifecycle,
   evaluateNycArtCFullPopulationArchive,
   evaluateNycArtCFacebookEventArchive,
+  evaluatePersonalWowlistFacebookEventArchive,
   evaluateProjectSocialArchiveProduction,
   evaluateUrbanHermitFullPopulationArchive,
   evaluateWowlistFullPopulationArchive,
@@ -1008,4 +1009,130 @@ test("NYC Artist Coalition Facebook event archive rejects sole authorship and si
 
   assert.ok(failures.some((failure) => failure.includes("not sole organization or authorship")));
   assert.ok(failures.some((failure) => failure.includes('claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"')));
+});
+
+const personalWowlistFacebookEventFixture = {
+  controlsLedger: readRepoFile(
+    "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json"
+  ),
+  hostedCensus: readRepoFile(
+    "docs/knowledge-bank/jamie-facebook-hosted-event-census-2026-07-14.csv"
+  ),
+  corpusModel: readRepoFile(
+    "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-batch-2026-07-14.ts"
+  ),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  archiveDoc: readRepoFile(
+    "docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md"
+  ),
+  participatoryDoc: readRepoFile(
+    "docs/knowledge-bank/projects/participatory-public-programs.md"
+  ),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md"),
+  publicSite: [
+    readRepoFile("apps/www/src/app/page.tsx"),
+    readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+    readRepoFile("apps/www/src/data/work.ts"),
+    readRepoFile("apps/www/src/content/work/fair-rent-nyc.mdx"),
+    readRepoFile("apps/www/src/content/work/wowlist.mdx"),
+    readRepoFile("apps/www/src/content/work/196-sunday-dinner.mdx")
+  ].join("\n")
+};
+
+test("personal and WOW List Facebook event archive passes population, privacy, and publication criteria", () => {
+  assert.deepEqual(
+    evaluatePersonalWowlistFacebookEventArchive(
+      personalWowlistFacebookEventFixture
+    ),
+    []
+  );
+});
+
+test("personal Facebook event archive rejects association-population drift", () => {
+  const controls = JSON.parse(personalWowlistFacebookEventFixture.controlsLedger);
+  controls.personalAssociationSurface.currentRecords = 501;
+  controls.personalAssociationSurface.yearCounts[2017] = 238;
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    controlsLedger: JSON.stringify(controls)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("remain 502 records")));
+  assert.ok(failures.some((failure) => failure.includes("recompute to 502")));
+});
+
+test("personal Facebook hosted-event archive rejects an erased unresolved slot", () => {
+  const controls = JSON.parse(personalWowlistFacebookEventFixture.controlsLedger);
+  controls.jamieHostedControl.recoveredPages = 21;
+  controls.jamieHostedControl.unresolvedSlots = 0;
+  const census = personalWowlistFacebookEventFixture.hostedCensus.replace(
+    "unresolved-021,unresolved,,",
+    "recovered-021,recovered,2017,civic-learning-and-making"
+  );
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    controlsLedger: JSON.stringify(controls),
+    hostedCensus: census
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("retain one unresolved slot")));
+  assert.ok(failures.some((failure) => failure.includes("retain one unresolved row")));
+});
+
+test("personal Facebook event archive rejects association-to-attendance inflation", () => {
+  const controls = JSON.parse(personalWowlistFacebookEventFixture.controlsLedger);
+  controls.personalAssociationSurface.boundary =
+    "Association proves Jamie attended these events.";
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    controlsLedger: JSON.stringify(controls),
+    antiClaims: personalWowlistFacebookEventFixture.antiClaims.replace(
+      "Association does not establish attendance",
+      "Association establishes attendance"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("non-attendance")));
+  assert.ok(failures.some((failure) => failure.includes("anti-claims")));
+});
+
+test("WOW List Facebook event archive rejects never-existed inflation", () => {
+  const controls = JSON.parse(personalWowlistFacebookEventFixture.controlsLedger);
+  controls.wowlist.boundary = "WOW List never had a Facebook event.";
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    controlsLedger: JSON.stringify(controls),
+    corpusModel: personalWowlistFacebookEventFixture.corpusModel.replaceAll(
+      "Not recovered does not mean did not exist",
+      "No event ever existed"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("historical nonexistence")));
+  assert.ok(failures.some((failure) => failure.includes("Not recovered does not mean did not exist")));
+});
+
+test("personal Facebook event archive rejects private locator and record-level leakage", () => {
+  const controls = JSON.parse(personalWowlistFacebookEventFixture.controlsLedger);
+  controls.eventId = "123";
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    controlsLedger: JSON.stringify(controls),
+    archiveDoc: `${personalWowlistFacebookEventFixture.archiveDoc}\n/Users/example/private\nauth_token=not-a-real-secret`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes('record-level key "eventId"')));
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+test("personal and WOW List Facebook event archive rejects silent reserve projection", () => {
+  const failures = evaluatePersonalWowlistFacebookEventArchive({
+    ...personalWowlistFacebookEventFixture,
+    publicSite: `${personalWowlistFacebookEventFixture.publicSite}\nCLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
 });

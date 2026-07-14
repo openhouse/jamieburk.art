@@ -104,3 +104,26 @@ private drafts.
 
 The unattributed machine-readable reporting note and unreviewed media-heavy
 collections were converted into explicit inquiries rather than public claims.
+
+## 2026-07-14 Personal And WOW List Facebook Events
+
+Public Facebook event pages deepen
+`sunday-dinner-196-participation-infrastructure` without changing its
+`partially-backed` status. The hundredth-dinner page supports longevity, the
+week-five page supports a rotating eight-week New York City format, and the
+2017 `Why I March` page supports a civic variation joining hospitality and sign
+making. None of these pages independently verifies the protected 300-plus
+gathering or 20-plus resident aggregates, physical attendance, or sole
+production.
+
+A separate 21-slot hosted-event control adds reserve depth to the held
+longitudinal participatory-practice inquiry: 20 pages were recovered across
+five primary forms and one slot remains unresolved. The wider 502-record
+personal event surface is retained as aggregate-only association provenance,
+not proof of attendance, endorsement, production, authorship, or professional
+significance.
+
+The current WOW List Facebook event surface displayed zero records and bounded
+historical recovery found none. This negative control prevents invented source
+coverage; not recovered does not mean did not exist and says nothing about WOW
+List's own platform activity or community use.

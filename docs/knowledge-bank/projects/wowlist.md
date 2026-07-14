@@ -14,6 +14,15 @@ public-facing web system. He also confirms establishing the shared `@wowlist`
 account as project identity infrastructure. The public account does not reveal
 which teammate composed each individual post.
 
+## Facebook Event Control
+
+While authenticated as the WOW List Page on July 14, 2026, the current
+Facebook event surface displayed zero event records. Exact Facebook event
+search, Jamie's current 502-record personal association control, and bounded
+Wayback queries recovered no historical WOW List Facebook event. This is a
+negative archival control, not proof that no event ever existed and not a
+measure of WOW List's own platform, organizer use, or community activity.
+
 ## Source-Backed Public Claims
 
 - Historical aggregate records support 1,800+ users, 16,000+ posts/events, and

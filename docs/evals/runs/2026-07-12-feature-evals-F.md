@@ -296,3 +296,43 @@ the event module to that scan restored **100/100** with every automated hard
 gate passing. Local browser QA at 1280px confirmed the selected claim, eleven
 working citation backlinks to ten source notes, no missing fragment targets,
 no horizontal overflow, and no console warnings or errors.
+
+## Personal And WOW List Facebook Event Recursive Pass
+
+The July 14 pass added a 20-point hard gate spanning two deliberately different
+Facebook event surfaces. Two terminal traversals of Jamie's personal events
+surface returned the exact same 502 event IDs. The archive retains aggregate
+accounting only: 20 cards displayed Jamie as host, 482 displayed another host,
+and 295 distinct displayed host labels appeared. Association remains explicitly
+different from attendance, endorsement, participation, production, authorship,
+and professional significance.
+
+A separate host control displayed 21 Jamie-hosted past-event slots. Twenty
+pages were recovered and close-read; one historical slot remains unresolved.
+The recovered pages span December 2006 through February 2017 and received one
+of five primary-form dispositions: seven cultural performance and production,
+four recurring hospitality and care, four participatory place, travel, and
+water, three networked culture and public history, and two civic learning and
+making. Selected public pages add source depth around the 8th Street Tunnel,
+river travel, Night Walk, Sunday Dinner, civic sign making, and public
+documentary discussion while preserving collective credit.
+
+While authenticated as the WOW List Page, the current Facebook event surface
+displayed zero records. Exact Facebook event search and the personal
+association control also produced zero WOW List event records; bounded Wayback
+queries recovered none. The stored disposition is not recovered, not did not
+exist, and says nothing about WOW List's own platform or wider event community.
+
+The hill climb added one intake record, fourteen source records, four claims,
+two inquiries, four reserve publication decisions, aggregate JSON and CSV
+controls, project and proof backlinks, source and anti-claim guidance, and six
+negative tests. No new visible site claim was selected. The Sunday Dinner proof
+basis now includes public pages documenting the hundredth dinner, a rotating
+eight-week New York City format, and a civic sign-making potluck without using
+those pages to verify protected aggregate counts or attendance.
+
+The first focused run exposed two boundary phrases that were implied but not
+explicit enough for the evaluator; both were tightened. The final recursive
+suite passed all 60 eval tests, all 19 citation tests, schema and public-safety
+checks, route validation, TypeScript, lint, production build, and the launch
+evaluator at **100/100** with every automated hard gate passing.

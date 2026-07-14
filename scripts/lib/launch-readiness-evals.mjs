@@ -2318,6 +2318,239 @@ export function evaluateNycArtCFacebookEventArchive({
   return missing;
 }
 
+export function evaluatePersonalWowlistFacebookEventArchive({
+  controlsLedger,
+  hostedCensus,
+  corpusModel,
+  framework,
+  proofs,
+  archiveDoc,
+  participatoryDoc,
+  antiClaims,
+  publicSite
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let controls;
+  try {
+    controls = JSON.parse(controlsLedger);
+  } catch {
+    missing.push("Personal and WOW List Facebook event controls are not valid JSON.");
+    return missing;
+  }
+
+  const association = controls.personalAssociationSurface ?? {};
+  const displayedHosts = association.displayedHostAccounting ?? {};
+  const associationYears = Object.values(association.yearCounts ?? {}).reduce(
+    (sum, count) => sum + count,
+    0
+  );
+  expect(
+    association.currentRecords === 502,
+    "Personal Facebook event association control must remain 502 records."
+  );
+  expect(
+    association.secondPassExactIdMatch === true,
+    "Personal Facebook event control must retain the exact second-pass ID match."
+  );
+  expect(
+    displayedHosts.jamie === 20 && displayedHosts.anotherHost === 482,
+    "Personal Facebook displayed-host accounting must remain 20 Jamie and 482 another host."
+  );
+  expect(
+    displayedHosts.jamie + displayedHosts.anotherHost === 502,
+    "Personal Facebook displayed-host accounting must recompute to 502."
+  );
+  expect(
+    displayedHosts.distinctHostLabelsIncludingUnresolved === 295,
+    "Personal Facebook distinct displayed-host labels must remain 295."
+  );
+  expect(
+    associationYears === 502,
+    "Personal Facebook year counts must recompute to 502."
+  );
+  expect(
+    /does not establish attendance, endorsement, participation, production, authorship, or professional significance/i.test(
+      association.boundary ?? ""
+    ),
+    "Personal Facebook association control must preserve the non-attendance and non-authorship boundary."
+  );
+
+  const hosted = controls.jamieHostedControl ?? {};
+  const formTotal = Object.values(hosted.primaryFormCounts ?? {}).reduce(
+    (sum, count) => sum + count,
+    0
+  );
+  const hostedYearTotal = Object.values(hosted.yearCounts ?? {}).reduce(
+    (sum, count) => sum + count,
+    0
+  );
+  expect(hosted.controlSlots === 21, "Jamie-hosted Facebook event control must remain 21 slots.");
+  expect(hosted.recoveredPages === 20, "Jamie-hosted Facebook event recovery must remain 20 pages.");
+  expect(hosted.unresolvedSlots === 1, "Jamie-hosted Facebook event archive must retain one unresolved slot.");
+  expect(
+    hosted.recoveredPages + hosted.unresolvedSlots === hosted.controlSlots,
+    "Jamie-hosted Facebook event dispositions must recompute to all 21 control slots."
+  );
+  expect(formTotal === 20, "Jamie-hosted primary-form counts must recompute to 20 recovered pages.");
+  expect(hostedYearTotal === 20, "Jamie-hosted year counts must recompute to 20 recovered pages.");
+  expect(
+    hosted.primaryFormCounts?.["cultural-performance-and-production"] === 7 &&
+      hosted.primaryFormCounts?.["recurring-hospitality-and-care"] === 4 &&
+      hosted.primaryFormCounts?.["participatory-place-travel-and-water"] === 4 &&
+      hosted.primaryFormCounts?.["networked-culture-and-public-history"] === 3 &&
+      hosted.primaryFormCounts?.["civic-learning-and-making"] === 2,
+    "Jamie-hosted primary-form distribution must remain 7, 4, 4, 3, and 2."
+  );
+  expect(
+    /must not be summed/i.test(hosted.responseSignalQuality?.boundary ?? ""),
+    "Jamie-hosted Facebook response signals must remain explicitly non-summable."
+  );
+
+  const censusRows = hostedCensus
+    .trim()
+    .split(/\r?\n/)
+    .slice(1)
+    .filter(Boolean);
+  const recoveredRows = censusRows.filter((row) => row.includes(",recovered,"));
+  const unresolvedRows = censusRows.filter((row) => row.includes(",unresolved,"));
+  expect(censusRows.length === 21, "Hosted-event census must retain all 21 control-slot rows.");
+  expect(recoveredRows.length === 20, "Hosted-event census must retain 20 recovered rows.");
+  expect(unresolvedRows.length === 1, "Hosted-event census must retain one unresolved row.");
+  expect(
+    unresolvedRows[0] === "unresolved-021,unresolved,,",
+    "The unresolved hosted-event row must not acquire an inferred year or form."
+  );
+
+  const wowlist = controls.wowlist ?? {};
+  expect(
+    wowlist.currentDisplayedRecords === 0 &&
+      wowlist.facebookSearchNumericRecords === 0 &&
+      wowlist.personalAssociationMatches === 0,
+    "WOW List Facebook current, search, and personal-association controls must remain zero."
+  );
+  expect(
+    wowlist.historicalDisposition === "not-recovered",
+    "WOW List historical Facebook event disposition must remain not-recovered."
+  );
+  expect(
+    /do not establish that no WOW List Facebook event ever existed/i.test(
+      wowlist.boundary ?? ""
+    ),
+    "WOW List negative control must not become a historical nonexistence claim."
+  );
+
+  requireFragments("Personal and WOW List Facebook event model", corpusModel, [
+    "LEAD-PERSONAL-WOWLIST-FACEBOOK-EVENT-FULL-POPULATION-2026",
+    "SRC-JAMIE-FACEBOOK-EVENT-ASSOCIATION-CONTROL-2026",
+    "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026",
+    "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007",
+    "SRC-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+    "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026",
+    "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+    "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+    "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026",
+    "INQ-WOWLIST-FACEBOOK-EVENTS-2026",
+    "not automatic corroboration",
+    "not sole production",
+    "Not recovered does not mean did not exist",
+    "decision: \"reserve\""
+  ]);
+  requireFragments("Personal and WOW List Facebook framework integration", framework, [
+    "personalWowlistFacebookEventIntake",
+    "personalWowlistFacebookEventSources",
+    "personalWowlistFacebookEventClaims",
+    "personalWowlistFacebookEventInquiries",
+    "personalWowlistFacebookEventPublicationDecisions",
+    "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+    "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014",
+    "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017"
+  ]);
+  requireFragments("Sunday Dinner proof basis", proofs, [
+    'id: "sunday-dinner-196-participation-infrastructure"',
+    "public Facebook event pages document the hundredth dinner",
+    "rotating eight-week New York City format",
+    "civic sign-making potluck"
+  ]);
+  requireFragments("Personal and WOW List Facebook archive documentation", archiveDoc, [
+    "same 502 event IDs with no additions or omissions",
+    "20 recovered event pages and one unresolved historical slot",
+    "Association does not establish attendance",
+    "Twenty recovered hosted-event pages from 2006 through 2017",
+    "not automatic corroboration",
+    "Not recovered does not mean did not exist",
+    "Do not add a new visible portfolio claim in this pass"
+  ]);
+  requireFragments("Participatory practice documentation", participatoryDoc, [
+    "20 pages were recovered and one remains unresolved",
+    "seven cultural performance and production events",
+    "not sole production",
+    "association control"
+  ]);
+  requireFragments("Personal and WOW List Facebook anti-claims", antiClaims, [
+    "not recovered does not mean did not exist",
+    "Association does not establish attendance",
+    "Do not erase the unresolved slot",
+    "Do not sum or compare unstable response displays",
+    "Do not publish the record-level personal association graph"
+  ]);
+
+  const forbiddenLedgerKeys = [
+    '"eventId"',
+    '"eventTitle"',
+    '"sourceUrl"',
+    '"guestName"',
+    '"exactLocation"'
+  ];
+  for (const key of forbiddenLedgerKeys) {
+    expect(
+      !controlsLedger.includes(key),
+      `Aggregate personal Facebook controls must not expose record-level key ${key}.`
+    );
+  }
+  const publicBundle = [
+    controlsLedger,
+    hostedCensus,
+    corpusModel,
+    framework,
+    proofs,
+    archiveDoc,
+    participatoryDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push(
+      "Public personal and WOW List Facebook event bundle contains authentication, session, or private-path material."
+    );
+  }
+  expect(
+    !publicSite.includes("CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017") &&
+      !publicSite.includes("CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026") &&
+      !publicSite.includes("CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"),
+    "Reserve personal and WOW List Facebook event claims must not silently appear on the public site."
+  );
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -2372,6 +2605,18 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCFacebookEventLinkLedger = readOptional(
     repoRoot,
     "docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json"
+  );
+  const personalWowlistFacebookEventCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-batch-2026-07-14.ts"
+  );
+  const personalWowlistFacebookEventControls = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json"
+  );
+  const jamieFacebookHostedEventCensus = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/jamie-facebook-hosted-event-census-2026-07-14.csv"
   );
   const wowlistSocialCorpus = readOptional(
     repoRoot,
@@ -2437,6 +2682,14 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCFacebookEventDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md"
+  );
+  const personalWowlistFacebookEventDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md"
+  );
+  const participatoryPublicProgramsDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/participatory-public-programs.md"
   );
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
@@ -2685,7 +2938,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -2953,6 +3206,41 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const personalWowlistFacebookEventMissing =
+    evaluatePersonalWowlistFacebookEventArchive({
+      controlsLedger: personalWowlistFacebookEventControls,
+      hostedCensus: jamieFacebookHostedEventCensus,
+      corpusModel: personalWowlistFacebookEventCorpus,
+      framework,
+      proofs,
+      archiveDoc: personalWowlistFacebookEventDoc,
+      participatoryDoc: participatoryPublicProgramsDoc,
+      antiClaims,
+      publicSite: [
+        homePage,
+        technicalOperations,
+        workData,
+        fairRentCase,
+        wowlistCase,
+        sundayDinnerCase
+      ].join("\n")
+    });
+  results.push(
+    result({
+      id: "personal-wowlist-facebook-event-archive",
+      label: "Personal and WOW List Facebook events reconcile every current control while preserving privacy and semantic boundaries",
+      weight: 20,
+      hardGate: true,
+      missing: personalWowlistFacebookEventMissing,
+      evidence: [
+        "Two authenticated terminal traversals returned the same 502 personal event IDs, split as 20 cards displaying Jamie as host and 482 displaying another host.",
+        "All 21 current Jamie-hosted control slots are dispositioned as 20 recovered pages and one unresolved slot.",
+        "The current WOW List event surface displays zero records; bounded historical recovery remains explicitly not recovered rather than never existed.",
+        "Aggregate ledgers, collective-credit rules, response-signal boundaries, and reserve publication decisions keep personal data and unsupported impact claims off the public site."
+      ]
+    })
+  );
+
   const wowlistFullPopulationMissing = evaluateWowlistFullPopulationArchive({
     ledger: wowlistPostLedger,
     corpusModel: wowlistSocialCorpus,
@@ -3051,6 +3339,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not publish Shared Drive names, links, IDs, membership, participant rows, access details, or private filenames to prove archival depth.",
       "Do not treat Shared Drive custody, a private draft, or one dated workflow record as proof of authorship, distribution, institutional adoption, implementation, or aggregate scale.",
       "Do not treat an authenticated visible social timeline as a complete platform export, count one-way tags as reciprocal engagement, assign every team post to Jamie, expose authentication material, or convert individual-account interactions into official endorsement or policy causality.",
+      "Do not turn personal Facebook event association into attendance, endorsement, authorship, production, or professional proof; erase an unresolved hosted-event slot; sum unstable response displays; infer WOW List historical nonexistence from a current zero display; or silently promote reserve event claims onto the site.",
       "Production deployment always requires explicit human approval."
     ]
   };

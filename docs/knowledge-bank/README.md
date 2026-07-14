@@ -71,6 +71,16 @@ slots; and `data/nycartc-facebook-event-link-ledger.json` routes 61 posted-link
 occurrences without exposing guest identities, comments, meeting-access paths,
 working-document locators, or private account context.
 
+The personal and WOW List Facebook event pass adds a deliberately asymmetric
+control. `personal-wowlist-facebook-events-2026-07-14.md` interprets 20
+recovered Jamie-hosted event pages and one unresolved slot;
+`data/personal-wowlist-facebook-event-controls.json` preserves aggregate
+reconciliation for the 502-record personal association surface and the zero
+record current WOW List surface; and
+`jamie-facebook-hosted-event-census-2026-07-14.csv` gives every hosted-event
+control slot a public-safe disposition. The record-level personal association
+graph remains protected.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

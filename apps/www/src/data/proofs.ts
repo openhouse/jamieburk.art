@@ -635,7 +635,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, proposal review, resident onboarding, space configuration, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, protected aggregate project records, a 2017 Greene Hill Food Co-op interview documenting weekly Sunday dinners open to the community, and a protected 2023 acceptance record confirming Jamie's proposal-review and onboarding workflow for one residency.",
+      "Approved resume language and protected aggregate project records support the scale claim; a 2017 Greene Hill Food Co-op interview documents weekly Sunday dinners open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 acceptance record confirms Jamie's proposal-review and onboarding workflow for one residency.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
