@@ -61,6 +61,21 @@ website selection. It is a recommendation, not publication approval.
   case study as a specific operational handoff. Keep participant details
   private and do not use one template to prove project scale.
 
+## Selected Social-Media Evidence
+
+- `CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT`: the bounded six-account historical
+  result is selected for the CallNYC case study. Keep it framed as observable
+  public engagement, not endorsement, adoption, impact, or a complete account-
+  universe metric.
+- `CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT`: the bounded four-account result is
+  selected as coalition-level traction. Preserve the two excluded incidental
+  appearances, shared-feed authorship, incomplete post-2020 coverage, and
+  causality boundaries.
+- `CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE`: selected as evidence that the project
+  account supported onboarding, product support, event distribution, and
+  coordination. Do not treat a small historical timeline as an adoption or
+  impact metric.
+
 ## Strong Future Feature Candidates
 
 - `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: three contemporaneous reports now
@@ -103,8 +118,6 @@ website selection. It is a recommendation, not publication approval.
   advocacy separately from post-creation accountability work.
 - `CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED`: recover a denominator, date range,
   exam type, and bounded result records before promoting the exact metric.
-- CallNYC Council-account engagement: complete its reproducible account-universe
-  and missing-data work before creating an engagement metric.
 - `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: recover a completed guide, implementation
   record, or collaborator confirmation before promotion.
 - `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: recover a second dated use or

@@ -90,6 +90,34 @@ test("Claim resolver returns only active approved projections", () => {
   );
 });
 
+test("social-media case-study claims resolve through the generated registry", () => {
+  for (const [claimId, pageId, occurrenceId, surface] of [
+    [
+      "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "callnyc",
+      "council-social-engagement",
+      "/work/callnyc",
+    ],
+    [
+      "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "fair-rent-nyc",
+      "council-social-engagement",
+      "/work/fair-rent-nyc",
+    ],
+    [
+      "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
+      "wowlist",
+      "social-product-surface",
+      "/work/wowlist",
+    ],
+  ]) {
+    assert.ok(getClaimProjection(claimId, "case-study", surface).text.length);
+    const resolved = resolveCitationOccurrence(pageId, occurrenceId);
+    assert.equal(resolved.claim.id, claimId);
+    assert.ok(resolved.sources.length > 0);
+  }
+});
+
 test("corrections retire old wording from public surfaces", () => {
   const text = [
     "apps/www/src/content/work/callnyc.mdx",

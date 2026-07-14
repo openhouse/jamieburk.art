@@ -279,6 +279,7 @@ const workItemsInput = [
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
       { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      { label: "NYC Artist Coalition on X", url: "https://x.com/NYCArtC" },
       {
         label: "2019 Council testimony",
         url: "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
@@ -318,6 +319,7 @@ const workItemsInput = [
       "Privacy-preserving commercial vacancy and lease-cost data pilot specification",
       "Jamie-attributed multi-action working draft later edited by a collaborator",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "Mission-relevant public engagement from at least four NYC Council Member accounts in the recovered 2017-2020 social corpus",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps",
     ],
@@ -394,6 +396,7 @@ const workItemsInput = [
         label: "GitHub repository",
         url: "https://github.com/openhouse/CallNYC",
       },
+      { label: "CallNYC on X", url: "https://x.com/CallNYCApp" },
     ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
@@ -412,6 +415,7 @@ const workItemsInput = [
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
       "Covered by Politico New York in 2016",
+      "At least six distinct historical NYC Council Member accounts publicly replied to, shared, quoted, or acknowledged CallNYC",
     ],
     knownOpenProtected: {
       known:
@@ -461,6 +465,7 @@ const workItemsInput = [
       "Community Platform Design",
       "Event Workflows",
     ],
+    links: [{ label: "WOW List on X", url: "https://x.com/wowlist" }],
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
@@ -476,6 +481,7 @@ const workItemsInput = [
       "Organizer-facing distribution workflows",
       "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
       "Roughly 35 city ecosystems reached",
+      "Historical project account used for product support, community onboarding, event distribution, and rapid civic coordination",
     ],
     knownOpenProtected: {
       known:

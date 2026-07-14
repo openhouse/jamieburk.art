@@ -32,6 +32,16 @@ import {
   googleSharedDriveReviewSummary,
   googleSharedDriveSources,
 } from "../apps/www/src/data/knowledge-bank/google-shared-drives.ts";
+import {
+  projectSocialAccounts,
+  socialMediaCaptures,
+  socialMediaClaims,
+  socialMediaInquiries,
+  socialMediaObservations,
+  socialMediaResearchTasks,
+  socialMediaReviewSummary,
+  socialMediaSources,
+} from "../apps/www/src/data/knowledge-bank/social-media-production.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 
 const suite = JSON.parse(
@@ -47,12 +57,16 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
   "apps/www/src/data/knowledge-bank/teams-archive.ts",
   "apps/www/src/data/knowledge-bank/google-shared-drives.ts",
+  "apps/www/src/data/knowledge-bank/social-media-production.ts",
+  "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/wowlist.mdx",
   "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/app/work/technical-operations/page.tsx",
   "apps/www/src/content/work/kc-town-hall.mdx",
@@ -68,6 +82,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
   "docs/knowledge-bank/projects/teams-archive-production.md",
   "docs/knowledge-bank/projects/google-shared-drives-production.md",
+  "docs/knowledge-bank/projects/social-media-production.md",
   "scripts/lib/citation-validation.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
@@ -77,6 +92,12 @@ const candidateFiles = [
 const campaignPressInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "utf8",
+  ),
+);
+const socialMediaInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
     "utf8",
   ),
 );
@@ -800,6 +821,184 @@ function deterministicResults(judgments) {
     );
   }
 
+  const socialMediaIntegrityViolations = [];
+  const socialMediaSafetyViolations = [];
+  const socialMediaSourceIds = new Set(
+    socialMediaSources.map((source) => source.id),
+  );
+  const socialMediaObservedSourceIds = new Set(
+    socialMediaObservations.map((observation) => observation.sourceId),
+  );
+  const callNycSocialClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+  );
+  const nycacSocialClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT",
+  );
+  const nycacIdentityClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP",
+  );
+  const wowListSocialClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
+  );
+  const laterNycacTask = socialMediaResearchTasks.find(
+    (task) => task.id === "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
+  );
+  const accountCorroborationTask = socialMediaResearchTasks.find(
+    (task) =>
+      task.id === "RT-SOCIAL-NYCAC-ACCOUNT-ESTABLISHMENT-CORROBORATION",
+  );
+  const socialMediaPublicText = [
+    "apps/www/src/content/work/callnyc.mdx",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/wowlist.mdx",
+    "apps/www/src/data/work.ts",
+  ]
+    .map((path) => readFileSync(path, "utf8"))
+    .join("\n");
+
+  if (
+    socialMediaCaptures.length !== 5 ||
+    socialMediaSources.length !== 24 ||
+    socialMediaObservations.length !== 24 ||
+    socialMediaClaims.length !== 4 ||
+    socialMediaResearchTasks.length !== 3 ||
+    socialMediaInquiries.length !== 4
+  ) {
+    socialMediaIntegrityViolations.push(
+      "Social-media archival-production graph has an unexpected record count",
+    );
+  }
+  const nycacInventoryRecords =
+    socialMediaInventory.inventories.nycArtistCoalitionIncomingMentions2017To2020
+      .records;
+  const wowListInventoryRecords =
+    socialMediaInventory.inventories.wowListProfileTimeline.records;
+  if (
+    nycacInventoryRecords.length !== 358 ||
+    new Set(nycacInventoryRecords.map((record) => record.url)).size !== 358 ||
+    wowListInventoryRecords.length !== 37 ||
+    new Set(wowListInventoryRecords.map((record) => record.url)).size !== 37
+  ) {
+    socialMediaIntegrityViolations.push(
+      "Social-media capture inventory is incomplete or contains duplicate status URLs",
+    );
+  }
+  if (
+    projectSocialAccounts.map((account) => account.currentHandle).join("|") !==
+      "@CallNYCApp|@NYCArtC|@wowlist" ||
+    socialMediaReviewSummary.callNycCouncilMemberAccountCount !== 6 ||
+    socialMediaReviewSummary.nycacCouncilMemberAuthorCount2017To2020 !== 6 ||
+    socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020 !==
+      4 ||
+    socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020 !==
+      358 ||
+    socialMediaReviewSummary.wowListRecoveredTimelineRecordCount !== 37
+  ) {
+    socialMediaIntegrityViolations.push(
+      "Social-media inventory no longer matches the bounded authenticated research record",
+    );
+  }
+  for (const sourceId of socialMediaSourceIds) {
+    if (!sourceById.has(sourceId) || !socialMediaObservedSourceIds.has(sourceId)) {
+      socialMediaIntegrityViolations.push(
+        `Social-media source lacks a normalized observation path: ${sourceId}`,
+      );
+    }
+  }
+  if (
+    callNycSocialClaim?.selectionState !== "selected" ||
+    callNycSocialClaim?.publicationState !== "approved" ||
+    nycacSocialClaim?.selectionState !== "selected" ||
+    nycacSocialClaim?.publicationState !== "approved" ||
+    wowListSocialClaim?.selectionState !== "selected" ||
+    wowListSocialClaim?.publicationState !== "approved" ||
+    nycacIdentityClaim?.selectionState !== "dormant" ||
+    !nycacIdentityClaim?.projections.every(
+      (projection) => projection.status === "hold" && !projection.surfaces.length,
+    ) ||
+    laterNycacTask?.status !== "open" ||
+    accountCorroborationTask?.status !== "open"
+  ) {
+    socialMediaIntegrityViolations.push(
+      "Social-media promotion, hold, or open-research states are incomplete",
+    );
+  }
+  for (const claim of [callNycSocialClaim, nycacSocialClaim, wowListSocialClaim]) {
+    if (
+      !claim ||
+      !claim.observationIds.length ||
+      !claim.evidence.length ||
+      !claim.boundaries.length ||
+      !claim.antiClaims.length
+    ) {
+      socialMediaIntegrityViolations.push(
+        `Social-media selected claim has an incomplete evidence boundary: ${claim?.id ?? "missing"}`,
+      );
+    }
+  }
+  if (
+    !/CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
+    !/CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT/.test(socialMediaPublicText) ||
+    !/CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE/.test(socialMediaPublicText) ||
+    !/at least six distinct historical NYC Council Member accounts/i.test(
+      socialMediaPublicText,
+    ) ||
+    !/at least four NYC Council Member accounts/i.test(socialMediaPublicText) ||
+    !/product support, community onboarding, event distribution, and rapid civic coordination/i.test(
+      socialMediaPublicText,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Website projection omits a selected social-media claim or bounded wording",
+    );
+  }
+  const protectedAccountSource = sourceById.get(
+    "SRC-SOCIAL-JAMIE-ACCOUNT-STEWARDSHIP-2026",
+  );
+  if (
+    protectedAccountSource?.canonicalUrl ||
+    protectedAccountSource?.archiveUrl ||
+    protectedAccountSource?.assetUrl ||
+    nycacIdentityClaim?.evidence.some((evidence) => evidence.renderCitation) ||
+    nycacIdentityClaim?.projections.some(
+      (projection) => projection.status === "active" || projection.surfaces.length,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Held account-establishment evidence leaks into a public citation or projection",
+    );
+  }
+  const socialMediaPayload = JSON.stringify({
+    captures: socialMediaCaptures,
+    sources: socialMediaSources,
+    observations: socialMediaObservations,
+    claims: socialMediaClaims,
+    tasks: socialMediaResearchTasks,
+    inquiries: socialMediaInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|cookie|session token|direct messages|private messages/i.test(
+      socialMediaPayload,
+    ) ||
+    /Jamie authored every @NYCArtC post\.(?![\s\S]*antiClaims)/i.test(
+      socialMediaPayload,
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Social-media payload exposes authenticated-session detail, private locators, or shared-account authorship drift",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i.test(
+      JSON.stringify(socialMediaInventory),
+    )
+  ) {
+    socialMediaSafetyViolations.push(
+      "Public social-media inventory contains post text, session state, or a private path",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -1047,7 +1246,8 @@ function deterministicResults(judgments) {
         campaignPressIntegrityViolations.length ||
         kcTownHallIntegrityViolations.length ||
         teamsArchiveIntegrityViolations.length ||
-        googleSharedDriveIntegrityViolations.length
+        googleSharedDriveIntegrityViolations.length ||
+        socialMediaIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -1060,6 +1260,7 @@ function deterministicResults(judgments) {
         `${kcTownHallIntegrityViolations.length} KC Town Hall funding-chain integrity violations`,
         `${teamsArchiveIntegrityViolations.length} Teams archive integrity violations`,
         `${googleSharedDriveIntegrityViolations.length} Google Shared Drive integrity violations`,
+        `${socialMediaIntegrityViolations.length} social-media archive integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -1069,6 +1270,7 @@ function deterministicResults(judgments) {
         ...kcTownHallIntegrityViolations,
         ...teamsArchiveIntegrityViolations,
         ...googleSharedDriveIntegrityViolations,
+        ...socialMediaIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -1082,7 +1284,8 @@ function deterministicResults(judgments) {
         campaignPressSafetyViolations.length ||
         kcTownHallSafetyViolations.length ||
         teamsArchiveSafetyViolations.length ||
-        googleSharedDriveSafetyViolations.length
+        googleSharedDriveSafetyViolations.length ||
+        socialMediaSafetyViolations.length
         ? 0
         : 4,
       [
@@ -1093,6 +1296,7 @@ function deterministicResults(judgments) {
         `${kcTownHallSafetyViolations.length} KC Town Hall projection-safety violations`,
         `${teamsArchiveSafetyViolations.length} Teams archive projection-safety violations`,
         `${googleSharedDriveSafetyViolations.length} Google Shared Drive safety violations`,
+        `${socialMediaSafetyViolations.length} social-media projection-safety violations`,
       ],
       [
         ...validationErrors,
@@ -1102,6 +1306,7 @@ function deterministicResults(judgments) {
         ...kcTownHallSafetyViolations,
         ...teamsArchiveSafetyViolations,
         ...googleSharedDriveSafetyViolations,
+        ...socialMediaSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -1152,6 +1357,13 @@ function deterministicResults(judgments) {
       googleSharedDriveObservations: googleSharedDriveObservations.length,
       googleSharedDriveClaims: googleSharedDriveClaims.length,
       googleSharedDriveUnreviewed: googleSharedDriveReviewSummary.unreviewedDriveCount,
+      socialMediaAccounts: projectSocialAccounts.length,
+      socialMediaSources: socialMediaSources.length,
+      socialMediaClaims: socialMediaClaims.length,
+      callNycCouncilAccounts:
+        socialMediaReviewSummary.callNycCouncilMemberAccountCount,
+      nycacMissionRelevantCouncilAccounts:
+        socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
       validationErrors: validationErrors.length,
     },
   };

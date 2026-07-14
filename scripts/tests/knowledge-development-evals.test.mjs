@@ -38,6 +38,16 @@ import {
   googleSharedDriveReviewSummary,
   googleSharedDriveSources,
 } from "../../apps/www/src/data/knowledge-bank/google-shared-drives.ts";
+import {
+  projectSocialAccounts,
+  socialMediaCaptures,
+  socialMediaClaims,
+  socialMediaInquiries,
+  socialMediaObservations,
+  socialMediaResearchTasks,
+  socialMediaReviewSummary,
+  socialMediaSources,
+} from "../../apps/www/src/data/knowledge-bank/social-media-production.ts";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -46,6 +56,12 @@ const cloneSuite = () => structuredClone(suite);
 const campaignPressInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "utf8",
+  ),
+);
+const socialMediaInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
     "utf8",
   ),
 );
@@ -412,6 +428,127 @@ test("Shared Drive outcome gaps remain explicit research tasks", () => {
     assert.ok(claim.researchTaskIds.includes(taskId));
     assert.ok(task.claimIds.includes(claimId));
   }
+});
+
+test("social-media production preserves account, engagement, and timeline inventories", () => {
+  assert.deepEqual(
+    projectSocialAccounts.map((account) => account.currentHandle),
+    ["@CallNYCApp", "@NYCArtC", "@wowlist"],
+  );
+  assert.equal(socialMediaCaptures.length, 5);
+  assert.equal(socialMediaSources.length, 24);
+  assert.equal(socialMediaObservations.length, 24);
+  assert.equal(socialMediaClaims.length, 4);
+  assert.equal(socialMediaResearchTasks.length, 3);
+  assert.equal(socialMediaInquiries.length, 4);
+  assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 6);
+  assert.equal(
+    socialMediaReviewSummary.nycacMissionRelevantCouncilMemberAccountCount2017To2020,
+    4,
+  );
+  assert.equal(
+    socialMediaReviewSummary.nycacHistoricalMentionRecordCount2017To2020,
+    358,
+  );
+  assert.equal(socialMediaReviewSummary.wowListRecoveredTimelineRecordCount, 37);
+
+  const nycacRecords =
+    socialMediaInventory.inventories.nycArtistCoalitionIncomingMentions2017To2020
+      .records;
+  const wowListRecords =
+    socialMediaInventory.inventories.wowListProfileTimeline.records;
+  assert.equal(nycacRecords.length, 358);
+  assert.equal(new Set(nycacRecords.map((record) => record.url)).size, 358);
+  assert.equal(wowListRecords.length, 37);
+  assert.equal(new Set(wowListRecords.map((record) => record.url)).size, 37);
+
+  const observedSourceIds = new Set(
+    socialMediaObservations.map((observation) => observation.sourceId),
+  );
+  for (const source of socialMediaSources) {
+    assert.ok(observedSourceIds.has(source.id), `Unobserved source ${source.id}`);
+  }
+});
+
+test("social-media claims use bounded counts and preserve shared-account authorship", () => {
+  const callNycClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+  );
+  const nycacClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT",
+  );
+  const identityClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-SHARED-IDENTITY-STEWARDSHIP",
+  );
+  const wowListClaim = socialMediaClaims.find(
+    (claim) => claim.id === "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
+  );
+
+  assert.equal(callNycClaim.selectionState, "selected");
+  assert.match(callNycClaim.projections[0].text, /at least six distinct/i);
+  assert.match(callNycClaim.boundaries.join("\n"), /deleted post|native repost/i);
+  assert.match(callNycClaim.antiClaims.join("\n"), /official Council service/i);
+
+  assert.equal(nycacClaim.selectionState, "selected");
+  assert.match(nycacClaim.projections[0].text, /at least four Council Member/i);
+  assert.match(nycacClaim.boundaries.join("\n"), /two incidental or logistical/i);
+  assert.match(nycacClaim.antiClaims.join("\n"), /authored every/i);
+  const nycacCapture = socialMediaCaptures.find(
+    (capture) => capture.id === "CAP-SOCIAL-NYCAC-COUNCIL-ENGAGEMENT-2026",
+  );
+  for (const sourceId of [
+    "SRC-NYCAC-LEVINE-INCIDENTAL-2020-03-20",
+    "SRC-NYCAC-BRANNAN-INCIDENTAL-2019-08-30",
+  ]) {
+    assert.ok(nycacCapture.sourceIds.includes(sourceId));
+    assert.ok(!nycacClaim.evidence.some((evidence) => evidence.sourceId === sourceId));
+  }
+  assert.ok(
+    nycacClaim.researchTaskIds.includes(
+      "RT-SOCIAL-NYCAC-POST-2020-MENTION-INVENTORY",
+    ),
+  );
+
+  assert.equal(identityClaim.selectionState, "dormant");
+  assert.ok(
+    identityClaim.projections.every(
+      (projection) => projection.status === "hold" && !projection.surfaces.length,
+    ),
+  );
+  assert.ok(identityClaim.evidence.every((evidence) => !evidence.renderCitation));
+  assert.match(identityClaim.boundaries.join("\n"), /cannot establish who opened/i);
+
+  assert.equal(wowListClaim.selectionState, "selected");
+  assert.match(wowListClaim.projections[0].text, /part of the product/i);
+  assert.match(wowListClaim.boundaries.join("\n"), /not used as.*adoption/i);
+});
+
+test("social-media production exposes no authenticated-session secrets or private locators", () => {
+  const protectedSource = socialMediaSources.find(
+    (source) => source.id === "SRC-SOCIAL-JAMIE-ACCOUNT-STEWARDSHIP-2026",
+  );
+  assert.equal(protectedSource.visibility, "protected");
+  assert.equal(protectedSource.canonicalUrl, undefined);
+  assert.equal(protectedSource.archiveUrl, undefined);
+  assert.equal(protectedSource.assetUrl, undefined);
+
+  const payload = JSON.stringify({
+    captures: socialMediaCaptures,
+    sources: socialMediaSources,
+    observations: socialMediaObservations,
+    claims: socialMediaClaims,
+    tasks: socialMediaResearchTasks,
+    inquiries: socialMediaInquiries,
+  });
+  assert.doesNotMatch(
+    payload,
+    /\/Users\/|\/Volumes\/|cookie|session token|direct messages|private messages/i,
+  );
+  assert.match(payload, /Counts are a point-in-time observation/i);
+  assert.doesNotMatch(
+    JSON.stringify(socialMediaInventory),
+    /"(?:text|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\//i,
+  );
 });
 
 test("Shared Drive projections retain draft, collaboration, and selection boundaries", () => {

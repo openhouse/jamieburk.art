@@ -45,6 +45,14 @@ import {
   googleSharedDriveResearchTasks,
   googleSharedDriveSources,
 } from "./google-shared-drives.ts";
+import {
+  socialMediaCaptures,
+  socialMediaClaims,
+  socialMediaInquiries,
+  socialMediaObservations,
+  socialMediaResearchTasks,
+  socialMediaSources,
+} from "./social-media-production.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -54,6 +62,7 @@ const knowledgeBankInput = {
     ...kcTownHallFundingCaptures,
     ...teamsArchiveCaptures,
     ...googleSharedDriveCaptures,
+    ...socialMediaCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -62,6 +71,7 @@ const knowledgeBankInput = {
     ...kcTownHallFundingSources,
     ...teamsArchiveSources,
     ...googleSharedDriveSources,
+    ...socialMediaSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -265,6 +275,7 @@ const knowledgeBankInput = {
     ...kcTownHallFundingObservations,
     ...teamsArchiveObservations,
     ...googleSharedDriveObservations,
+    ...socialMediaObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -273,6 +284,7 @@ const knowledgeBankInput = {
     ...kcTownHallFundingClaims,
     ...teamsArchiveClaims,
     ...googleSharedDriveClaims,
+    ...socialMediaClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -591,6 +603,7 @@ const knowledgeBankInput = {
     ...campaignPressResearchTasks,
     ...teamsArchiveResearchTasks,
     ...googleSharedDriveResearchTasks,
+    ...socialMediaResearchTasks,
   ],
   researchInquiries: [
     {
@@ -628,6 +641,7 @@ const knowledgeBankInput = {
     ...kcTownHallFundingInquiries,
     ...teamsArchiveInquiries,
     ...googleSharedDriveInquiries,
+    ...socialMediaInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -675,6 +689,12 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-CHIN-ENGAGEMENT-2017-07-11",
+        "SRC-CALLNYC-WILLS-ENGAGEMENT-2016-05-17",
+        "SRC-CALLNYC-MATTEO-FIGURES-2018-01-23",
+        "SRC-CALLNYC-KOO-ENGAGEMENT-2016-04-27",
+        "SRC-CALLNYC-EUGENE-ENGAGEMENT-2016-10-04",
+        "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27",
       ],
       occurrences: [
         {
@@ -722,6 +742,19 @@ const knowledgeBankInput = {
             "SRC-CALLNYC-POLITICO-2016-03-14",
           ],
         },
+        {
+          id: "council-social-engagement",
+          claimId: "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-CALLNYC-CHIN-ENGAGEMENT-2017-07-11",
+            "SRC-CALLNYC-WILLS-ENGAGEMENT-2016-05-17",
+            "SRC-CALLNYC-MATTEO-FIGURES-2018-01-23",
+            "SRC-CALLNYC-KOO-ENGAGEMENT-2016-04-27",
+            "SRC-CALLNYC-EUGENE-ENGAGEMENT-2016-10-04",
+            "SRC-CALLNYC-ROSENTHAL-SHARE-2016-09-27",
+          ],
+        },
       ],
     },
     {
@@ -740,6 +773,13 @@ const knowledgeBankInput = {
         "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
         "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
         "SRC-NYCAC-MAYOR-CURE-2023-12-28",
+        "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+        "SRC-NYCAC-ESPINAL-CABARET-2017-10-30",
+        "SRC-NYCAC-ESPINAL-TOWN-HALL-2018-03-25",
+        "SRC-NYCAC-LEVIN-HEARING-2019-02-06",
+        "SRC-NYCAC-LEVIN-TESTIMONY-2019-02-11",
+        "SRC-NYCAC-RIVERA-COSPONSOR-2018-10-20",
+        "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26",
       ],
       occurrences: [
         {
@@ -821,6 +861,49 @@ const knowledgeBankInput = {
           claimId: "CLM-NYCAC-MARCH-REPLACED-BY-CURE",
           projection: "case-study",
           sourceIds: ["SRC-NYCAC-MAYOR-CURE-2023-12-28"],
+        },
+        {
+          id: "council-social-engagement",
+          claimId: "CLM-NYCAC-COUNCIL-SOCIAL-ENGAGEMENT",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-SOCIAL-NYCARTC-PROFILE-2026-07-14",
+            "SRC-NYCAC-ESPINAL-CABARET-2017-10-30",
+            "SRC-NYCAC-ESPINAL-TOWN-HALL-2018-03-25",
+            "SRC-NYCAC-LEVIN-HEARING-2019-02-06",
+            "SRC-NYCAC-LEVIN-TESTIMONY-2019-02-11",
+            "SRC-NYCAC-RIVERA-COSPONSOR-2018-10-20",
+            "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26",
+          ],
+        },
+      ],
+    },
+    {
+      id: "wowlist",
+      surface: "/work/wowlist",
+      sourceOrder: [
+        "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
+        "SRC-WOWLIST-ORIGIN-2014-02-12",
+        "SRC-WOWLIST-TUTORIAL-2015-08-14",
+        "SRC-WOWLIST-NYCDIY-2016-09-01",
+        "SRC-WOWLIST-PRODUCT-SUPPORT-2015-04-24",
+        "SRC-WOWLIST-NATIONAL-MARCHES-2016-11-09",
+        "SRC-WOWLIST-POPULAR-VOTE-2016-11-14",
+      ],
+      occurrences: [
+        {
+          id: "social-product-surface",
+          claimId: "CLM-WOWLIST-SOCIAL-PRODUCT-SURFACE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-SOCIAL-WOWLIST-PROFILE-2026-07-14",
+            "SRC-WOWLIST-ORIGIN-2014-02-12",
+            "SRC-WOWLIST-TUTORIAL-2015-08-14",
+            "SRC-WOWLIST-NYCDIY-2016-09-01",
+            "SRC-WOWLIST-PRODUCT-SUPPORT-2015-04-24",
+            "SRC-WOWLIST-NATIONAL-MARCHES-2016-11-09",
+            "SRC-WOWLIST-POPULAR-VOTE-2016-11-14",
+          ],
         },
       ],
     },
