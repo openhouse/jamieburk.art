@@ -220,7 +220,7 @@ const workItemsInput = [
       {
         title: "Public campaign web surfaces",
         description:
-          "Public-safe website infrastructure for Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC, including calls to action, public evidence, partner credit, Council-facing tools, and campaign press indexes.",
+          "Documented public-safe website infrastructure for Let NYC Dance, Talks Not Raids, and FairRentNYC. Four campaign press indexes, including Save NYC Spaces, are preserved separately as collective campaign context.",
         type: "website"
       }
     ],

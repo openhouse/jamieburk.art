@@ -151,7 +151,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Forty-five outlets endorsed Jamie; every article is about Jamie; the press corpus proves Jamie caused the policy outcomes; every historical article remains live.
 **Protected boundaries:** Private press correspondence, unpublished pitches, private analytics, and unapproved collaborator attribution stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-13
 
 ## wowlist-community-platform - Followable community platform
 

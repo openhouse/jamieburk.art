@@ -16,6 +16,16 @@ const hybridPass = [
   { eval_id: "KB-009", score: 4, pass: true, evidence: ["blind projection-coverage review"], findings: [], confidence: 0.95 }
 ];
 
+function normalizeCanonicalUrl(value) {
+  const url = new URL(value);
+  url.protocol = "https:";
+  url.hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+  url.hash = "";
+  url.search = "";
+  url.pathname = url.pathname.replace(/\/$/, "");
+  return url.toString();
+}
+
 test("knowledge-development suite is structurally valid", () => {
   assert.deepEqual(validateKnowledgeDevelopmentSuite(suite).errors, []);
 });
@@ -43,7 +53,18 @@ test("campaign press corpus preserves all memberships without duplicating articl
 
   assert.equal(pressIntake.length, 4);
   assert.equal(articleMemberships.length, 45);
-  assert.equal(new Set(articleMemberships).size, 44);
+  const uniqueArticleIds = new Set(articleMemberships);
+  assert.equal(uniqueArticleIds.size, 44);
+
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const normalizedCanonicalUrls = new Set(
+    [...uniqueArticleIds].map((sourceId) =>
+      normalizeCanonicalUrl(sourceById.get(sourceId).canonicalUrl)
+    )
+  );
+  assert.equal(normalizedCanonicalUrls.size, 44);
 
   const task = knowledgeBank.researchTasks.find(
     (item) => item.id === "TASK-NAC-CAMPAIGN-PRESS-CLOSE-READ"
@@ -56,6 +77,12 @@ test("campaign press corpus preserves all memberships without duplicating articl
   for (const sourceId of articleMemberships) {
     assert.equal(assertionSourceIds.has(sourceId), true, `${sourceId} lacks decomposition`);
   }
+
+  const accessRestrictedSources = [...uniqueArticleIds]
+    .map((sourceId) => sourceById.get(sourceId))
+    .filter((source) => source.publicNote?.includes("HTTP 403"));
+  assert.equal(accessRestrictedSources.length, 5);
+  assert.ok(accessRestrictedSources.every((source) => source.archiveUrl));
 });
 
 test("an intake-linked source without decomposition fails KB-003", () => {

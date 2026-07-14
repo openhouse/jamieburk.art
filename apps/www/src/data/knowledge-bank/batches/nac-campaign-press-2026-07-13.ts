@@ -7,7 +7,7 @@ import type {
   SourceRecord
 } from "../schema.ts";
 
-export const nacCampaignPressBatch20260714: {
+export const nacCampaignPressBatch20260713: {
   intake: IntakeItem[];
   sources: SourceRecord[];
   sourceAssertions: SourceAssertion[];
@@ -19,7 +19,7 @@ export const nacCampaignPressBatch20260714: {
     {
       "id": "INT-NAC-LET-NYC-DANCE-PRESS-CORPUS",
       "kind": "public-url",
-      "capturedAt": "2026-07-14",
+      "capturedAt": "2026-07-13",
       "capturedFrom": "https://letnycdance.nycartc.com/",
       "publicSafeSummary": "Let NYC Dance press-section corpus with 21 listed article references.",
       "projects": [
@@ -60,7 +60,7 @@ export const nacCampaignPressBatch20260714: {
       "notes": [
         "Campaign membership is preserved separately from article-level support; press-list inclusion is not treated as endorsement."
       ],
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -69,7 +69,7 @@ export const nacCampaignPressBatch20260714: {
     {
       "id": "INT-NAC-TALKS-NOT-RAIDS-PRESS-CORPUS",
       "kind": "public-url",
-      "capturedAt": "2026-07-14",
+      "capturedAt": "2026-07-13",
       "capturedFrom": "https://talksnotraids.com/",
       "publicSafeSummary": "Talks Not Raids press-section corpus with 7 listed article references.",
       "projects": [
@@ -96,7 +96,7 @@ export const nacCampaignPressBatch20260714: {
       "notes": [
         "Campaign membership is preserved separately from article-level support; press-list inclusion is not treated as endorsement."
       ],
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -105,7 +105,7 @@ export const nacCampaignPressBatch20260714: {
     {
       "id": "INT-NAC-SAVE-NYC-SPACES-PRESS-CORPUS",
       "kind": "public-url",
-      "capturedAt": "2026-07-14",
+      "capturedAt": "2026-07-13",
       "capturedFrom": "https://savenycspaces.nycartc.com/",
       "publicSafeSummary": "Save NYC Spaces press-section corpus with 8 listed article references.",
       "projects": [
@@ -133,7 +133,7 @@ export const nacCampaignPressBatch20260714: {
       "notes": [
         "Campaign membership is preserved separately from article-level support; press-list inclusion is not treated as endorsement."
       ],
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -142,7 +142,7 @@ export const nacCampaignPressBatch20260714: {
     {
       "id": "INT-NAC-FAIR-RENT-NYC-PRESS-CORPUS-2021",
       "kind": "public-url",
-      "capturedAt": "2026-07-14",
+      "capturedAt": "2026-07-13",
       "capturedFrom": "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
       "publicSafeSummary": "FairRentNYC press-section corpus with 9 listed article references.",
       "projects": [
@@ -171,7 +171,7 @@ export const nacCampaignPressBatch20260714: {
       "notes": [
         "Campaign membership is preserved separately from article-level support; press-list inclusion is not treated as endorsement."
       ],
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -186,7 +186,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "institutional-web-page",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://letnycdance.nycartc.com/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition, 'Let NYC Dance press index.'",
@@ -208,7 +208,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "institutional-web-page",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://talksnotraids.com/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition, 'Talks Not Raids press index.'",
@@ -230,7 +230,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "institutional-web-page",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://savenycspaces.nycartc.com/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NYC Artist Coalition, 'Save NYC Spaces press index.'",
@@ -252,7 +252,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "archived-web-capture",
       "visibility": "public",
       "preservationStatus": "archived",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://fairrentnyc.nycartc.com/",
       "preferredPublicUrl": "archive",
       "publicCitation": "NYC Artist Coalition, 'FairRentNYC press index.'",
@@ -275,7 +275,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.amny.com/opinion/the-sad-story-behind-nyc-vacant-storefronts-1.26023055",
       "preferredPublicUrl": "canonical",
       "publicCitation": "AM New York, 'The sad story behind NYC vacant storefronts.'",
@@ -297,7 +297,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "archived",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://ny.curbed.com/2019/11/8/20953724/commercial-rent-stabilization-bill-nyc-retail-vacancy",
       "preferredPublicUrl": "archive",
       "publicCitation": "Curbed, 'Could Commercial Rent Stabilization Solve NYC’s Retail Vacancy Woes?.'",
@@ -320,7 +320,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://gothamist.com/food/neirs-tavern-saved-rally-commercial-rent-regulations",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Gothamist, 'Neir's Tavern Avoids Closure But Activists Say The Larger Issue Of Skyrocketing Rents Still Looms.'",
@@ -342,7 +342,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.nydailynews.com/news/politics/ny-commercial-rent-regulation-steve-levin-20191114-eh3aigksp5edlf4itwdkfur74y-story.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NY Daily News, 'Pols, Small-Biz Owners Rally For Law Limiting Rent Hikes On NYC’s Beleaguered Mom-And-Pop Shops.'",
@@ -364,7 +364,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.nytimes.com/interactive/2018/09/06/nyregion/nyc-storefront-vacancy.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NY Times, 'This Space Available.'",
@@ -386,7 +386,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://qns.com/story/2019/12/18/sunnyside-councilman-small-business-owners-rally-for-commercial-rent-control/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "QNS, 'Sunnyside councilman, small business owners rally for commercial rent control.'",
@@ -408,7 +408,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://sunnysidepost.com/van-bramer-calls-for-commercial-rent-control-bill-aims-to-protect-small-businesses-from-rent-hikes",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Sunnyside Post, 'Van Bramer Calls for Commercial Rent Control Bill, Aims to Protect Small Businesses From Rent Hikes.'",
@@ -430,7 +430,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.theatlantic.com/ideas/archive/2018/10/new-york-retail-vacancy/572911/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "The Atlantic, 'How Manhattan Became a Rich Ghost Town.'",
@@ -451,12 +451,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "The Jewish Voice",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "live-and-archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://thejewishvoice.com/2019/11/11/bklyn-councilman-aims-to-save-mom-pop-retail-outlets/",
+      "archiveUrl": "https://web.archive.org/web/20191214161746/http://thejewishvoice.com/2019/11/11/bklyn-councilman-aims-to-save-mom-pop-retail-outlets/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "The Jewish Voice, 'Bklyn Councilman Aims to Save Mom & Pop Retail Outlets.'",
-      "publicNote": "Listed in the FairRentNYC press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the FairRentNYC press section. A July 13, 2026 automated request returned HTTP 403, so an archive fallback is retained; article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by FairRentNYC",
         "Bklyn Councilman Aims to Save Mom & Pop Retail Outlets"
@@ -474,7 +475,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://bedfordandbowery.com/2017/09/cabaret-law-repeal-supported-by-everyone-from-de-blasio-to-duke-ellingtons-family/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Bedford and Bowery, 'Anti-Dance Law Repeal Supported By Everyone From de Blasio to Duke Ellington’s Family.'",
@@ -496,7 +497,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.brooklyneagle.com/articles/2017/5/12/there-are-only-17-places-brooklyn-where-you-can-legally-dance",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Brooklyn Daily Eagle, 'There are only 17 places in Brooklyn where you can legally dance.'",
@@ -518,7 +519,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.brooklynpaper.com/stories/40/14/dtg-cabaret-law-followup-2017-04-07-bk.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Brooklyn Paper, 'Think I better dance, now! Two Bushwick councilmen fight for your right to party!.'",
@@ -540,7 +541,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "archived",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.crainsnewyork.com/article/20170619/SMALLBIZ/170619882",
       "preferredPublicUrl": "archive",
       "publicCitation": "Crain's New York, 'City Council moves to repeal 'racist' cabaret law.'",
@@ -563,7 +564,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.dnainfo.com/new-york/20170620/williamsburg/cabaret-law-dancing-footloose-brooklyn-north-brooklyn",
       "preferredPublicUrl": "canonical",
       "publicCitation": "DNAinfo, 'City Stonewalls Council, Defends 'Racist' No Dancing Law.'",
@@ -585,7 +586,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.forbes.com/sites/realspin/2017/10/04/nyc-republicans-should-support-cabaret-law-repeal-effort",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Forbes, 'NYC Republicans Should Support Cabaret Law Repeal Effort.'",
@@ -607,7 +608,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.metro.us/news/local-news/new-york/arts-advocates-renew-call-end-new-york-citys-antiquated-cabaret-laws",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Metro NY, 'Arts advocates renew call to end New York City’s antiquated cabaret laws.'",
@@ -629,7 +630,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.nydailynews.com/new-york/footloose-new-yorkers-archaic-ban-dancing-article-1.3260553",
       "preferredPublicUrl": "canonical",
       "publicCitation": "NY Daily News, 'Footloose New Yorkers go after archaic cabaret law banning dancing in most city bars.'",
@@ -651,7 +652,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://nypost.com/2017/09/14/de-blasio-might-scrap-ridiculous-law-banning-dancing-in-bars/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York Post, 'De Blasio might scrap ridiculous law banning dancing in bars.'",
@@ -672,12 +673,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "New York Times",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "live-and-archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
+      "archiveUrl": "https://web.archive.org/web/20251225083004/https://www.nytimes.com/2017/10/30/nyregion/new-york-cabaret-law-repeal.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York Times, 'After 91 Years, New York Will Let Its People Boogie.'",
-      "publicNote": "Listed in the Let NYC Dance press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the Let NYC Dance press section. A July 13, 2026 automated request returned HTTP 403, so an archive fallback is retained; article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by Let NYC Dance",
         "After 91 Years, New York Will Let Its People Boogie"
@@ -695,7 +697,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.qchron.com/editions/queenswide/aged-cabaret-law-finally-at-its-end/article_368ea4d3-28ba-5a18-bb25-58f4c50a290f.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Queens Chronicle, 'Aged Cabaret Law finally at its end?.'",
@@ -716,12 +718,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "SF Gate",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.sfgate.com/news/media/New-York-City-apparently-has-a-No-Dancing-law-800714.php",
-      "preferredPublicUrl": "canonical",
+      "archiveUrl": "https://web.archive.org/web/20220809111234/https://www.sfgate.com/news/media/New-York-City-apparently-has-a-No-Dancing-law-800714.php",
+      "preferredPublicUrl": "archive",
       "publicCitation": "SF Gate, 'New York City apparently has a 'No Dancing' law.'",
-      "publicNote": "Listed in the Let NYC Dance press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the Let NYC Dance press section. The canonical URL returned HTTP 404 on July 13, 2026; the archive fallback is preferred and article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by Let NYC Dance",
         "New York City apparently has a 'No Dancing' law"
@@ -739,7 +742,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.smithsonianmag.com/smart-news/new-york-city-could-finally-lose-its-prohibition-era-dancing-rule-180964998/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Smithsonian, 'New York City Could Finally Lose Its Prohibition-era Dancing Rule.'",
@@ -761,7 +764,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.newyorker.com/magazine/2017/07/10/dance-outlaws-fight-for-the-right-to-party",
       "preferredPublicUrl": "canonical",
       "publicCitation": "The New Yorker, 'Dance Outlaws Fight for the Right to Party.'",
@@ -783,7 +786,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "archived",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.villagevoice.com/news/nycs-cabaret-law-is-racist-stupid-and-must-be-eliminated-9834234",
       "preferredPublicUrl": "archive",
       "publicCitation": "The Village Voice, 'NYC's Racist, Draconian Cabaret Law Must Be Eliminated.'",
@@ -806,7 +809,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.timeout.com/newyork/blog/its-time-to-make-it-legal-to-dance-anywhere-the-f-ck-you-want-in-new-york-081517",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Time Out New York, 'It’s time to make it legal to dance anywhere the f*ck you want in New York.'",
@@ -828,7 +831,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live-and-archived",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Vice Thump, 'A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety.'",
@@ -851,7 +854,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.wnyc.org/story/bureaucratic-dance-end-nyc-cabaret-law",
       "preferredPublicUrl": "canonical",
       "publicCitation": "WNYC, 'The Bureaucratic Dance to End NYC Cabaret Law.'",
@@ -873,7 +876,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://mixmag.net/read/nyc-activists-aim-to-repeal-local-no-dancing-law-news",
       "preferredPublicUrl": "canonical",
       "publicCitation": "mixmag, 'NYC ACTIVISTS AIM TO REPEAL LOCAL “NO DANCING LAW”.'",
@@ -895,7 +898,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Bedford and Bowery, 'What Can the Nightlife Mayor Do? The DIY Scene Discusses.'",
@@ -917,7 +920,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.brooklyneagle.com/articles/2017/9/20/new-era-mayor-de-blasio-signs-bill-create-nyc-office-nightlife",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Brooklyn Daily Eagle, 'A New Era: Mayor de Blasio signs bill to Create NYC Office of Nightlife.'",
@@ -938,12 +941,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "Brooklyn Vegan",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "live-and-archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.brooklynvegan.com/mayor-de-blasio-signed-nyc-office-of-nightlife-bill-at-house-of-yes/",
+      "archiveUrl": "https://web.archive.org/web/20250122015846/https://www.brooklynvegan.com/mayor-de-blasio-signed-nyc-office-of-nightlife-bill-at-house-of-yes/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Brooklyn Vegan, 'Mayor de Blasio signed NYC Office of Nightlife bill at House of Yes.'",
-      "publicNote": "Listed in the Save NYC Spaces press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the Save NYC Spaces press section. A July 13, 2026 automated request returned HTTP 403, so an archive fallback is retained; article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by Save NYC Spaces",
         "Mayor de Blasio signed NYC Office of Nightlife bill at House of Yes"
@@ -961,7 +965,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.citylab.com/solutions/2017/09/america-discovers-the-night-mayor/539505/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "CityLab, 'How to Be a Good 'Nightlife Mayor'.'",
@@ -983,7 +987,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://www.nydailynews.com/news/politics/nyc-creates-office-manage-issues-affecting-nightlife-industry-article-1.3507451",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Daily News, 'Mayor de Blasio OKs creation of office to manage issues affecting city’s nightlife.'",
@@ -1005,7 +1009,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://gothamist.com/2017/09/20/punk_blaz_signs_bill.php",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Gothamist, 'De Blasio, Praising Punk Rock, Signs Bill Establishing NYC 'Nightlife Mayor'.'",
@@ -1027,7 +1031,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://nypost.com/2017/09/19/de-blasios-newest-city-agency-office-of-nightlife/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York Post, 'De Blasio’s newest city agency: Office of Nightlife.'",
@@ -1049,7 +1053,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://bedfordandbowery.com/2019/02/disco-discord-nypd-and-nightlife-operators-clash-over-party-crashing-raids/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Bedford + Bowery, 'Disco Discord: NYPD and Nightlife Owners Clash Over Party-Crashing 'Raids'.'",
@@ -1071,7 +1075,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "http://gothamist.com/2019/02/12/march_nightlife_raids_city_council.php",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Gothamist, 'Nightlife Proprietors Say MARCH Raids Disproportionately Target Bars Favored By LGBTQ Patrons, People Of Color.'",
@@ -1092,12 +1096,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "New York Times",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "live-and-archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.nytimes.com/2002/11/10/nyregion/city-cracks-down-on-nightclubs-and-may-revise-its-policies.html",
+      "archiveUrl": "https://web.archive.org/web/20251104235429/https://www.nytimes.com/2002/11/10/nyregion/city-cracks-down-on-nightclubs-and-may-revise-its-policies.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York Times, 'City Cracks Down on Nightclubs and May Revise Its Policies.'",
-      "publicNote": "Listed in the Talks Not Raids press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the Talks Not Raids press section. A July 13, 2026 automated request returned HTTP 403, so an archive fallback is retained; article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by Talks Not Raids",
         "City Cracks Down on Nightclubs and May Revise Its Policies"
@@ -1115,7 +1120,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://observer.com/2018/03/new-york-city-night-mayor/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Observer, 'Here’s What New Yorkers Want the New Nightlife Mayor to Focus On.'",
@@ -1136,12 +1141,13 @@ export const nacCampaignPressBatch20260714: {
       "organization": "The Baffler",
       "kind": "published-article",
       "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "preservationStatus": "live-and-archived",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://thebaffler.com/latest/cut-the-music-pelly",
+      "archiveUrl": "https://web.archive.org/web/20260505011341/https://thebaffler.com/latest/cut-the-music-pelly",
       "preferredPublicUrl": "canonical",
       "publicCitation": "The Baffler, 'Cut the Music: Inside M.A.R.C.H.—the NYPD's secret, venue-closing task force.'",
-      "publicNote": "Listed in the Talks Not Raids press section; article-level claims remain held until close reading.",
+      "publicNote": "Listed in the Talks Not Raids press section. A July 13, 2026 automated request returned HTTP 403, so an archive fallback is retained; article-level claims remain held until close reading.",
       "supportsGenerally": [
         "the public media context assembled by Talks Not Raids",
         "Cut the Music: Inside M.A.R.C.H.—the NYPD's secret, venue-closing task force"
@@ -1159,7 +1165,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.villagevoice.com/2016/12/08/palisades-owners-explain-why-the-beloved-venue-was-shut-down/",
       "preferredPublicUrl": "canonical",
       "publicCitation": "The Village Voice, 'Palisades Owners Explain Why the Beloved Venue Was Shut Down.'",
@@ -1181,7 +1187,7 @@ export const nacCampaignPressBatch20260714: {
       "kind": "published-article",
       "visibility": "public",
       "preservationStatus": "live",
-      "accessedAt": "2026-07-14",
+      "accessedAt": "2026-07-13",
       "canonicalUrl": "https://www.amny.com/news/politics/nightlife-mayor-brooklyn-panel-1.17689726",
       "preferredPublicUrl": "canonical",
       "publicCitation": "amNewYork, 'Nightlife mayor Ariel Palitz, in Bushwick, Brooklyn, says ‘We have a lot of talking to do’.'",
@@ -1209,7 +1215,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1226,7 +1232,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1243,7 +1249,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1260,7 +1266,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1277,7 +1283,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1294,7 +1300,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1311,7 +1317,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1328,7 +1334,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1345,7 +1351,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1362,7 +1368,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1379,7 +1385,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1396,7 +1402,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1413,7 +1419,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1430,7 +1436,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1447,7 +1453,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1464,7 +1470,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1481,7 +1487,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1498,7 +1504,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1515,7 +1521,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1532,7 +1538,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1549,7 +1555,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1566,7 +1572,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1583,7 +1589,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1600,7 +1606,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1617,7 +1623,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1634,7 +1640,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1651,7 +1657,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1668,7 +1674,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1685,7 +1691,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1702,7 +1708,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1719,7 +1725,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1736,7 +1742,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1753,7 +1759,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1770,7 +1776,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1787,7 +1793,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1804,7 +1810,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1821,7 +1827,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1838,7 +1844,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1855,7 +1861,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1872,7 +1878,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1889,7 +1895,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1906,7 +1912,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1923,7 +1929,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1940,7 +1946,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1957,7 +1963,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1974,7 +1980,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -1991,7 +1997,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -2008,7 +2014,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSafe": true,
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -2027,7 +2033,7 @@ export const nacCampaignPressBatch20260714: {
       "projections": [
         {
           "key": "case-study",
-          "text": "Across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and the archived FairRentNYC site, four campaign press indexes preserve 45 listed references to 44 distinct articles spanning repeal, nightlife governance, enforcement, storefront vacancy, and commercial rent stabilization.",
+          "text": "Across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and the archived FairRentNYC site, four campaign press indexes preserve 45 listed references to 44 distinct article URLs spanning repeal, nightlife governance, enforcement, storefront vacancy, and commercial rent stabilization.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -2094,7 +2100,7 @@ export const nacCampaignPressBatch20260714: {
       "researchInquiryIds": [
         "INQ-NAC-CAMPAIGN-PRESS-CORPUS-2026"
       ],
-      "reviewedAt": "2026-07-14",
+      "reviewedAt": "2026-07-13",
       "reviewedBy": [
         "Jamie Burkart",
         "Codex public-source review"
@@ -2171,7 +2177,7 @@ export const nacCampaignPressBatch20260714: {
         "CLM-NAC-CAMPAIGN-PRESS-CORPUS"
       ],
       "publicSummary": "Close-read the 44-article campaign press corpus before promoting article-specific claims beyond the verified index metadata.",
-      "reviewedAt": "2026-07-14"
+      "reviewedAt": "2026-07-13"
     }
   ],
   "researchInquiries": [
@@ -2183,19 +2189,19 @@ export const nacCampaignPressBatch20260714: {
         "Fetched the three live campaign sites and the supplied December 1, 2021 FairRentNYC Wayback capture",
         "Parsed only links grouped under each page's Press heading",
         "Normalized article URLs while preserving many-to-many campaign membership",
-        "Audited all 44 unique URLs and recovered Wayback captures or a migrated canonical URL for four difficult links"
+        "Audited all 44 unique URLs, retained archive fallbacks for inaccessible links, and recorded the migrated Vice canonical URL"
       ],
-      "runAt": "2026-07-14",
+      "runAt": "2026-07-13",
       "resultStatus": "partially-recovered",
       "findings": [
         "The four indexes contain 45 press-list occurrences representing 44 unique article URLs.",
         "Let NYC Dance lists 21 references, Talks Not Raids lists 7, Save NYC Spaces lists 8, and the archived FairRentNYC page lists 9.",
-        "Thirty-four URLs returned direct 2xx responses during the audit; six returned access restrictions; four dead, migrated, or unresolved-host links received recovered archive or migrated-canonical handling."
+        "Thirty-five URLs returned direct 2xx responses during the July 13 audit; five returned HTTP 403 access restrictions; four returned HTTP 404 or 410. Every restricted or unavailable URL retains an archive fallback."
       ],
       "limitations": [
         "The corpus records campaign-curated metadata and membership; most articles have not yet received article-level close reading.",
         "Press-list inclusion does not establish outlet endorsement, article focus, Jamie-specific authorship, or policy causation.",
-        "Link availability is a July 14, 2026 snapshot and can change."
+        "Link availability is a July 13, 2026 snapshot and can change."
       ],
       "sourceIds": [
         "SRC-NAC-LET-NYC-DANCE-PRESS-INDEX",
@@ -2247,7 +2253,7 @@ export const nacCampaignPressBatch20260714: {
         "SRC-NAC-PRESS-THE-VILLAGE-VOICE-3385B8B5",
         "SRC-NAC-PRESS-AMNEWYORK-FABEA2E6"
       ],
-      "publicSummary": "Four campaign press indexes preserve 45 listed references to 44 unique articles; the corpus is aggregated and availability-audited, with article-level claim promotion still queued."
+      "publicSummary": "Four campaign press indexes preserve 45 listed references to 44 unique article URLs; the corpus is aggregated and availability-audited, with article-level claim promotion still queued."
     }
   ]
 };

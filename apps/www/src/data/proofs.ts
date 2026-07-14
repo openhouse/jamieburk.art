@@ -350,7 +350,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "The Let NYC Dance, Save NYC Spaces, Talks Not Raids, and archived FairRentNYC press sections assemble public context spanning Cabaret Law repeal, nightlife governance, MARCH enforcement, storefront vacancy, and Commercial Rent Stabilization.",
     sourceBasis:
-      "Three live campaign press indexes, the December 1, 2021 FairRentNYC Wayback capture, normalized article metadata, and a July 14, 2026 link-availability audit.",
+      "Three live campaign press indexes, the December 1, 2021 FairRentNYC Wayback capture, normalized article metadata, and a July 13, 2026 link-availability audit.",
     whyItMatters:
       "Makes the breadth of the public record reusable without overwhelming the portfolio page or treating campaign-curated links as automatic article-level proof.",
     guardrail:
@@ -370,7 +370,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["work-card", "case-study", "technical-operations"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "source-mapping", "public-guidance", "knowledge-systems"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "wowlist-community-platform",
