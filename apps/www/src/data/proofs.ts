@@ -428,16 +428,19 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.",
     shortWording:
-      "Jamie co-led adaptive reuse planning tied to a $490,539 public funding recommendation",
+      "Jamie co-led adaptive reuse planning for a project approved for a $490,539 city appropriation; it later withdrew before disbursement",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement.",
+    sourceBasis:
+      "Approved resume language and official KCMO proposal, Council, appropriation, and project-status records.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Never imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, or completed redevelopment.",
     doNotSay: [
-      "Final funding received",
+      "The City Council vote was unanimous",
+      "KC Town Hall received or spent $490,539",
+      "The funded redevelopment was completed",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record"
@@ -449,10 +452,11 @@ export const proofClaims: ProofClaim[] = [
       "Banking details",
       "Stakeholder details"
     ],
-    surfaces: ["technical-operations", "work-card", "case-study"],
+    surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    canonicalClaimIds: ["CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "source-backed-team-memory-method",

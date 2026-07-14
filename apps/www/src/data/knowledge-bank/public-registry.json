@@ -181,25 +181,6 @@
       ]
     },
     {
-      "id": "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-      "title": "Round Two Recommended Projects - Central City Economic Development Sales Tax Board",
-      "organization": "City of Kansas City, Missouri",
-      "kind": "government-record",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-12",
-      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=A318190A-A2D9-436E-8D10-85242BA4ED5F&ID=10628092&M=F",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Central City Economic Development Sales Tax Board, Round Two Recommended Projects presentation, Resolution 190649, 2019.",
-      "publicNote": "The official presentation records KC Town Hall's project description, $680,169 total budget, and $490,539 recommended funding amount.",
-      "doesNotEstablish": [
-        "final receipt or disbursement of funds",
-        "Jamie's sole ownership or authorship",
-        "current project or property status",
-        "that projected job estimates were realized"
-      ]
-    },
-    {
       "id": "SRC-WOWLIST-SBDIY",
       "title": "sbdiy community resources and WOWList calendar",
       "organization": "sbdiy",
@@ -219,23 +200,64 @@
       ]
     },
     {
-      "id": "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14",
-      "title": "Central City Economic Development Sales Tax Board minutes from September 14, 2021",
+      "id": "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+      "title": "Kansas City Resolution 190649 legislative record",
       "organization": "City of Kansas City, Missouri",
       "kind": "government-record",
       "visibility": "public",
       "preservationStatus": "live",
-      "publishedAt": "2021-10-12",
-      "accessedAt": "2026-07-12",
-      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/7198/637696345156870000",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=",
       "preferredPublicUrl": "canonical",
-      "publicCitation": "Central City Economic Development Sales Tax Board, minutes from September 14, 2021, published October 12, 2021.",
-      "publicNote": "The official minutes list Jamie Burkart among community members and identify him with KC Town Hall, documenting continued public project representation in 2021.",
+      "publicCitation": "City of Kansas City, Missouri, Resolution 190649 legislative record, Council action September 26, 2019.",
+      "publicNote": "The official record says the Council adopted Resolution 190649 as substituted, accepting the CCED Board's $490,539 recommendation for KC Town Hall and authorizing negotiation of a funding agreement.",
       "doesNotEstablish": [
-        "Jamie's action at the meeting",
+        "a member-level roll-call tally",
+        "a unanimous Council vote",
+        "an executed funding agreement",
+        "receipt or disbursement of funds",
+        "current project or property status"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
+      "title": "Central City Sales Tax Project Updates as of April 12, 2024",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-04-12",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/12660/638482760631600000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Sales Tax Project Updates, April 12, 2024.",
+      "publicNote": "The official status table lists $490,539 in CCED funds for KC Town Hall, no funds disbursed, and a developer letter rescinding the previously awarded funds.",
+      "doesNotEstablish": [
+        "the reason for the project's withdrawal",
+        "Jamie's role in the withdrawal",
         "current project or property status",
-        "final receipt or disbursement of funds",
-        "Jamie's sole ownership or control"
+        "current ownership of the property"
+      ]
+    },
+    {
+      "id": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "title": "Kansas City Ordinance 240317 claw-back record",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Ordinance 240317, passed March 28, 2024.",
+      "publicNote": "The ordinance states that Committee Substitute for Ordinance 190642 appropriated $490,539 to KC Town Hall, that the project later withdrew, and that the unused amount was reappropriated in 2024.",
+      "doesNotEstablish": [
+        "the reason for the project's withdrawal",
+        "Jamie's role in the withdrawal",
+        "a completed redevelopment",
+        "current project or property status"
       ]
     }
   ],
@@ -589,13 +611,13 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "KCMO records identify Jamie as the KC Town-Hall presenter in the 2019 proposal process, record a unanimous board recommendation of $490,539 for the project, and list him with KC Town Hall again in 2021.",
+          "text": "KCMO records identify Jamie as KC Town-Hall's presenter. The CCED Board unanimously recommended $490,539; the City Council then adopted the project resolution, and a companion ordinance appropriated that amount. The project later withdrew before the funds were disbursed.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
             "/work/kc-town-hall"
           ],
-          "rationale": "Make Jamie's public municipal-process role, the bounded recommendation outcome, and sustained project representation directly inspectable on the case study."
+          "rationale": "Make Jamie's public municipal-process role and the complete recommendation, Council-action, appropriation, and no-disbursement chronology directly inspectable without implying a completed project."
         }
       ],
       "evidence": [
@@ -611,29 +633,44 @@
           "renderCitation": true
         },
         {
-          "sourceId": "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-          "relationship": "corroborating",
+          "sourceId": "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+          "relationship": "direct-support",
           "supports": [
-            "KC Town Hall was a recommended Round Two project",
-            "recommended funding was $490,539"
+            "the Council adopted Resolution 190649 as substituted on September 26, 2019",
+            "the resolution accepted the CCED Board's $490,539 recommendation for KC Town Hall",
+            "the resolution authorized negotiation of a funding agreement"
           ],
           "confidence": "high",
           "renderCitation": true
         },
         {
-          "sourceId": "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14",
-          "relationship": "corroborating",
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
+          "relationship": "supports-boundary",
           "supports": [
-            "the municipal record identified Jamie with KC Town Hall",
-            "KC Town Hall remained represented in the public process in 2021"
+            "the KC Town Hall allocation was listed as $490,539",
+            "no KC Town Hall funds were disbursed",
+            "the project submitted a letter rescinding the previously awarded funds"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+          "relationship": "direct-support",
+          "supports": [
+            "Committee Substitute for Ordinance 190642 appropriated $490,539 to KC Town Hall",
+            "KC Town Hall later withdrew from the project",
+            "the unused $490,539 was reappropriated in 2024"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "Recommendation is not proof of final receipt or disbursement.",
-        "Presenter identification and meeting attendance do not establish sole ownership, authorship, or current project status."
+        "The unanimous vote belongs to the CCED Board; the official Council record does not publish a member-level tally.",
+        "Council adoption and appropriation are not proof of an executed funding agreement, receipt, or disbursement.",
+        "Later municipal records show that the project withdrew and the unused amount was reappropriated in 2024.",
+        "Presenter identification and meeting attendance do not establish sole ownership, authorship, withdrawal responsibility, or current property status."
       ]
     }
   ],
@@ -769,8 +806,9 @@
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
         "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
-        "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-        "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+        "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+        "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+        "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
       ],
       "occurrences": [
         {
@@ -779,8 +817,9 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
-            "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-            "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+            "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+            "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+            "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
           ]
         }
       ]

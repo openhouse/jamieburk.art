@@ -258,6 +258,22 @@ if (!existsSync(resumePath)) {
     addFailure(resumePath, "resume PDF is missing the approved CallNYC projection");
   }
 
+  if (/secured a\s+\$490,539 public funding recommendation/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF contains the retired KC Town Hall recommendation-only wording");
+  }
+
+  if (/City Council appropriation,?\s+then withdrew/i.test(resumeText)) {
+    addFailure(resumePath, "resume PDF ambiguously attributes the KC Town Hall withdrawal");
+  }
+
+  if (
+    !/the project\s+advanced from a unanimous CCED Board recommendation to a \$490,539 City Council appropriation\s+and later withdrew before disbursement/i.test(
+      resumeText
+    )
+  ) {
+    addFailure(resumePath, "resume PDF is missing the approved KC Town Hall Council-action projection");
+  }
+
   if (
     isProduction &&
     !process.env.NEXT_PUBLIC_CONTACT_EMAIL &&

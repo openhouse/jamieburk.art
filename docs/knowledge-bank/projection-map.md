@@ -26,7 +26,13 @@ Use claims that match the approved resume:
 - `nyc-artist-coalition-public-web-infrastructure`
 - `wowlist-community-platform`
 - `sunday-dinner-196-participation-infrastructure`
+- `kc-town-hall-public-benefit-documentation`
 - `ai-evals-professional-development`
+
+The KC Town Hall resume projection corrects the former recommendation-only
+understatement. It must keep the project as the explicit subject of advancement
+and withdrawal, distinguish the unanimous Board recommendation from the Council
+appropriation, and state that withdrawal occurred before disbursement.
 
 ## Technical Operations
 

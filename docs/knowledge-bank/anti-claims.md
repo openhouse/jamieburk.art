@@ -62,6 +62,13 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not collapse the municipal sequence into a single vote. The CCED Board's
+recommendation was unanimous; the official Council record establishes adoption
+and appropriation but publishes no member-level tally. Do not say KC Town Hall
+received or spent the $490,539, completed the funded redevelopment, or retained
+the allocation: later KCMO records show no disbursement, project withdrawal,
+and reappropriation of the unused amount.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

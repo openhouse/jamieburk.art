@@ -49,10 +49,10 @@ Seven additional claims matured from ten newly reviewed public sources:
 - `CLM-NYCAC-COMMERCIAL-RENT-TESTIMONY` - the official Council transcript
   documents Jamie's direct testimony, not legislative authorship or sole
   causality.
-- `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS` - three municipal records document
-  Jamie's presenter role, the unanimous $490,539 recommendation, and continued
-  KC Town Hall identification in 2021; receipt and current status are not
-  claimed.
+- `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS` - municipal records document Jamie's
+  presenter role, the unanimous $490,539 CCED Board recommendation, Council
+  adoption and appropriation, continued KC Town Hall identification in 2021,
+  and the project's later withdrawal before disbursement.
 - `CLM-CLAUDETTE-AR-COLLABORATION` - a collaborator-authored page documents an
   augmented-reality collaboration and shared video production with explicit
   credit and rights boundaries.
@@ -268,15 +268,16 @@ bibliography claim:
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public source / public-safe archive summary
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.
-**Where to project:** Technical Operations, Work card, Case study.
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement.
+**Where to project:** Resume, Technical Operations, Work card, Case study.
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.
+**Guardrail:** Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Do not imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, or completed redevelopment.
+**Do not say:** The City Council vote was unanimous; KC Town Hall received or spent $490,539; the funded redevelopment was completed; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Canonical claim:** `CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS`.
+**Last reviewed:** 2026-07-14
 
 ## source-backed-team-memory-method - Source-backed team memory
 

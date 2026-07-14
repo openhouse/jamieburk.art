@@ -16,6 +16,12 @@ import {
   campaignPressSources
 } from "../../apps/www/src/data/knowledge-bank/campaign-press.ts";
 import {
+  kcTownHallCouncilActionCorrections,
+  kcTownHallCouncilActionInquiries,
+  kcTownHallCouncilActionIntake,
+  kcTownHallCouncilActionSources
+} from "../../apps/www/src/data/knowledge-bank/kc-town-hall-council-action.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
@@ -51,6 +57,88 @@ test("ten-source expansion is complete and dispositioned", () => {
     sourceExpansionIntake.every(
       (record) => record.status === "matured" && record.claimIds.length > 0
     )
+  );
+});
+
+test("KC Town Hall Council action is exact, complete, and dispositioned", () => {
+  assert.equal(kcTownHallCouncilActionSources.length, 4);
+  assert.equal(kcTownHallCouncilActionIntake.length, 1);
+  assert.equal(kcTownHallCouncilActionInquiries.length, 1);
+  assert.equal(kcTownHallCouncilActionCorrections.length, 1);
+
+  const intake = kcTownHallCouncilActionIntake[0];
+  const inquiry = kcTownHallCouncilActionInquiries[0];
+  const correction = kcTownHallCouncilActionCorrections[0];
+  const sourceIds = kcTownHallCouncilActionSources.map((source) => source.id);
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS"
+  );
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  const projection = claim.projections.find(
+    (item) => item.key === "case-study" && item.status === "active"
+  );
+
+  assert.equal(intake.status, "matured");
+  assert.equal(intake.disposition, "correction-created");
+  assert.deepEqual(intake.sourceIds, sourceIds);
+  assert.ok(sourceIds.every((sourceId) => inquiry.sourceIds.includes(sourceId)));
+  assert.equal(inquiry.resultStatus, "recovered");
+  assert.equal(correction.claimId, claim.id);
+  assert.ok(correction.affectedSurfaces.includes("resume-pdf"));
+  assert.ok(
+    sourceIds.every((sourceId) =>
+      claim.evidence.some((relationship) => relationship.sourceId === sourceId)
+    )
+  );
+  assert.deepEqual(proof.canonicalClaimIds, [claim.id]);
+
+  assert.match(projection.text, /CCED Board unanimously recommended \$490,539/);
+  assert.match(projection.text, /City Council then adopted/);
+  assert.match(projection.text, /companion ordinance appropriated that amount/);
+  assert.match(projection.text, /withdrew before the funds were disbursed/);
+  assert.doesNotMatch(projection.text, /Council (?:vote )?was unanimous/i);
+  assert.ok(
+    claim.antiClaims.some((item) => /Council vote was unanimous/i.test(item))
+  );
+  assert.ok(
+    claim.antiClaims.some((item) => /received or spent/i.test(item))
+  );
+});
+
+test("KC Town Hall public surfaces preserve the no-disbursement boundary", () => {
+  const proof = proofClaims.find(
+    (item) => item.id === "kc-town-hall-public-benefit-documentation"
+  );
+  const technicalOperationsSource = readFileSync(
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "utf8"
+  );
+  const publicText = [
+    readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8"),
+    technicalOperationsSource,
+    readFileSync("apps/www/src/data/work.ts", "utf8"),
+    readFileSync("docs/knowledge-bank/proofs.md", "utf8"),
+    proof.publicWording,
+    proof.shortWording,
+    proof.detailedPublicWording
+  ].join("\n");
+
+  assert.match(
+    technicalOperationsSource,
+    /requireReadyOrCarefulProof\(\s*"kc-town-hall-public-benefit-documentation"/
+  );
+  assert.match(publicText, /City Council (?:approval and appropriation|then adopted)/);
+  assert.match(
+    publicText,
+    /withdrew before (?:(?:the )?funds were )?disburs(?:ed|ement)/
+  );
+  assert.doesNotMatch(publicText, /public funding recommendation/);
+  assert.doesNotMatch(publicText, /Council (?:vote )?was unanimous/i);
+  assert.doesNotMatch(
+    publicText,
+    /(?:received|was paid|spent) (?:the )?\$490,539|\$490,539 (?:received|paid|spent)/i
   );
 });
 

@@ -398,28 +398,32 @@ export const sourceExpansionClaims = [
   {
     id: "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS",
     project: "kc-town-hall",
-    internalClaim: "KCMO records identify Jamie as KC Town-Hall's presenter in 2019, document a unanimous $490,539 board recommendation, and identify him with KC Town Hall again in 2021.",
+    internalClaim: "KCMO records identify Jamie as KC Town-Hall's presenter, document a unanimous $490,539 CCED Board recommendation, show the Council adopted the project resolution and appropriated that amount, and later record withdrawal before disbursement and reappropriation of the unused funds.",
     status: "confirmed-with-boundary",
     projections: [
       {
         key: "case-study",
-        text: "KCMO records identify Jamie as the KC Town-Hall presenter in the 2019 proposal process, record a unanimous board recommendation of $490,539 for the project, and list him with KC Town Hall again in 2021.",
+        text: "KCMO records identify Jamie as KC Town-Hall's presenter. The CCED Board unanimously recommended $490,539; the City Council then adopted the project resolution, and a companion ordinance appropriated that amount. The project later withdrew before the funds were disbursed.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/kc-town-hall"],
-        rationale: "Make Jamie's public municipal-process role, the bounded recommendation outcome, and sustained project representation directly inspectable on the case study."
+        rationale: "Make Jamie's public municipal-process role and the complete recommendation, Council-action, appropriation, and no-disbursement chronology directly inspectable without implying a completed project."
       }
     ],
     evidence: [
       { sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019", relationship: "direct-support", supports: ["Jamie was identified as the KC Town-Hall presenter", "the proposal requested $490,539", "the board unanimously recommended $490,539 to the City Council"], confidence: "high", renderCitation: true },
       { sourceId: "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019", relationship: "corroborating", supports: ["KC Town Hall was a recommended Round Two project", "recommended funding was $490,539"], confidence: "high", renderCitation: true },
-      { sourceId: "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14", relationship: "corroborating", supports: ["the municipal record identified Jamie with KC Town Hall", "KC Town Hall remained represented in the public process in 2021"], confidence: "high", renderCitation: true }
+      { sourceId: "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649", relationship: "direct-support", supports: ["the Council adopted Resolution 190649 as substituted on September 26, 2019", "the resolution accepted the CCED Board's $490,539 recommendation for KC Town Hall", "the resolution authorized negotiation of a funding agreement"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KC-TOWN-HALL-COUNCIL-MEETING-2019-09-26", relationship: "corroborating", supports: ["the Council adopted Resolution 190649 as substituted", "the Council passed companion Ordinance 190642 as substituted"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14", relationship: "corroborating", supports: ["the municipal record identified Jamie with KC Town Hall", "KC Town Hall remained represented in the public process in 2021"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12", relationship: "supports-boundary", supports: ["the KC Town Hall allocation was listed as $490,539", "no KC Town Hall funds were disbursed", "the project submitted a letter rescinding the previously awarded funds"], confidence: "high", renderCitation: true },
+      { sourceId: "SRC-KC-TOWN-HALL-ORDINANCE-240317", relationship: "direct-support", supports: ["Committee Substitute for Ordinance 190642 appropriated $490,539 to KC Town Hall", "KC Town Hall later withdrew from the project", "the unused $490,539 was reappropriated in 2024"], confidence: "high", renderCitation: true }
     ],
-    boundaries: ["Recommendation is not proof of final receipt or disbursement.", "Presenter identification and meeting attendance do not establish sole ownership, authorship, or current project status."],
-    antiClaims: ["Jamie alone owned or controlled KC Town Hall.", "The $490,539 was confirmed as received.", "The municipal records establish current property status."],
-    researchInquiryIds: [],
-    reviewedAt: "2026-07-12",
-    reviewedBy: ["Codex public-source review"]
+    boundaries: ["The unanimous vote belongs to the CCED Board; the official Council record does not publish a member-level tally.", "Council adoption and appropriation are not proof of an executed funding agreement, receipt, or disbursement.", "Later municipal records show that the project withdrew and the unused amount was reappropriated in 2024.", "Presenter identification and meeting attendance do not establish sole ownership, authorship, withdrawal responsibility, or current property status."],
+    antiClaims: ["Jamie alone owned or controlled KC Town Hall.", "The City Council vote was unanimous.", "KC Town Hall received or spent the $490,539.", "The funded redevelopment was completed.", "The municipal records establish current property status."],
+    researchInquiryIds: ["INQ-KC-TOWN-HALL-COUNCIL-ACTION-2019"],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Jamie Burkart", "Codex official-record review"]
   },
   {
     id: "CLM-CLAUDETTE-AR-COLLABORATION",
@@ -681,8 +685,9 @@ export const sourceExpansionPages = [
     surface: "/work/kc-town-hall",
     sourceOrder: [
       "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
-      "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-      "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+      "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
     ],
     occurrences: [
       {
@@ -691,8 +696,9 @@ export const sourceExpansionPages = [
         projection: "case-study",
         sourceIds: [
           "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
-          "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-          "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+          "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+          "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+          "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
         ]
       }
     ]

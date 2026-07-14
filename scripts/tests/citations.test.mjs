@@ -32,8 +32,9 @@ test("multi-source occurrences preserve editorial order", () => {
     ),
     [
       "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
-      "SRC-KC-TOWN-HALL-CCED-RECOMMENDATION-2019",
-      "SRC-KC-TOWN-HALL-CCED-MINUTES-2021-09-14"
+      "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
+      "SRC-KC-TOWN-HALL-ORDINANCE-240317",
+      "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12"
     ]
   );
 });
@@ -42,7 +43,7 @@ test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 2);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 2);
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 3);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 4);
 });
 
 test("Claim resolver returns only active approved projections", () => {
@@ -54,7 +55,7 @@ test("Claim resolver returns only active approved projections", () => {
 test("corrections retire old wording from public surfaces", () => {
   const text = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 3);
+  assert.equal(knowledgeBank.corrections.length, 4);
 });
 
 test("negative research preserves scope and limitations", () => {
@@ -75,8 +76,17 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");
   const sourceNote = readFileSync("apps/www/src/components/citations/SourceNote.tsx", "utf8");
+  const caseStudyLayout = readFileSync(
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "utf8"
+  );
   assert.match(cite, /role="doc-noteref"/);
   assert.match(references, /role="doc-endnotes"/);
   assert.match(references, /<ol>/);
   assert.match(sourceNote, /role="doc-backlink"/);
+  assert.ok(
+    caseStudyLayout.indexOf("<EvidenceAndLimits") <
+      caseStudyLayout.indexOf("<References"),
+    "case-study endnotes must follow evidence and limits"
+  );
 });

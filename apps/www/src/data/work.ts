@@ -484,7 +484,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building. The project advanced from a unanimous $490,539 CCED Board recommendation to City Council approval and appropriation. The project later withdrew before disbursement.",
     role: "Co-Lead, Redevelopment Planning & Public-Benefit Documentation",
     years: "2020s",
     status: "Short proof page",
@@ -510,7 +510,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "KCMO Central City Economic Development Sales Tax Board records, approved resume language, and a public-safe project summary.",
+      "Official KCMO proposal, Council, appropriation, and project-status records, approved resume language, and a public-safe project summary.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -520,13 +520,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "$490,539 City Council-approved appropriation (not disbursed)"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and public-benefit documentation for a long-vacant historic building.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation for a long-vacant historic building; official records trace the project from Board recommendation through Council approval and appropriation to later withdrawal before disbursement.",
       open:
-        "Final funding disposition, named partner detail, and current project status remain unconfirmed and are not claimed.",
+        "Named partner detail and current property or redevelopment status remain outside this public-safe account.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }

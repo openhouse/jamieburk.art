@@ -2,8 +2,15 @@ import type { Metadata } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
-import { technicalOperationsProofRows } from "@/data/proofs";
+import {
+  requireReadyOrCarefulProof,
+  technicalOperationsProofRows
+} from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
+
+const kcTownHallProof = requireReadyOrCarefulProof(
+  "kc-town-hall-public-benefit-documentation"
+);
 
 const operationsMap = [
   "Clarify requirements and map workflows for public-facing technical work.",
@@ -47,8 +54,7 @@ const proofMap = [
   },
   {
     project: "KC Town Hall",
-    proof:
-      "Jamie co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation."
+    proof: kcTownHallProof.shortWording ?? kcTownHallProof.publicWording
   },
   {
     project: "Source-Backed Team Memory",
