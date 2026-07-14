@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
@@ -12,6 +13,44 @@ const publicProjectionKeys = new Set([
   "technical-operations",
   "homepage"
 ]);
+const hybridCandidatePaths = [
+  ".agents/evals/knowledge-bank-development.json",
+  "apps/www/src/content/work",
+  "apps/www/src/data/knowledge-bank",
+  "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/work.ts",
+  "docs/knowledge-bank",
+  "scripts/check-knowledge-development.mjs",
+  "scripts/lib/citation-validation.mjs",
+  "scripts/tests/citations.test.mjs",
+  "scripts/tests/knowledge-development.test.mjs"
+];
+
+export function validateHybridReportCandidate(report) {
+  const errors = [];
+  if (!/^[0-9a-f]{40}$/.test(report?.candidate_sha ?? "")) {
+    return ["hybrid report requires a full candidate_sha"];
+  }
+
+  try {
+    execFileSync("git", ["cat-file", "-e", `${report.candidate_sha}^{commit}`], {
+      stdio: "ignore"
+    });
+  } catch {
+    return [`hybrid report candidate ${report.candidate_sha} is not a local commit`];
+  }
+
+  try {
+    execFileSync("git", ["diff", "--quiet", report.candidate_sha, "--", ...hybridCandidatePaths], {
+      stdio: "ignore"
+    });
+  } catch {
+    errors.push(
+      `hybrid report candidate ${report.candidate_sha} does not match the current knowledge-bank inputs`
+    );
+  }
+  return errors;
+}
 
 export function validateKnowledgeDevelopmentSuite(suite) {
   const errors = [];
@@ -226,6 +265,14 @@ async function run() {
   const hybridReport = hybridArg
     ? JSON.parse(readFileSync(hybridArg.slice("--hybrid-report=".length), "utf8"))
     : { results: [] };
+  const hybridCandidateErrors = hybridArg
+    ? validateHybridReportCandidate(hybridReport)
+    : [];
+  if (hybridCandidateErrors.length) {
+    console.error("Hybrid scorecard validation failed:");
+    for (const error of hybridCandidateErrors) console.error(`- ${error}`);
+    process.exit(1);
+  }
   const result = evaluateKnowledgeBank(
     suite,
     knowledgeBank,

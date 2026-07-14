@@ -497,7 +497,7 @@ const workItemsInput = [
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
     role: "Project Planning & Documentation Support",
-    years: "2020s",
+    years: "2017 onward",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -535,7 +535,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; the Council later accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; in 2019, the Council accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
       open:
         "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status.",
       protected:
