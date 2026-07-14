@@ -39,3 +39,10 @@ Bowery reporting; Let NYC Dance, Save NYC Spaces, and Talks Not Raids public
 campaign materials; the 2018 Small Business and 2019 Justice System Council
 hearing transcripts; the legislative record; and New York City's 2023 CURE
 announcement.
+
+The campaign press dossier now inventories all 45 placements preserved in the
+four captured Press sections: 21 for Let NYC Dance, 7 for Talks Not Raids, 8
+for Save NYC Spaces, and 9 for Fair Rent NYC. They represent 44 unique
+articles, each with a Wayback snapshot. See
+`docs/knowledge-bank/projects/nyc-artist-coalition-press.md`. Article-level
+claim promotion remains an explicit close-reading inquiry.

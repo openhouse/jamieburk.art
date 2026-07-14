@@ -8,11 +8,32 @@ import {
   sourceExpansionSources
 } from "../../apps/www/src/data/knowledge-bank/source-expansion.ts";
 import {
+  campaignPressArticleSourceIds,
+  campaignPressClaims,
+  campaignPressInquiries,
+  campaignPressIntake,
+  campaignPressManifests,
+  campaignPressSources
+} from "../../apps/www/src/data/knowledge-bank/campaign-press.ts";
+import {
   knowledgeLifecycleReport,
   validateKnowledgeLifecycle
 } from "../lib/knowledge-lifecycle-validation.mjs";
 
 const cloneBank = () => structuredClone(knowledgeBank);
+const campaignPressCaptureInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "utf8"
+  )
+);
+
+const normalizeSourceUrl = (value) =>
+  value
+    .toLowerCase()
+    .replace(/^https?:\/\//, "")
+    .replace(/^www\./, "")
+    .replace(/\/$/, "");
 
 test("canonical knowledge lifecycle is valid", () => {
   assert.deepEqual(validateKnowledgeLifecycle(), []);
@@ -31,6 +52,175 @@ test("ten-source expansion is complete and dispositioned", () => {
       (record) => record.status === "matured" && record.claimIds.length > 0
     )
   );
+});
+
+test("campaign press ingestion is complete, deduplicated, and archived", () => {
+  assert.deepEqual(
+    campaignPressManifests.map((manifest) => manifest.articleSourceIds.length),
+    [21, 7, 8, 9]
+  );
+  assert.equal(
+    campaignPressManifests.reduce(
+      (count, manifest) => count + manifest.articleSourceIds.length,
+      0
+    ),
+    45
+  );
+  assert.equal(campaignPressArticleSourceIds.length, 44);
+  assert.equal(campaignPressSources.length, 45);
+  assert.equal(campaignPressClaims.length, 1);
+  assert.equal(campaignPressIntake.length, 4);
+  assert.equal(campaignPressInquiries.length, 1);
+
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  for (const sourceId of campaignPressArticleSourceIds) {
+    const source = sourceById.get(sourceId);
+    assert.ok(source, `Missing campaign press source ${sourceId}`);
+    assert.match(source.archiveUrl ?? "", /^https:\/\/web\.archive\.org\/web\//);
+  }
+  for (const manifest of campaignPressManifests) {
+    const indexSource = sourceById.get(manifest.indexSourceId);
+    assert.ok(indexSource, `Missing campaign index ${manifest.indexSourceId}`);
+    assert.match(
+      indexSource.archiveUrl ?? "",
+      /^https:\/\/web\.archive\.org\/web\//
+    );
+    assert.ok(indexSource.capturedAt, `${manifest.indexSourceId} lacks capturedAt`);
+  }
+
+  const duplicatePlacements = campaignPressManifests
+    .flatMap((manifest) => manifest.articleSourceIds)
+    .filter(
+      (sourceId, index, placements) => placements.indexOf(sourceId) !== index
+    );
+  assert.deepEqual(duplicatePlacements, ["SRC-NYCAC-NPR-2017-09-20"]);
+  assert.ok(
+    campaignPressIntake.every(
+      (record) =>
+        record.status === "researching" &&
+        record.inquiryIds.includes("INQ-NYCAC-CAMPAIGN-PRESS-CORPUS")
+    )
+  );
+  assert.deepEqual(
+    campaignPressClaims[0].evidence.map((relationship) => relationship.sourceId),
+    campaignPressManifests.map((manifest) => manifest.indexSourceId)
+  );
+  assert.equal(campaignPressClaims[0].projections[0].status, "hold");
+  assert.deepEqual(campaignPressClaims[0].projections[0].surfaces, []);
+});
+
+test("campaign press manifests are reproducible from capture-derived placements", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  assert.equal(campaignPressCaptureInventory.version, 1);
+  assert.equal(campaignPressCaptureInventory.captures.length, 4);
+  assert.equal(campaignPressCaptureInventory.placements.length, 45);
+
+  for (const manifest of campaignPressManifests) {
+    const capture = campaignPressCaptureInventory.captures.find(
+      (item) => item.campaignId === manifest.campaignId
+    );
+    const placements = campaignPressCaptureInventory.placements.filter(
+      (item) => item.campaignId === manifest.campaignId
+    );
+    const indexSource = sourceById.get(manifest.indexSourceId);
+
+    assert.ok(capture, `Missing capture fixture for ${manifest.campaignId}`);
+    assert.equal(capture.indexSourceId, manifest.indexSourceId);
+    assert.equal(capture.placementCount, placements.length);
+    assert.equal(capture.captureUrl, indexSource.archiveUrl);
+    assert.equal(capture.capturedAt, indexSource.capturedAt);
+    assert.deepEqual(
+      placements.map((item) => item.ordinal),
+      Array.from({ length: placements.length }, (_, index) => index + 1)
+    );
+    assert.deepEqual(
+      placements.map((item) => item.sourceId),
+      manifest.articleSourceIds
+    );
+
+    for (const placement of placements) {
+      assert.doesNotThrow(() => new URL(placement.listedUrl));
+      const source = sourceById.get(placement.sourceId);
+      assert.ok(source, `Missing source ${placement.sourceId}`);
+      const archivedOriginalUrl = source.archiveUrl?.match(
+        /^https:\/\/web\.archive\.org\/web\/\d{14}\/(.+)$/
+      )?.[1];
+      assert.ok(
+        [source.canonicalUrl, archivedOriginalUrl]
+          .filter(Boolean)
+          .map(normalizeSourceUrl)
+          .includes(normalizeSourceUrl(placement.listedUrl)),
+        `${placement.sourceId} does not preserve its capture-listed URL`
+      );
+    }
+  }
+
+  const repeatedPlacements = campaignPressCaptureInventory.placements.filter(
+    (item) => item.duplicateDisposition !== "unique"
+  );
+  assert.deepEqual(
+    repeatedPlacements.map((item) => [
+      item.campaignId,
+      item.sourceId,
+      item.duplicateDisposition
+    ]),
+    [
+      [
+        "let-nyc-dance",
+        "SRC-NYCAC-NPR-2017-09-20",
+        "shared-with-save-nyc-spaces"
+      ],
+      [
+        "save-nyc-spaces",
+        "SRC-NYCAC-NPR-2017-09-20",
+        "shared-with-let-nyc-dance"
+      ]
+    ]
+  );
+});
+
+test("campaign press sources cannot silently become personal claims", () => {
+  const newArticleIds = new Set(
+    campaignPressSources
+      .filter((source) => source.kind === "published-article")
+      .map((source) => source.id)
+  );
+  const promotedRelationships = knowledgeBank.claims.flatMap((claim) =>
+    claim.evidence.filter((relationship) =>
+      newArticleIds.has(relationship.sourceId)
+    )
+  );
+  assert.deepEqual(promotedRelationships, []);
+  assert.ok(
+    campaignPressSources
+      .filter((source) => source.kind === "published-article")
+      .every((source) =>
+        source.doesNotEstablish.some((boundary) =>
+          boundary.includes("Jamie's authorship")
+        )
+      )
+  );
+  assert.ok(
+    campaignPressSources
+      .filter((source) => source.kind === "published-article")
+      .every(
+        (source) =>
+          source.supportsGenerally.length === 1 &&
+          source.supportsGenerally[0].includes("Press section listed this article")
+      )
+  );
+
+  const dossier = readFileSync(
+    "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
+    "utf8"
+  );
+  for (const sourceId of campaignPressArticleSourceIds) {
+    assert.match(dossier, new RegExp(sourceId));
+  }
 });
 
 test("new evidence returns to every linked research inquiry", () => {

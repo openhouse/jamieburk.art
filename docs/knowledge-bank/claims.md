@@ -62,6 +62,17 @@ replacing the earlier salt-water-only boundary with independently reported Gulf
 terminus language while preserving the collaborative and incomplete-route
 limits.
 
+# 2026-07-13 NYC Artist Coalition campaign press corpus
+
+The four captured campaign Press sections directly support one held
+bibliography claim:
+
+- `CLM-NYCAC-CAMPAIGN-PRESS-CORPUS` - Let NYC Dance, Talks Not Raids, Save NYC
+  Spaces, and Fair Rent NYC preserve 45 article placements representing 44
+  unique articles. The claim remains an archive note, not a website projection
+  or a measure of Jamie's individual impact. Article-level claims require
+  separate close reading.
+
 ### open-house-participatory-practice
 
 **Status:** Ready

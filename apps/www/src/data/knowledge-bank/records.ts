@@ -1,6 +1,12 @@
 import { knowledgeBankSchema, type KnowledgeBankInput } from "./schema.ts";
 import { intakeRecords } from "./intake.ts";
 import {
+  campaignPressClaims,
+  campaignPressInquiries,
+  campaignPressIntake,
+  campaignPressSources
+} from "./campaign-press.ts";
+import {
   portfolioHistoryClaims,
   portfolioHistoryInquiries,
   portfolioHistorySources
@@ -13,7 +19,7 @@ import {
 } from "./source-expansion.ts";
 
 const knowledgeBankInput = {
-  intake: [...intakeRecords, ...sourceExpansionIntake],
+  intake: [...intakeRecords, ...sourceExpansionIntake, ...campaignPressIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -137,7 +143,8 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...portfolioHistorySources,
-    ...sourceExpansionSources
+    ...sourceExpansionSources,
+    ...campaignPressSources
   ],
   claims: [
     {
@@ -227,7 +234,8 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...portfolioHistoryClaims,
-    ...sourceExpansionClaims
+    ...sourceExpansionClaims,
+    ...campaignPressClaims
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -241,7 +249,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...portfolioHistoryInquiries],
+  }, ...portfolioHistoryInquiries, ...campaignPressInquiries],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },

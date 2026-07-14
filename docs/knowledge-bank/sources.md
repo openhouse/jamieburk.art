@@ -56,6 +56,31 @@ Hall case studies. The tunnel, raft, and augmented-reality records remain as
 public-safe depth in the bank until a future composition has the right
 artifacts, rights review, and editorial space.
 
+### NYC Artist Coalition campaign press corpus
+
+The July 13 press-ingestion pass added 41 previously unrecorded article records
+and four archived campaign press-index records. Together with three articles
+already in the canonical bank, the four captured campaign Press sections now
+resolve to 45 placements representing 44 unique articles:
+
+- Let NYC Dance: 21;
+- Talks Not Raids: 7;
+- Save NYC Spaces: 8;
+- Fair Rent NYC: 9.
+
+All 44 unique article records include a retrievable Wayback snapshot. The
+typed manifests preserve the cross-campaign NPR duplicate without duplicating
+the source. The corpus is queryable and public-safe, but articles do not become
+personal accomplishment evidence until they are close-read and attached to a
+bounded claim. The human-readable inventory lives at
+`docs/knowledge-bank/projects/nyc-artist-coalition-press.md`.
+
+The capture-derived fixture at
+`apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json`
+records every placement's source-page order, exact listed URL, normalized
+source ID, dated capture, and duplicate disposition. The lifecycle suite uses
+it to reproduce the four manifests offline.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
