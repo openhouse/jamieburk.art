@@ -269,6 +269,31 @@ export const researchedSourceRecords20260713 = [
     ]
   },
   {
+    id: "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
+    title: "Central City Sales Tax Project Updates, May 17, 2022",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2022-05-17",
+    accessedAt: "2026-07-14",
+    canonicalUrl: "https://kansascity.legistar.com/View.ashx?GUID=C851CE5D-2041-4E27-9967-26DB1BFD1D4F&ID=10918035&M=F",
+    preferredPublicUrl: "canonical",
+    publicCitation: "City of Kansas City, Missouri, 'Central City Sales Tax Project Updates,' May 17, 2022.",
+    publicNote: "The Round Two status table lists KC Town Hall's CCED allocation as $490,539, reports no disbursement amount at that point, and says General Services was negotiating the funding agreement.",
+    supportsGenerally: [
+      "the May 17, 2022, status table still listed a $490,539 CCED allocation for KC Town Hall",
+      "the table displayed a dash in the Funds Disbursed column for KC Town Hall at that reporting point",
+      "the table said General Services was negotiating the funding agreement"
+    ],
+    doesNotEstablish: [
+      "that no funds could have been disbursed after May 17, 2022",
+      "the reason negotiations remained open",
+      "that a funding agreement was later executed",
+      "construction or project completion"
+    ]
+  },
+  {
     id: "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
     title: "Kansas City Ordinance 240317",
     organization: "City of Kansas City, Missouri",
@@ -784,6 +809,32 @@ export const researchedClaimRecords20260713 = [
     reviewedBy: ["Codex public-source close reading of authenticated Ordinance 190642"]
   },
   {
+    id: "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022",
+    project: "kc-town-hall",
+    internalClaim: "A Kansas City status report dated May 17, 2022, listed KC Town Hall's $490,539 CCED allocation, displayed a dash in the Funds Disbursed column, and said General Services was negotiating the funding agreement.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "A May 2022 city status report still listed the funding agreement in negotiation and reported no disbursement amount at that point.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/kc-town-hall"]
+    }],
+    evidence: [{
+      sourceId: "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
+      relationship: "direct-support",
+      supports: ["$490,539 CCED allocation", "May 17, 2022, reporting date", "a dash in the Funds Disbursed column", "funding-agreement negotiations remained open"],
+      locator: "Round Two table, KC Town Hall row, page 1",
+      confidence: "high",
+      renderCitation: true
+    }],
+    boundaries: ["This is a dated interim status record; it does not by itself establish the project's status after May 17, 2022."],
+    antiClaims: ["No funds were ever disbursed after May 17, 2022.", "The status report proves why negotiations remained open.", "The funding agreement was executed.", "Construction occurred."],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex public-source close reading of the May 17, 2022, CCED project-status table"]
+  },
+  {
     id: "CLM-KC-TOWN-HALL-WITHDRAWN-2024",
     project: "kc-town-hall",
     internalClaim: "Kansas City Ordinance 240317 records that KC Town Hall withdrew and would no longer proceed under the CCED award, and that the unused $490,539 was reappropriated.",
@@ -1057,6 +1108,26 @@ export const researchedIntakeRecords20260713 = [
     inquiryIds: [],
     limitations: ["Appropriation does not establish that funds were disbursed, an agreement was executed, or construction occurred."],
     nextActions: ["Project the appropriation with an explicit citation and preserve the payment and completion boundaries."]
+  },
+  {
+    id: "INTAKE-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022-2026",
+    capturedAt: "2026-07-14",
+    capturedBy: "Codex public-source research",
+    kind: "public-url",
+    title: "KC Town Hall interim funding status in the May 2022 CCED project update",
+    publicSafeSummary: "Kansas City's May 17, 2022, project-status table listed the $490,539 KC Town Hall allocation, reported no disbursement amount at that point, and showed funding-agreement negotiations still underway.",
+    whyItMatters: "Adds direct evidence that the 2019 appropriation had not become a disbursement by the May 2022 reporting point.",
+    projectHints: ["kc-town-hall"],
+    maturity: "decomposed",
+    publicUse: "public-linkable",
+    editorialState: "selected",
+    disposition: "claim-candidate-created",
+    canonicalUrl: "https://kansascity.legistar.com/View.ashx?GUID=C851CE5D-2041-4E27-9967-26DB1BFD1D4F&ID=10918035&M=F",
+    sourceIds: ["SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022"],
+    claimIds: ["CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022"],
+    inquiryIds: [],
+    limitations: ["The table is a dated status snapshot and does not alone establish what happened after May 17, 2022."],
+    nextActions: ["Project the interim status beside the appropriation boundary and retain the later withdrawal record as the final known status."]
   },
   {
     id: "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",

@@ -25,6 +25,7 @@ export const requiredSeedIntakeIds = [
   "INTAKE-KC-TOWN-HALL-CCED-MINUTES-2026",
   "INTAKE-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649-2026",
   "INTAKE-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642-2026",
+  "INTAKE-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022-2026",
   "INTAKE-KC-TOWN-HALL-WITHDRAWAL-2026",
   "INTAKE-CLAUDETTE-AR-COLLABORATION-2026"
 ];
@@ -40,6 +41,7 @@ export const requiredResearchSourceIds = [
   "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
   "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
   "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+  "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
   "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024",
   "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION"
 ];
@@ -332,12 +334,14 @@ export function validateKnowledgeIntake() {
     "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
     "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
     "SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642",
+    "SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022",
     "SRC-KC-TOWN-HALL-WITHDRAWAL-ORDINANCE-2024"
   ];
   const requiredKcTownHallClaimIds = [
     "CLM-KC-TOWN-HALL-PROPOSAL-2019",
     "CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019",
     "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019",
+    "CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022",
     "CLM-KC-TOWN-HALL-WITHDRAWN-2024"
   ];
 
@@ -350,6 +354,7 @@ export function validateKnowledgeIntake() {
 
   const acceptanceClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-ACCEPTANCE-2019");
   const appropriationClaim = claimById.get("CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019");
+  const interimStatusClaim = claimById.get("CLM-KC-TOWN-HALL-INTERIM-FUNDING-STATUS-2022");
   const withdrawalClaim = claimById.get("CLM-KC-TOWN-HALL-WITHDRAWN-2024");
   const activeAcceptance = acceptanceClaim?.projections.find(
     (projection) => projection.key === "case-study" && projection.status === "active"
@@ -357,8 +362,12 @@ export function validateKnowledgeIntake() {
   const activeAppropriation = appropriationClaim?.projections.find(
     (projection) => projection.key === "case-study" && projection.status === "active"
   );
+  const activeInterimStatus = interimStatusClaim?.projections.find(
+    (projection) => projection.key === "case-study" && projection.status === "active"
+  );
   const acceptanceText = activeAcceptance?.text ?? "";
   const appropriationText = activeAppropriation?.text ?? "";
+  const interimStatusText = activeInterimStatus?.text ?? "";
 
   if (!/Council accepted the CCED Board's recommendation of up to \$490,539/i.test(acceptanceText)) {
     kcTownHallErrors.push("KC Town Hall public acceptance claim must name the Council, CCED Board recommendation, and bounded amount");
@@ -366,17 +375,23 @@ export function validateKnowledgeIntake() {
   if (!/Council passed Ordinance 190642, appropriating \$490,539 to KC Town Hall/i.test(appropriationText)) {
     kcTownHallErrors.push("KC Town Hall public appropriation claim must name Ordinance 190642 and the $490,539 project appropriation");
   }
-  if (!activeAcceptance?.citationRequired || !activeAppropriation?.citationRequired) {
-    kcTownHallErrors.push("KC Town Hall Council acceptance and appropriation projections must require citations");
+  if (!/May 2022 city status report.*funding agreement in negotiation.*no disbursement amount at that point/i.test(interimStatusText)) {
+    kcTownHallErrors.push("KC Town Hall public interim-status claim must preserve the May 2022 negotiation and dated non-disbursement finding");
+  }
+  if (!activeAcceptance?.citationRequired || !activeAppropriation?.citationRequired || !activeInterimStatus?.citationRequired) {
+    kcTownHallErrors.push("KC Town Hall Council acceptance, appropriation, and interim-status projections must require citations");
   }
 
   const municipalBoundaryText = JSON.stringify([
     sourceById.get("SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649")?.doesNotEstablish,
     sourceById.get("SRC-KC-TOWN-HALL-COUNCIL-ORDINANCE-190642")?.doesNotEstablish,
+    sourceById.get("SRC-KC-TOWN-HALL-CCED-PROJECT-UPDATE-2022")?.doesNotEstablish,
     acceptanceClaim?.boundaries,
     acceptanceClaim?.antiClaims,
     appropriationClaim?.boundaries,
-    appropriationClaim?.antiClaims
+    appropriationClaim?.antiClaims,
+    interimStatusClaim?.boundaries,
+    interimStatusClaim?.antiClaims
   ]).toLowerCase();
   for (const requiredBoundary of ["executed", "disburs", "completed", "alone caused"]) {
     if (!municipalBoundaryText.includes(requiredBoundary)) {
@@ -397,7 +412,7 @@ export function validateKnowledgeIntake() {
       }
     }
     if (JSON.stringify(kcTownHallPage.sourceOrder) !== JSON.stringify(requiredKcTownHallSourceIds)) {
-      kcTownHallErrors.push("KC Town Hall source order must preserve proposal, acceptance, appropriation, and withdrawal chronology");
+      kcTownHallErrors.push("KC Town Hall source order must preserve proposal, acceptance, appropriation, interim status, and withdrawal chronology");
     }
   }
   if (!withdrawalClaim?.projections.some(
@@ -445,7 +460,7 @@ export function validateKnowledgeIntake() {
       kcTownHall: {
         passed: kcTownHallErrors.length === 0,
         errors: kcTownHallErrors,
-        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, withdrawal, and reappropriation sequence with explicit non-disbursement and non-completion boundaries."
+        evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, May 2022 negotiation and no-reported-disbursement-amount status, withdrawal, and reappropriation sequence with explicit dated-status and non-completion boundaries."
       }
     }
   };

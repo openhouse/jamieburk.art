@@ -429,10 +429,10 @@ export const proofClaims: ProofClaim[] = [
       "Co-led planning and public-benefit documentation for a proposed mixed-use rehabilitation; Jamie presented the $490,539 proposal in 2019, the Council accepted the CCED recommendation and appropriated the project amount, and official records show the project later withdrew before proceeding under that award.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. On September 26, 2019, the Council accepted the CCED Board's recommendation of up to $490,539 and passed an ordinance appropriating $490,539 to KC Town Hall. The project later withdrew, and the unused allocation was reappropriated.",
-    sourceBasis: "Approved resume language, Kansas City CCED public minutes from June 12, 2019, Kansas City Resolution 190649, Kansas City Ordinance 190642, Kansas City Ordinance 240317, and public-safe project context.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for a proposed rehabilitation with four retail spaces and three apartments. On September 26, 2019, the Council accepted the CCED Board's recommendation of up to $490,539 and passed an ordinance appropriating $490,539 to KC Town Hall. A May 2022 status report still listed the agreement in negotiation and reported no disbursement amount at that point. The project later withdrew, and the unused allocation was reappropriated.",
+    sourceBasis: "Approved resume language, Kansas City CCED public minutes from June 12, 2019, Kansas City Resolution 190649, Kansas City Ordinance 190642, the May 17, 2022, Central City Sales Tax project-status table, Kansas City Ordinance 240317, and public-safe project context.",
     guardrail:
-      "Distinguish the proposal, Board recommendation, Council acceptance, appropriation, and later withdrawal. Do not imply an executed funding agreement, payment or disbursement, completed construction, sole causality, or fault.",
+      "Distinguish the proposal, Board recommendation, Council acceptance, appropriation, May 2022 interim status, and later withdrawal. Do not generalize the dated no-disbursement status beyond its reporting point or imply an executed funding agreement, completed construction, sole causality, or fault.",
     doNotSay: [
       "Final funding received",
       "A funding agreement was executed",

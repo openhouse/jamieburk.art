@@ -64,7 +64,10 @@ $490,539, a funding agreement was executed, the appropriation was paid or
 disbursed, Jamie alone caused the Council action, the project remains active
 under the award, or the 2024 withdrawal record assigns fault. Prefer
 "supported planning and public-benefit documentation" or "co-led the
-proposal" unless stronger role language is separately supported.
+proposal" unless stronger role language is separately supported. The May 17,
+2022, status table reports no disbursement amount at that point; do not turn
+that dated snapshot into an unsupported claim that funds were never disbursed
+later.
 
 ## Source-Backed Team Memory
 

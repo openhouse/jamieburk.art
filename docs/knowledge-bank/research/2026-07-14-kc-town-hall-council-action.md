@@ -19,6 +19,11 @@ This supports the public wording that the Council accepted the recommendation
 and appropriated $490,539 for the project. It is stronger and more precise than
 stopping at “funding recommendation.”
 
+An official project-status table dated May 17, 2022, adds a later checkpoint:
+the KC Town Hall row still listed $490,539 in CCED funds, displayed a dash in
+the Funds Disbursed column, and said General Services was negotiating
+the funding agreement.
+
 ## Sources
 
 - [Resolution 190649 legislation record](https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=44A50FFC-321A-41C7-9A86-6ADD9083B156&ID=5515936&Options=&Search=)
@@ -26,6 +31,7 @@ stopping at “funding recommendation.”
 - [Ordinance 190642 legislation record](https://kansascity.legistar.com/LegislationDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=B387009F-F7F7-454D-950A-E44588056314&ID=5515929&Options=&Search=)
 - [Authenticated Ordinance 190642](https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&ID=10628353&M=F)
 - [September 26, 2019, Council meeting record](https://kansascity.legistar.com/MeetingDetail.aspx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GID=821&LEGID=14410)
+- [Central City Sales Tax Project Updates, May 17, 2022](https://kansascity.legistar.com/View.ashx?GUID=C851CE5D-2041-4E27-9967-26DB1BFD1D4F&ID=10918035&M=F)
 
 ## Locators
 
@@ -38,6 +44,9 @@ stopping at “funding recommendation.”
   of $490,539.
 - Ordinance 190642, authentication page: passed as substituted on September 26,
   2019.
+- May 17, 2022, project-status table, Round Two, KC Town Hall row: $490,539 in
+  CCED funds, a dash in the Funds Disbursed column, and “General Services
+  negotiating Funding Agreement.”
 
 ## Evidence boundary
 
@@ -49,7 +58,12 @@ The records do not establish that:
 - construction began or was completed;
 - Jamie alone caused the Board recommendation or Council action.
 
+The May 2022 table is a dated status snapshot. It does not establish that no
+funds could have been disbursed later, explain why negotiations remained open,
+or independently establish the project's final status.
+
 Kansas City Ordinance 240317 remains necessary context: it records that the
 project later withdrew and that the unused $490,539 was reappropriated. The
 complete public sequence is proposal, recommendation, Council acceptance and
-appropriation, then later withdrawal and reappropriation.
+appropriation, a May 2022 interim negotiation and non-disbursement status, then
+later withdrawal and reappropriation.

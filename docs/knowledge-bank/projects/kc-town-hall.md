@@ -16,6 +16,9 @@ Status: bounded public projection with official status correction.
   funding-agreement negotiations.
 - At the same meeting, the Council passed Ordinance 190642. Its Round Two
   project table appropriated $490,539 to KC Town Hall.
+- A May 17, 2022, Kansas City project-status table still listed the $490,539
+  allocation, reported no disbursement amount at that point, and said
+  General Services was negotiating the funding agreement.
 - Kansas City Ordinance 240317, passed March 28, 2024, records that KC Town
   Hall withdrew and would no longer proceed under the CCED award. It
   reappropriated the unused $490,539.
@@ -31,13 +34,16 @@ that award.
 The approved resume uses the contribution wording "secured a $490,539 public
 funding recommendation." The knowledge bank preserves that as Jamie's approved
 self-report; it does not treat the verb as proof of sole causality, final funds
-received, or completed construction.
+received, or completed construction. The May 2022 status record provides a
+dated, direct check on the appropriation-versus-disbursement distinction.
 
 ## Boundaries
 
 - Do not say the redevelopment was completed.
 - Do not say Jamie personally received $490,539.
 - Do not say an agreement was executed or funds were paid or disbursed.
+- Do not generalize the May 2022 no-disbursement status beyond that reporting
+  point without later evidence.
 - Do not say Jamie alone caused the Board recommendation or Council action.
 - Do not say the project remains active under the award.
 - Do not infer why the project withdrew or assign fault.
