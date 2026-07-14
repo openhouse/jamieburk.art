@@ -183,6 +183,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-13
 
+## kc-town-hall-stewardship-transition - Stewardship continuity
+
+**Status:** Use with care
+**Support level:** Participant-memory lead
+**Evidence class:** Jamie first-person account
+**Public wording:** Transitioned stewardship of KC Town Hall to a mission-aligned organization.
+**Detailed public-safe wording:** Jamie reports that he transitioned project stewardship to a mission-aligned organization; recipient naming and public projection remain on hold.
+**Where to project:** Hold; no public-site surface currently authorized.
+**Why it matters:** Preserves a professionally relevant continuity action and prevents the later funding withdrawal from being misread as project abandonment.
+**Guardrail:** Keep this separate from the official City funding record. Do not name the recipient without accuracy, consent, and public-use review.
+**Do not say:** Jamie abandoned the project; the City records establish the transition; the recipient assumed every project obligation; the transition caused the later funding withdrawal.
+**Protected boundaries:** Private circumstances surrounding the transition are not retained in this public repository.
+**Review owner:** Jamie; recipient review needed before naming
+**Last reviewed:** 2026-07-13
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

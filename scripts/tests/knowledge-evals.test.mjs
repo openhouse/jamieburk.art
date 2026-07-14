@@ -142,6 +142,55 @@ test("KC Town Hall funding lifecycle rejects appropriation-as-receipt language",
   }
 });
 
+test("KC Town Hall stewardship transition remains retained, bounded, and held", () => {
+  const pilot = suite.pilot.kcTownHallFunding;
+  const intake = knowledgeBank.intakeItems.find((item) => item.id === pilot.transitionIntakeId);
+  const observation = knowledgeBank.observations.find(
+    (item) => item.id === pilot.transitionObservationId
+  );
+  const claim = knowledgeBank.claims.find((item) => item.id === pilot.transitionClaimId);
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === pilot.transitionInquiryId
+  );
+
+  assert.equal(intake?.disposition, "captured");
+  assert.equal(intake?.sourceIds.length, 0);
+  assert.equal(observation?.kind, "participant-memory");
+  assert.equal(observation?.status, "captured");
+  assert.equal(claim?.status, "use-with-care");
+  assert.ok(claim?.antiClaims.includes("Jamie abandoned the project."));
+  assert.ok(
+    claim?.projections.every(
+      (projection) => projection.status === "hold" && projection.surfaces.length === 0
+    )
+  );
+  assert.equal(inquiry?.resultStatus, "inconclusive");
+  assert.equal(inquiry?.sourceIds.length, 0);
+});
+
+test("KC Town Hall eval rejects accidental publication of the transition lead", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === suite.pilot.kcTownHallFunding.transitionClaimId
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = { status: projection.status, surfaces: [...projection.surfaces] };
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/kc-town-hall"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FUNDING-LIFECYCLE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.status = original.status;
+    projection.surfaces = original.surfaces;
+  }
+});
+
 test("photo feedback is instantiated as a protected research chain", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 5);

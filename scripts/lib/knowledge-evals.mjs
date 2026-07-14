@@ -30,6 +30,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const kcTownHallMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"), "utf8");
   const workData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
   const proofData = readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
+  const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
   const errors = validateKnowledgeBank();
 
   const pilotIntakes = suite.pilot.intakeIds.map((id) => intakeById.get(id));
@@ -97,6 +98,10 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const kcFundingObservations = kcFundingIntake?.observationIds.map((id) => observationById.get(id)) ?? [];
   const kcFundingClaims = kcFunding.claimIds.map((id) => claimById.get(id));
   const kcFundingInquiry = inquiryById.get(kcFunding.inquiryId);
+  const kcTransitionIntake = intakeById.get(kcFunding.transitionIntakeId);
+  const kcTransitionObservation = observationById.get(kcFunding.transitionObservationId);
+  const kcTransitionClaim = claimById.get(kcFunding.transitionClaimId);
+  const kcTransitionInquiry = inquiryById.get(kcFunding.transitionInquiryId);
   const kcFundingCorrection = knowledgeBank.corrections.find((item) => item.id === kcFunding.correctionId);
   const kcFundingCoverage = knowledgeBank.proofCoverageTargets.find((item) => item.proofId === kcFunding.proofId);
   const kcFundingPage = knowledgeBank.pages.find((item) => item.id === kcFunding.pageId);
@@ -134,11 +139,34 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       workData.includes("funds were not ultimately disbursed") &&
       proofData.includes("funds were not ultimately disbursed") &&
       !/KC Town Hall received (?:or spent )?(?:the )?\$490,539/i.test(kcProjectionText) &&
-      !kcTownHallMdx.includes("recommendation unless final funding details")
+      !kcTownHallMdx.includes("recommendation unless final funding details") &&
+      kcTransitionIntake?.kind === "memory-lead" &&
+      kcTransitionIntake.disposition === "captured" &&
+      kcTransitionIntake.visibility === "public-safe" &&
+      kcTransitionIntake.sourceIds.length === 0 &&
+      kcTransitionIntake.observationIds.includes(kcFunding.transitionObservationId) &&
+      kcTransitionIntake.researchInquiryIds.includes(kcFunding.transitionInquiryId) &&
+      kcTransitionIntake.boundaries.length >= 3 &&
+      kcTransitionObservation?.kind === "participant-memory" &&
+      kcTransitionObservation.status === "captured" &&
+      !kcTransitionObservation.sourceId &&
+      kcTransitionObservation.claimIds.includes(kcFunding.transitionClaimId) &&
+      kcTransitionObservation.researchInquiryIds.includes(kcFunding.transitionInquiryId) &&
+      kcTransitionClaim?.status === "use-with-care" &&
+      kcTransitionClaim.evidence.length === 0 &&
+      kcTransitionClaim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      ) &&
+      kcTransitionClaim.boundaries.length >= 3 &&
+      kcTransitionClaim.antiClaims.includes("Jamie abandoned the project.") &&
+      kcTransitionInquiry?.resultStatus === "inconclusive" &&
+      kcTransitionInquiry.sourceIds.length === 0 &&
+      kcTransitionInquiry.limitations.length >= 3 &&
+      !publicRegistryText.includes(kcFunding.transitionClaimId)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry];
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -152,7 +180,6 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const photoSource = sourceById.get(photoFeedback.sourceId);
   const photoClaim = claimById.get(photoFeedback.claimId);
   const photoInquiry = inquiryById.get(photoFeedback.inquiryId);
-  const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
   const privatePhotoEvidence = photoClaim?.evidence.find(
     (evidence) => evidence.sourceId === photoFeedback.sourceId
   );
@@ -220,12 +247,26 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     {
       criterionId: "KB-EVAL-MATURATION",
       score: score(
-        allEvaluatedClaims.every((claim) => claim?.evidence.length && claim.boundaries.length && claim.antiClaims.length && claim.reviewedBy.length) &&
+        allEvaluatedClaims.every((claim) =>
+          claim?.boundaries.length &&
+          claim.antiClaims.length &&
+          claim.reviewedBy.length &&
+          (
+            claim.evidence.length ||
+            (
+              claim.status === "use-with-care" &&
+              claim.researchInquiryIds.length &&
+              claim.projections.every(
+                (projection) => projection.status === "hold" && projection.surfaces.length === 0
+              )
+            )
+          )
+        ) &&
         allEvaluatedInquiries.every((inquiry) => inquiry?.limitations.length && inquiry.findings.length) &&
         expansionClaims.length === expansion.claimIds.length,
         triangulatedExpansionClaims.length >= 4
       ),
-      evidence: [`${expansionClaims.filter(Boolean).length} new claims matured; ${triangulatedExpansionClaims.length} are supported by multiple source records; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
+      evidence: [`${expansionClaims.filter(Boolean).length} new claims matured; ${triangulatedExpansionClaims.length} are supported by multiple source records; held participant-memory claims remain inquiry-linked; ${allEvaluatedInquiries.filter(Boolean).length} evaluated inquiries retain limitations`]
     },
     {
       criterionId: "KB-EVAL-PROJECTION",
@@ -280,8 +321,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       criterionId: "KB-EVAL-KCTH-FUNDING-LIFECYCLE",
       score: score(kcFundingComplete),
       evidence: [kcFundingComplete
-        ? "Five official records preserve the CCED recommendation, Council acceptance and appropriation, zero disbursement, withdrawal, and 2024 return; four nonredundant notes support the two-claim public projection"
-        : "KC Town Hall funding intake, source scope, observations, claims, lifecycle boundary, proof coverage, correction, or public citation plan is incomplete"]
+        ? "Five official records preserve the CCED recommendation, Council acceptance and appropriation, zero disbursement, withdrawal, and 2024 return; Jamie's stewardship-transition account remains a separate held memory lead; four nonredundant notes support the two-claim public projection"
+        : "KC Town Hall funding lifecycle, held stewardship-transition lead, source scope, observations, claims, boundaries, proof coverage, correction, or public citation plan is incomplete"]
     }
   ];
 

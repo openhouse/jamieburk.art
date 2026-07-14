@@ -35,6 +35,25 @@ export const kcTownHallFunding = {
         "The public action was a collective project milestone and does not establish that Jamie alone secured it.",
         "Later project status belongs in the same record so a historical approval cannot be mistaken for a completed award."
       ]
+    },
+    {
+      id: "INTAKE-KCTH-STEWARDSHIP-TRANSITION",
+      kind: "memory-lead",
+      title: "KC Town Hall stewardship transition",
+      submittedAt: reviewedAt,
+      submittedBy: "Jamie Burkart",
+      projectIds: ["kc-town-hall"],
+      reason: "Preserve Jamie's first-person account that he transitioned the project to a mission-aligned organization without exposing private circumstances or overstating what the City funding records establish.",
+      visibility: "public-safe",
+      disposition: "captured",
+      sourceIds: [],
+      observationIds: ["OBS-KCTH-STEWARDSHIP-TRANSITION-LEAD"],
+      researchInquiryIds: ["INQ-KCTH-STEWARDSHIP-TRANSITION"],
+      boundaries: [
+        "Retain the professional continuity action without recording private causal context.",
+        "Do not name the recipient organization without a separate accuracy, consent, and public-use decision.",
+        "Do not project the transition on the website until its wording and support are reviewed separately from the City funding record."
+      ]
     }
   ],
 
@@ -166,6 +185,22 @@ export const kcTownHallFunding = {
       researchInquiryIds: ["INQ-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE"],
       limitations: [
         "The reappropriation establishes the later disposition of the unused City funds, not a payment to or recovery from KC Town Hall."
+      ]
+    },
+    {
+      id: "OBS-KCTH-STEWARDSHIP-TRANSITION-LEAD",
+      intakeId: "INTAKE-KCTH-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      kind: "participant-memory",
+      text: "Jamie recalls transitioning stewardship of the KC Town Hall project to a mission-aligned organization.",
+      locator: "Jamie-provided participant-memory lead, July 13, 2026",
+      status: "captured",
+      publicSafe: true,
+      claimIds: ["CLM-KCTH-STEWARDSHIP-TRANSITION"],
+      researchInquiryIds: ["INQ-KCTH-STEWARDSHIP-TRANSITION"],
+      limitations: [
+        "The recipient is intentionally unnamed pending a separate accuracy and consent review.",
+        "The first-person account is not established by the City funding records and requires separate corroboration before broader public projection."
       ]
     }
   ],
@@ -402,6 +437,36 @@ export const kcTownHallFunding = {
       researchInquiryIds: ["INQ-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE"],
       reviewedAt,
       reviewedBy: ["Jamie Burkart", "Codex official-record review"]
+    },
+    {
+      id: "CLM-KCTH-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      internalClaim: "Jamie transitioned stewardship of the KC Town Hall project to a mission-aligned organization.",
+      status: "use-with-care",
+      projections: [
+        {
+          key: "archive-note",
+          text: "Transitioned stewardship of KC Town Hall to a mission-aligned organization.",
+          status: "hold",
+          citationRequired: false,
+          surfaces: []
+        }
+      ],
+      evidence: [],
+      boundaries: [
+        "Treat this as Jamie's first-person account until separate transfer evidence or collaborator confirmation is reviewed.",
+        "Do not name the recipient organization without an accuracy, consent, and public-use decision.",
+        "Do not encode or infer private circumstances surrounding the transition."
+      ],
+      antiClaims: [
+        "Jamie abandoned the project.",
+        "The City funding records establish the stewardship transition.",
+        "The recipient organization assumed every KC Town Hall obligation.",
+        "The stewardship transition explains or caused the later City funding withdrawal."
+      ],
+      researchInquiryIds: ["INQ-KCTH-STEWARDSHIP-TRANSITION"],
+      reviewedAt,
+      reviewedBy: ["Jamie Burkart"]
     }
   ],
 
@@ -441,6 +506,27 @@ export const kcTownHallFunding = {
         "SRC-KCTH-ORDINANCE-240317"
       ],
       publicSummary: "Official Kansas City records establish a July 2019 CCED Board recommendation, September 2019 Council acceptance and appropriation of $490,539, no disbursement as of May 2022, and a 2024 reappropriation after the project withdrew."
+    },
+    {
+      id: "INQ-KCTH-STEWARDSHIP-TRANSITION",
+      project: "kc-town-hall",
+      question: "What public-safe evidence can establish Jamie's transition of KC Town Hall stewardship while respecting the recipient organization's consent and keeping private context out of the repository?",
+      methods: [
+        "Recorded Jamie's first-person account as a participant-memory lead.",
+        "Separated the stewardship transition from the official City funding lifecycle and placed public projection on hold."
+      ],
+      runAt: reviewedAt,
+      resultStatus: "inconclusive",
+      findings: [
+        "Jamie's account that he transitioned the project to a mission-aligned organization is retained for future corroboration."
+      ],
+      limitations: [
+        "No public transfer document or collaborator confirmation is attached to this record.",
+        "The recipient organization is intentionally unnamed pending review.",
+        "The City funding records do not establish the stewardship transition or its relationship to the later withdrawal."
+      ],
+      sourceIds: [],
+      publicSummary: "Jamie's stewardship-transition account is retained as a held research lead and is not currently projected on the public site."
     }
   ],
 

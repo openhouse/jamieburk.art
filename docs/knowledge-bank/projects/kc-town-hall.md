@@ -48,6 +48,18 @@ withdrew, the Council returned the unused $490,539 to the fund in 2024.
 - a complete explanation for the project's withdrawal;
 - Jamie's complete individual role or sole causation of the Council action.
 
+## Stewardship transition lead
+
+Jamie has supplied a first-person account that he transitioned stewardship of
+KC Town Hall to a mission-aligned organization. The knowledge bank retains that
+professional continuity action as a participant-memory lead with no public-site
+projection.
+
+The recipient remains unnamed pending accuracy, consent, and public-use review.
+No private circumstances surrounding the transition are retained in this
+public repository. The City funding records do not establish the transition or
+its relationship to the later funding withdrawal.
+
 ## Projection guidance
 
 The portfolio may name the Council-approved appropriation because it is a

@@ -144,6 +144,10 @@
         "CLM-KCTH-NONDISBURSEMENT-AND-REAPPROPRIATION"
       ],
       "inquiryId": "INQ-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE",
+      "transitionIntakeId": "INTAKE-KCTH-STEWARDSHIP-TRANSITION",
+      "transitionObservationId": "OBS-KCTH-STEWARDSHIP-TRANSITION-LEAD",
+      "transitionClaimId": "CLM-KCTH-STEWARDSHIP-TRANSITION",
+      "transitionInquiryId": "INQ-KCTH-STEWARDSHIP-TRANSITION",
       "correctionId": "COR-KCTH-FUNDING-LIFECYCLE-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall"

@@ -70,6 +70,12 @@ claim Jamie alone caused the Council action, that the funding agreement was
 executed, that KC Town Hall received or spent the money, or that the development
 was completed.
 
+Do not describe Jamie as abandoning the project. His account that he
+transitioned stewardship to a mission-aligned organization is retained as a
+held participant-memory lead. Do not name the recipient, infer the scope of its
+obligations, connect the transition causally to the City funding withdrawal, or
+publish private circumstances without a separate review.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
