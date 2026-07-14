@@ -266,6 +266,98 @@ test("KC Town Hall stewardship transition remains a bounded memory lead", () => 
   );
 });
 
+test("iCloud Teams sources preserve public and protected evidence boundaries", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const selectedSourceIds = [
+    "SRC-NTER-CHNG-PITCH-2010-01-07",
+    "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
+    "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
+    "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
+    "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29",
+    "SRC-CRS-NINETY-DAY-OPERATING-PLAN-2026-04-06",
+    "SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29",
+    "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
+    "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+    "SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03",
+    "SRC-MAVEN-AI-EVALS-COMPLETION-2026",
+    "SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30"
+  ];
+
+  assert.ok(selectedSourceIds.every((sourceId) => sourceById.has(sourceId)));
+  const protectedSources = selectedSourceIds
+    .map((sourceId) => sourceById.get(sourceId))
+    .filter((source) => source.visibility === "protected");
+  assert.equal(protectedSources.length, 7);
+  assert.ok(protectedSources.every((source) => source.protectedLocatorId));
+  assert.ok(
+    protectedSources.every(
+      (source) => !source.canonicalUrl && !source.archiveUrl && !source.assetUrl
+    )
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-NTER-CHNG-PITCH-2010-01-07")
+      .doesNotEstablish.some((boundary) => /Jamie's role/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23")
+      .supportsGenerally.some((support) => /Jamie Burkart designer credit/i.test(support))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26")
+      .doesNotEstablish.some((boundary) => /Jamie Burkhardt is Jamie Burkart/i.test(boundary))
+  );
+});
+
+test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const interactive = intakeById.get(
+    "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14"
+  );
+  const crs = intakeById.get(
+    "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14"
+  );
+  const evals = intakeById.get(
+    "INTAKE-EVALS-AND-SOURCE-BACKED-SPRINT-2026-07-14"
+  );
+
+  assert.equal(interactive.status, "claim-candidate");
+  assert.equal(crs.status, "claim-candidate");
+  assert.equal(evals.status, "claim-candidate");
+  assert.equal(interactive.candidateClaims.length, 3);
+  assert.equal(crs.candidateClaims.length, 4);
+  assert.equal(evals.candidateClaims.length, 2);
+  assert.ok([interactive, crs, evals].every((item) => item.projectionStatus === "no-public-projection"));
+  assert.equal(
+    interactive.propositions.find(
+      (proposition) => proposition.id === "PROP-MATMOS-TOUR-VIDEO-NAME-CONFLICT-2016"
+    ).status,
+    "research-only"
+  );
+  assert.equal(
+    evals.propositions.find(
+      (proposition) => proposition.id === "PROP-JOB-HUNT-EVIDENCE-MAP-CONTEXT-2026"
+    ).status,
+    "context-only"
+  );
+  assert.ok(
+    crs.tensions[0].correctionTriggers.some(
+      (trigger) => trigger.action === "narrow"
+    )
+  );
+
+  const publicRegistryText = JSON.stringify(publicCitationRegistry);
+  assert.doesNotMatch(publicRegistryText, /INTAKE-INTERACTIVE-MEDIA-PRACTICE/);
+  assert.doesNotMatch(publicRegistryText, /SRC-CRS-NINETY-DAY-OPERATING-PLAN/);
+  assert.doesNotMatch(publicRegistryText, /SRC-SOURCE-BACKED-SPRINT-PREP/);
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");

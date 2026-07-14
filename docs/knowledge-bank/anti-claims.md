@@ -28,6 +28,17 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not turn the April 2026 ninety-day plan into proof that every deliverable was
+completed or adopted. Do not represent the Open Data Foundation memo or Fuller
+Public Baseline handout as an agency-adopted plan, completed data release, new
+empirical finding, or enacted Commercial Rent Guidelines Board.
+
+## Interactive Media
+
+Do not silently normalize the Matmos credit from Jamie Burkhardt to Jamie
+Burkart. Do not collapse collaborator, programmer, construction, platform, or
+source-composition credits into sole authorship by Jamie.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -72,3 +83,13 @@ appropriate corroboration and review.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+Do not represent a scoped sprint as accepted, paid, delivered, deployed, or
+successful without permissioned evidence of that status.
+
+## AI Evals
+
+Use course-completion language. Do not imply that Jamie teaches the course, has
+professional certification authority, or has demonstrated mastery solely from
+the completion certificate. Do not publish private cohort or coursework
+material.

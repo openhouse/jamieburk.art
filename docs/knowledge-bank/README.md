@@ -83,3 +83,10 @@ separate a recommendation, Council acceptance, appropriation, later withdrawal,
 and reappropriation without confusing allocation with receipt or expenditure.
 It also keeps Jamie's firsthand stewardship-transition account separate from
 what the government records establish.
+
+The [iCloud Teams archival-production
+note](research/2026-07-14-icloud-teams-archival-production.md) demonstrates
+protected-source summarization across Jamie Projects History, CRS, and job-hunt.
+It develops interactive-media, coalition-operations, public-data, evals, and
+service-design knowledge without committing local paths, correspondence,
+contacts, private strategy, or other underlying archive material.

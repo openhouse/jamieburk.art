@@ -423,6 +423,193 @@ const knowledgeBankInput = {
       supportsGenerally: ["Ordinance 190642 appropriated $490,539 to the KC Town Hall project account", "KC Town Hall later withdrew", "the allocation remained unused", "Council reappropriated the unused funds in 2024"],
       doesNotEstablish: ["why KC Town Hall withdrew", "Jamie's individual role in the withdrawal", "receipt or expenditure of the allocation", "whether a funding agreement was ever executed", "the property's current status"]
     },
+    {
+      id: "SRC-NTER-CHNG-PITCH-2010-01-07",
+      title: "NTR CHNG",
+      organization: "The Pitch",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2010-01-07",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://www.thepitchkc.com/ntr-chng/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "The Pitch event listing for NTR CHNG, published January 7, 2010.",
+      publicNote: "The listing describes the installation's two-sided digital wall and real-time visitor text dialogue, but does not credit its makers.",
+      supportsGenerally: ["January 2010 exhibition context", "software and architectural installation", "two-sided digital wall", "real-time visitor text messages", "evolving virtual dialogue"],
+      doesNotEstablish: ["Jamie's role", "the complete collaborator roster", "technical implementation details", "visitor count", "audience outcome"]
+    },
+    {
+      id: "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
+      title: "NTER CHNG project video metadata",
+      organization: "Vimeo",
+      author: "Garrett Fuselier",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2011-03-23",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://vimeo.com/21395655",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Garrett Fuselier's Vimeo metadata and credits for NTER CHNG, uploaded March 23, 2011.",
+      publicNote: "The metadata credits Drew Bolton, Jamie Burkart, and Garrett Fuselier as designers and credits Mary Nichols with wall engineering and construction help.",
+      supportsGenerally: ["Jamie Burkart designer credit", "Drew Bolton designer credit", "Garrett Fuselier designer and programmer credit", "Mary Nichols engineering and construction contribution", "interactive texting installation"],
+      doesNotEstablish: ["sole authorship", "Jamie's exact technical implementation scope", "visitor count", "commercial deployment", "current installation status"]
+    },
+    {
+      id: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
+      title: "A Sorted Audio File",
+      organization: "Monthly Music Hackathon NYC",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2013-02-27",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://monthlymusichackathon.org/post/44177616179/sortedaudio",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Monthly Music Hackathon NYC project note, A Sorted Audio File, February 27, 2013.",
+      publicNote: "The project note says Jamie made a Max/MSP program that segmented an audio file and sorted the clips by a selected feature; Jamie's quoted description identifies pitch as the feature used in the presented experiment.",
+      supportsGenerally: ["Jamie Burkart maker credit", "February 2013 Music Hackathon NYC", "Max/MSP program", "audio segmentation", "pitch-based clip sorting", "public audio output"],
+      doesNotEstablish: ["production deployment", "general software-engineering proficiency", "original authorship of the source song", "continued maintenance", "audience scale"]
+    },
+    {
+      id: "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
+      title: "Wash your cares away, for an evening",
+      organization: "Matmos / Vague Terrain",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2016-11-26",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "http://vague-terrain.com/2016/wash-your-cares-away-for-an-evening/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Matmos / Vague Terrain tour announcement, Wash your cares away, for an evening, November 26, 2016.",
+      publicNote: "The announcement credits specially prepared tour video to Matmos with 'Jamie Burkhardt.' The surname mismatch remains unresolved and is not silently normalized to Jamie Burkart.",
+      supportsGenerally: ["Ultimate Care II tour context", "specially prepared performance video", "Matmos collaboration with a person named Jamie Burkhardt"],
+      doesNotEstablish: ["that Jamie Burkhardt is Jamie Burkart", "Jamie's exact creative or technical scope", "sole video authorship", "participation at every tour date", "audience or critical outcome"]
+    },
+    {
+      id: "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29",
+      title: "Claudette's Theatre On Wheels",
+      organization: "XR Ensemble",
+      kind: "institutional-social-post",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2022-10-29",
+      accessedAt: "2026-07-14",
+      canonicalUrl: "https://www.instagram.com/p/CkTDxU3DBqD/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "XR Ensemble introduction to Claudette's Theatre On Wheels by Jamie Burkart and Michael Rees, October 29, 2022.",
+      publicNote: "The post identifies Jamie and Michael as the artists and describes app-accessed clips presenting Claudette's women-centered theater and artistic life.",
+      supportsGenerally: ["Jamie Burkart and Michael Rees artist credit", "Claudette's Theatre On Wheels", "2022 MakeUsVisible context", "short performance clips accessed in an app", "women-centered theater and public-memory purpose"],
+      doesNotEstablish: ["the exact division of labor", "Jamie as sole author", "authorship of the underlying AR platform", "audience reach", "permission to republish every clip or personal detail"]
+    },
+    {
+      id: "SRC-CRS-NINETY-DAY-OPERATING-PLAN-2026-04-06",
+      title: "Ninety-day operating plan for Fair Rent NYC and Commercial Rent Stabilization",
+      organization: "Fair Rent NYC / NYC Artist Coalition",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-04-06",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's April 2026 Fair Rent NYC / Commercial Rent Stabilization operating plan.",
+      publicNote: "The underlying working document remains outside the repository. The summary records the operating model and planned shared goods, not private strategy or stakeholder details.",
+      supportsGenerally: ["Jamie authored the operating plan", "six shared public goods", "movement architecture and synthesis role", "digital infrastructure stewardship", "city and state companion-lane framing", "explicit sole-organizer boundary"],
+      doesNotEstablish: ["completion of every planned deliverable", "coalition adoption of every proposal", "sole campaign leadership", "policy outcome causality", "current project status"],
+      protectedLocatorId: "LOC-CRS-NINETY-DAY-PLAN-2026"
+    },
+    {
+      id: "SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29",
+      title: "Commercial Rent Stabilization collaboration running minutes",
+      organization: "Commercial Rent Stabilization collaborators",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-04-29",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of April 2026 Commercial Rent Stabilization collaboration running minutes.",
+      publicNote: "The underlying minutes remain outside the repository. The summary excludes stakeholder contact details, sensitive stories, internal strategy, and unapproved transcript material.",
+      supportsGenerally: ["Jamie created the running-minutes document", "shared memory purpose", "decision and action tracking", "owner and status fields", "consent-aware story handling", "city and state alignment", "Jamie's offer to build shared movement infrastructure"],
+      doesNotEstablish: ["completion of every listed action", "formal coalition governance", "endorsement by every participant", "sole authorship of collective decisions", "policy outcome causality"],
+      protectedLocatorId: "LOC-CRS-RUNNING-MINUTES-2026"
+    },
+    {
+      id: "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
+      title: "Open Data Foundation for a Future Commercial Rent Guidelines Board",
+      organization: "NYC Artist Coalition",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2025-11-26",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's November 2025 Open Data Foundation memo.",
+      publicNote: "The signed memo proposes open aggregated indicator tables and a short technical note defining a minimum public data suite for a future Commercial Rent Guidelines Board.",
+      supportsGenerally: ["Jamie authored and signed the memo", "proposal for aggregated commercial rent and vacancy indicators", "minimum public data suite", "confidentiality and vendor-data boundaries", "future Commercial Rent Guidelines Board implementation framing"],
+      doesNotEstablish: ["agency adoption", "legal feasibility of every requested release", "availability of proprietary source data", "creation of a Commercial Rent Guidelines Board", "independent validation of every policy premise"],
+      protectedLocatorId: "LOC-CRS-OPEN-DATA-MEMO-2025"
+    },
+    {
+      id: "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+      title: "Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC",
+      organization: "School of Data presentation material",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-03-27",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's March 2026 School of Data handout on commercial vacancy and lease-cost indicators.",
+      publicNote: "The two-page handout specifies a privacy-preserving RPIE pilot with indicator, coverage and suppression, and methods tables. The document remains outside the repository because its archived copy includes contact information.",
+      supportsGenerally: ["Jamie authored the handout", "School of Data sharing context", "privacy-preserving RPIE pilot", "three-part release design", "minimum useful fields", "explicit confidential-data exclusions", "public-interest use cases"],
+      doesNotEstablish: ["agency adoption", "a completed data release", "new empirical findings", "access to confidential filings", "policy enactment"],
+      protectedLocatorId: "LOC-CRS-FULLER-BASELINE-HANDOUT-2026"
+    },
+    {
+      id: "SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03",
+      title: "Cross-archive job-hunt evidence map",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-07-03",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of a July 2026 AI-assisted cross-archive job-hunt evidence map.",
+      publicNote: "The map is a navigation and synthesis aid, not an independent source for the accomplishments it identifies.",
+      supportsGenerally: ["cross-archive source routing", "professional narrative synthesis", "identification of verification gaps", "separation of public claims from private support"],
+      doesNotEstablish: ["the truth of underlying accomplishment claims", "independent verification of metrics", "authorship of project outputs", "third-party endorsement", "current project status"],
+      protectedLocatorId: "LOC-JOB-HUNT-EVIDENCE-MAP-2026"
+    },
+    {
+      id: "SRC-MAVEN-AI-EVALS-COMPLETION-2026",
+      title: "AI Evals for Engineers and PMs completion certificate",
+      organization: "Maven",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-14",
+      publicCitation: "Public-safe completion certificate for AI Evals for Engineers and PMs, taught by Hamel Husain and Shreya Shankar through Maven in 2026.",
+      publicNote: "The certificate records completion. Private coursework, cohort material, and submissions remain outside the repository.",
+      supportsGenerally: ["James Burkart completion", "AI Evals for Engineers and PMs course", "Hamel Husain and Shreya Shankar instructor credit", "Maven course context", "2026 completion"],
+      doesNotEstablish: ["professional certification authority", "instructor affiliation", "course mastery beyond completion", "client delivery", "permission to publish private coursework"],
+      protectedLocatorId: "LOC-MAVEN-AI-EVALS-CERTIFICATE-2026"
+    },
+    {
+      id: "SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30",
+      title: "Source-backed team-memory sprint preparation packet",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publishedAt: "2026-06-30",
+      accessedAt: "2026-07-14",
+      publicCitation: "Protected public-safe summary of Jamie Burkart's June 2026 source-backed team-memory sprint preparation packet.",
+      publicNote: "The packet scopes a bounded discovery and prototype service. Private collaborator context, correspondence, transcript material, and pricing remain outside the repository.",
+      supportsGenerally: ["bounded discovery and prototype sprint design", "one approved safe source surface", "human-reviewed memory artifact", "knowledge-friction mapping", "explicit privacy exclusions", "continue, revise, or stop recommendation"],
+      doesNotEstablish: ["client acceptance", "paid engagement", "deployment inside an organization", "production software", "measured client outcome"],
+      protectedLocatorId: "LOC-SOURCE-BACKED-SPRINT-PREP-2026"
+    },
     ...campaignPressSources
   ],
   claims: [
@@ -1333,6 +1520,263 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "INTAKE-INTERACTIVE-MEDIA-PRACTICE-2026-07-14",
+      title: "Interactive media, sound, and public-memory practice",
+      kind: "claim-candidate",
+      summary: "Public project records recover three concrete interaction-design works by Jamie across 2010-2022: a texting installation built as a shared gallery dialogue, a Max/MSP audio-sorting experiment, and an app-accessed public-memory work created with Michael Rees. A fourth Matmos video credit remains a research lead because the source spells the collaborator's surname differently.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-NTER-CHNG-PITCH-2010-01-07",
+        "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23",
+        "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
+        "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
+        "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: [],
+      candidateClaims: [
+        "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
+        "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
+        "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips."
+      ],
+      propositions: [
+        {
+          id: "PROP-NTER-CHNG-COLLABORATIVE-DESIGN-2010",
+          text: "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-NTER-CHNG-PITCH-2010-01-07",
+            "SRC-NTER-CHNG-VIMEO-METADATA-2011-03-23"
+          ],
+          sourceSupport: ["January 2010 project context and interaction model", "Jamie, Drew, and Garrett designer credits", "Garrett programmer credit", "Mary Nichols engineering and construction contribution"],
+          boundaries: ["Preserve every named collaborator's credit.", "Do not assign Jamie an undocumented programming or wall-engineering role.", "Do not infer visitor scale or lasting audience outcome."],
+          decisionUse: "Supports interaction design, collaborative prototyping, and the translation of participant input into a shared public interface."
+        },
+        {
+          id: "PROP-SORTED-AUDIO-MAX-MSP-2013",
+          text: "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
+          status: "direct-support",
+          sourceIds: ["SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27"],
+          sourceSupport: ["Jamie maker credit", "Max/MSP implementation", "audio segmentation", "pitch-based sorting", "February 2013 event context"],
+          boundaries: ["Describe this as a hackathon experiment, not a production audio product.", "Do not claim authorship of the source composition."],
+          decisionUse: "Adds a compact, inspectable example of computational media prototyping and experimental toolmaking."
+        },
+        {
+          id: "PROP-CLAUDETTES-THEATRE-INTERACTIVE-MEMORY-2022",
+          text: "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"],
+          sourceSupport: ["Jamie Burkart and Michael Rees artist credit", "2022 project context", "short clips accessed through the app", "women-centered theater and public-memory purpose"],
+          boundaries: ["Credit Michael Rees equally.", "Do not assign Jamie sole authorship of the app or underlying augmented-reality platform.", "Do not republish clips or personal details without rights review."],
+          decisionUse: "Connects interactive design with archival care, collaborative authorship, and public memory."
+        },
+        {
+          id: "PROP-MATMOS-TOUR-VIDEO-NAME-CONFLICT-2016",
+          text: "A 2016 Matmos tour announcement credits specially prepared video to Matmos with a collaborator named Jamie Burkhardt.",
+          status: "research-only",
+          sourceIds: ["SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26"],
+          sourceSupport: ["Matmos Ultimate Care II tour", "specially prepared performance video", "Jamie Burkhardt credit as printed"],
+          boundaries: ["Do not silently normalize Burkhardt to Burkart.", "Do not attribute the credit to Jamie Burkart without corroboration.", "Do not infer the exact division of creative or technical labor."],
+          decisionUse: "Preserves a potentially useful collaboration lead while keeping the identity conflict visible.",
+          nextStep: "Recover an unambiguous Matmos credit, project file, dated correspondence suitable for public summary, or collaborator confirmation connecting Jamie Burkart to the 2016 tour video."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Can an unambiguous source resolve the Burkhardt/Burkart Matmos credit and identify Jamie's exact contribution?",
+        "Which public project files or collaborator accounts identify Jamie's specific design decisions in NTER CHNG and Claudette's Theatre On Wheels?",
+        "Do public-safe images or video stills survive with publication rights and collaborator consent?",
+        "Which additional experimental media projects add a distinct action, output, or consequence rather than duplicating this thread?"
+      ],
+      boundaries: [
+        "Do not use a project page that omits Jamie as person-specific role evidence.",
+        "Preserve collaborator, programmer, construction, platform, and source-composition credit.",
+        "Treat the Matmos item as unresolved research until the surname conflict is corroborated.",
+        "Do not project this intake item directly to the website; create and approve a governed claim first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex iCloud archive review"]
+    },
+    {
+      id: "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",
+      title: "Commercial Rent Stabilization operating and public-data infrastructure",
+      project: "fair-rent-nyc",
+      kind: "claim-candidate",
+      summary: "Protected working artifacts show Jamie designing both coalition operating infrastructure and privacy-preserving public-data proposals for Commercial Rent Stabilization. The sources support authorship of plans, minutes, a policy memo, and a public handout; they do not establish completion of every planned deliverable, coalition adoption, agency adoption, or policy outcomes.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-CRS-NINETY-DAY-OPERATING-PLAN-2026-04-06",
+        "SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29",
+        "SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26",
+        "SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["fair-rent-campaign-memory"],
+      candidateClaims: [
+        "In April 2026, Jamie authored a 90-day operating plan for Fair Rent NYC and Commercial Rent Stabilization that defined six shared public goods: a front door, recurring room, shared public line, story bank, implementation-readiness packet, and movement memory.",
+        "In April 2026, Jamie created a running-minutes system that turned Commercial Rent Stabilization meetings into decisions, owners, open questions, and consent-aware story tracking across aligned city and state work.",
+        "In November 2025, Jamie authored an NYC Artist Coalition memo proposing open aggregated indicator tables and a minimum public data suite for a future Commercial Rent Guidelines Board.",
+        "In March 2026, Jamie designed a two-page School of Data handout specifying a privacy-preserving RPIE pilot with indicator, coverage and suppression, and methods tables."
+      ],
+      propositions: [
+        {
+          id: "PROP-CRS-NINETY-DAY-SHARED-GOODS-2026",
+          text: "In April 2026, Jamie authored a 90-day operating plan for Fair Rent NYC and Commercial Rent Stabilization that defined six shared public goods: a front door, recurring room, shared public line, story bank, implementation-readiness packet, and movement memory.",
+          status: "direct-support",
+          sourceIds: ["SRC-CRS-NINETY-DAY-OPERATING-PLAN-2026-04-06"],
+          sourceSupport: ["Jamie authorship", "April 2026 date", "six named shared goods", "movement architecture and digital stewardship role", "city and state companion lanes"],
+          boundaries: ["This is evidence of plan authorship and operating design, not completion of every deliverable.", "Do not convert Jamie's role into sole campaign leadership or collective-outcome causality."],
+          decisionUse: "Provides unusually concrete product-operations language for how Jamie turns coalition ambiguity into shared, usable infrastructure."
+        },
+        {
+          id: "PROP-CRS-RUNNING-MINUTES-SYSTEM-2026",
+          text: "In April 2026, Jamie created a running-minutes system that turned Commercial Rent Stabilization meetings into decisions, owners, open questions, and consent-aware story tracking across aligned city and state work.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-CRS-COLLABORATION-RUNNING-MINUTES-2026-04-29"],
+          sourceSupport: ["Jamie ownership of the running-minutes action", "shared memory purpose", "decision and action tables", "owner and status fields", "consent labels", "city and state framing"],
+          boundaries: ["The minutes document activity and structure, not completion of every action.", "Do not publish stakeholder names, contact details, private stories, or internal strategy from the source."],
+          decisionUse: "Supports meeting synthesis, decision records, action tracking, privacy-aware knowledge design, and durable handoff work."
+        },
+        {
+          id: "PROP-CRS-OPEN-DATA-FOUNDATION-MEMO-2025",
+          text: "In November 2025, Jamie authored an NYC Artist Coalition memo proposing open aggregated indicator tables and a minimum public data suite for a future Commercial Rent Guidelines Board.",
+          status: "direct-support",
+          sourceIds: ["SRC-CRS-OPEN-DATA-FOUNDATION-MEMO-2025-11-26"],
+          sourceSupport: ["Jamie signature", "November 2025 date", "aggregated indicator-table request", "minimum data-suite proposal", "confidentiality and vendor-data limits"],
+          boundaries: ["Describe this as a proposal, not an adopted agency plan.", "Do not imply access to confidential filings or independent validation of every policy premise."],
+          decisionUse: "Supports policy translation, public-data product requirements, privacy boundaries, and implementation-readiness work."
+        },
+        {
+          id: "PROP-CRS-RPIE-PILOT-HANDOUT-2026",
+          text: "In March 2026, Jamie designed a two-page School of Data handout specifying a privacy-preserving RPIE pilot with indicator, coverage and suppression, and methods tables.",
+          status: "direct-support",
+          sourceIds: ["SRC-CRS-FULLER-PUBLIC-BASELINE-HANDOUT-2026-03-27"],
+          sourceSupport: ["Jamie authorship", "March 2026 date", "School of Data context", "two-page handout", "three-part pilot", "minimum fields", "explicit confidential-data exclusions"],
+          boundaries: ["The handout specifies a pilot; it does not report a completed release or new empirical findings.", "Do not imply agency adoption or policy enactment."],
+          decisionUse: "Shows Jamie converting a policy-neutral data opportunity into a small publishable v1 with fields, privacy controls, documentation, and user value."
+        }
+      ],
+      tensions: [
+        {
+          id: "TENSION-CRS-ARTIFACTS-AND-THIRTY-PAGE-AGGREGATE",
+          propositionIds: [
+            "PROP-CRS-NINETY-DAY-SHARED-GOODS-2026",
+            "PROP-CRS-RUNNING-MINUTES-SYSTEM-2026"
+          ],
+          relatedProofIds: ["fair-rent-campaign-memory"],
+          description: "The protected sources establish authored operating artifacts and concrete coordination patterns, but this four-source review does not independently establish the governed proof's 30+ page aggregate or every organization named in that proof.",
+          currentPosition: "Use the new sources for artifact-specific role claims. Keep the 30+ aggregate governed by its existing approved source basis until a reproducible public-safe inventory verifies its denominator, date range, and inclusion rules.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-CRS-THIRTY-PAGE-INVENTORY-CONFIRM",
+              targetProofId: "fair-rent-campaign-memory",
+              condition: "A public-safe inventory documents at least 30 qualifying pages, their date range and inclusion rules, and Jamie's stewardship relationship to them.",
+              action: "confirm",
+              requiredEvidence: ["public-safe page inventory", "count method", "time window", "role-to-artifact review"],
+              reason: "The aggregate would then be reproducible without exposing the underlying private coalition archive."
+            },
+            {
+              id: "TRIGGER-CRS-THIRTY-PAGE-INVENTORY-NARROW",
+              targetProofId: "fair-rent-campaign-memory",
+              condition: "A completed inventory materially reduces the qualifying page count or narrows Jamie's stewardship relationship to the included artifacts.",
+              action: "narrow",
+              requiredEvidence: ["completed inventory", "documented inclusion rules", "specific conflicting count or attribution evidence"],
+              reason: "The public proof should retain the documented operating accomplishment without an unsupported aggregate.",
+              replacementGuidance: "Replace the 30+ aggregate with the verified count or with artifact-specific wording about plans, minutes, decision records, action tracking, and public-data materials."
+            }
+          ]
+        }
+      ],
+      researchQuestions: [
+        "Which six shared goods were completed, adopted, or used, and what public-safe artifacts or collaborator accounts establish that status?",
+        "What reproducible inclusion rule and date range support the existing 30+ page aggregate?",
+        "Is there a stable public URL for the School of Data handout or a public event record documenting its presentation?",
+        "Did any agency, Council, research, or coalition partner respond to or use either public-data proposal, and what public source can establish the result?"
+      ],
+      boundaries: [
+        "Keep the underlying working documents, contact details, stakeholder lists, private stories, transcripts, and internal strategy outside the repository.",
+        "Distinguish authored plans and specifications from completed implementation, coalition adoption, agency adoption, and policy outcomes.",
+        "Do not use this source set to independently confirm the 30+ page aggregate.",
+        "Do not project this intake item directly to the website; reconcile or create a governed claim and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex protected-source review"]
+    },
+    {
+      id: "INTAKE-EVALS-AND-SOURCE-BACKED-SPRINT-2026-07-14",
+      title: "AI evals completion and bounded source-backed sprint design",
+      project: "source-backed-team-memory",
+      kind: "claim-candidate",
+      summary: "The job-hunt archive contains a completion certificate for AI Evals for Engineers and PMs and a protected preparation packet showing how Jamie translated source-backed team memory into a bounded discovery and prototype service. A separate cross-archive job-hunt map is retained only as context because it synthesizes sources rather than independently proving accomplishments.",
+      status: "claim-candidate",
+      sourceIds: [
+        "SRC-MAVEN-AI-EVALS-COMPLETION-2026",
+        "SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30",
+        "SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03"
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: [
+        "ai-evals-professional-development",
+        "source-backed-team-memory-method"
+      ],
+      candidateClaims: [
+        "Jamie's Maven certificate, issued to James Burkart, records completion of AI Evals for Engineers and PMs with Hamel Husain and Shreya Shankar in 2026.",
+        "In June 2026, Jamie scoped a bounded source-backed team-memory discovery sprint around one approved non-sensitive or redacted source surface, a reviewable memory artifact, human correction, and a continue, revise, or stop recommendation."
+      ],
+      propositions: [
+        {
+          id: "PROP-AI-EVALS-COURSE-COMPLETION-2026",
+          text: "Jamie's Maven certificate, issued to James Burkart, records completion of AI Evals for Engineers and PMs with Hamel Husain and Shreya Shankar in 2026.",
+          status: "direct-support",
+          sourceIds: ["SRC-MAVEN-AI-EVALS-COMPLETION-2026"],
+          sourceSupport: ["James Burkart name", "course completion", "course title", "Hamel Husain and Shreya Shankar instructor credit", "Maven", "2026"],
+          boundaries: ["Treat this as course completion, not professional certification authority or instructor affiliation.", "Do not publish private coursework, cohort material, or submissions."],
+          decisionUse: "Adds direct credential evidence for Jamie's application-centric evaluation practice without overstating mastery or authority."
+        },
+        {
+          id: "PROP-SOURCE-BACKED-SPRINT-SCOPE-2026",
+          text: "In June 2026, Jamie scoped a bounded source-backed team-memory discovery sprint around one approved non-sensitive or redacted source surface, a reviewable memory artifact, human correction, and a continue, revise, or stop recommendation.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-SOURCE-BACKED-SPRINT-PREP-2026-06-30"],
+          sourceSupport: ["bounded discovery and prototype scope", "one safe source surface", "reviewable memory artifact", "human review and correction", "privacy exclusions", "continue, revise, or stop output"],
+          boundaries: ["This establishes service and experiment design, not client acceptance, payment, delivery, deployment, or outcome.", "Do not name the private collaborator, company context, transcript, or pricing."],
+          decisionUse: "Shows product judgment: converting an emerging knowledge problem into a small test with explicit inputs, outputs, safety constraints, and a decision gate."
+        },
+        {
+          id: "PROP-JOB-HUNT-EVIDENCE-MAP-CONTEXT-2026",
+          text: "A July 2026 AI-assisted job-hunt map synthesizes project archives into a technical project management, product operations, civic systems, and knowledge-work narrative while flagging metrics that still require verification.",
+          status: "context-only",
+          sourceIds: ["SRC-JOB-HUNT-CROSS-ARCHIVE-EVIDENCE-MAP-2026-07-03"],
+          sourceSupport: ["cross-archive synthesis", "professional framing", "source-routing guidance", "verification gaps"],
+          boundaries: ["The map is not independent proof of any accomplishment it summarizes.", "Do not use its narrative confidence as a substitute for underlying sources."],
+          decisionUse: "Preserves a useful evidence-routing and positioning artifact while preventing circular citation.",
+          nextStep: "Resolve each material metric or role claim against its underlying public or protected source set before using the map's synthesis in governed claims."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which public-safe course artifacts, if any, can demonstrate Jamie's applied evaluation practice without exposing private cohort work?",
+        "What public-safe prototype or completed evaluation can demonstrate use of the course methods beyond completion?",
+        "Has a bounded source-backed sprint been accepted, delivered, reviewed, or measured, and what permissioned source could establish that status?",
+        "Which claims in the cross-archive map remain unresolved after the current knowledge-bank ingestion?"
+      ],
+      boundaries: [
+        "Do not publish private coursework, cohort material, collaborator identity, company context, transcripts, correspondence, or pricing.",
+        "Do not convert a scoped proposal into a delivered client engagement or production deployment.",
+        "Do not use the AI-assisted evidence map as independent proof of its own summaries.",
+        "Do not project this intake item directly to the website; reconcile or create a governed claim and make a separate editorial decision first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex protected-source review"]
     }
   ],
   pages: [{
