@@ -223,6 +223,12 @@ equivalent.
   findings remain reserve knowledge rather than automatic website copy.
 - The complete KC Town Hall census promotes the collective operations-loop and
   direct city-response findings while keeping them deferred from the website.
+- The [NYC Artist Coalition full-population census](nycartc-full-population-social-census-2026-07-14.md)
+  gives all 5,124 profile-counted slots a disposition, recovers 3,367 public
+  records, preserves 1,757 unresolved slots without inference, and adds bounded
+  campaign, amplification, posted-source, and explicit-mention findings.
+- NYC Artist Coalition thematic proportions remain held because 34.3 percent
+  of the profile control is unresolved; only recovered-item floors are used.
 - Jamie's memory of establishing the accounts remains a research-stage claim.
 - The account-establishment route calls for creation records, design files,
   administrator chronology, and collaborator proof notes.

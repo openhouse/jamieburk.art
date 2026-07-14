@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "703817bb48cb0ba221e095212bad33a5a823cf0405e715e9b802e55f65f759b2",
+    "fingerprint": "79a1ba9c0b868888fb7066263c60b80cf5560f5e29530fb31b78122ea834e1cf",
     "counts": {
       "entities": 22,
-      "intake": 103,
-      "sources": 160,
-      "sourceReadings": 160,
-      "claims": 65,
-      "researchTasks": 25,
-      "projectionDecisions": 48
+      "intake": 104,
+      "sources": 165,
+      "sourceReadings": 165,
+      "claims": 69,
+      "researchTasks": 27,
+      "projectionDecisions": 52
     }
   },
   "judge": {
@@ -24,20 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "INTAKE-KCTOWNHALL-FULL-POPULATION-X-CENSUS-2026"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "photo-observation"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "INTAKE-SOCIAL-ACCOUNT-ESTABLISHMENT-MEMORY-2026"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "INTAKE-NYCARTC-FULL-POPULATION-X-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-CALLNYC-SUPERLATIVE-2026"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "TASK-NYCARTC-UNRESOLVED-SLOT-RECOVERY"
           }
         ]
       },
@@ -46,20 +42,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "READ-X-KCTOWNHALL-FULL-POPULATION-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "READ-X-NYCARTC-FULL-POPULATION-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "READ-WAYBACK-KCTOWNHALL-HOME-2019"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "READ-X-NYCARTC-EXPLICIT-MENTION-SEARCH-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "READ-X-KCTOWNHALL-ROBINSON-TIRES-2020"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "READ-KCUR-MISSOURI-PRIMARY-GUIDE-2018"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "READ-GOTHAMIST-BOOK-CULTURE-RENT-2020"
           }
         ]
       },
@@ -68,20 +60,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "CLM-NYCARTC-FULL-SOCIAL-POPULATION-DISPOSITION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-COUNCIL-AND-CITY-ENGAGEMENT"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "CLM-NYCARTC-RECOVERED-AMPLIFICATION-NETWORK"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-CIVIC-INFORMATION-ROUTING"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "CLM-NYCARTC-POSTED-SOURCE-ROUTING"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-CURRENT-VISIBLE-REACTION-SNAPSHOT"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "CLM-NYCARTC-EXPLICIT-INBOUND-PATTERN"
           }
         ]
       },
@@ -90,16 +82,16 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "TASK-NYCARTC-UNRESOLVED-SLOT-RECOVERY"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-KCTOWNHALL-SOCIAL-METRIC-RECONCILIATION"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "## Research tasks"
           }
         ]
       },
@@ -108,20 +100,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "The claim is public-safe and source-backed, but this archival-production pass does not automatically alter the live portfolio argument."
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-NYCARTC-FULL-SOCIAL-POPULATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-KCTOWNHALL-COUNCIL-AND-CITY-ENGAGEMENT"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-NYCARTC-AMPLIFICATION-NETWORK"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
-          },
-          {
-            "file": "docs/knowledge-bank/approval-register.md",
-            "record": "The operations-loop and stakeholder-response claims remain deferred from the website pending human editorial review."
+            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-NYCARTC-POSTED-SOURCE-ROUTING"
           }
         ]
       },
@@ -130,20 +118,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
-            "record": "The ledger stores classifications, public metadata, summaries, and content digests rather than raw post text."
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "NYC Artist Coalition census is public-safe and leaves unresolved slots uninterpreted"
           },
           {
-            "file": "docs/knowledge-bank/anti-claims.md",
-            "record": "Keep project-reported tire and savings totals attributed and unaudited."
+            "file": "docs/knowledge-bank/data/nycartc-public-post-ledger.json",
+            "record": "NYCARTC-X-UNRESOLVED-0001"
           },
           {
-            "file": "docs/knowledge-bank/approval-register.md",
-            "record": "KC Town Hall full-population social census"
-          },
-          {
-            "file": "docs/knowledge-bank/research/kctownhall-full-population-social-census-2026-07-14.md",
-            "record": "The project's later transition is represented without private family context."
+            "file": "docs/knowledge-bank/public-safety.md",
+            "record": "## Prohibited Materials"
           }
         ]
       },
@@ -152,20 +136,16 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+          },
+          {
             "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "future writers a deep palette from which to compose the public site"
+            "record": "photo-observation"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "claimRecordSchema"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "Re-run the route union and compare content digests if the live profile count changes."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-CIVIC-INFORMATION-ROUTING"
+            "file": "docs/knowledge-bank/chad-lens.md",
+            "record": "# Chad Lens"
           }
         ]
       }
@@ -188,5 +168,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Deterministic evaluation under Node 26.5.0: 0/7 hard gates failing and 0/4 quality targets open. The knowledge-lifecycle suite passed 54/54 tests; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Weighted judge result: 100.0/100, with all seven criteria at 4/4. The new @KCTownHall census reconciles all 183 items in the surviving July 2026 profile control as 142 account posts, 13 account replies, and 28 reposts, while explicitly refusing native-export, deletion-history, or never-deleted language. The promoted operations claim joins archived collective-role evidence for Julia Fredenburg and Jamie Burkart with Oak Park Neighborhood Association collaboration, resident form and phone or text intake, a recurring schedule, the 100-record tire-workflow pattern, and dated public reporting. Direct responses from three then-serving Council figures and KCMO 311 are kept separate from the nine reposted source statuses belonging to three Council figures. Account-authored reactions are separated from source-status metrics and are not converted into historical analytics, unique people, reach, adoption, endorsement, or impact. Posted journalism remains mission context rather than press coverage of KC Town Hall. Tire and savings figures remain attributed project self-reports pending reconciliation, and private family context remains outside the public repository. The operations-loop and stakeholder-response claims are mature reserve knowledge but remain deferred from website projection. The redacted ledger preserves 183 unique status records, route provenance, classifications, metric ownership, and SHA-256 content digests without raw post text or authenticated-session material. Remaining bounded limits are that the census cannot establish deleted earlier items, individual shared-account authorship, completed pickups, unique resident reports, audited tire or savings totals, complete stakeholder history, historical analytics, adoption, endorsement, or causal neighborhood impact; metric reconciliation, account-establishment evidence, collaborator confirmation, and transition chronology remain bounded research or human-review work; and all three human gates remain pending."
+  "summary": "Fresh Node 26.4.0 evaluation of fingerprint 79a1ba9c0b868888fb7066263c60b80cf5560f5e29530fb31b78122ea834e1cf found 0/7 hard-gate failures and 0/4 quality gaps across 22 entities, 104 intake records, 165 sources, 165 readings, 69 claims, 27 research tasks, and 52 projection decisions. The NYC Artist Coalition ledger dispositions all 5,124 profile-counted slots as 3,367 recovered records plus 1,757 unresolved slots, keeping 100% disposition coverage separate from 65.7% item recovery; the inbound ledger counts 347 explicit mentions and excludes 154 context records. knowledge-bank and public-safety passed, TypeScript passed with no emit and incremental disabled, and lifecycle tests passed 60/60. Seven of seven in-memory mutations were detected: removal of each of the three unresolved-population anti-claims, reclassification of all 154 context rows, raw-text insertion in each ledger, and private-path insertion. No remaining material defect was found in this snapshot; all three human gates remain pending. Weighted judge score: 100/100."
 }

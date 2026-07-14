@@ -88,6 +88,25 @@ status, causality, or impact from an amplified resource to WOW List or Jamie.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+## NYC Artist Coalition Social Corpus
+
+Do not call the 5,124-row ledger a complete X export, deletion history, or 100
+percent item recovery. It provides 100 percent disposition coverage and 65.7
+percent item-level recovery. Do not infer IDs, dates, content, type, theme,
+author, or deletion reason for the 1,757 unresolved slots, and do not use
+recovered proportions as estimates for the unresolved population.
+
+Do not say Jamie authored every `@NYCArtC` post, operated the account alone, or
+selected every repost. Preserve collaborators' authorship and distinguish the
+documented organizer role from the still-researching account-establishment
+memory.
+
+Do not treat reposts, posted links, mentions, reactions, or public-official
+interactions as endorsement, partnership, adoption, audience reach, policy
+causation, or impact. Do not count search or thread-context records as explicit
+mentions. Linked journalism and public resources retain their own authorship
+and are not automatically coverage of the coalition.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

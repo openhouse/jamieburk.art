@@ -5,43 +5,43 @@ claim beyond the wording and guardrails here.
 
 ## career-operating-structure-14-years - Operating structure over 14+ years
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** 14+ years creating operating structure across civic, cultural, small-business, and technical environments.  
-**Detailed public-safe wording:** Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.  
-**Where to project:** Homepage, Resume page, Technical Operations, About.  
-**Why it matters:** Establishes the throughline across projects without forcing one job title onto every period of work.  
-**Guardrail:** Does not imply one continuous formal employment role, PMP certification, or government employment.  
-**Do not say:** 14+ years as a formal technical project manager in one organization.  
-**Protected boundaries:** Private clients, collaborator records, raw community materials, and internal operating details stay outside the repo.  
-**Review owner:** Jamie  
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public-safe portfolio briefs
+**Public wording:** 14+ years creating operating structure across civic, cultural, small-business, and technical environments.
+**Detailed public-safe wording:** Jamie creates operating structure where the need is real but requirements, workflows, ownership, documentation, and handoffs are not yet clear.
+**Where to project:** Homepage, Resume page, Technical Operations, About.
+**Why it matters:** Establishes the throughline across projects without forcing one job title onto every period of work.
+**Guardrail:** Does not imply one continuous formal employment role, PMP certification, or government employment.
+**Do not say:** 14+ years as a formal technical project manager in one organization.
+**Protected boundaries:** Private clients, collaborator records, raw community materials, and internal operating details stay outside the repo.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary  
-**Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.  
-**Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.  
-**Where to project:** Resume page, Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.  
-**Guardrail:** Use stewardship and contribution language.  
-**Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.  
-**Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.  
-**Review owner:** Jamie  
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public project artifact / public-safe archive summary
+**Public wording:** Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.
+**Detailed public-safe wording:** Jamie helped translate legacy operating knowledge into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.
+**Where to project:** Resume page, Technical Operations, Work card, Case study.
+**Why it matters:** Shows long-term implementation, stakeholder translation, and operating-system work in a real business environment.
+**Guardrail:** Use stewardship and contribution language.
+**Do not say:** Jamie fully owned the business, owned all growth, or replaced the company's institutional knowledge.
+**Protected boundaries:** Private dashboards, credentials, customer data, revenue detail, vendor terms, and sensitive operating practices stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / firsthand operational context  
-**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.  
-**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.  
-**Where to project:** Homepage, Resume page, Technical Operations, HJE case study.  
-**Why it matters:** Provides a concise business-impact proof point while retaining careful causality.  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / firsthand operational context
+**Public wording:** Contributed to a period of 2x revenue growth for a legacy e-commerce business.
+**Detailed public-safe wording:** Jamie's web, e-commerce, analytics, marketing, content, and operational workflow improvements contributed to a period of 2x revenue growth.
+**Where to project:** Homepage, Resume page, Technical Operations, HJE case study.
+**Why it matters:** Provides a concise business-impact proof point while retaining careful causality.
 **Guardrail:** Must stay as contribution language.
 **Do not say:** Caused 2x revenue growth; single-handedly doubled revenue; fully owned all business growth.
 **Protected boundaries:** Do not publish private revenue figures, dashboards, customer data, vendor terms, or internal analytics.
@@ -75,7 +75,7 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
 **Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
-**Review owner:** Jamie / Collaborator approval needed for named materials  
+**Review owner:** Jamie / Collaborator approval needed for named materials
 **Last reviewed:** 2026-07-07
 
 ## fair-rent-source-map - Legislative source map and provenance redline
@@ -89,8 +89,8 @@ claim beyond the wording and guardrails here.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
 **Guardrail:** Do not imply legal authority or official bill ownership.
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
-**Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
-**Review owner:** Jamie / Collaborator approval needed  
+**Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.
+**Review owner:** Jamie / Collaborator approval needed
 **Last reviewed:** 2026-07-07
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
@@ -126,31 +126,31 @@ claim beyond the wording and guardrails here.
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
-**Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context  
-**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
-**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
-**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
-**Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
-**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
-**Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
-**Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
-**Review owner:** Jamie  
+**Support level:** Careful
+**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.
+**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.
+**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
+**Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.
+**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.
+**Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.
+**Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## sunday-dinner-196-participation-infrastructure - Participation infrastructure
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
-**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
-**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
-**Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
-**Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
-**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
-**Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
-**Review owner:** Jamie  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation
+**Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.
+**Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
+**Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.
+**Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.
+**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.
+**Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
@@ -170,61 +170,121 @@ claim beyond the wording and guardrails here.
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 
-**Status:** Careful  
-**Support level:** Careful  
-**Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
-**Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Approved resume / public source / public-safe archive summary
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.
+**Where to project:** Technical Operations, Work card, Case study.
+**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.
 **Source basis:** Approved resume language; the 2019 CCED Board packet; the September 26, 2019 Council record and Resolution 190649; Ordinance 240317; and public-safe project context.
 **Guardrail:** The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received or disbursed; it remained unused and was reclaimed after the project withdrew in 2024.
 **Do not say:** Funding received or disbursed; executed funding agreement; construction or completed development; known reason for the project's withdrawal; current property status; private financial details; official municipal endorsement beyond the public record.
-**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
-**Review owner:** Jamie  
+**Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 
-**Status:** Careful  
-**Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
-**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
-**Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
-**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
-**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
-**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
-**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
-**Review owner:** Jamie  
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary
+**Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.
+**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.
+**Where to project:** Lab page, Technical Operations, future consulting materials after approval.
+**Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.
+**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.
+**Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.
+**Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
+
+## nycartc-full-social-population-disposition - Complete accounting with evidence debt
+
+**Status:** Reserve
+**Support level:** Strongly bounded
+**Evidence class:** Authenticated public-source archival census
+**Public wording:** A July 2026 archival pass gave all 5,124 profile-counted `@NYCArtC` slots a disposition, recovering 3,367 public records and preserving 1,757 unresolved slots without invented metadata.
+**Detailed public-safe wording:** The authenticated profile count establishes a 5,124-item control. The public-safe ledger accounts for every slot as either one of 3,367 recovered records or one of 1,757 unresolved positions, yielding 100% disposition coverage and 65.7% item recovery without assigning dates, formats, themes, authors, or deletion histories to unresolved material.
+**Where to project:** Knowledge bank and research documentation only.
+**Why it matters:** Makes archive completeness and evidence debt inspectable.
+**Guardrail:** Say 100% disposition coverage and 65.7% item recovery; never collapse the two.
+**Do not say:** Complete X export; 100% item recovery; recovered records represent unresolved slots.
+**Protected boundaries:** Do not publish raw post text, authenticated-session material, private exports, credentials, direct messages, private analytics, or local archival paths.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## nycartc-recovered-amplification-network - Shared coalition amplification
+
+**Status:** Reserve
+**Support level:** Corroborated
+**Evidence class:** Authenticated recovered social corpus
+**Public wording:** Within the recovered corpus, the shared account amplified a durable network of organizers, cultural workers, tenant and small-business advocates, labor groups, and public institutions through 2,652 reposts.
+**Detailed public-safe wording:** The 3,367-record recovered set contains 2,652 reposts, including recoverable floors of 192 from Olympia Kazi, 112 from United for Small Business NYC, 109 from Future of Music Coalition, 91 from Street Vendor Project, and 89 from Music Workers Alliance; these counts describe collective communications infrastructure while retaining each source account's authorship.
+**Where to project:** Future NYC Artist Coalition or Technical Operations composition after review.
+**Why it matters:** Shows the account functioning as collective communications infrastructure.
+**Guardrail:** Preserve source-account authorship and keep the finding bounded to recovered records.
+**Do not say:** Every account endorsed the coalition; Jamie authored or selected every repost; reposts prove reach, partnership, adoption, or impact.
+**Protected boundaries:** Do not publish raw post text, direct messages, private account-administration records, collaborator-private data, authenticated-session material, or private analytics.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## nycartc-posted-source-routing - Public source routing
+
+**Status:** Reserve
+**Support level:** Corroborated
+**Evidence class:** Authenticated recovered link inventory / close-read public sources
+**Public wording:** The recovered corpus routes 1,772 outbound-link occurrences across 1,241 unique shortened URLs, connecting campaign communication with reporting, official resources, events, actions, and coalition-owned project surfaces.
+**Detailed public-safe wording:** The recovered corpus contains 1,772 outbound-link occurrences across 1,241 unique shortened URLs; the public interface exposes destination labels for 1,204, and a bounded resolution pass recovered 125 short links leading to 108 current destinations. Linked authors and institutions retain credit for their work.
+**Where to project:** Knowledge bank; selected source examples may support later case-study composition.
+**Why it matters:** Documents source-backed public communication rather than isolated campaign messaging.
+**Guardrail:** A posted source remains the work of its author or institution and does not prove that readers opened or acted on it.
+**Do not say:** The coalition authored linked journalism; every source endorsed the coalition; link inventory proves clicks, conversion, or policy impact.
+**Protected boundaries:** Do not publish authenticated-session data, private or protected destinations, tracking or account credentials, local resolution artifacts, or URLs that expose private records.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## nycartc-explicit-inbound-pattern - Bounded stakeholder use
+
+**Status:** Reserve
+**Support level:** Corroborated
+**Evidence class:** Authenticated Latest-search inventory
+**Public wording:** A bounded recoverable search set contains 347 explicit `@NYCArtC` mentions from 107 public accounts, including coalition, cultural, labor, tenant, small-business, Council, and city-agency accounts.
+**Detailed public-safe wording:** Of 501 rendered search records, 347 from 107 public accounts explicitly name `@NYCArtC`; the explicit set includes 205 records from 15 coalition, civic, or cultural partner accounts, 15 records from three then-serving Council-member accounts, and two records from two city-agency accounts. The other 154 records remain search or thread context and are excluded from these counts.
+**Where to project:** Knowledge bank; use only after audience-specific composition.
+**Why it matters:** Documents sustained public use of the shared coalition identity.
+**Guardrail:** Exclude 154 search or thread-context records from explicit counts and call the result a recovered floor.
+**Do not say:** Complete lifetime engagement; every rendered record was direct; mentions prove endorsement, partnership, adoption, or impact.
+**Protected boundaries:** Do not publish private analytics, follower exports, direct messages, authenticated-session details, private account data, or inferred identities behind shared accounts.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
 
 ## technical-operations-operating-backbone - Operating backbone
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public-safe portfolio briefs  
-**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.  
-**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.  
-**Where to project:** Technical Operations, Homepage, Resume page, About.  
-**Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.  
-**Guardrail:** Keep it generally framed; do not make the site only an OTI application page.  
-**Do not say:** Jamie is a certified PMP unless separately approved; Jamie replaces product, engineering, legal, or executive judgment.  
-**Protected boundaries:** Private client materials, internal health metrics, HR context, and confidential team information stay offline.  
-**Review owner:** Jamie  
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public-safe portfolio briefs
+**Public wording:** Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.
+**Detailed public-safe wording:** Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.
+**Where to project:** Technical Operations, Homepage, Resume page, About.
+**Why it matters:** Names the role fit across product operations, implementation, technical project management, and public-facing delivery.
+**Guardrail:** Keep it generally framed; do not make the site only an OTI application page.
+**Do not say:** Jamie is a certified PMP unless separately approved; Jamie replaces product, engineering, legal, or executive judgment.
+**Protected boundaries:** Private client materials, internal health metrics, HR context, and confidential team information stay offline.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
 ## ai-evals-professional-development - AI evals professional development
 
-**Status:** Ready  
-**Support level:** Strong  
-**Evidence class:** Approved resume / public-safe certificate  
-**Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.  
-**Detailed public-safe wording:** Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.  
-**Where to project:** Resume page, Lab page, About.  
-**Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.  
-**Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.  
-**Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.  
-**Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
-**Review owner:** Jamie  
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / public-safe certificate
+**Public wording:** Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
+**Detailed public-safe wording:** Coursework covered application-centric evals, error analysis, annotation workflows, traces, LLM failure modes, retrieval quality, and human-in-the-loop evaluation practice.
+**Where to project:** Resume page, Lab page, About.
+**Why it matters:** Supports Jamie's source-backed memory and AI-readiness work without overstating product maturity.
+**Guardrail:** Treat as professional development, not instructor affiliation or certification authority beyond completion.
+**Do not say:** Jamie teaches the course; Jamie is certified by Maven as an AI evaluator unless the credential wording is separately approved.
+**Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.
+**Review owner:** Jamie
 **Last reviewed:** 2026-07-07

@@ -52,6 +52,23 @@ stronger public publication.
 Potentially usable, but do not project to public pages until Jamie or
 collaborators approve.
 
+## NYC Artist Coalition Social Census
+
+The July 14, 2026 authenticated review uses the displayed 5,124-post profile
+count as a population control and stores a redacted disposition ledger for
+every slot. It recovers 3,367 public records and preserves 1,757 unresolved
+slots without inferred metadata. A separate inbound ledger distinguishes 347
+explicit account mentions from 154 search or thread-context records.
+
+Three mission-relevant sources surfaced through recovered posted URLs were
+accessioned and closely read: Gothamist reporting on Book Culture's rent
+dispute, repeal of Civil Rights Law section 50-A, and the Excluded Workers Fund.
+They provide context for what the account routed; they are not coverage or
+endorsement of NYC Artist Coalition.
+
+See
+`docs/knowledge-bank/research/nycartc-full-population-social-census-2026-07-14.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

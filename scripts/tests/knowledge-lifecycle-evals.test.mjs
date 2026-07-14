@@ -10,6 +10,7 @@ import { projectTwitterAccountInventory } from "../../apps/www/src/data/knowledg
 import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts";
 import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts";
 import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts";
+import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -915,6 +916,191 @@ test("KC Town Hall stakeholder and traction findings retain attribution boundari
   }
   assert.equal(task.status, "resolved");
   assert.match(task.resolutionSummary, /all 183 items/i);
+});
+
+test("NYC Artist Coalition census dispositions the full 5,124-slot profile control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-public-post-ledger.json", "utf8")
+  );
+  const population = ledger.populationAudit;
+
+  assert.equal(population.profileCountObserved, 5124);
+  assert.equal(population.uniqueItemsRecovered, 3367);
+  assert.equal(population.accountAuthoredStatusesRecovered, 715);
+  assert.equal(population.repostsRecovered, 2652);
+  assert.equal(population.unresolvedPopulationSlots, 1757);
+  assert.equal(population.dispositionTotal, 5124);
+  assert.equal(ledger.items.length, 5124);
+  assert.equal(
+    ledger.items.filter((item) => item.status === "recovered-public-status").length,
+    3367
+  );
+  assert.equal(
+    ledger.items.filter((item) => item.status === "unresolved-profile-count-slot").length,
+    1757
+  );
+  assert.match(ledger.completenessStatement, /complete accounting, not complete item recovery/i);
+  assert.match(ledger.completenessStatement, /not a platform export/i);
+});
+
+test("NYC Artist Coalition census is public-safe and leaves unresolved slots uninterpreted", () => {
+  const ledgerText = readFileSync(
+    "docs/knowledge-bank/data/nycartc-public-post-ledger.json",
+    "utf8"
+  );
+  const ledger = JSON.parse(ledgerText);
+  const recovered = ledger.items.filter(
+    (item) => item.status === "recovered-public-status"
+  );
+  const unresolved = ledger.items.filter(
+    (item) => item.status === "unresolved-profile-count-slot"
+  );
+
+  assert.equal(new Set(recovered.map((item) => item.statusId)).size, 3367);
+  assert.ok(recovered.every((item) => /^[a-f0-9]{64}$/.test(item.contentDigestSha256)));
+  assert.ok(recovered.every((item) => !("text" in item) && !("raw" in item)));
+  assert.ok(
+    unresolved.every(
+      (item) =>
+        item.statusId === null &&
+        item.publishedAt === null &&
+        item.relationship === null &&
+        item.authorHandle === null &&
+        item.primaryTheme === "unresolved"
+    )
+  );
+  assert.doesNotMatch(
+    ledgerText,
+    /\/private\/|\/tmp\/|\/Users\/|Mobile Documents|authenticated-cookie|authorization:/i
+  );
+});
+
+test("NYC Artist Coalition corpus aggregates reproduce the typed lifecycle summary", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-public-post-ledger.json", "utf8")
+  );
+  const aggregate = ledger.aggregateFindings;
+
+  assert.equal(
+    ledger.populationAudit.profileCountObserved,
+    nycArtCSocialCensus.observedProfileCount
+  );
+  assert.equal(
+    ledger.populationAudit.uniqueItemsRecovered,
+    nycArtCSocialCensus.recoveredPublicStatuses
+  );
+  assert.deepEqual(aggregate.byRelationship, {
+    "account-status": nycArtCSocialCensus.relationshipCounts.accountStatuses,
+    repost: nycArtCSocialCensus.relationshipCounts.reposts
+  });
+  assert.equal(
+    aggregate.campaignHashtagAuthoredStatusFloors["#FairRentNYC"],
+    nycArtCSocialCensus.authoredCampaignHashtagFloors.fairRentNYC
+  );
+  assert.equal(
+    aggregate.campaignHashtagAuthoredStatusFloors["#SaveNYCSpaces"],
+    nycArtCSocialCensus.authoredCampaignHashtagFloors.saveNYCSpaces
+  );
+  assert.equal(
+    aggregate.campaignHashtagAuthoredStatusFloors["#LetNYCDance"],
+    nycArtCSocialCensus.authoredCampaignHashtagFloors.letNYCDance
+  );
+  assert.equal(
+    aggregate.campaignHashtagAuthoredStatusFloors["#TalksNotRaids"],
+    nycArtCSocialCensus.authoredCampaignHashtagFloors.talksNotRaids
+  );
+  assert.equal(aggregate.uniqueOutboundUrls, nycArtCSocialCensus.postedLinks.uniqueShortUrls);
+  assert.equal(
+    aggregate.uniqueResolvedDestinations,
+    nycArtCSocialCensus.postedLinks.uniqueResolvedDestinations
+  );
+});
+
+test("NYC Artist Coalition inbound ledger separates explicit mentions from context", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-public-engagement-ledger.json", "utf8")
+  );
+  const aggregate = ledger.aggregateFindings;
+
+  assert.equal(ledger.records.length, 501);
+  assert.equal(aggregate.renderedSearchRecords, 501);
+  assert.equal(aggregate.explicitAccountMentionRecords, 347);
+  assert.equal(aggregate.searchOrThreadContextRecords, 154);
+  assert.equal(aggregate.distinctPublicAccounts, 107);
+  assert.equal(aggregate.coalitionCivicAndCulturalPartnerFloor.recoveredInteractions, 205);
+  assert.equal(aggregate.councilMemberAccountFloor.recoveredInteractions, 15);
+  assert.equal(aggregate.cityAgencyAccountFloor.recoveredInteractions, 2);
+  assert.equal(
+    ledger.records.filter((item) => item.evidenceDisposition === "explicit-account-mention").length,
+    347
+  );
+  assert.equal(
+    ledger.records.filter((item) => item.evidenceDisposition === "search-or-thread-context").length,
+    154
+  );
+  assert.ok(ledger.records.every((item) => !("text" in item) && !("raw" in item)));
+});
+
+test("NYC Artist Coalition full-corpus claims retain recovery, authorship, and traction boundaries", () => {
+  const disposition = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FULL-SOCIAL-POPULATION-DISPOSITION"
+  );
+  const amplification = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-RECOVERED-AMPLIFICATION-NETWORK"
+  );
+  const routing = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-POSTED-SOURCE-ROUTING"
+  );
+  const inbound = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-EXPLICIT-INBOUND-PATTERN"
+  );
+  const identity = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NYCARTC-FULL-POPULATION-DISPOSITION"
+  );
+
+  assert.equal(disposition.maturity, "corroborated");
+  assert.ok(disposition.antiClaims.some((item) => /complete X export/i.test(item)));
+  assert.ok(disposition.antiClaims.some((item) => /All 5,124 historical items were recovered/i.test(item)));
+  assert.ok(disposition.antiClaims.some((item) => /representative of the unresolved slots/i.test(item)));
+  assert.ok(disposition.boundaries.some((item) => /100 percent disposition/i.test(item)));
+  assert.ok(amplification.antiClaims.some((item) => /Jamie authored|selected every repost/i.test(item)));
+  assert.ok(amplification.antiClaims.some((item) => /endorse|partnership|impact/i.test(item)));
+  assert.ok(routing.antiClaims.some((item) => /click|conversion|impact/i.test(item)));
+  assert.ok(inbound.boundaries.some((item) => /154 search or thread-context/i.test(item)));
+  assert.ok(inbound.antiClaims.some((item) => /endorsement|partnership|adoption/i.test(item)));
+  assert.ok(
+    identity.evidence.some(
+      (item) => item.sourceId === "SRC-X-NYCARTC-FULL-POPULATION-CENSUS-2026"
+    )
+  );
+  assert.equal(task.status, "resolved");
+  assert.match(task.resolutionSummary, /5,124 public-safe profile dispositions/i);
+  for (const claim of [disposition, amplification, routing, inbound]) {
+    const decision = knowledgeBank.projectionDecisions.find(
+      (item) => item.claimId === claim.id
+    );
+    assert.equal(decision.decision, "defer");
+  }
+});
+
+test("NYC Artist Coalition linked articles remain context rather than transferred credit", () => {
+  const sourceIds = [
+    "SRC-GOTHAMIST-BOOK-CULTURE-RENT-2020",
+    "SRC-GOTHAMIST-50A-REPEAL-2020",
+    "SRC-GOTHAMIST-EXCLUDED-WORKERS-FUND-2021"
+  ];
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.equal(source.visibility, "public");
+    assert.equal(reading.status, "closely-read");
+    assert.ok(source.doesNotEstablish.some((item) => /Jamie|coalition|NYC Artist Coalition/i.test(item)));
+    assert.ok(reading.limitations.some((item) => /not coverage or endorsement/i.test(item)));
+  }
 });
 
 test("NYC Artist Coalition social claims preserve shared authorship and campaign continuity", () => {
