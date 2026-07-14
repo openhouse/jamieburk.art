@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "98d7e4442a6110ab7c98992368ee5a8eacf886e6",
+  "candidate_sha": "e12e5bc436dfe32131de09b9db288ad92ce7c42f",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders confirmed that the press-corpus claim limits evidence to campaign-index membership, metadata, and aggregate counts, with explicit anti-claims for endorsement, Jamie-centered coverage, personal authorship, and causation.",
-        "All 44 ingestion-specific article assertions are contextualizing records; only the four campaign-index assertions support the aggregate membership count.",
-        "Public artifact copy attributes documented website infrastructure to Let NYC Dance, Talks Not Raids, and FairRentNYC while preserving Save NYC Spaces separately as collective campaign context.",
-        "The Fair Rent case study keeps Jamie's documented infrastructure and organizing work visible while crediting collaborators, advocates, Council sponsors, officials, participants, and agencies for collective and institutional outcomes.",
-        "Both graders found no solo-causation, authorship, endorsement, or Save NYC Spaces infrastructure overstatement and no material underclaiming of Jamie's supported work."
+        "Two fresh independent graders confirmed that the KC Town Hall records separately attribute the July 16, 2019 recommendation to the CCED Board and the September 26 adoption, acceptance, and negotiation authority to the Kansas City Council.",
+        "The canonical collective-work claim includes explicit boundaries and anti-claims against an executed agreement, disbursement, receipt, project completion, current status, or Jamie-alone causation.",
+        "The case study and work metadata describe Jamie's planning, public-benefit documentation, stakeholder-context, and municipal-review support separately from the institutional actions and credit KC Town Hall LLC collaborators.",
+        "Repository-wide review found the challenged outcome language only in limitations and do-not-say records, not as affirmative public claims.",
+        "Both graders scored KB-007 at 4/4 with no deficiencies and found that Jamie's supported contribution remains visible without absorbing collective or governmental credit."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,16 +20,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Independent recomputation produced campaign memberships of 21, 7, 8, and 9: 45 press-list occurrences, 44 unique source IDs, and 44 normalized canonical article URLs.",
-        "The NPR nightlife article is the sole cross-campaign duplicate and correctly retains both Let NYC Dance and Save NYC Spaces memberships.",
-        "All 44 article sources have atomic corpus-membership assertions and remain assigned to the queued close-reading task; article-specific promotion is withheld.",
-        "The dated availability audit records 35 direct 2xx responses, five HTTP 403 sources with archive fallbacks, four HTTP 404 or 410 sources with preferred archives, and the migrated Vice canonical URL with its prior archive.",
-        "The active case-study projection cites only the four campaign indexes and renders one concise aggregate paragraph; the full 44-URL corpus remains in the governed source note.",
-        "Both independent graders scored KB-009 at 4/4 after recomputing the corpus and inspecting proof, citation, projection, archive, and hold decisions."
+        "The consequential Council action is present in the canonical bank, public registry, proof layer, work metadata, cited case study, and human-readable source note without material contradiction.",
+        "The authenticated resolution supports the Board recommendation, Council acceptance for an amount not to exceed $490,539, and negotiation authority; the Legistar history supports adoption as substituted on September 26, 2019.",
+        "Runtime citation resolution returned the KC Town Hall occurrence with both official sources in registered order, valid public URLs, numbered citations, and matching endnotes.",
+        "The public projection combines a hiring-facing account of Jamie's implementation work with the municipal action while withholding unsupported agreement, payment, completion, and sole-causation claims.",
+        "Candidate binding correctly rejected the prior stale scorecard, tests consume the checked-in hybrid results, and an independent score-2 probe confirmed that a below-minimum nonblocking criterion forces another iteration.",
+        "Both independent graders scored KB-009 at 4/4 with no deficiencies after inspecting the records, projection, citation path, and recursive-evaluation controls."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit 98d7e4442a6110ab7c98992368ee5a8eacf886e6 passes two fresh independent blind reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies."
+  "overall_finding": "Exact commit e12e5bc436dfe32131de09b9db288ad92ce7c42f passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies. The KC Town Hall Council action is fully ingested, selectively projected, and bounded against unsupported claims."
 }

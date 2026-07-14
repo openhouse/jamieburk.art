@@ -88,3 +88,31 @@ causation for collective or governmental outcomes, or expose protected source
 material. A campaign press-list entry proves that the campaign listed an article;
 it does not by itself prove endorsement, article content, Jamie's authorship, or
 policy causation.
+
+## KC Town Hall Council Record
+
+This pass added the official Kansas City legislative record and authenticated
+resolution for KC Town Hall. The sources establish that the CCED Board voted on
+July 16, 2019 to recommend $490,539 and that the Council adopted Resolution
+190649 on September 26, accepting the recommendation and authorizing
+funding-agreement negotiations for an amount not to exceed $490,539.
+
+The first independent review found a chronology contradiction in work metadata
+and discovered that a stale hybrid scorecard could coexist with hard-coded
+passing test scores. The repair changed the chronology to `2017 onward`, bound
+every hybrid report to the exact knowledge-bank input commit, and made tests
+consume the report's actual results.
+
+An adversarial follow-up gave nonblocking criterion `KB-009` a score below its
+minimum while leaving its legacy pass flag true. Although the evaluator exited
+nonzero, it incorrectly reported `threshold_met`. The final repair made minimum
+scores part of threshold status and added a regression requiring another
+iteration on the deficient criterion.
+
+Two fresh independent graders then evaluated immutable content commit
+`e12e5bc436dfe32131de09b9db288ad92ce7c42f`. Both scored `KB-007` and `KB-009`
+at `4/4` with no deficiencies. They confirmed that the Board recommendation,
+Council action, and Jamie's documented implementation contribution remain
+distinct; both official citations resolve; unsupported agreement, payment,
+completion, and sole-causation claims remain withheld; and stale or
+below-minimum hybrid results cannot produce a passing threshold.
