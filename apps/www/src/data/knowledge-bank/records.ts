@@ -1,4 +1,11 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  campaignPressDistinctSourceIds,
+  campaignPressIndexSourceIds,
+  campaignPressPlacementCount,
+  campaignPressSources,
+  campaignPressSourceIds
+} from "./campaignPress.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -365,7 +372,8 @@ const knowledgeBankInput = {
       publicNote: "The official legislative record establishes MARCH reporting, advance-notice, establishment-response, machine-readable publication, and privacy requirements. It does not say the program was disbanded.",
       supportsGenerally: ["Int 1156-2018 introduction", "enactment on December 15, 2019", "Local Law 220 of 2019", "MARCH reporting requirements", "30-day notice with exceptions", "establishment opportunity to provide relevant information", "machine-readable public reporting", "privacy limits"],
       doesNotEstablish: ["Jamie's role", "NYC Artist Coalition's role", "advocacy causality", "disbandment of MARCH", "elimination of all multi-agency nightlife enforcement"]
-    }
+    },
+    ...campaignPressSources
   ],
   claims: [
     {
@@ -922,6 +930,146 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-12",
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
+    },
+    {
+      id: "INTAKE-NYCA-CAMPAIGN-PRESS-CORPUS-2026-07-13",
+      title: "NYC Artist Coalition campaign press corpus",
+      project: "nyc-artist-coalition",
+      kind: "source-link",
+      summary: `Jamie identifies the press and reference sections he built across four NYC Artist Coalition campaign sites. The recovered live and archived surfaces contain ${campaignPressPlacementCount} campaign-to-article placements representing ${campaignPressDistinctSourceIds.length} distinct articles.`,
+      status: "researching",
+      sourceIds: [
+        ...campaignPressIndexSourceIds,
+        ...campaignPressDistinctSourceIds
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: [
+        "nyc-artist-coalition-public-web-infrastructure",
+        "nyc-artist-coalition-civic-systems"
+      ],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-NYCA-CAMPAIGN-PRESS-CORPUS-COUNTS-2026",
+          text: "The recovered campaign surfaces contain 46 press placements representing 45 distinct articles: 21 on Let NYC Dance, 7 on Talks Not Raids, 8 on Save NYC Spaces, 9 in the December 2021 FairRentNYC archive, and 1 additional reporting item in the current FairRentNYC reference library.",
+          status: "direct-support",
+          sourceIds: [...campaignPressIndexSourceIds],
+          sourceSupport: [
+            `${campaignPressSourceIds["let-nyc-dance"].length} Let NYC Dance placements`,
+            `${campaignPressSourceIds["talks-not-raids"].length} Talks Not Raids placements`,
+            `${campaignPressSourceIds["save-nyc-spaces"].length} Save NYC Spaces placements`,
+            "nine placements in the December 2021 FairRentNYC capture",
+            "one additional reporting item in the current FairRentNYC reference library",
+            "the NPR Cabaret Law article appears on both Let NYC Dance and Save NYC Spaces"
+          ],
+          boundaries: [
+            "The count joins time-bounded live and archived editorial surfaces; it does not say all 46 placements appeared simultaneously.",
+            "A campaign press placement is not publisher endorsement, audience reach, favorable sentiment, or proof that the campaign caused an outcome.",
+            "The campaign sections may not be a complete record of every article ever published about the work."
+          ],
+          decisionUse: "Establishes the scale and structure of the public source trails Jamie says he built into four campaign websites without converting coverage volume into impact or causality."
+        },
+        {
+          id: "PROP-NYCA-CAMPAIGN-PRESS-ISSUE-RANGE-2026",
+          text: "The four press collections preserve reporting and narrative context around Cabaret Law repeal, MARCH enforcement and transparency, creation and accountability of the Office of Nightlife, cultural-space survival, storefront vacancy, and commercial-rent regulation.",
+          status: "synthesis-with-boundary",
+          sourceIds: [...campaignPressIndexSourceIds],
+          sourceSupport: [
+            "campaign-specific article placement and title metadata",
+            "four distinct campaign information architectures",
+            "linked cultural-space, nightlife-enforcement, and commercial-rent policy contexts"
+          ],
+          boundaries: [
+            "This is a synthesis of article placement and title metadata, not a substitute for article-level close reading.",
+            "Do not assign campaign authorship, coalition authorship, or policy causality from subject coverage alone."
+          ],
+          decisionUse: "Shows the breadth of the policy and cultural-space information architecture available for later role, chronology, and outcome research."
+        },
+        {
+          id: "PROP-NYCA-CAMPAIGN-PRESS-WEB-AUTHORSHIP-MEMORY",
+          text: "Jamie states that he made the four campaign sites and their press-article sections.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: [
+            "The campaign surfaces establish the sites and article collections but do not identify their technical author.",
+            "Jamie's statement aligns with the governed web-infrastructure proof but remains separable from collective campaign authorship and outcomes."
+          ],
+          decisionUse: "Preserves a concrete information-architecture accomplishment for repository, deployment, CMS, or collaborator corroboration.",
+          nextStep: "Recover repository history, deployment records, CMS exports, and collaborator accounts for each campaign site and press section."
+        },
+        {
+          id: "PROP-NYCA-CAMPAIGN-PRESS-ARTICLE-READING-QUEUE",
+          text: "The campaign indexes establish 45 distinct article leads, but article-body claims require source-by-source close reading before they support role, chronology, outcome, reach, or causal claims.",
+          status: "research-only",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: [
+            "Metadata accession is not article-body verification.",
+            "Paywalls, moved pages, archive quality, syndication, and headline changes must remain visible in later readings."
+          ],
+          decisionUse: "Creates a complete, deduplicated research queue without pretending that all 45 articles have already been decomposed into verified claims.",
+          nextStep: "Prioritize articles that name Jamie, identify campaign mechanisms, document collaborator roles, or connect an advocacy artifact to an institutional response; record locators and non-support for every close read."
+        }
+      ],
+      tensions: [
+        {
+          id: "TENSION-NYCA-CAMPAIGN-PRESS-WEB-AUTHORSHIP",
+          propositionIds: [
+            "PROP-NYCA-CAMPAIGN-PRESS-WEB-AUTHORSHIP-MEMORY"
+          ],
+          relatedProofIds: [
+            "nyc-artist-coalition-public-web-infrastructure"
+          ],
+          description: "Jamie directly confirms that he built the four sites and press sections, while the recovered public campaign surfaces establish the artifacts but do not name their technical author.",
+          currentPosition: "Retain the governed careful proof on its existing approved-resume and Jamie-review basis; use this corpus to establish the artifact set and seek project-level technical corroboration before adding a quantified press-architecture projection.",
+          status: "open",
+          correctionTriggers: [
+            {
+              id: "TRIGGER-NYCA-CAMPAIGN-PRESS-AUTHORSHIP-CONFIRM",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Repository, deployment, CMS, or collaborator evidence associates Jamie with implementation and stewardship of all four campaign press sections.",
+              action: "confirm",
+              requiredEvidence: [
+                "project-specific implementation or deployment record",
+                "campaign-to-contribution map",
+                "corroborating collaborator evidence where appropriate"
+              ],
+              reason: "The governed proof and a future quantified press-architecture claim would then have project-level technical provenance."
+            },
+            {
+              id: "TRIGGER-NYCA-CAMPAIGN-PRESS-AUTHORSHIP-NARROW",
+              targetProofId: "nyc-artist-coalition-public-web-infrastructure",
+              condition: "Recovered authorship evidence assigns a named campaign surface primarily to another person or materially narrows Jamie's implementation role.",
+              action: "narrow",
+              requiredEvidence: [
+                "project-specific authorship or contribution record",
+                "review with Jamie and the credited collaborator when appropriate"
+              ],
+              reason: "The proof should name Jamie's actual technical or operational contribution and retain the primary creator's credit.",
+              replacementGuidance: "Replace broad website-authorship wording for the affected campaign with the narrower evidenced role while preserving the verified artifact and collective context."
+            }
+          ]
+        }
+      ],
+      researchQuestions: [
+        "Which articles name Jamie or describe a specific action he took?",
+        "Which articles identify campaign mechanisms, collaborators, public events, or institutional responses that can be converted into bounded propositions?",
+        "Which repositories, deployments, CMS records, or collaborator accounts establish Jamie's technical authorship and stewardship campaign by campaign?",
+        "Which listed URLs require a preferred canonical replacement or a stable Wayback capture?",
+        "Which repeated, syndicated, moved, retitled, or paywalled articles need identity reconciliation before close reading?"
+      ],
+      boundaries: [
+        "Article placement does not imply publisher endorsement, favorable sentiment, audience reach, or campaign causality.",
+        "Jamie did not author the independent reporting merely because he built the campaign source trail.",
+        "Keep Jamie's web and information-architecture contribution distinct from collective campaign authorship and institutional policy outcomes.",
+        "The 46-placement count includes one article placed by two campaigns and joins the archived and current FairRentNYC states.",
+        "Do not project this intake item directly to the website; article-level claims, quantified wording, and any public placement require separate review."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-13",
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex campaign press census"]
     },
     {
       id: "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12",

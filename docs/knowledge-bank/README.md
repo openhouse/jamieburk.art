@@ -74,4 +74,7 @@ one pass.
 
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
-pilot.
+pilot. The [NYC Artist Coalition campaign press
+index](projects/nyca-campaign-press-index.md) demonstrates time-bounded press
+corpus accession, placement deduplication, and article-level research queuing
+without automatic website projection.

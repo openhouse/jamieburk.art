@@ -26,6 +26,22 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+### Campaign Press Corpus
+
+The four NYC Artist Coalition campaign press collections use two related but
+distinct source layers:
+
+- campaign-index records establish that a campaign surface placed a particular
+  publisher and article in its press or reporting section;
+- article records preserve the distinct article's metadata, preferred live or
+  archived location, campaign relationships, and recovery status.
+
+A campaign placement does not establish publisher endorsement, favorable
+sentiment, reach, Jamie's authorship of the reporting, or campaign causality.
+Article-body claims remain research leads until a close reading records atomic
+support, locators, uncertainty, and non-support. See
+[projects/nyca-campaign-press-index.md](projects/nyca-campaign-press-index.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

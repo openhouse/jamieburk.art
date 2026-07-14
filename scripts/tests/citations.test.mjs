@@ -2,6 +2,14 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  campaignPressDistinctSourceCount,
+  campaignPressDistinctSourceIds,
+  campaignPressIndexSourceIds,
+  campaignPressPlacementCount,
+  campaignPressSources,
+  campaignPressSourceIds
+} from "../../apps/www/src/data/knowledge-bank/campaignPress.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
@@ -90,6 +98,60 @@ test("new source leads preserve claim boundaries", () => {
   assert.ok(sourceById.get("SRC-WATERWAYS-PITCH-HUCK-FINN-2007").doesNotEstablish.some((item) => /Gulf of Mexico/i.test(item)));
   assert.ok(sourceById.get("SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19").doesNotEstablish.some((item) => /alone repealed/i.test(item)));
   assert.ok(sourceById.get("SRC-NYCA-NPR-CABARET-REPEAL-2017-09-20").doesNotEstablish.some((item) => /Jamie's role/i.test(item)));
+});
+
+test("campaign press census preserves every placement and its limits", () => {
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.entries(campaignPressSourceIds).map(([campaign, sourceIds]) => [
+        campaign,
+        sourceIds.length
+      ])
+    ),
+    {
+      "let-nyc-dance": 21,
+      "talks-not-raids": 7,
+      "save-nyc-spaces": 8,
+      "fair-rent-nyc": 10
+    }
+  );
+  assert.equal(campaignPressPlacementCount, 46);
+  assert.equal(campaignPressDistinctSourceCount, 45);
+  assert.equal(new Set(campaignPressDistinctSourceIds).size, 45);
+  assert.equal(campaignPressIndexSourceIds.length, 5);
+  assert.equal(campaignPressSources.length, 48);
+
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  for (const sourceId of [
+    ...campaignPressIndexSourceIds,
+    ...campaignPressDistinctSourceIds
+  ]) {
+    assert.ok(sourceById.has(sourceId), `missing campaign press source ${sourceId}`);
+  }
+
+  const intake = knowledgeBank.intakeItems.find(
+    (item) => item.id === "INTAKE-NYCA-CAMPAIGN-PRESS-CORPUS-2026-07-13"
+  );
+  assert.ok(intake);
+  assert.equal(intake.projectionStatus, "no-public-projection");
+  assert.equal(intake.sourceIds.length, 50);
+  assert.ok(
+    campaignPressSources.every((source) =>
+      source.doesNotEstablish.some((boundary) =>
+        /endorsement|causality|causal|authorship/i.test(boundary)
+      )
+    )
+  );
+  assert.equal(
+    sourceById.get("SRC-SFGATE-CABARET-LAW-2017").preservationStatus,
+    "dead"
+  );
+  assert.match(
+    sourceById.get("SRC-SFGATE-CABARET-LAW-2017").publicNote,
+    /no Wayback capture was recovered/i
+  );
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

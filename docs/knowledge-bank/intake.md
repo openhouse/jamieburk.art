@@ -127,15 +127,19 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve four threads surfaced on July
+The structured intake records currently preserve five threads surfaced on July
 12-13, 2026:
 
 - waterways, communal space, and participatory cultural practice;
 - Sunday Dinner as recurring open community infrastructure;
 - NYC Artist Coalition formation and cultural-space policy campaigns;
+- the press and reference architecture across four NYC Artist Coalition
+  campaign sites;
 - NYC Council member engagement with CallNYC on Twitter.
 
 The waterways and Sunday Dinner threads have reached `claim-candidate`. The NYC
-Artist Coalition thread remains `researching`; the CallNYC engagement thread
-remains `captured` until a complete, authenticated or archived engagement corpus
-can support defensible metrics. None is approved for direct website projection.
+Artist Coalition and campaign-press threads remain `researching`; the press
+indexes are fully accessioned, while their 45 distinct article bodies remain a
+bounded close-reading queue. The CallNYC engagement thread remains `captured`
+until a complete, authenticated or archived engagement corpus can support
+defensible metrics. None is approved for direct website projection.
