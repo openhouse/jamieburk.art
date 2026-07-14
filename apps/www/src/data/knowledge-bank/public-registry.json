@@ -901,6 +901,58 @@
       ]
     },
     {
+      "id": "CLM-CRS-COALITION-OPERATING-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie designed a coalition operating system around six shared public goods: a clear front door, a recurring room, a shared public line, a stewarded story bank, an implementation-readiness packet, and a durable source-of-truth spine. He maintained running minutes that separated shared memory from raw source material, tracked decisions and next steps, and encoded consent levels for public stories.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 collaboration.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe the six-part structure as Jamie's designed operating plan, not as proof that every component was fully implemented.",
+        "Credit the running minutes as collaborative memory maintained by Jamie, not sole authorship of every entry or underlying action.",
+        "Keep raw notes, private strategy, legal-review context, contacts, and vulnerable business information outside public Git."
+      ]
+    },
+    {
+      "id": "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie translated a policy idea into data-product requirements for a privacy-preserving public pilot: aggregate vacancy and lease-cost indicators, a coverage and suppression table, a methods note, and field-level release requirements. The proposal complements existing storefront data and excludes confidential filings, tenant identities, and parcel-level rent records.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "State that Jamie developed requirements and proposals, not that an agency adopted or implemented them.",
+        "Do not imply access to confidential filings or proprietary microdata.",
+        "Treat coalition positions and government decisions as collective and institutional work."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1181,6 +1233,16 @@
         "SRC-NYCAC-MAYOR-CURE-2023-12-28"
       ],
       "occurrences": [
+        {
+          "id": "crs-operating-system",
+          "claimId": "CLM-CRS-COALITION-OPERATING-SYSTEM",
+          "projection": "case-study"
+        },
+        {
+          "id": "crs-open-data-design",
+          "claimId": "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
+          "projection": "case-study"
+        },
         {
           "id": "founding-role",
           "claimId": "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",

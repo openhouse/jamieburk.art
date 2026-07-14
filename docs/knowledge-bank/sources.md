@@ -120,3 +120,16 @@ collaborators approve.
 - unapproved photos;
 - private financial records;
 - private personal records.
+
+## Cloud-Backed Teams Archival Production
+
+The July 14 Teams pass close-read materialized records from `Jamie Projects
+History`, `CRS`, and `job-hunt`. It added ten normalized source records: four
+metadata-only CRS working records; three public contemporaneous raft reports; a
+protected Wikipedia working record paired with public revision history; and a
+protected, anonymous summary of two product-discovery conversations.
+
+Protected sources have no public URL and every evidence relationship against
+them is non-citing. The later June 2026 job-hunt packet had not materialized by
+the end of the pass, so it produced a retrieval task rather than inferred
+observations. See `docs/knowledge-bank/projects/teams-archive-production.md`.

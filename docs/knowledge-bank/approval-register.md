@@ -51,3 +51,22 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.
+
+## Teams Archive Decisions
+
+- Fair Rent NYC operating design: Jamie's six-part coalition operating plan and
+  maintenance of consent-aware running memory are approved with explicit
+  boundaries against completion of every planned component or ownership of
+  collective actions.
+- Commercial Rent Stabilization data design: Jamie's privacy-preserving pilot
+  requirements are approved as implementation design, not City adoption,
+  dataset release, or access to confidential filings.
+- Waterways raft expedition: more than 1,000 miles, collaborative construction,
+  participatory invitations, and resumption after repair are approved for the
+  knowledge bank. Gulf arrival remains unconfirmed and is not approved.
+- NYC Artist Coalition Wikipedia workflow: Jamie's source assembly and initial
+  draft, Dorothy Howard's review and mainspace move, and later-editor credit are
+  approved for the knowledge bank. No website projection is selected.
+- Product-discovery conversations: the anonymous, public-safe method summary is
+  approved for the knowledge bank only; collaborator identity, transcript
+  content, endorsement, and market-validation claims are not approved.

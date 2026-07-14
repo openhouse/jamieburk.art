@@ -184,6 +184,16 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [KC Town Hall holdout 1 judgment](./kc-town-hall-funding-holdout-1-judge.json)
 - [KC Town Hall holdout 1 scorecard](./kc-town-hall-funding-holdout-1-final.json)
 - [KC Town Hall holdout 2 judgment](./kc-town-hall-funding-holdout-2-judge.json)
+
+## Teams Archive Production
+
+- [Hill-climb record](./2026-07-14-teams-archive-hill-climb.md)
+- [Deterministic pass before vocabulary remediation](./teams-archive-deterministic.json)
+- [Deterministic pass after remediation](./teams-archive-deterministic-2.json)
+- [Holdout 1 judgment](./teams-archive-holdout-1-judge.json)
+- [Holdout 1 final](./teams-archive-holdout-1-final.json)
+- [Holdout 2 judgment](./teams-archive-holdout-2-judge.json)
+- [Holdout 2 final](./teams-archive-holdout-2-final.json)
 - [KC Town Hall holdout 2 scorecard](./kc-town-hall-funding-holdout-2-final.json)
 
 ## Verification Contract

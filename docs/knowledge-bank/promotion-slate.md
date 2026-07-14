@@ -5,6 +5,14 @@ website selection. It is a recommendation, not publication approval.
 
 ## Selected in the Current Civic Case Study
 
+- `CLM-CRS-COALITION-OPERATING-SYSTEM`: selected as direct operating-design
+  proof. Present the six parts as Jamie's designed plan and the running minutes
+  as collaborative memory he maintained; do not imply complete implementation.
+- `CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`: selected as product-requirements
+  proof. Present the aggregate indicators, suppression, methods, and release
+  requirements as a proposed privacy-preserving pilot, not an adopted City
+  program.
+
 - `CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE`: public reporting now earns founding-
   member wording, with a boundary against sole-founder or total-ownership
   implications.
@@ -41,6 +49,15 @@ website selection. It is a recommendation, not publication approval.
 
 ## Strong Future Feature Candidates
 
+- `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`: three contemporaneous reports now
+  support more than 1,000 miles, collective construction, participatory intent,
+  interruption, repair, and resumption. Best use: a waterways case after visual
+  rights review. Keep the Gulf endpoint unresolved.
+- `CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW`: the protected working record and
+  public revision history support a legible archive-to-public-knowledge
+  workflow with Dorothy Howard's distinct editorial credit. Best use: future
+  knowledge-systems evidence if the hiring argument needs it.
+
 - `CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM`: Jamie's spearheading,
   collaborator-aware outreach, facilitation, participatory program forms, and
   public purpose are specific and legible. Best use: a participatory-program or
@@ -63,6 +80,10 @@ website selection. It is a recommendation, not publication approval.
   individual repeal-causality claim.
 
 ## Research Before Promotion
+
+- `CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS`: useful product-discovery
+  lineage, but keep it anonymous and held until the June 2026 job-hunt packet
+  materializes and can be compared without inference.
 
 - `CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE`: recover pre-creation
   advocacy separately from post-creation accountability work.

@@ -29,6 +29,14 @@ import {
   kcTownHallFundingObservations,
   kcTownHallFundingSources,
 } from "./kc-town-hall-funding.ts";
+import {
+  teamsArchiveCaptures,
+  teamsArchiveClaims,
+  teamsArchiveInquiries,
+  teamsArchiveObservations,
+  teamsArchiveResearchTasks,
+  teamsArchiveSources,
+} from "./teams-archive.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -36,12 +44,14 @@ const knowledgeBankInput = {
     ...nycacResearchCaptures,
     ...campaignPressCaptures,
     ...kcTownHallFundingCaptures,
+    ...teamsArchiveCaptures,
   ],
   sources: [
     ...developmentSources,
     ...nycacResearchSources,
     ...campaignPressSources,
     ...kcTownHallFundingSources,
+    ...teamsArchiveSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -243,12 +253,14 @@ const knowledgeBankInput = {
     ...nycacResearchObservations,
     ...campaignPressObservations,
     ...kcTownHallFundingObservations,
+    ...teamsArchiveObservations,
   ],
   claims: [
     ...developmentClaims,
     ...nycacResearchClaims,
     ...campaignPressClaims,
     ...kcTownHallFundingClaims,
+    ...teamsArchiveClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -565,6 +577,7 @@ const knowledgeBankInput = {
     ...developmentResearchTasks,
     ...nycacResearchTasks,
     ...campaignPressResearchTasks,
+    ...teamsArchiveResearchTasks,
   ],
   researchInquiries: [
     {
@@ -600,6 +613,7 @@ const knowledgeBankInput = {
     },
     ...campaignPressInquiries,
     ...kcTownHallFundingInquiries,
+    ...teamsArchiveInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -714,6 +728,16 @@ const knowledgeBankInput = {
         "SRC-NYCAC-MAYOR-CURE-2023-12-28",
       ],
       occurrences: [
+        {
+          id: "crs-operating-system",
+          claimId: "CLM-CRS-COALITION-OPERATING-SYSTEM",
+          projection: "case-study",
+        },
+        {
+          id: "crs-open-data-design",
+          claimId: "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
+          projection: "case-study",
+        },
         {
           id: "founding-role",
           claimId: "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",

@@ -19,6 +19,24 @@ Gulf arrival.
 Source: [Eric Barton, "When Artists Turn Huck Finn," *The Pitch*, August 9,
 2007](https://www.thepitchkc.com/when-artists-turn-huck-finn/).
 
+### CLM-WATERWAYS-RAFT-EXPEDITION-SCALE
+
+Three contemporaneous reports support that Jamie co-created and traveled on a
+participatory recycled-material raft expedition that covered more than 1,000
+miles from Kansas City down the Missouri and Mississippi Rivers. The record
+supports collective construction, invitations for people to join, a Coast
+Guard interruption near Vicksburg, and resumption after repair and inspection.
+
+Boundary: the reviewed sources establish travel toward the Gulf, not arrival at
+the Gulf of Mexico. Preserve Libby Hendon, Laura Mattingly, the other builders
+and travelers, Vicksburg supporters, and the wider participant network.
+
+Sources: [The Pitch, November 12,
+2007](https://www.thepitchkc.com/artists-turned-huck-finn-part-iii/),
+[Soundings, 2007](https://soundingsonline.com/news/rollin-on-the-river-again),
+and [9NEWS, September 25,
+2007](https://www.9news.com/article/news/weird/3-modern-day-huck-finn-rafters-stuck-on-mississippi-river/73-343541719).
+
 ### CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM
 
 Charlotte Street's institutional record supports that Jamie spearheaded Great

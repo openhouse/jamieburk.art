@@ -21,6 +21,14 @@ import {
   kcTownHallFundingObservations,
   kcTownHallFundingSources,
 } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
+import {
+  teamsArchiveCaptures,
+  teamsArchiveClaims,
+  teamsArchiveInquiries,
+  teamsArchiveObservations,
+  teamsArchiveResearchTasks,
+  teamsArchiveSources,
+} from "../../apps/www/src/data/knowledge-bank/teams-archive.ts";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -217,6 +225,127 @@ test("campaign press duplicate is explicit and limited to the shared NPR article
         "shared-with-let-nyc-dance",
       ],
     ],
+  );
+});
+
+test("Teams archival production covers all required corpora with a traversable graph", () => {
+  assert.equal(teamsArchiveCaptures.length, 6);
+  assert.equal(teamsArchiveSources.length, 10);
+  assert.equal(teamsArchiveObservations.length, 23);
+  assert.equal(teamsArchiveClaims.length, 5);
+  assert.equal(teamsArchiveResearchTasks.length, 2);
+  assert.equal(teamsArchiveInquiries.length, 1);
+
+  for (const prefix of [
+    "CAP-TEAMS-CRS",
+    "CAP-TEAMS-JPH",
+    "CAP-TEAMS-JOBHUNT",
+  ]) {
+    assert.ok(
+      teamsArchiveCaptures.some((capture) => capture.id.startsWith(prefix)),
+      `Missing required corpus prefix ${prefix}`,
+    );
+  }
+
+  const observedSourceIds = new Set(
+    teamsArchiveObservations.map((observation) => observation.sourceId),
+  );
+  for (const source of teamsArchiveSources) {
+    assert.ok(observedSourceIds.has(source.id), `Unobserved source ${source.id}`);
+  }
+});
+
+test("protected Teams sources stay URL-free and non-citing", () => {
+  const protectedSourceIds = new Set(
+    teamsArchiveSources
+      .filter((source) => source.visibility !== "public")
+      .map((source) => source.id),
+  );
+
+  for (const source of teamsArchiveSources.filter(
+    (item) => item.visibility !== "public",
+  )) {
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+  }
+
+  for (const claim of teamsArchiveClaims) {
+    assert.ok(
+      claim.evidence
+        .filter((item) => protectedSourceIds.has(item.sourceId))
+        .every((item) => item.renderCitation === false),
+      `${claim.id} renders protected evidence`,
+    );
+  }
+});
+
+test("raft scale remains collective and does not promote the unrecovered Gulf endpoint", () => {
+  const claim = teamsArchiveClaims.find(
+    (item) => item.id === "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+  );
+  assert.equal(claim.epistemicState, "corroborated");
+  assert.equal(claim.selectionState, "candidate");
+  assert.ok(
+    claim.boundaries.some((item) => /toward the Gulf/i.test(item)),
+  );
+  assert.ok(
+    claim.antiClaims.some((item) => /confirm arrival at the Gulf/i.test(item)),
+  );
+  assert.deepEqual(claim.researchTaskIds, [
+    "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+  ]);
+  assert.ok(
+    claim.projections
+      .filter((projection) => projection.key === "case-study")
+      .every(
+        (projection) =>
+          projection.status === "hold" && projection.surfaces.length === 0,
+      ),
+  );
+});
+
+test("unmaterialized job-hunt packets remain research state, not inferred evidence", () => {
+  const capture = teamsArchiveCaptures.find(
+    (item) =>
+      item.id === "CAP-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION-2026",
+  );
+  const task = teamsArchiveResearchTasks.find(
+    (item) => item.id === "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
+  );
+  const inquiry = teamsArchiveInquiries[0];
+
+  assert.equal(capture.status, "researching");
+  assert.deepEqual(capture.sourceIds, []);
+  assert.deepEqual(capture.observationIds, []);
+  assert.deepEqual(capture.researchTaskIds, [task.id]);
+  assert.equal(task.status, "in-progress");
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.match(inquiry.limitations.join("\n"), /not evidence.*absent/i);
+});
+
+test("Fair Rent projects direct operating and data-design work with adoption boundaries", () => {
+  const caseStudy = readFileSync(
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "utf8",
+  );
+  const workData = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const publicText = `${caseStudy}\n${workData}`;
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+
+  assert.match(publicText, /six-part coalition operating/i);
+  assert.match(publicText, /legislative (source map and )?provenance redline/i);
+  assert.match(publicText, /privacy-preserving public-data pilot/i);
+  assert.match(publicText, /not claims? that a City agency adopted/i);
+  assert.ok(
+    page.occurrences.some(
+      (item) => item.claimId === "CLM-CRS-COALITION-OPERATING-SYSTEM",
+    ),
+  );
+  assert.ok(
+    page.occurrences.some(
+      (item) => item.claimId === "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
+    ),
   );
 });
 

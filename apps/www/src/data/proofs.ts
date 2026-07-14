@@ -207,13 +207,13 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
     sourceBasis:
-      "Approved resume language and public-safe collaboration summary.",
+      "Approved resume language, a six-part operating plan, and consent-aware running minutes represented through protected source metadata.",
     sourceNote:
       "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
     guardrail:
-      "Use collective-work language and do not publish raw or private coalition context.",
+      "Jamie directly designed and maintained the operating structure; underlying campaign actions remain collective. Do not publish raw or private coalition context or imply that every planned component was completed.",
     doNotSay: [
       "Jamie led the movement",
       "Jamie owned the campaign",
@@ -257,7 +257,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language, the legislative provenance redline, and privacy-preserving public-data implementation documents represented through protected source metadata.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",

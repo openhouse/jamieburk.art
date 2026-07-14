@@ -199,7 +199,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, campaign websites, public testimony, and an auditable policy trail.",
+      "A six-part coalition operating plan, consent-aware running memory, a legislative provenance redline, and requirements for a privacy-preserving public-data pilot, alongside campaign websites, public testimony, and an auditable policy trail.",
     artifactTypes: [
       "website",
       "source map",
@@ -215,15 +215,27 @@ const workItemsInput = [
         type: "meeting memory",
       },
       {
-        title: "Source map",
+        title: "Six-part coalition operating plan",
         description:
-          "A structured way to separate public sources, private notes, open questions, and materials that require review.",
+          "A clear front door, recurring room, shared public line, stewarded story bank, implementation-readiness packet, and durable source-of-truth spine.",
+        type: "decision record",
+      },
+      {
+        title: "Legislative source map and provenance redline",
+        description:
+          "A traceable view of bill language across public policy lineages and revision paths, separated from protected legal-review context.",
         type: "source map",
       },
       {
         title: "Policy question log",
         description:
           "A working list of unresolved legal, policy, city, and state questions for collaborators to review.",
+        type: "decision record",
+      },
+      {
+        title: "Privacy-preserving public-data pilot",
+        description:
+          "Requirements for aggregate vacancy and lease-cost indicators, coverage and suppression reporting, methods, and release versioning.",
         type: "decision record",
       },
       {
@@ -295,6 +307,8 @@ const workItemsInput = [
       "Campaign materials around Cabaret Law repeal, Office of Nightlife accountability, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
+      "Six-part coalition operating plan with explicit role boundaries",
+      "Privacy-preserving commercial vacancy and lease-cost data pilot specification",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps",

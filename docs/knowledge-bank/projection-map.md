@@ -63,3 +63,13 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+The Fair Rent NYC case study additionally selects
+`CLM-CRS-COALITION-OPERATING-SYSTEM` and
+`CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`. Their protected source records must
+not render as public citations.
+
+`CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`,
+`CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW`, and
+`CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS` remain knowledge-bank depth with
+no current public website surface.

@@ -83,3 +83,22 @@ private reasons for the transition.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+Do not treat private discovery feedback as product-market validation, a
+purchase commitment, or a public testimonial. Do not infer product lineage
+from job-hunt packet directories that have not yet materialized.
+
+## Teams Archive Boundaries
+
+Do not say every component of Jamie's six-part CRS operating plan was
+completed, that the City adopted the proposed public-data pilot, that a
+requested dataset was released, or that Jamie accessed confidential RPIE
+filings.
+
+Do not say Jamie alone built the raft or completed the expedition. The reviewed
+sources confirm more than 1,000 miles and later resumption, but not arrival at
+the Gulf of Mexico.
+
+Do not say Jamie independently authored the final NYC Artist Coalition
+Wikipedia article, that Dorothy Howard's edit constituted Wikimedia
+endorsement, or that revision history proves every proposition in the article.

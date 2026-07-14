@@ -15,6 +15,14 @@ import {
   kcTownHallFundingObservations,
   kcTownHallFundingSources,
 } from "../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
+import {
+  teamsArchiveCaptures,
+  teamsArchiveClaims,
+  teamsArchiveInquiries,
+  teamsArchiveObservations,
+  teamsArchiveResearchTasks,
+  teamsArchiveSources,
+} from "../apps/www/src/data/knowledge-bank/teams-archive.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 
 const suite = JSON.parse(
@@ -28,6 +36,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/campaign-press.ts",
   "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+  "apps/www/src/data/knowledge-bank/teams-archive.ts",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -45,6 +54,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
+  "docs/knowledge-bank/projects/teams-archive-production.md",
   "scripts/lib/citation-validation.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
@@ -425,6 +435,154 @@ function deterministicResults(judgments) {
       : []),
   ];
 
+  const teamsArchiveIntegrityViolations = [];
+  const teamsArchiveSafetyViolations = [];
+  const teamsSourceIds = new Set(
+    teamsArchiveSources.map((source) => source.id),
+  );
+  const teamsProtectedSourceIds = new Set(
+    teamsArchiveSources
+      .filter((source) => source.visibility !== "public")
+      .map((source) => source.id),
+  );
+  const teamsObservedSourceIds = new Set(
+    teamsArchiveObservations.map((observation) => observation.sourceId),
+  );
+  const raftClaim = teamsArchiveClaims.find(
+    (claim) => claim.id === "CLM-WATERWAYS-RAFT-EXPEDITION-SCALE",
+  );
+  const hydrationCapture = teamsArchiveCaptures.find(
+    (capture) =>
+      capture.id === "CAP-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION-2026",
+  );
+  const hydrationTask = teamsArchiveResearchTasks.find(
+    (task) => task.id === "RT-TEAMS-JOBHUNT-JUNE-PACKET-HYDRATION",
+  );
+  const hydrationInquiry = teamsArchiveInquiries.find(
+    (inquiry) =>
+      inquiry.id === "INQ-TEAMS-JOBHUNT-ICLOUD-HYDRATION-2026",
+  );
+  const fairRentPage = knowledgeBank.pages.find(
+    (page) => page.id === "fair-rent-nyc",
+  );
+  const fairRentPublicText = [
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/data/proofs.ts",
+  ]
+    .map((path) => readFileSync(path, "utf8"))
+    .join("\n");
+
+  if (
+    teamsArchiveCaptures.length !== 6 ||
+    teamsArchiveSources.length !== 10 ||
+    teamsArchiveObservations.length !== 23 ||
+    teamsArchiveClaims.length !== 5 ||
+    teamsArchiveResearchTasks.length !== 2 ||
+    teamsArchiveInquiries.length !== 1
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Teams archival-production graph has an unexpected record count",
+    );
+  }
+  if (
+    !["CAP-TEAMS-CRS", "CAP-TEAMS-JPH", "CAP-TEAMS-JOBHUNT"].every(
+      (prefix) => teamsArchiveCaptures.some((capture) => capture.id.startsWith(prefix)),
+    )
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Teams archival-production graph does not cover all three required corpora",
+    );
+  }
+  for (const sourceId of teamsSourceIds) {
+    if (!sourceById.has(sourceId) || !teamsObservedSourceIds.has(sourceId)) {
+      teamsArchiveIntegrityViolations.push(
+        `Teams source lacks a normalized observation path: ${sourceId}`,
+      );
+    }
+  }
+  if (
+    hydrationCapture?.status !== "researching" ||
+    hydrationCapture.sourceIds.length ||
+    hydrationCapture.observationIds.length ||
+    !hydrationTask ||
+    hydrationTask.status !== "in-progress" ||
+    hydrationInquiry?.resultStatus !== "partially-recovered"
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Cloud-only job-hunt packet is not preserved as partially recovered research state",
+    );
+  }
+  if (
+    !raftClaim?.antiClaims.some((item) => /arrival at the Gulf/i.test(item)) ||
+    !raftClaim?.researchTaskIds?.includes(
+      "RT-WATERWAYS-GULF-ENDPOINT-CORROBORATION",
+    )
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Raft expedition claim does not preserve the unresolved Gulf endpoint",
+    );
+  }
+  if (
+    !fairRentPage?.occurrences.some(
+      (item) => item.claimId === "CLM-CRS-COALITION-OPERATING-SYSTEM",
+    ) ||
+    !fairRentPage?.occurrences.some(
+      (item) => item.claimId === "CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN",
+    )
+  ) {
+    teamsArchiveIntegrityViolations.push(
+      "Fair Rent case study does not register both selected Teams archive claims",
+    );
+  }
+  for (const sourceId of teamsProtectedSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (source?.canonicalUrl || source?.archiveUrl || source?.assetUrl) {
+      teamsArchiveSafetyViolations.push(
+        `Protected Teams source exposes a public URL: ${sourceId}`,
+      );
+    }
+    for (const claim of knowledgeBank.claims) {
+      if (
+        claim.evidence.some(
+          (item) => item.sourceId === sourceId && item.renderCitation,
+        )
+      ) {
+        teamsArchiveSafetyViolations.push(
+          `Protected Teams source renders as a public citation: ${sourceId}`,
+        );
+      }
+    }
+  }
+  if (
+    !/six-part coalition operating/i.test(fairRentPublicText) ||
+    !/legislative (source map and )?provenance redline/i.test(
+      fairRentPublicText,
+    ) ||
+    !/privacy-preserving public-data pilot/i.test(fairRentPublicText) ||
+    !/not claims? that a City agency adopted/i.test(fairRentPublicText)
+  ) {
+    teamsArchiveSafetyViolations.push(
+      "Fair Rent projection omits a selected deliverable or implementation boundary",
+    );
+  }
+  const teamsPayload = JSON.stringify({
+    captures: teamsArchiveCaptures,
+    observations: teamsArchiveObservations,
+    claims: teamsArchiveClaims,
+    tasks: teamsArchiveResearchTasks,
+    inquiries: teamsArchiveInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|Mobile Documents|Jonathan Marmor/i.test(
+      teamsPayload,
+    )
+  ) {
+    teamsArchiveSafetyViolations.push(
+      "Teams archival-production payload exposes a local path or private collaborator identity",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -670,7 +828,8 @@ function deterministicResults(judgments) {
         brokenObservationRefs.length ||
         integratedWithoutPath.length ||
         campaignPressIntegrityViolations.length ||
-        kcTownHallIntegrityViolations.length
+        kcTownHallIntegrityViolations.length ||
+        teamsArchiveIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -681,6 +840,7 @@ function deterministicResults(judgments) {
         `${inventoryPlacements.length} campaign press placements / ${uniqueCampaignPressArticleIds.size} unique articles`,
         `${campaignPressIntegrityViolations.length} campaign press integrity violations`,
         `${kcTownHallIntegrityViolations.length} KC Town Hall funding-chain integrity violations`,
+        `${teamsArchiveIntegrityViolations.length} Teams archive integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -688,6 +848,7 @@ function deterministicResults(judgments) {
         ...integratedWithoutPath.map((item) => item.id),
         ...campaignPressIntegrityViolations,
         ...kcTownHallIntegrityViolations,
+        ...teamsArchiveIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -699,7 +860,8 @@ function deterministicResults(judgments) {
         privateMarkerHits.length ||
         routeViolations.length ||
         campaignPressSafetyViolations.length ||
-        kcTownHallSafetyViolations.length
+        kcTownHallSafetyViolations.length ||
+        teamsArchiveSafetyViolations.length
         ? 0
         : 4,
       [
@@ -708,6 +870,7 @@ function deterministicResults(judgments) {
         `${routeViolations.length} prohibited routes`,
         `${campaignPressSafetyViolations.length} campaign press promotion violations`,
         `${kcTownHallSafetyViolations.length} KC Town Hall projection-safety violations`,
+        `${teamsArchiveSafetyViolations.length} Teams archive projection-safety violations`,
       ],
       [
         ...validationErrors,
@@ -715,6 +878,7 @@ function deterministicResults(judgments) {
         ...routeViolations,
         ...campaignPressSafetyViolations,
         ...kcTownHallSafetyViolations,
+        ...teamsArchiveSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -756,6 +920,10 @@ function deterministicResults(judgments) {
       campaignPressUniqueArticles: uniqueCampaignPressArticleIds.size,
       kcTownHallFundingSources: kcTownHallFundingSources.length,
       kcTownHallFundingClaims: kcTownHallFundingClaims.length,
+      teamsArchiveCaptures: teamsArchiveCaptures.length,
+      teamsArchiveSources: teamsArchiveSources.length,
+      teamsArchiveObservations: teamsArchiveObservations.length,
+      teamsArchiveClaims: teamsArchiveClaims.length,
       validationErrors: validationErrors.length,
     },
   };

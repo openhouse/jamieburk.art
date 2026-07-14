@@ -18,6 +18,40 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## Teams Archive Development Claims
+
+### CLM-CRS-COALITION-OPERATING-SYSTEM
+
+**Status:** Approved and selected with boundary
+**Public wording:** Jamie designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 Commercial Rent Stabilization collaboration.
+**Where to project:** Fair Rent NYC case study and work metadata.
+**Guardrail:** The six parts are a designed operating plan; do not claim every component was completed or that Jamie owned every collaborative action recorded in the minutes.
+
+### CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN
+
+**Status:** Approved and selected with boundary
+**Public wording:** Jamie specified a privacy-preserving public-data pilot with aggregate vacancy and lease-cost indicators, coverage and suppression reporting, a methods note, and field-level release requirements.
+**Where to project:** Fair Rent NYC case study and work metadata.
+**Guardrail:** This is an implementation design, not an adopted City program, released dataset, or claim of access to confidential filings.
+
+### CLM-WATERWAYS-RAFT-EXPEDITION-SCALE
+
+**Status:** Public-safe candidate, held from current site
+**Public wording:** Jamie co-created and traveled on a participatory recycled-material raft expedition that covered more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers.
+**Guardrail:** Preserve collective credit and say "toward the Gulf," not that the reviewed sources confirm arrival there.
+
+### CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW
+
+**Status:** Public-safe candidate, held from current site
+**Public wording:** Jamie assembled a source corpus and initiated an NYC Artist Coalition Wikipedia draft that Dorothy Howard reviewed and revised before moving it from Jamie's sandbox to mainspace.
+**Guardrail:** Credit both collaborators and later editors. Wikipedia history proves the publication workflow, not every article proposition.
+
+### CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS
+
+**Status:** Public-safe candidate, held from current site
+**Public wording:** Jamie used product-discovery conversations to pressure-test a knowledge-system concept against specific users, valuable problems, inspectable context, user control, and privacy.
+**Guardrail:** Do not name the private collaborator or claim market validation, purchase, testimonial, or direct lineage into unread later materials.
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready  
