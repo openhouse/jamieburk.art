@@ -135,9 +135,12 @@ Current surface: [FairRentNYC reference library](https://fairrentnyc.nycartc.com
 
 ## Claim Boundary
 
-The press corpus directly supports a professional claim about Jamie's campaign
-web and information-architecture work: he built public source trails into the
-campaign sites. It does not, without additional evidence, establish that Jamie
+The press corpus directly establishes the four public source trails and their
+campaign-to-article relationships. Jamie states that he built those campaign
+sites and press sections; that technical-authorship statement remains a memory
+lead here and a separately governed careful proof elsewhere in the bank.
+Repository, deployment, CMS, or collaborator evidence is still needed to
+corroborate it campaign by campaign. The corpus does not establish that Jamie
 wrote each campaign position, selected every article alone, received publisher
 endorsement, or caused the collective legislative and policy outcomes discussed
 in the reporting.
