@@ -42,6 +42,7 @@ Use claims that directly support operating-backbone fit:
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
+- `google-shared-drive-handoff-practice`
 
 For KC Town Hall, pair the public role and funding authorization with the later
 withdrawal and reappropriation. Do not project the 2019 amount alone as money
@@ -66,10 +67,21 @@ as source discipline rather than dumping the bank onto the page.
 
 The Fair Rent NYC case study additionally selects
 `CLM-CRS-COALITION-OPERATING-SYSTEM` and
-`CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`. Their protected source records must
-not render as public citations.
+`CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`, plus
+`CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`. The 196 / Sunday Dinner case study
+selects `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`. Their protected source records
+must not render as public citations.
+
+Technical Operations selects
+`CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE` and
+`CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW`. These claims project public-safe
+behavior summaries only; Drive URLs, excerpts, permissions, and archive output
+remain protected.
 
 `CLM-WATERWAYS-RAFT-EXPEDITION-SCALE`,
 `CLM-NYCAC-ARCHIVAL-PUBLICATION-WORKFLOW`, and
 `CLM-SOURCE-BACKED-MEMORY-DISCOVERY-PROCESS` remain knowledge-bank depth with
 no current public website surface.
+
+`CLM-SBU-STYLE-GUIDE-HANDOFF-SEED` remains dormant until completion or adoption
+evidence is recovered.

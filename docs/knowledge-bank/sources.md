@@ -133,3 +133,20 @@ Protected sources have no public URL and every evidence relationship against
 them is non-citing. The later June 2026 job-hunt packet had not materialized by
 the end of the pass, so it produced a retrieval task rather than inferred
 observations. See `docs/knowledge-bank/projects/teams-archive-production.md`.
+
+## Google Drive Shared Drive Archival Production
+
+The July 14 Shared Drive pass recorded an aggregate inventory of 110 accessible
+drives and selected 14 professionally relevant drives for top-level review.
+Seven text artifacts and four revision histories received closer review. The 96
+unreviewed drives remain a protected research queue.
+
+Six new normalized source records preserve public-safe metadata for Jamie's
+handoff-practice statement, the bounded inventory, a 196 residency onboarding
+template, an NYC Artist Coalition action-guidance draft, a mixed-format archive
+overview workflow, and an early collaborator-credited style-guide seed. A later
+Shared Drive revision also strengthened the existing CRS running-minutes source.
+
+All underlying Drive URLs, IDs, permissions, memberships, raw excerpts, and
+participant identities remain outside Git. See
+`docs/knowledge-bank/projects/google-shared-drives-production.md`.

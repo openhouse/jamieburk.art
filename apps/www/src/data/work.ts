@@ -199,12 +199,13 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "A six-part coalition operating plan, consent-aware running memory, a legislative provenance redline, and requirements for a privacy-preserving public-data pilot, alongside campaign websites, public testimony, and an auditable policy trail.",
+      "A six-part coalition operating plan, consent-aware collaborative running memory, a legislative provenance redline, a Jamie-attributed multi-action working draft later edited by a collaborator, and requirements for privacy-preserving public-data work, alongside campaign websites, public testimony, and an auditable policy trail.",
     artifactTypes: [
       "website",
       "source map",
       "meeting memory",
       "decision record",
+      "guide",
       "public handout",
     ],
     artifacts: [
@@ -243,6 +244,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website",
+      },
+      {
+        title: "Multi-action guidance working draft",
+        description:
+          "A Jamie-attributed working draft that turned three concurrent civic lanes into clear audience actions; a collaborator later edited it, and publication or use is not established.",
+        type: "guide",
       },
       {
         title: "Public testimony and policy trail",
@@ -284,7 +291,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public campaign materials, independent reporting, City-hosted records, Council testimony and legislation, meeting-memory summaries, and private/redacted coalition context.",
+      "Public campaign materials, independent reporting, City-hosted records, Council testimony and legislation, meeting-memory summaries, revision-attributed Shared Drive artifacts, and private/redacted coalition context.",
     credits: [
       "Jamie Burkart",
       "NYC Artist Coalition collaborators",
@@ -309,6 +316,7 @@ const workItemsInput = [
       "Running minutes, decision records, action trackers, and source maps",
       "Six-part coalition operating plan with explicit role boundaries",
       "Privacy-preserving commercial vacancy and lease-cost data pilot specification",
+      "Jamie-attributed multi-action working draft later edited by a collaborator",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps",
@@ -490,11 +498,13 @@ const workItemsInput = [
     featured: true,
     priority: 5,
     visibility: "summary-only",
-    proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
+    proofBankIds: [
+      "sunday-dinner-196-participation-infrastructure",
+    ],
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable participation infrastructure for gatherings and resident artists, including a scheduled acceptance, pre-arrival orientation, space configuration, and independent access handoff.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -502,6 +512,12 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow",
+      },
+      {
+        title: "Residency acceptance and access handoff",
+        description:
+          "A template-based 2023 workflow for schedule, orientation, space configuration, and independent collaborator access.",
+        type: "template",
       },
     ],
     tags: [
@@ -519,7 +535,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe summary plus a revision-attributed onboarding template; participant identities, access details, and raw community records remain private.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -529,6 +545,7 @@ const workItemsInput = [
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "Onboarding and participation systems",
+      "Revision-attributed residency acceptance and access handoff",
       "Recurring operations and continuity structures",
     ],
     knownOpenProtected: {

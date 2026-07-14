@@ -29,6 +29,15 @@ import {
   teamsArchiveResearchTasks,
   teamsArchiveSources,
 } from "../../apps/www/src/data/knowledge-bank/teams-archive.ts";
+import {
+  googleSharedDriveCaptures,
+  googleSharedDriveClaims,
+  googleSharedDriveInquiries,
+  googleSharedDriveObservations,
+  googleSharedDriveResearchTasks,
+  googleSharedDriveReviewSummary,
+  googleSharedDriveSources,
+} from "../../apps/www/src/data/knowledge-bank/google-shared-drives.ts";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -278,6 +287,165 @@ test("protected Teams sources stay URL-free and non-citing", () => {
       `${claim.id} renders protected evidence`,
     );
   }
+});
+
+test("Google Shared Drive production preserves the bounded sample and graph", () => {
+  assert.equal(googleSharedDriveReviewSummary.accessibleDriveCount, 110);
+  assert.equal(googleSharedDriveReviewSummary.selectedDriveCount, 14);
+  assert.equal(googleSharedDriveReviewSummary.unreviewedDriveCount, 96);
+  assert.equal(googleSharedDriveReviewSummary.closeReadTextArtifactCount, 7);
+  assert.equal(googleSharedDriveReviewSummary.revisionHistoryCount, 4);
+  assert.equal(googleSharedDriveCaptures.length, 9);
+  assert.equal(googleSharedDriveSources.length, 6);
+  assert.equal(googleSharedDriveObservations.length, 18);
+  assert.equal(googleSharedDriveClaims.length, 5);
+  assert.equal(googleSharedDriveResearchTasks.length, 7);
+  assert.equal(googleSharedDriveInquiries.length, 1);
+
+  const observedSourceIds = new Set(
+    googleSharedDriveObservations.map((observation) => observation.sourceId),
+  );
+  for (const source of googleSharedDriveSources) {
+    assert.ok(observedSourceIds.has(source.id), `Unobserved source ${source.id}`);
+  }
+});
+
+test("Google Shared Drive sources expose no locators and never render citations", () => {
+  const protectedIds = new Set([
+    ...googleSharedDriveSources.map((source) => source.id),
+    "SRC-CRS-RUNNING-MINUTES-2026-05-15",
+  ]);
+  for (const source of googleSharedDriveSources) {
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+  }
+  for (const claim of googleSharedDriveClaims) {
+    assert.ok(
+      claim.evidence
+        .filter((item) => protectedIds.has(item.sourceId))
+        .every((item) => item.renderCitation === false),
+      `${claim.id} renders protected evidence`,
+    );
+  }
+  const payload = JSON.stringify({
+    captures: googleSharedDriveCaptures,
+    sources: googleSharedDriveSources,
+    observations: googleSharedDriveObservations,
+    claims: googleSharedDriveClaims,
+    tasks: googleSharedDriveResearchTasks,
+    inquiries: googleSharedDriveInquiries,
+  });
+  assert.doesNotMatch(
+    payload,
+    /\/Users\/|\/Volumes\/|drive\.google\.com|docs\.google\.com|permissionId|fileId|[\w.+-]+@[\w.-]+/i,
+  );
+});
+
+test("Shared Drive claims distinguish selected proof from held research", () => {
+  for (const id of [
+    "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+    "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+    "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+    "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+  ]) {
+    const claim = googleSharedDriveClaims.find((item) => item.id === id);
+    assert.equal(claim.selectionState, "selected");
+    assert.equal(claim.publicationState, "approved");
+    assert.ok(
+      claim.projections.some(
+        (projection) =>
+          projection.status === "active" &&
+          projection.surfaces.some((surface) => surface.startsWith("/")),
+      ),
+    );
+  }
+
+  const held = googleSharedDriveClaims.find(
+    (item) => item.id === "CLM-SBU-STYLE-GUIDE-HANDOFF-SEED",
+  );
+  assert.equal(held.selectionState, "dormant");
+  assert.ok(held.projections.every((projection) => projection.status === "hold"));
+  assert.deepEqual(held.researchTaskIds, [
+    "RT-GDRIVE-SBU-STYLE-GUIDE-COMPLETION",
+  ]);
+});
+
+test("remaining drives, photographs, and WOWList materials stay tasked research", () => {
+  const remaining = googleSharedDriveResearchTasks.find(
+    (item) => item.id === "RT-GDRIVE-REMAINING-CORPUS-TRIAGE",
+  );
+  const photo = googleSharedDriveResearchTasks.find(
+    (item) => item.id === "RT-GDRIVE-SUNDAY-DINNER-PHOTO-REVIEW",
+  );
+  const wowlist = googleSharedDriveResearchTasks.find(
+    (item) => item.id === "RT-GDRIVE-WOWLIST-MEETING-HANDOFF-REVIEW",
+  );
+  assert.equal(remaining.status, "open");
+  assert.match(remaining.publicNote, /remaining 96/i);
+  assert.equal(photo.status, "open");
+  assert.match(photo.successCriteria.join("\n"), /rights, consent/i);
+  assert.equal(wowlist.status, "open");
+  assert.match(wowlist.publicNote, /protected research leads/i);
+});
+
+test("Shared Drive outcome gaps remain explicit research tasks", () => {
+  const expected = [
+    [
+      "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+      "RT-GDRIVE-196-WORKFLOW-REUSE-CORROBORATION",
+    ],
+    [
+      "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+      "RT-GDRIVE-NYCAC-GUIDANCE-PUBLICATION-USE",
+    ],
+    [
+      "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+      "RT-GDRIVE-ARCHIVE-WORKFLOW-EXECUTION",
+    ],
+  ];
+
+  for (const [claimId, taskId] of expected) {
+    const claim = googleSharedDriveClaims.find((item) => item.id === claimId);
+    const task = googleSharedDriveResearchTasks.find((item) => item.id === taskId);
+    assert.equal(task.status, "open");
+    assert.ok(claim.researchTaskIds.includes(taskId));
+    assert.ok(task.claimIds.includes(claimId));
+  }
+});
+
+test("Shared Drive projections retain draft, collaboration, and selection boundaries", () => {
+  const workData = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const proofData = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+  const technicalPage = readFileSync(
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "utf8",
+  );
+  const residencyClaim = googleSharedDriveClaims.find(
+    (item) => item.id === "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+  );
+  const crsClaim = teamsArchiveClaims.find(
+    (item) => item.id === "CLM-CRS-COALITION-OPERATING-SYSTEM",
+  );
+
+  assert.doesNotMatch(workData, /Privacy-aware archive overview workflow/);
+  assert.doesNotMatch(proofData, /community-platform work/i);
+  assert.match(
+    workData,
+    /Jamie-attributed multi-action working draft later edited by a collaborator/,
+  );
+  assert.match(
+    crsClaim.projections.map((projection) => projection.text).join("\n"),
+    /collaborative running minutes/,
+  );
+  assert.doesNotMatch(workData, /reusable workflow for schedule/i);
+  assert.doesNotMatch(technicalPage, /reusable residency/i);
+  assert.doesNotMatch(
+    `${residencyClaim.internalClaim}\n${residencyClaim.projections
+      .map((projection) => projection.text)
+      .join("\n")}`,
+    /reusable residency|reusable 196/i,
+  );
 });
 
 test("raft scale remains collective and does not promote the unrecovered Gulf endpoint", () => {

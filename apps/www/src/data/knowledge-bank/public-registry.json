@@ -906,7 +906,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie designed a coalition operating system around six shared public goods: a clear front door, a recurring room, a shared public line, a stewarded story bank, an implementation-readiness packet, and a durable source-of-truth spine. He maintained running minutes that separated shared memory from raw source material, tracked decisions and next steps, and encoded consent levels for public stories.",
+          "text": "Jamie designed a coalition operating system around six shared public goods: a clear front door, a recurring room, a shared public line, a stewarded story bank, an implementation-readiness packet, and a durable source-of-truth spine. He maintained collaborative running minutes that separated shared memory from raw source material, tracked decisions and next steps, and encoded consent levels for public stories.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -915,7 +915,7 @@
         },
         {
           "key": "work-card",
-          "text": "Jamie designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 collaboration.",
+          "text": "Jamie designed a six-part coalition operating system and maintained consent-aware collaborative running memory for the 2026 collaboration.",
           "status": "active",
           "citationRequired": false,
           "surfaces": [
@@ -950,6 +950,109 @@
         "State that Jamie developed requirements and proposals, not that an agency adopted or implemented them.",
         "Do not imply access to confidential filings or proprietary microdata.",
         "Treat coalition positions and government decisions as collective and institutional work."
+      ]
+    },
+    {
+      "id": "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "Jamie maintains project-specific Shared Drives as portable handoff surfaces across devices and collaborators. Reviewed examples pair structured onboarding templates, source-backed running memory, action-oriented guidance, and privacy-aware archive tooling so collaborators can orient, act, and continue without exposing protected material.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "A bounded July 2026 sample found reusable handoff patterns across Jamie's project Shared Drives while preserving private content and unreviewed drives as protected research state.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/google-shared-drives-production"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The 14-drive professional sample is not an exhaustive review of all 110 accessible Shared Drives.",
+        "Access does not imply ownership, authorship, collaborator adoption, public status, or permission to publish.",
+        "Use only the specific artifact affordances and attribution supported by source text and revision history.",
+        "Keep Drive IDs, URLs, memberships, private excerpts, participant identities, and personal or legal material outside public Git."
+      ]
+    },
+    {
+      "id": "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2023 template shows Jamie turning residency acceptance into an operational handoff: scheduled dates, a pre-arrival orientation, space configuration around the artist's needs, and independent access for collaborators.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Built a template-based 2023 residency onboarding and access handoff covering schedule, orientation, configuration, and independent collaborator access.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "This one template supports the workflow, not the separate 20-plus-resident scale claim.",
+        "Do not identify the resident, collaborator, address, contact details, or access instructions.",
+        "Do not infer participant satisfaction or completed outcomes from an acceptance message."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "An October 2025 revision history attributes to Jamie a coalition draft that turned three concurrent civic lanes into clear next actions: apply or request support, contact legislators about Commercial Rent Stabilization, and use reporting and incident intake to support Talks Not Raids oversight. A collaborator later edited the draft.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Call it a draft and preserve the later collaborator edit as distinct work.",
+        "Do not imply that the communication was sent, that every underlying statement remained current, or that any action occurred because of it.",
+        "Keep raw copy, collaborator identity, internal links, and audience records private."
+      ]
+    },
+    {
+      "id": "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "technical-operations",
+          "text": "Maintained a reusable shell workflow that inventories mixed-format project archives, extracts PDF and tracked-document text, samples oversized CSV and JSON material, and warns when generated overviews could expose sensitive data.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe inspectable code behavior, not successful execution against every possible archive.",
+        "Drive preserves one revision attributed to Jamie and no external Git authorship history.",
+        "Do not publish the script, its paths, or generated archive output from this protected source."
       ]
     },
     {
@@ -1244,6 +1347,11 @@
           "projection": "case-study"
         },
         {
+          "id": "nycac-multi-action-guidance",
+          "claimId": "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+          "projection": "case-study"
+        },
+        {
           "id": "founding-role",
           "claimId": "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",
           "projection": "case-study",
@@ -1311,6 +1419,35 @@
           "sourceIds": [
             "SRC-NYCAC-MAYOR-CURE-2023-12-28"
           ]
+        }
+      ]
+    },
+    {
+      "id": "196-sunday-dinner",
+      "surface": "/work/196-sunday-dinner",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "residency-onboarding-handoff",
+          "claimId": "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+          "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "technical-operations",
+      "surface": "/work/technical-operations",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "portable-shared-drive-handoffs",
+          "claimId": "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+          "projection": "technical-operations"
+        },
+        {
+          "id": "archive-overview-workflow",
+          "claimId": "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+          "projection": "technical-operations"
         }
       ]
     },

@@ -211,15 +211,15 @@ export const teamsArchiveSources = [
   },
   {
     id: "SRC-CRS-RUNNING-MINUTES-2026-05-15",
-    title: "Commercial Rent Stabilization Collaboration running minutes, public-safe metadata",
+    title: "Commercial Rent Stabilization Collaboration running minutes through May 29, 2026",
     organization: "Commercial Rent Stabilization collaboration",
     author: "Jamie Burkart and collaborators",
     kind: "project-archive",
     visibility: "public-metadata-only",
     preservationStatus: "private",
-    publishedAt: "2026-05-15",
+    publishedAt: "2026-05-29",
     publicCitation:
-      "Public-safe summary of Commercial Rent Stabilization collaboration running minutes maintained through May 15, 2026.",
+      "Public-safe summary of Commercial Rent Stabilization collaboration running minutes maintained through May 29, 2026.",
     publicNote:
       "Raw meeting notes, contact details, legal-review context, vulnerable business information, and private strategy remain outside the repository.",
     protectedLocatorId: "ARCHIVE-CRS-RUNNING-MINUTES-2026-001",
@@ -820,18 +820,21 @@ export const teamsArchiveClaims = [
       "OBS-CRS-MINUTES-MEMORY-STRUCTURE",
       "OBS-CRS-MINUTES-CONSENT-MODEL",
       "OBS-CRS-MINUTES-JAMIE-OWNERSHIP",
+      "OBS-GDRIVE-CRS-SHARED-PURPOSE",
+      "OBS-GDRIVE-CRS-HANDOFF-FIELDS",
+      "OBS-GDRIVE-CRS-REVISION-CREDIT",
     ],
     projections: [
       {
         key: "case-study",
-        text: "Jamie designed a coalition operating system around six shared public goods: a clear front door, a recurring room, a shared public line, a stewarded story bank, an implementation-readiness packet, and a durable source-of-truth spine. He maintained running minutes that separated shared memory from raw source material, tracked decisions and next steps, and encoded consent levels for public stories.",
+        text: "Jamie designed a coalition operating system around six shared public goods: a clear front door, a recurring room, a shared public line, a stewarded story bank, an implementation-readiness packet, and a durable source-of-truth spine. He maintained collaborative running minutes that separated shared memory from raw source material, tracked decisions and next steps, and encoded consent levels for public stories.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work/fair-rent-nyc"],
       },
       {
         key: "work-card",
-        text: "Jamie designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 collaboration.",
+        text: "Jamie designed a six-part coalition operating system and maintained consent-aware collaborative running memory for the 2026 collaboration.",
         status: "active",
         citationRequired: false,
         surfaces: ["/work", "/work/fair-rent-nyc"],

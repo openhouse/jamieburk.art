@@ -14,6 +14,18 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Designed a six-part coalition operating system and maintained consent-aware running memory for the 2026 collaboration.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Specified a privacy-preserving public-data pilot with aggregate indicators, coverage and suppression reporting, methods, and release requirements.
+- Maintains project-specific Shared Drives as portable handoff surfaces across
+  devices and collaborators, using structured templates, source-backed running
+  memory, action-oriented guidance, and privacy-aware archive tooling.
+- Created a template-based 2023 Artists Residency handoff covering schedule,
+  pre-arrival orientation, space configuration, and independent collaborator
+  access. This one recovered template does not establish the separate
+  20-plus-resident scale claim or repeated use.
+- Drafted an NYC Artist Coalition communication that organized three concurrent
+  civic lanes into concrete audience actions; a collaborator later edited the
+  draft.
+- Maintained a mixed-format archive overview workflow with extraction, sampling,
+  skip rules, and explicit sensitive-output warnings.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.

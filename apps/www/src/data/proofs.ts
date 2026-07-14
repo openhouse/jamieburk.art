@@ -339,9 +339,9 @@ export const proofClaims: ProofClaim[] = [
     shortWording:
       "Civic systems and coalition operations for NYC Artist Coalition",
     detailedPublicWording:
-      "Jamie translated policy, public-data, and coalition needs into practical materials for Cabaret Law repeal advocacy, Office of Nightlife agenda-setting and accountability, MARCH transparency, Commercial Rent Stabilization, and storefront stability; he also testified publicly for Talks Not Raids.",
+      "Jamie translated policy, public-data, and coalition needs into practical materials for Cabaret Law repeal advocacy, Office of Nightlife agenda-setting and accountability, MARCH transparency, Commercial Rent Stabilization, and storefront stability. A revision-attributed 2025 draft also shows him turning three concurrent civic lanes into concrete audience actions; he testified publicly for Talks Not Raids.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, independent reporting, a City-hosted policy appendix, Jamie's 2019 Council testimony, and the Local Law 220 legislative record.",
+      "Approved resume language, public campaign surfaces, independent reporting, a City-hosted policy appendix, Jamie's 2019 Council testimony, the Local Law 220 legislative record, and a public-safe revision-history summary.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -373,6 +373,47 @@ export const proofClaims: ProofClaim[] = [
       "policy-communications",
       "public-data-framing",
       "civic-systems",
+    ],
+    lastReviewed: "2026-07-14",
+  },
+  {
+    id: "google-shared-drive-handoff-practice",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: [
+      "public-safe-archive-summary",
+      "jamie-review-confirmation",
+    ],
+    publicWording:
+      "Maintains project-specific Shared Drives as portable handoff surfaces across devices and collaborators, using structured templates, running memory, public guidance, and privacy-aware archive tooling.",
+    shortWording: "Portable Shared Drive handoffs across projects",
+    detailedPublicWording:
+      "A bounded review found concrete handoff patterns across civic, cultural, and public-data work: residency onboarding, source-backed running memory, action-oriented guidance, and mixed-format archive overview tooling with explicit information boundaries.",
+    sourceBasis:
+      "Jamie confirmation plus public-safe summaries of a bounded Shared Drive inventory, close-read artifacts, and revision histories.",
+    whyItMatters:
+      "Shows durable handoff practice as inspectable operational work rather than a generic documentation claim.",
+    guardrail:
+      "The review sampled 14 of 110 accessible drives. Access does not imply authorship, collaborator adoption, public status, or permission to publish.",
+    doNotSay: [
+      "Jamie authored every file in every Shared Drive",
+      "All Shared Drives were reviewed",
+      "Every collaborator used every handoff system",
+    ],
+    protectedBoundaries: [
+      "Drive IDs and URLs",
+      "Membership and permissions",
+      "Private excerpts",
+      "Participant identities",
+      "Personal, legal, family, and unrelated collaborator material",
+    ],
+    surfaces: ["technical-operations"],
+    relatedProjects: ["fair-rent-nyc", "196-sunday-dinner"],
+    relatedCapabilities: [
+      "handoffs",
+      "shared-workspaces",
+      "documentation",
+      "archive-tooling",
     ],
     lastReviewed: "2026-07-14",
   },
@@ -440,15 +481,16 @@ export const proofClaims: ProofClaim[] = [
     homepageWording:
       "I created repeatable hosting and continuity systems that supported 300+ gatherings and 20+ resident artists.",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems. A 2023 template shows a concrete residency handoff covering schedule, pre-arrival orientation, space configuration, and independent collaborator access.",
     sourceBasis:
-      "Approved resume language and public-safe aggregate project history.",
+      "The 300-plus-gathering and 20-plus-resident scale comes from approved resume language and public-safe aggregate project history. A separate revision-attributed private onboarding template, represented through protected metadata, establishes one concrete handoff workflow but does not prove that scale.",
     guardrail:
-      "Keep the page summary-only and avoid turning community trust work into spectacle.",
+      "Keep the page summary-only, keep the scale claim and one-template workflow on separate evidence paths, and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
       "Attendance database",
+      "The 2023 template proves 20-plus residencies or use by every resident",
     ],
     protectedBoundaries: [
       "Guest lists",
@@ -472,7 +514,7 @@ export const proofClaims: ProofClaim[] = [
       "documentation",
       "handoffs",
     ],
-    lastReviewed: "2026-07-07",
+    lastReviewed: "2026-07-14",
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

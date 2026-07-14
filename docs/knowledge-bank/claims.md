@@ -18,6 +18,37 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## google-shared-drive-handoff-practice - Portable project handoffs
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Jamie confirmation / public-safe archive summary / revision history
+**Public wording:** Maintains project-specific Shared Drives as portable handoff surfaces across devices and collaborators, using structured templates, running memory, public guidance, and privacy-aware archive tooling so collaborators can orient, act, and continue without exposing protected material.
+**Detailed public-safe wording:** A bounded review found concrete handoff patterns across civic, cultural, and public-data work: residency onboarding, source-backed running memory, action-oriented guidance, and mixed-format archive overview tooling with explicit information boundaries.
+**Where to project:** Technical Operations and selected case-study evidence.
+**Why it matters:** Makes durable handoff practice concrete across civic, cultural, and public-data work.
+**Guardrail:** The review sampled 14 of 110 accessible drives. Access does not imply ownership, authorship, adoption, public status, or publication permission.
+**Do not say:** Jamie authored every file; every collaborator used every system; all Shared Drives were reviewed.
+**Protected boundaries:** Drive IDs, URLs, memberships, private excerpts, participant identities, and personal or legal material stay outside Git.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+### Selected machine claims
+
+- `CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE`: selected for Technical
+  Operations with an explicit 14-of-110 sample boundary.
+- `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: selected for the 196 / Sunday
+  Dinner case study as schedule, orientation, configuration, and access-handoff
+  evidence. It does not prove the 20-plus-resident scale claim.
+- `CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`: selected for Fair Rent NYC as an
+  attributed draft contribution. A later collaborator edit remains distinct;
+  sending, publication, participation, and outcomes are not established.
+- `CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW`: selected for Technical Operations
+  as inspectable mixed-format archive tooling with safety warnings and skip
+  rules. It is not a production service or proof of every execution.
+- `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: held. The source supports a credited
+  documentation seed, not a completed or adopted style guide.
+
 ## Teams Archive Development Claims
 
 ### CLM-CRS-COALITION-OPERATING-SYSTEM

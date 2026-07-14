@@ -12,6 +12,9 @@ website selection. It is a recommendation, not publication approval.
   proof. Present the aggregate indicators, suppression, methods, and release
   requirements as a proposed privacy-preserving pilot, not an adopted City
   program.
+- `CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`: selected as direct communication-
+  design proof. Preserve draft status and the later collaborator edit; do not
+  imply publication, audience action, or policy outcome.
 
 - `CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE`: public reporting now earns founding-
   member wording, with a boundary against sole-founder or total-ownership
@@ -46,6 +49,17 @@ website selection. It is a recommendation, not publication approval.
   first-hand account of continuity stewardship. Keep it distinct from the
   official municipal chronology and do not infer the receiving organization,
   transfer terms, assumed obligations, or causality.
+
+## Selected for Technical Operations and 196
+
+- `CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE`: selected as cross-project handoff
+  proof with a 14-of-110 sample boundary and no underlying Drive exposure.
+- `CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW`: selected as concrete technical-
+  operations proof. Describe inspectable extraction, sampling, skip, and warning
+  behavior, not deployment or universal sensitive-data safety.
+- `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: selected for the 196 / Sunday Dinner
+  case study as a specific operational handoff. Keep participant details
+  private and do not use one template to prove project scale.
 
 ## Strong Future Feature Candidates
 
@@ -91,6 +105,17 @@ website selection. It is a recommendation, not publication approval.
   exam type, and bounded result records before promoting the exact metric.
 - CallNYC Council-account engagement: complete its reproducible account-universe
   and missing-data work before creating an engagement metric.
+- `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: recover a completed guide, implementation
+  record, or collaborator confirmation before promotion.
+- `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: recover a second dated use or
+  collaborator confirmation before describing one template as a repeated
+  workflow; keep the project-scale evidence separate.
+- `CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`: recover a sent or published version
+  before making distribution or audience-use claims.
+- `CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW`: run a synthetic or public-safe fixture
+  before making execution claims beyond inspectable code behavior.
+- Remaining Shared Drives: triage the 96-drive protected queue in privacy-first
+  waves; not reviewed does not mean absent.
 
 ## Knowledge Depth, Not Current Projection
 

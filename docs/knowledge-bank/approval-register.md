@@ -37,6 +37,19 @@ The repo is public. Approval here means approved for public-safe repository and 
   assets or obligations, causal relationship to later City action, and private
   reasons are not approved for public projection.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
+- Shared Drive handoff practice: approved for Technical Operations using the
+  bounded 14-of-110 sample and public-safe artifact summaries. Drive access does
+  not approve underlying files, URLs, permissions, memberships, excerpts, or
+  participant identities for publication.
+- 196 residency onboarding template: schedule, orientation, space
+  configuration, and independent-access handoff are approved. Participant
+  identity, location, contact, and access details are not.
+- NYC Artist Coalition multi-action guidance: Jamie's attributed working draft
+  and a later collaborator edit are approved as process evidence. Sending,
+  publication, audience response, and outcomes are not.
+- Archive overview workflow: inspectable format-handling and safety-warning
+  behavior are approved. The protected script and generated archive output are
+  not.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo
@@ -70,3 +83,18 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Product-discovery conversations: the anonymous, public-safe method summary is
   approved for the knowledge bank only; collaborator identity, transcript
   content, endorsement, and market-validation claims are not approved.
+
+## Shared Drive Decisions
+
+- The 110-drive count is time-bounded account metadata, not an accomplishment
+  metric. The 14-drive sample and seven-artifact/four-revision review counts may
+  describe method and scope.
+- The remaining 96 drives are approved as a protected research queue only.
+- The early Small Business United style-guide seed remains dormant pending a
+  completed artifact, adoption evidence, or collaborator confirmation.
+- Sunday Dinner photographs and WOWList video/transition materials remain
+  protected leads. Visual content, legal mechanics, and testimonial language
+  are not approved.
+- KC Town Hall transition files are excluded. Existing official records and
+  Jamie's approved mission-aligned transition statement remain the public
+  boundary.

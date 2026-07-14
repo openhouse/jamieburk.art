@@ -71,3 +71,8 @@ one pass.
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow and [projects/callnyc.md](projects/callnyc.md) for the first complete
 pilot.
+
+See
+[projects/google-shared-drives-production.md](projects/google-shared-drives-production.md)
+for the privacy-first Shared Drive archival-production pass and its protected
+research queue.

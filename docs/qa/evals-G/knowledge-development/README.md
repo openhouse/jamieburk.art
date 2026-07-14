@@ -196,6 +196,18 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 - [Holdout 2 final](./teams-archive-holdout-2-final.json)
 - [KC Town Hall holdout 2 scorecard](./kc-town-hall-funding-holdout-2-final.json)
 
+## Google Shared Drives Production
+
+- [Hill-climb record](./2026-07-14-google-shared-drives-hill-climb.md)
+- [Pre-remediation deterministic pass](./google-shared-drives-iteration-2.json)
+- [Strict pre-remediation judgment](./google-shared-drives-iteration-2-judge.json)
+- [Intermediate judgment](./google-shared-drives-iteration-3-judge.json)
+- [Final deterministic pass](./google-shared-drives-deterministic.json)
+- [Final holdout 1 judgment](./google-shared-drives-final-holdout-1-judge.json)
+- [Final holdout 1 scorecard](./google-shared-drives-final-holdout-1-final.json)
+- [Final holdout 2 judgment](./google-shared-drives-final-holdout-2-judge.json)
+- [Final holdout 2 scorecard](./google-shared-drives-final-holdout-2-final.json)
+
 ## Verification Contract
 
 ```bash

@@ -37,6 +37,14 @@ import {
   teamsArchiveResearchTasks,
   teamsArchiveSources,
 } from "./teams-archive.ts";
+import {
+  googleSharedDriveCaptures,
+  googleSharedDriveClaims,
+  googleSharedDriveInquiries,
+  googleSharedDriveObservations,
+  googleSharedDriveResearchTasks,
+  googleSharedDriveSources,
+} from "./google-shared-drives.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -45,6 +53,7 @@ const knowledgeBankInput = {
     ...campaignPressCaptures,
     ...kcTownHallFundingCaptures,
     ...teamsArchiveCaptures,
+    ...googleSharedDriveCaptures,
   ],
   sources: [
     ...developmentSources,
@@ -52,6 +61,7 @@ const knowledgeBankInput = {
     ...campaignPressSources,
     ...kcTownHallFundingSources,
     ...teamsArchiveSources,
+    ...googleSharedDriveSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -254,6 +264,7 @@ const knowledgeBankInput = {
     ...campaignPressObservations,
     ...kcTownHallFundingObservations,
     ...teamsArchiveObservations,
+    ...googleSharedDriveObservations,
   ],
   claims: [
     ...developmentClaims,
@@ -261,6 +272,7 @@ const knowledgeBankInput = {
     ...campaignPressClaims,
     ...kcTownHallFundingClaims,
     ...teamsArchiveClaims,
+    ...googleSharedDriveClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -578,6 +590,7 @@ const knowledgeBankInput = {
     ...nycacResearchTasks,
     ...campaignPressResearchTasks,
     ...teamsArchiveResearchTasks,
+    ...googleSharedDriveResearchTasks,
   ],
   researchInquiries: [
     {
@@ -614,6 +627,7 @@ const knowledgeBankInput = {
     ...campaignPressInquiries,
     ...kcTownHallFundingInquiries,
     ...teamsArchiveInquiries,
+    ...googleSharedDriveInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -739,6 +753,11 @@ const knowledgeBankInput = {
           projection: "case-study",
         },
         {
+          id: "nycac-multi-action-guidance",
+          claimId: "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+          projection: "case-study",
+        },
+        {
           id: "founding-role",
           claimId: "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",
           projection: "case-study",
@@ -802,6 +821,35 @@ const knowledgeBankInput = {
           claimId: "CLM-NYCAC-MARCH-REPLACED-BY-CURE",
           projection: "case-study",
           sourceIds: ["SRC-NYCAC-MAYOR-CURE-2023-12-28"],
+        },
+      ],
+    },
+    {
+      id: "196-sunday-dinner",
+      surface: "/work/196-sunday-dinner",
+      sourceOrder: [],
+      occurrences: [
+        {
+          id: "residency-onboarding-handoff",
+          claimId: "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+          projection: "case-study",
+        },
+      ],
+    },
+    {
+      id: "technical-operations",
+      surface: "/work/technical-operations",
+      sourceOrder: [],
+      occurrences: [
+        {
+          id: "portable-shared-drive-handoffs",
+          claimId: "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+          projection: "technical-operations",
+        },
+        {
+          id: "archive-overview-workflow",
+          claimId: "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+          projection: "technical-operations",
         },
       ],
     },

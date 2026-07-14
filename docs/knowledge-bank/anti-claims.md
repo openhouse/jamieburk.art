@@ -102,3 +102,26 @@ the Gulf of Mexico.
 Do not say Jamie independently authored the final NYC Artist Coalition
 Wikipedia article, that Dorothy Howard's edit constituted Wikimedia
 endorsement, or that revision history proves every proposition in the article.
+
+## Google Drive Shared Drives
+
+Do not say Jamie owns or authored every accessible Shared Drive or file, that
+every collaborator adopted every workflow, or that all 110 drives were
+close-read. The first pass sampled 14 professionally relevant drives.
+
+Do not expose Drive IDs, URLs, memberships, permissions, participant identities,
+private excerpts, or personal, legal, family, medical, and unrelated
+collaborator material.
+
+Do not say the 196 template proves the 20-plus-resident scale claim, participant
+satisfaction, or use by every resident.
+
+Do not say the NYC Artist Coalition draft was sent, published, solely authored
+in its final form, or caused applications, calls, incident reports, or policy
+outcomes.
+
+Do not describe the archive-overview workflow as a production service, a
+complete sensitive-data safeguard, or proof of vacancy-data analysis results.
+
+Do not say Jamie designed the Small Business United identity system, completed
+the style guide, or secured team adoption.

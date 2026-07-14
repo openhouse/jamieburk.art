@@ -4,8 +4,21 @@ import type { Route } from "next";
 import { ContactCTA } from "@/components/ContactCTA";
 import { JBCard } from "@/components/JBCard";
 import { ResumeCTA } from "@/components/ResumeCTA";
+import { getClaimProjection } from "@/data/knowledge-bank/public";
 import { technicalOperationsProofRows } from "@/data/proofs";
 import { createMetadata } from "@/lib/metadata";
+
+const sharedDriveHandoff = getClaimProjection(
+  "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+  "technical-operations",
+  "/work/technical-operations"
+).text;
+
+const archiveOverviewWorkflow = getClaimProjection(
+  "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+  "technical-operations",
+  "/work/technical-operations"
+).text;
 
 const operationsMap = [
   "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
@@ -28,7 +41,7 @@ const proofMap = [
     project: "FairRentNYC / Commercial Rent Stabilization",
     href: "/work/fair-rent-nyc",
     proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
+      "collaborative campaign memory, decision records, source maps, action trackers, and a collaborator-edited public-guidance working draft."
   },
   {
     project: "CallNYC",
@@ -46,7 +59,7 @@ const proofMap = [
     project: "196 / Sunday Dinner",
     href: "/work/196-sunday-dinner",
     proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
+      "onboarding, facilitation, continuity, hosting rhythms, and a template-based 2023 residency acceptance and access handoff."
   },
   {
     project: "KC Spaces Fund",
@@ -102,6 +115,9 @@ export default function TechnicalOperationsPage() {
           planning rhythms, decision logs, action trackers, onboarding
           materials, documentation systems, launch support, and durable
           handoffs.
+        </p>
+        <p className="mt-5 leading-7 text-jb-ink/72">
+          {sharedDriveHandoff} {archiveOverviewWorkflow}
         </p>
       </div>
       <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">

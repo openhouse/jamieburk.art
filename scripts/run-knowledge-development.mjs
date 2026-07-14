@@ -23,6 +23,15 @@ import {
   teamsArchiveResearchTasks,
   teamsArchiveSources,
 } from "../apps/www/src/data/knowledge-bank/teams-archive.ts";
+import {
+  googleSharedDriveCaptures,
+  googleSharedDriveClaims,
+  googleSharedDriveInquiries,
+  googleSharedDriveObservations,
+  googleSharedDriveResearchTasks,
+  googleSharedDriveReviewSummary,
+  googleSharedDriveSources,
+} from "../apps/www/src/data/knowledge-bank/google-shared-drives.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 
 const suite = JSON.parse(
@@ -37,12 +46,15 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
   "apps/www/src/data/knowledge-bank/teams-archive.ts",
+  "apps/www/src/data/knowledge-bank/google-shared-drives.ts",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
+  "apps/www/src/app/work/technical-operations/page.tsx",
   "apps/www/src/content/work/kc-town-hall.mdx",
   "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/proofs.md",
@@ -55,6 +67,7 @@ const candidateFiles = [
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
   "docs/knowledge-bank/projects/teams-archive-production.md",
+  "docs/knowledge-bank/projects/google-shared-drives-production.md",
   "scripts/lib/citation-validation.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
@@ -583,6 +596,210 @@ function deterministicResults(judgments) {
     );
   }
 
+  const googleSharedDriveIntegrityViolations = [];
+  const googleSharedDriveSafetyViolations = [];
+  const googleSharedDriveSourceIds = new Set(
+    googleSharedDriveSources.map((source) => source.id),
+  );
+  const googleSharedDriveObservedSourceIds = new Set(
+    googleSharedDriveObservations.map((observation) => observation.sourceId),
+  );
+  const googleSharedDriveProtectedSourceIds = new Set([
+    ...googleSharedDriveSourceIds,
+    "SRC-CRS-RUNNING-MINUTES-2026-05-15",
+  ]);
+  const remainingDriveTask = googleSharedDriveResearchTasks.find(
+    (task) => task.id === "RT-GDRIVE-REMAINING-CORPUS-TRIAGE",
+  );
+  const photoReviewTask = googleSharedDriveResearchTasks.find(
+    (task) => task.id === "RT-GDRIVE-SUNDAY-DINNER-PHOTO-REVIEW",
+  );
+  const residencyReuseTask = googleSharedDriveResearchTasks.find(
+    (task) => task.id === "RT-GDRIVE-196-WORKFLOW-REUSE-CORROBORATION",
+  );
+  const guidanceUseTask = googleSharedDriveResearchTasks.find(
+    (task) => task.id === "RT-GDRIVE-NYCAC-GUIDANCE-PUBLICATION-USE",
+  );
+  const workflowExecutionTask = googleSharedDriveResearchTasks.find(
+    (task) => task.id === "RT-GDRIVE-ARCHIVE-WORKFLOW-EXECUTION",
+  );
+  const handoffClaim = googleSharedDriveClaims.find(
+    (claim) => claim.id === "CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE",
+  );
+  const residencyHandoffClaim = googleSharedDriveClaims.find(
+    (claim) => claim.id === "CLM-196-RESIDENCY-ONBOARDING-HANDOFF",
+  );
+  const actionGuidanceClaim = googleSharedDriveClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT",
+  );
+  const archiveWorkflowClaim = googleSharedDriveClaims.find(
+    (claim) => claim.id === "CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW",
+  );
+  const styleGuideSeedClaim = googleSharedDriveClaims.find(
+    (claim) => claim.id === "CLM-SBU-STYLE-GUIDE-HANDOFF-SEED",
+  );
+  const sharedDriveWorkData = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const sharedDriveProofData = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+  const sharedDrivePublicText = [
+    "apps/www/src/app/work/technical-operations/page.tsx",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/196-sunday-dinner.mdx",
+  ]
+    .map((path) => readFileSync(path, "utf8"))
+    .concat(sharedDriveWorkData, sharedDriveProofData)
+    .join("\n");
+
+  if (
+    googleSharedDriveCaptures.length !== 9 ||
+    googleSharedDriveSources.length !== 6 ||
+    googleSharedDriveObservations.length !== 18 ||
+    googleSharedDriveClaims.length !== 5 ||
+    googleSharedDriveResearchTasks.length !== 7 ||
+    googleSharedDriveInquiries.length !== 1
+  ) {
+    googleSharedDriveIntegrityViolations.push(
+      "Google Shared Drive archival-production graph has an unexpected record count",
+    );
+  }
+  if (
+    googleSharedDriveReviewSummary.accessibleDriveCount !== 110 ||
+    googleSharedDriveReviewSummary.selectedDriveCount !== 14 ||
+    googleSharedDriveReviewSummary.unreviewedDriveCount !== 96 ||
+    googleSharedDriveReviewSummary.closeReadTextArtifactCount !== 7 ||
+    googleSharedDriveReviewSummary.revisionHistoryCount !== 4
+  ) {
+    googleSharedDriveIntegrityViolations.push(
+      "Google Shared Drive review scope no longer matches the bounded research record",
+    );
+  }
+  for (const sourceId of googleSharedDriveSourceIds) {
+    if (!sourceById.has(sourceId) || !googleSharedDriveObservedSourceIds.has(sourceId)) {
+      googleSharedDriveIntegrityViolations.push(
+        `Google Shared Drive source lacks a normalized observation path: ${sourceId}`,
+      );
+    }
+  }
+  if (
+    remainingDriveTask?.status !== "open" ||
+    !remainingDriveTask.publicNote.includes("remaining 96") ||
+    photoReviewTask?.status !== "open" ||
+    !photoReviewTask.successCriteria.some((item) => /rights, consent/i.test(item)) ||
+    residencyReuseTask?.status !== "open" ||
+    guidanceUseTask?.status !== "open" ||
+    workflowExecutionTask?.status !== "open"
+  ) {
+    googleSharedDriveIntegrityViolations.push(
+      "Unreviewed-drive or photo-review research state is incomplete",
+    );
+  }
+  if (
+    handoffClaim?.selectionState !== "selected" ||
+    residencyHandoffClaim?.selectionState !== "selected" ||
+    actionGuidanceClaim?.selectionState !== "selected" ||
+    archiveWorkflowClaim?.selectionState !== "selected" ||
+    styleGuideSeedClaim?.selectionState !== "dormant" ||
+    !residencyHandoffClaim.researchTaskIds?.includes(
+      "RT-GDRIVE-196-WORKFLOW-REUSE-CORROBORATION",
+    ) ||
+    !actionGuidanceClaim.researchTaskIds?.includes(
+      "RT-GDRIVE-NYCAC-GUIDANCE-PUBLICATION-USE",
+    ) ||
+    !archiveWorkflowClaim.researchTaskIds?.includes(
+      "RT-GDRIVE-ARCHIVE-WORKFLOW-EXECUTION",
+    ) ||
+    !styleGuideSeedClaim.researchTaskIds?.includes(
+      "RT-GDRIVE-SBU-STYLE-GUIDE-COMPLETION",
+    )
+  ) {
+    googleSharedDriveIntegrityViolations.push(
+      "Google Shared Drive promotion and hold states are incomplete",
+    );
+  }
+  if (
+    !knowledgeBank.claims
+      .find((claim) => claim.id === "CLM-CRS-COALITION-OPERATING-SYSTEM")
+      ?.observationIds.includes("OBS-GDRIVE-CRS-REVISION-CREDIT")
+  ) {
+    googleSharedDriveIntegrityViolations.push(
+      "CRS operating-system claim does not include the later Shared Drive revision evidence",
+    );
+  }
+  if (
+    /Privacy-aware archive overview workflow/.test(sharedDriveWorkData) ||
+    /community-platform work/i.test(sharedDriveProofData) ||
+    !/Jamie-attributed multi-action working draft later edited by a collaborator/.test(
+      sharedDriveWorkData,
+    ) ||
+    !/collaborative running minutes/.test(
+      knowledgeBank.claims
+        .find((claim) => claim.id === "CLM-CRS-COALITION-OPERATING-SYSTEM")
+        ?.projections.map((projection) => projection.text)
+        .join(" ") ?? "",
+    ) ||
+    /reusable residency|reusable 196|reusable workflow for schedule/i.test(
+      sharedDrivePublicText,
+    ) ||
+    /reusable residency|reusable 196/i.test(
+      `${residencyHandoffClaim?.internalClaim ?? ""} ${residencyHandoffClaim?.projections
+        .map((projection) => projection.text)
+        .join(" ") ?? ""}`,
+    )
+  ) {
+    googleSharedDriveSafetyViolations.push(
+      "Downstream projection drift weakens a Shared Drive claim boundary",
+    );
+  }
+  for (const sourceId of googleSharedDriveProtectedSourceIds) {
+    const source = sourceById.get(sourceId);
+    if (!source) continue;
+    if (source.canonicalUrl || source.archiveUrl || source.assetUrl) {
+      googleSharedDriveSafetyViolations.push(
+        `Protected Shared Drive source exposes a public URL: ${sourceId}`,
+      );
+    }
+    for (const claim of knowledgeBank.claims) {
+      if (
+        claim.evidence.some(
+          (item) => item.sourceId === sourceId && item.renderCitation,
+        )
+      ) {
+        googleSharedDriveSafetyViolations.push(
+          `Protected Shared Drive source renders as a public citation: ${sourceId}`,
+        );
+      }
+    }
+  }
+  if (
+    !/CLM-GDRIVE-PORTABLE-HANDOFF-PRACTICE/.test(sharedDrivePublicText) ||
+    !/CLM-GDRIVE-ARCHIVE-OVERVIEW-WORKFLOW/.test(sharedDrivePublicText) ||
+    !/CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT/.test(sharedDrivePublicText) ||
+    !/CLM-196-RESIDENCY-ONBOARDING-HANDOFF/.test(sharedDrivePublicText) ||
+    !/revision-attributed residency acceptance and access handoff/i.test(
+      sharedDrivePublicText,
+    )
+  ) {
+    googleSharedDriveSafetyViolations.push(
+      "Website projection omits a selected Shared Drive claim or its bounded artifact wording",
+    );
+  }
+  const googleSharedDrivePayload = JSON.stringify({
+    captures: googleSharedDriveCaptures,
+    sources: googleSharedDriveSources,
+    observations: googleSharedDriveObservations,
+    claims: googleSharedDriveClaims,
+    tasks: googleSharedDriveResearchTasks,
+    inquiries: googleSharedDriveInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|drive\.google\.com|docs\.google\.com|permissionId|fileId|[\w.+-]+@[\w.-]+/i.test(
+      googleSharedDrivePayload,
+    )
+  ) {
+    googleSharedDriveSafetyViolations.push(
+      "Google Shared Drive payload exposes a local path, Drive locator, or email address",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -829,7 +1046,8 @@ function deterministicResults(judgments) {
         integratedWithoutPath.length ||
         campaignPressIntegrityViolations.length ||
         kcTownHallIntegrityViolations.length ||
-        teamsArchiveIntegrityViolations.length
+        teamsArchiveIntegrityViolations.length ||
+        googleSharedDriveIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -841,6 +1059,7 @@ function deterministicResults(judgments) {
         `${campaignPressIntegrityViolations.length} campaign press integrity violations`,
         `${kcTownHallIntegrityViolations.length} KC Town Hall funding-chain integrity violations`,
         `${teamsArchiveIntegrityViolations.length} Teams archive integrity violations`,
+        `${googleSharedDriveIntegrityViolations.length} Google Shared Drive integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -849,6 +1068,7 @@ function deterministicResults(judgments) {
         ...campaignPressIntegrityViolations,
         ...kcTownHallIntegrityViolations,
         ...teamsArchiveIntegrityViolations,
+        ...googleSharedDriveIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -861,7 +1081,8 @@ function deterministicResults(judgments) {
         routeViolations.length ||
         campaignPressSafetyViolations.length ||
         kcTownHallSafetyViolations.length ||
-        teamsArchiveSafetyViolations.length
+        teamsArchiveSafetyViolations.length ||
+        googleSharedDriveSafetyViolations.length
         ? 0
         : 4,
       [
@@ -871,6 +1092,7 @@ function deterministicResults(judgments) {
         `${campaignPressSafetyViolations.length} campaign press promotion violations`,
         `${kcTownHallSafetyViolations.length} KC Town Hall projection-safety violations`,
         `${teamsArchiveSafetyViolations.length} Teams archive projection-safety violations`,
+        `${googleSharedDriveSafetyViolations.length} Google Shared Drive safety violations`,
       ],
       [
         ...validationErrors,
@@ -879,6 +1101,7 @@ function deterministicResults(judgments) {
         ...campaignPressSafetyViolations,
         ...kcTownHallSafetyViolations,
         ...teamsArchiveSafetyViolations,
+        ...googleSharedDriveSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -924,6 +1147,11 @@ function deterministicResults(judgments) {
       teamsArchiveSources: teamsArchiveSources.length,
       teamsArchiveObservations: teamsArchiveObservations.length,
       teamsArchiveClaims: teamsArchiveClaims.length,
+      googleSharedDriveCaptures: googleSharedDriveCaptures.length,
+      googleSharedDriveSources: googleSharedDriveSources.length,
+      googleSharedDriveObservations: googleSharedDriveObservations.length,
+      googleSharedDriveClaims: googleSharedDriveClaims.length,
+      googleSharedDriveUnreviewed: googleSharedDriveReviewSummary.unreviewedDriveCount,
       validationErrors: validationErrors.length,
     },
   };
