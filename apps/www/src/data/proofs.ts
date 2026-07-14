@@ -426,18 +426,21 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.",
     shortWording: "Supported adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
       "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    sourceBasis: "Approved resume language, public record summary, and public-safe project context.",
+    sourceBasis:
+      "Approved resume language, official Kansas City Council and CCED records, and public-safe project context.",
     guardrail:
-      "Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.",
+      "Distinguish the CCED Board recommendation, Council acceptance and appropriation, funding-agreement execution, disbursement, withdrawal, and 2024 reappropriation. Preserve collective project credit.",
     doNotSay: [
-      "Final funding received",
+      "Treating the appropriation as money transferred to or spent by the project",
+      "The development was completed",
+      "Jamie alone secured the Council action",
       "Current property status",
       "Private financial details",
-      "Official municipal endorsement beyond the public record"
+      "A complete explanation for the project's withdrawal"
     ],
     protectedBoundaries: [
       "Private financial details",
@@ -449,7 +452,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "source-backed-team-memory-method",

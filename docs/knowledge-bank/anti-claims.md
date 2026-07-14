@@ -62,6 +62,14 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not collapse the funding lifecycle into a generic "award received." The CCED
+Board recommended $490,539; the Council accepted the recommendation and
+appropriated the amount to a City project account; official records later show
+zero disbursement, project withdrawal, and return of the unused funds. Do not
+claim Jamie alone caused the Council action, that the funding agreement was
+executed, that KC Town Hall received or spent the money, or that the development
+was completed.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

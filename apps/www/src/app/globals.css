@@ -183,7 +183,7 @@ h2 {
 .jb-endnotes {
   border-top: 1px solid color-mix(in srgb, var(--jb-oil-ink) 16%, transparent);
   font-size: 0.95rem;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   padding-top: 2rem;
 }
 
@@ -204,7 +204,7 @@ h2 {
 
 .jb-endnotes ol {
   display: grid;
-  gap: 1.75rem;
+  gap: 1.25rem;
   list-style: none;
   margin-top: 1.75rem;
   padding: 0;
@@ -239,6 +239,24 @@ h2 {
 .jb-endnote-boundary {
   color: color-mix(in srgb, var(--jb-oil-ink) 72%, transparent);
   margin-top: 0.5rem !important;
+}
+
+.jb-endnote-details {
+  margin-top: 0.5rem;
+}
+
+.jb-endnote-details summary {
+  color: var(--jb-broadway-blue);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.jb-endnote-details summary:focus-visible {
+  border-radius: 0.15rem;
+  outline: 3px solid var(--jb-yellow-ochre);
+  outline-offset: 2px;
 }
 
 .jb-endnote-backlinks a {

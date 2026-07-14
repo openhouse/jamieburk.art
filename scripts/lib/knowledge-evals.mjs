@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -26,6 +27,9 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
+  const kcTownHallMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"), "utf8");
+  const workData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
+  const proofData = readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
   const errors = validateKnowledgeBank();
 
   const pilotIntakes = suite.pilot.intakeIds.map((id) => intakeById.get(id));
@@ -87,9 +91,54 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       pressInquiry?.sourceIds.length === pressArchive.expectedIndexCount + pressArchive.expectedUniqueArticleCount &&
       pressInquiry.limitations.length >= 4
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry];
+  const kcFunding = suite.pilot.kcTownHallFunding;
+  const kcFundingIntake = intakeById.get(kcFunding.intakeId);
+  const kcFundingSources = kcFunding.sourceIds.map((id) => sourceById.get(id));
+  const kcFundingObservations = kcFundingIntake?.observationIds.map((id) => observationById.get(id)) ?? [];
+  const kcFundingClaims = kcFunding.claimIds.map((id) => claimById.get(id));
+  const kcFundingInquiry = inquiryById.get(kcFunding.inquiryId);
+  const kcFundingCorrection = knowledgeBank.corrections.find((item) => item.id === kcFunding.correctionId);
+  const kcFundingCoverage = knowledgeBank.proofCoverageTargets.find((item) => item.proofId === kcFunding.proofId);
+  const kcFundingPage = knowledgeBank.pages.find((item) => item.id === kcFunding.pageId);
+  const kcProjectionText = kcFundingClaims.flatMap((claim) => claim?.projections.map((projection) => projection.text) ?? []).join(" ");
+  const kcFundingComplete = Boolean(
+    kcTownHallFunding.sources.length === kcFunding.expectedSourceCount &&
+      kcFundingIntake?.disposition === "integrated" &&
+      kcFundingIntake.sourceIds.length === kcFunding.expectedSourceCount &&
+      kcFundingIntake.observationIds.length === kcFunding.expectedObservationCount &&
+      kcFundingIntake.researchInquiryIds.includes(kcFunding.inquiryId) &&
+      kcFundingIntake.boundaries.length >= 3 &&
+      kcFundingSources.every(
+        (source) => source?.kind === "government-record" && source.visibility === "public" && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      kcFundingObservations.length === kcFunding.expectedObservationCount &&
+      kcFundingObservations.every(
+        (observation) => observation?.status === "verified" && observation.locator && observation.limitations.length && observation.claimIds.length && observation.researchInquiryIds.includes(kcFunding.inquiryId)
+      ) &&
+      kcFundingClaims.every(
+        (claim) => claim?.status === "confirmed-with-boundary" && claim.evidence.length >= 2 && claim.boundaries.length >= 2 && claim.antiClaims.length >= 3 && claim.reviewedBy.length >= 2 && claim.projections.every((projection) => projection.status === "active" && projection.citationRequired && projection.surfaces.includes("/work/kc-town-hall"))
+      ) &&
+      kcFundingInquiry?.resultStatus === "recovered" &&
+      kcFundingInquiry.sourceIds.length === kcFunding.expectedSourceCount &&
+      kcFundingInquiry.findings.length === kcFunding.expectedObservationCount &&
+      kcFundingInquiry.limitations.length >= 4 &&
+      kcFundingCorrection?.status === "active" &&
+      kcFundingCorrection.replacementText.includes("not disbursed") &&
+      kcFundingCoverage?.status === "source-backed" &&
+      kcFundingCoverage.sourceIds.length === kcFunding.expectedSourceCount &&
+      kcFundingCoverage.researchInquiryIds.includes(kcFunding.inquiryId) &&
+      kcFundingPage?.occurrences.length === kcFunding.claimIds.length &&
+      kcFundingPage.sourceOrder.length === kcFunding.expectedPublicSourceCount &&
+      kcFunding.claimIds.every((id) => kcTownHallMdx.includes(id)) &&
+      kcTownHallMdx.includes("do not establish that Jamie alone caused the Council action") &&
+      workData.includes("funds were not ultimately disbursed") &&
+      proofData.includes("funds were not ultimately disbursed") &&
+      !/KC Town Hall received (?:or spent )?(?:the )?\$490,539/i.test(kcProjectionText) &&
+      !kcTownHallMdx.includes("recommendation unless final funding details")
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -146,7 +195,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         pilotIntakes.every((item) => item && item.boundaries.length && (item.sourceIds.length || item.researchInquiryIds.length)) &&
         expansionIntakes.length === expansion.expectedSourceCount &&
         expansionIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length && item.sourceIds.length === 1 && item.observationIds.length) &&
-        pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length)
+        pressIntakes.every((item) => item?.disposition === "integrated" && item.boundaries.length >= 2 && item.sourceIds.length === 1 && item.observationIds.length) &&
+        kcFundingIntake?.disposition === "integrated" && kcFundingIntake.boundaries.length >= 3
       ),
       evidence: [`${pilotIntakes.filter(Boolean).length} original pilot intakes, ${expansionIntakes.filter(Boolean).length}/${expansion.expectedSourceCount} source-expansion intakes, and ${pressIntakes.filter(Boolean).length}/${pressArchive.expectedIndexCount} press-index intakes retain dispositions, observations, and boundaries`]
     },
@@ -161,7 +211,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
     {
       criterionId: "KB-EVAL-SCOPE",
       score: score(
-        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
+        [...pilotSources, ...expansionSources, ...pressIndexSources, ...pressArticleSources, ...kcFundingSources].every((source) => source?.supportsGenerally.length && source.doesNotEstablish.length) &&
         expansionSources.length === expansion.expectedSourceCount &&
         !errors.some((error) => /does not establish|support a proposition/i.test(error))
       ),
@@ -193,6 +243,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         fairRentMdx.includes("CLM-NYCAC-CABARET-SAFETY-ORGANIZING") &&
         expansion.selectedClaimIds.every((id) => fairRentMdx.includes(id)) &&
         fairRentPage.occurrences.length >= 4 &&
+        kcFundingComplete &&
         knowledgeBank.proofCoverageTargets.length === proofClaims.length
       ),
       evidence: [`Four hiring-relevant NYCAC assertions now have canonical page citations; ${knowledgeBank.proofCoverageTargets.length}/${proofClaims.length} existing proof claims have evidence-coverage dispositions`]
@@ -224,6 +275,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [pressArchiveComplete
         ? `${pressEntries.length} appearances across ${campaignPressInventory.length} campaign indexes resolve to ${uniquePressArticleSourceIds.length} distinct bounded article records; duplicate campaign selection is preserved`
         : "Campaign press inventory is missing an appearance, source, boundary, disposition, or exact count"]
+    },
+    {
+      criterionId: "KB-EVAL-KCTH-FUNDING-LIFECYCLE",
+      score: score(kcFundingComplete),
+      evidence: [kcFundingComplete
+        ? "Five official records preserve the CCED recommendation, Council acceptance and appropriation, zero disbursement, withdrawal, and 2024 return; four nonredundant notes support the two-claim public projection"
+        : "KC Town Hall funding intake, source scope, observations, claims, lifecycle boundary, proof coverage, correction, or public citation plan is incomplete"]
     }
   ];
 

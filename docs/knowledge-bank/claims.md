@@ -173,15 +173,15 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
+**Public wording:** Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.
 **Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Distinguish the July 2019 CCED Board recommendation, September 2019 Council acceptance and appropriation, later funding-agreement status, zero disbursement, project withdrawal, and 2024 reappropriation. Preserve collective project credit.
+**Do not say:** KC Town Hall received or spent the $490,539; the development was completed; Jamie alone secured the Council action; the public record establishes why the project withdrew.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## source-backed-team-memory-method - Source-backed team memory
 

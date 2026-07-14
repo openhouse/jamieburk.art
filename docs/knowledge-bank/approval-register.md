@@ -30,7 +30,7 @@ only then enable indexing for that SHA.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
-- KC Town Hall funding: tie the amount to a public funding recommendation unless final funding details are separately approved.
+- KC Town Hall funding: approved public wording may say the CCED Board recommended $490,539 and the Council accepted the recommendation and appropriated that amount in 2019. It must also preserve that the money was not disbursed, the project later withdrew, and the Council returned the unused funds in 2024. Do not call the appropriation funding received.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

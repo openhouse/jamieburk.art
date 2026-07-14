@@ -126,6 +126,27 @@
       "claimId": "CLM-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
       "inquiryId": "INQ-NYCAC-CAMPAIGN-PRESS-ARCHIVE",
       "duplicateSourceId": "SRC-NYCAC-NPR-CABARET-2017-09-20"
+    },
+    "kcTownHallFunding": {
+      "intakeId": "INTAKE-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE",
+      "expectedSourceCount": 5,
+      "expectedPublicSourceCount": 4,
+      "expectedObservationCount": 8,
+      "sourceIds": [
+        "SRC-KCTH-CCED-FACT-SHEET-190649",
+        "SRC-KCTH-RESOLUTION-190649",
+        "SRC-KCTH-ORDINANCE-190642",
+        "SRC-KCTH-CCED-PROJECT-UPDATE-2022-05-10",
+        "SRC-KCTH-ORDINANCE-240317"
+      ],
+      "claimIds": [
+        "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019",
+        "CLM-KCTH-NONDISBURSEMENT-AND-REAPPROPRIATION"
+      ],
+      "inquiryId": "INQ-KCTH-CCED-COUNCIL-FUNDING-LIFECYCLE",
+      "correctionId": "COR-KCTH-FUNDING-LIFECYCLE-2026",
+      "proofId": "kc-town-hall-public-benefit-documentation",
+      "pageId": "kc-town-hall"
     }
   },
   "criteria": [
@@ -191,6 +212,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every press-list appearance across the four campaign sites is preserved with campaign provenance, deduplicated article identity, availability context, scope boundaries, and a maturation disposition."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FUNDING-LIFECYCLE",
+      "label": "KC Town Hall funding lifecycle integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "The bank and public projection preserve the full official sequence from CCED recommendation through Council acceptance and appropriation to zero disbursement, withdrawal, and return of the unused funds, without converting collective authorization into individual receipt or sole causation."
     }
   ],
   "hillClimb": {
@@ -206,7 +234,8 @@
       "Never improve completeness by placing private paths or raw evidence in the public repo.",
       "Never improve projection coverage by publishing every mature claim.",
       "Never infer sole causation from participation, proximity, or contemporaneous coverage.",
-      "Never treat a photograph as self-interpreting proof or consent to publish."
+      "Never treat a photograph as self-interpreting proof or consent to publish.",
+      "Never turn an appropriation into money received, omit a material later disposition, or erase a documented approval because the project later changed course."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."
   }

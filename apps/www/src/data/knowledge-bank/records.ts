@@ -1,4 +1,5 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
@@ -25,6 +26,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
+    ...kcTownHallFunding.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems
   ],
@@ -47,6 +49,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
+    ...kcTownHallFunding.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations
   ],
@@ -196,6 +199,7 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
+    ...kcTownHallFunding.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources
   ],
@@ -298,6 +302,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
+    ...kcTownHallFunding.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims
   ],
@@ -340,6 +345,7 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...historicalKnowledge.researchInquiries,
+    ...kcTownHallFunding.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries
   ],
@@ -347,7 +353,8 @@ const knowledgeBankInput = {
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
-    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
+    { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
+    ...kcTownHallFunding.corrections
   ],
   pages: [{
     id: "callnyc",
@@ -387,7 +394,7 @@ const knowledgeBankInput = {
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] }
     ]
-  }]
+  }, kcTownHallFunding.page]
 };
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

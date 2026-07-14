@@ -95,6 +95,53 @@ test("campaign press articles remain bounded source leads until close reading", 
   assert.ok(claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0));
 });
 
+test("KC Town Hall funding lifecycle retains the Council action and later disposition", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FUNDING-LIFECYCLE")?.score,
+    5
+  );
+});
+
+test("KC Town Hall funding lifecycle rejects omission of the 2024 disposition", () => {
+  const pilot = suite.pilot.kcTownHallFunding;
+  const intake = knowledgeBank.intakeItems.find((item) => item.id === pilot.intakeId);
+  assert.ok(intake);
+  const removedObservationId = intake.observationIds.pop();
+
+  try {
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FUNDING-LIFECYCLE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    intake.observationIds.push(removedObservationId);
+  }
+});
+
+test("KC Town Hall funding lifecycle rejects appropriation-as-receipt language", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019"
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const originalText = projection.text;
+
+  try {
+    projection.text = "KC Town Hall received the $490,539.";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FUNDING-LIFECYCLE")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.text = originalText;
+  }
+});
+
 test("photo feedback is instantiated as a protected research chain", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 5);

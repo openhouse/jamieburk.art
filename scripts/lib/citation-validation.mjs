@@ -5,6 +5,7 @@ import publicRegistry from "../../apps/www/src/data/knowledge-bank/public-regist
 
 const publicSurfaceFiles = [
   "apps/www/src/content/work/callnyc.mdx",
+  "apps/www/src/content/work/kc-town-hall.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -186,7 +187,7 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
 
   if (includePublicFiles) {
     const publicText = publicSurfaceFiles.map((path) => readFileSync(path, "utf8")).join("\n");
-    for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i]) {
+    for (const pattern of [/first civic-data hackathon/i, /first civic-tech hackathon/i, /the Council['’]s first hackathon(?! of)/i, /2014[-–]2015/, /citation pending|press citation pending/i, /recommendation unless final funding details/i, /KC Town Hall received (?:or spent )?(?:the )?\$490,539/i]) {
       if (pattern.test(publicText)) errors.push(`Retired or unresolved wording remains on a public surface: ${pattern}`);
     }
     const mdx = readFileSync("apps/www/src/content/work/callnyc.mdx", "utf8");

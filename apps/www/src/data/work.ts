@@ -484,7 +484,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building project that won City Council approval and appropriation of $490,539 in CCED funding; the funds were not ultimately disbursed.",
     role: "Project Planning & Documentation Support",
     years: "2020s",
     status: "Short proof page",
@@ -510,9 +510,10 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary and approved public materials pending.",
+      "Official Kansas City Council and CCED records, approved resume language, and public-safe project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+    currentStatus:
+      "The public funding record runs from a 2019 Council appropriation through return of the unused funds after the project withdrew in 2024.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -520,13 +521,14 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "$490,539 public funding recommendation"
+      "2019 Council acceptance and $490,539 appropriation",
+      "$0 disbursed before the unused funds were returned in 2024"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. Official records establish the CCED recommendation, Council acceptance and appropriation, zero disbursement as of May 2022, and return of the unused funds after the project withdrew.",
       open:
-        "Specific public-funding materials, named partners, and project status details need approval.",
+        "Jamie's complete role, named collaborators, the current property status, and the reasons for withdrawal are not established by the funding records.",
       protected:
         "Private financial, legal, property, banking, and stakeholder details are omitted."
     }
