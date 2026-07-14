@@ -289,6 +289,129 @@ test("Teams archive promotes only the independently supported CallNYC recognitio
   );
 });
 
+test("Shared Drives production retains the bounded seven-source evidence graph", () => {
+  const pilot = suite.pilot.googleDriveSharedDrivesProduction;
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(pilot.expectedDriveCount, 110);
+  assert.equal(pilot.expectedInspectedRootCount, 26);
+  assert.equal(pilot.expectedCloseReadArtifactCount, 7);
+  assert.equal(pilot.intakeIds.length, pilot.expectedIntakeCount);
+  assert.equal(pilot.sourceIds.length, pilot.expectedSourceCount);
+  assert.equal(pilot.claimIds.length, pilot.expectedClaimCount);
+  assert.equal(pilot.inquiryIds.length, pilot.expectedInquiryCount);
+  assert.equal(
+    result.criteria.find(
+      (item) => item.criterionId === "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION"
+    )?.score,
+    5
+  );
+});
+
+test("Shared Drives private sources cannot expose Drive URLs or enter the public registry", () => {
+  const pilot = suite.pilot.googleDriveSharedDrivesProduction;
+  const publicRegistry = readFileSync(
+    new URL("../../apps/www/src/data/knowledge-bank/public-registry.json", import.meta.url),
+    "utf8"
+  );
+
+  for (const sourceId of pilot.privateSourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source);
+    assert.notEqual(source.visibility, "public");
+    assert.equal(source.preservationStatus, "private");
+    assert.ok(source.protectedLocatorId);
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+    assert.equal(publicRegistry.includes(sourceId), false);
+    assert.equal(publicRegistry.includes(source.protectedLocatorId), false);
+  }
+});
+
+test("Shared Drives production rejects accidental publication of a held claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-COMMERCIAL-VACANCY-PRIVACY-PRESERVING-PILOT-DESIGN"
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = { status: projection.status, surfaces: [...projection.surfaces] };
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/fair-rent-nyc"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.status = original.status;
+    projection.surfaces = original.surfaces;
+  }
+});
+
+test("Shared Drives production preserves collaborator authorship for email guides", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-GDRIVE-NYCAC-IOS-EMAIL-ONBOARDING-2020"
+  );
+  assert.ok(source);
+  const originalAuthor = source.author;
+
+  try {
+    source.author = "Jamie Burkart";
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    source.author = originalAuthor;
+  }
+});
+
+test("Shared Drives production preserves the non-exhaustive access limitation", () => {
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"
+  );
+  assert.ok(inquiry);
+  const original = [...inquiry.limitations];
+
+  try {
+    inquiry.limitations = inquiry.limitations.filter(
+      (limitation) => !/not an exhaustive review|does not prove ownership/i.test(limitation)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    inquiry.limitations = original;
+  }
+});
+
+test("Shared Drives production keeps the resident count separate from gathering evidence", () => {
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE"
+  );
+  const ledger = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-GDRIVE-SUNDAY-DINNER-OPERATING-LEDGER"
+  );
+
+  assert.ok(inquiry?.findings.some((finding) => /not independently established/i.test(finding)));
+  assert.ok(ledger?.doesNotEstablish.includes("20-plus resident artists"));
+});
+
 test("photo feedback is instantiated as a protected research chain", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-RECOMPOSITION")?.score, 5);

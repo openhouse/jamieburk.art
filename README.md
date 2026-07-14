@@ -66,6 +66,13 @@ public registry; `npm run test:citations` runs citation regressions; and
 `npm run report:citations` writes an ignored review report to
 `reports/generated/citations.md`.
 
+Archive-production passes are evaluated as hard gates rather than informal
+notes. Run `npm run check:knowledge-evals`, `npm run test:knowledge-evals`, and
+`npm run report:knowledge-evals`. The latest Shared Drives pass is documented at
+`docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md`;
+the repository retains only public-safe records, never Shared Drive identifiers,
+private URLs, permissions, participant rows, or credentials.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:

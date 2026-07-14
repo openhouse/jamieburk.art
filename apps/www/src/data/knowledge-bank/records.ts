@@ -1,4 +1,5 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
@@ -27,6 +28,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
+    ...googleDriveSharedDrivesProduction.intakeItems,
     ...teamsArchiveProduction.intakeItems,
     ...kcTownHallFunding.intakeItems,
     ...nycacSourceExpansion.intakeItems,
@@ -51,6 +53,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
+    ...googleDriveSharedDrivesProduction.observations,
     ...teamsArchiveProduction.observations,
     ...kcTownHallFunding.observations,
     ...nycacSourceExpansion.observations,
@@ -202,6 +205,7 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
+    ...googleDriveSharedDrivesProduction.sources,
     ...teamsArchiveProduction.sources,
     ...kcTownHallFunding.sources,
     ...nycacSourceExpansion.sources,
@@ -306,6 +310,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
+    ...googleDriveSharedDrivesProduction.claims,
     ...teamsArchiveProduction.claims,
     ...kcTownHallFunding.claims,
     ...nycacSourceExpansion.claims,
@@ -350,6 +355,7 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...historicalKnowledge.researchInquiries,
+    ...googleDriveSharedDrivesProduction.researchInquiries,
     ...teamsArchiveProduction.researchInquiries,
     ...kcTownHallFunding.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,

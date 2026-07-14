@@ -32,7 +32,7 @@ only then enable indexing for that SHA.
   not establish commissioning, formal presentation, adoption, or official
   Council/BetaNYC ownership.
 - WOWList reach: use approximate public-safe adoption wording.
-- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
+- Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording. A protected ledger supports the gathering count and records 2,783 meals served through March 2021; a separate Jamie-authored workflow supports one residency's onboarding and access operations. Neither source independently establishes the 20+ resident aggregate.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
 - KC Town Hall funding: approved public wording may say the CCED Board recommended $490,539 and the Council accepted the recommendation and appropriated that amount in 2019. It must also preserve that the money was not disbursed, the project later withdrew, and the Council returned the unused funds in 2024. Do not call the appropriation funding received.
 - KC Town Hall stewardship: Jamie's first-person account that he transitioned the project to a mission-aligned organization is approved for retention as a held public-safe knowledge-bank lead. Website projection and recipient naming remain unapproved pending separate support and consent review. Private circumstances are not retained in the public repository.
@@ -40,6 +40,10 @@ only then enable indexing for that SHA.
 - Teams archive production: the nine newly matured claims not selected for
   CallNYC remain held. Private CRS, proposal, and code-review sources are
   metadata-only and cannot render as public citations.
+- Google Drive Shared Drives production: drive names, identifiers, permissions,
+  collaborator listings, and private file URLs remain protected. The 26-root
+  sample is non-exhaustive. Only the existing Sunday Dinner aggregate is
+  activated; the five other mature claims remain held for later composition.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo

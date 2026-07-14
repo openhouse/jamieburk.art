@@ -82,3 +82,10 @@ See
 for the public-safe production pass across `Jamie Projects History`, `CRS`, and
 `job-hunt`, including the iCloud materialization boundary and selective
 projection decision.
+
+See
+[projects/google-drive-shared-drives-production-2026-07-14.md](projects/google-drive-shared-drives-production-2026-07-14.md)
+for the bounded pass across 110 accessible Shared Drives: aggregate mapping,
+26 portfolio-relevant roots, seven close-read artifacts, cross-carrier
+deduplication, protected-source handling, collective credit, and the strengthened
+Sunday Dinner projection.

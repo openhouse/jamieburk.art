@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -30,6 +31,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
   const callnycMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/callnyc.mdx"), "utf8");
   const kcTownHallMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"), "utf8");
+  const sundayDinnerMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/196-sunday-dinner.mdx"), "utf8");
   const workData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
   const proofData = readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
   const publicRegistryText = readFileSync(publicRegistryPath, "utf8");
@@ -275,9 +277,142 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       teamsArchive.privateSourceIds.every((id) => !publicRegistryText.includes(id)) &&
       existsSync(path.join(repoRoot, "docs/knowledge-bank/projects/teams-archive-production-2026-07-14.md"))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries];
+  const sharedDrives = suite.pilot.googleDriveSharedDrivesProduction;
+  const sharedDriveIntakes = sharedDrives.intakeIds.map((id) => intakeById.get(id));
+  const sharedDriveSources = sharedDrives.sourceIds.map((id) => sourceById.get(id));
+  const sharedDrivePrivateSources = sharedDrives.privateSourceIds.map((id) => sourceById.get(id));
+  const sharedDriveObservations = sharedDriveIntakes.flatMap((item) =>
+    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
+  const sharedDriveClaims = sharedDrives.claimIds.map((id) => claimById.get(id));
+  const sharedDriveInquiries = sharedDrives.inquiryIds.map((id) => inquiryById.get(id));
+  const sharedDriveActiveClaim = claimById.get(sharedDrives.activeClaimId);
+  const sharedDriveMainInquiry = inquiryById.get(
+    "INQ-GDRIVE-SHARED-DRIVES-PRODUCTION-2026-07-14"
+  );
+  const sharedDriveScaleInquiry = inquiryById.get(
+    "INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE"
+  );
+  const sharedDriveCoverage = knowledgeBank.proofCoverageTargets.find(
+    (target) => target.proofId === sharedDrives.proofId
+  );
+  const sharedDriveEmailSources = [
+    sourceById.get("SRC-GDRIVE-OHAI-EMAIL-ONBOARDING-2020"),
+    sourceById.get("SRC-GDRIVE-NYCAC-IOS-EMAIL-ONBOARDING-2020")
+  ];
+  const sharedDriveEmailClaim = claimById.get(
+    "CLM-NYCAC-AND-OHAI-ROLE-BASED-COMMUNICATION-INFRASTRUCTURE"
+  );
+  const sharedDriveComplete = Boolean(
+    googleDriveSharedDrivesProduction.intakeItems.length === sharedDrives.expectedIntakeCount &&
+      googleDriveSharedDrivesProduction.sources.length === sharedDrives.expectedSourceCount &&
+      googleDriveSharedDrivesProduction.observations.length === sharedDrives.expectedObservationCount &&
+      googleDriveSharedDrivesProduction.claims.length === sharedDrives.expectedClaimCount &&
+      googleDriveSharedDrivesProduction.researchInquiries.length === sharedDrives.expectedInquiryCount &&
+      sharedDriveIntakes.length === sharedDrives.expectedIntakeCount &&
+      sharedDriveIntakes.every(
+        (intake) => intake?.disposition === "integrated" &&
+          intake.sourceIds.length === 1 &&
+          intake.observationIds.length &&
+          intake.researchInquiryIds.length &&
+          intake.boundaries.length >= 2
+      ) &&
+      sharedDriveSources.length === sharedDrives.expectedSourceCount &&
+      sharedDriveSources.every(
+        (source) => source?.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      sharedDrivePrivateSources.length === sharedDrives.privateSourceIds.length &&
+      sharedDrivePrivateSources.every(
+        (source) => source &&
+          source.visibility !== "public" &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+      ) &&
+      sharedDriveObservations.length === sharedDrives.expectedObservationCount &&
+      sharedDriveObservations.every(
+        (observation) => observation?.sourceId &&
+          observation.locator &&
+          observation.limitations.length &&
+          observation.publicSafe &&
+          observation.claimIds.length &&
+          observation.researchInquiryIds.length
+      ) &&
+      sharedDriveClaims.length === sharedDrives.expectedClaimCount &&
+      sharedDriveClaims.every(
+        (claim) => claim?.status === "confirmed-with-boundary" &&
+          claim.evidence.length &&
+          claim.boundaries.length >= 2 &&
+          claim.antiClaims.length >= 3 &&
+          claim.reviewedBy.length >= 2
+      ) &&
+      sharedDriveClaims
+        .filter((claim) => claim?.id !== sharedDrives.activeClaimId)
+        .every((claim) =>
+          claim?.projections.every(
+            (projection) => projection.status === "hold" && projection.surfaces.length === 0
+          )
+        ) &&
+      sharedDriveClaims.every((claim) =>
+        claim?.evidence.every((evidence) => evidence.renderCitation === false)
+      ) &&
+      sharedDriveInquiries.length === sharedDrives.expectedInquiryCount &&
+      sharedDriveInquiries.every(
+        (inquiry) => inquiry?.methods.length &&
+          inquiry.findings.length &&
+          inquiry.limitations.length >= 3 &&
+          inquiry.sourceIds.length
+      ) &&
+      sharedDriveMainInquiry?.findings.some((finding) =>
+        finding.includes(`${sharedDrives.expectedDriveCount} accessible Shared Drives`)
+      ) &&
+      sharedDriveMainInquiry.methods.some((method) =>
+        method.includes(`${sharedDrives.expectedInspectedRootCount} portfolio-relevant drive roots`)
+      ) &&
+      sharedDriveMainInquiry.methods.some((method) =>
+        method.includes(`${sharedDrives.expectedCloseReadArtifactCount} unique high-signal`)
+      ) &&
+      sharedDriveMainInquiry.limitations.some((limitation) => /not an exhaustive review/i.test(limitation)) &&
+      sharedDriveMainInquiry.limitations.some(
+        (limitation) => /does not prove ownership/i.test(limitation)
+      ) &&
+      sharedDriveScaleInquiry?.findings.some(
+        (finding) => /20-plus resident-artist count.*not independently established/i.test(finding)
+      ) &&
+      sharedDriveActiveClaim?.projections.some(
+        (projection) => projection.status === "active" &&
+          !projection.citationRequired &&
+          projection.surfaces.includes("/work/196-sunday-dinner") &&
+          projection.text.includes("345 numbered gatherings") &&
+          projection.text.includes("2,783 meals served")
+      ) &&
+      sharedDriveActiveClaim.evidence.some(
+        (evidence) => evidence.sourceId === sharedDrives.sundayDinnerSourceId &&
+          evidence.relationship === "private-support" &&
+          evidence.renderCitation === false
+      ) &&
+      sharedDriveCoverage?.status === "protected-support" &&
+      sharedDriveCoverage.sourceIds.includes(sharedDrives.sundayDinnerSourceId) &&
+      sharedDriveCoverage.sourceIds.includes("SRC-GDRIVE-196-ACCEPTANCE-WORKFLOW-2023") &&
+      sharedDriveCoverage.researchInquiryIds.includes("INQ-GDRIVE-SUNDAY-DINNER-AND-196-SCALE") &&
+      sharedDriveEmailSources.every((source) => source?.author === "Julia Fredenburg") &&
+      sharedDriveEmailClaim?.antiClaims.includes("Jamie authored these guides.") &&
+      sundayDinnerMdx.includes("345 numbered gatherings") &&
+      sundayDinnerMdx.includes("2,783 meals served") &&
+      sundayDinnerMdx.includes("participant names, contact details, attendance history") &&
+      workData.includes("345 numbered gatherings and 2,783 meals served") &&
+      workData.includes("participant-level records remain intentionally omitted") &&
+      sharedDrives.privateSourceIds.every((id) => !publicRegistryText.includes(id)) &&
+      sharedDrivePrivateSources.every(
+        (source) => source?.protectedLocatorId && !publicRegistryText.includes(source.protectedLocatorId)
+      ) &&
+      existsSync(path.join(repoRoot, "docs/knowledge-bank/projects/google-drive-shared-drives-production-2026-07-14.md"))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -441,6 +576,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [teamsArchiveComplete
         ? `${teamsSources.length} bounded sources from three required Teams archive families produced ${teamsObservations.length} atomic observations and ${teamsClaims.length} mature claims; one independently supported CallNYC claim is public and the remaining depth stays held`
         : "Teams archive source counts, boundaries, hydration limits, held claims, proof coverage, CallNYC projection, documentation, or private-source redaction is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-GDRIVE-SHARED-DRIVES-PRODUCTION",
+      score: score(sharedDriveComplete),
+      evidence: [sharedDriveComplete
+        ? `${sharedDriveSources.length} protected sources from a ${sharedDrives.expectedDriveCount}-drive inventory and ${sharedDrives.expectedInspectedRootCount}-root sample produced ${sharedDriveObservations.length} atomic observations and ${sharedDriveClaims.length} mature claims; the existing Sunday Dinner projection gained aggregate support while five claims remain held`
+        : "Shared Drives counts, non-exhaustive method, deduplication, private-source redaction, collective credit, held claims, Sunday Dinner projection, proof coverage, or documentation is incomplete"]
     }
   ];
 

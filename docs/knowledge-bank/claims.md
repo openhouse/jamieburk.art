@@ -142,16 +142,17 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public-safe archive summary / Jamie review confirmation  
+**Evidence class:** Approved resume / public community context / protected operations ledger / Jamie-authored residency workflow / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**New protected support:** A private operating ledger records 345 numbered gatherings and 2,783 meals served through March 2021. A separate 2023 workflow documents Jamie-authored acceptance, space-configuration, arrival, and collaborator-access planning for one residency. These sources do not establish the 20+ resident aggregate.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

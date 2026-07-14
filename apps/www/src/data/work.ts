@@ -457,7 +457,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary, approved public materials pending, and private records intentionally omitted.",
+      "Public-safe aggregate summary supported by a protected operations ledger and residency workflow; participant-level records remain intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -465,13 +465,14 @@ const workItemsInput = [
       "Community operations, onboarding, facilitation, documentation, trust-building systems, and continuity planning.",
     evidence: [
       "300+ hosted gatherings",
+      "Protected operations ledger records 345 numbered gatherings and 2,783 meals served through March 2021",
       "20+ resident artists supported",
       "Onboarding and participation systems",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A protected ledger records 345 numbered gatherings and 2,783 meals served through March 2021.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
