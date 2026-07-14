@@ -461,6 +461,83 @@
       ]
     },
     {
+      "id": "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "title": "Awaiting the Night Mayor",
+      "organization": "The Village Voice",
+      "author": "Roshan Abraham",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-11-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.villagevoice.com/awaiting-the-night-mayor/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Roshan Abraham, 'Awaiting the Night Mayor,' The Village Voice, November 17, 2017.",
+      "publicNote": "Independent reporting describes about one hundred people gathering at Market Hotel for the NYC Artist Coalition's Save NYC Spaces town hall with Council members and city-agency representatives.",
+      "doesNotEstablish": [
+        "Jamie's individual production tasks for the event",
+        "that the Facebook response count measured attendance",
+        "sole coalition credit or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+      "title": "NYC Artist Coalition - March General Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/1833265643557435/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'NYC Artist Coalition - March General Meeting,' Facebook event, March 6, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+      "title": "Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-04-25",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/212427345900529/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'Legalize Dance in NYC Panel - NYC Artist Coalition April Meeting,' Facebook event, April 25, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+      "title": "Tell NYC's Night Mayor: Save NYC Spaces",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/120802405289008/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition and campaign partners, 'Tell NYC's Night Mayor: Save NYC Spaces,' Facebook event, October 11, 2017.",
+      "doesNotEstablish": [
+        "individual authorship of the event page",
+        "physical attendance from Facebook response totals",
+        "unique responders across events",
+        "sole organization or policy causality"
+      ]
+    },
+    {
       "id": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
       "title": "Authenticated @CallNYCApp full-population recovery and public-post ledger",
       "organization": "X (formerly Twitter)",
@@ -1331,6 +1408,83 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie helped establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Twelve recovered recurring-meeting records span ten distinct named physical venues and two virtual meetings; the wider event population also includes public hearings, rallies, training and Q&A sessions, venue-support actions, and relief coordination.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/nycartc-facebook-events-2026-07-13"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "the recurring meeting format and its mix of safety, listening, survey, and town-hall work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "the rotating cultural-space practice and policy-to-action format"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "a cultural-space town hall connecting lived concerns with public officials"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "independent reporting on the town hall, its approximate attendance, and city-participant context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-CABARET-GOTHAMIST-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's named coalition advocacy and the coalition's practical fire-safety study groups"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Credit the event practice and outcomes collectively; Jamie's first-person account supports his contribution, not sole organization or authorship.",
+        "Do not attribute every event page, invitation, or facilitation decision to Jamie without event-level production evidence or collaborator confirmation.",
+        "The event record supports a recurring rotating-venue practice, not an uninterrupted monthly schedule in every year.",
+        "Policy outcomes require independent official evidence and collective-work language."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1671,7 +1825,11 @@
         "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
         "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
-        "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
+        "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+        "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+        "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+        "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
       ],
       "occurrences": [
         {
@@ -1713,6 +1871,18 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
+          ]
+        },
+        {
+          "id": "participation-system",
+          "claimId": "CLM-NYCAC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+            "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+            "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+            "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
           ]
         },
         {

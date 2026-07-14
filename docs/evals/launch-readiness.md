@@ -44,6 +44,8 @@ The canonical positioning sentence is:
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 | Project social archive production | 18 | Yes | Verified account identities, authenticated recovery floors, direct engagement definitions, collective authorship boundaries, and selected public projections remain linked and privacy-safe. |
 | CallNYC full-population archive | 20 | Yes | All 110 observed profile-count slots reconcile to 107 item-level recoveries and three explicit unresolved slots; post types, stakeholder patterns, issue links, external URLs, claims, and boundaries recompute from the ledger. |
+| NYC Artist Coalition full-population archive | 20 | Yes | All 5,124 current profile-count slots reconcile to 3,367 item-level recoveries and 1,757 unresolved slots; themes, links, inbound engagement floors, Council-member interactions, claims, and collective-authorship boundaries recompute from the ledgers. |
+| NYC Artist Coalition Facebook event archive | 20 | Yes | All 34 current past-event control slots reconcile to 33 recovered records and one unresolved slot; recurring-meeting, venue, response, posted-link, source-routing, role, collective-credit, and privacy boundaries recompute from the ledgers. |
 | Personal social full-population archive | 20 | Yes | All 434 records in the current `@urbanhermit` live-profile control reconcile as 338 authored posts, 15 authored replies, and 81 reposts; aggregate years, themes, links, inbound stakeholder groups, and interaction contexts recompute without exposing the personal timeline or misassigning repost reactions. |
 | WOWList full-population archive | 20 | Yes | All 38 current-profile items reconcile at item level; account posts, support replies, reposts, themes, links, claims, and collective-authorship boundaries recompute from the ledger. |
 | KC Town Hall full-population archive | 20 | Yes | All 183 observed profile-count slots reconcile to 181 item-level recoveries and two explicit unresolved slots; account relationships, themes, links, reactions, stakeholder patterns, shared authorship, later stewardship, and selected public projections recompute from the ledger. |
@@ -105,3 +107,8 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   search as a platform export, promoting ordinary conversation as professional
   evidence, assigning repost statements or reactions to Jamie, or converting
   link and mention counts into reach, endorsement, causality, or impact.
+- Do not satisfy Facebook event completeness by erasing the unresolved control
+  slot, treating response displays as attendance or unique people, summing
+  responses, assigning every event page to Jamie, treating posted links as
+  automatic corroboration, publishing participant or access data, or converting
+  an event chronology into sole policy causality.

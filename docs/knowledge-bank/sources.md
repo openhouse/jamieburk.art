@@ -167,6 +167,37 @@ stronger public publication.
 Potentially usable, but do not project to public pages until Jamie or
 collaborators approve.
 
+### NYC Artist Coalition Facebook Events
+
+The July 13 capture and July 14 authenticated revalidation preserve five source
+functions:
+
+- the public [NYC Artist Coalition events surface](https://www.facebook.com/nycartc/events)
+  as the 34-slot control;
+- a protected record-level run accounting for 33 recovered events and one
+  unresolved slot;
+- a protected outbound-link run accounting for 61 occurrences across 38
+  normalized URL rows on 25 events;
+- Jamie's protected first-person confirmation of his substantial event-system
+  contribution; and
+- selected public event pages and independent reporting used for claim and
+  boundary support.
+
+Independent public sources selected in this pass include Roshan Abraham's
+[Village Voice account of the Market Hotel town
+hall](https://www.villagevoice.com/awaiting-the-night-mayor/) and Elizabeth
+Kim's [Gothamist account of the 2019 Commercial Rent Stabilization
+proposal](https://gothamist.com/news/facing-retail-vacancy-crisis-city-council-consider-plan-commercial-rent-stabilization).
+Emily Witt's New Yorker Cabaret Law hearing report and Liz Pelly's Baffler
+M.A.R.C.H. report were promoted from campaign-index metadata to close-read
+source records.
+
+The public event and link ledgers exclude guest identities, comments, invite
+and friend context, participant profiles, contact details, working-document
+locators, meeting-access paths, private administration, credentials, and raw
+authenticated captures. A link posted in an event description remains a source
+lead until close reading establishes what it supports.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

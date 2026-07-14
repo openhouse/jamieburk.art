@@ -2123,6 +2123,201 @@ export function evaluateUrbanHermitFullPopulationArchive({
   return missing;
 }
 
+export function evaluateNycArtCFacebookEventArchive({
+  eventLedger,
+  linkLedger,
+  corpusModel,
+  framework,
+  proofs,
+  workData,
+  fairRentCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let events;
+  let links;
+  try {
+    events = JSON.parse(eventLedger);
+  } catch {
+    missing.push("NYC Artist Coalition Facebook event ledger is not valid JSON.");
+    return missing;
+  }
+  try {
+    links = JSON.parse(linkLedger);
+  } catch {
+    missing.push("NYC Artist Coalition Facebook event link ledger is not valid JSON.");
+    return missing;
+  }
+
+  const accounting = events.accounting ?? {};
+  const records = events.records ?? [];
+  const recovered = records.filter((record) => record.recoveryStatus !== "unresolved-control-slot");
+  const unresolved = records.filter((record) => record.recoveryStatus === "unresolved-control-slot");
+  const responseValues = recovered
+    .map((record) => record.responseValue)
+    .filter(Number.isFinite);
+  const yearCount = (year) => recovered.filter((record) => record.date?.startsWith(year)).length;
+  const recurring = recovered.filter((record) => record.isRecurringMeeting);
+  const recurringVirtual = recurring.filter((record) => record.venueOrMode === "Virtual");
+  const recurringPhysicalVenues = new Set(
+    recurring
+      .filter((record) => record.venueOrMode !== "Virtual")
+      .map((record) => record.venueOrMode)
+  );
+
+  expect(accounting.controlSlots === 34, "NYC Artist Coalition Facebook event control must remain 34 slots.");
+  expect(accounting.recoveredRecords === 33, "NYC Artist Coalition Facebook event recovery must remain 33 records.");
+  expect(accounting.unresolvedSlots === 1, "NYC Artist Coalition Facebook event archive must retain one unresolved slot.");
+  expect(records.length === 34, "NYC Artist Coalition Facebook event ledger must retain all 34 control-slot dispositions.");
+  expect(recovered.length === 33, "NYC Artist Coalition Facebook event ledger must recompute to 33 recovered records.");
+  expect(unresolved.length === 1, "NYC Artist Coalition Facebook event ledger must recompute to one unresolved slot.");
+  expect(
+    unresolved.every(
+      (record) =>
+        record.eventId === null &&
+        record.date === null &&
+        record.title === null &&
+        record.sourceUrl === null
+    ),
+    "The unresolved Facebook event slot must not acquire an inferred ID, date, title, or URL."
+  );
+  expect(
+    new Set(recovered.map((record) => record.eventId)).size === 33,
+    "Recovered NYC Artist Coalition Facebook event IDs must remain unique."
+  );
+
+  const expectedYears = { "2017": 17, "2018": 3, "2019": 6, "2020": 6, "2021": 1 };
+  for (const [year, count] of Object.entries(expectedYears)) {
+    expect(yearCount(year) === count, `NYC Artist Coalition Facebook ${year} count must recompute to ${count}.`);
+    expect(accounting.yearCounts?.[year] === count, `Stored NYC Artist Coalition Facebook ${year} count must remain ${count}.`);
+  }
+  expect(recurring.length === 12, "NYC Artist Coalition Facebook recurring-meeting count must recompute to 12.");
+  expect(recurringVirtual.length === 2, "NYC Artist Coalition Facebook recurring virtual-meeting count must recompute to two.");
+  expect(recurringPhysicalVenues.size === 10, "NYC Artist Coalition Facebook recurring physical-venue count must recompute to ten.");
+
+  const responseAccounting = accounting.responseSignals ?? {};
+  expect(responseValues.length === 32, "NYC Artist Coalition Facebook response-display count must recompute to 32.");
+  expect(Math.min(...responseValues) === 9, "NYC Artist Coalition Facebook minimum response display must remain nine.");
+  expect(Math.max(...responseValues) === 1700, "NYC Artist Coalition Facebook maximum response display must remain 1.7K.");
+  expect(responseValues.filter((value) => value >= 100).length === 19, "NYC Artist Coalition Facebook events at or above 100 responses must recompute to 19.");
+  expect(responseValues.filter((value) => value >= 400).length === 9, "NYC Artist Coalition Facebook events at or above 400 responses must recompute to nine.");
+  expect(responseValues.filter((value) => value >= 1000).length === 3, "NYC Artist Coalition Facebook events at or above 1K responses must recompute to three.");
+  expect(responseAccounting.displayed === responseValues.length, "Stored Facebook response-display count must match the event rows.");
+  expect(responseAccounting.minimum === 9 && responseAccounting.maximum === 1700, "Stored Facebook response range must remain nine through 1.7K.");
+  expect(/must not be summed/i.test(responseAccounting.boundary ?? ""), "Facebook response totals must remain explicitly non-summable.");
+
+  const linkRows = links.rows ?? [];
+  const linkAccounting = links.accounting ?? {};
+  const linkOccurrences = linkRows.reduce((sum, row) => sum + row.occurrences, 0);
+  const linkEventIds = new Set(linkRows.flatMap((row) => row.eventIds));
+  expect(linkRows.length === 38, "NYC Artist Coalition Facebook link ledger must retain 38 normalized URL rows.");
+  expect(linkOccurrences === 61, "NYC Artist Coalition Facebook outbound-link occurrences must recompute to 61.");
+  expect(linkEventIds.size === 25, "NYC Artist Coalition Facebook link-bearing event count must recompute to 25.");
+  expect(linkRows.filter((row) => row.category === "published-article").length === 7, "NYC Artist Coalition Facebook published-article destination count must recompute to seven.");
+  expect(linkRows.filter((row) => row.disposition === "protected").length === 1, "NYC Artist Coalition Facebook protected link-row count must recompute to one.");
+  expect(linkRows.filter((row) => row.disposition === "research-needed").length === 4, "NYC Artist Coalition Facebook unresolved short-link rows must recompute to four.");
+  expect(linkAccounting.linkOccurrences === linkOccurrences, "Stored NYC Artist Coalition Facebook link occurrences must match the rows.");
+  expect(linkAccounting.normalizedUrlRows === linkRows.length, "Stored NYC Artist Coalition Facebook normalized URL count must match the rows.");
+  expect(linkAccounting.eventsWithOutboundLinks === linkEventIds.size, "Stored NYC Artist Coalition Facebook link-bearing event count must match the rows.");
+  expect(
+    linkRows
+      .filter((row) => row.disposition === "protected" || row.host === "goo.gl")
+      .every((row) => row.publicUrl === null),
+    "Protected working-document and unresolved goo.gl locators must remain withheld."
+  );
+
+  requireFragments("NYC Artist Coalition Facebook event model", corpusModel, [
+    "LEAD-NYCAC-FACEBOOK-EVENT-FULL-POPULATION-2026",
+    "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026",
+    "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026",
+    "SRC-NYCAC-FACEBOOK-EVENT-LINK-INVENTORY-2026",
+    "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+    "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+    "SRC-GOTHAMIST-COMMERCIAL-RENT-2019",
+    "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+    "CLM-NYCAC-PARTICIPATION-SYSTEM",
+    "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
+    "CLM-NYCAC-FACEBOOK-EVENT-LINK-ROUTING",
+    "INQ-NYCAC-FACEBOOK-EVENTS-2026",
+    "61 outbound-link occurrences across 38 normalized URL rows on 25 events",
+    "not automatic corroboration",
+    "helped establish and produce",
+    "not sole organization or authorship"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook framework integration", framework, [
+    "nycartcFacebookEventIntake",
+    "nycartcFacebookEventSources",
+    "nycartcFacebookEventClaims",
+    "nycartcFacebookEventInquiries",
+    "nycartcFacebookEventPublicationDecisions",
+    "nycartcFacebookEventProofCoverage"
+  ]);
+  requireFragments("NYC Artist Coalition participation proof", proofs, [
+    'id: "nyc-artist-coalition-participation-system"',
+    "Helped establish and produce",
+    "Twelve recurring-meeting records span ten named physical venues and two virtual meetings",
+    "Facebook responses equal attendance",
+    "All 34 event records were recovered"
+  ]);
+  requireFragments("NYC Artist Coalition work data", workData, [
+    '"nyc-artist-coalition-participation-system"',
+    "Participation event layer",
+    "Twelve recovered recurring-meeting records across ten named physical venues and two virtual meetings"
+  ]);
+  requireFragments("Fair Rent case study", fairRentCase, [
+    'claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"',
+    'occurrenceId="participation-system"',
+    "building this participation layer was a substantial contribution",
+    "do not assign Jamie authorship of every page"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook archive documentation", archiveDoc, [
+    "33 recovered event records + 1 unresolved control slot = 34/34 slots accounted",
+    "same 33-ID set with no additions or omissions",
+    "Twelve recovered records are recurring coalition meetings",
+    "Thirty-two recovered event pages display a Facebook response total",
+    "61 outbound-link occurrences across 38",
+    "posting a URL does not establish",
+    "helped establish and produce",
+    "100 percent control-slot accounting, not 100 percent content recovery"
+  ]);
+  requireFragments("NYC Artist Coalition Facebook anti-claims", antiClaims, [
+    "Facebook response totals equal attendance",
+    "Jamie authored every NYC Artist Coalition Facebook event page",
+    "every historical NYC Artist Coalition event",
+    "posted URL is automatic corroboration",
+    "one event caused a policy outcome"
+  ]);
+
+  const publicBundle = [eventLedger, linkLedger, corpusModel, framework, proofs, workData, fairRentCase, archiveDoc, antiClaims].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /zoom\.us\/j\//i,
+    /docs\.google\.com\/document\/d\//i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public NYC Artist Coalition Facebook event bundle contains access, session, working-document, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -2165,6 +2360,18 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCEngagementLedger = readOptional(
     repoRoot,
     "docs/knowledge-bank/data/nycartc-public-engagement-ledger.json"
+  );
+  const nycArtCFacebookEventCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/nycartc-facebook-events-batch-2026-07-13.ts"
+  );
+  const nycArtCFacebookEventLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/nycartc-facebook-event-ledger.json"
+  );
+  const nycArtCFacebookEventLinkLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json"
   );
   const wowlistSocialCorpus = readOptional(
     repoRoot,
@@ -2226,6 +2433,10 @@ export function runLaunchEvals(repoRoot) {
   const nycArtCFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-nycartc-full-population-social-corpus.md"
+  );
+  const nycArtCFacebookEventDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md"
   );
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
@@ -2474,7 +2685,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: kcTownHallSocialCorpus,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -2711,6 +2922,33 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies relationships, eight theme families, campaign-hashtag floors, 1,241 unique outbound URLs, and all unresolved placeholders.",
         "The inbound ledger distinguishes 347 explicit account mentions from 154 search or thread-context records within 501 rendered results from 178 accounts.",
         "The selected public claim retains a 24-record floor across at least seven Council-member accounts without converting interaction into endorsement or causality."
+      ]
+    })
+  );
+
+  const nycArtCFacebookEventMissing = evaluateNycArtCFacebookEventArchive({
+    eventLedger: nycArtCFacebookEventLedger,
+    linkLedger: nycArtCFacebookEventLinkLedger,
+    corpusModel: nycArtCFacebookEventCorpus,
+    framework,
+    proofs,
+    workData,
+    fairRentCase,
+    archiveDoc: nycArtCFacebookEventDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "nycartc-facebook-event-archive",
+      label: "NYC Artist Coalition Facebook events account for every control slot and expose a bounded participation system",
+      weight: 20,
+      hardGate: true,
+      missing: nycArtCFacebookEventMissing,
+      evidence: [
+        "All 34 current host-card control slots are dispositioned as 33 recovered records and one unresolved slot, with an exact second-pass ID match.",
+        "Recomputation verifies the year distribution, 12 recurring meetings, ten physical venues, two virtual meetings, and bounded response signals.",
+        "Sixty-one outbound-link occurrences become a privacy-reviewed 38-row source and action-routing ledger rather than automatic claim evidence.",
+        "The selected portfolio claim credits Jamie's substantial participation-system contribution while preserving collective authorship and policy-causality boundaries."
       ]
     })
   );

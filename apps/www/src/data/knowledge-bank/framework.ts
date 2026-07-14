@@ -40,6 +40,14 @@ import {
   nycArtCSocialCorpusSources
 } from "./nycartc-social-corpus.ts";
 import {
+  nycartcFacebookEventClaims,
+  nycartcFacebookEventInquiries,
+  nycartcFacebookEventIntake,
+  nycartcFacebookEventProofCoverage,
+  nycartcFacebookEventPublicationDecisions,
+  nycartcFacebookEventSources
+} from "./nycartc-facebook-events-batch-2026-07-13.ts";
+import {
   wowlistSocialCorpusClaims,
   wowlistSocialCorpusInquiries,
   wowlistSocialCorpusIntake,
@@ -539,6 +547,7 @@ export const frameworkIntake = [
   ...campaignPressIntake,
   ...socialArchiveIntake,
   ...nycArtCSocialCorpusIntake,
+  ...nycartcFacebookEventIntake,
   ...callNycSocialCorpusIntake,
   ...wowlistSocialCorpusIntake,
   ...kcTownHallSocialCorpusIntake,
@@ -640,6 +649,15 @@ export const frameworkProjects = [
       "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022",
       "SRC-X-NYCARTC-FULL-POPULATION-AUDIT-2026",
       "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+      "SRC-NYCAC-FACEBOOK-EVENTS-CONTROL-2026",
+      "SRC-NYCAC-FACEBOOK-EVENTS-POPULATION-RUN-2026",
+      "SRC-NYCAC-FACEBOOK-EVENT-LINK-INVENTORY-2026",
+      "SRC-NYCAC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026",
+      "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+      "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "SRC-GOTHAMIST-COMMERCIAL-RENT-2019",
       "SRC-X-NYCARTC-BRAD-LANDER-FAIR-RENT-2021",
       "SRC-HELL-GATE-WHO-LEADS-NIGHTCLUB-RAIDS-2023",
       "SRC-NYT-COMMERCIAL-RENTS-SURGING-2023",
@@ -662,9 +680,13 @@ export const frameworkProjects = [
       "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
       "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
       "CLM-NYCARTC-COMPLETE-SOCIAL-POPULATION",
-      "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY"
+      "CLM-NYCARTC-SOURCE-ROUTING-CONTINUITY",
+      "CLM-NYCAC-FACEBOOK-EVENT-POPULATION-2026",
+      "CLM-NYCAC-PARTICIPATION-SYSTEM",
+      "CLM-NYCAC-FACEBOOK-RESPONSE-BOUNDARY",
+      "CLM-NYCAC-FACEBOOK-EVENT-LINK-ROUTING"
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026", "INQ-NYCARTC-FULL-POPULATION-2026", "INQ-NYCAC-FACEBOOK-EVENTS-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -1335,6 +1357,7 @@ export const frameworkSources = [
   ...campaignPressSources,
   ...socialArchiveSources,
   ...nycArtCSocialCorpusSources,
+  ...nycartcFacebookEventSources,
   ...callNycSocialCorpusSources,
   ...wowlistSocialCorpusSources,
   ...kcTownHallSocialCorpusSources,
@@ -1705,6 +1728,7 @@ export const frameworkClaims = [
   },
   ...socialArchiveClaims,
   ...nycArtCSocialCorpusClaims,
+  ...nycartcFacebookEventClaims,
   ...callNycSocialCorpusClaims,
   ...wowlistSocialCorpusClaims,
   ...kcTownHallSocialCorpusClaims,
@@ -1742,6 +1766,7 @@ export const frameworkInquiries = [
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
   ...socialArchiveInquiries,
   ...nycArtCSocialCorpusInquiries,
+  ...nycartcFacebookEventInquiries,
   ...callNycSocialCorpusInquiries,
   ...wowlistSocialCorpusInquiries,
   ...kcTownHallSocialCorpusInquiries,
@@ -1797,6 +1822,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
 ).concat(
   socialArchivePublicationDecisions,
   nycArtCSocialCorpusPublicationDecisions,
+  nycartcFacebookEventPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
   wowlistSocialCorpusPublicationDecisions,
   kcTownHallSocialCorpusPublicationDecisions,
@@ -1832,6 +1858,7 @@ export const frameworkProofCoverage = [
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
   ...socialArchiveProofCoverage,
   ...nycArtCSocialCorpusProofCoverage,
+  ...nycartcFacebookEventProofCoverage,
   ...callNycSocialCorpusProofCoverage,
   ...wowlistSocialCorpusProofCoverage,
   ...kcTownHallSocialCorpusProofCoverage,
@@ -1848,7 +1875,11 @@ export const frameworkPages = [
       "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
       "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
       "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
-      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"
+      "SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026",
+      "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+      "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+      "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
     ],
     occurrences: [
       {
@@ -1880,6 +1911,18 @@ export const frameworkPages = [
         claimId: "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
         projection: "case-study",
         sourceIds: ["SRC-X-NYCARTC-INBOUND-ENGAGEMENT-AUDIT-2026"]
+      },
+      {
+        id: "participation-system",
+        claimId: "CLM-NYCAC-PARTICIPATION-SYSTEM",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
+          "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
+          "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
+          "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "SRC-NYCARTC-CABARET-GOTHAMIST-2017"
+        ]
       },
       {
         id: "commercial-vacancy-public-data-brief",

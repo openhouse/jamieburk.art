@@ -59,6 +59,15 @@ complete platform export, erase the 1,757 unresolved profile-count slots, or
 turn 501 rendered inbound-search records into 501 explicit mentions, unique
 people, audience reach, or independently audited impact.
 
+Do not say Jamie authored every NYC Artist Coalition Facebook event page or
+solely organized every event. Do not call the current 34-slot accounting every
+historical NYC Artist Coalition event, erase the unresolved control slot, or
+infer its title, date, host, or topic. Do not claim Facebook response totals equal attendance
+or sum them into unique people reached. Do not say a posted URL is automatic corroboration,
+and do not claim one event caused a policy outcome. Keep
+working-document locators, meeting-access paths, guest identities, comments,
+participant profiles, and private account context outside the repository.
+
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE
 filings. It is an authored proposal unless external outcome evidence matures.

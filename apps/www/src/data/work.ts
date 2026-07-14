@@ -193,12 +193,13 @@ const workItemsInput = [
       "nyc-artist-coalition-civic-systems",
       "nyc-artist-coalition-cabaret-organizing",
       "project-social-identity-systems",
-      "nyc-artist-coalition-social-engagement"
+      "nyc-artist-coalition-social-engagement",
+      "nyc-artist-coalition-participation-system"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving commercial-vacancy data proposal, stakeholder follow-up notes, public-safe explanations, public campaign websites, a durable shared campaign identity, and shared campaign memory.",
+      "A recurring participation system linking cultural-space meetings, practical support, public hearings, and campaign action, alongside running minutes, action trackers, source maps, public-data framing, public campaign websites, a durable shared identity, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -230,6 +231,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Participation event layer",
+        description:
+          "Recurring meetings across cultural spaces, practical safety and advocacy sessions, and public paths into hearings, town halls, and campaign action.",
+        type: "workflow"
       }
     ],
     tags: [
@@ -245,6 +252,7 @@ const workItemsInput = [
       "Source Mapping",
       "Action Tracking",
       "Campaign Websites",
+      "Event Systems",
       "Public Guidance",
       "Decision Records"
     ],
@@ -273,12 +281,14 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "Twelve recovered recurring-meeting records across ten named physical venues and two virtual meetings",
+      "A documented path from artist concerns and practical support to public hearings and campaign action",
       "Legal/policy questions organized for collaborators",
       "Privacy-preserving public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Jamie co-founded NYC Artist Coalition and helped establish its recurring participation system while structuring public-safe civic systems, campaign memory, source maps, policy communications, and follow-up systems.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

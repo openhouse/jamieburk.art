@@ -64,6 +64,13 @@ The knowledge bank exists to:
   bounded research population without reproducing personal timelines, private
   records, or raw interaction data.
 
+The NYC Artist Coalition Facebook event pass demonstrates the event-node form
+of this model. `nycartc-facebook-events-2026-07-13.md` interprets the practice;
+`data/nycartc-facebook-event-ledger.json` dispositions all 34 current control
+slots; and `data/nycartc-facebook-event-link-ledger.json` routes 61 posted-link
+occurrences without exposing guest identities, comments, meeting-access paths,
+working-document locators, or private account context.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

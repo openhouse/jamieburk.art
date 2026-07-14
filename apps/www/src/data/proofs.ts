@@ -509,6 +509,48 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "nyc-artist-coalition-participation-system",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to hearings and campaign action.",
+    shortWording: "Built a recurring participation system from cultural-space meetings to public action",
+    detailedPublicWording:
+      "A 34-slot Facebook event census accounts for 33 recovered event records and one unresolved slot. Twelve recurring-meeting records span ten named physical venues and two virtual meetings; the wider record includes public hearings, safety training, legal and architectural Q&A, venue-support actions, panels, rallies, and relief coordination.",
+    sourceBasis:
+      "Jamie's firsthand role account, a twice-traversed authenticated event census, ten selected public event pages, independent Village Voice reporting on the Market Hotel town hall, and Gothamist reporting on Jamie's coalition and fire-safety work.",
+    whyItMatters:
+      "Shows how Jamie turns listening, practical support, public identity, and institutional pathways into repeatable participation infrastructure.",
+    guardrail:
+      "Use helped establish and produce, preserve collective credit, and keep Facebook responses distinct from physical attendance. The current interface is not an official Meta export and one of 34 control slots remains unresolved.",
+    doNotSay: [
+      "Jamie alone organized every NYC Artist Coalition event",
+      "Jamie authored every event page",
+      "Every meeting happened monthly or at a different venue",
+      "Facebook responses equal attendance or unique people reached",
+      "The event system alone caused legislation or agency change",
+      "All 34 event records were recovered"
+    ],
+    protectedBoundaries: [
+      "Guest and attendee identities",
+      "Invite and friend context",
+      "Comments and participant profiles",
+      "Meeting-access paths and credentials",
+      "Private account administration and analytics"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "participation-infrastructure",
+      "event-systems",
+      "public-engagement",
+      "civic-implementation",
+      "stakeholder-translation"
+    ],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",

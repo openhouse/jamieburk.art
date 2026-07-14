@@ -527,3 +527,63 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.  
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
+
+## nycac-facebook-event-population - Facebook event population accounting
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Authenticated public-interface census / protected research run
+**Public wording:** All 34 slots in the current NYC Artist Coalition Facebook past-event control are dispositioned as 33 recovered event records and one unresolved slot.
+**Detailed public-safe wording:** The 33 event IDs recovered on July 13 were recovered again as an exact set on July 14; the separate host-card control remained 34 past events.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Preserves a testable denominator and prevents a missing record from being silently erased or invented.
+**Guardrail:** This is complete control-slot accounting, not every event ever created, an official Meta export, or complete content recovery.
+**Do not say:** All 34 event records were recovered; the unresolved slot was deleted; the current counter reveals all historical events.
+**Protected boundaries:** Raw authenticated captures, account administration, participant context, and access material remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nyc-artist-coalition-participation-system - Recurring participation infrastructure
+
+**Status:** Selected
+**Support level:** Strong with a firsthand role boundary
+**Evidence class:** Public event pages / independent reporting / Jamie review confirmation
+**Public wording:** Jamie helped establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.
+**Detailed public-safe wording:** Twelve recovered recurring-meeting records span ten named physical venues and two virtual meetings. The wider 33-record event population includes safety training, legal and architectural Q&A, venue-support actions, panels, public hearings, a town hall, rallies, workshops, and relief coordination.
+**Where to project:** Fair Rent / NYC Artist Coalition case study and related technical-operations proof.
+**Why it matters:** Makes Jamie's event-system, stakeholder-translation, and implementation contribution legible without reducing relational work to attendance or policy claims.
+**Guardrail:** Use helped establish and produce; preserve collective credit; do not assign Jamie every event page, facilitation choice, or outcome.
+**Do not say:** Jamie alone organized every event; the coalition met every month without interruption; every meeting used a new venue; the event system caused legislation.
+**Protected boundaries:** Guest identities, comments, participant profiles, invite context, private administration, contact details, and meeting-access paths stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nycac-facebook-response-boundary - Response signals are not attendance
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Authenticated public event metadata / independent attendance reporting for one event
+**Public wording:** Thirty-two recovered event pages display Facebook response totals from nine to 1.7K.
+**Detailed public-safe wording:** Nineteen pages display at least 100 responses, nine at least 400, and three at least 1K; one recovered page exposes no response total.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Retains a bounded platform-traction signal while preventing it from becoming false turnout or reach.
+**Guardrail:** These are mutable event-level platform signals, not unique people, physical attendance, participation, reach, endorsement, or impact. Never sum them.
+**Do not say:** 1.7K people attended the Cabaret Law hearing; the sum represents people reached; response volume proves a policy outcome.
+**Protected boundaries:** Guest lists, attendee identities, invite context, comments, reactions, and private analytics are not captured or published.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nycac-facebook-event-link-routing - Event-to-source and action routing
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Protected full-population link review / public-safe routing ledger
+**Public wording:** Across 25 events, 61 outbound-link occurrences route participants toward campaigns, civic actions, registrations, public resources, organizations, and seven published-article destinations.
+**Detailed public-safe wording:** Query parameters and fragments were removed to produce 38 normalized URL rows; HTTP and HTTPS variants remain separate for reproducibility, and every row has a public, protected, or research-needed disposition.
+**Where to project:** Knowledge-bank source discovery, future research, and photo-editor briefs; not current hiring-site impact copy.
+**Why it matters:** Preserves how event nodes connect issues, campaigns, practical resources, actions, organizations, and reporting so later agents can close-read and mature useful evidence.
+**Guardrail:** A posted URL is a research lead, not automatic corroboration, authorship, endorsement, readership, conversion, attendance, reach, or policy impact.
+**Do not say:** Every destination was recovered; Jamie selected every link; link volume proves reach; a linked article verifies every event-page statement.
+**Protected boundaries:** Working-document locators, meeting-access paths, unresolved sensitive destinations, raw descriptions, and private interface context stay outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14

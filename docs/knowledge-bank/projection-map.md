@@ -66,6 +66,9 @@ Current selected citation projections now include:
 - the coalition's MARCH records-request data and the bounded legislative result;
 - a recovered floor of 24 direct `@NYCArtC` interactions from at least seven
   contemporaneous Council-member accounts;
+- Jamie's bounded contribution to a recurring NYC Artist Coalition
+  participation system spanning cultural-space meetings, practical support,
+  public hearings, town halls, and campaign action;
 - WOW List's public Sunday Dinner origin statement and one community-created
   instructional artifact;
 - WOW List's complete current-profile census and the six account replies that
@@ -102,6 +105,14 @@ protected, and one record does not verify the full residency aggregate.
 These selections do not publish founding causality, event-production ownership,
 funding-agreement execution or disbursement, participant records, or a claim
 that MARCH was disbanded.
+
+The selected participation-system claim is backed by a 34-slot Facebook event
+accounting with 33 recovered records and one unresolved slot, plus Jamie's
+first-person role confirmation and independent reporting. The complete census,
+response distribution, and event-to-source link graph remain knowledge-bank
+depth; the site uses only the concise contribution claim. Facebook responses
+are not attendance, and public event pages do not establish Jamie's authorship
+of every page or sole causality for collective outcomes.
 
 KC Town Hall is modeled as historical for Jamie. His firsthand account of
 transitioning stewardship to a mission-aligned organization remains research

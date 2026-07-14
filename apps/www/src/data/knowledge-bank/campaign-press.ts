@@ -106,6 +106,49 @@ const intakeAlreadyHandled = new Set([
 
 const campaignLabels = (entry: CampaignPressEntry) => entry.campaigns.join(", ");
 
+const campaignPressCloseReadOverrides: Record<string, Partial<SourceRecord>> = {
+  "SRC-PRESS-LET-NEW-YORKER-DANCE-OUTLAWS-2017": {
+    author: "Emily Witt",
+    preservationStatus: "live",
+    publishedAt: "2017-07-03",
+    accessedAt: "2026-07-14",
+    publicCitation:
+      "Emily Witt, 'Dance Outlaws Fight for the Right to Party,' The New Yorker, July 3, 2017.",
+    publicNote:
+      "Close-read reporting on the June 2017 City Council hearing, the Cabaret Law's operation, venue testimony, and the wider cultural and enforcement context.",
+    supportsGenerally: [
+      "a multi-hour City Council hearing with venue operators, promoters, artists, dancers, and advocates",
+      "the public cultural and enforcement context for Cabaret Law repeal advocacy",
+      "the July 2017 coalition meeting's routing of participants toward contemporaneous reporting"
+    ],
+    doesNotEstablish: [
+      "Jamie's individual role or authorship",
+      "sole coalition credit for the hearing or repeal",
+      "that a Facebook response total measured attendance or impact"
+    ]
+  },
+  "SRC-PRESS-TNR-BAFFLER-CUT-MUSIC-2018": {
+    author: "Liz Pelly",
+    preservationStatus: "live",
+    publishedAt: "2018-02-12",
+    accessedAt: "2026-07-14",
+    publicCitation:
+      "Liz Pelly, 'Cut the Music,' The Baffler, February 12, 2018.",
+    publicNote:
+      "Close-read reporting on M.A.R.C.H.'s multi-agency structure, opacity, venue effects, enforcement process, and testimony from affected cultural-space operators.",
+    supportsGenerally: [
+      "the public context for M.A.R.C.H. transparency advocacy",
+      "the multi-agency enforcement structure and opacity described by venue operators and public officials",
+      "the February 2019 hearing event's routing of participants toward reported background"
+    ],
+    doesNotEstablish: [
+      "Jamie's individual role or authorship",
+      "that every reported allegation is an official agency finding",
+      "that one event caused reporting legislation or later agency change"
+    ]
+  }
+};
+
 export const campaignPressSources = campaignPressEntries
   .filter((entry) => !existingCanonicalSourceIds.has(entry.id))
   .map((entry): SourceRecord => ({
@@ -120,7 +163,8 @@ export const campaignPressSources = campaignPressEntries
     publicCitation: `${entry.organization}, '${entry.title}'.`,
     publicNote: `Indexed in the ${campaignLabels(entry)} campaign press section; close reading and durable article-level preservation remain open.`,
     supportsGenerally: ["campaign press-index membership", "article title and publisher relationship"],
-    doesNotEstablish: ["that Jamie is named in the article", "Jamie's individual role or authorship", "campaign causality or endorsement", "the article's full factual propositions before close reading"]
+    doesNotEstablish: ["that Jamie is named in the article", "Jamie's individual role or authorship", "campaign causality or endorsement", "the article's full factual propositions before close reading"],
+    ...campaignPressCloseReadOverrides[entry.id]
   }));
 
 export const campaignPressIntake = campaignPressEntries

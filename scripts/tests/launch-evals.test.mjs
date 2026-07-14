@@ -12,6 +12,7 @@ import {
   evaluateKcTownHallFullPopulationArchive,
   evaluateKnowledgeLifecycle,
   evaluateNycArtCFullPopulationArchive,
+  evaluateNycArtCFacebookEventArchive,
   evaluateProjectSocialArchiveProduction,
   evaluateUrbanHermitFullPopulationArchive,
   evaluateWowlistFullPopulationArchive,
@@ -919,4 +920,92 @@ test("@urbanhermit full-population archive rejects silent Technical Operations p
   });
 
   assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
+});
+
+const nycArtCFacebookEventFixture = {
+  eventLedger: readRepoFile("docs/knowledge-bank/data/nycartc-facebook-event-ledger.json"),
+  linkLedger: readRepoFile("docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/nycartc-facebook-events-batch-2026-07-13.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  fairRentCase: readRepoFile("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/nycartc-facebook-events-2026-07-13.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("NYC Artist Coalition Facebook event archive passes population, routing, and public-safety criteria", () => {
+  assert.deepEqual(evaluateNycArtCFacebookEventArchive(nycArtCFacebookEventFixture), []);
+});
+
+test("NYC Artist Coalition Facebook event archive rejects a dropped record and erased unresolved slot", () => {
+  const events = JSON.parse(nycArtCFacebookEventFixture.eventLedger);
+  events.records.pop();
+  events.accounting.unresolvedSlots = 0;
+  const failures = evaluateNycArtCFacebookEventArchive({
+    ...nycArtCFacebookEventFixture,
+    eventLedger: JSON.stringify(events)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("34 control-slot dispositions")));
+  assert.ok(failures.some((failure) => failure.includes("one unresolved slot")));
+});
+
+test("NYC Artist Coalition Facebook event archive rejects response inflation", () => {
+  const events = JSON.parse(nycArtCFacebookEventFixture.eventLedger);
+  events.accounting.responseSignals.boundary = "Facebook responses are total attendance.";
+  const failures = evaluateNycArtCFacebookEventArchive({
+    ...nycArtCFacebookEventFixture,
+    eventLedger: JSON.stringify(events),
+    antiClaims: nycArtCFacebookEventFixture.antiClaims.replace(
+      "Facebook response totals equal attendance",
+      "platform responses are attendance"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("non-summable")));
+  assert.ok(failures.some((failure) => failure.includes("anti-claims")));
+});
+
+test("NYC Artist Coalition Facebook event archive rejects link-accounting drift", () => {
+  const links = JSON.parse(nycArtCFacebookEventFixture.linkLedger);
+  links.rows[0].occurrences += 1;
+  const failures = evaluateNycArtCFacebookEventArchive({
+    ...nycArtCFacebookEventFixture,
+    linkLedger: JSON.stringify(links)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must recompute to 61")));
+  assert.ok(failures.some((failure) => failure.includes("must match the rows")));
+});
+
+test("NYC Artist Coalition Facebook event archive rejects access and working-document leakage", () => {
+  const links = JSON.parse(nycArtCFacebookEventFixture.linkLedger);
+  links.rows.find((row) => row.disposition === "protected").publicUrl =
+    "https://docs.google.com/document/d/not-a-real-document/edit";
+  const failures = evaluateNycArtCFacebookEventArchive({
+    ...nycArtCFacebookEventFixture,
+    linkLedger: JSON.stringify(links),
+    archiveDoc: `${nycArtCFacebookEventFixture.archiveDoc}\nhttps://zoom.us/j/000000000`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("locators must remain withheld")));
+  assert.ok(failures.some((failure) => failure.includes("access, session, working-document")));
+});
+
+test("NYC Artist Coalition Facebook event archive rejects sole authorship and silent site removal", () => {
+  const failures = evaluateNycArtCFacebookEventArchive({
+    ...nycArtCFacebookEventFixture,
+    corpusModel: nycArtCFacebookEventFixture.corpusModel.replace(
+      "not sole organization or authorship",
+      "sole organization and authorship"
+    ),
+    fairRentCase: nycArtCFacebookEventFixture.fairRentCase.replace(
+      'claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"',
+      'claimId="CLM-NYCAC-CABARET-ORGANIZING"'
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("not sole organization or authorship")));
+  assert.ok(failures.some((failure) => failure.includes('claimId="CLM-NYCAC-PARTICIPATION-SYSTEM"')));
 });

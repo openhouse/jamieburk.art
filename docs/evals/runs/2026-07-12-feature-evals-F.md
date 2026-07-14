@@ -248,3 +248,51 @@ missing project-to-claim backlinks and accidental use of an unreviewed campaign
 press source as claim evidence. After repair, the complete recursive check
 returned **100/100** with all automated hard gates passing. The four manual
 gates remain explicit under the protocol's stopping rule.
+
+## NYC Artist Coalition Facebook event recursive pass
+
+The July 14 follow-up added a 20-point hard gate for the coalition's Facebook
+event practice. The authenticated host surface displayed 34 past events. A
+terminal traversal recovered 33 distinct event IDs; a second authenticated pass
+recovered the exact same 33-ID set. The resulting 34-slot ledger therefore
+retains 33 recovered records and one unresolved control slot. It does not call
+the interface an official Meta export or infer the missing event's title, date,
+host, or topic.
+
+The recovered chronology spans 2017 through 2021. Twelve recurring-meeting
+records include ten named physical cultural spaces and two virtual meetings.
+The wider population records public hearings, fire-safety training, legal and
+architectural Q&A, venue-support actions, panels, rallies, workshops,
+small-business advocacy, and relief coordination. Thirty-two pages expose
+Facebook response displays ranging from nine to 1.7K; the gate rejects summing
+them or treating them as unique people, attendance, reach, endorsement, or
+impact.
+
+Expanded descriptions produced 61 outbound-link occurrences across 38
+normalized URL rows on 25 events, including seven published-article
+destinations. Every row has a public, protected, or research-needed
+disposition. Working-document locators, meeting-access paths, guest identities,
+comments, participant profiles, contact details, and private account context
+remain outside the repository. Posted links are source routes, not automatic
+corroboration.
+
+The hill climb added a full-population intake record, sixteen source records,
+four claims, one inquiry, four publication decisions, a source-backed proof,
+two machine-readable ledgers, human-readable archive guidance, anti-claims, and
+six negative tests. New Yorker and Baffler campaign sources were promoted from
+index-only metadata after close reading; Village Voice town-hall reporting and
+Gothamist Commercial Rent Stabilization reporting entered as bounded public
+sources.
+
+The Fair Rent / NYC Artist Coalition case study now selects one concise claim:
+Jamie helped establish and produce the recurring participation system that
+connected cultural-space meetings, practical support, public hearings, and
+campaign action. The public copy preserves collective credit and does not assign
+him every event page, facilitation decision, or policy outcome.
+
+The first recursive launch run scored **95/100** because the new public proof
+was not yet visible to the lifecycle evaluator's modular coverage scan. Adding
+the event module to that scan restored **100/100** with every automated hard
+gate passing. Local browser QA at 1280px confirmed the selected claim, eleven
+working citation backlinks to ten source notes, no missing fragment targets,
+no horizontal overflow, and no console warnings or errors.
