@@ -538,6 +538,66 @@
       ]
     },
     {
+      "id": "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+      "title": "WOW List members introduce calendars in nine cities",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-10-05",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/watch/?v=439926419547504",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook video announcing member-introduced community calendars in nine cities, October 5, 2015.",
+      "doesNotEstablish": [
+        "official chapters in nine cities",
+        "the full set of city ecosystems that used WOW List",
+        "unique people reached, historical impressions, or causal impact",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+      "title": "WOW List credits a contributor with adding 41 Los Angeles events",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-11-16",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/450622238477922",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook post crediting Joe Gutierrez with adding 41 upcoming DIY events to the LADIY calendar, November 16, 2015.",
+      "doesNotEstablish": [
+        "independent verification of every event record",
+        "that Jamie personally entered the 41 events",
+        "the full volume of Los Angeles activity",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
+      "id": "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018",
+      "title": "Phoenix organizer describes continued WOW List use",
+      "organization": "WOW List",
+      "author": "WOW List account",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-03-23",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/wowlist/posts/pfbid02Ao38e5ECy89isroMuqjhh62gBdutGNTkgmfYJAzPErEZi3SQ5uD2tRtv2GG8wRZWl",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List Facebook share of Aaron Ponzo's public post describing WOW List use while updating PHXDIY.com, March 23, 2018.",
+      "doesNotEstablish": [
+        "the complete Phoenix organizer population",
+        "current platform activity",
+        "platform-wide adoption or impact",
+        "sole project ownership or authorship of quoted and reshared source material"
+      ]
+    },
+    {
       "id": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
       "title": "Authenticated @CallNYCApp full-population recovery and public-post ledger",
       "organization": "X (formerly Twitter)",
@@ -1485,6 +1545,94 @@
       ]
     },
     {
+      "id": "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The operating model traveled: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later described continued use of WOWList.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "Selected Facebook records preserve member-led city calendars, community event contribution, and later external-organizer continuity.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "member-introduced calendars in nine cities"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public credit for a 41-event Los Angeles contribution"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "external Phoenix organizer use and continuity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The nine-city and 41-event statements are contemporaneous project-account records, not an independent audit of platform-wide adoption.",
+        "Use city calendars or city ecosystems, not official chapters."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Authenticated Page records identify Jamie as publisher on at least 51 of the 57 surviving posts, substantiating his Facebook publishing role while preserving WOW List as a shared project.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The protected publisher audit attributes 51 matching post identities to Jamie, leaves six records unresolved, and finds no record attributed to another publisher.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Published by identifies the Page publisher, not necessarily the drafter of every word or originator of reshared material.",
+        "The six unresolved records cannot be assigned to Jamie or anyone else.",
+        "WOW List was Jamie and Richard's shared project; Facebook publishing responsibility does not become sole product ownership.",
+        "This audit covers Facebook posts, not every WOW List social channel."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1903,7 +2051,10 @@
         "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015",
         "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016",
         "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
-        "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
+        "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016",
+        "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+        "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+        "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"
       ],
       "occurrences": [
         {
@@ -1927,6 +2078,21 @@
             "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016",
             "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"
           ]
+        },
+        {
+          "id": "facebook-distributed-use",
+          "claimId": "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+            "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+            "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"
+          ]
+        },
+        {
+          "id": "facebook-publishing-role",
+          "claimId": "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+          "projection": "case-study"
         }
       ]
     },

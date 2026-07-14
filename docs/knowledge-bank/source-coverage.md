@@ -127,3 +127,18 @@ The current WOW List Facebook event surface displayed zero records and bounded
 historical recovery found none. This negative control prevents invented source
 coverage; not recovered does not mean did not exist and says nothing about WOW
 List's own platform activity or community use.
+
+## 2026-07-14 WOW List Facebook Posts
+
+The 57-record owner-timeline census adds public-source coverage for
+`wowlist-community-platform` without changing the proof from
+`partially-backed`: selected posts document member-led calendars in nine
+cities, a 41-event Los Angeles contribution, and later Phoenix organizer
+continuity. The larger 1,800-plus user, 16,000-plus post/event, architecture,
+and roughly 35-city claims still rely substantially on the product archive.
+
+A separate protected Page-management aggregate strengthens Jamie's role
+evidence: 51 matching records identify him as publisher, six remain
+unresolved, and none identifies another publisher. This supports sustained
+Facebook publishing responsibility, not all 57 records, sole product ownership,
+sole drafting, source authorship, or management of every social channel.

@@ -105,8 +105,16 @@ Do not name collaborators unless approved.
 Do not use one community-created tutorial or the 38-record social corpus as
 proof of broad adoption, support volume, satisfaction, audience, or impact.
 Do not call the current-profile census a complete platform export or deletion
-history, assign shared-account posts to Jamie without direct evidence, or treat
-reposted and linked work as something WOWList organized or authored.
+history or treat reposted and linked work as something WOWList organized or
+authored.
+
+Do not turn the authenticated Facebook publisher aggregate into a claim that
+Jamie published all 57 records, authored every quoted or reshared word, solely
+owned WOW List, or managed every WOW List social channel. Fifty-one matching
+records identify Jamie as publisher; six unavailable or redirected records
+remain unresolved and none may inherit attribution from an adjacent render.
+“Published by” establishes the Page publisher, not necessarily the drafter or
+originator of source material. Preserve Richard's shared-project credit.
 
 Do not say WOW List never created or used a Facebook event. The current event
 surface displayed zero records and bounded historical recovery found none;

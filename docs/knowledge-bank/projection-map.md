@@ -73,6 +73,10 @@ Current selected citation projections now include:
   instructional artifact;
 - WOW List's complete current-profile census and the six account replies that
   document product support, onboarding, and local-calendar identity guidance;
+- WOW List's distributed Facebook use through nine member-led city calendars,
+  a 41-event Los Angeles contribution, and later Phoenix organizer continuity;
+- Jamie's protected aggregate Facebook publisher attribution on at least 51
+  surviving records, with six unresolved and shared-project credit preserved;
 - Sunday Dinner's externally documented weekly open-community practice; and
 - KC Town Hall's unanimously recommended and Council-allocated $490,539
   proposal.

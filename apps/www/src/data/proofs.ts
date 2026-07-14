@@ -564,15 +564,18 @@ export const proofClaims: ProofClaim[] = [
       "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
-      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
+      "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers. Public Facebook records show the distributed model in use through member-led calendars in nine cities, a 41-event Los Angeles contribution, and later Phoenix organizer continuity.",
     sourceBasis:
-      "Approved resume language, verified public-safe archive counts, a 2017 Greene Hill Food Co-op interview confirming WOW List's community-events function, and a 2015 Music Hackathon post identifying Jamie as a co-organizer and describing WOW List as an event-sharing service.",
+      "Approved resume language, verified public-safe archive counts, a 2017 Greene Hill Food Co-op interview, a 2015 Music Hackathon post identifying Jamie as a co-organizer and describing WOW List as an event-sharing service, selected public Facebook records, and a protected Page-management aggregate identifying Jamie as publisher on 51 matching records with six unresolved.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Use approximate adoption language, describe city activity as member-led calendars rather than official chapters, preserve Richard's shared-project credit, and keep Facebook publisher attribution distinct from sole drafting, source authorship, product ownership, or management of every social channel.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
-      "Current active platform unless confirmed"
+      "Current active platform unless confirmed",
+      "Jamie published all 57 surviving Facebook records",
+      "Jamie authored every quoted or reshared word",
+      "Jamie managed every WOW List social channel"
     ],
     protectedBoundaries: [
       "Private user data",
@@ -584,7 +587,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-public-support-surface",

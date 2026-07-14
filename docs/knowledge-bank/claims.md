@@ -309,14 +309,59 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary / firsthand-collaborator context
 **Public wording:** Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.  
-**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.  
+**Detailed public-safe wording:** WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers. Selected Facebook records show member-led calendars in nine cities, a 41-event Los Angeles contribution, and later Phoenix organizer continuity.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows public-facing platform delivery, community workflows, and product operations for real organizers.  
-**Guardrail:** Use approximate adoption language and do not describe city activity as official chapters.  
-**Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed.  
+**Guardrail:** Use approximate adoption language, describe city activity as member-led calendars rather than official chapters, preserve Richard's shared-project credit, and keep Facebook publisher attribution distinct from sole drafting, source authorship, product ownership, or every social channel.
+**Do not say:** Official chapters in 35 cities; full ownership of all organizer adoption; current active platform unless confirmed; Jamie published all 57 Facebook records; Jamie authored every quoted or reshared word; Jamie managed every WOW List social channel.
 **Protected boundaries:** Private user data, organizer contact lists, raw records, geolocation rows, and unapproved community artifacts stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-distributed-use - Community operation in public
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public project account / external organizer context
+**Public wording:** The operating model traveled: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later described continued WOW List use.
+**Detailed public-safe wording:** Selected records in the complete Facebook population document members introducing calendars in nine cities, public credit for a contributor adding 41 Los Angeles events, and an external Phoenix organizer describing continued use while updating PHXDIY.com.
+**Where to project:** WOW List case study.
+**Why it matters:** Makes the platform's distributed contribution and local-stewardship model concrete through public records of use.
+**Guardrail:** Use these as concrete examples of distributed use, not an independent audit of platform-wide adoption or official chapters.
+**Do not say:** Official chapters in nine cities; Jamie personally entered 41 Los Angeles events; three selected records prove total adoption.
+**Protected boundaries:** Raw authenticated captures, comments, private analytics, and full post text stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-publishing-role - Sustained Page publishing
+
+**Status:** Ready with boundary
+**Support level:** Strong protected aggregate
+**Evidence class:** Authenticated Page-management attribution
+**Public wording:** Authenticated Page records identify Jamie as publisher on at least 51 of the 57 surviving Facebook posts, substantiating his publishing role while preserving WOW List as a shared project.
+**Detailed public-safe wording:** A record-identity-matched Page-management audit attributes 51 surviving posts to Jamie as publisher, leaves six unavailable or redirected records unresolved, and identifies no other publisher in the completed population.
+**Where to project:** WOW List case study.
+**Why it matters:** Directly substantiates Jamie's sustained operating responsibility for the project's Facebook publishing without converting that work into sole product ownership or source authorship.
+**Guardrail:** Six unavailable or redirected records remain unresolved; publisher attribution is not sole drafting, source authorship, product ownership, or management of every social channel.
+**Do not say:** Jamie published all 57; Jamie authored every quoted or reshared word; Jamie solely owned WOW List; Jamie managed every WOW List social channel.
+**Protected boundaries:** Per-record manager attribution, Page administration, authentication, comments, and raw browser state stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-complete-population - Surviving owner-timeline census
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Protected research run / public-safe metadata census
+**Public wording:** A terminal-cursor pass recovered 57 unique WOW List Facebook records: 35 standalone posts and 22 reshared stories from April 2015 through March 2018.
+**Detailed public-safe wording:** Nineteen three-record owner-timeline pages reached Facebook's terminal cursor with 57 unique post IDs, no repeated cursor, and a stable March 2018 newest-record control.
+**Where to project:** Knowledge-bank reserve and archival method documentation.
+**Why it matters:** Gives future editors a closed, auditable denominator for theme, source, role, and interaction analysis without turning the census itself into a portfolio headline.
+**Guardrail:** Complete means the current accessible owner-timeline cursor terminated; it is not an official Meta export or deletion history.
+**Do not say:** No record was ever deleted; 57 posts measure adoption, reach, or impact.
+**Protected boundaries:** Raw responses, authentication, full post text, comments, Page administration, and per-record manager attribution stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## wowlist-public-support-surface - Public product support and onboarding
 

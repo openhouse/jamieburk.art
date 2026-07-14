@@ -81,6 +81,14 @@ record current WOW List surface; and
 control slot a public-safe disposition. The record-level personal association
 graph remains protected.
 
+The WOW List Facebook post pass closes a separate 57-record owner-timeline
+population. `intake/2026-07-14-wowlist-facebook-posts.md` interprets the
+distributed-use, civic-routing, interaction, and publishing-role findings;
+`data/wowlist-facebook-post-census-2026-07-14.csv` dispositions every recovered
+post ID. A protected Page-management audit attributes 51 matching records to
+Jamie, leaves six unavailable or redirected records unresolved, and exposes no
+per-record administrator data in this public repository.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

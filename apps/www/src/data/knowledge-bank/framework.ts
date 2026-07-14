@@ -56,6 +56,14 @@ import {
   personalWowlistFacebookEventSources
 } from "./personal-wowlist-facebook-events-batch-2026-07-14.ts";
 import {
+  wowlistFacebookPostClaims,
+  wowlistFacebookPostInquiries,
+  wowlistFacebookPostIntake,
+  wowlistFacebookPostProofCoverage,
+  wowlistFacebookPostPublicationDecisions,
+  wowlistFacebookPostSources
+} from "./wowlist-facebook-posts-batch-2026-07-14.ts";
+import {
   wowlistSocialCorpusClaims,
   wowlistSocialCorpusInquiries,
   wowlistSocialCorpusIntake,
@@ -557,6 +565,7 @@ export const frameworkIntake = [
   ...nycArtCSocialCorpusIntake,
   ...nycartcFacebookEventIntake,
   ...personalWowlistFacebookEventIntake,
+  ...wowlistFacebookPostIntake,
   ...callNycSocialCorpusIntake,
   ...wowlistSocialCorpusIntake,
   ...kcTownHallSocialCorpusIntake,
@@ -760,9 +769,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["community platforms", "event discovery", "participatory technology"],
-    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015", "SRC-GOOD-TIMES-ZINES-2-2015", "SRC-KQED-GHOST-SHIP-VIGIL-2016", "SRC-MEOW-WOLF-DIY-FUND-2016", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015", "SRC-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026", "SRC-WOWLIST-FACEBOOK-EVENT-RECOVERY-RUN-2026"],
-    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION", "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE", "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING", "CLM-WOWLIST-CIVIC-CARE-CONTINUITY", "CLM-MUSIC-HACKATHON-WOWLIST-ROLE", "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"],
-    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-FULL-POPULATION-2026", "INQ-URBANHERMIT-FULL-POPULATION-2026", "INQ-WOWLIST-FACEBOOK-EVENTS-2026"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015", "SRC-GOOD-TIMES-ZINES-2-2015", "SRC-KQED-GHOST-SHIP-VIGIL-2016", "SRC-MEOW-WOLF-DIY-FUND-2016", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015", "SRC-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026", "SRC-WOWLIST-FACEBOOK-EVENT-RECOVERY-RUN-2026", "SRC-FB-WOWLIST-PAGE-CONTROL-2026", "SRC-FB-WOWLIST-FULL-POPULATION-RUN-2026", "SRC-FB-WOWLIST-PUBLISHER-ATTRIBUTION-RUN-2026", "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-WOMENS-MARCH-ROUTE-2017", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"],
+    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION", "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE", "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING", "CLM-WOWLIST-CIVIC-CARE-CONTINUITY", "CLM-MUSIC-HACKATHON-WOWLIST-ROLE", "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026", "CLM-WOWLIST-FACEBOOK-COMPLETE-POPULATION", "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE", "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE", "CLM-WOWLIST-FACEBOOK-CIVIC-CARE", "CLM-WOWLIST-FACEBOOK-INTERACTION-SIGNALS"],
+    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-FULL-POPULATION-2026", "INQ-URBANHERMIT-FULL-POPULATION-2026", "INQ-WOWLIST-FACEBOOK-EVENTS-2026", "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which interface or community image best demonstrates organizer use without exposing user data?",
@@ -1375,6 +1384,7 @@ export const frameworkSources = [
   ...nycArtCSocialCorpusSources,
   ...nycartcFacebookEventSources,
   ...personalWowlistFacebookEventSources,
+  ...wowlistFacebookPostSources,
   ...callNycSocialCorpusSources,
   ...wowlistSocialCorpusSources,
   ...kcTownHallSocialCorpusSources,
@@ -1747,6 +1757,7 @@ export const frameworkClaims = [
   ...nycArtCSocialCorpusClaims,
   ...nycartcFacebookEventClaims,
   ...personalWowlistFacebookEventClaims,
+  ...wowlistFacebookPostClaims,
   ...callNycSocialCorpusClaims,
   ...wowlistSocialCorpusClaims,
   ...kcTownHallSocialCorpusClaims,
@@ -1786,6 +1797,7 @@ export const frameworkInquiries = [
   ...nycArtCSocialCorpusInquiries,
   ...nycartcFacebookEventInquiries,
   ...personalWowlistFacebookEventInquiries,
+  ...wowlistFacebookPostInquiries,
   ...callNycSocialCorpusInquiries,
   ...wowlistSocialCorpusInquiries,
   ...kcTownHallSocialCorpusInquiries,
@@ -1843,6 +1855,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   nycArtCSocialCorpusPublicationDecisions,
   nycartcFacebookEventPublicationDecisions,
   personalWowlistFacebookEventPublicationDecisions,
+  wowlistFacebookPostPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
   wowlistSocialCorpusPublicationDecisions,
   kcTownHallSocialCorpusPublicationDecisions,
@@ -1868,7 +1881,7 @@ export const frameworkProofCoverage = [
   coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
   coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; a protected 2017 FAQ adds collective mutual-support infrastructure, while individual systems authorship remains only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
   coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist reporting and the official Council transcript directly support the bounded organizing and testimony claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"], []),
-  coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function, and a 2015 Music Hackathon post identifies Jamie as a co-organizer and describes WOW List as an event-sharing service; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
+  coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview and Music Hackathon record independently support WOW List's community-events function and Jamie's co-organizer role. Selected Facebook records add member-led city calendars, a 41-event Los Angeles contribution, and Phoenix organizer continuity; a protected Page-management audit identifies Jamie as publisher on 51 matching records with six unresolved. Technical architecture and the larger aggregate scale remain archive-backed and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015", "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018", "SRC-FB-WOWLIST-PUBLISHER-ATTRIBUTION-RUN-2026"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026"]),
   coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck; and a protected 2023 record confirms Jamie's proposal-review and onboarding workflow for one residency. Aggregate gathering and residency totals remain separately protected.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS", "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026"]),
   coverage("commercial-vacancy-public-data-brief", "source-backed", "A protected March 2026 artifact directly supports Jamie's authorship of the bounded public-data proposal while external adoption and implementation remain open.", ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"], ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"]),
   coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
@@ -1880,6 +1893,7 @@ export const frameworkProofCoverage = [
   ...nycArtCSocialCorpusProofCoverage,
   ...nycartcFacebookEventProofCoverage,
   ...personalWowlistFacebookEventProofCoverage,
+  ...wowlistFacebookPostProofCoverage,
   ...callNycSocialCorpusProofCoverage,
   ...wowlistSocialCorpusProofCoverage,
   ...kcTownHallSocialCorpusProofCoverage,
@@ -1955,7 +1969,7 @@ export const frameworkPages = [
   {
     id: "wowlist",
     surface: "/work/wowlist",
-    sourceOrder: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"],
+    sourceOrder: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"],
     occurrences: [
       {
         id: "public-origin-and-use",
@@ -1968,6 +1982,17 @@ export const frameworkPages = [
         claimId: "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
         projection: "case-study",
         sourceIds: ["SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016"]
+      },
+      {
+        id: "facebook-distributed-use",
+        claimId: "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+        projection: "case-study",
+        sourceIds: ["SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015", "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015", "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018"]
+      },
+      {
+        id: "facebook-publishing-role",
+        claimId: "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+        projection: "case-study"
       }
     ]
   },

@@ -419,7 +419,7 @@ const workItemsInput = [
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns, connected to Sunday Dinner and used publicly enough for a community member to make a tutorial.",
+      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns. Public records show members introducing calendars in nine cities, a contributor adding 41 Los Angeles events, and later Phoenix organizer continuity.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -433,6 +433,12 @@ const workItemsInput = [
         description:
           "Six surviving account replies document feed, profile, submission, onboarding, and local-calendar guidance.",
         type: "workflow"
+      },
+      {
+        title: "Distributed publishing operation",
+        description:
+          "A 57-record Facebook census and protected publisher audit document member-led use and Jamie's sustained Page publishing role.",
+        type: "workflow"
       }
     ],
     tags: ["Community Systems", "Web Systems", "Product Operations", "Public-Facing Tools"],
@@ -444,9 +450,9 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. Preserve Richard's shared-project credit, six unresolved Facebook publisher records, and the difference between publishing, drafting, source authorship, adoption, and impact.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Public-safe archive summary, selected public posts, protected aggregate Page-management attribution, historical project context, and screenshots pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",

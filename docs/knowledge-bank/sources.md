@@ -223,6 +223,26 @@ source-discovery routes rather than automatic corroboration. The complete
 personal association ledger, guest and relationship context, exact private
 locations, raw descriptions, responses, and browser state remain protected.
 
+### WOW List Facebook Posts
+
+The July 14 post pass preserves three source layers:
+
+- the public [WOW List Page](https://www.facebook.com/wowlist) as the
+  organizational identity and owner-timeline control;
+- a protected terminal-cursor run with a 57-row public-safe metadata census;
+  and
+- a protected Page-management attribution run identifying Jamie as publisher
+  on 51 matching records, with six unavailable or redirected identities left
+  unresolved and no record attributed to another publisher.
+
+Selected public records document member-led calendars in nine cities, a
+41-event Los Angeles contribution, a Women's March gathering route, and later
+Phoenix organizer continuity. These are project-account and external-organizer
+sources, not automatic independent corroboration of the product's full scale.
+
+Raw responses, authentication state, full text, comments, Page administration,
+and per-record manager attribution remain protected.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

@@ -35,6 +35,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
   Dinner; a 2015 post documents one community-created product tutorial.
 - All six replies in the complete surviving `@wowlist` corpus functioned as
   product support, onboarding, or local-calendar identity guidance.
+- Public Facebook records show WOW List's distributed model in use through
+  member-led calendars in nine cities, a 41-event Los Angeles contribution,
+  and later Phoenix organizer continuity.
+- Authenticated Page-management records identify Jamie as publisher on at
+  least 51 of 57 surviving WOW List Facebook posts; six records remain
+  unresolved, and the claim does not erase Richard's shared-project credit.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process; after the CCED board's unanimous recommendation, the Council allocated $490,539 and authorized funding-agreement negotiations.

@@ -16,6 +16,7 @@ import {
   evaluatePersonalWowlistFacebookEventArchive,
   evaluateProjectSocialArchiveProduction,
   evaluateUrbanHermitFullPopulationArchive,
+  evaluateWowlistFacebookPostArchive,
   evaluateWowlistFullPopulationArchive,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
@@ -741,12 +742,12 @@ test("WOWList full-population archive rejects inflated aggregates and erased aut
     ...wowlistFullPopulationFixture,
     ledger: JSON.stringify(ledger),
     antiClaims: wowlistFullPopulationFixture.antiClaims
-      .replace("assign shared-account posts to Jamie without direct evidence", "")
+      .replace(/Fifty-one matching\s+records identify Jamie as publisher/, "")
       .replace("proof of broad adoption, support volume, satisfaction, audience, or impact", "")
   });
 
   assert.ok(failures.some((failure) => failure.includes("stored aggregate findings")));
-  assert.ok(failures.some((failure) => failure.includes("assign shared-account posts")));
+  assert.ok(failures.some((failure) => failure.includes("Fifty-one matching records")));
   assert.ok(failures.some((failure) => failure.includes("proof of broad adoption")));
 });
 
@@ -762,6 +763,105 @@ test("WOWList full-population archive rejects full post text and private browser
   assert.ok(failures.some((failure) => failure.includes("must not reproduce full post")));
   assert.ok(
     failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+const wowlistFacebookPostFixture = {
+  census: readRepoFile("docs/knowledge-bank/data/wowlist-facebook-post-census-2026-07-14.csv"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  wowlistCase: readRepoFile("apps/www/src/content/work/wowlist.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("WOW List Facebook post archive passes population, role, and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateWowlistFacebookPostArchive(wowlistFacebookPostFixture),
+    []
+  );
+});
+
+test("WOW List Facebook post archive rejects a silently dropped record", () => {
+  const lines = wowlistFacebookPostFixture.census.trim().split("\n");
+  lines.pop();
+  const failures = evaluateWowlistFacebookPostArchive({
+    ...wowlistFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("57 post records")));
+  assert.ok(failures.some((failure) => failure.includes("2018 count")));
+});
+
+test("WOW List Facebook post archive rejects duplicate identities and year drift", () => {
+  const lines = wowlistFacebookPostFixture.census.trim().split("\n");
+  const first = lines[1].split(",");
+  const second = lines[2].split(",");
+  second[1] = first[1];
+  second[2] = "2016-05-11";
+  lines[2] = second.join(",");
+  const failures = evaluateWowlistFacebookPostArchive({
+    ...wowlistFacebookPostFixture,
+    census: `${lines.join("\n")}\n`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("post IDs must remain unique")));
+  assert.ok(failures.some((failure) => failure.includes("2015 count")));
+});
+
+test("WOW List Facebook post archive rejects publisher inflation and erased collective credit", () => {
+  const failures = evaluateWowlistFacebookPostArchive({
+    ...wowlistFacebookPostFixture,
+    corpusModel: wowlistFacebookPostFixture.corpusModel
+      .replace("jamieBurkart: 51", "jamieBurkart: 57")
+      .replace("unresolved: 6", "unresolved: 0"),
+    antiClaims: wowlistFacebookPostFixture.antiClaims
+      .replace("Jamie published all 57 records", "")
+      .replace("Preserve Richard's shared-project credit", "")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("jamieBurkart: 51")));
+  assert.ok(failures.some((failure) => failure.includes("unresolved: 6")));
+  assert.ok(failures.some((failure) => failure.includes("shared-project credit")));
+});
+
+test("WOW List Facebook post archive rejects interaction inflation and reach semantics", () => {
+  const census = wowlistFacebookPostFixture.census.replace(
+    "439926419547504,2015-10-05,standalone-post,distributed-community-use,13,3,29",
+    "439926419547504,2015-10-05,standalone-post,distributed-community-use,13,3,99"
+  );
+  const failures = evaluateWowlistFacebookPostArchive({
+    ...wowlistFacebookPostFixture,
+    census,
+    archiveDoc: wowlistFacebookPostFixture.archiveDoc.replace(
+      "not unique people,\nreach, impressions, attendance, endorsement, adoption, or impact",
+      "proof of reach"
+    )
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("share total must remain 49")));
+  assert.ok(failures.some((failure) => failure.includes("29 share signal")));
+  assert.ok(failures.some((failure) => failure.includes("not unique people")));
+});
+
+test("WOW List Facebook post archive rejects publisher rows and private browser material", () => {
+  const census = wowlistFacebookPostFixture.census.replace(
+    "public_detail_status",
+    "public_detail_status,publisher"
+  ).replace(/,metadata-only$/gm, ",metadata-only,Jamie Burkart");
+  const failures = evaluateWowlistFacebookPostArchive({
+    ...wowlistFacebookPostFixture,
+    census,
+    archiveDoc: `${wowlistFacebookPostFixture.archiveDoc}\n__cft__=not-a-real-token\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("11 public-safe columns")));
+  assert.ok(failures.some((failure) => failure.includes("must not expose publisher rows")));
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, Page-session, or private-path"))
   );
 });
 

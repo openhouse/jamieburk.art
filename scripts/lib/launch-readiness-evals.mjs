@@ -1158,7 +1158,7 @@ export function evaluateWowlistFullPopulationArchive({
     "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE",
     "public-support-surface",
     "complete census of the 38 items",
-    "does not identify which teammate composed each post"
+    "separate Facebook audit distinguishes"
   ]);
   requireFragments("WOWList full-population documentation", archiveDoc, [
     "100 percent recovery",
@@ -1174,7 +1174,7 @@ export function evaluateWowlistFullPopulationArchive({
   ]);
   requireFragments("WOWList anti-claims", antiClaims, [
     "complete platform export or deletion history",
-    "assign shared-account posts to Jamie without direct evidence",
+    "Fifty-one matching records identify Jamie as publisher",
     "proof of broad adoption, support volume, satisfaction, audience, or impact",
     "reposted and linked work as something WOWList organized or authored"
   ]);
@@ -1201,6 +1201,197 @@ export function evaluateWowlistFullPopulationArchive({
   ];
   if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
     missing.push("Public WOWList corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
+export function evaluateWowlistFacebookPostArchive({
+  census,
+  corpusModel,
+  framework,
+  proofs,
+  workData,
+  wowlistCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  const lines = census.trim().split(/\r?\n/).filter(Boolean);
+  const headers = lines.shift()?.split(",") ?? [];
+  const rows = lines.map((line) => {
+    const values = line.split(",");
+    return Object.fromEntries(headers.map((header, index) => [header, values[index]]));
+  });
+  const count = (field, value) => rows.filter((row) => row[field] === value).length;
+  const sum = (field) =>
+    rows.reduce((total, row) => total + Number(row[field] ?? 0), 0);
+
+  expect(headers.length === 11, "WOW List Facebook census must retain 11 public-safe columns.");
+  expect(rows.length === 57, "WOW List Facebook census must contain 57 post records.");
+  expect(
+    new Set(rows.map((row) => row.post_id)).size === rows.length,
+    "WOW List Facebook census post IDs must remain unique."
+  );
+  expect(count("record_type", "standalone-post") === 35, "WOW List Facebook census must contain 35 standalone posts.");
+  expect(count("record_type", "reshared-story") === 22, "WOW List Facebook census must contain 22 reshared stories.");
+  for (const [year, expected] of Object.entries({ "2015": 22, "2016": 27, "2017": 7, "2018": 1 })) {
+    expect(
+      rows.filter((row) => row.date?.startsWith(year)).length === expected,
+      `WOW List Facebook ${year} count must remain ${expected}.`
+    );
+  }
+  for (const [theme, expected] of Object.entries({
+    "event-distribution": 11,
+    "distributed-community-use": 12,
+    "cultural-space-care": 19,
+    "product-community-infrastructure": 6,
+    "public-knowledge-and-storytelling": 1,
+    "civic-routing": 8
+  })) {
+    expect(
+      count("primary_theme", theme) === expected,
+      `WOW List Facebook ${theme} count must recompute to ${expected}.`
+    );
+  }
+  expect(sum("reactions") === 94, "WOW List Facebook reaction total must remain 94.");
+  expect(sum("comments") === 16, "WOW List Facebook comment total must remain 16.");
+  expect(sum("shares") === 49, "WOW List Facebook share total must remain 49.");
+  expect(
+    rows.filter((row) =>
+      Number(row.reactions) + Number(row.comments) + Number(row.shares) > 0
+    ).length === 47,
+    "WOW List Facebook census must retain 47 records with a visible interaction."
+  );
+  const strongest = rows.find((row) => row.post_id === "439926419547504");
+  expect(
+    strongest?.reactions === "13" && strongest?.comments === "3" && strongest?.shares === "29",
+    "WOW List Facebook nine-city record must retain the 13 reaction, three comment, 29 share signal."
+  );
+  expect(
+    rows.every(
+      (row) =>
+        row.accounting_status === "recovered" &&
+        row.public_detail_status === "metadata-only" &&
+        /^https:\/\/www\.facebook\.com\/wowlist\/posts\//.test(row.source_url)
+    ),
+    "Every WOW List Facebook record must retain a public URL and metadata-only recovered disposition."
+  );
+  expect(
+    !census.includes("publisher") &&
+      !census.includes("full_text") &&
+      !census.includes("commenter") &&
+      !census.includes("session"),
+    "Public WOW List Facebook census must not expose publisher rows, full text, commenters, or session data."
+  );
+
+  requireFragments("WOW List Facebook corpus model", corpusModel, [
+    "ownerTimelineRecords: 57",
+    "cursorPages: 19",
+    "standalonePosts: 35",
+    "resharedStories: 22",
+    "postIdentitiesChecked: 57",
+    "jamieBurkart: 51",
+    "otherPublisher: 0",
+    "unresolved: 6",
+    "LEAD-WOWLIST-FACEBOOK-FULL-POPULATION-2026",
+    "SRC-FB-WOWLIST-PUBLISHER-ATTRIBUTION-RUN-2026",
+    "SRC-FB-WOWLIST-NINE-CITY-CALENDARS-2015",
+    "SRC-FB-WOWLIST-LA-FORTY-ONE-EVENTS-2015",
+    "SRC-FB-WOWLIST-PHXDIY-CONTINUITY-2018",
+    "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+    "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+    "six unavailable or redirected records remain unresolved",
+    "Published by identifies the Page publisher",
+    "shared project",
+    "not every WOW List social channel"
+  ]);
+  requireFragments("WOW List Facebook framework integration", framework, [
+    "wowlistFacebookPostIntake",
+    "wowlistFacebookPostSources",
+    "wowlistFacebookPostClaims",
+    "wowlistFacebookPostInquiries",
+    "wowlistFacebookPostPublicationDecisions",
+    "INQ-WOWLIST-FACEBOOK-FULL-POPULATION-2026",
+    "facebook-distributed-use",
+    "facebook-publishing-role"
+  ]);
+  requireFragments("WOW List Facebook proof bank", proofs, [
+    "member-led calendars in nine cities",
+    "publisher on 51 matching records with six unresolved",
+    "preserve Richard's shared-project credit",
+    "Jamie published all 57 surviving Facebook records",
+    "Jamie managed every WOW List social channel"
+  ]);
+  requireFragments("WOW List Facebook work metadata", workData, [
+    "Distributed publishing operation",
+    "57-record Facebook census",
+    "six unresolved Facebook publisher records"
+  ]);
+  requireFragments("WOW List Facebook case study", wowlistCase, [
+    "CLM-WOWLIST-FACEBOOK-DISTRIBUTED-USE",
+    "facebook-distributed-use",
+    "CLM-WOWLIST-FACEBOOK-PUBLISHING-ROLE",
+    "facebook-publishing-role",
+    "separate Facebook audit distinguishes",
+    "Neither corpus measures adoption or impact"
+  ]);
+  requireFragments("WOW List Facebook archival documentation", archiveDoc, [
+    "57 unique WOW List Facebook records",
+    "35 standalone posts and 22 reshared stories",
+    "Jamie Burkart | 51",
+    "Unavailable or redirected; unresolved | 6",
+    "rather than inheriting attribution",
+    "member-led city calendars",
+    "41 upcoming DIY events",
+    "Phoenix organizer",
+    "Forty-seven of the 57 records",
+    "not unique people",
+    "Per-record publisher attribution and Page-management context remain protected"
+  ]);
+  requireFragments("WOW List Facebook anti-claims", antiClaims, [
+    "Jamie published all 57 records",
+    "authored every quoted or reshared word",
+    "managed every WOW List social channel",
+    "six unavailable or redirected records remain unresolved",
+    "Preserve Richard's shared-project credit",
+    "not necessarily the drafter or originator"
+  ]);
+
+  const publicBundle = [
+    census,
+    corpusModel,
+    framework,
+    proofs,
+    workData,
+    wowlistCase,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /__cft__/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push(
+      "Public WOW List Facebook bundle contains authentication, Page-session, or private-path material."
+    );
   }
 
   return missing;
@@ -2626,6 +2817,14 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/wowlist-public-post-ledger.json"
   );
+  const wowlistFacebookPostCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/wowlist-facebook-posts-batch-2026-07-14.ts"
+  );
+  const wowlistFacebookPostCensus = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/wowlist-facebook-post-census-2026-07-14.csv"
+  );
   const kcTownHallSocialCorpus = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/kc-town-hall-social-corpus.ts"
@@ -2694,6 +2893,10 @@ export function runLaunchEvals(repoRoot) {
   const wowlistFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-wowlist-full-population-social-corpus.md"
+  );
+  const wowlistFacebookPostDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-wowlist-facebook-posts.md"
   );
   const kcTownHallFullPopulationDoc = readOptional(
     repoRoot,
@@ -3263,6 +3466,32 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies post types, themes, repost sources, and all 35 posted short URLs.",
         "The selected portfolio claim makes public support and onboarding concrete without assigning individual post authorship.",
         "Scene knowledge and civic-care findings remain available in reserve without converting shared resources into authorship, adoption, or impact."
+      ]
+    })
+  );
+
+  const wowlistFacebookPostMissing = evaluateWowlistFacebookPostArchive({
+    census: wowlistFacebookPostCensus,
+    corpusModel: wowlistFacebookPostCorpus,
+    framework,
+    proofs,
+    workData,
+    wowlistCase,
+    archiveDoc: wowlistFacebookPostDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "wowlist-facebook-post-archive",
+      label: "WOW List Facebook posts close the surviving population and substantiate a bounded publishing role",
+      weight: 20,
+      hardGate: true,
+      missing: wowlistFacebookPostMissing,
+      evidence: [
+        "The terminal owner-timeline cursor reconciles all 57 surviving records across 19 pages.",
+        "Item-level recomputation verifies form, year, theme, public URL, and mutable interaction totals.",
+        "Selected public posts document member-led calendars, community contribution, and later external-organizer continuity.",
+        "A protected identity-matched audit attributes at least 51 records to Jamie, leaves six unresolved, and preserves shared-project and source-authorship boundaries."
       ]
     })
   );
