@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { teamsArchiveProduction } from "../../apps/www/src/data/knowledge-bank/teams-archive-production.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 import { validateKnowledgeBank } from "./citation-validation.mjs";
 
@@ -27,6 +28,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const inquiryById = new Map(knowledgeBank.researchInquiries.map((item) => [item.id, item]));
   const fairRentPage = knowledgeBank.pages.find((page) => page.id === "fair-rent-nyc");
   const fairRentMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx"), "utf8");
+  const callnycMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/callnyc.mdx"), "utf8");
   const kcTownHallMdx = readFileSync(path.join(repoRoot, "apps/www/src/content/work/kc-town-hall.mdx"), "utf8");
   const workData = readFileSync(path.join(repoRoot, "apps/www/src/data/work.ts"), "utf8");
   const proofData = readFileSync(path.join(repoRoot, "apps/www/src/data/proofs.ts"), "utf8");
@@ -164,9 +166,118 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       kcTransitionInquiry.limitations.length >= 3 &&
       !publicRegistryText.includes(kcFunding.transitionClaimId)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry];
+  const teamsArchive = suite.pilot.teamsArchiveProduction;
+  const teamsIntakes = teamsArchive.intakeIds.map((id) => intakeById.get(id));
+  const teamsSources = teamsArchive.sourceIds.map((id) => sourceById.get(id));
+  const teamsObservations = teamsIntakes.flatMap((item) =>
+    item?.observationIds.map((id) => observationById.get(id)) ?? []
+  );
+  const teamsClaims = teamsArchive.claimIds.map((id) => claimById.get(id));
+  const teamsInquiries = teamsArchive.inquiryIds.map((id) => inquiryById.get(id));
+  const teamsPrivateSources = teamsArchive.privateSourceIds.map((id) => sourceById.get(id));
+  const teamsActiveClaim = claimById.get(teamsArchive.activeClaimId);
+  const callnycPage = knowledgeBank.pages.find((page) => page.id === "callnyc");
+  const teamsCoverageTargets = teamsArchive.proofIds.map((id) =>
+    knowledgeBank.proofCoverageTargets.find((target) => target.proofId === id)
+  );
+  const archiveInquiry = inquiryById.get("INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-14");
+  const callnycOccurrence = callnycPage?.occurrences.find(
+    (occurrence) => occurrence.id === teamsArchive.callnycOccurrenceId
+  );
+  const teamsArchiveGroupsComplete = Object.entries(
+    teamsArchive.archiveGroupIntakeIds
+  ).every(([group, intakeIds]) =>
+    intakeIds.length === teamsArchive.archiveGroups[group] &&
+    intakeIds.every((id) => teamsArchive.intakeIds.includes(id) && intakeById.has(id))
+  );
+  const teamsArchiveComplete = Boolean(
+    teamsArchiveProduction.intakeItems.length === teamsArchive.expectedIntakeCount &&
+      teamsArchiveProduction.sources.length === teamsArchive.expectedSourceCount &&
+      teamsArchiveProduction.observations.length === teamsArchive.expectedObservationCount &&
+      teamsArchiveProduction.claims.length === teamsArchive.expectedClaimCount &&
+      teamsArchiveProduction.researchInquiries.length === teamsArchive.expectedInquiryCount &&
+      teamsArchiveGroupsComplete &&
+      teamsIntakes.length === teamsArchive.expectedIntakeCount &&
+      teamsIntakes.every(
+        (intake) => intake?.disposition === "integrated" &&
+          intake.sourceIds.length === 1 &&
+          intake.observationIds.length &&
+          intake.researchInquiryIds.length &&
+          intake.boundaries.length >= 2
+      ) &&
+      teamsSources.length === teamsArchive.expectedSourceCount &&
+      teamsSources.every(
+        (source) => source?.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      teamsPrivateSources.length === teamsArchive.privateSourceIds.length &&
+      teamsPrivateSources.every(
+        (source) => source &&
+          source.visibility !== "public" &&
+          source.preservationStatus === "private" &&
+          source.protectedLocatorId &&
+          !source.canonicalUrl &&
+          !source.archiveUrl &&
+          !source.assetUrl
+      ) &&
+      teamsObservations.length === teamsArchive.expectedObservationCount &&
+      teamsObservations.every(
+        (observation) => observation?.sourceId &&
+          observation.locator &&
+          observation.limitations.length &&
+          observation.publicSafe &&
+          (observation.claimIds.length || observation.researchInquiryIds.length)
+      ) &&
+      teamsClaims.length === teamsArchive.expectedClaimCount &&
+      teamsClaims.every(
+        (claim) => claim &&
+          ["confirmed", "confirmed-with-boundary"].includes(claim.status) &&
+          claim.evidence.length &&
+          claim.boundaries.length >= 2 &&
+          claim.antiClaims.length >= 2 &&
+          claim.reviewedBy.length >= 2
+      ) &&
+      teamsClaims
+        .filter((claim) => claim?.id !== teamsArchive.activeClaimId)
+        .every((claim) =>
+          claim?.projections.every(
+            (projection) => projection.status === "hold" && projection.surfaces.length === 0
+          )
+        ) &&
+      teamsPrivateSources.every((source) =>
+        teamsClaims.every((claim) =>
+          claim?.evidence
+            .filter((evidence) => evidence.sourceId === source?.id)
+            .every((evidence) => evidence.renderCitation === false)
+        )
+      ) &&
+      teamsInquiries.length === teamsArchive.expectedInquiryCount &&
+      teamsInquiries.every(
+        (inquiry) => inquiry?.methods.length && inquiry.findings.length && inquiry.limitations.length && inquiry.sourceIds.length
+      ) &&
+      archiveInquiry?.limitations.some((limitation) => /iCloud-backed files/i.test(limitation)) &&
+      archiveInquiry.limitations.some((limitation) => /does not prove/i.test(limitation)) &&
+      teamsActiveClaim?.projections.some(
+        (projection) => projection.status === "active" &&
+          projection.citationRequired &&
+          projection.surfaces.includes("/work/callnyc")
+      ) &&
+      teamsActiveClaim.evidence.some(
+        (evidence) => evidence.sourceId === teamsArchive.callnycSourceId && evidence.renderCitation
+      ) &&
+      callnycOccurrence?.claimId === teamsArchive.activeClaimId &&
+      callnycOccurrence.sourceIds?.includes(teamsArchive.callnycSourceId) &&
+      callnycMdx.includes(teamsArchive.activeClaimId) &&
+      callnycMdx.includes(teamsArchive.callnycOccurrenceId) &&
+      callnycPage?.sourceOrder.includes(teamsArchive.callnycSourceId) &&
+      teamsCoverageTargets.every((target) => target?.sourceIds.length) &&
+      publicRegistryText.includes(teamsArchive.activeClaimId) &&
+      publicRegistryText.includes(teamsArchive.callnycSourceId) &&
+      teamsArchive.privateSourceIds.every((id) => !publicRegistryText.includes(id)) &&
+      existsSync(path.join(repoRoot, "docs/knowledge-bank/projects/teams-archive-production-2026-07-14.md"))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -323,6 +434,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [kcFundingComplete
         ? "Five official records preserve the CCED recommendation, Council acceptance and appropriation, zero disbursement, withdrawal, and 2024 return; Jamie's stewardship-transition account remains a separate held memory lead; four nonredundant notes support the two-claim public projection"
         : "KC Town Hall funding lifecycle, held stewardship-transition lead, source scope, observations, claims, boundaries, proof coverage, correction, or public citation plan is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION",
+      score: score(teamsArchiveComplete),
+      evidence: [teamsArchiveComplete
+        ? `${teamsSources.length} bounded sources from three required Teams archive families produced ${teamsObservations.length} atomic observations and ${teamsClaims.length} mature claims; one independently supported CallNYC claim is public and the remaining depth stays held`
+        : "Teams archive source counts, boundaries, hydration limits, held claims, proof coverage, CallNYC projection, documentation, or private-source redaction is incomplete"]
     }
   ];
 

@@ -30,6 +30,9 @@ product, a documented formal submission, or a documented winner.
 - New York City Council event-day CouncilStat post.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
+- BetaNYC's March 8, 2016 NYC School of Data recap, which included CallNYC in
+  its "Featured Hacks" section and described its constituent-services-data
+  purpose.
 - Public CallNYC GitHub repository.
 - Public CallNYC project mark preserved in that repository; cleared for this
   portfolio with an explicit non-affiliation boundary.
@@ -38,6 +41,10 @@ product, a documented formal submission, or a documented winner.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+The BetaNYC recap is independent public recognition of what the prototype did.
+It does not establish that BetaNYC or the Council commissioned, adopted, or
+formally presented CallNYC.
 
 ## Bounded research finding
 

@@ -151,6 +151,108 @@
       "correctionId": "COR-KCTH-FUNDING-LIFECYCLE-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall"
+    },
+    "teamsArchiveProduction": {
+      "expectedSourceCount": 12,
+      "expectedIntakeCount": 12,
+      "expectedObservationCount": 17,
+      "expectedClaimCount": 10,
+      "expectedInquiryCount": 6,
+      "intakeIds": [
+        "INTAKE-TEAMS-CALLNYC-SCHOOL-OF-DATA-2016",
+        "INTAKE-TEAMS-WOWLIST-ARCHIVED-LANDING-2017",
+        "INTAKE-TEAMS-CLAUDETTES-MAKE-US-VISIBLE-2022",
+        "INTAKE-TEAMS-BAPLAB-WAVE-FARM-2006",
+        "INTAKE-TEAMS-KCSPACES-GOFUNDME-2020",
+        "INTAKE-TEAMS-KCSPACES-CODE-REVIEW-2026",
+        "INTAKE-TEAMS-CRS-90-DAY-OPERATING-PLAN-2026",
+        "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026",
+        "INTAKE-TEAMS-CRS-OPEN-DATA-FOUNDATION-2025",
+        "INTAKE-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+        "INTAKE-TEAMS-APPROVED-RESUME-2026-06-11",
+        "INTAKE-TEAMS-SOURCE-BACKED-MEMORY-PROPOSAL-2026"
+      ],
+      "sourceIds": [
+        "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+        "SRC-WOWLIST-WAYBACK-2017-06-25",
+        "SRC-CLAUDETTES-MAKE-US-VISIBLE-MUNICH-2022",
+        "SRC-BAPLAB-WAVE-FARM-2006-07-22",
+        "SRC-KCSPACES-GOFUNDME-2020",
+        "SRC-KCSPACES-ARCHIVAL-CODE-REVIEW-2026-07-09",
+        "SRC-CRS-90-DAY-OPERATING-PLAN-2026-04-06",
+        "SRC-CRS-RUNNING-MINUTES-2026-04-29",
+        "SRC-CRS-OPEN-DATA-FOUNDATION-2025-11-26",
+        "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-16",
+        "SRC-JAMIE-APPROVED-RESUME-2026-06-11",
+        "SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26"
+      ],
+      "privateSourceIds": [
+        "SRC-KCSPACES-ARCHIVAL-CODE-REVIEW-2026-07-09",
+        "SRC-CRS-90-DAY-OPERATING-PLAN-2026-04-06",
+        "SRC-CRS-RUNNING-MINUTES-2026-04-29",
+        "SRC-CRS-OPEN-DATA-FOUNDATION-2025-11-26",
+        "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-16",
+        "SRC-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26"
+      ],
+      "claimIds": [
+        "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+        "CLM-WOWLIST-PUBLIC-PRODUCT-PURPOSE",
+        "CLM-CLAUDETTES-THEATRE-CO-CREDIT",
+        "CLM-BAPLAB-JAMIE-PARTICIPATION-2006",
+        "CLM-KCSPACES-DIGITAL-INFRASTRUCTURE",
+        "CLM-CRS-SHARED-PUBLIC-GOODS-DESIGN",
+        "CLM-CRS-CONSENT-AWARE-KNOWLEDGE-GOVERNANCE",
+        "CLM-CRS-OPEN-DATA-FOUNDATION-DESIGN",
+        "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE",
+        "CLM-SOURCE-BACKED-MEMORY-BOUNDED-PILOT-METHOD"
+      ],
+      "inquiryIds": [
+        "INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-14",
+        "INQ-WOWLIST-ADOPTION-AND-METRICS",
+        "INQ-CLAUDETTES-CONTRIBUTION-SCOPE",
+        "INQ-KCSPACES-DIGITAL-INFRASTRUCTURE-ROLE",
+        "INQ-CRS-ARTIFACT-PUBLICATION-AND-COLLABORATOR-REVIEW",
+        "INQ-SOURCE-BACKED-MEMORY-PILOT-STATUS"
+      ],
+      "archiveGroups": {
+        "jamieProjectsHistory": 6,
+        "crs": 4,
+        "jobHunt": 2
+      },
+      "archiveGroupIntakeIds": {
+        "jamieProjectsHistory": [
+          "INTAKE-TEAMS-CALLNYC-SCHOOL-OF-DATA-2016",
+          "INTAKE-TEAMS-WOWLIST-ARCHIVED-LANDING-2017",
+          "INTAKE-TEAMS-CLAUDETTES-MAKE-US-VISIBLE-2022",
+          "INTAKE-TEAMS-BAPLAB-WAVE-FARM-2006",
+          "INTAKE-TEAMS-KCSPACES-GOFUNDME-2020",
+          "INTAKE-TEAMS-KCSPACES-CODE-REVIEW-2026"
+        ],
+        "crs": [
+          "INTAKE-TEAMS-CRS-90-DAY-OPERATING-PLAN-2026",
+          "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026",
+          "INTAKE-TEAMS-CRS-OPEN-DATA-FOUNDATION-2025",
+          "INTAKE-TEAMS-CRS-PROVENANCE-REDLINE-2026"
+        ],
+        "jobHunt": [
+          "INTAKE-TEAMS-APPROVED-RESUME-2026-06-11",
+          "INTAKE-TEAMS-SOURCE-BACKED-MEMORY-PROPOSAL-2026"
+        ]
+      },
+      "activeClaimId": "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+      "callnycOccurrenceId": "school-of-data-feature",
+      "callnycSourceId": "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+      "proofIds": [
+        "career-operating-structure-14-years",
+        "callnyc-civic-data-guidance",
+        "fair-rent-campaign-memory",
+        "fair-rent-source-map",
+        "wowlist-community-platform",
+        "kc-spaces-fund-digital-infrastructure",
+        "source-backed-team-memory-method",
+        "technical-operations-operating-backbone",
+        "ai-evals-professional-development"
+      ]
     }
   },
   "criteria": [
@@ -223,6 +325,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "The bank and public projection preserve the full official sequence from CCED recommendation through Council acceptance and appropriation to zero disbursement, withdrawal, and return of the unused funds, without converting collective authorization into individual receipt or sole causation."
+    },
+    {
+      "id": "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION",
+      "label": "Teams archive production integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Jamie Projects History, CRS, and job-hunt produce bounded sources, atomic observations, held depth, explicit hydration limits, and only one independently supported public projection without exposing private archive material."
     }
   ],
   "hillClimb": {

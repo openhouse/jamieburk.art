@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -189,6 +190,103 @@ test("KC Town Hall eval rejects accidental publication of the transition lead", 
     projection.status = original.status;
     projection.surfaces = original.surfaces;
   }
+});
+
+test("Teams archive production retains the complete three-family evidence graph", () => {
+  const pilot = suite.pilot.teamsArchiveProduction;
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(pilot.intakeIds.length, pilot.expectedIntakeCount);
+  assert.equal(pilot.sourceIds.length, pilot.expectedSourceCount);
+  assert.equal(pilot.claimIds.length, pilot.expectedClaimCount);
+  assert.equal(pilot.inquiryIds.length, pilot.expectedInquiryCount);
+  assert.deepEqual(pilot.archiveGroups, {
+    jamieProjectsHistory: 6,
+    crs: 4,
+    jobHunt: 2
+  });
+  assert.equal(
+    result.criteria.find(
+      (item) => item.criterionId === "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION"
+    )?.score,
+    5
+  );
+});
+
+test("Teams archive private sources retain protected locators and cannot enter the public registry", () => {
+  const pilot = suite.pilot.teamsArchiveProduction;
+  const publicRegistry = readFileSync(
+    new URL("../../apps/www/src/data/knowledge-bank/public-registry.json", import.meta.url),
+    "utf8"
+  );
+
+  for (const sourceId of pilot.privateSourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source);
+    assert.notEqual(source.visibility, "public");
+    assert.equal(source.preservationStatus, "private");
+    assert.ok(source.protectedLocatorId);
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+    assert.equal(publicRegistry.includes(sourceId), false);
+  }
+});
+
+test("Teams archive eval rejects accidental publication of a held CRS claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-OPEN-DATA-FOUNDATION-DESIGN"
+  );
+  assert.ok(claim);
+  const projection = claim.projections[0];
+  const original = { status: projection.status, surfaces: [...projection.surfaces] };
+
+  try {
+    projection.status = "active";
+    projection.surfaces = ["/work/fair-rent-nyc"];
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find(
+        (item) => item.criterionId === "KB-EVAL-TEAMS-ARCHIVE-PRODUCTION"
+      )?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    projection.status = original.status;
+    projection.surfaces = original.surfaces;
+  }
+});
+
+test("Teams archive inquiry preserves the iCloud materialization limitation", () => {
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-14"
+  );
+
+  assert.ok(inquiry);
+  assert.ok(
+    inquiry.limitations.some(
+      (limitation) =>
+        limitation.includes("did not materialize") &&
+        limitation.includes("does not prove")
+    )
+  );
+});
+
+test("Teams archive promotes only the independently supported CallNYC recognition", () => {
+  const pilot = suite.pilot.teamsArchiveProduction;
+  const activeClaims = pilot.claimIds
+    .map((id) => knowledgeBank.claims.find((claim) => claim.id === id))
+    .filter((claim) => claim?.projections.some((projection) => projection.status === "active"));
+
+  assert.deepEqual(activeClaims.map((claim) => claim.id), [pilot.activeClaimId]);
+  assert.equal(
+    activeClaims[0].evidence.some(
+      (evidence) =>
+        evidence.sourceId === pilot.callnycSourceId && evidence.renderCitation === true
+    ),
+    true
+  );
 });
 
 test("photo feedback is instantiated as a protected research chain", () => {

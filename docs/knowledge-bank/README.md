@@ -76,3 +76,9 @@ See
 [projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)
 for the complete, deduplicated press indexes from Let NYC Dance, Talks Not
 Raids, Save NYC Spaces, and the supplied Fair Rent NYC Wayback capture.
+
+See
+[projects/teams-archive-production-2026-07-14.md](projects/teams-archive-production-2026-07-14.md)
+for the public-safe production pass across `Jamie Projects History`, `CRS`, and
+`job-hunt`, including the iCloud materialization boundary and selective
+projection decision.

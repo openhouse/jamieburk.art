@@ -184,6 +184,28 @@
       ]
     },
     {
+      "id": "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+      "title": "A brief recap of NYC School of Data 2016",
+      "organization": "BetaNYC / NYC School of Data",
+      "author": "Noel Hidalgo",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-03-08",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://schoolofdata.nyc/a-brief-recap-of-nyc-school-of-data-2016/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Noel Hidalgo, 'A brief recap of NYC School of Data 2016,' BetaNYC / NYC School of Data, March 8, 2016.",
+      "publicNote": "The recap includes CallNYC in its Featured Hacks section and describes it as profiling City Council constituent-services data.",
+      "doesNotEstablish": [
+        "CallNYC as an official Council product",
+        "CallNYC as a formal NYC School of Data presentation",
+        "CallNYC as a commissioned or adopted BetaNYC product",
+        "Jamie's presence at the March 5 event",
+        "product usage or outcome metrics"
+      ]
+    },
+    {
       "id": "SRC-KCTH-RESOLUTION-190649",
       "title": "Kansas City Resolution 190649",
       "organization": "City Council of Kansas City, Missouri",
@@ -610,6 +632,37 @@
       ]
     },
     {
+      "id": "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "BetaNYC's 2016 NYC School of Data recap featured CallNYC as a civic hack that profiled the Council's constituent-services data.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
+          "relationship": "direct-support",
+          "supports": [
+            "Featured Hacks placement",
+            "description of CallNYC's constituent-services data function"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the recognition to BetaNYC's NYC School of Data recap.",
+        "Keep CallNYC independent and unofficial."
+      ]
+    },
+    {
       "id": "CLM-KCTH-COUNCIL-APPROVAL-AND-APPROPRIATION-2019",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -823,7 +876,8 @@
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
         "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-        "SRC-CALLNYC-PROJECT-MARK"
+        "SRC-CALLNYC-PROJECT-MARK",
+        "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"
       ],
       "occurrences": [
         {
@@ -874,6 +928,14 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        },
+        {
+          "id": "school-of-data-feature",
+          "claimId": "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"
           ]
         },
         {

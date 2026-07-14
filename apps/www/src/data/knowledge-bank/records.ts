@@ -4,6 +4,7 @@ import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
 import { knowledgeBankSchema } from "./schema.ts";
+import { teamsArchiveProduction } from "./teams-archive-production.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -26,6 +27,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.intakeItems,
+    ...teamsArchiveProduction.intakeItems,
     ...kcTownHallFunding.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems
@@ -49,6 +51,7 @@ const knowledgeBankInput = {
       ]
     },
     ...historicalKnowledge.observations,
+    ...teamsArchiveProduction.observations,
     ...kcTownHallFunding.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations
@@ -199,6 +202,7 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     },
     ...historicalKnowledge.sources,
+    ...teamsArchiveProduction.sources,
     ...kcTownHallFunding.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources
@@ -302,6 +306,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     ...historicalKnowledge.claims,
+    ...teamsArchiveProduction.claims,
     ...kcTownHallFunding.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims
@@ -345,6 +350,7 @@ const knowledgeBankInput = {
       protectedLocatorId: "PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001"
     },
     ...historicalKnowledge.researchInquiries,
+    ...teamsArchiveProduction.researchInquiries,
     ...kcTownHallFunding.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries
@@ -365,7 +371,8 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
       "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "SRC-CALLNYC-PROJECT-MARK"
+      "SRC-CALLNYC-PROJECT-MARK",
+      "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -374,6 +381,7 @@ const knowledgeBankInput = {
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "project-mark", claimId: "CLM-CALLNYC-PROJECT-MARK", projection: "photo-caption", sourceIds: ["SRC-CALLNYC-PROJECT-MARK"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "school-of-data-feature", claimId: "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE", projection: "case-study", sourceIds: ["SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {
