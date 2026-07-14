@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import {
@@ -6,6 +7,7 @@ import {
   campaignPressPlacements
 } from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts";
 import { projectTwitterAccountInventory } from "../../apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts";
+import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -584,18 +586,113 @@ test("CallNYC Council engagement is promoted only as a recovered minimum", () =>
   const task = knowledgeBank.researchTasks.find(
     (item) => item.id === "TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
   );
-  const councilSources = knowledgeBank.sources.filter((item) =>
-    item.id.startsWith("SRC-X-CALLNYC-")
-  );
+  const councilSourceIds = claim.evidence
+    .map((item) => item.sourceId)
+    .filter((id) => /^SRC-X-CALLNYC-(?:CHIN|WILLS|MATTEO|KOO|EUGENE|ROSENTHAL|MENDEZ|RODRIGUEZ)-/.test(id));
 
   assert.equal(claim.maturity, "public-ready");
-  assert.equal(councilSources.length, 8);
+  assert.equal(councilSourceIds.length, 8);
   assert.match(claim.internalClaim, /at least eight then-serving/i);
   assert.ok(claim.antiClaims.some((item) => /adoption/i.test(item)));
   assert.ok(claim.boundaries.some((item) => /Carlina Rivera/i.test(item)));
   assert.equal(task.status, "resolved");
   assert.match(task.resolutionSummary, /recovered minimum/i);
   assert.match(task.resolutionSummary, /does not imply adoption or endorsement/i);
+});
+
+test("CallNYC census gives every observed profile-count slot a public-safe disposition", () => {
+  const ledger = JSON.parse(readFileSync("docs/knowledge-bank/data/callnyc-public-post-ledger.json", "utf8"));
+  const recovered = ledger.items.filter((item) => item.status === "recovered-public-status");
+  const unresolved = ledger.items.filter((item) => item.status === "unresolved-profile-count-slot");
+
+  assert.equal(ledger.items.length, 110);
+  assert.equal(recovered.length, 107);
+  assert.equal(unresolved.length, 3);
+  assert.equal(new Set(ledger.items.map((item) => item.dispositionId)).size, 110);
+  assert.equal(new Set(recovered.map((item) => item.statusId)).size, 107);
+  assert.ok(unresolved.every((item) => item.statusId === null && item.canonicalUrl === null));
+  assert.ok(ledger.completenessStatement.includes("100% disposition coverage"));
+  assert.ok(ledger.completenessStatement.includes("not an X data export"));
+  assert.ok(ledger.items.every((item) => !("text" in item) && !("raw" in item)));
+  assert.doesNotMatch(JSON.stringify(ledger), /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("CallNYC census aggregates reproduce the typed knowledge record", () => {
+  const ledger = JSON.parse(readFileSync("docs/knowledge-bank/data/callnyc-public-post-ledger.json", "utf8"));
+  const aggregate = ledger.aggregate;
+
+  assert.equal(aggregate.observedProfileCount, callNycSocialCensus.observedProfileCount);
+  assert.equal(aggregate.recoveredPublicStatuses, callNycSocialCensus.recoveredPublicStatuses);
+  assert.equal(aggregate.unresolvedProfileCountSlots, callNycSocialCensus.unresolvedProfileCountSlots);
+  assert.deepEqual(aggregate.relationshipCounts, { "account-post": 86, "account-reply": 6, repost: 15 });
+  assert.equal(aggregate.accountAuthoredStatuses, 92);
+  assert.equal(aggregate.accountAuthoredStatusesMentioningNyccouncil, 82);
+  assert.equal(aggregate.issueRecognitionStatuses, 71);
+  assert.equal(aggregate.councilMemberHandlesNamedInIssueRecognition, 26);
+  assert.equal(aggregate.councilMemberHandlesIncluded.length, 26);
+  assert.deepEqual(aggregate.nonMemberInstitutionalHandlesExcluded, ["@nyccouncil", "@nycha", "@nychousing"]);
+  assert.equal(new Set(aggregate.councilMemberHandlesIncluded).size, 26);
+  assert.equal(aggregate.uniqueIssueDestinations, 61);
+  assert.equal(aggregate.topLevelIssueCategories, 16);
+  assert.equal(aggregate.uniqueShortUrls, 84);
+  assert.equal(aggregate.uniqueResolvedDestinations, 76);
+  assert.equal(aggregate.uniqueCallNycDestinations, 63);
+  assert.equal(aggregate.uniqueExternalDestinations, 13);
+  assert.deepEqual(aggregate.issueRecognitionVisibleReactionTotals, {
+    statusesWithVisibleReaction: 46,
+    replies: 4,
+    reposts: 66,
+    likes: 86
+  });
+});
+
+test("CallNYC full-population claims preserve Chad-lens agency and traction boundaries", () => {
+  const loopClaim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP");
+  const metricsClaim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-CURRENT-VISIBLE-REACTION-PATTERN");
+  const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === loopClaim.id);
+  const roleProposition = knowledgeBank.sourceReadings
+    .flatMap((item) => item.propositions)
+    .find((item) => item.id === "PROP-CALLNYC-POLITICO-INDEPENDENT-FOLLOW-ON");
+
+  assert.equal(loopClaim.maturity, "public-ready");
+  assert.match(loopClaim.composition.action, /independently built/i);
+  assert.equal(roleProposition.relationToJamie, "direct-role");
+  assert.ok(loopClaim.antiClaims.some((item) => /71 recognition posts/i.test(item)));
+  assert.equal(decision.decision, "defer");
+  assert.equal(metricsClaim.maturity, "corroborated");
+  assert.ok(metricsClaim.boundaries.some((item) => /July 2026/i.test(item)));
+  assert.ok(metricsClaim.antiClaims.some((item) => /unique people/i.test(item)));
+});
+
+test("CallNYC School of Data recognition is independent and narrowly worded", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-NYC-SCHOOL-OF-DATA-RECOGNITION");
+  const source = knowledgeBank.sources.find((item) => item.id === "SRC-CALLNYC-NYC-SCHOOL-OF-DATA-RECAP-2016");
+  const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claim.id);
+
+  assert.equal(source.author, "Noel Hidalgo");
+  assert.match(source.canonicalUrl, /schoolofdata\.nyc/);
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.internalClaim, /featured hacks/i);
+  assert.ok(claim.antiClaims.some((item) => /award/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /formally presented/i.test(item)));
+  assert.equal(decision.decision, "defer");
+});
+
+test("CallNYC product announcements and unresolved slots remain research-routed", () => {
+  const apiClaim = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENTS");
+  const apiTask = knowledgeBank.researchTasks.find((item) => item.id === "TASK-CALLNYC-API-AND-CONTACT-CONTROLS");
+  const unresolvedTask = knowledgeBank.researchTasks.find((item) => item.id === "TASK-CALLNYC-UNRESOLVED-PROFILE-SLOTS");
+  const rejectedOutcome = knowledgeBank.claims.find((item) => item.id === "CLM-CALLNYC-AGGREGATE-SERVICE-OUTCOME-REJECTED");
+
+  assert.equal(apiClaim.maturity, "corroborated");
+  assert.equal(apiClaim.projections.length, 0);
+  assert.ok(apiClaim.boundaries.some((item) => /announcements/i.test(item)));
+  assert.equal(apiTask.status, "open");
+  assert.equal(unresolvedTask.status, "open");
+  assert.equal(unresolvedTask.priority, "high");
+  assert.ok(unresolvedTask.nextActions.some((item) => /native X account archive/i.test(item)));
+  assert.equal(rejectedOutcome.maturity, "rejected");
+  assert.match(rejectedOutcome.disposition.reason, /not an independently audited/i);
 });
 
 test("NYC Artist Coalition social claims preserve shared authorship and campaign continuity", () => {

@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "2e75fd4f56bfe78f76df4aed8ea0a52df0bfb8d1a185077b0c65257669150e88",
+    "fingerprint": "c43ee468b350115124017093fd6e480552260b9f5a58d905d1a489f318d715a9",
     "counts": {
       "entities": 22,
-      "intake": 100,
-      "sources": 129,
-      "sourceReadings": 129,
-      "claims": 51,
-      "researchTasks": 21,
-      "projectionDecisions": 43
+      "intake": 101,
+      "sources": 139,
+      "sourceReadings": 139,
+      "claims": 56,
+      "researchTasks": 23,
+      "projectionDecisions": 45
     }
   },
   "judge": {
@@ -20,29 +20,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "intakeRecordSchema",
-            "observation": "The intake contract accepts URLs, memories, protected archive pointers, photo observations, corrections, and migrations while separating public and protected material."
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-NYCARTC-TALKS-NOT-RAIDS-MEMORY",
-            "observation": "The Talks Not Raids memory remains linked to a researching claim and executable task without becoming verified public prose."
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO",
-            "observation": "The photo observation is retained as protected metadata and routed to research rather than treated as public proof."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "INTAKE-CALLNYC-FULL-POPULATION-X-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-ENGAGEMENT-EQUALS-ADOPTION-REJECTED",
-            "observation": "A misleading adoption inference remains inspectable as rejected and points to its narrower successor."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-FIRST-CIVIC-DATA-HACKATHON-SUPERSEDED",
-            "observation": "Superseded wording retains dated disposition history and no active surface."
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
           }
         ]
       },
@@ -51,24 +42,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "atomicPropositionSchema",
-            "observation": "Each proposition carries a relation-to-Jamie class, semantic support tags, confidence, and an optional locator."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "READ-X-CALLNYC-FULL-POPULATION-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "READ-X-REVIEW-KCTOWNHALL-2026",
-            "observation": "The tire-intake and reporting pattern is classified as project context, not Jamie's role, with incomplete-recovery and self-reported-metric limits."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "READ-CALLNYC-NYC-SCHOOL-OF-DATA-RECAP-2016"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "READ-KCSPACES-DIGITAL-INFRASTRUCTURE-ARCHIVAL-REVIEW-2026",
-            "observation": "This reading identifies Jamie's direct implementation role while excluding organizer, grant-decision, fundraiser-owner, and post-authorship claims."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "READ-HELLGATE-CURE-MARCH-2025",
-            "observation": "Later institutional figures are outcome context and explicitly do not establish legal identity, complete totals, or Jamie's causation."
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-RIVER-PITCH-2007"
           }
         ]
       },
@@ -77,34 +60,28 @@
         "score": 4,
         "evidence": [
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "public-ready Chad-lens action lacks a linked direct-role or collective-role proposition",
-            "observation": "The deterministic gate rejects public-ready composition without proposition-level role support."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
           },
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "public-ready Chad-lens action requires proposition-level role support",
-            "observation": "The regression test removes the qualifying role source and requires the promotion gate to fail for the Chad-lens reason."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-NYC-SCHOOL-OF-DATA-RECOGNITION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION",
-            "observation": "KC Spaces links Jamie's action to the direct-role proposition for the Ghost site, theme, widget, deployment, and platform continuity while excluding organizer and grant-making credit."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENTS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP",
-            "observation": "KC Town Hall remains corroborated without composition or projection because its evidence establishes the account workflow but not Jamie's role."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-AGGREGATE-SERVICE-OUTCOME-REJECTED"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS",
-            "observation": "The river claim gives Suzanne Hogan explicit outreach credit, preserves contributor authorship, and disallows unsupported measured outcomes."
+            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE",
-            "observation": "The Open House claim supports Jamie's instigation and tending while locating responsibility and decisions in the group."
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           }
         ]
       },
@@ -113,24 +90,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-KCTOWNHALL-SOCIAL-METRIC-RECONCILIATION",
-            "observation": "The task specifies missing role and metric evidence, reconciliation steps, and the requirement to keep the claim corroborated until role support exists."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "TASK-CALLNYC-UNRESOLVED-PROFILE-SLOTS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP",
-            "observation": "The task separates account creation, design, administration, strategy, and individual post authorship."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME",
-            "observation": "The critical task provides a cold-start evidence chain for Talks Not Raids, MARCH chronology, institutional action, collective contribution, and causation."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "TASK-CALLNYC-API-AND-CONTACT-CONTROLS"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-CREATION-ROLE",
-            "observation": "The founding-role memory becomes a prioritized search for early records, a dated chronology, and collaborator proof notes."
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
           }
         ]
       },
@@ -139,24 +108,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "publication-is-an-independent-decision",
-            "observation": "The evaluator rejects active surfaces without publish decisions, conflicting defer decisions, and undecided public-ready claims."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "socialArchiveDecisions",
-            "observation": "Every July 14 public-ready social claim is explicitly deferred instead of automatically published."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP",
-            "observation": "The corroborated KC Town Hall record has no composition or active projection while role evidence remains open."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-CALLNYC-NYC-SCHOOL-OF-DATA-RECOGNITION"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER",
-            "observation": "A strong public-ready river claim is separately deferred because it has not been selected for the current hiring argument."
+            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           }
         ]
       },
@@ -165,24 +126,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "sourceVisibilitySchema",
-            "observation": "The schema separates public, metadata-only, private, and protected sources and forbids underlying URLs on non-public sources."
+            "file": "docs/knowledge-bank/data/callnyc-public-post-ledger.json",
+            "record": "CALLNYC-X-UNRESOLVED-001"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO",
-            "observation": "The private photograph exposes only bounded metadata and an opaque locator while rights, consent, and display remain on hold."
+            "file": "docs/knowledge-bank/anti-claims.md",
+            "record": "Do not call the 107-record Posts and Replies union a complete X export."
           },
           {
             "file": "docs/knowledge-bank/approval-register.md",
-            "record": "Social account archive production",
-            "observation": "The boundary excludes sessions, credentials, direct messages, administrator records, and inferred post authorship; July 14 website use remains deferred."
-          },
-          {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "scanPublicRepositoryBoundary",
-            "observation": "The evaluator scans repository text for local user, volume, temporary-research, and iCloud-container paths in addition to graph-level unsafe markers."
+            "record": "CallNYC full-population social census"
           }
         ]
       },
@@ -191,29 +144,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Use Chad's lens when composing a projection",
-            "observation": "The lifecycle defines a reusable action, intended end, usable result, translation, collective-credit, and causal-limit sequence."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY",
-            "observation": "The composition joins documented organizer status to account continuity while separating creation, post authorship, collaborator voice, and legislative causation."
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION",
-            "observation": "The composition packages action, intended end, usable result, audience, collective credit, and causal boundary around proposition-level role support."
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT",
-            "observation": "A visual discovery is routed into public-record research and remains metadata-only until rights and consent are resolved."
+            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-KCTOWNHALL-SOCIAL-METRIC-RECONCILIATION",
-            "observation": "The graph preserves the workflow as future material while naming the role and metric evidence needed before it can become Jamie's accomplishment."
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           }
         ]
       }
@@ -236,5 +176,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh deterministic evaluation reports 0 of 7 hard gates failing and 0 of 4 quality targets open; 41 of 41 lifecycle tests pass. Read-only mutation tests confirmed that every July 14 public-ready social composition links direct-role or collective-role support, removing KC Spaces role support fails promotion, and forcing KC Town Hall to public-ready with only project-context propositions fails promotion. KC Town Hall remains corroborated with no composition or projection pending role evidence. KC Spaces links PROP-KCSPACES-JAMIE-DIGITAL-INFRASTRUCTURE as direct-role support while retaining organizer, grant-decision, fundraising, and post-authorship anti-claims. The assessment validator reports a weighted judge score of 100 with all human gates pending."
+  "summary": "Deterministic gates under Node 26.4.0: 0/7 hard gates failing and 0/4 quality targets open. The focused CallNYC and lifecycle slice passed 12/12 tests; the full knowledge-lifecycle suite passed 46/46; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Judge score: 100.0/100, with all seven criteria at 4/4, because intake, atomic readings, role-linked Chad-lens claims, explicit research routes, projection decisions, and public-safe boundaries are unusually explicit and traversable. Remaining bounded gaps are preserved rather than inferred: three profile-count slots are unresolved; API and contact controls remain announcements pending code and archive verification; July 2026 visible metrics are mutable current observations; both new public-ready claims remain deferred; and all named human gates remain pending."
 }

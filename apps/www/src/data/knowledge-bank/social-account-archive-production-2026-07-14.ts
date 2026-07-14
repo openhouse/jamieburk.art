@@ -12,7 +12,7 @@ export const projectTwitterAccountInventory = {
   reviewedAt: "2026-07-14",
   method: "Authenticated, read-only X profile, timeline, and indexed-search review.",
   accounts: [
-    { project: "CallNYC", handle: "@CallNYCapp", profileUrl: "https://x.com/CallNYCapp", observedPosts: 110, recoveredTimelineItems: 106 },
+    { project: "CallNYC", handle: "@CallNYCapp", profileUrl: "https://x.com/CallNYCapp", observedPosts: 110, recoveredPublicStatuses: 107, unresolvedProfileCountSlots: 3 },
     { project: "NYC Artist Coalition", handle: "@NYCArtC", profileUrl: "https://x.com/NYCArtC", observedPosts: 5124, recoveredIndexedMentions: 374 },
     { project: "WOW List", handle: "@wowlist", profileUrl: "https://x.com/wowlist", observedPosts: 38, recoveredTimelineItems: 37 },
     { project: "KC Town Hall", handle: "@KCTownHall", profileUrl: "https://x.com/KCTownHall", observedPosts: 183, recoveredTimelineItems: 121 },
@@ -183,8 +183,8 @@ const researchSources: SourceRecord[] = [
   {
     id: "SRC-X-REVIEW-CALLNYC-2026", title: "Authenticated CallNYC X inventory", author: "Codex archival review", kind: "research-run", visibility: "public", preservationStatus: "live", capturedAt: "2026-07-14", accessedAt: "2026-07-14",
     publicCitation: "Authenticated, read-only review of the @CallNYCapp profile, timeline, and indexed mentions, July 14, 2026.",
-    publicNote: "The review recovered 106 visible timeline items from a profile showing 110 posts and verified a minimum of eight then-serving Council member accounts that replied to, quoted, reposted, or directly shared CallNYC.",
-    intakeIds: ["INTAKE-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT"], supportsGenerally: ["bounded CallNYC timeline inventory", "minimum of eight then-serving Council-member account interactions"], doesNotEstablish: ["an exhaustive interaction count", "institutional adoption", "endorsement", "resident use", "complete liker history"]
+    publicNote: "The review recovered 107 unique public statuses across the authenticated Posts and Replies routes from a profile showing 110 posts, preserved three unresolved slots, and verified a minimum of eight then-serving Council member accounts that replied to, quoted, reposted, or directly shared CallNYC.",
+    intakeIds: ["INTAKE-CALLNYC-COUNCIL-TWITTER-ENGAGEMENT"], supportsGenerally: ["bounded CallNYC Posts and Replies inventory", "minimum of eight then-serving Council-member account interactions"], doesNotEstablish: ["a native X data export", "the content or cause of three unresolved profile-count slots", "an exhaustive interaction count", "institutional adoption", "endorsement", "resident use", "complete liker history"]
   },
   {
     id: "SRC-X-REVIEW-NYCARTC-2026", title: "Authenticated NYC Artist Coalition X inventory", author: "Codex archival review", kind: "research-run", visibility: "public", preservationStatus: "live", capturedAt: "2026-07-14", accessedAt: "2026-07-14",
@@ -279,11 +279,11 @@ const researchReadings: SourceReading[] = [
   {
     id: "READ-X-REVIEW-CALLNYC-2026", sourceId: "SRC-X-REVIEW-CALLNYC-2026", status: "closely-read", readAt: "2026-07-14",
     propositions: [
-      { id: "PROP-X-CALLNYC-TIMELINE-106", text: "The authenticated review recovered 106 visible items from a profile showing 110 posts.", relationToJamie: "project-context", supportTags: ["callnyc-bounded-social-inventory"], confidence: "high", locator: "Profile and timeline review" },
+      { id: "PROP-X-CALLNYC-PUBLIC-UNION-107", text: "The authenticated Posts and Replies union recovered 107 unique public statuses from a profile showing 110 posts and preserved three unresolved profile-count slots.", relationToJamie: "project-context", supportTags: ["callnyc-bounded-social-inventory"], confidence: "high", locator: "Posts and Replies route union" },
       { id: "PROP-X-CALLNYC-EIGHT-COUNCIL-MEMBERS", text: "At least eight then-serving NYC Council member accounts publicly replied to, reposted, quoted, or directly shared CallNYC between April 2016 and July 2017.", relationToJamie: "outcome-context", supportTags: ["callnyc-council-eight-recovered"], confidence: "high", locator: "Deduplicated account and office-date review" },
       { id: "PROP-X-CALLNYC-CARLINA-BOUNDARY", text: "Carlina Rivera also quoted CallNYC in May 2016 while serving on Council Member Rosie Mendez's team, before Rivera joined the Council.", relationToJamie: "outcome-context", supportTags: ["callnyc-later-member-boundary"], confidence: "high", locator: "Office-date classification" }
     ],
-    limitations: ["The review is a recovered minimum, not an exhaustive lifetime interaction count.", "X search does not expose a complete historical liker or follower ledger.", "Engagement does not establish adoption, endorsement, resident use, or institutional deployment."], researchTaskIds: []
+    limitations: ["The review is not a native X data export and cannot identify the content or cause of the three unresolved profile-count slots.", "X search does not expose a complete historical liker or follower ledger.", "Engagement does not establish adoption, endorsement, resident use, or institutional deployment."], researchTaskIds: []
   },
   {
     id: "READ-X-REVIEW-NYCARTC-2026", sourceId: "SRC-X-REVIEW-NYCARTC-2026", status: "closely-read", readAt: "2026-07-14",

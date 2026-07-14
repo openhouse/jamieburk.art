@@ -25,7 +25,7 @@ especially for likes, follows, deleted posts, or unindexed replies.
 
 | Project | Handle | Observed profile posts | Recovered in this pass |
 | --- | --- | ---: | ---: |
-| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 | 106 timeline items |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 | 107 public statuses plus 3 unresolved slots |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 | 374 indexed mentions plus campaign searches |
 | WOW List | [@wowlist](https://x.com/wowlist) | 38 | 37 timeline items |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 | 121 timeline items |
@@ -43,6 +43,12 @@ Residency or Sunday Dinner. That is a bounded search result, not proof that an
 account never existed.
 
 ## CallNYC
+
+The subsequent
+[full-population census](callnyc-full-population-social-census-2026-07-14.md)
+reconciles the Posts and Replies routes against all 110 observed profile-count
+slots. It recovers 107 unique public statuses and preserves three unresolved
+slots without inference.
 
 The authenticated review recovered at least eight then-serving NYC Council
 member accounts that replied to, reposted, quoted, or directly shared CallNYC

@@ -187,6 +187,14 @@ It preserves recovered-minimum counts rather than treating incomplete timelines
 as exhaustive, and it keeps every newly mature social claim deferred from the
 website pending a later compositional decision.
 
+The
+[CallNYC full-population social census](research/callnyc-full-population-social-census-2026-07-14.md)
+then applies the lifecycle at item level. It gives all 110 observed profile-count
+slots a disposition, retains 107 public status records in a redacted ledger,
+routes three unknown slots to further research, extracts source and stakeholder
+patterns, rejects an unsupported service-outcome conversion, and defers two
+new public-ready claims from the website.
+
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing
 review status without pretending that a new proposition-level close reading

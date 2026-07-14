@@ -94,3 +94,10 @@ The
 shows how authenticated review of public project accounts can recover bounded
 engagement, campaign continuity, operational workflows, and source leads while
 keeping shared authorship, mutable metrics, and adoption limits explicit.
+
+The
+[CallNYC full-population social census](research/callnyc-full-population-social-census-2026-07-14.md)
+shows how an observed profile population can receive 100% disposition coverage
+without overstating archive completeness: 107 recovered public statuses, three
+explicit unresolved slots, a redacted item ledger, and bounded source,
+communication, and traction findings.

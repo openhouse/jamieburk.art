@@ -1,0 +1,3625 @@
+{
+  "schemaVersion": 1,
+  "account": "@CallNYCapp",
+  "profileUrl": "https://x.com/CallNYCapp",
+  "observedAt": "2026-07-14",
+  "populationDefinition": "All 110 slots represented by the authenticated X profile count at review time, with a disposition for each slot.",
+  "completenessStatement": "This is 100% disposition coverage of the observed profile-count population: 107 recoverable public status records and three unresolved slots. It is not an X data export and does not claim recovery of deleted, withheld, or otherwise unavailable content.",
+  "method": [
+    "Traversed the authenticated Posts route to exhaustion and recovered 106 unique status records.",
+    "Traversed the authenticated Replies route to exhaustion and recovered 107 unique status records.",
+    "Deduplicated the route union by canonical status URL and compared it with the observed profile count of 110.",
+    "Checked the rendered route populations for unavailable, withheld, and deleted placeholders; none exposed a recoverable status ID.",
+    "Resolved public t.co destinations in July 2026; current resolution does not establish 2016 availability."
+  ],
+  "aggregate": {
+    "observedProfileCount": 110,
+    "recoveredPublicStatuses": 107,
+    "unresolvedProfileCountSlots": 3,
+    "relationshipCounts": {
+      "account-post": 86,
+      "account-reply": 6,
+      "repost": 15
+    },
+    "accountAuthoredStatuses": 92,
+    "accountAuthoredStatusesMentioningNyccouncil": 82,
+    "issueRecognitionStatuses": 71,
+    "issueRecognitionVisibleReactionTotals": {
+      "statusesWithVisibleReaction": 46,
+      "replies": 4,
+      "reposts": 66,
+      "likes": 86
+    },
+    "councilMemberHandlesNamedInIssueRecognition": 26,
+    "councilMemberHandlesIncluded": [
+      "@benkallos",
+      "@bradlander",
+      "@chaimdeutsch",
+      "@cm_margaretchin",
+      "@cm_rubenwills",
+      "@cmenchaca",
+      "@cmmathieueugene",
+      "@cmpeterkoo",
+      "@cmreynoso34",
+      "@dromm25",
+      "@elizcrowleynyc",
+      "@fcabrerany",
+      "@helenrosenthal",
+      "@idaneekmiller",
+      "@jimmyvanbramer",
+      "@julissaferreras",
+      "@marktreyger718",
+      "@mmviverito",
+      "@nycgreenfield",
+      "@ritchietorres",
+      "@rlespinal",
+      "@rosiemendez",
+      "@stephenlevin33",
+      "@stevenmatteo",
+      "@vanessalgibson",
+      "@ydanis"
+    ],
+    "nonMemberInstitutionalHandlesExcluded": [
+      "@nyccouncil",
+      "@nycha",
+      "@nychousing"
+    ],
+    "uniqueIssueDestinations": 61,
+    "topLevelIssueCategories": 16,
+    "uniqueShortUrls": 84,
+    "uniqueResolvedDestinations": 76,
+    "uniqueCallNycDestinations": 63,
+    "uniqueExternalDestinations": 13
+  },
+  "metricBoundary": "Visible reply, repost, and like counts were observed in July 2026. They are mutable interface counts, not 2016 snapshots, unique-person counts, complete engagement histories, or evidence of adoption or service outcomes.",
+  "contentBoundary": "Raw post text is omitted from this public ledger. SHA-256 digests permit later corpus comparison without republishing the text.",
+  "items": [
+    {
+      "dispositionId": "CALLNYC-X-706146203604492288",
+      "status": "recovered-public-status",
+      "statusId": "706146203604492288",
+      "canonicalUrl": "https://x.com/ppolitics/status/706146203604492288",
+      "publishedAt": "2016-03-05T15:55:49.000Z",
+      "relationship": "repost",
+      "authorHandle": "@ppolitics",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@betanyc",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nyc",
+        "#opengov"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/595mNVKE1j",
+          "destination": "https://nyctwg.org/",
+          "resolutionObservedAt": "2026-07-14"
+        },
+        {
+          "shortUrl": "https://t.co/fxKlcXONki",
+          "destination": "https://labs.council.nyc/",
+          "resolutionObservedAt": "2026-07-14"
+        },
+        {
+          "shortUrl": "https://t.co/0998D9hEqF",
+          "destination": "https://talk.beta.nyc/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 140,
+      "contentDigestSha256": "d8430fcf977d3667c1f0e7b35459d11d5064938e357dccce8449af0daccdde61"
+    },
+    {
+      "dispositionId": "CALLNYC-X-706208629360304128",
+      "status": "recovered-public-status",
+      "statusId": "706208629360304128",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/706208629360304128",
+      "publishedAt": "2016-03-05T20:03:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "launch",
+      "mentionedHandles": [
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nycsodata",
+        "#opendataday"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 120,
+      "contentDigestSha256": "ea7596c451bf676829a4e3ae687b994c66a882aca35740e2b4fd384380ff207a"
+    },
+    {
+      "dispositionId": "CALLNYC-X-707677287366467584",
+      "status": "recovered-public-status",
+      "statusId": "707677287366467584",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/707677287366467584",
+      "publishedAt": "2016-03-09T21:19:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "project-communication",
+      "mentionedHandles": [
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 114,
+      "contentDigestSha256": "d094782b38c6d56af7fb22a4b05762f90f308c296d94220adea328d33e380a26"
+    },
+    {
+      "dispositionId": "CALLNYC-X-710150246781882369",
+      "status": "recovered-public-status",
+      "statusId": "710150246781882369",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710150246781882369",
+      "publishedAt": "2016-03-16T17:06:27.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "stakeholder-conversation",
+      "mentionedHandles": [
+        "@noneck"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        },
+        {
+          "shortUrl": "https://t.co/IBvFeEBZSP",
+          "destination": "https://wowlist.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 127,
+      "contentDigestSha256": "657392549c8ce875b26603c17efbc7941805fef6a9deda4c46f39e7f728ba0ed"
+    },
+    {
+      "dispositionId": "CALLNYC-X-710154803054301184",
+      "status": "recovered-public-status",
+      "statusId": "710154803054301184",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710154803054301184",
+      "publishedAt": "2016-03-16T17:24:33.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "product-interface",
+      "mentionedHandles": [
+        "@noneck"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "destination": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 184,
+      "contentDigestSha256": "2c844360b9c2d2f72f895bb9c831298863629f408edc1888239a6558cd268b3e"
+    },
+    {
+      "dispositionId": "CALLNYC-X-710498412349800450",
+      "status": "recovered-public-status",
+      "statusId": "710498412349800450",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710498412349800450",
+      "publishedAt": "2016-03-17T16:09:56.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@alizauf"
+      ],
+      "hashtags": [
+        "#311"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uhtgJwS83b",
+          "destination": "https://gizmodo.com/check-the-history-of-complaints-at-any-nyc-address-with-1764099069",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 185,
+      "contentDigestSha256": "11a1e04720f484968e7ba07e32bdcc840607625f05120564cca0cf8613685e3e"
+    },
+    {
+      "dispositionId": "CALLNYC-X-710507767447031808",
+      "status": "recovered-public-status",
+      "statusId": "710507767447031808",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710507767447031808",
+      "publishedAt": "2016-03-17T16:47:07.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@politico"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/mnTxsOm2u5",
+          "destination": "http://www.capitalnewyork.com/article/city-hall/2016/03/8593638/website-allows-getting-know-councilmembers-through-data",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 118,
+      "contentDigestSha256": "e9e8e432a52a8be13a92f6741a31c0fb0bcef9418061e915aca281f3f9022084"
+    },
+    {
+      "dispositionId": "CALLNYC-X-712349795403374592",
+      "status": "recovered-public-status",
+      "statusId": "712349795403374592",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/712349795403374592",
+      "publishedAt": "2016-03-22T18:46:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "aggregate-service-claim",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#mostservice"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/o34NImeSCP",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 119,
+      "contentDigestSha256": "8a0106100b93315043c6a3fdd2a47c8727b67a83b4cc54267b37ea4ff0d89e8a"
+    },
+    {
+      "dispositionId": "CALLNYC-X-713537148000018432",
+      "status": "recovered-public-status",
+      "statusId": "713537148000018432",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/713537148000018432",
+      "publishedAt": "2016-03-26T01:24:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "product-interface",
+      "mentionedHandles": [
+        "@noneck",
+        "@nyccouncil",
+        "@ppolitics"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/3FD3LmieU3",
+          "destination": "https://callnyc.org/api/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "1d98cf09eeab866cd490ed723abfec7fa164f5129c4819cba112a9f7efd5cc24"
+    },
+    {
+      "dispositionId": "CALLNYC-X-715139663384547328",
+      "status": "recovered-public-status",
+      "statusId": "715139663384547328",
+      "canonicalUrl": "https://x.com/chris_whong/status/715139663384547328",
+      "publishedAt": "2016-03-30T11:32:37.000Z",
+      "relationship": "repost",
+      "authorHandle": "@chris_whong",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@nyc311"
+      ],
+      "hashtags": [
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KvWTMollyY",
+          "destination": "http://chriswhong.github.io/311buddy/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 5,
+        "likes": 8
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 117,
+      "contentDigestSha256": "2c630e30a31bf19c41bb7a8b21a5445a76f4d7d25fb6295412eea81add02b6f5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-722837286476390401",
+      "status": "recovered-public-status",
+      "statusId": "722837286476390401",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/722837286476390401",
+      "publishedAt": "2016-04-20T17:20:13.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "product-interface",
+      "mentionedHandles": [
+        "@noneck",
+        "@nyccouncil",
+        "@ppolitics"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/QLHrhiHP1y",
+          "destination": "https://callnyc.org/api/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 124,
+      "contentDigestSha256": "aca4b8a693f508660aca4cfb83d45844a3ae6f7b0a67f586076b8f9aeb5d2896"
+    },
+    {
+      "dispositionId": "CALLNYC-X-722837868008177664",
+      "status": "recovered-public-status",
+      "statusId": "722837868008177664",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/722837868008177664",
+      "publishedAt": "2016-04-20T17:22:32.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@ritchietorres"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#uscitizenship"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/2ihtdXQMGs",
+          "destination": "https://callnyc.org/immigration/u-s-citizenship.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 150,
+      "contentDigestSha256": "56a15d41a8e2dddeb03aaf9da8e7b638dbae8f51e27577c66ccccdb1d1dd0de2"
+    },
+    {
+      "dispositionId": "CALLNYC-X-722928370237853696",
+      "status": "recovered-public-status",
+      "statusId": "722928370237853696",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/722928370237853696",
+      "publishedAt": "2016-04-20T23:22:09.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stephenlevin33"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#libraries"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/fkq7hzWi6c",
+          "destination": "https://callnyc.org/cultural-affairs/libraries.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 146,
+      "contentDigestSha256": "05820f19acd9714517030fe07e19641e3b94b0f7aeaa908172362a3fdecce843"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723132373114572801",
+      "status": "recovered-public-status",
+      "statusId": "723132373114572801",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723132373114572801",
+      "publishedAt": "2016-04-21T12:52:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#foodstamps"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XNjYv",
+          "destination": "https://callnyc.org/general-welfare/food-stamps.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 143,
+      "contentDigestSha256": "b258b58dfd85574e875441aaeeb498ea09000656eca8a1186db76ba4647ca89f"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723153082096345092",
+      "status": "recovered-public-status",
+      "statusId": "723153082096345092",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723153082096345092",
+      "publishedAt": "2016-04-21T14:15:04.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#landlordissues"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ZQZbxgPqPx",
+          "destination": "https://callnyc.org/housing-and-buildings/landlord-managing-agent-issues.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 177,
+      "contentDigestSha256": "fa37a9187da36f3fa365c9631338b1ec9776ab68bc68c7d1ab3c16fedc4e7646"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723249608659443712",
+      "status": "recovered-public-status",
+      "statusId": "723249608659443712",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723249608659443712",
+      "publishedAt": "2016-04-21T20:38:38.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@ydanis"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#nychanewapplication"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/jP1mkW2MfY",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-new-application.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 165,
+      "contentDigestSha256": "bb95a053bcaf94183cefb22e6f67da7d3e7341f6361080ae2bee32a990cd7ec3"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723313062950907905",
+      "status": "recovered-public-status",
+      "statusId": "723313062950907905",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723313062950907905",
+      "publishedAt": "2016-04-22T00:50:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nychabuildingmaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 174,
+      "contentDigestSha256": "041708e567f62b22b603a4971d8180602daae1fa2d565ac1496c8eb86dbcd442"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723546610576306176",
+      "status": "recovered-public-status",
+      "statusId": "723546610576306176",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723546610576306176",
+      "publishedAt": "2016-04-22T16:18:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmmathieueugene",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#immigration"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KaN1Ph34OH",
+          "destination": "https://callnyc.org/legal-services/immigration.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "3d9be6d65079d79126e7dab9acf7f2e315b16e37f2f590c74d9096d4e1875dd5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-723547805709676544",
+      "status": "recovered-public-status",
+      "statusId": "723547805709676544",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/723547805709676544",
+      "publishedAt": "2016-04-22T16:23:34.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@nycgreenfield"
+      ],
+      "hashtags": [
+        "#earthday",
+        "#treeplanting"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/t4aK6PYHIG",
+          "destination": "https://callnyc.org/parks/tree-planting-pruning.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 150,
+      "contentDigestSha256": "1974c8c909cc1751a0edf727f2eec3921070ad342c012d6860e1dc463d39f477"
+    },
+    {
+      "dispositionId": "CALLNYC-X-724723473852059649",
+      "status": "recovered-public-status",
+      "statusId": "724723473852059649",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/724723473852059649",
+      "publishedAt": "2016-04-25T22:15:15.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@benkallos",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#generalconstruction"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KUZBXbkGrp",
+          "destination": "https://callnyc.org/housing-and-buildings/construction-general.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 167,
+      "contentDigestSha256": "02ce85e4fb56e208cb97d758c854145e163024617c8e854dcc7f1cf3b9cbd02c"
+    },
+    {
+      "dispositionId": "CALLNYC-X-724727480909705216",
+      "status": "recovered-public-status",
+      "statusId": "724727480909705216",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/724727480909705216",
+      "publishedAt": "2016-04-25T22:31:10.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#parkmaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/UwHNuZs1qj",
+          "destination": "https://callnyc.org/parks/park-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 146,
+      "contentDigestSha256": "267d7a4e5ed50eaa04245a1fad35fcb3d6632d93ca829952d069f409b69ebc17"
+    },
+    {
+      "dispositionId": "CALLNYC-X-724767660353949697",
+      "status": "recovered-public-status",
+      "statusId": "724767660353949697",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/724767660353949697",
+      "publishedAt": "2016-04-26T01:10:50.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@dromm25",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#noise"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D6cgQ300iJ",
+          "destination": "https://callnyc.org/quality-of-life/noise-other.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 136,
+      "contentDigestSha256": "6e5016dc080120a03a169578351eeda64a7bc0da0feab2270fcb5d59b934de55"
+    },
+    {
+      "dispositionId": "CALLNYC-X-724986599419875333",
+      "status": "recovered-public-status",
+      "statusId": "724986599419875333",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/724986599419875333",
+      "publishedAt": "2016-04-26T15:40:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@ritchietorres"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#taxprepassistance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHJlRD",
+          "destination": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 156,
+      "contentDigestSha256": "21431815f5600d5bbe5d9a094f5d48177b9a04e065804b72b23694e7f4f7472e"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725048363528392704",
+      "status": "recovered-public-status",
+      "statusId": "725048363528392704",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725048363528392704",
+      "publishedAt": "2016-04-26T19:46:15.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#streetresurfacing"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/CfUcCUgR5v",
+          "destination": "https://callnyc.org/transportation/street-resurfacing.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 159,
+      "contentDigestSha256": "48c385843ad6f55cb86a5910540aad3c23b01ca66c69fc866d10d49e3dc9273f"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725052316978663426",
+      "status": "recovered-public-status",
+      "statusId": "725052316978663426",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725052316978663426",
+      "publishedAt": "2016-04-26T20:01:57.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#nychatransfer"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/9GUjrTPVfR",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-transfers.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 157,
+      "contentDigestSha256": "b445aec29c36f0aac866ab13f62b239a95f1b75fb2ecea3cc2d4ed9fbe51b3e6"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725084356432269313",
+      "status": "recovered-public-status",
+      "statusId": "725084356432269313",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725084356432269313",
+      "publishedAt": "2016-04-26T22:09:16.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@marktreyger718",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#employment"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ixqxa8cPpB",
+          "destination": "https://callnyc.org/economy-jobs/seeking-employment.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 3,
+      "normalizedTextCharacterCount": 152,
+      "contentDigestSha256": "3a6776b5a477065d72942ba63b66da4d0d4bb75b34f82722a33b0f90ffc50e32"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725334082364821504",
+      "status": "recovered-public-status",
+      "statusId": "725334082364821504",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725334082364821504",
+      "publishedAt": "2016-04-27T14:41:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@vanessalgibson"
+      ],
+      "hashtags": [
+        "#communitybasedorg"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/KlskCGW2jn",
+          "destination": "https://callnyc.org/cultural-affairs/community-based-organization.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 163,
+      "contentDigestSha256": "e3152c0d39eafa0b196aa4c5a2f5d1a1d998419a37190186f4d3ec40b482cf68"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725403215282487296",
+      "status": "recovered-public-status",
+      "statusId": "725403215282487296",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725403215282487296",
+      "publishedAt": "2016-04-27T19:16:18.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmpeterkoo",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#lifeline"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/FZduliunTG",
+          "destination": "https://callnyc.org/utilities/lifeline.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 133,
+      "contentDigestSha256": "be22755dc76449208f323162035d985ac71f7c0b020097728cf2a1c535ee43da"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725445909241278468",
+      "status": "recovered-public-status",
+      "statusId": "725445909241278468",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725445909241278468",
+      "publishedAt": "2016-04-27T22:05:57.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@elizcrowleynyc",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#animalcare",
+        "#wildanimal"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/dQTEpirK0c",
+          "destination": "https://callnyc.org/health/animal-care-wild-animal.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 156,
+      "contentDigestSha256": "e17802275ccee16bc54238030f64d6e664818bf6e941098bba96326303ba17a4"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725447728503902211",
+      "status": "recovered-public-status",
+      "statusId": "725447728503902211",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725447728503902211",
+      "publishedAt": "2016-04-27T22:13:11.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmenchaca",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#cityservicesandbenefits"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/1Uo5Non4dz",
+          "destination": "https://callnyc.org/immigration/city-services-and-benefits.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 3,
+      "normalizedTextCharacterCount": 158,
+      "contentDigestSha256": "4a3642b38407c79ec2763129a01e1d132025ae95c0cfe41b228c92fa03056347"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725462205173518338",
+      "status": "recovered-public-status",
+      "statusId": "725462205173518338",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725462205173518338",
+      "publishedAt": "2016-04-27T23:10:42.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rosiemendez"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#homelessshelter"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/f7sPewFLeA",
+          "destination": "https://callnyc.org/general-welfare/homeless-shelter-dhs.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 159,
+      "contentDigestSha256": "b4dbe86b2c3710f7398396a20b79fd7cc86249dc74fbdefa803116fe3a1da3eb"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725783813880684544",
+      "status": "recovered-public-status",
+      "statusId": "725783813880684544",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725783813880684544",
+      "publishedAt": "2016-04-28T20:28:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#affordablehousing",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "destination": "https://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 3,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 173,
+      "contentDigestSha256": "1ca05c8f22b2770dd25b29c64ddb283fb838b17a08a37f39eaa3ab4bc8620619"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725788478676570113",
+      "status": "recovered-public-status",
+      "statusId": "725788478676570113",
+      "canonicalUrl": "https://x.com/Gothamist/status/725788478676570113",
+      "publishedAt": "2016-04-28T20:47:12.000Z",
+      "relationship": "repost",
+      "authorHandle": "@Gothamist",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#bikenyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/nOPVwvQhOv",
+          "destination": "https://gothamist.com/news/long-overdue-pulaski-bridge-bike-path-will-officially-open-friday",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 2,
+        "reposts": 10,
+        "likes": 19
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 142,
+      "contentDigestSha256": "e68c3a8c3ff515c5c097677bb347343eadb0630956222b42870917d2cfa72e96"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725789777673465857",
+      "status": "recovered-public-status",
+      "statusId": "725789777673465857",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725789777673465857",
+      "publishedAt": "2016-04-28T20:52:22.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#leaseissue"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/48kNXGpGNx",
+          "destination": "https://callnyc.org/housing-and-buildings/lease-issue.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 154,
+      "contentDigestSha256": "252b0b31c652221a5c50e4ef58ec720027254b3c032c6f2f0f256ffdef974834"
+    },
+    {
+      "dispositionId": "CALLNYC-X-725813046631911424",
+      "status": "recovered-public-status",
+      "statusId": "725813046631911424",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/725813046631911424",
+      "publishedAt": "2016-04-28T22:24:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#landuseapplication"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Ki4PWJgXMf",
+          "destination": "https://callnyc.org/land-use-and-zoning/land-use-application-process.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 168,
+      "contentDigestSha256": "2f30d7c490baf370c4a8b5ca78fbb32c0ece7c2b69602f77a008a4f5aa4d1afa"
+    },
+    {
+      "dispositionId": "CALLNYC-X-726080902024040448",
+      "status": "recovered-public-status",
+      "statusId": "726080902024040448",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/726080902024040448",
+      "publishedAt": "2016-04-29T16:09:11.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmmathieueugene",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#greencard"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "destination": "https://callnyc.org/immigration/green-card.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 143,
+      "contentDigestSha256": "c8f2c759316bcfadf8d33677a93addda6386a8c0f0ea5274974ba1c33aa92478"
+    },
+    {
+      "dispositionId": "CALLNYC-X-726819779953188865",
+      "status": "recovered-public-status",
+      "statusId": "726819779953188865",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/726819779953188865",
+      "publishedAt": "2016-05-01T17:05:13.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@nycgreenfield"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#conedison"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "destination": "https://callnyc.org/utilities/con-edison.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 7
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 139,
+      "contentDigestSha256": "879df64d77d74c2c706da715fd6ef9948cb6a73e822d59dac9a2637e0da289d8"
+    },
+    {
+      "dispositionId": "CALLNYC-X-726900698827358208",
+      "status": "recovered-public-status",
+      "statusId": "726900698827358208",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/726900698827358208",
+      "publishedAt": "2016-05-01T22:26:46.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@fcabrerany",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#rentalarrears"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/xGXnqIMgz2",
+          "destination": "https://callnyc.org/housing-and-buildings/rental-arrears.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 156,
+      "contentDigestSha256": "21d8dfd6d3226ab14cf5be936efe3b60fd4b90cc39aaa1dc424a5795994721ee"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727164122106847233",
+      "status": "recovered-public-status",
+      "statusId": "727164122106847233",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727164122106847233",
+      "publishedAt": "2016-05-02T15:53:31.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#streetlights"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/NPe2gejGrr",
+          "destination": "https://callnyc.org/transportation/street-lights.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "e73d27e3b5dd5b5c429ae3bac370ec3e45578b7e933cb8228e2a4d80ac51ea89"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727218948127739905",
+      "status": "recovered-public-status",
+      "statusId": "727218948127739905",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727218948127739905",
+      "publishedAt": "2016-05-02T19:31:22.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@organize20",
+        "@spedwybabs"
+      ],
+      "hashtags": [
+        "#catpictures",
+        "#org20"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 118,
+      "contentDigestSha256": "84f97294692deca848317eb0269ee120e237e072f25f9b8ea41540526d0fcda5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727251825414561792",
+      "status": "recovered-public-status",
+      "statusId": "727251825414561792",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727251825414561792",
+      "publishedAt": "2016-05-02T21:42:01.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@benkallos",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#bicycle",
+        "#bikemonth",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ii9fYml6sq",
+          "destination": "https://callnyc.org/transportation/bicycles.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 147,
+      "contentDigestSha256": "51a26fe6641fffb7d32a515ec65a9cf630f19fe5d08c0e22a3b89b0be7b4462b"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727528637340241920",
+      "status": "recovered-public-status",
+      "statusId": "727528637340241920",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727528637340241920",
+      "publishedAt": "2016-05-03T16:01:58.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@idaneekmiller",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#snowremoval"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/fs5dINLYGQ",
+          "destination": "https://callnyc.org/sanitation/snow-removal.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 144,
+      "contentDigestSha256": "8118d91bce916bc5c74a8bdb545fabcf85d3545b7e7f732721b8d89d4ff6b302"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727601279984381952",
+      "status": "recovered-public-status",
+      "statusId": "727601279984381952",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727601279984381952",
+      "publishedAt": "2016-05-03T20:50:37.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#heat",
+        "#hotwater"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "destination": "https://callnyc.org/housing-and-buildings/heat-hot-water.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 161,
+      "contentDigestSha256": "742065e3a269236b360056159fdc386db56c6a320e8bdb3dd12c96fc8d536f07"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727619816081784832",
+      "status": "recovered-public-status",
+      "statusId": "727619816081784832",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727619816081784832",
+      "publishedAt": "2016-05-03T22:04:17.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#potholes"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "destination": "https://callnyc.org/transportation/pot-holes.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 141,
+      "contentDigestSha256": "a21b92feb018036ea1f293a5e0aa355a914cc1c92137e949637f644846b941ca"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727689676115611650",
+      "status": "recovered-public-status",
+      "statusId": "727689676115611650",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727689676115611650",
+      "publishedAt": "2016-05-04T02:41:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@marktreyger718",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#votinginfo"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ipg2ACxsfA",
+          "destination": "https://callnyc.org/governmental-operations/voting-information.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 3,
+      "normalizedTextCharacterCount": 163,
+      "contentDigestSha256": "7f6d31663e837b524f3edad2a395d218ada88c0c82d943893589bcb757e67408"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727878157076959232",
+      "status": "recovered-public-status",
+      "statusId": "727878157076959232",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727878157076959232",
+      "publishedAt": "2016-05-04T15:10:50.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "project-communication",
+      "mentionedHandles": [
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#councilstat",
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 135,
+      "contentDigestSha256": "53a4f12eb23f121d88f8a17c360a49ca8bf3d684e9156925105a72abc5215131"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727880846271782913",
+      "status": "recovered-public-status",
+      "statusId": "727880846271782913",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727880846271782913",
+      "publishedAt": "2016-05-04T15:21:31.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "project-communication",
+      "mentionedHandles": [
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#constituentservices",
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 114,
+      "contentDigestSha256": "6552a64103a1621c51206aa4ede490c93b9a8b14e8e21166d79c63ea9e6e801e"
+    },
+    {
+      "dispositionId": "CALLNYC-X-727919445763575809",
+      "status": "recovered-public-status",
+      "statusId": "727919445763575809",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/727919445763575809",
+      "publishedAt": "2016-05-04T17:54:54.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "stakeholder-conversation",
+      "mentionedHandles": [
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#constituentservices",
+        "#opendata"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/0sswRK5kfj",
+          "destination": "https://callnyc.org/transportation/pot-holes.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 2,
+        "likes": 5
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 171,
+      "contentDigestSha256": "9ebdc79b0d67f1adc7c85f1c133a7f70ec4c0b2a5249fe8e4c5b459cf96ca387"
+    },
+    {
+      "dispositionId": "CALLNYC-X-728001482692399104",
+      "status": "recovered-public-status",
+      "statusId": "728001482692399104",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/728001482692399104",
+      "publishedAt": "2016-05-04T23:20:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@bradlander",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#pedestriansafety"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/RakQv8ztqc",
+          "destination": "https://callnyc.org/transportation/pedestrian-safety.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 155,
+      "contentDigestSha256": "9d409f735a5f27551db5bc1c6975369d3de09b758b5d257e3320efde248ba0a2"
+    },
+    {
+      "dispositionId": "CALLNYC-X-728259132705353728",
+      "status": "recovered-public-status",
+      "statusId": "728259132705353728",
+      "canonicalUrl": "https://x.com/CMPeterKoo/status/728259132705353728",
+      "publishedAt": "2016-05-05T16:24:42.000Z",
+      "relationship": "repost",
+      "authorHandle": "@CMPeterKoo",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@jihajacques",
+        "@nycfinance",
+        "@selfhelpny"
+      ],
+      "hashtags": [
+        "#drie",
+        "#scrie"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 6,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 106,
+      "contentDigestSha256": "1936450f0a1370ecdbd04a5ae24bc9dd0d42ac9f733239b5799d27d8d6197239"
+    },
+    {
+      "dispositionId": "CALLNYC-X-728333768226947077",
+      "status": "recovered-public-status",
+      "statusId": "728333768226947077",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/728333768226947077",
+      "publishedAt": "2016-05-05T21:21:16.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#eviction"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/II5uv5lxQV",
+          "destination": "https://callnyc.org/housing-and-buildings/eviction.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "c1e9909ac1b37a2265b552277d5bcb13f979f4e0f5b4e6f6095f0a19338060e1"
+    },
+    {
+      "dispositionId": "CALLNYC-X-728666490250113026",
+      "status": "recovered-public-status",
+      "statusId": "728666490250113026",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/728666490250113026",
+      "publishedAt": "2016-05-06T19:23:23.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#section8"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/DBrHgcWshC",
+          "destination": "https://callnyc.org/housing-and-buildings/section-8.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 145,
+      "contentDigestSha256": "f91cab30481e96656136f4d6dbab0d7449d3e6987d1017b4d33151d91218769a"
+    },
+    {
+      "dispositionId": "CALLNYC-X-728692814079463429",
+      "status": "recovered-public-status",
+      "statusId": "728692814079463429",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/728692814079463429",
+      "publishedAt": "2016-05-06T21:07:59.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "project-communication",
+      "mentionedHandles": [
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#constituentservice",
+        "#tech4all"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 107,
+      "contentDigestSha256": "7def5833848ce49a00b580419878b84c4fde64b9d6ec5095468553b6737e65c4"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729670658406400001",
+      "status": "recovered-public-status",
+      "statusId": "729670658406400001",
+      "canonicalUrl": "https://x.com/darrenbloch/status/729670658406400001",
+      "publishedAt": "2016-05-09T13:53:36.000Z",
+      "relationship": "repost",
+      "authorHandle": "@darrenbloch",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@deblasionyc"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 131,
+      "contentDigestSha256": "0ea654a23d99e4b5a7ddbe7571a3333ab819ffdf255366319f538d205e09729d"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729673498608685058",
+      "status": "recovered-public-status",
+      "statusId": "729673498608685058",
+      "canonicalUrl": "https://x.com/CivicHall/status/729673498608685058",
+      "publishedAt": "2016-05-09T14:04:53.000Z",
+      "relationship": "repost",
+      "authorHandle": "@CivicHall",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@billdeblasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 5
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 142,
+      "contentDigestSha256": "281ebf843d7126619678faaf232516a807cb64ce0f810ebbe8a75b51bdb6da23"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729676362634629120",
+      "status": "recovered-public-status",
+      "statusId": "729676362634629120",
+      "canonicalUrl": "https://x.com/NYCMayorsOffice/status/729676362634629120",
+      "publishedAt": "2016-05-09T14:16:16.000Z",
+      "relationship": "repost",
+      "authorHandle": "@NYCMayorsOffice",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@billdeblasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 13,
+        "likes": 14
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 123,
+      "contentDigestSha256": "dfaefe43a492de763befcf86769cacfb312ee90c355f899499f7d87dbbd90d42"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729713874715455488",
+      "status": "recovered-public-status",
+      "statusId": "729713874715455488",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729713874715455488",
+      "publishedAt": "2016-05-09T16:45:19.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@billdeblasio"
+      ],
+      "hashtags": [
+        "#nycdigital"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 140,
+      "contentDigestSha256": "54b04cf40e47f9a2ca9d4fc366459ffc92799938b43a5f8a81a660be761b1808"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729737077340946432",
+      "status": "recovered-public-status",
+      "statusId": "729737077340946432",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729737077340946432",
+      "publishedAt": "2016-05-09T18:17:31.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@billdeblasio",
+        "@galeabrewer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nycdigital",
+        "#opendata"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 144,
+      "contentDigestSha256": "9864fb1d68e56ba4d4def1265f3f59875d35a07760ca208e7706216bd9698a41"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729741165273165824",
+      "status": "recovered-public-status",
+      "statusId": "729741165273165824",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729741165273165824",
+      "publishedAt": "2016-05-09T18:33:46.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "stakeholder-conversation",
+      "mentionedHandles": [
+        "@billdeblasio",
+        "@ibookery"
+      ],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 139,
+      "contentDigestSha256": "a3a39598006cce9446513988df2b025d06f5207a40cfcd0a9f4e710cfc7fda53"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729757799647981570",
+      "status": "recovered-public-status",
+      "statusId": "729757799647981570",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729757799647981570",
+      "publishedAt": "2016-05-09T19:39:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@nychra"
+      ],
+      "hashtags": [
+        "#antieviction",
+        "#freelegalservices"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rgMJ2CoXGE",
+          "destination": "https://www.nyc.gov:443/site/hra/help/homelessness-prevention.page",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 98,
+      "contentDigestSha256": "7ab43470c0825d783dbf4f67eb942f01a2e6ae570fdfb05fa03997ee86c994ec"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729830383689281537",
+      "status": "recovered-public-status",
+      "statusId": "729830383689281537",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729830383689281537",
+      "publishedAt": "2016-05-10T00:28:17.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#treesandsidewalksprogram"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/YMBsQlYVUD",
+          "destination": "https://callnyc.org/parks/trees-and-sidewalks-program.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 157,
+      "contentDigestSha256": "1c57b50151b06111c6d0e736cf1c8ae5176fa7d54f377e6efc73b310278955b5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729832019304194052",
+      "status": "recovered-public-status",
+      "statusId": "729832019304194052",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729832019304194052",
+      "publishedAt": "2016-05-10T00:34:47.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmmathieueugene",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#immigration",
+        "#visas"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hYFYASsn6j",
+          "destination": "https://callnyc.org/immigration/visas.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 143,
+      "contentDigestSha256": "482161ebdfaf6b96b8aa0ea44b6cd5fd8a82378186f7bdc873dd91306d44fde0"
+    },
+    {
+      "dispositionId": "CALLNYC-X-729835258808537088",
+      "status": "recovered-public-status",
+      "statusId": "729835258808537088",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/729835258808537088",
+      "publishedAt": "2016-05-10T00:47:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmmathieueugene",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#visas"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hYFYASaMeL",
+          "destination": "https://callnyc.org/immigration/visas.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 3,
+      "normalizedTextCharacterCount": 141,
+      "contentDigestSha256": "c5c33b1e474ddcca43811250e4ae1bc1830a750ba7df9bfeab113d86f4ee0006"
+    },
+    {
+      "dispositionId": "CALLNYC-X-730739253358018561",
+      "status": "recovered-public-status",
+      "statusId": "730739253358018561",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/730739253358018561",
+      "publishedAt": "2016-05-12T12:39:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nychabuildingmaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 174,
+      "contentDigestSha256": "0d485f34a5d03ce4618aa5f6dc99f66d72ca74201a66e36d24312ebf727303b3"
+    },
+    {
+      "dispositionId": "CALLNYC-X-730838778772893696",
+      "status": "recovered-public-status",
+      "statusId": "730838778772893696",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/730838778772893696",
+      "publishedAt": "2016-05-12T19:15:17.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "project-communication",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil",
+        "@twitter"
+      ],
+      "hashtags": [
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/yLLGsC6DRO",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 109,
+      "contentDigestSha256": "4b044d2f6ca20ff5923ecc3b1d0d8936c7baa29bc9b6e3f1994a32d0e93ba60f"
+    },
+    {
+      "dispositionId": "CALLNYC-X-730842213429710850",
+      "status": "recovered-public-status",
+      "statusId": "730842213429710850",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/730842213429710850",
+      "publishedAt": "2016-05-12T19:28:56.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#trafficenforcement"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/Rr2SCkG4ha",
+          "destination": "https://callnyc.org/transportation/traffic-enforcement.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 154,
+      "contentDigestSha256": "6bd4245ee27c5107656e73a2571a36dc647e44e4bfde3844f0ac789c47c0fc03"
+    },
+    {
+      "dispositionId": "CALLNYC-X-730856560071741440",
+      "status": "recovered-public-status",
+      "statusId": "730856560071741440",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/730856560071741440",
+      "publishedAt": "2016-05-12T20:25:57.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@nycgreenfield"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#dirtysidewalks"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uIv6B7KlFk",
+          "destination": "https://callnyc.org/sanitation/dirty-sidewalk.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 4,
+        "likes": 9
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "42849181f82daff0ddbd91ce34846271eade1cfbe3f7b8a4744277b769544865"
+    },
+    {
+      "dispositionId": "CALLNYC-X-730862177037488128",
+      "status": "recovered-public-status",
+      "statusId": "730862177037488128",
+      "canonicalUrl": "https://x.com/StephCW_/status/730862177037488128",
+      "publishedAt": "2016-05-12T20:48:16.000Z",
+      "relationship": "repost",
+      "authorHandle": "@StephCW_",
+      "classification": "stakeholder-amplification",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#dataisbeautiful"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/CPuzz8aIbk",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 36,
+      "contentDigestSha256": "6110e6060429906fc2113956bb8237e936ca92281b47526296f58bc0fb6de89c"
+    },
+    {
+      "dispositionId": "CALLNYC-X-731168037433450496",
+      "status": "recovered-public-status",
+      "statusId": "731168037433450496",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/731168037433450496",
+      "publishedAt": "2016-05-13T17:03:39.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#medicaid"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ffdda0QyEM",
+          "destination": "https://callnyc.org/general-welfare/medicaid.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 138,
+      "contentDigestSha256": "c7dd337fa2e4e3ffa0d428f09c8dce43e048700f164e0ec99a7d06f67d379d90"
+    },
+    {
+      "dispositionId": "CALLNYC-X-731212042863005697",
+      "status": "recovered-public-status",
+      "statusId": "731212042863005697",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/731212042863005697",
+      "publishedAt": "2016-05-13T19:58:30.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cm_margaretchin",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#heat",
+        "#hotwater"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/lSRkB621fB",
+          "destination": "https://callnyc.org/housing-and-buildings/heat-hot-water.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 155,
+      "contentDigestSha256": "8f6ed34b7e55ed48c4eb6d479a3bd85f7dfe7aeb1537aaf3d00210cdfbffb861"
+    },
+    {
+      "dispositionId": "CALLNYC-X-731254021000986624",
+      "status": "recovered-public-status",
+      "statusId": "731254021000986624",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/731254021000986624",
+      "publishedAt": "2016-05-13T22:45:19.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@benkallos",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#buses",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/LfBEH2jLbI",
+          "destination": "https://callnyc.org/transportation/buses.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 136,
+      "contentDigestSha256": "5a2953ce8ce5e87b4d84e58c0ec179c93bf46797b6adbd9130b5b163c46a5fd4"
+    },
+    {
+      "dispositionId": "CALLNYC-X-731873940923109376",
+      "status": "recovered-public-status",
+      "statusId": "731873940923109376",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/731873940923109376",
+      "publishedAt": "2016-05-15T15:48:39.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cm_rubenwills",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#buildingsviolation",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/4HbbAUkItU",
+          "destination": "https://callnyc.org/housing-and-buildings/violation.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 156,
+      "contentDigestSha256": "d3cb95b2ad4edf0426ebf2eed7afb1c5f0964683cca2a2f3f907a00af8f110bc"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732370968946065408",
+      "status": "recovered-public-status",
+      "statusId": "732370968946065408",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732370968946065408",
+      "publishedAt": "2016-05-17T00:43:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#conedison"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/uRvk9DxiIn",
+          "destination": "https://callnyc.org/utilities/con-edison.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 138,
+      "contentDigestSha256": "39af2fad1f9ae780237149247dc53632a111eac25aaab6d32d218e7643e8c541"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732660179540578306",
+      "status": "recovered-public-status",
+      "statusId": "732660179540578306",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732660179540578306",
+      "publishedAt": "2016-05-17T19:52:53.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#trafficsignal"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/pTyzAfP1VC",
+          "destination": "https://callnyc.org/transportation/traffic-signals.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 152,
+      "contentDigestSha256": "3ac77562b7dbe72fb22a35f7233af7f56555e4e9353e7c8b7af22489872cd7d6"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732687384597430273",
+      "status": "recovered-public-status",
+      "statusId": "732687384597430273",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732687384597430273",
+      "publishedAt": "2016-05-17T21:40:59.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#idnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/s1o4UnLYUh",
+          "destination": "https://callnyc.org/governmental-operations/idnyc.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 141,
+      "contentDigestSha256": "425d5bda3f9537e19664b448cf5bb997ad2413166df3ec9a3d98edb3b9276bad"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732752376709447680",
+      "status": "recovered-public-status",
+      "statusId": "732752376709447680",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732752376709447680",
+      "publishedAt": "2016-05-18T01:59:15.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@elizcrowleynyc",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#recycling"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/rswa2xGz1k",
+          "destination": "https://callnyc.org/sanitation/recycling.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 140,
+      "contentDigestSha256": "09b6d8674d9802e8e7ff647c17a887fe3897bf78edb7d28d9cd44c237d341e5d"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732928060635373569",
+      "status": "recovered-public-status",
+      "statusId": "732928060635373569",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732928060635373569",
+      "publishedAt": "2016-05-18T13:37:21.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@marktreyger718",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#hospitalfacility"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/d7ArO9ggzv",
+          "destination": "https://callnyc.org/health/hospital-facility-or-clinic.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 3,
+      "normalizedTextCharacterCount": 158,
+      "contentDigestSha256": "a91e47fe123ae21686e06e6ba84fc459915439a8c592bc93e877839d5a95af43"
+    },
+    {
+      "dispositionId": "CALLNYC-X-732959093225345024",
+      "status": "recovered-public-status",
+      "statusId": "732959093225345024",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/732959093225345024",
+      "publishedAt": "2016-05-18T15:40:40.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@coreyinnyc",
+        "@dangarodnick",
+        "@galeabrewer",
+        "@helenrosenthal",
+        "@marklevinenyc",
+        "@rentjustice"
+      ],
+      "hashtags": [
+        "#rentstabilized"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 1,
+      "normalizedTextCharacterCount": 127,
+      "contentDigestSha256": "55203c5ff3c9e7857ed6584d62dbc9c9ffeb0d40ba71d199a85b33a935cba2ff"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733027856025047041",
+      "status": "recovered-public-status",
+      "statusId": "733027856025047041",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/733027856025047041",
+      "publishedAt": "2016-05-18T20:13:54.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rosiemendez"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#emergencyrepairs"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/llG6NvBbg5",
+          "destination": "https://callnyc.org/housing-and-buildings/emergency-repairs.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 163,
+      "contentDigestSha256": "15d13e24bc969dd3063d9e1303cfabb5c036edcbc788d488711007f5fc0057c2"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733063600152141825",
+      "status": "recovered-public-status",
+      "statusId": "733063600152141825",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/733063600152141825",
+      "publishedAt": "2016-05-18T22:35:56.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@ydanis"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#rentovercharges"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/VhFe6Rlsgt",
+          "destination": "https://callnyc.org/housing-and-buildings/rent-overcharges.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 153,
+      "contentDigestSha256": "b5d24237de4511649bcea741698656f1eab40af3e9c040430c4ce88fc3ec2599"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733089563334299648",
+      "status": "recovered-public-status",
+      "statusId": "733089563334299648",
+      "canonicalUrl": "https://x.com/ydanis/status/733089563334299648",
+      "publishedAt": "2016-05-19T00:19:06.000Z",
+      "relationship": "repost",
+      "authorHandle": "@ydanis",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [],
+      "hashtags": [],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 114,
+      "contentDigestSha256": "206ec5c3850cf91ec2c14a031d2fdc041e4d462eec07a7e2c020c0b2dbbf8552"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733387247362379777",
+      "status": "recovered-public-status",
+      "statusId": "733387247362379777",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/733387247362379777",
+      "publishedAt": "2016-05-19T20:02:00.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#scrie"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/U2jumuuuMK",
+          "destination": "https://callnyc.org/finance/scrie.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 1,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 139,
+      "contentDigestSha256": "dc2064b6d72a41764abba3449e7d6c6acc4da426b356f07a3192c14de28506c6"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733388862806982656",
+      "status": "recovered-public-status",
+      "statusId": "733388862806982656",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/733388862806982656",
+      "publishedAt": "2016-05-19T20:08:25.000Z",
+      "relationship": "account-reply",
+      "authorHandle": "@CallNYCapp",
+      "classification": "service-guidance",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil",
+        "@nycseniors"
+      ],
+      "hashtags": [
+        "#rentfreeze",
+        "#scrie"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/hbYVTNLDAJ",
+          "destination": "https://www.nyc.gov/rentfreeze",
+          "resolutionObservedAt": "2026-07-14"
+        },
+        {
+          "shortUrl": "https://t.co/wjTEKDJRnR",
+          "destination": "https://www.youtube.com/watch?v=vwpGGRK4JgA",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 169,
+      "contentDigestSha256": "c019c818886686dd488766d718074185cc0786a2ca83ef152b00d0cb238fbd8a"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733410096915550208",
+      "status": "recovered-public-status",
+      "statusId": "733410096915550208",
+      "canonicalUrl": "https://x.com/RosieMendez/status/733410096915550208",
+      "publishedAt": "2016-05-19T21:32:47.000Z",
+      "relationship": "repost",
+      "authorHandle": "@RosieMendez",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [
+        "@carlinarivera",
+        "@evillpunki",
+        "@fadonna",
+        "@shyviviana"
+      ],
+      "hashtags": [
+        "#teamrosie"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 73,
+      "contentDigestSha256": "6bb1696ad1531eead96934a8da966675332c0ff21c8d8d9ffb64e0ea96a7a13a"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733440491673489408",
+      "status": "recovered-public-status",
+      "statusId": "733440491673489408",
+      "canonicalUrl": "https://x.com/CarlinaRivera/status/733440491673489408",
+      "publishedAt": "2016-05-19T23:33:34.000Z",
+      "relationship": "repost",
+      "authorHandle": "@CarlinaRivera",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#nyctenants"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 31,
+      "contentDigestSha256": "18c3627bdf0594950ada8f2f279a6f1069430acd5df946bccbd7b41ffad1fb45"
+    },
+    {
+      "dispositionId": "CALLNYC-X-733649303223336960",
+      "status": "recovered-public-status",
+      "statusId": "733649303223336960",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/733649303223336960",
+      "publishedAt": "2016-05-20T13:23:19.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@nycgreenfield"
+      ],
+      "hashtags": [
+        "#imwalkinhere",
+        "#sidewalks"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/eaopIEuKTI",
+          "destination": "https://callnyc.org/transportation/sidewalks.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 146,
+      "contentDigestSha256": "488562cef371d0d05ead7a31343c301c5c85588a945e41cc1495eb97547db425"
+    },
+    {
+      "dispositionId": "CALLNYC-X-734492930262585344",
+      "status": "recovered-public-status",
+      "statusId": "734492930262585344",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/734492930262585344",
+      "publishedAt": "2016-05-22T21:15:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#housing",
+        "#legalservices"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/ZydpCtAgvM",
+          "destination": "https://callnyc.org/legal-services/housing.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 147,
+      "contentDigestSha256": "6eddde6e3681e9f071906a90a107ffea6f5c9271f104b8061026e0ef27fce5eb"
+    },
+    {
+      "dispositionId": "CALLNYC-X-734897908353470464",
+      "status": "recovered-public-status",
+      "statusId": "734897908353470464",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/734897908353470464",
+      "publishedAt": "2016-05-24T00:04:49.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#parkingpermits"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/tq0BISDhHW",
+          "destination": "https://callnyc.org/transportation/parking-permits.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 153,
+      "contentDigestSha256": "bcb870d5fde34b02d723d5bd99fe05584d995cddb87e61dee18f1bd41b304cc9"
+    },
+    {
+      "dispositionId": "CALLNYC-X-735214806249144320",
+      "status": "recovered-public-status",
+      "statusId": "735214806249144320",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/735214806249144320",
+      "publishedAt": "2016-05-24T21:04:04.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#speedbumprequest"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/EZNfChqkZ9",
+          "destination": "https://callnyc.org/transportation/speed-bump-request.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 157,
+      "contentDigestSha256": "50d894499afaa2a8106905b01e18bbeb4248b3de648ab367acb08bf152bd94ba"
+    },
+    {
+      "dispositionId": "CALLNYC-X-735644754340401152",
+      "status": "recovered-public-status",
+      "statusId": "735644754340401152",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/735644754340401152",
+      "publishedAt": "2016-05-26T01:32:31.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#streetsigns"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/eZOLTVq7Dd",
+          "destination": "https://callnyc.org/transportation/street-signs.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 147,
+      "contentDigestSha256": "6c9193800deea087a4f2c3581d632a18282b7f9ea2fee3b6ff9d5bf2e62ddacd"
+    },
+    {
+      "dispositionId": "CALLNYC-X-735914869782904832",
+      "status": "recovered-public-status",
+      "statusId": "735914869782904832",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/735914869782904832",
+      "publishedAt": "2016-05-26T19:25:52.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#seniorhousing"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/WrNWyaz9jp",
+          "destination": "https://callnyc.org/housing-and-buildings/senior-housing.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 160,
+      "contentDigestSha256": "22b6e552ed7690425710a4ed3e905689d58429575e6d7d73efe2d40dc54c09a8"
+    },
+    {
+      "dispositionId": "CALLNYC-X-736904163414675456",
+      "status": "recovered-public-status",
+      "statusId": "736904163414675456",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/736904163414675456",
+      "publishedAt": "2016-05-29T12:56:58.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#nychamisc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/VVY0b0qR3v",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-misc.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 148,
+      "contentDigestSha256": "ff5b567e3ddd4d477cc0bcd25fc49e3094577eaca015715e9f608d32d82596a5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-738115545002807296",
+      "status": "recovered-public-status",
+      "statusId": "738115545002807296",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/738115545002807296",
+      "publishedAt": "2016-06-01T21:10:34.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@rlespinal"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#greencard"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/BJ0kKbfsHS",
+          "destination": "https://callnyc.org/immigration/green-card.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 137,
+      "contentDigestSha256": "822817e0874462ea916755172efbcbeb762fcedfaac74ff787d3bb2c3ddb5eb5"
+    },
+    {
+      "dispositionId": "CALLNYC-X-738140834973900800",
+      "status": "recovered-public-status",
+      "statusId": "738140834973900800",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/738140834973900800",
+      "publishedAt": "2016-06-01T22:51:03.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#accessaride",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/FM6CIEx4Ih",
+          "destination": "https://callnyc.org/transportation/access-a-ride.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 148,
+      "contentDigestSha256": "fe4ab464e13fbe72dd0eb4d0e17d2344f26722bb78d9bf436a7f872ade1be720"
+    },
+    {
+      "dispositionId": "CALLNYC-X-738458056716091392",
+      "status": "recovered-public-status",
+      "statusId": "738458056716091392",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/738458056716091392",
+      "publishedAt": "2016-06-02T19:51:35.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@helenrosenthal",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#buildingmaintenance",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/MIOl6874Ns",
+          "destination": "https://callnyc.org/housing-and-buildings/building-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 168,
+      "contentDigestSha256": "128266e9fb935734871f8a347c3b5d2d53f97a5c678eb9db9c17718daf407a36"
+    },
+    {
+      "dispositionId": "CALLNYC-X-748532929802997760",
+      "status": "recovered-public-status",
+      "statusId": "748532929802997760",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/748532929802997760",
+      "publishedAt": "2016-06-30T15:05:32.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@nyccouncil",
+        "@stevenmatteo"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#streetflooding"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/y8HNgKVmZy",
+          "destination": "https://callnyc.org/environment/street-flooding.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 150,
+      "contentDigestSha256": "be76933f58225bc39faad28e971f7d86a6cd212258161458af486e7c65f72343"
+    },
+    {
+      "dispositionId": "CALLNYC-X-753631998221033472",
+      "status": "recovered-public-status",
+      "statusId": "753631998221033472",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/753631998221033472",
+      "publishedAt": "2016-07-14T16:47:24.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmreynoso34",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#taxprep"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/7mstGHrKt3",
+          "destination": "https://callnyc.org/finance/tax-preparation-assistance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "60ae8f0634fcb3913984d9dbb52e3282888a40cabc4a364dacd77b0115a145fc"
+    },
+    {
+      "dispositionId": "CALLNYC-X-753678962501390336",
+      "status": "recovered-public-status",
+      "statusId": "753678962501390336",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/753678962501390336",
+      "publishedAt": "2016-07-14T19:54:01.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@mmviverito",
+        "@nyccouncil",
+        "@nycha"
+      ],
+      "hashtags": [
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHzN1dC",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 176,
+      "contentDigestSha256": "09bbefbc048a3600c848a30a73ded31623c8edc86f482952caa6712d9f3b2fc3"
+    },
+    {
+      "dispositionId": "CALLNYC-X-773637656555163648",
+      "status": "recovered-public-status",
+      "statusId": "773637656555163648",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/773637656555163648",
+      "publishedAt": "2016-09-07T21:42:45.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@julissaferreras",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#affordablehousing",
+        "#callnyc"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/grEZDUYGgo",
+          "destination": "https://callnyc.org/housing-and-buildings/affordable-housing-apartment.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 176,
+      "contentDigestSha256": "7a9b585d3f976d860be179a099c2dee4f759484e3a1eea9c6c3426b5e996dd75"
+    },
+    {
+      "dispositionId": "CALLNYC-X-775370427644411904",
+      "status": "recovered-public-status",
+      "statusId": "775370427644411904",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/775370427644411904",
+      "publishedAt": "2016-09-12T16:28:10.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@jimmyvanbramer",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#nychabuildingmaintenance"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/kb8YHA4CCc",
+          "destination": "https://callnyc.org/housing-and-buildings/nycha-building-maintenance.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 4
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 174,
+      "contentDigestSha256": "041708e567f62b22b603a4971d8180602daae1fa2d565ac1496c8eb86dbcd442"
+    },
+    {
+      "dispositionId": "CALLNYC-X-776509377897500672",
+      "status": "recovered-public-status",
+      "statusId": "776509377897500672",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/776509377897500672",
+      "publishedAt": "2016-09-15T19:53:57.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@julissaferreras",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#foodstamps"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/R9Bx3XvJ6X",
+          "destination": "https://callnyc.org/general-welfare/food-stamps.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 149,
+      "contentDigestSha256": "9da7719d55bea412c2b318a0db74c8b4948a8a0f143fa20ce60a3c43ba272c1b"
+    },
+    {
+      "dispositionId": "CALLNYC-X-780797474277511170",
+      "status": "recovered-public-status",
+      "statusId": "780797474277511170",
+      "canonicalUrl": "https://x.com/HelenRosenthal/status/780797474277511170",
+      "publishedAt": "2016-09-27T15:53:19.000Z",
+      "relationship": "repost",
+      "authorHandle": "@HelenRosenthal",
+      "classification": "stakeholder-amplification",
+      "mentionedHandles": [
+        "@goddardriv",
+        "@housingconcoord",
+        "@mfylegal",
+        "@nyccouncil"
+      ],
+      "hashtags": [],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/2uxB0ADLpY",
+          "destination": "https://callnyc.org/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 2,
+        "likes": 2
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 134,
+      "contentDigestSha256": "5ddea492ea658f3ddde96c00beaed7ac8b01344b39e2fef470e8a1830b84beaa"
+    },
+    {
+      "dispositionId": "CALLNYC-X-783022174890229760",
+      "status": "recovered-public-status",
+      "statusId": "783022174890229760",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/783022174890229760",
+      "publishedAt": "2016-10-03T19:13:28.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@cmmathieueugene",
+        "@nyccouncil",
+        "@nychousing"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#hpdhousinglottery"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/4dT9nvJtsb",
+          "destination": "https://callnyc.org/housing-and-buildings/hpd-housing-lottery.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 184,
+      "contentDigestSha256": "088bbc41badbea7e884925882a3388ed27f17375d13a580b95a193da9bb175ee"
+    },
+    {
+      "dispositionId": "CALLNYC-X-783305320508514304",
+      "status": "recovered-public-status",
+      "statusId": "783305320508514304",
+      "canonicalUrl": "https://x.com/CMMathieuEugene/status/783305320508514304",
+      "publishedAt": "2016-10-04T13:58:36.000Z",
+      "relationship": "repost",
+      "authorHandle": "@CMMathieuEugene",
+      "classification": "civic-and-city-context",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#housing"
+      ],
+      "outboundLinks": [],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 1,
+        "likes": 1
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 133,
+      "contentDigestSha256": "4e168419ce0bf2849944083cb0c0a646105ce81c2aa4dc8c0abe10f2b4056723"
+    },
+    {
+      "dispositionId": "CALLNYC-X-783410245632655364",
+      "status": "recovered-public-status",
+      "statusId": "783410245632655364",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/783410245632655364",
+      "publishedAt": "2016-10-04T20:55:32.000Z",
+      "relationship": "account-post",
+      "authorHandle": "@CallNYCapp",
+      "classification": "issue-recognition",
+      "mentionedHandles": [
+        "@chaimdeutsch",
+        "@nyccouncil"
+      ],
+      "hashtags": [
+        "#callnyc",
+        "#waterquality"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/xRaVn9NchH",
+          "destination": "https://callnyc.org/environment/water-quality.html",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 0,
+        "likes": 0
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 2,
+      "normalizedTextCharacterCount": 146,
+      "contentDigestSha256": "e9b8f5d8da521bbdc3dc31862bd8bdcc8beed3607b3f73f07f511e5b5a90eceb"
+    },
+    {
+      "dispositionId": "CALLNYC-X-796473557387575297",
+      "status": "recovered-public-status",
+      "statusId": "796473557387575297",
+      "canonicalUrl": "https://x.com/wowlist/status/796473557387575297",
+      "publishedAt": "2016-11-09T22:04:28.000Z",
+      "relationship": "repost",
+      "authorHandle": "@wowlist",
+      "classification": "adjacent-project",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#downwithtrump"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/D6udDGJ7Um",
+          "destination": "https://wowlist.org/DownWithTrump",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 5,
+        "likes": 6
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 152,
+      "contentDigestSha256": "78c58d0bcc79841241ada2c2f6284d8df2b7e3314ce57e3098114690ff4e97d0"
+    },
+    {
+      "dispositionId": "CALLNYC-X-798274424763981824",
+      "status": "recovered-public-status",
+      "statusId": "798274424763981824",
+      "canonicalUrl": "https://x.com/wowlist/status/798274424763981824",
+      "publishedAt": "2016-11-14T21:20:28.000Z",
+      "relationship": "repost",
+      "authorHandle": "@wowlist",
+      "classification": "adjacent-project",
+      "mentionedHandles": [],
+      "hashtags": [
+        "#notmypresident",
+        "#wearethepopularvote"
+      ],
+      "outboundLinks": [
+        {
+          "shortUrl": "https://t.co/O1euiAdPmX",
+          "destination": "https://popular.vote/",
+          "resolutionObservedAt": "2026-07-14"
+        }
+      ],
+      "visibleMetrics": {
+        "replies": 0,
+        "reposts": 3,
+        "likes": 3
+      },
+      "visibleMetricsObservedAt": "2026-07-14",
+      "mediaCount": 0,
+      "normalizedTextCharacterCount": 137,
+      "contentDigestSha256": "0cf24147b5ab8df1295c64da338c060c7d6db5603383d2540d8978d0cc2081c9"
+    },
+    {
+      "dispositionId": "CALLNYC-X-UNRESOLVED-001",
+      "status": "unresolved-profile-count-slot",
+      "statusId": null,
+      "canonicalUrl": null,
+      "publishedAt": null,
+      "relationship": null,
+      "authorHandle": null,
+      "classification": "unresolved",
+      "reason": "The authenticated Posts and Replies union did not expose a status record for this observed profile-count slot. No status ID, content, date, or deletion reason is inferred."
+    },
+    {
+      "dispositionId": "CALLNYC-X-UNRESOLVED-002",
+      "status": "unresolved-profile-count-slot",
+      "statusId": null,
+      "canonicalUrl": null,
+      "publishedAt": null,
+      "relationship": null,
+      "authorHandle": null,
+      "classification": "unresolved",
+      "reason": "The authenticated Posts and Replies union did not expose a status record for this observed profile-count slot. No status ID, content, date, or deletion reason is inferred."
+    },
+    {
+      "dispositionId": "CALLNYC-X-UNRESOLVED-003",
+      "status": "unresolved-profile-count-slot",
+      "statusId": null,
+      "canonicalUrl": null,
+      "publishedAt": null,
+      "relationship": null,
+      "authorHandle": null,
+      "classification": "unresolved",
+      "reason": "The authenticated Posts and Replies union did not expose a status record for this observed profile-count slot. No status ID, content, date, or deletion reason is inferred."
+    }
+  ]
+}

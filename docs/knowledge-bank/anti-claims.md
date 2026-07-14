@@ -42,6 +42,20 @@ shares into institutional adoption, endorsement, resident use, or measured
 service impact. “At least eight then-serving Council member accounts” is a
 recovered minimum, not a complete lifetime engagement count.
 
+Do not call the 107-record Posts and Replies union a complete X export. The
+full-population census provides dispositions for all 110 observed profile-count
+slots, including three unresolved slots whose identity, date, content, and
+cause remain unknown.
+
+Do not convert 71 issue-recognition posts, 26 named Council-member handles,
+visible reactions, or aggregate CouncilStat issue rows into unique residents,
+successful service resolutions, institutional adoption, or outcomes caused by
+CallNYC. Describe the public API and contact controls as account announcements
+until surviving implementation and historical behavior are verified.
+
+Do not call NYC School of Data's inclusion of CallNYC among “Featured Hacks” an
+award, formal presentation, partnership, endorsement, or adoption.
+
 ## Social Project Identities
 
 Do not say Jamie authored every post from a project account, operated each

@@ -992,7 +992,7 @@ export const lifecycleResearchTasks = [
     ],
     claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"],
     nextActions: ["Preserve the eight-member result as a recovered minimum and repeat the review if X indexing or exported account data becomes more complete."],
-    resolutionSummary: "Authenticated review recovered 106 visible timeline items and verified a recovered minimum of eight then-serving Council member accounts with replies, quotes, reposts, or direct CallNYC shares. The result excludes incomplete like and follower histories and does not imply adoption or endorsement."
+    resolutionSummary: "Authenticated review recovered 107 unique public statuses across the Posts and Replies routes, preserved three unresolved slots against the observed profile count of 110, and verified a recovered minimum of eight then-serving Council member accounts with replies, quotes, reposts, or direct CallNYC shares. The result is not a native X export, excludes incomplete like and follower histories, and does not imply adoption or endorsement."
   }
 ] satisfies ResearchTask[];
 
