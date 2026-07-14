@@ -1,0 +1,232 @@
+{
+  "suite": "jamieburk-art-launch-readiness",
+  "suiteVersion": 4,
+  "runId": "feature-evals-D-research-v4-20260713T224524-0400",
+  "commit": "9ed7bf318bdb5da2de09b4da0ac205d63d905616",
+  "baseUrl": "http://127.0.0.1:3037",
+  "performedAt": "2026-07-13T22:45:24-04:00",
+  "results": [
+    {
+      "criterionId": "RESP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "All 14 application-facing routes returned successfully with one main landmark and one H1 at 320, 375, 768, and 1440 CSS pixels.",
+        "All 56 measurements reported document scrollWidth equal to clientWidth, with no machine-local path exposed in main content."
+      ],
+      "limitations": [
+        "Measurements were performed against the local production bundle, not the deployed production domain."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-research-v4-20260713T224524-0400"
+      }
+    },
+    {
+      "criterionId": "A11Y-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "The first Tab focused the complete Skip to content link with a visible 3px solid outline; an inverse case-study tag measured 7.25:1 contrast.",
+        "A 320px, 2x-density rendering had no horizontal overflow or collapsed citation markers; CallNYC retained eight named markers, eight backlinks, and Sources and notes with JavaScript disabled."
+      ],
+      "limitations": [
+        "This browser run does not replace a human screen-reader comprehension review."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-research-v4-20260713T224524-0400"
+      }
+    },
+    {
+      "criterionId": "PROOF-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC each rendered one relevant public-web artifact with nonempty alt text and a public source link.",
+        "All three artifacts loaded at their expected natural dimensions at the measured mobile width."
+      ],
+      "limitations": [
+        "These public captures do not authorize additional private or approval-gated images."
+      ],
+      "grader": {
+        "type": "browser",
+        "name": "Chromium 140 / Playwright 1.61.1",
+        "runId": "browser-feature-evals-D-research-v4-20260713T224524-0400"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The homepage still states Jamie's target role, recurring contribution, and work, resume, and contact actions immediately.",
+        "The proof strip, Technical Operations proof map, and resume highlights provide multiple concrete proofs within a short skim."
+      ],
+      "limitations": [
+        "Some operating-structure language remains repetitive across role-level surfaces."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-and-delivery-reviewer",
+        "runId": "019f5dba-f3b9-7110-b976-e99a53e7ce2e-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "CLARITY-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The homepage presents the target role, recurring contribution, proof points, and Work, Resume, and Contact actions in a short skim.",
+        "The bounded KC Town Hall projection now resolves without changing or inflating its public wording."
+      ],
+      "limitations": [
+        "Proof follows the hero, and some evaluator-facing process language remains."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-evidence-editor",
+        "runId": "019f5dc1-71e7-7b71-bdf4-7c5b7f573160-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Priority surfaces identify Jamie through concrete actions including delivery coordination, documentation architecture, e-commerce implementation, and civic-data translation.",
+        "The KC Town Hall projection states the bounded intervention directly while keeping municipal corroboration and division-of-labor limits distinct."
+      ],
+      "limitations": [
+        "Some priority openings reach the concrete work product after abstract systems language."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-and-delivery-reviewer",
+        "runId": "019f5dba-f3b9-7110-b976-e99a53e7ce2e-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "CHAD-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Homepage, Technical Operations, resume, and priority cases preserve an actor-action-result structure.",
+        "Collective credit and qualifications remain intact across FairRentNYC, WOWList, Sunday Dinner, CallNYC, and KC Town Hall."
+      ],
+      "limitations": [
+        "Some Technical Operations proof entries remain noun-heavy and depend on the introduction for agency."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-evidence-editor",
+        "runId": "019f5dc1-71e7-7b71-bdf4-7c5b7f573160-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 1,
+      "passed": true,
+      "evidence": [
+        "Ten unique new public sources are decomposed into atomic claims, locators, evidence roles, support limits, anti-claims, and bounded inquiries.",
+        "The public registry exposes the approved KC role wording and boundary while omitting its non-public source ID, locator, and evidence relationship; regression tests cover both availability and redaction."
+      ],
+      "limitations": [
+        "Stronger coalition-role, policy-causality, raft-route, and MARCH-outcome questions remain intentionally unresolved."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-and-delivery-reviewer",
+        "runId": "019f5dba-f3b9-7110-b976-e99a53e7ce2e-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "DECOMP-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The ten researched sources and older reviewed sources remain decomposed into atomic claims, evidence roles, locators, limitations, anti-claims, dispositions, and inquiries.",
+        "The KC self-report remains moderate non-public support, and the public registry correctly exposes no evidence for that uncited projection."
+      ],
+      "limitations": [
+        "Some legacy CallNYC relationships and web sources have less precise locators than the newest records."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-evidence-editor",
+        "runId": "019f5dc1-71e7-7b71-bdf4-7c5b7f573160-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "HJE, FairRentNYC, and CallNYC retain a layered sequence of summary, artifact, narrative, references, and later evidence limits.",
+        "The research pass removed repeated evidence layers without deleting citations, collective credit, or public-safety qualifications."
+      ],
+      "limitations": [
+        "Some template-driven repetition remains across summary and Known, Open, Protected layers."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-and-delivery-reviewer",
+        "runId": "019f5dba-f3b9-7110-b976-e99a53e7ce2e-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "EDITORIAL-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The reader-facing narrative remains primary on the priority cases, with source governance at a deeper layer.",
+        "The KC projection repair adds no private source mechanics or repository-facing evidence material to the public story."
+      ],
+      "limitations": [
+        "FairRentNYC still repeats some protected-material boundaries, and the common case-study structure remains visible."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-evidence-editor",
+        "runId": "019f5dc1-71e7-7b71-bdf4-7c5b7f573160-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "The site remains active, warm, specific, and careful about consent, privacy, collective credit, and useful handoffs.",
+        "Sunday Dinner, HJE, KC Town Hall, Contact, and Source-Backed Team Memory retain human stakes and direct next actions."
+      ],
+      "limitations": [
+        "Repeated governance vocabulary makes extended site-wide reading somewhat procedural."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-hiring-and-delivery-reviewer",
+        "runId": "019f5dba-f3b9-7110-b976-e99a53e7ce2e-final-9ed7bf3"
+      }
+    },
+    {
+      "criterionId": "VOICE-001",
+      "score": 0.8,
+      "passed": true,
+      "evidence": [
+        "Homepage, priority cases, Contact, and the lab preserve active language, human stakes, careful qualification, and usable next steps.",
+        "Protected-source redaction keeps evidence mechanics from intruding into the public voice."
+      ],
+      "limitations": [
+        "A few internal evaluation labels and abstract-noun-heavy passages remain."
+      ],
+      "grader": {
+        "type": "llm",
+        "name": "independent-evidence-editor",
+        "runId": "019f5dc1-71e7-7b71-bdf4-7c5b7f573160-final-9ed7bf3"
+      }
+    }
+  ],
+  "humanApprovals": []
+}
