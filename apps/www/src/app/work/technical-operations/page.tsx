@@ -34,7 +34,7 @@ const proofMap = [
   {
     project: "CallNYC",
     proof:
-      "I built an independent civic-data follow-on that translated constituent-services records into resident-facing guidance."
+      "I built an independent civic-data follow-on that translated constituent-services records into resident-facing guidance and a public-engagement layer spanning 61 issue pathways and 26 Council-member accounts."
   },
   {
     project: "Project identity systems",

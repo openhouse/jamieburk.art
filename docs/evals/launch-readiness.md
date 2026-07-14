@@ -43,6 +43,7 @@ The canonical positioning sentence is:
 | KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 | Project social archive production | 18 | Yes | Verified account identities, authenticated recovery floors, direct engagement definitions, collective authorship boundaries, and selected public projections remain linked and privacy-safe. |
+| CallNYC full-population archive | 20 | Yes | All 110 observed profile-count slots reconcile to 107 item-level recoveries and three explicit unresolved slots; post types, stakeholder patterns, issue links, external URLs, claims, and boundaries recompute from the ledger. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -88,3 +89,8 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   count one-way tags as reciprocal engagement, attribute every team post to
   Jamie, expose authentication material, or convert individual-account
   interactions into official endorsement or policy causality.
+- Do not satisfy CallNYC population completeness by erasing unresolved slots,
+  inventing missing status IDs, trusting stored aggregates without item-level
+  recomputation, converting Council tags into responses, converting issue rows
+  into unique people or outcomes, promoting unreconstructed historical
+  metrics, or treating announced API behavior as independently recovered.

@@ -9,6 +9,9 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - At least five sitting NYC Council members publicly amplified CallNYC in 2016.
+- Built a civic-data engagement layer documented by 71 recognition posts
+  naming 26 Council-member accounts and linking to 61 issue pages across 16
+  constituent-service categories.
 - Established public-facing identities for CallNYC, WOW List, and NYC Artist
   Coalition that collaborators could use and carry forward.
 - Authenticated archival review recovered direct public interactions from at

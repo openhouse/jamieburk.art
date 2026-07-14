@@ -42,6 +42,7 @@ Use claims that directly support operating-backbone fit:
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
+- `callnyc-public-engagement-architecture`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`

@@ -23,6 +23,14 @@ import {
   socialArchivePublicationDecisions,
   socialArchiveSources
 } from "./social-archive.ts";
+import {
+  callNycSocialCorpusClaims,
+  callNycSocialCorpusInquiries,
+  callNycSocialCorpusIntake,
+  callNycSocialCorpusProofCoverage,
+  callNycSocialCorpusPublicationDecisions,
+  callNycSocialCorpusSources
+} from "./callnyc-social-corpus.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -497,7 +505,8 @@ export const frameworkIntake = [
     ]
   },
   ...campaignPressIntake,
-  ...socialArchiveIntake
+  ...socialArchiveIntake,
+  ...callNycSocialCorpusIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -525,7 +534,14 @@ export const frameworkProjects = [
       "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
       "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328",
       "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026",
-      "SRC-X-CALLNYC-PROFILE-INVENTORY-2026"
+      "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
+      "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+      "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026",
+      "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
+      "SRC-X-CALLNYC-DISTRICT-API-713537148000018432",
+      "SRC-X-CALLNYC-JSON-API-722837286476390401",
+      "SRC-X-CALLNYC-ISSUE-TWEET-BUTTONS-710154803054301184"
     ],
     claimIds: [
       "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -534,10 +550,18 @@ export const frameworkProjects = [
       "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       "CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION",
+      "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+      "CLM-CALLNYC-SCHOOL-OF-DATA-RECOGNITION",
+      "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENT",
       "CLM-CALLNYC-DIGITAL-DISTRICT",
       "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED"
     ],
-    inquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"],
+    inquiryIds: [
+      "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      "INQ-CALLNYC-FULL-POPULATION-RECOVERY-2026",
+      "INQ-CALLNYC-UNVERIFIED-ACCOUNT-METRICS",
+      "INQ-CALLNYC-API-IMPLEMENTATION"
+    ],
     photoBrief: {
       status: "candidates-located",
       selectionQuestion: "Which image best shows Jamie working in a collaborative civic-data setting without implying official Council ownership?",
@@ -1260,7 +1284,8 @@ export const frameworkSources = [
     doesNotEstablish: ["executed funding agreement", "receipt or disbursement of funds", "project completion", "Jamie's sole causality for the Council vote", "current property status"]
   },
   ...campaignPressSources,
-  ...socialArchiveSources
+  ...socialArchiveSources,
+  ...callNycSocialCorpusSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -1624,7 +1649,8 @@ export const frameworkClaims = [
     reviewedAt: "2026-07-12",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
-  ...socialArchiveClaims
+  ...socialArchiveClaims,
+  ...callNycSocialCorpusClaims
 ] satisfies ClaimRecord[];
 
 const openInquiry = (
@@ -1656,7 +1682,8 @@ export const frameworkInquiries = [
   openInquiry("INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "kc-town-hall", "What public-safe handoff record or recipient confirmation establishes Jamie's transition of project stewardship to a mission-aligned organization?", ["Recover a public-safe handoff artifact or receiving-organization confirmation.", "Ask Jamie whether naming the receiving organization would be useful and approved.", "Keep personal circumstances outside the professional record."], ["Jamie's firsthand correction establishes that his involvement is historical; the receiving organization and handoff details are not yet independently corroborated or selected for public projection."], []),
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
   openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
-  ...socialArchiveInquiries
+  ...socialArchiveInquiries,
+  ...callNycSocialCorpusInquiries
 ] satisfies ResearchInquiry[];
 
 const publicationDecisionInputs: Array<[
@@ -1705,7 +1732,10 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
       "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
     ].includes(id) ? "2026-07-13" : "2026-07-12"
   })
-).concat(socialArchivePublicationDecisions) satisfies PublicationDecision[];
+).concat(
+  socialArchivePublicationDecisions,
+  callNycSocialCorpusPublicationDecisions
+) satisfies PublicationDecision[];
 
 const coverage = (
   proofId: string,
@@ -1734,7 +1764,8 @@ export const frameworkProofCoverage = [
   coverage("source-backed-team-memory-method", "partially-backed", "A protected June 2026 proposal supports the bounded method, human-review loop, approved-source scoping, and privacy boundaries; it does not establish a completed client engagement or production product.", ["SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
-  ...socialArchiveProofCoverage
+  ...socialArchiveProofCoverage,
+  ...callNycSocialCorpusProofCoverage
 ] satisfies ProofCoverage[];
 
 export const frameworkPages = [

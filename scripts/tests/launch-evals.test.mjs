@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  evaluateCallNycFullPopulationArchive,
   evaluateChadLens,
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
@@ -465,7 +467,7 @@ const projectSocialArchiveFixture = {
   socialArchive: [
     "socialArchiveAccountMap",
     'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist"',
-    "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 106",
+    "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 107",
     "profilePostsObserved: 5124 followersObserved: 1338",
     "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 37",
     "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
@@ -545,4 +547,67 @@ test("project social archive rejects sole-authorship and endorsement boundary re
 
   assert.ok(failures.some((failure) => failure.includes("Jamie authored every")));
   assert.ok(failures.some((failure) => failure.includes("official Council endorsement")));
+});
+
+const readRepoFile = (relativePath) =>
+  readFileSync(new URL(`../../${relativePath}`, import.meta.url), "utf8");
+
+const callNycFullPopulationFixture = {
+  ledger: readRepoFile("docs/knowledge-bank/data/callnyc-public-post-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  records: readRepoFile("apps/www/src/data/knowledge-bank/records.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  workData: readRepoFile("apps/www/src/data/work.ts"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+  callNycCase: readRepoFile("apps/www/src/content/work/callnyc.mdx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-13-callnyc-full-population-social-corpus.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("CallNYC full-population archive passes item-level reconciliation and public boundaries", () => {
+  assert.deepEqual(
+    evaluateCallNycFullPopulationArchive(callNycFullPopulationFixture),
+    []
+  );
+});
+
+test("CallNYC full-population archive rejects a silently dropped recovered item", () => {
+  const ledger = JSON.parse(callNycFullPopulationFixture.ledger);
+  ledger.records.pop();
+  const failures = evaluateCallNycFullPopulationArchive({
+    ...callNycFullPopulationFixture,
+    ledger: JSON.stringify(ledger)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("107 item-level records")));
+  assert.ok(failures.some((failure) => failure.includes("must contain")));
+});
+
+test("CallNYC full-population archive rejects erased unresolved slots and metric inflation boundaries", () => {
+  const ledger = JSON.parse(callNycFullPopulationFixture.ledger);
+  ledger.populationAudit.unresolvedPopulationSlots = 0;
+  ledger.unresolvedItems = [];
+  const failures = evaluateCallNycFullPopulationArchive({
+    ...callNycFullPopulationFixture,
+    ledger: JSON.stringify(ledger),
+    antiClaims: callNycFullPopulationFixture.antiClaims
+      .replace(/26 reciprocal\s+engagements/, "")
+      .replace(/CouncilStat rows represent issues, not verified\s+unique people helped/, "")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("three explicit unresolved")));
+  assert.ok(failures.some((failure) => failure.includes("26 reciprocal engagements")));
+  assert.ok(failures.some((failure) => failure.includes("CouncilStat rows represent issues")));
+});
+
+test("CallNYC full-population archive rejects authentication and private-path material", () => {
+  const failures = evaluateCallNycFullPopulationArchive({
+    ...callNycFullPopulationFixture,
+    archiveDoc: `${callNycFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
+  });
+
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
 });

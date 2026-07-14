@@ -303,7 +303,8 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: [
       "callnyc-civic-data-guidance",
-      "callnyc-council-member-amplification"
+      "callnyc-council-member-amplification",
+      "callnyc-public-engagement-architecture"
     ],
     whatWasUnclear:
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
@@ -322,6 +323,12 @@ const workItemsInput = [
         description:
           "An independent interpretation layer built from CouncilStat constituent-services records.",
         type: "map"
+      },
+      {
+        title: "Public-engagement system",
+        description:
+          "A recoverable 2016 account corpus documents 71 data-derived recognitions naming 26 Council-member accounts and linking to 61 issue pages across 16 categories.",
+        type: "analytics summary"
       },
       {
         title: "Archived press note",
@@ -349,12 +356,17 @@ const workItemsInput = [
         label: "Politico New York archived PDF",
         url: "https://callnyc.org/data/media/Politico-Website-provides-new-information-about-council-members-focus.pdf"
       },
+      {
+        label: "NYC School of Data 2016 recap",
+        url: "https://schoolofdata.nyc/a-brief-recap-of-nyc-school-of-data-2016/"
+      },
+      { label: "Public account archive", url: "https://x.com/CallNYCapp" },
       { label: "GitHub repository", url: "https://github.com/openhouse/CallNYC" }
     ],
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, a 107-item public-account ledger with three unresolved count slots, NYC School of Data and Politico coverage, Council-member posts, the public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -367,11 +379,13 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
+      "Published 71 data-derived recognition posts naming 26 Council-member accounts and linking to 61 issue pages across 16 categories",
+      "Featured in NYC School of Data's 2016 civic-hacks recap",
       "Covered by Politico New York in 2016"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance; its recoverable public-account corpus documents a repeatable stakeholder-engagement layer, independent NYC School of Data recognition, and amplification by at least five sitting Council members.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:

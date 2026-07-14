@@ -188,6 +188,46 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-12"
   },
   {
+    id: "callnyc-public-engagement-architecture",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Built a civic-data engagement layer documented by 71 recognition posts naming 26 Council-member accounts and linking to 61 issue pages across 16 constituent-service categories.",
+    shortWording:
+      "Built a civic-data engagement layer spanning 61 issue pathways and 26 Council-member accounts",
+    detailedPublicWording:
+      "CallNYC translated CouncilStat issue categories into a repeatable public-engagement system: 71 recovered recognition posts named 26 sitting Council-member accounts and linked to 61 issue pages across 16 service categories.",
+    sourceBasis:
+      "A 107-item authenticated public-post ledger, New York City Council stated-meeting minutes confirming 2016 officeholding, and current public dataset metadata distinguishing issues from cases and people.",
+    whyItMatters:
+      "Shows the operational scale and audience design behind the prototype, not only the existence of a website.",
+    guardrail:
+      "Treat tags as intended institutional reach, not reciprocal engagement; treat CouncilStat rows as issues, not unique people helped or service outcomes.",
+    doNotSay: [
+      "Twenty-six Council members engaged with or endorsed CallNYC",
+      "CallNYC helped a verified number of unique residents",
+      "Seventy-one posts document seventy-one service outcomes",
+      "The ledger is a complete platform export",
+      "Jamie authored every @CallNYCApp post"
+    ],
+    protectedBoundaries: [
+      "Authentication and session material",
+      "Private messages and account analytics",
+      "Unrecovered status content",
+      "Individual post authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc"],
+    relatedCapabilities: [
+      "public-interest-technology",
+      "stakeholder-engagement",
+      "information-architecture",
+      "source-backed-analysis"
+    ],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",
@@ -800,6 +840,7 @@ export const technicalOperationsProofRows = [
       "kc-spaces-fund-digital-infrastructure",
       "callnyc-civic-data-guidance",
       "callnyc-council-member-amplification",
+      "callnyc-public-engagement-architecture",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"
     ]

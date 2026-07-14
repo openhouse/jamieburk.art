@@ -636,7 +636,7 @@ export function evaluateProjectSocialArchiveProduction({
     'handle: "@wowlist"',
     "profilePostsObserved: 110",
     "followersObserved: 69",
-    "timelineItemsRecovered: 106",
+    "timelineItemsRecovered: 107",
     "profilePostsObserved: 5124",
     "followersObserved: 1338",
     "profilePostsObserved: 38",
@@ -738,6 +738,235 @@ export function evaluateProjectSocialArchiveProduction({
   return missing;
 }
 
+export function evaluateCallNycFullPopulationArchive({
+  ledger,
+  corpusModel,
+  framework,
+  records,
+  proofs,
+  workData,
+  technicalOperations,
+  callNycCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(ledger);
+  } catch {
+    missing.push("CallNYC public-post ledger is not valid JSON.");
+    return missing;
+  }
+
+  const population = parsed.populationAudit ?? {};
+  const corpus = parsed.records ?? [];
+  const unresolved = parsed.unresolvedItems ?? [];
+  const aggregate = parsed.aggregateFindings ?? {};
+  const relationshipCount = (relationship) =>
+    corpus.filter((item) => item.relationship === relationship).length;
+
+  expect(population.profileCountObserved === 110, "CallNYC observed profile population must remain 110.");
+  expect(population.postsTabItemsRecovered === 106, "CallNYC Posts-tab recovery must remain 106.");
+  expect(population.accountPostsRecovered === 86, "CallNYC original account-post count must remain 86.");
+  expect(population.accountRepliesRecovered === 6, "CallNYC account-reply count must remain 6.");
+  expect(population.accountAuthoredStatusesRecovered === 92, "CallNYC account-authored status count must remain 92.");
+  expect(population.repostsRecovered === 15, "CallNYC repost count must remain 15.");
+  expect(population.uniqueItemsRecovered === 107, "CallNYC unique item-level recovery must remain 107.");
+  expect(population.unresolvedPopulationSlots === 3, "CallNYC must retain three explicit unresolved population slots.");
+  expect(population.dispositionTotal === 110, "CallNYC disposition total must remain 110.");
+  expect(
+    population.uniqueItemsRecovered + population.unresolvedPopulationSlots === population.profileCountObserved,
+    "Recovered and unresolved CallNYC slots must reconcile to the observed profile count."
+  );
+  expect(
+    population.accountPostsRecovered + population.accountRepliesRecovered === population.accountAuthoredStatusesRecovered,
+    "Original posts and replies must reconcile to account-authored statuses."
+  );
+  expect(
+    population.accountAuthoredStatusesRecovered + population.repostsRecovered === population.uniqueItemsRecovered,
+    "Account-authored statuses and reposts must reconcile to recovered items."
+  );
+  expect(corpus.length === 107, "CallNYC ledger must contain 107 item-level records.");
+  expect(relationshipCount("account-post") === 86, "CallNYC ledger must contain 86 original account posts.");
+  expect(relationshipCount("account-reply") === 6, "CallNYC ledger must contain six account replies.");
+  expect(relationshipCount("repost") === 15, "CallNYC ledger must contain 15 reposts.");
+  expect(new Set(corpus.map((item) => item.statusId)).size === corpus.length, "CallNYC ledger status IDs must be unique.");
+  expect(new Set(corpus.map((item) => item.statusUrl)).size === corpus.length, "CallNYC ledger status URLs must be unique.");
+  expect(
+    unresolved.length === 3 && unresolved.every((item) => item.status === "not-recovered"),
+    "CallNYC ledger must preserve three not-recovered placeholder slots."
+  );
+
+  const accountAuthored = corpus.filter((item) => item.relationship !== "repost");
+  const recognitionPosts = accountAuthored.filter((item) =>
+    /(?:provides|provided|gives) the most/i.test(item.text)
+  );
+  const recognitionHandles = new Set(
+    recognitionPosts
+      .map((item) => item.text.match(/@([A-Za-z0-9_]+)/)?.[1]?.toLowerCase())
+      .filter(Boolean)
+  );
+  const allOutbound = corpus.flatMap((item) => item.outboundLinks ?? []);
+  const recognitionDestinations = recognitionPosts.flatMap((item) =>
+    (item.outboundLinks ?? [])
+      .map((link) => link.destinationUrl)
+      .filter((url) => /^https:\/\/(?:www\.)?callnyc\.org\//.test(url))
+  );
+  const recognitionCategories = new Set(
+    recognitionDestinations
+      .map((url) => new URL(url).pathname.split("/").filter(Boolean)[0])
+      .filter(Boolean)
+  );
+  const uniqueShortUrls = new Set(allOutbound.map((link) => link.shortUrl));
+  const uniqueDestinations = new Set(allOutbound.map((link) => link.destinationUrl));
+  const uniqueCallNycDestinations = new Set(
+    allOutbound
+      .map((link) => link.destinationUrl)
+      .filter((url) => /^https:\/\/(?:www\.)?callnyc\.org(?:\/|$)/.test(url))
+  );
+
+  expect(recognitionPosts.length === 71, "CallNYC recognition-post aggregate must recompute to 71.");
+  expect(recognitionHandles.size === 26, "CallNYC recognition handles must recompute to 26.");
+  expect(new Set(recognitionDestinations).size === 61, "CallNYC recognition issue pages must recompute to 61.");
+  expect(recognitionCategories.size === 16, "CallNYC recognition categories must recompute to 16.");
+  expect(
+    accountAuthored.filter((item) => /@NYCCouncil/i.test(item.text)).length === 82,
+    "CallNYC account-authored statuses mentioning @NYCCouncil must recompute to 82."
+  );
+  expect(allOutbound.length === 98, "CallNYC short-link occurrences must recompute to 98.");
+  expect(uniqueShortUrls.size === 84, "CallNYC unique short URLs must recompute to 84.");
+  expect(uniqueDestinations.size === 76, "CallNYC unique resolved destinations must recompute to 76.");
+  expect(uniqueCallNycDestinations.size === 63, "CallNYC unique CallNYC destinations must recompute to 63.");
+  expect(
+    aggregate.issueRecognitionPosts === recognitionPosts.length &&
+      aggregate.councilMemberHandlesNamedInRecognitions === recognitionHandles.size &&
+      aggregate.uniqueIssuePagesLinkedFromRecognitions === new Set(recognitionDestinations).size &&
+      aggregate.issueCategoriesLinkedFromRecognitions === recognitionCategories.size,
+    "CallNYC stored aggregate findings must match the item-level ledger."
+  );
+  expect(
+    allOutbound.every(
+      (link) =>
+        /^https:\/\/t\.co\//.test(link.shortUrl) &&
+        /^https?:\/\//.test(link.destinationUrl) &&
+        Number.isInteger(link.observedHttpStatus)
+    ),
+    "Every CallNYC outbound short link must have a public destination and observed HTTP status."
+  );
+
+  requireFragments("CallNYC corpus model", corpusModel, [
+    "callNycPopulationAudit",
+    "uniqueItemsRecovered: 107",
+    "unresolvedPopulationSlots: 3",
+    "issueRecognitionPosts: 71",
+    "councilMemberHandlesNamedInRecognitions: 26",
+    "uniqueIssuePagesLinkedFromRecognitions: 61",
+    "issueCategoriesLinkedFromRecognitions: 16",
+    "LEAD-CALLNYC-FULL-POPULATION-CORPUS-2026",
+    "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+    "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+    "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026",
+    "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+    "CLM-CALLNYC-SCHOOL-OF-DATA-RECOGNITION",
+    "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENT",
+    "INQ-CALLNYC-FULL-POPULATION-RECOVERY-2026",
+    "INQ-CALLNYC-UNVERIFIED-ACCOUNT-METRICS",
+    "INQ-CALLNYC-API-IMPLEMENTATION",
+    "100 percent disposition coverage",
+    "not a platform export",
+    "rows and issues must not be equated with cases or unique people",
+    "The project account does not establish Jamie's authorship of every post"
+  ]);
+  requireFragments("CallNYC framework integration", framework, [
+    "callNycSocialCorpusIntake",
+    "callNycSocialCorpusSources",
+    "callNycSocialCorpusClaims",
+    "callNycSocialCorpusInquiries",
+    "callNycSocialCorpusPublicationDecisions",
+    "callNycSocialCorpusProofCoverage"
+  ]);
+  requireFragments("CallNYC citation page", records, [
+    "social-engagement-architecture",
+    "school-of-data-recognition",
+    "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+    "SRC-NYC-SCHOOL-OF-DATA-CALLNYC-2016",
+    "SRC-NYC-COUNCIL-CONSTITUENT-SERVICES-DATASET-2026"
+  ]);
+  requireFragments("CallNYC proof bank", proofs, [
+    'id: "callnyc-public-engagement-architecture"',
+    "71 recognition posts",
+    "26 Council-member accounts",
+    "61 issue pages",
+    "Twenty-six Council members engaged with or endorsed CallNYC",
+    "Jamie authored every @CallNYCApp post"
+  ]);
+  requireFragments("CallNYC work metadata", workData, [
+    "Public-engagement system",
+    "71 data-derived recognition posts",
+    "NYC School of Data 2016 recap",
+    "107-item public-account ledger with three unresolved count slots"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    "61 issue pathways and 26 Council-member accounts"
+  ]);
+  requireFragments("CallNYC case study", callNycCase, [
+    "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+    "CLM-CALLNYC-SCHOOL-OF-DATA-RECOGNITION",
+    "A tag is not a reply",
+    "an issue row is not a unique person helped"
+  ]);
+  requireFragments("CallNYC full-population documentation", archiveDoc, [
+    "100 percent",
+    "Unique item-level recoveries",
+    "Explicit unresolved count slots",
+    "71 data-derived issue-recognition posts",
+    "26 Council-member handles",
+    "61 unique linked issue pages",
+    "13 unique external destination URLs",
+    "Research debt",
+    "does not mean X supplied a platform export"
+  ]);
+  requireFragments("CallNYC anti-claims", antiClaims, [
+    "complete platform export",
+    "26 reciprocal engagements",
+    "71 recognition posts into service outcomes",
+    "CouncilStat rows represent issues, not verified unique people helped",
+    "94 percent, 96 percent",
+    "2,330 helped in 365",
+    "currently working, official, or adopted"
+  ]);
+
+  const publicBundle = [ledger, corpusModel, framework, records, proofs, workData, technicalOperations, callNycCase, archiveDoc, antiClaims].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public CallNYC corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -760,6 +989,14 @@ export function runLaunchEvals(repoRoot) {
   const socialArchive = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/social-archive.ts"
+  );
+  const callNycSocialCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts"
+  );
+  const callNycPostLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/callnyc-public-post-ledger.json"
   );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const campaignPressDoc = readOptional(
@@ -785,6 +1022,10 @@ export function runLaunchEvals(repoRoot) {
   const projectSocialArchiveDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-project-social-account-archive-pass.md"
+  );
+  const callNycFullPopulationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-callnyc-full-population-social-corpus.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -1020,7 +1261,7 @@ export function runLaunchEvals(repoRoot) {
     schema,
     records,
     framework,
-    socialArchive,
+    socialArchive: `${socialArchive}\n${callNycSocialCorpus}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -1175,6 +1416,34 @@ export function runLaunchEvals(repoRoot) {
         "Authenticated recovery counts are explicit floors, with near-complete visible timelines distinguished from full platform exports.",
         "Council-member interaction counts distinguish direct engagement, campaign ecology, officeholding, and official endorsement.",
         "Jamie's account-establishment role remains distinct from shared post authorship and collective campaign outcomes."
+      ]
+    })
+  );
+
+  const callNycFullPopulationMissing = evaluateCallNycFullPopulationArchive({
+    ledger: callNycPostLedger,
+    corpusModel: callNycSocialCorpus,
+    framework,
+    records,
+    proofs,
+    workData,
+    technicalOperations,
+    callNycCase,
+    archiveDoc: callNycFullPopulationDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "callnyc-full-population-archive",
+      label: "CallNYC full-population archive reconciles every observed slot and bounds stakeholder claims",
+      weight: 20,
+      hardGate: true,
+      missing: callNycFullPopulationMissing,
+      evidence: [
+        "All 110 observed profile-count slots are dispositioned as 107 item-level recoveries and three explicit unresolved slots.",
+        "Item-level recomputation verifies post types, recognition posts, Council-member handles, issue pages, categories, and outbound URLs.",
+        "Selected public claims distinguish intended reach from reciprocal engagement and issue rows from people or outcomes.",
+        "Independent NYC School of Data recognition is selected while API announcements and unverifiable historical metrics remain reserve or research debt."
       ]
     })
   );

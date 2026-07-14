@@ -16,8 +16,8 @@ export const socialArchiveAccountMap = [
     profilePostsObserved: 110,
     followingObserved: 194,
     followersObserved: 69,
-    timelineItemsRecovered: 106,
-    recoveryNote: "91 account-authored posts and 15 reposts were recovered from the visible March-November 2016 profile timeline."
+    timelineItemsRecovered: 107,
+    recoveryNote: "Cross-tab reconciliation recovered 92 account-authored statuses and 15 reposts from March-November 2016; three of the 110 profile-count slots remain explicitly unresolved."
   },
   {
     projects: ["NYC Artist Coalition", "Let NYC Dance", "Talks Not Raids", "Save NYC Spaces", "FairRentNYC"],
@@ -76,7 +76,7 @@ export const socialArchiveIntake = [
     ],
     notes: [
       "Authenticated read-only recovery was necessary to see historical timelines, but no session, credential, cookie, account-recovery, or private-message data entered the repository.",
-      "Recovered counts are documented floors, not claims of platform-export completeness.",
+      "Recovered counts are documented item-level results, not claims of platform-export completeness; the full CallNYC population audit now dispositions 107 recovered items and three unresolved count slots.",
       "Jamie confirms establishing the accounts; public timelines do not identify who authored every team post."
     ]
   }
@@ -121,8 +121,8 @@ export const socialArchiveSources = [
     canonicalUrl: "https://x.com/CallNYCapp",
     preferredPublicUrl: "canonical",
     publicCitation: "Authenticated read-only review of the public @CallNYCApp profile and timeline, July 13, 2026.",
-    publicNote: "The profile showed 110 posts. Scrolling recovered 106 visible timeline items: 91 account-authored posts and 15 reposts, spanning March-November 2016.",
-    supportsGenerally: ["the verified CallNYC handle", "near-complete visible timeline recovery", "historical project outreach and repost patterns"],
+    publicNote: "The profile showed 110 posts. Cross-tab reconciliation recovered 107 unique items: 92 account-authored statuses and 15 reposts, spanning March-November 2016; three count slots remain unresolved.",
+    supportsGenerally: ["the verified CallNYC handle", "cross-tab recovery of 107 unique public items", "historical project outreach and repost patterns"],
     doesNotEstablish: ["a complete platform export", "authorship of every post", "private engagement data", "institutional endorsement"]
   },
   {
@@ -414,13 +414,13 @@ export const socialArchiveInquiries = [
     id: "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
     project: "career-proof-system",
     question: "What public project-account material can be recovered without mistaking an authenticated visible timeline for a complete platform export?",
-    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 106 of 110 visible-profile items for @CallNYCApp and 37 of 38 for @wowlist.", "Sampled @NYCArtC through campaign and public-actor queries because its 5,124-post active profile was not practical to treat as a scrolling export."],
+    methods: ["Used an authenticated read-only browser session to inspect public profiles, visible timelines, live search, and status pages.", "Recovered 107 of 110 profile-count items for @CallNYCApp across the Posts and Replies surfaces and 37 of 38 for @wowlist.", "Sampled @NYCArtC through campaign and public-actor queries because its 5,124-post active profile was not practical to treat as a scrolling export."],
     runAt: "2026-07-13",
     resultStatus: "partially-recovered",
     findings: ["Verified @CallNYCApp, @NYCArtC, and @wowlist as public project accounts.", "Verified that Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC used the shared @NYCArtC identity.", "Recovered 53 #LetNYCDance, 40 #SaveNYCSpaces, 34 #TalksNotRaids, and 27 #FairRentNYC account-authored search results as non-exhaustive floors.", "No verified dedicated account was recovered for the other portfolio projects reviewed in this pass."],
     limitations: ["X search and scrolling are incomplete and can change over time.", "Profile post totals can include items not returned by visible scrolling.", "No account export, analytics dashboard, private messages, or nonpublic engagement data was accessed.", "Reposts by a project account do not establish that the original author endorsed the project."],
     sourceIds: ["SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026"],
-    publicSummary: "An authenticated read-only pass verified three project accounts and recovered bounded public timeline evidence; all counts are documented floors rather than claims of completeness."
+    publicSummary: "An authenticated read-only pass verified three project accounts and recovered bounded public timeline evidence; CallNYC has a separate full-population disposition audit, while no result is presented as a platform export."
   },
   {
     id: "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",

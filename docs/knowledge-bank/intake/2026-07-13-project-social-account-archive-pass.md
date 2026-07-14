@@ -36,7 +36,8 @@ credentials, account-recovery information, or other nonpublic account data was
 collected or entered into the repository.
 
 X search and infinite scrolling are not archival exports. Every count below is
-an observed value or a recovered floor as of the review date.
+an observed value, an item-level recovery result, or a bounded floor as of the
+review date. CallNYC now has a separate full-population disposition ledger.
 
 ## Account Inventory
 
@@ -44,10 +45,14 @@ an observed value or a recovered floor as of the review date.
 
 - Joined March 2016; 194 following and 69 followers observed on the review date.
 - Profile count observed: 110 posts.
-- Visible timeline items recovered: 106.
-- Recovery composition: 91 account-authored posts and 15 reposts.
+- Unique cross-tab items recovered: 107.
+- Recovery composition: 92 account-authored statuses and 15 reposts.
+- Account-authored composition: 86 original posts and 6 replies.
 - Visible date range: March 5-November 14, 2016.
-- Four profile-count items were not recovered through scrolling.
+- The Posts tab yielded 106 items; the Replies tab supplied one additional
+  reply absent from that surface.
+- Three profile-count slots remain explicitly not recovered.
+- All 110 observed slots are dispositioned, but this is not a platform export.
 - The account linked the civic-data tool to issue-specific resident guidance,
   recognized Council-office constituent-service work, shared press coverage,
   and reposted two WOW List items.
@@ -59,6 +64,12 @@ an observed value or a recovered floor as of the review date.
 - A March 2016 account post asserted that 94 percent of Council members were on
   Twitter. That figure remains research material rather than a promoted claim
   because its calculation was not recovered.
+- The full corpus contains 71 data-derived issue-recognition posts naming 26
+  Council-member accounts and linking to 61 issue pages across 16 categories.
+  This documents intended institutional reach, not 26 reciprocal engagements
+  or 71 service outcomes.
+- The item ledger and detailed URL inventory live at
+  `docs/knowledge-bank/data/callnyc-public-post-ledger.json`.
 
 ### NYC Artist Coalition - @NYCArtC
 

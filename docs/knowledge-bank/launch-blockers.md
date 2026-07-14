@@ -17,6 +17,10 @@ public portfolio surface.
 - [x] Knowledge lifecycle passes as an automated hard gate: intake has no
   silent loss, claims have publication decisions, and every public proof has a
   source-coverage disposition.
+- [x] CallNYC full-population archival production passes as an automated hard
+  gate: 107 recovered items plus three unresolved slots reconcile to the 110
+  observed profile count, and stakeholder and outcome boundaries are
+  item-level recomputed.
 
 ## Human gates
 

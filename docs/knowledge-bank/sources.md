@@ -27,8 +27,15 @@ Approved public artifact examples for this launch pass include:
 - Public CallNYC-related posts by five sitting NYC Council member accounts in
   2016, including an archived post and resolvable retweet object.
 - Authenticated read-only public-profile inventories for `@CallNYCApp`,
-  `@NYCArtC`, and `@wowlist`, with recovery counts recorded as floors rather
-  than complete exports.
+  `@NYCArtC`, and `@wowlist`. The CallNYC full-population audit dispositions
+  107 recovered items and three unresolved count slots; none is presented as a
+  complete platform export.
+- A public 107-record CallNYC status and URL ledger preserving every
+  recoverable public item from the 110-item observed population.
+- Noel Hidalgo's March 2016 NYC School of Data recap, which featured CallNYC
+  among civic hacks using constituent-services open data.
+- Current City Council Constituent Services dataset metadata distinguishing
+  issue rows from cases and unique people.
 - Public posts from six contemporaneous NYC Council-member accounts directly
   interacting with `@NYCArtC` across coalition campaign contexts.
 - WOW List's 2014 public Sunday Dinner origin post and 2015 public
@@ -82,6 +89,9 @@ The public social-account inventory is documented in
 `intake/2026-07-13-project-social-account-archive-pass.md`. Authentication was
 used only to access public timelines. No session material, account-recovery
 information, private messages, or private analytics belongs in this repo.
+The CallNYC full-population method, findings, and research debt are documented
+in `intake/2026-07-13-callnyc-full-population-social-corpus.md`; item-level data
+is in `data/callnyc-public-post-ledger.json`.
 
 ### Public-Safe Archive Summary
 

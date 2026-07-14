@@ -78,6 +78,51 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-12
 
+## callnyc-public-engagement-architecture - Public engagement architecture
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated public-post ledger
+**Public wording:** Built a civic-data engagement layer documented by 71 recognition posts naming 26 Council-member accounts and linking to 61 issue pages across 16 constituent-service categories.
+**Detailed public-safe wording:** CallNYC translated CouncilStat issue categories into a repeatable public-engagement system: 71 recovered recognition posts named 26 sitting Council-member accounts and linked to 61 issue pages across 16 service categories.
+**Where to project:** Technical Operations and CallNYC case study.
+**Why it matters:** Shows the operational scale and audience design behind the prototype, not only the existence of a website.
+**Guardrail:** Treat tags as intended institutional reach, not reciprocal engagement; treat CouncilStat rows as issues, not unique people helped or service outcomes.
+**Do not say:** Twenty-six Council members engaged with or endorsed CallNYC; CallNYC helped a verified number of unique residents; 71 posts document 71 service outcomes; the ledger is a complete platform export; Jamie authored every `@CallNYCApp` post.
+**Protected boundaries:** Do not publish authentication, session, private-message, private-analytics, or unrecovered-status material.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## callnyc-school-of-data-recognition - Independent civic-tech recognition
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Independent public source
+**Public wording:** NYC School of Data's March 2016 recap featured CallNYC among civic hacks using New York City open data.
+**Detailed public-safe wording:** Noel Hidalgo's March 2016 NYC School of Data recap featured CallNYC among civic hacks and described it as profiling City Council constituent-service data.
+**Where to project:** CallNYC case study.
+**Why it matters:** Adds independent contemporaneous recognition from New York City's civic-tech and open-data ecosystem.
+**Guardrail:** Describe this as a feature in the recap, not an award, presentation, or official endorsement.
+**Do not say:** CallNYC won NYC School of Data; NYC School of Data officially endorsed CallNYC; Jamie presented CallNYC at the event.
+**Protected boundaries:** Do not infer Jamie's attendance, presentation role, or a formal institutional relationship from the recap.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## callnyc-public-api-announcement - Public API and contact-feature announcements
+
+**Status:** Reserve
+**Support level:** Careful
+**Evidence class:** Contemporaneous project-account posts
+**Public wording:** Contemporaneous CallNYC posts announced a District Profile API, a JSON endpoint for Council-member Twitter usernames, and issue-specific Council contact buttons.
+**Detailed public-safe wording:** In March and April 2016, the public project account announced a District Profile API, a JSON endpoint for Council-member Twitter usernames, and issue-specific Council contact buttons; historical implementation behavior remains open research.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Preserves meaningful product and interaction-design depth for technical interviews and future research without promoting an unrecovered feature.
+**Guardrail:** The announcements are recovered; historical endpoint behavior, implementation completeness, use, and adoption are not.
+**Do not say:** CallNYC currently provides a working API; the API was an official NYC Council service; the posts prove adoption.
+**Protected boundaries:** Do not publish live credentials, private server records, analytics, or infer endpoint use from the public announcements.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful

@@ -49,6 +49,24 @@ first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
 selected, or a winner without new evidence and review.
 
+Do not call the 107-item ledger a complete platform export; three of the 110
+observed profile-count slots remain explicitly not recovered. Do not infer
+their IDs or contents.
+
+Do not convert 26 named Council-member accounts into 26 reciprocal
+engagements, endorsements, or office responses. Do not convert 71 recognition
+posts into service outcomes. CouncilStat rows represent issues, not verified
+unique people helped, and office comparisons may reflect participation and
+reporting practices.
+
+Do not publish the account's 94 percent, 96 percent, or `2,330 helped in 365`
+claims until the exact contemporaneous roster, query, and row-to-case method are
+recovered and reviewed.
+
+Do not describe the announced API or issue-specific contact controls as
+currently working, official, or adopted until historical implementation and
+use are independently recovered.
+
 ## WOWList
 
 Do not name collaborators unless approved.
