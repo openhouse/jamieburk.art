@@ -267,7 +267,7 @@ export const wowlistSocialCorpus = {
       preservationStatus: "live",
       capturedAt: reviewedAt,
       accessedAt: reviewedAt,
-      canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-public-post-ledger.json",
+      canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/269f97ff752bd201b47ab5932425c50eb7e66759/docs/knowledge-bank/data/wowlist-public-post-ledger.json",
       preferredPublicUrl: "canonical",
       publicCitation: "Authenticated read-only review of the public @wowlist Posts and Replies surfaces, with a 38-record public ledger, July 14, 2026.",
       publicNote: "The profile displayed 38 posts. Cross-tab reconciliation recovered all 38 unique public items: 16 account posts, six account replies, and 16 reposts from 13 other public accounts. The ledger preserves every recovered posted URL and bounded classifications without reproducing full post text.",
