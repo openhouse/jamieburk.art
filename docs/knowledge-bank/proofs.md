@@ -36,6 +36,12 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 Reserve proofs are defensible knowledge-bank material, not automatic website
 copy. Each has an explicit defer decision in the typed lifecycle.
 
+- Helped establish and produce NYC Artist Coalition's recurring participation
+  system across public event pages, cultural-space meetings, practical support,
+  public hearings, campaign action, and relief coordination. A 34-slot Facebook
+  census recovers 33 event records and preserves one unresolved slot without
+  inference; the website projection remains deferred.
+
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.

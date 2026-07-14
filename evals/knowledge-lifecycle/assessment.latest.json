@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "4dc6cd78218f5f3aaafdb418df16a0621878106ca15374b72dc138f844ad8734",
+    "fingerprint": "f3478ed6d58db494b7d3d8540265a5ef23246d6e0a8f2b3accb171f769016aef",
     "counts": {
       "entities": 25,
-      "intake": 105,
-      "sources": 179,
-      "sourceReadings": 179,
-      "claims": 76,
-      "researchTasks": 29,
-      "projectionDecisions": 58
+      "intake": 106,
+      "sources": 195,
+      "sourceReadings": 195,
+      "claims": 80,
+      "researchTasks": 31,
+      "projectionDecisions": 62
     }
   },
   "judge": {
@@ -46,16 +46,12 @@
             "record": "atomicPropositionSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-NYCARTC-GOTHAMIST-CABARET-2017"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "READ-NYCARTC-JAMIE-EVENT-PRACTICE-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-NYC-CABARET-REPEAL-LAW-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "READ-NPR-HORSE-LORDS-TRUTHERS-2016"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "READ-VILLAGE-VOICE-NIGHT-MAYOR-2017"
           }
         ]
       },
@@ -68,20 +64,16 @@
             "record": "claim-promotion-is-evidence-backed"
           },
           {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "CLM-NYCARTC-PARTICIPATION-SYSTEM"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "CLM-NYCARTC-FACEBOOK-RESPONSE-SIGNALS"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-AGGREGATE-SERVICE-OUTCOME-REJECTED"
           }
         ]
       },
@@ -94,16 +86,12 @@
             "record": "researchTaskSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-CREATION-ROLE"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "TASK-NYCARTC-FACEBOOK-EVENT-EXPORT-AND-CREDIT"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "TASK-URBANHERMIT-EXPORT-AND-PRESERVATION"
           }
         ]
       },
@@ -120,12 +108,8 @@
             "record": "publication-is-an-independent-decision"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-HORSE-LORDS-TRUTHERS-VIDEO"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-PUBLISH-CALLNYC-DATE"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "DEC-DEFER-NYCARTC-FACEBOOK-EVENT"
           }
         ]
       },
@@ -134,24 +118,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/public-safety.md",
-            "record": "Prohibited Materials"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "public-repo-boundary-is-enforced"
           },
           {
-            "file": "docs/knowledge-bank/data/urbanhermit-public-post-ledger.json",
+            "file": "docs/knowledge-bank/data/nycartc-facebook-event-ledger.json",
             "record": "privacyBoundary"
           },
           {
-            "file": "docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json",
-            "record": "privacyBoundary"
-          },
-          {
-            "file": "scripts/generate-public-citations.mjs",
-            "record": "protectedLocatorId: _protectedLocatorId"
-          },
-          {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "personal social population ledger is aggregate-only and public-safe"
+            "file": "docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json",
+            "record": "nycartc-facebook-link-037"
           }
         ]
       },
@@ -164,16 +140,12 @@
             "record": "composition: z.object"
           },
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Public-ready claims also store the"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts",
+            "record": "CLM-NYCARTC-PARTICIPATION-SYSTEM"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "CLM-URBANHERMIT-PRACTICE-CONTINUITY"
-          },
-          {
-            "file": "docs/knowledge-bank/research/urbanhermit-full-population-social-census-2026-07-14.md",
-            "record": "Selected professional traces"
+            "file": "docs/knowledge-bank/research/nycartc-facebook-events-2026-07-14.md",
+            "record": "The Participation System"
           }
         ]
       }
@@ -196,5 +168,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent read-only assessment: weighted judge score 100/100. The deterministic lifecycle evaluation passed all 7 hard gates and 4 quality targets; all 67 lifecycle tests, public-safety checks, and citation checks passed. Records at captured, researching, corroborated, public-ready, projected, rejected, and superseded maturity were inspected. The @urbanhermit pass preserves the 434-item control as 431 directly reverified records plus 3 prior-capture-only reposts, excludes raw personal-archive detail, retains repost authorship and stakeholder-interpretation boundaries, preserves joint Horse Lords credit, and keeps all six eligible findings deferred. Human approval, collaborator permission, and media-rights gates remain pending."
+  "summary": "Fresh independent read-only assessment: weighted judge score 100/100. All 7 deterministic hard gates and 4 quality targets passed; all 72 knowledge-lifecycle tests and 10 citation tests passed. Claims at captured, researching, corroborated, public-ready, projected, rejected, and superseded maturity were inspected. The Facebook-event pass accounts for all 34 control slots while preserving 33 recovered records and one metadata-free unresolved slot, event-level plot points, shared-host boundaries, response-versus-attendance semantics, protected link routing, and collective credit. The public-ready participation-system claim links Jamie's bounded first-person role evidence to independent Gothamist, Bedford + Bowery, and Village Voice propositions without assigning him every event or page. All four event findings are deferred, and no census or platform metric is projected onto the website. No private paths or raw private archive material were found. Human approval, collaborator permission, and media-rights gates remain pending."
 }

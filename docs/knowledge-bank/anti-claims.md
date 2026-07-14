@@ -201,6 +201,31 @@ validated analysis, or a production data pipeline.
 Do not derive claims from unread recordings or photo-set labels. Review content,
 speaker or participant identity, rights, consent, and source relationships first.
 
+## NYC Artist Coalition Facebook Events
+
+Do not call the 34-slot event ledger a native Meta export, deletion history, or
+100 percent item recovery. It provides 100 percent disposition coverage: 33
+recovered event records and one unresolved slot whose date, title, host, topic,
+URL, and disappearance reason remain unknown.
+
+Do not say Jamie organized every event, authored every event page, or worked
+alone. Preserve the credit of coalition organizers, venue hosts, cohosts,
+participants, advocates, public officials, and agency staff. The record supports
+a recurring rotating-venue practice, not an uninterrupted monthly schedule or a
+different venue for every event.
+
+Do not sum Facebook response displays or translate them into unique people,
+physical attendance, participation, reach, endorsement, or impact. Independent
+reporting of about one hundred physical attendees applies only to the October
+2017 Market Hotel town hall; its event page's 1.2K response display is a
+different platform signal.
+
+Do not treat a visible host byline or posted URL as proof of formal partnership,
+division of labor, authorship, endorsement, readership, conversion, attendance,
+or policy causation. Do not publish guest identities, friend or invite context,
+comments, profiles, contact details, meeting credentials, working documents,
+private administration, or raw authenticated captures.
+
 ## Personal Social Archive
 
 Do not publish or reconstruct Jamie's full `@urbanhermit` timeline in this

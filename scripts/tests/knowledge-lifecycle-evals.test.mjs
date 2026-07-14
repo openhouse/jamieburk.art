@@ -11,6 +11,7 @@ import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/call
 import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts";
 import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts";
 import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts";
+import { nycArtCFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
@@ -1127,6 +1128,130 @@ test("NYC Artist Coalition social claims preserve shared authorship and campaign
   assert.equal(establishmentClaim.maturity, "researching");
   assert.equal(establishmentClaim.evidence.length, 0);
   assert.equal(establishmentTask.status, "in-progress");
+});
+
+test("NYC Artist Coalition Facebook event census accounts for every control slot", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-facebook-event-ledger.json", "utf8")
+  );
+  const recovered = ledger.records.filter((item) =>
+    ["detail-recovered", "detail-partial-description"].includes(item.recoveryStatus)
+  );
+  const unresolved = ledger.records.filter(
+    (item) => item.recoveryStatus === "unresolved-control-slot"
+  );
+
+  assert.equal(ledger.records.length, 34);
+  assert.equal(recovered.length, 33);
+  assert.equal(unresolved.length, 1);
+  assert.equal(new Set(recovered.map((item) => item.eventId)).size, 33);
+  assert.ok(recovered.every((item) => item.sourceUrl === `https://www.facebook.com/events/${item.eventId}/`));
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.entries(
+        recovered.reduce((counts, item) => {
+          const year = item.date.slice(0, 4);
+          counts[year] = (counts[year] ?? 0) + 1;
+          return counts;
+        }, {})
+      )
+    ),
+    { "2017": 17, "2018": 3, "2019": 6, "2020": 6, "2021": 1 }
+  );
+  assert.equal(unresolved[0].eventId, null);
+  assert.equal(unresolved[0].date, null);
+  assert.equal(unresolved[0].title, null);
+  assert.equal(nycArtCFacebookEventCensus.dispositionTotal, 34);
+  assert.match(nycArtCFacebookEventCensus.completenessStatement, /not complete item recovery/i);
+});
+
+test("NYC Artist Coalition event census preserves rotating-meeting and stakeholder boundaries", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-facebook-event-ledger.json", "utf8")
+  );
+  const meetings = ledger.records.filter((item) => item.isRecurringMeeting);
+  const physicalVenues = new Set(
+    meetings.filter((item) => item.venueOrMode !== "Virtual").map((item) => item.venueOrMode)
+  );
+
+  assert.equal(meetings.length, 12);
+  assert.equal(physicalVenues.size, 10);
+  assert.equal(meetings.filter((item) => item.venueOrMode === "Virtual").length, 2);
+  assert.deepEqual(ledger.accounting.hostBylines, {
+    coalitionOnly: 17,
+    sharedOrAssociated: 16,
+    boundary: "Visible public host bylines document shared event identity, not each organization's division of labor, formal partnership terms, or individual page authorship."
+  });
+  assert.deepEqual(ledger.accounting.pageRelationships, {
+    directCardHost: 24,
+    cohostedOrAssociated: 9
+  });
+});
+
+test("NYC Artist Coalition event response displays remain bounded platform signals", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/nycartc-facebook-event-ledger.json", "utf8")
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FACEBOOK-RESPONSE-SIGNALS"
+  );
+
+  assert.deepEqual(ledger.accounting.responseSignals, {
+    displayed: 32,
+    missing: 1,
+    minimum: 9,
+    maximum: 1700,
+    atLeast100: 19,
+    atLeast400: 9,
+    atLeast1000: 3,
+    boundary: "Facebook response displays are mutable event-level platform signals, not unique people, attendance, participation, reach, endorsement, or impact. They must not be summed."
+  });
+  assert.ok(claim.boundaries.some((item) => /Do not sum/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /physical attendance/i.test(item)));
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-VILLAGE-VOICE-NIGHT-MAYOR-2017"));
+});
+
+test("NYC Artist Coalition event link ledger routes every recovered destination safely", () => {
+  const ledgerText = readFileSync(
+    "docs/knowledge-bank/data/nycartc-facebook-event-link-ledger.json",
+    "utf8"
+  );
+  const ledger = JSON.parse(ledgerText);
+  const protectedRows = ledger.rows.filter((item) => item.disposition === "protected");
+
+  assert.equal(ledger.rows.length, 38);
+  assert.deepEqual(ledger.accounting, {
+    linkOccurrences: 61,
+    normalizedUrlRows: 38,
+    eventsWithOutboundLinks: 25,
+    sourceArticles: 7,
+    protectedRows: 1,
+    researchNeededRows: 4
+  });
+  assert.equal(protectedRows.length, 1);
+  assert.equal(protectedRows[0].publicUrl, null);
+  assert.match(ledger.interpretationBoundary, /not automatic corroboration/i);
+  assert.doesNotMatch(ledgerText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("NYC Artist Coalition participation system is public-ready, collective, and deferred", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-PARTICIPATION-SYSTEM"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.composition.action, /Helped establish and produce/i);
+  assert.match(claim.composition.intendedEnd, /Listen deeply/i);
+  assert.match(claim.composition.collectiveCredit, /venue hosts.*cohosts.*participants/i);
+  assert.match(claim.composition.causalBoundary, /not an uninterrupted monthly schedule/i);
+  assert.ok(claim.antiClaims.some((item) => /Jamie alone organized/i.test(item)));
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-NYCARTC-GOTHAMIST-CABARET-2017"));
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-BEDFORD-NIGHT-MAYOR-TOWN-HALL-2017"));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
 });
 
 test("operational social claims retain metric and role boundaries", () => {

@@ -356,6 +356,36 @@ stay outside the repo.
 **Review owner:** Jamie / Codex
 **Last reviewed:** 2026-07-14
 
+## nycartc-participation-system - Cultural-space participation system
+
+**Status:** Ready but deferred
+**Support level:** Strong with collective-credit boundary
+**Evidence class:** Full-population event census / first-person role account / independent journalism
+**Public wording:** Jamie helped establish and produce NYC Artist Coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical support and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.
+**Detailed public-safe wording:** The recovered event record documents a repeatable operating loop from gathering and listening through practical safety, legal, architectural, venue-support, policy, and relief work into hearings, rallies, institutional dialogue, and return meetings. Jamie describes building this event layer as a substantial contribution and connecting lessons from WOWList with legislative advocacy.
+**Where to project:** Knowledge bank now; future NYC Artist Coalition, About, or Technical Operations composition after audience review.
+**Why it matters:** Makes the relational operating system legible: events were not merely promotion, but a public interface for issue discovery, mutual support, shared priorities, and civic action.
+**Guardrail:** Credit organizers, venue hosts, cohosts, participants, advocates, officials, and agency staff collectively. The record supports a recurring rotating-venue practice, not an uninterrupted monthly schedule.
+**Do not say:** Jamie organized every event; Jamie authored every event page; every meeting used a different venue; Facebook responses equal attendance; events alone caused laws or agency change.
+**Protected boundaries:** Guest identities, invite and friend context, comments, participant profiles, contact details, meeting credentials, working documents, private administration, and raw captures stay outside the repo.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## nycartc-facebook-event-population - Facebook event accounting
+
+**Status:** Reserve
+**Support level:** Strongly bounded
+**Evidence class:** Authenticated public-source archival census
+**Public wording:** Every slot in Facebook's current 34-event host-card control has a disposition: 33 recovered event records and one unresolved slot.
+**Detailed public-safe wording:** The 33 recovered records span January 2017 through January 2021. Twelve recurring-meeting records span ten named physical cultural spaces and two virtual meetings; the larger population includes hearings, rallies, practical support, venue defense, small-business advocacy, and relief coordination.
+**Where to project:** Knowledge-bank research documentation.
+**Why it matters:** Preserves each event as a historical plot point while keeping the missing record visible.
+**Guardrail:** Call this complete disposition coverage, not complete item recovery, a native Meta export, or a lifetime deletion history.
+**Do not say:** All 34 events were recovered; the unresolved slot was deleted; the current control contains every event ever created.
+**Protected boundaries:** Raw authenticated-session captures and participant-level context stay outside the repo.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready

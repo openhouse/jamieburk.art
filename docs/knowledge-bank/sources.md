@@ -69,6 +69,24 @@ endorsement of NYC Artist Coalition.
 See
 `docs/knowledge-bank/research/nycartc-full-population-social-census-2026-07-14.md`.
 
+## NYC Artist Coalition Facebook Event Census
+
+The July 14, 2026 authenticated review assigns a disposition to every slot in
+Facebook's current 34-event host-card control. It recovers 33 public event
+records and retains one unresolved slot without invented metadata. A public
+event ledger preserves factual date, title, venue or mode, event format,
+program, page relationship, response display, and URL fields where recovered.
+
+A separate redacted ledger routes 61 outbound-link occurrences across 38
+normalized rows on 25 events. Links are source-discovery and action-routing
+records, not automatic corroboration or impact evidence. The pass accessioned
+selected public event pages, Village Voice reporting on the Market Hotel town
+hall, and Gothamist reporting on commercial-rent-stabilization context. Jamie's
+first-person role account is protected and bounded by collective credit.
+
+See
+`docs/knowledge-bank/research/nycartc-facebook-events-2026-07-14.md`.
+
 ## Personal Public Social Sources
 
 Personal social records may enter the source bank after individual close

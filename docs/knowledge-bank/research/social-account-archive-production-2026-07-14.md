@@ -77,6 +77,21 @@ constituent use, complete engagement totals, or measured service outcomes.
 
 ## NYC Artist Coalition
 
+The [Facebook event census](nycartc-facebook-events-2026-07-14.md) adds a
+different public-documentation surface. Facebook's current host-card control
+shows 34 past events; the authenticated pass recovered 33 event pages and
+preserved one unresolved slot without inference. Twelve recurring-meeting
+records span ten named physical cultural spaces and two virtual meetings, while
+the wider chronology includes hearings, rallies, practical support, venue
+defense, small-business advocacy, and relief coordination.
+
+Seventeen event pages show a coalition-only host byline and sixteen visibly
+name cohosts or associated organizations. Independent Village Voice reporting
+describes about one hundred people attending the October 2017 Market Hotel town
+hall with Council members and city-agency representatives. Host bylines and
+Facebook response displays remain bounded platform evidence, not partnership
+terms, attendance, endorsement, or impact measures.
+
 The profile explicitly holds four campaign identities. Bounded from-account
 searches recovered:
 
