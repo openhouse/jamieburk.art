@@ -25,6 +25,23 @@ Approved public artifact examples for this launch pass include:
 - CallNYC archived Politico New York PDF.
 - Public-safe CallNYC Council-member account engagement review linking 11
   attributable public posts.
+- Authenticated public-profile and bounded timeline reviews for `@CallNYCapp`,
+  `@NYCArtC`, `@wowlist`, `@KCSpacesFund`, and `@KCTownHall`.
+- Public-safe `@NYCArtC` population and engagement ledgers that disposition all
+  5,124 reported profile-count slots while separating 3,367 recovered items
+  from 1,757 unresolved slots and excluding full post text and authenticated
+  session data.
+- New York City Council's official City Council Members (1999 to Present)
+  dataset, used only to classify returned account posts against service terms.
+- Document Journal's 2018 Cabaret Law repeal feature, including public photo
+  captions identifying Jamie and Olympia Kazi with NYC Artist Coalition.
+- amNewYork's January 2019 Office of Nightlife report and Brooklyn Eagle's May
+  2019 account of the Office's public resource website.
+- Gothamist's February 2019 MARCH-hearing report and September 2021
+  commercial-rent-regulation report, City Limits' April 2020 commercial-tenant
+  report, and the Comptroller's September 2019 retail-vacancy analysis, all
+  recovered through the `@NYCArtC` posted-source trail and independently
+  close-read before promotion.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 - Good Times Santa Cruz's 2006 Open House profile.
@@ -57,6 +74,12 @@ canonical source record, access posture, campaign relationship, and explicit
 non-support boundaries. Article placement supports a claim about campaign
 source architecture; article-body claims require separate close reading before
 reuse.
+
+The governed `@NYCArtC` population and posted-link review is documented in
+`docs/knowledge-bank/projects/nycartc-x-population-2026-07-14.md`. Its public
+ledgers live under `docs/knowledge-bank/data/`. Complete disposition means every
+observed profile-count slot has a recovered or unresolved state; it does not
+mean every historical item or link destination was recovered.
 
 The KC Town Hall funding sequence is documented in
 `docs/knowledge-bank/projects/kc-town-hall-council-allocation-2019.md`. The

@@ -36,12 +36,15 @@ Use claims that directly support operating-backbone fit:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `nyc-artist-coalition-public-web-infrastructure`
+- `project-social-identity-systems`
+- `nyca-council-member-account-engagement`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
 - `callnyc-civic-data-guidance`
 - `source-backed-team-memory-method`
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
+- `kc-town-hall-public-operations-channel`
 - `nyca-commercial-rent-testimony-2018`
 - `nyca-campaign-press-architecture`
 - `commercial-vacancy-public-data-pilot`
@@ -62,6 +65,17 @@ The FairRentNYC case study may project `nyca-campaign-press-architecture` with
 both audited denominators: 46 placements and 45 distinct articles. Keep the
 surviving live/archive time boundary and the no-endorsement guardrail visible.
 
+The FairRentNYC case study may also project
+`project-social-identity-systems` and
+`nyca-council-member-account-engagement`. Keep account establishment,
+individual post authorship, Council-member account engagement, formal
+endorsement, and policy causality distinct.
+
+The KC Town Hall case study may project
+`kc-town-hall-public-operations-channel` as a bounded account-infrastructure
+claim. Keep it separate from program authorship, current program status, the
+CCED award lifecycle, and Jamie's later stewardship transition.
+
 ## Bank-Only Depth
 
 These claims are retained for future composition but are not selected for the
@@ -73,6 +87,8 @@ current site:
 - `kc-eighth-street-tunnel-public-program`
 - `claudette-ar-collaboration`
 - `talks-not-raids-transparency-to-phaseout`
+- `kc-spaces-fund-public-operations-timeline`
+- `nyca-shared-publishing-system-range`
 
 The Office of Nightlife claim now has a bounded active projection in the Fair
 Rent NYC case study: Jamie's documented public invitation and speaking role are

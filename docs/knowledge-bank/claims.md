@@ -80,6 +80,70 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-12
 
+## project-social-identity-systems - Durable public project identities
+
+**Structured claim IDs:** `CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS`, `CLM-NYCA-SHARED-SOCIAL-IDENTITY`
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe authenticated review / Jamie review confirmation
+**Public wording:** Established and connected public project identities across websites and social accounts for CallNYC, NYC Artist Coalition, WOWList, KC Spaces Fund, and KC Town Hall, creating durable publishing surfaces collaborators could use over time.
+**Detailed public-safe wording:** Jamie confirms that he established the accounts and connected them to project websites. The public record independently verifies the account map and shows the identities remaining usable across civic technology, coalition advocacy, community publishing, mutual aid, and neighborhood work.
+**Where to project:** Technical Operations and selected case studies.
+**Why it matters:** Shows shared publishing infrastructure that could outlive a single launch or individual operator.
+**Guardrail:** The establishment claim is first-person. Public profiles independently establish account identity and later use, not who authored each post or controlled later stewardship.
+**Do not say:** Jamie authored every project post; Jamie controlled every account for its entire life; follower counts prove impact; social engagement proves policy causality.
+**Protected boundaries:** Private messages, credentials, access records, analytics, unpublished drafts, follower identities, and personal contact details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nyca-council-member-account-engagement - Council-member account engagement
+
+**Structured claim IDs:** `CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT`
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe authenticated review
+**Public wording:** A 2026 authenticated review recovered 20 X posts returned by search from accounts of seven then-sitting NYC Council members engaging `@NYCArtC`.
+**Detailed public-safe wording:** The returned set documents acknowledgment, event invitation, hearing amplification, joint-work credit, direct replies, and policy discussion across several coalition campaigns.
+**Where to project:** Technical Operations and the FairRentNYC case study.
+**Why it matters:** Shows that the shared coalition identity became legible to public officials across multiple civic contexts.
+**Guardrail:** This is a minimum recovered account-level count, not a complete export or proof of personal authorship, endorsement, commissioning, adoption, partnership, or policy causality.
+**Do not say:** The Council endorsed NYC Artist Coalition; seven members formally endorsed every campaign; every tagged member engaged; Jamie personally communicated with every member.
+**Protected boundaries:** Private messages, account-access records, private analytics, deleted posts, and unverified personal authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nyca-shared-publishing-system-range - Shared publishing-system range
+
+**Structured claim IDs:** `CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE`
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe authenticated population ledger
+**Public wording:** A public-safe population ledger shows `@NYCArtC` functioning as a shared publishing system across four coalition campaigns and wider civic, cultural, small-business, and artist-labor networks.
+**Detailed public-safe wording:** The review dispositions all 5,124 slots reported by the authenticated profile. It recovered 3,367 public items, including 715 account-authored statuses and 2,652 reposts, and preserves 1,757 slots as unresolved. The recovered account-authored floor includes 191 `#FairRentNYC`, 110 `#SaveNYCSpaces`, 90 `#LetNYCDance`, and 56 `#TalksNotRaids` statuses.
+**Where to project:** Knowledge Bank only for now.
+**Why it matters:** Makes the durability, range, and collaborator usability of the shared public identity auditable without crowding the current portfolio argument.
+**Guardrail:** Say complete population accounting, not complete tweet recovery. Keep the recovered and unresolved counts together. Attribute all counts to the account, not Jamie.
+**Do not say:** All 5,124 tweets were recovered; Jamie authored 715 coalition posts; Jamie selected every repost; reposts prove endorsement; the account corpus proves policy causality.
+**Protected boundaries:** Authenticated session data, private analytics, messages, credentials, follower identities, full post text, and inferred details for unresolved slots stay outside the public repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## kc-town-hall-public-operations-channel - Resident-facing project channel
+
+**Structured claim IDs:** `CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL`
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / public-safe authenticated review / Jamie review confirmation
+**Public wording:** Established KC Town Hall's public account as part of the project identity; its surviving timeline later functioned as a resident-facing channel for neighborhood information and recurring `#TiredOfTires` pickups.
+**Detailed public-safe wording:** Jamie confirms that he established `@KCTownHall`. A bounded 2026 review recovered 170 of 183 profile entries, including 142 account-authored posts and 95 entries concerning `#TiredOfTires`.
+**Where to project:** Technical Operations and KC Town Hall case study.
+**Why it matters:** Shows a public identity becoming practical neighborhood infrastructure.
+**Guardrail:** Do not attribute every post, pickup, or later program action to Jamie. Keep this separate from the CCED award and stewardship-transition records.
+**Do not say:** Jamie authored every post; Jamie personally ran every pickup; the account proves current program status; the timeline proves funding disbursement.
+**Protected boundaries:** Private messages, account access, personal contact details, participant or pickup records, and private property/funding context stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful
@@ -249,7 +313,23 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
+
+## kc-spaces-fund-public-operations-timeline - KC Spaces Fund public operations timeline
+
+**Structured claim IDs:** `CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE`
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public source / public-safe authenticated review
+**Public wording:** A bounded review of KC Spaces Fund's public account recovered application guidance, fundraising and partner communication, and 11 account-authored `#FUNDED` grantee highlights.
+**Detailed public-safe wording:** The recovered account history shows how the collective campaign made applications, fundraising, partnerships, and funded-grantee communication legible in public. It does not assign the campaign's posts, grant decisions, organizer role, or fiscal sponsorship to Jamie.
+**Where to project:** Knowledge Bank only. A later case study may use the campaign-level finding after editorial review, but it must remain separate from Jamie's technical-infrastructure proof.
+**Why it matters:** Preserves operational context for a rapid mutual-aid campaign without converting collective communication into individual credit.
+**Guardrail:** Describe the recovered public-account function only. Do not infer complete recovery, grant authority, organizer status, fiscal sponsorship, or individual post authorship.
+**Do not say:** Jamie selected the grantees; Jamie authored every post; the timeline is a complete grantee or disbursement ledger; Jamie was the public organizer or fiscal sponsor.
+**Protected boundaries:** Applicant or grantee records, donor and subscriber data, private messages, account access, and private analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

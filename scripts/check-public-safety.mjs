@@ -145,6 +145,11 @@ const shippedContentFiles = shippedTextFiles.filter((file) => !scannerFiles.has(
 const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
+const publicSocialLedgerFiles = textFiles.filter((file) =>
+  /^docs\/knowledge-bank\/data\/(?:nycartc|callnyc|wowlist|kctownhall)-public-.*\.json$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -190,6 +195,18 @@ scanPattern(
   shippedContentFiles,
   "all-caps private/confidential marker appears in production-facing content",
   /\b(?:PRIVATE|CONFIDENTIAL)\b/
+);
+
+scanPattern(
+  publicSocialLedgerFiles,
+  "public social ledger exposes raw outbound-link or mutable-metric fields",
+  /"(?:outboundLinks|visibleMetricsObserved2026)"\s*:/
+);
+
+scanPattern(
+  publicSocialLedgerFiles,
+  "public social ledger exposes a Google working-document or Zoom session URL",
+  /https?:\\?\/\\?\/(?:docs|drive)\.google\.com|https?:\\?\/\\?\/(?:[^\/"\\\s]+\.)?zoom\.us\//i
 );
 
 const credentialPatterns = [

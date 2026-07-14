@@ -596,6 +596,83 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "project-social-identity-systems",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Established and connected public project identities across websites and social accounts for CallNYC, NYC Artist Coalition, WOWList, KC Spaces Fund, and KC Town Hall, creating durable publishing surfaces collaborators could use over time.",
+    shortWording: "Established durable public identities collaborators could use",
+    detailedPublicWording:
+      "Jamie established project accounts and connected them to their public websites. The identities remained usable by collaborators across civic technology, coalition advocacy, community publishing, mutual aid, and neighborhood work; individual post authorship and later stewardship remained shared or project-specific.",
+    sourceBasis:
+      "Jamie's first-person confirmation, public project-site links, authenticated public profiles, bounded 2026 timeline reviews, and the public-safe @NYCArtC population ledger.",
+    sourceNote:
+      "The public record verifies the account map and later use. Jamie's account-establishment role remains first-person unless a collaborator or platform record supplies independent corroboration.",
+    whyItMatters:
+      "Shows product and communications infrastructure that outlived a single launch and supported shared project stewardship.",
+    guardrail:
+      "Claim account establishment and identity-system work only. Do not attribute every post, editorial decision, audience response, later stewardship action, or project outcome to Jamie.",
+    doNotSay: [
+      "Jamie authored every project post",
+      "Jamie controlled every account for its entire life",
+      "Follower counts prove impact",
+      "Social engagement proves Jamie caused campaign or policy outcomes"
+    ],
+    protectedBoundaries: [
+      "Private messages",
+      "Account access records",
+      "Credentials",
+      "Private analytics",
+      "Unpublished drafts",
+      "Follower identities",
+      "Personal contact information"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc", "fair-rent-nyc", "wowlist", "kc-spaces-fund", "kc-town-hall"],
+    relatedCapabilities: ["public-facing-web-systems", "publishing-infrastructure", "information-architecture", "shared-stewardship"],
+    structuredClaimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-NYCA-SHARED-SOCIAL-IDENTITY", "CLM-NYCA-SHARED-PUBLISHING-SYSTEM-RANGE"],
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "nyca-council-member-account-engagement",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "By establishing @NYCArtC as a shared address, Jamie gave collaborators a durable public identity that Council-member accounts could recognize, reply to, invite, and amplify across campaigns; a bounded 2026 review recovered 20 in-term returned posts from seven Council-member accounts.",
+    shortWording: "Bounded account-level proof that @NYCArtC became a recognizable address for replies, invitations, and amplification",
+    detailedPublicWording:
+      "The shared coalition identity remained usable across campaigns as a public address for recognition, replies, invitations, amplification, and policy discussion. Twenty in-term posts returned from seven Council-member accounts provide bounded evidence of that use.",
+    sourceBasis:
+      "A public-safe authenticated X review of 485 unique returned statuses, with account identity and Council service dates reviewed before counting.",
+    sourceNote:
+      "Seventeen in-term results rendered @NYCArtC explicitly; three exposed it through X's collapsed reply-recipient context. Three additional results outside the authors' Council terms were excluded.",
+    whyItMatters:
+      "Shows that the coalition identity became legible enough for public officials to acknowledge, reply to, invite, and amplify across several campaign contexts.",
+    guardrail:
+      "Keep this at account level and as a minimum recovered search count. Do not infer personal authorship, formal endorsement, commissioning, adoption, partnership, or policy causality.",
+    doNotSay: [
+      "The New York City Council endorsed NYC Artist Coalition",
+      "Seven Council members formally endorsed every coalition campaign",
+      "Every tagged Council member engaged",
+      "Jamie personally communicated with every member",
+      "The search recovered every relevant post"
+    ],
+    protectedBoundaries: [
+      "Private messages",
+      "Account-access records",
+      "Private analytics",
+      "Unrecovered or deleted posts",
+      "Unverified personal authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-engagement", "policy-communications", "coalition-operations", "source-mapping"],
+    structuredClaimIds: ["CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "kc-spaces-fund-digital-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -640,7 +717,81 @@ export const proofClaims: ProofClaim[] = [
       "implementation",
       "technical-operations"
     ],
-    lastReviewed: "2026-07-09"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "kc-spaces-fund-public-operations-timeline",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "A bounded review of KC Spaces Fund's public account recovered application guidance, fundraising and partner communication, and 11 account-authored #FUNDED grantee highlights.",
+    shortWording: "KC Spaces Fund public operations timeline",
+    detailedPublicWording:
+      "The recovered account history shows how the collective campaign made applications, fundraising, partnerships, and funded-grantee communication legible in public. It does not assign the campaign's posts, grant decisions, organizer role, or fiscal sponsorship to Jamie.",
+    sourceBasis:
+      "Authenticated public-account review recovering 34 of 35 profile entries, including 27 account-authored posts and seven reposts.",
+    sourceNote:
+      "Retained as bank-only project context; it does not strengthen Jamie's separate technical-infrastructure claim.",
+    whyItMatters:
+      "Preserves evidence of how the campaign's public communications supported an operational mutual-aid workflow without converting collective activity into individual credit.",
+    guardrail:
+      "Describe the account's recovered public function only. Do not infer complete recovery, grant authority, organizer status, fiscal sponsorship, or individual post authorship.",
+    doNotSay: [
+      "Jamie selected the grantees",
+      "Jamie authored every KC Spaces Fund post",
+      "The social timeline is a complete grantee or disbursement ledger",
+      "Jamie was the campaign's public organizer or fiscal sponsor"
+    ],
+    protectedBoundaries: [
+      "Applicant or grantee records",
+      "Donor and subscriber data",
+      "Private messages",
+      "Account-access records",
+      "Private analytics"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["kc-spaces-fund"],
+    relatedCapabilities: ["public-communications", "campaign-operations", "source-mapping"],
+    structuredClaimIds: ["CLM-KCSPACES-PUBLIC-OPERATIONS-TIMELINE"],
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "kc-town-hall-public-operations-channel",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Established KC Town Hall's public account as part of the project identity; its surviving timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups.",
+    shortWording: "Established a project identity that became a resident-facing operations channel",
+    detailedPublicWording:
+      "Jamie confirms that he established @KCTownHall. A 2026 authenticated review recovered 170 of 183 profile entries, including 142 account-authored posts and 95 entries concerning #TiredOfTires, while preserving the distinction between account infrastructure, individual post authorship, program stewardship, and the separate CCED funding lifecycle.",
+    sourceBasis:
+      "Jamie's first-person account, the public @KCTownHall profile, and an authenticated public-safe timeline review.",
+    sourceNote:
+      "The public timeline establishes the account's later function; it does not assign each post or program action to Jamie.",
+    whyItMatters:
+      "Shows a public identity becoming practical neighborhood infrastructure rather than remaining a static project announcement.",
+    guardrail:
+      "Do not attribute every post, pickup, or later program action to Jamie. Keep the social timeline separate from the CCED award and stewardship-transition records.",
+    doNotSay: [
+      "Jamie authored every KC Town Hall post",
+      "Jamie personally ran every tire pickup",
+      "The account proves current program status",
+      "The timeline proves funding disbursement or project completion"
+    ],
+    protectedBoundaries: [
+      "Private messages",
+      "Account access",
+      "Personal contact details",
+      "Private participant or pickup records",
+      "Private property and funding context"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["public-guidance", "program-communications", "community-operations", "shared-stewardship"],
+    structuredClaimIds: ["CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "kc-town-hall-public-benefit-documentation",
@@ -1130,9 +1281,12 @@ export const technicalOperationsProofRows = [
     capability: "Public-facing launch and adoption",
     toward: "Shaping websites, prototypes, and community platforms so real audiences can act.",
     proofIds: [
+      "project-social-identity-systems",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
+      "nyca-council-member-account-engagement",
       "kc-spaces-fund-digital-infrastructure",
+      "kc-town-hall-public-operations-channel",
       "callnyc-civic-data-guidance",
       "wowlist-community-platform",
       "hje-revenue-growth-contribution"

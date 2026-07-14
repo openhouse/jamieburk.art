@@ -15,12 +15,21 @@ The repo is public. Approval here means approved for public-safe repository and 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
 - NYC Artist Coalition press architecture: 46 placements representing 45 distinct articles across four campaign sites is approved with the live/archive date boundary; press placement is not publisher endorsement or individual credit for collective outcomes.
+- Project social identity systems: Jamie's first-person account that he established the verified project accounts is approved with public-profile corroboration of the account map. Do not attribute every post, later stewardship action, reaction, or project outcome to Jamie.
+- NYC Artist Coalition account engagement: the recovered minimum of 20 in-term posts returned from seven then-sitting Council-member accounts is approved as account-level engagement, not formal endorsement, personal authorship, commissioning, adoption, partnership, or policy causality.
+- NYC Artist Coalition population ledger: approved as bank-only depth. Say that
+  all 5,124 observed profile-count slots were dispositioned, with 3,367 public
+  items recovered and 1,757 slots unresolved. Never shorten this to "all tweets
+  recovered," attribute account-authored or repost populations to Jamie, or
+  convert repost and link patterns into endorsement or impact.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
 - KC Spaces Fund: behind-the-scenes digital infrastructure language only. AI-assisted archival review may support the proof-bank claim, but it is not a human testimonial and does not approve public organizer, grant decision-maker, fundraiser-owner, or fiscal-sponsor framing.
+- KC Spaces Fund public timeline: approved for bank-only campaign context. Keep the recovered application, fundraising, partnership, and funded-grantee communication separate from Jamie's technical role and from grant authority, organizer status, fiscal sponsorship, or individual post authorship.
 - KC Town Hall funding and transition: the unanimous $490,539 Board recommendation and City appropriation are public-record-backed. Jamie's transition of stewardship to a mission-aligned organization is approved as a bounded first-person account. Keep it distinct from the City's later withdrawal and reappropriation record; do not name the successor without separate review, and do not store or project a reason for the transition.
+- KC Town Hall public account: Jamie's establishment claim and the account's later resident-facing information function are approved with the explicit boundary that individual posts, pickups, program stewardship, and current status are not assigned to Jamie.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Open House / Shop Shows: source-backed and safe for the bank; preserve housemate and participant credit.
 - Waterways work: source-backed and safe for the bank with collaborative language; the Gulf of Mexico endpoint is recovered, while the exact landing place remains open.

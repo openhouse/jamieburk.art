@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-x-project-social-accounts-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 4,
+  "qualifyingRounds": [3, 4],
+  "candidate": "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 63,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 3,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "The first pass left active MDX claims outside the governed registry, lacked an item-level Council-account manifest, and let human and machine claim registers drift."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 4,
+      "result": "revise",
+      "finding": "The evidence graph passed, but the public copy led with a recovered count before naming the durable shared address and collaborator use; bounded non-recovery findings also lacked concrete next actions."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The revised candidate made Jamie the actor, named the reusable identity and publishing infrastructure, explained collaborator and public use, and preserved account-level and collective-work boundaries."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck confirmed the 63-word candidate in both declared paths with every dimension, hard gate, evidence boundary, and public-safety condition intact."
+    }
+  ]
+}

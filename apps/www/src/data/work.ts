@@ -178,7 +178,7 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+      "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
     role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
     years: "2017-Present",
     status: "Full case study",
@@ -189,7 +189,9 @@ const workItemsInput = [
       "fair-rent-campaign-memory",
       "fair-rent-operating-layer-design",
       "fair-rent-source-map",
+      "project-social-identity-systems",
       "nyc-artist-coalition-public-web-infrastructure",
+      "nyca-council-member-account-engagement",
       "nyca-campaign-press-architecture",
       "nyc-artist-coalition-civic-systems",
       "nyca-cabaret-law-direct-organizing",
@@ -237,6 +239,12 @@ const workItemsInput = [
         type: "website"
       },
       {
+        title: "Shared public identity system",
+        description:
+          "A durable @NYCArtC publishing identity connected across the coalition, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC, with shared authorship kept explicit.",
+        type: "website"
+      },
+      {
         title: "Campaign press corpus",
         description:
           "A governed index of 46 campaign-to-article placements representing 45 distinct articles across four live and archived campaign surfaces.",
@@ -276,7 +284,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, four live and archived campaign press surfaces, 45 distinct article records, selected protected Shared Drive records with Jamie-attributed revision history, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four live and archived campaign press surfaces, 45 distinct article records, an authenticated public-account and Council-member engagement review, selected protected Shared Drive records with Jamie-attributed revision history, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -294,6 +302,8 @@ const workItemsInput = [
       "Running minutes, decision records, action trackers, and source maps",
       "Protected 2017-2019 records for member onboarding, Let NYC Dance deployment, public-meeting production, and machine-readable policy implementation",
       "Public campaign websites for NYC Artist Coalition advocacy",
+      "Shared @NYCArtC identity connected across five coalition and campaign surfaces",
+      "20 recovered in-term X posts returned from seven then-sitting Council-member accounts",
       "46 press placements representing 45 distinct articles across four campaign sites",
       "Documented public organizing and testimony for Cabaret Law repeal",
       "Documented speaking participation in Office of Nightlife town halls",
@@ -304,7 +314,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Protected Shared Drive records with Jamie-attributed revision history document operating infrastructure from member onboarding and Let NYC Dance deployment through public-meeting production and machine-readable policy implementation. Current protected records also support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools and a 2026 commercial-vacancy open-data pilot brief; they do not establish adoption or completion. Public records separately document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
+        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and established @NYCArtC as a shared publishing identity across the coalition and four campaign surfaces. A bounded authenticated review recovered 20 in-term X posts returned from accounts of seven then-sitting Council members; authorship remains at account level and is not formal endorsement. Protected Shared Drive records with Jamie-attributed revision history document operating infrastructure from member onboarding and Let NYC Dance deployment through public-meeting production and machine-readable policy implementation. Current protected records also support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools and a 2026 commercial-vacancy open-data pilot brief; they do not establish adoption or completion. Public records separately document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -543,7 +553,11 @@ const workItemsInput = [
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-public-benefit-documentation",
+      "project-social-identity-systems",
+      "kc-town-hall-public-operations-channel"
+    ],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
@@ -554,6 +568,12 @@ const workItemsInput = [
         title: "Public-benefit documentation set",
         description:
           "Representative materials for describing intended public value, funding context, and stakeholder needs.",
+        type: "guide"
+      },
+      {
+        title: "Resident-facing operations channel",
+        description:
+          "A public project identity that later carried neighborhood information and recurring #TiredOfTires pickup communication.",
         type: "guide"
       }
     ],
@@ -569,7 +589,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Kansas City CCED Board meeting records, City Council Resolution 190649, Ordinances 190642 and 240317, independent 2021 reporting, Jamie's public-safe first-person correction, and public-safe project context.",
+      "Kansas City CCED Board meeting records, City Council Resolution 190649, Ordinances 190642 and 240317, independent 2021 reporting, Jamie's public-safe first-person correction, the public @KCTownHall profile, and a bounded authenticated timeline review.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Jamie transitioned stewardship to a mission-aligned organization; City records later closed the original unused CCED award as withdrawn and reappropriated it in 2024.",
     group: "Operating systems for teams",
@@ -581,11 +601,12 @@ const workItemsInput = [
       "Historic preservation context",
       "Unanimous $490,539 CCED Board recommendation and subsequent City Council appropriation",
       "Years-long City-contract process documented by independent reporting",
-      "Stewardship transition separated from the City's later withdrawal record"
+      "Stewardship transition separated from the City's later withdrawal record",
+      "Public account established as part of the project identity and later used for resident-facing neighborhood information"
     ],
     knownOpenProtected: {
       known:
-        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
+        "Jamie presented and supported planning and documentation for a mixed-use adaptive-reuse proposal and confirms that he established its public account. All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The recovered public timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups; it does not assign every post or program action to Jamie. Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn and reappropriated the unused funds.",
       open:
         "Public sources reviewed so far do not independently identify the successor organization or establish the timing and terms of transition. City records do not provide a complete stewardship or responsibility map.",
       protected:

@@ -85,7 +85,21 @@ if (privatePattern.test(source)) fail("Chad Lens eval contains a private path");
 
 const runsRoot = path.join(evalRoot, "runs");
 if (existsSync(runsRoot)) {
-  for (const runName of readdirSync(runsRoot)) {
+  const runNames = readdirSync(runsRoot);
+  const latestCompleteRunName = runNames
+    .filter((runName) => {
+      const resultPath = path.join(runsRoot, runName, "result.json");
+      if (!existsSync(resultPath)) return false;
+      try {
+        return JSON.parse(readFileSync(resultPath, "utf8")).status === "complete";
+      } catch {
+        return false;
+      }
+    })
+    .sort()
+    .at(-1);
+
+  for (const runName of runNames) {
     const resultPath = path.join(runsRoot, runName, "result.json");
     if (!existsSync(resultPath)) continue;
     const resultSource = readFileSync(resultPath, "utf8");
@@ -166,14 +180,16 @@ if (existsSync(runsRoot)) {
         fail(`${runName} candidate violates its sentence-count contract`);
       }
 
-      for (const relativePath of projection.exactCandidatePaths ?? []) {
-        const projectionPath = path.join(repoRoot, relativePath);
-        if (!existsSync(projectionPath)) {
-          fail(`${runName} projection path is missing: ${relativePath}`);
-          continue;
-        }
-        if (!readFileSync(projectionPath, "utf8").includes(result.candidate)) {
-          fail(`${runName} winning candidate is not projected exactly in ${relativePath}`);
+      if (runName === latestCompleteRunName) {
+        for (const relativePath of projection.exactCandidatePaths ?? []) {
+          const projectionPath = path.join(repoRoot, relativePath);
+          if (!existsSync(projectionPath)) {
+            fail(`${runName} projection path is missing: ${relativePath}`);
+            continue;
+          }
+          if (!readFileSync(projectionPath, "utf8").includes(result.candidate)) {
+            fail(`${runName} winning candidate is not projected exactly in ${relativePath}`);
+          }
         }
       }
       for (const relativePath of projection.knowledgeBankPaths ?? []) {

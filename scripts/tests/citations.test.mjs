@@ -35,6 +35,21 @@ test("Claim resolver returns only active approved projections", () => {
   assert.throws(() => getClaimProjection("CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", "resume-html", "/work"), /not approved/);
 });
 
+test("every MDX Claim resolves through the generated public registry", () => {
+  for (const filename of ["fair-rent-nyc.mdx", "kc-town-hall.mdx", "callnyc.mdx"]) {
+    const source = readFileSync(`apps/www/src/content/work/${filename}`, "utf8");
+    for (const match of source.matchAll(/<Claim\b([\s\S]*?)\/>/g)) {
+      const attributes = Object.fromEntries(
+        [...match[1].matchAll(/(claimId|projection|surface)="([^"]+)"/g)].map((item) => [item[1], item[2]])
+      );
+      assert.doesNotThrow(
+        () => getClaimProjection(attributes.claimId, attributes.projection, attributes.surface),
+        `${filename} must resolve ${attributes.claimId}`
+      );
+    }
+  }
+});
+
 test("corrections retire old wording from public surfaces", () => {
   const publicText = ["apps/www/src/content/work/callnyc.mdx", "apps/www/src/content/work/kc-town-hall.mdx", "apps/www/src/data/work.ts", "apps/www/src/data/proofs.ts", "apps/www/src/app/resume/page.tsx"].map((path) => readFileSync(path, "utf8")).join("\n");
   assert.doesNotMatch(publicText, /first civic-data hackathon|2014[-–]2015/i);

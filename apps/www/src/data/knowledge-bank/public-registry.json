@@ -1,6 +1,107 @@
 {
   "sources": [
     {
+      "id": "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+      "title": "Public project social-account inventory",
+      "organization": "Jamie Burkart portfolio research",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/project-social-accounts-2026-07-14.md",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public-safe authenticated-browser inventory of project social accounts, July 14, 2026.",
+      "publicNote": "Maps verified project accounts, shared campaign identities, bounded timeline recovery, current profile counters, account-level engagement, and authorship limits.",
+      "doesNotEstablish": [
+        "that Jamie authored every post",
+        "that account followers or current counters are contemporaneous impact analytics",
+        "that every project had a dedicated account",
+        "complete recovery of any timeline"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-X-PROFILE-2026",
+      "title": "NYC Artist Coalition public X profile",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/NYCArtC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, @NYCArtC public profile, accessed July 14, 2026.",
+      "publicNote": "The authenticated profile reported 5,124 posts on July 14, 2026 and explicitly connects #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC.",
+      "doesNotEstablish": [
+        "which collaborator authored a post",
+        "Jamie's sole control of the account",
+        "campaign causality",
+        "historical reach from current counters"
+      ]
+    },
+    {
+      "id": "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026",
+      "title": "NYC Artist Coalition authenticated X engagement review",
+      "organization": "Jamie Burkart portfolio research",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/project-social-accounts-2026-07-14.md#nyc-artist-coalition",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated X review of @NYCArtC account identity and public engagement, July 14, 2026.",
+      "publicNote": "An authenticated Latest search recovered 485 unique status entries. A 24-status Council-account candidate manifest yielded 20 counted in-term posts: 17 rendered @NYCArtC explicitly and three exposed it through collapsed reply-recipient context. Three candidates fell outside the authors' Council terms; one near-duplicate same-event invitation was conservatively excluded.",
+      "doesNotEstablish": [
+        "a complete X corpus",
+        "formal endorsement",
+        "Council commissioning or adoption",
+        "who personally typed a post",
+        "Jamie's authorship of coalition posts",
+        "causality for policy outcomes"
+      ]
+    },
+    {
+      "id": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT",
+      "title": "City Council Members (1999 to Present)",
+      "organization": "New York City Council / NYC Open Data",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://data.cityofnewyork.us/City-Government/City-Council-Members-1999-to-Present-/uvw5-9znb",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, 'City Council Members (1999 to Present),' NYC Open Data, accessed July 14, 2026.",
+      "publicNote": "The official roster supplied the service-term boundaries used to classify returned account posts as in-term or out-of-term.",
+      "doesNotEstablish": [
+        "which social account a member personally operated",
+        "personal authorship of an account post",
+        "endorsement of NYC Artist Coalition",
+        "complete recovery of social engagement"
+      ]
+    },
+    {
+      "id": "SRC-KCTOWNHALL-X-TIMELINE-REVIEW-2026",
+      "title": "KC Town Hall authenticated X timeline review",
+      "organization": "Jamie Burkart portfolio research",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/project-social-accounts-2026-07-14.md#kc-town-hall",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated X review of the @KCTownHall timeline, July 14, 2026.",
+      "publicNote": "Recovered 170 of 183 profile entries: 142 account-authored posts and 28 reposts. Ninety-five recovered entries concern #TiredOfTires, alongside neighborhood information, public-service amplification, and exchanges with city and community accounts.",
+      "doesNotEstablish": [
+        "that Jamie authored every post",
+        "program ownership",
+        "current program status",
+        "the CCED award lifecycle",
+        "stewardship-transition timing or terms"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -125,6 +226,147 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-NYCA-SHARED-SOCIAL-IDENTITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie also established @NYCArtC as a shared coalition publishing identity and connected it across the coalition, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Teammates also published through the account, so individual posts are not attributed to Jamie without separate evidence.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's first-person establishment account",
+            "shared-authorship boundary"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-X-PROFILE-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "shared coalition identity",
+            "explicit relationship to four campaign hashtags",
+            "long-lived public publishing surface"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public sites and profile establish a shared identity system; Jamie's account-establishment role is first-person evidence.",
+        "Do not attribute every coalition post to Jamie or erase Olympia Kazi and other collaborators' stewardship.",
+        "A long-lived account does not by itself establish campaign outcomes or audience impact."
+      ]
+    },
+    {
+      "id": "CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "By establishing that shared address, Jamie gave collaborators a durable public identity that Council-member accounts could recognize, reply to, invite, and amplify across campaigns. A bounded 2026 review recovered 20 returned posts from accounts of seven then-sitting Council members. This is account-level evidence, not formal endorsement or proof of personal authorship.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's first-person account-establishment role",
+            "shared-authorship boundary"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "20 in-term returned posts",
+            "seven then-sitting Council-member accounts",
+            "engagement modes",
+            "temporal separation of three out-of-term posts",
+            "conservative exclusion of one near-duplicate same-event invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT",
+          "relationship": "direct-support",
+          "supports": [
+            "official Council service-term boundaries used for temporal classification"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is a minimum recovered count from an authenticated platform search, not a complete account history.",
+        "Seventeen in-term results rendered @NYCArtC explicitly; three exposed it through X's collapsed reply-recipient context.",
+        "Keep this at account level: staff may have operated an officeholder's account.",
+        "Do not treat tags by @NYCArtC, third-party posts, current counters, or account follows as Council-member engagement."
+      ]
+    },
+    {
+      "id": "CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie established KC Town Hall's public account as part of the project's identity system. Its surviving timeline later functioned as a resident-facing operations channel for neighborhood information and recurring #TiredOfTires pickups; account authorship and program stewardship are not assigned to Jamie post by post.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's first-person establishment account"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTOWNHALL-X-TIMELINE-REVIEW-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "bounded timeline recovery",
+            "142 account-authored posts",
+            "95 recovered #TiredOfTires entries",
+            "resident-facing neighborhood information and city-account interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account-establishment role is Jamie's first-person account; the public timeline independently establishes the account's later function.",
+        "Do not attribute every post, every pickup, or later program stewardship to Jamie.",
+        "Keep the public account timeline separate from the CCED funding lifecycle and the later stewardship transition."
+      ]
+    },
     {
       "id": "CLM-CRS-SHARED-OPERATING-LAYER-2026",
       "status": "confirmed-with-boundary",
@@ -391,12 +633,55 @@
     {
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
-      "sourceOrder": [],
+      "sourceOrder": [
+        "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+        "SRC-NYCA-X-PROFILE-2026",
+        "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026",
+        "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT"
+      ],
       "occurrences": [
         {
           "id": "shared-operating-layer",
           "claimId": "CLM-CRS-SHARED-OPERATING-LAYER-2026",
           "projection": "case-study"
+        },
+        {
+          "id": "shared-social-identity",
+          "claimId": "CLM-NYCA-SHARED-SOCIAL-IDENTITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+            "SRC-NYCA-X-PROFILE-2026"
+          ]
+        },
+        {
+          "id": "council-member-account-engagement",
+          "claimId": "CLM-NYCA-COUNCIL-MEMBER-ACCOUNT-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+            "SRC-NYCA-X-ENGAGEMENT-REVIEW-2026",
+            "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-PRESENT"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+        "SRC-KCTOWNHALL-X-TIMELINE-REVIEW-2026"
+      ],
+      "occurrences": [
+        {
+          "id": "public-operations-channel",
+          "claimId": "CLM-KCTOWNHALL-PUBLIC-OPERATIONS-CHANNEL",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-PROJECT-SOCIAL-ACCOUNT-INVENTORY-2026",
+            "SRC-KCTOWNHALL-X-TIMELINE-REVIEW-2026"
+          ]
         }
       ]
     },

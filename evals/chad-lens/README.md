@@ -20,8 +20,9 @@ The paragraph may use up to four short sentences within the 75-word ceiling.
 This keeps the collective boundary visible without forcing every responsibility,
 audience, and use into overloaded compound sentences.
 
-Committed run artifacts live under `runs/<date>-<branch>/`. The winning
-candidate must enter the Knowledge Bank before it is projected onto the site.
-The deterministic checker verifies the exact winning paragraph on its declared
-site surfaces and verifies that every supporting claim ID exists in both the
+Committed run artifacts live under `runs/<date>-<branch>/`. Historical winners
+remain immutable evaluation records; the newest completed winning candidate
+must enter the Knowledge Bank before it is projected onto the site. The
+deterministic checker verifies that newest candidate exactly on its declared site
+surfaces and verifies that every supporting claim ID exists in both the
 structured and human-readable Knowledge Bank.

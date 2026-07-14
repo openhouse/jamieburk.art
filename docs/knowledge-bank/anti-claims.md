@@ -13,6 +13,10 @@ Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
 
+Do not convert project-account establishment into authorship of every post,
+control of later stewardship, or ownership of collective outcomes. Current
+follower, reaction, view, and post counters are not historical impact analytics.
+
 ## HJE
 
 Do not say Jamie caused 2x revenue growth.
@@ -32,6 +36,16 @@ Do not claim that Jamie single-handedly repealed the Cabaret Law or alone
 created the Office of Nightlife. Do not convert coalition advocacy, later
 legislation, and administrative change into one unbroken personal-causality
 claim.
+
+Do not convert posts returned from Council-member accounts into formal Council
+endorsement, commissioning, adoption, partnership, personal authorship by the
+officeholder, or proof of policy causality. A tag or follow is not engagement.
+
+Do not describe the `@NYCArtC` population ledger as a complete platform export
+or say all 5,124 tweets were recovered. Keep 3,367 recovered public items and
+1,757 unresolved profile-count slots together. Do not assign the 715
+account-authored statuses or 2,652 reposts to Jamie personally, and do not treat
+reposts as inbound endorsement.
 
 ## Talks Not Raids
 
@@ -94,6 +108,10 @@ Do not say the City transferred the CCED award to a successor organization, the
 successor received or spent the $490,539, or public sources establish the
 successor identity or transition terms. Do not store or project a reason for
 the transition.
+
+Do not attribute every `@KCTownHall` post, `#TiredOfTires` pickup, or later
+program action to Jamie. Keep the public account record separate from the CCED
+award lifecycle and the stewardship transition.
 
 ## Source-Backed Team Memory
 
