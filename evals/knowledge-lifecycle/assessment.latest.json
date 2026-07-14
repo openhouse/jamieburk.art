@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "5c71b1f11e6d3db257a828fdb5f95565ded887d1fd6a3ba9696a533288f0a29d",
+    "fingerprint": "9772d64b015347f6a41018df36d403645bc12fb529f2749f148692d447073bb4",
     "counts": {
-      "entities": 17,
-      "intake": 75,
-      "sources": 76,
-      "sourceReadings": 67,
-      "claims": 37,
+      "entities": 18,
+      "intake": 81,
+      "sources": 81,
+      "sourceReadings": 81,
+      "claims": 41,
       "researchTasks": 15,
-      "projectionDecisions": 30
+      "projectionDecisions": 34
     }
   },
   "judge": {
@@ -20,42 +20,42 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "intakeRecordSchema"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-RIVER-PITCH-2007"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-SEED"
+            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "INTAKE-TEAMS-PROJECT-HISTORY-OVERVIEW-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-NYCARTC-CREATION-ROLE-SEED"
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
           }
         ]
       },
       {
         "criterionId": "source-decomposition",
-        "score": 3,
+        "score": 4,
         "evidence": [
-          {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "relationToJamie"
-          },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "READ-KCMO-RESOLUTION-190649-2019"
+            "record": "READ-KCMO-COUNCIL-MEETING-2019-09-26"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "READ-TEAMS-CRS-RUNNING-MINUTES-2026"
           }
         ]
       },
@@ -64,24 +64,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "PROP-KCTOWN-UNUSED-FUNDS-REAPPROPRIATED"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-EXPEDITION-ORIGIN"
+            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026"
           }
         ]
       },
@@ -90,8 +86,8 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -100,10 +96,6 @@
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
           }
         ]
       },
@@ -112,20 +104,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "sourceExpansionDecisions"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-PUBLISH-CALLNYC-FOLLOW-ON-CASE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-PUBLISH-CALLNYC-DATE"
-          },
-          {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "Publication decisions"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "teamsArchiveDecisions"
           }
         ]
       },
@@ -134,42 +122,34 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "docs/knowledge-bank/anti-claims.md",
-            "record": "do not attribute the withdrawal to"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "SRC-TEAMS-SOURCE-BACKED-PILOT-PROPOSAL-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
-          },
-          {
-            "file": "docs/knowledge-bank/public-safety.md",
-            "record": "Prohibited Materials"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "public-repo-boundary-is-enforced"
           }
         ]
       },
       {
         "criterionId": "future-composability",
-        "score": 3,
+        "score": 4,
         "evidence": [
-          {
-            "file": "apps/www/src/data/knowledge-bank/schema.ts",
-            "record": "collectiveCredit"
-          },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
+            "record": "CLM-CROSS-PROJECT-ARCHIVE-PRACTICE-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           }
         ]
       }
@@ -192,5 +172,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh Node 26.5.0 results: repository snapshot counts are 17 entities, 75 intake records, 76 sources, 67 source readings, 37 claims, 15 research tasks, and 30 projection decisions. Deterministic evaluation found 0/7 hard-gate failures and 0/4 quality-target gaps: 75 accessions, 67/67 bounded readings, 5 safely routed research-stage claims, 25 closely read sources, 29 mature claims, and research-queue depth 7. Maturity counts are 1 captured, 4 researching, 4 corroborated, 15 public-ready, 10 projected, 1 rejected, and 2 superseded. Lifecycle tests passed 28/28; citation tests passed 10/10; typecheck, lint, knowledge-bank, public-safety, route, and citation checks passed, with 10 expected careful-claim warnings. The KC correction contains no private explanatory detail or euphemistic disclosure: it accessions only Jamie's professional first-party handoff memory as protected outside the repository, keeps the claim researching with zero evidence and zero projections, and opens a high-priority corroboration task covering date, recipient, accepted responsibilities, and collective credit. It separates that handoff from the official later withdrawal, forbids unsupported attribution of the withdrawal to Jamie, and preserves the Council appropriation, negotiation authorization, non-disbursement, later withdrawal, and unused-fund reappropriation. Website-facing projection files are unchanged. No privacy or attribution defect was identified. In-memory mutation confirms claim-seeds-have-research-routes passes for open, in-progress, and blocked task states, but fails for resolved and closed-no-finding with CLM-KC-TOWN-HALL-TRANSITION-SEED reported unrouted. The repository-wide bounded gaps remain 41 queued readings, 1 needs-access reading, 10 legacy projected claims without structured Chad-lens composition, and 9 migration-mature claims whose evidence is exempt from proposition-link enforcement. Weighted score: 93.8/100. All human gates remain pending."
+  "summary": "A fresh deterministic run for this snapshot passed all seven hard gates and all four quality targets. The current graph is exceptionally explicit across accession, source decomposition, bounded evidence, executable research, independent publication decisions, public-safety controls, and Chad-lens composition; the named human approvals remain pending."
 }

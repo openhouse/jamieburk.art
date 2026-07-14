@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
@@ -98,6 +98,63 @@ function unknownReference(type, ownerId, id) {
   return { type, ownerId, id };
 }
 
+const repositoryBoundaryIgnoredDirs = new Set([
+  ".git",
+  ".next",
+  ".turbo",
+  "coverage",
+  "dist",
+  "node_modules"
+]);
+const repositoryBoundaryTextExtensions = new Set([
+  ".css",
+  ".example",
+  ".html",
+  ".js",
+  ".json",
+  ".jsx",
+  ".md",
+  ".mdx",
+  ".mjs",
+  ".ts",
+  ".tsx",
+  ".txt",
+  ".yaml",
+  ".yml"
+]);
+
+function repositoryBoundaryFiles(dir) {
+  if (!existsSync(dir)) return [];
+  const files = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const absolute = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      if (!repositoryBoundaryIgnoredDirs.has(entry.name)) files.push(...repositoryBoundaryFiles(absolute));
+    } else if (entry.isFile() && repositoryBoundaryTextExtensions.has(path.extname(entry.name))) {
+      files.push(absolute);
+    }
+  }
+  return files;
+}
+
+export function findUnsafeRepositoryText(file, content) {
+  const patterns = [
+    ["local-user-path", /\/Users\//i],
+    ["local-volume-path", /\/Volumes\//i],
+    ["temporary-research-path", /\/private\/tmp\//i],
+    ["icloud-container-path", /Mobile Documents\/com~apple~CloudDocs/i]
+  ];
+  return patterns
+    .filter(([, pattern]) => pattern.test(content))
+    .map(([reason]) => ({ file, reason }));
+}
+
+export function scanPublicRepositoryBoundary(repoRoot = defaultRepoRoot) {
+  return repositoryBoundaryFiles(repoRoot).flatMap((file) =>
+    findUnsafeRepositoryText(path.relative(repoRoot, file), readFileSync(file, "utf8"))
+  );
+}
+
 export function currentRepositorySnapshot(bank = knowledgeBank) {
   const counts = {
     entities: bank.entities.length,
@@ -190,7 +247,8 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
     const qualifying = claim.evidence.filter((item) => ["direct-support", "corroborating", "private-support"].includes(item.relationship) && item.confidence !== "limited");
     if (!qualifying.length) promotionFailures.push({ id: claim.id, reason: "no qualifying support relationship" });
     const migrationOnly = claim.intakeIds.length > 0 && claim.intakeIds.every((id) => intake.get(id)?.kind === "migration");
-    if (claim.intakeIds.length && !migrationOnly) {
+    const requiresPropositionContract = claim.intakeIds.length && (!migrationOnly || claim.requiredSupportTags.length > 0);
+    if (requiresPropositionContract) {
       for (const evidence of qualifying) {
         if (!evidence.propositionIds.length) promotionFailures.push({ id: claim.id, sourceId: evidence.sourceId, reason: "qualifying evidence lacks proposition IDs" });
         for (const propositionId of evidence.propositionIds) {
@@ -373,11 +431,13 @@ export function evaluateLifecycle({ suite = loadSuite(), bank = knowledgeBank } 
     /(?:\+?1[ .-]?)?\(?\d{3}\)?[ .-]\d{3}[ .-]\d{4}/
   ];
   const unsafe = unsafePatterns.filter((pattern) => pattern.test(serialized)).map((pattern) => ({ pattern: String(pattern) }));
+  const unsafeRepositoryText = scanPublicRepositoryBoundary();
+  const publicBoundaryFailures = [...unsafe, ...unsafeRepositoryText];
   results.push(result(
     checks.get("public-repo-boundary-is-enforced"),
-    unsafe.length === 0,
-    `${unsafe.length} private-path or raw-material marker(s)`,
-    unsafe
+    publicBoundaryFailures.length === 0,
+    `${publicBoundaryFailures.length} private-path or raw-material marker(s) across the graph and repository text`,
+    publicBoundaryFailures
   ));
 
   const quality = [

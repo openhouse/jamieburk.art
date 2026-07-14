@@ -73,5 +73,28 @@ research lead until the professional handoff is corroborated.
 
 ## Source-Backed Team Memory
 
-Do not name Jonathan Marmor, publish pricing, publish private transcript
+Do not name a prospective collaborator, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+The June 2026 pilot proposal supports a bounded service and prototype design.
+Do not describe it as an accepted proposal, completed client engagement,
+deployed production system, or evidence of customer outcomes. Keep AI in a
+drafting role and preserve the human-review, permission, privacy, access, and
+retention boundaries.
+
+## Teams Archive Production
+
+Do not treat folder presence as proof of the claims inside a project archive.
+Do not infer that Jamie solely created collective projects represented there,
+that a February 2026 snapshot is currently complete, or that archive structure
+measures how often work moved between devices.
+
+For the Commercial Rent Stabilization records, distinguish Jamie's planned
+operating model from the shared-memory system documented as started and in use.
+Do not claim every proposed deliverable was completed, every collaborator
+adopted the system, or the documentation produced a legislative outcome.
+
+Describe the legislative artifact as a provenance redline prepared by Jamie.
+Do not call it an official legislative history or legal opinion, and do not
+credit Jamie with underlying language attributed to counsel, prior bills, or
+legislative staff.

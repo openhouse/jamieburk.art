@@ -76,3 +76,9 @@ The
 [NYC Artist Coalition campaign press corpus](research/nycartc-campaign-press-2026-07-13.md)
 shows how campaign-curated press indexes, repeated placements, dead links,
 archived captures, and queued article-level readings enter the same lifecycle.
+
+The
+[Teams archive production record](research/teams-archive-production-2026-07-13.md)
+shows how selected private working artifacts can yield public-safe source
+descriptions and bounded claims without committing raw archives or automatically
+changing the website.

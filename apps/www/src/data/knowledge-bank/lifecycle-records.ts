@@ -574,7 +574,8 @@ export const lifecycleSourceReadings = [
     status: "closely-read",
     readAt: "2026-07-12",
     propositions: [
-      { id: "PROP-CALLNYC-FIRST-COUNCILSTAT", text: "The Council's event-day post identifies the gathering as its first CouncilStat hackathon.", relationToJamie: "project-context", supportTags: ["first-councilstat-wording"], confidence: "high", locator: "Event-day post" }
+      { id: "PROP-CALLNYC-FIRST-COUNCILSTAT", text: "The Council's event-day post identifies the gathering as its first CouncilStat hackathon.", relationToJamie: "project-context", supportTags: ["first-councilstat-wording"], confidence: "high", locator: "Event-day post" },
+      { id: "PROP-CALLNYC-COUNCIL-EVENT-DATE-VENUE", text: "The Council posted from Civic Hall on January 30, 2016, about the CouncilStat hackathon.", relationToJamie: "project-context", supportTags: ["callnyc-event-venue"], confidence: "high", locator: "Event-day post" }
     ],
     limitations: ["The post does not support a broader first civic-data, civic-tech, or all-purpose Council hackathon superlative."],
     researchTaskIds: []

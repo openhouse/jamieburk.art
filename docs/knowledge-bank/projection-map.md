@@ -47,7 +47,7 @@ Use claims that directly support operating-backbone fit:
 
 Use only public-safe method claims.
 
-Do not name Jonathan Marmor, publish pricing, publish private transcripts, or
+Do not name a prospective collaborator, publish pricing, publish private transcripts, or
 imply production SaaS.
 
 ## Case Studies

@@ -8,6 +8,7 @@ import {
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
+  findUnsafeRepositoryText,
   loadSuite,
   scoreAssessment,
   validateSuite
@@ -169,6 +170,13 @@ test("public-safe records reject correspondence and contact patterns", () => {
   assert.equal(report.results.find((item) => item.id === "public-repo-boundary-is-enforced").passed, false);
 });
 
+test("repository boundary scan detects concrete local archive paths", () => {
+  const localPath = ["", "Users", "example", "private-archive"].join("/");
+  const findings = findUnsafeRepositoryText("fixture.md", `Archive: ${localPath}`);
+  assert.deepEqual(findings, [{ file: "fixture.md", reason: "local-user-path" }]);
+  assert.deepEqual(findUnsafeRepositoryText("fixture.md", "Public-safe source description."), []);
+});
+
 test("July 13 source expansion preserves its original ten bounded public sources", () => {
   const sourceIds = [
     "SRC-GREENE-HILL-COOP-QA-2017",
@@ -288,6 +296,120 @@ test("KC Town Hall Council semantics cannot lose proposition-level support", () 
       "PROP-KCTOWN-RESOLUTION-AUTHORIZES-NEGOTIATION",
       "PROP-KCTOWN-RESOLUTION-LIMITS-USES"
     ].includes(id)
+  );
+
+  const report = evaluateLifecycle({ suite, bank });
+  assert.equal(
+    report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed,
+    false
+  );
+});
+
+test("Teams archive production remains protected, source-backed, and deferred", () => {
+  const sourceIds = [
+    "SRC-TEAMS-PROJECT-HISTORY-OVERVIEW-2026",
+    "SRC-TEAMS-CRS-ACTION-PLAN-2026",
+    "SRC-TEAMS-CRS-RUNNING-MINUTES-2026",
+    "SRC-TEAMS-CRS-PROVENANCE-REDLINE-2026",
+    "SRC-TEAMS-SOURCE-BACKED-PILOT-PROPOSAL-2026"
+  ];
+  const claimIds = [
+    "CLM-CROSS-PROJECT-ARCHIVE-PRACTICE-2026",
+    "CLM-CRS-SHARED-OPERATING-MEMORY-2026",
+    "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",
+    "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026"
+  ];
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.equal(source.visibility, "protected");
+    assert.equal(source.preservationStatus, "private");
+    assert.ok(source.protectedLocatorId);
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+    assert.equal(reading.status, "closely-read");
+    assert.ok(reading.propositions.length > 0);
+    assert.ok(reading.limitations.length > 0);
+  }
+
+  for (const claimId of claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claimId);
+    assert.equal(claim.maturity, "public-ready");
+    assert.equal(claim.projections.length, 0);
+    assert.ok(claim.composition);
+    assert.ok(claim.antiClaims.length > 0);
+    assert.equal(decision.decision, "defer");
+  }
+
+  const memoryIntake = knowledgeBank.intake.find(
+    (item) => item.id === "INTAKE-TEAMS-ICLOUD-HANDOFF-PRACTICE-2026"
+  );
+  assert.equal(memoryIntake.kind, "public-memory");
+  assert.equal(memoryIntake.rawMaterialPolicy, "protected-outside-repo");
+
+  const pilotSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-TEAMS-SOURCE-BACKED-PILOT-PROPOSAL-2026"
+  );
+  const publicRecord = JSON.stringify(pilotSource);
+  assert.equal(pilotSource.author, "Jamie Burkart");
+  assert.equal(pilotSource.organization, undefined);
+  assert.doesNotMatch(publicRecord, /\$\d|@gmail\.com|\/Users\//i);
+  assert.ok(pilotSource.doesNotEstablish.some((item) => /acceptance/i.test(item)));
+  assert.ok(pilotSource.doesNotEstablish.some((item) => /delivery/i.test(item)));
+});
+
+test("Teams archive claims cannot lose semantic support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-OPERATING-MEMORY-2026"
+  );
+  const minutesEvidence = claim.evidence.find(
+    (item) => item.sourceId === "SRC-TEAMS-CRS-RUNNING-MINUTES-2026"
+  );
+  minutesEvidence.propositionIds = minutesEvidence.propositionIds.filter(
+    (id) => id !== "PROP-TEAMS-CRS-MEMORY-GUARDRAILS"
+  );
+
+  const report = evaluateLifecycle({ suite, bank });
+  assert.equal(
+    report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed,
+    false
+  );
+});
+
+test("legacy projected claims carry proposition-level support", () => {
+  const claimIds = [
+    "CLM-CALLNYC-HACKATHON-DATE-TIME",
+    "CLM-CALLNYC-EVENT-BRANDING",
+    "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
+    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
+    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
+    "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE",
+    "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+    "CLM-FAIRRENTNYC-PUBLIC-CAMPAIGN-SURFACE",
+    "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE"
+  ];
+
+  for (const claimId of claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    assert.ok(claim.requiredSupportTags.length > 0, `${claimId} must declare support tags`);
+    assert.ok(
+      claim.evidence.some((item) => item.propositionIds.length > 0),
+      `${claimId} must cite source-level propositions`
+    );
+  }
+});
+
+test("legacy projected claims cannot lose semantic support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-HJE-PUBLIC-ECOMMERCE-SURFACE"
+  );
+  claim.evidence[0].propositionIds = claim.evidence[0].propositionIds.filter(
+    (id) => id !== "PROP-HJE-STOREFRONT-EDITORIAL-VOICE"
   );
 
   const report = evaluateLifecycle({ suite, bank });
