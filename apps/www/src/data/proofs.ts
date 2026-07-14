@@ -424,7 +424,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. Campaign decisions and accomplishments remained collective.",
     sourceBasis:
-      "Approved resume language, public campaign surfaces, and public-safe NYC Artist Coalition project history.",
+      "Approved resume language, public campaign surfaces, and protected Shared Drive records with Jamie-attributed revision history for member onboarding, web deployment, public-meeting production, and machine-readable policy implementation.",
     whyItMatters:
       "Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.",
     guardrail:
@@ -451,7 +451,8 @@ export const proofClaims: ProofClaim[] = [
       "public-data-framing",
       "civic-systems"
     ],
-    lastReviewed: "2026-07-09"
+    structuredClaimIds: ["CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "wowlist-community-platform",
@@ -501,7 +502,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
-    sourceBasis: "Approved resume language and public-safe aggregate project history.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate project history, and the 2017 Greene Hill profile. The aggregate counts rely on their separate support, not on a single participant workflow.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -521,7 +523,77 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
     structuredClaimIds: ["CLM-SUNDAY-DINNER-WEEKLY-COMMUNITY-HOSTING"],
-    lastReviewed: "2026-07-13"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "196-residency-acceptance-workflow",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "A 2023 acceptance workflow shows Jamie reviewing one residency proposal, planning the space with the artist, and arranging 24-hour self-service access for the artist and a collaborator.",
+    shortWording: "One documented residency acceptance and access workflow",
+    detailedPublicWording:
+      "A protected acceptance record signed by Jamie documents one 196 Artists Residency process: proposal review, a pre-arrival planning call, configuring the space for the project, and independent 24-hour access for an artist and collaborator.",
+    sourceBasis:
+      "One protected July 2023 residency acceptance and access record signed by Jamie.",
+    whyItMatters:
+      "Makes Jamie's hospitality and operating practice concrete without treating private participant records as public content.",
+    guardrail:
+      "One documented workflow only. It does not support the 20-plus resident-artist count, a universal residency process, participant identification, or publication consent.",
+    doNotSay: [
+      "This record proves 20-plus resident artists",
+      "Every residency used this exact workflow",
+      "The participant approved public identification",
+      "Jamie created the participant's artwork"
+    ],
+    protectedBoundaries: [
+      "Participant identity",
+      "Contact information",
+      "Access instructions",
+      "Private messages",
+      "Unapproved photographs or artwork"
+    ],
+    surfaces: ["case-study"],
+    relatedProjects: ["196-sunday-dinner"],
+    relatedCapabilities: ["onboarding", "artist-support", "space-configuration", "access-workflows"],
+    structuredClaimIds: ["CLM-196-RESIDENCY-OPERATING-WORKFLOW-2023"],
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "commercial-vacancy-public-data-pilot",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Developed a privacy-preserving open-data pilot brief for geography-aggregated commercial vacancy and lease-cost indicators, with a minimum data model, coverage and suppression reporting, methods documentation, and explicit confidentiality limits.",
+    shortWording: "Commercial vacancy and lease-cost open-data pilot",
+    detailedPublicWording:
+      "Jamie translated a public-data gap into a smallest serious pilot: reusable aggregate indicators, transparent coverage and suppression, plain-language methods, and explicit exclusions for raw confidential filings and identifying records.",
+    sourceBasis:
+      "A protected March 2026 public-data brief authored by Jamie and reviewed as a bounded project artifact.",
+    whyItMatters:
+      "Shows Jamie turning a complex policy and data opportunity into a concrete, privacy-aware implementation proposal.",
+    guardrail:
+      "Describe proposal design only. Do not imply agency sponsorship, formal acceptance, access to confidential filings, dataset publication, or measured policy impact.",
+    doNotSay: [
+      "The City adopted Jamie's proposal",
+      "Jamie published the proposed dataset",
+      "Jamie accessed confidential tax filings",
+      "The pilot caused a policy outcome"
+    ],
+    protectedBoundaries: [
+      "Private correspondence",
+      "Unpublished routing context",
+      "Contact information",
+      "Raw confidential filings",
+      "Unapproved agency discussions"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc", "commercial-vacancy-open-data"],
+    relatedCapabilities: ["open-data", "requirements", "privacy", "policy-translation"],
+    structuredClaimIds: ["CLM-COMMERCIAL-VACANCY-PUBLIC-DATA-PILOT-2026"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -621,7 +693,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Protected June 2026 proposal and system-specification artifacts authored by Jamie, represented through public-safe source and claim records.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -638,7 +711,8 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    structuredClaimIds: ["CLM-SOURCE-BACKED-MEMORY-DESIGN-2026"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -1039,6 +1113,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "commercial-vacancy-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },

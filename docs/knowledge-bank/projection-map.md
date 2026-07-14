@@ -44,6 +44,7 @@ Use claims that directly support operating-backbone fit:
 - `kc-town-hall-public-benefit-documentation`
 - `nyca-commercial-rent-testimony-2018`
 - `nyca-campaign-press-architecture`
+- `commercial-vacancy-public-data-pilot`
 
 ## Lab / Source-Backed Team Memory
 

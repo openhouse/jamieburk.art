@@ -115,30 +115,31 @@ claim beyond the wording and guardrails here.
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / Jamie review confirmation
-**Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
-**Detailed public-safe wording:** Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.
+**Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance public web surfaces.
+**Detailed public-safe wording:** Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
 **Why it matters:** Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.
 **Guardrail:** Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
+**Structured claim IDs:** `CLM-NYCA-OPERATING-INFRASTRUCTURE-2017-2019`
 **Status:** Careful
 **Support level:** Careful
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
-**Detailed public-safe wording:** Jamie built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. Campaign decisions and accomplishments remained collective.
+**Detailed public-safe wording:** Protected records with Jamie-attributed revision history document member onboarding and shared resources, Let NYC Dance deployment context, a 21-day public-meeting production checklist, and a note translating legislation into machine-readable data requirements from 2017 through 2019. Revision attribution supports maintenance, not sole authorship. Campaign decisions and accomplishments remained collective.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
 **Why it matters:** Names Jamie's operating role in NYC Artist Coalition without turning collective advocacy outcomes into solo accomplishments.
 **Guardrail:** Use campaign-support and systems language. Do not claim solo leadership, legal authority, or sole causality for public policy outcomes.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-14
 
 ## wowlist-community-platform - Followable community platform
 
@@ -169,7 +170,23 @@ claim beyond the wording and guardrails here.
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-14
+
+## 196-residency-acceptance-workflow - Residency acceptance and access workflow
+
+**Structured claim IDs:** `CLM-196-RESIDENCY-OPERATING-WORKFLOW-2023`
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Public wording:** A 2023 acceptance workflow shows Jamie reviewing one residency proposal, planning the space with the artist, and arranging 24-hour self-service access for the artist and a collaborator.
+**Detailed public-safe wording:** A protected acceptance record signed by Jamie documents one 196 Artists Residency process: proposal review, a pre-arrival planning call, configuring the space for the project, and independent 24-hour access for an artist and collaborator.
+**Where to project:** 196 / Sunday Dinner case study.
+**Why it matters:** Makes Jamie's hospitality and operating practice concrete without treating private participant records as public content.
+**Guardrail:** One documented workflow only. It does not support the 20-plus resident-artist count, a universal residency process, participant identification, or publication consent.
+**Do not say:** This record proves 20-plus resident artists; every residency used this exact workflow; the participant approved public identification; Jamie created the participant's artwork.
+**Protected boundaries:** Participant identity, contact information, access instructions, private messages, and unapproved photographs or artwork stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## fair-rent-operating-layer-design - Shared coalition operating design
 
@@ -186,6 +203,22 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private coalition notes, current strategy, stakeholder identities and contact data, sensitive business stories, private correspondence, and unapproved working documents stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
+
+## commercial-vacancy-public-data-pilot - Commercial vacancy open-data pilot
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Structured claim IDs:** `CLM-COMMERCIAL-VACANCY-PUBLIC-DATA-PILOT-2026`
+**Public wording:** Developed a privacy-preserving open-data pilot brief for geography-aggregated commercial vacancy and lease-cost indicators, with a minimum data model, coverage and suppression reporting, methods documentation, and explicit confidentiality limits.
+**Detailed public-safe wording:** Jamie translated a public-data gap into a smallest serious pilot: reusable aggregate indicators, transparent coverage and suppression, plain-language methods, and explicit exclusions for raw confidential filings and identifying records.
+**Where to project:** FairRentNYC case study and Technical Operations.
+**Why it matters:** Shows Jamie turning a complex policy and data opportunity into a concrete, privacy-aware implementation proposal.
+**Guardrail:** Describe proposal design only. Do not imply agency sponsorship, formal acceptance, access to confidential filings, dataset publication, or measured policy impact.
+**Do not say:** The City adopted Jamie's proposal; Jamie published the proposed dataset; Jamie accessed confidential tax filings; the pilot caused a policy outcome.
+**Protected boundaries:** Private correspondence, unpublished routing context, contact information, raw confidential filings, and unapproved agency discussions stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## experimental-media-systems-practice - Creative-technical systems practice
 
@@ -236,18 +269,19 @@ claim beyond the wording and guardrails here.
 
 ## source-backed-team-memory-method - Source-backed team memory
 
+**Structured claim IDs:** `CLM-SOURCE-BACKED-MEMORY-DESIGN-2026`
 **Status:** Careful  
 **Support level:** Moderate  
-**Evidence class:** Public-safe lab materials / proposal-derived public-safe method summary  
+**Evidence class:** Public-safe archive summary / protected proposal and system specification
 **Public wording:** Developing a bounded lab method for source-backed team memory: reviewable, human-correctable, source-linked operating memory for knowledge-heavy teams.  
-**Detailed public-safe wording:** The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.  
+**Detailed public-safe wording:** A protected 2026 proposal and system specification authored by Jamie separate source artifacts, claims, decisions, open questions, permissions, bot identities, human review, policies, exports, and evals so teams can preserve decision lineage, onboarding context, attribution, uncertainty, and reviewable source links without turning private archives into unsafe browsing surfaces.
 **Where to project:** Lab page, Technical Operations, future consulting materials after approval.  
 **Why it matters:** Shows Jamie's knowledge-systems direction while keeping AI and archive claims bounded.  
-**Guardrail:** Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.  
+**Guardrail:** Developed method and specification, not a paid engagement, client deployment, finished SaaS, chatbot, private archive browser, or replacement for human judgment.
 **Do not say:** Built a production AI memory platform for a client; automated trust; replaces human review.  
 **Protected boundaries:** Do not name private collaborators, publish pricing, publish private transcript excerpts, or publish private company context.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## technical-operations-operating-backbone - Operating backbone
 

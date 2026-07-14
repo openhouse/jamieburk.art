@@ -11,11 +11,15 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built press sections across four NYC Artist Coalition campaign sites, organizing 46 placements representing 45 distinct articles into public source trails.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
+- Protected 2017-2019 coalition records with Jamie-attributed revision history document member onboarding, Let NYC Dance deployment context, a 21-day public-meeting production checklist, and machine-readable policy implementation work.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created an initial Commercial Rent Stabilization working record for running minutes, open questions, action items, privacy rules, and named next steps; separately designed broader coordination tools that are not represented as completed or adopted.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
+- A protected 2023 acceptance workflow signed by Jamie documents one 196 Artists Residency process for proposal review, pre-arrival planning, space configuration, and independent 24-hour access.
+- Developed a privacy-preserving open-data pilot brief for geography-aggregated commercial vacancy and lease-cost indicators, with minimum fields, coverage and suppression reporting, methods, and confidentiality limits.
+- Developed a bounded source-backed team-memory method and system specification with explicit provenance, uncertainty, privacy, bot attribution, human review, and evals.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.

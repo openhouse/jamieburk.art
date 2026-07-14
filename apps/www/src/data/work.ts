@@ -194,7 +194,8 @@ const workItemsInput = [
       "nyc-artist-coalition-civic-systems",
       "nyca-cabaret-law-direct-organizing",
       "nyca-office-nightlife-advocacy",
-      "nyca-commercial-rent-testimony-2018"
+      "nyca-commercial-rent-testimony-2018",
+      "commercial-vacancy-public-data-pilot"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
@@ -240,6 +241,12 @@ const workItemsInput = [
         description:
           "A governed index of 46 campaign-to-article placements representing 45 distinct articles across four live and archived campaign surfaces.",
         type: "source map"
+      },
+      {
+        title: "Commercial vacancy open-data pilot",
+        description:
+          "A privacy-preserving implementation brief for geography-aggregated vacancy and lease-cost indicators, including minimum fields, coverage and suppression reporting, methods, and confidentiality limits.",
+        type: "source map"
       }
     ],
     tags: [
@@ -269,7 +276,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, four live and archived campaign press surfaces, 45 distinct article records, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public sources, four live and archived campaign press surfaces, 45 distinct article records, selected protected Shared Drive records with Jamie-attributed revision history, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -285,17 +292,19 @@ const workItemsInput = [
       "30+ pages of shared campaign-memory infrastructure",
       "Designed and began building a shared operating layer for current collaboration",
       "Running minutes, decision records, action trackers, and source maps",
+      "Protected 2017-2019 records for member onboarding, Let NYC Dance deployment, public-meeting production, and machine-readable policy implementation",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "46 press placements representing 45 distinct articles across four campaign sites",
       "Documented public organizing and testimony for Cabaret Law repeal",
       "Documented speaking participation in Office of Nightlife town halls",
       "2018 City Council testimony connecting commercial affordability to cultural-space safety",
       "Legal/policy questions organized for collaborators",
-      "Public-data framing and stakeholder next steps"
+      "Public-data framing and stakeholder next steps",
+      "2026 privacy-preserving commercial vacancy and lease-cost indicator pilot brief"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Current protected records support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools, not completion or coalition-wide adoption. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
+        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Protected Shared Drive records with Jamie-attributed revision history document operating infrastructure from member onboarding and Let NYC Dance deployment through public-meeting production and machine-readable policy implementation. Current protected records also support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools and a 2026 commercial-vacancy open-data pilot brief; they do not establish adoption or completion. Public records separately document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
@@ -468,11 +477,14 @@ const workItemsInput = [
     featured: true,
     priority: 5,
     visibility: "summary-only",
-    proofBankIds: ["sunday-dinner-196-participation-infrastructure"],
+    proofBankIds: [
+      "sunday-dinner-196-participation-infrastructure",
+      "196-residency-acceptance-workflow"
+    ],
     whatWasUnclear:
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
-      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+      "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs. One documented 2023 residency workflow adds proposal review, pre-arrival planning, space configuration, and independent access as a specific example, not a universal process.",
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -480,6 +492,12 @@ const workItemsInput = [
         description:
           "A representative structure for welcoming, hosting, documenting, and continuing recurring cultural work.",
         type: "workflow"
+      },
+      {
+        title: "Residency acceptance and access workflow",
+        description:
+          "A documented 2023 workflow for proposal review, pre-arrival coordination, space configuration, and 24-hour self-service access for an artist and collaborator.",
+        type: "template"
       }
     ],
     tags: ["Community Systems", "Documentation", "Implementation", "Knowledge Systems"],
@@ -490,7 +508,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Greene Hill Food Co-op's 2017 member profile, public-safe aggregate history, and private records intentionally omitted.",
+      "Greene Hill Food Co-op's 2017 member profile, public-safe aggregate history, and a protected 2023 residency acceptance and access workflow; participant identity and private records remain omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",
@@ -500,12 +518,12 @@ const workItemsInput = [
       "300+ hosted gatherings",
       "20+ resident artists supported",
       "Weekly community-open Sunday dinners documented in a 2017 co-op profile",
-      "Onboarding and participation systems",
+      "One documented residency workflow for proposal review, pre-arrival planning, space configuration, and independent 24-hour access",
       "Recurring operations and continuity structures"
     ],
     knownOpenProtected: {
       known:
-        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A 2017 Greene Hill Food Co-op profile independently documents weekly Sunday dinners open to the community, co-hosted with Julia Fredenberg.",
+        "Jamie created and sustained participation infrastructure across recurring gatherings and artist-residency contexts. A 2017 Greene Hill Food Co-op profile independently documents weekly Sunday dinners open to the community, co-hosted with Julia Fredenberg. A protected 2023 acceptance record signed by Jamie separately documents one residency workflow for proposal review, pre-arrival planning, space configuration, and independent 24-hour access.",
       open:
         "Named participants, photos, and artifacts require consent and approval.",
       protected:
