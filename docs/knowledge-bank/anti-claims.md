@@ -67,7 +67,9 @@ authorization to negotiate a funding agreement. Do not call the allocation
 received, paid, or disbursed. Do not claim an executed agreement, construction,
 completion, or measured neighborhood outcome. The project later withdrew and
 the Council reclaimed the unused allocation in 2024; do not infer or assign an
-individual reason for the withdrawal.
+individual reason for the withdrawal, and do not attribute the withdrawal to
+Jamie. Jamie's first-party account of a prior stewardship transition remains a
+research lead until the professional handoff is corroborated.
 
 ## Source-Backed Team Memory
 

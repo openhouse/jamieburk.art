@@ -229,6 +229,15 @@ test("KC Town Hall records Council appropriation and the later unused-fund clawb
   const task = knowledgeBank.researchTasks.find(
     (item) => item.id === "TASK-KC-TOWN-HALL-DOWNSTREAM-OUTCOME"
   );
+  const transitionIntake = knowledgeBank.intake.find(
+    (item) => item.id === "INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY"
+  );
+  const transitionClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KC-TOWN-HALL-TRANSITION-SEED"
+  );
+  const transitionTask = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
+  );
 
   assert.equal(priorClaim.maturity, "superseded");
   assert.ok(priorClaim.disposition.successorClaimIds.includes(completeClaim.id));
@@ -239,8 +248,31 @@ test("KC Town Hall records Council appropriation and the later unused-fund clawb
   assert.ok(completeClaim.requiredSupportTags.includes("kc-town-hall-unused-funds-clawed-back"));
   assert.match(completeClaim.composition.causalBoundary, /did not become a disbursement/i);
   assert.ok(completeClaim.antiClaims.some((item) => /received or spent/i.test(item)));
+  assert.ok(completeClaim.antiClaims.some((item) => /personally made or controlled the later withdrawal/i.test(item)));
   assert.equal(task.status, "resolved");
   assert.match(task.resolutionSummary, /no disbursement or completed development/i);
+  assert.match(task.resolutionSummary, /do not attribute the later withdrawal to Jamie/i);
+  assert.equal(transitionIntake.kind, "public-memory");
+  assert.equal(transitionIntake.rawMaterialPolicy, "protected-outside-repo");
+  assert.equal(transitionClaim.maturity, "researching");
+  assert.equal(transitionClaim.projections.length, 0);
+  assert.equal(transitionClaim.evidence.length, 0);
+  assert.equal(transitionTask.status, "open");
+  assert.equal(transitionTask.priority, "high");
+});
+
+test("KC Town Hall transition memory cannot lose its research route", () => {
+  const bank = structuredClone(knowledgeBank);
+  const task = bank.researchTasks.find(
+    (item) => item.id === "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
+  );
+  task.status = "resolved";
+
+  const report = evaluateLifecycle({ suite, bank });
+  assert.equal(
+    report.results.find((item) => item.id === "claim-seeds-have-research-routes").passed,
+    false
+  );
 });
 
 test("KC Town Hall Council semantics cannot lose proposition-level support", () => {

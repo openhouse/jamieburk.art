@@ -169,6 +169,19 @@ export const sourceExpansionIntake = [
     rawMaterialPolicy: "public-source-only"
   },
   {
+    id: "INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY",
+    receivedAt: "2026-07-13",
+    kind: "public-memory",
+    publicSafeSummary: "Jamie reports transitioning KC Town Hall project stewardship to a mission-aligned organization; the handoff chronology and organizational credit require public-safe corroboration.",
+    submittedBy: "Jamie Burkart",
+    entityIds: ["ENT-KC-TOWN-HALL"],
+    disposition: "claim-seed-created",
+    sourceIds: [],
+    claimIds: ["CLM-KC-TOWN-HALL-TRANSITION-SEED"],
+    researchTaskIds: ["TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"],
+    rawMaterialPolicy: "protected-outside-repo"
+  },
+  {
     id: "INTAKE-KCUR-EIGHTH-STREET-TUNNEL-2016",
     receivedAt: "2026-07-13",
     kind: "public-url",
@@ -848,13 +861,15 @@ export const sourceExpansionClaims = [
     boundaries: [
       "Use appropriated, allocated, or awarded with the exact amount and Council action; do not substitute received, paid, or disbursed.",
       "The substituted resolution limited eligible uses and authorized negotiation rather than executing a funding agreement.",
-      "Carry the later withdrawal and clawback whenever describing the ultimate project outcome."
+      "Carry the later withdrawal and clawback whenever describing the ultimate project outcome.",
+      "Do not attribute the later withdrawal to Jamie; the official records do not establish project stewardship at that stage."
     ],
     antiClaims: [
       "KC Town-Hall received or spent $490,539 in City funds.",
       "A funding agreement was executed or money was disbursed.",
       "KC Town-Hall was constructed or completed through this allocation.",
       "Jamie solely authored the proposal or caused the board recommendation or Council vote.",
+      "Jamie personally made or controlled the later withdrawal.",
       "The public record establishes why the project withdrew or assigns individual responsibility."
     ],
     disposition: {
@@ -866,6 +881,31 @@ export const sourceExpansionClaims = [
     researchInquiryIds: [],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex public-source review"]
+  },
+  {
+    id: "CLM-KC-TOWN-HALL-TRANSITION-SEED",
+    project: "kc-town-hall",
+    internalClaim: "Research Jamie's recollection that he transitioned KC Town Hall project stewardship to a mission-aligned organization, including the handoff date, recipient identity, accepted responsibilities, and relationship to the later official disposition.",
+    status: "claim-seed",
+    maturity: "researching",
+    intakeIds: ["INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY"],
+    requiredSupportTags: [],
+    projections: [],
+    evidence: [],
+    boundaries: [
+      "Treat the transition as first-party memory until public records or permissioned collaborator evidence establish the professional handoff.",
+      "Limit research and any future projection to the professional handoff, stewardship chronology, and precise organizational credit.",
+      "Do not infer that the transition caused the later withdrawal or attribute the withdrawal to Jamie without evidence."
+    ],
+    antiClaims: [
+      "The current official sources establish the stewardship transition.",
+      "Jamie personally made or controlled the later withdrawal.",
+      "The transition caused the later withdrawal.",
+      "The receiving organization or handoff terms are established by the current record."
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart memory intake", "Codex triage"]
   },
   {
     id: "CLM-RIVER-TUNNEL-SCREENING-2006",
@@ -993,7 +1033,24 @@ export const sourceExpansionResearchTasks = [
       "Preserve the distinction between appropriation, negotiation authorization, execution, and disbursement in every future use.",
       "Reopen only if a later official record materially changes the withdrawn, unused, or unbuilt status."
     ],
-    resolutionSummary: "Official records establish that Council passed the Round Two appropriation ordinance and adopted Resolution 190649 on September 26, 2019. Ordinance 240317 later confirms the $490,539 KC Town Hall appropriation, project withdrawal, and reappropriation of the unused funds; no disbursement or completed development is established."
+    resolutionSummary: "Official records establish that Council passed the Round Two appropriation ordinance and adopted Resolution 190649 on September 26, 2019. Ordinance 240317 later confirms the $490,539 KC Town Hall appropriation, project withdrawal, and reappropriation of the unused funds; no disbursement or completed development is established. The official records do not attribute the later withdrawal to Jamie."
+  },
+  {
+    id: "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY",
+    project: "kc-town-hall",
+    question: "What public or permissioned evidence can establish Jamie's transition of KC Town Hall project stewardship to a mission-aligned organization and distinguish that handoff from the later official withdrawal?",
+    status: "open",
+    priority: "high",
+    openedAt: "2026-07-13",
+    intakeIds: ["INTAKE-KCMO-KC-TOWN-HALL-TRANSITION-MEMORY"],
+    sourceIds: [],
+    claimIds: ["CLM-KC-TOWN-HALL-TRANSITION-SEED"],
+    nextActions: [
+      "Establish the handoff date, receiving organization, accepted responsibilities, and Jamie's role using public records or permissioned collaborator evidence.",
+      "Confirm whether the receiving organization may be named and how collective credit should be stated.",
+      "Map the professional stewardship chronology against the later official withdrawal without inferring causation.",
+      "Keep the research scope limited to the professional handoff and project stewardship."
+    ]
   }
 ] satisfies ResearchTask[];
 
@@ -1004,7 +1061,9 @@ export const sourceExpansionDecisions = sourceExpansionClaims.map((claim) => ({
   decision: claim.maturity === "superseded" ? "retire" as const : "defer" as const,
   rationale: claim.maturity === "superseded"
     ? "A more complete source-backed successor replaces this board-only claim."
-    : "The claim is public-ready and retained for future composition; this source-ingestion pass does not automatically change the live portfolio argument.",
+    : claim.maturity === "public-ready"
+      ? "The claim is public-ready and retained for future composition; this source-ingestion pass does not automatically change the live portfolio argument."
+      : "The first-party memory remains research-stage and cannot be projected until the professional handoff is corroborated.",
   decidedAt: "2026-07-13",
   reviewedBy: ["Codex editorial review"]
 })) satisfies ProjectionDecision[];

@@ -44,6 +44,14 @@ Jamie's documented presentation
   -> project withdrawal and clawback of the unused allocation
 ```
 
+## Stewardship transition lead
+
+Jamie has supplied a first-party account that he transitioned project
+stewardship to a mission-aligned organization. The professional handoff remains
+a research-stage lead pending public or permissioned corroboration of its date,
+recipient, scope, and collective credit. The later official withdrawal must not
+be attributed to Jamie unless the stewardship chronology supports that claim.
+
 ## Safe wording
 
 > After Jamie presented the KC Town-Hall mixed-use proposal and the CCED Board
@@ -71,6 +79,10 @@ were not disbursed and were later reclaimed after withdrawal.
   element of the original proposal as a funded use.
 - The public record does not establish why the project withdrew or assign
   individual responsibility.
+- Do not attribute the later withdrawal to Jamie. The official records do not
+  establish project stewardship at that stage.
+- Do not publish the stewardship-transition claim until the professional
+  handoff and organizational credit are corroborated.
 - Do not claim that the allocation produced construction, completed apartments,
   operating businesses, or measured neighborhood outcomes.
 - Do not claim Jamie solely authored the proposal or caused the board or Council
