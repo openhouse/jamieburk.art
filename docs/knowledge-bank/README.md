@@ -108,3 +108,10 @@ shows the complementary case where Posts and Replies close the observed control
 completely: all 38 surviving items are recovered, linked, and classified while
 individual authorship, historical metrics, adoption, and linked-work credit
 remain bounded.
+
+The
+[KC Town Hall full-population social census](research/kctownhall-full-population-social-census-2026-07-14.md)
+closes all 183 surviving profile items and joins the account record to archived
+collective-role, resident-intake, scheduling, public-reporting, source-routing,
+and stakeholder-response evidence without treating self-reports or reactions
+as audited impact.

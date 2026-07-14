@@ -101,8 +101,26 @@ private Drive documents.
 
 ## KC Town Hall
 
-Prefer "supported" or "co-founded and documented" unless Jamie approves
-stronger language.
+Use the archived project pages to describe Jamie's collective work with Julia
+Fredenburg and Oak Park Neighborhood Association. Do not convert collective
+project authorship into sole credit or infer that Jamie authored every account
+post.
+
+Do not call the 183-record surviving-profile census a native X export, deletion
+history, or proof that no older item was deleted. Do not convert 100
+tire-workflow records into 100 pickups, completed outcomes, or unique resident
+reports. Keep project-reported tire and savings totals attributed and unaudited.
+
+Do not treat direct replies or quotes from three then-serving Council figures,
+KCMO 311, or a partner acknowledgment as endorsement, institutional adoption,
+audited impact, or complete stakeholder history. Distinguish those direct
+responses from KC Town Hall reposting a public official's source post. Reactions
+on reposted source statuses belong to the source statuses.
+
+Do not present election, housing, transit, public-health, or city-service links
+as press coverage of KC Town Hall. Do not publish contact details, resident
+reports, authenticated-session data, private family context, or nonpublic
+account-administration records.
 
 The official record supports a $490,539 City Council appropriation and
 authorization to negotiate a funding agreement. Do not call the allocation

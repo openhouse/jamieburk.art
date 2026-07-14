@@ -203,6 +203,14 @@ a complete six-reply product-support pattern, preserves mission-relevant source
 and stakeholder-network findings in reserve, and keeps account authorship,
 historical metrics, adoption, and amplified-work credit explicit.
 
+The
+[KC Town Hall full-population social census](research/kctownhall-full-population-social-census-2026-07-14.md)
+closes all 183 items in its observed profile control, joins the account record
+to archived collective-role and resident-workflow evidence, and separates
+direct stakeholder responses from account amplification. It promotes the
+operations-loop and city-response findings without converting project
+self-reports or mutable reactions into audited impact.
+
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing
 review status without pretending that a new proposition-level close reading

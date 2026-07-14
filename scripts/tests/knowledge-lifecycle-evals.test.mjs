@@ -9,6 +9,7 @@ import {
 import { projectTwitterAccountInventory } from "../../apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts";
 import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts";
 import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts";
+import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -804,6 +805,116 @@ test("WOW List network, source, and traction findings retain their boundaries", 
   }
   assert.equal(task.status, "resolved");
   assert.match(task.resolutionSummary, /all 38 items/i);
+});
+
+test("KC Town Hall census recovers every item in the observed profile control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/kctownhall-public-post-ledger.json", "utf8")
+  );
+
+  assert.equal(ledger.population.displayedProfileCount, 183);
+  assert.equal(ledger.population.postsRouteUnique, 170);
+  assert.equal(ledger.population.repliesRouteArticles, 188);
+  assert.equal(ledger.population.excludedConversationContextArticles, 5);
+  assert.equal(ledger.population.attributableRecords, 183);
+  assert.equal(ledger.population.unresolvedProfileCountSlots, 0);
+  assert.deepEqual(
+    ledger.population.relationshipCounts,
+    kcTownHallSocialCensus.relationshipCounts
+  );
+  assert.equal(new Set(ledger.records.map((item) => item.statusId)).size, 183);
+  assert.ok(
+    ledger.records.every((item) => /^[a-f0-9]{64}$/.test(item.contentDigestSha256))
+  );
+  assert.ok(ledger.records.every((item) => !("text" in item) && !("raw" in item)));
+  assert.match(ledger.population.completenessStatement, /surviving July 2026 profile population/i);
+  assert.match(ledger.population.completenessStatement, /not a native X export/i);
+  assert.doesNotMatch(
+    JSON.stringify(ledger),
+    /\/private\/|\/tmp\/|\/Users\/|Mobile Documents|phone|street address/i
+  );
+});
+
+test("KC Town Hall census aggregates reproduce the typed lifecycle record", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/kctownhall-public-post-ledger.json", "utf8")
+  );
+  const aggregate = ledger.aggregateFindings;
+
+  assert.equal(ledger.population.displayedProfileCount, kcTownHallSocialCensus.observedProfileCount);
+  assert.equal(ledger.population.attributableRecords, kcTownHallSocialCensus.recoveredPublicStatuses);
+  assert.equal(aggregate.tireWorkflow.classifiedRecords, kcTownHallSocialCensus.tireWorkflowStatuses);
+  assert.equal(aggregate.tireWorkflow.hashtagBearingRecords, kcTownHallSocialCensus.tireHashtagBearingStatuses);
+  assert.equal(aggregate.repostNetwork.distinctSourceAccounts, kcTownHallSocialCensus.distinctRepostSourceAccounts);
+  assert.equal(aggregate.repostNetwork.cityCouncilFigureSourceStatuses, kcTownHallSocialCensus.councilFigureRepostSourceStatuses);
+  assert.equal(aggregate.postedLinks.uniqueShortUrls, kcTownHallSocialCensus.uniqueShortUrls);
+  assert.equal(aggregate.postedLinks.uniqueResolvedDestinations, kcTownHallSocialCensus.uniqueResolvedDestinations);
+  assert.deepEqual(
+    aggregate.accountAuthoredVisibleReactionSnapshot,
+    kcTownHallSocialCensus.accountAuthoredVisibleReactionSnapshot
+  );
+  assert.match(aggregate.metricBoundary, /source statuses/i);
+});
+
+test("KC Town Hall operations claim uses collective role proof and keeps impact bounded", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+  const roleReading = knowledgeBank.sourceReadings.find(
+    (item) => item.id === "READ-WAYBACK-KCTOWNHALL-HOME-2019"
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.composition.action, /Julia Fredenburg/i);
+  assert.match(claim.composition.action, /Oak Park Neighborhood Association/i);
+  assert.match(claim.composition.intendedEnd, /residents/i);
+  assert.match(claim.composition.usableResult, /form and phone or text intake/i);
+  assert.match(claim.composition.collectiveCredit, /collective|Julia/i);
+  assert.match(claim.composition.causalBoundary, /not sole authorship|not sole/i);
+  assert.ok(claim.boundaries.some((item) => /self-reports/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /audited/i.test(item)));
+  assert.ok(
+    roleReading.propositions.some(
+      (item) =>
+        item.id === "PROP-WAYBACK-KCTOWNHALL-JAMIE-JULIA-WORKFLOW" &&
+        item.relationToJamie === "collective-role"
+    )
+  );
+  assert.equal(decision.decision, "defer");
+});
+
+test("KC Town Hall stakeholder and traction findings retain attribution boundaries", () => {
+  const engagement = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-COUNCIL-AND-CITY-ENGAGEMENT"
+  );
+  const metrics = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-CURRENT-VISIBLE-REACTION-SNAPSHOT"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-KCTOWNHALL-FULL-POPULATION-CENSUS"
+  );
+  const contextualSources = [
+    "SRC-KCUR-MISSOURI-PRIMARY-GUIDE-2018",
+    "SRC-NORTHEAST-NEWS-AFFORDABLE-HOUSING-2018",
+    "SRC-KSHB-LEONS-CLOSURE-2019"
+  ];
+
+  assert.equal(engagement.maturity, "public-ready");
+  assert.match(engagement.internalClaim, /three then-serving City Council figures/i);
+  assert.ok(engagement.boundaries.some((item) => /amplification/i.test(item)));
+  assert.ok(engagement.antiClaims.some((item) => /endorsement/i.test(item)));
+  assert.equal(metrics.status, "use-with-care");
+  assert.ok(metrics.boundaries.some((item) => /July 2026/i.test(item)));
+  assert.ok(metrics.antiClaims.some((item) => /unique people/i.test(item)));
+  for (const sourceId of contextualSources) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source.doesNotEstablish.some((item) => /coverage of KC Town Hall/i.test(item)));
+  }
+  assert.equal(task.status, "resolved");
+  assert.match(task.resolutionSummary, /all 183 items/i);
 });
 
 test("NYC Artist Coalition social claims preserve shared authorship and campaign continuity", () => {

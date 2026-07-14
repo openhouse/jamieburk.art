@@ -15,7 +15,7 @@ export const projectTwitterAccountInventory = {
     { project: "CallNYC", handle: "@CallNYCapp", profileUrl: "https://x.com/CallNYCapp", observedPosts: 110, recoveredPublicStatuses: 107, unresolvedProfileCountSlots: 3 },
     { project: "NYC Artist Coalition", handle: "@NYCArtC", profileUrl: "https://x.com/NYCArtC", observedPosts: 5124, recoveredIndexedMentions: 374 },
     { project: "WOW List", handle: "@wowlist", profileUrl: "https://x.com/wowlist", observedPosts: 38, recoveredTimelineItems: 38 },
-    { project: "KC Town Hall", handle: "@KCTownHall", profileUrl: "https://x.com/KCTownHall", observedPosts: 183, recoveredTimelineItems: 121 },
+    { project: "KC Town Hall", handle: "@KCTownHall", profileUrl: "https://x.com/KCTownHall", observedPosts: 183, recoveredTimelineItems: 183 },
     { project: "KC Spaces Fund", handle: "@KCSpacesFund", profileUrl: "https://x.com/KCSpacesFund", observedPosts: 35, recoveredTimelineItems: 34 }
   ],
   sharedCampaignHandle: {
@@ -407,13 +407,17 @@ export const socialArchiveClaims = [
   },
   {
     id: "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP", project: "kc-town-hall",
-    internalClaim: "The @KCTownHall account functioned as a public intake and reporting loop by soliciting tire locations and publishing dated removal reports with collaborator credit.",
-    status: "confirmed-with-boundary", maturity: "corroborated", intakeIds: ["INTAKE-KCTOWNHALL-X-ARCHIVE-2026"], requiredSupportTags: ["kctownhall-social-operations-loop", "kctownhall-public-operations-report"],
+    internalClaim: "Jamie worked with Julia Fredenburg and Oak Park Neighborhood Association on a recurring free tire-pickup workflow that gave residents public intake routes, a schedule, and dated operations reporting.",
+    status: "confirmed-with-boundary", maturity: "public-ready", intakeIds: ["INTAKE-KCTOWNHALL-X-ARCHIVE-2026", "INTAKE-KCTOWNHALL-FULL-POPULATION-X-CENSUS-2026"], requiredSupportTags: ["kctownhall-social-operations-loop", "kctownhall-public-operations-report", "kctownhall-jamie-julia-public-workflow", "kctownhall-resident-intake", "kctownhall-recurring-service-schedule", "kctownhall-tire-workflow-census"],
+    composition: { action: "Worked with Julia Fredenburg and Oak Park Neighborhood Association to make a recurring free tire-pickup workflow operable and visible.", intendedEnd: "Give residents practical ways to report dumped tires and follow recurring neighborhood service.", usableResult: "The project exposed form and phone or text intake, a recurring pickup schedule, calls for locations, and dated progress reports with collaborator credit.", audience: "Hiring readers evaluating implementation, resident-facing operations, and durable public-service workflows.", collectiveCredit: "The archived project pages attribute the work to Julia and Jamie and name Oak Park Neighborhood Association; the wider pickup and disposal work involved residents and service partners.", causalBoundary: "The evidence supports Jamie's collective role and the public workflow, not sole authorship, authorship of every account post, independently audited aggregate tire or savings totals, or causal neighborhood impact." },
     projections: [], evidence: [
       { sourceId: "SRC-X-REVIEW-KCTOWNHALL-2026", relationship: "direct-support", supports: ["public intake and reporting pattern"], propositionIds: ["PROP-X-KCTOWNHALL-OPERATIONS-LOOP"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-KCTOWNHALL-FULL-POPULATION-CENSUS-2026", relationship: "direct-support", supports: ["100-record tire-intake and operations pattern in the complete surviving profile population"], propositionIds: ["PROP-X-KCTOWNHALL-TIRE-WORKFLOW-100"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-WAYBACK-KCTOWNHALL-HOME-2019", relationship: "direct-support", supports: ["Jamie and Julia's collective role and the Oak Park Neighborhood Association collaboration"], propositionIds: ["PROP-WAYBACK-KCTOWNHALL-JAMIE-JULIA-WORKFLOW"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-WAYBACK-KCTOWNHALL-TIRES-2021", relationship: "direct-support", supports: ["resident intake routes and recurring pickup schedule"], propositionIds: ["PROP-WAYBACK-KCTOWNHALL-RESIDENT-INTAKE", "PROP-WAYBACK-KCTOWNHALL-RECURRING-SCHEDULE"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-KCTOWNHALL-TIRES-JUNE-2019", relationship: "corroborating", supports: ["a dated removal report with collaborator acknowledgment"], propositionIds: ["PROP-X-KCTOWNHALL-TIRES-JUNE-2019"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-KCTOWNHALL-TIRES-JULY-2019", relationship: "corroborating", supports: ["a second dated removal report"], propositionIds: ["PROP-X-KCTOWNHALL-TIRES-JULY-2019"], confidence: "high", renderCitation: false }
-    ], boundaries: ["The authenticated pass recovered 121 of 183 profile posts.", "Published tire and savings totals are attributed self-reports pending reconciliation."], antiClaims: ["The account provides audited aggregate impact figures.", "Jamie authored every post.", "Social reporting alone proves causal neighborhood outcomes."], researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Codex authenticated social-archive review"]
+    ], boundaries: ["The route union closes the surviving 183-item profile control but is not a native export or deletion history.", "Published tire and savings totals remain attributed project self-reports pending reconciliation.", "The project's later transition is represented without private family context."], antiClaims: ["The account provides audited aggregate impact figures.", "Jamie authored every post or operated the workflow alone.", "Social reporting alone proves causal neighborhood outcomes."], researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Codex authenticated social-archive review", "Codex Chad-lens composition review"]
   }
 ] satisfies ClaimRecord[];
 
@@ -433,8 +437,8 @@ export const socialArchiveResearchTasks = [
   {
     id: "TASK-KCTOWNHALL-SOCIAL-METRIC-RECONCILIATION", project: "kc-town-hall",
     question: "Which dated tire-removal and disposal-fee figures can be reconciled, and what evidence identifies Jamie's role in the public intake and reporting workflow before it is composed as his accomplishment?",
-    status: "open", priority: "medium", openedAt: "2026-07-14", intakeIds: ["INTAKE-KCTOWNHALL-X-ARCHIVE-2026"], sourceIds: ["SRC-X-REVIEW-KCTOWNHALL-2026", "SRC-X-KCTOWNHALL-TIRES-JUNE-2019", "SRC-X-KCTOWNHALL-TIRES-JULY-2019"], claimIds: ["CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"],
-    nextActions: ["Recover the remaining timeline and export a deduplicated dated ledger.", "Compare post-level figures with event, invoice, partner, and disposal records.", "Recover account-administration, collaborator, or dated project records that identify Jamie's role in the workflow.", "Keep unreconciled totals attributed as account self-reports and the claim at corroborated maturity until Jamie's role is supported."]
+    status: "in-progress", priority: "medium", openedAt: "2026-07-14", intakeIds: ["INTAKE-KCTOWNHALL-X-ARCHIVE-2026", "INTAKE-KCTOWNHALL-FULL-POPULATION-X-CENSUS-2026"], sourceIds: ["SRC-X-REVIEW-KCTOWNHALL-2026", "SRC-X-KCTOWNHALL-FULL-POPULATION-CENSUS-2026", "SRC-WAYBACK-KCTOWNHALL-HOME-2019", "SRC-WAYBACK-KCTOWNHALL-TIRES-2021", "SRC-X-KCTOWNHALL-TIRES-JUNE-2019", "SRC-X-KCTOWNHALL-TIRES-JULY-2019", "SRC-X-KCTOWNHALL-BTG-DROPOFF-2019"], claimIds: ["CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"],
+    nextActions: ["Compare the complete post-level figure sequence with event, invoice, partner, and disposal records.", "Seek collaborator confirmation of operational roles without exposing private family context.", "Keep unreconciled aggregate totals attributed as project self-reports even though the workflow and Jamie's collective role are now public-ready."]
   }
 ] satisfies ResearchTask[];
 

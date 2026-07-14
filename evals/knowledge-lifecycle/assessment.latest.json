@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "10d94571a93be50f9c026869a4756987a72942e65afb66f996fd8bb32086cf7e",
+    "fingerprint": "703817bb48cb0ba221e095212bad33a5a823cf0405e715e9b802e55f65f759b2",
     "counts": {
       "entities": 22,
-      "intake": 102,
-      "sources": 148,
-      "sourceReadings": 148,
-      "claims": 61,
-      "researchTasks": 24,
-      "projectionDecisions": 46
+      "intake": 103,
+      "sources": 160,
+      "sourceReadings": 160,
+      "claims": 65,
+      "researchTasks": 25,
+      "projectionDecisions": 48
     }
   },
   "judge": {
@@ -20,8 +20,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "INTAKE-WOWLIST-FULL-POPULATION-X-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "intakeRecordSchema"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "INTAKE-KCTOWNHALL-FULL-POPULATION-X-CENSUS-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
@@ -32,8 +36,8 @@
             "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
           }
         ]
       },
@@ -42,16 +46,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "READ-X-WOWLIST-FULL-POPULATION-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "READ-X-KCTOWNHALL-FULL-POPULATION-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "READ-GRASSTRONAUT-IN-EVERY-TOWN-2015"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "READ-WAYBACK-KCTOWNHALL-HOME-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "READ-GOOD-TIMES-ZINES-2-2015"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "READ-X-KCTOWNHALL-ROBINSON-TIRES-2020"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "READ-KCUR-MISSOURI-PRIMARY-GUIDE-2018"
           }
         ]
       },
@@ -61,19 +69,19 @@
         "evidence": [
           {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
+            "record": "CLM-KCTOWNHALL-SOCIAL-OPERATIONS-LOOP"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "CLM-WOWLIST-FULL-SOCIAL-POPULATION"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "CLM-KCTOWNHALL-COUNCIL-AND-CITY-ENGAGEMENT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "CLM-WOWLIST-CURRENT-VISIBLE-REACTION-SNAPSHOT"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "CLM-KCTOWNHALL-CIVIC-INFORMATION-ROUTING"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "CLM-KCTOWNHALL-CURRENT-VISIBLE-REACTION-SNAPSHOT"
           }
         ]
       },
@@ -82,16 +90,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "TASK-WOWLIST-FULL-POPULATION-CENSUS"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
-            "record": "TASK-GDRIVE-WOWLIST-MEMBER-MEETING"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-KCTOWNHALL-SOCIAL-METRIC-RECONCILIATION"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "TASK-KC-TOWN-HALL-TRANSITION-CHRONOLOGY"
           }
         ]
       },
@@ -100,16 +108,20 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "The claim is public-safe and source-backed, but this archival-production pass does not automatically alter the live portfolio argument."
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-KCTOWNHALL-COUNCIL-AND-CITY-ENGAGEMENT"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
             "record": "DEC-DEFER-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
+            "file": "docs/knowledge-bank/approval-register.md",
+            "record": "The operations-loop and stakeholder-response claims remain deferred from the website pending human editorial review."
           }
         ]
       },
@@ -118,16 +130,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/wowlist-public-post-ledger.json",
-            "record": "Raw post text is omitted from this public ledger. SHA-256 digests permit later corpus comparison without republishing the text."
+            "file": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+            "record": "The ledger stores classifications, public metadata, summaries, and content digests rather than raw post text."
           },
           {
             "file": "docs/knowledge-bank/anti-claims.md",
-            "record": "Do not call the 38-record surviving profile census a native X export"
+            "record": "Keep project-reported tire and savings totals attributed and unaudited."
           },
           {
             "file": "docs/knowledge-bank/approval-register.md",
-            "record": "WOW List full-population social census"
+            "record": "KC Town Hall full-population social census"
+          },
+          {
+            "file": "docs/knowledge-bank/research/kctownhall-full-population-social-census-2026-07-14.md",
+            "record": "The project's later transition is represented without private family context."
           }
         ]
       },
@@ -136,16 +152,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "future writers a deep palette from which to compose the public site"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
-            "record": "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "Re-run the route union and compare content digests if the live profile count changes."
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts",
+            "record": "CLM-KCTOWNHALL-CIVIC-INFORMATION-ROUTING"
           }
         ]
       }
@@ -168,5 +188,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Deterministic evaluation under Node 26.5.0: 0/7 hard gates failing and 0/4 quality targets open. The knowledge-lifecycle suite passed 50/50 tests; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Weighted judge result: 100.0/100, with all seven criteria at 4/4. The new @wowlist census reconciles all 38 items in the observed surviving-profile control as 16 account posts, six account replies, and 16 reposts from 13 public accounts, while explicitly refusing native-export or deletion-history language. Its Chad-lens origin-and-support claim turns all six replies into a concrete product-support and onboarding result, credits Jamie and Richard collectively, leaves individual shared-account authorship unassigned, and remains deferred from website projection. Current visible reactions are dated and separated from repost-source metrics, adoption, endorsement, audience, and impact; linked articles are retained as mission context rather than WOW List press coverage. Mature population, network, scene-knowledge, civic-care, and reaction findings remain reserve knowledge rather than automatic website copy. The public ledger preserves 38 unique item records and SHA-256 content digests while omitting raw post text and authenticated-session material. Remaining bounded limits are that the census cannot establish deleted earlier items, individual post authorship, complete support workload, historical analytics, unique people, adoption, endorsement, or causal impact; account-establishment and private recording evidence still require research and collaborator review; the strengthened claim still requires human editorial selection; and all three human gates remain pending."
+  "summary": "Deterministic evaluation under Node 26.5.0: 0/7 hard gates failing and 0/4 quality targets open. The knowledge-lifecycle suite passed 54/54 tests; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Weighted judge result: 100.0/100, with all seven criteria at 4/4. The new @KCTownHall census reconciles all 183 items in the surviving July 2026 profile control as 142 account posts, 13 account replies, and 28 reposts, while explicitly refusing native-export, deletion-history, or never-deleted language. The promoted operations claim joins archived collective-role evidence for Julia Fredenburg and Jamie Burkart with Oak Park Neighborhood Association collaboration, resident form and phone or text intake, a recurring schedule, the 100-record tire-workflow pattern, and dated public reporting. Direct responses from three then-serving Council figures and KCMO 311 are kept separate from the nine reposted source statuses belonging to three Council figures. Account-authored reactions are separated from source-status metrics and are not converted into historical analytics, unique people, reach, adoption, endorsement, or impact. Posted journalism remains mission context rather than press coverage of KC Town Hall. Tire and savings figures remain attributed project self-reports pending reconciliation, and private family context remains outside the public repository. The operations-loop and stakeholder-response claims are mature reserve knowledge but remain deferred from website projection. The redacted ledger preserves 183 unique status records, route provenance, classifications, metric ownership, and SHA-256 content digests without raw post text or authenticated-session material. Remaining bounded limits are that the census cannot establish deleted earlier items, individual shared-account authorship, completed pickups, unique resident reports, audited tire or savings totals, complete stakeholder history, historical analytics, adoption, endorsement, or causal neighborhood impact; metric reconciliation, account-establishment evidence, collaborator confirmation, and transition chronology remain bounded research or human-review work; and all three human gates remain pending."
 }

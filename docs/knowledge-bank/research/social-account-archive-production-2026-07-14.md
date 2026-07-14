@@ -28,7 +28,7 @@ especially for likes, follows, deleted posts, or unindexed replies.
 | CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 | 107 public statuses plus 3 unresolved slots |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 | 374 indexed mentions plus campaign searches |
 | WOW List | [@wowlist](https://x.com/wowlist) | 38 | 38 public statuses; no unresolved slots |
-| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 | 121 timeline items |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 | 183 public statuses; no unresolved slots |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 | 34 timeline items |
 
 The four NYC Artist Coalition campaigns used the shared `@NYCArtC` identity:
@@ -173,21 +173,29 @@ decisions. Named public-organizer credit remains unchanged.
 
 ## KC Town Hall
 
-The review recovered 121 of 183 visible profile posts, including 106
-account-authored items. Across the bounded sample, the account repeatedly asked
-residents to submit dumped-tire locations and then published dated removal
-reports and collaborator acknowledgments.
+The subsequent
+[full-population census](kctownhall-full-population-social-census-2026-07-14.md)
+reconciles the Posts and Replies routes against all 183 items represented by the
+observed profile count. It recovers 142 account posts, 13 account replies, and
+28 reposts with no unresolved slots.
+
+One hundred records belong to the resident tire-intake and operations workflow;
+98 distinct records carry `#TiredOfTires`. Archived project pages identify
+Julia and Jamie's collective role and preserve resident intake, recurring
+schedule, and partnership context.
 
 Representative records include the [project-identity post](https://x.com/KCTownHall/status/1013893135695601665),
 a [June 2019 removal report](https://x.com/KCTownHall/status/1135246124883861504),
 and a [July 2019 removal report](https://x.com/KCTownHall/status/1147679988600254465).
 
-**Defensible claim:** The account operated as a public intake and reporting loop
-for a recurring neighborhood workflow.
+**Defensible claim:** Jamie worked with Julia Fredenburg and Oak Park
+Neighborhood Association to make a recurring free tire-pickup workflow
+operable and visible through resident intake, scheduling, and public reporting.
 
 **Limits:** Tire and disposal-fee figures are account self-reports pending
-reconciliation with operational records. The social record does not establish
-the author of each post or audited aggregate impact.
+reconciliation with operational records. The record does not establish sole
+authorship, the author of each post, audited aggregate impact, or that no older
+status was deleted before capture.
 
 ## Source Articles Surfaced
 
@@ -213,10 +221,13 @@ equivalent.
 - The complete WOW List census strengthens the existing origin-and-support
   claim, while its population, network, scene-knowledge, care, and reaction
   findings remain reserve knowledge rather than automatic website copy.
+- The complete KC Town Hall census promotes the collective operations-loop and
+  direct city-response findings while keeping them deferred from the website.
 - Jamie's memory of establishing the accounts remains a research-stage claim.
 - The account-establishment route calls for creation records, design files,
   administrator chronology, and collaborator proof notes.
-- KC Town Hall aggregate metrics remain queued for reconciliation.
+- KC Town Hall aggregate service metrics remain queued for reconciliation even
+  though the workflow and collective-role evidence are now public-ready.
 - KC Spaces Fund social records remain bounded by named-organizer and
   grant-decision credit.
 
