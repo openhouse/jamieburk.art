@@ -71,6 +71,14 @@ agreement, or completed the project with City funds. The Council appropriated
 the amount in 2019, but KC Town Hall later withdrew and the Council
 reappropriated the full unused amount in 2024.
 
+Jamie's approved first-hand account supports saying that he transitioned the
+project to a mission-aligned organization. Do not present that transition as a
+fact documented by the Council records. Do not identify the organization or
+imply that it assumed the property, LLC, City appropriation, funding agreement,
+or every project obligation without additional public evidence and approval.
+Do not merge the transition with the City's later withdrawal record or publish
+private reasons for the transition.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

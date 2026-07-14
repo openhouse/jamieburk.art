@@ -51,7 +51,7 @@ records every placement's source-page order, exact listed URL, normalized
 source ID, dated capture, and duplicate disposition. The knowledge-development suite uses
 it to reproduce the four manifests offline.
 
-### KC Town Hall municipal funding record
+### KC Town Hall public record and first-hand clarification
 
 The July 14 funding-status pass recovered four official KCMO sources:
 
@@ -68,6 +68,14 @@ These sources support the stages they name. They do not turn recommendation or
 appropriation into an executed agreement, receipt, expenditure, or completed
 project. The public-safe research note lives at
 `docs/knowledge-bank/projects/kc-town-hall-funding.md`.
+
+Jamie's July 14, 2026 public-safe first-hand clarification adds one distinct
+professional fact: he transitioned the project to a mission-aligned
+organization. It is encoded as a `firsthand-statement`, not as a government
+record or independent corroboration. The source record does not expose the
+underlying conversation, private reasons, receiving organization, or transfer
+terms. It does not connect the transition causally to the City's later
+withdrawal and reappropriation record.
 
 ### Public-Safe Archive Summary
 

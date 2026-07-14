@@ -28,6 +28,7 @@ const candidateFiles = [
   "apps/www/src/data/knowledge-bank/campaign-press.ts",
   "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+  "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/proofs.ts",
@@ -35,6 +36,7 @@ const candidateFiles = [
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/content/work/kc-town-hall.mdx",
   "docs/knowledge-bank/claims.md",
+  "docs/knowledge-bank/proofs.md",
   "docs/knowledge-bank/sources.md",
   "docs/knowledge-bank/anti-claims.md",
   "docs/knowledge-bank/approval-register.md",
@@ -256,37 +258,52 @@ function deterministicResults(judgments) {
       ),
   ];
   const kcTownHallIntegrityViolations = [];
-  const expectedKcTownHallSourceIds = [
+  const expectedKcTownHallOfficialSourceIds = [
     "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
     "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
     "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
     "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
   ];
+  const transitionSourceId =
+    "SRC-KCTH-JAMIE-TRANSITION-CLARIFICATION-2026";
+  const approvedTransitionStatement =
+    "Jamie transitioned the KC Town Hall project to a mission-aligned organization.";
+  const transitionCapture = kcTownHallFundingCaptures.find(
+    (capture) => capture.id === "CAP-KCTH-MISSION-ALIGNED-TRANSITION-2026",
+  );
+  const transitionSource = kcTownHallFundingSources.find(
+    (source) => source.id === transitionSourceId,
+  );
   const roleClaim = kcTownHallFundingClaims.find(
     (claim) => claim.id === "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
   );
   const fundingClaim = kcTownHallFundingClaims.find(
     (claim) => claim.id === "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN",
   );
+  const transitionClaim = kcTownHallFundingClaims.find(
+    (claim) => claim.id === "CLM-KCTH-MISSION-ALIGNED-TRANSITION",
+  );
   const kcTownHallPage = knowledgeBank.pages.find(
     (page) => page.id === "kc-town-hall",
   );
   if (
-    kcTownHallFundingCaptures.length !== 1 ||
-    kcTownHallFundingSources.length !== 4 ||
-    kcTownHallFundingObservations.length !== 5 ||
-    kcTownHallFundingClaims.length !== 2 ||
+    kcTownHallFundingCaptures.length !== 2 ||
+    kcTownHallFundingSources.length !== 5 ||
+    kcTownHallFundingObservations.length !== 6 ||
+    kcTownHallFundingClaims.length !== 3 ||
     kcTownHallFundingInquiries.length !== 1 ||
-    kcTownHallFundingCorrections.length !== 1
+    kcTownHallFundingCorrections.length !== 2
   ) {
     kcTownHallIntegrityViolations.push(
       "KC Town Hall funding graph has an unexpected record count",
     );
   }
   if (
-    !expectedKcTownHallSourceIds.every((id) => sourceById.has(id)) ||
+    ![...expectedKcTownHallOfficialSourceIds, transitionSourceId].every((id) =>
+      sourceById.has(id),
+    ) ||
     JSON.stringify(kcTownHallPage?.sourceOrder) !==
-      JSON.stringify(expectedKcTownHallSourceIds)
+      JSON.stringify(expectedKcTownHallOfficialSourceIds)
   ) {
     kcTownHallIntegrityViolations.push(
       "KC Town Hall source set or citation order is incomplete",
@@ -295,7 +312,7 @@ function deterministicResults(judgments) {
   if (
     !roleClaim ||
     JSON.stringify(roleClaim.evidence.map((item) => item.sourceId)) !==
-      JSON.stringify([expectedKcTownHallSourceIds[0]])
+      JSON.stringify([expectedKcTownHallOfficialSourceIds[0]])
   ) {
     kcTownHallIntegrityViolations.push(
       "KC Town Hall developer/presenter role is not bound to the proposal list",
@@ -304,10 +321,20 @@ function deterministicResults(judgments) {
   if (
     !fundingClaim ||
     JSON.stringify(fundingClaim.evidence.map((item) => item.sourceId)) !==
-      JSON.stringify(expectedKcTownHallSourceIds.slice(1))
+      JSON.stringify(expectedKcTownHallOfficialSourceIds.slice(1))
   ) {
     kcTownHallIntegrityViolations.push(
       "KC Town Hall funding claim does not preserve resolution, appropriation, and reappropriation evidence",
+    );
+  }
+  if (
+    !transitionClaim ||
+    JSON.stringify(transitionClaim.evidence.map((item) => item.sourceId)) !==
+      JSON.stringify([transitionSourceId]) ||
+    transitionClaim.evidence.some((item) => item.renderCitation)
+  ) {
+    kcTownHallIntegrityViolations.push(
+      "KC Town Hall transition is not bound to non-citing first-hand evidence",
     );
   }
   const kcTownHallPublicText = [
@@ -337,11 +364,43 @@ function deterministicResults(judgments) {
       : []),
     ...(!fundingClaim?.evidence.some(
       (item) =>
-        item.sourceId === expectedKcTownHallSourceIds[3] &&
+        item.sourceId === expectedKcTownHallOfficialSourceIds[3] &&
         item.relationship === "supports-boundary",
     )
       ? [
           "KC Town Hall funding claim does not use the 2024 ordinance as a disposition boundary",
+        ]
+      : []),
+    ...(!transitionClaim?.boundaries.some(
+      (item) => /first-hand.*official City records/i.test(item),
+    )
+      ? [
+          "KC Town Hall transition claim does not distinguish first-hand context from official records",
+        ]
+      : []),
+    ...(!transitionClaim?.antiClaims.some((item) =>
+      /official Council records document/i.test(item),
+    )
+      ? [
+          "KC Town Hall transition claim lacks an official-record attribution anti-claim",
+        ]
+      : []),
+    ...(!/transitioned the project to a mission-aligned organization/i.test(
+      kcTownHallPublicText,
+    )
+      ? ["KC Town Hall public projection omits the mission-aligned transition"]
+      : []),
+    ...(!/Separately, the City/i.test(kcTownHallPublicText)
+      ? [
+          "KC Town Hall public projection does not separate the transition from the City record",
+        ]
+      : []),
+    ...(transitionCapture?.summary !== approvedTransitionStatement ||
+    transitionSource?.supportsGenerally.some(
+      (item) => !/transitioned KC Town Hall to a mission-aligned organization/i.test(item),
+    )
+      ? [
+          "KC Town Hall first-hand capture exceeds the approved professional transition statement",
         ]
       : []),
     ...(!/Council accepted and appropriated the amount in 2019/i.test(
@@ -351,7 +410,7 @@ function deterministicResults(judgments) {
           "KC Town Hall public projection omits Council acceptance and appropriation",
         ]
       : []),
-    ...(!/later withdrew/i.test(kcTownHallPublicText) ||
+    ...(!/withdrew|withdrawal/i.test(kcTownHallPublicText) ||
     !/unused/i.test(kcTownHallPublicText)
       ? [
           "KC Town Hall public projection omits withdrawal or unused-funds disposition",

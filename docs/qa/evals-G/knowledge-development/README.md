@@ -5,7 +5,7 @@
 - Suite: `knowledge-development-lifecycle`, version 1
 - Decision: `stop_threshold_met`
 - Final candidate fingerprint:
-  `5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34`
+  `0e50340382c93104ff84d53ae136716f403d224e2af202cabf8d0874f4b96eb7`
 
 ## Result
 
@@ -39,12 +39,14 @@ the proposal role, Board recommendation, Council acceptance, Council
 appropriation, later withdrawal, and reappropriation of the unused amount. The
 public projection keeps Jamie's City-listed developer/presenter role separate
 from the government decisions and does not convert appropriation into receipt
-or expenditure.
+or expenditure. It also records Jamie's approved first-hand account that he
+transitioned the project to a mission-aligned organization, without publishing
+private circumstances or presenting the transition as a City-record fact.
 
 Two fresh read-only holdouts reviewed the unchanged KC Town Hall candidate. The
-first scored both judged criteria at `4/4`, for a weighted score of `1.0000`;
-the second scored `KD-006` at `4/4` and `KD-012` at `3/4`, for `0.9925`. Both met every stopping
-criterion with no blocking or nonblocking failures.
+two judges each scored `KD-006` at `4/4` and `KD-012` at `3/4`, for weighted
+scores of `0.9925`. Both met every stopping criterion with no blocking or
+nonblocking failures.
 
 The runner binds each judgment to the reviewed candidate files with a SHA-256
 fingerprint. `npm run check` fails if evaluated content changes without a new
@@ -56,15 +58,16 @@ authorize production deployment.
 
 ## Corpus Developed
 
-- 27 public-safe captures, all integrated or routed;
-- 64 normalized development sources, including 41 new article records and 4
+- 28 public-safe captures, all integrated or routed;
+- 65 normalized development sources, including 41 new article records and 4
   campaign Press indexes in the campaign-press expansion;
-- 83 located, limited atomic observations;
-- 18 developed claims, plus selected claims in the canonical registry;
+- 84 located, limited atomic observations;
+- 19 developed claims, plus selected claims in the canonical registry;
 - 10 prioritized research tasks;
 - 0 canonical validation errors;
 - 45 ordered campaign-press placements representing 44 unique articles;
-- 4 official KC Town Hall funding sources and 2 bounded claims;
+- 4 official KC Town Hall funding sources, 1 metadata-only first-hand source,
+  and 3 bounded claims;
 - 7 selected civic-case-study claims and 0 prohibited public routes.
 
 The source-backed direct claims cover:
@@ -103,7 +106,7 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
 | Campaign-press holdout 1          |         `1.0000` | Pass                                         |
 | Campaign-press holdout 2          |         `1.0000` | Pass; stop threshold met                     |
 | KC Town Hall deterministic pass   |         `0.8900` | Continue: independent judgments required     |
-| KC Town Hall holdout 1            |         `1.0000` | Pass                                         |
+| KC Town Hall holdout 1            |         `0.9925` | Pass                                         |
 | KC Town Hall holdout 2            |         `0.9925` | Pass; stop threshold met                     |
 
 ## Accepted Improvements
@@ -150,6 +153,9 @@ engagement metrics. A readable NPR syndication was recovered and normalized.
     and reappropriation chain; separated Jamie's role from government action;
     and added exact regression tests for the public wording and unused-funds
     ending.
+22. Added Jamie's approved first-hand KC Town Hall transition as a distinct,
+    metadata-only evidence class; omitted private circumstances; and required
+    attribution and separation from the City record on every public surface.
 
 ## Evidence
 

@@ -47,6 +47,11 @@ For KC Town Hall, pair the public role and funding authorization with the later
 withdrawal and reappropriation. Do not project the 2019 amount alone as money
 received or spent.
 
+Project Jamie's mission-aligned transition as a separate first-hand claim. Do
+not cite the Council records for it, name the receiving organization, imply a
+legal or funding transfer, merge it with the later withdrawal, or publish the
+private reasons behind it.
+
 ## Lab / Source-Backed Team Memory
 
 Use only public-safe method claims.

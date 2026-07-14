@@ -38,7 +38,7 @@
   },
   "hard_constraints": [
     "Nothing lost applies to capture, not to public Git: raw private archives, local paths, credentials, private correspondence, unapproved images, and sensitive records stay outside the repository.",
-    "Memory is a research lead, not proof; no claim may be promoted from first-person memory alone.",
+    "Unattributed memory is a research lead, not proof. An approved first-hand statement may support an attributed public-safe claim when its source type and boundaries are explicit; it may not stand in for independent corroboration.",
     "A source must be decomposed into atomic observations before an agent uses it to strengthen a claim.",
     "A source relationship must say what it supports and what it does not establish.",
     "Collective work must preserve collaborator credit and calibrate individual causality.",
@@ -109,7 +109,7 @@
       "weight": 12,
       "inputs": ["captures", "sources", "observations", "claims", "projections"],
       "procedure": ["Trace selected and approved claims backward through observations and sources.", "Verify held candidate claims cannot render publicly."],
-      "pass_criteria": ["Every newly developed confirmed claim cites at least one observation and source relationship.", "Every active public-site projection is approved and sourced or corroborated.", "Memory-only and causal candidate claims remain held until corroborated."],
+      "pass_criteria": ["Every newly developed confirmed claim cites at least one observation and source relationship.", "Every active public-site projection is approved and sourced or corroborated.", "Unattributed memory-only and causal candidate claims remain held; approved attributed first-hand claims may project only with explicit source boundaries."],
       "evidence_required": ["claim lineage report", "promotion violation list"],
       "remediation_hint": "Hold the projection or strengthen the evidence path; never manufacture support."
     },
@@ -122,7 +122,7 @@
       "weight": 8,
       "inputs": ["new observations", "new claims", "boundaries", "anti-claims"],
       "procedure": ["Give a blind reviewer the source observations and claim records.", "Ask whether direct action, collective contribution, public outcome, and causality remain distinct."],
-      "pass_criteria": ["Jamie's documented actions are not understated.", "Collaborator and coalition credit is not absorbed into individual authorship.", "Instrumental, created, caused, and disbanded are held unless the evidence specifically earns them."],
+      "pass_criteria": ["Jamie's documented actions are not understated.", "Collaborator and coalition credit is not absorbed into individual authorship.", "Instrumental, created, caused, and disbanded are held unless the evidence specifically earns them.", "Approved first-hand transition context remains distinct from official records, unsupported transfer mechanics, and private reasons."],
       "evidence_required": ["blind judge scorecard", "claim-level findings"],
       "remediation_hint": "Name the direct action courageously and bound the causal or collective inference."
     },
@@ -200,7 +200,7 @@
       "weight": 3,
       "inputs": ["developed claims", "research queue", "current public proof gaps"],
       "procedure": ["Ask a blind hiring-oriented reviewer whether the bank names Jamie's strongest defensible actions without apology or inflation.", "Ask which matured claims are worth future projection and which need more research."],
-      "pass_criteria": ["Direct action is specific and courageous.", "The material states toward what end and what became possible or usable.", "Unresolved high-value claims remain visible as prioritized research rather than being weakened into vagueness or promoted prematurely."],
+      "pass_criteria": ["Direct action is specific and courageous.", "The material states toward what end and what became possible or usable, including stewardship through transition where supported.", "Unresolved high-value claims remain visible as prioritized research rather than being weakened into vagueness or promoted prematurely.", "A difficult project ending is framed candidly without importing private circumstances or treating transition as failure."],
       "evidence_required": ["blind judge scorecard", "promotion recommendations", "held-claim rationale"],
       "remediation_hint": "Strengthen the direct action, end, and evidence relationship while holding unearned causality."
     }

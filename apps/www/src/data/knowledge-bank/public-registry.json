@@ -869,6 +869,38 @@
       ]
     },
     {
+      "id": "CLM-KCTH-MISSION-ALIGNED-TRANSITION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie states that he transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Jamie states that he transitioned the project to a mission-aligned organization.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Present the transition as Jamie's first-hand account, not as independently corroborated by the official City records.",
+        "Do not identify the receiving organization or imply a particular legal transfer, ownership change, funding transfer, or assumption of obligations without additional public evidence and approval.",
+        "Keep the transition separate from the City's later withdrawal and reappropriation record; the current sources do not establish that they were the same event or that one caused the other.",
+        "Keep private reasons and personal circumstances outside the public repository and site."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1247,6 +1279,11 @@
             "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
             "SRC-KCTH-KCMO-ORDINANCE-240317-2024"
           ]
+        },
+        {
+          "id": "mission-aligned-transition",
+          "claimId": "CLM-KCTH-MISSION-ALIGNED-TRANSITION",
+          "projection": "case-study"
         }
       ]
     }

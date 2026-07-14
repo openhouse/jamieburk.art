@@ -1,8 +1,8 @@
 {
   "suite_id": "knowledge-development-lifecycle",
   "suite_version": 1,
-  "label": "kc-town-hall-funding-holdout-2-final",
-  "run_at": "2026-07-14T20:00:27.656Z",
+  "label": "kc-town-hall-transition-holdout-2",
+  "run_at": "2026-07-14T21:01:17.868Z",
   "candidate_files": [
     ".agents/evals/knowledge-development.json",
     "scripts/run-knowledge-development.mjs",
@@ -11,6 +11,7 @@
     "apps/www/src/data/knowledge-bank/campaign-press.ts",
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
     "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "apps/www/src/data/knowledge-bank/schema.ts",
     "apps/www/src/data/knowledge-bank/records.ts",
     "apps/www/src/data/knowledge-bank/public-registry.json",
     "apps/www/src/data/proofs.ts",
@@ -18,6 +19,7 @@
     "apps/www/src/content/work/fair-rent-nyc.mdx",
     "apps/www/src/content/work/kc-town-hall.mdx",
     "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/proofs.md",
     "docs/knowledge-bank/sources.md",
     "docs/knowledge-bank/anti-claims.md",
     "docs/knowledge-bank/approval-register.md",
@@ -31,22 +33,22 @@
     "scripts/tests/knowledge-development-evals.test.mjs",
     "docs/knowledge-bank/promotion-slate.md"
   ],
-  "candidate_fingerprint": "5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34",
-  "judgment_fingerprint": "5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34",
+  "candidate_fingerprint": "0e50340382c93104ff84d53ae136716f403d224e2af202cabf8d0874f4b96eb7",
+  "judgment_fingerprint": "0e50340382c93104ff84d53ae136716f403d224e2af202cabf8d0874f4b96eb7",
   "judgment_fingerprint_missing": false,
   "judgment_fingerprint_mismatch": false,
   "metrics": {
-    "captures": 27,
-    "routedCaptures": 27,
-    "sources": 71,
-    "developmentSources": 64,
-    "observations": 83,
-    "developmentClaims": 18,
+    "captures": 28,
+    "routedCaptures": 28,
+    "sources": 72,
+    "developmentSources": 65,
+    "observations": 84,
+    "developmentClaims": 19,
     "researchTasks": 10,
     "campaignPressPlacements": 45,
     "campaignPressUniqueArticles": 44,
-    "kcTownHallFundingSources": 4,
-    "kcTownHallFundingClaims": 2,
+    "kcTownHallFundingSources": 5,
+    "kcTownHallFundingClaims": 3,
     "validationErrors": 0
   },
   "weighted_score": 0.9925,
@@ -65,7 +67,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "27/27 captures integrated, tasked, or closed"
+        "28/28 captures integrated, tasked, or closed"
       ],
       "findings": [],
       "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
@@ -81,7 +83,7 @@
       "pass": true,
       "evidence": [
         "20/20 URL captures routed",
-        "64 normalized development sources"
+        "65 normalized development sources"
       ],
       "findings": [],
       "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
@@ -96,8 +98,8 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "64/64 development sources decomposed",
-        "83 atomic observations"
+        "65/65 development sources decomposed",
+        "84 atomic observations"
       ],
       "findings": [],
       "recommended_next_move": "Decompose each integrated source into located, limited observations.",
@@ -112,7 +114,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "25 claims declare three independent states"
+        "26 claims declare three independent states"
       ],
       "findings": [],
       "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
@@ -127,7 +129,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "18 development claims",
+        "19 development claims",
         "0 promoted-lineage violations",
         "0 projection violations"
       ],
@@ -144,16 +146,15 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh read-only execution of `node scripts/run-knowledge-development.mjs` recomputed the exact candidate fingerprint `5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34` and reported four KC Town Hall funding sources, two claims, and zero validation errors.",
-        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:169-248` decomposes the evidence into five observations: City-listed developer/presenter, CCED Board recommendation, Council acceptance plus negotiation authority, Council appropriation, and 2024 withdrawal plus unused-funds reappropriation. The limitations explicitly distinguish recommendation from appropriation, negotiation from execution or receipt, and appropriation from payment, expenditure, or completion.",
-        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:251-385` keeps `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE` separate from `CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN`. Its active funding projection says, “This was authorization, not receipt: KC Town Hall later withdrew, and in 2024 the Council reappropriated the unused $490,539,” while its boundaries require that ending whenever the appropriation is presented and reject claims that Jamie “secured or caused” it.",
-        "`apps/www/src/content/work/kc-town-hall.mdx:3-41` renders the role and funding chronology as separate Claim occurrences, states that the designation does not turn government decisions into Jamie's accomplishment, and explicitly distinguishes recommendation, acceptance, appropriation, agreement, payment, receipt, expenditure, and completion.",
-        "`apps/www/src/data/work.ts:529-595` keeps collaborator credit, the unused-funds ending, and the prohibition on describing the money as received or spent in the card summary, status, evidence, and Known/Open/Protected fields.",
-        "Existing collective-credit records retain the same calibration: `apps/www/src/data/knowledge-bank/development-records.ts:487-517` preserves Suzanne Hogan, participant, housemate, and communal-governance credit; `development-records.ts:606-624` preserves the multi-group Cabaret campaign and named government actors; and `apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts:604-656` separates Jamie's testimony from Council enactment and the City's later replacement of MARCH.",
-        "Fresh targeted verification passed both KC Town Hall tests in `scripts/tests/knowledge-development-evals.test.mjs:223-304` with zero failures. `npm run check:citations` also passed canonical-record, public-projection, boundary, and page-plan consistency."
+        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:218-310` atomizes Jamie's City-listed developer/presenter role, the CCED Board recommendation, Council acceptance and negotiation authority, appropriation, 2024 withdrawal and unused-funds reappropriation, and Jamie's attributed transition; each observation carries an explicit limitation.",
+        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:313-500` keeps the three claims separate. The funding projection says, “This was authorization, not receipt,” requires the withdrawal/reappropriation ending, and rejects agreement execution, receipt, expenditure, completion, and Jamie-centered causality.",
+        "`apps/www/src/content/work/kc-town-hall.mdx:26-55` renders the official funding chain and transition separately, stating, “This is Jamie's approved first-hand account, not a fact established by the City records above,” and declines any inferred relationship to the later withdrawal.",
+        "`apps/www/src/data/work.ts:529-595` repeatedly uses “Jamie states” and “Separately, the City,” retains the full unused-funds ending, omits private mechanics, and credits both “Jamie Burkart” and “KC Town Hall LLC collaborators.”",
+        "Existing collective-credit governance is consistent: `apps/www/src/data/knowledge-bank/development-records.ts:606-624` names Jamie's direct Cabaret Law campaign actions while explicitly preserving credit for Rafael Espinal, partner organizations, the Council, and the Mayor.",
+        "Read-only verification reproduced the exact candidate fingerprint; `npm run test:knowledge-evals` passed 10/10 tests, `npm run test:citations` passed 9/9, and citation, knowledge-bank, public-safety, and route checks all exited successfully."
       ],
       "findings": [],
-      "recommended_next_move": "Preserve the current role-versus-government-decision decomposition, mandatory unused-funds ending, and regression coverage; no material revision is needed.",
+      "recommended_next_move": "Preserve the role-versus-government-decision decomposition, first-hand transition boundaries, mandatory unused-funds ending, and collective-credit regression coverage.",
       "confidence": "high"
     },
     {
@@ -253,16 +254,16 @@
       "score": 3,
       "pass": true,
       "evidence": [
-        "`apps/www/src/content/work/kc-town-hall.mdx:18-45` is concise and professionally organized around what became usable, Jamie's work, the official funding record, and transferable implementation proof; it does not expose the underlying registry machinery.",
-        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:251-336` strengthens the case with the exact City-listed developer/presenter role and a precise official chronology without converting Board or Council action into Jamie's impact.",
-        "`apps/www/src/data/work.ts:529-595` directly names the role, planning and documentation outputs, municipal source map, collaborator credit, implementation fit, withdrawal, and reappropriation. The ending is stated matter-of-factly without blame or language that negates the demonstrated work.",
-        "Selection is purposeful: `apps/www/src/data/work.ts:537-540` keeps the short proof non-featured at priority 6; `docs/knowledge-bank/promotion-slate.md:28-36` selects only the bounded role and funding-chain claims; and `apps/www/src/data/knowledge-bank/records.ts:784-811` defines only those two claim occurrences for the public page.",
-        "The concise Technical Operations projection uses the bounded wording “Presented an adaptive-reuse proposal that advanced through CCED and Council review” through `apps/www/src/data/proofs.ts:528-545` and `apps/www/src/app/work/technical-operations/page.tsx:142-159`, rather than dumping the full chronology or source registry."
+        "`apps/www/src/data/work.ts:529-595` makes Jamie's City-listed role, planning/documentation function, collaborator credit, mission-aligned transition, and candid unused-funds ending immediately legible to hiring readers.",
+        "`apps/www/src/content/work/kc-town-hall.mdx:18-61` is purposefully organized around what became usable, what Jamie did, the exact official funding record, the separately attributed transition, and “stewardship through transition.”",
+        "`apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:368-500` uses exact recommendation, acceptance, appropriation, withdrawal, and reappropriation language without shame or euphemism while excluding private reasons and unsupported transfer mechanics.",
+        "Selection is restrained: `apps/www/src/data/work.ts:537-540` marks the project non-featured at priority 6; `docs/knowledge-bank/promotion-slate.md:28-40` selects only three bounded claims; and `apps/www/src/data/proofs.ts:528-575` supplies a concise Technical Operations projection instead of exposing the full bank.",
+        "The ending is candid and public-safe: `apps/www/src/data/work.ts:577-595` says the full appropriation remained unused and was reappropriated while expressly omitting private financial, legal, property, banking, and stakeholder circumstances."
       ],
       "findings": [
-        "The official records atomically establish Jamie's developer/presenter designation and the governmental chronology, but the broader public assertions that Jamie “helped shape redevelopment planning, public-benefit documentation, stakeholder context, and municipal-review support” and made materials usable to collaborators (`apps/www/src/content/work/kc-town-hall.mdx:18-24`) rely only on the broad approved-resume/public-safe-summary source basis in `apps/www/src/data/proofs.ts:528-545`. No KC-specific atomic observation identifies Jamie's division of that work or a concrete collaborator-use instance, preventing a fully source-backed score of 4."
+        "The broader statements that Jamie “helped shape redevelopment planning, public-benefit documentation, stakeholder context, and municipal-review support” and made materials usable to collaborators (`apps/www/src/content/work/kc-town-hall.mdx:18-24`) lack a KC-specific atomic observation or concrete artifact/use instance. The structured observations at `apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:216-310` establish the City-listed role, official chronology, and attributed transition, but not those fuller work-product assertions."
       ],
-      "recommended_next_move": "Add one public-safe atomic observation, artifact, or concrete use example tying Jamie specifically to the planning/documentation work and showing how a collaborator used it; retain the present official chronology and candid ending unchanged.",
+      "recommended_next_move": "Add a bounded KC-specific observation and evidence relationship for the planning/documentation outputs and collaborator use, or narrow those two public paragraphs to the currently structured evidence.",
       "confidence": "high"
     }
   ]

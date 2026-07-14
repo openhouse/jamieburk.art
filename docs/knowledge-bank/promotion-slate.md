@@ -34,6 +34,10 @@ website selection. It is a recommendation, not publication approval.
   chronology: Board recommendation, Council acceptance, Council appropriation,
   later withdrawal, and reappropriation of the unused amount. The ending must
   remain attached so authorization is never presented as receipt.
+- `CLM-KCTH-MISSION-ALIGNED-TRANSITION`: selected as Jamie's approved
+  first-hand account of continuity stewardship. Keep it distinct from the
+  official municipal chronology and do not infer the receiving organization,
+  transfer terms, assumed obligations, or causality.
 
 ## Strong Future Feature Candidates
 

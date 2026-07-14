@@ -15,7 +15,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
-- Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
+- Served as the City-listed developer/presenter for KC Town Hall's adaptive-reuse proposal; the CCED Board recommended $490,539 and the Council appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused funds in 2024.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
 ## Projection Rule

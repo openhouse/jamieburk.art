@@ -532,17 +532,18 @@ export const proofClaims: ProofClaim[] = [
       "approved-resume",
       "public-source",
       "public-safe-archive-summary",
+      "jamie-review-confirmation",
     ],
     publicWording:
-      "The City lists Jamie as KC Town Hall's developer/presenter for an adaptive-reuse proposal. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019; KC Town Hall later withdrew and the Council reappropriated the unused funds in 2024.",
+      "The City lists Jamie as KC Town Hall's developer/presenter for an adaptive-reuse proposal. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded KC Town Hall's withdrawal and reappropriated the unused funds in 2024.",
     shortWording:
       "Presented an adaptive-reuse proposal that advanced through CCED and Council review",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official KCMO records name him as developer/presenter and document the Board recommendation, Council acceptance and appropriation, and later reappropriation of the unused amount after withdrawal.",
+      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. He states that he transitioned the project to a mission-aligned organization. Official KCMO records separately name him as developer/presenter and document the Board recommendation, Council acceptance and appropriation, and later reappropriation of the unused amount after withdrawal.",
     sourceBasis:
-      "Approved resume language, the official CCED Round Two proposal list, authenticated Resolution 190649, authenticated Ordinance 190642, Ordinance 240317, and public-safe project context.",
+      "Approved resume language, the official CCED Round Two proposal list, authenticated Resolution 190649, authenticated Ordinance 190642, Ordinance 240317, Jamie's public-safe first-hand transition clarification, and public-safe project context.",
     guardrail:
-      "Distinguish Board recommendation, Council acceptance, appropriation, agreement execution, receipt, and expenditure. State the later withdrawal and reappropriation whenever describing the 2019 appropriation.",
+      "Distinguish Board recommendation, Council acceptance, appropriation, agreement execution, receipt, and expenditure. State the later withdrawal and reappropriation whenever describing the 2019 appropriation. Treat the mission-aligned transition as Jamie's first-hand account, separate from the official City record.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "A final funding agreement was executed",
@@ -552,8 +553,12 @@ export const proofClaims: ProofClaim[] = [
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the cited public record",
+      "The official Council records document the mission-aligned transition",
+      "The receiving organization received the City appropriation or assumed the property, LLC, funding agreement, or every project obligation",
+      "The transition and the City's later withdrawal are the same documented event",
     ],
     protectedBoundaries: [
+      "Private reasons and personal circumstances",
       "Private financial details",
       "Legal details",
       "Property details",

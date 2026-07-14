@@ -1,4 +1,4 @@
-# KC Town Hall Municipal Funding Record
+# KC Town Hall Public Record and Project Transition
 
 ## Public-safe finding
 
@@ -19,6 +19,10 @@ complete municipal funding decision:
    unused, reduces the full $490,539 project account amount, and reappropriates
    the combined clawed-back funds in 2024.
 
+Jamie's separate first-hand clarification adds that he transitioned the project
+to a mission-aligned organization. This is public-safe professional context,
+not a fact established by the municipal records.
+
 ## Source table
 
 | Source                            | Affordance                                                               | Boundary                                                   |
@@ -27,6 +31,7 @@ complete municipal funding decision:
 | Authenticated Resolution 190649   | Board vote, Council acceptance, negotiation authority, conditions        | Not an executed agreement or payment                       |
 | Authenticated Ordinance 190642    | Council appropriation and KC Town Hall amount                            | Not receipt, expenditure, or completion                    |
 | Ordinance 240317                  | Withdrawal and reappropriation of the full unused amount                 | Does not disclose complete private reasons or assign fault |
+| Jamie's first-hand clarification  | Project transition to a mission-aligned organization                     | Not independent corroboration, recipient identity, terms, assumed obligations, or a link to City action |
 
 ## Claim decomposition
 
@@ -42,6 +47,15 @@ The public record supports saying that the Council accepted the CCED Board's
 recommendation and appropriated $490,539 for KC Town Hall. "Appropriated" is
 more exact than "allocated" and stronger than recommendation alone.
 
+### Project transition
+
+Jamie's approved first-hand account supports saying that he transitioned the
+project to a mission-aligned organization. The knowledge bank labels this as a
+first-hand statement and does not render it as a government-record citation.
+It does not identify the organization or establish the transition's legal
+form, assets, obligations, funding, timing, or causal relationship to the
+City's later withdrawal record.
+
 ### Later disposition
 
 The public record does not support saying KC Town Hall received or spent the
@@ -54,11 +68,15 @@ mention of the 2019 appropriation should retain that ending.
 - Capture: `CAP-KCTH-COUNCIL-FUNDING-CHAIN-2026`
 - Role claim: `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE`
 - Funding claim: `CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN`
+- Transition capture: `CAP-KCTH-MISSION-ALIGNED-TRANSITION-2026`
+- Transition claim: `CLM-KCTH-MISSION-ALIGNED-TRANSITION`
 - Inquiry: `INQ-KCTH-COUNCIL-FUNDING-CHAIN-2026`
-- Correction: `COR-KCTH-FUNDING-STATUS-2026`
+- Corrections: `COR-KCTH-FUNDING-STATUS-2026` and
+  `COR-KCTH-PROJECT-TRANSITION-CONTEXT-2026`
 
 ## Public-safety boundary
 
-The knowledge bank stores official public-source metadata and bounded
-propositions. Private financial, legal, property, banking, contracting, and
-stakeholder records remain outside the repository.
+The knowledge bank stores official public-source metadata, a public-safe
+first-hand statement, and bounded propositions. The underlying conversation,
+private reasons, and private financial, legal, property, banking, contracting,
+and stakeholder records remain outside the repository.

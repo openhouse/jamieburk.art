@@ -31,6 +31,11 @@ The repo is public. Approval here means approved for public-safe repository and 
   approved when the later withdrawal and 2024 reappropriation of the unused
   amount stay attached. Do not imply agreement execution, receipt, expenditure,
   completion, sole authorship, or individual causality for government actions.
+- KC Town Hall transition: Jamie's first-hand statement that he transitioned
+  the project to a mission-aligned organization is approved. Keep it separate
+  from the City record. The receiving organization, transition terms, assumed
+  assets or obligations, causal relationship to later City action, and private
+  reasons are not approved for public projection.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 

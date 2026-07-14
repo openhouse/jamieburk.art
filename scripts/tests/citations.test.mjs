@@ -100,7 +100,7 @@ test("corrections retire old wording from public surfaces", () => {
     .map((path) => readFileSync(path, "utf8"))
     .join("\n");
   assert.doesNotMatch(text, /first civic-data hackathon|2014[-–]2015/i);
-  assert.equal(knowledgeBank.corrections.length, 4);
+  assert.equal(knowledgeBank.corrections.length, 5);
   assert.ok(
     knowledgeBank.corrections.some(
       (correction) => correction.id === "COR-KCTH-FUNDING-STATUS-2026",
@@ -121,6 +121,10 @@ test("private and metadata-only evidence is absent from the public registry", ()
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
+  assert.doesNotMatch(
+    serialized,
+    /SRC-KCTH-JAMIE-TRANSITION-CLARIFICATION-2026/,
+  );
   assert.ok(
     publicCitationRegistry.sources.every(
       (source) => source.visibility === "public",

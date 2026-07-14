@@ -531,9 +531,9 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse planning and public-benefit documentation",
     summary:
-      "The City lists Jamie as KC Town Hall's developer/presenter for adaptive reuse of a long-vacant building. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019; the project later withdrew and the unused funds were reappropriated in 2024.",
+      "The City lists Jamie as KC Town Hall's developer/presenter for adaptive reuse of a long-vacant building. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record says KC Town Hall withdrew and the unused funds were reappropriated.",
     role: "Developer/Presenter; Project Planning & Documentation Support",
-    years: "2019-2024",
+    years: "2019 proposal; 2024 disposition",
     status: "Short proof page",
     featured: false,
     priority: 6,
@@ -542,7 +542,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant building involved public benefit, preservation, funding, stakeholder, and redevelopment questions, including distinctions among recommendation, Council authorization, appropriation, contract execution, and payment.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, municipal-review support, and a source-backed chronology of the public funding decision and later disposition.",
+      "Planning materials, public-benefit documentation, stakeholder context, municipal-review support, a source-backed chronology of the public funding decision, and, in Jamie's first-hand account, continuity through a mission-aligned transition.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -570,12 +570,12 @@ const workItemsInput = [
       "Historic Preservation Context",
     ],
     careNote:
-      "Official public records are cited. Private financial, legal, property, and stakeholder details remain omitted.",
+      "Official public records and Jamie's public-safe first-hand clarification are distinguished. Private reasons and financial, legal, property, and stakeholder details remain omitted.",
     sourceLayer:
-      "Official KCMO CCED proposal and Council records, plus a public-safe project summary.",
+      "Official KCMO CCED proposal and Council records, Jamie's public-safe first-hand transition clarification, and a public-safe project summary.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
-      "Historical project. The 2019 appropriation was later reappropriated after KC Town Hall withdrew; do not describe the amount as received or spent.",
+      "Historical project. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record states that KC Town Hall withdrew and the full 2019 appropriation remained unused and was reappropriated.",
     group: "Operating systems for teams",
     roleFit:
       "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
@@ -585,13 +585,14 @@ const workItemsInput = [
       "City-listed developer/presenter role",
       "CCED Board recommendation and Council acceptance",
       "$490,539 Council appropriation, later reappropriated unused",
+      "Project transition to a mission-aligned organization (Jamie's first-hand account)",
     ],
     knownOpenProtected: {
       known:
-        "The City listed Jamie as KC Town Hall's developer/presenter. The CCED Board recommended $490,539; the Council accepted and appropriated the amount in 2019; KC Town Hall later withdrew and the Council reappropriated the unused amount in 2024.",
-      open: "The official records do not establish sole authorship, individual causality for government decisions, an executed funding agreement, receipt, expenditure, or completion.",
+        "The City listed Jamie as KC Town Hall's developer/presenter. The CCED Board recommended $490,539; the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused amount in 2024.",
+      open: "The official records do not establish sole authorship, individual causality for government decisions, an executed funding agreement, receipt, expenditure, completion, the receiving organization's identity, or the transition terms.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted.",
+        "Private reasons and financial, legal, property, banking, and stakeholder details are omitted.",
     },
   },
 ] satisfies WorkMeta[];

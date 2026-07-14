@@ -221,18 +221,21 @@ test("campaign press duplicate is explicit and limited to the shared NPR article
 });
 
 test("KC Town Hall funding chain preserves proposal role, recommendation, appropriation, and later disposition", () => {
-  assert.equal(kcTownHallFundingCaptures.length, 1);
-  assert.equal(kcTownHallFundingSources.length, 4);
-  assert.equal(kcTownHallFundingObservations.length, 5);
-  assert.equal(kcTownHallFundingClaims.length, 2);
+  assert.equal(kcTownHallFundingCaptures.length, 2);
+  assert.equal(kcTownHallFundingSources.length, 5);
+  assert.equal(kcTownHallFundingObservations.length, 6);
+  assert.equal(kcTownHallFundingClaims.length, 3);
   assert.equal(kcTownHallFundingInquiries.length, 1);
-  assert.equal(kcTownHallFundingCorrections.length, 1);
+  assert.equal(kcTownHallFundingCorrections.length, 2);
 
   const roleClaim = kcTownHallFundingClaims.find(
     (claim) => claim.id === "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
   );
   const fundingClaim = kcTownHallFundingClaims.find(
     (claim) => claim.id === "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN",
+  );
+  const transitionClaim = kcTownHallFundingClaims.find(
+    (claim) => claim.id === "CLM-KCTH-MISSION-ALIGNED-TRANSITION",
   );
   const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
 
@@ -270,35 +273,112 @@ test("KC Town Hall funding chain preserves proposal role, recommendation, approp
     fundingClaim.antiClaims.some((item) => /spent \$490,539/i.test(item)),
   );
 
+  assert.equal(transitionClaim.epistemicState, "sourced");
+  assert.equal(transitionClaim.publicationState, "approved");
+  assert.equal(transitionClaim.selectionState, "selected");
+  assert.deepEqual(
+    transitionClaim.evidence.map((item) => [item.sourceId, item.renderCitation]),
+    [["SRC-KCTH-JAMIE-TRANSITION-CLARIFICATION-2026", false]],
+  );
+  assert.ok(
+    transitionClaim.boundaries.some((item) =>
+      /first-hand.*official City records/i.test(item),
+    ),
+  );
+  assert.ok(
+    transitionClaim.antiClaims.some((item) =>
+      /official Council records document/i.test(item),
+    ),
+  );
+
+  const transitionSource = kcTownHallFundingSources.find(
+    (source) =>
+      source.id === "SRC-KCTH-JAMIE-TRANSITION-CLARIFICATION-2026",
+  );
+  const transitionCapture = kcTownHallFundingCaptures.find(
+    (capture) => capture.id === "CAP-KCTH-MISSION-ALIGNED-TRANSITION-2026",
+  );
+  assert.equal(
+    transitionCapture.summary,
+    "Jamie transitioned the KC Town Hall project to a mission-aligned organization.",
+  );
+  assert.equal(transitionSource.kind, "firsthand-statement");
+  assert.equal(transitionSource.visibility, "public-metadata-only");
+  assert.equal(transitionSource.canonicalUrl, undefined);
+
   assert.deepEqual(page.sourceOrder, [
     "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
     "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
     "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
     "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
   ]);
+  assert.deepEqual(
+    page.occurrences.find(
+      (occurrence) => occurrence.id === "mission-aligned-transition",
+    ).sourceIds,
+    undefined,
+  );
 });
 
 test("KC Town Hall public projection states authorization and the unused-funds ending together", () => {
-  const publicText = [
-    "apps/www/src/content/work/kc-town-hall.mdx",
+  const standaloneDataSurfaces = [
     "apps/www/src/data/work.ts",
     "apps/www/src/data/proofs.ts",
-  ]
-    .map((path) => readFileSync(path, "utf8"))
-    .join("\n");
+  ].map((path) => ({ path, text: readFileSync(path, "utf8") }));
+  const caseStudy = readFileSync(
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "utf8",
+  );
+  const claimBank = readFileSync(
+    "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "utf8",
+  );
+  const publicText = [
+    ...standaloneDataSurfaces.map(({ text }) => text),
+    caseStudy,
+    claimBank,
+  ].join("\n");
 
   assert.match(
     publicText,
     /Council accepted and appropriated the amount in 2019/i,
   );
-  assert.match(publicText, /later withdrew/i);
+  assert.match(publicText, /withdrew|withdrawal/i);
   assert.match(publicText, /unused/i);
+  assert.match(publicText, /Separately, the City/i);
+  assert.doesNotMatch(publicText, /later transitioned/i);
+  for (const { path, text } of standaloneDataSurfaces) {
+    assert.match(
+      text,
+      /Jamie states that he transitioned the project to a mission-aligned organization/i,
+      `${path} must carry the first-hand attribution on its own`,
+    );
+    assert.match(
+      text,
+      /Separately, the City/i,
+      `${path} must separate Jamie's statement from the City record`,
+    );
+  }
+  const workData = standaloneDataSurfaces.find(
+    ({ path }) => path === "apps/www/src/data/work.ts",
+  ).text;
+  assert.match(workData, /years: "2019 proposal; 2024 disposition"/i);
+  assert.match(
+    workData,
+    /in Jamie's first-hand account, continuity through a mission-aligned transition/i,
+  );
+  assert.match(
+    claimBank,
+    /Jamie states that he transitioned the project to a mission-aligned organization/i,
+  );
+  assert.match(caseStudy, /Jamie's approved first-hand account/i);
+  assert.match(caseStudy, /not a fact established by the City\s+records/i);
   assert.doesNotMatch(
     publicText,
     /including a \$490,539 public funding recommendation/i,
   );
   assert.match(
-    readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8"),
+    caseStudy,
     /recommendation, Council acceptance, appropriation,[\s\S]*receipt or expenditure/i,
   );
 });

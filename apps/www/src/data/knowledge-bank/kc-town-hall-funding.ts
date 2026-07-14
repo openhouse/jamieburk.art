@@ -11,9 +11,11 @@ const proposalListSourceId = "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019";
 const resolutionSourceId = "SRC-KCTH-KCMO-RESOLUTION-190649-2019";
 const appropriationSourceId = "SRC-KCTH-KCMO-ORDINANCE-190642-2019";
 const reappropriationSourceId = "SRC-KCTH-KCMO-ORDINANCE-240317-2024";
+const transitionSourceId = "SRC-KCTH-JAMIE-TRANSITION-CLARIFICATION-2026";
 
 const roleClaimId = "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE";
 const fundingClaimId = "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN";
+const transitionClaimId = "CLM-KCTH-MISSION-ALIGNED-TRANSITION";
 
 export const kcTownHallFundingCaptures = [
   {
@@ -49,6 +51,27 @@ export const kcTownHallFundingCaptures = [
     researchTaskIds: [],
     disposition:
       "Recovered the official proposal list and authenticated 2019 Council actions, then bounded the authorization claim with the Council's 2024 record reappropriating the unused amount after KC Town Hall withdrew.",
+  },
+  {
+    id: "CAP-KCTH-MISSION-ALIGNED-TRANSITION-2026",
+    receivedAt: "2026-07-14",
+    submittedBy: "Jamie Burkart",
+    kind: "memory",
+    summary:
+      "Jamie transitioned the KC Town Hall project to a mission-aligned organization.",
+    status: "integrated",
+    publicSafety: "public-safe",
+    potentialProjectIds: ["kc-town-hall"],
+    potentialClaimFamilies: [
+      "project transition",
+      "continuity stewardship",
+      "mission-aligned handoff",
+    ],
+    sourceIds: [transitionSourceId],
+    observationIds: ["OBS-KCTH-MISSION-ALIGNED-TRANSITION"],
+    researchTaskIds: [],
+    disposition:
+      "Integrated the professional transition as Jamie's approved first-hand account while omitting private reasons and holding the receiving organization's identity, transfer terms, and relationship to later City action outside the claim.",
   },
 ] satisfies CaptureRecord[];
 
@@ -164,6 +187,30 @@ export const kcTownHallFundingSources = [
       "the present ownership or condition of the property",
     ],
   },
+  {
+    id: transitionSourceId,
+    title: "Jamie Burkart public-safe KC Town Hall clarification",
+    author: "Jamie Burkart",
+    kind: "firsthand-statement",
+    visibility: "public-metadata-only",
+    preservationStatus: "private",
+    publishedAt: "2026-07-14",
+    publicCitation:
+      "Jamie Burkart, public-safe first-hand KC Town Hall project clarification, July 14, 2026.",
+    publicNote:
+      "Jamie states that he transitioned the project to a mission-aligned organization. The underlying conversation is not published or exposed as a source asset.",
+    supportsGenerally: [
+      "Jamie's first-hand account that he transitioned KC Town Hall to a mission-aligned organization",
+    ],
+    doesNotEstablish: [
+      "independent corroboration of the transition",
+      "the receiving organization's identity",
+      "the legal form or scope of the transition",
+      "transfer of the property, LLC, City appropriation, funding agreement, or every project obligation",
+      "a causal or chronological relationship between the transition and the City's later withdrawal record",
+      "the private reasons for the transition",
+    ],
+  },
 ] satisfies SourceRecord[];
 
 export const kcTownHallFundingObservations = [
@@ -244,6 +291,21 @@ export const kcTownHallFundingObservations = [
       "The ordinance does not provide the complete private reasons for withdrawal and should not be used to assign fault.",
     ],
     supportsClaimIds: [fundingClaimId],
+    reviewedAt: "2026-07-14",
+  },
+  {
+    id: "OBS-KCTH-MISSION-ALIGNED-TRANSITION",
+    sourceId: transitionSourceId,
+    project: "kc-town-hall",
+    statement:
+      "Jamie Burkart states that he transitioned the KC Town Hall project to a mission-aligned organization.",
+    observationType: "attributed",
+    locator: "Public-safe first-hand clarification supplied July 14, 2026.",
+    confidence: "high",
+    limitations: [
+      "This is Jamie's first-hand account, not independent corroboration; it does not identify the receiving organization, define the transfer terms, or connect the transition causally to later City action.",
+    ],
+    supportsClaimIds: [transitionClaimId],
     reviewedAt: "2026-07-14",
   },
 ] satisfies ObservationRecord[];
@@ -387,6 +449,59 @@ export const kcTownHallFundingClaims = [
     reviewedAt: "2026-07-14",
     reviewedBy: ["Jamie Burkart", "Codex archival review"],
   },
+  {
+    id: transitionClaimId,
+    project: "kc-town-hall",
+    claimType: "action",
+    internalClaim:
+      "Jamie transitioned the KC Town Hall project to a mission-aligned organization.",
+    epistemicState: "sourced",
+    publicationState: "approved",
+    selectionState: "selected",
+    status: "confirmed-with-boundary",
+    observationIds: ["OBS-KCTH-MISSION-ALIGNED-TRANSITION"],
+    projections: [
+      {
+        key: "case-study",
+        text: "Jamie states that he transitioned the project to a mission-aligned organization.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/kc-town-hall"],
+      },
+      {
+        key: "work-card",
+        text: "Jamie states that he transitioned the project to a mission-aligned organization.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work", "/work/kc-town-hall"],
+      },
+    ],
+    evidence: [
+      {
+        sourceId: transitionSourceId,
+        relationship: "direct-support",
+        supports: ["Jamie's first-hand account of the project transition"],
+        locator: "Public-safe first-hand clarification supplied July 14, 2026.",
+        confidence: "high",
+        renderCitation: false,
+      },
+    ],
+    boundaries: [
+      "Present the transition as Jamie's first-hand account, not as independently corroborated by the official City records.",
+      "Do not identify the receiving organization or imply a particular legal transfer, ownership change, funding transfer, or assumption of obligations without additional public evidence and approval.",
+      "Keep the transition separate from the City's later withdrawal and reappropriation record; the current sources do not establish that they were the same event or that one caused the other.",
+      "Keep private reasons and personal circumstances outside the public repository and site.",
+    ],
+    antiClaims: [
+      "The official Council records document the mission-aligned transition",
+      "The receiving organization received the $490,539 appropriation",
+      "The receiving organization assumed the property, LLC, funding agreement, or every project obligation",
+      "The transition and the City's later withdrawal are the same documented event",
+    ],
+    researchInquiryIds: [],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"],
+  },
 ] satisfies ClaimRecord[];
 
 export const kcTownHallFundingInquiries = [
@@ -434,6 +549,19 @@ export const kcTownHallFundingCorrections = [
       "The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019; KC Town Hall later withdrew and the Council reappropriated the unused funds in 2024.",
     reason:
       "The authenticated resolution, appropriation ordinance, and later reappropriation ordinance recover the complete public decision and disposition chain.",
+    decidedAt: "2026-07-14",
+    affectedSurfaces: ["/work", "/work/kc-town-hall", "knowledge-bank"],
+    status: "active",
+  },
+  {
+    id: "COR-KCTH-PROJECT-TRANSITION-CONTEXT-2026",
+    claimId: transitionClaimId,
+    previousText:
+      "Historical project. The 2019 appropriation was later reappropriated after KC Town Hall withdrew.",
+    replacementText:
+      "Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record states that KC Town Hall withdrew and the full 2019 appropriation remained unused and was reappropriated.",
+    reason:
+      "The earlier wording preserved the municipal funding endpoint but omitted Jamie's approved first-hand account of the project's transition.",
     decidedAt: "2026-07-14",
     affectedSurfaces: ["/work", "/work/kc-town-hall", "knowledge-bank"],
     status: "active",

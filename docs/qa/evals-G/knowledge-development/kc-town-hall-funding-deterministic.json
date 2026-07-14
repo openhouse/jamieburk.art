@@ -1,8 +1,8 @@
 {
   "suite_id": "knowledge-development-lifecycle",
   "suite_version": 1,
-  "label": "kc-town-hall-funding-deterministic-final",
-  "run_at": "2026-07-14T19:51:57.912Z",
+  "label": "kc-town-hall-transition-deterministic",
+  "run_at": "2026-07-14T20:53:24.766Z",
   "candidate_files": [
     ".agents/evals/knowledge-development.json",
     "scripts/run-knowledge-development.mjs",
@@ -11,6 +11,7 @@
     "apps/www/src/data/knowledge-bank/campaign-press.ts",
     "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
     "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "apps/www/src/data/knowledge-bank/schema.ts",
     "apps/www/src/data/knowledge-bank/records.ts",
     "apps/www/src/data/knowledge-bank/public-registry.json",
     "apps/www/src/data/proofs.ts",
@@ -18,6 +19,7 @@
     "apps/www/src/content/work/fair-rent-nyc.mdx",
     "apps/www/src/content/work/kc-town-hall.mdx",
     "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/proofs.md",
     "docs/knowledge-bank/sources.md",
     "docs/knowledge-bank/anti-claims.md",
     "docs/knowledge-bank/approval-register.md",
@@ -31,22 +33,22 @@
     "scripts/tests/knowledge-development-evals.test.mjs",
     "docs/knowledge-bank/promotion-slate.md"
   ],
-  "candidate_fingerprint": "5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34",
+  "candidate_fingerprint": "0e50340382c93104ff84d53ae136716f403d224e2af202cabf8d0874f4b96eb7",
   "judgment_fingerprint": null,
   "judgment_fingerprint_missing": false,
   "judgment_fingerprint_mismatch": false,
   "metrics": {
-    "captures": 27,
-    "routedCaptures": 27,
-    "sources": 71,
-    "developmentSources": 64,
-    "observations": 83,
-    "developmentClaims": 18,
+    "captures": 28,
+    "routedCaptures": 28,
+    "sources": 72,
+    "developmentSources": 65,
+    "observations": 84,
+    "developmentClaims": 19,
     "researchTasks": 10,
     "campaignPressPlacements": 45,
     "campaignPressUniqueArticles": 44,
-    "kcTownHallFundingSources": 4,
-    "kcTownHallFundingClaims": 2,
+    "kcTownHallFundingSources": 5,
+    "kcTownHallFundingClaims": 3,
     "validationErrors": 0
   },
   "weighted_score": 0.89,
@@ -72,7 +74,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "27/27 captures integrated, tasked, or closed"
+        "28/28 captures integrated, tasked, or closed"
       ],
       "findings": [],
       "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
@@ -88,7 +90,7 @@
       "pass": true,
       "evidence": [
         "20/20 URL captures routed",
-        "64 normalized development sources"
+        "65 normalized development sources"
       ],
       "findings": [],
       "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
@@ -103,8 +105,8 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "64/64 development sources decomposed",
-        "83 atomic observations"
+        "65/65 development sources decomposed",
+        "84 atomic observations"
       ],
       "findings": [],
       "recommended_next_move": "Decompose each integrated source into located, limited observations.",
@@ -119,7 +121,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "25 claims declare three independent states"
+        "26 claims declare three independent states"
       ],
       "findings": [],
       "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
@@ -134,7 +136,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "18 development claims",
+        "19 development claims",
         "0 promoted-lineage violations",
         "0 projection violations"
       ],

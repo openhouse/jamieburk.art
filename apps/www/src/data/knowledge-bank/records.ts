@@ -807,6 +807,11 @@ const knowledgeBankInput = {
             "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
           ],
         },
+        {
+          id: "mission-aligned-transition",
+          claimId: "CLM-KCTH-MISSION-ALIGNED-TRANSITION",
+          projection: "case-study",
+        },
       ],
     },
   ],

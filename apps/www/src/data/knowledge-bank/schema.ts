@@ -25,6 +25,7 @@ export const sourceKindSchema = z.enum([
   "promotional-graphic",
   "published-article",
   "project-archive",
+  "firsthand-statement",
   "participant-photograph",
   "photo-metadata",
   "research-run"
