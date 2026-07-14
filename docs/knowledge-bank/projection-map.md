@@ -74,6 +74,15 @@ Current selected citation projections now include:
 - KC Town Hall's unanimously recommended and Council-allocated $490,539
   proposal.
 
+The personal-account archival pass adds reserve depth without adding visible
+site copy. Music Hackathon's 2015 public role and product-description record
+strengthens the existing WOW List proof basis. NPR Music's joint Horse Lords
+video credit remains available for a future creative-technology or media
+audience. KCUR's 8th Street Tunnel reporting strengthens the held participatory
+practice inquiry. The 434-record personal-account census and 26-record inbound
+search floor are provenance and discovery infrastructure, not a public route,
+dashboard, or engagement claim.
+
 Technical Operations also selects the protected-source-backed Commercial Rent
 Stabilization operating-backbone claim. It names the usable outputs without
 publishing raw coalition records or rendering a public citation to a protected

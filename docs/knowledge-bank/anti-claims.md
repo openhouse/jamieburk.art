@@ -16,6 +16,26 @@ Do not treat an authenticated visible social timeline as a complete platform
 export, infer post authorship from a shared account, or publish authentication,
 session, private-message, recovery, or analytics data.
 
+## Personal Social Archive
+
+Do not call the 434-record `@urbanhermit` current-profile census every post
+Jamie ever made, a platform export, or a deletion history. The recovered
+population contains 353 Jamie-authored records and 81 reposts; do not assign
+reposted statements or the reactions displayed on reposts to Jamie.
+
+Do not publish the raw personal timeline, full post text, exact dates, handles,
+status IDs or URLs, media, relationship details, historical contact or location
+details, or raw reaction metrics as a professional dataset.
+
+Do not call 26 recoverable inbound-search records complete historical
+engagement, 26 unique people, endorsements, audience reach, or independently
+audited impact. X search is a historical floor, and project-account thanks are
+not independent validation.
+
+Do not treat 321 posted short URLs as 321 corroborated claims. Sixty-one
+resolved during this pass; the other 260 are unresolved research debt, not proof
+that their destinations never existed.
+
 ## HJE
 
 Do not say Jamie caused 2x revenue growth.

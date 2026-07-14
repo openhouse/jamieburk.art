@@ -408,6 +408,81 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## urbanhermit-current-population-accounting - Current-profile accounting
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public-source research run
+**Public wording:** All 434 records in the July 2026 `@urbanhermit` live-profile control were recovered: 338 authored standalone posts, 15 authored replies, and 81 reposts.
+**Detailed public-safe wording:** A full Posts and Replies union closed exactly against the current profile count while preserving authorship relationships and excluding two third-party conversation-context records.
+**Where to project:** Knowledge-bank provenance only.
+**Why it matters:** Establishes a closed research population from which sources can be discovered without turning the personal timeline into a portfolio surface.
+**Guardrail:** Complete means the current live-profile control is reconciled; it is not a platform export, deletion history, or every post Jamie ever made.
+**Do not say:** Jamie authored all 434 records; no prior post was deleted; the public ledger reconstructs the personal timeline.
+**Protected boundaries:** Full text, exact dates, handles, status IDs and URLs, media, relationship details, historic contact or location details, raw reactions, and browser state stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## urbanhermit-source-routing - Personal-account source routing
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public-source research run
+**Public wording:** The current surviving population contains 345 external-link occurrences across 321 unique short URLs; 61 resolved during this pass and 260 remain bounded research debt.
+**Detailed public-safe wording:** The corpus routes source trails across civic, cultural, technical, community, and public-history work, but only individually close-read professional sources are promoted.
+**Where to project:** Knowledge-bank research and future editorial briefs.
+**Why it matters:** Preserves discoverability without treating link volume as reach or impact.
+**Guardrail:** A posted or reposted link is a lead, not automatic corroboration, authorship, endorsement, readership, conversion, or impact.
+**Do not say:** All 321 links were recovered; every URL supports a claim; a failed redirect proves the destination never existed.
+**Protected boundaries:** The complete personal link graph and ordinary-life destinations stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## urbanhermit-practice-threads - Developing practice throughline
+
+**Status:** Hold
+**Support level:** Careful
+**Evidence class:** Selected public personal records / public reporting
+**Public wording:** Selected dated records suggest continuity among participatory place work, public interfaces, community documentation, cultural safety, and preservation-oriented technical practice.
+**Detailed public-safe wording:** The current corpus supplies source leads across those practices, while KCUR adds independent evidence for the participatory public-history thread.
+**Where to project:** Research only until broader cross-project corroboration and editorial need justify public composition.
+**Why it matters:** Develops a useful longitudinal hypothesis without flattening distinct projects, collaborators, and communities.
+**Guardrail:** Theme frequencies describe records, not labor, professional priority, personality, reach, causality, or impact.
+**Do not say:** Every personal post is professional evidence; every project follows one method; the timeline should become a portfolio route.
+**Protected boundaries:** Ordinary life, relationships, health, family, location, and other personal material stay outside professional projection.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## horse-lords-truthers-video - Horse Lords video collaboration
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Independent public reporting / contemporaneous public post
+**Public wording:** Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 `Truthers` video, which NPR Music featured.
+**Detailed public-safe wording:** NPR credits both makers and reports the band's description of how simple materials, repetition, variation, text, black and white, and color mirror the music.
+**Where to project:** Reserve for creative-technology, media, or cultural-production contexts.
+**Why it matters:** Adds independent evidence of collaborative visual systems work beyond the current technical-operations composition.
+**Guardrail:** Credit Jamie and M.C. Schmidt together.
+**Do not say:** Jamie alone made the video; NPR commissioned it; the feature proves audience reach or commercial success.
+**Protected boundaries:** Do not infer the collaborators' division of labor beyond the sources.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## music-hackathon-wowlist-role - Music Hackathon and WOW List role
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public institutional social post
+**Public wording:** In 2015, Music Hackathon publicly identified Jamie as a co-organizer and described WOW List as a new event-sharing service.
+**Detailed public-safe wording:** The contemporaneous institutional post supplies bounded external role attribution and a concise third-party product description.
+**Where to project:** WOW List proof basis and reserve career depth.
+**Why it matters:** Strengthens the role and product record without relying only on Jamie's resume or a project-controlled account.
+**Guardrail:** The post does not establish the complete organizing group, platform architecture, user or event totals, geographic reach, or sole authorship.
+**Do not say:** Jamie solely founded Music Hackathon; the post verifies every WOW List scale claim; Jamie alone built WOW List.
+**Protected boundaries:** Do not infer private organizing or collaborator details.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

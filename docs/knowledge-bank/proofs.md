@@ -25,6 +25,8 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- Music Hackathon's public account identified Jamie as a co-organizer in 2015
+  and described WOW List as a new event-sharing service.
 - A 2014 WOW List public post connects the project to Jamie, Richard, and Sunday
   Dinner; a 2015 post documents one community-created product tutorial.
 - All six replies in the complete surviving `@wowlist` corpus functioned as
@@ -33,6 +35,17 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process; after the CCED board's unanimous recommendation, the Council allocated $490,539 and authorized funding-agreement negotiations.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
+
+## Reserve Depth
+
+- Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 `Truthers`
+  video, which NPR Music featured. Preserve joint credit and do not infer an NPR
+  commission, division of labor, audience reach, or commercial outcome.
+- KCUR's reporting on Jamie's 2006 8th Street Tunnel program strengthens a held
+  longitudinal inquiry into participatory place, public history, and access.
+- A complete accounting of the current `@urbanhermit` live profile is retained
+  as aggregate-only archival provenance, not as a public portfolio route or
+  traction claim.
 
 ## Projection Rule
 

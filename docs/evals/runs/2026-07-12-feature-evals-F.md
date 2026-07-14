@@ -217,3 +217,34 @@ two proof-coverage records, a public-safe accession note, and selected Fair Rent
 NYC, WOW List, and Technical Operations projections. Negative tests reject
 complete-export inflation, session-material leakage, sole-author attribution,
 and official-endorsement inflation.
+
+## Personal social full-population recursive pass
+
+A later archival-production pass added a 20-point hard gate for Jamie's public
+personal `@urbanhermit` account. Authenticated full-scroll recovery closed the
+current 434-post profile control as 338 authored standalone posts, 15 authored
+replies, and 81 reposts. A separate inbound-search floor recovered 26 public
+records from 17 accounts while preserving role attribution, mission context,
+and general conversation as different dispositions.
+
+The public repository retains aggregate-only 434-row and 26-row ledgers. Full
+text, exact dates, handles, status IDs and URLs, media, relationship details,
+historic contact or location details, and raw reactions remain outside the
+repository. The gate recomputes all relationship, year, theme, link,
+stakeholder, and interaction-context totals and deliberately fails on dropped
+records, privacy leakage, stakeholder inflation, erased general conversation,
+repost-reaction conflation, or silent site projection.
+
+The source-routing pass close-read and promoted three bounded records: NPR
+Music's joint maker credit for the Horse Lords `Truthers` video, Music
+Hackathon's identification of Jamie as a co-organizer and WOW List as an
+event-sharing service, and KCUR's reporting on the 8th Street Tunnel public
+history program. The first two remain reserve depth or proof-basis support;
+KCUR strengthens a held longitudinal inquiry. No new visible site copy was
+selected.
+
+The citation validator then caught and repaired two integration defects:
+missing project-to-claim backlinks and accidental use of an unreviewed campaign
+press source as claim evidence. After repair, the complete recursive check
+returned **100/100** with all automated hard gates passing. The four manual
+gates remain explicit under the protocol's stopping rule.

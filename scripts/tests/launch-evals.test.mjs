@@ -13,6 +13,7 @@ import {
   evaluateKnowledgeLifecycle,
   evaluateNycArtCFullPopulationArchive,
   evaluateProjectSocialArchiveProduction,
+  evaluateUrbanHermitFullPopulationArchive,
   evaluateWowlistFullPopulationArchive,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
@@ -832,4 +833,90 @@ test("KC Town Hall full-population archive rejects full post text and private br
   assert.ok(
     failures.some((failure) => failure.includes("authentication, session, or private-path"))
   );
+});
+
+const urbanHermitFullPopulationFixture = {
+  populationLedger: readRepoFile("docs/knowledge-bank/data/urbanhermit-public-post-ledger.json"),
+  engagementLedger: readRepoFile("docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json"),
+  corpusModel: readRepoFile("apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts"),
+  framework: readRepoFile("apps/www/src/data/knowledge-bank/framework.ts"),
+  proofs: readRepoFile("apps/www/src/data/proofs.ts"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx"),
+  archiveDoc: readRepoFile("docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md"),
+  antiClaims: readRepoFile("docs/knowledge-bank/anti-claims.md")
+};
+
+test("@urbanhermit full-population archive passes reconciliation and privacy boundaries", () => {
+  assert.deepEqual(
+    evaluateUrbanHermitFullPopulationArchive(urbanHermitFullPopulationFixture),
+    []
+  );
+});
+
+test("@urbanhermit full-population archive rejects a silently dropped current record", () => {
+  const population = JSON.parse(urbanHermitFullPopulationFixture.populationLedger);
+  population.items.pop();
+  const failures = evaluateUrbanHermitFullPopulationArchive({
+    ...urbanHermitFullPopulationFixture,
+    populationLedger: JSON.stringify(population)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("434 aggregate-only rows")));
+  assert.ok(failures.some((failure) => failure.includes("count must recompute")));
+});
+
+test("@urbanhermit full-population archive rejects raw timeline and browser leakage", () => {
+  const population = JSON.parse(urbanHermitFullPopulationFixture.populationLedger);
+  population.items[0].fullText = "Copied personal status text";
+  population.items[0].statusUrl = "https://x.com/urbanhermit/status/example";
+  population.items[0].likes = 10;
+  const failures = evaluateUrbanHermitFullPopulationArchive({
+    ...urbanHermitFullPopulationFixture,
+    populationLedger: JSON.stringify(population),
+    archiveDoc: `${urbanHermitFullPopulationFixture.archiveDoc}\nauth_token=not-a-real-secret\n/Users/example/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must not expose post text")));
+  assert.ok(
+    failures.some((failure) => failure.includes("authentication, session, or private-path"))
+  );
+});
+
+test("@urbanhermit full-population archive rejects stakeholder inflation and collapsed context", () => {
+  const engagement = JSON.parse(urbanHermitFullPopulationFixture.engagementLedger);
+  engagement.records[0].stakeholderGroup = "professional-institution";
+  engagement.records.find(
+    (record) => record.interactionContext === "general-public-conversation"
+  ).interactionContext = "role-or-project-attribution";
+  const failures = evaluateUrbanHermitFullPopulationArchive({
+    ...urbanHermitFullPopulationFixture,
+    engagementLedger: JSON.stringify(engagement)
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("professional-institution count must recompute")));
+  assert.ok(failures.some((failure) => failure.includes("general-public-conversation count must recompute")));
+});
+
+test("@urbanhermit full-population archive rejects denominator and repost-reaction boundary loss", () => {
+  const failures = evaluateUrbanHermitFullPopulationArchive({
+    ...urbanHermitFullPopulationFixture,
+    corpusModel: urbanHermitFullPopulationFixture.corpusModel
+      .replace("not every post Jamie ever made", "every post Jamie ever made")
+      .replace("repost reactions belong to original source posts", "repost reactions are account traction"),
+    antiClaims: urbanHermitFullPopulationFixture.antiClaims
+      .replace("unresolved research debt", "dead links")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("not every post Jamie ever made")));
+  assert.ok(failures.some((failure) => failure.includes("repost reactions belong to original source posts")));
+  assert.ok(failures.some((failure) => failure.includes("unresolved research debt")));
+});
+
+test("@urbanhermit full-population archive rejects silent Technical Operations projection", () => {
+  const failures = evaluateUrbanHermitFullPopulationArchive({
+    ...urbanHermitFullPopulationFixture,
+    technicalOperations: `${urbanHermitFullPopulationFixture.technicalOperations}\nCLM-HORSE-LORDS-TRUTHERS-VIDEO`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
 });

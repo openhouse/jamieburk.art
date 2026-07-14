@@ -44,6 +44,7 @@ The canonical positioning sentence is:
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
 | Project social archive production | 18 | Yes | Verified account identities, authenticated recovery floors, direct engagement definitions, collective authorship boundaries, and selected public projections remain linked and privacy-safe. |
 | CallNYC full-population archive | 20 | Yes | All 110 observed profile-count slots reconcile to 107 item-level recoveries and three explicit unresolved slots; post types, stakeholder patterns, issue links, external URLs, claims, and boundaries recompute from the ledger. |
+| Personal social full-population archive | 20 | Yes | All 434 records in the current `@urbanhermit` live-profile control reconcile as 338 authored posts, 15 authored replies, and 81 reposts; aggregate years, themes, links, inbound stakeholder groups, and interaction contexts recompute without exposing the personal timeline or misassigning repost reactions. |
 | WOWList full-population archive | 20 | Yes | All 38 current-profile items reconcile at item level; account posts, support replies, reposts, themes, links, claims, and collective-authorship boundaries recompute from the ledger. |
 | KC Town Hall full-population archive | 20 | Yes | All 183 observed profile-count slots reconcile to 181 item-level recoveries and two explicit unresolved slots; account relationships, themes, links, reactions, stakeholder patterns, shared authorship, later stewardship, and selected public projections recompute from the ledger. |
 
@@ -99,3 +100,8 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   recomputation, converting Council tags into responses, converting issue rows
   into unique people or outcomes, promoting unreconstructed historical
   metrics, or treating announced API behavior as independently recovered.
+- Do not satisfy personal-account completeness by calling the current 434-post
+  control every post Jamie ever made, publishing raw personal records, treating
+  search as a platform export, promoting ordinary conversation as professional
+  evidence, assigning repost statements or reactions to Jamie, or converting
+  link and mention counts into reach, endorsement, causality, or impact.

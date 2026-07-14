@@ -1815,6 +1815,314 @@ export function evaluateNycArtCFullPopulationArchive({
   return missing;
 }
 
+export function evaluateUrbanHermitFullPopulationArchive({
+  populationLedger,
+  engagementLedger,
+  corpusModel,
+  framework,
+  proofs,
+  technicalOperations,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let population;
+  let engagement;
+  try {
+    population = JSON.parse(populationLedger);
+  } catch {
+    missing.push("@urbanhermit public-post ledger is not valid JSON.");
+    return missing;
+  }
+  try {
+    engagement = JSON.parse(engagementLedger);
+  } catch {
+    missing.push("@urbanhermit public-engagement ledger is not valid JSON.");
+    return missing;
+  }
+
+  const audit = population.populationAudit ?? {};
+  const aggregate = population.aggregateFindings ?? {};
+  const items = population.items ?? [];
+  const relationshipCount = (relationship) =>
+    items.filter((item) => item.relationship === relationship).length;
+  const yearCount = (year) => items.filter((item) => item.year === year).length;
+  const themeCount = (theme) =>
+    items.filter((item) => item.primaryTheme === theme).length;
+
+  expect(audit.profileCountObserved === 434, "@urbanhermit current profile control must remain 434.");
+  expect(audit.postsSurfaceRecovered === 421, "@urbanhermit Posts-surface recovery must remain 421.");
+  expect(audit.additionalAuthoredRepliesRecovered === 13, "@urbanhermit additional Replies-surface recovery must remain 13.");
+  expect(audit.thirdPartyConversationContextExcluded === 2, "@urbanhermit excluded conversation-context count must remain two.");
+  expect(audit.currentProfileRecordsRecovered === 434, "@urbanhermit current-profile recovery must remain 434.");
+  expect(audit.authoredStandalonePosts === 338, "@urbanhermit authored standalone-post count must remain 338.");
+  expect(audit.authoredReplies === 15, "@urbanhermit authored-reply count must remain 15.");
+  expect(audit.reposts === 81, "@urbanhermit repost count must remain 81.");
+  expect(audit.liveProfileControlClosed === true, "@urbanhermit current live-profile control must remain closed.");
+  expect(
+    audit.postsSurfaceRecovered + audit.additionalAuthoredRepliesRecovered === audit.currentProfileRecordsRecovered,
+    "@urbanhermit Posts and additional Replies recoveries must reconcile to the current profile control."
+  );
+  expect(
+    audit.authoredStandalonePosts + audit.authoredReplies + audit.reposts === audit.currentProfileRecordsRecovered,
+    "@urbanhermit relationship counts must reconcile to the current profile control."
+  );
+
+  expect(items.length === 434, "@urbanhermit public ledger must retain 434 aggregate-only rows.");
+  expect(relationshipCount("authored-post") === 338, "@urbanhermit ledger must contain 338 authored posts.");
+  expect(relationshipCount("authored-reply") === 15, "@urbanhermit ledger must contain 15 authored replies.");
+  expect(relationshipCount("repost") === 81, "@urbanhermit ledger must contain 81 reposts.");
+  expect(new Set(items.map((item) => item.ledgerId)).size === items.length, "@urbanhermit ledger IDs must be unique.");
+  expect(
+    items.every(
+      (item) =>
+        item.accountingStatus === "recovered-current-profile-record" &&
+        item.publicDetailStatus === "aggregate-only" &&
+        item.hasExternalLink === (item.externalLinkCount > 0)
+    ),
+    "Every @urbanhermit row must remain aggregate-only and reconcile link presence to link count."
+  );
+
+  const forbiddenItemKeys = [
+    "text",
+    "fullText",
+    "rawText",
+    "contentSummary",
+    "statusId",
+    "statusUrl",
+    "authorHandle",
+    "publishedAt",
+    "exactDate",
+    "media",
+    "metrics",
+    "likes",
+    "reposts",
+    "replies",
+    "views"
+  ];
+  expect(
+    items.every((item) => forbiddenItemKeys.every((key) => !(key in item))),
+    "@urbanhermit public ledger must not expose post text, exact identifiers, dates, media, handles, or raw reactions."
+  );
+
+  const expectedYears = {
+    2008: 1,
+    2009: 49,
+    2010: 6,
+    2011: 4,
+    2012: 12,
+    2013: 58,
+    2014: 114,
+    2015: 18,
+    2016: 37,
+    2017: 67,
+    2018: 25,
+    2019: 31,
+    2020: 8,
+    2021: 1,
+    2022: 2,
+    2023: 1
+  };
+  for (const [year, count] of Object.entries(expectedYears)) {
+    expect(yearCount(Number(year)) === count, `@urbanhermit ${year} count must recompute to ${count}.`);
+    expect(aggregate.byYear?.[year] === count, `@urbanhermit stored ${year} count must remain ${count}.`);
+  }
+
+  const expectedThemes = {
+    "everyday-life-and-observation": 204,
+    "civic-and-public-interest-work": 78,
+    "culture-art-and-performance": 52,
+    "community-and-hospitality": 37,
+    "waterways-place-and-ecology": 20,
+    "technical-and-digital-practice": 19,
+    "care-memory-and-relationships": 14,
+    "media-only-or-text-unavailable": 10
+  };
+  for (const [theme, count] of Object.entries(expectedThemes)) {
+    expect(themeCount(theme) === count, `@urbanhermit ${theme} count must recompute to ${count}.`);
+    expect(aggregate.byPrimaryTheme?.[theme] === count, `@urbanhermit stored ${theme} count must remain ${count}.`);
+  }
+  expect(
+    Object.values(expectedThemes).reduce((sum, count) => sum + count, 0) === items.length,
+    "@urbanhermit theme dispositions must reconcile to all 434 rows."
+  );
+
+  const linkOccurrences = items.reduce((sum, item) => sum + item.externalLinkCount, 0);
+  const linkBearingRecords = items.filter((item) => item.hasExternalLink).length;
+  expect(linkOccurrences === 345, "@urbanhermit external-link occurrences must recompute to 345.");
+  expect(linkBearingRecords === 277, "@urbanhermit link-bearing records must recompute to 277.");
+  expect(aggregate.externalLinkOccurrences === linkOccurrences, "@urbanhermit stored link occurrences must match the ledger.");
+  expect(aggregate.recordsWithExternalLinks === linkBearingRecords, "@urbanhermit stored link-bearing count must match the ledger.");
+  expect(aggregate.uniqueExternalShortUrls === 321, "@urbanhermit unique short-URL count must remain 321.");
+  expect(aggregate.shortUrlsResolvedToLiveDestinations === 61, "@urbanhermit resolved short-URL count must remain 61.");
+  expect(aggregate.shortUrlsNotResolvedInThisPass === 260, "@urbanhermit unresolved short-URL count must remain 260.");
+  expect(
+    aggregate.shortUrlsResolvedToLiveDestinations + aggregate.shortUrlsNotResolvedInThisPass === aggregate.uniqueExternalShortUrls,
+    "@urbanhermit resolved and unresolved short URLs must reconcile to 321 unique URLs."
+  );
+
+  const searchAudit = engagement.searchAudit ?? {};
+  const engagementAggregate = engagement.aggregateFindings ?? {};
+  const records = engagement.records ?? [];
+  const engagementCount = (key, value) => records.filter((record) => record[key] === value).length;
+  expect(searchAudit.renderedRecordsRecovered === 26, "@urbanhermit inbound-search recovery must remain 26.");
+  expect(searchAudit.distinctPublicAccounts === 17, "@urbanhermit inbound-search distinct-account floor must remain 17.");
+  expect(searchAudit.oldestRecoveredYear === 2014 && searchAudit.newestRecoveredYear === 2023, "@urbanhermit inbound-search span must remain 2014 through 2023.");
+  expect(searchAudit.searchIsHistoricalFloorNotPlatformExport === true, "@urbanhermit inbound search must remain labeled as a historical floor.");
+  expect(records.length === 26, "@urbanhermit engagement ledger must retain 26 aggregate-only rows.");
+  expect(new Set(records.map((record) => record.ledgerId)).size === records.length, "@urbanhermit engagement ledger IDs must be unique.");
+  expect(
+    records.every(
+      (record) =>
+        record.evidenceDisposition === "explicit-handle-visible" &&
+        record.publicDetailStatus === "aggregate-only" &&
+        forbiddenItemKeys.every((key) => !(key in record))
+    ),
+    "@urbanhermit engagement rows must remain aggregate-only and omit personal handles, text, exact identifiers, dates, and reactions."
+  );
+
+  const expectedStakeholders = {
+    "community-peer-or-personal-context": 7,
+    "professional-institution": 1,
+    "cultural-or-technical-collaborator": 7,
+    "journalist-designer-or-civic-peer": 5,
+    "project-account": 6
+  };
+  for (const [group, count] of Object.entries(expectedStakeholders)) {
+    expect(engagementCount("stakeholderGroup", group) === count, `@urbanhermit ${group} count must recompute to ${count}.`);
+    expect(engagementAggregate.byStakeholderGroup?.[group] === count, `@urbanhermit stored ${group} count must remain ${count}.`);
+  }
+
+  const expectedEngagementThemes = {
+    "community-and-relationship-context": 6,
+    "public-digital-community-infrastructure": 1,
+    "creative-technology-and-media": 4,
+    "public-history-and-neighborhood-operations": 4,
+    "cultural-history": 1,
+    "civic-design-and-public-interfaces": 5,
+    "civic-policy-and-cultural-space": 5
+  };
+  for (const [theme, count] of Object.entries(expectedEngagementThemes)) {
+    expect(engagementCount("primaryTheme", theme) === count, `@urbanhermit inbound ${theme} count must recompute to ${count}.`);
+    expect(engagementAggregate.byPrimaryTheme?.[theme] === count, `@urbanhermit stored inbound ${theme} count must remain ${count}.`);
+  }
+
+  const expectedContexts = {
+    "general-public-conversation": 8,
+    "role-or-project-attribution": 11,
+    "mission-related-thread": 7
+  };
+  for (const [context, count] of Object.entries(expectedContexts)) {
+    expect(engagementCount("interactionContext", context) === count, `@urbanhermit ${context} count must recompute to ${count}.`);
+    expect(engagementAggregate.byInteractionContext?.[context] === count, `@urbanhermit stored ${context} count must remain ${count}.`);
+  }
+  expect(records.filter((record) => record.missionRelevantContext).length === 18, "@urbanhermit mission-relevant context count must recompute to 18.");
+  expect(records.filter((record) => !record.missionRelevantContext).length === 8, "@urbanhermit general-conversation count must recompute to eight.");
+  expect(engagementAggregate.missionRelevantContextRecords === 18, "@urbanhermit stored mission-relevant count must remain 18.");
+  expect(engagementAggregate.generalPublicConversationRecords === 8, "@urbanhermit stored general-conversation count must remain eight.");
+
+  requireFragments("@urbanhermit corpus model", corpusModel, [
+    "LEAD-URBANHERMIT-FULL-POPULATION-CORPUS-2026",
+    "SRC-X-URBANHERMIT-FULL-POPULATION-AUDIT-2026",
+    "SRC-X-URBANHERMIT-INBOUND-ENGAGEMENT-AUDIT-2026",
+    "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015",
+    "SRC-KCUR-8TH-STREET-TUNNEL-2016",
+    "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+    "CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING",
+    "CLM-URBANHERMIT-SOURCE-ROUTING",
+    "CLM-URBANHERMIT-PRACTICE-THREADS",
+    "CLM-HORSE-LORDS-TRUTHERS-VIDEO",
+    "CLM-MUSIC-HACKATHON-WOWLIST-ROLE",
+    "INQ-URBANHERMIT-FULL-POPULATION-2026",
+    "421 unique Posts-surface records plus 13 additional Jamie-authored replies",
+    "338 authored standalone posts, 15 authored replies, and 81 reposts",
+    "345 external-link occurrences across 321 unique short URLs",
+    "Sixty-one short URLs resolved",
+    "Another 260 short URLs remain",
+    "26 recoverable public inbound-search records from 17 accounts",
+    "eleven role or project attributions, seven mission-related thread records, and eight general public-conversation records",
+    "not every post Jamie ever made",
+    "repost reactions belong to original source posts",
+    "does not improve the current technical-operations hiring argument"
+  ]);
+  requireFragments("@urbanhermit framework integration", framework, [
+    "urbanHermitSocialCorpusIntake",
+    "urbanHermitSocialCorpusSources",
+    "urbanHermitSocialCorpusClaims",
+    "urbanHermitSocialCorpusInquiries",
+    "urbanHermitSocialCorpusPublicationDecisions",
+    "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015",
+    "SRC-KCUR-8TH-STREET-TUNNEL-2016"
+  ]);
+  requireFragments("WOW List proof basis", proofs, [
+    "2015 Music Hackathon post identifying Jamie as a co-organizer",
+    "describing WOW List as an event-sharing service"
+  ]);
+  requireFragments("@urbanhermit full-population documentation", archiveDoc, [
+    "100 percent accounting of the **current live profile control**",
+    "338 authored standalone posts, 15 authored replies, and 81 reposts",
+    "345 external-link occurrences across 321 unique short",
+    "61 resolved to live destinations",
+    "260 did not",
+    "26 records from 17 accounts",
+    "Role or project attribution",
+    "reactions displayed on the 81 reposts belong to the original source posts",
+    "No new visible portfolio copy is selected"
+  ]);
+  requireFragments("@urbanhermit anti-claims", antiClaims, [
+    "every post Jamie ever made",
+    "353 Jamie-authored records and 81 reposts",
+    "reactions displayed on reposts",
+    "raw personal timeline",
+    "26 recoverable inbound-search records",
+    "Sixty-one resolved during this pass",
+    "unresolved research debt"
+  ]);
+  expect(
+    !technicalOperations.includes("CLM-HORSE-LORDS-TRUTHERS-VIDEO") &&
+      !technicalOperations.includes("CLM-URBANHERMIT-PRACTICE-THREADS"),
+    "Reserve personal-account findings must not silently appear on Technical Operations."
+  );
+
+  const publicBundle = [
+    populationLedger,
+    engagementLedger,
+    corpusModel,
+    framework,
+    proofs,
+    technicalOperations,
+    archiveDoc,
+    antiClaims
+  ].join("\n");
+  const privateMarkers = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i,
+    /\/Users\//,
+    /\/Volumes\//
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public @urbanhermit corpus contains authentication, session, or private-path material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -1874,6 +2182,18 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/data/kc-town-hall-public-post-ledger.json"
   );
+  const urbanHermitSocialCorpus = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/urbanhermit-social-corpus.ts"
+  );
+  const urbanHermitPostLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/urbanhermit-public-post-ledger.json"
+  );
+  const urbanHermitEngagementLedger = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json"
+  );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const campaignPressDoc = readOptional(
     repoRoot,
@@ -1914,6 +2234,10 @@ export function runLaunchEvals(repoRoot) {
   const kcTownHallFullPopulationDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-full-population-social-corpus.md"
+  );
+  const urbanHermitFullPopulationDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-urbanhermit-full-population-social-corpus.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -2333,6 +2657,32 @@ export function runLaunchEvals(repoRoot) {
         "Item-level recomputation verifies post types, recognition posts, Council-member handles, issue pages, categories, and outbound URLs.",
         "Selected public claims distinguish intended reach from reciprocal engagement and issue rows from people or outcomes.",
         "Independent NYC School of Data recognition is selected while API announcements and unverifiable historical metrics remain reserve or research debt."
+      ]
+    })
+  );
+
+  const urbanHermitFullPopulationMissing = evaluateUrbanHermitFullPopulationArchive({
+    populationLedger: urbanHermitPostLedger,
+    engagementLedger: urbanHermitEngagementLedger,
+    corpusModel: urbanHermitSocialCorpus,
+    framework,
+    proofs,
+    technicalOperations,
+    archiveDoc: urbanHermitFullPopulationDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "urbanhermit-full-population-archive",
+      label: "Personal social archive reconciles the current population while protecting personal context",
+      weight: 20,
+      hardGate: true,
+      missing: urbanHermitFullPopulationMissing,
+      evidence: [
+        "All 434 current live-profile records are recovered as 338 authored posts, 15 authored replies, and 81 reposts.",
+        "Aggregate recomputation verifies every year, theme, relationship, link, stakeholder, and interaction-context total.",
+        "The 26-record inbound floor remains distinct from endorsement, reach, causality, or complete historical engagement.",
+        "NPR, Music Hackathon, and KCUR sources are promoted selectively while the personal timeline and raw reactions remain protected."
       ]
     })
   );

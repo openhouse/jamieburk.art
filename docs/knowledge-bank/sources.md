@@ -27,11 +27,13 @@ Approved public artifact examples for this launch pass include:
 - Public CallNYC-related posts by five sitting NYC Council member accounts in
   2016, including an archived post and resolvable retweet object.
 - Authenticated read-only public-profile inventories for `@CallNYCApp`,
-  `@NYCArtC`, and `@wowlist`. The CallNYC full-population audit dispositions
+  `@NYCArtC`, `@wowlist`, and Jamie's personal `@urbanhermit` account. The
+  CallNYC full-population audit dispositions
   107 recovered items and three unresolved count slots; the NYC Artist
   Coalition audit dispositions 3,367 recovered items and 1,757 unresolved
   slots; the WOWList audit recovers all 38 items in its current live-profile
-  control. None is presented as a complete platform export.
+  control; and the personal-account audit recovers all 434 records in its
+  current live-profile control. None is presented as a complete platform export.
 - A public 107-record CallNYC status and URL ledger preserving every
   recoverable public item from the 110-item observed population.
 - Noel Hidalgo's March 2016 NYC School of Data recap, which featured CallNYC
@@ -46,6 +48,16 @@ Approved public artifact examples for this launch pass include:
 - A public 38-record WOWList status and URL ledger, six support and onboarding
   replies, and close-read source context from Grasstronaut, Good Times, KQED,
   and Meow Wolf.
+- A public aggregate-only 434-record `@urbanhermit` current-profile ledger and
+  26-record inbound-search ledger. Full personal post text, exact dates,
+  handles, status identifiers and URLs, media, relationship details, and raw
+  reactions remain protected.
+- Music Hackathon's 2015 public post identifying Jamie as a co-organizer and
+  describing WOW List as an event-sharing service.
+- NPR Music's 2016 joint maker credit for Jamie Burkart and M.C. Schmidt on
+  Horse Lords' official `Truthers` video.
+- KCUR's 2016 reporting on Jamie's participatory public-history program around
+  Kansas City's 8th Street Tunnel.
 - Daisy Prince's 2018 Document Journal account of the Cabaret Law repeal and
   Office of Nightlife movement, which names and pictures Jamie and Olympia Kazi
   with NYC Artist Coalition.
@@ -108,6 +120,12 @@ The WOWList full-population method, mission-relevant destinations, findings,
 and boundaries are documented in
 `intake/2026-07-14-wowlist-full-population-social-corpus.md`; its 38 item-level
 dispositions are in `data/wowlist-public-post-ledger.json`.
+The personal `@urbanhermit` current-population method, selected source close
+reads, engagement floor, findings, and privacy boundaries are documented in
+`intake/2026-07-14-urbanhermit-full-population-social-corpus.md`; its 434
+aggregate-only post dispositions and 26 aggregate-only inbound-search
+dispositions are in `data/urbanhermit-public-post-ledger.json` and
+`data/urbanhermit-public-engagement-ledger.json`.
 
 ### Public-Safe Archive Summary
 

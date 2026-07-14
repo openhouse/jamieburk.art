@@ -55,6 +55,14 @@ import {
   kcTownHallSocialCorpusPublicationDecisions,
   kcTownHallSocialCorpusSources
 } from "./kc-town-hall-social-corpus.ts";
+import {
+  urbanHermitSocialCorpusClaims,
+  urbanHermitSocialCorpusInquiries,
+  urbanHermitSocialCorpusIntake,
+  urbanHermitSocialCorpusProofCoverage,
+  urbanHermitSocialCorpusPublicationDecisions,
+  urbanHermitSocialCorpusSources
+} from "./urbanhermit-social-corpus.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -533,7 +541,8 @@ export const frameworkIntake = [
   ...nycArtCSocialCorpusIntake,
   ...callNycSocialCorpusIntake,
   ...wowlistSocialCorpusIntake,
-  ...kcTownHallSocialCorpusIntake
+  ...kcTownHallSocialCorpusIntake,
+  ...urbanHermitSocialCorpusIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -713,9 +722,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["community platforms", "event discovery", "participatory technology"],
-    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015", "SRC-GOOD-TIMES-ZINES-2-2015", "SRC-KQED-GHOST-SHIP-VIGIL-2016", "SRC-MEOW-WOLF-DIY-FUND-2016"],
-    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION", "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE", "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING", "CLM-WOWLIST-CIVIC-CARE-CONTINUITY"],
-    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-FULL-POPULATION-2026"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015", "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026", "SRC-X-WOWLIST-SUPPORT-FEED-SCOPE-2015", "SRC-X-WOWLIST-SUPPORT-PROFILE-2015", "SRC-X-WOWLIST-SUPPORT-EVENT-SUBMISSION-2015", "SRC-X-WOWLIST-SUPPORT-NYCDIY-IDENTITY-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-JOIN-2016", "SRC-X-WOWLIST-SUPPORT-NYCDIY-LINEAGE-2016", "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015", "SRC-GOOD-TIMES-ZINES-2-2015", "SRC-KQED-GHOST-SHIP-VIGIL-2016", "SRC-MEOW-WOLF-DIY-FUND-2016", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015"],
+    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE", "CLM-WOWLIST-COMPLETE-SOCIAL-POPULATION", "CLM-WOWLIST-PUBLIC-SUPPORT-SURFACE", "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING", "CLM-WOWLIST-CIVIC-CARE-CONTINUITY", "CLM-MUSIC-HACKATHON-WOWLIST-ROLE"],
+    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-WOWLIST-FULL-POPULATION-2026", "INQ-URBANHERMIT-FULL-POPULATION-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which interface or community image best demonstrates organizer use without exposing user data?",
@@ -813,9 +822,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
     themes: ["archival production", "evidence quality", "job applications"],
-    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026", "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026"],
-    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS"],
-    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP"],
+    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026", "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026", "SRC-X-URBANHERMIT-PROFILE-CONTROL-2026", "SRC-X-URBANHERMIT-FULL-POPULATION-AUDIT-2026", "SRC-X-URBANHERMIT-INBOUND-ENGAGEMENT-AUDIT-2026", "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"],
+    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS", "CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING", "CLM-URBANHERMIT-SOURCE-ROUTING", "CLM-HORSE-LORDS-TRUTHERS-VIDEO"],
+    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP", "INQ-URBANHERMIT-FULL-POPULATION-2026", "INQ-URBANHERMIT-LINK-RESOLUTION-2026"],
     photoBrief: {
       status: "not-applicable",
       selectionQuestion: "What evidence diagram would help an editor understand proof maturity without exposing private records?",
@@ -833,8 +842,8 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
     themes: ["participation", "public life", "documentation", "facilitation"],
-    sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"],
-    claimIds: ["CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL"],
+    sourceIds: ["SRC-OPEN-HOUSE-GOOD-TIMES-2006", "SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", "SRC-KCUR-8TH-STREET-TUNNEL-2016", "SRC-X-URBANHERMIT-COUNCIL-PUBLIC-ENGAGEMENT-2015", "SRC-X-URBANHERMIT-MEDIA-ARCHAEOLOGY-2020"],
+    claimIds: ["CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "CLM-URBANHERMIT-PRACTICE-THREADS"],
     inquiryIds: ["INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL"],
     photoBrief: {
       status: "research-needed",
@@ -1328,7 +1337,8 @@ export const frameworkSources = [
   ...nycArtCSocialCorpusSources,
   ...callNycSocialCorpusSources,
   ...wowlistSocialCorpusSources,
-  ...kcTownHallSocialCorpusSources
+  ...kcTownHallSocialCorpusSources,
+  ...urbanHermitSocialCorpusSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -1676,7 +1686,7 @@ export const frameworkClaims = [
   {
     id: "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL",
     project: "participatory-public-practice",
-    internalClaim: "The reviewed Open House and Great Accommodations sources suggest a recurring practice of creating participatory structures in which strangers develop agency together and leave behind shared records.",
+    internalClaim: "The reviewed Open House, Great Accommodations, and 8th Street Tunnel sources suggest a recurring practice of creating participatory structures in which strangers develop agency together and leave behind shared records.",
     status: "inference",
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
@@ -1684,19 +1694,21 @@ export const frameworkClaims = [
     evidence: [
       { sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006", relationship: "context", supports: ["participatory space", "distributed responsibility", "shared documentation"], confidence: "moderate", renderCitation: false },
       { sourceId: "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009", relationship: "context", supports: ["participatory river programs", "facilitation", "working documentation"], confidence: "moderate", renderCitation: false },
-      { sourceId: "SRC-RAFT-PITCH-2007", relationship: "context", supports: ["experiential public project", "river and city context"], confidence: "limited", renderCitation: false }
+      { sourceId: "SRC-RAFT-PITCH-2007", relationship: "context", supports: ["experiential public project", "river and city context"], confidence: "limited", renderCitation: false },
+      { sourceId: "SRC-KCUR-8TH-STREET-TUNNEL-2016", relationship: "context", supports: ["participatory public-history route", "site-specific film program", "public-access rationale"], confidence: "high", renderCitation: false }
     ],
     boundaries: ["This is a research hypothesis, not an approved public throughline.", "Distinct participants, communities, and projects must not be flattened into one story."],
     antiClaims: ["Every Jamie Burkart project follows one identical method", "Later civic outcomes were caused by the early art projects"],
     researchInquiryIds: ["INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL"],
-    reviewedAt: "2026-07-12",
+    reviewedAt: "2026-07-14",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
   },
   ...socialArchiveClaims,
   ...nycArtCSocialCorpusClaims,
   ...callNycSocialCorpusClaims,
   ...wowlistSocialCorpusClaims,
-  ...kcTownHallSocialCorpusClaims
+  ...kcTownHallSocialCorpusClaims,
+  ...urbanHermitSocialCorpusClaims
 ] satisfies ClaimRecord[];
 
 const openInquiry = (
@@ -1732,7 +1744,8 @@ export const frameworkInquiries = [
   ...nycArtCSocialCorpusInquiries,
   ...callNycSocialCorpusInquiries,
   ...wowlistSocialCorpusInquiries,
-  ...kcTownHallSocialCorpusInquiries
+  ...kcTownHallSocialCorpusInquiries,
+  ...urbanHermitSocialCorpusInquiries
 ] satisfies ResearchInquiry[];
 
 const publicationDecisionInputs: Array<[
@@ -1786,7 +1799,8 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   nycArtCSocialCorpusPublicationDecisions,
   callNycSocialCorpusPublicationDecisions,
   wowlistSocialCorpusPublicationDecisions,
-  kcTownHallSocialCorpusPublicationDecisions
+  kcTownHallSocialCorpusPublicationDecisions,
+  urbanHermitSocialCorpusPublicationDecisions
 ) satisfies PublicationDecision[];
 
 const coverage = (
@@ -1808,7 +1822,7 @@ export const frameworkProofCoverage = [
   coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
   coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; a protected 2017 FAQ adds collective mutual-support infrastructure, while individual systems authorship remains only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
   coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist reporting and the official Council transcript directly support the bounded organizing and testimony claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"], []),
-  coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
+  coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function, and a 2015 Music Hackathon post identifies Jamie as a co-organizer and describes WOW List as an event-sharing service; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-MUSIC-HACKATHON-URBANHERMIT-WOWLIST-2015"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
   coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community, and a protected 2023 record confirms Jamie's proposal-review and onboarding workflow for one residency; aggregate gathering and residency totals remain separately protected.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"]),
   coverage("commercial-vacancy-public-data-brief", "source-backed", "A protected March 2026 artifact directly supports Jamie's authorship of the bounded public-data proposal while external adoption and implementation remain open.", ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"], ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"]),
   coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
@@ -1820,7 +1834,8 @@ export const frameworkProofCoverage = [
   ...nycArtCSocialCorpusProofCoverage,
   ...callNycSocialCorpusProofCoverage,
   ...wowlistSocialCorpusProofCoverage,
-  ...kcTownHallSocialCorpusProofCoverage
+  ...kcTownHallSocialCorpusProofCoverage,
+  ...urbanHermitSocialCorpusProofCoverage
 ] satisfies ProofCoverage[];
 
 export const frameworkPages = [

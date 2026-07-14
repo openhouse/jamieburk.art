@@ -60,6 +60,9 @@ The knowledge bank exists to:
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+- **Aggregate archival ledgers:** public-safe dispositions that reconcile a
+  bounded research population without reproducing personal timelines, private
+  records, or raw interaction data.
 
 ## Core Rule
 

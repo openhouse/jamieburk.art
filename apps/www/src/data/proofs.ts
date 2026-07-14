@@ -524,7 +524,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
     sourceBasis:
-      "Approved resume language, verified public-safe archive counts, and a 2017 Greene Hill Food Co-op interview confirming WOW List's community-events function.",
+      "Approved resume language, verified public-safe archive counts, a 2017 Greene Hill Food Co-op interview confirming WOW List's community-events function, and a 2015 Music Hackathon post identifying Jamie as a co-organizer and describing WOW List as an event-sharing service.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
