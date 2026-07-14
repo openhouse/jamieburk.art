@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "79a1ba9c0b868888fb7066263c60b80cf5560f5e29530fb31b78122ea834e1cf",
+    "fingerprint": "4dc6cd78218f5f3aaafdb418df16a0621878106ca15374b72dc138f844ad8734",
     "counts": {
-      "entities": 22,
-      "intake": 104,
-      "sources": 165,
-      "sourceReadings": 165,
-      "claims": 69,
-      "researchTasks": 27,
-      "projectionDecisions": 52
+      "entities": 25,
+      "intake": 105,
+      "sources": 179,
+      "sourceReadings": 179,
+      "claims": 76,
+      "researchTasks": 29,
+      "projectionDecisions": 58
     }
   },
   "judge": {
@@ -24,16 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "photo-observation"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "INTAKE-NYCARTC-FULL-POPULATION-X-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "CLM-NYCARTC-CREATION-ROLE-SEED"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "TASK-NYCARTC-UNRESOLVED-SLOT-RECOVERY"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "COR-CALLNYC-SUPERLATIVE-2026"
           }
         ]
       },
@@ -42,16 +42,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "READ-X-NYCARTC-FULL-POPULATION-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "atomicPropositionSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "READ-X-NYCARTC-EXPLICIT-MENTION-SEARCH-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-NYCARTC-GOTHAMIST-CABARET-2017"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "READ-GOTHAMIST-BOOK-CULTURE-RENT-2020"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-NYC-CABARET-REPEAL-LAW-2017"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "READ-NPR-HORSE-LORDS-TRUTHERS-2016"
           }
         ]
       },
@@ -60,20 +64,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "CLM-NYCARTC-FULL-SOCIAL-POPULATION-DISPOSITION"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "claim-promotion-is-evidence-backed"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "CLM-NYCARTC-RECOVERED-AMPLIFICATION-NETWORK"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "CLM-NYCARTC-POSTED-SOURCE-ROUTING"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "CLM-NYCARTC-EXPLICIT-INBOUND-PATTERN"
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
+            "record": "CLM-CALLNYC-AGGREGATE-SERVICE-OUTCOME-REJECTED"
           }
         ]
       },
@@ -82,16 +90,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "TASK-NYCARTC-UNRESOLVED-SLOT-RECOVERY"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "researchTaskSchema"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           },
           {
-            "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "## Research tasks"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "TASK-URBANHERMIT-EXPORT-AND-PRESERVATION"
           }
         ]
       },
@@ -100,16 +112,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-NYCARTC-FULL-SOCIAL-POPULATION"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Publication decisions"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-NYCARTC-AMPLIFICATION-NETWORK"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "publication-is-an-independent-decision"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-NYCARTC-POSTED-SOURCE-ROUTING"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-HORSE-LORDS-TRUTHERS-VIDEO"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-PUBLISH-CALLNYC-DATE"
           }
         ]
       },
@@ -118,16 +134,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "NYC Artist Coalition census is public-safe and leaves unresolved slots uninterpreted"
-          },
-          {
-            "file": "docs/knowledge-bank/data/nycartc-public-post-ledger.json",
-            "record": "NYCARTC-X-UNRESOLVED-0001"
-          },
-          {
             "file": "docs/knowledge-bank/public-safety.md",
-            "record": "## Prohibited Materials"
+            "record": "Prohibited Materials"
+          },
+          {
+            "file": "docs/knowledge-bank/data/urbanhermit-public-post-ledger.json",
+            "record": "privacyBoundary"
+          },
+          {
+            "file": "docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json",
+            "record": "privacyBoundary"
+          },
+          {
+            "file": "scripts/generate-public-citations.mjs",
+            "record": "protectedLocatorId: _protectedLocatorId"
+          },
+          {
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "personal social population ledger is aggregate-only and public-safe"
           }
         ]
       },
@@ -136,16 +160,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "composition: z.object"
           },
           {
             "file": "docs/knowledge-bank/lifecycle.md",
-            "record": "photo-observation"
+            "record": "Public-ready claims also store the"
           },
           {
-            "file": "docs/knowledge-bank/chad-lens.md",
-            "record": "# Chad Lens"
+            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
+            "record": "CLM-URBANHERMIT-PRACTICE-CONTINUITY"
+          },
+          {
+            "file": "docs/knowledge-bank/research/urbanhermit-full-population-social-census-2026-07-14.md",
+            "record": "Selected professional traces"
           }
         ]
       }
@@ -168,5 +196,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh Node 26.4.0 evaluation of fingerprint 79a1ba9c0b868888fb7066263c60b80cf5560f5e29530fb31b78122ea834e1cf found 0/7 hard-gate failures and 0/4 quality gaps across 22 entities, 104 intake records, 165 sources, 165 readings, 69 claims, 27 research tasks, and 52 projection decisions. The NYC Artist Coalition ledger dispositions all 5,124 profile-counted slots as 3,367 recovered records plus 1,757 unresolved slots, keeping 100% disposition coverage separate from 65.7% item recovery; the inbound ledger counts 347 explicit mentions and excludes 154 context records. knowledge-bank and public-safety passed, TypeScript passed with no emit and incremental disabled, and lifecycle tests passed 60/60. Seven of seven in-memory mutations were detected: removal of each of the three unresolved-population anti-claims, reclassification of all 154 context rows, raw-text insertion in each ledger, and private-path insertion. No remaining material defect was found in this snapshot; all three human gates remain pending. Weighted judge score: 100/100."
+  "summary": "Fresh independent read-only assessment: weighted judge score 100/100. The deterministic lifecycle evaluation passed all 7 hard gates and 4 quality targets; all 67 lifecycle tests, public-safety checks, and citation checks passed. Records at captured, researching, corroborated, public-ready, projected, rejected, and superseded maturity were inspected. The @urbanhermit pass preserves the 434-item control as 431 directly reverified records plus 3 prior-capture-only reposts, excludes raw personal-archive detail, retains repost authorship and stakeholder-interpretation boundaries, preserves joint Horse Lords credit, and keeps all six eligible findings deferred. Human approval, collaborator permission, and media-rights gates remain pending."
 }

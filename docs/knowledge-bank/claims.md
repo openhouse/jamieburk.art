@@ -18,6 +18,103 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-07
 
+## urbanhermit-full-population-disposition - Personal archive accounting
+
+**Status:** Reserve
+**Support level:** Strongly bounded
+**Evidence class:** Authenticated public-source archival census
+**Public wording:** A July 2026 archival pass gave every record in the 434-item
+current-profile control a public-safe disposition: 431 directly reverified
+records and three reposted source statuses retained from an immediately prior
+authenticated capture.
+**Detailed public-safe wording:** The authenticated profile displayed 434
+records. A Posts-and-Replies reconciliation directly reverified 431 records and
+retained three reposted source statuses from an immediately prior authenticated
+capture, producing one redacted disposition row for every current-profile slot.
+**Where to project:** Knowledge-bank research documentation only.
+**Why it matters:** Makes completeness and preservation debt inspectable without
+publishing Jamie's personal timeline.
+**Guardrail:** Call this complete current-profile accounting, not a lifetime
+archive, native export, or deletion history.
+**Do not say:** Every post Jamie ever published; Jamie authored all 434 records;
+the reason three source statuses no longer resolve.
+**Protected boundaries:** Full text, exact dates, handles, identifiers, URLs,
+media, relationship context, historic contact or location data, and per-record
+reactions stay outside the public repository.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## urbanhermit-practice-continuity - Recurring practice threads
+
+**Status:** Reserve
+**Support level:** Corroborated first-party chronology
+**Evidence class:** Selected close-read personal public posts
+**Public wording:** Selected records across 2009-2020 connect Jamie's
+participatory place work, community hosting and documentation, public-interest
+systems, creative media, and practical software stewardship.
+**Detailed public-safe wording:** Individually close-read records document dated
+instances of participatory river practice, web work, community documentation,
+civic participation routing, cultural-space advocacy, creative media, and
+software preservation without projecting ordinary-life material.
+**Where to project:** Future About or portfolio composition after review.
+**Why it matters:** Supplies longitudinal evidence for Jamie's operating
+throughline while keeping public composition audience-focused.
+**Guardrail:** Use selected sources, not aggregate frequency, as support.
+**Do not say:** Uninterrupted activity; equal emphasis; measured outcomes; sole
+authorship across collective projects.
+**Protected boundaries:** Ordinary-life, relationship, health, politics,
+location, historic contact, and unreviewed media records stay outside
+professional projection.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## horse-lords-truthers-video - Joint creative-technology credit
+
+**Status:** Ready but deferred
+**Support level:** Strong
+**Evidence class:** Independent journalism / contemporaneous creator post
+**Public wording:** Jamie Burkart and M.C. Schmidt made Horse Lords' official
+2016 “Truthers” video, translating the band's recursive musical structure
+through repetition, variation, text, and color; NPR Music featured the work.
+**Detailed public-safe wording:** Jamie co-created the official video with M.C.
+Schmidt; NPR identifies both makers and reports Andrew Bernstein's description
+of the visual method as mirroring the band's musical construction.
+**Where to project:** Future creative-technology or range composition.
+**Why it matters:** Adds independently reported creative-technical delivery and
+collaboration to the portfolio's reserve proof range.
+**Guardrail:** Preserve joint credit and NPR's attribution of the visual-method
+description to Andrew Bernstein.
+**Do not say:** Jamie made the video alone; NPR commissioned it; known division
+of labor; commercial performance or audience reach.
+**Protected boundaries:** Unpublished production records, private collaborator
+communications, rights material, and unapproved media remain outside the repo.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## music-hackathon-wowlist-credit - Organizational role evidence
+
+**Status:** Reserve
+**Support level:** Corroborated
+**Evidence class:** Professional organizational social record
+**Public wording:** A 2015 Music Hackathon / Music Community Lab post identified
+Jamie as a co-organizer and publicly credited his work on WOW List.
+**Detailed public-safe wording:** The organizational account provides
+contemporaneous public role evidence for Music Hackathon and creation credit for
+Jamie while the wider record preserves Richard Kim and other WOW List
+collaborators' product credit.
+**Where to project:** Knowledge bank; future WOW List composition if useful.
+**Why it matters:** Connects Jamie's community-organizing role with a reusable
+digital event-sharing surface through an organizational source.
+**Guardrail:** Preserve Richard Kim and other collaborators' credit despite the
+source's singular phrasing.
+**Do not say:** Jamie solely authored or owned WOW List; full role or tenure;
+adoption, audience, or impact.
+**Protected boundaries:** Private organizer records, participant data,
+account-administration material, and unapproved collaborator communications
+stay outside the repo.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
 ## hje-modernization-stewardship - Legacy e-commerce modernization
 
 **Status:** Ready

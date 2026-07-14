@@ -21,6 +21,21 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
 
+## Reserve Proofs
+
+- Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 “Truthers”
+  video; NPR Music featured the work and described its repetition, variation,
+  text, and color as translating the band's recursive musical construction.
+- A 2015 Music Hackathon / Music Community Lab organizational post identified
+  Jamie as a co-organizer and publicly credited his work on WOW List, while
+  collective WOW List authorship remains explicit.
+- A complete current-profile accounting of `@urbanhermit` preserves 434
+  dispositions and routes selected professional traces into research without
+  publishing a personal-timeline dossier.
+
+Reserve proofs are defensible knowledge-bank material, not automatic website
+copy. Each has an explicit defer decision in the typed lifecycle.
+
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.

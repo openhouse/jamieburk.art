@@ -69,6 +69,27 @@ endorsement of NYC Artist Coalition.
 See
 `docs/knowledge-bank/research/nycartc-full-population-social-census-2026-07-14.md`.
 
+## Personal Public Social Sources
+
+Personal social records may enter the source bank after individual close
+reading when they document Jamie's role, method, project chronology, or a
+research lead. They are first-party contemporaneous evidence, not independent
+verification of every statement or outcome.
+
+The July 14, 2026 `@urbanhermit` review gives all 434 records represented by the
+authenticated profile control a public-safe disposition. The repository retains
+only aggregate population and inbound ledgers plus selected typed sources. Full
+text, exact dates, handles, status IDs, URLs, media, relationship context, and
+per-record reactions remain outside the public corpus.
+
+The pass also accessioned NPR Music's independent joint creator credit for
+Jamie Burkart and M.C. Schmidt's Horse Lords “Truthers” video, a Music Hackathon
+organizational role credit, and bounded public collaborator corroboration for
+Cabaret Law repeal and KC Town Hall tire operations.
+
+See
+`docs/knowledge-bank/research/urbanhermit-full-population-social-census-2026-07-14.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

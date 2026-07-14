@@ -11,6 +11,7 @@ import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/call
 import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts";
 import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts";
 import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts";
+import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -1164,6 +1165,160 @@ test("social discovery routes later MARCH reporting without resolving causation"
     assert.ok(task.sourceIds.includes(sourceId));
   }
   assert.equal(task.status, "open");
+});
+
+test("personal social census dispositions the full current-profile control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/urbanhermit-public-post-ledger.json", "utf8")
+  );
+  const audit = ledger.populationAudit;
+
+  assert.equal(ledger.items.length, 434);
+  assert.equal(new Set(ledger.items.map((item) => item.ledgerId)).size, 434);
+  assert.equal(audit.profileCountObserved, urbanHermitSocialCensus.observedProfileCount);
+  assert.equal(audit.currentProfileRecordsDispositioned, 434);
+  assert.equal(audit.directlyReverifiedRecords, 431);
+  assert.equal(audit.priorAuthenticatedCaptureOnlyRecords, 3);
+  assert.equal(
+    ledger.items.filter((item) => item.verificationStatus === "live-reverified-2026-07-14").length,
+    431
+  );
+  assert.equal(
+    ledger.items.filter(
+      (item) => item.verificationStatus === "prior-authenticated-capture-currently-unavailable"
+    ).length,
+    3
+  );
+  assert.deepEqual(audit, {
+    ...audit,
+    authoredStandalonePosts: 338,
+    authoredReplies: 15,
+    reposts: 81
+  });
+  assert.match(audit.completenessStatement, /100% current-profile disposition coverage/i);
+  assert.match(audit.completenessStatement, /not a native X export/i);
+});
+
+test("personal social population ledger is aggregate-only and public-safe", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/urbanhermit-public-post-ledger.json", "utf8")
+  );
+  const forbiddenFields = [
+    "text",
+    "raw",
+    "statusId",
+    "statusUrl",
+    "authorHandle",
+    "datetime",
+    "canonicalUrl",
+    "metricsLabel"
+  ];
+
+  for (const item of ledger.items) {
+    for (const field of forbiddenFields) assert.equal(field in item, false, `${field} must remain protected`);
+    assert.equal(item.publicDetailStatus, "aggregate-only");
+  }
+  assert.doesNotMatch(JSON.stringify(ledger), /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("personal explicit-mention ledger preserves stakeholder and interpretation boundaries", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/urbanhermit-public-engagement-ledger.json", "utf8")
+  );
+
+  assert.equal(ledger.records.length, 26);
+  assert.equal(ledger.searchAudit.distinctPublicAccounts, 17);
+  assert.equal(ledger.searchAudit.governmentOrPublicOfficialAccountsRecovered, 0);
+  assert.deepEqual(ledger.aggregateFindings.byStakeholderGroup, {
+    "community-peer-or-personal-context": 7,
+    "professional-institution": 1,
+    "cultural-or-technical-collaborator": 7,
+    "journalist-designer-or-civic-peer": 5,
+    "project-account": 6
+  });
+  assert.deepEqual(ledger.aggregateFindings.byInteractionContext, {
+    "general-public-conversation": 8,
+    "role-or-project-attribution": 11,
+    "mission-related-thread": 7
+  });
+  assert.ok(ledger.records.every((item) => !("text" in item) && !("statusId" in item)));
+  assert.ok(ledger.records.every((item) => !("authorHandle" in item) && !("statusUrl" in item)));
+  assert.doesNotMatch(JSON.stringify(ledger), /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("personal social claims preserve authorship, traction, and official-engagement limits", () => {
+  const disposition = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-FULL-POPULATION-DISPOSITION"
+  );
+  const practice = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-PRACTICE-CONTINUITY"
+  );
+  const inbound = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-EXPLICIT-INBOUND-PATTERN"
+  );
+
+  assert.ok(disposition.boundaries.some((item) => /current profile control, not a lifetime/i.test(item)));
+  assert.ok(disposition.antiClaims.some((item) => /Jamie authored all 434/i.test(item)));
+  assert.ok(practice.antiClaims.some((item) => /frequency measures.*labor.*impact/i.test(item)));
+  assert.ok(inbound.boundaries.some((item) => /not proof of no public-official interaction/i.test(item)));
+  assert.ok(inbound.antiClaims.some((item) => /endorsement.*partnership.*adoption.*impact/i.test(item)));
+});
+
+test("Horse Lords and Music Hackathon records preserve collective credit", () => {
+  const horseLords = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016"
+  );
+  const musicHackathon = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-MUSIC-HACKATHON-WOWLIST-PUBLIC-CREDIT"
+  );
+  const npr = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NPR-HORSE-LORDS-TRUTHERS-2016"
+  );
+
+  assert.equal(horseLords.maturity, "public-ready");
+  assert.match(horseLords.composition.collectiveCredit, /Jamie Burkart and M\.C\. Schmidt together/i);
+  assert.ok(horseLords.antiClaims.some((item) => /alone made/i.test(item)));
+  assert.ok(horseLords.antiClaims.some((item) => /NPR commissioned/i.test(item)));
+  assert.match(npr.canonicalUrl, /npr\.org/);
+  assert.match(musicHackathon.composition.action, /Co-organized Music Hackathon/i);
+  assert.match(musicHackathon.composition.collectiveCredit, /Richard Kim/i);
+  assert.ok(musicHackathon.antiClaims.some((item) => /alone made or owned WOW List/i.test(item)));
+});
+
+test("personal social findings remain deferred from public composition", () => {
+  const claimIds = [
+    "CLM-URBANHERMIT-FULL-POPULATION-DISPOSITION",
+    "CLM-URBANHERMIT-POSTED-SOURCE-ROUTING",
+    "CLM-URBANHERMIT-EXPLICIT-INBOUND-PATTERN",
+    "CLM-URBANHERMIT-PRACTICE-CONTINUITY",
+    "CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016",
+    "CLM-MUSIC-HACKATHON-WOWLIST-PUBLIC-CREDIT"
+  ];
+
+  for (const claimId of claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claimId);
+    assert.equal(claim.projections.length, 0);
+    assert.equal(decision.decision, "defer");
+  }
+});
+
+test("unreviewed personal media remains a captured claim seed with a research route", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-URBANHERMIT-EXPORT-AND-PRESERVATION"
+  );
+
+  assert.equal(claim.status, "claim-seed");
+  assert.equal(claim.maturity, "captured");
+  assert.equal(claim.projections.length, 0);
+  assert.equal(claim.evidence.length, 0);
+  assert.ok(claim.boundaries.some((item) => /raw media.*outside the public repository/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /cleared for publication/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.claimIds.includes(claim.id));
 });
 
 test("judge evidence and floors are enforced", () => {

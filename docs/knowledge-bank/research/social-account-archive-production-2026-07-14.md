@@ -197,6 +197,34 @@ reconciliation with operational records. The record does not establish sole
 authorship, the author of each post, audited aggregate impact, or that no older
 status was deleted before capture.
 
+## Jamie Burkart Personal Account
+
+The [full-population personal-account census](urbanhermit-full-population-social-census-2026-07-14.md)
+gives all 434 records in the authenticated current-profile control a public-safe
+disposition. A July 14 recrawl directly reverified 431 records; three reposted
+source statuses are retained from an immediately prior authenticated capture
+because their current source objects redirect or fail to render.
+
+The control contains 338 authored standalone posts, 15 authored replies, and 81
+reposts. It also exposes a source-discovery layer of 345 external-link
+occurrences across 321 unique shortened URLs. Only individually close-read,
+mission-relevant records enter the typed source bank.
+
+An explicit-mention search recovered 26 directly reverified records from 17
+public accounts: 11 role or project attributions, seven mission-related thread
+records, and eight ordinary public conversations. No government or
+public-official account appeared in this bounded set. This is a current search
+floor, not a complete lifetime engagement history.
+
+The strongest new independent source is NPR Music's joint creator credit for
+Jamie Burkart and M.C. Schmidt's 2016 Horse Lords “Truthers” video. An
+organizational Music Hackathon post also identifies Jamie as a co-organizer and
+credits his work on WOW List. Both are retained with collective-credit limits
+and explicit defer decisions.
+
+No personal-account finding is automatically projected onto the website. The
+raw personal timeline remains outside the public repository.
+
 ## Source Articles Surfaced
 
 The Talks Not Raids stream surfaced two later Hell Gate articles that have been

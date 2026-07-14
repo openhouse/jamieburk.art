@@ -200,3 +200,29 @@ validated analysis, or a production data pipeline.
 
 Do not derive claims from unread recordings or photo-set labels. Review content,
 speaker or participant identity, rights, consent, and source relationships first.
+
+## Personal Social Archive
+
+Do not publish or reconstruct Jamie's full `@urbanhermit` timeline in this
+repository. The 434-row ledger intentionally excludes text, exact dates,
+handles, status IDs, URLs, media, relationship details, historic contact or
+location data, and per-record reactions.
+
+Do not call the current-profile accounting a native X export, deletion history,
+or every post Jamie ever published. Three reposted source statuses are retained
+from an immediately prior authenticated capture; do not infer why they no
+longer resolve.
+
+Do not say Jamie authored all 434 records. The control contains 338 authored
+standalone posts, 15 authored replies, and 81 reposts. Reposted and linked work
+retains its source authorship.
+
+Do not turn theme, link, mention, account, or year frequencies into measures of
+professional labor, priority, reach, endorsement, adoption, causality, or
+impact. The absence of public-official accounts from the bounded 26-record
+explicit-mention set does not establish that no official ever engaged with
+Jamie or his projects.
+
+Credit Jamie Burkart and M.C. Schmidt jointly for Horse Lords' official 2016
+“Truthers” video. Do not claim sole authorship, an NPR commission, a known
+division of labor, commercial results, or audience reach.
