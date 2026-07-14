@@ -244,7 +244,7 @@ export const kcTownHallSocialCorpus = {
       preservationStatus: "live",
       capturedAt: reviewedAt,
       accessedAt: reviewedAt,
-      canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/b59c4cbc8d7e561e8da77aa21121b29f51568c03/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/d2536a0ff2c505efe2ccfa96ebf043d46376d054/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
       preferredPublicUrl: "canonical",
       publicCitation: "Authenticated read-only review of the public @KCTownHall Posts and Replies surfaces, with a 183-record public-safe ledger, July 14, 2026.",
       publicNote: "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
