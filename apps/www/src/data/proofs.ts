@@ -261,6 +261,42 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "commercial-vacancy-public-data-brief",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary"],
+    publicWording:
+      "Prepared a public-data brief proposing privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside New York City's existing storefront data.",
+    shortWording:
+      "Designed a privacy-preserving commercial vacancy data proposal",
+    detailedPublicWording:
+      "Jamie translated administrative-data constraints into a practical open-data proposal using RPIE-derived aggregate indicators, coverage and suppression rules, a methods note, and explicit exclusions for raw filings, tenant identities, parcel-level rent rows, and lease documents.",
+    sourceBasis:
+      "Public-safe review of Jamie's March 2026 authored brief in a project Shared Drive.",
+    whyItMatters:
+      "Shows public-interest data product framing, privacy-by-design, policy translation, and implementation scoping in one concrete artifact.",
+    guardrail:
+      "Describe this as Jamie's proposal. Do not imply City endorsement, adoption, implementation, publication, or access to confidential filings.",
+    doNotSay: [
+      "New York City adopted Jamie's proposal",
+      "Jamie published an official City dataset",
+      "Jamie had access to confidential RPIE filings",
+      "The proposed pilot was implemented"
+    ],
+    protectedBoundaries: [
+      "Underlying Shared Drive URL and access metadata",
+      "Raw filings",
+      "Tenant identities",
+      "Parcel-level rent rows",
+      "Lease documents",
+      "Unverified maps"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc", "commercial-vacancy-public-data"],
+    relatedCapabilities: ["open-data", "privacy-by-design", "policy-translation", "implementation-scoping"],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -417,15 +453,16 @@ export const proofClaims: ProofClaim[] = [
       "Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.",
     shortWording: "300+ gatherings and 20+ resident artists supported",
     detailedPublicWording:
-      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
+      "Jamie made recurring cultural work easier to continue through practical invitation, hosting, proposal review, resident onboarding, space configuration, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, protected aggregate project records, and a 2017 Greene Hill Food Co-op interview documenting weekly Sunday dinners open to the community.",
+      "Approved resume language, protected aggregate project records, a 2017 Greene Hill Food Co-op interview documenting weekly Sunday dinners open to the community, and a protected 2023 acceptance record confirming Jamie's proposal-review and onboarding workflow for one residency.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
       "Institutional ownership of participants' work",
       "Comprehensive public archive",
-      "Attendance database"
+      "Attendance database",
+      "One onboarding record independently verifies the 20-plus resident aggregate"
     ],
     protectedBoundaries: [
       "Guest lists",
@@ -438,7 +475,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",
@@ -675,6 +712,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "commercial-vacancy-public-data-brief",
       "kc-town-hall-public-benefit-documentation"
     ]
   },

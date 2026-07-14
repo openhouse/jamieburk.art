@@ -27,6 +27,11 @@ const proofMap = [
       "I designed and maintained a lightweight operating backbone for multi-organization policy work: running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work."
   },
   {
+    project: "Commercial Vacancy Data",
+    proof:
+      "I translated administrative-data constraints into a practical proposal for privacy-preserving commercial vacancy and lease-cost indicators, including coverage, suppression, and methods requirements."
+  },
+  {
     project: "CallNYC",
     proof:
       "I built an independent civic-data follow-on that translated constituent-services records into resident-facing guidance."

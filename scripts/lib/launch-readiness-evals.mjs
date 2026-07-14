@@ -515,6 +515,98 @@ export function evaluateICloudArchiveProduction({
   return missing;
 }
 
+export function evaluateGoogleSharedDriveArchiveProduction({
+  framework,
+  proofs,
+  technicalOperations,
+  fairRentCase,
+  sundayDinnerCase,
+  archiveDoc
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "LEAD-GDRIVE-SHARED-DRIVES-ARCHIVAL-PASS-2026",
+    "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+    "SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+    "SRC-GDRIVE-SUNDAY-DINNER-PHOTO-SET-2025",
+    "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+    "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
+    "SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026",
+    "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "CLM-196-RESIDENCY-ONBOARDING-2023",
+    "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+    "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP",
+    "INQ-GDRIVE-DEFERRED-COLLECTION-REVIEW",
+    "INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME",
+    "PUB-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "PUB-196-RESIDENCY-ONBOARDING-2023",
+    "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+    'coverage("commercial-vacancy-public-data-brief", "source-backed"',
+    'coverage("source-backed-team-memory-method", "partially-backed"',
+    "Shared Drive custody and file content establish that the proposal existed, not Jamie's authorship",
+    "private-support",
+    "renderCitation: false"
+  ]);
+  requireFragments("Proof bank", proofs, [
+    'id: "commercial-vacancy-public-data-brief"',
+    "privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators",
+    "New York City adopted Jamie's proposal",
+    'id: "sunday-dinner-196-participation-infrastructure"',
+    "proposal review, resident onboarding, space configuration",
+    "One onboarding record independently verifies the 20-plus resident aggregate"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    'project: "Commercial Vacancy Data"',
+    "privacy-preserving commercial vacancy and lease-cost indicators",
+    "coverage, suppression, and methods requirements"
+  ]);
+  requireFragments("Fair Rent case study", fairRentCase, [
+    "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "not evidence that New York City adopted, implemented, or published"
+  ]);
+  requireFragments("196 / Sunday Dinner case study", sundayDinnerCase, [
+    "CLM-196-RESIDENCY-ONBOARDING-2023",
+    "does not independently verify the larger residency aggregate"
+  ]);
+  requireFragments("Shared Drives archive documentation", archiveDoc, [
+    "110 Shared Drives",
+    "collection-scale accession pass plus focused close reading",
+    "access visibility as not verified",
+    "Shared Drive presence was never treated as proof",
+    "Selected public claims",
+    "Reserve depth",
+    "Research debt created rather than concealed",
+    "Private material excluded from ingestion",
+    "eleven candidate image files",
+    "unreviewed archive is not evidence that records did not exist"
+  ]);
+
+  const publicBundle = [proofs, technicalOperations, fairRentCase, sundayDinnerCase, archiveDoc].join("\n");
+  const privateMarkers = [
+    /\/Users\//,
+    /\/Volumes\//,
+    /Library\/CloudStorage/,
+    /drive\.google\.com/i,
+    /docs\.google\.com/i,
+    /spreadsheets\/d\//i
+  ];
+  if (privateMarkers.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public Shared Drive archival production contains a private path or Drive link marker.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -550,6 +642,10 @@ export function runLaunchEvals(repoRoot) {
   const iCloudTeamsArchiveDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-icloud-teams-archive-pass.md"
+  );
+  const googleSharedDrivesArchiveDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-google-shared-drives-archive-pass.md"
   );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
@@ -890,6 +986,31 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const googleSharedDriveArchiveProductionMissing =
+    evaluateGoogleSharedDriveArchiveProduction({
+      framework,
+      proofs,
+      technicalOperations,
+      fairRentCase,
+      sundayDinnerCase,
+      archiveDoc: googleSharedDrivesArchiveDoc
+    });
+  results.push(
+    result({
+      id: "google-shared-drives-archive-production",
+      label: "Google Shared Drive archival production strengthens proof without publishing the archive",
+      weight: 18,
+      hardGate: true,
+      missing: googleSharedDriveArchiveProductionMissing,
+      evidence: [
+        "All 110 accessible Shared Drives receive a private collection-level inventory while the public repo retains only a bounded summary.",
+        "Focused close reading produces selected, reserve, protected, photo, and research dispositions rather than automatic publication.",
+        "A privacy-aware commercial-vacancy proposal and a concrete residency-onboarding workflow strengthen public role evidence.",
+        "Custody, draft status, authorship, adoption, rights, and outcome boundaries remain explicit and machine-checked."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -932,6 +1053,8 @@ export function runLaunchEvals(repoRoot) {
       "Do not satisfy press-corpus completeness by dropping duplicates across campaigns, treating index membership as claim support, or marking unreviewed articles as close-read.",
       "Do not satisfy archival-production coverage by exposing local paths, private records, or unhydrated files; not recovered is not evidence of nonexistence.",
       "Do not use first-party job-hunt documents as independent corroboration or promote every mature archive claim to the public site.",
+      "Do not publish Shared Drive names, links, IDs, membership, participant rows, access details, or private filenames to prove archival depth.",
+      "Do not treat Shared Drive custody, a private draft, or one dated workflow record as proof of authorship, distribution, institutional adoption, implementation, or aggregate scale.",
       "Production deployment always requires explicit human approval."
     ]
   };

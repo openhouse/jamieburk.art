@@ -453,6 +453,41 @@ export const frameworkIntake = [
       "Private proposal, transcript, correspondence, and contact context remain outside the repository."
     ]
   },
+  {
+    id: "LEAD-GDRIVE-SHARED-DRIVES-ARCHIVAL-PASS-2026",
+    receivedAt: "2026-07-13",
+    suppliedBy: "Codex archival review with Jamie Burkart",
+    kind: "document",
+    title: "Google Drive Shared Drives archival-production pass",
+    summary: "A collection-scale inventory of 110 accessible Shared Drives and focused close reading of public-interest, cultural-program, technical-method, and civic-project records produced selected claims, reserve depth, protected support, photo leads, and explicit research debt.",
+    status: "integrated",
+    dispositions: ["source-created", "claim-created", "inquiry-created", "project-linked", "protected-from-publication"],
+    projectIds: ["commercial-vacancy-public-data", "nyc-artist-coalition", "sunday-dinner-196", "career-proof-system"],
+    sourceIds: [
+      "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+      "SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+      "SRC-GDRIVE-SUNDAY-DINNER-PHOTO-SET-2025",
+      "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+      "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
+      "SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026"
+    ],
+    claimIds: [
+      "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      "CLM-196-RESIDENCY-ONBOARDING-2023",
+      "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
+    ],
+    inquiryIds: [
+      "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP",
+      "INQ-GDRIVE-DEFERRED-COLLECTION-REVIEW",
+      "INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"
+    ],
+    notes: [
+      "The repository retains a public-safe collection summary, not the complete drive-name inventory, access links, file IDs, participant rows, or private drafts.",
+      "Shared Drive presence establishes custody and project context, not authorship, distribution, adoption, institutional approval, or outcome by itself.",
+      "Files whose access visibility could not be verified remain protected even when their contents afford a public-safe claim."
+    ]
+  },
   ...campaignPressIntake
 ] satisfies IntakeRecord[];
 
@@ -522,6 +557,8 @@ export const frameworkProjects = [
       "SRC-TALKS-NOT-RAIDS-CAMPAIGN",
       "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
       "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
+      "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+      "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
       ...campaignPressNewSourceIds
     ],
     claimIds: [
@@ -529,9 +566,10 @@ export const frameworkProjects = [
       "CLM-NYCARTC-EARLY-MUTUAL-AID-ORGANIZING",
       "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
       "CLM-NYCARTC-MARCH-TRANSPARENCY",
-      "CLM-CRS-OPERATING-BACKBONE-2026"
+      "CLM-CRS-OPERATING-BACKBONE-2026",
+      "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -549,14 +587,34 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["community infrastructure", "hosting", "participation"],
-    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
-    claimIds: ["CLM-SUNDAY-DINNER-WEEKLY-OPEN"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023", "SRC-GDRIVE-SUNDAY-DINNER-PHOTO-SET-2025"],
+    claimIds: ["CLM-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-196-RESIDENCY-ONBOARDING-2023"],
     inquiryIds: ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"],
     photoBrief: {
-      status: "research-needed",
+      status: "candidates-located",
       selectionQuestion: "Which images show repeatable hosting and participant agency without exposing a private home, guest identity, or vulnerable context?",
       evidenceNeeds: ["hosting context", "participant consent", "date", "photographer rights"],
-      rightsNotes: "Guest lists, home details, and unapproved participant images remain protected."
+      rightsNotes: "Eleven candidate image files were located in a Shared Drive; guest lists, home details, faces, and image contents remain protected until date, photographer, participant consent, and public-display rights are reviewed."
+    }
+  },
+  {
+    id: "commercial-vacancy-public-data",
+    title: "Commercial vacancy public-data baseline",
+    aliases: ["Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC"],
+    period: "2026",
+    status: "active",
+    summary: "A privacy-preserving open-data proposal for geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside existing storefront data.",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    themes: ["open data", "privacy", "policy implementation"],
+    sourceIds: ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"],
+    claimIds: ["CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"],
+    inquiryIds: ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"],
+    photoBrief: {
+      status: "candidates-located",
+      selectionQuestion: "Which map or brief page best explains the proposed public indicator layer without implying that the City adopted or implemented it?",
+      evidenceNeeds: ["clear indicator concept", "privacy and suppression context", "date", "publication rights"],
+      rightsNotes: "Three council-district map images were located; do not publish them until data provenance, map authorship, accessibility, and rights are reviewed."
     }
   },
   {
@@ -702,6 +760,137 @@ export const frameworkProjects = [
 ] satisfies ProjectRecord[];
 
 export const frameworkSources = [
+  {
+    id: "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+    title: "Google Drive Shared Drives collection inventory",
+    kind: "research-run",
+    visibility: "protected",
+    preservationStatus: "private",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe inventory and focused archival review of Jamie Burkart's Google Drive Shared Drives, July 2026.",
+    publicNote: "The public repository retains the collection count, method, selected project categories, and dispositions while withholding the complete drive-name inventory and access metadata.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-SHARED-DRIVE-INVENTORY-2026-001",
+    supportsGenerally: [
+      "110 accessible Shared Drives at the time of review",
+      "collection-scale project and collaborator handoff practice",
+      "public-safe prioritization and deferred-review lanes"
+    ],
+    doesNotEstablish: [
+      "Jamie created or owned every drive or file",
+      "complete review of every file in every drive",
+      "public permission for drive names, file names, links, IDs, membership, or contents",
+      "project outcome from collection presence alone"
+    ]
+  },
+  {
+    id: "SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    title: "Commercial vacancy and lease-cost public-baseline brief",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-03-27",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe review of Jamie Burkart's March 2026 commercial vacancy and lease-cost open-data brief.",
+    publicNote: "The protected brief proposes a privacy-preserving, geography-aggregated indicator pilot without exposing raw filings, tenant identities, parcel-level rent rows, or lease documents.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-COMMERCIAL-VACANCY-BRIEF-2026-001",
+    supportsGenerally: [
+      "Jamie as author",
+      "March 27, 2026 version",
+      "privacy-preserving geography-aggregated pilot proposal",
+      "RPIE-derived vacancy and lease-cost indicators alongside storefront data",
+      "coverage, suppression, and methods requirements"
+    ],
+    doesNotEstablish: [
+      "City endorsement or adoption",
+      "access to confidential RPIE filings",
+      "publication or implementation of the proposed dataset",
+      "delivery at a public event",
+      "policy outcome"
+    ]
+  },
+  {
+    id: "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+    title: "196 Artists Residency acceptance and onboarding record",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe review of a dated 196 Artists Residency acceptance and onboarding record.",
+    publicNote: "The protected record identifies Jamie as the sender and documents proposal review, acceptance, pre-arrival coordination, space configuration, and access handoff without publishing the resident's identity or logistics.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-196-ACCEPTANCE-2023-001",
+    supportsGenerally: [
+      "Jamie as residency host and onboarding contact",
+      "proposal review and acceptance",
+      "pre-arrival coordination",
+      "space configuration",
+      "arrival and access handoff"
+    ],
+    doesNotEstablish: [
+      "the 20-plus resident aggregate",
+      "every residency followed an identical process",
+      "institutional ownership of the resident's work",
+      "permission to publish resident identity, dates, contact details, access instructions, or private messages"
+    ]
+  },
+  {
+    id: "SRC-GDRIVE-SUNDAY-DINNER-PHOTO-SET-2025",
+    title: "Sunday Dinner candidate photo set",
+    kind: "photo-metadata",
+    visibility: "protected",
+    preservationStatus: "private",
+    accessedAt: "2026-07-13",
+    publicCitation: "Metadata-only record of eleven Sunday Dinner candidate images located in a Shared Drive.",
+    publicNote: "The source records only that candidate files exist; no image, face, home detail, filename, or participant identity is published.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-SUNDAY-DINNER-PHOTOS-2025-001",
+    supportsGenerally: ["eleven candidate image files located for future photo editing", "need for image-level rights and consent review"],
+    doesNotEstablish: ["event dates", "photographer", "participant consent", "public-display rights", "attendance or gathering totals"]
+  },
+  {
+    id: "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+    title: "NYC Artist Coalition mutual-support Shared Folder FAQ",
+    organization: "NYC Artist Coalition",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2017-02-09",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe review of NYC Artist Coalition's February 2017 mutual-support Shared Folder FAQ.",
+    publicNote: "The artifact describes a member-editable resource-sharing space and mutual-support network; it does not identify the document's author.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-NYCARTC-SHARED-FOLDER-FAQ-2017-001",
+    supportsGenerally: ["2017 mutual-support network framing", "member-editable shared resource space", "coalition meeting and join pathways"],
+    doesNotEstablish: ["Jamie as sole author", "Jamie as sole founder", "membership totals", "campaign outcomes", "current access or operation"]
+  },
+  {
+    id: "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
+    title: "Cure-periods machine-readable data recommendation",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2019-05-10",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe review of a 2019 NYC Artist Coalition archive note recommending machine-readable small-business violation reporting.",
+    publicNote: "The artifact proposes linking agency, code-section, violation, and fine data across two Council bills; authorship, submission, adoption, and Jamie's role remain open.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-NYCARTC-CURE-PERIODS-NOTE-2019-001",
+    supportsGenerally: ["existence of a machine-readable reporting proposal", "proposed linkage of violation data with OATH or ECB information", "relationship between two 2019 Council bills"],
+    doesNotEstablish: ["Jamie as author", "submission to Council", "Council acceptance", "adoption in enacted language", "implementation or outcome"]
+  },
+  {
+    id: "SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026",
+    title: "Source-Backed Team Memory Sprint proposal",
+    author: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    publishedAt: "2026-06-26",
+    accessedAt: "2026-07-13",
+    publicCitation: "Public-safe method summary derived from Jamie Burkart's June 2026 Source-Backed Team Memory Sprint proposal.",
+    publicNote: "The proposal defines one bounded source-to-memory loop, human review, approved non-sensitive or synthetic inputs, and explicit privacy, access, retention, and stop-or-continue decisions.",
+    protectedLocatorId: "ARCHIVE-GDRIVE-SOURCE-BACKED-SPRINT-2026-001",
+    supportsGenerally: ["bounded sprint design", "human-correctable source-to-memory loop", "approved-source scoping", "privacy and retention boundaries", "continue, revise, or stop recommendation"],
+    doesNotEstablish: ["completed client engagement", "production software", "client adoption", "business outcome", "permission to publish collaborator identity, pricing, correspondence, or company context"]
+  },
   {
     id: "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
     title: "Commercial Rent Stabilization operating-backbone archive review",
@@ -1053,6 +1242,107 @@ export const frameworkSources = [
 
 export const frameworkClaims = [
   {
+    id: "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    project: "commercial-vacancy-public-data",
+    internalClaim: "Jamie authored a March 2026 proposal for a privacy-preserving, geography-aggregated open-data pilot that would place RPIE-derived commercial vacancy and lease-cost indicators alongside existing storefront reporting, with coverage, suppression, and methods documentation.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [
+      {
+        key: "case-study",
+        text: "Jamie prepared a public-data brief proposing privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside New York City's existing storefront data.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/fair-rent-nyc"]
+      },
+      {
+        key: "technical-operations",
+        text: "Jamie translated administrative-data constraints into a practical proposal for privacy-preserving commercial vacancy and lease-cost indicators, including coverage, suppression, and methods requirements.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["/work/technical-operations"]
+      }
+    ],
+    evidence: [{
+      sourceId: "SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      relationship: "private-support",
+      supports: ["Jamie as author", "privacy-preserving geography-aggregated pilot proposal", "RPIE-derived vacancy and lease-cost indicators alongside storefront data", "coverage, suppression, and methods requirements"],
+      locator: "Public-safe review of the March 27, 2026 brief",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: [
+      "The artifact establishes a proposal, not City adoption, implementation, endorsement, or access to confidential filings.",
+      "Do not expose raw filings, tenant identities, parcel-level rent rows, lease records, or unverified map outputs.",
+      "The current Shared Drive file's public access status was not verified, so the underlying URL remains protected."
+    ],
+    antiClaims: ["New York City adopted Jamie's proposal", "Jamie published an official City dataset", "Jamie had access to confidential RPIE filings", "The proposed pilot was implemented"],
+    researchInquiryIds: ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-196-RESIDENCY-ONBOARDING-2023",
+    project: "sunday-dinner-196",
+    internalClaim: "A dated 196 Artists Residency acceptance record signed by Jamie documents his direct proposal-review, acceptance, pre-arrival coordination, space-configuration, and access-handoff role for one 2023 residency.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "selected",
+    projections: [{
+      key: "case-study",
+      text: "For 196 Artists Residency, Jamie supported the path from proposal review and acceptance through pre-arrival coordination, space configuration, and access handoff.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["/work/196-sunday-dinner"]
+    }],
+    evidence: [{
+      sourceId: "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+      relationship: "private-support",
+      supports: ["Jamie as residency host and onboarding contact", "proposal review and acceptance", "pre-arrival coordination", "space configuration", "arrival and access handoff"],
+      locator: "Public-safe review of a 2023 acceptance and onboarding record",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: [
+      "One record demonstrates the workflow but does not independently verify the 20-plus resident aggregate or establish that every residency followed an identical process.",
+      "Resident identity, dates, proposal details, contact information, access instructions, and private messages remain protected.",
+      "The work supported an artist's process; it does not establish institutional ownership of that work."
+    ],
+    antiClaims: ["The record verifies 20-plus residents", "Every residency used the same process", "Jamie owned the resident's work", "The private onboarding record is public"],
+    researchInquiryIds: ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
+    id: "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+    project: "nyc-artist-coalition",
+    internalClaim: "A February 2017 NYC Artist Coalition FAQ describes an early mutual-support network and member-editable shared resource space intended to let coalition members contribute useful material for artists in New York.",
+    status: "confirmed-with-boundary",
+    publicSafety: "public-with-boundary",
+    editorialStatus: "reserve",
+    projections: [{
+      key: "archive-note",
+      text: "A February 2017 coalition artifact describes NYC Artist Coalition as a mutual-support network with a member-editable shared resource space.",
+      status: "active",
+      citationRequired: false,
+      surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"]
+    }],
+    evidence: [{
+      sourceId: "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+      relationship: "private-support",
+      supports: ["2017 mutual-support network framing", "member-editable shared resource space", "coalition meeting and join pathways"],
+      locator: "Public-safe review of the February 2017 FAQ",
+      confidence: "high",
+      renderCitation: false
+    }],
+    boundaries: ["This is a collective coalition artifact; the source does not identify Jamie as sole author or sole founder.", "The record does not establish membership totals, current operation, or campaign outcomes.", "The underlying Shared Drive file and access metadata remain protected."],
+    antiClaims: ["Jamie alone created the mutual-support network", "Jamie solely authored the FAQ", "The 2017 shared folder is currently active", "The artifact proves campaign outcomes"],
+    researchInquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE"],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Jamie Burkart", "Codex archival review"]
+  },
+  {
     id: "CLM-CRS-OPERATING-BACKBONE-2026",
     project: "nyc-artist-coalition",
     internalClaim: "Jamie's April 2026 operating plan defined a small set of shared public goods for Commercial Rent Stabilization work, and subsequent running minutes document his maintenance of decisions, action ownership, open questions, source boundaries, and coordinated city/state work across a multi-organization collaboration.",
@@ -1323,6 +1613,9 @@ const openInquiry = (
 ) => ({ id, project, question, methods, resultStatus: "open" as const, findings: [], limitations, sourceIds });
 
 export const frameworkInquiries = [
+  openInquiry("INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "nyc-artist-coalition", "Who authored, submitted, reviewed, or adopted the 2019 recommendation for machine-readable small-business violation reporting, and what was Jamie's role?", ["Compare document revision and correspondence history with Council records for Int. 1466-2019 and Int. 1467-2019.", "Seek a public submission, testimony, bill report, collaborator confirmation, or version history that identifies authorship and reception.", "Compare proposed agency, code-section, violation, and fine fields with adopted reporting language."], ["Shared Drive custody and file content establish that the proposal existed, not Jamie's authorship, submission, Council adoption, implementation, or policy outcome."], ["SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019"]),
+  openInquiry("INQ-GDRIVE-DEFERRED-COLLECTION-REVIEW", "career-proof-system", "Which additional Shared Drive collections should be close-read next for role evidence, public outcomes, collaborator context, and cleared visual assets?", ["Prioritize collection roots tied to existing portfolio claims and unresolved proof debt.", "Review media-heavy collections through transcript, metadata, caption, rights, and consent workflows rather than filename inference.", "Preserve a resumable collection map while withholding personal, family, legal, financial, applicant, credential, and contact records."], ["This pass inventoried 110 accessible Shared Drives but close-read a bounded high-value cohort; unreviewed or connector-empty roots are deferred, not evidence of absence."], ["SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026"]),
+  openInquiry("INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME", "commercial-vacancy-public-data", "Was the commercial vacancy and lease-cost public-baseline proposal presented, adopted, piloted, published, or otherwise acted on by a public institution?", ["Locate public event records, agency correspondence approved for use, meeting notes, follow-up documents, public datasets, methods notes, or institutional acknowledgments.", "Distinguish authoring, sharing, discussion, endorsement, adoption, implementation, and publication."], ["The March 2026 brief establishes Jamie's proposal and method; it does not establish external reception or implementation."], ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"]),
   openInquiry("INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "career-proof-system", "Which quantified or causality-heavy resume claims should be promoted, narrowed, or held after a cross-archive audit?", ["Prioritize the Harry J. Epstein growth contribution, WOW List geographic reach, Sunday Dinner and residency aggregates, and any current-status language.", "Seek public sources, approved aggregate methods, and protected corroboration while keeping raw records private.", "Record not recovered separately from evidence that something did not exist."], ["The current resume and positioning outline are first-party research maps, not independent verification of their metrics or causality."], ["SRC-JOB-HUNT-PROOF-AUDIT-2026"]),
   openInquiry("INQ-NYCARTC-COFOUNDING-ROLE", "nyc-artist-coalition", "What do public formation records, launch materials, websites, correspondence, and collaborators establish about Jamie's role creating NYC Artist Coalition?", ["Recover dated public launch and formation materials.", "Map website authorship and coalition role language.", "Seek collaborator confirmation before broadening public wording."], ["The new sources establish an early organizer role, but not the complete founding group or co-founder wording."], ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017"]),
   openInquiry("INQ-NYCARTC-CABARET-OUTCOME-ROLE", "nyc-artist-coalition", "How did Jamie's documented fire-code education and public advocacy relate to the broader collective campaign and legislative repeal outcome?", ["Review remaining bill history and campaign records.", "Map coalition, partner, sponsor, and administration roles.", "Separate contribution, coalition action, sponsor action, and final legislative causality."], ["Press and Council testimony establish Jamie's contribution but not complete causality."], ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"]),
@@ -1364,8 +1657,11 @@ const publicationDecisionInputs: Array<[
   ["PUB-NYCARTC-NIGHTLIFE-TOWN-HALL", "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL", "selected", ["/work/fair-rent-nyc"], "Shows Jamie participating in a coalition-led public feedback structure for a new city office."],
   ["PUB-NYCARTC-MARCH-TRANSPARENCY", "CLM-NYCARTC-MARCH-TRANSPARENCY", "selected", ["/work/fair-rent-nyc"], "Adds a bounded collective outcome connecting public data, campaigning, and legislation."],
   ["PUB-SUNDAY-DINNER-WEEKLY-OPEN", "CLM-SUNDAY-DINNER-WEEKLY-OPEN", "selected", ["/work/196-sunday-dinner"], "Provides external evidence of the recurring open-community practice without exposing participants."],
+  ["PUB-196-RESIDENCY-ONBOARDING-2023", "CLM-196-RESIDENCY-ONBOARDING-2023", "selected", ["/work/196-sunday-dinner"], "Adds concrete role and workflow evidence while protecting the resident and private access logistics."],
   ["PUB-KC-TOWN-HALL-COUNCIL-ALLOCATION", "CLM-KC-TOWN-HALL-COUNCIL-ALLOCATION", "selected", ["/work/kc-town-hall"], "Preserves the complete official public-record sequence while distinguishing allocation from agreement execution and disbursement."],
   ["PUB-CRS-OPERATING-BACKBONE-2026", "CLM-CRS-OPERATING-BACKBONE-2026", "selected", ["/work/technical-operations"], "Adds a concrete product-operations proof while protecting coalition records and collective ownership."],
+  ["PUB-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026", "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026", "selected", ["/work/fair-rent-nyc", "/work/technical-operations"], "Adds a concrete privacy-aware public-data implementation artifact without implying government adoption."],
+  ["PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017", "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017", "reserve", ["docs/knowledge-bank/projects/nyc-artist-coalition-nightlife"], "Preserves early collective infrastructure as source-backed depth without crowding the current public composition or assigning solo authorship."],
   ["PUB-CLAUDETTE-AR-COLLABORATION", "CLM-CLAUDETTE-AR-COLLABORATION", "reserve", ["docs/knowledge-bank/projects/participatory-public-programs"], "Preserves a public-source-backed collaboration for future cultural, public-memory, and creative-technology contexts without crowding the current hiring composition."],
   ["PUB-PARTICIPATORY-LONGITUDINAL", "CLM-PARTICIPATORY-SYSTEMS-LONGITUDINAL", "hold", [], "Promising throughline requires broader cross-project research."]
 ];
@@ -1378,7 +1674,11 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
   audiences: ["hiring managers", "public-interest technology peers", "future editors"],
   surfaces,
   rationale,
-    decidedAt: "2026-07-12"
+    decidedAt: [
+      "PUB-196-RESIDENCY-ONBOARDING-2023",
+      "PUB-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
+    ].includes(id) ? "2026-07-13" : "2026-07-12"
   })
 ) satisfies PublicationDecision[];
 
@@ -1399,13 +1699,14 @@ export const frameworkProofCoverage = [
   coverage("fair-rent-campaign-memory", "partially-backed", "A protected April-May 2026 archive review now supports Jamie's operating design and running-minutes practice; the 30-plus page aggregate and additional public corroboration remain open.", ["SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("fair-rent-source-map", "research-needed", "Identify the public records and approved artifact metadata that support the source-map claim."),
   coverage("nyc-artist-coalition-public-web-infrastructure", "partially-backed", "The Save NYC Spaces and Talks Not Raids campaign sites are canonical public artifacts; individual web authorship still relies on Jamie confirmation and repository research.", ["SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-TALKS-NOT-RAIDS-CAMPAIGN"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE"]),
-  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records now support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; Fair Rent and individual systems authorship remain only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
+  coverage("nyc-artist-coalition-civic-systems", "partially-backed", "Independent reporting and government records support early organizing, Council testimony, a coalition-led town hall, campaign artifacts, FOIL-derived data, and MARCH reporting legislation; a protected 2017 FAQ adds collective mutual-support infrastructure, while individual systems authorship remains only partly canonical.", ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017", "SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019", "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH"]),
   coverage("nyc-artist-coalition-cabaret-organizing", "source-backed", "Gothamist reporting and the official Council transcript directly support the bounded organizing and testimony claim.", ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"], []),
   coverage("wowlist-community-platform", "partially-backed", "The Greene Hill interview independently confirms WOW List's community-events function; technical architecture, aggregate counts, and geographic reach remain supported by the archive and need more public-source coverage.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"]),
-  coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community; aggregate gathering and residency totals remain supported by protected records.", ["SRC-GHFC-JAMIE-JULIA-QA-2017"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"]),
+  coverage("sunday-dinner-196-participation-infrastructure", "partially-backed", "The Greene Hill interview confirms a weekly gathering open to the community, and a protected 2023 record confirms Jamie's proposal-review and onboarding workflow for one residency; aggregate gathering and residency totals remain separately protected.", ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023"], ["INQ-SUNDAY-DINNER-AGGREGATE-COUNTS"]),
+  coverage("commercial-vacancy-public-data-brief", "source-backed", "A protected March 2026 artifact directly supports Jamie's authorship of the bounded public-data proposal while external adoption and implementation remain open.", ["SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026"], ["INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME"]),
   coverage("kc-spaces-fund-digital-infrastructure", "research-needed", "Convert AI-assisted archival review into bounded canonical source metadata where public-safe."),
   coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City records identify Jamie as presenter, record the unanimous recommendation, and show the Council's $490,539 allocation and authorization of funding-agreement negotiations; execution and disbursement remain open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"], ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"]),
-  coverage("source-backed-team-memory-method", "research-needed", "Associate public lab materials without exposing private collaborator context."),
+  coverage("source-backed-team-memory-method", "partially-backed", "A protected June 2026 proposal supports the bounded method, human-review loop, approved-source scoping, and privacy boundaries; it does not establish a completed client engagement or production product.", ["SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
   coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record.")
 ] satisfies ProofCoverage[];
@@ -1445,6 +1746,11 @@ export const frameworkPages = [
         claimId: "CLM-NYCARTC-MARCH-TRANSPARENCY",
         projection: "case-study",
         sourceIds: ["SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]
+      },
+      {
+        id: "commercial-vacancy-public-data-brief",
+        claimId: "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+        projection: "case-study"
       }
     ]
   },
@@ -1452,12 +1758,19 @@ export const frameworkPages = [
     id: "196-sunday-dinner",
     surface: "/work/196-sunday-dinner",
     sourceOrder: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
-    occurrences: [{
-      id: "weekly-open-gathering",
-      claimId: "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
-      projection: "case-study",
-      sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"]
-    }]
+    occurrences: [
+      {
+        id: "weekly-open-gathering",
+        claimId: "CLM-SUNDAY-DINNER-WEEKLY-OPEN",
+        projection: "case-study",
+        sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"]
+      },
+      {
+        id: "residency-onboarding",
+        claimId: "CLM-196-RESIDENCY-ONBOARDING-2023",
+        projection: "case-study"
+      }
+    ]
   },
   {
     id: "kc-town-hall",

@@ -695,6 +695,57 @@
       ]
     },
     {
+      "id": "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie prepared a public-data brief proposing privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside New York City's existing storefront data.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Jamie translated administrative-data constraints into a practical proposal for privacy-preserving commercial vacancy and lease-cost indicators, including coverage, suppression, and methods requirements.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "The artifact establishes a proposal, not City adoption, implementation, endorsement, or access to confidential filings.",
+        "Do not expose raw filings, tenant identities, parcel-level rent rows, lease records, or unverified map outputs.",
+        "The current Shared Drive file's public access status was not verified, so the underlying URL remains protected."
+      ]
+    },
+    {
+      "id": "CLM-196-RESIDENCY-ONBOARDING-2023",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For 196 Artists Residency, Jamie supported the path from proposal review and acceptance through pre-arrival coordination, space configuration, and access handoff.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "One record demonstrates the workflow but does not independently verify the 20-plus resident aggregate or establish that every residency followed an identical process.",
+        "Resident identity, dates, proposal details, contact information, access instructions, and private messages remain protected.",
+        "The work supported an artist's process; it does not establish institutional ownership of that work."
+      ]
+    },
+    {
       "id": "CLM-NYCARTC-CABARET-ORGANIZING",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1054,6 +1105,11 @@
           "sourceIds": [
             "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"
           ]
+        },
+        {
+          "id": "commercial-vacancy-public-data-brief",
+          "claimId": "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+          "projection": "case-study"
         }
       ]
     },
@@ -1071,6 +1127,11 @@
           "sourceIds": [
             "SRC-GHFC-JAMIE-JULIA-QA-2017"
           ]
+        },
+        {
+          "id": "residency-onboarding",
+          "claimId": "CLM-196-RESIDENCY-ONBOARDING-2023",
+          "projection": "case-study"
         }
       ]
     },

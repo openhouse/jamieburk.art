@@ -1,6 +1,6 @@
 # NYC Artist Coalition Nightlife Research
 
-**Reviewed:** 2026-07-12
+**Reviewed:** 2026-07-13
 
 ## Confirmed contribution
 
@@ -33,6 +33,18 @@ These records support collective accomplishment and Jamie's documented public
 participation. They do not establish his individual role in the MARCH records
 request, sole causality for legislation, or a claim that MARCH was disbanded.
 
+## Reserve collective infrastructure
+
+A protected February 2017 coalition FAQ describes NYC Artist Coalition as a
+mutual-support network with a member-editable shared resource space. This
+preserves evidence that early coalition infrastructure included practical
+resource sharing as well as public advocacy.
+
+The artifact is collective and does not identify its author. It therefore does
+not establish Jamie as sole author, sole founder, or owner of the network, and
+it does not establish membership totals, current operation, or campaign
+outcomes.
+
 ## Open research lanes
 
 - NYC Artist Coalition formation, founding roles, and dated public artifacts.
@@ -43,6 +55,9 @@ request, sole causality for legislation, or a claim that MARCH was disbanded.
   outputs.
 - Talks Not Raids: campaign methods, transparency outcomes, Jamie's role, and
   the public record concerning MARCH.
+- Authorship, submission, reception, and implementation of a 2019 archive note
+  recommending machine-readable small-business violation reporting across two
+  Council bills.
 - Durable capture and close reading of the supplied NPR article.
 
 Each lane should separate Jamie's direct role, collective accomplishments,

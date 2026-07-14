@@ -108,6 +108,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / Collaborator approval needed  
 **Last reviewed:** 2026-07-07
 
+## commercial-vacancy-public-data-brief - Privacy-preserving commercial vacancy data proposal
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary
+**Public wording:** Prepared a public-data brief proposing privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators alongside New York City's existing storefront data.
+**Detailed public-safe wording:** Jamie translated administrative-data constraints into a practical open-data proposal using RPIE-derived aggregate indicators, coverage and suppression rules, a methods note, and explicit exclusions for raw filings, tenant identities, parcel-level rent rows, and lease documents.
+**Where to project:** Technical Operations and Fair Rent NYC case study.
+**Why it matters:** Shows public-interest data product framing, privacy-by-design, policy translation, and implementation scoping in one concrete artifact.
+**Guardrail:** Describe this as Jamie's proposal, not City endorsement, adoption, implementation, publication, or access to confidential filings.
+**Do not say:** New York City adopted Jamie's proposal; Jamie published an official City dataset; Jamie had access to confidential RPIE filings; the proposed pilot was implemented.
+**Protected boundaries:** Underlying Shared Drive URL and access metadata, raw filings, tenant identities, parcel-level rent rows, lease documents, and unverified maps stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 
 **Status:** Careful
@@ -174,14 +189,44 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful  
 **Evidence class:** Approved resume / public project artifact / public-safe archive summary / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
-**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
+**Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, proposal review, resident onboarding, space configuration, facilitation, documentation, and follow-through systems.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
-**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
+**Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database; one onboarding record independently verifies the 20-plus resident aggregate.
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-13
+
+## 196-residency-onboarding-2023 - Residency onboarding workflow
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary
+**Public wording:** For 196 Artists Residency, Jamie supported the path from proposal review and acceptance through pre-arrival coordination, space configuration, and access handoff.
+**Detailed public-safe wording:** A protected dated acceptance record signed by Jamie documents his direct proposal-review, acceptance, pre-arrival coordination, space-configuration, and access-handoff role for one 2023 residency.
+**Where to project:** 196 / Sunday Dinner case study.
+**Why it matters:** Makes the operational substance of cultural hosting legible without exposing a resident or private home-access details.
+**Guardrail:** One dated record establishes one concrete workflow, not the 20-plus resident aggregate or an identical process for every residency.
+**Do not say:** The record verifies 20-plus residents; every residency used the same process; Jamie owned the resident's work; the private onboarding record is public.
+**Protected boundaries:** Resident identity, proposal, dates, contact information, access instructions, and private messages stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## nyc-artist-coalition-mutual-support-resource-2017 - Early mutual-support resource
+
+**Status:** Reserve
+**Support level:** Strong for the collective artifact
+**Evidence class:** Public-safe archive summary
+**Public wording:** A February 2017 coalition artifact describes NYC Artist Coalition as a mutual-support network with a member-editable shared resource space.
+**Detailed public-safe wording:** The protected FAQ describes a collective space where coalition members could share resources useful to one another and to artists in New York, without identifying Jamie as its sole author or owner.
+**Where to project:** Knowledge-bank reserve only.
+**Why it matters:** Preserves evidence that early coalition infrastructure included practical resource sharing, not only public advocacy.
+**Guardrail:** Treat as a collective artifact. The source does not identify Jamie as sole author or sole founder.
+**Do not say:** Jamie alone created the mutual-support network; Jamie solely authored the FAQ; the shared folder is currently active; the artifact proves campaign outcomes.
+**Protected boundaries:** Underlying file, access metadata, membership, and private shared resources stay offline.
+**Review owner:** Jamie / collaborator context useful
+**Last reviewed:** 2026-07-13
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

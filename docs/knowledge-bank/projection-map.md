@@ -70,6 +70,17 @@ Stabilization operating-backbone claim. It names the usable outputs without
 publishing raw coalition records or rendering a public citation to a protected
 source.
 
+The Shared Drives pass adds a selected commercial-vacancy public-data proof:
+Jamie prepared a bounded proposal for privacy-preserving, geography-aggregated
+vacancy and lease-cost indicators with coverage, suppression, and methods
+requirements. The site presents the authored proposal, not City adoption or
+implementation.
+
+The 196 / Sunday Dinner case study now also selects one protected-source-backed
+workflow claim covering proposal review, acceptance, pre-arrival coordination,
+space configuration, and access handoff. Resident identity and logistics remain
+protected, and one record does not verify the full residency aggregate.
+
 These selections do not publish founding causality, event-production ownership,
 funding-agreement execution or disbursement, participant records, or a claim
 that MARCH was disbanded.

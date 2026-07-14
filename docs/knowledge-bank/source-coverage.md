@@ -83,3 +83,24 @@ and job-hunt working archives.
 
 Files that had not materialized or could not be durably read were recorded as
 not recovered in this pass. That is not evidence that they did not exist.
+
+## 2026-07-13 Google Drive Shared Drives Pass
+
+The Shared Drives pass inventoried 110 accessible collections privately and
+close-read a bounded high-value cohort. It added protected source support
+without publishing drive names, access links, file IDs, participant rows, or
+private drafts.
+
+- `commercial-vacancy-public-data-brief` is source-backed by a March 2026
+  Jamie-authored artifact. City reception and implementation remain open.
+- `sunday-dinner-196-participation-infrastructure` now has protected evidence of
+  Jamie's proposal-review and onboarding workflow for one residency; the larger
+  aggregates remain separately bounded.
+- `nyc-artist-coalition-civic-systems` gains a collective 2017 mutual-support
+  resource artifact without assigning Jamie solo authorship.
+- `source-backed-team-memory-method` is now partially backed by a bounded June
+  2026 proposal, without implying a completed client engagement or production
+  product.
+
+The unattributed machine-readable reporting note and unreviewed media-heavy
+collections were converted into explicit inquiries rather than public claims.

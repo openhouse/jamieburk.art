@@ -28,6 +28,10 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
+adopted, implemented, published, or based on his access to confidential RPIE
+filings. It is an authored proposal unless external outcome evidence matures.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -45,6 +49,21 @@ Do not name collaborators unless approved.
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not use one dated residency onboarding record to verify the 20-plus resident
+aggregate or imply that every residency followed an identical process. Do not
+publish resident identity, proposal details, dates, contact information, or
+access instructions.
+
+## Google Drive Shared Drives
+
+Do not publish the complete collection inventory, private drive names, file
+IDs, access links, membership, private filenames, participant rows, or private
+drafts.
+
+Do not treat Shared Drive presence or custody as proof of Jamie's authorship,
+distribution, institutional adoption, public permission, implementation, or
+project outcome.
 
 ## KC Spaces Fund
 

@@ -4,6 +4,7 @@ import {
   evaluateChadLens,
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
+  evaluateGoogleSharedDriveArchiveProduction,
   evaluateICloudArchiveProduction,
   evaluateKcTownHallCouncilAllocation,
   evaluateKnowledgeLifecycle,
@@ -383,4 +384,78 @@ test("iCloud archive production rejects local paths and missing archive lanes", 
 
   assert.ok(failures.some((failure) => failure.includes("job-hunt")));
   assert.ok(failures.some((failure) => failure.includes("local filesystem path")));
+});
+
+const googleSharedDriveArchiveFixture = {
+  framework: [
+    "LEAD-GDRIVE-SHARED-DRIVES-ARCHIVAL-PASS-2026",
+    "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+    "SRC-GDRIVE-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "SRC-GDRIVE-196-RESIDENCY-ACCEPTANCE-2023",
+    "SRC-GDRIVE-SUNDAY-DINNER-PHOTO-SET-2025",
+    "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
+    "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
+    "SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026",
+    "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "CLM-196-RESIDENCY-ONBOARDING-2023",
+    "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+    "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP",
+    "INQ-GDRIVE-DEFERRED-COLLECTION-REVIEW",
+    "INQ-COMMERCIAL-VACANCY-PUBLICATION-OUTCOME",
+    "PUB-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "PUB-196-RESIDENCY-ONBOARDING-2023",
+    "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+    'coverage("commercial-vacancy-public-data-brief", "source-backed"',
+    'coverage("source-backed-team-memory-method", "partially-backed"',
+    "Shared Drive custody and file content establish that the proposal existed, not Jamie's authorship",
+    "private-support renderCitation: false"
+  ].join(" "),
+  proofs: [
+    'id: "commercial-vacancy-public-data-brief"',
+    "privacy-preserving, geography-aggregated commercial vacancy, occupancy, and lease-cost indicators",
+    "New York City adopted Jamie's proposal",
+    'id: "sunday-dinner-196-participation-infrastructure"',
+    "proposal review, resident onboarding, space configuration",
+    "One onboarding record independently verifies the 20-plus resident aggregate"
+  ].join(" "),
+  technicalOperations: [
+    'project: "Commercial Vacancy Data"',
+    "privacy-preserving commercial vacancy and lease-cost indicators",
+    "coverage, suppression, and methods requirements"
+  ].join(" "),
+  fairRentCase: [
+    "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
+    "not evidence that New York City adopted, implemented, or published"
+  ].join(" "),
+  sundayDinnerCase: [
+    "CLM-196-RESIDENCY-ONBOARDING-2023",
+    "does not independently verify the larger residency aggregate"
+  ].join(" "),
+  archiveDoc: [
+    "110 Shared Drives",
+    "collection-scale accession pass plus focused close reading",
+    "access visibility as not verified",
+    "Shared Drive presence was never treated as proof",
+    "Selected public claims Reserve depth Research debt created rather than concealed",
+    "Private material excluded from ingestion",
+    "eleven candidate image files",
+    "unreviewed archive is not evidence that records did not exist"
+  ].join(" ")
+};
+
+test("Google Shared Drive archive production passes with bounded asymmetric dispositions", () => {
+  assert.deepEqual(
+    evaluateGoogleSharedDriveArchiveProduction(googleSharedDriveArchiveFixture),
+    []
+  );
+});
+
+test("Google Shared Drive archive production rejects private links and missing collection scope", () => {
+  const failures = evaluateGoogleSharedDriveArchiveProduction({
+    ...googleSharedDriveArchiveFixture,
+    archiveDoc: `${googleSharedDriveArchiveFixture.archiveDoc.replace("110 Shared Drives", "Shared Drives")} https://docs.google.com/document/d/private`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("110 Shared Drives")));
+  assert.ok(failures.some((failure) => failure.includes("private path or Drive link")));
 });

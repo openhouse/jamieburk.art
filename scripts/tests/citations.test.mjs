@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 27 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 28 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
