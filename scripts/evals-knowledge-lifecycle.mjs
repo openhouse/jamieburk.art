@@ -4,6 +4,11 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { knowledgeBank } from "../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  nycaPressArticles,
+  nycaPressCampaigns,
+  nycaPressCorpusStats
+} from "../apps/www/src/data/knowledge-bank/nyca-press-corpus.ts";
 import publicRegistry from "../apps/www/src/data/knowledge-bank/public-registry.json" with { type: "json" };
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 
@@ -101,6 +106,34 @@ check(
     "SRC-NYCA-MAYOR-CURE-2023-12-28"
   ].every((id) => sourceById.get(id)?.kind === "government-record")
 );
+check(
+  "Source quality",
+  "The four campaign indexes recover the complete deduplicated press corpus",
+  6,
+  nycaPressCampaigns.letnycdance.expected === 21 &&
+    nycaPressCampaigns.talksnotraids.expected === 7 &&
+    nycaPressCampaigns.savenycspaces.expected === 8 &&
+    nycaPressCampaigns.fairrentnyc.expected === 9 &&
+    nycaPressCorpusStats.placementCount === 45 &&
+    nycaPressCorpusStats.uniqueArticleCount === 44 &&
+    nycaPressCorpusStats.reusedSourceCount === 3 &&
+    nycaPressCorpusStats.newArticleSourceCount === 41,
+  true
+);
+check(
+  "Source quality",
+  "Every recovered article resolves to a source and Wayback fallback",
+  6,
+  nycaPressArticles.length === 44 &&
+    new Set(nycaPressArticles.map((article) => article.sourceId)).size === 44 &&
+    nycaPressCorpusStats.archivedArticleCount === 44 &&
+    nycaPressArticles.every(
+      (article) =>
+        sourceById.has(article.sourceId) &&
+        article.archiveUrl.startsWith("https://web.archive.org/web/")
+    ),
+  true
+);
 
 check(
   "Atomic observations",
@@ -186,6 +219,39 @@ check(
       ),
   true
 );
+check(
+  "Claim maturity",
+  "Campaign website authorship is direct, specific, and collectively bounded",
+  5,
+  claimById.get("CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP")?.status ===
+      "confirmed-with-boundary" &&
+    ["Let NYC Dance", "Talks Not Raids", "Save NYC Spaces", "FairRentNYC"].every(
+      (name) =>
+        claimById
+          .get("CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP")
+          ?.internalClaim.includes(name)
+    ) &&
+    claimById
+      .get("CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP")
+      ?.antiClaims.some((value) => /solely led|alone caused/i.test(value)),
+  true
+);
+check(
+  "Claim maturity",
+  "Press and commercial-rent claims preserve attribution boundaries",
+  5,
+  claimById.get("CLM-NYCA-CAMPAIGN-PRESS-CORPUS")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NYCA-CAMPAIGN-PRESS-CORPUS")
+      ?.boundaries.some((value) => /inclusion.*endorsed/i.test(value)) &&
+    claimById.get("CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-CONTEXT")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-CONTEXT")
+      ?.boundaries.some((value) => /do not establish Jamie's complete individual/i.test(value)),
+  true
+);
 
 check(
   "Research recursion",
@@ -250,6 +316,19 @@ check(
 
 const frameworkDoc = read("docs/knowledge-bank/framework.md");
 const intakeDoc = read("docs/knowledge-bank/intake/README.md");
+const nycaPressReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-13-nyca-campaign-press-corpus.md"
+);
+
+check(
+  "Capture integrity",
+  "The public-safe press receipt accounts for every recovered source",
+  5,
+  /\| \*\*Total placements\*\* \| \*\*45\*\* \|/.test(nycaPressReceipt) &&
+    /\| \*\*Unique articles\*\* \| \*\*44\*\* \|/.test(nycaPressReceipt) &&
+    nycaPressArticles.every((article) => nycaPressReceipt.includes(article.sourceId)),
+  true
+);
 
 check(
   "Photo feedback",

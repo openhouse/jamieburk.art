@@ -47,6 +47,36 @@ Key sources: `SRC-NYCA-GOTHAMIST-CABARET-2017-06-19`,
 `SRC-NYCA-MIXMAG-CABARET-2017-09-20`,
 `SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19`.
 
+## Campaign Websites and Press Corpus
+
+Jamie directly confirmed that he made the Let NYC Dance, Talks Not Raids, Save
+NYC Spaces, and FairRentNYC websites. That establishes website authorship, not
+sole authorship of each campaign's policy, organizing, or collective outcomes.
+
+A July 2026 recovery pass extracted every press link presented by those four
+sites: 21 Let NYC Dance placements, 7 Talks Not Raids placements, 8 Save NYC
+Spaces placements, and 9 FairRentNYC placements. One NPR article appears on two
+sites, producing 45 placements and 44 distinct articles. Every distinct article
+has a recoverable Wayback capture, and every article body was reviewed from a
+live or archived page. The repository retains metadata, public links,
+paraphrased observations, and boundaries rather than republishing article text.
+
+The corpus adds useful depth to the campaign record:
+
+- Cabaret Law coverage documents public mobilization, a coalition-built license
+  map, a reported crowd of more than 300 at a Let NYC Dance event, and 3,511
+  petition supporters at the time of one May 2017 report.
+- Office of Nightlife coverage documents continued coalition accountability
+  work, including a March 2018 forum attended by more than 100 venue operators,
+  artists, and community members.
+- MARCH coverage documents public-records work, disagreement over available
+  enforcement data, venue testimony, and demands for transparency.
+- FairRentNYC coverage documents the commercial-vacancy and lease-cost context
+  in which NYC Artist Coalition members advocated commercial rent stabilization.
+
+See the complete public-safe
+[campaign press receipt](../intake/2026-07-13-nyca-campaign-press-corpus.md).
+
 ## Office of Nightlife and Market Hotel Town Hall
 
 Independent coverage says NYC Artist Coalition spearheaded and organized the
@@ -85,4 +115,7 @@ The Cabaret Law contribution claim is confirmed with collective boundaries.
 The Office of Nightlife and Talks Not Raids long-arc claims are use-with-care.
 The co-founder and early organizer claims are confirmed with boundaries. Exact
 founding responsibilities and Jamie's complete town-hall production role remain
-open research questions.
+open research questions. Jamie's four-site authorship and the recovered
+campaign-press corpus are confirmed with boundaries. The commercial-rent source
+context is confirmed, while Jamie's exact role in every cited commercial-rent
+action remains deliberately unclaimed.

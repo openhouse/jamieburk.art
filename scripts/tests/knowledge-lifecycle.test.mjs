@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  nycaPressArticles,
+  nycaPressCampaigns,
+  nycaPressCorpusStats
+} from "../../apps/www/src/data/knowledge-bank/nyca-press-corpus.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
 
 test("canonical lifecycle records pass validation", () => {
@@ -49,6 +54,59 @@ test("portfolio expansion ingests exactly ten new public sources", () => {
         (source) => source.id === id && source.visibility === "public"
       )
     )
+  );
+});
+
+test("NYC Artist Coalition press recovery is complete and deduplicated", () => {
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.entries(nycaPressCampaigns).map(([key, campaign]) => [
+        key,
+        campaign.expected
+      ])
+    ),
+    { letnycdance: 21, talksnotraids: 7, savenycspaces: 8, fairrentnyc: 9 }
+  );
+  assert.equal(nycaPressCorpusStats.placementCount, 45);
+  assert.equal(nycaPressCorpusStats.uniqueArticleCount, 44);
+  assert.equal(nycaPressCorpusStats.reusedSourceCount, 3);
+  assert.equal(nycaPressCorpusStats.newArticleSourceCount, 41);
+  assert.equal(nycaPressCorpusStats.archivedArticleCount, 44);
+  assert.equal(new Set(nycaPressArticles.map((article) => article.sourceId)).size, 44);
+  assert.ok(
+    nycaPressArticles.every(
+      (article) =>
+        article.archiveUrl.startsWith("https://web.archive.org/web/") &&
+        knowledgeBank.sources.some((source) => source.id === article.sourceId)
+    )
+  );
+});
+
+test("each campaign has a researched knowledge-bank-only intake", () => {
+  for (const campaign of Object.keys(nycaPressCampaigns)) {
+    const intake = knowledgeBank.intakeItems.find(
+      (item) => item.id === `INTAKE-2026-07-13-NYCA-PRESS-${campaign.toUpperCase()}`
+    );
+    assert.ok(intake);
+    assert.equal(intake.researchStatus, "researched");
+    assert.equal(intake.publicationStatus, "knowledge-bank-only");
+    assert.ok(intake.observationIds.length > 1);
+  }
+});
+
+test("campaign authorship and press claims retain collective boundaries", () => {
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const authorship = claimById.get("CLM-NYCA-CAMPAIGN-WEBSITE-AUTHORSHIP");
+  const press = claimById.get("CLM-NYCA-CAMPAIGN-PRESS-CORPUS");
+  const rent = claimById.get("CLM-NYCA-COMMERCIAL-RENT-ADVOCACY-CONTEXT");
+
+  assert.equal(authorship?.status, "confirmed-with-boundary");
+  assert.ok(authorship?.antiClaims.some((value) => /solely led|alone caused/i.test(value)));
+  assert.equal(press?.status, "confirmed-with-boundary");
+  assert.ok(press?.boundaries.some((value) => /inclusion.*endorsed/i.test(value)));
+  assert.equal(rent?.status, "confirmed-with-boundary");
+  assert.ok(
+    rent?.boundaries.some((value) => /do not establish Jamie's complete individual/i.test(value))
   );
 });
 

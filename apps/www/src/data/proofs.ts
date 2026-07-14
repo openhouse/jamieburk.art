@@ -240,7 +240,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.",
     sourceBasis:
-      "Approved resume language, Jamie confirmation, contemporaneous NPR founding-member attribution, independent organizer reporting, and public campaign websites.",
+      "Approved resume language, Jamie confirmation, contemporaneous NPR founding-member attribution, independent organizer reporting, public campaign websites, and a recovered 44-article campaign press corpus.",
     whyItMatters:
       "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
     guardrail:
@@ -263,7 +263,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["campaign-websites", "public-guidance", "information-architecture"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyc-artist-coalition-civic-systems",

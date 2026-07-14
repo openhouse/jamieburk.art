@@ -1,7 +1,16 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  nycaPressClaims,
+  nycaPressEvidenceByClaim,
+  nycaPressIntakeItems,
+  nycaPressObservations,
+  nycaPressResearchInquiries,
+  nycaPressSources
+} from "./nyca-press-corpus.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...nycaPressIntakeItems,
     {
       id: "INTAKE-2026-07-12-PORTFOLIO-STRENGTHENING-SOURCES",
       receivedAt: "2026-07-12",
@@ -188,6 +197,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...nycaPressSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -447,10 +457,11 @@ const knowledgeBankInput = {
       author: "Emma Whitford",
       kind: "published-article",
       visibility: "public",
-      preservationStatus: "live",
+      preservationStatus: "live-and-archived",
       publishedAt: "2017-06-19",
       accessedAt: "2026-07-12",
       canonicalUrl: "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      archiveUrl: "https://web.archive.org/web/20190507132352/http://gothamist.com:80/2017/06/19/cabaret_law_nyc.php",
       preferredPublicUrl: "canonical",
       publicCitation: "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
       publicNote: "Independent reporting directly identifies Jamie's fire-code study groups, City Hall rally, NYC Artist Coalition affiliation, and safety framing.",
@@ -472,10 +483,11 @@ const knowledgeBankInput = {
       organization: "NPR",
       kind: "published-article",
       visibility: "public",
-      preservationStatus: "live",
+      preservationStatus: "live-and-archived",
       publishedAt: "2017-09-20",
       accessedAt: "2026-07-12",
       canonicalUrl: "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      archiveUrl: "https://web.archive.org/web/20251028172606/https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
       preferredPublicUrl: "canonical",
       publicCitation: "NPR, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' September 20, 2017.",
       publicNote: "National reporting contextualizing the broader nightlife movement and political moment; the canonical page was robots-blocked during this review and was cross-checked through syndicated copies.",
@@ -576,10 +588,11 @@ const knowledgeBankInput = {
       author: "Cassidy Dawn Graves",
       kind: "published-article",
       visibility: "public",
-      preservationStatus: "live",
+      preservationStatus: "live-and-archived",
       publishedAt: "2017-10-12",
       accessedAt: "2026-07-12",
       canonicalUrl: "https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
+      archiveUrl: "https://web.archive.org/web/20260106102010/https://bedfordandbowery.com/2017/10/what-can-the-night-mayor-do-the-diy-scene-discusses/",
       preferredPublicUrl: "canonical",
       publicCitation: "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
       publicNote: "Independent reporting describing the town hall as spearheaded by NYC Artist Coalition, the coalition as instrumental in advocacy, and Jamie as a participating coalition speaker.",
@@ -679,16 +692,18 @@ const knowledgeBankInput = {
       organization: "Talks Not Raids Coalition",
       kind: "institutional-web-page",
       visibility: "public",
-      preservationStatus: "live",
+      preservationStatus: "live-and-archived",
       accessedAt: "2026-07-12",
       canonicalUrl: "https://talksnotraids.com/",
+      archiveUrl: "https://web.archive.org/web/20260416022227/https://talksnotraids.com/",
       preferredPublicUrl: "canonical",
       publicCitation: "Talks Not Raids Coalition, 'Talks Not Raids: Transparency on MARCH Raids in NYC.'",
       publicNote: "Public campaign surface advocating trust, transparency, and relationship-based safety work in place of disruptive MARCH raids.",
       supportsGenerally: [
         "the coalition publicly advocated talks rather than raids",
         "the campaign framed MARCH as harmful to vulnerable cultural spaces",
-        "the campaign sought trust with public-safety stakeholders"
+        "the campaign sought trust with public-safety stakeholders",
+        "the site preserves a curated press index of seven articles"
       ],
       doesNotEstablish: [
         "Jamie's individual authorship",
@@ -808,9 +823,10 @@ const knowledgeBankInput = {
       organization: "NYC Artist Coalition and Save NYC Spaces coalition",
       kind: "project-archive",
       visibility: "public",
-      preservationStatus: "live",
+      preservationStatus: "live-and-archived",
       accessedAt: "2026-07-12",
       canonicalUrl: "https://savenycspaces.nycartc.com/",
+      archiveUrl: "https://web.archive.org/web/20260521133438/https://savenycspaces.nycartc.com/",
       preferredPublicUrl: "canonical",
       publicCitation: "NYC Artist Coalition and Save NYC Spaces coalition, 'Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures.'",
       publicNote: "Public campaign surface preserving a multi-organization agenda, participant statements, media materials, and Jamie's attribution as NYC Artist Coalition.",
@@ -818,7 +834,8 @@ const knowledgeBankInput = {
         "a public Save NYC Spaces campaign agenda",
         "demands concerning criminalization, support, displacement, representation, and MARCH transparency",
         "Jamie participated under NYC Artist Coalition attribution",
-        "the campaign centered neighborhood-scale cultural access"
+        "the campaign centered neighborhood-scale cultural access",
+        "the site preserves a curated press index of eight articles"
       ],
       doesNotEstablish: [
         "Jamie's authorship of every campaign statement",
@@ -1014,6 +1031,7 @@ const knowledgeBankInput = {
     }
   ],
   observations: [
+    ...nycaPressObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1425,6 +1443,7 @@ const knowledgeBankInput = {
     }
   ],
   claims: [
+    ...nycaPressClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -1635,6 +1654,7 @@ const knowledgeBankInput = {
         surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"]
       }],
       evidence: [
+        ...(nycaPressEvidenceByClaim["CLM-NYCA-CABARET-LAW-CONTRIBUTION"] ?? []),
         {
           sourceId: "SRC-NYCA-GOTHAMIST-CABARET-2017-06-19",
           relationship: "direct-support",
@@ -1712,6 +1732,7 @@ const knowledgeBankInput = {
         surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"]
       }],
       evidence: [
+        ...(nycaPressEvidenceByClaim["CLM-NYCA-OFFICE-NIGHTLIFE-TOWN-HALL"] ?? []),
         {
           sourceId: "SRC-NYCA-BEDFORD-BOWERY-NIGHT-MAYOR-2017-10-12",
           relationship: "direct-support",
@@ -1795,6 +1816,7 @@ const knowledgeBankInput = {
         surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"]
       }],
       evidence: [
+        ...(nycaPressEvidenceByClaim["CLM-NYCA-TALKS-NOT-RAIDS-LONG-ARC"] ?? []),
         {
           sourceId: "SRC-NYCA-TALKS-NOT-RAIDS",
           relationship: "direct-support",
@@ -2036,6 +2058,7 @@ const knowledgeBankInput = {
         surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition"]
       }],
       evidence: [
+        ...(nycaPressEvidenceByClaim["CLM-NYCA-COFOUNDER-ROLE"] ?? []),
         {
           sourceId: "SRC-NYCA-NPR-CABARET-2017-09-20",
           relationship: "direct-support",
@@ -2109,7 +2132,9 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex intake review"]
     }
   ],
-  researchInquiries: [{
+  researchInquiries: [
+  ...nycaPressResearchInquiries,
+  {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
     question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
@@ -2154,6 +2179,7 @@ const knowledgeBankInput = {
     findings: [
       "NPR contemporaneously identified Jamie as a founding member of NYC Artist Coalition.",
       "Bedford + Bowery identified Jamie as an NYC Artist Coalition organizer in February 2017 and documented concrete safety-meeting and mutual-aid work.",
+      "THUMP independently reported that NYC Artist Coalition formed in January 2017 amid post-Ghost Ship safety concerns and documented the coalition's early meeting with the cultural-affairs commissioner; this strengthens the chronology without assigning Jamie's exact founding labor.",
       "The sources support a bounded co-founder or founding-member claim while leaving exact founding chronology and division of labor open."
     ],
     limitations: [
@@ -2162,7 +2188,8 @@ const knowledgeBankInput = {
     ],
     sourceIds: [
       "SRC-NYCA-NPR-CABARET-2017-09-20",
-      "SRC-NYCA-BEDFORD-BOWERY-DIY-SPACES-2017-02-07"
+      "SRC-NYCA-BEDFORD-BOWERY-DIY-SPACES-2017-02-07",
+      "SRC-NYCA-PRESS-VICE-THUMP-2017-03-21-A-COALITION-OF-ADVOCACY-GROUPS"
     ],
     publicSummary: "Contemporaneous national and local reporting supports a bounded founding-member and organizer claim while exact founding responsibilities remain open."
   },
@@ -2183,6 +2210,7 @@ const knowledgeBankInput = {
       "A second independent report identifies NYC Artist Coalition as organizer and quotes Jamie articulating the event's purpose and commitment to continuing dialogue.",
       "A contemporaneous Greene Hill Food Co-op profile records Jamie working as part of the coalition and inviting readers into the Office of Nightlife town hall.",
       "The public coalition letter documents the event's equity, trust, and representation goals.",
+      "amNewYork documented more than 100 venue operators, artists, and community members attending a later NYC Artist Coalition forum with the city's first nightlife mayor in March 2018, supporting continued public accountability work after the office was created.",
       "Jamie's complete individual production and drafting responsibilities are not yet recovered."
     ],
     limitations: [
@@ -2198,7 +2226,8 @@ const knowledgeBankInput = {
       "SRC-NYCA-MOME-OFFICE-NIGHTLIFE-2017-09-19",
       "SRC-NYCA-EDGE-OF-SOUND-TOWN-HALL-2017-10-14",
       "SRC-NYCA-SAVE-NYC-SPACES-SITE",
-      "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19"
+      "SRC-SUNDAY-DINNER-GREENE-HILL-QA-2017-12-19",
+      "SRC-NYCA-PRESS-AMNY-2018-03-27-NIGHTLIFE-MAYOR-ARIEL-PALITZ-IN"
     ],
     publicSummary: "The coalition's town-hall and advocacy role is strongly documented, and Jamie is documented as a participating coalition speaker; his complete production role remains open."
   },
@@ -2215,6 +2244,7 @@ const knowledgeBankInput = {
     resultStatus: "partially-recovered",
     findings: [
       "Talks Not Raids publicly advocated transparency, trust, communication, and relationship-based safety work in place of disruptive raids.",
+      "Contemporaneous Gothamist, Bedford + Bowery, and Baffler reporting documented the transparency dispute, uncertainty in MARCH data, venue testimony, public-records work, and City Council scrutiny surrounding the campaign.",
       "Local Law 220 later required MARCH reporting and advance notice in many circumstances.",
       "The city replaced MARCH with the engagement-first CURE process in 2023.",
       "The CURE announcement transcript acknowledged NYC Artist Coalition among nightlife advocates, but the reviewed sources do not establish a complete causal chain or Jamie's individual causal contribution."
@@ -2226,6 +2256,9 @@ const knowledgeBankInput = {
     ],
     sourceIds: [
       "SRC-NYCA-TALKS-NOT-RAIDS",
+      "SRC-NYCA-PRESS-GOTHAMIST-2019-02-12-LAWMAKERS-DEMAND-TRANSPARENCY-ON-SURPRISE",
+      "SRC-NYCA-PRESS-BEDFORD-BOWERY-2019-02-12-DISCO-DISCORD-NYPD-AND-NIGHTLIFE",
+      "SRC-NYCA-PRESS-BAFFLER-2018-02-12-CUT-THE-MUSIC-LIZ-PELLY",
       "SRC-NYCA-LEGISTAR-MARCH-TRANSPARENCY-2019",
       "SRC-NYCA-MAYOR-CURE-2023-12-28"
     ],

@@ -69,3 +69,7 @@ See [framework.md](framework.md) for the intake-to-projection lifecycle,
 [July 12 waterways/nightlife receipt](intake/2026-07-12-waterways-nightlife.md)
 and [ten-source portfolio-strengthening receipt](intake/2026-07-12-portfolio-strengthening.md)
 for worked examples that promote some claims while holding others for research.
+The [NYC Artist Coalition campaign press corpus](intake/2026-07-13-nyca-campaign-press-corpus.md)
+shows the same method applied to a complete four-site press index: source
+recovery, deduplication, preservation, atomic observations, bounded claims, and
+selective public projection.

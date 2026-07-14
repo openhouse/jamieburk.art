@@ -248,7 +248,7 @@ const workItemsInput = [
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, meeting-memory summaries, and protected coalition context.",
+      "NPR founding-member attribution, independent organizer and town-hall reporting, Council testimony, public campaign materials, a recovered 44-article campaign press corpus, meeting-memory summaries, and protected coalition context.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
@@ -264,13 +264,14 @@ const workItemsInput = [
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
-      "Public campaign websites for NYC Artist Coalition advocacy",
+      "Jamie-built campaign websites for Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC",
+      "Recovered campaign press corpus: 45 placements and 44 distinct articles across four campaign sites",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. He helped structure safety and mutual-aid work, public-safe civic systems, campaign memory, source maps, policy communications, and follow-through systems.",
+        "Contemporaneous reporting identifies Jamie as a founding member and organizer of NYC Artist Coalition. Jamie directly confirms that he made the Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC websites; the recovered press corpus documents the wider collective campaign context.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:
