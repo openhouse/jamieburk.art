@@ -17,6 +17,17 @@ type CaseStudyLayoutProps = {
 };
 
 export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
+  const actions = (
+    <div className="flex flex-wrap gap-3">
+      <JBButton href="/resume" variant="secondary">
+        View resume
+      </JBButton>
+      <JBButton href="/contact" variant="ghost">
+        Contact Jamie
+      </JBButton>
+    </div>
+  );
+
   return (
     <article className="jb-frame py-12">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(280px,0.28fr)]">
@@ -27,6 +38,10 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
           </h1>
           <p className="mt-3 text-xl font-semibold text-jb-green">{item.subtitle}</p>
           <p className="mt-5 text-xl leading-8 text-jb-ink/78">{item.summary}</p>
+          <div className="mt-8 space-y-5 lg:hidden">
+            <AtAGlance headingId="at-a-glance-mobile" item={item} />
+            {actions}
+          </div>
           <div className="mt-10">
             <ArtifactGallery item={item} />
           </div>
@@ -37,16 +52,9 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
             <References pageId={item.slug} />
           </div>
         </div>
-        <aside className="space-y-5 lg:sticky lg:top-28 lg:self-start">
+        <aside className="hidden space-y-5 lg:sticky lg:top-28 lg:block lg:self-start">
           <AtAGlance item={item} />
-          <div className="flex flex-wrap gap-3">
-            <JBButton href="/resume" variant="secondary">
-              View resume
-            </JBButton>
-            <JBButton href="/contact" variant="ghost">
-              Contact Jamie
-            </JBButton>
-          </div>
+          {actions}
         </aside>
       </div>
       <div className="mt-14 space-y-12">

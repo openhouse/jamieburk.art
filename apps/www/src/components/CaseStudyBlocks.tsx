@@ -3,7 +3,13 @@ import { JBCard } from "@/components/JBCard";
 import { TagList } from "@/components/TagList";
 import type { WorkMeta } from "@/types/work";
 
-export function AtAGlance({ item }: { item: WorkMeta }) {
+export function AtAGlance({
+  item,
+  headingId = "at-a-glance"
+}: {
+  item: WorkMeta;
+  headingId?: string;
+}) {
   const rows = [
     ["Role", item.role],
     ["Years", item.years],
@@ -14,8 +20,8 @@ export function AtAGlance({ item }: { item: WorkMeta }) {
   ];
 
   return (
-    <section aria-labelledby="at-a-glance" className="rounded-lg bg-jb-blue p-5 text-jb-paper">
-      <h2 className="text-xl font-semibold" id="at-a-glance">
+    <section aria-labelledby={headingId} className="rounded-lg bg-jb-blue p-5 text-jb-paper">
+      <h2 className="text-xl font-semibold" id={headingId}>
         At a glance
       </h2>
       <dl className="mt-5 grid gap-4 sm:grid-cols-2">
