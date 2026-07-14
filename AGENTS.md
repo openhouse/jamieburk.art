@@ -76,6 +76,16 @@ The website should read as a composed portfolio, not a claims database.
 
 Do not add `/proofs`, `/knowledge-bank`, or `/public-claims` public routes.
 
+### Knowledge Lifecycle
+
+- Capture every submitted fragment with a stable intake ID and disposition.
+- Keep knowledge maturity, publication safety, and editorial selection separate.
+- A memory is a research lead, not a confirmed claim.
+- Closely read sources into both support and non-support fields.
+- Keep private originals outside the public repo behind opaque locator IDs.
+- Do not project every mature claim onto the site.
+- Run `npm run evals:knowledge` before opening or updating a knowledge-bank PR.
+
 ## Chad Lens
 
 Minimize the reader's burden. Make Jamie visible as the actor, explain what the

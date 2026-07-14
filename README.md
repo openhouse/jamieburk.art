@@ -76,6 +76,11 @@ changing evaluation definitions or beginning a recursive optimization run.
 Both profiles require the weighted Chad-lens criterion and a dedicated
 candidate-bound `chad-editorial` judgment.
 
+The knowledge bank also has a recursive intake and promotion lifecycle. Run
+`npm run evals:knowledge` to verify capture coverage, source decomposition,
+claim provenance, independent statuses, project context, research honesty, and
+projection restraint.
+
 ## Environment
 
 Staging is the first deployment target and is non-indexable by default:

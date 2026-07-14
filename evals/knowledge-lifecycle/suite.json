@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "profile": {
+    "id": "knowledge_ready",
+    "threshold": 95,
+    "minimumRubricScore": 3,
+    "requiredHardGates": [
+      "repository_integrity",
+      "baseline_improvement",
+      "intake_coverage",
+      "referential_integrity",
+      "lifecycle_completion",
+      "projection_boundary",
+      "model_judgment"
+    ],
+    "requiredJudgments": 2
+  },
+  "baseline": {
+    "commit": "7a496aad750b21752dd64972cd373368e4d11591",
+    "record": "evals/knowledge-lifecycle/baselines/feature-evals-C-7a496aad.json"
+  },
+  "requiredIntakeUrls": [
+    "https://www.thepitchkc.com/when-artists-turn-huck-finn/",
+    "https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/",
+    "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
+    "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+    "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true",
+    "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter"
+  ],
+  "rubrics": [
+    {
+      "id": "capture_integrity",
+      "weight": 15,
+      "question": "Does every submitted fragment receive a stable, public-safe intake record and explicit disposition?"
+    },
+    {
+      "id": "source_decomposition",
+      "weight": 15,
+      "question": "Has each promoted source been closely read into support, non-support, review, preservation, and provenance fields?"
+    },
+    {
+      "id": "claim_atomicity",
+      "weight": 10,
+      "question": "Are claims small and precise enough that their evidence relationship, qualification, and correction history can be evaluated?"
+    },
+    {
+      "id": "provenance_closure",
+      "weight": 15,
+      "question": "Does every mature claim resolve to known sources, projects, inquiries, and public-safe evidence relationships?"
+    },
+    {
+      "id": "status_separation",
+      "weight": 10,
+      "question": "Are knowledge maturity, publication safety, and editorial selection represented independently?"
+    },
+    {
+      "id": "project_context",
+      "weight": 10,
+      "question": "Can fragments and claims be situated in projects, entities, timelines, related work, and future photo research?"
+    },
+    {
+      "id": "research_honesty",
+      "weight": 10,
+      "question": "Are unresolved memories, dead links, negative findings, methods, and limitations preserved without becoming facts?"
+    },
+    {
+      "id": "projection_restraint",
+      "weight": 15,
+      "question": "Does the public site select only mature, safe, purposeful claims while leaving the rest available in the bank?"
+    }
+  ]
+}

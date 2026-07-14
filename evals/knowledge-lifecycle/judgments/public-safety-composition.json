@@ -1,0 +1,57 @@
+{
+  "judgeId": "lifecycle-composition-2026-07-13-r2",
+  "lens": "public-safety-composition",
+  "candidate": "sha256:e4c41db2eb70992cd1b4b2893061213ac6f8950c1d4d21afa6326429e4b1ba51",
+  "contract": "sha256:a1dc71747d6e136cbbfef5890090b2abe903dc7f4739636edaebe86567440ea0",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 4,
+    "claim_atomicity": 3,
+    "provenance_closure": 4,
+    "status_separation": 4,
+    "project_context": 4,
+    "research_honesty": 4,
+    "projection_restraint": 3
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "All six required submitted URLs have stable intake IDs, project placement, availability, promotion links, and dispositions; unresolved memories and the CallNYC metric are explicitly deferred into inquiries rather than silently discarded."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "Each newly promoted source records review provenance, preservation state, public citation, supported propositions, and explicit non-support. The records distinguish institutional descriptions and Jamie's attributed recollections from independent verification."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "The founding-role, institutional-outcome, invitation, and chronology claims are narrowly bounded. The Cabaret Law advocacy and participatory-project claims combine several activities, but their component support and limits remain inspectable within the evidence relationships."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "Every mature new claim resolves through evidence relationships to reviewed sources and a project; causal or event-completion gaps resolve to named inquiries. Active FairRentNYC occurrences resolve to the two cited claims and their renderable sources."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "Knowledge status, publication status, editorial status, and per-projection status are independent. Confirmed Open House and Water Publics material remains unused, while unresolved Office of Nightlife, town-hall, M.A.R.C.H., and engagement memories remain inquiries."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The three dossiers provide chronology, boundaries, projection decisions, open research, and photo prompts. Project and media schemas give future agents and photo editors explicit rights, consent, display, entity, and intake pathways."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The candidate preserves negative and partial findings without converting them into nonexistence or causality claims. The Greene Hill record distinguishes an invitation from a completed event, and the Council press release is not treated as final enactment or proof of advocacy causality."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The public page selects only founding-member attribution and directly documented Cabaret Law advocacy from the new lifecycle material. Open House, Water Publics, institutional outcomes, and unresolved memories remain off-site. The generated registry contains only active public citation records and exposes no protected locator, private path, internal excerpt, or protected source."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The FairRentNYC sentence grouping Jamie's infrastructure work with campaigns around Office of Nightlife creation is close to the unresolved causality boundary, but it explicitly assigns policy outcomes to the collective and does not claim that Jamie created the office."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "No blocking patch. Clarify older FairRentNYC operating-language boundaries as those claims migrate into the canonical lifecycle."
+}

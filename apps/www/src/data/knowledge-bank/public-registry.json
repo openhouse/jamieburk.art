@@ -100,6 +100,52 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Contemporaneous reporting identifies Jamie with NYC Artist Coalition and documents his fire-code study groups and public call for full Cabaret Law repeal.",
+      "locator": "Paragraphs identifying Jamie, the fire-code study groups, and his City Hall repeal position.",
+      "doesNotEstablish": [
+        "Jamie as sole founder or leader of NYC Artist Coalition",
+        "Jamie's exact role in drafting legislation",
+        "sole causality for repeal",
+        "creation of the Office of Nightlife",
+        "the final enacted outcome"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+      "title": "With Its 'No Dancing' Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      "organization": "NPR",
+      "author": "Jane Lerner",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, September 20, 2017.",
+      "publicNote": "Contemporaneous reporting describes collective Let NYC Dance mobilization, identifies Jamie as a founding coalition member using a name variant, and reports enactment of the Office of Nightlife legislation.",
+      "locator": "Paragraphs on Let NYC Dance, Jamie's coalition role, the Office of Nightlife, and his repeal position.",
+      "doesNotEstablish": [
+        "Jamie as the coalition's sole founder",
+        "Jamie's exact causal contribution to creating the Office of Nightlife",
+        "Jamie as the author or sponsor of legislation",
+        "final Cabaret Law enactment after the article date",
+        "sole coalition causality for policy outcomes"
+      ]
     }
   ],
   "claims": [
@@ -171,7 +217,9 @@
           "renderCitation": true
         }
       ],
-      "boundaries": []
+      "boundaries": [
+        "Preserve attribution to the Council and the narrower CouncilStat wording."
+      ]
     },
     {
       "id": "CLM-CALLNYC-EVENT-BRANDING",
@@ -299,6 +347,86 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-NYCARTC-FOUNDING-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Contemporaneous reporting identified Jamie as a founding member of NYC Artist Coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "founding-member attribution"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's NYC Artist Coalition affiliation",
+            "coalition name"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "NPR used the name variant 'NYC Arts Coalition'; Gothamist used 'NYC Artist Coalition.'"
+      ]
+    },
+    {
+      "id": "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In 2017, Jamie organized fire-code study groups for DIY venues and publicly called for full Cabaret Law repeal as NYC Artist Coalition mobilized with other groups under Let NYC Dance.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "fire-code study groups",
+            "public repeal advocacy",
+            "coalition affiliation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "collective mobilization under Let NYC Dance",
+            "Jamie's public repeal position"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Advocacy and coalition mobilization do not establish sole causality for legislative outcomes."
+      ]
     }
   ],
   "pages": [
@@ -362,6 +490,34 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+        "SRC-NYCARTC-GOTHAMIST-CABARET-2017"
+      ],
+      "occurrences": [
+        {
+          "id": "nycartc-founding-role",
+          "claimId": "CLM-NYCARTC-FOUNDING-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017"
+          ]
+        },
+        {
+          "id": "nycartc-cabaret-advocacy",
+          "claimId": "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+            "SRC-NYCARTC-NPR-NIGHTLIFE-2017"
           ]
         }
       ]

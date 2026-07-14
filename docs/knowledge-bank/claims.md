@@ -97,7 +97,7 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public project artifact / Jamie review confirmation
+**Evidence class:** Approved resume / public project artifact / contemporaneous NPR and Gothamist reporting / Jamie review confirmation
 **Public wording:** Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, and Let NYC Dance public web surfaces.
 **Detailed public-safe wording:** Jamie helped give NYC Artist Coalition a public-facing civic systems layer: campaign websites, issue explanations, calls to action, public resources, and support paths for cultural-space advocacy.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study.
@@ -106,13 +106,13 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie solely led NYC Artist Coalition; Jamie owned every campaign; Jamie authored every policy position; Jamie controlled partner decisions; Jamie single-handedly caused policy outcomes.
 **Protected boundaries:** Private coalition notes, CMS/admin details, strategy records, contact lists, private correspondence, and unapproved collaborator details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-13
 
 ## nyc-artist-coalition-civic-systems - Civic systems and coalition operations
 
 **Status:** Careful
 **Support level:** Careful
-**Evidence class:** Approved resume / public project artifact / public-safe archive summary
+**Evidence class:** Approved resume / public project artifact / contemporaneous Gothamist and NPR reporting / official Council context / public-safe archive summary
 **Public wording:** Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 **Detailed public-safe wording:** Jamie translated policy, public-data, and coalition needs into practical materials for campaigns around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability.
 **Where to project:** Resume page, Technical Operations, Work card, FairRentNYC case study, About.
@@ -121,7 +121,7 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie alone repealed the Cabaret Law; Jamie alone created the Office of Nightlife; Jamie alone passed nightlife enforcement reporting legislation; Jamie speaks for every NYC Artist Coalition collaborator.
 **Protected boundaries:** Private coalition notes, internal disputes, private correspondence, membership records, unapproved collaborator names, and legal-review materials stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-13
 
 ## wowlist-community-platform - Followable community platform
 

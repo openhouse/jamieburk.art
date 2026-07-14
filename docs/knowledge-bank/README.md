@@ -13,6 +13,10 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+Submitted fragments enter through the intake lifecycle before they become
+sources or claims. See [lifecycle.md](lifecycle.md) for capture, review,
+promotion, projection, maintenance, and photo-feedback rules.
+
 ## Purpose
 
 The knowledge bank exists to:

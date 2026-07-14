@@ -1,0 +1,53 @@
+{
+  "judgeId": "lifecycle-archival-2026-07-13-r2",
+  "lens": "archival-editorial",
+  "candidate": "sha256:e4c41db2eb70992cd1b4b2893061213ac6f8950c1d4d21afa6326429e4b1ba51",
+  "contract": "sha256:a1dc71747d6e136cbbfef5890090b2abe903dc7f4739636edaebe86567440ea0",
+  "passes": true,
+  "scores": {
+    "capture_integrity": 4,
+    "source_decomposition": 3,
+    "claim_atomicity": 3,
+    "provenance_closure": 3,
+    "status_separation": 4,
+    "project_context": 3,
+    "research_honesty": 4,
+    "projection_restraint": 4
+  },
+  "evidence": [
+    {
+      "rubric": "capture_integrity",
+      "observation": "All six required submitted URLs have stable intake IDs and promoted dispositions; the four attributed memory or metric fragments remain deferred with explicit reasons and linked inquiries. Two discovered Council sources also have durable intake records."
+    },
+    {
+      "rubric": "source_decomposition",
+      "observation": "Each promoted source records support, non-support, review metadata, and a locator. Live verification materially confirmed the bounded readings of The Pitch, Charlotte Street, Good Times, Gothamist, Greene Hill, NPR syndication, and both Council releases. The score is limited because several locators are paragraph-level rather than durable anchors, the live sources lack archived captures, and the October 31 Council record uses a shortened descriptive title rather than the page's actual headline."
+    },
+    {
+      "rubric": "claim_atomicity",
+      "observation": "Claims preserve attribution and distinguish activity, role, chronology, outcome, and negative findings. The Cabaret Law advocacy and Great Accommodations claims still bundle several related propositions, but their evidence relationships identify the support for each component and their boundaries permit correction without implying causality."
+    },
+    {
+      "rubric": "provenance_closure",
+      "observation": "Every lifecycle claim resolves to a project, reviewed source, evidence relationship, and any relevant inquiry. The two new FairRentNYC projections resolve through page occurrences and the redacted registry. Some surrounding case-study prose continues to rely on the older proofs layer rather than lifecycle records, preventing a top score but not making the newly projected claims stronger than their evidence."
+    },
+    {
+      "rubric": "status_separation",
+      "observation": "Knowledge maturity, publication safety, and editorial selection are independent fields. Seven mature lifecycle claims remain unused or held while only the founding-role and bounded advocacy claims are actively projected."
+    },
+    {
+      "rubric": "project_context",
+      "observation": "The three dossiers provide project framing, periods, entities, open research, projection decisions, collective-credit boundaries, and actionable photo-research prompts. Their timelines remain concise rather than event-level archival chronologies."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Attributed memories remain inquiries; advocacy is not converted into legislative causality; planned programs and invitations are not treated as completed events; and the Civic Hall negative finding explicitly remains a bounded non-recovery finding. The Greene Hill availability reversal is preserved in both the recovery inquiry and documentation rather than silently discarded."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "Only two mature, qualified, purposeful lifecycle claims are added to FairRentNYC, and both retain attribution or collective-work boundaries. The generated registry omits protected locators, private paths, review internals, and unused claims. Fresh lifecycle tests and the public-safety gate passed."
+    }
+  ],
+  "regressions": [],
+  "nextAction": "Add durable archived captures for the live lifecycle sources and normalize the Council source titles to their exact published headlines without changing claim wording."
+}

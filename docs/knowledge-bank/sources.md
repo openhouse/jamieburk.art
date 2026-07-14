@@ -26,6 +26,25 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+## First Lifecycle Corpus
+
+The July 13, 2026 lifecycle run closely reviewed:
+
+- [The Pitch: When Artists Turn Huck Finn](https://www.thepitchkc.com/when-artists-turn-huck-finn/), supporting Jamie's origination of the experiential raft project and its Kansas City/Missouri River premise, but not the complete later route.
+- [Charlotte Street: Great Accommodations](https://charlottestreet.org/event/great-accommodations-with-jamie-burkart-imagining-lifestyles-for-cities-on-the-water/), supporting Jamie's participatory river-city program and preserving his attributed account of the earlier raft journey.
+- [Good Times: Open House](https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html), supporting Jamie's initiating and facilitation role in a ten-day communal gallery experiment.
+- [Gothamist: DIY Venues Demand Repeal](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law), supporting Jamie's fire-code study groups, coalition affiliation, and public call for full Cabaret Law repeal.
+- [NPR: With Its No Dancing Law Verging On Repeal](https://www.npr.org/sections/therecord/2017/09/20/552292586/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife?renderPlatform=nprone_ios&unified=true), supporting founding-member attribution, collective Let NYC Dance mobilization, and Office of Nightlife enactment context.
+- [Greene Hill Food Co-op: The Co-op Q&A With Jamie Burkart and Julia Fredenberg](https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter), supporting coalition affiliation, stated Cabaret Law repeal work, and a September 28 Office of Nightlife town-hall invitation, but not completed-event scale or effects.
+- [New York City Council: Office of Nightlife vote](https://council.nyc.gov/press/2017/08/24/1453/), supporting the bill, sponsor, vote context, and proposed responsibilities, but not Jamie's exact role.
+- [New York City Council: Cabaret Law vote](https://council.nyc.gov/press/2017/10/31/1541/), supporting the Council vote context and proposal, but not advocacy causality or the final signed-law date.
+
+The Greene Hill URL was initially misclassified as unavailable. An independent
+archival-editorial judgment recovered the live Q&A, triggering a correction,
+close reading, and bounded claim. Its town-hall invitation does not establish
+that the event occurred, its scale, Jamie's complete production role, or policy
+effects.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing
