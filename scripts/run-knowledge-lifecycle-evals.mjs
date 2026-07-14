@@ -22,6 +22,7 @@ const candidatePaths = [
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/data/knowledge-bank/public-registry.json",
   "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+  "apps/www/src/data/knowledge-bank/press-catalog.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/proofs.ts",

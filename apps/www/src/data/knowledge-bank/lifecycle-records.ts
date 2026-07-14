@@ -122,8 +122,12 @@ export const lifecycleSources = [
     publicNote: "Contemporaneous reporting identifies Jamie with NYC Artist Coalition and documents his fire-code study groups and public call for full Cabaret Law repeal.",
     locator: "Paragraphs identifying Jamie, the fire-code study groups, and his City Hall repeal position.",
     projectIds: ["nyc-artist-coalition"],
-    intakeIds: ["INT-2026-07-13-GOTHAMIST-CABARET"],
+    intakeIds: [
+      "INT-2026-07-13-GOTHAMIST-CABARET",
+      "INT-2026-07-13-PRESS-LET-NYC-DANCE"
+    ],
     reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading"],
     supportsGenerally: [
@@ -156,8 +160,13 @@ export const lifecycleSources = [
     publicNote: "Contemporaneous reporting describes collective Let NYC Dance mobilization, identifies Jamie as a founding coalition member using a name variant, and reports enactment of the Office of Nightlife legislation.",
     locator: "Paragraphs on Let NYC Dance, Jamie's coalition role, the Office of Nightlife, and his repeal position.",
     projectIds: ["nyc-artist-coalition"],
-    intakeIds: ["INT-2026-07-13-NPR-NIGHTLIFE"],
+    intakeIds: [
+      "INT-2026-07-13-NPR-NIGHTLIFE",
+      "INT-2026-07-13-PRESS-LET-NYC-DANCE",
+      "INT-2026-07-13-PRESS-SAVE-NYC-SPACES"
+    ],
     reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading"],
     supportsGenerally: [
@@ -416,8 +425,12 @@ export const lifecycleSources = [
     publicNote: "Contemporaneous reporting confirms the coalition's October 11 Market Hotel town hall, identifies Jamie among NYC Artist Coalition participants, and documents participation by cultural organizations, three Council members, and city cultural officials.",
     locator: "Opening account of the town hall and participant description, especially article lines 23-30.",
     projectIds: ["nyc-artist-coalition"],
-    intakeIds: ["INT-2026-07-13-BNB-NIGHT-MAYOR-TOWN-HALL"],
+    intakeIds: [
+      "INT-2026-07-13-BNB-NIGHT-MAYOR-TOWN-HALL",
+      "INT-2026-07-13-PRESS-SAVE-NYC-SPACES"
+    ],
     reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading with public-source verification"],
     supportsGenerally: [
@@ -510,8 +523,12 @@ export const lifecycleSources = [
     publicNote: "The campaign surface explains its M.A.R.C.H. transparency position, links Intro 1156, tracks fifteen named Council supporters at the captured state, supplies a call script, credits a multi-organization coalition, and provides press and media assets.",
     locator: "Campaign sections 'NYC's M.A.R.C.H. Raids,' 'Progress,' Council supporter tracker, coalition credits, press links, and media kit, especially page lines 46-175.",
     projectIds: ["nyc-artist-coalition"],
-    intakeIds: ["INT-2026-07-13-TALKS-NOT-RAIDS"],
+    intakeIds: [
+      "INT-2026-07-13-TALKS-NOT-RAIDS",
+      "INT-2026-07-13-PRESS-TALKS-NOT-RAIDS"
+    ],
     reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading with public-source verification"],
     supportsGenerally: [
@@ -577,8 +594,12 @@ export const lifecycleSources = [
     publicNote: "The public campaign surface credits NYC Artist Coalition and partner organizations, attributes a statement about grassroots cultural spaces to Jamie, presents Office of Nightlife priorities, and supplies press links and downloadable media assets.",
     locator: "Campaign priorities, Jamie attribution, coalition list, press links, and media kit, especially page lines 38-52, 169-183, and 238-299.",
     projectIds: ["nyc-artist-coalition"],
-    intakeIds: ["INT-2026-07-13-SAVE-NYC-SPACES"],
+    intakeIds: [
+      "INT-2026-07-13-SAVE-NYC-SPACES",
+      "INT-2026-07-13-PRESS-SAVE-NYC-SPACES"
+    ],
     reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading with public-source verification"],
     supportsGenerally: [
@@ -1331,6 +1352,71 @@ export const lifecycleClaims = [
     researchInquiryIds: ["INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE"],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading"]
+  },
+  {
+    id: "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+    project: "nyc-artist-coalition",
+    claimType: "metric",
+    internalClaim: "Four recovered NYC Artist Coalition campaign Press sections contain forty-five placements linking forty-four distinct press or issue-context articles.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "active",
+    projections: [
+      {
+        key: "case-study",
+        text: "Across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the archived FairRentNYC campaign, the recovered Press sections catalog 45 placements linking 44 distinct press or issue-context articles.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/fair-rent-nyc"]
+      }
+    ],
+    evidence: [
+      {
+        sourceId: "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        relationship: "direct-support",
+        supports: ["twenty-one ordered Let NYC Dance press placements"],
+        locator: "Live campaign Press section headed 'Press'.",
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        relationship: "direct-support",
+        supports: ["seven ordered Talks Not Raids press placements"],
+        locator: "Live campaign Press section headed 'Press'.",
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+        relationship: "direct-support",
+        supports: ["eight ordered Save NYC Spaces press placements"],
+        locator: "Live campaign Press section headed 'Press'.",
+        confidence: "high",
+        renderCitation: true
+      },
+      {
+        sourceId: "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+        relationship: "direct-support",
+        supports: ["nine ordered Fair Rent NYC press placements"],
+        locator: "December 1, 2021 Wayback capture, Press section headed 'Press'.",
+        confidence: "high",
+        renderCitation: true
+      }
+    ],
+    boundaries: [
+      "One NPR article appears in two campaign Press sections, producing forty-five placements and forty-four distinct source identities.",
+      "Campaign inclusion does not establish that every article names Jamie, endorses the campaign, or measures audience reach.",
+      "Article bodies remain metadata-reviewed unless a separate close reading is recorded."
+    ],
+    antiClaims: [
+      "All forty-four articles profile Jamie or NYC Artist Coalition.",
+      "Forty-four articles establish a measured audience or policy effect.",
+      "Every listed article independently endorses each campaign position."
+    ],
+    researchInquiryIds: ["INQ-NYCARTC-PRESS-CORPUS-CLOSE-READING"],
+    reviewedAt: "2026-07-13",
+    reviewedBy: ["Codex DOM extraction, URL normalization, and collection reconciliation"]
   }
 ] satisfies ClaimRecord[];
 
@@ -1521,5 +1607,44 @@ export const lifecycleResearchInquiries = [
       "SRC-NYC-COUNCIL-CABARET-VOTE-2017",
       "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
     ]
+  },
+  {
+    id: "INQ-NYCARTC-PRESS-CORPUS-CLOSE-READING",
+    project: "nyc-artist-coalition",
+    intakeIds: [
+      "INT-2026-07-13-PRESS-LET-NYC-DANCE",
+      "INT-2026-07-13-PRESS-TALKS-NOT-RAIDS",
+      "INT-2026-07-13-PRESS-SAVE-NYC-SPACES",
+      "INT-2026-07-13-PRESS-FAIR-RENT-NYC-ARCHIVE",
+      "INT-2026-07-13-PRESS-FAIR-RENT-NYC-LIVE"
+    ],
+    question: "Which articles in the four campaign Press sections materially support, qualify, or contradict portfolio claims after article-level close reading?",
+    methods: [
+      "Parsed each Press section from live campaign HTML or the supplied FairRentNYC Wayback capture and preserved publisher, displayed headline, listed URL, and list order.",
+      "Normalized duplicate source identities while retaining all campaign-to-article placements.",
+      "Audited all forty-four distinct listed destinations and queried Wayback availability for blocked, dead, or misleading redirects.",
+      "Recorded article sources at metadata review depth so they cannot become direct claim evidence before a separate close reading."
+    ],
+    runAt: "2026-07-13",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The four Press sections contain forty-five placements linking forty-four distinct article sources.",
+      "Let NYC Dance contains twenty-one placements, Talks Not Raids seven, Save NYC Spaces eight, and archived FairRentNYC nine.",
+      "Thirty-four destinations returned article-like public responses during the audit; ten blocked, dead, or unavailable destinations received Wayback links, and one apparently successful Metro redirect was reclassified through archive recovery.",
+      "The NPR nightlife article appears in both Let NYC Dance and Save NYC Spaces."
+    ],
+    limitations: [
+      "This cycle completed campaign-index and link-metadata review, not forty-four full article close readings.",
+      "Campaign editors selected these links; inclusion alone does not establish article endorsement, a mention of Jamie, or independent verification of campaign assertions.",
+      "Paywalls, bot protections, publisher migrations, and later URL changes affect live availability.",
+      "Future claim promotion must cite article-level locators and preserve collective credit and causal boundaries."
+    ],
+    sourceIds: [
+      "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+      "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+      "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+      "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021"
+    ],
+    publicSummary: "Four recovered campaign Press sections contain 45 placements linking 44 distinct articles; article bodies remain eligible for later close reading rather than automatic claim promotion."
   }
 ] satisfies ResearchInquiry[];

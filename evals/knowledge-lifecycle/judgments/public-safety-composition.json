@@ -1,53 +1,53 @@
 {
-  "judgeId": "lifecycle-composition-2026-07-13-r3",
+  "judgeId": "lifecycle-composition-2026-07-14-r4",
   "lens": "public-safety-composition",
-  "candidate": "sha256:efea66c4c8ce2d96b760e66cda3fe31e7dc852816e542ddac86c60fcc6a1f397",
-  "contract": "sha256:9ca4f87a74601d6f897dfd244d44af4ac31182ba07229793906434f5d7fc492e",
+  "candidate": "sha256:14a5a21d47b8ed7409e83353e73fa341380de438bdf05089225a5c95077f5c35",
+  "contract": "sha256:e7acd49c6b8d2833c51f0ce77c0d57a125983e06974b903c2890c673dd45ea8f",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
-    "source_decomposition": 4,
+    "source_decomposition": 3,
     "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
     "project_context": 4,
     "research_honesty": 4,
-    "projection_restraint": 4
+    "projection_restraint": 3
   },
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All ten second-round sources have stable intake and source IDs, public-safe descriptions, dispositions, and explicit links to claims or inquiries. Unverified memories remain deferred research leads."
+      "observation": "The four collection records preserve consecutive campaign order and the verified 21, 7, 8, and 9 placement counts. Capture digests match the supplied HTML captures, transcription matches the independent audit, and the duplicated NPR source correctly reconciles 45 placements to 44 identities."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Each promoted source records provenance, review metadata, locators, affirmative support, and explicit non-support. Coalition-authored, journalistic, and government sources retain distinct evidentiary roles."
+      "observation": "All four campaign index sources are explicitly close-read, while 41 newly catalogued article sources are explicitly metadata-reviewed with support and non-support boundaries. The article bodies appropriately remain pending rather than being represented as fully understood."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Organizer role, attributed signup count, advocacy, town-hall participation, testimony, campaign interface, and legislative outcome are separate claims with individual boundaries and anti-claims."
+      "observation": "The public claim makes one evaluable aggregate assertion about four Press sections, 45 placements, and 44 distinct article identities. Separate boundaries explain the duplicate and reject stronger interpretations about Jamie, endorsement, reach, or policy effect."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Every selected FairRentNYC claim resolves through the page plan to canonical claims and public sources. The generated registry preserves those relationships without exposing protected source paths or private artifacts."
+      "observation": "The claim, page occurrence, and rendered citations resolve only to the four campaign index pages and their Press-section locators. No metadata-only article record is used as positive claim evidence."
     },
     {
       "rubric": "status_separation",
-      "observation": "Knowledge maturity, publication safety, editorial selection, and projection status remain independent. Confirmed but unused Office, March 2018, priorities, and Save NYC Spaces material is not automatically projected."
+      "observation": "The aggregate claim is confirmed-with-boundary, publication-qualified, and editorially active, while article review depth remains metadata-only and future article promotion remains an open inquiry. The current FairRentNYC check is closed separately from the promoted archived capture."
     },
     {
       "rubric": "project_context",
-      "observation": "The dossier situates the corpus across early organizing, Cabaret Law advocacy, Office of Nightlife accountability, town halls, affordability testimony, and Talks Not Raids, with collective-credit boundaries and future photo-research prompts."
+      "observation": "Each collection resolves to the NYC Artist Coalition project and a specific campaign entity. In the case-study composition, the metric follows Jamie's direct web-infrastructure role while surrounding copy preserves collective campaign ownership and causal credit."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The more-than-100 count remains explicitly attributed to Jamie rather than audited. Event scale, exact production shares, Office-creation causality, M.A.R.C.H. disbandment, and final Cabaret enactment evidence remain openly unresolved."
+      "observation": "The inquiry preserves audit methods, unavailable or blocked destinations, the misleading Metro redirect, the repeated NPR record, and the limit that campaign inclusion is not article endorsement or article-body verification."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The page selects eight purposeful claims supported by nine sources, using seven of the ten new sources while retaining three as contextual or unused research. Institutional outcomes are stated separately from advocacy activity and causal credit. Jamie's documented actions are visible without converting coalition accomplishments into solo achievements, and no protected material is exposed."
+      "observation": "The portfolio projects one bounded aggregate sentence rather than a 44-item evidence dump. The public registry includes the four campaign index sources but excludes all metadata-only article records."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept the candidate under the version-2 lifecycle composition contract."
+  "nextAction": "Preserve this projection boundary and require article-level close reading before promoting any deeper press claim."
 }

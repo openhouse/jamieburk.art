@@ -26,6 +26,7 @@ export function validateKnowledgeLifecycle(bank, suite) {
   const entityIds = new Set(bank.entities.map((item) => item.id));
   const intakeIds = new Set(bank.intakeItems.map((item) => item.id));
   const sourceIds = new Set(bank.sources.map((item) => item.id));
+  const sourceById = new Map(bank.sources.map((item) => [item.id, item]));
   const claimIds = new Set(bank.claims.map((item) => item.id));
   const inquiryIds = new Set(bank.researchInquiries.map((item) => item.id));
 
@@ -35,7 +36,8 @@ export function validateKnowledgeLifecycle(bank, suite) {
     ["project", bank.projects],
     ["source", bank.sources],
     ["claim", bank.claims],
-    ["inquiry", bank.researchInquiries]
+    ["inquiry", bank.researchInquiries],
+    ["press collection", bank.pressCollections]
   ]) {
     for (const id of duplicateIds(records)) {
       add("referential_integrity", "duplicate-id", `Duplicate ${label} ID ${id}`);
@@ -109,6 +111,59 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  for (const collection of bank.pressCollections) {
+    if (!projectIds.has(collection.project)) {
+      add("project_context", "unknown-project", `${collection.id} references ${collection.project}`);
+    }
+    if (!entityIds.has(collection.campaignEntityId)) {
+      add("project_context", "unknown-entity", `${collection.id} references ${collection.campaignEntityId}`);
+    }
+    if (!sourceIds.has(collection.indexSourceId)) {
+      add("referential_integrity", "unknown-press-index", `${collection.id} references ${collection.indexSourceId}`);
+    } else if (!sourceById.get(collection.indexSourceId)?.reviewDepth) {
+      add("source_decomposition", "press-index-missing-review-depth", `${collection.indexSourceId} has no explicit review depth`);
+    }
+    if (collection.articles.length !== collection.expectedArticleCount) {
+      add("capture_integrity", "press-count-mismatch", `${collection.id} expected ${collection.expectedArticleCount} article placements but has ${collection.articles.length}`);
+    }
+    const positions = collection.articles.map((article) => article.position);
+    const expectedPositions = collection.articles.map((_, index) => index + 1);
+    if (positions.join(",") !== expectedPositions.join(",")) {
+      add("capture_integrity", "press-order-gap", `${collection.id} does not preserve consecutive campaign order`);
+    }
+    for (const article of collection.articles) {
+      if (!sourceIds.has(article.sourceId)) {
+        add("referential_integrity", "unknown-press-source", `${collection.id} references ${article.sourceId}`);
+      } else if (!sourceById.get(article.sourceId)?.reviewDepth) {
+        add("source_decomposition", "press-source-missing-review-depth", `${article.sourceId} has no explicit review depth`);
+      }
+    }
+  }
+
+  for (const required of suite.requiredPressCollections ?? []) {
+    const collection = bank.pressCollections.find((item) => item.id === required.id);
+    if (!collection) {
+      add("capture_integrity", "missing-press-collection", `Missing press collection ${required.id}`);
+      continue;
+    }
+    if (collection.expectedArticleCount !== required.articleCount) {
+      add("capture_integrity", "press-contract-mismatch", `${required.id} must contain ${required.articleCount} placements`);
+    }
+  }
+  if (suite.requiredPressSummary) {
+    const placements = bank.pressCollections.flatMap((collection) => collection.articles);
+    const uniqueSources = new Set(placements.map((article) => article.sourceId));
+    if (bank.pressCollections.length !== suite.requiredPressSummary.collectionCount) {
+      add("capture_integrity", "press-collection-total", `Expected ${suite.requiredPressSummary.collectionCount} press collections`);
+    }
+    if (placements.length !== suite.requiredPressSummary.placementCount) {
+      add("capture_integrity", "press-placement-total", `Expected ${suite.requiredPressSummary.placementCount} press placements`);
+    }
+    if (uniqueSources.size !== suite.requiredPressSummary.uniqueArticleCount) {
+      add("capture_integrity", "press-unique-total", `Expected ${suite.requiredPressSummary.uniqueArticleCount} unique press sources`);
+    }
+  }
+
   for (const claim of bank.claims) {
     if (!projectIds.has(claim.project)) add("project_context", "unknown-project", `${claim.id} references ${claim.project}`);
     if (!claim.evidence.length && !["not-recovered", "disallowed"].includes(claim.status)) {
@@ -119,6 +174,12 @@ export function validateKnowledgeLifecycle(bank, suite) {
       const source = bank.sources.find((record) => record.id === evidence.sourceId);
       if (source && !source.projectIds.includes(claim.project)) {
         add("provenance_closure", "cross-project-evidence", `${claim.id} uses ${evidence.sourceId} without shared project context`);
+      }
+      if (
+        source?.reviewDepth === "metadata" &&
+        ["direct-support", "corroborating"].includes(evidence.relationship)
+      ) {
+        add("provenance_closure", "metadata-as-positive-evidence", `${claim.id} uses metadata-only ${evidence.sourceId} as positive evidence`);
       }
       if (claim.reviewedAt === "2026-07-13" && source?.intakeIds.some((id) => id.startsWith("INT-2026-07-13")) && !evidence.locator) {
         add("provenance_closure", "missing-evidence-locator", `${claim.id} does not locate its support within ${evidence.sourceId}`);

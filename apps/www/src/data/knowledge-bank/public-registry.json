@@ -116,6 +116,7 @@
       "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
       "publicNote": "Contemporaneous reporting identifies Jamie with NYC Artist Coalition and documents his fire-code study groups and public call for full Cabaret Law repeal.",
       "locator": "Paragraphs identifying Jamie, the fire-code study groups, and his City Hall repeal position.",
+      "reviewDepth": "close-reading",
       "doesNotEstablish": [
         "Jamie as sole founder or leader of NYC Artist Coalition",
         "Jamie's exact role in drafting legislation",
@@ -139,6 +140,7 @@
       "publicCitation": "Jane Lerner, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, September 20, 2017.",
       "publicNote": "Contemporaneous reporting describes collective Let NYC Dance mobilization, identifies Jamie as a founding coalition member using a name variant, and reports enactment of the Office of Nightlife legislation.",
       "locator": "Paragraphs on Let NYC Dance, Jamie's coalition role, the Office of Nightlife, and his repeal position.",
+      "reviewDepth": "close-reading",
       "doesNotEstablish": [
         "Jamie as the coalition's sole founder",
         "Jamie's exact causal contribution to creating the Office of Nightlife",
@@ -228,6 +230,7 @@
       "publicCitation": "Cassidy Dawn Graves, 'What Can the Night Mayor Do? The DIY Scene Discusses,' Bedford + Bowery, October 12, 2017.",
       "publicNote": "Contemporaneous reporting confirms the coalition's October 11 Market Hotel town hall, identifies Jamie among NYC Artist Coalition participants, and documents participation by cultural organizations, three Council members, and city cultural officials.",
       "locator": "Opening account of the town hall and participant description, especially article lines 23-30.",
+      "reviewDepth": "close-reading",
       "doesNotEstablish": [
         "a reliable numeric attendance count",
         "Jamie's exact production responsibilities",
@@ -269,6 +272,7 @@
       "publicCitation": "Talks Not Raids coalition, 'Transparency on M.A.R.C.H. Raids in NYC,' public campaign site.",
       "publicNote": "The campaign surface explains its M.A.R.C.H. transparency position, links Intro 1156, tracks fifteen named Council supporters at the captured state, supplies a call script, credits a multi-organization coalition, and provides press and media assets.",
       "locator": "Campaign sections 'NYC's M.A.R.C.H. Raids,' 'Progress,' Council supporter tracker, coalition credits, press links, and media kit, especially page lines 46-175.",
+      "reviewDepth": "close-reading",
       "doesNotEstablish": [
         "Jamie's individual authorship or implementation role",
         "independent verification of the campaign's reported M.A.R.C.H. action count",
@@ -297,6 +301,69 @@
         "sole causality by Talks Not Raids",
         "disbandment of M.A.R.C.H.",
         "perfect compliance with or later effects of the law"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+      "title": "Save NYC Spaces: New Nightlife Mayor Must Assist Diverse Cultures",
+      "organization": "Save NYC Spaces coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Save NYC Spaces coalition, 'New Nightlife Mayor Must Assist Diverse Cultures,' public campaign site.",
+      "publicNote": "The public campaign surface credits NYC Artist Coalition and partner organizations, attributes a statement about grassroots cultural spaces to Jamie, presents Office of Nightlife priorities, and supplies press links and downloadable media assets.",
+      "locator": "Campaign priorities, Jamie attribution, coalition list, press links, and media kit, especially page lines 38-52, 169-183, and 238-299.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's authorship or implementation of the campaign surface",
+        "Jamie's exact role in organizing every listed partner",
+        "independent verification of every campaign assertion",
+        "sole coalition causality for Office of Nightlife policy"
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+      "title": "Let NYC Dance: Movement to Repeal the Cabaret Law",
+      "organization": "Let NYC Dance coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://letnycdance.nycartc.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Let NYC Dance coalition, public campaign site and Press section.",
+      "publicNote": "The live campaign site documents the repeal call, Council-support interface, coalition credits, media kit, and a Press section containing twenty-one article placements.",
+      "locator": "Campaign call to action, progress tracker, coalition credits, media kit, and Press section headed 'Press'.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's sole ownership of the campaign or every editorial decision.",
+        "That every listed article names Jamie or endorses every campaign claim.",
+        "Audience reach or causal allocation for Cabaret Law repeal."
+      ]
+    },
+    {
+      "id": "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+      "title": "Fair Rent NYC archived campaign site",
+      "organization": "Fair Rent NYC coalition",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "capturedAt": "2021-12-01T10:44:25Z",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://fairrentnyc.nycartc.com/",
+      "archiveUrl": "https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Fair Rent NYC coalition, archived campaign site, December 1, 2021 capture.",
+      "publicNote": "The archived campaign surface preserves its Commercial Rent Stabilization framing, coalition interface, media materials, and a Press section containing nine article placements.",
+      "locator": "December 1, 2021 Wayback capture, Press section headed 'Press', plus campaign and coalition sections.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "The current contents of the live domain.",
+        "That every listed article names Jamie or endorses every campaign claim.",
+        "Audience reach or causal allocation for legislative outcomes."
       ]
     }
   ],
@@ -804,6 +871,64 @@
       "boundaries": [
         "The sequence does not assign causal shares to Talks Not Raids, Jamie, NYC Artist Coalition, legislators, officials, or partner organizations and does not establish that M.A.R.C.H. was disbanded."
       ]
+    },
+    {
+      "id": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the archived FairRentNYC campaign, the recovered Press sections catalog 45 placements linking 44 distinct press or issue-context articles.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "twenty-one ordered Let NYC Dance press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "seven ordered Talks Not Raids press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "eight ordered Save NYC Spaces press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
+          "relationship": "direct-support",
+          "supports": [
+            "nine ordered Fair Rent NYC press placements"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "One NPR article appears in two campaign Press sections, producing forty-five placements and forty-four distinct source identities.",
+        "Campaign inclusion does not establish that every article names Jamie, endorses the campaign, or measures audience reach.",
+        "Article bodies remain metadata-reviewed unless a separate close reading is recorded."
+      ]
     }
   ],
   "pages": [
@@ -878,11 +1003,14 @@
         "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
         "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
         "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
         "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
         "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
         "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
-        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
       ],
       "occurrences": [
@@ -903,6 +1031,17 @@
             "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
             "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
             "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          "id": "nycartc-campaign-press-corpus",
+          "claimId": "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+            "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021"
           ]
         },
         {

@@ -25,6 +25,8 @@ individual and collective causal claims separate.
 - The official October 22, 2018 Council hearing transcript documents Jamie testifying as a coalition member, connecting cultural-space safety and survival to commercial affordability and supporting Intro 737.
 - Talks Not Raids publicly connected an issue explainer, Council-support tracker, call script, coalition credits, and media kit to Intro 1156. Official Council records show that the measure later had nineteen sponsors and became Local Law 220 of 2019.
 - The public coalition priorities and Save NYC Spaces surfaces preserve further Office of Nightlife, M.A.R.C.H., safety, affordability, partner-credit, and campaign-interface context for future composition.
+- Four recovered campaign Press sections preserve 45 placements linking 44 distinct press or issue-context articles: 21 for Let NYC Dance, 7 for Talks Not Raids, 8 for Save NYC Spaces, and 9 in the archived FairRentNYC surface. One NPR article appears in two campaigns.
+- The press inventory establishes what the campaign sites selected and linked. It does not establish that every article names Jamie, endorses a campaign, measures audience reach, or allocates causal credit. Article-body claims require separate close reading.
 
 ## Open Research
 
@@ -33,13 +35,14 @@ individual and collective causal claims separate.
 - Jamie's exact role in Talks Not Raids, its causal contribution to Local Law 220, and the official disposition of M.A.R.C.H. operations.
 - A complete enacted-law record and fuller collective-credit history for Cabaret Law repeal.
 - The relationship, if any, between the September 28 invitation in Greene Hill Food Co-op and the separately documented October 11 Market Hotel event.
+- Article-level close reading for the 41 newly catalogued press sources, with claim promotion only where the article body and locator support it.
 
 ## Projection Decision
 
-The FairRentNYC case study now cites eight selected claims: founding and early
+The FairRentNYC case study now cites nine selected claims: founding and early
 organizer roles, the attributed mutual-aid signup count, Cabaret Law advocacy,
-the October town hall, affordability testimony, the Talks Not Raids campaign
-surface, and the bounded Local Law 220 outcome. Office-creation causality,
+the bounded four-campaign press inventory, the October town hall, affordability
+testimony, the Talks Not Raids campaign surface, and the bounded Local Law 220 outcome. Office-creation causality,
 March 2018 individual-role claims, Save NYC Spaces, and M.A.R.C.H. disbandment
 remain unused context or open inquiries.
 

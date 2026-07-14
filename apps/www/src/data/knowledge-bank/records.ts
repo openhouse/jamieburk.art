@@ -4,9 +4,15 @@ import {
   lifecycleResearchInquiries,
   lifecycleSources
 } from "./lifecycle-records.ts";
+import {
+  campaignPressCollections,
+  campaignPressIntakes,
+  campaignPressSources
+} from "./press-catalog.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...campaignPressIntakes,
     {
       id: "INT-2026-07-13-PITCH-RAFT",
       kind: "url",
@@ -433,6 +439,13 @@ const knowledgeBankInput = {
       publicDescription: "Kansas City arts organization that presented Great Accommodations in 2009."
     },
     {
+      id: "fair-rent-nyc-campaign",
+      kind: "campaign",
+      name: "Fair Rent NYC",
+      aliases: ["FairRentNYC"],
+      publicDescription: "Coalition campaign and public web surface advocating Commercial Rent Stabilization and storefront stability."
+    },
+    {
       id: "let-nyc-dance",
       kind: "campaign",
       name: "Let NYC Dance",
@@ -546,6 +559,7 @@ const knowledgeBankInput = {
       entityIds: [
         "nyc-artist-coalition",
         "let-nyc-dance",
+        "fair-rent-nyc-campaign",
         "nyc-cabaret-law",
         "nyc-office-of-nightlife",
         "new-york-city-council",
@@ -751,7 +765,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["bounded negative search finding", "research method and limitations"],
       doesNotEstablish: ["that no event page ever existed"]
     },
-    ...lifecycleSources
+    ...lifecycleSources,
+    ...campaignPressSources
   ],
   claims: [
     {
@@ -912,11 +927,14 @@ const knowledgeBankInput = {
         "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
         "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
         "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
+        "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+        "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
         "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
         "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
         "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
-        "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
       ],
       occurrences: [
@@ -934,6 +952,17 @@ const knowledgeBankInput = {
             "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
             "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
             "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017"
+          ]
+        },
+        {
+          id: "nycartc-campaign-press-corpus",
+          claimId: "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
+            "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
+            "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021"
           ]
         },
         {
@@ -974,7 +1003,8 @@ const knowledgeBankInput = {
         }
       ]
     }
-  ]
+  ],
+  pressCollections: campaignPressCollections
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

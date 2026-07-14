@@ -30,6 +30,24 @@ Nothing is discarded silently, and nothing is published automatically.
 A confirmed claim may remain unused. A qualified claim may be selected with its
 boundary. An unresolved memory may remain valuable as a research inquiry.
 
+## Review Depth
+
+Source availability is not the same as source understanding. A source may be
+reviewed at one of two explicit depths:
+
+- **Metadata** means the source identity, campaign association, displayed
+  label, destination, and preservation status were checked. It cannot directly
+  support or corroborate an article-body claim.
+- **Close reading** means the source body was inspected and its support,
+  non-support, locator, and qualifications were recorded.
+
+Campaign press collections preserve the campaign's displayed publisher,
+displayed title or excerpt, listed URL, and list order separately from the
+normalized article source. Repeated articles share one stable source identity
+while retaining every campaign placement. A metadata-reviewed article must be
+promoted through a later close reading before it can become positive claim
+evidence.
+
 ## Public Repository Boundary
 
 This repository is public. Intake descriptions must be safe to quote in a
@@ -43,6 +61,8 @@ to them only through an opaque `protectedLocatorId`.
 - Never convert a memory directly into a confirmed claim.
 - Preserve exact attribution and collective credit.
 - Record source non-support as carefully as source support.
+- Preserve campaign-displayed press labels separately from normalized source
+  metadata, and declare review depth for every press index and article.
 - Turn dead links and stronger unresolved memories into bounded inquiries.
 - Update the bank before strengthening the public site.
 - Do not project every mature claim.

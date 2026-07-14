@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-chad-editor-r4",
+  "judgeId": "codex-independent-chad-editor-r6",
   "lens": "chad-editorial",
-  "candidate": "sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154",
-  "contract": "sha256:70e722e6ae95c9d8d65b9e47abba4450254363df59f20cb1a9494683273b9c3c",
+  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
+  "contract": "sha256:a1344df9f14e5edcaebff228b319c654036d03811ad4f584093cddc3d0ced0f1",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,67 +21,62 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The preceding accepted judgment found the opening viewport immediately identified Jamie, his Technical Project Manager target, and his concrete operating work; the candidate-bound rendered report shows the same application path remains healthy without a reported role-framing regression."
+      "observation": "The hero immediately names Jamie, the Technical Project Manager — Product Operations & Implementation target, his value of creating operating structure, and concrete work including requirements, workflows, documentation, launch support, onboarding, and durable handoffs."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The selected role-fit route remains present and healthy at desktop and mobile, preserving the established direct connection between Jamie's requirements, workflows, implementation, documentation, launch support, and cross-functional operating work."
+      "observation": "The dedicated entry page plainly maps Jamie's work to delivery coordination, risk tracking, planning rhythms, cross-functional dependencies, onboarding, reporting, and continuous operational improvement, then connects those capabilities to selected projects."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/fair-rent-nyc",
-      "observation": "The expanded record states strong facts directly while preserving their limits: Jamie is identified as a founding member and organizer, his fire-code study groups and testimony are attributed to him, the mutual-aid count remains attributed rather than audited, and coalition or legislative outcomes are not converted into solo causality."
+      "observation": "The new statement is appropriately bounded: four recovered campaign Press sections catalog 45 placements linking 44 distinct press or issue-context articles, with the duplicate NPR placement explained. It measures the campaign-page catalogs only and does not treat the 41 metadata-only article records as substantive body evidence, proof that each article names Jamie, endorsement, reach, or individual causality."
     },
     {
       "rubric": "citational_care",
       "route": "/work/fair-rent-nyc",
-      "observation": "The rendered report binds thirteen references to thirteen backlinks and nine source notes. Canonical records distinguish direct support, corroboration, and context, and each organizing, town-hall, testimony, campaign-interface, and legislative claim carries an explicit boundary describing what its sources do not prove."
+      "observation": "Candidate-bound evidence confirms 17 reference markers, 17 backlinks, 12 source notes, and working marker-to-reference-to-marker round trips. The press-corpus claim cites the four campaign surfaces directly and states where that evidence stops."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "Headings organize the case around what was unclear, what became usable, Jamie's work, the wider record, use, outcomes, and transferable proof. The expanded chronology is scannable, but the long page and repeated collective-credit qualifications keep it from exceptional concision."
+      "observation": "Plain headings and outcome-oriented sections make the case scannable, but the long chronology, numerous citations, and repeated collective-credit and protection qualifications still require more reading than an exceptional application-facing case study."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/fair-rent-nyc",
-      "observation": "Jamie is unusually visible without displacing collaborators: he helped build and steward campaign memory, built public campaign sites, organized fire-code study groups, advocated publicly, participated in the town hall, and testified before Council. Plain-language descriptions show what became usable—shared memory, action tracking, public explanations, a support tracker, call script, and media kit—while legislative enactment remains credited to the documented collective and institutional record."
-    },
-    {
-      "rubric": "chad_lens",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Compared with the prior accepted Chad judgment, the added early-organizing, mutual-aid, town-hall, testimony, campaign-interface, and legislative material strengthens courageous specificity. It does not inflate Jamie's authorship, attendance, leadership, policy ownership, or causal share, and no protected dimension regresses."
+      "observation": "Jamie remains unmistakably visible as the person who built campaign web surfaces, helped create and steward shared campaign memory, organized study groups, advocated publicly, participated in the town hall, and testified before Council. The copy names what became usable while assigning policy leadership, institutional action, legislative outcomes, and broader campaign accomplishments to the coalition and public record."
     },
     {
       "rubric": "visual_evidence",
       "route": "/work/fair-rent-nyc",
-      "observation": "The report declares project imagery unchanged and deferred; no approved artifact newly lets the reader inspect the campaign interface or documentation system. This remains the permitted application-ready visual-evidence deferral, not a regression."
+      "observation": "No approved project artifact lets a reader visually inspect the campaign interfaces or documentation system. The site relies on prose, citations, and a representative homepage diagram; this remains the profile's permitted score-1 visual-evidence deferral."
     },
     {
       "rubric": "resume_alignment",
       "route": "/resume",
-      "observation": "The resume route and approved download remain healthy, and the expanded public record extends rather than contradicts the established NYC Artist Coalition chronology and contribution framing from the preceding accepted judgment."
+      "observation": "The resume download and chronology pass, and the site's technical-project-management, product-operations, implementation, civic-technology, and coalition contribution framing remains coherent with the prior accepted judgment."
     },
     {
       "rubric": "responsive_quality",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Candidate-bound inspection reports status 200 with no overflow on desktop and mobile, successful 200%-equivalent reflow across all eight routes, visible focus on all twenty-four traversed controls, and working citation focus targets."
+      "route": "all 8 evaluated routes",
+      "observation": "All routes return 200 without desktop, mobile, or 200%-equivalent reflow overflow; all 24 traversed controls show visible focus. This is strong and release-capable, though the supplied evidence establishes functional responsive accessibility more fully than exceptional visual hierarchy across every rendered state."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume",
-      "observation": "The rendered report confirms a canonical URL, Open Graph title and image, Twitter card, working resume download, and staging metadata defaults. Production sharing remains outside the application-ready profile."
+      "observation": "Canonical metadata, Open Graph title and image, Twitter card, links, contact path, and resume download pass. The evidence uses staging metadata defaults, so production sharing behavior remains outside this application-ready judgment."
     },
     {
       "rubric": "operational_confidence",
-      "route": "candidate-bound rendered-site report",
-      "observation": "The exact candidate is bound to desktop, mobile, reflow, keyboard, focus, citation, metadata, and resume-download evidence. Production smoke, deployed-commit verification, indexing approval, and rollback evidence remain permitted production-stage gaps."
+      "route": "candidate-bound application evidence",
+      "observation": "The exact candidate is bound to route, viewport, focus, citation, metadata, and resume checks. Production smoke results, deployed-commit verification, indexing approval, monitoring, and rollback evidence remain deferred to production readiness."
     }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of the Talks Not Raids campaign interface, captioned to identify Jamie's direct web contribution while keeping coalition ownership and the non-causal legislative boundary adjacent.",
+  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of a campaign interface Jamie directly built, with an adjacent caption that identifies his web contribution, retains coalition ownership, and makes no claim about article content, reach, or legislative causality.",
   "passes": true,
   "confidence": "high"
 }

@@ -66,6 +66,31 @@ interface facts; they are not independent proof of impact or Jamie's individual
 authorship. Official records establish hearings and enacted provisions; they do
 not allocate causal credit among advocates, legislators, agencies, or partners.
 
+## NYC Artist Coalition Campaign Press Corpus
+
+The July 13, 2026 press-corpus pass recovered every placement in four campaign
+Press sections:
+
+- [Let NYC Dance](https://letnycdance.nycartc.com/): 21 placements.
+- [Talks Not Raids](https://talksnotraids.com/): 7 placements.
+- [Save NYC Spaces](https://savenycspaces.nycartc.com/): 8 placements.
+- [Fair Rent NYC, December 1, 2021 Wayback capture](https://web.archive.org/web/20211201104425/https://fairrentnyc.nycartc.com/): 9 placements.
+
+Together they contain 45 placements linking 44 distinct article identities.
+The same NPR nightlife article appears in Let NYC Dance and Save NYC Spaces.
+Each placement preserves the campaign's displayed publisher, displayed title or
+excerpt, listed URL, and order; each source record separately preserves a
+normalized title, publisher, current URL, and archival URL where recovery was
+needed.
+
+The campaign index pages were close-read. Forty-one newly catalogued article
+sources remain metadata-reviewed; three previously used article sources already
+had close readings. Metadata review establishes inclusion in a campaign Press
+section and an auditable destination, not that the article names Jamie, endorses
+the campaign, measures reach, or proves policy causality. The current Fair Rent
+NYC domain no longer exposes the historical Press section, so the current live
+check and the recovered 2021 archive are separate intake records.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

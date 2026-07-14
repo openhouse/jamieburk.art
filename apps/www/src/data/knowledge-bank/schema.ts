@@ -197,6 +197,7 @@ export const sourceRecordSchema = z
     projectIds: z.array(stableIdSchema).min(1),
     intakeIds: z.array(stableIdSchema).default([]),
     reviewStatus: z.enum(["candidate", "reviewed", "blocked"]),
+    reviewDepth: z.enum(["metadata", "close-reading"]).optional(),
     reviewedAt: z.iso.date().optional(),
     reviewedBy: z.array(z.string().min(1)).default([]),
     legacyImportedAt: z.iso.date().optional(),
@@ -354,6 +355,27 @@ export const citationPageSchema = z.object({
   occurrences: z.array(citationOccurrenceSchema)
 });
 
+export const pressPlacementSchema = z.object({
+  position: z.number().int().positive(),
+  sourceId: stableIdSchema,
+  listedPublisher: z.string().min(1),
+  listedTitle: z.string().min(1),
+  listedUrl: publicUrlSchema
+});
+
+export const pressCollectionSchema = z.object({
+  id: stableIdSchema,
+  project: stableIdSchema,
+  campaignEntityId: stableIdSchema,
+  title: z.string().min(1),
+  indexSourceId: stableIdSchema,
+  capturedAt: z.iso.date(),
+  captureKind: z.enum(["live", "archived"]),
+  captureDigest: z.string().regex(/^sha256:[a-f0-9]{64}$/),
+  expectedArticleCount: z.number().int().positive(),
+  articles: z.array(pressPlacementSchema).min(1)
+});
+
 export const knowledgeBankSchema = z.object({
   intakeItems: z.array(intakeItemSchema),
   entities: z.array(entityRecordSchema),
@@ -362,7 +384,8 @@ export const knowledgeBankSchema = z.object({
   claims: z.array(claimRecordSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
-  pages: z.array(citationPageSchema)
+  pages: z.array(citationPageSchema),
+  pressCollections: z.array(pressCollectionSchema).default([])
 });
 
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
@@ -376,4 +399,5 @@ export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
 export type CitationPage = z.infer<typeof citationPageSchema>;
+export type PressCollection = z.infer<typeof pressCollectionSchema>;
 export type KnowledgeBank = z.infer<typeof knowledgeBankSchema>;

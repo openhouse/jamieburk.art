@@ -1,7 +1,7 @@
 {
-  "candidate": "sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154",
+  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
   "profile": "application_ready",
-  "performedAt": "2026-07-13",
+  "performedAt": "2026-07-14",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
   "routes": [
     {
@@ -54,9 +54,9 @@
     "referencesHeading": true
   },
   "fairRentCitations": {
-    "referenceCount": 13,
-    "backlinkCount": 13,
-    "sourceNoteCount": 9,
+    "referenceCount": 17,
+    "backlinkCount": 17,
+    "sourceNoteCount": 12,
     "localLinks": true,
     "accessibleLabels": true,
     "referencesHeading": true,

@@ -112,6 +112,38 @@ reflow; 24 of 24 visible keyboard-focus states; CallNYC citation semantics; and
 the expanded FairRentNYC surface with 13 references, 13 backlinks, nine source
 notes, and working reference/backlink round trips.
 
+## Campaign Press Corpus Cycle
+
+The next pass froze `1c89df56f59fbab826795306cc99d35dd14d07d9` as its
+baseline and added a typed press-collection layer for four NYC Artist Coalition
+campaign sites.
+
+- Baseline score: `92.5`
+- Deterministic candidate score: `100`
+- Collections: `4`
+- Placements: `45`
+- Distinct article identities: `44`
+- Newly metadata-reviewed article sources: `41`
+- Previously close-read reused article sources: `3`
+
+Live DOM extraction recovered 21 Let NYC Dance placements, 7 Talks Not Raids
+placements, and 8 Save NYC Spaces placements. The supplied December 1, 2021
+FairRentNYC Wayback capture recovered 9 more. The current FairRentNYC domain was
+checked and dispositioned separately because it no longer exposes the historical
+Press section. A link audit added archive destinations for blocked, dead, or
+misleadingly redirected records without making network access part of the build.
+
+The first independent archival pass found that reused sources needed explicit
+review-depth labels. The second found that placement labels and normalized
+article metadata needed separate fields. Both defects were corrected. The
+contract now requires explicit review depth for every campaign index and article,
+preserves verbatim campaign labels and order, and rejects metadata-only article
+sources used as direct or corroborating claim evidence.
+
+The public composition adds one bounded aggregate claim to FairRentNYC. It says
+what the four campaign sites catalogued; it does not imply that every article
+names Jamie, endorses the campaigns, measures reach, or proves policy effects.
+
 ## Next Cycle
 
 Add durable archived captures for live sources, migrate the remaining high-value

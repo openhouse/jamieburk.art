@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-r4",
+  "judgeId": "codex-independent-hiring-manager-r5",
   "lens": "hiring-manager",
-  "candidate": "sha256:c76d36afa7e9d4548785b9e8b6e2f4093544730ce78b5e0b89e79d122cafd154",
-  "contract": "sha256:70e722e6ae95c9d8d65b9e47abba4450254363df59f20cb1a9494683273b9c3c",
+  "candidate": "sha256:52e3c28aa21a9df07f33b93775430bd19b15d3719c68259c3ad526f1da6c3e81",
+  "contract": "sha256:a1344df9f14e5edcaebff228b319c654036d03811ad4f584093cddc3d0ced0f1",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -21,67 +21,67 @@
     {
       "rubric": "role_clarity",
       "route": "/",
-      "observation": "The opening positioning identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation and provides direct paths to selected work, resume, and contact."
+      "observation": "The opening names Jamie as a Technical Project Manager focused on Product Operations and Implementation, states that he creates operating structure for complex public-facing teams, and exposes work, resume, and contact actions."
     },
     {
       "rubric": "role_fit",
       "route": "/work/technical-operations",
-      "observation": "The role-fit page translates Jamie's work into requirements, coordination, risk and dependency management, implementation, onboarding, documentation, and durable handoffs."
+      "observation": "The page maps Jamie to delivery coordination, risk surfacing, cross-functional dependencies, onboarding, operating documentation, launch support, and durable handoffs, then connects those responsibilities to named projects."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/fair-rent-nyc",
-      "observation": "The expansion adds source-backed founding affiliation, organizing, public testimony, campaign-web, and coalition-operating evidence while repeatedly preserving collective ownership and excluding sole policy causality."
+      "observation": "The new sentence says only that four recovered campaign Press sections catalog 45 placements linking 44 distinct article identities. Its canonical boundaries explain the duplicate and explicitly reject inferences about Jamie mentions, endorsement, reach, or policy causality; metadata-only article records are not used as substantive support."
     },
     {
       "rubric": "citational_care",
       "route": "/work/fair-rent-nyc",
-      "observation": "Candidate-bound evidence records 13 local references and backlinks, nine source notes, accessible labels, successful reference targeting, and canonical registry boundaries describing both support and non-support."
+      "observation": "Candidate-bound evidence records 17 local references, 17 backlinks, and 12 source notes. The new claim cites the four close-read campaign index surfaces, while the public registry excludes metadata-only article records and states what the collection evidence does not establish."
     },
     {
       "rubric": "reader_effort",
       "route": "/work/fair-rent-nyc",
-      "observation": "Clear headings and a usable work-to-outcome sequence keep the expanded case navigable, but the added claim chronology and repeated public/private and collective-credit qualifications make it substantially denser than a one-pass hiring summary."
+      "observation": "The work-to-outcome headings keep the case navigable, and the new Press-corpus claim adds only one public sentence. The already long case and its necessary source and collective-credit boundaries remain too dense for exceptional one-pass concision."
     },
     {
       "rubric": "chad_lens",
       "route": "/work/fair-rent-nyc",
-      "observation": "Jamie is visible as documentation architect, organizer, translator, website builder, and coordination contributor, with useful outputs named directly; repeated boundary language keeps the presentation strong rather than exceptional."
+      "observation": "Jamie remains visible as co-founder, organizer, website builder, documentation architect, translator, and testifier, with usable outputs named directly. The collection-level Press sentence adds context but not evidence of Jamie's individual contribution, and repeated boundary language keeps the page strong rather than exceptional."
     },
     {
       "rubric": "visual_evidence",
-      "route": "/work/fair-rent-nyc, /work/callnyc",
-      "observation": "The cases still describe artifacts primarily through text rather than showing an approved, inspectable interface or work artifact. This is the existing application-ready deferral, not a regression."
+      "route": "/work/fair-rent-nyc, /work/callnyc, /work/harry-j-epstein",
+      "observation": "The artifact galleries describe interfaces, maps, workflows, and summaries in text but show no approved project imagery or inspectable work artifact. This remains the permitted application-ready deferral and is unchanged from r4."
     },
     {
       "rubric": "resume_alignment",
-      "route": "/resume, /work/fair-rent-nyc",
-      "observation": "The expanded coalition record reinforces the established professional throughline and maintains the distinction between longer-running NYC Artist Coalition work and later Commercial Rent Stabilization collaboration."
+      "route": "/resume",
+      "observation": "The HTML summary and approved two-page PDF reinforce the same 14+ year Technical Project Manager positioning, HJE contribution framing, CallNYC chronology, NYC Artist Coalition role, and public-safe Commercial Rent Stabilization work."
     },
     {
       "rubric": "responsive_quality",
       "route": "candidate-bound browser evidence for eight declared routes",
-      "observation": "Evidence reports status 200 and no overflow at desktop, mobile, and 200%-equivalent reflow across all required routes, plus visible focus on all 24 traversed controls; the evidence remains local rather than exhaustive device coverage."
+      "observation": "The exact candidate returned 200 without overflow on desktop, mobile, or 200%-equivalent reflow across all eight routes; all 24 traversed controls had visible focus and citation round trips worked. Evidence remains local rather than broad device coverage."
     },
     {
       "rubric": "sharing_quality",
       "route": "/resume, /contact",
-      "observation": "Resume download, contact paths, canonical metadata, Open Graph image and title, and Twitter card are present under staging defaults; production sharing behavior remains outside this profile."
+      "observation": "The resume download, email, LinkedIn, GitHub, canonical URL, Open Graph image and title, and Twitter card are present under staging defaults. Production sharing behavior remains outside this profile."
     },
     {
       "rubric": "operational_confidence",
       "route": "candidate-bound evaluation evidence",
-      "observation": "The exact requested candidate is bound to route, responsive, keyboard, citation, metadata, and resume-download evidence. The generated aggregate report present in the workspace references an earlier candidate and contract, while production smoke, rollback, indexing, and deployed-commit verification remain deferred."
+      "observation": "Fresh read-only evaluation recomputed the exact candidate and contract hashes and passed repository, public-safety, claim-integrity, resume, route, application-path, and responsive gates. Production smoke, deploy verification, indexing approval, and rollback evidence remain deferred."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/callnyc",
-      "observation": "CallNYC remains framed as an independent, archived, unofficial follow-on, with boundaries against official-product, formal-submission, winner, and unsupported historical-superlative claims."
+      "observation": "CallNYC remains an independent archived follow-on with explicit boundaries against official-product, formal-submission, winner, and current-guidance claims."
     },
     {
       "rubric": "proof_defensibility",
       "route": "/work/harry-j-epstein",
-      "observation": "The business-growth evidence retains contribution language rather than converting a period of growth into sole causality."
+      "observation": "The case continues to frame the 2x growth period as an outcome Jamie contributed to, not as sole causality."
     }
   ],
   "regressions": [],
