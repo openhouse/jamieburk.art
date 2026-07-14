@@ -1,30 +1,36 @@
 {
   "suite_id": "knowledge-development-lifecycle",
   "suite_version": 1,
-  "label": "holdout-2-final-unchanged",
-  "run_at": "2026-07-14T03:40:56.342Z",
+  "label": "final-holdout-2",
+  "run_at": "2026-07-14T15:45:41.987Z",
   "candidate_files": [
     ".agents/evals/knowledge-development.json",
     "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "docs/knowledge-bank/claims.md",
     "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
     "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
     "docs/knowledge-bank/promotion-slate.md"
   ],
-  "candidate_fingerprint": "2abeced36a55ee43a4f7985a0ab3f720acb1dcd07f8f710e7eff5209003e68d1",
-  "judgment_fingerprint": "2abeced36a55ee43a4f7985a0ab3f720acb1dcd07f8f710e7eff5209003e68d1",
+  "candidate_fingerprint": "cb8ccc6747119d273841e959bb9c96ebd7791b530aa111ea114e235982d321e8",
+  "judgment_fingerprint": "cb8ccc6747119d273841e959bb9c96ebd7791b530aa111ea114e235982d321e8",
   "judgment_fingerprint_missing": false,
   "judgment_fingerprint_mismatch": false,
   "metrics": {
-    "captures": 12,
-    "routedCaptures": 12,
-    "sources": 12,
-    "developmentSources": 5,
-    "observations": 15,
-    "developmentClaims": 9,
-    "researchTasks": 8,
+    "captures": 22,
+    "routedCaptures": 22,
+    "sources": 22,
+    "developmentSources": 15,
+    "observations": 33,
+    "developmentClaims": 15,
+    "researchTasks": 9,
     "validationErrors": 0
   },
-  "weighted_score": 1,
+  "weighted_score": 0.9725,
   "threshold": 0.85,
   "criteria_met": true,
   "blocking_failures": [],
@@ -40,7 +46,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "12/12 captures integrated, tasked, or closed"
+        "22/22 captures integrated, tasked, or closed"
       ],
       "findings": [],
       "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
@@ -55,8 +61,8 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "6/6 URL captures routed",
-        "5 normalized development sources"
+        "16/16 URL captures routed",
+        "15 normalized development sources"
       ],
       "findings": [],
       "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
@@ -71,8 +77,8 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "5/5 development sources decomposed",
-        "15 atomic observations"
+        "15/15 development sources decomposed",
+        "33 atomic observations"
       ],
       "findings": [],
       "recommended_next_move": "Decompose each integrated source into located, limited observations.",
@@ -87,7 +93,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "16 claims declare three independent states"
+        "22 claims declare three independent states"
       ],
       "findings": [],
       "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
@@ -102,7 +108,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "9 development claims",
+        "15 development claims",
         "0 promoted-lineage violations",
         "0 projection violations"
       ],
@@ -116,23 +122,22 @@
       "grader": "llm_judge",
       "blocking": true,
       "weight": 8,
-      "score": 4,
+      "score": 3,
       "pass": true,
       "evidence": [
-        "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN names Jamie’s initiating and tending role while OBS-OPEN-HOUSE-COMMUNAL-GOVERNANCE, OBS-OPEN-HOUSE-TENDING-ROLE, its boundaries, and antiClaims preserve communal governance and participant agency.",
-        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM identifies Jamie’s spearheading and facilitation while explicitly crediting Suzanne Hogan’s outreach and refusing authorship of participant contributions.",
-        "CLM-NYCAC-CABARET-REPEAL-ADVOCACY separates documented organizing and rallying from legislative causality; CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE remains held pending RT-NYCAC-CABARET-CONTRIBUTION.",
-        "CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE distinguishes the supported post-creation town-hall intent from unsupported pre-creation influence; RT-NYCAC-OFFICE-CREATION-CONTRIBUTION requires coalition and government credit.",
-        "RT-TALKS-NOT-RAIDS-MARCH-OUTCOME explicitly holds “disbanded” until an authoritative source establishes that institutional outcome.",
-        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19 records the Julie/Julia inconsistency and derived records consistently use only “Fredenberg” pending corroboration."
+        "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE names Jamie's fire-code study groups and City Hall rally while explicitly retaining credit for Council Member Rafael Espinal, partner organizations, the Council, and the Mayor.",
+        "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY, CLM-NYCAC-MARCH-TRANSPARENCY-LAW, and CLM-NYCAC-MARCH-REPLACED-BY-CURE distinguish Jamie's testimony, the coalition campaign, Council enactment, and later City action; their boundaries reject individual causality.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx explicitly separates direct organizing and testimony, coalition infrastructure, and government records, then credits Council sponsors, coalition partners, agencies, venue operators, advocates, and elected officials.",
+        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM credits Suzanne Hogan's outreach, while CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN preserves housemate, participant, and communal-governance credit without hiding Jamie's initiating and tending role.",
+        "docs/knowledge-bank/claims.md and apps/www/src/data/proofs.ts state that Jamie built and stewarded 30+ pages and created the legislative source map and provenance redline; the case study weakens these to 'helped build and steward' and generic source-map participation."
       ],
       "findings": [
-        "Direct action, collective contribution, public outcome, and causality remain unusually well separated at observation, claim, boundary, anti-claim, research-task, and promotion levels.",
-        "Jamie’s actions are stated confidently—conceived, spearheaded, facilitated, initiated, tended, organized, rallied—without converting participation into sole leadership or outcome ownership.",
-        "The Open House treatment is especially strong: it makes Jamie’s indispensable tending visible without contradicting his documented rejection of a leader role.",
-        "No reviewed claim absorbs collaborator, coalition, participant, legislative, or institutional credit."
+        "Collective and governmental credit is consistently preserved, including in the public-facing chronology.",
+        "Chronology is not presented as individual causality: enactment and CURE replacement are framed as government outcomes adjacent to, but not caused by, Jamie's work.",
+        "The candidate confidently preserves several direct actions: co-founding, website construction, fire-code study-group organizing, City Hall advocacy, Council testimony, program initiation, and facilitation.",
+        "The main shortfall is unnecessary understatement of the Commercial Rent Stabilization work. The canonical proof says Jamie built and stewarded the 30+ page system and created a legislative source map and provenance redline, but the case study retreats to 'helped' language and never clearly surfaces the redline as Jamie's direct deliverable."
       ],
-      "recommended_next_move": "Preserve the current calibration. Before promoting any held NYC Artist Coalition outcome claim, complete its linked research task and retain the same action-versus-causality structure.",
+      "recommended_next_move": "Restore the approved direct wording in the case study: state that Jamie built and stewarded the 30+ page campaign-memory system and created the legislative source map and provenance redline, while retaining the existing boundaries against campaign ownership, legal authority, and policy causality.",
       "confidence": "high"
     },
     {
@@ -144,7 +149,7 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "8 research tasks",
+        "9 research tasks",
         "0 unresolved captures without tasks",
         "0 inference claims without tasks"
       ],
@@ -224,24 +229,24 @@
       "grader": "llm_judge",
       "blocking": false,
       "weight": 3,
-      "score": 4,
+      "score": 3,
       "pass": true,
       "evidence": [
-        "docs/knowledge-bank/promotion-slate.md distinguishes Strong Future Feature Candidates, Strong Supporting Proof, and Research Before Promotion, giving a future editor concrete uses and explicit evidence gates.",
-        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM states Jamie’s action, the end of connecting river communities, and the usable program forms: outreach, interactive media, shared stories, and facilitation.",
-        "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN states what Jamie did and what became operationally possible: a ten-day experiment sustained through tending while responsibility and decisions remained with the group.",
-        "CLM-NYCAC-FIRE-CODE-STUDY-GROUPS and CLM-NYCAC-CABARET-REPEAL-ADVOCACY provide specific hiring-legible actions and purposes while withholding unmeasured consequences and repeal causality.",
-        "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE, CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, and CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE each link to prioritized research tasks with claim-specific success criteria.",
-        "docs/knowledge-bank/projects/nyc-artist-coalition-research.md keeps the NPR page as a retrieval candidate and states that no claim relies on unread content.",
-        "docs/knowledge-bank/promotion-slate.md correctly holds CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL until occurrence, Jamie’s production role, participation, and consequences are established."
+        "apps/www/src/data/work.ts gives a compact hiring frame: Jamie's role, the unclear multi-stakeholder environment, and the usable outputs of minutes, trackers, source maps, public explanations, websites, testimony, and an auditable policy trail.",
+        "apps/www/src/content/work/fair-rent-nyc.mdx answers what Jamie did, what became usable, how collaborators used it, and why the work transfers to technical project management, product operations, and knowledge systems.",
+        "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS, CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY, and CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY form a bounded civic-systems case rather than merely listing sources.",
+        "docs/knowledge-bank/projects/nyc-artist-coalition-research.md keeps CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE and CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED visible with precise evidentiary gaps.",
+        "RT-NYCAC-OFFICE-CREATION-CONTRIBUTION and RT-NYCAC-FIREGUARD-PASS-RATE-CORROBORATION specify concrete next research moves, including legislation and hearing review, collaborator confirmation, denominator recovery, date range, exam type, and bounded records.",
+        "docs/knowledge-bank/promotion-slate.md clearly separates current selections, future feature candidates, supporting proof, and research-before-promotion items."
       ],
       "findings": [
-        "A future hiring-oriented editor can readily identify Jamie’s strongest defensible actions, their intended public or organizational ends, and the structures they made usable.",
-        "Promotion advice is exceptionally practical: it identifies likely case-study roles, distinguishes lead stories from supporting proof, and names the exact research needed before elevation.",
-        "Candidate claims and research tasks are tightly linked, so high-value unresolved material remains visible without being diluted into vague language or prematurely published.",
-        "Source discipline is strong across live sources, unread-source handling, claim-level evidence relationships, and explicit does-not-establish boundaries."
+        "A skeptical hiring reader can identify Jamie's core value: he built public web infrastructure and source-backed operating memory so collaborators could orient, protect sensitive context, track decisions, and continue civic work.",
+        "The selected civic claims are coherent around civic-systems implementation, public communication, organizing, and accountability; they are not an undifferentiated source dump.",
+        "High-value held claims remain visible and are paired with actionable research plans rather than vague calls for more evidence.",
+        "The case is not exceptional because it combines a 2017-2023 coalition history with a separate 2026 Commercial Rent Stabilization collaboration. The government-outcome chronology is well bounded but temporarily competes with the clearer hiring story about Jamie's own artifacts and their use.",
+        "The strongest direct policy-documentation artifact—the legislative source map and provenance redline—is insufficiently prominent, making Jamie's individual contribution less concrete than the evidence permits."
       ],
-      "recommended_next_move": "Use CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM and CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN as the next feature candidates after rights review; retain the NYC Artist Coalition items as supporting proof or research until their stated evidence gates are met.",
+      "recommended_next_move": "Recenter the case-study spine on Jamie action → intended user → usable artifact → observed use. Surface the 30+ page memory system and legislative provenance redline as named deliverables, clarify the two-period timeline, and keep the Cabaret Law, Local Law 220, and CURE chronology as bounded supporting context.",
       "confidence": "high"
     }
   ]

@@ -1,6 +1,250 @@
 {
   "sources": [
     {
+      "id": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+      "title": "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law",
+      "organization": "Gothamist / WNYC",
+      "author": "Emma Whitford",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-06-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Emma Whitford, 'DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,' Gothamist, June 19, 2017.",
+      "publicNote": "Contemporaneous reporting on Jamie's fire-code study groups and City Hall repeal advocacy.",
+      "doesNotEstablish": [
+        "that Jamie founded NYC Artist Coalition",
+        "that Jamie alone led the repeal campaign",
+        "that Jamie caused the later legislative repeal",
+        "the coalition's complete membership or decision process",
+        "every action Jamie took in the campaign"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+      "title": "The Co-op Q&A With Jamie Burkart and Julie Fredenberg",
+      "organization": "Greene Hill Food Co-op",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-12-19",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Greene Hill Food Co-op, 'The Co-op Q&A With Jamie Burkart and Julie Fredenberg,' December 19, 2017.",
+      "publicNote": "The page presents the Q&A as a September 2017 newsletter item and displays a December 19, 2017 publication date. Its title says Julie Fredenberg while its body says Julia, so derived records use Fredenberg until another source resolves the given name.",
+      "doesNotEstablish": [
+        "that Jamie founded NYC Artist Coalition",
+        "that Jamie alone produced the town hall",
+        "that Jamie helped create the Office of Nightlife",
+        "that the town hall determined Office policy",
+        "that Jamie caused Cabaret Law repeal"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+      "title": "A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety",
+      "organization": "VICE",
+      "author": "Alexander Iadarola",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-21",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Alexander Iadarola, 'A Coalition of Advocacy Groups Are Meeting New York's Cultural Commissioner to Talk About DIY Venue Safety,' VICE, March 21, 2017.",
+      "publicNote": "Contemporaneous independent reporting on coalition formation and planned engagement with city cultural officials.",
+      "doesNotEstablish": [
+        "the complete founder roster",
+        "Jamie's individual role in the meeting",
+        "that city officials adopted the proposals",
+        "sole coalition leadership"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+      "title": "With Its 'No Dancing' Law Verging On Repeal, New York Legitimizes Its Nightlife",
+      "organization": "NPR, syndicated by KUAF",
+      "author": "Andrew Flanagan",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-20",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kuaf.com/npr-music-news/2017-09-20/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Andrew Flanagan, 'With Its No Dancing Law Verging On Repeal, New York Legitimizes Its Nightlife,' NPR, syndicated by KUAF, September 20, 2017.",
+      "publicNote": "Readable public syndication of the NPR story that the original NPR URL did not expose to the July 13 retrieval pass.",
+      "doesNotEstablish": [
+        "that Jamie was the only founder",
+        "that Jamie alone led Let NYC Dance",
+        "individual causality for repeal",
+        "authorship of every coalition position"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+      "title": "Preserve Community-Driven Spaces - NYC Artist Coalition DIY Community",
+      "organization": "CreateNYC / City of New York",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CreateNYC, 'Preserve Community-Driven Spaces - NYC Artist Coalition DIY Community,' 2017 appendix.",
+      "publicNote": "City-hosted appendix preserving notes and materials from a March 30, 2017, NYC Artist Coalition co-hosted gathering.",
+      "doesNotEstablish": [
+        "Jamie's complete production role",
+        "attendance",
+        "adoption of every proposal",
+        "individual authorship of the appendix",
+        "causality for later legislation"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+      "title": "Cabaret Law Fact Sheet",
+      "organization": "Let NYC Dance coalition / NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://letnycdance.nycartc.com/download/cabaret-law-factsheet.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Let NYC Dance coalition and NYC Artist Coalition, 'Cabaret Law Fact Sheet,' 2017.",
+      "publicNote": "Coalition-authored campaign artifact; individual research, writing, design, and mapping credits are not stated in the document.",
+      "doesNotEstablish": [
+        "Jamie's individual authorship",
+        "independent verification of every campaign statistic",
+        "that repeal alone resolved zoning restrictions",
+        "sole coalition ownership"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+      "title": "Recommendations for the Newly Established Office of Nightlife",
+      "organization": "NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-09-08",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, letter to Commissioners Julie Menin and Tom Finkelpearl with recommendations for the newly established Office of Nightlife, September 8, 2017.",
+      "publicNote": "Public coalition letter about the new Office's agenda. It does not name the document's individual authors.",
+      "doesNotEstablish": [
+        "Jamie's individual authorship",
+        "that NYC Artist Coalition created the Office",
+        "adoption of every recommendation",
+        "individual causality for later reforms"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31",
+      "title": "New York City Council Repeals Cabaret Law After 91 Years",
+      "organization": "Resident Advisor",
+      "author": "Max Pearl",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-31",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://ra.co/news/40325",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Max Pearl, 'New York City Council Repeals Cabaret Law After 91 Years,' Resident Advisor, October 31, 2017.",
+      "publicNote": "Independent outcome report crediting Council Member Rafael Espinal and a multi-group campaign.",
+      "doesNotEstablish": [
+        "Jamie's individual causal share",
+        "that NYC Artist Coalition acted alone",
+        "sole credit for repeal",
+        "that zoning restrictions were simultaneously resolved"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+      "title": "Talks Not Raids: Transparency on M.A.R.C.H. Raids in NYC",
+      "organization": "Talks Not Raids coalition / NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://talksnotraids.com/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Talks Not Raids coalition, 'Transparency on M.A.R.C.H. Raids in NYC,' public campaign page.",
+      "publicNote": "Campaign-authored record of its Council call-to-action, co-sponsor tracking, supporting organizations, and attributed participant statements.",
+      "doesNotEstablish": [
+        "Jamie's individual authorship of the page",
+        "independent proof of campaign causality",
+        "the bill's later enactment without the Council record",
+        "that every coalition participant shared every statement"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+      "title": "Committee on Justice System Hearing Transcript - Intro 1156",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Committee on Justice System hearing transcript on Intro 1156, February 11, 2019.",
+      "publicNote": "Official transcript identifies Jamie as an NYC Artist Coalition member and records his public testimony. The transcript misspells his surname as Burkhart.",
+      "doesNotEstablish": [
+        "independent verification of every witness statement",
+        "Jamie's sole authorship of coalition work",
+        "individual causality for Intro 1156",
+        "independent verification of the stated Fireguard exam pass rate"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
+      "title": "Intro 1156-A / Local Law 220 of 2019",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-12-15",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, Intro 1156-A, enacted as Local Law 220 of 2019, December 15, 2019.",
+      "publicNote": "Authoritative legislative history and enacted text.",
+      "doesNotEstablish": [
+        "which advocate caused enactment",
+        "that MARCH ended in 2019",
+        "that notice was required in every law-enforcement circumstance",
+        "the law's complete implementation history"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-MAYOR-CURE-2023-12-28",
+      "title": "Mayor Adams Launches Effort to Enhance Nightlife Safety and Strengthen Small Businesses, Phasing Out MARCH Enforcement",
+      "organization": "New York City Mayor's Office",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2023-12-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.nyc.gov/mayors-office/news/2023/12/mayor-adams-launches-effort-enhance-nightlife-safety-strengthen-small-businesses-phasing",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Mayor's Office, 'Mayor Adams Launches Effort to Enhance Nightlife Safety and Strengthen Small Businesses, Phasing Out MARCH Enforcement,' December 28, 2023.",
+      "publicNote": "Authoritative announcement of the CURE process and its replacement of MARCH.",
+      "doesNotEstablish": [
+        "that Jamie or Talks Not Raids caused the replacement",
+        "that multi-agency enforcement ended in every form",
+        "implementation outcomes after the announcement",
+        "sole credit to any advocacy organization"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -103,6 +347,343 @@
     }
   ],
   "claims": [
+    {
+      "id": "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Contemporaneous NPR reporting identified Jamie as a founding member of NYC Artist Coalition, formed in early 2017 to support and advocate for informal cultural spaces.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+          "relationship": "corroborating",
+          "supports": [
+            "the coalition's January 2017 formation and purpose"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's founding-member role",
+            "public repeal advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public record supports founding-member wording but does not name every founder, define the division of formation work, or make Jamie the coalition's sole founder."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "As a founding member of NYC Artist Coalition, Jamie started organizing fire-code study groups and rallied outside City Hall within the multi-group Let NYC Dance campaign that preceded the Council's 2017 repeal of the Cabaret Law.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's documented organizing and public repeal advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's founding-member role and public advocacy",
+            "Let NYC Dance coalition mobilization"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "relationship": "context",
+          "supports": [
+            "a coalition co-hosted policy gathering with repeal on its agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31",
+          "relationship": "corroborating",
+          "supports": [
+            "repeal outcome",
+            "the multi-group campaign preceding repeal",
+            "NYC Artist Coalition's inclusion in that campaign"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The sources support direct action and participation in a collective campaign. They do not quantify Jamie's causal share or displace Council Member Rafael Espinal, Dance Liberation Network, Dance Parade, Legalize Dance NYC, other advocates, the Council, or the Mayor from the outcome."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The coalition's public infrastructure included town halls, mapped policy explanations, recommendations to city officials, public-record research, and resident calls to action. At a 2019 hearing, Council questioning cited the coalition's FOIL-derived MARCH dataset and map.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+          "relationship": "context",
+          "supports": [
+            "planned policy engagement with the Cultural Affairs commissioner"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "co-hosted town hall",
+            "multi-part policy agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "mapped policy explanation",
+            "public safety framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+          "relationship": "direct-support",
+          "supports": [
+            "written recommendations to city officials"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "direct-support",
+          "supports": [
+            "resident calls to action and co-sponsor tracking"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+          "relationship": "corroborating",
+          "supports": [
+            "Council use of coalition public-record research"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The sources document collective artifacts and methods; they do not assign individual authorship of every map, recommendation, analysis, or event component to Jamie."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "After the Office of Nightlife was established, NYC Artist Coalition delivered recommendations and announced a town hall inviting community dialogue; Jamie later asked the Office, in Council testimony, to work directly with coalition cultural liaisons and establishments.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+          "relationship": "direct-support",
+          "supports": [
+            "town-hall dialogue with the new Office",
+            "attention to diverse cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+          "relationship": "direct-support",
+          "supports": [
+            "recommendations to the newly established Office"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's request that the Office work with coalition liaisons and cultural establishments"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "These sources establish post-creation accountability work, not individual causality for creating the Office."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In February 2019, Jamie testified before the City Council as an NYC Artist Coalition member, asking for Talks Not Raids, MARCH transparency, and direct problem-solving between the Office of Nightlife and cultural establishments.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's appearance and coalition affiliation",
+            "Talks Not Raids testimony",
+            "MARCH transparency request",
+            "Office liaison request"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Public testimony is a direct action; it does not by itself establish individual legislative causality."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-MARCH-TRANSPARENCY-LAW",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The Council later enacted Intro 1156-A as Local Law 220 of 2019, requiring public MARCH reporting and, with specified exceptions, advance notice and an opportunity for establishments to respond.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+          "relationship": "context",
+          "supports": [
+            "the public campaign for Intro 1156 and its named coalition"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+          "relationship": "context",
+          "supports": [
+            "Council hearing",
+            "Jamie's testimony",
+            "coalition public-record research"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "enactment as Local Law 220",
+            "semiannual MARCH reporting",
+            "30-day notice with exceptions",
+            "opportunity to provide relevant information"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Chronological sequence and aligned demands do not prove that Jamie or the campaign caused enactment; Council sponsors, other advocates, agencies, and legislators retain their distinct roles."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-MARCH-REPLACED-BY-CURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "In December 2023, the City announced that CURE, an engagement-first process built around direct communication and opportunities to correct problems, replaced MARCH.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-MAYOR-CURE-2023-12-28",
+          "relationship": "direct-support",
+          "supports": [
+            "CURE replaced MARCH",
+            "direct communication with establishments",
+            "opportunities to correct concerns"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is the later institutional endpoint, not proof that Jamie or Talks Not Raids caused the 2023 replacement; the announcement does not say all multi-agency enforcement ended."
+      ]
+    },
     {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
@@ -362,6 +943,95 @@
           "sourceIds": [
             "SRC-CALLNYC-GITHUB-REPOSITORY",
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [
+        "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+        "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+        "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+        "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+        "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+        "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+        "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
+        "SRC-NYCAC-MAYOR-CURE-2023-12-28"
+      ],
+      "occurrences": [
+        {
+          "id": "founding-role",
+          "claimId": "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+            "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21"
+          ]
+        },
+        {
+          "id": "policy-data-communications",
+          "claimId": "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+            "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+            "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+            "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"
+          ]
+        },
+        {
+          "id": "cabaret-contribution",
+          "claimId": "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+            "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+            "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31"
+          ]
+        },
+        {
+          "id": "office-accountability",
+          "claimId": "CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+            "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+            "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"
+          ]
+        },
+        {
+          "id": "talks-not-raids-testimony",
+          "claimId": "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"
+          ]
+        },
+        {
+          "id": "march-transparency-law",
+          "claimId": "CLM-NYCAC-MARCH-TRANSPARENCY-LAW",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+            "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+            "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019"
+          ]
+        },
+        {
+          "id": "march-cure-replacement",
+          "claimId": "CLM-NYCAC-MARCH-REPLACED-BY-CURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-MAYOR-CURE-2023-12-28"
           ]
         }
       ]

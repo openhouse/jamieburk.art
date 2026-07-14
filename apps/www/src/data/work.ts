@@ -178,8 +178,8 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Co-founded NYC Artist Coalition and built public civic systems, campaign websites, source maps, and shared campaign memory so collaborators could preserve decisions, coordinate follow-up, and prepare public explanations.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
+      "Co-founded NYC Artist Coalition and built public civic systems, campaign websites, source maps, and shared campaign memory for cultural-space advocacy, public testimony, and durable coalition work.",
+    role: "Co-Founder, Civic Systems & Policy Communications",
     years: "2017-Present; current collaboration 2026-Present",
     status: "Full case study",
     featured: true,
@@ -194,7 +194,7 @@ const workItemsInput = [
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, campaign websites, public testimony, and an auditable policy trail.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -220,6 +220,12 @@ const workItemsInput = [
         description:
           "Public-safe website infrastructure for NYC Artist Coalition advocacy, FairRentNYC, Talks Not Raids, and Let NYC Dance.",
         type: "website"
+      },
+      {
+        title: "Public testimony and policy trail",
+        description:
+          "Cited records place Jamie's direct advocacy and Council testimony alongside separately credited coalition campaigns, enacted transparency requirements, and later City action; they do not establish individual causality.",
+        type: "public handout"
       }
     ],
     tags: [
@@ -242,24 +248,35 @@ const workItemsInput = [
       { label: "NYC Artist Coalition", url: "https://nycartc.com/" },
       { label: "FairRentNYC", url: "https://fairrentnyc.nycartc.com/" },
       { label: "Talks Not Raids", url: "https://talksnotraids.com/" },
-      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" }
+      { label: "Let NYC Dance", url: "https://letnycdance.nycartc.com/" },
+      {
+        label: "2019 Council testimony",
+        url: "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F"
+      },
+      {
+        label: "Local Law 220 record",
+        url: "https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156"
+      }
     ],
     careNote:
       "Public-safe summary of collective civic and coalition work. This page does not publish private notes, legal-review materials, stakeholder lists, raw strategy documents, or unapproved internal materials.",
     sourceLayer:
-      "Public sources, public campaign materials where approved, meeting memory summaries, private/redacted coalition context, and collaborator review still required for named materials.",
+      "Public campaign materials, independent reporting, City-hosted records, Council testimony and legislation, meeting-memory summaries, and private/redacted coalition context.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
       note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
     },
-    currentStatus: "Active public-safe summary. Collaborator and material approvals pending.",
+    currentStatus: "Active cited public-safe case study. Additional collaborator and artifact approvals remain welcome.",
     group: "Civic and public-facing systems",
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
       "Co-founder role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
-      "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
+      "Independent reporting identifies Jamie as a founding member and participant in the multi-group Cabaret Law repeal campaign",
+      "2019 Council testimony records Jamie asking for Talks Not Raids, MARCH transparency, and direct problem-solving with cultural establishments",
+      "Local Law 220 later required MARCH reporting and advance notice with exceptions; the City replaced MARCH with CURE in 2023",
+      "Campaign materials around Cabaret Law repeal, Office of Nightlife accountability, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
@@ -268,7 +285,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition and helped structure public-safe civic systems, campaign memory, coordination documents, source maps, policy-communications materials, and follow-up systems.",
+        "Public reporting identifies Jamie as a founding member of NYC Artist Coalition. He built campaign web infrastructure, participated in Cabaret Law advocacy, testified for Talks Not Raids, and developed civic systems and source-backed campaign memory.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

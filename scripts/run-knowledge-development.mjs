@@ -7,6 +7,12 @@ const suite = JSON.parse(readFileSync(".agents/evals/knowledge-development.json"
 const candidateFiles = [
   ".agents/evals/knowledge-development.json",
   "apps/www/src/data/knowledge-bank/development-records.ts",
+  "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+  "apps/www/src/data/knowledge-bank/records.ts",
+  "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/work.ts",
+  "apps/www/src/content/work/fair-rent-nyc.mdx",
+  "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/promotion-slate.md"

@@ -6,11 +6,19 @@ import {
   developmentResearchTasks,
   developmentSources
 } from "./development-records.ts";
+import {
+  nycacResearchCaptures,
+  nycacResearchClaims,
+  nycacResearchObservations,
+  nycacResearchSources,
+  nycacResearchTasks
+} from "./nycac-research-2026-07-14.ts";
 
 const knowledgeBankInput = {
-  captures: developmentCaptures,
+  captures: [...developmentCaptures, ...nycacResearchCaptures],
   sources: [
     ...developmentSources,
+    ...nycacResearchSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -133,9 +141,10 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     }
   ],
-  observations: developmentObservations,
+  observations: [...developmentObservations, ...nycacResearchObservations],
   claims: [
     ...developmentClaims,
+    ...nycacResearchClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -258,7 +267,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     }
   ],
-  researchTasks: developmentResearchTasks,
+  researchTasks: [...developmentResearchTasks, ...nycacResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -277,25 +286,54 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" }
   ],
-  pages: [{
-    id: "callnyc",
-    surface: "/work/callnyc",
-    sourceOrder: [
-      "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
-      "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
-      "SRC-CALLNYC-POLITICO-2016-03-14",
-      "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-    ],
-    occurrences: [
-      { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
-      { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-      { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-      { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
-      { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
-    ]
-  }]
+  pages: [
+    {
+      id: "callnyc",
+      surface: "/work/callnyc",
+      sourceOrder: [
+        "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
+        "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
+        "SRC-CALLNYC-GITHUB-REPOSITORY",
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      ],
+      occurrences: [
+        { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
+        { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
+        { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
+      ]
+    },
+    {
+      id: "fair-rent-nyc",
+      surface: "/work/fair-rent-nyc",
+      sourceOrder: [
+        "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20",
+        "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21",
+        "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+        "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017",
+        "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08",
+        "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN",
+        "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11",
+        "SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19",
+        "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19",
+        "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019",
+        "SRC-NYCAC-MAYOR-CURE-2023-12-28"
+      ],
+      occurrences: [
+        { id: "founding-role", claimId: "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE", projection: "case-study", sourceIds: ["SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20", "SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21"] },
+        { id: "policy-data-communications", claimId: "CLM-NYCAC-POLICY-DATA-COMMUNICATIONS", projection: "case-study", sourceIds: ["SRC-NYCAC-VICE-DIY-SAFETY-2017-03-21", "SRC-NYCAC-CREATENYC-APPENDIX-2017", "SRC-NYCAC-LETNYCDANCE-FACTSHEET-2017", "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08", "SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"] },
+        { id: "cabaret-contribution", claimId: "CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE", projection: "case-study", sourceIds: ["SRC-NYCAC-GOTHAMIST-CABARET-2017-06-19", "SRC-NYCAC-NPR-KUAF-CABARET-2017-09-20", "SRC-NYCAC-CREATENYC-APPENDIX-2017", "SRC-NYCAC-RA-CABARET-REPEAL-2017-10-31"] },
+        { id: "office-accountability", claimId: "CLM-NYCAC-OFFICE-NIGHTLIFE-ACCOUNTABILITY", projection: "case-study", sourceIds: ["SRC-NYCAC-GREENE-HILL-QA-2017-12-19", "SRC-NYCAC-NIGHT-MAYOR-LETTER-2017-09-08", "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"] },
+        { id: "talks-not-raids-testimony", claimId: "CLM-NYCAC-TALKS-NOT-RAIDS-TESTIMONY", projection: "case-study", sourceIds: ["SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11"] },
+        { id: "march-transparency-law", claimId: "CLM-NYCAC-MARCH-TRANSPARENCY-LAW", projection: "case-study", sourceIds: ["SRC-NYCAC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYCAC-COUNCIL-MARCH-HEARING-2019-02-11", "SRC-NYCAC-COUNCIL-LOCAL-LAW-220-2019"] },
+        { id: "march-cure-replacement", claimId: "CLM-NYCAC-MARCH-REPLACED-BY-CURE", projection: "case-study", sourceIds: ["SRC-NYCAC-MAYOR-CURE-2023-12-28"] }
+      ]
+    }
+  ]
 } satisfies KnowledgeBank;
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

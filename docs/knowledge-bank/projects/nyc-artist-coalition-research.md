@@ -1,61 +1,142 @@
 # NYC Artist Coalition Research
 
-Status: direct actions developed; role and causal claims remain under research.
-Nothing in this file is currently selected for a new public-site projection.
+Status: ten new public sources ingested on July 14, 2026. Founding-member,
+Cabaret-campaign contribution, policy-communications, Office accountability,
+Talks Not Raids testimony, MARCH-transparency law, and later MARCH replacement
+claims are developed. Individual causality for Office creation, legislation, or
+MARCH replacement remains held.
 
-## Confirmed Direct Actions
+## What Matured
 
-### CLM-NYCAC-FIRE-CODE-STUDY-GROUPS
+### Founding role
 
-Gothamist reports that Jamie started organizing fire-code study groups for New
-York City DIY venues after the Ghost Ship warehouse fire.
+An accessible syndication of the September 20, 2017, NPR story identifies Jamie
+as a founding member of NYC Artist Coalition. Contemporaneous VICE reporting
+independently says the coalition formed in January 2017 after the Ghost Ship
+fire to support informal community spaces.
 
-Boundary: the source does not establish the number, curriculum, attendance, or
-outcomes of the groups, and the work should not be framed as official code or
-legal advice.
+Public wording may say that Jamie was a founding member or, in approved resume
+and proof contexts, that he co-founded the coalition. It must not imply that he
+was the sole founder, name an incomplete founder roster as complete, or assign
+all later coalition work to him.
 
-### CLM-NYCAC-CABARET-REPEAL-ADVOCACY
+### Cabaret Law campaign contribution
 
-Gothamist reports that Jamie rallied outside City Hall for full Cabaret Law
-repeal. A Greene Hill Food Co-op Q&A independently places Jamie and Fredenberg in
-NYC Artist Coalition work advocating for community-driven spaces and repeal.
+The source cluster now connects four distinct propositions without collapsing
+them:
 
-Boundary: these sources establish sustained public action and coalition
-participation, not sole leadership or individual causality for the later
-legislative outcome.
+1. Gothamist reports Jamie's fire-code study groups and City Hall repeal
+   advocacy.
+2. NPR identifies Jamie as a founding member and participant in public repeal
+   advocacy while describing Let NYC Dance coalition mobilization.
+3. The City-hosted CreateNYC appendix records a coalition co-hosted policy
+   gathering with repeal on its agenda.
+4. Resident Advisor reports the Council's October 31, 2017, repeal and describes
+   it as the culmination of an almost year-long multi-group campaign including
+   NYC Artist Coalition.
 
-### CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL
+The strongest public claim is that Jamie started organizing fire-code study
+groups and rallied outside City Hall within the multi-group campaign that
+preceded repeal. Council Member Rafael Espinal, partner organizations, other
+advocates, the Council, and the Mayor retain their distinct roles. The record
+does not support individual legislative causality.
 
-In the Greene Hill Q&A, Jamie and Fredenberg publicly invite community members
-to a September 28, 2017, town hall intended to put them in dialogue with the
-new Office of Nightlife and press for attention to diverse cultural spaces.
+### Public policy and data communications
 
-Boundary: the page does not name the complete production team, document the
-event's attendance or outcome, or establish Jamie's role in creating the
-Office.
+Public coalition artifacts and independent records establish a civic-systems
+layer that included:
 
-Sources:
+- policy meetings and town halls;
+- a Cabaret Law fact sheet and license/zoning map;
+- written recommendations to City commissioners;
+- a Calls Not Raids call-to-action and Council co-sponsor tracker;
+- FOIL-derived MARCH analysis used in Council questioning.
 
-- [Emma Whitford, "DIY Venues Demand Repeal Of Widely Reviled Cabaret Law,"
-  *Gothamist*, June 19,
-  2017](https://gothamist.com/news/diy-venues-demand-repeal-of-widely-reviled-cabaret-law).
-- [Greene Hill Food Co-op, "The Co-op Q&A With Jamie Burkart and Julie
-  Fredenberg," December 19,
-  2017](https://www.greenehillfood.coop/master-blog/2017/12/september-2017-newsletter).
+These are collective artifacts. The sources do not assign Jamie individual
+authorship of every map, analysis, recommendation, event component, or line of
+copy. Jamie's separate approved web-infrastructure claim remains grounded in
+public project surfaces, public-safe project history, and Jamie confirmation.
 
-## High-Priority Candidate Claims
+### Office of Nightlife accountability
 
-The following matter and remain visible, but the present sources do not yet
-earn their strongest wording:
+The Greene Hill Q&A records a planned public town hall with the new Office. A
+September 8, 2017, coalition letter gives the newly established Office a
+detailed recommendation set. The 2019 Council transcript records Jamie asking
+the Office to work with coalition cultural liaisons and establishments.
 
-- `CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE`: exact role in forming NYC Artist
-  Coalition;
-- `CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE`: material contribution to
-  the collective campaign preceding repeal;
-- `CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE`: contribution before the
-  Office's creation, distinct from later accountability work;
-- Talks Not Raids and the institutional status of M.A.R.C.H. operations;
-- reproducible Council-member-account engagement with CallNYC.
+This earns post-creation agenda-setting, planned public dialogue, and
+accountability wording. It does not yet earn the stronger causal claim that
+Jamie helped create the Office or that the announced town hall occurred.
 
-Each lead has a research task in the canonical registry. The NPR URL is kept as
-a retrieval candidate; no claim depends on unread article content.
+### Talks Not Raids and MARCH
+
+The official February 11, 2019, Council transcript identifies Jamie as an NYC
+Artist Coalition member and records him asking for Talks Not Raids, MARCH
+transparency, and direct problem-solving between the Office of Nightlife and
+cultural establishments.
+
+The Council record shows that Intro 1156-A became Local Law 220 of 2019. The law
+required semiannual, machine-readable MARCH reporting and, with specified
+exceptions, at least 30 days' notice and an opportunity for establishments to
+provide relevant information.
+
+The Mayor's Office announced on December 28, 2023, that CURE replaced MARCH and
+described CURE as an engagement-first process with direct communication and
+opportunities to correct concerns.
+
+This chronology establishes Jamie's direct testimony, an aligned public
+campaign, an enacted transparency and notice law, and MARCH's later replacement.
+It does not establish that Jamie or Talks Not Raids alone caused enactment or
+the 2023 replacement. It also does not establish that every form of multi-agency
+nightlife enforcement ended.
+
+## Held Claims
+
+- `CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE`: public sources now show
+  post-creation accountability work, but do not yet establish Jamie's causal
+  contribution before the Office was created.
+- `CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED`: the Council transcript records
+  Jamie reporting a 100 percent exam pass rate for coalition Fireguard study
+  groups. The denominator, date range, exam type, and result records remain to
+  be corroborated.
+- CallNYC Council-account engagement remains a separate reproducibility task.
+
+## Ten New Sources
+
+1. [Alexander Iadarola, "A Coalition of Advocacy Groups Are Meeting New York's
+   Cultural Commissioner to Talk About DIY Venue Safety," VICE, March 21,
+   2017](https://www.vice.com/en/article/nyc-artist-coalition-dance-liberation-network-diy-spaces/).
+2. [Andrew Flanagan, "With Its 'No Dancing' Law Verging On Repeal, New York
+   Legitimizes Its Nightlife," NPR, syndicated by KUAF, September 20,
+   2017](https://www.kuaf.com/npr-music-news/2017-09-20/with-its-no-dancing-law-verging-on-repeal-new-york-legitimizes-its-nightlife).
+3. [CreateNYC, "Preserve Community-Driven Spaces - NYC Artist Coalition DIY
+   Community," 2017
+   appendix](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf).
+4. [Let NYC Dance coalition and NYC Artist Coalition, "Cabaret Law Fact Sheet,"
+   2017](https://letnycdance.nycartc.com/download/cabaret-law-factsheet.pdf).
+5. [NYC Artist Coalition, recommendations for the newly established Office of
+   Nightlife, September 8,
+   2017](https://savenycspaces.nycartc.com/download/Night-Mayor-Letter-MOME-9-23-17.pdf).
+6. [Max Pearl, "New York City Council Repeals Cabaret Law After 91 Years,"
+   Resident Advisor, October 31, 2017](https://ra.co/news/40325).
+7. [Talks Not Raids coalition, "Transparency on M.A.R.C.H. Raids in
+   NYC"](https://talksnotraids.com/).
+8. [New York City Council, Committee on Justice System hearing transcript on
+   Intro 1156, February 11,
+   2019](https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F).
+9. [New York City Council, Intro 1156-A, enacted as Local Law 220 of
+   2019](https://legistar.council.nyc.gov/LegislationDetail.aspx?GUID=6A35ADA6-86E7-40B0-AD39-5B6E376FD23F&ID=3704342&Options=ID%7CText%7C&Search=1156).
+10. [New York City Mayor's Office, "Mayor Adams Launches Effort to Enhance
+    Nightlife Safety and Strengthen Small Businesses, Phasing Out MARCH
+    Enforcement," December 28,
+    2023](https://www.nyc.gov/mayors-office/news/2023/12/mayor-adams-launches-effort-enhance-nightlife-safety-strengthen-small-businesses-phasing).
+
+The Greene Hill Food Co-op Q&A remains an existing eleventh source in the
+project graph and now participates in the selected Office-accountability claim.
+
+## Public-Safety Boundary
+
+These records are public. Raw coalition correspondence, private strategy,
+membership records, unpublished participant data, private contact information,
+and unapproved images remain outside the repository. Public documents may
+contain contact details; the knowledge records do not reproduce them.
