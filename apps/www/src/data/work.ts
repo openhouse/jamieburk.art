@@ -137,7 +137,7 @@ const workItemsInput = [
           height: 891,
           alt: "Harry J. Epstein Company New Items storefront with category filters, product cards, prices, cart actions, and hand-drawn brand artwork.",
           caption:
-            "Public storefront capture, July 2026. It directly documents the maintained customer-facing catalog and distinctive public voice; it does not expose private analytics, orders, or revenue data.",
+            "Public storefront capture, July 2026. The maintained customer surface brings catalog filters, product detail, pricing, cart actions, and the company's distinctive voice into one usable experience.",
           sourceUrl: "https://www.harryepstein.com/collections/new-items",
           capturedAt: "2026-07-12",
           evidenceScope: "direct",
@@ -193,7 +193,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "A dated public storefront capture documents the maintained customer-facing catalog and distinctive public voice.",
+        "A dated storefront capture and approved contribution claim document the public customer surface and the work's relationship to online growth.",
       open:
         "Additional screenshots, internal workflow diagrams, and more detailed impact evidence require separate review before publication.",
       protected:
@@ -273,7 +273,7 @@ const workItemsInput = [
           height: 1650,
           alt: "First page of Jamie Burkart's public handout proposing privacy-preserving commercial vacancy and lease-cost indicators derived from aggregated RPIE filings.",
           caption:
-            "Jamie-authored School of Data handout, March 27, 2026. It directly documents a proposed indicator table, coverage and suppression table, methods note, and confidentiality boundary; it does not establish City adoption or a released dataset.",
+            "Jamie-authored School of Data handout, March 27, 2026. The document turns a broad policy question into a proposed indicator table, coverage and suppression table, methods note, and confidentiality boundary.",
           sourceUrl: "/artifacts/fair-rent-nyc/toward-a-fuller-public-baseline.pdf",
           capturedAt: "2026-03-27",
           evidenceScope: "direct",
@@ -328,7 +328,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "A dated FairRentNYC capture documents a public campaign surface, an official 2018 Council transcript documents Jamie's testimony as a coalition member, and a public two-page handout directly documents his privacy-preserving data-product proposal.",
+        "A public campaign capture, official Council transcript, and two-page handout substantiate the web, testimony, and data-product work described in this case study.",
       open:
         "Additional named collaborators, meeting materials, photographs, and internal campaign artifacts require separate approval.",
       protected:
@@ -430,7 +430,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Politico's 2016 coverage, the public source repository, and a dated prototype capture document the independent project and its surviving interface.",
+        "Politico's coverage and the public repository corroborate the independent build; the dated prototype capture shows the issue-first interface.",
       open:
         "No dedicated Civic Hall event page, complete agenda, registration form, or participant roster has been recovered.",
       protected:
