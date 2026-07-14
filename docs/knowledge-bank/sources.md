@@ -51,6 +51,24 @@ records every placement's source-page order, exact listed URL, normalized
 source ID, dated capture, and duplicate disposition. The knowledge-development suite uses
 it to reproduce the four manifests offline.
 
+### KC Town Hall municipal funding record
+
+The July 14 funding-status pass recovered four official KCMO sources:
+
+- the CCED Round Two proposal list, which names Jamie Burkart as KC Town Hall's
+  developer/presenter for Proposal 16;
+- authenticated Resolution 190649, which records the CCED Board's July 16,
+  2019 recommendation and the Council's September 26 acceptance;
+- authenticated Ordinance 190642, which appropriates $490,539 for KC Town Hall
+  within a Central City Sales Tax-Projects account; and
+- Ordinance 240317, which records KC Town Hall's withdrawal and the Council's
+  2024 reappropriation of the full unused amount.
+
+These sources support the stages they name. They do not turn recommendation or
+appropriation into an executed agreement, receipt, expenditure, or completed
+project. The public-safe research note lives at
+`docs/knowledge-bank/projects/kc-town-hall-funding.md`.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

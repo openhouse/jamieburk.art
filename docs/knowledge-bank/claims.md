@@ -188,15 +188,25 @@ claim beyond the wording and guardrails here.
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary  
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.  
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.  
+**Public wording:** The City lists Jamie as KC Town Hall's developer/presenter for an adaptive-reuse proposal. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019; KC Town Hall later withdrew and the Council reappropriated the unused funds in 2024.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Official KCMO records name him as developer/presenter and document the Board recommendation, Council acceptance and appropriation, and later reappropriation of the unused amount after withdrawal.
 **Where to project:** Technical Operations, Work card, Case study.  
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Public-funding wording should stay tied to recommendation language unless final funding is separately confirmed.  
-**Do not say:** Final funding received; current property status; private financial details; official municipal endorsement beyond the public record.  
+**Guardrail:** Distinguish Board recommendation, Council acceptance, appropriation, agreement execution, receipt, and expenditure. State the later withdrawal and reappropriation whenever describing the 2019 appropriation.
+**Do not say:** KC Town Hall received or spent $490,539; a final funding agreement was executed; Jamie caused or secured the government decisions; Jamie solely authored the proposal; the project was completed with City funds; current property status; private financial details; official municipal endorsement beyond the cited public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
+
+### Canonical claim records
+
+- `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE`: sourced and selected. The City's
+  Round Two list names Jamie as developer/presenter; this does not establish
+  sole authorship, ownership, or causality for later government decisions.
+- `CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN`: corroborated and selected. The CCED
+  Board recommendation, Council resolution, appropriation ordinance, and later
+  reappropriation record are one bounded chronology. Do not shorten it into a
+  claim that KC Town Hall received or spent the money.
 
 ## source-backed-team-memory-method - Source-backed team memory
 

@@ -245,6 +245,85 @@
       ]
     },
     {
+      "id": "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+      "title": "Central City Economic Development Sales Tax Round Two proposals",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/3533/637145055055230000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Central City Economic Development Sales Tax Round Two proposal list, Proposal 16, 2019.",
+      "publicNote": "The official proposal table identifies Jamie Burkart as KC Town Hall's developer/presenter and records the request amount and then-proposed redevelopment program.",
+      "doesNotEstablish": [
+        "that Jamie solely authored or owned the proposal",
+        "that Jamie caused the Board recommendation or Council actions",
+        "that every proposed program element appeared in the final resolution",
+        "that KC Town Hall received or spent the requested funds"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
+      "title": "Second Committee Substitute for Resolution No. 190649",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=2CBC09C0-65EC-4F05-A70F-FCD8E4F7FBE3&ID=10628240&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Second Committee Substitute for Resolution No. 190649, authenticated September 26, 2019.",
+      "publicNote": "The authenticated resolution records the CCED Board's July 16 recommendation, accepts up to $490,539 for KC Town Hall, and authorizes negotiation of a funding agreement with conditions.",
+      "doesNotEstablish": [
+        "that a funding agreement was executed",
+        "that KC Town Hall received or spent $490,539",
+        "that Jamie caused the Board recommendation or Council adoption",
+        "that the proposed project was completed"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
+      "title": "Committee Substitute for Ordinance No. 190642",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-09-26",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?M=F&ID=10628353&GUID=DAED2DE7-AA03-43D8-B1C9-448EA4DAEEB2&G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Committee Substitute for Ordinance No. 190642, authenticated September 26, 2019.",
+      "publicNote": "The authenticated ordinance appropriates Round Two CCED funds and lists a $490,539 award for KC Town Hall within the Central City Sales Tax-Projects account.",
+      "doesNotEstablish": [
+        "that a funding agreement was executed",
+        "that KC Town Hall received or spent the appropriation",
+        "that Jamie caused the appropriation",
+        "that the proposed project was completed"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
+      "title": "Ordinance No. 240317",
+      "organization": "Council of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2024-03-28",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://clerk.kcmo.gov/LegislationDetail.aspx?GUID=E3F31A7F-65F8-464E-ABD4-197DEB6D80C8&ID=6586846&Options=&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Council of Kansas City, Missouri, Ordinance No. 240317, passed March 28, 2024.",
+      "publicNote": "The ordinance says KC Town Hall had withdrawn, identifies its $490,539 as unused, reduces that full project account amount, and reappropriates the combined clawed-back funds for future awards.",
+      "doesNotEstablish": [
+        "the complete private reasons for withdrawal",
+        "fault by Jamie or any collaborator",
+        "that the 2019 Council appropriation had never occurred",
+        "the present ownership or condition of the property"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -685,6 +764,111 @@
       ]
     },
     {
+      "id": "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The City's CCED Round Two proposal list names Jamie as KC Town Hall's developer/presenter for the $490,539 adaptive-reuse request.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Named by the City as KC Town Hall's developer/presenter for its CCED adaptive-reuse proposal.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's developer/presenter designation",
+            "the $490,539 request",
+            "the KC Town Hall proposal identity"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use developer/presenter as the City's recorded proposal role; do not expand it to sole developer, sole author, or sole project owner."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public record preserves the complete funding decision: the CCED Board voted on July 16, 2019 to recommend $490,539; on September 26, the Council adopted Resolution 190649 accepting the recommendation and passed Ordinance 190642 appropriating $490,539 for KC Town Hall within the Central City Sales Tax-Projects account. This was authorization, not receipt: KC Town Hall later withdrew, and in 2024 the Council reappropriated the unused $490,539.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019; the project later withdrew and the unused funds were reappropriated in 2024.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "the July 16, 2019 CCED Board vote and $490,539 amount",
+            "Council acceptance",
+            "authorization to negotiate"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "the September 26, 2019 appropriation",
+            "the $490,539 KC Town Hall amount"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
+          "relationship": "supports-boundary",
+          "supports": [
+            "KC Town Hall's withdrawal",
+            "the amount remained unused",
+            "the 2024 reappropriation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Distinguish Board recommendation, Council acceptance, appropriation, negotiation authority, receipt, and expenditure.",
+        "State the later withdrawal and reappropriation whenever the 2019 amount is presented as more than a recommendation.",
+        "Treat the Council actions as governmental decisions, not outcomes caused by Jamie individually."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -1032,6 +1216,36 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYCAC-MAYOR-CURE-2023-12-28"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc-town-hall",
+      "surface": "/work/kc-town-hall",
+      "sourceOrder": [
+        "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+        "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
+        "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
+        "SRC-KCTH-KCMO-ORDINANCE-240317-2024"
+      ],
+      "occurrences": [
+        {
+          "id": "developer-presenter-role",
+          "claimId": "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019"
+          ]
+        },
+        {
+          "id": "funding-decision-chain",
+          "claimId": "CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
+            "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
+            "SRC-KCTH-KCMO-ORDINANCE-240317-2024"
           ]
         }
       ]

@@ -25,6 +25,16 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-NYCAC-MARCH-REPLACED-BY-CURE`: selected as later institutional context,
   not as an accomplishment attributed to Jamie or one campaign.
 
+## Selected in the KC Town Hall Case Study
+
+- `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE`: selected as direct official-record
+  evidence of Jamie's proposal role, bounded against sole authorship,
+  ownership, or causality.
+- `CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN`: selected as the complete municipal
+  chronology: Board recommendation, Council acceptance, Council appropriation,
+  later withdrawal, and reappropriation of the unused amount. The ending must
+  remain attached so authorization is never presented as receipt.
+
 ## Strong Future Feature Candidates
 
 - `CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM`: Jamie's spearheading,

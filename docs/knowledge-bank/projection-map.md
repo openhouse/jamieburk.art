@@ -43,6 +43,10 @@ Use claims that directly support operating-backbone fit:
 - `sunday-dinner-196-participation-infrastructure`
 - `kc-town-hall-public-benefit-documentation`
 
+For KC Town Hall, pair the public role and funding authorization with the later
+withdrawal and reappropriation. Do not project the 2019 amount alone as money
+received or spent.
+
 ## Lab / Source-Backed Team Memory
 
 Use only public-safe method claims.

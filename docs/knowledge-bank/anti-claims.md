@@ -62,6 +62,15 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+The City's public proposal list supports "developer/presenter" for the CCED
+proposal. It does not support sole developer, sole author, sole owner, or
+individual causality for the Board recommendation or Council decisions.
+
+Do not say KC Town Hall received or spent $490,539, executed a final funding
+agreement, or completed the project with City funds. The Council appropriated
+the amount in 2019, but KC Town Hall later withdrew and the Council
+reappropriated the full unused amount in 2024.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

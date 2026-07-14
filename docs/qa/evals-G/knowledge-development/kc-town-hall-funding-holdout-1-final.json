@@ -1,0 +1,267 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "kc-town-hall-funding-holdout-1-final",
+  "run_at": "2026-07-14T20:00:27.472Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "scripts/run-knowledge-development.mjs",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
+    "apps/www/src/data/knowledge-bank/campaign-press.ts",
+    "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
+    "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+    "apps/www/src/data/knowledge-bank/records.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/work.ts",
+    "apps/www/src/content/work/fair-rent-nyc.mdx",
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "docs/knowledge-bank/claims.md",
+    "docs/knowledge-bank/sources.md",
+    "docs/knowledge-bank/anti-claims.md",
+    "docs/knowledge-bank/approval-register.md",
+    "docs/knowledge-bank/projection-map.md",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
+    "docs/knowledge-bank/projects/kc-town-hall-funding.md",
+    "scripts/lib/citation-validation.mjs",
+    "scripts/tests/citations.test.mjs",
+    "scripts/tests/knowledge-development-evals.test.mjs",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34",
+  "judgment_fingerprint": "5c1ab3d7743e8764a33b7288bf2a188b347fd139986315fa74876aea5af74a34",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 27,
+    "routedCaptures": 27,
+    "sources": 71,
+    "developmentSources": 64,
+    "observations": 83,
+    "developmentClaims": 18,
+    "researchTasks": 10,
+    "campaignPressPlacements": 45,
+    "campaignPressUniqueArticles": 44,
+    "kcTownHallFundingSources": 4,
+    "kcTownHallFundingClaims": 2,
+    "validationErrors": 0
+  },
+  "weighted_score": 1,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "27/27 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "20/20 URL captures routed",
+        "64 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "64/64 development sources decomposed",
+        "83 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "25 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "18 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:169-248 decomposes the chain into five atomic observations: Jamie's developer/presenter designation, Board recommendation, Council acceptance and negotiation authority, Council appropriation, and the 2024 unused-funds reappropriation. Each stage carries a specific limitation against conflation.",
+        "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:251-389 keeps CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE separate from CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN. The role anti-claims reject Jamie causing either governmental action; the funding boundaries distinguish recommendation, acceptance, appropriation, negotiation authority, receipt, and expenditure and require the withdrawal/reappropriation ending whenever the appropriation is presented.",
+        "apps/www/src/content/work/kc-town-hall.mdx:3-41 projects the two claims separately and states exactly: \"The City's developer/presenter designation does not erase collaborator contributions or turn later government decisions into Jamie's individual accomplishment.\" It also says the record supports recommendation, acceptance, and appropriation, \"not receipt or expenditure,\" while retaining the later withdrawal and reappropriation.",
+        "apps/www/src/data/work.ts:529-595 consistently attaches the ending to every appropriation statement, credits \"KC Town Hall LLC collaborators,\" and explicitly says the records do not establish sole authorship, individual causality, agreement execution, receipt, expenditure, or completion.",
+        "Existing collective-credit records remain calibrated: apps/www/src/data/knowledge-bank/development-records.ts:606-624 places Jamie's specific Cabaret Law actions within the multi-group campaign while preserving partner and government roles; apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts:604-655 separates Jamie's testimony, Council enactment, and the City's later replacement of MARCH.",
+        "Fresh verification passed: npm run test:knowledge-evals reported 10/10 tests, including both KC Town Hall tests at scripts/tests/knowledge-development-evals.test.mjs:223-304; npm run test:citations reported 9/9; npm run check:citations confirmed canonical records, public projection, boundaries, and page plans are consistent."
+      ],
+      "findings": [],
+      "recommended_next_move": "Preserve the separate role and governmental-decision claims, the attached unused-funds ending, and the existing collective-credit regression coverage; no material revision is needed.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "10 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths",
+        "45 campaign press placements / 44 unique articles",
+        "0 campaign press integrity violations",
+        "0 KC Town Hall funding-chain integrity violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes",
+        "0 campaign press promotion violations",
+        "0 KC Town Hall projection-safety violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "apps/www/src/content/work/kc-town-hall.mdx:18-24 makes the professional case concrete: redevelopment planning, public-benefit documentation, stakeholder context, municipal-review support, proposal presentation, and materials collaborators could use to describe, discuss, and continue the effort.",
+        "apps/www/src/data/work.ts:529-595 gives a hiring reader a direct City-listed role, named artifacts and usable outputs, implementation-oriented role fit, collaborator credit, and the official funding chronology. The summary and current-status fields state the withdrawal and unused-funds reappropriation plainly without erasing the demonstrated planning and documentation work.",
+        "apps/www/src/data/proofs.ts:536-570 strengthens the case with the exact official record—Board recommendation, Council acceptance and appropriation, and later reappropriation after withdrawal—while its guardrail rejects agreement execution, receipt, expenditure, completion, sole authorship, and personal causality.",
+        "The ending is neither hidden nor over-apologized: apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts:321-385 says \"This was authorization, not receipt\" and then states the withdrawal and 2024 reappropriation, while retaining Jamie's separate developer/presenter projection and direct work.",
+        "Public selection is purposeful: docs/knowledge-bank/promotion-slate.md:28-36 selects only the role and bounded funding chronology; apps/www/src/data/knowledge-bank/records.ts:784-811 defines only two case-study occurrences; apps/www/src/data/work.ts:537-540 marks the item as a non-featured short proof page. The deeper inquiry, correction, and anti-claim machinery is not dumped into the page.",
+        "Fresh verification recomputed the requested fingerprint exactly and passed npm run knowledge-bank, npm run public-safety, and npm run check:routes; the latter confirmed that prohibited public knowledge-bank routes are absent."
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep the concise role-to-usable-work-to-bounded-outcome composition and its matter-of-fact ending; no material revision is needed.",
+      "confidence": "high"
+    }
+  ]
+}
