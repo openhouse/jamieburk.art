@@ -4,6 +4,12 @@ import {
   campaignPressIntakeRecords,
   campaignPressSources
 } from "./campaignPress.ts";
+import {
+  urbanHermitSocialCorpusClaims,
+  urbanHermitSocialCorpusInquiries,
+  urbanHermitSocialCorpusIntake,
+  urbanHermitSocialCorpusSources
+} from "./urbanhermitSocial.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -576,7 +582,8 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
-    ...campaignPressIntakeRecords
+    ...campaignPressIntakeRecords,
+    ...urbanHermitSocialCorpusIntake
   ],
   sources: [
     {
@@ -1649,7 +1656,8 @@ const knowledgeBankInput = {
       supportsGenerally: ["Jamie collaborated with Michael Rees on an augmented-reality experience for MakeUseVisible Munich", "Jamie co-produced source video with Anne Dufy Burkart and Julia Fredenburg", "the source video was shot in 2017 with Claudette"],
       doesNotEstablish: ["Jamie's sole authorship of the AR implementation", "a complete technical stack", "the exhibition date", "sole production of the source video", "rights to republish the video"]
     },
-    ...campaignPressSources
+    ...campaignPressSources,
+    ...urbanHermitSocialCorpusSources
   ],
   claims: [
     {
@@ -2053,7 +2061,8 @@ const knowledgeBankInput = {
         { sourceId: "SRC-NPR-CABARET-OFFICE-NIGHTLIFE-2017-09-20", relationship: "context", supports: ["the broader 2017 repeal campaign and legislative context"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-GREENE-HILL-QA-2017-12-19", relationship: "corroborating", supports: ["Jamie's public advocacy for repeal", "Jamie's community-space and anti-discrimination framing"], confidence: "high", renderCitation: false },
         { sourceId: "SRC-MIXMAG-LET-NYC-DANCE-2017-09-20", relationship: "corroborating", supports: ["Jamie's hearing participation as a coalition member", "Jamie's concern about discriminatory use of the law"], confidence: "high", renderCitation: false },
-        { sourceId: "SRC-DOCUMENT-JOURNAL-NYC-NIGHTLIFE-2018-02-27", relationship: "corroborating", supports: ["Jamie's visible participation with NYC Artist Coalition in the Let NYC Dance repeal campaign", "Olympia Kazi's visible coalition and campaign participation", "collective repeal-movement context"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-DOCUMENT-JOURNAL-NYC-NIGHTLIFE-2018-02-27", relationship: "corroborating", supports: ["Jamie's visible participation with NYC Artist Coalition in the Let NYC Dance repeal campaign", "Olympia Kazi's visible coalition and campaign participation", "collective repeal-movement context"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-X-ALIZA-URBANHERMIT-CABARET-2017", relationship: "corroborating", supports: ["public collaborator attribution of Jamie and Julia Fredenburg's work on the Cabaret Law repeal effort"], confidence: "high", renderCitation: false }
       ],
       boundaries: ["Claim Jamie's documented organizing and testimony directly.", "Describe repeal as a collective advocacy and legislative outcome.", "Do not infer legal authorship or sole causality."],
       antiClaims: ["Jamie single-handedly repealed the Cabaret Law", "Jamie authored the repeal legislation", "NYC Artist Coalition acted alone", "Jamie provided legal advice"],
@@ -2213,13 +2222,14 @@ const knowledgeBankInput = {
         { key: "archive-note", text: "In 2006, Jamie led a downtown scavenger-hunt format and hosted a film screening in Kansas City's historic 8th Street Tunnel, connecting public art, transit history, and shared-space advocacy.", status: "hold", citationRequired: true, surfaces: [] }
       ],
       evidence: [
-        { sourceId: "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15", relationship: "direct-support", supports: ["Jamie's scavenger-hunt-led public program", "Jamie's three-film tunnel screening", "Jamie's public-history and educational-access framing"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15", relationship: "direct-support", supports: ["Jamie's scavenger-hunt-led public program", "Jamie's three-film tunnel screening", "Jamie's public-history and educational-access framing"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-X-JULIA-URBANHERMIT-KCUR-TUNNEL-2016", relationship: "context", supports: ["collaborator routing of KCUR's independent report"], confidence: "moderate", renderCitation: false }
       ],
       boundaries: ["Do not imply Jamie owned, controlled, or secured official access to the tunnel.", "Do not use the historical event as current access or safety guidance.", "Do not republish participant photographs without review."],
       antiClaims: ["Jamie opened the tunnel to the public", "The screening had official long-term authorization", "The tunnel is currently safe or open", "Jamie solely authored every film shown"],
       proofClaimIds: ["kc-eighth-street-tunnel-public-program"],
-      researchInquiryIds: [],
-      reviewedAt: "2026-07-13",
+      researchInquiryIds: ["INQ-URBANHERMIT-FULL-POPULATION-2026"],
+      reviewedAt: "2026-07-14",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
@@ -2240,9 +2250,11 @@ const knowledgeBankInput = {
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
-    ...campaignPressClaims
+    ...campaignPressClaims,
+    ...urbanHermitSocialCorpusClaims
   ],
   researchInquiries: [
+    ...urbanHermitSocialCorpusInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",

@@ -460,6 +460,7 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: [
       "approved-resume",
+      "public-source",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
@@ -468,7 +469,10 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "WOWList reached roughly 35 city ecosystems",
     detailedPublicWording:
       "WOWList supported 1,800+ users, 16,000+ posts/events, followable keyword communities, natural-language event entry, weekly digest emails, embeddable calendars, and low-cost deployment for local calendar organizers.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+    sourceBasis:
+      "Approved resume language, public-safe aggregate historical summary, and a 2015 Music Hackathon public post identifying Jamie as a co-organizer and WOW List as an event-sharing service.",
+    sourceNote:
+      "The Music Hackathon post supports only the co-organizer role and event-sharing-service description. Approved resume and archive sources separately support the stack, scale, and adoption wording.",
     guardrail:
       "Use approximate adoption language and do not describe city activity as official chapters.",
     doNotSay: [
@@ -486,7 +490,38 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["wowlist"],
     relatedCapabilities: ["django", "postgresql", "postgis", "ember", "community-platforms"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "music-hackathon-wowlist-role",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "In 2015, Music Hackathon publicly identified Jamie as a co-organizer and described WOW List as an event-sharing service.",
+    detailedPublicWording:
+      "A March 2015 Music Hackathon organizational post identifies Jamie as a co-organizer and describes WOW List as an event-sharing service, supplying bounded external role and product-description evidence.",
+    sourceBasis:
+      "Music Hackathon public post, March 20, 2015.",
+    whyItMatters:
+      "Provides contemporaneous institutional evidence for Jamie's organizing role and a clear description of the product's purpose.",
+    guardrail:
+      "Use only for the co-organizer role and event-sharing-service description; keep platform architecture, scale, adoption, and sole authorship separate.",
+    doNotSay: [
+      "Jamie solely founded Music Hackathon",
+      "The post verifies WOW List's stack or scale",
+      "Jamie alone built WOW List"
+    ],
+    protectedBoundaries: [
+      "Private collaborator records",
+      "Unrecovered role details",
+      "Private user data"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["community-platforms", "event-infrastructure", "community-organizing"],
+    structuredClaimIds: ["CLM-MUSIC-HACKATHON-WOWLIST-ROLE"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "sunday-dinner-196-participation-infrastructure",

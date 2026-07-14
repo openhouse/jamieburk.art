@@ -27,6 +27,12 @@ Approved public artifact examples for this launch pass include:
   attributable public posts.
 - Authenticated public-profile and bounded timeline reviews for `@CallNYCapp`,
   `@NYCArtC`, `@wowlist`, `@KCSpacesFund`, and `@KCTownHall`.
+- An authenticated, redacted row-level disposition of the current 434-record
+  `@urbanhermit` profile control and a bounded 26-record inbound-search floor,
+  each with aggregate summaries. Coarse years and research classifications
+  preserve auditability but carry residual reconstruction risk. These are
+  research-accounting sources, not a lifetime export or a public reconstruction
+  of Jamie's personal timeline.
 - Public-safe `@NYCArtC` population and engagement ledgers that disposition all
   5,124 reported profile-count slots while separating 3,367 recovered items
   from 1,757 unresolved slots and excluding full post text and authenticated
@@ -64,6 +70,12 @@ Approved public artifact examples for this launch pass include:
 - The Kansas City Star's December 2021 reporting on the KC Town Hall project and City-contract delays.
 - Kansas City Ordinance 240317 documenting the later KC Town Hall withdrawal.
 - KCUR's 2016 8th Street Tunnel reporting.
+- NPR Music's 2016 joint maker credit for Jamie Burkart and M.C. Schmidt on
+  Horse Lords' official “Truthers” video.
+- Music Hackathon's 2015 public identification of Jamie as a co-organizer and
+  WOW List as an event-sharing service.
+- Aliza Aufrichtig's 2017 collaborator attribution of Jamie Burkart and Julia
+  Fredenburg's work on the collective Cabaret Law repeal effort.
 - The Pitch's 2009 Great Accommodations and Gulf endpoint follow-up.
 - Michael Rees's Claudette's Theatre on Wheels project page.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
@@ -80,6 +92,14 @@ The governed `@NYCArtC` population and posted-link review is documented in
 ledgers live under `docs/knowledge-bank/data/`. Complete disposition means every
 observed profile-count slot has a recovered or unresolved state; it does not
 mean every historical item or link destination was recovered.
+
+The governed personal-account census is documented in
+`docs/knowledge-bank/projects/urbanhermit-x-population-2026-07-14.md`. Its
+current-profile and inbound ledgers live under `docs/knowledge-bank/data/`.
+Complete current-profile disposition does not mean every post Jamie ever made
+was recovered. Reposts retain source-account authorship, current reactions are
+mutable floors rather than impact measures, and unresolved short URLs remain
+research debt rather than inferred nonexistence.
 
 The KC Town Hall funding sequence is documented in
 `docs/knowledge-bank/projects/kc-town-hall-council-allocation-2019.md`. The

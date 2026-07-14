@@ -117,3 +117,25 @@ award lifecycle and the stewardship transition.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+## Personal Social Archive
+
+Do not describe the current 434-record `@urbanhermit` profile control as every
+post Jamie ever made, a native platform export, or a deletion history. Jamie
+authored 353 recovered records; 81 are reposts and retain the displayed source
+accounts' authorship.
+
+Do not publish the raw personal timeline or treat ordinary life, relationship,
+health, family, political, or location context as professional evidence. Theme
+frequency describes retrieved records, not Jamie's identity, effort,
+professional priorities, reach, causality, or impact.
+
+Do not convert the 26-record inbound-search floor or its 17 accounts into a
+complete engagement history, endorsements, adoption, partnership, audience
+reach, or impact. Reactions on reposts belong to the source posts. Current
+visible reactions on authored posts are mutable floors, not historical
+analytics or unique people.
+
+Do not say an unresolved short URL never existed. Do not erase M.C. Schmidt
+from the Horse Lords video credit or describe Jamie as WOW List's sole builder
+because Music Hackathon used singular wording in one post.

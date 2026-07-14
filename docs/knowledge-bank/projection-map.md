@@ -89,6 +89,12 @@ current site:
 - `talks-not-raids-transparency-to-phaseout`
 - `kc-spaces-fund-public-operations-timeline`
 - `nyca-shared-publishing-system-range`
+- `horse-lords-truthers-video`
+- `music-hackathon-wowlist-role`
+
+The personal-account population accounting, inbound-search floor, and thematic
+retrieval aids remain Knowledge Bank method records rather than website copy.
+The current portfolio argument does not need a public personal timeline.
 
 The Office of Nightlife claim now has a bounded active projection in the Fair
 Rent NYC case study: Jamie's documented public invitation and speaking role are

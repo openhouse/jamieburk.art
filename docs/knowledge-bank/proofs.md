@@ -34,6 +34,17 @@ Public pages may simplify this language, but they must not strengthen ownership,
 
 ## Bank-Only Depth
 
+- The current `@urbanhermit` profile control contains 434 publicly dispositioned
+  records: 431 directly reverified in the July 14 pass and three repost-source
+  records retained from an immediately prior authenticated capture. This is
+  complete current-profile disposition, not a lifetime export. A separate
+  inbound-search floor contains 26 records from 17 accounts; neither count is
+  used as endorsement, reach, or impact.
+- NPR Music independently credits Jamie Burkart and M.C. Schmidt together as
+  makers of Horse Lords' official 2016 “Truthers” video. Music Hackathon
+  separately identified Jamie as a co-organizer and WOW List as an
+  event-sharing service. Both claims remain available for future composition
+  without displacing collaborators or expanding into unsupported scale claims.
 - A bounded KC Spaces Fund account review recovered application guidance, fundraising and partner communication, and 11 account-authored `#FUNDED` grantee highlights. This campaign-level finding remains separate from Jamie's technical-infrastructure proof.
 - A complete disposition ledger for the 5,124 slots reported by `@NYCArtC`
   recovered 3,367 public items, including 715 account-authored statuses and

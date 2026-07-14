@@ -14,7 +14,10 @@ personal X account without turning a personal timeline into a public dossier?
 ## Privacy and editorial boundary
 
 The full captured timeline is research material, not a portfolio artifact. The
-public repository does not retain full post text, exact dates, handles, status
+public repository retains redacted ordered rows with coarse year and research
+classifications so aggregate findings can be audited. This carries residual
+reconstruction risk, but the rows are intentionally not individually linkable.
+The repository does not retain full post text, exact dates, handles, status
 identifiers, status URLs, media, personal relationship detail, historic contact
 or location data, or per-record reaction metrics in the population ledgers.
 
@@ -104,21 +107,23 @@ The population contains:
 The link layer shows that the account frequently routed readers to reporting,
 project sites, public resources, events, and creative work. It is a source-
 discovery queue, not proof that Jamie authored, organized, endorsed, or caused
-the linked work. Short-link requests did not resolve reliably during this pass,
-so only individually inspected destinations become typed sources.
+the linked work. Sixty-one short URLs resolved to live destinations in this
+pass; 260 remain explicit source-resolution debt. Only individually inspected
+destinations become typed sources.
 
 ## Selected professional traces
 
 Seven Jamie-authored records were close-read as contemporaneous role or method
 evidence:
 
-- a 2009 invitation connecting river projects, handicrafts, and software design;
 - a 2010 description of making a forward-looking hand-tool website for Harry J.
   Epstein Company;
 - a 2013 post publishing a Sunday Dinner video;
 - a 2015 post routing readers into a New York City Council public-hearing
   participation pathway;
 - a 2016 post crediting Jamie and M.C. Schmidt together for a Horse Lords video;
+- a 2016 post translating DIY-space safety concern into a call-your-mayor
+  action path;
 - a 2017 public-safety framing for Let NYC Dance advocacy; and
 - a 2020 description of a dual-boot media-archaeology workflow that preserved
   access to older software.
@@ -157,15 +162,12 @@ the full role, tenure, adoption, audience, or impact.
 
 ## Collaborator corroboration retained as source material
 
-Two additional public records were accessioned and close-read without being
-promoted into new public-site claims:
+One additional public record was accessioned and close-read without being
+promoted into new public-site copy:
 
 - Aliza Aufrichtig publicly credited Jamie Burkart and Julia Fredenburg for work
   on the Cabaret Law repeal effort. This corroborates contribution to collective
   work without defining its scope or assigning sole causation.
-- Jimmy Fitzner publicly recalled driving a dump truck with Jamie to collect
-  tires in Northeast Kansas City. This corroborates hands-on participation in
-  the KC Town Hall workflow without validating aggregate project counts.
 
 ## Explicit-mention and stakeholder floor
 
@@ -209,14 +211,12 @@ authored-record summary.
 This pass adds:
 
 - one intake record;
-- three entity records;
-- fourteen source records and close readings;
-- seven bounded claims, including one captured media-review lead;
-- one resolved research task and one open preservation task;
-- one research inquiry;
-- six explicit defer decisions; and
-- two aggregate-only public ledgers with 434 population rows and 26 inbound
-  rows.
+- seventeen source records and close readings;
+- six bounded claims and two research inquiries;
+- new corroborating evidence on the existing Cabaret Law and 8th Street Tunnel
+  claims; and
+- two redacted row-level public ledgers with aggregate summaries, containing
+  434 population rows and 26 inbound rows.
 
 The Horse Lords claim is public-ready but deferred. The remaining claims are
 corroborated or research-oriented and deferred. No public website projection is

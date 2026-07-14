@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "account": "@urbanhermit",
   "generatedAt": "2026-07-14",
-  "privacyBoundary": "Aggregate-only current-profile accounting. Full text, exact dates, handles, status IDs, status URLs, media, relationship details, historic contact or location data, and per-record interaction metrics are excluded. Individually reviewed professional sources live in the typed knowledge-bank corpus, not this ledger.",
+  "privacyBoundary": "Redacted row-level current-profile accounting with aggregate summaries. Each ordered row retains only a coarse year, authorship relationship, interpretive theme, aggregate link presence, and verification state. This preserves auditability but exposes broad temporal pattern and therefore carries residual reconstruction risk. Full text, exact dates, handles, status IDs, status URLs, media, relationship details, historic contact or location data, and per-record interaction metrics are excluded. Individually reviewed professional sources live in the typed knowledge-bank corpus, not this ledger.",
   "populationAudit": {
     "profileCountObserved": 434,
     "postsSurfaceRecovered": 421,
@@ -74,7 +74,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -85,7 +85,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -96,7 +96,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -107,7 +107,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -118,7 +118,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -129,7 +129,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -140,7 +140,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -151,7 +151,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -162,7 +162,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -173,7 +173,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -184,7 +184,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -195,7 +195,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -206,7 +206,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -217,7 +217,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -228,7 +228,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -239,7 +239,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -250,7 +250,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -261,7 +261,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -272,7 +272,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -283,7 +283,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -294,7 +294,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -305,7 +305,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -316,7 +316,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -327,7 +327,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -338,7 +338,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -349,7 +349,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -360,7 +360,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -371,7 +371,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -382,7 +382,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -393,7 +393,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -404,7 +404,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -415,7 +415,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -426,7 +426,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -437,7 +437,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -448,7 +448,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -459,7 +459,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -470,7 +470,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -481,7 +481,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -492,7 +492,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -503,7 +503,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -514,7 +514,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -525,7 +525,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -536,7 +536,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -547,7 +547,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -558,7 +558,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -569,7 +569,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -580,7 +580,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -591,7 +591,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -602,7 +602,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -613,7 +613,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -624,7 +624,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -635,7 +635,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -646,7 +646,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -657,7 +657,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -668,7 +668,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -679,7 +679,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -690,7 +690,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -701,7 +701,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -712,7 +712,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -723,7 +723,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -734,7 +734,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -745,7 +745,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -756,7 +756,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -767,7 +767,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -778,7 +778,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -789,7 +789,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -800,7 +800,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -811,7 +811,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -822,7 +822,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -833,7 +833,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -844,7 +844,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -855,7 +855,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -866,7 +866,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -877,7 +877,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -888,7 +888,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -899,7 +899,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -910,7 +910,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -921,7 +921,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -932,7 +932,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -943,7 +943,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -954,7 +954,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -965,7 +965,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -976,7 +976,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -987,7 +987,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -998,7 +998,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1009,7 +1009,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1020,7 +1020,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1031,7 +1031,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1042,7 +1042,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1053,7 +1053,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1064,7 +1064,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1075,7 +1075,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1086,7 +1086,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1097,7 +1097,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1108,7 +1108,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1119,7 +1119,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1130,7 +1130,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1141,7 +1141,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1152,7 +1152,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1163,7 +1163,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1174,7 +1174,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1185,7 +1185,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1196,7 +1196,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1207,7 +1207,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1218,7 +1218,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1229,7 +1229,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1240,7 +1240,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1251,7 +1251,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1262,7 +1262,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1273,7 +1273,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1284,7 +1284,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1295,7 +1295,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1306,7 +1306,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1317,7 +1317,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1328,7 +1328,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1339,7 +1339,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1350,7 +1350,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1361,7 +1361,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1372,7 +1372,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1383,7 +1383,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1394,7 +1394,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1405,7 +1405,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1416,7 +1416,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1427,7 +1427,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1438,7 +1438,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1449,7 +1449,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1460,7 +1460,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1471,7 +1471,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1482,7 +1482,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1493,7 +1493,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1504,7 +1504,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1515,7 +1515,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1526,7 +1526,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1537,7 +1537,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1548,7 +1548,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1559,7 +1559,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1570,7 +1570,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1581,7 +1581,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1592,7 +1592,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1603,7 +1603,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1614,7 +1614,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1625,7 +1625,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1636,7 +1636,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1647,7 +1647,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1658,7 +1658,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1669,7 +1669,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1680,7 +1680,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1691,7 +1691,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1702,7 +1702,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1713,7 +1713,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1724,7 +1724,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1735,7 +1735,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1746,7 +1746,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1757,7 +1757,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1768,7 +1768,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1779,7 +1779,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1790,7 +1790,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1801,7 +1801,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1812,7 +1812,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1823,7 +1823,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1834,7 +1834,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1845,7 +1845,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1856,7 +1856,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1867,7 +1867,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1878,7 +1878,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1889,7 +1889,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1900,7 +1900,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1911,7 +1911,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1922,7 +1922,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1933,7 +1933,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1944,7 +1944,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1955,7 +1955,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1966,7 +1966,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1977,7 +1977,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1988,7 +1988,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -1999,7 +1999,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2010,7 +2010,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2021,7 +2021,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2032,7 +2032,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2043,7 +2043,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2054,7 +2054,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2065,7 +2065,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2076,7 +2076,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2087,7 +2087,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2098,7 +2098,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2109,7 +2109,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2120,7 +2120,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2131,7 +2131,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2142,7 +2142,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2153,7 +2153,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2164,7 +2164,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2175,7 +2175,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2186,7 +2186,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2197,7 +2197,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2208,7 +2208,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2219,7 +2219,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2230,7 +2230,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2241,7 +2241,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2252,7 +2252,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2263,7 +2263,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2274,7 +2274,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2285,7 +2285,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2296,7 +2296,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2307,7 +2307,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2318,7 +2318,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2329,7 +2329,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2340,7 +2340,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2351,7 +2351,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2362,7 +2362,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2373,7 +2373,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2384,7 +2384,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2395,7 +2395,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2406,7 +2406,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2417,7 +2417,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2428,7 +2428,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2439,7 +2439,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2450,7 +2450,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2461,7 +2461,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2472,7 +2472,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2483,7 +2483,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2494,7 +2494,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2505,7 +2505,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 4,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2516,7 +2516,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2527,7 +2527,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2538,7 +2538,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2549,7 +2549,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2560,7 +2560,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2571,7 +2571,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2582,7 +2582,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2593,7 +2593,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2604,7 +2604,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2615,7 +2615,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2626,7 +2626,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2637,7 +2637,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2648,7 +2648,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2659,7 +2659,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2670,7 +2670,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2681,7 +2681,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 3,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2692,7 +2692,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2703,7 +2703,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2714,7 +2714,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2725,7 +2725,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2736,7 +2736,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2747,7 +2747,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2758,7 +2758,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2769,7 +2769,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2780,7 +2780,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2791,7 +2791,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2802,7 +2802,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2813,7 +2813,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2824,7 +2824,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2835,7 +2835,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2846,7 +2846,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2857,7 +2857,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2868,7 +2868,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2879,7 +2879,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2890,7 +2890,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2901,7 +2901,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2912,7 +2912,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2923,7 +2923,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2934,7 +2934,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2945,7 +2945,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2956,7 +2956,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2967,7 +2967,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2978,7 +2978,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -2989,7 +2989,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3000,7 +3000,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3011,7 +3011,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3022,7 +3022,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3033,7 +3033,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3044,7 +3044,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3055,7 +3055,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3066,7 +3066,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3077,7 +3077,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3088,7 +3088,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3099,7 +3099,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3110,7 +3110,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3121,7 +3121,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3132,7 +3132,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3143,7 +3143,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3154,7 +3154,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3165,7 +3165,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3176,7 +3176,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3187,7 +3187,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3198,7 +3198,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3209,7 +3209,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3220,7 +3220,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3231,7 +3231,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3242,7 +3242,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3253,7 +3253,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3264,7 +3264,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3275,7 +3275,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3286,7 +3286,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3297,7 +3297,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3308,7 +3308,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3319,7 +3319,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3330,7 +3330,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3341,7 +3341,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3352,7 +3352,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3363,7 +3363,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3374,7 +3374,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3385,7 +3385,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3396,7 +3396,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3407,7 +3407,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3418,7 +3418,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3429,7 +3429,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3440,7 +3440,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3451,7 +3451,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3462,7 +3462,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3473,7 +3473,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3484,7 +3484,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3495,7 +3495,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3506,7 +3506,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3517,7 +3517,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3528,7 +3528,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3539,7 +3539,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3550,7 +3550,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3561,7 +3561,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3572,7 +3572,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3583,7 +3583,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3594,7 +3594,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3605,7 +3605,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3616,7 +3616,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3627,7 +3627,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3638,7 +3638,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3649,7 +3649,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3660,7 +3660,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3671,7 +3671,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3682,7 +3682,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3693,7 +3693,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3704,7 +3704,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3715,7 +3715,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3726,7 +3726,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3737,7 +3737,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3748,7 +3748,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3759,7 +3759,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3770,7 +3770,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3781,7 +3781,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3792,7 +3792,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3803,7 +3803,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3814,7 +3814,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3825,7 +3825,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3836,7 +3836,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3847,7 +3847,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3858,7 +3858,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3869,7 +3869,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3880,7 +3880,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3891,7 +3891,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3902,7 +3902,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3913,7 +3913,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3924,7 +3924,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3935,7 +3935,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "prior-authenticated-capture-currently-unavailable"
     },
     {
@@ -3946,7 +3946,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3957,7 +3957,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "prior-authenticated-capture-currently-unavailable"
     },
     {
@@ -3968,7 +3968,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3979,7 +3979,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -3990,7 +3990,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4001,7 +4001,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4012,7 +4012,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4023,7 +4023,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4034,7 +4034,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "prior-authenticated-capture-currently-unavailable"
     },
     {
@@ -4045,7 +4045,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4056,7 +4056,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4067,7 +4067,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4078,7 +4078,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4089,7 +4089,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4100,7 +4100,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4111,7 +4111,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4122,7 +4122,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4133,7 +4133,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4144,7 +4144,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4155,7 +4155,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4166,7 +4166,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4177,7 +4177,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4188,7 +4188,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4199,7 +4199,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4210,7 +4210,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4221,7 +4221,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4232,7 +4232,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4243,7 +4243,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4254,7 +4254,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4265,7 +4265,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4276,7 +4276,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4287,7 +4287,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4298,7 +4298,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4309,7 +4309,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4320,7 +4320,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4331,7 +4331,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4342,7 +4342,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4353,7 +4353,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4364,7 +4364,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4375,7 +4375,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4386,7 +4386,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4397,7 +4397,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4408,7 +4408,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4419,7 +4419,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4430,7 +4430,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4441,7 +4441,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4452,7 +4452,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4463,7 +4463,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4474,7 +4474,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4485,7 +4485,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4496,7 +4496,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4507,7 +4507,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4518,7 +4518,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4529,7 +4529,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4540,7 +4540,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4551,7 +4551,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4562,7 +4562,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4573,7 +4573,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4584,7 +4584,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4595,7 +4595,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4606,7 +4606,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4617,7 +4617,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4628,7 +4628,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4639,7 +4639,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4650,7 +4650,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4661,7 +4661,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4672,7 +4672,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4683,7 +4683,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4694,7 +4694,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4705,7 +4705,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4716,7 +4716,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4727,7 +4727,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4738,7 +4738,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 2,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4749,7 +4749,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4760,7 +4760,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4771,7 +4771,7 @@
       "hasExternalLink": true,
       "externalLinkCount": 1,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4782,7 +4782,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4793,7 +4793,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4804,7 +4804,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4815,7 +4815,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4826,7 +4826,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     },
     {
@@ -4837,7 +4837,7 @@
       "hasExternalLink": false,
       "externalLinkCount": 0,
       "accountingStatus": "recovered-current-profile-record",
-      "publicDetailStatus": "aggregate-only",
+      "publicDetailStatus": "redacted-row-level-disposition",
       "verificationStatus": "live-reverified-2026-07-14"
     }
   ]

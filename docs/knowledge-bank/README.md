@@ -80,3 +80,13 @@ The recovered KC Town Hall public-funding sequence is documented in
 It keeps the Board recommendation, Council acceptance, appropriation, later
 contract-delay state, Jamie's first-person stewardship transition, City
 withdrawal, and reappropriation as distinct evidence-bearing events.
+
+The authenticated personal-social review is documented in
+[projects/urbanhermit-x-population-2026-07-14.md](projects/urbanhermit-x-population-2026-07-14.md).
+Its public ledgers preserve redacted row-level dispositions and aggregate
+summaries for the current 434-record profile control and a 26-record
+inbound-search floor. Ordered rows retain coarse year and research classes for
+auditability, which carries residual reconstruction risk. They intentionally omit
+raw post text, handles, status identifiers, exact dates, personal context, and
+per-record metrics. Selected professional records enter the typed bank only
+after close reading; the personal timeline is not a public portfolio artifact.

@@ -521,6 +521,86 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / research open
 **Last reviewed:** 2026-07-12
 
+## urbanhermit-current-population-accounting - Current-profile disposition
+
+**Status:** Ready as research method
+**Support level:** Strong
+**Evidence class:** Authenticated public-profile review / redacted row-level public ledger
+**Structured claim IDs:** `CLM-URBANHERMIT-CURRENT-POPULATION-ACCOUNTING`
+**Public wording:** All 434 records in the current live-profile control received a public-safe disposition: 431 were directly reverified and three repost-source records were retained from an immediately prior authenticated capture.
+**Detailed public-safe wording:** The authenticated Posts and Replies union closed exactly against the current 434-record profile control, with 431 direct re-verifications and three prior-capture-only repost-source records; 338 are authored standalone posts, 15 are authored replies, and 81 are reposts.
+**Where to project:** Knowledge Bank method record only.
+**Why it matters:** Establishes that professional source discovery was conducted against a closed current-profile control rather than a hand-picked sample.
+**Guardrail:** This is complete current-profile disposition, not a lifetime archive, deletion history, or native X export. Jamie authored 353 records; 81 are reposts.
+**Do not say:** Every post Jamie ever made was recovered; Jamie authored all 434 records; the public ledger reconstructs Jamie's personal timeline.
+**Protected boundaries:** Raw text, handles, status IDs and URLs, exact dates, media, personal context, and per-record metrics stay outside the public ledger.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## urbanhermit-source-routing - Personal-account source trail
+
+**Status:** Ready as research method
+**Support level:** Strong
+**Evidence class:** Authenticated public-profile review / redacted row-level public ledger
+**Structured claim IDs:** `CLM-URBANHERMIT-SOURCE-ROUTING`
+**Public wording:** The surviving population contains 345 external-link occurrences across 321 unique short URLs; 61 resolved to live destinations in this pass and 260 remain explicit source-resolution debt.
+**Detailed public-safe wording:** The current-profile corpus routes to 321 unique shortened URLs. Sixty-one resolved to live destinations during this pass; the remaining 260 stay in a bounded research queue and are not treated as dead or nonexistent.
+**Where to project:** Knowledge Bank method record only.
+**Why it matters:** Preserves a large source-discovery queue while requiring close reading before any link becomes claim support.
+**Guardrail:** A posted URL is a research lead, not automatic corroboration, authorship, endorsement, readership, conversion, or impact.
+**Do not say:** All 321 URLs were resolved; every link supports a portfolio claim; an unresolved destination never existed.
+**Protected boundaries:** The full personal link graph and ordinary-life destinations stay outside the public repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## urbanhermit-inbound-engagement-floor - Bounded public engagement floor
+
+**Status:** Ready as research method
+**Support level:** Strong
+**Evidence class:** Authenticated public-search review / redacted row-level public ledger
+**Structured claim IDs:** `CLM-URBANHERMIT-INBOUND-ENGAGEMENT-FLOOR`
+**Public wording:** A bounded search recovered 26 public inbound records from 17 accounts, including 11 role or project attributions and seven mission-related threads; eight general conversations remain outside professional proof.
+**Detailed public-safe wording:** The authenticated explicit-mention search produced a 26-record floor across 17 accounts: 11 role or project attributions, seven mission-related threads, and eight general conversations withheld from professional proof.
+**Where to project:** Knowledge Bank method record only.
+**Why it matters:** Separates potentially useful external attribution from ordinary conversation and gives future research a defensible floor.
+**Guardrail:** Search results are a recoverable floor, not a complete engagement export. Mentions do not establish endorsement, adoption, partnership, reach, causality, or impact.
+**Do not say:** Seventeen accounts endorsed Jamie; 26 records measure Jamie's reach; no public official ever interacted with Jamie or his projects.
+**Protected boundaries:** Handles, post text, exact dates, relationship detail, and general personal conversation stay outside the public ledger.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## horse-lords-truthers-video - Collaborative moving-image work
+
+**Status:** Ready, held for composition
+**Support level:** Strong
+**Evidence class:** Independent reporting / contemporaneous public post
+**Structured claim IDs:** `CLM-HORSE-LORDS-TRUTHERS-VIDEO`
+**Public wording:** Jamie Burkart and M.C. Schmidt made Horse Lords' official 2016 “Truthers” video, which NPR Music featured with the band's description of its visual construction.
+**Detailed public-safe wording:** NPR Music identifies Jamie Burkart and M.C. Schmidt together as makers of Horse Lords' official “Truthers” video and reports the band's account of how repetition, variation, text, black and white, and color mirror the music's structure.
+**Where to project:** Knowledge Bank only until a creative-technology or media composition needs it.
+**Why it matters:** Adds independently credited collaborative media work that translates a complex musical structure into a legible visual system.
+**Guardrail:** Credit Jamie and M.C. Schmidt together; do not infer their division of labor, an NPR commission, commercial results, or audience reach.
+**Do not say:** Jamie made the video alone; NPR commissioned it; the feature proves commercial success.
+**Protected boundaries:** Unrecovered production correspondence and unapproved media assets stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## music-hackathon-wowlist-role - Organizational and product attribution
+
+**Status:** Ready, held for composition
+**Support level:** Strong
+**Evidence class:** Institutional public post
+**Structured claim IDs:** `CLM-MUSIC-HACKATHON-WOWLIST-ROLE`
+**Public wording:** In 2015, Music Hackathon publicly identified Jamie as a co-organizer and described WOW List as an event-sharing service.
+**Detailed public-safe wording:** A March 2015 Music Hackathon organizational post identifies Jamie as a co-organizer and describes WOW List as an event-sharing service, supplying bounded external role and product-description evidence without establishing sole authorship or platform scale.
+**Where to project:** Knowledge Bank now; available to support a future WOW List composition.
+**Why it matters:** Supplies contemporaneous external evidence for Jamie's organizational role and a plain-language product description.
+**Guardrail:** The post does not establish WOW List's architecture, user or event counts, geographic reach, or Jamie's sole authorship.
+**Do not say:** Jamie solely founded Music Hackathon; the post verifies all WOW List scale claims; Jamie alone built WOW List.
+**Protected boundaries:** Private collaborator records, user data, and unrecovered role details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## nyca-campaign-press-architecture - Campaign press source architecture
 
 **Status:** Careful

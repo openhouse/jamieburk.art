@@ -146,9 +146,12 @@ const publicContentFiles = shippedContentFiles.filter((file) => {
   return relative(file) !== "apps/www/src/data/proofs.ts";
 });
 const publicSocialLedgerFiles = textFiles.filter((file) =>
-  /^docs\/knowledge-bank\/data\/(?:nycartc|callnyc|wowlist|kctownhall)-public-.*\.json$/i.test(
+  /^docs\/knowledge-bank\/data\/(?:nycartc|callnyc|wowlist|kctownhall|urbanhermit)-public-.*\.json$/i.test(
     relative(file)
   )
+);
+const urbanHermitPublicLedgerFiles = publicSocialLedgerFiles.filter((file) =>
+  /urbanhermit-public-.*\.json$/i.test(relative(file))
 );
 
 for (const file of allFiles) {
@@ -201,6 +204,12 @@ scanPattern(
   publicSocialLedgerFiles,
   "public social ledger exposes raw outbound-link or mutable-metric fields",
   /"(?:outboundLinks|visibleMetricsObserved2026)"\s*:/
+);
+
+scanPattern(
+  urbanHermitPublicLedgerFiles,
+  "personal social ledger exposes raw post, author, URL, date, or per-record metric fields",
+  /"(?:statusId|statusUrl|fullText|authorHandle|postedAt|publishedAt|exactDate|visibleMetricsObserved2026)"\s*:/i
 );
 
 scanPattern(
