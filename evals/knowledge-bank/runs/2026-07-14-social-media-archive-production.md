@@ -6,6 +6,11 @@ Branch: `feature/evals-A`
 
 Starting head: `4dd26e0cd44fbfdb06ed285ed5825723c9434d8f`
 
+> Historical run note: the CallNYC counts below record this bounded-pass
+> iteration. The later full-population run on the same date supersedes them with
+> 107 recovered items, three unresolved count slots, and an eight-member
+> reciprocal-engagement floor.
+
 ## Objective
 
 Treat project social accounts as public identity, engagement, documentation,

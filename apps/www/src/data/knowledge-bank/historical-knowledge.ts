@@ -120,7 +120,7 @@ export const historicalKnowledge = {
       observationIds: ["OBS-CALLNYC-COUNCIL-ENGAGEMENT-LEAD"],
       researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT"],
       boundaries: [
-        "Publish only the seven-member recovered floor with named interaction types and the July 2026 method.",
+        "Publish only the eight-member recovered floor with named interaction types and the July 2026 method.",
         "Do not convert replies, quote-posts, reposts, or independent links into formal adoption or Council endorsement.",
         "Deleted, private, search-suppressed, and unavailable engagement remains outside the recovered count."
       ]
@@ -189,7 +189,7 @@ export const historicalKnowledge = {
     { id: "OBS-NYCAC-GREENE-HILL-COALITION", intakeId: "INTAKE-NYCAC-GREENE-HILL-QA-2017", sourceId: "SRC-NYCAC-GREENE-HILL-QA-2017-12-19", project: "nyc-artist-coalition", kind: "source-fact", text: "A Greene Hill Food Co-op Q&A documented Jamie and Julia working through NYC Artist Coalition to preserve community spaces and repeal the Cabaret Law.", locator: "What are you working on outside of the Co-op?", status: "verified", publicSafe: true, claimIds: ["CLM-NYCAC-CABARET-TOWN-HALL"], researchInquiryIds: [], limitations: ["First-person community profile; policy outcomes remain collective."] },
     { id: "OBS-NYCAC-GREENE-HILL-TOWN-HALL", intakeId: "INTAKE-NYCAC-GREENE-HILL-QA-2017", sourceId: "SRC-NYCAC-GREENE-HILL-QA-2017-12-19", project: "office-of-nightlife", kind: "source-fact", text: "The Q&A invited community members to a September 28 town hall intended as dialogue with the new Office of Nightlife about serving diverse local cultures.", locator: "Town hall invitation", status: "verified", publicSafe: true, claimIds: ["CLM-NYCAC-CABARET-TOWN-HALL"], researchInquiryIds: ["INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION"], limitations: ["Does not establish Jamie's causal role in creating the Office."] },
     { id: "OBS-COMMUNITY-GREENE-HILL-DINNER-WOW", intakeId: "INTAKE-NYCAC-GREENE-HILL-QA-2017", sourceId: "SRC-NYCAC-GREENE-HILL-QA-2017-12-19", project: "sunday-dinner", kind: "source-fact", text: "The Q&A described Jamie and Julia hosting weekly Sunday dinners open to the community and publishing community-event listings through WOW List.", locator: "Introduction", status: "verified", publicSafe: true, claimIds: ["CLM-COMMUNITY-SUNDAY-DINNER-WOW-2017"], researchInquiryIds: [], limitations: ["Does not establish attendance totals, duration beyond the publication context, or Jamie's sole role."] },
-    { id: "OBS-CALLNYC-COUNCIL-ENGAGEMENT-LEAD", intakeId: "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-LEAD", sourceId: "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14", project: "callnyc", kind: "source-fact", text: "A July 2026 authenticated audit recovered authored public engagement with CallNYC from seven sitting New York City Council members.", locator: "Deduplicated profile and authenticated-search status set cross-checked against NYC Open Data term dates", status: "verified", publicSafe: true, claimIds: ["CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"], researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT"], limitations: ["The seven-member result is a recoverable floor, not a lifetime total, adoption count, or Council endorsement."] },
+    { id: "OBS-CALLNYC-COUNCIL-ENGAGEMENT-LEAD", intakeId: "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-LEAD", sourceId: "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14", project: "callnyc", kind: "source-fact", text: "A July 2026 authenticated audit recovered authored public engagement with CallNYC from eight sitting New York City Council members.", locator: "Deduplicated profile, full-corpus, and authenticated-search status set cross-checked against NYC Open Data term dates", status: "verified", publicSafe: true, claimIds: ["CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"], researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT"], limitations: ["The eight-member result is a recoverable floor, not a lifetime total, adoption count, or Council endorsement."] },
     { id: "OBS-NYCAC-OFFICE-NIGHTLIFE-ROLE-LEAD", intakeId: "INTAKE-NYCAC-OFFICE-NIGHTLIFE-ROLE-LEAD", project: "office-of-nightlife", kind: "participant-memory", text: "Jamie remembers an instrumental role in forming NYC Artist Coalition, supporting creation of the Office of Nightlife, and producing large public town halls.", locator: "Jamie-provided participant-memory lead; public-source triangulation recorded separately", status: "captured", publicSafe: true, claimIds: [], researchInquiryIds: ["INQ-NYCAC-OFFICE-NIGHTLIFE-CONTRIBUTION"], limitations: ["Specific actions, collaborators, legislative stages, and causal contribution require corroboration."] },
     { id: "OBS-NYCAC-MARCH-RAIDS-LEAD", intakeId: "INTAKE-NYCAC-MARCH-RAIDS-LEAD", project: "talks-not-raids", kind: "participant-memory", text: "Jamie remembers Talks Not Raids first seeking transparency about M.A.R.C.H. raids and contributing to their eventual disbanding.", locator: "Jamie-provided participant-memory lead; agency-record research pending", status: "captured", publicSafe: true, claimIds: [], researchInquiryIds: ["INQ-NYCAC-MARCH-RAIDS"], limitations: ["Chronology, agency action, coalition contribution, and final institutional status require public-source research."] },
     { id: "OBS-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD", intakeId: "INTAKE-WATERWAYS-PARTICIPATORY-PROGRAMS-LEAD", sourceId: "SRC-WATERWAYS-CHARLOTTE-STREET-2009", project: "great-accommodations", kind: "research-lead", text: "Jamie recalls a larger body of participatory programs connecting city residents with waterways; the Charlotte Street record establishes several public-program and outreach forms within Great Accommodations.", locator: "Charlotte Street event description plus Jamie-provided broader memory lead", status: "extracted", publicSafe: true, claimIds: ["CLM-WATERWAYS-GREAT-ACCOMMODATIONS"], researchInquiryIds: ["INQ-WATERWAYS-PARTICIPATORY-PROGRAMS"], limitations: ["The complete program inventory and outcomes remain open."] }
@@ -230,13 +230,13 @@ export const historicalKnowledge = {
       runAt: "2026-07-14",
       resultStatus: "recovered",
       findings: [
-        "Seven sitting members authored recovered engagement: Peter Koo, Steven Matteo, Ruben Wills, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
+        "Eight sitting members authored recovered engagement: Peter Koo, Steven Matteo, Ruben Wills, Ydanis Rodriguez, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
         "Recovered interaction types include replies, quote-posts, an explicit repost, and an independently authored link to CallNYC.org.",
         "Carlina Rivera's May 2016 quote-post remains useful public engagement context but is excluded from the Council-member count because it predates her Council service.",
         "CallNYC posts tagging many Council members were preserved as outreach but were not counted as engagement by those members."
       ],
       limitations: [
-        "The @CallNYCapp profile reported 110 posts, while the bounded pass recovered 86 unique visible status records.",
+        "The @CallNYCapp profile reported 110 posts; full-population reconciliation recovered 107 unique public items and retained three unresolved count slots.",
         "Deleted, private, search-suppressed, and otherwise unavailable posts cannot be recovered or treated as never having existed.",
         "The audit does not identify every liker or reposter and does not establish formal adoption, endorsement, or office use.",
         "X profile totals and search availability can change after the audit date."
@@ -247,12 +247,13 @@ export const historicalKnowledge = {
         "SRC-X-CALLNYC-PETER-KOO-2016-04-27",
         "SRC-X-CALLNYC-STEVEN-MATTEO-2016-05-03",
         "SRC-X-CALLNYC-RUBEN-WILLS-2016-05-17",
+        "SRC-X-CALLNYC-YDANIS-RODRIGUEZ-2016-05-18",
         "SRC-X-CALLNYC-ROSIE-MENDEZ-2016-05-19",
         "SRC-X-CALLNYC-HELEN-ROSENTHAL-2016-09-27",
         "SRC-X-CALLNYC-MATHIEU-EUGENE-2016-10-04",
         "SRC-X-CALLNYC-MARGARET-CHIN-2017-07-11"
       ],
-      publicSummary: "A July 2026 authenticated audit recovered public engagement from seven sitting Council members through replies, quote-posts, a repost, and an independent CallNYC link; seven is a recovered floor, not an adoption count or complete lifetime total."
+      publicSummary: "A July 2026 authenticated audit recovered public engagement from eight sitting Council members through replies, quote-posts, reposts, and an independent CallNYC link; eight is a recovered floor, not an adoption count or complete lifetime total."
     }
   ]
 } as const;

@@ -89,3 +89,10 @@ for the bounded pass across 110 accessible Shared Drives: aggregate mapping,
 26 portfolio-relevant roots, seven close-read artifacts, cross-carrier
 deduplication, protected-source handling, collective credit, and the strengthened
 Sunday Dinner projection.
+
+See
+[intake/2026-07-14-callnyc-full-population-social-corpus.md](intake/2026-07-14-callnyc-full-population-social-corpus.md)
+for the 100-percent-disposition archival pass on the observed `@CallNYCApp`
+population. Its canonical public ledger preserves 107 recovered item records,
+every recovered outbound URL, and three explicit unresolved count slots without
+claiming a platform export.

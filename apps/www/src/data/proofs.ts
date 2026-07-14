@@ -159,6 +159,41 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-11"
   },
   {
+    id: "callnyc-public-engagement-architecture",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "Paired CallNYC's issue pathways with a public-engagement layer: 71 data-derived posts connected 61 issue pages across 16 service categories to an intended institutional audience of 26 sitting Council-member accounts.",
+    shortWording: "Built a source-backed public-engagement layer around 61 civic issue pathways",
+    detailedPublicWording:
+      "A 107-item authenticated public-account ledger documents how CallNYC connected resident-facing issue pathways to their intended institutional audience while preserving the distinction between outreach, member-authored response, and service outcomes.",
+    sourceBasis:
+      "Authenticated full-population review of the public CallNYC Posts and Replies surfaces, a 107-record public ledger, first-person contemporaneous role and feature posts, and official Council term records.",
+    sourceNote:
+      "The ledger dispositions all 110 observed profile-count slots through 107 recovered items and three explicit unresolved slots; it is not a platform export.",
+    whyItMatters:
+      "Makes Jamie's product and implementation work legible as an operating system for public data, resident pathways, and institutional engagement rather than a static visualization.",
+    guardrail:
+      "Treat the 26 accounts as intended audience, not reciprocal engagement; keep the separate eight-member authored-engagement floor distinct.",
+    doNotSay: [
+      "Twenty-six Council members engaged with or endorsed CallNYC",
+      "CallNYC helped a verified number of unique residents",
+      "The ledger is a complete X platform export",
+      "Jamie authored every CallNYC account post"
+    ],
+    protectedBoundaries: [
+      "Authentication and session material",
+      "Private messages and analytics",
+      "Unverified historical metrics",
+      "Individual authorship of shared-account posts"
+    ],
+    surfaces: ["case-study"],
+    relatedProjects: ["callnyc"],
+    relatedCapabilities: ["public-engagement", "information-architecture", "civic-technology", "implementation"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "fair-rent-campaign-memory",
     status: "careful",
     supportLevel: "careful",

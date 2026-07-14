@@ -369,6 +369,48 @@
       ]
     },
     {
+      "id": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @CallNYCApp full-population recovery and public-post ledger",
+      "organization": "CallNYC",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/callnyc-public-post-ledger.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated review of the public @CallNYCApp Posts and Replies surfaces, with a 107-record ledger and three explicit unresolved count slots, July 2026.",
+      "publicNote": "The profile displayed 110 posts. Fresh cross-tab reconciliation reproduced 107 unique public items: 86 original account posts, 6 account replies, and 15 reposts. Three count slots remain unresolved. The corpus includes 71 issue-recognition posts connecting 61 issue pages across 16 categories to 26 Council-member accounts.",
+      "doesNotEstablish": [
+        "a complete X platform export",
+        "that no deleted, withheld, or inaccessible status exists",
+        "Jamie's authorship of every account post",
+        "reciprocal engagement by every tagged office",
+        "official NYC Council endorsement or adoption",
+        "service quality, case resolution, unique residents helped, or policy causality",
+        "contemporaneous or project-owned engagement analytics",
+        "visual media asset preservation, description, rights, or publication clearance"
+      ]
+    },
+    {
+      "id": "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
+      "title": "CallNYC first-person Jamie Burkart role post",
+      "organization": "CallNYC",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-03-16",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CallNYCapp/status/710150246781882369",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "CallNYC public reply identifying Jamie Burkart and describing CallNYC as his first civic-tech project, March 16, 2016.",
+      "publicNote": "The contemporaneous account publicly connected Jamie to CallNYC in the first person.",
+      "doesNotEstablish": [
+        "authorship of every account post",
+        "sole project causality",
+        "official Council affiliation"
+      ]
+    },
+    {
       "id": "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
       "title": "Authenticated CallNYC Council-account engagement audit",
       "kind": "research-run",
@@ -378,7 +420,7 @@
       "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md#callnyc-council-account-engagement",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Authenticated review of public Council-member engagement with @CallNYCapp, July 14, 2026.",
-      "publicNote": "The linked public ledger includes all seven underlying status URLs. The audit deduplicated visible authored statuses, separated CallNYC outreach from official-account response, and cross-checked post dates against official Council term dates. Seven sitting members were recovered: Peter Koo, Steven Matteo, Ruben Wills, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
+      "publicNote": "The audit links all eight underlying public statuses, separates CallNYC outreach from member-authored response, and cross-checks dates against official Council terms. Eight sitting members were recovered: Peter Koo, Steven Matteo, Ruben Wills, Ydanis Rodriguez, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
       "doesNotEstablish": [
         "all historical engagement",
         "deleted, private, or search-suppressed posts",
@@ -904,12 +946,68 @@
       ]
     },
     {
+      "id": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie paired CallNYC's issue pathways with a public-engagement layer. The recoverable account corpus includes 71 data-derived posts connecting 61 issue pages across 16 service categories to an intended institutional audience of 26 sitting Council-member accounts.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "item-level corpus",
+            "population reconciliation",
+            "71 recognition posts",
+            "26 Council-member accounts",
+            "61 issue pages",
+            "16 categories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's first-person project role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+          "relationship": "corroborating",
+          "supports": [
+            "2016 Council officeholding for the named member accounts"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Named accounts were the intended institutional audience; the 26-account count does not mean all 26 offices saw, replied to, used, or endorsed CallNYC.",
+        "The 71 posts and 61 linked pages document an engagement architecture, not service outcomes or independently validated guidance products.",
+        "CouncilStat rows represent issues rather than unique cases or people, and office comparisons reflect participation and reporting practices.",
+        "The corpus has 107 recovered items plus three unresolved profile-count slots; it is not a complete platform export.",
+        "The project account does not establish Jamie's authorship of every post."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
       "status": "confirmed-with-boundary",
       "projections": [
         {
           "key": "case-study",
-          "text": "The independent CallNYC prototype Jamie built drew public engagement from seven sitting New York City Council members through replies, quote-posts, reposts, and direct links.",
+          "text": "The independent CallNYC prototype Jamie built drew public engagement from eight sitting New York City Council members through replies, quote-posts, reposts, and direct links.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -922,7 +1020,7 @@
           "sourceId": "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
           "relationship": "direct-support",
           "supports": [
-            "deduplicated seven-member count",
+            "deduplicated eight-member count",
             "interaction types",
             "collection method",
             "exclusions and limitations"
@@ -941,7 +1039,7 @@
         }
       ],
       "boundaries": [
-        "Say seven recovered sitting-member accounts, not seven endorsements, adopters, offices using the product, or all lifetime engagement.",
+        "Say eight recovered sitting-member accounts, not eight endorsements, adopters, offices using the product, or all lifetime engagement.",
         "Count only posts authored by the member account; project outreach tagging a member is not member engagement.",
         "Carlina Rivera's 2016 post is retained as public engagement but excluded because it predates her Council service."
       ]
@@ -960,7 +1058,9 @@
         "SRC-CALLNYC-PROJECT-MARK",
         "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
         "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
-        "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
+        "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+        "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+        "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369"
       ],
       "occurrences": [
         {
@@ -1027,6 +1127,16 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
+            "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
+          ]
+        },
+        {
+          "id": "social-engagement-architecture",
+          "claimId": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+            "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
             "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
           ]
         },

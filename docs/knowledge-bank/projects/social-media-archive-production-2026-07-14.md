@@ -14,13 +14,15 @@ official as proof of impact.
 
 | Project | Handle | Profile snapshot | Recovered public record |
 | --- | --- | --- | --- |
-| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 posts; joined March 2016 | 86 unique visible statuses; 72 authored by the project |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 posts; joined March 2016 | 107 unique items: 92 authored statuses and 15 reposts; 3 count slots unresolved |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | Targeted authenticated samples; no complete export |
 | WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 37 unique visible statuses; 21 authored by the project |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 posts; joined April 2020 | 34 unique visible statuses; 27 authored by the project |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 170 unique visible statuses; 142 authored by the project |
 
-Counts are accessed-at snapshots and recovered floors. X pagination,
+Counts are accessed-at snapshots and recovered floors. For CallNYC, the 107
+recovered item records plus three explicit unresolved slots disposition all 110
+observed profile-count slots; this is not a platform export. X pagination,
 virtualization, search behavior, deletions, privacy settings, and unavailable
 posts prevent these from being described as complete exports.
 
@@ -34,7 +36,7 @@ account never existed.
 
 ## CallNYC Council-account engagement
 
-A bounded authenticated pass recovered public posts by **seven people who
+A bounded authenticated pass recovered public posts by **eight people who
 were sitting New York City Council members on the post dates**:
 
 | Member | Date | Recovered engagement |
@@ -42,18 +44,48 @@ were sitting New York City Council members on the post dates**:
 | [Peter Koo](https://x.com/CMPeterKoo/status/725422741160079360) | 2016-04-27 | Explicit repost of a CallNYC recognition |
 | [Steven Matteo](https://x.com/StevenMatteo/status/727621921341358081) | 2016-05-03 | Reply naming a constituent-service concern |
 | [Ruben Wills](https://x.com/CM_RubenWills/status/732717792097603584) | 2016-05-17 | Public reply with press amplification |
+| [Ydanis Rodriguez](https://x.com/ydanis/status/733089563334299648) | 2016-05-18 | Quote-post connecting a CallNYC recognition to tenant-rights work |
 | [Rosie Mendez](https://x.com/RosieMendez/status/733410096915550208) | 2016-05-19 | Quote-post crediting the office team |
 | [Helen Rosenthal](https://x.com/HelenRosenthal/status/780797474277511170) | 2016-09-27 | Independently authored link to CallNYC.org |
 | [Mathieu Eugene](https://x.com/CMMathieuEugene/status/783305320508514304) | 2016-10-04 | Quote-post connecting the recognition to housing help |
 | [Margaret Chin](https://x.com/CM_MargaretChin/status/884863588317442049) | 2017-07-11 | Response to office-performance recognition |
 
-The profile reported 110 posts; 86 unique visible status records were
-recovered. Seven is therefore a recovered floor, not an adoption count,
+The profile reported 110 posts; 107 unique public items were recovered and
+three count slots remain explicitly unresolved. Eight is therefore a recovered floor, not an adoption count,
 endorsement count, office-use count, or complete lifetime total. Posts from
 CallNYC tagging officials were classified as outreach and not counted as
 engagement by those officials. Carlina Rivera's May 2016 quote-post remains
 public engagement context but is excluded from the Council-member count
 because it predates her Council service.
+
+## CallNYC full-population pattern
+
+Fresh scroll-to-exhaustion passes recovered 106 unique status URLs from Posts
+and 107 from Replies. Their union matched the canonical item-level ledger
+exactly. The one Replies-only item is a CallNYC reply announcing a JSON endpoint
+for Council-member Twitter usernames. Monthly authenticated X search surfaced
+only 47 of 92 authored statuses and no additional IDs, demonstrating that
+ordinary search is an incomplete discovery surface.
+
+The 107-item ledger documents a deliberate public-engagement layer: 71
+data-derived posts connected 61 issue pages across 16 constituent-service
+categories to 26 sitting Council-member accounts. Those 26 accounts were the
+intended institutional audience. They are not 26 responses, adopters, or
+endorsements. The broader member-authored audit above is the separate evidence
+for reciprocal engagement.
+
+The ledger also preserves every recovered outbound link: 98 short-link
+occurrences, 84 unique short URLs, 76 resolved destinations, 63 CallNYC
+destinations, and 13 external destinations. The external set spans official
+rent-freeze and homelessness-prevention resources, civic-tech infrastructure,
+adjacent open-data tools, public-interest reporting, and other public projects.
+Posted or reposted links establish source circulation, not partnership,
+historical availability, use, or individual post authorship.
+
+See the
+[full-population archival note](../intake/2026-07-14-callnyc-full-population-social-corpus.md)
+and the
+[107-record public ledger](../data/callnyc-public-post-ledger.json).
 
 ## NYC Artist Coalition Council-account engagement
 
@@ -112,4 +144,3 @@ and the official Council term dataset enter the repository. Direct messages,
 private analytics, account settings, security data, cookies, resident
 addresses, applicant data, and private correspondence were not inspected or
 retained.
-

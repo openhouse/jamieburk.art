@@ -1,12 +1,17 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
 
 const suite = loadKnowledgeEvalSuite();
+const callNycLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/callnyc-public-post-ledger.json", import.meta.url),
+  "utf8"
+));
 
 test("knowledge-bank pilot retains every supplied intake item", () => {
   const result = evaluateKnowledgeBank(suite);
@@ -479,7 +484,7 @@ test("social archive production preserves five accounts and bounded official eng
 
   assert.equal(socialMediaArchiveProduction.inventory.accounts.length, 5);
   assert.equal(socialMediaArchiveProduction.sources.length, pilot.expectedSourceCount);
-  assert.equal(pilot.callnycCouncilPostIds.length, 7);
+  assert.equal(pilot.callnycCouncilPostIds.length, 8);
   assert.equal(pilot.nycacCouncilPostIds.length, 5);
   assert.equal(
     result.criteria.find(
@@ -493,7 +498,7 @@ test("social archive eval rejects an inflated CallNYC Council count", () => {
   const original = socialMediaArchiveProduction.inventory.callnycCouncilMemberCount;
 
   try {
-    socialMediaArchiveProduction.inventory.callnycCouncilMemberCount = 8;
+    socialMediaArchiveProduction.inventory.callnycCouncilMemberCount = 9;
     const result = evaluateKnowledgeBank(suite);
     assert.equal(
       result.criteria.find(
@@ -593,6 +598,142 @@ test("social archive eval preserves excluded-handle uncertainty", () => {
   } finally {
     socialMediaArchiveProduction.inventory.excludedHandles = original;
   }
+});
+
+test("CallNYC full-population ledger dispositions all 110 observed slots", () => {
+  const pilot = suite.pilot.callNycFullPopulation;
+  const result = evaluateKnowledgeBank(suite);
+
+  assert.equal(callNycLedger.records.length, 107);
+  assert.equal(new Set(callNycLedger.records.map((record) => record.statusId)).size, 107);
+  assert.equal(new Set(callNycLedger.records.map((record) => record.statusUrl)).size, 107);
+  assert.equal(callNycLedger.unresolvedItems.length, 3);
+  assert.equal(
+    callNycLedger.records.length + callNycLedger.unresolvedItems.length,
+    callNycLedger.populationAudit.profileCountObserved
+  );
+  assert.equal(callNycPopulationAudit.uniqueItemsRecovered, pilot.expectedUniqueItems);
+  assert.equal(callNycCorpusFindings.issueRecognitionPosts, pilot.expectedIssueRecognitionPosts);
+  assert.equal(
+    result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score,
+    5
+  );
+});
+
+test("CallNYC visual tokens are not misrepresented as archived media", () => {
+  assert.ok(
+    callNycLedger.records.every(
+      (record) => !("mediaUrls" in record) && !("mediaIndicators" in record)
+    )
+  );
+  assert.ok(
+    callNycLedger.records.every(
+      (record) =>
+        Array.isArray(record.visualTokens) &&
+        record.visualTokens.every(
+          (token) => typeof token === "string" && token.length > 0
+        )
+    )
+  );
+  assert.equal(
+    callNycLedger.records.filter((record) => record.visualTokens.length > 0).length,
+    87
+  );
+  assert.equal(
+    callNycLedger.records.filter((record) => record.visualTokens.includes("Image")).length,
+    82
+  );
+  assert.equal(
+    callNycLedger.records.filter(
+      (record) => record.visualTokens.length > 0 && !record.visualTokens.includes("Image")
+    ).length,
+    5
+  );
+});
+
+test("CallNYC recognition architecture excludes institutional accounts", () => {
+  const handles = callNycCorpusFindings.councilMemberHandlesNamedInRecognitionsList;
+  assert.equal(handles.length, 26);
+  assert.equal(new Set(handles.map((handle) => handle.toLowerCase())).size, 26);
+  assert.ok(!handles.some((handle) => ["@nyccouncil", "@nychousing", "@nycha"].includes(handle.toLowerCase())));
+
+  const original = [...handles];
+  try {
+    handles.push("@NYCHA");
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    handles.splice(0, handles.length, ...original);
+  }
+});
+
+test("CallNYC full-population eval rejects an erased unresolved slot", () => {
+  const original = callNycPopulationAudit.unresolvedPopulationSlots;
+
+  try {
+    callNycPopulationAudit.unresolvedPopulationSlots = 2;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    callNycPopulationAudit.unresolvedPopulationSlots = original;
+  }
+});
+
+test("CallNYC full-population claim cannot convert outreach into engagement", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE"
+  );
+  assert.ok(claim);
+  const original = [...claim.antiClaims];
+
+  try {
+    claim.antiClaims = claim.antiClaims.filter(
+      (antiClaim) => !/Twenty-six Council members engaged/i.test(antiClaim)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-CALLNYC-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = original;
+  }
+});
+
+test("CallNYC engagement floor includes the authenticated Ydanis quote-post", () => {
+  assert.equal(socialMediaArchiveProduction.inventory.callnycCouncilMemberCount, 8);
+  assert.ok(
+    socialMediaArchiveProduction.inventory.callnycCouncilPostIds.includes(
+      "SRC-X-CALLNYC-YDANIS-RODRIGUEZ-2016-05-18"
+    )
+  );
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-X-CALLNYC-YDANIS-RODRIGUEZ-2016-05-18"
+  );
+  assert.equal(source?.canonicalUrl, "https://x.com/ydanis/status/733089563334299648");
+});
+
+test("CallNYC reserve depth stays off public surfaces", () => {
+  const heldIds = suite.pilot.callNycFullPopulation.heldClaimIds;
+  const heldClaims = callNycSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(
+    heldClaims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      )
+    )
+  );
 });
 
 test("complete maturation pilot meets every floor", () => {

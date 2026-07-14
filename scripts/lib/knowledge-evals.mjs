@@ -1,6 +1,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
@@ -497,7 +498,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         (projection) => projection.status === "active" &&
           projection.citationRequired &&
           projection.surfaces.includes("/work/callnyc") &&
-          /seven sitting New York City Council members/i.test(projection.text) &&
+          /eight sitting New York City Council members/i.test(projection.text) &&
           /independent CallNYC prototype Jamie built/i.test(projection.text)
       ) &&
       socialCallClaim.boundaries.some((boundary) => /outreach tagging/i.test(boundary)) &&
@@ -531,7 +532,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
         (inquiry) => inquiry?.methods.length >= 3 && inquiry.findings.length && inquiry.limitations.length >= 3
       ) &&
       socialMainInquiry?.limitations.some((limitation) => /deleted, private, search-suppressed/i.test(limitation)) &&
-      socialCallInquiry?.findings.some((finding) => /Seven sitting members/i.test(finding)) &&
+      socialCallInquiry?.findings.some((finding) => /Eight sitting members/i.test(finding)) &&
       socialCallInquiry?.findings.some((finding) => /tagging.*not counted/i.test(finding)) &&
       socialNycacInquiry?.resultStatus === "partially-recovered" &&
       socialMediaArchiveProduction.inventory.excludedHandles.length === social.excludedHandles.length &&
@@ -552,9 +553,208 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       social.activeClaimIds.every((id) => publicRegistryText.includes(id)) &&
       social.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries];
+  const callFull = suite.pilot.callNycFullPopulation;
+  const callLedgerPath = path.join(repoRoot, callFull.ledgerPath);
+  const callFullDocumentation = existsSync(path.join(repoRoot, callFull.documentationPath))
+    ? readFileSync(path.join(repoRoot, callFull.documentationPath), "utf8")
+    : "";
+  const callLedger = existsSync(callLedgerPath)
+    ? JSON.parse(readFileSync(callLedgerPath, "utf8"))
+    : null;
+  const callRecords = callLedger?.records ?? [];
+  const callRecordIds = callRecords.map((record) => record.statusId);
+  const callRecordUrls = callRecords.map((record) => record.statusUrl);
+  const callRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(callRecords, (record) => record.relationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const callLinks = callRecords.flatMap((record) => record.outboundLinks ?? []);
+  const callUniqueShortUrls = new Set(callLinks.map((link) => link.shortUrl));
+  const callUniqueDestinations = new Set(callLinks.map((link) => link.destinationUrl));
+  const callUniqueCallNycDestinations = new Set(
+    [...callUniqueDestinations].filter((url) => /https?:\/\/(?:www\.)?callnyc\.org\//i.test(url))
+  );
+  const callExternalDestinations = new Set(
+    [...callUniqueDestinations].filter((url) => !/https?:\/\/(?:www\.)?callnyc\.org\//i.test(url))
+  );
+  const callVisualTokenRecords = callRecords.filter((record) => record.visualTokens?.length > 0);
+  const callImageIndicatorRecords = callRecords.filter((record) =>
+    record.visualTokens?.includes("Image")
+  );
+  const callAmbiguousVisualTokenRecords = callVisualTokenRecords.filter((record) =>
+    !record.visualTokens.includes("Image")
+  );
+  const issuePathPattern = /callnyc\.org\/(cultural-affairs|economy-jobs|environment|finance|general-welfare|governmental-operations|health|housing-and-buildings|immigration|land-use-and-zoning|legal-services|parks|quality-of-life|sanitation|transportation|utilities)\//i;
+  const callRecognitionRecords = callRecords.filter(
+    (record) => record.relationship === "account-post" &&
+      record.outboundLinks?.some((link) => issuePathPattern.test(link.destinationUrl))
+  );
+  const callInstitutionalHandles = new Set(
+    callFull.institutionalHandlesExcluded.map((handle) => handle.toLowerCase())
+  );
+  const callRecognitionMemberHandlesByRecord = callRecognitionRecords.map((record) =>
+    record.mentionedHandles?.filter(
+      (handle) => !callInstitutionalHandles.has(handle.toLowerCase())
+    ) ?? []
+  );
+  const callRecognitionHandles = new Set(callRecognitionMemberHandlesByRecord.flat());
+  const callRecognitionHandleList = [...callRecognitionHandles]
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const callLedgerRecognitionHandleList = [
+    ...(callLedger?.aggregateFindings?.councilMemberHandlesNamedInRecognitionsList ?? [])
+  ].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const callCorpusRecognitionHandleList = [
+    ...callNycCorpusFindings.councilMemberHandlesNamedInRecognitionsList
+  ].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+  const callRecognitionIssuePages = new Set(
+    callRecognitionRecords.flatMap((record) =>
+      record.outboundLinks
+        .map((link) => link.destinationUrl)
+        .filter((url) => issuePathPattern.test(url))
+    )
+  );
+  const callRecognitionCategories = new Set(
+    [...callRecognitionIssuePages].map((url) => url.match(issuePathPattern)?.[1]).filter(Boolean)
+  );
+  const callFullSources = callNycSocialCorpus.sources.map((source) => sourceById.get(source.id));
+  const callFullClaims = callNycSocialCorpus.claims.map((claim) => claimById.get(claim.id));
+  const callFullInquiries = callNycSocialCorpus.researchInquiries.map((inquiry) => inquiryById.get(inquiry.id));
+  const callFullActiveClaim = claimById.get(callFull.activeClaimId);
+  const callFullHeldClaims = callFull.heldClaimIds.map((id) => claimById.get(id));
+  const callFullAuditSource = sourceById.get(callFull.auditSourceId);
+  const callFullRoleSource = sourceById.get(callFull.roleSourceId);
+  const callFullInquiry = inquiryById.get("INQ-CALLNYC-FULL-POPULATION-RECOVERY-2026");
+  const callFullProof = knowledgeBank.proofCoverageTargets.find(
+    (target) => target.proofId === callFull.proofId
+  );
+  const callFullPage = knowledgeBank.pages.find((page) => page.id === "callnyc");
+  const callFullOccurrence = callFullPage?.occurrences.find(
+    (occurrence) => occurrence.id === "social-engagement-architecture"
+  );
+  const callLedgerText = callLedger ? JSON.stringify(callLedger) : "";
+  const callFullPopulationComplete = Boolean(
+    callLedger &&
+      callLedger.reviewedAt === "2026-07-14" &&
+      callLedger.sourceProfile === "https://x.com/CallNYCapp" &&
+      callLedger.method?.authenticatedReadOnlyReview === true &&
+      callLedger.method?.freshVerification?.ledgerUrlSetMatchedFreshUnion === true &&
+      callLedger.method?.freshVerification?.postsTabUniqueStatusUrls === callFull.expectedPostsTabCount &&
+      callLedger.method?.freshVerification?.repliesTabUniqueStatusUrls === callFull.expectedUniqueItems &&
+      callLedger.method?.freshVerification?.dateSlicedSearchAuthoredStatusesRecovered === callNycPopulationAudit.dateSlicedSearchAuthoredStatusesRecovered &&
+      callLedger.populationAudit.profileCountObserved === callFull.expectedProfileCount &&
+      callLedger.populationAudit.postsTabItemsRecovered === callFull.expectedPostsTabCount &&
+      callLedger.populationAudit.uniqueItemsRecovered === callFull.expectedUniqueItems &&
+      callLedger.populationAudit.accountPostsRecovered === callFull.expectedAccountPosts &&
+      callLedger.populationAudit.accountRepliesRecovered === callFull.expectedAccountReplies &&
+      callLedger.populationAudit.accountAuthoredStatusesRecovered === callFull.expectedAuthoredStatuses &&
+      callLedger.populationAudit.repostsRecovered === callFull.expectedReposts &&
+      callLedger.populationAudit.unresolvedPopulationSlots === callFull.expectedUnresolvedSlots &&
+      callLedger.populationAudit.dispositionTotal === callFull.expectedProfileCount &&
+      callLedger.populationAudit.uniqueItemsRecovered + callLedger.populationAudit.unresolvedPopulationSlots === callLedger.populationAudit.profileCountObserved &&
+      callRecords.length === callFull.expectedUniqueItems &&
+      new Set(callRecordIds).size === callFull.expectedUniqueItems &&
+      new Set(callRecordUrls).size === callFull.expectedUniqueItems &&
+      callRecords.every((record) =>
+        /^\d+$/.test(record.statusId) &&
+          record.statusUrl.endsWith(`/status/${record.statusId}`) &&
+          ["account-post", "account-reply", "repost"].includes(record.relationship) &&
+          Array.isArray(record.recoveredFrom) && record.recoveredFrom.length &&
+          typeof record.text === "string" && record.text.length &&
+          Array.isArray(record.mentionedHandles) &&
+          Array.isArray(record.hashtags) &&
+          !("mediaUrls" in record) &&
+          !("mediaIndicators" in record) &&
+          Array.isArray(record.visualTokens) &&
+          record.visualTokens.every((token) =>
+            typeof token === "string" && token.length > 0
+          ) &&
+          Array.isArray(record.outboundLinks) &&
+          record.outboundLinks.every((link) =>
+            /^https:\/\/t\.co\//.test(link.shortUrl) && /^https?:\/\//.test(link.destinationUrl)
+          )
+      ) &&
+      callRelationshipCounts["account-post"] === callFull.expectedAccountPosts &&
+      callRelationshipCounts["account-reply"] === callFull.expectedAccountReplies &&
+      callRelationshipCounts.repost === callFull.expectedReposts &&
+      callLedger.unresolvedItems.length === callFull.expectedUnresolvedSlots &&
+      new Set(callLedger.unresolvedItems.map((item) => item.slot)).size === callFull.expectedUnresolvedSlots &&
+      callLedger.unresolvedItems.every((item) =>
+        item.status === "not-recovered" && /no status ID or content was recovered/i.test(item.note)
+      ) &&
+      callRecognitionRecords.length === callFull.expectedIssueRecognitionPosts &&
+      callRecognitionMemberHandlesByRecord.every((handles) => handles.length === 1) &&
+      callRecognitionHandles.size === callFull.expectedCouncilMemberHandles &&
+      JSON.stringify(callRecognitionHandleList) === JSON.stringify(callLedgerRecognitionHandleList) &&
+      JSON.stringify(callRecognitionHandleList) === JSON.stringify(callCorpusRecognitionHandleList) &&
+      callFull.institutionalHandlesExcluded.every(
+        (handle) => !callRecognitionHandles.has(handle)
+      ) &&
+      callRecognitionIssuePages.size === callFull.expectedUniqueIssuePages &&
+      callRecognitionCategories.size === callFull.expectedIssueCategories &&
+      callLinks.length === callFull.expectedShortUrlOccurrences &&
+      callUniqueShortUrls.size === callFull.expectedUniqueShortUrls &&
+      callUniqueDestinations.size === callFull.expectedResolvedDestinations &&
+      callUniqueCallNycDestinations.size === callFull.expectedCallNycDestinations &&
+      callExternalDestinations.size === callFull.expectedExternalDestinations &&
+      callVisualTokenRecords.length === callFull.expectedVisualTokenRecords &&
+      callImageIndicatorRecords.length === callFull.expectedImageIndicatorRecords &&
+      callAmbiguousVisualTokenRecords.length === callFull.expectedAmbiguousVisualTokenRecords &&
+      callNycCorpusFindings.visualTokenRecords === callFull.expectedVisualTokenRecords &&
+      callNycCorpusFindings.imageIndicatorRecords === callFull.expectedImageIndicatorRecords &&
+      callNycCorpusFindings.ambiguousVisualTokenRecords === callFull.expectedAmbiguousVisualTokenRecords &&
+      callNycCorpusFindings.issueRecognitionPosts === callFull.expectedIssueRecognitionPosts &&
+      callNycCorpusFindings.councilMemberHandlesNamedInRecognitions === callFull.expectedCouncilMemberHandles &&
+      callNycPopulationAudit.unresolvedPopulationSlots === callFull.expectedUnresolvedSlots &&
+      callNycSocialCorpus.sources.length === callFull.expectedSourceCount &&
+      callNycSocialCorpus.observations.length === callFull.expectedObservationCount &&
+      callNycSocialCorpus.claims.length === callFull.expectedClaimCount &&
+      callNycSocialCorpus.researchInquiries.length === callFull.expectedInquiryCount &&
+      callFullSources.every((source) =>
+        source?.visibility === "public" && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      callFullAuditSource?.kind === "research-run" &&
+      callFullAuditSource.canonicalUrl?.includes(callFull.ledgerPath) &&
+      callFullAuditSource.doesNotEstablish.some((boundary) => /platform export/i.test(boundary)) &&
+      callFullAuditSource.doesNotEstablish.some((boundary) => /visual media asset preservation/i.test(boundary)) &&
+      callFullRoleSource?.canonicalUrl?.endsWith("/status/710150246781882369") &&
+      callFullActiveClaim?.status === "confirmed-with-boundary" &&
+      callFullActiveClaim.projections.some((projection) =>
+        projection.status === "active" &&
+          projection.surfaces.includes("/work/callnyc") &&
+          /Jamie paired CallNYC's issue pathways/i.test(projection.text) &&
+          /71 data-derived posts/i.test(projection.text) &&
+          /61 issue pages/i.test(projection.text) &&
+          /26 sitting Council-member accounts/i.test(projection.text)
+      ) &&
+      callFullActiveClaim.boundaries.some((boundary) => /intended institutional audience/i.test(boundary)) &&
+      callFullActiveClaim.antiClaims.some((antiClaim) => /Twenty-six Council members engaged/i.test(antiClaim)) &&
+      callFullHeldClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      callFullInquiry?.resultStatus === "partially-recovered" &&
+      callFullInquiry.findings.some((finding) => /47 of 92/i.test(finding)) &&
+      callFullInquiry.limitations.some((limitation) => /not recovered rather than inferred/i.test(limitation)) &&
+      callFullInquiry.limitations.some((limitation) => /Visual tokens are not archived media URLs or assets/i.test(limitation)) &&
+      callFullProof?.status === "source-backed" &&
+      callFullProof.sourceIds.includes(callFull.auditSourceId) &&
+      callFullOccurrence?.claimId === callFull.activeClaimId &&
+      callFullOccurrence.sourceIds.includes(callFull.auditSourceId) &&
+      callFullPage?.sourceOrder.includes(callFull.auditSourceId) &&
+      callnycMdx.includes(callFull.activeClaimId) &&
+      callnycMdx.includes("social-engagement-architecture") &&
+      callFullDocumentation.includes("107-URL union matched") &&
+      callFullDocumentation.includes("not a platform export") &&
+      /Media assets and their public locators were not\s+archived/.test(callFullDocumentation) &&
+      /Eighty-two\s+records carry the literal token `Image`/.test(callFullDocumentation) &&
+      callFullDocumentation.includes("not interpreted as proof of attached media") &&
+      callFullDocumentation.includes("`@NYCHA` are not counted as Council members") &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(callLedgerText) &&
+      publicRegistryText.includes(callFull.activeClaimId) &&
+      callFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -730,8 +930,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       criterionId: "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION",
       score: score(socialArchiveComplete),
       evidence: [socialArchiveComplete
-        ? `Five authenticated project-account inventories produced ${socialMediaArchiveProduction.sources.length} bounded sources, a seven-member CallNYC count, an at-least-five-member NYC Artist Coalition floor, one inspectable public claim, and six held claims with collective-authorship and completeness limits`
+        ? `Five authenticated project-account inventories produced ${socialMediaArchiveProduction.sources.length} bounded sources, an eight-member CallNYC count, an at-least-five-member NYC Artist Coalition floor, one inspectable public claim, and six held claims with collective-authorship and completeness limits`
         : "Social-account identity, recovered counts, official-at-date verification, outreach distinction, collective authorship, excluded-handle boundaries, selected projections, held depth, public safety, or documentation is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-CALLNYC-FULL-POPULATION",
+      score: score(callFullPopulationComplete),
+      evidence: [callFullPopulationComplete
+        ? `All ${callFull.expectedProfileCount} observed profile-count slots are dispositioned through ${callRecords.length} unique item records and ${callLedger.unresolvedItems.length} explicit unresolved slots; the ledger preserves ${callUniqueShortUrls.size} unique short URLs, ${callRecognitionRecords.length} recognition posts, ${callRecognitionIssuePages.size} issue pages, ${callRecognitionCategories.size} categories, and ${callRecognitionHandles.size} intended Council-member accounts without converting outreach into response`
+        : "CallNYC ledger reconciliation, item uniqueness, relationship counts, URL inventory, stakeholder derivation, unresolved-slot boundaries, source maturation, held claims, public projection, proof coverage, or public safety is incomplete"]
     }
   ];
 

@@ -1,4 +1,5 @@
 import { historicalKnowledge } from "./historical-knowledge.ts";
+import { callNycSocialCorpus } from "./callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
@@ -34,6 +35,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems,
+    ...callNycSocialCorpus.intakeItems,
     ...socialMediaArchiveProduction.intakeItems
   ],
   observations: [
@@ -60,6 +62,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations,
+    ...callNycSocialCorpus.observations,
     ...socialMediaArchiveProduction.observations
   ],
   sources: [
@@ -213,6 +216,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources,
+    ...callNycSocialCorpus.sources,
     ...socialMediaArchiveProduction.sources
   ],
   claims: [
@@ -319,6 +323,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims,
+    ...callNycSocialCorpus.claims,
     ...socialMediaArchiveProduction.claims
   ],
   researchInquiries: [
@@ -365,6 +370,7 @@ const knowledgeBankInput = {
     ...kcTownHallFunding.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries,
+    ...callNycSocialCorpus.researchInquiries,
     ...socialMediaArchiveProduction.researchInquiries
   ],
   proofCoverageTargets: [...proofCoverageTargets],
@@ -386,7 +392,9 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-PROJECT-MARK",
       "SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08",
       "SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14",
-      "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"
+      "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
+      "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -397,6 +405,7 @@ const knowledgeBankInput = {
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "school-of-data-feature", claimId: "CLM-CALLNYC-SCHOOL-OF-DATA-FEATURE", projection: "case-study", sourceIds: ["SRC-CALLNYC-SCHOOL-OF-DATA-2016-03-08"] },
       { id: "council-account-engagement", claimId: "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-X-AUDIT-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-14", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"] },
+      { id: "social-engagement-architecture", claimId: "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE", projection: "case-study", sourceIds: ["SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026", "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369", "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }, {

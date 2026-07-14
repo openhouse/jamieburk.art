@@ -313,11 +313,11 @@
       "expectedAccountCount": 5,
       "expectedIntakeCount": 6,
       "expectedObservationCount": 13,
-      "expectedSourceCount": 29,
+      "expectedSourceCount": 30,
       "expectedClaimCount": 7,
       "expectedInquiryCount": 3,
       "accountSnapshots": {
-        "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 86, "recoveredAuthoredPosts": 72 },
+        "@CallNYCapp": { "profilePosts": 110, "recoveredStatuses": 107, "recoveredAuthoredPosts": 92 },
         "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": null, "recoveredAuthoredPosts": null },
         "@wowlist": { "profilePosts": 38, "recoveredStatuses": 37, "recoveredAuthoredPosts": 21 },
         "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
@@ -336,11 +336,12 @@
         "SRC-X-AUDIT-NYCAC-ENGAGEMENT-2026-07-14"
       ],
       "officialRosterSourceId": "SRC-NYC-OPEN-DATA-COUNCIL-MEMBERS-1999-2025",
-      "callnycCouncilMemberCount": 7,
+      "callnycCouncilMemberCount": 8,
       "callnycCouncilPostIds": [
         "SRC-X-CALLNYC-PETER-KOO-2016-04-27",
         "SRC-X-CALLNYC-STEVEN-MATTEO-2016-05-03",
         "SRC-X-CALLNYC-RUBEN-WILLS-2016-05-17",
+        "SRC-X-CALLNYC-YDANIS-RODRIGUEZ-2016-05-18",
         "SRC-X-CALLNYC-ROSIE-MENDEZ-2016-05-19",
         "SRC-X-CALLNYC-HELEN-ROSENTHAL-2016-09-27",
         "SRC-X-CALLNYC-MATHIEU-EUGENE-2016-10-04",
@@ -374,6 +375,44 @@
       "callnycOccurrenceId": "council-account-engagement",
       "excludedHandles": ["@fairrentnyc", "@sundaydinnernyc"],
       "documentationPath": "docs/knowledge-bank/projects/social-media-archive-production-2026-07-14.md"
+    },
+    "callNycFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/callnyc-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-callnyc-full-population-social-corpus.md",
+      "expectedProfileCount": 110,
+      "expectedPostsTabCount": 106,
+      "expectedUniqueItems": 107,
+      "expectedAccountPosts": 86,
+      "expectedAccountReplies": 6,
+      "expectedAuthoredStatuses": 92,
+      "expectedReposts": 15,
+      "expectedUnresolvedSlots": 3,
+      "expectedIssueRecognitionPosts": 71,
+      "expectedCouncilMemberHandles": 26,
+      "institutionalHandlesExcluded": ["@NYCCouncil", "@NYCHousing", "@NYCHA"],
+      "expectedUniqueIssuePages": 61,
+      "expectedIssueCategories": 16,
+      "expectedShortUrlOccurrences": 98,
+      "expectedUniqueShortUrls": 84,
+      "expectedResolvedDestinations": 76,
+      "expectedCallNycDestinations": 63,
+      "expectedExternalDestinations": 13,
+      "expectedVisualTokenRecords": 87,
+      "expectedImageIndicatorRecords": 82,
+      "expectedAmbiguousVisualTokenRecords": 5,
+      "expectedSourceCount": 10,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 3,
+      "expectedInquiryCount": 3,
+      "activeClaimId": "CLM-CALLNYC-SOCIAL-ENGAGEMENT-ARCHITECTURE",
+      "heldClaimIds": [
+        "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENT",
+        "CLM-CALLNYC-PUBLIC-SOURCE-CIRCULATION"
+      ],
+      "auditSourceId": "SRC-X-CALLNYC-FULL-POPULATION-AUDIT-2026",
+      "roleSourceId": "SRC-X-CALLNYC-JAMIE-ROLE-710150246781882369",
+      "repliesOnlySourceId": "SRC-X-CALLNYC-JSON-API-722837286476390401",
+      "proofId": "callnyc-public-engagement-architecture"
     }
   },
   "criteria": [
@@ -467,6 +506,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Five verified project accounts receive bounded authenticated inventories, official-at-date engagement counts, source and authorship limits, collective credit, one inspectable CallNYC projection, and held archival depth without exposing private account data or mistaking project outreach for official engagement."
+    },
+    {
+      "id": "KB-EVAL-CALLNYC-FULL-POPULATION",
+      "label": "CallNYC full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every recoverable @CallNYCApp item and posted URL is preserved in an item-level ledger; all 110 observed profile-count slots receive honest dispositions; stakeholder outreach remains distinct from reciprocal engagement; mission-relevant sources and claims mature without inflating tags, rows, links, or visible metrics into outcomes."
     }
   ],
   "hillClimb": {

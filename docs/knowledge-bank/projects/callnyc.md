@@ -40,6 +40,8 @@ product, a documented formal submission, or a documented winner.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 - Authenticated July 2026 social-account audit and official NYC Open Data
   Council-member term records.
+- A 107-record public-post ledger preserving every recoverable status, posted
+  URL, relationship class, and three explicit unresolved profile-count slots.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
@@ -50,14 +52,15 @@ formally presented CallNYC.
 
 ## Council-account engagement
 
-A bounded authenticated review recovered posts from seven people who were
+A bounded authenticated review recovered posts from eight people who were
 sitting Council members on the post dates: Peter Koo, Steven Matteo, Ruben
-Wills, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin. The
+Wills, Ydanis Rodriguez, Rosie Mendez, Helen Rosenthal, Mathieu Eugene, and Margaret Chin. The
 interaction set includes replies, quote-posts, an explicit repost, and an
 independently authored link to CallNYC.org.
 
-The review recovered 86 unique visible status records from a profile reporting
-110 posts. The count is therefore a recovered floor, not proof of endorsement,
+The full-population review recovered 107 unique public items from a profile
+reporting 110 posts and retained three count slots as not recovered. The count
+is therefore a recovered floor, not proof of endorsement,
 formal adoption, office use, or complete lifetime engagement. CallNYC posts
 tagging members were classified as project outreach rather than engagement by
 the tagged official. Carlina Rivera's 2016 post remains public engagement
@@ -67,6 +70,26 @@ Council service.
 See
 [social-media-archive-production-2026-07-14.md](social-media-archive-production-2026-07-14.md)
 for the project-account inventory, status links, method, and limitations.
+
+## Public-engagement architecture
+
+The recoverable account corpus contains 71 data-derived recognition posts
+connecting 61 issue pages across 16 constituent-service categories to 26
+sitting Council-member accounts. This makes the operating design concrete: the
+prototype did not stop at publishing issue pages; it placed those pathways into
+a public conversation with their intended institutional audience.
+
+The 26-account figure is outreach architecture, not reciprocal traction. It
+does not mean 26 members saw, replied to, used, adopted, or endorsed CallNYC.
+The separate eight-member finding above uses only member-authored public posts.
+The ledger also preserves all 84 unique recovered short URLs and 76 resolved
+destinations, including official service resources, adjacent civic-data tools,
+press, and public-interest reporting.
+
+Contemporaneous posts announced a District Profile API, a JSON endpoint for
+Council-member Twitter usernames, and issue-specific Council contact buttons.
+Those announcements remain reserve depth until the historical endpoints and
+interaction behavior are independently recovered.
 
 ## Bounded research finding
 

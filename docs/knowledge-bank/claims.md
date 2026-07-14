@@ -63,6 +63,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-11
 
+## callnyc-public-engagement-architecture - Public engagement around issue pathways
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / AI-assisted archive review
+**Public wording:** Paired CallNYC's issue pathways with a public-engagement layer: 71 data-derived posts connected 61 issue pages across 16 service categories to an intended institutional audience of 26 sitting Council-member accounts.
+**Detailed public-safe wording:** A 107-item authenticated public-account ledger documents how CallNYC connected resident-facing issue pathways to their intended institutional audience while preserving the distinction between outreach, member-authored response, and service outcomes.
+**Where to project:** CallNYC case study.
+**Why it matters:** Makes Jamie's product and implementation work legible as an operating system for public data, resident pathways, and institutional engagement rather than a static visualization.
+**Guardrail:** Treat the 26 accounts as intended audience, not reciprocal engagement; keep the separate eight-member authored-engagement floor distinct. The ledger dispositions 107 recovered items and three unresolved slots, not a complete platform export.
+**Do not say:** Twenty-six Council members engaged with or endorsed CallNYC; CallNYC helped a verified number of unique residents; the ledger is a complete X export; Jamie authored every account post.
+**Protected boundaries:** Authentication and session material, private messages and analytics, unverified historical metrics, and individual shared-account post authorship stay outside the public record.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
 **Status:** Careful
