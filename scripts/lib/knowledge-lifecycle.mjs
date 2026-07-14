@@ -371,6 +371,363 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredIcloudArchiveProduction) {
+    const required = suite.requiredIcloudArchiveProduction;
+    const requiredIntakes = required.intakeIds
+      .map((id) => bank.intakeItems.find((item) => item.id === id))
+      .filter(Boolean);
+    const requiredSources = required.sourceIds
+      .map((id) => bank.sources.find((item) => item.id === id))
+      .filter(Boolean);
+    const requiredClaims = required.claimIds
+      .map((id) => bank.claims.find((item) => item.id === id))
+      .filter(Boolean);
+
+    for (const projectId of required.projectIds) {
+      if (!projectIds.has(projectId)) {
+        add("project_context", "missing-icloud-project", `Missing ${projectId}`);
+      }
+    }
+    for (const intakeId of required.intakeIds) {
+      if (!intakeIds.has(intakeId)) {
+        add("capture_integrity", "missing-icloud-intake", `Missing ${intakeId}`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      if (!sourceIds.has(sourceId)) {
+        add("source_decomposition", "missing-icloud-source", `Missing ${sourceId}`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) {
+        add("provenance_closure", "missing-icloud-claim", `Missing ${claimId}`);
+      }
+    }
+
+    for (const url of required.publicIntakeUrls) {
+      const intake = bank.intakeItems.find((item) => item.submittedUrl === url);
+      if (!intake || intake.status !== "promoted" || intake.sensitivity !== "public-safe") {
+        add("capture_integrity", "icloud-public-intake", `Public archive lead is not promoted safely: ${url}`);
+      }
+    }
+
+    for (const intakeId of required.privateIntakeIds) {
+      const intake = bank.intakeItems.find((item) => item.id === intakeId);
+      if (!intake) continue;
+      if (
+        intake.sensitivity === "public-safe" ||
+        intake.availability !== "local-private" ||
+        !intake.protectedLocatorId ||
+        intake.submittedUrl
+      ) {
+        add("projection_restraint", "icloud-private-intake-boundary", `${intakeId} does not preserve the private archive boundary`);
+      }
+    }
+
+    for (const source of requiredSources) {
+      if (
+        source.reviewStatus !== "reviewed" ||
+        source.reviewDepth !== "close-reading" ||
+        !source.locator ||
+        !source.supportsGenerally.length ||
+        !source.doesNotEstablish.length
+      ) {
+        add("source_decomposition", "icloud-source-close-reading", `${source.id} lacks a complete close-reading record`);
+      }
+      if (source.visibility !== "public") {
+        if (
+          !source.protectedLocatorId ||
+          source.canonicalUrl ||
+          source.archiveUrl ||
+          source.assetUrl ||
+          source.preservationStatus !== "private"
+        ) {
+          add("projection_restraint", "icloud-private-source-boundary", `${source.id} exposes or misclassifies a private archive source`);
+        }
+      }
+    }
+
+    for (const claim of requiredClaims) {
+      if (!claim.evidence.length || !claim.boundaries.length || !claim.antiClaims.length) {
+        add("provenance_closure", "icloud-claim-boundary", `${claim.id} lacks evidence, boundaries, or anti-claims`);
+      }
+      if (claim.projections.some((projection) => projection.status === "active")) {
+        add("projection_restraint", "icloud-premature-projection", `${claim.id} was selected for public composition during an archival-production pass`);
+      }
+      for (const evidence of claim.evidence) {
+        const source = sourceById.get(evidence.sourceId);
+        if (source?.visibility !== "public" && (evidence.relationship !== "private-support" || evidence.renderCitation)) {
+          add("projection_restraint", "icloud-private-evidence-projection", `${claim.id} does not keep ${evidence.sourceId} private`);
+        }
+      }
+    }
+
+    for (const claimId of required.internalOnlyClaimIds) {
+      const claim = bank.claims.find((item) => item.id === claimId);
+      if (claim && claim.publicationStatus !== "internal-only") {
+        add("status_separation", "icloud-live-work-publication", `${claimId} must remain internal-only`);
+      }
+    }
+
+    const collectiveCreditClaim = bank.claims.find(
+      (item) => item.id === required.collectiveCreditClaimId
+    );
+    if (
+      collectiveCreditClaim &&
+      (!/Drew Bolton/.test(collectiveCreditClaim.internalClaim) ||
+        !/Garrett Fuselier/.test(collectiveCreditClaim.internalClaim) ||
+        !/Mary Nichols/.test(collectiveCreditClaim.internalClaim) ||
+        !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-PITCH-2010") ||
+        !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-VIMEO-2011"))
+    ) {
+      add("research_honesty", "icloud-collective-credit", `${required.collectiveCreditClaimId} loses collaborator credit or source triangulation`);
+    }
+
+    const collectivePolicyClaim = bank.claims.find(
+      (item) => item.id === required.collectivePolicyClaimId
+    );
+    if (
+      collectivePolicyClaim &&
+      (!/collective/i.test(collectivePolicyClaim.internalClaim) ||
+        !collectivePolicyClaim.antiClaims.some((item) => /alone|sole/i.test(item)))
+    ) {
+      add("research_honesty", "icloud-collective-policy-credit", `${required.collectivePolicyClaimId} converts a collective record into individual authorship`);
+    }
+
+    const proposalClaim = bank.claims.find((item) => item.id === required.proposalClaimId);
+    if (
+      proposalClaim &&
+      (!proposalClaim.boundaries.some((item) => /not completion|not.*completed|not.*client adoption/i.test(item)) ||
+        !proposalClaim.antiClaims.some((item) => /production AI memory platform/i.test(item)))
+    ) {
+      add("research_honesty", "icloud-proposal-outcome-boundary", `${required.proposalClaimId} turns an engagement design into a delivered outcome`);
+    }
+
+    const verificationInquiry = bank.researchInquiries.find(
+      (item) => item.id === required.verificationInquiryId
+    );
+    if (
+      !verificationInquiry ||
+      verificationInquiry.resultStatus !== "partially-recovered" ||
+      !verificationInquiry.limitations.some((item) => /not independent verification/i.test(item))
+    ) {
+      add("research_honesty", "icloud-job-hunt-orientation", `${required.verificationInquiryId} does not keep the job-hunt outline in its research-orientation role`);
+    }
+  }
+
+  if (suite.requiredSocialArchiveProduction) {
+    const required = suite.requiredSocialArchiveProduction;
+    for (const projectId of required.projectIds) {
+      if (!projectIds.has(projectId)) add("project_context", "missing-social-project", `Missing ${projectId}`);
+    }
+    for (const intakeId of required.intakeIds) {
+      if (!intakeIds.has(intakeId)) add("capture_integrity", "missing-social-intake", `Missing ${intakeId}`);
+    }
+    for (const sourceId of required.sourceIds) {
+      const source = sourceById.get(sourceId);
+      if (!source) {
+        add("source_decomposition", "missing-social-source", `Missing ${sourceId}`);
+      } else if (
+        !source.locator ||
+        !source.supportsGenerally.length ||
+        !source.doesNotEstablish.length ||
+        !["reviewed", "blocked"].includes(source.reviewStatus)
+      ) {
+        add("source_decomposition", "social-source-boundary", `${sourceId} lacks review scope or non-support boundaries`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      if (!claimIds.has(claimId)) add("provenance_closure", "missing-social-claim", `Missing ${claimId}`);
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) add("research_honesty", "missing-social-inquiry", `Missing ${inquiryId}`);
+    }
+
+    for (const population of required.completePopulations) {
+      const claim = bank.claims.find((item) => item.id === population.claimId);
+      const profile = sourceById.get(population.profileSourceId);
+      const corpus = sourceById.get(population.corpusSourceId);
+      const expected = String(population.count);
+      if (
+        !claim ||
+        !profile ||
+        !corpus ||
+        !claim.internalClaim.includes(expected) ||
+        !profile.publicNote.includes(expected) ||
+        !corpus.publicNote.includes(expected) ||
+        !claim.evidence.some((item) => item.sourceId === population.profileSourceId) ||
+        !claim.evidence.some((item) => item.sourceId === population.corpusSourceId)
+      ) {
+        add("capture_integrity", "social-population-reconciliation", `${population.claimId} does not reconcile its complete current population`);
+      }
+      if (
+        claim &&
+        (claim.publicationStatus !== "internal-only" || claim.projections.some((projection) => projection.status === "active"))
+      ) {
+        add("projection_restraint", "social-population-as-impact", `${population.claimId} turns a current-account inventory into public impact copy`);
+      }
+      if (
+        corpus &&
+        (corpus.visibility === "public" ||
+          corpus.preservationStatus !== "private" ||
+          !corpus.protectedLocatorId ||
+          corpus.canonicalUrl ||
+          corpus.archiveUrl ||
+          corpus.assetUrl)
+      ) {
+        add("projection_restraint", "social-corpus-boundary", `${population.corpusSourceId} exposes the private research corpus`);
+      }
+    }
+
+    const callRequired = required.callNyc;
+    const callInquiry = bank.researchInquiries.find((item) => item.id === callRequired.inquiryId);
+    const callClaim = bank.claims.find((item) => item.id === callRequired.amplificationClaimId);
+    const callCorpus = sourceById.get("SRC-X-CALLNYC-CORPUS-2026");
+    const callNumbers = [callRequired.profileCount, callRequired.recoveredCount]
+      .map((value) => String(value));
+    if (
+      !callInquiry ||
+      callInquiry.resultStatus !== "partially-recovered" ||
+      !callNumbers.every((value) => JSON.stringify(callInquiry).includes(value)) ||
+      !callInquiry.limitations.some((item) => /gap|unavailable|100-percent/i.test(item))
+    ) {
+      add("research_honesty", "callnyc-population-gap", `${callRequired.inquiryId} does not preserve the 107-of-110 retrieval boundary`);
+    }
+    if (
+      callCorpus &&
+      (callCorpus.visibility === "public" || !callCorpus.protectedLocatorId || !callCorpus.doesNotEstablish.some((item) => /three unavailable posts/i.test(item)))
+    ) {
+      add("projection_restraint", "callnyc-corpus-boundary", "CallNYC corpus must remain private and explicitly incomplete");
+    }
+    const callEvidenceIds = new Set(callClaim?.evidence.map((item) => item.sourceId) ?? []);
+    if (
+      !callClaim ||
+      !/^At least four\b/.test(callClaim.internalClaim) ||
+      ![...callRequired.postSourceIds, ...callRequired.personSourceIds].every((id) => callEvidenceIds.has(id)) ||
+      !callClaim.boundaries.some((item) => /likes|complete engagement roster|private analytics/i.test(item)) ||
+      !callClaim.antiClaims.some((item) => /formally endorsed|official product|adopted/i.test(item))
+    ) {
+      add("research_honesty", "callnyc-amplification-boundary", `${callRequired.amplificationClaimId} overstates or under-sources Council-member amplification`);
+    }
+
+    const nycRequired = required.nycArtC;
+    const nycClaim = bank.claims.find((item) => item.id === nycRequired.negativeClaimId);
+    const nycInquiry = bank.researchInquiries.find((item) => item.id === nycRequired.inquiryId);
+    const nycMemory = bank.intakeItems.find((item) => item.id === nycRequired.memoryIntakeId);
+    const nycRoleInquiry = bank.researchInquiries.find((item) => item.id === nycRequired.roleInquiryId);
+    const nycText = JSON.stringify([nycClaim, nycInquiry]).replaceAll(",", "");
+    if (
+      !nycClaim ||
+      nycClaim.status !== "not-recovered" ||
+      nycClaim.publicationStatus !== "internal-only" ||
+      nycClaim.projections.some((projection) => projection.status === "active") ||
+      ![nycRequired.profileCount, nycRequired.recoveredCount, nycRequired.gap].every((value) => nycText.includes(String(value))) ||
+      !nycClaim.antiClaims.some((item) => /full.*population|population-wide/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-population-boundary", `${nycRequired.negativeClaimId} does not preserve the incomplete 748-of-5124 recovery`);
+    }
+    if (
+      !nycInquiry ||
+      nycInquiry.resultStatus !== "partially-recovered" ||
+      !nycInquiry.limitations.some((item) => /official account archive|API export/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-recovery-method", `${nycRequired.inquiryId} lacks the official-export next step`);
+    }
+    if (
+      !nycMemory ||
+      nycMemory.status !== "deferred" ||
+      nycMemory.claimIds.length ||
+      !nycRoleInquiry ||
+      !nycRoleInquiry.limitations.some((item) => /Olympia Kazi|account contributors|multi-author/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-account-credit", "NYCArtC account-establishment memory must remain deferred and preserve multi-author credit");
+    }
+
+    const kcCorpus = sourceById.get("SRC-X-KC-TOWN-HALL-CORPUS-2026");
+    if (!kcCorpus?.doesNotEstablish.some((item) => /mentions were replies or endorsements/i.test(item))) {
+      add("research_honesty", "social-mention-engagement", "Project-account mentions must not be counted as stakeholder engagement");
+    }
+  }
+
+  if (suite.requiredGoogleDriveArchiveProduction) {
+    const required = suite.requiredGoogleDriveArchiveProduction;
+    for (const intakeId of required.intakeIds) {
+      const intake = bank.intakeItems.find((item) => item.id === intakeId);
+      if (!intake) {
+        add("capture_integrity", "missing-drive-intake", `Missing ${intakeId}`);
+      } else if (
+        intake.sensitivity === "public-safe" ||
+        intake.availability !== "local-private" ||
+        !intake.protectedLocatorId ||
+        intake.submittedUrl
+      ) {
+        add("projection_restraint", "drive-private-intake-boundary", `${intakeId} exposes private Shared Drive context`);
+      }
+    }
+    for (const sourceId of required.sourceIds) {
+      const source = sourceById.get(sourceId);
+      if (!source) {
+        add("source_decomposition", "missing-drive-source", `Missing ${sourceId}`);
+      } else if (
+        source.visibility === "public" ||
+        source.preservationStatus !== "private" ||
+        !source.protectedLocatorId ||
+        source.canonicalUrl ||
+        source.archiveUrl ||
+        source.assetUrl
+      ) {
+        add("projection_restraint", "drive-private-source-boundary", `${sourceId} exposes a Drive identifier, URL, or private artifact`);
+      }
+    }
+    for (const claimId of required.claimIds) {
+      const claim = bank.claims.find((item) => item.id === claimId);
+      if (!claim) {
+        add("provenance_closure", "missing-drive-claim", `Missing ${claimId}`);
+      } else if (
+        !claim.evidence.length ||
+        claim.evidence.some((item) => item.relationship !== "private-support" || item.renderCitation) ||
+        claim.projections.some((projection) => projection.status === "active")
+      ) {
+        add("projection_restraint", "drive-claim-projection", `${claimId} does not keep private evidence out of public composition`);
+      }
+    }
+    for (const inquiryId of required.inquiryIds) {
+      if (!inquiryIds.has(inquiryId)) add("research_honesty", "missing-drive-inquiry", `Missing ${inquiryId}`);
+    }
+
+    const residency = bank.claims.find((item) => item.id === required.residencyClaimId);
+    if (
+      !residency ||
+      !/proposal review/.test(residency.internalClaim) ||
+      !/space configuration/.test(residency.internalClaim) ||
+      !residency.boundaries.some((item) => /participant identity|access instructions/i.test(item))
+    ) {
+      add("research_honesty", "drive-residency-boundary", `${required.residencyClaimId} loses operational scope or privacy limits`);
+    }
+    const wowlistVideo = sourceById.get(required.wowlistVideoSourceId);
+    if (wowlistVideo && wowlistVideo.reviewStatus !== "blocked") {
+      add("source_decomposition", "drive-unreviewed-video", `${required.wowlistVideoSourceId} must remain blocked pending transcription and visual review`);
+    }
+    const fairRentMedia = sourceById.get(required.fairRentMediaSourceId);
+    if (
+      !fairRentMedia?.media ||
+      fairRentMedia.media.rightsStatus !== "permission-needed" ||
+      fairRentMedia.media.consentStatus !== "review-needed" ||
+      fairRentMedia.media.publicDisplayStatus !== "hold"
+    ) {
+      add("projection_restraint", "drive-media-rights", `${required.fairRentMediaSourceId} lost its rights, consent, or display hold`);
+    }
+    const sundayDinner = bank.claims.find((item) => item.id === required.sundayDinnerClaimId);
+    if (
+      !sundayDinner ||
+      !sundayDinner.internalClaim.includes("33") ||
+      !sundayDinner.boundaries.some((item) => /not an event|event.*count/i.test(item)) ||
+      !sundayDinner.antiClaims.some((item) => /33 Zoom events/i.test(item))
+    ) {
+      add("research_honesty", "drive-asset-event-boundary", `${required.sundayDinnerClaimId} converts stored assets into event counts`);
+    }
+  }
+
   for (const claim of bank.claims) {
     if (!projectIds.has(claim.project)) add("project_context", "unknown-project", `${claim.id} references ${claim.project}`);
     if (!claim.evidence.length && !["not-recovered", "disallowed"].includes(claim.status)) {

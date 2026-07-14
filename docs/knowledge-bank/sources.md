@@ -91,6 +91,41 @@ the campaign, measures reach, or proves policy causality. The current Fair Rent
 NYC domain no longer exposes the historical Press section, so the current live
 check and the recovered 2021 archive are separate intake records.
 
+## iCloud Teams Archival Production
+
+The July 14, 2026 pass closely reviewed Jamie Projects History, CRS, and
+job-hunt. It promoted five public sources and represented six private artifacts
+only through public-safe metadata and opaque protected locators. See the
+[research note](research/icloud-teams-archival-production-2026-07.md) for the
+source list, claim palette, method, and limits.
+
+Public creative records can directly support bounded claims. Private working
+plans, collaboration records, research briefs, and proposals can support
+internal or qualified claims, but their paths and contents remain outside the
+repository. A job-search synthesis remains a research map rather than evidence.
+
+## Social Media Archival Production
+
+The July 14, 2026 authenticated pass reconciled the complete current visible
+populations for @urbanhermit (434 of 434), @wowlist (38 of 38), and @KCTownHall
+(183 of 183). It recovered 107 of 110 @CallNYCApp records and 748 of 5,124
+@NYCArtC records; the unrecovered populations remain explicit research gaps.
+
+Public profile and selected-post records support account identity, chronology,
+linked-source discovery, and visible stakeholder response. Private research
+corpora support reconciliation and pattern analysis but are not renderable.
+Post count is not reach, a mention is not engagement, and a repost or direct
+share is not formal endorsement. See the [research note](research/social-media-archival-production-2026-07.md).
+
+## Google Drive Shared Drives Archival Production
+
+The July 14, 2026 bounded Drive pass represented four private artifacts through
+public-safe metadata and opaque protected locators: a 196 Artists Residency
+onboarding workflow, a WOW List member-meeting video, Fair Rent NYC event
+visuals, and a Sunday Dinner Zoom archive. No Drive ID, URL, raw artifact,
+participant name, or access instruction is stored in the repository. See the
+[research note](research/google-drive-shared-drives-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

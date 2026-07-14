@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-chad-editor-r9",
+  "judgeId": "codex-independent-chad-editor-r10",
   "lens": "chad-editorial",
-  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
-  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
+  "candidate": "sha256:6b5b442fdcc2e69462622e9036bb60049cde4c61a5a43aa8f437b8480b8b5e2e",
+  "contract": "sha256:87c7aa72c9f3d138673b4c3bb79a4de29c544a7909866e8df98e0636046f0e1c",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -18,56 +18,17 @@
     "operational_confidence": 3
   },
   "evidence": [
-    {
-      "rubric": "role_clarity",
-      "route": "/",
-      "observation": "The first viewport names Jamie, the Technical Project Manager target, his operating-structure value, and direct application actions."
-    },
-    {
-      "rubric": "role_fit",
-      "route": "/work/technical-operations",
-      "observation": "The operations map connects Jamie's work directly to delivery coordination, risk surfacing, dependencies, onboarding, reporting, and durable handoffs."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "Jamie's attributed planning and presenter roles remain distinct from Board and Council actions; no personal cause is assigned."
-    },
-    {
-      "rubric": "citational_care",
-      "route": "/work/kc-town-hall",
-      "observation": "Separate citations support the role account, presenter record, four-member Board recommendation, Council adoption, and appropriation, each with explicit limits."
-    },
-    {
-      "rubric": "reader_effort",
-      "route": "/work/fair-rent-nyc",
-      "observation": "The case is structured and scannable, but its long operating record and extensive source notes require more reading than an exceptional one-pass surface."
-    },
-    {
-      "rubric": "chad_lens",
-      "route": "/work/kc-town-hall",
-      "observation": "The page states the Council appropriation directly, ends with the no-disbursement boundary, and omits the later administrative disposition from the page, registry, and artifact caption."
-    },
-    {
-      "rubric": "visual_evidence",
-      "route": "/work",
-      "observation": "Project evidence remains primarily textual; approved visual evidence remains the declared application-stage deferral."
-    },
-    {
-      "rubric": "responsive_quality",
-      "route": "candidate-bound browser evidence",
-      "observation": "Ten routes returned 200 without overflow, all 24 traversed controls displayed focus, citation backlinks worked, and 200%-equivalent reflow passed."
-    },
-    {
-      "rubric": "sharing_quality",
-      "route": "/resume",
-      "observation": "Canonical, social, resume-download, email, LinkedIn, and GitHub paths are present; staging defaults keep this below exceptional."
-    },
-    {
-      "rubric": "operational_confidence",
-      "route": "/contact",
-      "observation": "Candidate-bound route, accessibility, citation, metadata, contact, and resume checks pass; production controls remain deferred."
-    }
+    { "rubric": "role_clarity", "route": "/", "observation": "The opening names Jamie, the Technical Project Manager target, his operating-structure value, and direct paths to selected work, the resume, and contact." },
+    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page translates Jamie's experience into delivery coordination, requirements, risk surfacing, cross-functional dependencies, onboarding, reporting, documentation, and durable handoffs." },
+    { "rubric": "proof_defensibility", "route": "/work/kc-town-hall", "observation": "The chronology distinguishes Jamie's attributed planning and presenter roles from the Board recommendation and Council appropriation, then states that appropriation does not establish receipt, expenditure, or completion." },
+    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "Separate source-backed claims preserve the Council's attributed CouncilStat wording, Jamie's independent follow-on development, recovered event branding, and the archived unofficial-service boundary." },
+    { "rubric": "reader_effort", "route": "/work/fair-rent-nyc", "observation": "Headings and direct claims make the case navigable, but the long operating record and seventeen references require more reading than an exceptional one-pass application surface." },
+    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "Jamie is visible as a builder and steward of documentation, campaign websites, coordination systems, and public materials, while coalition accomplishments and institutional actions retain collective credit." },
+    { "rubric": "visual_evidence", "route": "/work", "observation": "The portfolio remains predominantly textual and does not yet provide an approved inspectable project screenshot or primary artifact image; this is explicitly allowed to remain deferred for application readiness." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The HTML positioning and approved PDF reinforce the same technical project management, product operations, implementation, civic systems, and documentation history; the CallNYC chronology uses the narrower CouncilStat wording." },
+    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound browser evidence reports no overflow across ten desktop, mobile, and 200%-equivalent route checks, visible focus on all twenty-four traversed controls, and working citation targets and backlinks." },
+    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical and social metadata, resume download, email, LinkedIn, GitHub, and contact paths are present and trustworthy; verification still uses staging metadata defaults." },
+    { "rubric": "operational_confidence", "route": "/api/health", "observation": "Candidate-bound repository, public-safety, citation, route, resume, and browser checks pass; production deploy verification, rollback evidence, indexing approval, and monitoring remain explicitly deferred." }
   ],
   "regressions": [],
   "highestValueFailure": null,

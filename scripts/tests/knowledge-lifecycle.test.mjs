@@ -113,7 +113,7 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 12);
+  assert.equal(unused.length, 15);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -159,8 +159,13 @@ test("campaign press corpus preserves every placement and deduplicates sources",
 });
 
 test("press article metadata is reviewed but cannot silently support claims", () => {
+  const pressSourceIds = new Set(
+    knowledgeBank.pressCollections.flatMap((collection) =>
+      collection.articles.map((article) => article.sourceId)
+    )
+  );
   const metadataSources = knowledgeBank.sources.filter(
-    (source) => source.reviewDepth === "metadata"
+    (source) => pressSourceIds.has(source.id) && source.reviewDepth === "metadata"
   );
   assert.equal(metadataSources.length, 41);
   assert.equal(metadataSources.every((source) => source.reviewStatus === "reviewed"), true);
@@ -382,6 +387,202 @@ test("KC Town Hall transition memory remains deferred and outside public composi
   assert.equal(result.findings.some((item) => item.code === "kc-disposition-public-conclusion"), true);
 });
 
+test("iCloud Teams archival production covers all required archives and records", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  assert.deepEqual(required.archiveNames, ["Jamie Projects History", "CRS", "job-hunt"]);
+  assert.equal(required.intakeIds.length, 11);
+  assert.equal(required.sourceIds.length, 11);
+  assert.equal(required.claimIds.length, 9);
+  for (const id of required.projectIds) {
+    assert.equal(knowledgeBank.projects.some((item) => item.id === id), true, id);
+  }
+  for (const id of required.intakeIds) {
+    const intake = knowledgeBank.intakeItems.find((item) => item.id === id);
+    assert.ok(intake, id);
+    assert.equal(intake.status, "promoted");
+  }
+  for (const id of required.sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === id);
+    assert.ok(source, id);
+    assert.equal(source.reviewStatus, "reviewed");
+    assert.equal(source.reviewDepth, "close-reading");
+    assert.equal(Boolean(source.locator), true);
+    assert.equal(source.supportsGenerally.length > 0, true);
+    assert.equal(source.doesNotEstablish.length > 0, true);
+  }
+});
+
+test("private iCloud artifacts remain opaque and non-renderable", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  for (const id of required.privateIntakeIds) {
+    const intake = knowledgeBank.intakeItems.find((item) => item.id === id);
+    assert.ok(intake, id);
+    assert.notEqual(intake.sensitivity, "public-safe");
+    assert.equal(intake.availability, "local-private");
+    assert.equal(Boolean(intake.protectedLocatorId), true);
+    assert.equal(intake.submittedUrl, undefined);
+  }
+  const privateSourceIds = new Set(
+    required.privateIntakeIds.flatMap((id) =>
+      knowledgeBank.intakeItems.find((item) => item.id === id)?.sourceIds ?? []
+    )
+  );
+  const privateSources = knowledgeBank.sources.filter((item) => privateSourceIds.has(item.id));
+  assert.equal(privateSources.length, required.privateIntakeIds.length);
+  assert.equal(privateSources.every((item) => item.visibility !== "public"), true);
+  assert.equal(privateSources.every((item) => Boolean(item.protectedLocatorId)), true);
+  assert.equal(privateSources.every((item) => !item.canonicalUrl && !item.archiveUrl && !item.assetUrl), true);
+  const privateEvidence = knowledgeBank.claims.flatMap((claim) =>
+    claim.evidence.filter((evidence) => privateSourceIds.has(evidence.sourceId))
+  );
+  assert.equal(privateEvidence.every((item) => item.relationship === "private-support"), true);
+  assert.equal(privateEvidence.every((item) => item.renderCitation === false), true);
+});
+
+test("iCloud archive claims preserve collective credit and proposal boundaries", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  const nterChng = knowledgeBank.claims.find((item) => item.id === required.collectiveCreditClaimId);
+  assert.match(nterChng?.internalClaim ?? "", /Drew Bolton/);
+  assert.match(nterChng?.internalClaim ?? "", /Garrett Fuselier/);
+  assert.match(nterChng?.internalClaim ?? "", /Mary Nichols/);
+  assert.deepEqual(
+    nterChng?.evidence.map((item) => item.sourceId),
+    ["SRC-NTER-CHNG-PITCH-2010", "SRC-NTER-CHNG-VIMEO-2011"]
+  );
+
+  const createNyc = knowledgeBank.claims.find((item) => item.id === required.collectivePolicyClaimId);
+  assert.match(createNyc?.internalClaim ?? "", /collective/i);
+  assert.equal(createNyc?.antiClaims.some((item) => /alone|sole/i.test(item)), true);
+
+  const proposal = knowledgeBank.claims.find((item) => item.id === required.proposalClaimId);
+  assert.equal(proposal?.projections.every((item) => item.status !== "active"), true);
+  assert.equal(proposal?.boundaries.some((item) => /not completion/i.test(item)), true);
+  assert.equal(proposal?.antiClaims.some((item) => /production AI memory platform/i.test(item)), true);
+});
+
+test("iCloud archive eval rejects private leaks and premature projection", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const privateIntake = bank.intakeItems.find((item) => item.id === required.privateIntakeIds[0]);
+  const privateSource = bank.sources.find((item) => item.id === privateIntake.sourceIds[0]);
+  const candidateClaim = bank.claims.find((item) => item.id === required.proposalClaimId);
+  privateIntake.sensitivity = "public-safe";
+  privateSource.visibility = "public";
+  privateSource.preservationStatus = "live";
+  privateSource.canonicalUrl = "https://example.com/private-artifact";
+  candidateClaim.editorialStatus = "active";
+  candidateClaim.projections[0].status = "active";
+  candidateClaim.projections[0].surfaces = ["/lab/source-backed-team-memory"];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "icloud-private-intake-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "icloud-premature-projection"), true);
+});
+
+test("social archival production reconciles complete populations and preserves explicit gaps", () => {
+  const required = suite.requiredSocialArchiveProduction;
+  for (const population of required.completePopulations) {
+    const claim = knowledgeBank.claims.find((item) => item.id === population.claimId);
+    const corpus = knowledgeBank.sources.find((item) => item.id === population.corpusSourceId);
+    assert.ok(claim, population.claimId);
+    assert.ok(corpus, population.corpusSourceId);
+    assert.match(claim.internalClaim, new RegExp(String(population.count)));
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(corpus.visibility, "private");
+    assert.equal(Boolean(corpus.protectedLocatorId), true);
+  }
+  const callInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === required.callNyc.inquiryId
+  );
+  assert.match(callInquiry.publicSummary, /107 of 110/);
+  const nycInquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === required.nycArtC.inquiryId
+  );
+  assert.match(nycInquiry.publicSummary, /748-record/);
+  assert.match(nycInquiry.limitations.join(" "), /4,376/);
+});
+
+test("social archive eval rejects a partial NYCArtC corpus presented as complete", () => {
+  const required = suite.requiredSocialArchiveProduction.nycArtC;
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.negativeClaimId);
+  const inquiry = bank.researchInquiries.find((item) => item.id === required.inquiryId);
+  claim.status = "confirmed";
+  claim.publicationStatus = "public";
+  claim.internalClaim = "The complete @NYCArtC population contains 748 posts.";
+  claim.antiClaims = [];
+  inquiry.resultStatus = "resolved";
+  inquiry.limitations = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-population-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-recovery-method"), true);
+});
+
+test("CallNYC amplification requires all four posts, officeholder context, and endorsement limits", () => {
+  const required = suite.requiredSocialArchiveProduction.callNyc;
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.amplificationClaimId);
+  claim.internalClaim = "Four Council members endorsed CallNYC.";
+  claim.evidence = claim.evidence.filter(
+    (item) => !required.personSourceIds.includes(item.sourceId)
+  );
+  claim.boundaries = [];
+  claim.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "callnyc-amplification-boundary"), true);
+});
+
+test("NYCArtC account-establishment memory cannot erase the multi-author boundary", () => {
+  const required = suite.requiredSocialArchiveProduction.nycArtC;
+  const bank = structuredClone(knowledgeBank);
+  const memory = bank.intakeItems.find((item) => item.id === required.memoryIntakeId);
+  const inquiry = bank.researchInquiries.find((item) => item.id === required.roleInquiryId);
+  memory.status = "promoted";
+  memory.claimIds = ["CLM-X-NYCARTC-CAMPAIGN-IDENTITY"];
+  inquiry.limitations = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-account-credit"), true);
+});
+
+test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
+  const required = suite.requiredGoogleDriveArchiveProduction;
+  for (const sourceId of required.sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source, sourceId);
+    assert.notEqual(source.visibility, "public");
+    assert.equal(Boolean(source.protectedLocatorId), true);
+    assert.equal(source.canonicalUrl, undefined);
+  }
+  const media = knowledgeBank.sources.find((item) => item.id === required.fairRentMediaSourceId);
+  assert.deepEqual(media.media, {
+    mediaKind: "other",
+    rightsStatus: "permission-needed",
+    consentStatus: "review-needed",
+    publicDisplayStatus: "hold"
+  });
+  const sundayDinner = knowledgeBank.claims.find((item) => item.id === required.sundayDinnerClaimId);
+  assert.match(sundayDinner.antiClaims.join(" "), /33 Zoom events/);
+});
+
+test("Google Drive eval rejects exposed locators, cleared media, and event-count inflation", () => {
+  const required = suite.requiredGoogleDriveArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === required.sourceIds[0]);
+  const media = bank.sources.find((item) => item.id === required.fairRentMediaSourceId);
+  const sundayDinner = bank.claims.find((item) => item.id === required.sundayDinnerClaimId);
+  source.visibility = "public";
+  source.canonicalUrl = "https://drive.google.com/private-artifact";
+  media.media.rightsStatus = "cleared";
+  media.media.consentStatus = "cleared";
+  media.media.publicDisplayStatus = "approved";
+  sundayDinner.internalClaim = "Sunday Dinner held 33 Zoom events.";
+  sundayDinner.boundaries = [];
+  sundayDinner.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "drive-private-source-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "drive-media-rights"), true);
+  assert.equal(result.findings.some((item) => item.code === "drive-asset-event-boundary"), true);
+});
+
 test("missing supplied URLs fail capture integrity", () => {
   const result = validateKnowledgeLifecycle({ ...knowledgeBank, intakeItems: [] }, suite);
   assert.equal(result.findings.filter((item) => item.code === "missing-required-intake").length, suite.requiredIntakeUrls.length);
@@ -397,7 +598,14 @@ test("private filesystem paths fail projection restraint", () => {
 
 test("immature public projections fail closed", () => {
   const bank = structuredClone(knowledgeBank);
-  bank.claims[0].status = "inference";
+  const activeClaim = bank.claims.find((claim) =>
+    claim.projections.some(
+      (projection) =>
+        projection.status === "active" &&
+        projection.surfaces.some((surface) => surface.startsWith("/"))
+    )
+  );
+  activeClaim.status = "inference";
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.equal(result.findings.some((item) => item.code === "immature-active"), true);
 });

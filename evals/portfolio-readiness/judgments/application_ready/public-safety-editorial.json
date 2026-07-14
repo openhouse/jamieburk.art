@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-public-safety-editorial-r9",
+  "judgeId": "codex-independent-public-safety-editorial-r10",
   "lens": "public-safety-editorial",
-  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
-  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
+  "candidate": "sha256:6b5b442fdcc2e69462622e9036bb60049cde4c61a5a43aa8f437b8480b8b5e2e",
+  "contract": "sha256:87c7aa72c9f3d138673b4c3bb79a4de29c544a7909866e8df98e0636046f0e1c",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -18,65 +18,20 @@
     "operational_confidence": 3
   },
   "evidence": [
-    {
-      "rubric": "role_clarity",
-      "route": "/",
-      "observation": "The first viewport names Jamie, the target role, his operating-structure value, and direct work, resume, and contact paths."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "The page separates Jamie's attributed role, documented presenter role, Board recommendation, Council adoption, and $490,539 appropriation."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "The public conclusion stops at appropriation and states that the record does not establish an agreement, disbursement, receipt, expenditure, construction, or completion."
-    },
-    {
-      "rubric": "citational_care",
-      "route": "/work/kc-town-hall",
-      "observation": "Five distinct public sources support the active KC sequence, each with an explicit does-not-establish boundary."
-    },
-    {
-      "rubric": "citational_care",
-      "route": "public registry",
-      "observation": "The registry excludes the later-disposition source, unused-allocation claim, transition memory, and any personal-causality projection."
-    },
-    {
-      "rubric": "reader_effort",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Clear headings support scanning, but the long chronology and extensive references require more than one pass."
-    },
-    {
-      "rubric": "chad_lens",
-      "route": "/work",
-      "observation": "Jamie is visible as builder, co-founder, project manager, and contributor, while institutional and collective credit remains right-sized."
-    },
-    {
-      "rubric": "visual_evidence",
-      "route": "/work",
-      "observation": "The portfolio relies on prose and descriptive artifacts rather than an approved inspectable project image."
-    },
-    {
-      "rubric": "responsive_quality",
-      "route": "candidate-bound browser evidence",
-      "observation": "All ten routes returned 200 without desktop, mobile, or 200%-equivalent overflow; all 24 traversed controls showed visible focus."
-    },
-    {
-      "rubric": "sharing_quality",
-      "route": "/work/kc-town-hall",
-      "observation": "Canonical and social metadata repeat only the attributed role and Council appropriation under staging defaults."
-    },
-    {
-      "rubric": "operational_confidence",
-      "route": "candidate-bound evaluation",
-      "observation": "Candidate-bound repository, knowledge-bank, citation, public-safety, route, resume, and browser gates pass; production deployment controls remain deferred."
-    }
+    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport names Jamie, the target role, the value proposition, and direct paths to selected work, resume, and contact." },
+    { "rubric": "proof_defensibility", "route": "/work/kc-town-hall", "observation": "The page keeps Jamie's attributed planning role distinct from Board and Council actions and states that appropriation is not disbursement, receipt, expenditure, or completion." },
+    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "Claim-level references identify what event, press, repository, and graphic sources support, expose source-specific limits, and provide accessible backlinks." },
+    { "rubric": "reader_effort", "route": "/work/fair-rent-nyc", "observation": "The long chronology, repeated collective-work boundaries, Sources and notes section, and Known / Open / Protected material are useful but require more reading than the primary application path." },
+    { "rubric": "chad_lens", "route": "/work/technical-operations", "observation": "Jamie is visible as the actor and the proof map names concrete work and outcomes, though phrases such as source-backed memory and public-data framing still require some domain familiarity." },
+    { "rubric": "visual_evidence", "route": "/work/callnyc", "observation": "The Artifact gallery presents text cards for the prototype, translation layer, and press note rather than an approved image of the actual interface." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The HTML role, chronology, selected impact, and corrected CallNYC framing agree with the approved downloadable resume PDF." },
+    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound evidence reports no desktop, mobile, or 200%-equivalent overflow and visible focus for all 24 traversed controls, including nine citation markers; browser-chrome zoom itself was not exercised." },
+    { "rubric": "sharing_quality", "route": "/resume", "observation": "The route supplies a canonical URL, specific Open Graph title, generated social image, summary-large-image card, working resume download, and contact path; inspected metadata remains staging-bound." },
+    { "rubric": "operational_confidence", "route": "/api/health", "observation": "The candidate has documented staging configuration, health and robots checks, candidate-bound local route evidence, and rollback guidance; deployed-commit verification and production monitoring remain correctly deferred." }
   ],
   "regressions": [],
   "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "After rights and public-safety review, add one inspectable artifact image from work Jamie directly performed with an ownership and source-boundary caption.",
+  "smallestDefensiblePatch": "After rights and public-safety approval, replace one CallNYC text-only artifact card with one screenshot of the archived interface, captioned as historical and unofficial, without exposing current guidance or private data.",
   "passes": true,
   "confidence": "high"
 }

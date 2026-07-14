@@ -1,8 +1,8 @@
 {
-  "judgeId": "lifecycle-archival-kc-town-hall-transition-2026-07-14-r8",
+  "judgeId": "archival-editorial-urbanhermit-2026-07-14-c",
   "lens": "archival-editorial",
-  "candidate": "sha256:3b0fcff93c764088bcbea5e417b21f1f54e878b3b6f2bff6a62b4e82838fef8d",
-  "contract": "sha256:79d0470581d3c4e5ae1af21c8c32dfc25252f73274a42b29accebe4a7e7d4fb4",
+  "candidate": "sha256:85ddeb135180d768eb1330aaed6d34dca444b1fbf0bf0ff3e8a6809ac6870a38",
+  "contract": "sha256:ba136442143abb388fbf3efd39ff2e4a19aebcd494cd154a59018f88b15c194c",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -10,44 +10,56 @@
     "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
-    "project_context": 3,
+    "project_context": 4,
     "research_honesty": 4,
     "projection_restraint": 4
   },
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The transition memory has a stable public-safe intake, deferred status, no source or claim promotion, and exactly one link to its dedicated transition inquiry."
+      "observation": "The social, Google Drive, and iCloud passes assign stable intake, source, claim, inquiry, project, and opaque locator identities; complete current X populations reconcile to 434, 38, and 183 records while CallNYC and NYCArtC retain explicit retrieval gaps."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The approved resume remains first-party project-archive evidence, while the Council-sequence inquiry resolves exclusively to five close-read government records with explicit support and non-support boundaries."
+      "observation": "Sources consistently record review depth, locators, supported propositions, non-support boundaries, preservation state, visibility, and rights status; the unreviewed WOW List video remains blocked and metadata-only visual archives do not become substantive evidence."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Presenter role, four-member Board recommendation, Council acceptance, Council appropriation, and later unused-allocation disposition remain separate claims; no claim attributes personal causation to Jamie."
+      "observation": "Claims separate current-population reconciliation, project-lineage discovery, Council-member amplification, official response, coalition identity, incomplete recovery, residency operations, media-archive existence, and stored-asset counts rather than combining them into broad impact narratives."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The recovered Council-sequence inquiry contains exactly five URL intakes and their five government-record sources, excluding both the resume artifact and transition memory. Ordinance 240317 directly supports only the bounded disposition claim."
+      "observation": "The CallNYC amplification claim resolves separately to four recovered public posts and four official Council person records, while every private-supported Drive and iCloud claim resolves to a known protected source with non-renderable evidence."
     },
     {
       "rubric": "status_separation",
-      "observation": "The transition lead is deferred and inconclusive with zero sources, while the later disposition is confirmed-with-boundary and qualified but editorially unused, with a hold projection and no public surfaces."
+      "observation": "Personal memory, public social evidence, private support, metadata findings, negative research, qualified claims, candidates, holds, and internal-only records remain distinct; Jamie's NYCArtC account-establishment memory is deferred without a promoted claim."
     },
     {
       "rubric": "project_context",
-      "observation": "The project record, 2015-2024 period, research note, source chronology, public-surface candidates, and photo-research prompt provide usable orientation. Explicit linked entity records remain sparse."
+      "observation": "The three research notes orient future researchers through account inventories, archive scope, methods, results, claim palettes, privacy boundaries, unresolved inquiries, and photo-editor implications without requiring the original research to be repeated."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The transition inquiry states that no corroborating public source, recipient confirmation, verified recipient, or verified date exists and refuses to equate organizational transition with municipal withdrawal."
+      "observation": "The implementation identifies 434 @urbanhermit records as the complete current visible population rather than a total historical record, preserves CallNYC's 107-of-110 and NYCArtC's 748-of-5,124 boundaries, and requires an official archive or API export before population-wide NYCArtC findings."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "Council-member activity is described narrowly as recovered quote-posts and a direct share; explicit boundaries reject formal endorsement, adoption, offline use, constituent outcomes, complete engagement rosters, and treating mentions as engagement."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The case study, work metadata, proof wording, citation page, and public registry stop at appropriation and downstream limits. Ordinance 240317, the unused-allocation claim, and the transition memory are absent from public composition."
+      "observation": "New archive-derived claims remain unused, candidate, internal-only, or on hold; private corpora, Drive materials, participant identities, access instructions, private paths, raw records, and unapproved audiovisual assets are not exposed."
+    },
+    {
+      "rubric": "projection_restraint",
+      "observation": "The Google Drive records preserve rights and consent holds, distinguish 33 stored Zoom assets from 33 events, and distinguish 42 photographs from attendance or participant counts."
+    },
+    {
+      "rubric": "research_honesty",
+      "observation": "The deterministic lifecycle suite reports 100 out of 100, and all 35 fixture and mutation tests pass, including failures for private leaks, premature projection, partial-corpus inflation, endorsement drift, metadata misuse, and event-count inflation."
     }
   ],
   "regressions": [],
-  "nextAction": "Persist this candidate-bound judgment; no KC content change is required."
+  "nextAction": "Obtain an official @NYCArtC account archive or authenticated API export, then reconcile the remaining 4,376 profile-counted records without weakening the present partial-corpus boundary."
 }

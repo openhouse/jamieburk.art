@@ -1,8 +1,8 @@
 {
-  "judgeId": "lifecycle-composition-kc-town-hall-transition-2026-07-14-r8",
+  "judgeId": "public-safety-composition-social-drive-2026-07-14-r2",
   "lens": "public-safety-composition",
-  "candidate": "sha256:3b0fcff93c764088bcbea5e417b21f1f54e878b3b6f2bff6a62b4e82838fef8d",
-  "contract": "sha256:79d0470581d3c4e5ae1af21c8c32dfc25252f73274a42b29accebe4a7e7d4fb4",
+  "candidate": "sha256:85ddeb135180d768eb1330aaed6d34dca444b1fbf0bf0ff3e8a6809ac6870a38",
+  "contract": "sha256:ba136442143abb388fbf3efd39ff2e4a19aebcd494cd154a59018f88b15c194c",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,37 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The transition recollection has a stable memory intake marked public-safe and deferred, with no source or claim promotion and exactly one link to its dedicated inquiry."
+      "observation": "Every selected social, Google Drive, and iCloud fragment has a stable intake identity and explicit disposition. Complete current-visible populations reconcile for @urbanhermit, @wowlist, and @KCTownHall, while the CallNYC and NYCArtC shortfalls remain separately dispositioned inquiries."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "Each KC municipal record has close-reading support and non-support fields; Ordinance 240317 supports the administrative disposition without establishing motive, responsibility, payment, or current property status."
+      "observation": "Sources consistently state support and non-support scope, review depth, provenance, preservation state, and locators. The unreviewed WOW List video remains blocked, metadata-only audiovisual records support only archive existence and file counts, and public social posts are not treated as independent proof of linked outcomes."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Presenter role, Board recommendation, Council acceptance, Council appropriation, and later unused-allocation disposition remain separate claims with stage-specific wording and boundaries."
+      "observation": "Claims isolate current-population reconciliation, source-discovery lineages, campaign identity, specific public amplification, operational workflows, and archive depth. Collective credits remain explicit, asset counts remain distinct from event counts, and authored plans or proposals remain distinct from completed work."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The recovered Council-sequence inquiry contains exactly the five URL intakes and their five municipal sources; the transition memory resolves only to its own inconclusive zero-source inquiry."
+      "observation": "Mature claims resolve to project-aligned evidence relationships and inquiries. The CallNYC amplification claim uses four recovered posts plus four official officeholder records, while private evidence uses private-support relationships with renderCitation false."
     },
     {
       "rubric": "status_separation",
-      "observation": "The disposition is mature and qualified but editorially unused, with a held projection, no surfaces, and no public citation occurrence; the transition recollection remains deferred rather than becoming a claim."
+      "observation": "Knowledge maturity, publication status, and editorial selection remain independent. Population inventories are internal-only, partial recoveries are not-recovered findings, the NYCArtC account-role memory remains deferred, and all newly introduced projections are held or unused."
     },
     {
       "rubric": "project_context",
-      "observation": "The dossier preserves the Board-to-Council sequence, administrative disposition, separate transition lead, chronology, public-surface candidates, and bounded future research prompts."
+      "observation": "Project dossiers and the three July research notes preserve chronology, project relationships, handle identity, future research questions, and rights-aware photo-editor prompts without requiring every mature record to appear on the portfolio."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The transition inquiry is inconclusive with zero sources and explicit missing-corroboration, recipient, and date limitations; no personal cause is encoded."
+      "observation": "The implementation explicitly limits @urbanhermit to the current visible population and a discovery index, records CallNYC as 107 of 110 and NYCArtC as 748 of 5,124, refuses population-wide inference from partial records, preserves multi-author NYCArtC credit, and distinguishes mentions from inspected engagement."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "The public registry, citation page, KC MDX, work metadata, proof wording, and technical-operations presentation stop at Council appropriation and downstream limits."
+      "observation": "No raw social corpus, Drive identifier, private URL, filesystem path, participant identity, or access instruction is exposed. Council-member sharing remains amplification rather than endorsement or adoption, Fair Rent and Sunday Dinner media remain on rights and consent hold, and private-derived claims remain outside active composition."
     }
   ],
   "regressions": [],
-  "nextAction": "Preserve the transition lead and mature disposition as non-rendered lifecycle records until corroboration or a later explicit editorial decision."
+  "nextAction": "Preserve these records in their current held or unused state until a separate audience-specific composition review selects the smallest useful claims and revalidates attribution, rights, and surface approval."
 }

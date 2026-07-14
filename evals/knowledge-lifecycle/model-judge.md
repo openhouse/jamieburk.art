@@ -31,6 +31,20 @@ Ask:
     to a mission-aligned organization remain a deferred research lead pending
     public-safe corroboration, while the later municipal disposition remains
     mature but editorially unused?
+12. Does the iCloud Teams archival-production pass preserve all three required
+    archive scopes, opaque private-source locators, collective credit, and the
+    difference between authored plans or proposals and completed outcomes?
+13. Do complete current X populations reconcile to displayed profile counts
+    while partial CallNYC and NYC Artist Coalition retrievals remain explicit
+    gaps rather than population-wide findings?
+14. Does the @urbanhermit record function as a source-discovery index rather
+    than independent proof, a total historical record, or an impact metric?
+15. Does Council-member amplification remain bounded to recovered quote-posts
+    and direct shares, without becoming formal endorsement, adoption, offline
+    use, constituent outcome, or a complete engagement roster?
+16. Do Google Drive records preserve opaque private locators, blocked or held
+    audiovisual material, participant and access privacy, and the difference
+    between stored asset counts and event counts?
 
 Return JSON with:
 

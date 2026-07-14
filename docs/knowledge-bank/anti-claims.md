@@ -28,6 +28,19 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not convert Jamie's 90-day operating plan into completed campaign delivery.
+Do not describe the legislative-provenance redline as legal advice or authorship
+of underlying legislation. Do not describe the RPIE public-data brief as an
+adopted City program or released dataset.
+
+## Creative Technical Systems
+
+Do not remove M.C. Schmidt's co-credit from the Horse Lords "Truthers" video.
+Do not describe Jamie as the sole creator of NTER CHNG; preserve Drew Bolton,
+Garrett Fuselier, and Mary Nichols's documented contributions. Do not convert a
+Monthly Music Hackathon prototype into a production release, award, or adoption
+claim.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.
@@ -37,14 +50,39 @@ first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
 selected, or a winner without new evidence and review.
 
+Do not convert four recovered Council-member quote-posts or direct shares into
+formal endorsement, Council adoption, offline use, constituent outcomes, or a
+complete engagement roster. Do not describe 107 recovered posts as the full
+110-record current population.
+
 ## WOWList
 
 Do not name collaborators unless approved.
+
+Do not convert 38 currently visible X records, 17 project-domain links, or a
+private member-meeting video into audience, adoption, event, or member counts.
 
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
+
+Do not publish artist identities or access instructions from residency
+onboarding records. Do not convert 33 Zoom archive assets into 33 events.
+
+## Social Accounts
+
+Do not convert the current visible @urbanhermit population into Jamie's entire
+historical posting record or a professional-impact metric. Personal posts are
+source-discovery leads, not independent proof of every linked project claim.
+
+Do not present the 748 recovered @NYCArtC records as the full 5,124-record
+population. Do not attribute a multi-author coalition account to Jamie alone;
+his account-establishment memory remains deferred pending corroboration that
+also preserves Olympia Kazi's and other contributors' work.
+
+Do not count stakeholder mentions as replies, amplification, endorsement, or
+engagement without inspecting the actual relationship.
 
 ## KC Spaces Fund
 
@@ -78,3 +116,6 @@ public copy.
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
 context, or imply deployment inside his company.
+
+Do not convert a discovery and prototype proposal into a completed engagement,
+client adoption, measured outcome, or production AI platform.

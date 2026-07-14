@@ -5,6 +5,26 @@ import {
   lifecycleSources
 } from "./lifecycle-records.ts";
 import {
+  icloudArchiveClaims,
+  icloudArchiveIntakes,
+  icloudArchiveProjects,
+  icloudArchiveResearchInquiries,
+  icloudArchiveSources
+} from "./icloud-archive-production.ts";
+import {
+  googleDriveArchiveClaims,
+  googleDriveArchiveIntakes,
+  googleDriveArchiveResearchInquiries,
+  googleDriveArchiveSources
+} from "./google-drive-archive-production.ts";
+import {
+  socialArchiveClaims,
+  socialArchiveIntakes,
+  socialArchiveProjects,
+  socialArchiveResearchInquiries,
+  socialArchiveSources
+} from "./social-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -22,6 +42,9 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...googleDriveArchiveIntakes,
+    ...socialArchiveIntakes,
+    ...icloudArchiveIntakes,
     ...campaignPressIntakes,
     ...kcTownHallIntakes,
     {
@@ -549,6 +572,8 @@ const knowledgeBankInput = {
     }
   ],
   projects: [
+    ...socialArchiveProjects,
+    ...icloudArchiveProjects,
     kcTownHallProject,
     {
       id: "callnyc",
@@ -614,6 +639,9 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...googleDriveArchiveSources,
+    ...socialArchiveSources,
+    ...icloudArchiveSources,
     ...kcTownHallSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -782,6 +810,9 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...googleDriveArchiveClaims,
+    ...socialArchiveClaims,
+    ...icloudArchiveClaims,
     ...kcTownHallClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -893,6 +924,9 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...googleDriveArchiveResearchInquiries,
+    ...socialArchiveResearchInquiries,
+    ...icloudArchiveResearchInquiries,
     kcTownHallInquiry,
     kcTownHallTransitionInquiry,
     {

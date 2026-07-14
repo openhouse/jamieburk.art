@@ -1,8 +1,8 @@
 {
-  "judgeId": "codex-independent-hiring-manager-r9",
+  "judgeId": "independent-hiring-manager-application-2026-07-14-r10",
   "lens": "hiring-manager",
-  "candidate": "sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb",
-  "contract": "sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab",
+  "candidate": "sha256:6b5b442fdcc2e69462622e9036bb60049cde4c61a5a43aa8f437b8480b8b5e2e",
+  "contract": "sha256:87c7aa72c9f3d138673b4c3bb79a4de29c544a7909866e8df98e0636046f0e1c",
   "profile": "application_ready",
   "scores": {
     "role_clarity": 4,
@@ -18,60 +18,21 @@
     "operational_confidence": 3
   },
   "evidence": [
-    {
-      "rubric": "role_clarity",
-      "route": "/",
-      "observation": "The opening identifies Jamie as a Technical Project Manager focused on Product Operations and Implementation, states his operating-structure value, and provides immediate work, resume, and contact actions."
-    },
-    {
-      "rubric": "role_fit",
-      "route": "/work/technical-operations",
-      "observation": "The operations map connects Jamie's experience to delivery coordination, risk surfacing, cross-functional dependencies, documentation, adoption, and durable handoffs."
-    },
-    {
-      "rubric": "proof_defensibility",
-      "route": "/work/kc-town-hall",
-      "observation": "The page distinguishes Jamie's resume-attributed planning role and documented presenter role from the Board recommendation and Council actions, ending with the appropriation and its explicit downstream limits."
-    },
-    {
-      "rubric": "citational_care",
-      "route": "/work/kc-town-hall",
-      "observation": "Five ordered public sources support the role account, presenter role, Board recommendation, Council acceptance, and appropriation. The later disposition and transition memory are not projected publicly."
-    },
-    {
-      "rubric": "reader_effort",
-      "route": "/work/fair-rent-nyc",
-      "observation": "Headings and outcomes are scannable, but FairRentNYC remains a long, citation-dense operating record."
-    },
-    {
-      "rubric": "chad_lens",
-      "route": "/work/kc-town-hall",
-      "observation": "Jamie remains visible while institutional credit is right-sized; the page now ends at the relevant appropriation boundary."
-    },
-    {
-      "rubric": "visual_evidence",
-      "route": "/work",
-      "observation": "The portfolio still lacks an approved inspectable project screenshot or primary work artifact; this remains the declared application-ready deferral."
-    },
-    {
-      "rubric": "responsive_quality",
-      "route": "all 10 evaluated routes",
-      "observation": "Candidate-bound evidence reports successful desktop, mobile, and 200%-equivalent renders without overflow, visible focus on all 24 traversed controls, and working citation targets and backlinks."
-    },
-    {
-      "rubric": "sharing_quality",
-      "route": "/resume, /contact",
-      "observation": "Canonical metadata, social metadata, resume download, email, LinkedIn, and GitHub paths are present; verification uses staging defaults."
-    },
-    {
-      "rubric": "operational_confidence",
-      "route": "candidate-bound evaluation",
-      "observation": "Candidate and contract fingerprints recompute and application-stage repository, safety, citation, route, resume, and browser checks pass; production controls remain deferred."
-    }
+    { "rubric": "role_clarity", "route": "/", "observation": "The first viewport names Jamie, the target role, and the value proposition: creating operating structure for complex public-facing teams through requirements, workflows, documentation, launch support, onboarding, and handoffs." },
+    { "rubric": "role_fit", "route": "/work/technical-operations", "observation": "The page directly maps Jamie's work to delivery coordination, risk visibility, decision systems, stakeholder dependencies, adoption materials, and durable operating documentation." },
+    { "rubric": "proof_defensibility", "route": "/work/kc-town-hall", "observation": "The case study separates Jamie's documented project role from the later municipal sequence and explicitly declines to claim an executed agreement, disbursement, receipt, expenditure, or construction." },
+    { "rubric": "citational_care", "route": "/work/callnyc", "observation": "Nine accessible same-page references include numerical markers, meaningful labels, local targets, and backlinks while preserving CallNYC's archived, independent, and unofficial status." },
+    { "rubric": "reader_effort", "route": "/work", "observation": "The grouped work index and repeated unclear-to-usable framing are highly scannable, though the similarly structured cards and extensive boundary sections make deeper portfolio review somewhat repetitive." },
+    { "rubric": "chad_lens", "route": "/work/fair-rent-nyc", "observation": "Jamie is visible as co-founder and builder of campaign websites, source maps, coordination records, and public guidance, with collective campaign credit preserved; some operating-language density still requires careful reading." },
+    { "rubric": "visual_evidence", "route": "/work/harry-j-epstein", "observation": "Artifact-gallery cards describe the work but do not show approved screenshots, documents, interfaces, photographs, or other primary visual artifacts." },
+    { "rubric": "resume_alignment", "route": "/resume", "observation": "The HTML summary and approved PDF reinforce the same technical-project-management positioning, project chronology, CouncilStat attribution, quantified achievements, and contact path." },
+    { "rubric": "responsive_quality", "route": "/work/callnyc", "observation": "Candidate-bound browser evidence shows no overflow across ten desktop, mobile, and 200-percent-equivalent views, with visible focus on all 24 traversed controls; the zoom result is standards-equivalent reflow rather than direct browser-chrome zoom." },
+    { "rubric": "sharing_quality", "route": "/resume", "observation": "Canonical metadata, Open Graph title and image, Twitter card, working resume download, and direct contact links are present; final production-domain verification is appropriately deferred." },
+    { "rubric": "operational_confidence", "route": "/", "observation": "Repository, safety, citation, route, resume, and responsive checks pass, but deployed production SHA, smoke, rollback, indexing, and human-approval evidence are production-only deferrals." }
   ],
   "regressions": [],
-  "highestValueFailure": "visual_evidence",
-  "smallestDefensiblePatch": "Add one rights-reviewed, public-safe screenshot of a system Jamie directly built with an ownership and source-boundary caption.",
+  "highestValueFailure": null,
+  "smallestDefensiblePatch": null,
   "passes": true,
   "confidence": "high"
 }

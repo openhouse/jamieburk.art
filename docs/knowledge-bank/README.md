@@ -17,6 +17,18 @@ Submitted fragments enter through the intake lifecycle before they become
 sources or claims. See [lifecycle.md](lifecycle.md) for capture, review,
 promotion, projection, maintenance, and photo-feedback rules.
 
+The July 2026 [iCloud Teams archival-production pass](research/icloud-teams-archival-production-2026-07.md)
+shows how working archives become public sources, private metadata records,
+atomic claims, anti-claims, and verification inquiries without exposing the
+underlying private files.
+
+The [social-media archival-production pass](research/social-media-archival-production-2026-07.md)
+adds complete-population reconciliation, explicit retrieval gaps, project-link
+discovery, and bounded stakeholder-response evidence. The [Google Drive Shared
+Drives pass](research/google-drive-shared-drives-archival-production-2026-07.md)
+adds private workflow evidence and rights-aware audiovisual research queues
+without publishing Drive identifiers or source materials.
+
 ## Purpose
 
 The knowledge bank exists to:
