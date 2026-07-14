@@ -45,6 +45,26 @@ not establish Jamie as sole author, sole founder, or owner of the network, and
 it does not establish membership totals, current operation, or campaign
 outcomes.
 
+## Public identity and engagement record
+
+Jamie confirms that he established `@NYCArtC` as shared public-facing identity
+infrastructure. The public profile and campaign searches corroborate long-running
+use across Let NYC Dance, Save NYC Spaces, Talks Not Raids, and FairRentNYC.
+Multiple teammates posted, so account establishment and continuity do not imply
+post-by-post Jamie authorship.
+
+An authenticated read-only pass recovered direct interactions from at least six
+contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina
+Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine. Five representative
+interactions are mission-specific; Levine's recovered reply establishes direct
+account interaction only. The six-member figure is a floor, not a complete
+historical census, official Council endorsement, or evidence of policy causality.
+
+Document Journal's 2018 nightlife feature independently names and pictures
+Jamie with NYC Artist Coalition and names Olympia Kazi with the coalition and
+Let NYC Dance. Public posts also show Olympia continuing to use the coalition
+identity and campaign vocabulary in later Council-hearing contexts.
+
 ## Open research lanes
 
 - NYC Artist Coalition formation, founding roles, and dated public artifacts.
@@ -59,6 +79,8 @@ outcomes.
   recommending machine-readable small-business violation reporting across two
   Council bills.
 - Durable capture and close reading of the supplied NPR article.
+- First-party account-export recovery, additional Council-member interactions,
+  and post-level authorship only where explicit evidence supports attribution.
 
 Each lane should separate Jamie's direct role, collective accomplishments,
 government decisions, and causal claims.

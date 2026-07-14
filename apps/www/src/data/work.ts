@@ -191,12 +191,14 @@ const workItemsInput = [
       "commercial-vacancy-public-data-brief",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems",
-      "nyc-artist-coalition-cabaret-organizing"
+      "nyc-artist-coalition-cabaret-organizing",
+      "project-social-identity-systems",
+      "nyc-artist-coalition-social-engagement"
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving commercial-vacancy data proposal, stakeholder follow-up notes, public-safe explanations, public campaign websites, and shared campaign memory.",
+      "Running minutes, action trackers, source maps, legal/policy question logs, a privacy-preserving commercial-vacancy data proposal, stakeholder follow-up notes, public-safe explanations, public campaign websites, a durable shared campaign identity, and shared campaign memory.",
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -389,11 +391,11 @@ const workItemsInput = [
     featured: true,
     priority: 4,
     visibility: "public-safe",
-    proofBankIds: ["wowlist-community-platform"],
+    proofBankIds: ["wowlist-community-platform", "project-social-identity-systems"],
     whatWasUnclear:
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
-      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+      "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns, connected to Sunday Dinner and used publicly enough for a community member to make a tutorial.",
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {

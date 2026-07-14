@@ -37,6 +37,11 @@ const proofMap = [
       "I built an independent civic-data follow-on that translated constituent-services records into resident-facing guidance."
   },
   {
+    project: "Project identity systems",
+    proof:
+      "I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years."
+  },
+  {
     project: "WOWList",
     proof:
       "I co-built a public-facing community event distribution platform using Python / Django, PostgreSQL / PostGIS, and Ember.js."

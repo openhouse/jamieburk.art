@@ -401,6 +401,64 @@
         "Jamie's sole causality for the Council vote",
         "current property status"
       ]
+    },
+    {
+      "id": "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+      "title": "Authenticated NYC Artist Coalition public-profile inventory",
+      "organization": "X (formerly Twitter)",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-13",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/NYCArtC",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @NYCArtC profile, campaign queries, and Council-member interactions, July 13, 2026.",
+      "publicNote": "The active profile named #SaveNYCSpaces, #LetNYCDance, #TalksNotRaids, and #FairRentNYC. Authenticated query recovery found direct mentions, replies, or quote amplification from at least six contemporaneous Council-member accounts: Rafael Espinal, Stephen Levin, Carlina Rivera, Justin Brannan, Jimmy Van Bramer, and Mark Levine.",
+      "doesNotEstablish": [
+        "a complete account export",
+        "authorship of every post",
+        "sole credit for campaigns or outcomes",
+        "official Council endorsement"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+      "title": "WOW List public Sunday Dinner origin post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public post naming Richard and Jamie and describing the project as based on calendars made at Sunday Dinner, February 12, 2014.",
+      "publicNote": "The account's own contemporaneous description publicly connects Jamie, a collaborator named Richard, WOW List, and Sunday Dinner.",
+      "doesNotEstablish": [
+        "complete product authorship",
+        "the collaborator's full identity",
+        "later adoption scale"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+      "title": "WOW List community-created tutorial post",
+      "organization": "X (formerly Twitter)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-08-14",
+      "accessedAt": "2026-07-13",
+      "canonicalUrl": "https://x.com/wowlist/status/632168285291835392",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List public post thanking a community member for creating a tutorial about using the platform, August 14, 2015.",
+      "publicNote": "This is direct public evidence that someone outside the account team created an instructional artifact for other users.",
+      "doesNotEstablish": [
+        "broad adoption",
+        "the tutorial's current availability",
+        "the creator's motivation or representative status"
+      ]
     }
   ],
   "claims": [
@@ -976,6 +1034,91 @@
         "The public sequence does not establish that Jamie solely caused the board recommendation or Council vote.",
         "Do not infer current property, financial, legal, or occupancy status."
       ]
+    },
+    {
+      "id": "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "The shared coalition identity earned direct public interaction from at least six contemporaneous NYC Council-member accounts across multiple campaigns.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+          "relationship": "context",
+          "supports": [
+            "authenticated query method",
+            "six-account recovery floor",
+            "four-campaign account identity"
+          ],
+          "confidence": "moderate",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "At least six is a recovered minimum, not a complete historical census.",
+        "The count includes direct mentions, replies, or quote amplification; it does not treat tags by @NYCArtC as reciprocal engagement.",
+        "Mark Levine's reply supports account interaction only, not mission-specific endorsement.",
+        "Brad Lander's documented FairRentNYC campaign engagement is retained outside the direct-@NYCArtC count because the recovered wrapper did not itself mention the handle.",
+        "This is individual-account activity, not an official NYC Council endorsement, policy outcome, or proof that Jamie authored the underlying posts."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The project's public timeline named Richard and Jamie and described WOW List as growing from calendars made at Sunday Dinner; a later post thanked a community member for creating a public tutorial showing others how to use the platform.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "publicly named project participants",
+            "Sunday Dinner origin context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "community-created instructional artifact",
+            "public evidence of use"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The origin post names the collaborator only as Richard; do not infer a surname from this source.",
+        "One community-created tutorial is evidence of use, not proof of broad adoption or satisfaction."
+      ]
     }
   ],
   "pages": [
@@ -1070,7 +1213,8 @@
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
         "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
-        "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"
+        "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+        "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
       ],
       "occurrences": [
         {
@@ -1107,9 +1251,36 @@
           ]
         },
         {
+          "id": "council-social-engagement",
+          "claimId": "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
+          ]
+        },
+        {
           "id": "commercial-vacancy-public-data-brief",
           "claimId": "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
           "projection": "case-study"
+        }
+      ]
+    },
+    {
+      "id": "wowlist",
+      "surface": "/work/wowlist",
+      "sourceOrder": [
+        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+      ],
+      "occurrences": [
+        {
+          "id": "public-origin-and-use",
+          "claimId": "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+            "SRC-X-WOWLIST-USER-TUTORIAL-2015"
+          ]
         }
       ]
     },

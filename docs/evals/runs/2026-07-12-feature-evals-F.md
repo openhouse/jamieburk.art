@@ -186,3 +186,34 @@ No personal circumstances were entered into the repository.
 The existing KC Town Hall hard gate now requires historical lifecycle metadata,
 the bounded transition record, and an explicit privacy boundary. A new negative
 test demonstrates that the gate fails if the boundary is removed.
+
+## Project social-account recursive pass
+
+A subsequent 18-point hard gate treats project social media as public evidence
+and identity infrastructure rather than a loose collection of links. The
+authenticated, read-only pass verified three project handles:
+
+- `@CallNYCApp` for CallNYC;
+- `@NYCArtC` as the shared identity for NYC Artist Coalition, Let NYC Dance,
+  Talks Not Raids, Save NYC Spaces, and FairRentNYC; and
+- `@wowlist` for WOW List.
+
+The recovery found 106 of 110 visible-profile items for CallNYC and 37 of 38
+for WOW List. The larger active coalition account was sampled through campaign
+and public-actor queries, recovering non-exhaustive floors of 53 Let NYC Dance,
+40 Save NYC Spaces, 34 Talks Not Raids, and 27 FairRentNYC posts.
+
+The Council-member pass retained two definitions instead of collapsing them.
+CallNYC keeps its existing minimum of five sitting member amplifications in
+2016. NYC Artist Coalition now has a separate minimum of six contemporaneous
+member accounts that directly mentioned, replied to, or quote-amplified
+`@NYCArtC`; Brad Lander's additional campaign-level engagement stays outside
+that direct-handle count.
+
+The hill climb added a canonical account map, thirteen public social/profile
+sources, one protected firsthand establishment source, two newly discovered
+public documents, three claims, three inquiries, three publication decisions,
+two proof-coverage records, a public-safe accession note, and selected Fair Rent
+NYC, WOW List, and Technical Operations projections. Negative tests reject
+complete-export inflation, session-material leakage, sole-author attribution,
+and official-endorsement inflation.

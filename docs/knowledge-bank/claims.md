@@ -168,6 +168,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-12
 
+## project-social-identity-systems - Durable project identities
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source / Jamie review confirmation
+**Public wording:** Established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years.
+**Detailed public-safe wording:** Jamie established the project accounts and the shared coalition identity system; public timelines show durable use across CallNYC, WOW List, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
+**Where to project:** Technical Operations and selected case studies.
+**Why it matters:** Shows a systems contribution that made public work recognizable, reusable, and maintainable by collaborators beyond one person's posting activity.
+**Guardrail:** Account establishment is Jamie's contribution; post authorship, campaign authorship, and outcomes remain collective unless separately sourced.
+**Do not say:** Jamie authored every project-account post; Jamie solely owned the coalition voice; creating an account proves sole credit for campaign outcomes.
+**Protected boundaries:** Authentication details, private messages, account analytics, and unsupported post-level authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## nyc-artist-coalition-social-engagement - Council-member interaction
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source
+**Public wording:** Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.
+**Detailed public-safe wording:** The recovered interactions span Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the count is a documented minimum, not a complete census.
+**Where to project:** Technical Operations and NYC Artist Coalition / FairRentNYC case study.
+**Why it matters:** Shows that the shared campaign identity reached relevant public officials across distinct policy and cultural-space efforts.
+**Guardrail:** Describe individual-account interaction as a recovered minimum, never as official Council endorsement, policy causality, or proof of Jamie's post authorship.
+**Do not say:** Only six Council members engaged; the NYC Council endorsed NYC Artist Coalition; social engagement caused policy outcomes; Jamie authored every @NYCArtC post.
+**Protected boundaries:** Authentication details, private analytics, private messages, and unrecoverable team-post authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

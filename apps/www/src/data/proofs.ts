@@ -404,6 +404,71 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-12"
   },
   {
+    id: "project-social-identity-systems",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source", "jamie-review-confirmation"],
+    publicWording:
+      "Established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition, including a shared coalition account collaborators used across four campaigns over years.",
+    shortWording: "Established durable public identities collaborators could carry forward",
+    detailedPublicWording:
+      "Jamie established the project accounts and the shared coalition identity system; public timelines show durable use across CallNYC, WOW List, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
+    sourceBasis:
+      "Jamie's firsthand confirmation plus authenticated read-only review of the public @CallNYCApp, @NYCArtC, and @wowlist profiles and campaign timelines.",
+    whyItMatters:
+      "Shows a systems contribution that made public work recognizable, reusable, and maintainable by collaborators beyond one person's posting activity.",
+    guardrail:
+      "Account establishment is Jamie's contribution; post authorship, campaign authorship, and outcomes remain collective unless separately sourced.",
+    doNotSay: [
+      "Jamie authored every project-account post",
+      "Jamie solely owned the coalition voice",
+      "Creating an account proves sole credit for campaign outcomes"
+    ],
+    protectedBoundaries: [
+      "Authentication details",
+      "Private messages",
+      "Account analytics",
+      "Post-level authorship without evidence"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["callnyc", "wowlist", "fair-rent-nyc"],
+    relatedCapabilities: ["public-identity-systems", "handoffs", "campaign-infrastructure"],
+    lastReviewed: "2026-07-13"
+  },
+  {
+    id: "nyc-artist-coalition-social-engagement",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Authenticated archival review recovered direct public interactions from at least six contemporaneous NYC Council-member accounts with @NYCArtC across multiple campaigns.",
+    shortWording: "At least six Council-member accounts directly engaged @NYCArtC",
+    detailedPublicWording:
+      "The recovered interactions span Cabaret Law repeal, MARCH transparency, arts-and-culture support, and FairRentNYC; the count is a documented minimum, not a complete census.",
+    sourceBasis:
+      "Six public member-account status pages, authenticated public-profile review, and contemporaneous Council context.",
+    whyItMatters:
+      "Shows that the shared campaign identity reached relevant public officials across distinct policy and cultural-space efforts.",
+    guardrail:
+      "Describe individual-account interaction as a recovered minimum, never as official Council endorsement, policy causality, or proof of Jamie's post authorship.",
+    doNotSay: [
+      "Only six Council members engaged",
+      "The NYC Council endorsed NYC Artist Coalition",
+      "Social engagement caused policy outcomes",
+      "Jamie authored every @NYCArtC post"
+    ],
+    protectedBoundaries: [
+      "Authentication details",
+      "Private analytics",
+      "Private messages",
+      "Unrecoverable team-post authorship"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["public-engagement", "stakeholder-adoption", "campaign-infrastructure"],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "wowlist-community-platform",
     status: "careful",
     supportLevel: "careful",

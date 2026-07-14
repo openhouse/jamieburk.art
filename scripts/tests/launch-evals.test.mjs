@@ -8,6 +8,7 @@ import {
   evaluateICloudArchiveProduction,
   evaluateKcTownHallCouncilAllocation,
   evaluateKnowledgeLifecycle,
+  evaluateProjectSocialArchiveProduction,
   summarizeLaunchEvals
 } from "../lib/launch-readiness-evals.mjs";
 
@@ -458,4 +459,90 @@ test("Google Shared Drive archive production rejects private links and missing c
 
   assert.ok(failures.some((failure) => failure.includes("110 Shared Drives")));
   assert.ok(failures.some((failure) => failure.includes("private path or Drive link")));
+});
+
+const projectSocialArchiveFixture = {
+  socialArchive: [
+    "socialArchiveAccountMap",
+    'handle: "@CallNYCApp" handle: "@NYCArtC" handle: "@wowlist"',
+    "profilePostsObserved: 110 followersObserved: 69 timelineItemsRecovered: 106",
+    "profilePostsObserved: 5124 followersObserved: 1338",
+    "profilePostsObserved: 38 followersObserved: 47 timelineItemsRecovered: 37",
+    "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
+    "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
+    "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+    "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
+    "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+    "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
+    "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+    "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
+    "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
+    "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP",
+    "53 #LetNYCDance 40 #SaveNYCSpaces 34 #TalksNotRaids 27 #FairRentNYC",
+    "At least six is a recovered minimum Multiple teammates posted post-by-post authorship",
+    "not a complete platform export official NYC Council endorsement"
+  ].join(" "),
+  framework:
+    "socialArchiveIntake socialArchiveSources socialArchiveClaims socialArchiveInquiries socialArchivePublicationDecisions socialArchiveProofCoverage council-social-engagement public-origin-and-use",
+  proofs: [
+    'id: "project-social-identity-systems"',
+    'id: "nyc-artist-coalition-social-engagement"',
+    "collaborators used across four campaigns over years",
+    "at least six contemporaneous NYC Council-member accounts",
+    "Jamie authored every @NYCArtC post"
+  ].join(" "),
+  technicalOperations:
+    'project: "Project identity systems" I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition',
+  fairRentCase:
+    "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT council-social-engagement account establishment and continuity remain distinct from post-by-post authorship not an official Council endorsement",
+  wowlistCase:
+    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE public-origin-and-use do not independently verify the larger historical user, event, or geographic totals",
+  archiveDoc: [
+    "Verified Account Map @CallNYCApp @NYCArtC @wowlist",
+    "No verified dedicated account was recovered",
+    "Authenticated recovery found direct interactions from **at least six**",
+    "Carlina Rivera not yet serving on the Council",
+    "Profile count observed: 5,124 posts",
+    "1,338 followers observed",
+    "53 `#LetNYCDance` results 40 `#SaveNYCSpaces` results",
+    "34 `#TalksNotRaids` results 27 `#FairRentNYC` results",
+    "The six-member figure is a recovery floor multiple teammates posted Public-Safety Exclusions"
+  ].join(" "),
+  antiClaims:
+    "complete platform export Jamie authored every `@NYCArtC` post six is the complete historical Council-member count official Council endorsement"
+};
+
+test("project social archive passes with account map, engagement floor, and authorship boundaries", () => {
+  assert.deepEqual(
+    evaluateProjectSocialArchiveProduction(projectSocialArchiveFixture),
+    []
+  );
+});
+
+test("project social archive rejects missing recovery boundaries and leaked session material", () => {
+  const failures = evaluateProjectSocialArchiveProduction({
+    ...projectSocialArchiveFixture,
+    socialArchive: projectSocialArchiveFixture.socialArchive.replace(
+      "not a complete platform export",
+      ""
+    ),
+    archiveDoc: `${projectSocialArchiveFixture.archiveDoc} auth_token=not-a-real-secret-value`
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("complete platform export")));
+  assert.ok(failures.some((failure) => failure.includes("authentication or session")));
+});
+
+test("project social archive rejects sole-authorship and endorsement boundary removal", () => {
+  const failures = evaluateProjectSocialArchiveProduction({
+    ...projectSocialArchiveFixture,
+    antiClaims: projectSocialArchiveFixture.antiClaims
+      .replace("Jamie authored every `@NYCArtC` post", "")
+      .replace("official Council endorsement", "")
+  });
+
+  assert.ok(failures.some((failure) => failure.includes("Jamie authored every")));
+  assert.ok(failures.some((failure) => failure.includes("official Council endorsement")));
 });

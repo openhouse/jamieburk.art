@@ -9,6 +9,10 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Contributed to a period of 2x revenue growth for a legacy e-commerce business.
 - Built CallNYC.org after a New York City Council civic-data hackathon, translating constituent-services open data into resident-facing next-step guidance.
 - At least five sitting NYC Council members publicly amplified CallNYC in 2016.
+- Established public-facing identities for CallNYC, WOW List, and NYC Artist
+  Coalition that collaborators could use and carry forward.
+- Authenticated archival review recovered direct public interactions from at
+  least six contemporaneous NYC Council-member accounts with `@NYCArtC`.
 - Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - In 2017, organized fire-code study groups for DIY venues and publicly advocated at City Hall for full repeal of the Cabaret Law as part of NYC Artist Coalition.
@@ -18,6 +22,8 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
+- A 2014 WOW List public post connects the project to Jamie, Richard, and Sunday
+  Dinner; a 2015 post documents one community-created product tutorial.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Presented KC Town Hall's adaptive-reuse proposal in Kansas City's public process; after the CCED board's unanimous recommendation, the Council allocated $490,539 and authorized funding-agreement negotiations.

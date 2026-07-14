@@ -15,6 +15,14 @@ import {
   campaignPressSourceIds,
   campaignPressSources
 } from "./campaign-press.ts";
+import {
+  socialArchiveClaims,
+  socialArchiveInquiries,
+  socialArchiveIntake,
+  socialArchiveProofCoverage,
+  socialArchivePublicationDecisions,
+  socialArchiveSources
+} from "./social-archive.ts";
 
 export const frameworkPrinciple =
   "No silent loss: every submitted fragment receives a durable disposition, but intake is never automatically promoted to a public claim.";
@@ -488,7 +496,8 @@ export const frameworkIntake = [
       "Files whose access visibility could not be verified remain protected even when their contents afford a public-safe claim."
     ]
   },
-  ...campaignPressIntake
+  ...campaignPressIntake,
+  ...socialArchiveIntake
 ] satisfies IntakeRecord[];
 
 export const frameworkProjects = [
@@ -515,7 +524,8 @@ export const frameworkProjects = [
       "SRC-CALLNYC-ROSIE-MENDEZ-733410096915550208",
       "SRC-CALLNYC-MATHIEU-EUGENE-783305320508514304",
       "SRC-CALLNYC-PETER-KOO-RETWEET-725422714807267328",
-      "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"
+      "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026",
+      "SRC-X-CALLNYC-PROFILE-INVENTORY-2026"
     ],
     claimIds: [
       "CLM-CALLNYC-HACKATHON-DATE-TIME",
@@ -559,6 +569,17 @@ export const frameworkProjects = [
       "SRC-CRS-OPERATING-BACKBONE-ARCHIVE-2026",
       "SRC-GDRIVE-NYCARTC-MUTUAL-SUPPORT-FAQ-2017",
       "SRC-GDRIVE-NYCARTC-CURE-PERIODS-DATA-NOTE-2019",
+      "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+      "SRC-X-NYCARTC-ESPINAL-CABARET-2017",
+      "SRC-X-NYCARTC-LEVIN-MARCH-2019",
+      "SRC-X-NYCARTC-RIVERA-FAIR-RENT-2021",
+      "SRC-X-NYCARTC-BRANNAN-MARCH-2019",
+      "SRC-X-NYCARTC-VAN-BRAMER-CULTURE-2020",
+      "SRC-X-NYCARTC-MARK-LEVINE-REPLY-2020",
+      "SRC-X-NYCARTC-MADE-IN-NY-TOWN-HALL-2017",
+      "SRC-X-NYCARTC-OLYMPIA-CONTINUITY-2022",
+      "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+      "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
       ...campaignPressNewSourceIds
     ],
     claimIds: [
@@ -567,9 +588,10 @@ export const frameworkProjects = [
       "CLM-NYCARTC-NIGHTLIFE-TOWN-HALL",
       "CLM-NYCARTC-MARCH-TRANSPARENCY",
       "CLM-CRS-OPERATING-BACKBONE-2026",
-      "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
+      "CLM-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017",
+      "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT"
     ],
-    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP"],
+    inquiryIds: ["INQ-NYCARTC-COFOUNDING-ROLE", "INQ-NYCARTC-CABARET-OUTCOME-ROLE", "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "INQ-NYCARTC-CURE-PERIODS-DATA-NOTE-AUTHORSHIP", "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which public images show Jamie's facilitation, web, documentation, or event-production role while preserving collective credit?",
@@ -627,9 +649,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "selected",
     themes: ["community platforms", "event discovery", "participatory technology"],
-    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017"],
-    claimIds: [],
-    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE"],
+    sourceIds: ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"],
+    claimIds: ["CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE"],
+    inquiryIds: ["INQ-WOWLIST-PUBLIC-SOURCE-COVERAGE", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026"],
     photoBrief: {
       status: "research-needed",
       selectionQuestion: "Which interface or community image best demonstrates organizer use without exposing user data?",
@@ -727,9 +749,9 @@ export const frameworkProjects = [
     publicSafety: "public-with-boundary",
     editorialStatus: "hold",
     themes: ["archival production", "evidence quality", "job applications"],
-    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026"],
-    claimIds: [],
-    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT"],
+    sourceIds: ["SRC-JOB-HUNT-PROOF-AUDIT-2026", "SRC-X-CALLNYC-PROFILE-INVENTORY-2026", "SRC-X-NYCARTC-PROFILE-INVENTORY-2026", "SRC-X-WOWLIST-PROFILE-INVENTORY-2026", "SRC-JAMIE-SOCIAL-IDENTITY-ESTABLISHMENT-2026"],
+    claimIds: ["CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS"],
+    inquiryIds: ["INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026", "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP"],
     photoBrief: {
       status: "not-applicable",
       selectionQuestion: "What evidence diagram would help an editor understand proof maturity without exposing private records?",
@@ -1237,7 +1259,8 @@ export const frameworkSources = [
     supportsGenerally: ["Council adoption on September 26, 2019", "acceptance of the CCED Board recommendation", "authorization to negotiate a funding agreement not to exceed $490,539"],
     doesNotEstablish: ["executed funding agreement", "receipt or disbursement of funds", "project completion", "Jamie's sole causality for the Council vote", "current property status"]
   },
-  ...campaignPressSources
+  ...campaignPressSources,
+  ...socialArchiveSources
 ] satisfies SourceRecord[];
 
 export const frameworkClaims = [
@@ -1600,7 +1623,8 @@ export const frameworkClaims = [
     researchInquiryIds: ["INQ-PARTICIPATORY-PRACTICE-LONGITUDINAL"],
     reviewedAt: "2026-07-12",
     reviewedBy: ["Jamie Burkart", "Codex source review"]
-  }
+  },
+  ...socialArchiveClaims
 ] satisfies ClaimRecord[];
 
 const openInquiry = (
@@ -1619,7 +1643,7 @@ export const frameworkInquiries = [
   openInquiry("INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT", "career-proof-system", "Which quantified or causality-heavy resume claims should be promoted, narrowed, or held after a cross-archive audit?", ["Prioritize the Harry J. Epstein growth contribution, WOW List geographic reach, Sunday Dinner and residency aggregates, and any current-status language.", "Seek public sources, approved aggregate methods, and protected corroboration while keeping raw records private.", "Record not recovered separately from evidence that something did not exist."], ["The current resume and positioning outline are first-party research maps, not independent verification of their metrics or causality."], ["SRC-JOB-HUNT-PROOF-AUDIT-2026"]),
   openInquiry("INQ-NYCARTC-COFOUNDING-ROLE", "nyc-artist-coalition", "What do public formation records, launch materials, websites, correspondence, and collaborators establish about Jamie's role creating NYC Artist Coalition?", ["Recover dated public launch and formation materials.", "Map website authorship and coalition role language.", "Seek collaborator confirmation before broadening public wording."], ["The new sources establish an early organizer role, but not the complete founding group or co-founder wording."], ["SRC-BEDFORD-BOWERY-DIY-SPACES-2017", "SRC-VICE-NYCARTC-DCA-2017"]),
   openInquiry("INQ-NYCARTC-CABARET-OUTCOME-ROLE", "nyc-artist-coalition", "How did Jamie's documented fire-code education and public advocacy relate to the broader collective campaign and legislative repeal outcome?", ["Review remaining bill history and campaign records.", "Map coalition, partner, sponsor, and administration roles.", "Separate contribution, coalition action, sponsor action, and final legislative causality."], ["Press and Council testimony establish Jamie's contribution but not complete causality."], ["SRC-NYCARTC-CABARET-GOTHAMIST-2017", "SRC-NYC-COUNCIL-CABARET-HEARING-2017"]),
-  openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
+  openInquiry("INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE", "nyc-artist-coalition", "What public records establish Jamie's and NYC Artist Coalition's roles in advocacy surrounding creation of the Office of Nightlife?", ["Review legislation, hearings, testimony, coalition pages, and contemporaneous press.", "Identify Jamie-authored or Jamie-produced public artifacts."], ["Reporting establishes coalition advocacy and Jamie's public participation, not sole causality or every production task."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017", "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018", "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021"]),
   openInquiry("INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "nyc-artist-coalition", "Which nightlife town halls did Jamie produce, what was his role, who participated, and what public outputs followed?", ["Recover event programs, recordings, photographs, and production records.", "Map production tasks, collaborators, attendance, and outputs."], ["One town hall is now externally documented; exact production ownership and attendance remain open."], ["SRC-GHFC-JAMIE-JULIA-QA-2017", "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017", "SRC-SAVE-NYC-SPACES-CAMPAIGN", "SRC-EDGE-OF-SOUND-SAVE-NYC-SPACES-2017"]),
   openInquiry("INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH", "nyc-artist-coalition", "What did Talks Not Raids do, what role did Jamie play, what transparency was achieved, and what public record establishes changes to MARCH?", ["Map Jamie's individual authorship and operational role.", "Review implementation reports and later agency structure.", "Define what disbanded means in the public record."], ["The campaign and legislative outcome are documented, but Jamie's individual role and any disbandment claim remain unverified."], ["SRC-TALKS-NOT-RAIDS-CAMPAIGN", "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]),
   openInquiry("INQ-RIVER-RAFT-EXACT-ROUTE", "great-accommodations", "What exact route, dates, crew, host communities, interruptions, and endpoint are documented for the raft expedition?", ["Recover route logs, contemporary press, photographs, correspondence, and collaborator accounts.", "Distinguish reaching salt water from a documented Gulf endpoint."], ["Current sources do not establish the exact final endpoint or complete crew."], ["SRC-RAFT-PITCH-2007", "SRC-GREAT-ACCOMMODATIONS-CHARLOTTE-STREET-2009"]),
@@ -1631,7 +1655,8 @@ export const frameworkInquiries = [
   openInquiry("INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT", "kc-town-hall", "What later public record establishes whether Kansas City and KC Town Hall executed a funding agreement, whether funds were received or disbursed, and what implementation followed?", ["Search executed agreements, contract records, Council and board updates, and public payment records.", "Distinguish allocation, agreement execution, payment, implementation, and later property or operating status.", "Keep current property, legal, and private financial details outside the public repository unless approved."], ["Council allocation and funding-agreement negotiation authority are documented; execution, receipt or disbursement, project completion, and later property or operating status are not established by these records."], ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"]),
   openInquiry("INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", "kc-town-hall", "What public-safe handoff record or recipient confirmation establishes Jamie's transition of project stewardship to a mission-aligned organization?", ["Recover a public-safe handoff artifact or receiving-organization confirmation.", "Ask Jamie whether naming the receiving organization would be useful and approved.", "Keep personal circumstances outside the professional record."], ["Jamie's firsthand correction establishes that his involvement is historical; the receiving organization and handoff details are not yet independently corroborated or selected for public projection."], []),
   openInquiry("INQ-NYCARTC-CAMPAIGN-PRESS-CORPUS", "nyc-artist-coalition", "Which claim-level propositions does each article indexed by Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent NYC support after close reading and preservation review?", ["Close-read each unique article and record author, date, Jamie mentions, coalition claims, outcomes, contradictions, and boundaries.", "Recover durable article-level captures where publisher links moved or died.", "Preserve campaign membership while deduplicating shared articles."], ["Index membership establishes source selection by the campaign, not Jamie's appearance, article endorsement, authorship, or factual support before review.", `The four indexes contain ${Object.values(campaignPressIndexes).reduce((sum, index) => sum + index.sourceIds.length, 0)} occurrences across ${new Set(campaignPressSourceIds).size} unique articles.`], campaignPressSourceIds),
-  openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."])
+  openInquiry("INQ-PUBLIC-PROOF-SOURCE-COVERAGE", "participatory-public-practice", "Which canonical public or public-safe sources should be associated with each existing public proof claim?", ["Audit every proof ID against canonical sources.", "Prioritize metric, causality, ownership, and public-outcome claims.", "Create bounded source records and inquiries rather than weakening accurate claims by default."], ["Many claims currently rely on approved resume or public-safe archive summaries rather than canonical source records."]),
+  ...socialArchiveInquiries
 ] satisfies ResearchInquiry[];
 
 const publicationDecisionInputs: Array<[
@@ -1680,7 +1705,7 @@ export const frameworkPublicationDecisions = publicationDecisionInputs.map(
       "PUB-NYCARTC-MUTUAL-SUPPORT-RESOURCE-2017"
     ].includes(id) ? "2026-07-13" : "2026-07-12"
   })
-) satisfies PublicationDecision[];
+).concat(socialArchivePublicationDecisions) satisfies PublicationDecision[];
 
 const coverage = (
   proofId: string,
@@ -1708,7 +1733,8 @@ export const frameworkProofCoverage = [
   coverage("kc-town-hall-public-benefit-documentation", "source-backed", "Official Kansas City records identify Jamie as presenter, record the unanimous recommendation, and show the Council's $490,539 allocation and authorization of funding-agreement negotiations; execution and disbursement remain open.", ["SRC-KCMO-CCED-ROUND2-MINUTES-2019", "SRC-KCMO-ORDINANCE-190642-2019", "SRC-KCMO-RESOLUTION-190649-2019"], ["INQ-KC-TOWN-HALL-AGREEMENT-DISBURSEMENT"]),
   coverage("source-backed-team-memory-method", "partially-backed", "A protected June 2026 proposal supports the bounded method, human-review loop, approved-source scoping, and privacy boundaries; it does not establish a completed client engagement or production product.", ["SRC-GDRIVE-SOURCE-BACKED-SPRINT-PROPOSAL-2026"], ["INQ-PUBLIC-PROOF-SOURCE-COVERAGE"]),
   coverage("technical-operations-operating-backbone", "research-needed", "Treat this as a synthesis and map each operating capability to project evidence."),
-  coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record.")
+  coverage("ai-evals-professional-development", "research-needed", "Associate the public-safe completion credential as a canonical source record."),
+  ...socialArchiveProofCoverage
 ] satisfies ProofCoverage[];
 
 export const frameworkPages = [
@@ -1720,7 +1746,8 @@ export const frameworkPages = [
       "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
       "SRC-BEDFORD-BOWERY-DIY-SPACES-2017",
       "SRC-BEDFORD-BOWERY-NIGHT-MAYOR-2017",
-      "SRC-NYC-COUNCIL-MARCH-REPORTING-2019"
+      "SRC-NYC-COUNCIL-MARCH-REPORTING-2019",
+      "SRC-X-NYCARTC-PROFILE-INVENTORY-2026"
     ],
     occurrences: [
       {
@@ -1748,9 +1775,28 @@ export const frameworkPages = [
         sourceIds: ["SRC-NYC-COUNCIL-MARCH-REPORTING-2019"]
       },
       {
+        id: "council-social-engagement",
+        claimId: "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+        projection: "case-study",
+        sourceIds: ["SRC-X-NYCARTC-PROFILE-INVENTORY-2026"]
+      },
+      {
         id: "commercial-vacancy-public-data-brief",
         claimId: "CLM-COMMERCIAL-VACANCY-BASELINE-BRIEF-2026",
         projection: "case-study"
+      }
+    ]
+  },
+  {
+    id: "wowlist",
+    surface: "/work/wowlist",
+    sourceOrder: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"],
+    occurrences: [
+      {
+        id: "public-origin-and-use",
+        claimId: "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+        projection: "case-study",
+        sourceIds: ["SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014", "SRC-X-WOWLIST-USER-TUTORIAL-2015"]
       }
     ]
   },

@@ -26,6 +26,16 @@ Approved public artifact examples for this launch pass include:
 - New York City Council stated-meeting minutes from September 28, 2016.
 - Public CallNYC-related posts by five sitting NYC Council member accounts in
   2016, including an archived post and resolvable retweet object.
+- Authenticated read-only public-profile inventories for `@CallNYCApp`,
+  `@NYCArtC`, and `@wowlist`, with recovery counts recorded as floors rather
+  than complete exports.
+- Public posts from six contemporaneous NYC Council-member accounts directly
+  interacting with `@NYCArtC` across coalition campaign contexts.
+- WOW List's 2014 public Sunday Dinner origin post and 2015 public
+  community-created tutorial post.
+- Daisy Prince's 2018 Document Journal account of the Cabaret Law repeal and
+  Office of Nightlife movement, which names and pictures Jamie and Olympia Kazi
+  with NYC Artist Coalition.
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 - Eric Barton's 2007 Pitch reporting on the recycled-material raft expedition.
@@ -67,6 +77,11 @@ identities across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent
 NYC. Newly indexed articles remain discovery records, not claim support, until
 they are close-read and promoted through the canonical evidence workflow. See
 `intake/2026-07-12-campaign-press-corpus.md` for the complete grouped inventory.
+
+The public social-account inventory is documented in
+`intake/2026-07-13-project-social-account-archive-pass.md`. Authentication was
+used only to access public timelines. No session material, account-recovery
+information, private messages, or private analytics belongs in this repo.
 
 ### Public-Safe Archive Summary
 

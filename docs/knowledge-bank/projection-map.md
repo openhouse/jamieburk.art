@@ -23,6 +23,8 @@ Use claims that match the approved resume:
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
 - `callnyc-civic-data-guidance`
+- `project-social-identity-systems`
+- `nyc-artist-coalition-social-engagement`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `nyc-artist-coalition-cabaret-organizing`
 - `wowlist-community-platform`
@@ -61,6 +63,10 @@ Current selected citation projections now include:
 - early NYC Artist Coalition mutual-aid and safety organizing;
 - the coalition-led Office of Nightlife town hall and Jamie's speaker role;
 - the coalition's MARCH records-request data and the bounded legislative result;
+- a recovered floor of direct `@NYCArtC` interactions from at least six
+  contemporaneous Council-member accounts;
+- WOW List's public Sunday Dinner origin statement and one community-created
+  instructional artifact;
 - Sunday Dinner's externally documented weekly open-community practice; and
 - KC Town Hall's unanimously recommended and Council-allocated $490,539
   proposal.

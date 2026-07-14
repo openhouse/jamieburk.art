@@ -161,6 +161,7 @@ export function evaluateKnowledgeLifecycle({
   schema,
   records,
   framework,
+  socialArchive = "",
   knowledgeReadme,
   fairRentCase,
   proofs
@@ -232,10 +233,11 @@ export function evaluateKnowledgeLifecycle({
   const proofIds = [...proofs.matchAll(/^\s+id:\s*"([^"]+)"/gm)].map(
     (match) => match[1]
   );
+  const coverageSources = `${framework}\n${socialArchive}`;
   for (const proofId of proofIds) {
     if (
-      !framework.includes(`proofId: "${proofId}"`) &&
-      !framework.includes(`coverage("${proofId}"`)
+      !coverageSources.includes(`proofId: "${proofId}"`) &&
+      !coverageSources.includes(`coverage("${proofId}"`)
     ) {
       missing.push(`Source-coverage ledger is missing public proof: ${proofId}`);
     }
@@ -607,6 +609,135 @@ export function evaluateGoogleSharedDriveArchiveProduction({
   return missing;
 }
 
+export function evaluateProjectSocialArchiveProduction({
+  framework,
+  socialArchive,
+  proofs,
+  technicalOperations,
+  fairRentCase,
+  wowlistCase,
+  archiveDoc,
+  antiClaims
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Social archive model", socialArchive, [
+    "socialArchiveAccountMap",
+    'handle: "@CallNYCApp"',
+    'handle: "@NYCArtC"',
+    'handle: "@wowlist"',
+    "profilePostsObserved: 110",
+    "followersObserved: 69",
+    "timelineItemsRecovered: 106",
+    "profilePostsObserved: 5124",
+    "followersObserved: 1338",
+    "profilePostsObserved: 38",
+    "followersObserved: 47",
+    "timelineItemsRecovered: 37",
+    "LEAD-PROJECT-SOCIAL-ARCHIVE-PASS-2026",
+    "SRC-X-CALLNYC-PROFILE-INVENTORY-2026",
+    "SRC-X-NYCARTC-PROFILE-INVENTORY-2026",
+    "SRC-X-WOWLIST-PROFILE-INVENTORY-2026",
+    "SRC-DOCUMENT-JOURNAL-NIGHTLIFE-2018",
+    "SRC-NYC-NIGHTLIFE-ADVISORY-REPORT-2021",
+    "CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS",
+    "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+    "INQ-X-PROJECT-ACCOUNT-INVENTORY-2026",
+    "INQ-NYCARTC-COUNCIL-ENGAGEMENT-2026",
+    "INQ-PROJECT-SOCIAL-POST-AUTHORSHIP",
+    "53 #LetNYCDance",
+    "40 #SaveNYCSpaces",
+    "34 #TalksNotRaids",
+    "27 #FairRentNYC",
+    "At least six is a recovered minimum",
+    "Multiple teammates posted",
+    "post-by-post authorship",
+    "a complete platform export",
+    "official NYC Council endorsement"
+  ]);
+  requireFragments("Knowledge-bank integration", framework, [
+    "socialArchiveIntake",
+    "socialArchiveSources",
+    "socialArchiveClaims",
+    "socialArchiveInquiries",
+    "socialArchivePublicationDecisions",
+    "socialArchiveProofCoverage",
+    "council-social-engagement",
+    "public-origin-and-use"
+  ]);
+  requireFragments("Proof bank", proofs, [
+    'id: "project-social-identity-systems"',
+    'id: "nyc-artist-coalition-social-engagement"',
+    "collaborators used across four campaigns over years",
+    "at least six contemporaneous NYC Council-member accounts",
+    "Jamie authored every @NYCArtC post"
+  ]);
+  requireFragments("Technical Operations", technicalOperations, [
+    'project: "Project identity systems"',
+    "I established public-facing identities for CallNYC, WOW List, and NYC Artist Coalition"
+  ]);
+  requireFragments("NYC Artist Coalition case study", fairRentCase, [
+    "CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT",
+    "council-social-engagement",
+    "account establishment and continuity remain distinct from post-by-post authorship",
+    "not an official Council endorsement"
+  ]);
+  requireFragments("WOW List case study", wowlistCase, [
+    "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
+    "public-origin-and-use",
+    "do not independently verify the larger historical user, event, or geographic totals"
+  ]);
+  requireFragments("Social archive documentation", archiveDoc, [
+    "Verified Account Map",
+    "@CallNYCApp",
+    "@NYCArtC",
+    "@wowlist",
+    "No verified dedicated account was recovered",
+    "Authenticated recovery found direct interactions from **at least six**",
+    "Carlina Rivera",
+    "not yet serving on the Council",
+    "Profile count observed: 5,124 posts",
+    "1,338 followers observed",
+    "53 `#LetNYCDance` results",
+    "40 `#SaveNYCSpaces` results",
+    "34 `#TalksNotRaids` results",
+    "27 `#FairRentNYC` results",
+    "The six-member figure is a recovery floor",
+    "multiple teammates posted",
+    "Public-Safety Exclusions"
+  ]);
+  requireFragments("Social anti-claims", antiClaims, [
+    "complete platform export",
+    "Jamie authored every `@NYCArtC` post",
+    "six is the complete historical Council-member count",
+    "official Council endorsement"
+  ]);
+
+  const publicBundle = [framework, proofs, technicalOperations, fairRentCase, wowlistCase, archiveDoc, antiClaims].join("\n");
+  const secretPatterns = [
+    /auth_token\s*[:=]/i,
+    /ct0\s*[:=]/i,
+    /cookie\s*:\s*[^\s]/i,
+    /bearer\s+[a-z0-9._-]{16,}/i,
+    /password\s*[:=]\s*[^\s]+/i,
+    /session[_-]?id\s*[:=]\s*[^\s]+/i
+  ];
+  if (secretPatterns.some((pattern) => pattern.test(publicBundle))) {
+    missing.push("Public social archival production contains authentication or session material.");
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -625,6 +756,10 @@ export function runLaunchEvals(repoRoot) {
   const campaignPress = readOptional(
     repoRoot,
     "apps/www/src/data/knowledge-bank/campaign-press.ts"
+  );
+  const socialArchive = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/social-archive.ts"
   );
   const knowledgeReadme = read(repoRoot, "docs/knowledge-bank/README.md");
   const campaignPressDoc = readOptional(
@@ -647,8 +782,13 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-google-shared-drives-archive-pass.md"
   );
+  const projectSocialArchiveDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-13-project-social-account-archive-pass.md"
+  );
   const callNycCase = read(repoRoot, "apps/www/src/content/work/callnyc.mdx");
   const fairRentCase = read(repoRoot, "apps/www/src/content/work/fair-rent-nyc.mdx");
+  const wowlistCase = read(repoRoot, "apps/www/src/content/work/wowlist.mdx");
   const sundayDinnerCase = read(
     repoRoot,
     "apps/www/src/content/work/196-sunday-dinner.mdx"
@@ -666,6 +806,7 @@ export function runLaunchEvals(repoRoot) {
   const globalCss = read(repoRoot, "apps/www/src/app/globals.css");
   const deployment = read(repoRoot, "docs/deployment.md");
   const chadGuide = read(repoRoot, "docs/knowledge-bank/chad-lens.md");
+  const antiClaims = read(repoRoot, "docs/knowledge-bank/anti-claims.md");
   const packageJson = JSON.parse(read(repoRoot, "package.json"));
   const resumePath = path.join(
     repoRoot,
@@ -879,6 +1020,7 @@ export function runLaunchEvals(repoRoot) {
     schema,
     records,
     framework,
+    socialArchive,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -1011,6 +1153,32 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  const projectSocialArchiveMissing = evaluateProjectSocialArchiveProduction({
+    framework,
+    socialArchive,
+    proofs,
+    technicalOperations,
+    fairRentCase,
+    wowlistCase,
+    archiveDoc: projectSocialArchiveDoc,
+    antiClaims
+  });
+  results.push(
+    result({
+      id: "project-social-archive-production",
+      label: "Project social accounts preserve engagement evidence and collective authorship boundaries",
+      weight: 18,
+      hardGate: true,
+      missing: projectSocialArchiveMissing,
+      evidence: [
+        "Three verified project handles and four coalition campaign identities are mapped without inventing accounts for other projects.",
+        "Authenticated recovery counts are explicit floors, with near-complete visible timelines distinguished from full platform exports.",
+        "Council-member interaction counts distinguish direct engagement, campaign ecology, officeholding, and official endorsement.",
+        "Jamie's account-establishment role remains distinct from shared post authorship and collective campaign outcomes."
+      ]
+    })
+  );
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -1055,6 +1223,7 @@ export function runLaunchEvals(repoRoot) {
       "Do not use first-party job-hunt documents as independent corroboration or promote every mature archive claim to the public site.",
       "Do not publish Shared Drive names, links, IDs, membership, participant rows, access details, or private filenames to prove archival depth.",
       "Do not treat Shared Drive custody, a private draft, or one dated workflow record as proof of authorship, distribution, institutional adoption, implementation, or aggregate scale.",
+      "Do not treat an authenticated visible social timeline as a complete platform export, count one-way tags as reciprocal engagement, assign every team post to Jamie, expose authentication material, or convert individual-account interactions into official endorsement or policy causality.",
       "Production deployment always requires explicit human approval."
     ]
   };

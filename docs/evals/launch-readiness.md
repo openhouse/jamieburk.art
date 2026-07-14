@@ -42,6 +42,7 @@ The canonical positioning sentence is:
 | Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
 | KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
 | Campaign press corpus | 18 | Yes | All four campaign press indexes retain complete membership, deduplicate to canonical articles, and keep unreviewed sources out of claim support. |
+| Project social archive production | 18 | Yes | Verified account identities, authenticated recovery floors, direct engagement definitions, collective authorship boundaries, and selected public projections remain linked and privacy-safe. |
 
 The executable implementation is `scripts/lib/launch-readiness-evals.mjs`.
 Generated reports are written to `reports/generated/` and are ignored by Git.
@@ -83,3 +84,7 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - Do not satisfy press-corpus completeness by dropping cross-campaign
   duplicates, treating index membership as claim support, or marking
   unreviewed articles as close-read.
+- Do not treat an authenticated visible social timeline as a complete export,
+  count one-way tags as reciprocal engagement, attribute every team post to
+  Jamie, expose authentication material, or convert individual-account
+  interactions into official endorsement or policy causality.

@@ -12,6 +12,9 @@ Do not imply a prototype is a current official service.
 Do not imply Source-Backed Team Memory is a finished SaaS product.
 Do not imply AI replaces human judgment.
 Do not imply private archives are browsable or available.
+Do not treat an authenticated visible social timeline as a complete platform
+export, infer post authorship from a shared account, or publish authentication,
+session, private-message, recovery, or analytics data.
 
 ## HJE
 
@@ -27,6 +30,11 @@ stability advocacy outcomes.
 
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
+
+Do not say Jamie authored every `@NYCArtC` post, that every official tagged by
+the coalition engaged, that six is the complete historical Council-member
+count, or that individual-account interaction is an official Council
+endorsement or caused a policy outcome.
 
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE
@@ -44,6 +52,8 @@ selected, or a winner without new evidence and review.
 ## WOWList
 
 Do not name collaborators unless approved.
+Do not use one community-created tutorial as proof of broad adoption or treat
+the social profile as a complete historical export.
 
 ## 196 / Sunday Dinner
 

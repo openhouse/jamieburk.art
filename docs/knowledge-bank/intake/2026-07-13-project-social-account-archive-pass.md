@@ -1,0 +1,187 @@
+# Project Social-Account Archive Pass
+
+Date: 2026-07-13
+
+## Purpose
+
+Treat public project accounts as engagement records, source-discovery surfaces,
+and durable identity infrastructure. This pass inventories verified accounts,
+recovers mission-relevant public interactions, and separates Jamie's account-
+establishment role from collective post authorship and campaign outcomes.
+
+## Verified Account Map
+
+| Project or campaign | Verified handle | Account relationship |
+| --- | --- | --- |
+| CallNYC | [@CallNYCApp](https://x.com/CallNYCapp) | Dedicated historical project account |
+| NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | Shared active coalition account |
+| Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
+| Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
+| Save NYC Spaces | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
+| FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Campaign used the shared coalition account |
+| WOW List | [@wowlist](https://x.com/wowlist) | Dedicated historical project account |
+
+No verified dedicated account was recovered in this pass for Sunday Dinner / 196
+Artists Residency, Harry J. Epstein Company, KC Town Hall, KC Spaces Fund, or
+Source-Backed Team Memory. That is a bounded recovery finding, not proof that no
+account or project-related social activity ever existed.
+
+## Collection Method
+
+The review used an authenticated, read-only browser session to inspect public X
+(formerly Twitter) profiles, visible timelines, live search results, and public
+status pages. Authentication was necessary for reliable access to the public
+timeline interface. No private messages, account analytics, session material,
+credentials, account-recovery information, or other nonpublic account data was
+collected or entered into the repository.
+
+X search and infinite scrolling are not archival exports. Every count below is
+an observed value or a recovered floor as of the review date.
+
+## Account Inventory
+
+### CallNYC - @CallNYCApp
+
+- Joined March 2016; 194 following and 69 followers observed on the review date.
+- Profile count observed: 110 posts.
+- Visible timeline items recovered: 106.
+- Recovery composition: 91 account-authored posts and 15 reposts.
+- Visible date range: March 5-November 14, 2016.
+- Four profile-count items were not recovered through scrolling.
+- The account linked the civic-data tool to issue-specific resident guidance,
+  recognized Council-office constituent-service work, shared press coverage,
+  and reposted two WOW List items.
+- The canonical claim remains a verified minimum of five sitting Council
+  members who publicly amplified CallNYC in 2016: Helen Rosenthal, Ydanis
+  Rodriguez, Rosie Mendez, Mathieu Eugene, and Peter Koo.
+- Carlina Rivera also quote-posted a CallNYC recognition in 2016, but she was not
+  yet serving on the Council. She is not included in the five-member claim.
+- A March 2016 account post asserted that 94 percent of Council members were on
+  Twitter. That figure remains research material rather than a promoted claim
+  because its calculation was not recovered.
+
+### NYC Artist Coalition - @NYCArtC
+
+- Joined January 2017; 568 following and 1,338 followers observed on the review
+  date.
+- Profile count observed: 5,124 posts.
+- The profile explicitly names `#SaveNYCSpaces`, `#LetNYCDance`,
+  `#TalksNotRaids`, and `#FairRentNYC` as one coalition campaign family.
+- The active account was sampled through campaign and actor queries rather than
+  treated as a scrolling export.
+- Recovered account-authored search floors: 53 `#LetNYCDance` results, 40
+  `#SaveNYCSpaces` results, 34 `#TalksNotRaids` results, and 27 `#FairRentNYC`
+  results.
+- The recovered campaign record spans 2017-2025 and shows one public identity
+  carrying research, public-hearing invitations, town halls, rally and meeting
+  calls, bill sponsorship and co-sponsorship context, campaign reporting, and
+  long-running commercial-rent advocacy.
+- Public collaborator posts show Olympia Kazi continuing to use the coalition
+  identity and campaign vocabulary in Council-hearing and policy contexts in
+  2022 and later.
+
+#### Council-Member Engagement Definition
+
+The direct-account count includes a contemporaneous Council member's authored
+mention of `@NYCArtC`, reply to it, or quote amplification of its post. It does
+not count a one-way tag by the coalition account, a like that cannot be reliably
+recovered, or an interaction that occurred outside the person's Council term.
+
+Authenticated recovery found direct interactions from **at least six**
+contemporaneous Council-member accounts:
+
+| Council member | Representative public interaction | Mission context |
+| --- | --- | --- |
+| Rafael Espinal | [October 30, 2017](https://x.com/RLEspinal/status/924972124628049920) | Credited NYC Artist Coalition and Dance Liberation Network in the Cabaret Law repeal effort |
+| Stephen Levin | [February 11, 2019](https://x.com/StephenLevin33/status/1095020293112979457) | Thanked the coalition and venues after testimony about MARCH raids |
+| Carlina Rivera | [September 17, 2021](https://x.com/CarlinaRivera/status/1438843816732151813) | Quote-amplified a FairRentNYC campaign message |
+| Justin Brannan | [June 17, 2019](https://x.com/JustinBrannan/status/1140698679394938883) | Quote-amplified a Talks Not Raids message |
+| Jimmy Van Bramer | [October 26, 2020](https://x.com/JimmyVanBramer/status/1320792543773282304) | Mentioned the coalition in arts-and-culture support context |
+| Mark Levine | [March 20, 2020](https://x.com/MarkLevineNYC/status/1241027587947876352) | Direct account reply; not treated as mission-specific endorsement |
+
+Five of those six representative interactions are mission-specific. Mark
+Levine's recovered reply establishes direct account interaction only. Brad
+Lander supplied additional FairRentNYC campaign-level engagement, but the
+recovered wrapper did not itself mention `@NYCArtC`, so he remains outside the
+direct-handle count under this definition.
+
+The six-member figure is a recovery floor, not a complete historical census.
+It is individual-account activity, not an official NYC Council endorsement,
+evidence of policy causality, or proof that Jamie authored the underlying team
+posts.
+
+#### Institutional and Source-Discovery Findings
+
+- [Made in NY](https://x.com/MadeinNY/status/918266538616082432)
+  publicly connected NYC Artist Coalition with the first Nightlife Town Hall.
+- [Document Journal](https://www.documentjournal.com/2018/02/taking-back-new-york-citys-nightlife/)
+  names and pictures Jamie with NYC Artist Coalition, names Olympia Kazi with
+  NYC Artist Coalition and Let NYC Dance, and documents the larger collective
+  movement around Cabaret Law repeal and nightlife policy.
+- The [New York City Government Publications Portal](https://a860-gpp.nyc.gov/concern/file_sets/0z708z64c?locale=en)
+  preserves the 2021 Nightlife Advisory Board report. It is retained as an
+  institutional source lead for later claim-level review.
+
+### WOW List - @wowlist
+
+- Joined February 2014; 57 following and 47 followers observed on the review
+  date.
+- Profile count observed: 38 posts.
+- Visible timeline items recovered: 37.
+- The first recovered account-authored post, from
+  [February 12, 2014](https://x.com/wowlist/status/433671630837919744),
+  publicly names Richard and Jamie and describes the project as based on the
+  calendars made at Sunday Dinner.
+- An [August 14, 2015 post](https://x.com/wowlist/status/632168285291835392)
+  thanks a community member for making a public tutorial about using WOW List.
+  This is one concrete sign of participant use and documentation, not proof of
+  broad adoption.
+- Other recovered posts show public onboarding replies, cross-city event
+  calendars, Allied Media Conference participation, and use for civic and
+  mutual-aid event discovery. Those items remain reserve depth until their
+  linked pages and exact context are close-read.
+
+## Jamie's Role and the Team Boundary
+
+Jamie confirms that he established the CallNYC, NYC Artist Coalition, and WOW
+List project accounts as public-facing identity infrastructure. The public
+record corroborates the accounts' existence, mission, use, and continuity. It
+does not independently expose the setup action or identify who composed every
+team post.
+
+The defensible portfolio claim is therefore about systems and stewardship:
+Jamie established durable project identities that collaborators could use and
+carry forward. The especially strong NYC Artist Coalition example is also
+collective: multiple teammates posted, and Olympia Kazi's excellent public use
+of the identity over years is evidence that the shared form worked, not that
+Jamie authored her words or owned the campaign voice.
+
+## Significant Claims Promoted
+
+- `CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS`: selected for Technical Operations,
+  with the establishment claim supported by Jamie's firsthand confirmation and
+  the continuity claim supported by public account evidence.
+- `CLM-NYCARTC-COUNCIL-SOCIAL-ENGAGEMENT`: selected for the civic case study
+  and Technical Operations as an at-least-six direct-interaction floor.
+- `CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE`: selected for the WOW List proof page as
+  bounded evidence of its Sunday Dinner origin and one community-created
+  instructional artifact.
+
+## Research Debt Preserved
+
+- Obtain first-party account exports if they become available and can be
+  reviewed without exposing private data.
+- Attribute individual team posts only when drafts, exports, explicit signing,
+  repository history, or collaborator confirmation support attribution.
+- Continue Council-roster and post recovery so the six-member coalition count
+  can mature without losing its current minimum boundary.
+- Close-read linked articles, reports, event pages, and media for claim-level
+  support rather than treating a social link as automatic corroboration.
+- Preserve `not recovered` separately from `did not exist`.
+
+## Public-Safety Exclusions
+
+Do not publish authentication material, cookies, session identifiers, private
+messages, private analytics, recovery prompts, nonpublic account data, or raw
+account exports. Do not infer post authorship, institutional endorsement,
+participant consent, or policy causality from account activity alone.
