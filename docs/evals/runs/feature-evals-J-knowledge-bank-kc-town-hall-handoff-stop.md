@@ -31,12 +31,10 @@ proof or changing the website.
 
 ## Boundaries
 
-- Private circumstances surrounding the transition are omitted entirely.
 - The receiving organization, handoff mechanics, timing, responsibility set,
   and subsequent project disposition remain unspecified.
 - The Council's later withdrawal and reappropriation do not establish the
-  stewardship transition, abandonment, failure, or Jamie's reasons for ending
-  his involvement.
+  stewardship transition, abandonment, or failure.
 - The institutional record and Jamie's account remain separate evidence types.
 - No website route, page copy, governed proof, work data, generated public
   registry, or public citation changed.
