@@ -29,6 +29,12 @@ Drives pass](research/google-drive-shared-drives-archival-production-2026-07.md)
 adds private workflow evidence and rights-aware audiovisual research queues
 without publishing Drive identifiers or source materials.
 
+The [NYC Artist Coalition Facebook event pass](research/nycartc-facebook-events-archival-production-2026-07.md)
+accounts for a 34-slot event control with 33 recovered records and one unresolved
+slot. It preserves the complete surviving chronology, Page-host boundaries,
+rotating-venue practice, public-institution interfaces, posted-source routes,
+and the difference between response signals and attendance.
+
 ## Purpose
 
 The knowledge bank exists to:

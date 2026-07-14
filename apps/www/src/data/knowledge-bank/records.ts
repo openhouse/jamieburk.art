@@ -25,6 +25,13 @@ import {
   socialArchiveSources
 } from "./social-archive-production.ts";
 import {
+  nycArtcFacebookEventClaims,
+  nycArtcFacebookEventEntities,
+  nycArtcFacebookEventIntakes,
+  nycArtcFacebookEventResearchInquiries,
+  nycArtcFacebookEventSources
+} from "./facebook-events-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -44,6 +51,7 @@ const knowledgeBankInput = {
   intakeItems: [
     ...googleDriveArchiveIntakes,
     ...socialArchiveIntakes,
+    ...nycArtcFacebookEventIntakes,
     ...icloudArchiveIntakes,
     ...campaignPressIntakes,
     ...kcTownHallIntakes,
@@ -434,17 +442,16 @@ const knowledgeBankInput = {
       kind: "memory",
       capturedAt: "2026-07-13",
       submittedBy: "Jamie Burkart",
-      publicSafeDescription: "Jamie's memory of producing large town halls intended to help the Office of Nightlife protect small, diverse cultural spaces.",
+      publicSafeDescription: "Jamie's account of helping establish and produce a recurring coalition participation system that connected cultural-space meetings, practical support, public event pages, hearings, and campaign action.",
       projectIds: ["nyc-artist-coalition"],
       entityIds: ["nyc-artist-coalition", "nyc-office-of-nightlife"],
       dateHints: ["2017 onward"],
       sensitivity: "public-safe",
       availability: "unknown",
-      status: "deferred",
-      sourceIds: [],
-      claimIds: [],
-      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"],
-      dispositionReason: "Requires event records, public notices, attendance or scale evidence, Jamie's production role, and collective credits."
+      status: "promoted",
+      sourceIds: ["SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"],
+      claimIds: ["CLM-FB-NYCARTC-PARTICIPATION-SYSTEM"],
+      inquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS", "INQ-FB-NYCARTC-EVENT-POPULATION"]
     },
     {
       id: "INT-2026-07-13-MEMORY-TALKS-NOT-RAIDS-MARCH",
@@ -465,6 +472,7 @@ const knowledgeBankInput = {
     }
   ],
   entities: [
+    ...nycArtcFacebookEventEntities,
     {
       id: "charlotte-street-foundation",
       kind: "organization",
@@ -641,6 +649,7 @@ const knowledgeBankInput = {
   sources: [
     ...googleDriveArchiveSources,
     ...socialArchiveSources,
+    ...nycArtcFacebookEventSources,
     ...icloudArchiveSources,
     ...kcTownHallSources,
     {
@@ -810,6 +819,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...nycArtcFacebookEventClaims,
     ...googleDriveArchiveClaims,
     ...socialArchiveClaims,
     ...icloudArchiveClaims,
@@ -851,8 +861,8 @@ const knowledgeBankInput = {
       internalClaim: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
       status: "confirmed-with-boundary",
       publicationStatus: "qualified",
-      editorialStatus: "active",
-      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
+      editorialStatus: "unused",
+      projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "hold", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
       antiClaims: [], researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
@@ -926,6 +936,7 @@ const knowledgeBankInput = {
   researchInquiries: [
     ...googleDriveArchiveResearchInquiries,
     ...socialArchiveResearchInquiries,
+    ...nycArtcFacebookEventResearchInquiries,
     ...icloudArchiveResearchInquiries,
     kcTownHallInquiry,
     kcTownHallTransitionInquiry,
@@ -960,14 +971,12 @@ const knowledgeBankInput = {
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       occurrences: [
         { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
         { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
-        { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
         { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
         { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
       ]
@@ -978,14 +987,17 @@ const knowledgeBankInput = {
       sourceOrder: [
         "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
         "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+        "SRC-FB-NYCARTC-EVENT-1833265643557435",
+        "SRC-FB-NYCARTC-EVENT-790581997948463",
+        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
         "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
         "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
         "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
-        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
         "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
         "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
         "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
       ],
@@ -995,6 +1007,16 @@ const knowledgeBankInput = {
           claimId: "CLM-NYCARTC-FOUNDING-ROLE",
           projection: "case-study",
           sourceIds: ["SRC-NYCARTC-NPR-NIGHTLIFE-2017", "SRC-NYCARTC-GOTHAMIST-CABARET-2017"]
+        },
+        {
+          id: "nycartc-participation-system",
+          claimId: "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-FB-NYCARTC-EVENT-1833265643557435",
+            "SRC-FB-NYCARTC-EVENT-790581997948463",
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
+          ]
         },
         {
           id: "nycartc-cabaret-advocacy",
@@ -1033,7 +1055,7 @@ const knowledgeBankInput = {
           id: "nycartc-october-town-hall",
           claimId: "CLM-NYCARTC-OCTOBER-TOWN-HALL",
           projection: "case-study",
-          sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017", "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"]
+          sourceIds: ["SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017", "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017", "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017"]
         },
         {
           id: "nycartc-sbjsa-testimony",

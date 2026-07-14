@@ -126,6 +126,19 @@ visuals, and a Sunday Dinner Zoom archive. No Drive ID, URL, raw artifact,
 participant name, or access instruction is stored in the repository. See the
 [research note](research/google-drive-shared-drives-archival-production-2026-07.md).
 
+## NYC Artist Coalition Facebook Events
+
+The July 14, 2026 authenticated pass accounts for all 34 displayed event-control
+slots: 33 recovered current-visible event records and one unresolved slot. Each
+recovered event has a stable entity and source node with date, title, Page
+relationship, listed host, venue or mode, format, program, public URL, and
+non-support boundaries.
+
+The event descriptions route to campaign sites, civic actions, public-safety
+resources, planning resources, registrations, and published reporting. A
+posted URL remains a discovery and routing trace until the destination is
+independently reviewed. See the [complete public-safe research note](research/nycartc-facebook-events-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

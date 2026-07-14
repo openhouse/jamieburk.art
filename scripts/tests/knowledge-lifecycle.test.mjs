@@ -53,12 +53,16 @@ test("the second research round contains ten unique promoted sources", () => {
   }
 });
 
-test("memory leads remain inquiries rather than confirmed claims", () => {
+test("memory leads stay deferred until bounded evidence supports promotion", () => {
   const memoryItems = knowledgeBank.intakeItems.filter((item) =>
     item.id.startsWith("INT-2026-07-13-MEMORY")
   );
   assert.equal(memoryItems.length, 4);
-  for (const item of memoryItems) {
+  const promoted = memoryItems.find((item) => item.id === "INT-2026-07-13-MEMORY-NYCARTC-TOWN-HALLS");
+  assert.equal(promoted.status, "promoted");
+  assert.deepEqual(promoted.sourceIds, ["SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"]);
+  assert.deepEqual(promoted.claimIds, ["CLM-FB-NYCARTC-PARTICIPATION-SYSTEM"]);
+  for (const item of memoryItems.filter((candidate) => candidate !== promoted)) {
     assert.equal(item.status, "deferred");
     assert.equal(item.claimIds.length, 0);
     assert.equal(item.inquiryIds.length > 0, true);
@@ -102,6 +106,7 @@ test("mature unused claims remain out of public composition", () => {
   assert.deepEqual(
     active.map((claim) => claim.id).sort(),
     [
+      "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
       "CLM-NYCARTC-CABARET-LAW-ADVOCACY",
       "CLM-NYCARTC-CAMPAIGN-PRESS-CORPUS",
       "CLM-NYCARTC-EARLY-ORGANIZER-ROLE",
@@ -113,7 +118,7 @@ test("mature unused claims remain out of public composition", () => {
       "CLM-TALKS-NOT-RAIDS-PUBLIC-CAMPAIGN"
     ]
   );
-  assert.equal(unused.length, 15);
+  assert.equal(unused.length, 16);
   assert.equal(unused.every((claim) => claim.projections.every((item) => item.status !== "active")), true);
 });
 
@@ -541,6 +546,139 @@ test("NYCArtC account-establishment memory cannot erase the multi-author boundar
   inquiry.limitations = [];
   const result = validateKnowledgeLifecycle(bank, suite);
   assert.equal(result.findings.some((item) => item.code === "nycartc-account-credit"), true);
+});
+
+test("Facebook event production accounts for every displayed control slot", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const sources = required.eventIds.map((eventId) =>
+    knowledgeBank.sources.find((item) => item.id === `SRC-FB-NYCARTC-EVENT-${eventId}`)
+  );
+  const entities = required.eventIds.map((eventId) =>
+    knowledgeBank.entities.find((item) => item.id === `facebook-nycartc-event-${eventId}`)
+  );
+  assert.equal(sources.filter(Boolean).length, 33);
+  assert.equal(entities.filter(Boolean).length, 33);
+  assert.equal(sources.filter((item) => /direct-card-host/.test(item.locator)).length, 24);
+  assert.equal(sources.filter((item) => /page-associated/.test(item.locator)).length, 9);
+  assert.equal(sources.filter((item) => item.reviewDepth === "close-reading").length, 26);
+  assert.equal(sources.filter((item) => item.reviewDepth === "metadata").length, 7);
+  assert.equal(sources.filter((item) => item.preservationStatus === "dead").length, 2);
+  const inquiry = knowledgeBank.researchInquiries.find((item) => item.id === required.inquiryId);
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.match(inquiry.publicSummary, /33 recovered records and one unresolved slot/);
+});
+
+test("Facebook event eval rejects a missing event and association promoted to hosting", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  bank.sources = bank.sources.filter((item) => item.id !== `SRC-FB-NYCARTC-EVENT-${required.eventIds[0]}`);
+  const associated = bank.sources.find((item) => item.id === `SRC-FB-NYCARTC-EVENT-${required.associatedEventIds[1]}`);
+  associated.locator = associated.locator.replace("page-associated", "direct-card-host");
+  associated.doesNotEstablish = associated.doesNotEstablish.filter((item) => !/association alone/i.test(item));
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-population"), true);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-host-boundary"), true);
+});
+
+test("Facebook event eval rejects response signals presented as attendance", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.responseClaimId);
+  claim.publicationStatus = "public";
+  claim.projections = [{ key: "case-study", text: "1.7K people attended the hearing.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }];
+  claim.boundaries = [];
+  claim.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-response-boundary"), true);
+});
+
+test("Facebook event eval rejects sole-author role projection and exposed first-party evidence", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === required.roleSourceId);
+  const claim = bank.claims.find((item) => item.id === required.participationClaimId);
+  source.visibility = "public";
+  source.preservationStatus = "live";
+  source.protectedLocatorId = undefined;
+  claim.projections[0].text = "Jamie alone organized every NYC Artist Coalition event.";
+  claim.boundaries = [];
+  claim.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-role-source"), true);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-participation-claim"), true);
+});
+
+test("Facebook event role projection cannot drop first-person attribution", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.participationClaimId);
+  claim.claimType = "role";
+  claim.projections[0].text = "Jamie helped establish and produce the coalition's recurring participation system.";
+  claim.boundaries = claim.boundaries.filter((item) => !/first-person/i.test(item));
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-participation-claim"), true);
+});
+
+test("Facebook event public notes do not expose internal response signals", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === `SRC-FB-NYCARTC-EVENT-${required.eventIds[1]}`);
+  source.publicNote = "The captured page displayed 150 people responded.";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-source"), true);
+});
+
+test("Facebook event review depth follows surviving detail availability", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === `SRC-FB-NYCARTC-EVENT-${required.eventIds[25]}`);
+  source.visibility = "public";
+  source.preservationStatus = "live";
+  source.reviewDepth = "close-reading";
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-source"), true);
+});
+
+test("Facebook event eval rejects invented recovery of the unresolved slot", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.populationClaimId);
+  const inquiry = bank.researchInquiries.find((item) => item.id === required.inquiryId);
+  claim.internalClaim = "All 34 Facebook event records were recovered.";
+  claim.publicationStatus = "public";
+  claim.antiClaims = [];
+  inquiry.resultStatus = "recovered";
+  inquiry.limitations = inquiry.limitations.filter((item) => !/Meta.*export/i.test(item));
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-population-claim"), true);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-inquiry"), true);
+});
+
+test("Facebook event eval rejects scheduled officials presented as confirmed attendees", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === `SRC-FB-NYCARTC-EVENT-${required.stakeholderEventIds[0]}`);
+  const claim = bank.claims.find((item) => item.id === required.officialProgramClaimId);
+  source.doesNotEstablish = source.doesNotEstablish.filter((item) => !/scheduled stakeholder attended/i.test(item));
+  claim.boundaries = [];
+  claim.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-stakeholder-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-official-boundary"), true);
+});
+
+test("Facebook event eval keeps posted URLs as private research routing", () => {
+  const required = suite.requiredFacebookEventsArchiveProduction;
+  const bank = structuredClone(knowledgeBank);
+  const source = bank.sources.find((item) => item.id === required.linkSourceId);
+  const claim = bank.claims.find((item) => item.id === required.sourceRoutingClaimId);
+  source.visibility = "public";
+  source.protectedLocatorId = undefined;
+  claim.publicationStatus = "public";
+  claim.boundaries = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-links"), true);
+  assert.equal(result.findings.some((item) => item.code === "facebook-event-source-routing"), true);
 });
 
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {

@@ -1,12 +1,12 @@
 {
-  "judgeId": "public-safety-composition-social-drive-2026-07-14-r2",
+  "judgeId": "public-safety-composition-final-chad-2026-07-14-codex-c5eb3c-r3",
   "lens": "public-safety-composition",
-  "candidate": "sha256:85ddeb135180d768eb1330aaed6d34dca444b1fbf0bf0ff3e8a6809ac6870a38",
-  "contract": "sha256:ba136442143abb388fbf3efd39ff2e4a19aebcd494cd154a59018f88b15c194c",
+  "candidate": "sha256:c5eb3c220af65798246d2a33ba0c3d4a2df0b67ff41fe0d507115ec6fbdd9c95",
+  "contract": "sha256:bf2d38dde11edfad5d59d9d52c20e29bd32c36a68f332d3f9b563707ca093d43",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
-    "source_decomposition": 4,
+    "source_decomposition": 3,
     "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
@@ -15,39 +15,15 @@
     "projection_restraint": 4
   },
   "evidence": [
-    {
-      "rubric": "capture_integrity",
-      "observation": "Every selected social, Google Drive, and iCloud fragment has a stable intake identity and explicit disposition. Complete current-visible populations reconcile for @urbanhermit, @wowlist, and @KCTownHall, while the CallNYC and NYCArtC shortfalls remain separately dispositioned inquiries."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "Sources consistently state support and non-support scope, review depth, provenance, preservation state, and locators. The unreviewed WOW List video remains blocked, metadata-only audiovisual records support only archive existence and file counts, and public social posts are not treated as independent proof of linked outcomes."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "Claims isolate current-population reconciliation, source-discovery lineages, campaign identity, specific public amplification, operational workflows, and archive depth. Collective credits remain explicit, asset counts remain distinct from event counts, and authored plans or proposals remain distinct from completed work."
-    },
-    {
-      "rubric": "provenance_closure",
-      "observation": "Mature claims resolve to project-aligned evidence relationships and inquiries. The CallNYC amplification claim uses four recovered posts plus four official officeholder records, while private evidence uses private-support relationships with renderCitation false."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "Knowledge maturity, publication status, and editorial selection remain independent. Population inventories are internal-only, partial recoveries are not-recovered findings, the NYCArtC account-role memory remains deferred, and all newly introduced projections are held or unused."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "Project dossiers and the three July research notes preserve chronology, project relationships, handle identity, future research questions, and rights-aware photo-editor prompts without requiring every mature record to appear on the portfolio."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The implementation explicitly limits @urbanhermit to the current visible population and a discovery index, records CallNYC as 107 of 110 and NYCArtC as 748 of 5,124, refuses population-wide inference from partial records, preserves multi-author NYCArtC credit, and distinguishes mentions from inspected engagement."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "No raw social corpus, Drive identifier, private URL, filesystem path, participant identity, or access instruction is exposed. Council-member sharing remains amplification rather than endorsement or adoption, Fair Rent and Sunday Dinner media remain on rights and consent hold, and private-derived claims remain outside active composition."
-    }
+    { "rubric": "capture_integrity", "observation": "The candidate and contract fingerprints match exactly. All 34 displayed Facebook control slots retain durable dispositions through 33 recovered event source/entity pairs and one unresolved slot, while protected research artifacts remain behind opaque locators." },
+    { "rubric": "source_decomposition", "observation": "The 26 substantive event bodies remain close-read, five bounded permalink records remain metadata-reviewed, and two list-only records remain metadata-reviewed and marked dead. Hosting, Page association, stakeholder scheduling, platform response, attendance, authorship, and policy-causality boundaries remain explicit. The only residual hardening opportunity is that expected availability is still inferred from mutable locator text rather than independently pinned in the suite." },
+    { "rubric": "claim_atomicity", "observation": "The simplified participation sentence describes one attributed contribution and directly preserves shared coalition credit. Population accounting, Facebook responses, physical attendance, scheduled officials, source routing, and policy outcomes remain separate claims with separate evidentiary rules." },
+    { "rubric": "provenance_closure", "observation": "The participation occurrence now cites three representative public sources: a recurring meeting, a public-hearing pathway, and contemporaneous reporting identifying Jamie as an organizer. The protected first-person source carries the personal production description, while the broader public evidence graph remains preserved in the canonical claim." },
+    { "rubric": "status_separation", "observation": "CallNYC event-branding evidence remains reviewed and mature in the canonical bank, but its claim is editorially unused with a held projection and is absent from the public registry and page citation plan. No knowledge was deleted merely because the public composition was simplified." },
+    { "rubric": "project_context", "observation": "The NYC Artist Coalition dossier still records the 33-plus-one accounting, rotating meeting pattern, independently reported about-one-hundred attendance, first-person role boundary, ten selected claims, open collaborator research, and rights-aware photo priorities." },
+    { "rubric": "research_honesty", "observation": "The non-export limitation, unavailable detail pages, unresolved slot, direct-host versus association distinction, scheduled-versus-attended boundary, response-versus-attendance distinction, journalistic attendance qualification, and collective policy-credit limits all remain intact." },
+    { "rubric": "projection_restraint", "observation": "The active projection now states both qualifications in the sentence itself: Jamie describes the contribution, and the work was shared across the coalition. Public event notes omit internal response totals, the occurrence uses a smaller purposeful citation set, private evidence remains non-renderable, and all lifecycle, citation, knowledge-bank, public-safety, and portfolio-eval tests pass." }
   ],
   "regressions": [],
-  "nextAction": "Preserve these records in their current held or unused state until a separate audience-specific composition review selects the smallest useful claims and revalidates attribution, rights, and surface approval."
+  "nextAction": "Preserve this composition and add a deterministic assertion that the participation occurrence retains its three representative sources while the mature CallNYC branding claim remains unused and outside the public registry."
 }

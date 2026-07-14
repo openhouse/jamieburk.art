@@ -1,6 +1,70 @@
 {
   "sources": [
     {
+      "id": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "title": "Awaiting the Night Mayor",
+      "organization": "The Village Voice",
+      "author": "Roshan Abraham",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-11-17",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.villagevoice.com/awaiting-the-night-mayor/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Roshan Abraham, 'Awaiting the Night Mayor,' The Village Voice, November 17, 2017.",
+      "publicNote": "Independent reporting described about one hundred people gathering at Market Hotel for the NYC Artist Coalition's Save NYC Spaces town hall with Council members and city-agency representatives.",
+      "locator": "Article headline, body, event description, and attributed reporting.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "Jamie's individual production tasks",
+        "Facebook response totals as attendance",
+        "sole coalition credit or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCARTC-EVENT-1833265643557435",
+      "title": "NYC Artist Coalition - March General Meeting",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-06",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/1833265643557435/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'NYC Artist Coalition - March General Meeting,' Facebook event for 2017-03-06.",
+      "publicNote": "The event archive records a recurring-meeting at The Floasis focused on safety-town-halls-and-survey-design.",
+      "locator": "substantive-current-body; Page relationship: direct-card-host; listed host: NYC Artist Coalition.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "physical attendance or unique people from Facebook response signals",
+        "Jamie's authorship or production of the individual event page",
+        "policy causality"
+      ]
+    },
+    {
+      "id": "SRC-FB-NYCARTC-EVENT-790581997948463",
+      "title": "MARCH Raids in NYC - City Hall Hearing #TalksNotRaids",
+      "organization": "NYC Artist Coalition and event partners",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-02-11",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://www.facebook.com/events/790581997948463/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Artist Coalition, 'MARCH Raids in NYC - City Hall Hearing #TalksNotRaids,' Facebook event for 2019-02-11.",
+      "publicNote": "The event archive records a public-hearing at New York City Hall focused on Talks-Not-Raids.",
+      "locator": "substantive-current-body; Page relationship: direct-card-host; listed host: NYC Artist Coalition.",
+      "reviewDepth": "close-reading",
+      "doesNotEstablish": [
+        "physical attendance or unique people from Facebook response signals",
+        "Jamie's authorship or production of the individual event page",
+        "policy causality"
+      ]
+    },
+    {
       "id": "SRC-KC-TOWN-HALL-APPROVED-RESUME-2026",
       "title": "Jamie Burkart approved public resume",
       "organization": "Jamie Burkart",
@@ -156,25 +220,6 @@
         "a complete attendee list",
         "formal winners",
         "CallNYC as an official submission"
-      ]
-    },
-    {
-      "id": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-      "title": "New York City Council Hackathon promotional graphic",
-      "organization": "New York City Council / Civic Hall",
-      "kind": "promotional-graphic",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "accessedAt": "2026-07-11",
-      "assetUrl": "https://pbs.twimg.com/media/CZ5m-mAWwAA42td.png:large",
-      "preferredPublicUrl": "asset",
-      "publicCitation": "NYC Council-branded promotional graphic reading 'New York City Council Hackathon' and displaying labs.council.nyc.",
-      "publicNote": "The graphic supports the visible event branding, not a longer formal registration title.",
-      "doesNotEstablish": [
-        "a longer formal registration title",
-        "the agenda",
-        "breakout structure",
-        "participant roster"
       ]
     },
     {
@@ -483,6 +528,75 @@
   ],
   "claims": [
     {
+      "id": "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie describes helping establish and produce a recurring coalition practice that brought artists together in cultural spaces, connected practical support and listening to public action, and enabled collaborators to turn concerns into campaigns; the work was shared across the coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-FB-NYCARTC-EVENT-1833265643557435",
+          "relationship": "direct-support",
+          "supports": [
+            "recurring meeting format combining safety, listening, survey, and town-hall work"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-NYCARTC-EVENT-790581997948463",
+          "relationship": "direct-support",
+          "supports": [
+            "public-hearing pathway using 'Being there changes everything' and asking participants to tell their stories"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "independent reporting on the Market Hotel town hall and broader town-hall practice"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's named coalition advocacy and practical fire-safety study groups"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-BNB-DIY-SPACES-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "Jamie's early organizer role and coalition meeting context"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The public role wording is attributed to Jamie's first-person account; the event and reporting sources establish the collective practice and context, not his exact production share.",
+        "Credit the event practice and outcomes collectively; Jamie's first-person account supports contribution, not sole organization or authorship.",
+        "Do not attribute every event page, invitation, or facilitation decision to Jamie without event-level production evidence or collaborator confirmation.",
+        "The event record supports a recurring rotating-venue practice, not an uninterrupted monthly schedule in every year.",
+        "Policy outcomes require independent official evidence and collective-work language."
+      ]
+    },
+    {
       "id": "CLM-KC-TOWN-HALL-PLANNING-AND-DOCUMENTATION-ROLE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -755,36 +869,6 @@
       ]
     },
     {
-      "id": "CLM-CALLNYC-EVENT-BRANDING",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/callnyc"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
-          "relationship": "direct-support",
-          "supports": [
-            "graphic wording",
-            "event branding"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Treat the wording as visible branding, not proof of a longer formal registration title."
-      ]
-    },
-    {
       "id": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1040,7 +1124,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "In October 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife. Contemporaneous reporting identified Jamie among coalition participants and documented participation by cultural organizations, three Council members, and city cultural officials.",
+          "text": "In October 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife. Independent reporting described a crowd of about one hundred, while contemporaneous reporting identified Jamie among coalition participants and documented participation by cultural organizations, Council members, and city cultural officials.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1072,10 +1156,21 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "approximately one hundred attendees",
+            "Council and city-agency participation",
+            "recurring coalition town-hall practice"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
-        "The sources establish coalition organization and Jamie's participation, not a numeric attendance total or Jamie's exact production responsibilities."
+        "About one hundred is a contemporaneous journalistic description, not an audited attendance count; the sources establish Jamie's participation, not his exact production responsibilities."
       ]
     },
     {
@@ -1308,8 +1403,7 @@
         "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
-        "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-GITHUB-REPOSITORY"
       ],
       "occurrences": [
         {
@@ -1339,14 +1433,6 @@
           ]
         },
         {
-          "id": "event-branding",
-          "claimId": "CLM-CALLNYC-EVENT-BRANDING",
-          "projection": "case-study",
-          "sourceIds": [
-            "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
-          ]
-        },
-        {
           "id": "press-coverage",
           "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
           "projection": "case-study",
@@ -1371,14 +1457,17 @@
       "sourceOrder": [
         "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
         "SRC-NYCARTC-GOTHAMIST-CABARET-2017",
+        "SRC-FB-NYCARTC-EVENT-1833265643557435",
+        "SRC-FB-NYCARTC-EVENT-790581997948463",
+        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-MIXMAG-CABARET-HEARING-2017",
         "SRC-NYCARTC-LET-NYC-DANCE-CAMPAIGN",
         "SRC-NYCARTC-TALKS-NOT-RAIDS-CAMPAIGN",
         "SRC-NYCARTC-SAVE-NYC-SPACES-CAMPAIGN",
         "SRC-NYCARTC-FAIR-RENT-NYC-CAMPAIGN-ARCHIVE-2021",
-        "SRC-NYCARTC-BNB-DIY-SPACES-2017",
         "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
         "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+        "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
         "SRC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
         "SRC-NYC-COUNCIL-INTRO-1156-LOCAL-LAW-220"
       ],
@@ -1390,6 +1479,16 @@
           "sourceIds": [
             "SRC-NYCARTC-NPR-NIGHTLIFE-2017",
             "SRC-NYCARTC-GOTHAMIST-CABARET-2017"
+          ]
+        },
+        {
+          "id": "nycartc-participation-system",
+          "claimId": "CLM-FB-NYCARTC-PARTICIPATION-SYSTEM",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-FB-NYCARTC-EVENT-1833265643557435",
+            "SRC-FB-NYCARTC-EVENT-790581997948463",
+            "SRC-NYCARTC-BNB-DIY-SPACES-2017"
           ]
         },
         {
@@ -1435,7 +1534,8 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
-            "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017"
+            "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
+            "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017"
           ]
         },
         {

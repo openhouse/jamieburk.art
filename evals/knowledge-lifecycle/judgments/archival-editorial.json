@@ -1,65 +1,29 @@
 {
-  "judgeId": "archival-editorial-urbanhermit-2026-07-14-c",
+  "judgeId": "archival-editorial-final-c-20260714-a91e6f",
   "lens": "archival-editorial",
-  "candidate": "sha256:85ddeb135180d768eb1330aaed6d34dca444b1fbf0bf0ff3e8a6809ac6870a38",
-  "contract": "sha256:ba136442143abb388fbf3efd39ff2e4a19aebcd494cd154a59018f88b15c194c",
+  "candidate": "sha256:c5eb3c220af65798246d2a33ba0c3d4a2df0b67ff41fe0d507115ec6fbdd9c95",
+  "contract": "sha256:bf2d38dde11edfad5d59d9d52c20e29bd32c36a68f332d3f9b563707ca093d43",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
     "source_decomposition": 4,
-    "claim_atomicity": 4,
-    "provenance_closure": 4,
+    "claim_atomicity": 3,
+    "provenance_closure": 3,
     "status_separation": 4,
     "project_context": 4,
     "research_honesty": 4,
     "projection_restraint": 4
   },
   "evidence": [
-    {
-      "rubric": "capture_integrity",
-      "observation": "The social, Google Drive, and iCloud passes assign stable intake, source, claim, inquiry, project, and opaque locator identities; complete current X populations reconcile to 434, 38, and 183 records while CallNYC and NYCArtC retain explicit retrieval gaps."
-    },
-    {
-      "rubric": "source_decomposition",
-      "observation": "Sources consistently record review depth, locators, supported propositions, non-support boundaries, preservation state, visibility, and rights status; the unreviewed WOW List video remains blocked and metadata-only visual archives do not become substantive evidence."
-    },
-    {
-      "rubric": "claim_atomicity",
-      "observation": "Claims separate current-population reconciliation, project-lineage discovery, Council-member amplification, official response, coalition identity, incomplete recovery, residency operations, media-archive existence, and stored-asset counts rather than combining them into broad impact narratives."
-    },
-    {
-      "rubric": "provenance_closure",
-      "observation": "The CallNYC amplification claim resolves separately to four recovered public posts and four official Council person records, while every private-supported Drive and iCloud claim resolves to a known protected source with non-renderable evidence."
-    },
-    {
-      "rubric": "status_separation",
-      "observation": "Personal memory, public social evidence, private support, metadata findings, negative research, qualified claims, candidates, holds, and internal-only records remain distinct; Jamie's NYCArtC account-establishment memory is deferred without a promoted claim."
-    },
-    {
-      "rubric": "project_context",
-      "observation": "The three research notes orient future researchers through account inventories, archive scope, methods, results, claim palettes, privacy boundaries, unresolved inquiries, and photo-editor implications without requiring the original research to be repeated."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The implementation identifies 434 @urbanhermit records as the complete current visible population rather than a total historical record, preserves CallNYC's 107-of-110 and NYCArtC's 748-of-5,124 boundaries, and requires an official archive or API export before population-wide NYCArtC findings."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "Council-member activity is described narrowly as recovered quote-posts and a direct share; explicit boundaries reject formal endorsement, adoption, offline use, constituent outcomes, complete engagement rosters, and treating mentions as engagement."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "New archive-derived claims remain unused, candidate, internal-only, or on hold; private corpora, Drive materials, participant identities, access instructions, private paths, raw records, and unapproved audiovisual assets are not exposed."
-    },
-    {
-      "rubric": "projection_restraint",
-      "observation": "The Google Drive records preserve rights and consent holds, distinguish 33 stored Zoom assets from 33 events, and distinguish 42 photographs from attendance or participant counts."
-    },
-    {
-      "rubric": "research_honesty",
-      "observation": "The deterministic lifecycle suite reports 100 out of 100, and all 35 fixture and mutation tests pass, including failures for private leaks, premature projection, partial-corpus inflation, endorsement drift, metadata misuse, and event-count inflation."
-    }
+    { "rubric": "capture_integrity", "observation": "The candidate and contract hashes match exactly. All 58 intakes have completed dispositions, all 34 displayed Facebook event-control slots remain accounted for as 33 recovered records and one unresolved slot, and the deterministic evaluation reports no findings." },
+    { "rubric": "source_decomposition", "observation": "The event corpus retains availability-matched review depth: 26 substantive bodies are close-read, five bounded permalink records are metadata-reviewed, and two list-only records are metadata-reviewed and marked dead. Hosting, association, response, attendance, stakeholder, authorship, and policy-causality non-support boundaries remain intact." },
+    { "rubric": "claim_atomicity", "observation": "The system keeps population accounting, participation contribution, response signals, source routing, official programs, attendance, and policy outcomes separately evaluable. The participation projection is necessarily synthetic but remains one explicitly attributed and collectively bounded practice claim." },
+    { "rubric": "provenance_closure", "observation": "No provenance regressed. The full claim retains Jamie's protected first-person source, four event records, independent attendance reporting, and organizer-context reporting. The public occurrence selects three representative sources for recurring practice, public-action routing, and Jamie's organizer context without deleting the fuller evidence graph." },
+    { "rubric": "status_separation", "observation": "CallNYC event-branding evidence remains reviewed, directly supported, confirmed-with-boundary, qualified, editorially unused, and held rather than removed. Its source and claim remain in the knowledge bank while disappearing from the public registry and CallNYC citation plan." },
+    { "rubric": "project_context", "observation": "The NYC Artist Coalition dossier still reconciles the 33-plus-one event accounting, recurring rotating venues, independent about-one-hundred town-hall report, collective campaign context, open production-share research, and future photo priorities." },
+    { "rubric": "research_honesty", "observation": "No research-honesty boundary regressed: the candidate still distinguishes displayed-control accounting from historical completeness, records seven degraded detail surfaces, requires a Meta export for the unresolved slot, keeps Facebook responses separate from attendance, and refuses inferred hosting, official attendance, authorship, endorsement, or policy causality." },
+    { "rubric": "projection_restraint", "observation": "The simplified public projection directly says 'Jamie describes,' explicitly states that the work was shared across the coalition, and uses three representative public sources rather than presenting the full evidence inventory. The separate October-town-hall occurrence preserves the independently reported about-one-hundred figure. All 45 lifecycle tests and all 10 citation tests pass." }
   ],
   "regressions": [],
-  "nextAction": "Obtain an official @NYCArtC account archive or authenticated API export, then reconcile the remaining 4,376 profile-counted records without weakening the present partial-corpus boundary."
+  "nextAction": "Stop this lifecycle cycle, preserve the unused CallNYC branding claim for future composition, and retain first-person attribution until collaborator or event-level evidence supports stronger role allocation."
 }

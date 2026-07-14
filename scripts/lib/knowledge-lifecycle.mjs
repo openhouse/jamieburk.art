@@ -649,6 +649,197 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredFacebookEventsArchiveProduction) {
+    const required = suite.requiredFacebookEventsArchiveProduction;
+    const intake = bank.intakeItems.find((item) => item.id === required.intakeId);
+    const memoryIntake = bank.intakeItems.find((item) => item.id === required.memoryIntakeId);
+    const control = sourceById.get(required.controlSourceId);
+    const corpus = sourceById.get(required.corpusSourceId);
+    const linkSource = sourceById.get(required.linkSourceId);
+    const roleSource = sourceById.get(required.roleSourceId);
+    const attendanceSource = sourceById.get(required.independentAttendanceSourceId);
+    const inquiry = bank.researchInquiries.find((item) => item.id === required.inquiryId);
+    const populationClaim = bank.claims.find((item) => item.id === required.populationClaimId);
+    const participationClaim = bank.claims.find((item) => item.id === required.participationClaimId);
+    const responseClaim = bank.claims.find((item) => item.id === required.responseClaimId);
+    const routingClaim = bank.claims.find((item) => item.id === required.sourceRoutingClaimId);
+    const officialClaim = bank.claims.find((item) => item.id === required.officialProgramClaimId);
+    const eventSources = required.eventIds
+      .map((eventId) => sourceById.get(`SRC-FB-NYCARTC-EVENT-${eventId}`))
+      .filter(Boolean);
+    const eventEntities = required.eventIds
+      .map((eventId) => bank.entities.find((item) => item.id === `facebook-nycartc-event-${eventId}`))
+      .filter(Boolean);
+
+    if (!intake || intake.status !== "promoted" || !intake.protectedLocatorId) {
+      add("capture_integrity", "facebook-event-intake", `${required.intakeId} is missing or not safely promoted`);
+    }
+    if (eventSources.length !== required.recoveredCount || eventEntities.length !== required.recoveredCount) {
+      add("capture_integrity", "facebook-event-population", `Expected ${required.recoveredCount} event sources and entities`);
+    }
+    for (const eventId of required.eventIds) {
+      const source = sourceById.get(`SRC-FB-NYCARTC-EVENT-${eventId}`);
+      const detailAvailability = source?.locator?.split(";")[0];
+      const reviewMatchesAvailability =
+        (detailAvailability === "substantive-current-body" && source?.visibility === "public" && source?.preservationStatus === "live" && source?.reviewDepth === "close-reading") ||
+        (detailAvailability === "bounded-permalink-facts-only" && source?.visibility === "public" && source?.preservationStatus === "live" && source?.reviewDepth === "metadata") ||
+        (detailAvailability === "list-record-only" && source?.visibility === "public" && source?.preservationStatus === "dead" && source?.reviewDepth === "metadata");
+      if (
+        !source ||
+        source.reviewStatus !== "reviewed" ||
+        !reviewMatchesAvailability ||
+        source.canonicalUrl !== `https://www.facebook.com/events/${eventId}/` ||
+        !source.supportsGenerally.length ||
+        /people responded/i.test(source.publicNote ?? "") ||
+        !source.doesNotEstablish.some((item) => /attendance|unique people/i.test(item)) ||
+        !source.doesNotEstablish.some((item) => /Jamie.*authorship|individual event page/i.test(item))
+      ) {
+        add("source_decomposition", "facebook-event-source", `Event ${eventId} lacks an availability-matched review depth, public source, or response/authorship boundary`);
+      }
+    }
+
+    const directSources = eventSources.filter((source) => /direct-card-host/.test(source.locator ?? ""));
+    const associatedSources = eventSources.filter((source) => /page-associated/.test(source.locator ?? ""));
+    const recurringSources = eventSources.filter((source) => source.supportsGenerally.includes("recurring coalition meeting"));
+    if (directSources.length !== required.directHostCount || associatedSources.length !== required.associatedCount) {
+      add("project_context", "facebook-event-relationship-count", `Expected ${required.directHostCount} direct and ${required.associatedCount} associated event records`);
+    }
+    if (recurringSources.length !== required.recurringMeetingCount) {
+      add("project_context", "facebook-event-recurring-count", `Expected ${required.recurringMeetingCount} recurring meeting records`);
+    }
+    for (const eventId of required.associatedEventIds) {
+      const source = sourceById.get(`SRC-FB-NYCARTC-EVENT-${eventId}`);
+      if (!source?.doesNotEstablish.some((item) => /association alone.*hosted|association alone.*co-hosted/i.test(item))) {
+        add("research_honesty", "facebook-event-host-boundary", `${eventId} turns Page association into coalition hosting`);
+      }
+    }
+    for (const eventId of required.stakeholderEventIds) {
+      const source = sourceById.get(`SRC-FB-NYCARTC-EVENT-${eventId}`);
+      if (
+        !source?.supportsGenerally.some((item) => /scheduled public stakeholders/i.test(item)) ||
+        !source.doesNotEstablish.some((item) => /named or scheduled stakeholder attended/i.test(item))
+      ) {
+        add("research_honesty", "facebook-event-stakeholder-boundary", `${eventId} does not separate scheduled stakeholders from attendance`);
+      }
+    }
+
+    if (
+      !control ||
+      control.visibility !== "public" ||
+      !control.publicNote?.includes(String(required.recoveredCount)) ||
+      !control.publicNote?.includes(String(required.hostCardCount))
+    ) {
+      add("source_decomposition", "facebook-event-control", `${required.controlSourceId} does not preserve the 33-of-34 control`);
+    }
+    if (
+      !corpus ||
+      corpus.visibility === "public" ||
+      corpus.preservationStatus !== "private" ||
+      !corpus.protectedLocatorId ||
+      corpus.canonicalUrl ||
+      corpus.archiveUrl ||
+      corpus.assetUrl
+    ) {
+      add("projection_restraint", "facebook-event-corpus", `${required.corpusSourceId} exposes the private research corpus`);
+    }
+    if (
+      !linkSource ||
+      linkSource.visibility === "public" ||
+      !linkSource.protectedLocatorId ||
+      !linkSource.doesNotEstablish.some((item) => /truth of every linked proposition/i.test(item))
+    ) {
+      add("projection_restraint", "facebook-event-links", `${required.linkSourceId} treats posted links as public proof or exposes the raw inventory`);
+    }
+    if (
+      !roleSource ||
+      roleSource.visibility !== "protected" ||
+      roleSource.preservationStatus !== "private" ||
+      !roleSource.protectedLocatorId ||
+      !roleSource.doesNotEstablish.some((item) => /sole organization|individual authorship/i.test(item))
+    ) {
+      add("projection_restraint", "facebook-event-role-source", `${required.roleSourceId} loses its first-party or collective-credit boundary`);
+    }
+    if (
+      !memoryIntake ||
+      memoryIntake.status !== "promoted" ||
+      !memoryIntake.sourceIds.includes(required.roleSourceId) ||
+      !memoryIntake.claimIds.includes(required.participationClaimId)
+    ) {
+      add("provenance_closure", "facebook-event-role-intake", `${required.memoryIntakeId} is not linked to the bounded role source and claim`);
+    }
+
+    if (
+      !populationClaim ||
+      populationClaim.publicationStatus !== "internal-only" ||
+      populationClaim.projections.some((projection) => projection.status === "active") ||
+      ![required.hostCardCount, required.recoveredCount, required.unresolvedCount].every((count) => JSON.stringify(populationClaim).includes(String(count))) ||
+      !populationClaim.antiClaims.some((item) => /All 34 event records|every event ever/i.test(item))
+    ) {
+      add("research_honesty", "facebook-event-population-claim", `${required.populationClaimId} overstates the recovered population`);
+    }
+    if (
+      !participationClaim ||
+      participationClaim.claimType !== "attributed-description" ||
+      participationClaim.status !== "confirmed-with-boundary" ||
+      participationClaim.publicationStatus !== "qualified" ||
+      participationClaim.editorialStatus !== "active" ||
+      !participationClaim.projections.some((projection) => projection.status === "active" && /Jamie describes.*help(?:ed|ing) establish and produce/i.test(projection.text)) ||
+      !participationClaim.boundaries.some((item) => /first-person.*not.*exact production/i.test(item)) ||
+      !participationClaim.boundaries.some((item) => /collectively|not sole|not.*authorship/i.test(item)) ||
+      !participationClaim.antiClaims.some((item) => /Jamie alone|every event page|caused legislation/i.test(item)) ||
+      !participationClaim.evidence.some((item) => item.sourceId === required.roleSourceId && item.relationship === "private-support") ||
+      !participationClaim.evidence.some((item) => item.sourceId === required.independentAttendanceSourceId && item.relationship === "corroborating")
+    ) {
+      add("projection_restraint", "facebook-event-participation-claim", `${required.participationClaimId} loses the bounded contribution or collective-credit posture`);
+    }
+    if (
+      !attendanceSource ||
+      !attendanceSource.supportsGenerally.some((item) => /approximately one hundred/i.test(item)) ||
+      !attendanceSource.doesNotEstablish.some((item) => /Facebook response totals as attendance/i.test(item))
+    ) {
+      add("provenance_closure", "facebook-event-attendance-source", `${required.independentAttendanceSourceId} does not support the bounded attendance report`);
+    }
+    if (
+      !responseClaim ||
+      responseClaim.publicationStatus !== "internal-only" ||
+      responseClaim.projections.some((projection) => projection.status === "active") ||
+      !responseClaim.boundaries.some((item) => /do not establish.*attendance|not.*attendance|Do not sum/i.test(item)) ||
+      !responseClaim.antiClaims.some((item) => /1.7K people attended|sum of all Facebook responses/i.test(item))
+    ) {
+      add("projection_restraint", "facebook-event-response-boundary", `${required.responseClaimId} converts response signals into attendance or impact`);
+    }
+    if (
+      !routingClaim ||
+      routingClaim.publicationStatus !== "internal-only" ||
+      !routingClaim.boundaries.some((item) => /not automatic corroboration|research lead/i.test(item)) ||
+      !routingClaim.evidence.some((item) => item.sourceId === required.linkSourceId && item.relationship === "private-support")
+    ) {
+      add("research_honesty", "facebook-event-source-routing", `${required.sourceRoutingClaimId} treats posted URLs as claim proof`);
+    }
+    if (
+      !officialClaim ||
+      !officialClaim.boundaries.some((item) => /does not prove attendance/i.test(item)) ||
+      !officialClaim.antiClaims.some((item) => /Every named official attended/i.test(item))
+    ) {
+      add("research_honesty", "facebook-event-official-boundary", `${required.officialProgramClaimId} converts scheduled officials into attendance or endorsement`);
+    }
+
+    const inquiryText = JSON.stringify(inquiry ?? {});
+    if (
+      !inquiry ||
+      inquiry.resultStatus !== "partially-recovered" ||
+      ![required.hostCardCount, required.recoveredCount, required.unresolvedCount, required.directHostCount, required.associatedCount, required.recurringMeetingCount, required.physicalVenueCount, required.virtualMeetingCount].every((count) => inquiryText.includes(String(count))) ||
+      !inquiry.limitations.some((item) => /official Meta.*export/i.test(item)) ||
+      !inquiry.limitations.some((item) => /response.*not.*attendance|response displays are not/i.test(item))
+    ) {
+      add("research_honesty", "facebook-event-inquiry", `${required.inquiryId} does not preserve the complete accounting and unresolved boundary`);
+    }
+    const fairRentPage = bank.pages.find((page) => page.id === "fair-rent-nyc");
+    if (!fairRentPage?.occurrences.some((occurrence) => occurrence.claimId === required.participationClaimId)) {
+      add("provenance_closure", "facebook-event-projection", `${required.participationClaimId} is active without a page citation plan`);
+    }
+  }
+
   if (suite.requiredGoogleDriveArchiveProduction) {
     const required = suite.requiredGoogleDriveArchiveProduction;
     for (const intakeId of required.intakeIds) {

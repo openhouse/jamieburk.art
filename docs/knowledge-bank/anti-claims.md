@@ -84,6 +84,18 @@ also preserves Olympia Kazi's and other contributors' work.
 Do not count stakeholder mentions as replies, amplification, endorsement, or
 engagement without inspecting the actual relationship.
 
+## NYC Artist Coalition Facebook Events
+
+Do not describe 33 recovered records as 34 recovered records or invent the
+unresolved slot. Do not treat Page association as coalition hosting. Do not
+convert Facebook responses, Went, or Interested displays into attendance,
+unique people, reach, or impact.
+
+Do not say every meeting happened monthly, every meeting used a new venue,
+every scheduled official attended, Jamie authored every event page, Jamie alone
+organized the events, or the event practice by itself caused legislation or
+agency change.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

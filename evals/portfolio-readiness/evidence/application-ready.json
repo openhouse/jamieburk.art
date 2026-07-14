@@ -1,5 +1,5 @@
 {
-  "candidate": "sha256:6b5b442fdcc2e69462622e9036bb60049cde4c61a5a43aa8f437b8480b8b5e2e",
+  "candidate": "sha256:ebf906802434ab11b1a7db7190f7349a5cbdb7b987a6c9738dc8613f9662d234",
   "profile": "application_ready",
   "performedAt": "2026-07-14",
   "method": "Local Next.js candidate inspected with Playwright at desktop, mobile, and 200%-equivalent reflow viewports, plus real keyboard traversal, citation semantics, metadata, and resume download checks.",
@@ -16,17 +16,17 @@
     { "route": "/work/wowlist", "desktop": { "status": 200, "overflow": false, "h1": "WOWList.org" }, "mobile": { "status": 200, "overflow": false, "h1": "WOWList.org" } }
   ],
   "citations": {
-    "referenceCount": 9,
-    "backlinkCount": 9,
+    "referenceCount": 8,
+    "backlinkCount": 8,
     "localLinks": true,
     "backlinks": true,
     "accessibleLabels": true,
     "referencesHeading": true
   },
   "fairRentCitations": {
-    "referenceCount": 17,
-    "backlinkCount": 17,
-    "sourceNoteCount": 12,
+    "referenceCount": 21,
+    "backlinkCount": 21,
+    "sourceNoteCount": 15,
     "localLinks": true,
     "accessibleLabels": true,
     "referencesHeading": true,
@@ -47,7 +47,7 @@
     "method": "Sent twenty-four real Tab key events on /work/callnyc and inspected document.activeElement plus computed focus outlines.",
     "focusableCount": 24,
     "visibleFocusCount": 24,
-    "citationFocusCount": 9
+    "citationFocusCount": 8
   },
   "resumeDownload": true,
   "resumeStatus": 200,

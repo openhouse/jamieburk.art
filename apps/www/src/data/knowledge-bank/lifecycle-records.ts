@@ -1143,14 +1143,14 @@ export const lifecycleClaims = [
     id: "CLM-NYCARTC-OCTOBER-TOWN-HALL",
     project: "nyc-artist-coalition",
     claimType: "activity",
-    internalClaim: "NYC Artist Coalition organized an October 11, 2017 Market Hotel town hall about the new Office of Nightlife, and contemporaneous reporting identified Jamie among coalition participants.",
+    internalClaim: "NYC Artist Coalition organized an October 11, 2017 Market Hotel town hall about the new Office of Nightlife; independent reporting described about one hundred attendees, and contemporaneous reporting identified Jamie among coalition participants.",
     status: "confirmed-with-boundary",
     publicationStatus: "qualified",
     editorialStatus: "active",
     projections: [
       {
         key: "case-study",
-        text: "In October 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife. Contemporaneous reporting identified Jamie among coalition participants and documented participation by cultural organizations, three Council members, and city cultural officials.",
+        text: "In October 2017, NYC Artist Coalition spearheaded a Market Hotel town hall about the new Office of Nightlife. Independent reporting described a crowd of about one hundred, while contemporaneous reporting identified Jamie among coalition participants and documented participation by cultural organizations, Council members, and city cultural officials.",
         status: "active",
         citationRequired: true,
         surfaces: ["/work/fair-rent-nyc"]
@@ -1172,10 +1172,18 @@ export const lifecycleClaims = [
         locator: "Opening account of the town hall and participant description.",
         confidence: "high",
         renderCitation: true
+      },
+      {
+        sourceId: "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+        relationship: "corroborating",
+        supports: ["approximately one hundred attendees", "Council and city-agency participation", "recurring coalition town-hall practice"],
+        locator: "Opening paragraphs and later account of the coalition's town-hall practice.",
+        confidence: "high",
+        renderCitation: true
       }
     ],
-    boundaries: ["The sources establish coalition organization and Jamie's participation, not a numeric attendance total or Jamie's exact production responsibilities."],
-    antiClaims: ["Jamie alone produced the town hall or the town hall alone determined Office policy."],
+    boundaries: ["About one hundred is a contemporaneous journalistic description, not an audited attendance count; the sources establish Jamie's participation, not his exact production responsibilities."],
+    antiClaims: ["Hundreds of people are independently documented as attending, Jamie alone produced the town hall, or the town hall alone determined Office policy."],
     researchInquiryIds: ["INQ-NYCARTC-NIGHTLIFE-TOWN-HALLS"],
     reviewedAt: "2026-07-13",
     reviewedBy: ["Codex close reading"]
@@ -1514,33 +1522,40 @@ export const lifecycleResearchInquiries = [
       "INT-2026-07-13-GREENE-HILL-NEWSLETTER",
       "INT-2026-07-13-NIGHT-MAYOR-LETTER",
       "INT-2026-07-13-BNB-NIGHT-MAYOR-TOWN-HALL",
-      "INT-2026-07-13-NYC-NIGHTLIFE-REPORT"
+      "INT-2026-07-13-NYC-NIGHTLIFE-REPORT",
+      "INT-2026-07-14-FB-NYCARTC-EVENT-POPULATION"
     ],
     question: "Which nightlife town halls did Jamie produce, at what scale, with which collaborators, and how did they inform public accountability for the Office of Nightlife?",
     methods: [
       "Preserved Jamie's memory as an inquiry and identified the minimum event, role, scale, credit, and outcome evidence needed.",
       "Closely read the recovered Greene Hill Q&A for bounded event evidence.",
-      "Triangulated the coalition's October 11 invitation with contemporaneous reporting that the event occurred and a later official report documenting a separate March 2018 town hall."
+      "Triangulated the coalition's October 11 invitation with contemporaneous reporting that the event occurred and a later official report documenting a separate March 2018 town hall.",
+      "Reconciled the complete displayed Facebook event control and close-read the recurring meetings, Market Hotel town hall, March 2018 panel, public-hearing paths, and response-versus-attendance boundary."
     ],
-    runAt: "2026-07-13",
+    runAt: "2026-07-14",
     resultStatus: "partially-recovered",
     findings: [
       "A public Q&A records Jamie and Julia inviting readers to a September 28 town hall for dialogue with the new Office of Nightlife.",
       "NYC Artist Coalition's September letter and Bedford + Bowery reporting establish that the coalition spearheaded an October 11 Market Hotel town hall and identify Jamie among coalition participants.",
-      "The Office of Nightlife's report establishes that NYC Artist Coalition held another town hall in March 2018 to introduce the first nightlife director to broad stakeholders."
+      "Independent Village Voice reporting described about one hundred people at the October Market Hotel town hall with Council members and city-agency representatives.",
+      "The Office of Nightlife's report establishes that NYC Artist Coalition held another town hall in March 2018 to introduce the first nightlife director to broad stakeholders.",
+      "The Facebook event record documents a wider recurring participation system across cultural-space meetings, practical support, public hearings, and campaign action."
     ],
     limitations: [
-      "No reviewed source supplies a reliable numeric attendance count for either documented event.",
+      "The October report's about-one-hundred figure is journalistic, not audited; Facebook response displays are not attendance.",
       "The October sources establish Jamie's participation, not his complete production responsibilities; the March report does not name him.",
-      "Programs, recordings, collaborator accounts, and operational records are still needed for a stronger personal production claim."
+      "Jamie's first-person account supports a bounded contribution claim; collaborator accounts and event-level production records would strengthen allocation of specific tasks."
     ],
     sourceIds: [
       "SRC-NYCARTC-GREENE-HILL-NEWSLETTER-2017",
       "SRC-NYCARTC-NIGHT-MAYOR-LETTER-2017",
       "SRC-NYCARTC-BNB-NIGHT-MAYOR-TOWN-HALL-2017",
-      "SRC-NYC-NIGHTLIFE-REPORT-2021"
+      "SRC-NYC-NIGHTLIFE-REPORT-2021",
+      "SRC-NYCARTC-VILLAGE-VOICE-NIGHT-MAYOR-2017",
+      "SRC-FB-NYCARTC-EVENTS-CORPUS-2026",
+      "SRC-NYCARTC-JAMIE-EVENT-PRACTICE-CONFIRMATION-2026"
     ],
-    publicSummary: "Public records establish coalition-organized Office of Nightlife town halls in October 2017 and March 2018; Jamie is documented at the October event, while scale and his complete production role remain open."
+    publicSummary: "Public records establish coalition-organized Office of Nightlife town halls in October 2017 and March 2018; independent reporting described about one hundred people at the October event, and the broader event record supports Jamie's bounded contribution to a recurring participation system while preserving collective credit."
   },
   {
     id: "INQ-NYCARTC-TALKS-NOT-RAIDS-MARCH",

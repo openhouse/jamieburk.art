@@ -45,6 +45,16 @@ Ask:
 16. Do Google Drive records preserve opaque private locators, blocked or held
     audiovisual material, participant and access privacy, and the difference
     between stored asset counts and event counts?
+17. Does the NYC Artist Coalition Facebook event pass account for the complete
+    displayed control as 33 recovered records plus one unresolved slot, without
+    inventing the missing event or claiming a complete historical export?
+18. Are direct Page hosting, Page association, scheduled public stakeholders,
+    Facebook response signals, physical attendance, and policy causality kept
+    distinct?
+19. Does the active participation-system projection state Jamie's substantial
+    contribution clearly while preserving collective event authorship, the
+    rotating-but-not-uninterrupted meeting pattern, and the independent
+    about-one-hundred attendance report for the October 2017 town hall?
 
 Return JSON with:
 

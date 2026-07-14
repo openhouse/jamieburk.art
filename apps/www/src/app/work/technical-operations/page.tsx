@@ -17,7 +17,7 @@ const operationsMap = [
 
 const proofMap = [
   {
-    project: "HJE",
+    project: "Harry J. Epstein Company",
     proof:
       "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
   },
