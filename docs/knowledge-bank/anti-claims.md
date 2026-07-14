@@ -72,6 +72,17 @@ collaborator records support it.
 
 Do not name collaborators unless approved.
 
+Do not call the 38-record surviving profile census a native X export, a
+deletion history, or proof that no earlier item was deleted. Do not say Jamie
+authored every account post or all six support replies. Do not treat current
+visible reactions as historical analytics, unique people, audience reach,
+adoption, endorsement, or impact. Metrics on reposted source statuses belong to
+the source statuses, not to WOW List's repost action.
+
+Do not present linked scene articles as press coverage of WOW List. Do not
+transfer authorship, organizing, participation, partnership, beneficiary
+status, causality, or impact from an amplified resource to WOW List or Jamie.
+
 ## 196 / Sunday Dinner
 
 Do not publish private guest lists, resident records, personal histories, or

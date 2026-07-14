@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "c43ee468b350115124017093fd6e480552260b9f5a58d905d1a489f318d715a9",
+    "fingerprint": "10d94571a93be50f9c026869a4756987a72942e65afb66f996fd8bb32086cf7e",
     "counts": {
       "entities": 22,
-      "intake": 101,
-      "sources": 139,
-      "sourceReadings": 139,
-      "claims": 56,
-      "researchTasks": 23,
-      "projectionDecisions": 45
+      "intake": 102,
+      "sources": 148,
+      "sourceReadings": 148,
+      "claims": 61,
+      "researchTasks": 24,
+      "projectionDecisions": 46
     }
   },
   "judge": {
@@ -20,20 +20,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "INTAKE-WOWLIST-FULL-POPULATION-X-CENSUS-2026"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "INTAKE-SOCIAL-ACCOUNT-ESTABLISHMENT-MEMORY-2026"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "INTAKE-CALLNYC-FULL-POPULATION-X-CENSUS-2026"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-CALLNYC-SUPERLATIVE-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"
           }
         ]
       },
@@ -42,16 +42,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "READ-X-CALLNYC-FULL-POPULATION-CENSUS-2026"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "READ-X-WOWLIST-FULL-POPULATION-CENSUS-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "READ-CALLNYC-NYC-SCHOOL-OF-DATA-RECAP-2016"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "READ-GRASSTRONAUT-IN-EVERY-TOWN-2015"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "READ-RIVER-PITCH-2007"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "READ-GOOD-TIMES-ZINES-2-2015"
           }
         ]
       },
@@ -60,28 +60,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-NYC-SCHOOL-OF-DATA-RECOGNITION"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "CLM-WOWLIST-FULL-SOCIAL-POPULATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-PUBLIC-API-ANNOUNCEMENTS"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "CLM-WOWLIST-CURRENT-VISIBLE-REACTION-SNAPSHOT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-AGGREGATE-SERVICE-OUTCOME-REJECTED"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING"
           }
         ]
       },
@@ -90,16 +82,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "TASK-CALLNYC-UNRESOLVED-PROFILE-SLOTS"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "TASK-WOWLIST-FULL-POPULATION-CENSUS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "TASK-CALLNYC-API-AND-CONTACT-CONTROLS"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "TASK-GDRIVE-WOWLIST-MEMBER-MEETING"
           }
         ]
       },
@@ -108,12 +100,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "DEC-DEFER-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "DEC-DEFER-CALLNYC-NYC-SCHOOL-OF-DATA-RECOGNITION"
+            "record": "DEC-DEFER-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -126,16 +118,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "docs/knowledge-bank/data/callnyc-public-post-ledger.json",
-            "record": "CALLNYC-X-UNRESOLVED-001"
+            "file": "docs/knowledge-bank/data/wowlist-public-post-ledger.json",
+            "record": "Raw post text is omitted from this public ledger. SHA-256 digests permit later corpus comparison without republishing the text."
           },
           {
             "file": "docs/knowledge-bank/anti-claims.md",
-            "record": "Do not call the 107-record Posts and Replies union a complete X export."
+            "record": "Do not call the 38-record surviving profile census a native X export"
           },
           {
             "file": "docs/knowledge-bank/approval-register.md",
-            "record": "CallNYC full-population social census"
+            "record": "WOW List full-population social census"
           }
         ]
       },
@@ -144,12 +136,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts",
-            "record": "CLM-CALLNYC-SOCIAL-ISSUE-CONTACT-LOOP"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts",
+            "record": "CLM-WOWLIST-SCENE-KNOWLEDGE-ROUTING"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -176,5 +168,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Deterministic gates under Node 26.4.0: 0/7 hard gates failing and 0/4 quality targets open. The focused CallNYC and lifecycle slice passed 12/12 tests; the full knowledge-lifecycle suite passed 46/46; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Judge score: 100.0/100, with all seven criteria at 4/4, because intake, atomic readings, role-linked Chad-lens claims, explicit research routes, projection decisions, and public-safe boundaries are unusually explicit and traversable. Remaining bounded gaps are preserved rather than inferred: three profile-count slots are unresolved; API and contact controls remain announcements pending code and archive verification; July 2026 visible metrics are mutable current observations; both new public-ready claims remain deferred; and all named human gates remain pending."
+  "summary": "Deterministic evaluation under Node 26.5.0: 0/7 hard gates failing and 0/4 quality targets open. The knowledge-lifecycle suite passed 50/50 tests; knowledge-bank and public-safety checks passed with 10 careful-claim guardrail warnings. Weighted judge result: 100.0/100, with all seven criteria at 4/4. The new @wowlist census reconciles all 38 items in the observed surviving-profile control as 16 account posts, six account replies, and 16 reposts from 13 public accounts, while explicitly refusing native-export or deletion-history language. Its Chad-lens origin-and-support claim turns all six replies into a concrete product-support and onboarding result, credits Jamie and Richard collectively, leaves individual shared-account authorship unassigned, and remains deferred from website projection. Current visible reactions are dated and separated from repost-source metrics, adoption, endorsement, audience, and impact; linked articles are retained as mission context rather than WOW List press coverage. Mature population, network, scene-knowledge, civic-care, and reaction findings remain reserve knowledge rather than automatic website copy. The public ledger preserves 38 unique item records and SHA-256 content digests while omitting raw post text and authenticated-session material. Remaining bounded limits are that the census cannot establish deleted earlier items, individual post authorship, complete support workload, historical analytics, unique people, adoption, endorsement, or causal impact; account-establishment and private recording evidence still require research and collaborator review; the strengthened claim still requires human editorial selection; and all three human gates remain pending."
 }

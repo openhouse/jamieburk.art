@@ -14,7 +14,7 @@ export const projectTwitterAccountInventory = {
   accounts: [
     { project: "CallNYC", handle: "@CallNYCapp", profileUrl: "https://x.com/CallNYCapp", observedPosts: 110, recoveredPublicStatuses: 107, unresolvedProfileCountSlots: 3 },
     { project: "NYC Artist Coalition", handle: "@NYCArtC", profileUrl: "https://x.com/NYCArtC", observedPosts: 5124, recoveredIndexedMentions: 374 },
-    { project: "WOW List", handle: "@wowlist", profileUrl: "https://x.com/wowlist", observedPosts: 38, recoveredTimelineItems: 37 },
+    { project: "WOW List", handle: "@wowlist", profileUrl: "https://x.com/wowlist", observedPosts: 38, recoveredTimelineItems: 38 },
     { project: "KC Town Hall", handle: "@KCTownHall", profileUrl: "https://x.com/KCTownHall", observedPosts: 183, recoveredTimelineItems: 121 },
     { project: "KC Spaces Fund", handle: "@KCSpacesFund", profileUrl: "https://x.com/KCSpacesFund", observedPosts: 35, recoveredTimelineItems: 34 }
   ],
@@ -195,8 +195,8 @@ const researchSources: SourceRecord[] = [
   {
     id: "SRC-X-REVIEW-WOWLIST-2026", title: "Authenticated WOW List X inventory", author: "Codex archival review", kind: "research-run", visibility: "public", preservationStatus: "live", capturedAt: "2026-07-14", accessedAt: "2026-07-14",
     publicCitation: "Authenticated, read-only review of the @wowlist profile and recovered timeline, July 14, 2026.",
-    publicNote: "The review recovered 37 visible timeline items from a profile showing 38 posts.",
-    intakeIds: ["INTAKE-WOWLIST-X-ARCHIVE-2026"], supportsGenerally: ["bounded WOW List social timeline inventory"], doesNotEstablish: ["a complete archive", "user adoption", "Jamie as sole account author"]
+    publicNote: "The cross-tab review recovered all 38 items represented by the observed profile count; the complete item ledger and route reconciliation are recorded in the full-population census.",
+    intakeIds: ["INTAKE-WOWLIST-X-ARCHIVE-2026"], supportsGenerally: ["bounded WOW List social timeline inventory"], doesNotEstablish: ["a native platform export or deletion history", "user adoption", "Jamie as sole account author"]
   },
   {
     id: "SRC-X-REVIEW-KCSPACES-2026", title: "Authenticated KC Spaces Fund X inventory", author: "Codex archival review", kind: "research-run", visibility: "public", preservationStatus: "live", capturedAt: "2026-07-14", accessedAt: "2026-07-14",
@@ -296,8 +296,8 @@ const researchReadings: SourceReading[] = [
   },
   {
     id: "READ-X-REVIEW-WOWLIST-2026", sourceId: "SRC-X-REVIEW-WOWLIST-2026", status: "closely-read", readAt: "2026-07-14",
-    propositions: [{ id: "PROP-X-WOWLIST-RECOVERED-37", text: "The review recovered 37 visible timeline items from a profile showing 38 posts.", relationToJamie: "project-context", supportTags: ["wowlist-bounded-social-inventory"], confidence: "high", locator: "Profile and timeline review" }],
-    limitations: ["The recovered set is not a complete archive and does not establish adoption or user totals."], researchTaskIds: []
+    propositions: [{ id: "PROP-X-WOWLIST-RECOVERED-38", text: "The Posts and Replies route union recovered all 38 items represented by the observed profile count.", relationToJamie: "project-context", supportTags: ["wowlist-bounded-social-inventory"], confidence: "high", locator: "Profile and cross-tab timeline review" }],
+    limitations: ["The recovered current profile population is not a native platform export or deletion history and does not establish adoption or user totals."], researchTaskIds: []
   },
   {
     id: "READ-X-REVIEW-KCSPACES-2026", sourceId: "SRC-X-REVIEW-KCSPACES-2026", status: "closely-read", readAt: "2026-07-14",
@@ -382,14 +382,15 @@ export const socialArchiveClaims = [
   },
   {
     id: "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT", project: "wowlist",
-    internalClaim: "The @wowlist record publicly connected Jamie and Richard to a project based on Sunday Dinner calendars, answered prospective-user workflow questions, and later documented community-calendar adaptations.",
-    status: "confirmed-with-boundary", maturity: "public-ready", intakeIds: ["INTAKE-WOWLIST-X-ARCHIVE-2026"], requiredSupportTags: ["wowlist-social-origin", "wowlist-public-support", "wowlist-community-adaptation"],
-    composition: { action: "Worked with Richard on a WOW List project rooted in Sunday Dinner calendars and community event sharing.", intendedEnd: "Turn a community calendar practice into a reusable way for people to find and contribute events.", usableResult: "The public account documented the Sunday Dinner origin, answered product-use questions, and showed later community-calendar adaptations.", audience: "Hiring readers evaluating product operations, community onboarding, and implementation continuity.", collectiveCredit: "The origin post names Richard and Jamie together, and the wider Sunday Dinner and WOW List practices were collective; the support-post author is not identified.", causalBoundary: "The evidence supports Jamie's collective project role and the account's support activity separately, not user scale, adoption, or sole product authorship." },
+    internalClaim: "The complete surviving @wowlist record connected Jamie and Richard to a project based on Sunday Dinner calendars and preserved six account replies explaining product use, onboarding, and local-calendar adaptations.",
+    status: "confirmed-with-boundary", maturity: "public-ready", intakeIds: ["INTAKE-WOWLIST-X-ARCHIVE-2026", "INTAKE-WOWLIST-FULL-POPULATION-X-CENSUS-2026"], requiredSupportTags: ["wowlist-social-origin", "wowlist-six-public-support-replies", "wowlist-community-adaptation"],
+    composition: { action: "Worked with Richard on a WOW List project rooted in Sunday Dinner calendars and community event sharing.", intendedEnd: "Turn a community calendar practice into a reusable way for people to find, contribute, and organize events.", usableResult: "The complete surviving account record preserves six direct support and onboarding replies covering feed scope, profile navigation, multi-list event submission, joining NYCDIY, and the relationship among NYCDIY, WOW List, and Sunday Dinner.", audience: "Hiring readers evaluating product operations, community onboarding, and implementation continuity.", collectiveCredit: "The origin post names Richard and Jamie together, and the wider Sunday Dinner and WOW List practices were collective; the shared account does not identify the teammate who authored each reply.", causalBoundary: "The evidence supports Jamie's collective project role and the account's support behavior separately, not individual post authorship, total support workload, user scale, adoption, satisfaction, or sole product authorship." },
     projections: [], evidence: [
       { sourceId: "SRC-X-WOWLIST-ORIGIN-2014", relationship: "direct-support", supports: ["Jamie and Richard's project connection to Sunday Dinner calendars"], propositionIds: ["PROP-X-WOWLIST-ORIGIN-2014"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", relationship: "direct-support", supports: ["the complete six-reply public support and onboarding pattern"], propositionIds: ["PROP-X-WOWLIST-SIX-PUBLIC-SUPPORT-REPLIES"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-WOWLIST-SUPPORT-2015", relationship: "direct-support", supports: ["public product-support workflow"], propositionIds: ["PROP-X-WOWLIST-SUPPORT-2015"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-X-WOWLIST-NYCDIY-2016", relationship: "corroborating", supports: ["community-calendar adaptation"], propositionIds: ["PROP-X-WOWLIST-NYCDIY-2016"], confidence: "high", renderCitation: false }
-    ], boundaries: ["The account record does not identify the author of every post or quantify adoption."], antiClaims: ["Jamie alone created WOW List.", "The social account proves user or city scale."], researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Codex authenticated social-archive review"]
+    ], boundaries: ["The account record does not identify the author of every post or quantify adoption, satisfaction, audience, or the complete support workload."], antiClaims: ["Jamie alone created WOW List.", "Jamie personally wrote all six support replies.", "The social account proves user or city scale."], researchInquiryIds: [], reviewedAt: "2026-07-14", reviewedBy: ["Codex authenticated social-archive review"]
   },
   {
     id: "CLM-KCSPACES-PUBLIC-GRANT-DOCUMENTATION", project: "kc-spaces-fund",

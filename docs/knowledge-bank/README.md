@@ -101,3 +101,10 @@ shows how an observed profile population can receive 100% disposition coverage
 without overstating archive completeness: 107 recovered public statuses, three
 explicit unresolved slots, a redacted item ledger, and bounded source,
 communication, and traction findings.
+
+The
+[WOW List full-population social census](research/wowlist-full-population-social-census-2026-07-14.md)
+shows the complementary case where Posts and Replies close the observed control
+completely: all 38 surviving items are recovered, linked, and classified while
+individual authorship, historical metrics, adoption, and linked-work credit
+remain bounded.

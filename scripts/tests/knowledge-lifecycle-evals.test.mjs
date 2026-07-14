@@ -8,6 +8,7 @@ import {
 } from "../../apps/www/src/data/knowledge-bank/campaign-press-2026-07-13.ts";
 import { projectTwitterAccountInventory } from "../../apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts";
 import { callNycSocialCensus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-census-2026-07-14.ts";
+import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
   evaluateLifecycle,
@@ -693,6 +694,116 @@ test("CallNYC product announcements and unresolved slots remain research-routed"
   assert.ok(unresolvedTask.nextActions.some((item) => /native X account archive/i.test(item)));
   assert.equal(rejectedOutcome.maturity, "rejected");
   assert.match(rejectedOutcome.disposition.reason, /not an independently audited/i);
+});
+
+test("WOW List census recovers every item in the observed profile control", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/wowlist-public-post-ledger.json", "utf8")
+  );
+  const population = ledger.populationAudit;
+
+  assert.equal(population.profileCountObserved, 38);
+  assert.equal(population.postsTabItemsRecovered, 37);
+  assert.equal(population.repliesTabItemsRecovered, 38);
+  assert.equal(population.uniqueItemsRecovered, 38);
+  assert.equal(population.unresolvedPopulationSlots, 0);
+  assert.equal(population.dispositionTotal, 38);
+  assert.deepEqual(
+    {
+      accountPosts: population.accountPostsRecovered,
+      accountReplies: population.accountRepliesRecovered,
+      reposts: population.repostsRecovered
+    },
+    wowListSocialCensus.relationshipCounts
+  );
+  assert.equal(new Set(ledger.records.map((item) => item.statusId)).size, 38);
+  assert.ok(ledger.records.every((item) => /^[a-f0-9]{64}$/.test(item.contentDigestSha256)));
+  assert.ok(ledger.records.every((item) => !("text" in item) && !("raw" in item)));
+  assert.match(population.completenessStatement, /surviving July 2026 profile population/i);
+  assert.match(population.completenessStatement, /not a platform export/i);
+  assert.doesNotMatch(JSON.stringify(ledger), /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+});
+
+test("WOW List census aggregates reproduce the typed lifecycle record", () => {
+  const ledger = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/wowlist-public-post-ledger.json", "utf8")
+  );
+  const aggregate = ledger.aggregateFindings;
+
+  assert.equal(ledger.populationAudit.profileCountObserved, wowListSocialCensus.observedProfileCount);
+  assert.equal(ledger.populationAudit.uniqueItemsRecovered, wowListSocialCensus.recoveredPublicStatuses);
+  assert.equal(aggregate.directProductSupportReplies, wowListSocialCensus.productSupportAndOnboardingReplies);
+  assert.equal(aggregate.eventDistributionPosts, wowListSocialCensus.eventDistributionStatuses);
+  assert.equal(aggregate.sceneKnowledgePosts, wowListSocialCensus.sceneKnowledgeStatuses);
+  assert.equal(aggregate.productCommunityInfrastructurePosts, wowListSocialCensus.productCommunityInfrastructureStatuses);
+  assert.equal(aggregate.civicCareAuthoredPosts, wowListSocialCensus.civicCareAccountStatuses);
+  assert.equal(aggregate.civicCareReposts, wowListSocialCensus.civicCareReposts);
+  assert.equal(aggregate.uniqueShortUrls, wowListSocialCensus.uniqueShortUrls);
+  assert.equal(aggregate.uniqueResolvedDestinations, wowListSocialCensus.uniqueResolvedDestinations);
+  assert.deepEqual(aggregate.accountAuthoredVisibleReactionSnapshot, {
+    statuses: 22,
+    statusesWithVisibleReaction: 12,
+    replies: 2,
+    reposts: 20,
+    likes: 21
+  });
+});
+
+test("WOW List support claim uses the complete six-reply record without assigning authorship", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT"
+  );
+  const censusReading = knowledgeBank.sourceReadings.find(
+    (item) => item.id === "READ-X-WOWLIST-FULL-POPULATION-CENSUS-2026"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.internalClaim, /six account replies/i);
+  assert.match(claim.composition.action, /worked with Richard/i);
+  assert.match(claim.composition.usableResult, /multi-list event submission/i);
+  assert.match(claim.composition.collectiveCredit, /shared account/i);
+  assert.ok(claim.antiClaims.some((item) => /personally wrote all six/i.test(item)));
+  assert.ok(
+    censusReading.propositions.some(
+      (item) => item.id === "PROP-X-WOWLIST-SIX-PUBLIC-SUPPORT-REPLIES"
+    )
+  );
+  assert.equal(decision.decision, "defer");
+});
+
+test("WOW List network, source, and traction findings retain their boundaries", () => {
+  const network = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-PUBLIC-NETWORK-PATTERN"
+  );
+  const metrics = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-CURRENT-VISIBLE-REACTION-SNAPSHOT"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-WOWLIST-FULL-POPULATION-CENSUS"
+  );
+  const contextSources = [
+    "SRC-GRASSTRONAUT-IN-EVERY-TOWN-2015",
+    "SRC-GOOD-TIMES-ZINES-2-2015",
+    "SRC-KQED-GHOST-SHIP-VIGIL-2016",
+    "SRC-MEOW-WOLF-DIY-FUND-2016"
+  ];
+
+  assert.equal(network.maturity, "corroborated");
+  assert.ok(network.antiClaims.some((item) => /endorsed/i.test(item)));
+  assert.ok(network.antiClaims.some((item) => /adoption/i.test(item)));
+  assert.equal(metrics.maturity, "corroborated");
+  assert.ok(metrics.boundaries.some((item) => /July 2026/i.test(item)));
+  assert.ok(metrics.antiClaims.some((item) => /unique people/i.test(item)));
+  assert.ok(metrics.antiClaims.some((item) => /historical engagement/i.test(item)));
+  for (const sourceId of contextSources) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    assert.ok(source.doesNotEstablish.some((item) => /coverage|organization|fund organizer/i.test(item)));
+  }
+  assert.equal(task.status, "resolved");
+  assert.match(task.resolutionSummary, /all 38 items/i);
 });
 
 test("NYC Artist Coalition social claims preserve shared authorship and campaign continuity", () => {

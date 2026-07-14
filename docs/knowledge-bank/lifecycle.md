@@ -195,6 +195,14 @@ routes three unknown slots to further research, extracts source and stakeholder
 patterns, rejects an unsupported service-outcome conversion, and defers two
 new public-ready claims from the website.
 
+The
+[WOW List full-population social census](research/wowlist-full-population-social-census-2026-07-14.md)
+closes all 38 slots in its observed profile control through the Posts and
+Replies route union. It promotes the earlier sample-based support finding into
+a complete six-reply product-support pattern, preserves mission-relevant source
+and stakeholder-network findings in reserve, and keeps account authorship,
+historical metrics, adoption, and amplified-work credit explicit.
+
 Migration accessions connect every source and claim that predated the lifecycle
 framework to the same entity and publication graph. They preserve existing
 review status without pretending that a new proposition-level close reading

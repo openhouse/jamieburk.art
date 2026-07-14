@@ -27,7 +27,7 @@ especially for likes, follows, deleted posts, or unindexed replies.
 | --- | --- | ---: | ---: |
 | CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110 | 107 public statuses plus 3 unresolved slots |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 | 374 indexed mentions plus campaign searches |
-| WOW List | [@wowlist](https://x.com/wowlist) | 38 | 37 timeline items |
+| WOW List | [@wowlist](https://x.com/wowlist) | 38 | 38 public statuses; no unresolved slots |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 | 121 timeline items |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 | 34 timeline items |
 
@@ -120,24 +120,38 @@ or administrative change.
 
 ## WOW List
 
-The review recovered 37 of 38 visible profile posts. Three items are especially
-useful:
+The subsequent
+[full-population census](wowlist-full-population-social-census-2026-07-14.md)
+reconciles the Posts and Replies routes against all 38 items represented by the
+observed profile count. The Posts route yielded 37 records; the Replies route
+supplied the missing authored status and closed the population with no
+unresolved slots.
+
+The recovered corpus contains 16 account posts, six account replies, and 16
+reposts from 13 public accounts. Three findings are especially useful:
 
 - The [earliest recovered account post](https://x.com/wowlist/status/433671630837919744)
   identifies Richard and Jamie as working on a project based on WOW List
   calendars made at Sunday Dinner.
 - A [2015 support thread](https://x.com/wowlist/status/591664757473673216)
-  answers questions about local calendars, profiles, and how people could add
-  events and lists.
+  begins a six-reply support and onboarding pattern covering feed scope,
+  profiles, multi-list event submission, joining NYCDIY, and the relationship
+  among NYCDIY, WOW List, and Sunday Dinner.
 - A [2016 NYC DIY post](https://x.com/wowlist/status/771457416298921985)
   connects a community calendar adaptation back to Sunday Dinner and WOW List.
 
-**Defensible claim:** The account documented a collective Sunday Dinner origin,
-supported prospective users, and showed the platform adapting to community
-calendar uses.
+The corpus also contains five event-distribution records, three scene-knowledge
+records, and ten records centered on civic mobilization or care. Thirty-five
+shortened links resolved to 34 public destinations in July 2026.
 
-**Limits:** It does not establish sole authorship, user totals, geographic
-adoption, or the identity of every account author.
+**Defensible claim:** The complete surviving account record documents a
+collective Sunday Dinner origin and a usable public support surface for finding,
+contributing, and organizing community events.
+
+**Limits:** Complete means the surviving July 2026 profile population, not a
+native X export or deletion history. The record does not establish sole
+authorship, user totals, geographic adoption, audience reach, historical
+analytics, or the identity of every account author.
 
 ## KC Spaces Fund
 
@@ -196,6 +210,9 @@ equivalent.
 
 - Mature social findings are public-safe and retained for future composition.
 - None of the new claims automatically changes the live website.
+- The complete WOW List census strengthens the existing origin-and-support
+  claim, while its population, network, scene-knowledge, care, and reaction
+  findings remain reserve knowledge rather than automatic website copy.
 - Jamie's memory of establishing the accounts remains a research-stage claim.
 - The account-establishment route calls for creation records, design files,
   administrator chronology, and collaborator proof notes.
