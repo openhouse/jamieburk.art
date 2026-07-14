@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "9772d64b015347f6a41018df36d403645bc12fb529f2749f148692d447073bb4",
+    "fingerprint": "78c96f52b93a44fb21908a750c63f8a991f341c57f3b322e66a450c2f1f86e4f",
     "counts": {
-      "entities": 18,
-      "intake": 81,
-      "sources": 81,
-      "sourceReadings": 81,
-      "claims": 41,
-      "researchTasks": 15,
-      "projectionDecisions": 34
+      "entities": 20,
+      "intake": 92,
+      "sources": 90,
+      "sourceReadings": 90,
+      "claims": 45,
+      "researchTasks": 18,
+      "projectionDecisions": 38
     }
   },
   "judge": {
@@ -20,24 +20,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-RIVER-PITCH-2007"
+            "file": "apps/www/src/data/knowledge-bank/schema.ts",
+            "record": "intakeRecordSchema"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "INTAKE-TEAMS-PROJECT-HISTORY-OVERVIEW-2026"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-CALLNYC-SUPERLATIVE-2026"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "INTAKE-GDRIVE-NYCARTC-PHOTOSET-2026"
           }
         ]
       },
@@ -47,15 +43,15 @@
         "evidence": [
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "READ-RIVER-PITCH-2007"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "READ-KCMO-COUNCIL-MEETING-2019-09-26"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "READ-TEAMS-CRS-RUNNING-MINUTES-2026"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "READ-GDRIVE-COMMERCIAL-VACANCY-PILOT-2026"
           }
         ]
       },
@@ -72,12 +68,12 @@
             "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
-            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "CLM-FAIR-RENT-WEB-RELAUNCH-SYSTEM-2023"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026"
+            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
+            "record": "claim-promotion-is-evidence-backed"
           }
         ]
       },
@@ -91,11 +87,11 @@
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-OFFICE-NIGHTLIFE-ROLE"
+            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "TASK-GDRIVE-NYCARTC-PHOTOSET"
           }
         ]
       },
@@ -105,15 +101,15 @@
         "evidence": [
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-PUBLISH-CALLNYC-FOLLOW-ON-CASE"
+            "record": "DEC-PUBLISH-CALLNYC-DATE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "DEC-RIVER-EXPEDITION-ORIGIN-DEFER"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "teamsArchiveDecisions"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "future-portfolio-composition"
           }
         ]
       },
@@ -122,16 +118,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "docs/knowledge-bank/public-safety.md",
+            "record": "Prohibited Materials"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "SRC-TEAMS-SOURCE-BACKED-PILOT-PROPOSAL-2026"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "protectedLocatorId"
           },
           {
-            "file": "scripts/evals/lib/knowledge-lifecycle.mjs",
-            "record": "public-repo-boundary-is-enforced"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "Google Drive archive production remains protected, bounded, and deferred"
           }
         ]
       },
@@ -140,16 +136,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Use Chad's lens when composing a projection"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-production-2026-07-13.ts",
-            "record": "CLM-CROSS-PROJECT-ARCHIVE-PRACTICE-2026"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "CLM-GDRIVE-COLLABORATIVE-HANDOFF-PRACTICE-2023-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "file": "apps/www/src/data/knowledge-bank/google-drive-archive-production-2026-07-13.ts",
+            "record": "Route visual observations into source discovery"
           }
         ]
       }
@@ -172,5 +168,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "A fresh deterministic run for this snapshot passed all seven hard gates and all four quality targets. The current graph is exceptionally explicit across accession, source decomposition, bounded evidence, executable research, independent publication decisions, public-safety controls, and Chad-lens composition; the named human approvals remain pending."
+  "summary": "All seven criteria score 4. The exact snapshot passes all 7 hard gates and all 4 quality targets; the knowledge-lifecycle test suite passes 35 of 35 tests. Intake preserves memories, corrections, private archive leads, and photo observations without forced publication; close readings separate direct role, collective role, context, outcomes, and limitations; mature claims use proposition-level semantic support, boundaries, anti-claims, review history, and collective-credit language. NYC Artist Coalition, Office of Nightlife, and Talks Not Raids memories remain researching with executable routes; river and Open House claims preserve collective credit. Google Drive records expose only bounded public-safe descriptions and opaque protected locators, unread recordings and photos remain research tasks, all new mature claims are explicitly deferred, and human approval, collaborator permission, and media rights remain pending."
 }

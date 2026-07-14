@@ -22,6 +22,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - KC Town Hall funding: official records support a $490,539 Council appropriation after the board recommendation. Pair that fact with the limits that negotiation was authorized, no disbursement is established, and the unused allocation was reclaimed after withdrawal in 2024. Do not attribute the withdrawal to Jamie. His first-party account of a prior stewardship transition remains research-stage pending public-safe corroboration.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.
 - Teams archive production: public-safe source descriptions and bounded claims may remain in the knowledge bank. Private raw files, archive paths, prospective-client identity, commercial terms, and sensitive coalition material remain outside the repository. The four July 13 archive-derived claims are deferred from website projection pending later editorial selection.
+- Google Drive Shared Drives production: public-safe source descriptions, bounded claims, and research tasks may remain in the knowledge bank. Raw Drive files, private links and identifiers, contact details, collaborator-specific records, unread media content, and sensitive administrative context remain outside the repository. The four July 13 Drive-derived claims are deferred from website projection pending later editorial selection.
 - Production indexing: only after final reviewed commit, and only with explicit `NEXT_PUBLIC_ROBOTS_POLICY=index`.
 
 ## Not Approved For Public Repo

@@ -380,6 +380,92 @@ test("Teams archive claims cannot lose semantic support", () => {
   );
 });
 
+test("Google Drive archive production remains protected, bounded, and deferred", () => {
+  const sourceIds = [
+    "SRC-GDRIVE-SHARED-DRIVE-INVENTORY-2026",
+    "SRC-GDRIVE-196-ACCEPTANCE-2023",
+    "SRC-GDRIVE-FAIR-RENT-WEB-NOTES-2023",
+    "SRC-GDRIVE-FAIR-RENT-WEBSITE-TEMPLATE-2023",
+    "SRC-GDRIVE-CRS-VERSION-HISTORY-2026",
+    "SRC-GDRIVE-COMMERCIAL-VACANCY-PILOT-2026",
+    "SRC-GDRIVE-VACANCY-CORPUS-2026",
+    "SRC-GDRIVE-SUNDAY-DINNER-RECORDINGS-2023",
+    "SRC-GDRIVE-WOWLIST-MEMBER-MEETING-2015"
+  ];
+  const closeReadSourceIds = new Set(sourceIds.slice(0, 7));
+  const claimIds = [
+    "CLM-GDRIVE-COLLABORATIVE-HANDOFF-PRACTICE-2023-2026",
+    "CLM-196-PARTICIPANT-ONBOARDING-2023",
+    "CLM-FAIR-RENT-WEB-RELAUNCH-SYSTEM-2023",
+    "CLM-COMMERCIAL-VACANCY-PUBLIC-DATA-PILOT-2026"
+  ];
+
+  for (const sourceId of sourceIds) {
+    const source = knowledgeBank.sources.find((item) => item.id === sourceId);
+    const reading = knowledgeBank.sourceReadings.find((item) => item.sourceId === sourceId);
+    assert.equal(source.visibility, "protected");
+    assert.equal(source.preservationStatus, "private");
+    assert.ok(source.protectedLocatorId);
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+    assert.equal(reading.status, closeReadSourceIds.has(sourceId) ? "closely-read" : "queued");
+  }
+
+  for (const claimId of claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claimId);
+    assert.equal(claim.maturity, "public-ready");
+    assert.equal(claim.projections.length, 0);
+    assert.ok(claim.composition);
+    assert.ok(claim.requiredSupportTags.length > 0);
+    assert.ok(claim.antiClaims.length > 0);
+    assert.equal(decision.decision, "defer");
+  }
+
+  const publicRecord = JSON.stringify({
+    sources: sourceIds.map((id) => knowledgeBank.sources.find((item) => item.id === id)),
+    claims: claimIds.map((id) => knowledgeBank.claims.find((item) => item.id === id))
+  });
+  assert.doesNotMatch(publicRecord, /drive\.google\.com|docs\.google\.com|@gmail\.com|@ohai\.us|\/Users\//i);
+
+  const queuedTaskIds = [
+    "TASK-GDRIVE-SUNDAY-DINNER-RECORDINGS",
+    "TASK-GDRIVE-WOWLIST-MEMBER-MEETING",
+    "TASK-GDRIVE-NYCARTC-PHOTOSET"
+  ];
+  for (const taskId of queuedTaskIds) {
+    const task = knowledgeBank.researchTasks.find((item) => item.id === taskId);
+    assert.equal(task.status, "open");
+    assert.ok(task.nextActions.length > 0);
+  }
+
+  const crsClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-OPERATING-MEMORY-2026"
+  );
+  assert.ok(crsClaim.intakeIds.includes("INTAKE-GDRIVE-CRS-VERSION-HISTORY-2026"));
+  assert.ok(crsClaim.requiredSupportTags.includes("crs-running-minutes-collaborative-version-history"));
+});
+
+test("Google Drive mature claims cannot lose semantic support", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find(
+    (item) => item.id === "CLM-FAIR-RENT-WEB-RELAUNCH-SYSTEM-2023"
+  );
+  const templateEvidence = claim.evidence.find(
+    (item) => item.sourceId === "SRC-GDRIVE-FAIR-RENT-WEBSITE-TEMPLATE-2023"
+  );
+  templateEvidence.propositionIds = templateEvidence.propositionIds.filter(
+    (id) => id !== "PROP-GDRIVE-FAIR-RENT-REUSE-CONSTRAINTS"
+  );
+
+  const report = evaluateLifecycle({ suite, bank });
+  assert.equal(
+    report.results.find((item) => item.id === "claim-promotion-is-evidence-backed").passed,
+    false
+  );
+});
+
 test("legacy projected claims carry proposition-level support", () => {
   const claimIds = [
     "CLM-CALLNYC-HACKATHON-DATE-TIME",

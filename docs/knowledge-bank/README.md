@@ -82,3 +82,9 @@ The
 shows how selected private working artifacts can yield public-safe source
 descriptions and bounded claims without committing raw archives or automatically
 changing the website.
+
+The
+[Google Drive Shared Drives production record](research/google-drive-shared-drives-production-2026-07-13.md)
+extends that method to collaborative cloud workspaces: central project records
+can strengthen authored and collective-role claims, while unread recordings and
+photographs remain routed research leads rather than implied evidence.

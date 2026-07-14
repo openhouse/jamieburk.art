@@ -281,8 +281,8 @@ export const teamsArchiveClaims = [
     internalClaim: "In April 2026, Jamie designed a bounded operating model for Commercial Rent Stabilization collaboration and implemented an active shared-memory structure for decisions, actions, open questions, campaign language, and consent-aware information stewardship.",
     status: "confirmed-with-boundary",
     maturity: "public-ready",
-    intakeIds: ["INTAKE-TEAMS-CRS-ACTION-PLAN-2026", "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026"],
-    requiredSupportTags: ["crs-operating-model-design", "crs-running-minutes-active-use", "crs-memory-privacy-guardrails"],
+    intakeIds: ["INTAKE-TEAMS-CRS-ACTION-PLAN-2026", "INTAKE-TEAMS-CRS-RUNNING-MINUTES-2026", "INTAKE-GDRIVE-CRS-VERSION-HISTORY-2026"],
+    requiredSupportTags: ["crs-operating-model-design", "crs-running-minutes-active-use", "crs-memory-privacy-guardrails", "crs-running-minutes-collaborative-version-history"],
     composition: {
       action: "Designed a coalition operating model and implemented a lightweight shared-memory system.",
       intendedEnd: "Reduce fragmentation while preserving decisions, responsibilities, policy context, consent, and follow-up across collaborating groups.",
@@ -294,13 +294,14 @@ export const teamsArchiveClaims = [
     projections: [],
     evidence: [
       { sourceId: "SRC-TEAMS-CRS-ACTION-PLAN-2026", relationship: "direct-support", supports: ["Jamie's bounded operating-model design", "shared public goods", "collective-role limits"], propositionIds: ["PROP-TEAMS-CRS-OPERATING-MODEL", "PROP-TEAMS-CRS-SHARED-PUBLIC-GOODS", "PROP-TEAMS-CRS-IMPLEMENTATION-SEQUENCE"], confidence: "high", renderCitation: false },
-      { sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026", relationship: "direct-support", supports: ["active running-minutes system", "Jamie's maintenance responsibility", "privacy and consent guardrails"], propositionIds: ["PROP-TEAMS-CRS-RUNNING-MINUTES-PURPOSE", "PROP-TEAMS-CRS-RUNNING-MINUTES-ACTIVE", "PROP-TEAMS-CRS-MEMORY-GUARDRAILS", "PROP-TEAMS-CRS-OPERATING-CATEGORIES"], confidence: "high", renderCitation: false }
+      { sourceId: "SRC-TEAMS-CRS-RUNNING-MINUTES-2026", relationship: "direct-support", supports: ["active running-minutes system", "Jamie's maintenance responsibility", "privacy and consent guardrails"], propositionIds: ["PROP-TEAMS-CRS-RUNNING-MINUTES-PURPOSE", "PROP-TEAMS-CRS-RUNNING-MINUTES-ACTIVE", "PROP-TEAMS-CRS-MEMORY-GUARDRAILS", "PROP-TEAMS-CRS-OPERATING-CATEGORIES"], confidence: "high", renderCitation: false },
+      { sourceId: "SRC-GDRIVE-CRS-VERSION-HISTORY-2026", relationship: "corroborating", supports: ["collaborative editing", "Jamie editing continuity", "April-May 2026 revision history"], propositionIds: ["PROP-GDRIVE-CRS-RUNNING-MINUTES-VERSION-HISTORY"], confidence: "high", renderCitation: false }
     ],
     boundaries: ["Distinguish the designed 90-day plan from the one documented system already in use.", "Preserve shared authorship of coalition decisions and do not expose sensitive business or tenant information."],
     antiClaims: ["Jamie was the whole movement or sole organizer.", "Every proposed deliverable was completed or collectively adopted.", "The running minutes produced a legislative or campaign outcome.", "Jamie individually authored every decision or contribution in the shared record."],
     researchInquiryIds: [],
     reviewedAt: "2026-07-13",
-    reviewedBy: ["Codex private-archive review"]
+    reviewedBy: ["Codex private-archive review", "Codex Google Drive archival review"]
   },
   {
     id: "CLM-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026",

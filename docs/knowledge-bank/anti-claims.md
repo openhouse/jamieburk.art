@@ -98,3 +98,26 @@ Describe the legislative artifact as a provenance redline prepared by Jamie.
 Do not call it an official legislative history or legal opinion, and do not
 credit Jamie with underlying language attributed to counsel, prior bills, or
 legislative staff.
+
+## Google Drive Shared Drives
+
+Do not treat access to a Shared Drive, a drive name, or folder presence as
+proof that Jamie owned, created, or actively maintained the workspace or the
+claims inside it. The July 2026 inventory count is a point-in-time access count,
+not a measure of project scope, use, or ownership.
+
+For 196 Artists Residency, credit Jamie with the documented participant
+evaluation, invitation, space-configuration follow-up, and access workflow. Do
+not identify or quote the participant, claim the artist's work, or infer the
+complete program and its outcomes from one acceptance letter.
+
+For the FairRentNYC relaunch, use co-edited and collaborative language. Do not
+assign every task, wording choice, or campaign action to Jamie, infer completion
+of every checklist item, or claim measured website or policy outcomes.
+
+For the commercial-vacancy proposal, say designed or proposed. Do not imply
+agency acceptance, access to confidential filings, released indicators,
+validated analysis, or a production data pipeline.
+
+Do not derive claims from unread recordings or photo-set labels. Review content,
+speaker or participant identity, rights, consent, and source relationships first.
