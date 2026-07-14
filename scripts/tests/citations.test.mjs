@@ -29,7 +29,7 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("KC Town Hall keeps five records while projecting four nonredundant notes", () => {
+test("KC Town Hall preserves four funding notes and adds five service-interface notes", () => {
   assert.equal(knowledgeBank.sources.filter((source) => source.id.startsWith("SRC-KCTH-")).length, 5);
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "council-approval-and-appropriation").sources.map((item) => item.number),
@@ -39,7 +39,11 @@ test("KC Town Hall keeps five records while projecting four nonredundant notes",
     resolveCitationOccurrence("kc-town-hall", "nondisbursement-and-reappropriation").sources.map((item) => item.number),
     [3, 4]
   );
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 4);
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "public-service-interface").sources.map((item) => item.number),
+    [5, 6, 7, 8, 9]
+  );
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 9);
 });
 
 test("Claim resolver returns only active approved projections", () => {

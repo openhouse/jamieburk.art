@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "../../apps/www/src/data/knowledge-bank/google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
+import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
@@ -113,6 +114,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
   const kcFundingCorrection = knowledgeBank.corrections.find((item) => item.id === kcFunding.correctionId);
   const kcFundingCoverage = knowledgeBank.proofCoverageTargets.find((item) => item.proofId === kcFunding.proofId);
   const kcFundingPage = knowledgeBank.pages.find((item) => item.id === kcFunding.pageId);
+  const kcFundingOccurrences = kcFundingPage?.occurrences.filter((occurrence) =>
+    kcFunding.claimIds.includes(occurrence.claimId)
+  ) ?? [];
+  const kcFundingPublicSourceIds = new Set(
+    kcFundingOccurrences.flatMap((occurrence) => occurrence.sourceIds)
+  );
   const kcProjectionText = kcFundingClaims.flatMap((claim) => claim?.projections.map((projection) => projection.text) ?? []).join(" ");
   const kcFundingComplete = Boolean(
     kcTownHallFunding.sources.length === kcFunding.expectedSourceCount &&
@@ -140,8 +147,12 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       kcFundingCoverage?.status === "source-backed" &&
       kcFundingCoverage.sourceIds.length === kcFunding.expectedSourceCount &&
       kcFundingCoverage.researchInquiryIds.includes(kcFunding.inquiryId) &&
-      kcFundingPage?.occurrences.length === kcFunding.claimIds.length &&
-      kcFundingPage.sourceOrder.length === kcFunding.expectedPublicSourceCount &&
+      kcFunding.claimIds.every((id) =>
+        kcFundingPage?.occurrences.some((occurrence) => occurrence.claimId === id)
+      ) &&
+      kcFundingOccurrences.length === kcFunding.claimIds.length &&
+      kcFundingPublicSourceIds.size === kcFunding.expectedPublicSourceCount &&
+      [...kcFundingPublicSourceIds].every((id) => kcFundingPage?.sourceOrder.includes(id)) &&
       kcFunding.claimIds.every((id) => kcTownHallMdx.includes(id)) &&
       kcTownHallMdx.includes("do not establish that Jamie alone caused the Council action") &&
       workData.includes("funds were not ultimately disbursed") &&
@@ -937,9 +948,225 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       publicRegistryText.includes(wowFull.activeClaimId) &&
       wowFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries];
+  const kcthFull = suite.pilot.kcTownHallFullPopulation;
+  const kcthLedgerPath = path.join(repoRoot, kcthFull.ledgerPath);
+  const kcthDocumentation = existsSync(path.join(repoRoot, kcthFull.documentationPath))
+    ? readFileSync(path.join(repoRoot, kcthFull.documentationPath), "utf8")
+    : "";
+  const kcthLedger = existsSync(kcthLedgerPath)
+    ? JSON.parse(readFileSync(kcthLedgerPath, "utf8"))
+    : null;
+  const kcthRecords = kcthLedger?.records ?? [];
+  const kcthRecordIds = kcthRecords.map((record) => record.statusId);
+  const kcthRecordUrls = kcthRecords.map((record) => record.statusUrl);
+  const kcthRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRecords, (record) => record.relationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const kcthAuthoredRecords = kcthRecords.filter((record) => record.relationship !== "repost");
+  const kcthRepostRecords = kcthRecords.filter((record) => record.relationship === "repost");
+  const kcthRepostSourceHandles = new Set(kcthRepostRecords.map((record) => record.statusOwner));
+  const kcthExternalHandles = new Set(
+    kcthAuthoredRecords.flatMap((record) => record.publicMentions ?? [])
+      .filter((handle) => handle.toLowerCase() !== "@kctownhall")
+  );
+  const countKcthMention = (handle) => kcthAuthoredRecords.filter((record) =>
+    record.publicMentions.some((mention) => mention.toLowerCase() === handle.toLowerCase())
+  ).length;
+  const kcthLinks = kcthRecords.flatMap((record) => record.postedUrls ?? []);
+  const kcthUniqueShortUrls = new Set(kcthLinks.map((link) => link.shortUrl));
+  const kcthUniqueDestinations = new Set(
+    kcthLinks.map((link) => link.resolvedUrl).filter(Boolean)
+  );
+  const isKcthProjectDestination = (url) =>
+    /kctownhall\.com|facebook\.com\/KCTownHall|youtube\.com\/watch\?v=(PmLjLyOpS9I|onCKU-TuPhc)/i.test(url);
+  const kcthProjectDestinations = new Set(
+    [...kcthUniqueDestinations].filter(isKcthProjectDestination)
+  );
+  const kcthExternalDestinations = new Set(
+    [...kcthUniqueDestinations].filter((url) => !isKcthProjectDestination(url))
+  );
+  const kcthThemeCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRecords, (record) => record.primaryTheme))
+      .map(([theme, records]) => [theme, records.length])
+  );
+  const kcthTireRecords = kcthRecords.filter(
+    (record) => record.primaryTheme === "resident-tire-intake-and-operations"
+  );
+  const kcthAuthoredReactionSnapshot = kcthAuthoredRecords.reduce(
+    (aggregate, record) => {
+      const metrics = record.currentVisibleMetrics;
+      aggregate.statuses += 1;
+      aggregate.statusesWithVisibleReaction += metrics.replies + metrics.reposts + metrics.likes > 0 ? 1 : 0;
+      aggregate.replies += metrics.replies;
+      aggregate.reposts += metrics.reposts;
+      aggregate.likes += metrics.likes;
+      return aggregate;
+    },
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+  const kcthDirectResponseIds = new Set([
+    "1122866432130334720",
+    "1122883010582466560"
+  ]);
+  const kcthDirectResponseRecords = kcthRecords.filter((record) =>
+    kcthDirectResponseIds.has(record.statusId)
+  );
+  const kcthCityPoliticalHandles = new Set([
+    "@QuintonLucasKC",
+    "@Robinson4kc",
+    "@joliejustus"
+  ]);
+  const kcthCityPoliticalReposts = kcthRepostRecords.filter((record) =>
+    [...kcthCityPoliticalHandles].some(
+      (handle) => handle.toLowerCase() === record.statusOwner.toLowerCase()
+    )
+  );
+  const kcthFullSources = kcTownHallSocialCorpus.sources.map((source) => sourceById.get(source.id));
+  const kcthFullClaims = kcTownHallSocialCorpus.claims.map((claim) => claimById.get(claim.id));
+  const kcthFullInquiries = kcTownHallSocialCorpus.researchInquiries.map((inquiry) => inquiryById.get(inquiry.id));
+  const kcthActiveClaim = claimById.get(kcthFull.activeClaimId);
+  const kcthHeldClaims = kcthFull.heldClaimIds.map((id) => claimById.get(id));
+  const kcthAuditSource = sourceById.get(kcthFull.auditSourceId);
+  const kcthFullInquiry = inquiryById.get("INQ-KCTH-FULL-POPULATION-2026");
+  const kcthTractionInquiry = inquiryById.get("INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES");
+  const kcthAuthorshipInquiry = inquiryById.get("INQ-KCTH-SHARED-ACCOUNT-AUTHORSHIP");
+  const kcthCouncilResponseClaim = claimById.get("CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR");
+  const kcthProof = knowledgeBank.proofCoverageTargets.find(
+    (target) => target.proofId === kcthFull.proofId
+  );
+  const kcthPage = knowledgeBank.pages.find((page) => page.id === "kc-town-hall");
+  const kcthOccurrence = kcthPage?.occurrences.find(
+    (occurrence) => occurrence.id === "public-service-interface"
+  );
+  const kcthLedgerText = kcthLedger ? JSON.stringify(kcthLedger) : "";
+  const kcthFullPopulationComplete = Boolean(
+    kcthLedger &&
+      kcthLedger.account === "@KCTownHall" &&
+      kcthLedger.observedAt === "2026-07-14" &&
+      kcthLedger.population.displayedProfileCount === kcthFull.expectedProfileCount &&
+      kcthLedger.population.postsRouteUnique === kcthFull.expectedPostsTabCount &&
+      kcthLedger.population.attributableRecords === kcthFull.expectedRepliesTabCount &&
+      kcthLedger.population.excludedConversationContextArticles === kcthFull.expectedExcludedContextItems &&
+      kcthLedger.population.unresolvedProfileCountSlots === kcthFull.expectedUnresolvedSlots &&
+      kcthLedger.population.relationshipCounts.accountPosts === kcthFull.expectedAccountPosts &&
+      kcthLedger.population.relationshipCounts.accountReplies === kcthFull.expectedAccountReplies &&
+      kcthLedger.population.relationshipCounts.reposts === kcthFull.expectedReposts &&
+      /complete recovery of the surviving/i.test(kcthLedger.population.completenessStatement) &&
+      /not a native X export/i.test(kcthLedger.population.completenessStatement) &&
+      /No credential, cookie, direct message, private analytics/i.test(kcthLedger.method.authenticationBoundary) &&
+      kcthRecords.length === kcthFull.expectedUniqueItems &&
+      new Set(kcthRecordIds).size === kcthFull.expectedUniqueItems &&
+      new Set(kcthRecordUrls).size === kcthFull.expectedUniqueItems &&
+      kcthRecords.every((record) =>
+        /^\d+$/.test(record.statusId) &&
+          record.statusUrl.endsWith(`/status/${record.statusId}`) &&
+          ["account-post", "account-reply", "repost"].includes(record.relationship) &&
+          Array.isArray(record.recoveredRoutes) && record.recoveredRoutes.length &&
+          typeof record.publicSummary === "string" && record.publicSummary.length &&
+          typeof record.contentDigestSha256 === "string" && /^[a-f0-9]{64}$/.test(record.contentDigestSha256) &&
+          !("text" in record) && !("phone" in record) && !("address" in record) &&
+          Array.isArray(record.publicMentions) &&
+          Array.isArray(record.hashtags) &&
+          Array.isArray(record.postedUrls) &&
+          record.postedUrls.every((link) =>
+            /^https?:\/\/t\.co\//.test(link.shortUrl) &&
+              (link.resolvedUrl === null || /^https?:\/\//.test(link.resolvedUrl))
+          ) &&
+          Number.isInteger(record.currentVisibleMetrics?.replies) &&
+          Number.isInteger(record.currentVisibleMetrics?.reposts) &&
+          Number.isInteger(record.currentVisibleMetrics?.likes) &&
+          record.metricOwner === (record.relationship === "repost"
+            ? "source-status-not-kctownhall-repost-action"
+            : "account-authored-status") &&
+          Number.isInteger(record.mediaSignals?.photoCount) &&
+          typeof record.mediaSignals?.hasVideoOrGif === "boolean"
+      ) &&
+      kcthRelationshipCounts["account-post"] === kcthFull.expectedAccountPosts &&
+      kcthRelationshipCounts["account-reply"] === kcthFull.expectedAccountReplies &&
+      kcthRelationshipCounts.repost === kcthFull.expectedReposts &&
+      kcthRepostSourceHandles.size === kcthFull.expectedRepostSourceAccounts &&
+      kcthExternalHandles.size === kcthFull.expectedExternalHandles &&
+      countKcthMention("@QuintonLucasKC") === kcthFull.expectedQuintonLucasMentions &&
+      countKcthMention("@Robinson4kc") === kcthFull.expectedMelissaRobinsonMentions &&
+      kcthCityPoliticalReposts.length === kcthFull.expectedCityPoliticalFigureReposts &&
+      kcthDirectResponseRecords.length === kcthFull.expectedDirectCouncilResponses &&
+      new Set(kcthDirectResponseRecords.map((record) => record.statusOwner.toLowerCase())).size === kcthFull.expectedDirectCouncilAccounts &&
+      kcthLinks.length === kcthFull.expectedShortUrlOccurrences &&
+      kcthUniqueShortUrls.size === kcthFull.expectedUniqueShortUrls &&
+      kcthUniqueDestinations.size === kcthFull.expectedResolvedDestinations &&
+      kcthProjectDestinations.size === kcthFull.expectedProjectOrLineageDestinations &&
+      kcthExternalDestinations.size === kcthFull.expectedExternalDestinations &&
+      kcthThemeCounts["resident-tire-intake-and-operations"] === kcthFull.expectedTireWorkflowRecords &&
+      kcthTireRecords.filter((record) => record.relationship === "account-post").length === kcthFull.expectedTireWorkflowPosts &&
+      kcthTireRecords.filter((record) => record.relationship === "account-reply").length === kcthFull.expectedTireWorkflowReplies &&
+      kcthTireRecords.filter((record) => record.relationship === "repost").length === kcthFull.expectedTireWorkflowReposts &&
+      kcthThemeCounts["civic-information-and-service-routing"] === kcthFull.expectedCivicInformationRecords &&
+      kcthThemeCounts["neighborhood-culture-and-community"] === kcthFull.expectedNeighborhoodCultureRecords &&
+      kcthThemeCounts["town-hall-development-and-participation"] === kcthFull.expectedDevelopmentRecords &&
+      kcthThemeCounts["racial-justice-documentation"] === kcthFull.expectedRacialJusticeRecords &&
+      kcthThemeCounts["pandemic-resource-routing"] === kcthFull.expectedPandemicResourceRecords &&
+      kcthAuthoredReactionSnapshot.statusesWithVisibleReaction === kcthFull.expectedAuthoredStatusesWithReaction &&
+      kcthAuthoredReactionSnapshot.replies === kcthFull.expectedAuthoredVisibleReplies &&
+      kcthAuthoredReactionSnapshot.reposts === kcthFull.expectedAuthoredVisibleReposts &&
+      kcthAuthoredReactionSnapshot.likes === kcthFull.expectedAuthoredVisibleLikes &&
+      kcTownHallPopulationAudit.uniqueItemsRecovered === kcthFull.expectedUniqueItems &&
+      kcTownHallPopulationAudit.unresolvedPopulationSlots === kcthFull.expectedUnresolvedSlots &&
+      kcTownHallCorpusFindings.tireWorkflowRecords === kcthFull.expectedTireWorkflowRecords &&
+      kcTownHallCorpusFindings.directCouncilMemberResponseStatuses === kcthFull.expectedDirectCouncilResponses &&
+      kcTownHallCorpusFindings.authoredVisibleLikes === kcthFull.expectedAuthoredVisibleLikes &&
+      kcTownHallSocialCorpus.sources.length === kcthFull.expectedSourceCount &&
+      kcTownHallSocialCorpus.observations.length === kcthFull.expectedObservationCount &&
+      kcTownHallSocialCorpus.claims.length === kcthFull.expectedClaimCount &&
+      kcTownHallSocialCorpus.researchInquiries.length === kcthFull.expectedInquiryCount &&
+      kcthFullSources.every((source) =>
+        source?.visibility === "public" && source.supportsGenerally.length && source.doesNotEstablish.length
+      ) &&
+      kcthAuditSource?.kind === "research-run" &&
+      kcthAuditSource.canonicalUrl?.includes(kcthFull.ledgerPath) &&
+      kcthAuditSource.doesNotEstablish.some((boundary) => /platform export/i.test(boundary)) &&
+      kcthActiveClaim?.status === "confirmed-with-boundary" &&
+      kcthActiveClaim.projections.some((projection) =>
+        projection.status === "active" &&
+          projection.surfaces.includes("/work/kc-town-hall") &&
+          /shared public account as an operating surface/i.test(projection.text) &&
+          /100 of 183 surviving records/i.test(projection.text)
+      ) &&
+      kcthActiveClaim.boundaries.some((boundary) => /shared project identity/i.test(boundary)) &&
+      kcthActiveClaim.antiClaims.some((antiClaim) => /One hundred records equal/i.test(antiClaim)) &&
+      kcthCouncilResponseClaim?.antiClaims.some((antiClaim) => /Nine Council members engaged/i.test(antiClaim)) &&
+      kcthHeldClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      kcthFullInquiry?.resultStatus === "recovered" &&
+      kcthFullInquiry.limitations.some((limitation) => /does not prove that no record was deleted/i.test(limitation)) &&
+      kcthTractionInquiry?.resultStatus === "partially-recovered" &&
+      kcthTractionInquiry.findings.some((finding) => /only two records meet the direct-response definition/i.test(finding)) &&
+      kcthAuthorshipInquiry?.resultStatus === "inconclusive" &&
+      kcthAuthorshipInquiry.limitations.some((limitation) => /cannot identify an author/i.test(limitation)) &&
+      kcthProof?.status === "source-backed" &&
+      kcthProof.sourceIds.includes(kcthFull.auditSourceId) &&
+      kcthOccurrence?.claimId === kcthFull.activeClaimId &&
+      kcthOccurrence.sourceIds.length === 5 &&
+      kcthPage?.sourceOrder.includes(kcthFull.auditSourceId) &&
+      kcTownHallMdx.includes(kcthFull.activeClaimId) &&
+      kcTownHallMdx.includes("public-service-interface") &&
+      kcthDocumentation.includes("all 183 unique surviving items") &&
+      kcthDocumentation.includes("not a platform export") &&
+      kcthDocumentation.includes("outreach counts, not responses") &&
+      kcthDocumentation.includes("Metrics on the 28 reposted source statuses are excluded") &&
+      kcthDocumentation.includes("not necessarily coverage of KC Town Hall") &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(kcthLedgerText) &&
+      kcthRecords.every((record) =>
+        !/(?:816[- .])\d{3}[- .]\d{4}/.test(record.publicSummary) &&
+        !/\b\d{3,5}\s+(?:N\.?|S\.?|E\.?|W\.?)?\s*[A-Z][A-Za-z]+(?:\s+(?:St|Street|Ave|Avenue|Rd|Road|Blvd|Boulevard))\b/i.test(record.publicSummary)
+      ) &&
+      publicRegistryText.includes(kcthFull.activeClaimId) &&
+      kcthFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -1115,7 +1342,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       criterionId: "KB-EVAL-SOCIAL-MEDIA-ARCHIVE-PRODUCTION",
       score: score(socialArchiveComplete),
       evidence: [socialArchiveComplete
-        ? `Five authenticated project-account inventories produced ${socialMediaArchiveProduction.sources.length} bounded sources, an eight-member CallNYC count, an at-least-five-member NYC Artist Coalition floor, one inspectable public claim, and six held claims with collective-authorship and completeness limits`
+        ? `Five authenticated project-account inventories produced ${socialMediaArchiveProduction.sources.length} bounded sources, an eight-member CallNYC count, an at-least-five-member NYC Artist Coalition floor, ${social.activeClaimIds.length} inspectable public claims, and ${social.heldClaimIds.length} held claims with collective-authorship and completeness limits`
         : "Social-account identity, recovered counts, official-at-date verification, outreach distinction, collective authorship, excluded-handle boundaries, selected projections, held depth, public safety, or documentation is incomplete"]
     },
     {
@@ -1131,6 +1358,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite()) {
       evidence: [wowFullPopulationComplete
         ? `All ${wowFull.expectedProfileCount} surviving profile-count items are recovered through ${wowRecords.length} unique records; the ledger preserves ${wowUniqueShortUrls.size} posted short URLs, ${wowFull.expectedSupportReplies} direct support replies, ${wowExternalHandles.size} external account touchpoints, ${wowThemeCounts["civic-mobilization-and-care"] + wowThemeCounts["civic-care-amplification"]} civic-care records, and a separately bounded visible-reaction snapshot without assigning shared-account authorship or source-status metrics to Jamie`
         : "WOW List ledger reconciliation, item uniqueness, link inventory, support and stakeholder patterns, source-status metric exclusion, collective authorship, held depth, public projection, proof coverage, or public safety is incomplete"]
+    },
+    {
+      criterionId: "KB-EVAL-KCTH-FULL-POPULATION",
+      score: score(kcthFullPopulationComplete),
+      evidence: [kcthFullPopulationComplete
+        ? `All ${kcthFull.expectedProfileCount} surviving profile-count items are recovered through ${kcthRecords.length} unique records; the ledger preserves ${kcthUniqueShortUrls.size} posted short URLs, ${kcthFull.expectedTireWorkflowRecords} tire-workflow records, ${kcthExternalHandles.size} outside-account touchpoints, and a ${kcthFull.expectedDirectCouncilResponses}-member direct-response floor while keeping outreach, amplification, mutable reactions, collective authorship, and private service data bounded`
+        : "KC Town Hall ledger reconciliation, item uniqueness, link and source inventory, tire-workflow classification, direct-response derivation, metric parsing, source-status metric exclusion, collective authorship, private-data exclusion, held depth, public projection, proof coverage, or public safety is incomplete"]
     }
   ];
 

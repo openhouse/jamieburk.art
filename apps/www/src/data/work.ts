@@ -492,7 +492,10 @@ const workItemsInput = [
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-public-benefit-documentation",
+      "kc-town-hall-public-service-interface"
+    ],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
@@ -511,7 +514,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official Kansas City Council and CCED records, approved resume language, and public-safe project context.",
+      "Official Kansas City Council and CCED records, a complete public-safe account corpus, approved resume language, and public-safe project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
       "The public funding record runs from a 2019 Council appropriation through return of the unused funds after the project withdrew in 2024.",
@@ -522,12 +525,13 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
+      "Recurring public intake, service coordination, and result-reporting workflow",
       "2019 Council acceptance and $490,539 appropriation",
       "$0 disbursed before the unused funds were returned in 2024"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. Official records establish the CCED recommendation, Council acceptance and appropriation, zero disbursement as of May 2022, and return of the unused funds after the project withdrew.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. Official records establish the CCED funding lifecycle, while the complete surviving public-account corpus documents a collective resident intake, service, and follow-through workflow.",
       open:
         "Jamie's complete role, named collaborators, the current property status, and the reasons for withdrawal are not established by the funding records.",
       protected:

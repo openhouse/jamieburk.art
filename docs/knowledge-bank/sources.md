@@ -49,6 +49,20 @@ or credentials. The current population is not represented as a complete
 platform export or proof that no earlier post was deleted. See
 [intake/2026-07-14-wowlist-full-population-social-corpus.md](intake/2026-07-14-wowlist-full-population-social-corpus.md).
 
+The KC Town Hall social-corpus audit reconciles all 183 items in the surviving
+profile control: 142 account posts, 13 account replies, and 28 reposts. Its
+public-safe ledger retains bounded classifications, posted destinations, media
+signals, status identifiers, and mutable reaction snapshots without reproducing
+post text, phone numbers, street addresses, session material, messages, or
+private analytics. See
+[intake/2026-07-14-kctownhall-full-population-social-corpus.md](intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+KCUR election guidance, Northeast News affordable-housing reporting, Curbed
+housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
+are retained as sources routed by the account. Their appearance establishes
+public circulation and mission context, not coverage of KC Town Hall, project
+authorship, partnership, adoption, or impact.
+
 Four public articles linked or reposted by the account are retained as context
 sources: Grasstronaut on DIY organization and community infrastructure, *Good
 Times* on zines connecting geographically separated DIY spaces, KQED on the

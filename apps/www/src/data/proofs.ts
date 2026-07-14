@@ -523,6 +523,43 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-13"
   },
   {
+    id: "kc-town-hall-public-service-interface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern tire reports, pickups, and result reporting from 2019 through 2022.",
+    shortWording: "Built a recurring public intake and follow-through surface",
+    detailedPublicWording:
+      "A complete 183-record public-account ledger documents how KC Town Hall repeatedly solicited resident tire locations, coordinated pickups, and reported results through one shared public identity.",
+    sourceBasis:
+      "Authenticated full-population review of the public KC Town Hall Posts and Replies surfaces, a 183-record public-safe ledger, and public project posts spanning program launch through recurring result reports.",
+    sourceNote:
+      "The complete surviving profile population is not a platform export or proof that no earlier post was deleted.",
+    whyItMatters:
+      "Shows public-facing communications functioning as an operating interface for resident intake, service coordination, and accountable follow-through.",
+    guardrail:
+      "Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and project-reported tire or fee figures as unreconciled self-reporting.",
+    doNotSay: [
+      "Jamie authored every KC Town Hall post",
+      "Jamie alone performed every pickup",
+      "One hundred records equal one hundred completed pickups or households",
+      "The timeline is an audited service ledger",
+      "Visible social reactions measure historical impact"
+    ],
+    protectedBoundaries: [
+      "Resident addresses",
+      "Phone numbers",
+      "Direct messages",
+      "Private service records",
+      "Account credentials and analytics"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["resident-intake", "service-coordination", "public-reporting", "implementation"],
+    lastReviewed: "2026-07-14"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",

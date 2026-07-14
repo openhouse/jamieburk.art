@@ -214,6 +214,21 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-13
 
+## kc-town-hall-public-service-interface - Recurring public service interface
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated full-population audit / public-safe archive summary
+**Public wording:** KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern tire reports, pickups, and result reporting from 2019 through 2022.
+**Detailed public-safe wording:** A complete 183-record public-account ledger documents repeated resident intake, pickup coordination, and result reporting through one shared project identity.
+**Where to project:** KC Town Hall work card and case study.
+**Why it matters:** Shows public communication functioning as operating infrastructure for intake, service coordination, and accountable follow-through.
+**Guardrail:** Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and project-reported tire or fee figures as unreconciled self-reporting.
+**Do not say:** Jamie authored every post; Jamie alone performed every pickup; 100 records equal 100 completed pickups or households; the timeline is an audited service ledger; visible reactions measure historical impact.
+**Protected boundaries:** Resident addresses, phone numbers, direct messages, private service records, account credentials, and private analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## kc-town-hall-stewardship-transition - Stewardship continuity
 
 **Status:** Use with care

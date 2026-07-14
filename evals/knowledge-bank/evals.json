@@ -321,7 +321,7 @@
         "@NYCArtC": { "profilePosts": 5124, "recoveredStatuses": null, "recoveredAuthoredPosts": null },
         "@wowlist": { "profilePosts": 38, "recoveredStatuses": 38, "recoveredAuthoredPosts": 22 },
         "@KCSpacesFund": { "profilePosts": 35, "recoveredStatuses": 34, "recoveredAuthoredPosts": 27 },
-        "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 170, "recoveredAuthoredPosts": 142 }
+        "@KCTownHall": { "profilePosts": 183, "recoveredStatuses": 183, "recoveredAuthoredPosts": 155 }
       },
       "profileSourceIds": [
         "SRC-X-PROFILE-CALLNYCAPP",
@@ -356,15 +356,15 @@
         "SRC-X-NYCAC-BRAD-LANDER-2021-01-28"
       ],
       "activeClaimIds": [
-        "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"
+        "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
+        "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
       ],
       "heldClaimIds": [
         "CLM-NYCAC-COUNCIL-ACCOUNT-ENGAGEMENT",
         "CLM-NYCAC-SHARED-SOCIAL-IDENTITY",
         "CLM-PROJECT-SOCIAL-IDENTITY-ESTABLISHMENT",
         "CLM-WOWLIST-SOCIAL-PROJECT-ORIGIN",
-        "CLM-KCSPACES-SOCIAL-GRANTEE-REPORTING",
-        "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
+        "CLM-KCSPACES-SOCIAL-GRANTEE-REPORTING"
       ],
       "inquiryIds": [
         "INQ-PROJECT-SOCIAL-ARCHIVE-PRODUCTION-2026-07-14",
@@ -458,6 +458,58 @@
       "auditSourceId": "SRC-X-WOWLIST-FULL-POPULATION-AUDIT-2026",
       "repliesOnlySourceId": "SRC-X-WOWLIST-MEMBERS-MEETING-665520472461860864",
       "proofId": "wowlist-public-support-surface"
+    },
+    "kcTownHallFullPopulation": {
+      "ledgerPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "expectedProfileCount": 183,
+      "expectedPostsTabCount": 170,
+      "expectedRepliesTabCount": 183,
+      "expectedUniqueItems": 183,
+      "expectedAccountPosts": 142,
+      "expectedAccountReplies": 13,
+      "expectedAuthoredStatuses": 155,
+      "expectedReposts": 28,
+      "expectedRepostSourceAccounts": 16,
+      "expectedExcludedContextItems": 5,
+      "expectedUnresolvedSlots": 0,
+      "expectedTireWorkflowRecords": 100,
+      "expectedTireWorkflowPosts": 96,
+      "expectedTireWorkflowReplies": 3,
+      "expectedTireWorkflowReposts": 1,
+      "expectedCivicInformationRecords": 26,
+      "expectedNeighborhoodCultureRecords": 27,
+      "expectedDevelopmentRecords": 16,
+      "expectedRacialJusticeRecords": 12,
+      "expectedPandemicResourceRecords": 2,
+      "expectedExternalHandles": 35,
+      "expectedQuintonLucasMentions": 26,
+      "expectedMelissaRobinsonMentions": 23,
+      "expectedCityPoliticalFigureReposts": 9,
+      "expectedDirectCouncilResponses": 2,
+      "expectedDirectCouncilAccounts": 2,
+      "expectedShortUrlOccurrences": 133,
+      "expectedUniqueShortUrls": 31,
+      "expectedResolvedDestinations": 20,
+      "expectedProjectOrLineageDestinations": 9,
+      "expectedExternalDestinations": 11,
+      "expectedAuthoredStatusesWithReaction": 77,
+      "expectedAuthoredVisibleReplies": 22,
+      "expectedAuthoredVisibleReposts": 70,
+      "expectedAuthoredVisibleLikes": 174,
+      "expectedSourceCount": 10,
+      "expectedObservationCount": 8,
+      "expectedClaimCount": 4,
+      "expectedInquiryCount": 3,
+      "activeClaimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      "heldClaimIds": [
+        "CLM-KCTH-COMPLETE-SOCIAL-POPULATION",
+        "CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR",
+        "CLM-KCTH-PUBLIC-IDENTITY-MISSION-BREADTH",
+        "CLM-KCTH-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "proofId": "kc-town-hall-public-service-interface"
     }
   },
   "criteria": [
@@ -565,6 +617,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "Every surviving @wowlist item and posted URL is dispositioned; support and stakeholder patterns are reproducible; current reactions remain bounded; collective authorship is preserved; and only the clearest operational claim is composed into the site."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FULL-POPULATION",
+      "label": "KC Town Hall full-population archival integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "Every surviving @KCTownHall item and posted URL is dispositioned; resident-service, source-routing, and stakeholder patterns are reproducible; outreach, direct response, amplification, and current reactions remain distinct; private contact and service data stay absent; collective authorship is preserved; and only the clearest operational claim is composed into the site."
     }
   ],
   "hillClimb": {
@@ -586,6 +645,8 @@
       "Never count candidate-era or former-member posts as sitting-officeholder engagement.",
       "Never treat profile post totals as stable impact metrics or individual authorship records.",
       "Never count reactions on a reposted source status as engagement earned by the project account's repost action.",
+      "Never turn project-authored mentions or project-selected reposts into engagement authored by an outside stakeholder.",
+      "Never turn a tire-workflow record count into a completed-pickup, household, or resident-outcome count.",
       "Never turn an unrecovered account or status into proof that it never existed."
     ],
     "stopWhen": "Every criterion meets its minimum and the weighted target passes in two consecutive fresh-judge runs, with deterministic checks and public safety passing."

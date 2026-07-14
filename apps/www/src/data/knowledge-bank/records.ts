@@ -2,6 +2,7 @@ import { historicalKnowledge } from "./historical-knowledge.ts";
 import { callNycSocialCorpus } from "./callnyc-social-corpus.ts";
 import { googleDriveSharedDrivesProduction } from "./google-drive-shared-drives-production.ts";
 import { kcTownHallFunding } from "./kc-town-hall-funding.ts";
+import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacSourceExpansion } from "./nycac-source-expansion.ts";
 import { proofCoverageTargets } from "./proof-coverage.ts";
@@ -34,6 +35,7 @@ const knowledgeBankInput = {
     ...googleDriveSharedDrivesProduction.intakeItems,
     ...teamsArchiveProduction.intakeItems,
     ...kcTownHallFunding.intakeItems,
+    ...kcTownHallSocialCorpus.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacPressArchive.intakeItems,
     ...callNycSocialCorpus.intakeItems,
@@ -62,6 +64,7 @@ const knowledgeBankInput = {
     ...googleDriveSharedDrivesProduction.observations,
     ...teamsArchiveProduction.observations,
     ...kcTownHallFunding.observations,
+    ...kcTownHallSocialCorpus.observations,
     ...nycacSourceExpansion.observations,
     ...nycacPressArchive.observations,
     ...callNycSocialCorpus.observations,
@@ -217,6 +220,7 @@ const knowledgeBankInput = {
     ...googleDriveSharedDrivesProduction.sources,
     ...teamsArchiveProduction.sources,
     ...kcTownHallFunding.sources,
+    ...kcTownHallSocialCorpus.sources,
     ...nycacSourceExpansion.sources,
     ...nycacPressArchive.sources,
     ...callNycSocialCorpus.sources,
@@ -325,6 +329,7 @@ const knowledgeBankInput = {
     ...googleDriveSharedDrivesProduction.claims,
     ...teamsArchiveProduction.claims,
     ...kcTownHallFunding.claims,
+    ...kcTownHallSocialCorpus.claims,
     ...nycacSourceExpansion.claims,
     ...nycacPressArchive.claims,
     ...callNycSocialCorpus.claims,
@@ -373,6 +378,7 @@ const knowledgeBankInput = {
     ...googleDriveSharedDrivesProduction.researchInquiries,
     ...teamsArchiveProduction.researchInquiries,
     ...kcTownHallFunding.researchInquiries,
+    ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacPressArchive.researchInquiries,
     ...callNycSocialCorpus.researchInquiries,
@@ -458,7 +464,32 @@ const knowledgeBankInput = {
       { id: "nightlife-town-hall", claimId: "CLM-NYCAC-NIGHTLIFE-TOWN-HALL-2017", projection: "case-study", sourceIds: ["SRC-NYCAC-BEDFORD-NIGHT-MAYOR-2017-10-12", "SRC-NYCAC-GREENE-HILL-QA-2017-12-19"] },
       { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study", sourceIds: ["SRC-NYC-SBJSA-HEARING-2018-10-22"] }
     ]
-  }, kcTownHallFunding.page]
+  }, {
+    ...kcTownHallFunding.page,
+    sourceOrder: [
+      ...kcTownHallFunding.page.sourceOrder,
+      "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-KCTH-TIRES-LAUNCH-2019-05-03",
+      "SRC-X-KCTH-TIRES-2019-YEAR-END",
+      "SRC-X-KCTH-TIRES-2021-YEAR-END",
+      "SRC-X-KCTH-TIRES-2022-MAY"
+    ],
+    occurrences: [
+      ...kcTownHallFunding.page.occurrences,
+      {
+        id: "public-service-interface",
+        claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+        projection: "case-study",
+        sourceIds: [
+          "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+          "SRC-X-KCTH-TIRES-LAUNCH-2019-05-03",
+          "SRC-X-KCTH-TIRES-2019-YEAR-END",
+          "SRC-X-KCTH-TIRES-2021-YEAR-END",
+          "SRC-X-KCTH-TIRES-2022-MAY"
+        ]
+      }
+    ]
+  }]
 };
 
 export const knowledgeBank = knowledgeBankSchema.parse(knowledgeBankInput);

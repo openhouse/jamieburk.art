@@ -18,11 +18,13 @@ official as proof of impact.
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124 posts; joined January 2017 | Targeted authenticated samples; no complete export |
 | WOW List | [@wowlist](https://x.com/wowlist) | 38 posts; joined February 2014 | 38 unique surviving statuses; 22 authored by the project account |
 | KC Spaces Fund | [@KCSpacesFund](https://x.com/KCSpacesFund) | 35 posts; joined April 2020 | 34 unique visible statuses; 27 authored by the project |
-| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 170 unique visible statuses; 142 authored by the project |
+| KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | 183 posts; joined March 2018 | 183 unique surviving items; 155 authored by the project account |
 
 Counts are accessed-at snapshots and recovered floors. For CallNYC, the 107
 recovered item records plus three explicit unresolved slots disposition all 110
-observed profile-count slots; this is not a platform export. X pagination,
+observed profile-count slots; this is not a platform export. For KC Town Hall,
+Posts and Replies reconciliation recovered all 183 surviving profile-counted
+items. X pagination,
 virtualization, search behavior, deletions, privacy settings, and unavailable
 posts prevent these from being described as complete exports.
 
@@ -117,10 +119,14 @@ Council term were excluded from the sitting-member floor.
   applications and donations and publicly reported at least 11 named recipient
   or grantee highlights. These are project self-reports, not an audited payment
   ledger; Jamie's established role remains technical and operational support.
-- **KC Town Hall:** 170 of 183 profile posts were recovered. They document a
-  recurring loop of soliciting neighborhood needs, performing pickups or
-  public programs, and reporting results. Tire and avoided-fee figures remain
-  explicitly identified as project self-reporting pending reconciliation.
+- **KC Town Hall:** all 183 surviving profile-counted items were recovered: 142
+  account posts, 13 account replies, and 28 reposts. One hundred records concern
+  the recurring tire-service workflow. Two sitting Council members authored
+  direct responses in one April 2019 exchange; nine reposted statuses from three
+  city political figures remain separately classified as project-selected
+  amplification. Tire and avoided-fee figures remain project self-reporting
+  pending independent reconciliation. See the
+  [full-population note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
 
 ## Authorship and stewardship boundary
 

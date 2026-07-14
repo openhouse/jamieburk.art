@@ -84,6 +84,16 @@ held participant-memory lead. Do not name the recipient, infer the scope of its
 obligations, connect the transition causally to the City funding withdrawal, or
 publish private circumstances without a separate review.
 
+Do not treat 183 surviving profile items as a complete platform export or proof
+against prior deletion. Do not treat the account's 100 tire-workflow records as
+100 pickups or households, or as an audited service ledger. Do not infer that
+Jamie authored every shared-account record or alone delivered every field
+operation. Project mentions, outside-authored responses, project-selected
+reposts, and visible reactions are different relationship types; do not convert
+nine reposted posts from city political figures into nine official engagements.
+July 2026 reactions are mutable snapshots, and project-reported tire and fee
+figures remain unreconciled.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

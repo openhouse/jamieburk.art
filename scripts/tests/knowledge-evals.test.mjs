@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import { callNycCorpusFindings, callNycPopulationAudit, callNycSocialCorpus } from "../../apps/www/src/data/knowledge-bank/callnyc-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { wowlistPopulationAudit, wowlistSocialCorpus } from "../../apps/www/src/data/knowledge-bank/wowlist-social-corpus.ts";
@@ -15,6 +16,10 @@ const callNycLedger = JSON.parse(readFileSync(
 ));
 const wowlistLedger = JSON.parse(readFileSync(
   new URL("../../docs/knowledge-bank/data/wowlist-public-post-ledger.json", import.meta.url),
+  "utf8"
+));
+const kcTownHallLedger = JSON.parse(readFileSync(
+  new URL("../../docs/knowledge-bank/data/kctownhall-public-post-ledger.json", import.meta.url),
   "utf8"
 ));
 
@@ -785,6 +790,83 @@ test("WOW List shared-account authorship boundary is a hard gate", () => {
 test("WOW List reserve depth stays off public surfaces", () => {
   const heldIds = suite.pilot.wowlistFullPopulation.heldClaimIds;
   const heldClaims = wowlistSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(
+    heldClaims.every((claim) =>
+      claim.projections.every(
+        (projection) => projection.status === "hold" && projection.surfaces.length === 0
+      )
+    )
+  );
+});
+
+test("KC Town Hall full-population ledger reconciles every surviving profile item", () => {
+  assert.equal(kcTownHallPopulationAudit.profileCountObserved, 183);
+  assert.equal(kcTownHallLedger.records.length, 183);
+  assert.equal(new Set(kcTownHallLedger.records.map((record) => record.statusId)).size, 183);
+  assert.equal(kcTownHallLedger.population.unresolvedProfileCountSlots, 0);
+  assert.equal(kcTownHallLedger.population.excludedConversationContextArticles, 5);
+});
+
+test("KC Town Hall source-status reactions cannot become project-account traction", () => {
+  const reposts = kcTownHallLedger.records.filter((record) => record.relationship === "repost");
+  const authored = kcTownHallLedger.records.filter((record) => record.relationship !== "repost");
+
+  assert.equal(reposts.length, 28);
+  assert.ok(reposts.every((record) => record.metricOwner === "source-status-not-kctownhall-repost-action"));
+  assert.ok(authored.every((record) => record.metricOwner === "account-authored-status"));
+  assert.equal(kcTownHallLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot.likes, 174);
+  assert.equal(kcTownHallLedger.aggregateFindings.repostSourceVisibleReactionSnapshot.likes, 1241);
+});
+
+test("KC Town Hall shared-account and service-unit boundaries are hard gates", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
+  );
+  assert.ok(claim);
+  const original = [...claim.antiClaims];
+
+  try {
+    claim.antiClaims = claim.antiClaims.filter(
+      (antiClaim) => !/One hundred records equal/i.test(antiClaim)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = original;
+  }
+});
+
+test("KC Town Hall official-engagement floor cannot absorb outreach or reposts", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR"
+  );
+  assert.ok(claim);
+  const original = [...claim.antiClaims];
+
+  try {
+    claim.antiClaims = claim.antiClaims.filter(
+      (antiClaim) => !/Nine Council members engaged/i.test(antiClaim)
+    );
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(
+      result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score,
+      1
+    );
+    assert.equal(result.accepted, false);
+  } finally {
+    claim.antiClaims = original;
+  }
+});
+
+test("KC Town Hall reserve depth stays off public surfaces", () => {
+  const heldIds = suite.pilot.kcTownHallFullPopulation.heldClaimIds;
+  const heldClaims = kcTownHallSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
 
   assert.equal(heldClaims.length, heldIds.length);
   assert.ok(
