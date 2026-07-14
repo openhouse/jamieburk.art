@@ -5,7 +5,9 @@
 Strengthen the portfolio by close-reading the supplied Greene Hill Food Co-op
 interview, recovering ten additional public sources, ingesting them into the
 knowledge bank, and recursively improving the NYC Artist Coalition public case
-study until every frozen evaluation criterion passed.
+study until every frozen evaluation criterion passed. A second pass on the same
+date aggregated the press sections from four NYC Artist Coalition campaign sites
+and recursively tested their public-safe projection.
 
 ## Source Development
 
@@ -22,6 +24,26 @@ The resulting public record now distinguishes:
 - coalition-authored campaign surfaces and partner activity;
 - Council and mayoral enactments, agency mandates, and later City decisions;
 - unresolved formation history and causal questions that remain held.
+
+## Campaign Press Expansion
+
+The second pass parsed only links grouped under the `Press` heading on Let NYC
+Dance, Talks Not Raids, Save NYC Spaces, and the supplied December 1, 2021
+FairRentNYC Wayback capture. It preserves 45 campaign-index memberships across
+44 normalized canonical article URLs. The NPR nightlife article is the sole
+cross-campaign duplicate.
+
+Each campaign received a governed intake and index source. Each article URL
+received a source record and an atomic contextualizing assertion, while all 44
+article IDs remain queued for close reading before article-specific claims can
+be promoted. The public case study projects one aggregate sentence and cites
+only the four indexes; the complete corpus remains in the knowledge-bank source
+note.
+
+The July 13 availability snapshot records 35 direct 2xx responses, five HTTP
+403 responses with retained archives, and four HTTP 404 or 410 responses with
+preferred archive fallbacks. The migrated Vice URL retains both its current
+canonical location and its original Thump archive.
 
 ## Recursive Passes
 
@@ -43,14 +65,26 @@ the protected archive review. The final repair split implementation claims from
 public-artifact claims and added a deterministic entailment guard preventing
 rendered citations from standing in for non-renderable direct support.
 
+The first campaign-press blind review then found two defects: public artifact
+copy implied unsupported Jamie-specific authorship of Save NYC Spaces and its
+press index, and the first availability snapshot was dated one day ahead of the
+actual review. A second grader also noted that source-ID uniqueness was weaker
+than URL normalization and that access restrictions were not inspectable at the
+article level. The repair separated documented infrastructure from collective
+campaign context, normalized canonical URLs in the regression test, corrected
+all dates, and attached archive fallbacks and dated access notes to every
+restricted or unavailable source.
+
 ## Threshold
 
-Two fresh independent blind graders evaluated the immutable content commit
-`bea860273246e1cbb4e787842a8830a4359d7088`. Both scored `KB-007` and `KB-009`
+Two fresh independent blind graders evaluated the latest immutable content commit
+`98d7e4442a6110ab7c98992368ee5a8eacf886e6`. Both scored `KB-007` and `KB-009`
 at `4/4` with no findings. The deterministic suite reached weighted score
 `1.0000` and `threshold_met` after two consecutive passing runs.
 
 This threshold confirms the current public-safe projection and evidence
 contract. It does not promote the held formal co-founder title, establish sole
 causation for collective or governmental outcomes, or expose protected source
-material.
+material. A campaign press-list entry proves that the campaign listed an article;
+it does not by itself prove endorsement, article content, Jamie's authorship, or
+policy causation.

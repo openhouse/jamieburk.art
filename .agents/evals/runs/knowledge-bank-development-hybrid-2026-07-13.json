@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "bea860273246e1cbb4e787842a8830a4359d7088",
+  "candidate_sha": "98d7e4442a6110ab7c98992368ee5a8eacf886e6",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Fresh audit of all 14 collective-work claims found explicit Jamie actions, collective or institutional boundaries, and anti-claims for every record.",
-        "Claim maturity correctly separates protected archive support for Jamie-specific implementation from public campaign-artifact support for visible campaign surfaces.",
-        "CLM-NAC-CABARET-CIVIC-TOOLING and CLM-NAC-TALKS-NOT-RAIDS-CAMPAIGN use non-rendered protected direct support; separate public-surface claims use rendered public direct support.",
-        "Collective campaign and policy wording preserves collaborators, partner organizations, Council sponsors, officials, and agencies without converting outcomes into solo causation.",
-        "Citation, knowledge-bank, public-safety, and Chad-lens checks passed."
+        "Two fresh independent graders confirmed that the press-corpus claim limits evidence to campaign-index membership, metadata, and aggregate counts, with explicit anti-claims for endorsement, Jamie-centered coverage, personal authorship, and causation.",
+        "All 44 ingestion-specific article assertions are contextualizing records; only the four campaign-index assertions support the aggregate membership count.",
+        "Public artifact copy attributes documented website infrastructure to Let NYC Dance, Talks Not Raids, and FairRentNYC while preserving Save NYC Spaces separately as collective campaign context.",
+        "The Fair Rent case study keeps Jamie's documented infrastructure and organizing work visible while crediting collaborators, advocates, Council sponsors, officials, participants, and agencies for collective and institutional outcomes.",
+        "Both graders found no solo-causation, authorship, endorsement, or Save NYC Spaces infrastructure overstatement and no material underclaiming of Jamie's supported work."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,16 +20,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "All 25 eligible claims have an explicit active or hold projection disposition; research-needed claims remain held.",
-        "Fair Rent MDX contains 15 Claim bindings: all 11 cited bindings exactly match the 11 registered occurrences, while the four protected-support projections correctly render without public citations.",
-        "The fair-rent-nyc page ID, /work/fair-rent-nyc surface, work-item slug, MDX bindings, and CaseStudyLayout reference resolution align.",
-        "All 13 Fair Rent source notes resolve to public registry sources with ordered numbering and valid backlinks.",
-        "Source-by-source review of every Fair Rent occurrence confirmed that each rendered citation supports the proposition or clause it follows; protected archive evidence is not represented by an unrelated public campaign citation.",
-        "check:citations, test:citations (11/11), check:routes, and test:knowledge-development (5/5) passed with a clean worktree."
+        "Independent recomputation produced campaign memberships of 21, 7, 8, and 9: 45 press-list occurrences, 44 unique source IDs, and 44 normalized canonical article URLs.",
+        "The NPR nightlife article is the sole cross-campaign duplicate and correctly retains both Let NYC Dance and Save NYC Spaces memberships.",
+        "All 44 article sources have atomic corpus-membership assertions and remain assigned to the queued close-reading task; article-specific promotion is withheld.",
+        "The dated availability audit records 35 direct 2xx responses, five HTTP 403 sources with archive fallbacks, four HTTP 404 or 410 sources with preferred archives, and the migrated Vice canonical URL with its prior archive.",
+        "The active case-study projection cites only the four campaign indexes and renders one concise aggregate paragraph; the full 44-URL corpus remains in the governed source note.",
+        "Both independent graders scored KB-009 at 4/4 after recomputing the corpus and inspecting proof, citation, projection, archive, and hold decisions."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact commit bea860273246e1cbb4e787842a8830a4359d7088 passes fresh blind confirmation for KB-007 and KB-009 with no repair findings."
+  "overall_finding": "Exact commit 98d7e4442a6110ab7c98992368ee5a8eacf886e6 passes two fresh independent blind reviews for KB-007 and KB-009 at 4/4 with no remaining deficiencies."
 }
