@@ -236,7 +236,15 @@ export function evaluateKnowledgeBank(
     return total + weight * (result.score / suite.score_scale.maximum);
   }, 0) / 100;
   const failedBlocking = suite.evals.filter((entry) => entry.blocking && !results.find((result) => result.eval_id === entry.id).pass);
-  const thresholdPassed = weightedScore >= suite.thresholds.weighted_score_minimum && failedBlocking.length === 0;
+  const belowNonblockingMinimum = suite.evals.filter((entry) => {
+    if (entry.blocking) return false;
+    const result = results.find((item) => item.eval_id === entry.id);
+    return result.score < suite.thresholds.nonblocking_score_minimum;
+  });
+  const thresholdPassed =
+    weightedScore >= suite.thresholds.weighted_score_minimum &&
+    failedBlocking.length === 0 &&
+    belowNonblockingMinimum.length === 0;
   const status = thresholdPassed && consecutivePassingRuns >= 2 ? "threshold_met" : "iterate";
 
   return {
@@ -244,7 +252,11 @@ export function evaluateKnowledgeBank(
     status,
     weighted_score: Number(weightedScore.toFixed(4)),
     consecutive_passing_runs: thresholdPassed ? consecutivePassingRuns : 0,
-    next_eval_id: failedBlocking[0]?.id ?? results.find((result) => !result.pass)?.eval_id ?? null,
+    next_eval_id:
+      failedBlocking[0]?.id ??
+      belowNonblockingMinimum[0]?.id ??
+      results.find((result) => !result.pass)?.eval_id ??
+      null,
     results
   };
 }

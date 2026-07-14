@@ -154,6 +154,18 @@ test("a research-stage claim cannot become projection-eligible", () => {
   assert.match(maturityIntegrity.findings.join("\n"), /eligible before confirmation/);
 });
 
+test("a nonblocking score below its minimum cannot report threshold met", () => {
+  const belowThreshold = structuredClone(hybridPass);
+  const publicCoverage = belowThreshold.find((entry) => entry.eval_id === "KB-009");
+  publicCoverage.score = 2;
+  publicCoverage.pass = false;
+  publicCoverage.findings = ["sentinel public-coverage failure"];
+
+  const result = evaluateKnowledgeBank(suite, knowledgeBank, 2, belowThreshold);
+  assert.equal(result.status, "iterate");
+  assert.equal(result.next_eval_id, "KB-009");
+});
+
 test("hybrid criteria cannot pass without an independent scorecard", () => {
   const result = evaluateKnowledgeBank(suite, knowledgeBank, 2);
   assert.equal(result.status, "iterate");
