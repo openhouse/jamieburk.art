@@ -237,6 +237,45 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "fair-rent-operating-layer-design",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary"],
+    publicWording:
+      "Jamie designed a shared intake path, recurring meetings, reusable messages, a process for gathering stories with permission, and an implementation plan for a Commercial Rent Stabilization collaboration. He also created an initial shared working record: running minutes, open questions, action items, privacy rules, and named next steps that gave collaborators a place to track follow-up and carry decisions forward. Campaign decisions and outcomes remained collective.",
+    shortWording: "Created a shared working record and designed broader coalition operations",
+    detailedPublicWording:
+      "Jamie created an initial shared working record that turned meetings into running minutes, open questions, action items, privacy rules, and named next steps. He separately designed a broader system for joining, recurring coordination, reusable communications, permission-based story gathering, and implementation planning; the evidence does not establish that those proposed components were completed or adopted.",
+    sourceBasis:
+      "Public-safe review of protected 2026 operating-design and running-memory records.",
+    sourceNote:
+      "The protected evidence supports the initial working record and broader system design, not completion or coalition-wide adoption of every proposed component.",
+    whyItMatters:
+      "Makes Jamie's current product-operations and implementation practice concrete without exposing the coalition's private working record.",
+    guardrail:
+      "Separate the working record Jamie created from the broader components he designed; keep coalition outcomes collective and do not imply that every proposed component was adopted or completed.",
+    doNotSay: [
+      "Jamie built the entire movement",
+      "Every proposed component was completed",
+      "The coalition adopted the full plan",
+      "Jamie owned all strategy or follow-up",
+      "Jamie authored the legislation"
+    ],
+    protectedBoundaries: [
+      "Private coalition notes",
+      "Current strategy",
+      "Stakeholder identities and contact data",
+      "Sensitive business stories",
+      "Private correspondence",
+      "Unapproved working documents"
+    ],
+    surfaces: ["technical-operations", "case-study", "resume"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["product-operations", "implementation", "knowledge-systems", "stakeholder-coordination"],
+    structuredClaimIds: ["CLM-CRS-SHARED-OPERATING-LAYER-2026"],
+    lastReviewed: "2026-07-13"
+  },
+  {
     id: "fair-rent-source-map",
     status: "careful",
     supportLevel: "careful",
@@ -267,6 +306,40 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "experimental-media-systems-practice",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "In 2006 Jamie exhibited Time is Long, an interactive VHS installation with about a 20-minute delay. In 2013 he built a Max/MSP experiment that reordered audio clips by pitch. A community-maintained Discogs release record lists him as a participant on a 99-person Matmos album from 2020; his specific contribution is not identified.",
+    shortWording: "Three documented creative-technical works across video, software, and sound",
+    detailedPublicWording:
+      "Dated public records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.",
+    sourceBasis:
+      "Cool Hunting's 2006 BAP Lab coverage, Monthly Music Hackathon NYC's 2013 project post, Thrill Jockey's album page, and the Discogs release record.",
+    whyItMatters:
+      "Preserves three precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.",
+    guardrail:
+      "Keep each contribution at the precision of its source and do not convert participation into event organization, production credit, or sole authorship.",
+    doNotSay: [
+      "Jamie organized BAP Lab",
+      "The Max/MSP experiment was a production product",
+      "Jamie produced or composed the Matmos album",
+      "The reviewed records identify Jamie's specific Matmos contribution"
+    ],
+    protectedBoundaries: [
+      "Unapproved historical participants",
+      "Uncleared event photographs or video",
+      "Unrecovered source code",
+      "Unverified track-level credits"
+    ],
+    surfaces: ["lab", "about", "internal-only"],
+    relatedProjects: ["time-is-long", "monthly-music-hackathon", "matmos-collaboration"],
+    relatedCapabilities: ["interactive-media", "creative-coding", "audio-software", "collaboration"],
+    structuredClaimIds: ["CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
+    lastReviewed: "2026-07-13"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",

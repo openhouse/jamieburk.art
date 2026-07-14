@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "evalId": "chad-lens",
+  "runId": "2026-07-14-teams-archive-production-B",
+  "branch": "feature/evals-B",
+  "base": "develop",
+  "status": "complete",
+  "iterations": 5,
+  "qualifyingRounds": [4, 5],
+  "candidate": "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition and FairRentNYC. He also built and stewarded workflows and shared materials that helped collaborators explain issues and coordinate calls to action. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+  "wordCount": 53,
+  "sentenceCount": 4,
+  "finalJudgments": {
+    "evidenceJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    },
+    "hiringReaderJudge": {
+      "hardGatesPass": true,
+      "score": 5,
+      "dimensionsPass": 5
+    }
+  },
+  "regressions": [],
+  "rounds": [
+    {
+      "round": 1,
+      "evidenceJudgeScore": 3,
+      "hiringReaderJudgeScore": 3,
+      "result": "revise",
+      "finding": "The first CRS draft blurred designed and completed work and did not name a demonstrated usable change for collaborators."
+    },
+    {
+      "round": 2,
+      "evidenceJudgeScore": 4,
+      "hiringReaderJudgeScore": 3,
+      "result": "revise",
+      "finding": "Jamie became more visible, but the wording still described intended benefit and used specialized coalition-operations language without a concrete artifact."
+    },
+    {
+      "round": 3,
+      "evidenceJudgeScore": 4,
+      "hiringReaderJudgeScore": 5,
+      "result": "revise",
+      "finding": "The public sentence named the working record and its use, but the evidence graph had not yet mapped every proposition and the work-card version was too dense."
+    },
+    {
+      "round": 4,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "The governed projections made Jamie the actor, named concrete tools and collaborator use in ordinary language, and preserved the collective-work boundary."
+    },
+    {
+      "round": 5,
+      "evidenceJudgeScore": 5,
+      "hiringReaderJudgeScore": 5,
+      "result": "qualifying-pass",
+      "finding": "An unchanged independent recheck passed all five dimensions with no regression or privacy leak."
+    }
+  ]
+}

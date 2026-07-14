@@ -8,6 +8,55 @@ import {
 const knowledgeBankInput = {
   intakeRecords: [
     {
+      id: "INTAKE-2026-07-13-TEAMS-PROJECT-HISTORY-CREATIVE-TECH",
+      receivedAt: "2026-07-13",
+      kind: "artifact",
+      project: "experimental-media-practice",
+      publicSummary: "A selective archival pass recovered public records of Jamie's interactive VHS installation, Max/MSP audio experiment, and participation in a large-scale collaborative Matmos recording.",
+      privacy: "public-safe-summary",
+      status: "claim-linked",
+      sourceIds: ["SRC-COOL-HUNTING-TIME-IS-LONG-2006", "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013", "SRC-THRILL-JOCKEY-CONSUMING-FLAME-2020", "SRC-DISCOGS-CONSUMING-FLAME-2020"],
+      claimIds: ["CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006", "CLM-SORTED-AUDIO-MAX-MSP-2013", "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      projectionIntent: "bank-only",
+      nextActions: ["Retain these records as compositional depth; project them publicly only when the role or page benefits from Jamie's longer creative-technical throughline."],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "INTAKE-2026-07-13-TEAMS-CRS-OPERATING-DESIGN",
+      receivedAt: "2026-07-13",
+      kind: "artifact",
+      project: "commercial-rent-stabilization",
+      publicSummary: "Protected working records support a bounded claim that Jamie created an initial shared working record and designed a broader operating system for current Commercial Rent Stabilization collaboration.",
+      privacy: "protected",
+      status: "claim-linked",
+      sourceIds: ["SRC-CRS-OPERATING-DESIGN-ARCHIVE-2026"],
+      claimIds: ["CLM-CRS-SHARED-OPERATING-LAYER-2026"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      projectionIntent: "candidate-for-public-surface",
+      nextActions: ["Keep the initial working record distinct from the broader system design unless collaborator-approved evidence establishes adoption or completion of specific components."],
+      protectedLocatorId: "LOC-CRS-OPERATING-DESIGN-2026",
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "INTAKE-2026-07-13-TEAMS-JOB-HUNT-EVIDENCE-AUDIT",
+      receivedAt: "2026-07-13",
+      kind: "artifact",
+      project: "portfolio-source-coverage",
+      publicSummary: "A close reading of the job-search dossier organized Jamie's technical project management, product operations, civic technology, and knowledge-systems throughline while identifying metric-bearing claims that still require primary evidence.",
+      privacy: "public-safe-summary",
+      status: "researched",
+      sourceIds: [],
+      claimIds: [],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13", "INQ-PUBLIC-SITE-SOURCE-COVERAGE"],
+      projectionIntent: "no-public-projection",
+      nextActions: ["Use the dossier to prioritize primary-source research; do not treat resume or preparation language as independent evidence for metrics or outcomes."],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "INTAKE-2026-07-12-PITCH-RAFT",
       receivedAt: "2026-07-12",
       kind: "source-url",
@@ -349,6 +398,85 @@ const knowledgeBankInput = {
     ...campaignPressIntakeRecords
   ],
   sources: [
+    {
+      id: "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
+      title: "Cool Hunting Video Presents: BAP Lab Part 1: New Media Artists",
+      organization: "Cool Hunting",
+      author: "Cool Hunting Video",
+      kind: "published-article",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2006-08-01",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://coolhunting.com/culture/bap-lab-part-1/",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Cool Hunting Video, 'BAP Lab Part 1: New Media Artists,' August 1, 2006.",
+      publicNote: "The article identifies Jamie's Time is Long installation and describes its visible playback mechanism.",
+      supportsGenerally: ["Jamie's participation in the July 22, 2006 BAP Lab at 3rd Ward", "the Time is Long title", "an extended VHS path through the gallery", "an approximately 20-minute delayed video playback for viewers"],
+      doesNotEstablish: ["Jamie's organization of BAP Lab", "sole technical fabrication", "a complete materials or engineering specification", "later exhibition history", "rights to republish the video or event images"]
+    },
+    {
+      id: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+      title: "A Sorted Audio File",
+      organization: "Monthly Music Hackathon NYC",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live-and-archived",
+      publishedAt: "2013-02-27",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://monthlymusichackathon.org/post/44177616179/sortedaudio",
+      archiveUrl: "https://web.archive.org/web/20160805170225/http://monthlymusichackathon.org/post/44177616179/sortedaudio",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Monthly Music Hackathon NYC, 'A Sorted Audio File,' February 27, 2013.",
+      publicNote: "The project post attributes a Max/MSP audio-segmentation and sorting experiment to Jamie at the February 2013 hackathon.",
+      supportsGenerally: ["Jamie's participation in the February 2013 Music Hackathon NYC", "a Jamie-authored Max/MSP program", "segmenting audio into small clips", "sorting the clips by a selected feature, demonstrated with pitch"],
+      doesNotEstablish: ["organization of the hackathon", "production deployment", "a complete source-code record", "the precise algorithm beyond the published description", "ownership of the source song"]
+    },
+    {
+      id: "SRC-THRILL-JOCKEY-CONSUMING-FLAME-2020",
+      title: "The Consuming Flame: Open Exercises in Group Form",
+      organization: "Thrill Jockey Records",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2020-08-21",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://www.thrilljockey.com/products/the-consuming-flame-open-exercises-in-group-form",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Thrill Jockey Records, Matmos, The Consuming Flame: Open Exercises in Group Form, 2020.",
+      publicNote: "The label describes the album's 99-participant, invitation-based collaborative structure. A separate release record identifies Jamie among the participants.",
+      supportsGenerally: ["the album title and 2020 release", "a 99-participant collaborative recording process", "a shared 99-beats-per-minute constraint", "remote assembly of contributions into a three-hour work"],
+      doesNotEstablish: ["Jamie's individual participation", "Jamie's specific sound contribution", "track-level credit", "production or composition credit for Jamie"]
+    },
+    {
+      id: "SRC-DISCOGS-CONSUMING-FLAME-2020",
+      title: "Matmos - The Consuming Flame: Open Exercises In Group Form release record",
+      organization: "Discogs",
+      kind: "institutional-web-page",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2020-08-21",
+      accessedAt: "2026-07-13",
+      canonicalUrl: "https://www.discogs.com/release/15791514-Matmos-The-Consuming-Flame-Open-Exercises-In-Group-Form",
+      preferredPublicUrl: "canonical",
+      publicCitation: "Discogs release record for Matmos, The Consuming Flame: Open Exercises In Group Form, 2020.",
+      publicNote: "The community-maintained release record lists Jamie Burkart among the album participants; the label page supplies the official project context.",
+      supportsGenerally: ["Jamie Burkart is credited as a participant on the release", "the album title", "the 2020 release date", "the collective participant list"],
+      doesNotEstablish: ["Jamie's specific sound contribution", "a track-level assignment", "composition, production, or engineering credit", "the completeness of community-maintained metadata without label corroboration"]
+    },
+    {
+      id: "SRC-CRS-OPERATING-DESIGN-ARCHIVE-2026",
+      title: "Protected Commercial Rent Stabilization operating-design archive",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      publicCitation: "Protected Commercial Rent Stabilization operating-design archive, 2026. Not publicly linked.",
+      publicNote: "Public-safe metadata only. The underlying working records remain private because they include current coalition context, people, strategy, and operational details.",
+      supportsGenerally: ["Jamie's design of a shared operating layer", "initial creation of running minutes and a shared knowledge structure", "open-question tracking", "live action-item tracking", "privacy and consent instructions", "named next steps with owners", "intake and follow-up design", "recurring coordination", "reusable message design", "consent-aware story handling", "implementation-readiness planning", "durable shared memory"],
+      doesNotEstablish: ["completion of every proposed component", "coalition-wide adoption", "sole movement leadership", "policy authorship", "campaign outcomes caused by Jamie", "permission to publish underlying records"],
+      protectedLocatorId: "LOC-CRS-OPERATING-DESIGN-2026"
+    },
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -900,6 +1028,68 @@ const knowledgeBankInput = {
   ],
   claims: [
     {
+      id: "CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006",
+      project: "experimental-media-practice",
+      internalClaim: "In 2006, Jamie exhibited Time is Long at BAP Lab, using an extended VHS tape path through the gallery to return viewers' images on a monitor about 20 minutes later.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Exhibited Time is Long, an interactive VHS installation that returned viewers' images after an approximately 20-minute physical tape delay, at BAP Lab in 2006.", status: "hold", citationRequired: true, surfaces: ["knowledge-bank"] }],
+      evidence: [{ sourceId: "SRC-COOL-HUNTING-TIME-IS-LONG-2006", relationship: "direct-support", supports: ["event date and venue", "project title and attribution", "extended VHS mechanism", "approximately 20-minute delayed playback"], confidence: "high", renderCitation: false }],
+      boundaries: ["Describe the visible interaction documented by the source without inventing a full technical specification.", "Keep BAP Lab production and event credit with its organizers."],
+      antiClaims: ["Jamie organized BAP Lab", "Jamie was the only artist at BAP Lab", "The source proves sole fabrication", "The video or photographs are cleared for reuse"],
+      proofClaimIds: ["experimental-media-systems-practice"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-SORTED-AUDIO-MAX-MSP-2013",
+      project: "experimental-media-practice",
+      internalClaim: "At the February 2013 Music Hackathon NYC, Jamie made a Max/MSP program that segmented an audio file and reordered the clips by a selected feature, demonstrated by sorting them by pitch.",
+      status: "confirmed-with-boundary",
+      projections: [{ key: "archive-note", text: "Built a Max/MSP experiment that segmented recorded audio and reordered the clips by pitch for Music Hackathon NYC in 2013.", status: "hold", citationRequired: true, surfaces: ["knowledge-bank"] }],
+      evidence: [{ sourceId: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013", relationship: "direct-support", supports: ["Jamie's authorship", "Max/MSP implementation", "audio segmentation", "feature-based sorting demonstrated with pitch"], confidence: "high", renderCitation: false }],
+      boundaries: ["Use the published project description rather than inferring an unreviewed algorithm or production-quality system."],
+      antiClaims: ["Jamie organized Monthly Music Hackathon NYC", "The experiment was a production audio product", "Jamie owned the source recording", "The complete source code was recovered"],
+      proofClaimIds: ["experimental-media-systems-practice"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020",
+      project: "experimental-media-practice",
+      internalClaim: "A community-maintained Discogs release record lists Jamie as a participant on Matmos's 2020 album The Consuming Flame: Open Exercises in Group Form; the official label page describes the album as a 99-participant collaboration under a shared 99-beats-per-minute constraint but does not individually name Jamie.",
+      status: "use-with-care",
+      projections: [{ key: "archive-note", text: "A community-maintained Discogs release record lists Jamie as a participant on Matmos's 2020 album The Consuming Flame: Open Exercises in Group Form; the reviewed records do not identify his specific contribution.", status: "hold", citationRequired: true, surfaces: ["knowledge-bank"] }],
+      evidence: [
+        { sourceId: "SRC-DISCOGS-CONSUMING-FLAME-2020", relationship: "direct-support", supports: ["Jamie's participant credit", "release title and date"], confidence: "moderate", renderCitation: false },
+        { sourceId: "SRC-THRILL-JOCKEY-CONSUMING-FLAME-2020", relationship: "corroborating", supports: ["official release context", "99-participant structure", "shared tempo constraint", "collective assembly method"], confidence: "high", renderCitation: false }
+      ],
+      boundaries: ["Describe Jamie as a credited participant, not a composer, producer, engineer, or featured soloist.", "The reviewed records do not identify Jamie's specific contribution or track location."],
+      antiClaims: ["Jamie produced the album", "Jamie composed the album", "Jamie is credited on a specific track", "The official label page individually names Jamie"],
+      proofClaimIds: ["experimental-media-systems-practice"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
+      id: "CLM-CRS-SHARED-OPERATING-LAYER-2026",
+      project: "commercial-rent-stabilization",
+      internalClaim: "In 2026, Jamie created an initial shared working record for Commercial Rent Stabilization collaborators and separately designed a broader operating system for intake, recurring coordination, reusable messages, permission-based story gathering, and implementation planning.",
+      status: "confirmed-with-boundary",
+      projections: [
+        { key: "case-study", text: "Jamie designed a shared intake path, recurring meetings, reusable messages, a process for gathering stories with permission, and an implementation plan for a Commercial Rent Stabilization collaboration. He also created an initial shared working record: running minutes, open questions, action items, privacy rules, and named next steps that gave collaborators a place to track follow-up and carry decisions forward. Campaign decisions and outcomes remained collective.", status: "active", citationRequired: false, surfaces: ["/work/fair-rent-nyc"] },
+        { key: "work-card", text: "Created an initial shared record for meetings, open questions, action items, privacy rules, and named next steps, while designing broader coordination tools for a Commercial Rent Stabilization collaboration. Campaign decisions and outcomes remained collective.", status: "active", citationRequired: false, surfaces: ["/work", "/work/fair-rent-nyc"] }
+      ],
+      evidence: [{ sourceId: "SRC-CRS-OPERATING-DESIGN-ARCHIVE-2026", relationship: "private-support", supports: ["Jamie's broader operating-system design", "initial running minutes and shared knowledge structure", "open-question tracking", "live action-item tracking", "privacy and consent instructions", "named next steps with owners"], publicNote: "Protected working evidence supports the initial shared working record and broader system design, not completion or coalition-wide adoption of every proposed component.", confidence: "high", renderCitation: false }],
+      boundaries: ["Keep current coalition records private.", "Distinguish the initial working record from the broader components that were designed but are not established as completed or adopted.", "Preserve collective credit for organizing, policy, legal, data, and campaign outcomes."],
+      antiClaims: ["Jamie built the entire movement", "Every proposed component was completed", "The coalition adopted the full plan", "Jamie owned all follow-up or strategy", "Jamie authored the legislation"],
+      proofClaimIds: ["fair-rent-operating-layer-design"],
+      researchInquiryIds: ["INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13"],
+      reviewedAt: "2026-07-13",
+      reviewedBy: ["Jamie Burkart", "Codex archival review"]
+    },
+    {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
       internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
@@ -1246,6 +1436,18 @@ const knowledgeBankInput = {
   ],
   researchInquiries: [
     {
+      id: "INQ-TEAMS-ARCHIVE-PRODUCTION-2026-07-13",
+      project: "portfolio-source-coverage",
+      question: "What public-safe claims, sources, and research priorities can be produced from selective close reading of Jamie Projects History, CRS, and job-hunt working archives?",
+      methods: ["Oriented each archive from its generated overview or no-context synthesis before opening individual artifacts.", "Close-read representative public project captures, protected current-work records, the approved resume source, and a bounded offer-preparation packet.", "Traced public creative-technical claims to live or archived URLs and classified private working material by the narrower actions it can support.", "Compared derivative job-search language against the canonical source-coverage backlog rather than treating it as independent evidence."],
+      runAt: "2026-07-13",
+      resultStatus: "partially-recovered",
+      findings: ["Jamie Projects History recovered three public creative-technical claims spanning interactive video, audio software, and collaborative music from 2006 through 2020.", "Protected CRS records support a hiring-relevant claim that Jamie created an initial shared working record and designed broader operating infrastructure while explicitly rejecting sole-movement and completed-delivery claims.", "The job-hunt dossier coherently frames Jamie for technical project management, product operations, civic technology, and knowledge systems, but its resume and preparation language remains a research-routing layer rather than independent proof.", "Existing metric-bearing claims for HJE growth, WOWList scale, Sunday Dinner and 196 aggregate scale, and some role assertions still need primary or protected canonical source relationships.", "Private correspondence, current coalition details, stakeholder data, and sensitive project records were intentionally not ingested."],
+      limitations: ["This was a high-signal selective pass, not an exhaustive read of every cloud-backed file.", "Some iCloud artifacts may not yet have materialized locally.", "A public page preserved in a private archive remains subject to present-day URL and source-quality review.", "Protected working evidence can support bounded action claims but cannot establish independent outcomes, adoption, or collaborator approval.", "The three recovered creative-technical claims are bank-only until the portfolio's current composition benefits from them."],
+      sourceIds: ["SRC-COOL-HUNTING-TIME-IS-LONG-2006", "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013", "SRC-THRILL-JOCKEY-CONSUMING-FLAME-2020", "SRC-DISCOGS-CONSUMING-FLAME-2020", "SRC-CRS-OPERATING-DESIGN-ARCHIVE-2026"],
+      publicSummary: "A selective Teams archive pass produced three public creative-technical claims, one protected current-work operating claim, and a clearer source-verification backlog without exposing private archive contents."
+    },
+    {
       id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
       project: "callnyc",
       question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
@@ -1338,6 +1540,13 @@ const knowledgeBankInput = {
     { id: "COR-KC-TOWN-HALL-STEWARDSHIP-2026", claimId: "CLM-KC-TOWN-HALL-STEWARDSHIP-TRANSITION", previousText: "The project later withdrew without proceeding.", replacementText: "Jamie later transitioned stewardship to a mission-aligned organization; City records subsequently described the original CCED project as withdrawn.", reason: "Jamie's first-person correction distinguishes his stewardship handoff from the City's later administrative withdrawal record without storing or projecting a reason for the transition.", decidedAt: "2026-07-13", affectedSurfaces: ["/work", "/work/kc-town-hall", "knowledge-bank"], status: "active" }
   ],
   pages: [{
+    id: "fair-rent-nyc",
+    surface: "/work/fair-rent-nyc",
+    sourceOrder: [],
+    occurrences: [
+      { id: "shared-operating-layer", claimId: "CLM-CRS-SHARED-OPERATING-LAYER-2026", projection: "case-study" }
+    ]
+  }, {
     id: "callnyc",
     surface: "/work/callnyc",
     sourceOrder: [

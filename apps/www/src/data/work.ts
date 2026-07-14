@@ -187,6 +187,7 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: [
       "fair-rent-campaign-memory",
+      "fair-rent-operating-layer-design",
       "fair-rent-source-map",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyca-campaign-press-architecture",
@@ -197,8 +198,11 @@ const workItemsInput = [
     ],
     whatWasUnclear:
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
-    whatBecameUsable:
-      "Running minutes, action trackers, source maps, legal/policy question logs, public-data framing, stakeholder follow-up notes, public-safe explanations, public campaign websites, campaign press indexes, and shared campaign memory.",
+    whatBecameUsable: getClaimProjection(
+      "CLM-CRS-SHARED-OPERATING-LAYER-2026",
+      "work-card",
+      "/work"
+    ).text,
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -206,6 +210,12 @@ const workItemsInput = [
         description:
           "A shared documentation structure for meetings, next steps, decision context, and public-safe continuity.",
         type: "meeting memory"
+      },
+      {
+        title: "Coalition operating design",
+        description:
+          "A bounded design for intake, recurring coordination, reusable messages, consent-aware story handling, implementation planning, and durable shared memory.",
+        type: "decision record"
       },
       {
         title: "Source map",
@@ -273,6 +283,7 @@ const workItemsInput = [
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
+      "Designed and began building a shared operating layer for current collaboration",
       "Running minutes, decision records, action trackers, and source maps",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "46 press placements representing 45 distinct articles across four campaign sites",
@@ -284,7 +295,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
+        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and helped structure civic systems, campaign memory, coordination documents, source maps, policy communications, and follow-up systems. Current protected records support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools, not completion or coalition-wide adoption. Public records also document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

@@ -12,12 +12,14 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built press sections across four NYC Artist Coalition campaign sites, organizing 46 placements representing 45 distinct articles into public source trails.
 - Built and stewarded civic systems, coalition operations, and policy-communications infrastructure for NYC Artist Coalition cultural-space advocacy from 2017 onward.
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
+- Created an initial Commercial Rent Stabilization working record for running minutes, open questions, action items, privacy rules, and named next steps; separately designed broader coordination tools that are not represented as completed or adopted.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
 - Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
 - Co-led adaptive reuse planning and public-benefit documentation tied to a $490,539 public funding recommendation.
 - Completed AI Evals for Engineers & PMs with Shreya Shankar and Hamel Husain / Maven in 2026.
+- Public records document a 2006 interactive VHS installation and a 2013 Max/MSP audio experiment; a community-maintained Discogs release record lists Jamie as a participant on one 2020 Matmos album without identifying his contribution.
 
 ## Projection Rule
 

@@ -126,6 +126,37 @@
   ],
   "claims": [
     {
+      "id": "CLM-CRS-SHARED-OPERATING-LAYER-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie designed a shared intake path, recurring meetings, reusable messages, a process for gathering stories with permission, and an implementation plan for a Commercial Rent Stabilization collaboration. He also created an initial shared working record: running minutes, open questions, action items, privacy rules, and named next steps that gave collaborators a place to track follow-up and carry decisions forward. Campaign decisions and outcomes remained collective.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Created an initial shared record for meetings, open questions, action items, privacy rules, and named next steps, while designing broader coordination tools for a Commercial Rent Stabilization collaboration. Campaign decisions and outcomes remained collective.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Keep current coalition records private.",
+        "Distinguish the initial working record from the broader components that were designed but are not established as completed or adopted.",
+        "Preserve collective credit for organizing, policy, legal, data, and campaign outcomes."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -357,6 +388,18 @@
     }
   ],
   "pages": [
+    {
+      "id": "fair-rent-nyc",
+      "surface": "/work/fair-rent-nyc",
+      "sourceOrder": [],
+      "occurrences": [
+        {
+          "id": "shared-operating-layer",
+          "claimId": "CLM-CRS-SHARED-OPERATING-LAYER-2026",
+          "projection": "case-study"
+        }
+      ]
+    },
     {
       "id": "callnyc",
       "surface": "/work/callnyc",

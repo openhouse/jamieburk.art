@@ -171,6 +171,38 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-13
 
+## fair-rent-operating-layer-design - Shared coalition operating design
+
+**Status:** Careful
+**Support level:** Strong
+**Evidence class:** Public-safe archive summary
+**Structured claim IDs:** `CLM-CRS-SHARED-OPERATING-LAYER-2026`
+**Public wording:** Jamie designed a shared intake path, recurring meetings, reusable messages, a process for gathering stories with permission, and an implementation plan for a Commercial Rent Stabilization collaboration. He also created an initial shared working record: running minutes, open questions, action items, privacy rules, and named next steps that gave collaborators a place to track follow-up and carry decisions forward. Campaign decisions and outcomes remained collective.
+**Detailed public-safe wording:** Jamie created an initial shared working record that turned meetings into running minutes, open questions, action items, privacy rules, and named next steps. He separately designed a broader system for joining, recurring coordination, reusable communications, permission-based story gathering, and implementation planning; the evidence does not establish that those proposed components were completed or adopted.
+**Where to project:** FairRentNYC case study, Technical Operations, and resume after surface review.
+**Why it matters:** Makes Jamie's product-operations and implementation practice concrete without exposing the coalition's private working record.
+**Guardrail:** The protected evidence supports the initial working record and broader system design, not completion or coalition-wide adoption of every proposed component. Keep organizing, policy, legal, data, and campaign outcomes collective.
+**Do not say:** Jamie built the entire movement; every proposed component was completed; the coalition adopted the full plan; Jamie owned all strategy or follow-up; Jamie authored the legislation.
+**Protected boundaries:** Private coalition notes, current strategy, stakeholder identities and contact data, sensitive business stories, private correspondence, and unapproved working documents stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
+## experimental-media-systems-practice - Creative-technical systems practice
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Public source
+**Structured claim IDs:** `CLM-TIME-IS-LONG-INTERACTIVE-VHS-2006`, `CLM-SORTED-AUDIO-MAX-MSP-2013`, `CLM-MATMOS-CONSUMING-FLAME-PARTICIPANT-2020`
+**Public wording:** In 2006 Jamie exhibited Time is Long, an interactive VHS installation with about a 20-minute delay. In 2013 he built a Max/MSP experiment that reordered audio clips by pitch. A community-maintained Discogs release record lists him as a participant on a 99-person Matmos album from 2020; his specific contribution is not identified.
+**Detailed public-safe wording:** Dated public records document Jamie's 20-minute VHS delay installation Time is Long and a Max/MSP experiment that reordered audio segments by pitch. A community-maintained Discogs release record lists him among the participants on Matmos's 99-contributor album The Consuming Flame; the official label page establishes the collaborative album context but does not individually name Jamie.
+**Where to project:** Knowledge Bank now; Lab or About only when the public composition benefits from the longer creative-technical throughline.
+**Why it matters:** Preserves three precise specimens showing how Jamie has joined technical mechanisms, human participation, and cultural experience without implying a continuous formal practice.
+**Guardrail:** Keep each contribution at the precision of its source and do not convert participation into event organization, production credit, or sole authorship.
+**Do not say:** Jamie organized BAP Lab; the Max/MSP experiment was a production product; Jamie produced or composed the Matmos album; the reviewed records identify Jamie's specific Matmos contribution.
+**Protected boundaries:** Unapproved historical participants, uncleared event photographs or video, unrecovered source code, and unverified track-level credits stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-13
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful

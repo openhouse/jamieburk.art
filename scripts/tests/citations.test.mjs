@@ -53,7 +53,10 @@ test("corrections retire old wording from public surfaces", () => {
 });
 
 test("negative research preserves scope and limitations", () => {
-  const inquiry = knowledgeBank.researchInquiries[0];
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (record) => record.id === "INQ-CALLNYC-CIVIC-HALL-PAGE-2026"
+  );
+  assert.ok(inquiry, "Missing Civic Hall negative-research inquiry");
   assert.equal(inquiry.resultStatus, "not-recovered");
   assert.ok(inquiry.limitations.some((item) => /not proof of nonexistence/i.test(item)));
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);
