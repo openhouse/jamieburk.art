@@ -87,6 +87,34 @@ first-person role account is protected and bounded by collective credit.
 See
 `docs/knowledge-bank/research/nycartc-facebook-events-2026-07-14.md`.
 
+## Personal And WOW List Facebook Events
+
+The July 14 authenticated pass preserves three separate controls rather than
+collapsing them:
+
+- the public [personal events surface](https://www.facebook.com/jburkart/events/),
+  where two terminal traversals returned the same 502 event IDs;
+- a protected 21-slot hosted-event accounting run with 20 recovered pages and
+  one unresolved historical slot; and
+- the public [WOW List event surface](https://www.facebook.com/wowlist/events/),
+  which displayed zero event records while acting as the Page, plus a protected
+  bounded historical-recovery run.
+
+Nine selected hosted-event pages are modeled as public professional sources.
+They preserve event structures connecting networked music culture, public
+history, river travel, walking, Sunday Dinner, civic sign making, and public
+documentary discussion. Existing independent reporting in the bank
+corroborates the raft and 8th Street Tunnel contexts.
+
+The `Micropop: Nation-Scenes` page routed participants to *Imagined
+Communities*, a Last.fm fan graph, and KCDIY.org. Those destinations remain
+source-discovery routes rather than automatic corroboration. The complete
+personal association ledger, guest and relationship context, exact private
+locations, raw descriptions, responses, and browser state remain protected.
+
+See
+`docs/knowledge-bank/research/personal-wowlist-facebook-events-2026-07-14.md`.
+
 ## Personal Public Social Sources
 
 Personal social records may enter the source bank after individual close

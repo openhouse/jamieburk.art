@@ -386,6 +386,66 @@ stay outside the repo.
 **Review owner:** Jamie / Codex
 **Last reviewed:** 2026-07-14
 
+## jamie-facebook-event-association-population - Personal association control
+
+**Status:** Reserve
+**Support level:** Strong with a semantic boundary
+**Evidence class:** Authenticated public-interface census / protected research run
+**Public wording:** Two authenticated terminal traversals returned the same 502 current personal event IDs: 20 cards displayed Jamie as host and 482 displayed another host.
+**Detailed public-safe wording:** The current association control contains 502 records and 295 distinct displayed host labels, but association is not attendance, endorsement, participation, production, authorship, or professional significance.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Gives the archival pass a testable denominator while preventing Jamie's personal association graph from becoming a false portfolio or public dossier.
+**Guardrail:** This is a current-interface control, not a native Meta export or every event ever associated with Jamie.
+**Do not say:** Jamie attended or produced 502 events; displayed host clusters measure stakeholder engagement with Jamie.
+**Protected boundaries:** Record-level associations, other host labels as a personal graph, guest identities, relationship context, exact private locations, comments, and browser state remain protected.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-hosted-event-population - Hosted-event accounting
+
+**Status:** Reserve
+**Support level:** Strong with one unresolved slot
+**Evidence class:** Authenticated public-interface census / protected research run
+**Public wording:** All 21 current hosted-event control slots are dispositioned as 20 recovered event pages and one unresolved historical slot.
+**Detailed public-safe wording:** The 20 recovered pages span December 2006 through February 2017; the unresolved slot has no inferred title, date, host, or format.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Preserves complete control-slot accounting without silently erasing or inventing the missing record.
+**Guardrail:** Complete accounting is not complete historical recovery, and host attribution is not sole production.
+**Do not say:** All 21 pages were recovered; this is every event Jamie ever hosted; Jamie alone produced every recovered event.
+**Protected boundaries:** Raw descriptions, guest and relationship context, exact private locations, comments, responses, and account administration remain protected.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-hosted-event-practice - Event-making throughline
+
+**Status:** Ready but deferred
+**Support level:** Strong with collective-credit boundaries
+**Evidence class:** Twenty public event pages / protected population run / selected independent reporting
+**Public wording:** Twenty recovered Facebook event pages naming Jamie as host from 2006 through 2017 document recurring structures for cultural production, hospitality and care, participatory place and water work, civic learning and making, and networked public culture.
+**Detailed public-safe wording:** The aggregate classification contains seven cultural performance and production events, four recurring hospitality and care events, four participatory place, travel, and water events, three networked culture and public-history events, and two civic-learning and making events.
+**Where to project:** Reserve depth for facilitation, cultural-program, participatory-design, public-history, hospitality-system, and photo-editor contexts.
+**Why it matters:** Makes a long event-making and participation practice legible without treating Jamie's wider personal event graph as professional proof.
+**Guardrail:** The primary forms are interpretive; preserve collaborators, performers, venues, hosts, and participants; do not convert page or response counts into impact.
+**Do not say:** Jamie alone produced every event; all 502 associated events were Jamie's projects; Facebook responses measure attendance or impact.
+**Protected boundaries:** Personal associations, guest identities, private locations, raw descriptions, comments, and response data remain outside the repository.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-event-live-control - Current zero and historical non-recovery
+
+**Status:** Reserve
+**Support level:** Strong current control / bounded historical search
+**Evidence class:** Authenticated Page-management surface / protected recovery run
+**Public wording:** The current WOW List Facebook event surface displayed zero event records in July 2026; bounded historical recovery found none.
+**Detailed public-safe wording:** Exact Facebook event search and the 502-record personal association control also produced zero WOW List event records; three bounded Wayback patterns returned no captures and one timed out.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Prevents future agents from inventing a WOW List Facebook event corpus while preserving honest research debt.
+**Guardrail:** Not recovered does not mean did not exist.
+**Do not say:** WOW List never used Facebook events; WOW List had no event community; this control characterizes WOW List's own platform.
+**Protected boundaries:** Raw authenticated state and internal Page-administration context remain protected.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-14
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready

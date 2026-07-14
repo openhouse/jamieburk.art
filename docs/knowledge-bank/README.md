@@ -115,3 +115,11 @@ closes all 183 surviving profile items and joins the account record to archived
 collective-role, resident-intake, scheduling, public-reporting, source-routing,
 and stakeholder-response evidence without treating self-reports or reactions
 as audited impact.
+
+The
+[personal and WOW List Facebook event pass](research/personal-wowlist-facebook-events-2026-07-14.md)
+uses deliberately asymmetric controls: the 502-record personal association
+surface remains aggregate-only, the narrower 21-slot Jamie-hosted control is
+dispositioned as 20 recovered pages and one unresolved slot, and the active WOW
+List Page event surface exposes zero records. The pass preserves event-making
+depth without turning Jamie's personal association graph into a portfolio.

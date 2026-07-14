@@ -12,6 +12,7 @@ import { wowListSocialCensus } from "../../apps/www/src/data/knowledge-bank/wowl
 import { kcTownHallSocialCensus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-census-2026-07-14.ts";
 import { nycArtCSocialCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-social-census-2026-07-14.ts";
 import { nycArtCFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/nycartc-facebook-events-2026-07-14.ts";
+import { personalWowListFacebookEventCensus } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.ts";
 import { urbanHermitSocialCensus } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts";
 import {
   currentRepositorySnapshot,
@@ -1163,6 +1164,129 @@ test("NYC Artist Coalition Facebook event census accounts for every control slot
   assert.equal(unresolved[0].title, null);
   assert.equal(nycArtCFacebookEventCensus.dispositionTotal, 34);
   assert.match(nycArtCFacebookEventCensus.completenessStatement, /not complete item recovery/i);
+});
+
+test("personal and WOW List Facebook event controls account for their full populations", () => {
+  const controls = JSON.parse(
+    readFileSync("docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json", "utf8")
+  );
+  const hostedRows = readFileSync(
+    "docs/knowledge-bank/data/jamie-facebook-hosted-event-census-2026-07-14.csv",
+    "utf8"
+  ).trim().split("\n").slice(1);
+
+  assert.equal(controls.personalAssociationSurface.currentRecords, 502);
+  assert.equal(
+    controls.personalAssociationSurface.displayedHostAccounting.jamie
+      + controls.personalAssociationSurface.displayedHostAccounting.anotherHost,
+    502
+  );
+  assert.equal(controls.personalAssociationSurface.secondPassExactIdMatch, true);
+  assert.equal(hostedRows.length, 21);
+  assert.equal(hostedRows.filter((row) => row.includes(",recovered,")).length, 20);
+  assert.equal(hostedRows.filter((row) => row.includes(",unresolved,")).length, 1);
+  assert.equal(controls.wowlist.currentDisplayedRecords, 0);
+  assert.equal(personalWowListFacebookEventCensus.personalAssociationSurface.currentRecords, 502);
+  assert.equal(personalWowListFacebookEventCensus.jamieHostedControl.controlSlots, 21);
+  assert.equal(personalWowListFacebookEventCensus.wowListControl.currentDisplayedRecords, 0);
+  assert.match(personalWowListFacebookEventCensus.completenessStatement, /not native Meta exports/i);
+});
+
+test("personal Facebook event evidence stays aggregate-safe and semantically bounded", () => {
+  const controlsText = readFileSync(
+    "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
+    "utf8"
+  );
+  const association = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026"
+  );
+  const population = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026"
+  );
+
+  assert.doesNotMatch(controlsText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+  assert.ok(association.boundaries.some((item) => /Association does not establish attendance/i.test(item)));
+  assert.ok(association.antiClaims.some((item) => /attended or produced all 502/i.test(item)));
+  assert.ok(population.boundaries.some((item) => /does not mean every historical event page/i.test(item)));
+  assert.ok(population.antiClaims.some((item) => /All 21 event pages were recovered/i.test(item)));
+});
+
+test("Facebook event readings separate host attribution from event context", () => {
+  const readings = knowledgeBank.sourceReadings.filter((item) =>
+    item.sourceId.startsWith("SRC-JAMIE-FACEBOOK-EVENT-")
+      && !item.sourceId.includes("ASSOCIATION")
+  );
+
+  for (const reading of readings) {
+    for (const proposition of reading.propositions) {
+      if (proposition.relationToJamie === "direct-role") {
+        assert.match(proposition.text, /host|display/i);
+        assert.doesNotMatch(proposition.text, / and (documents|routes|invites)/i);
+      }
+    }
+  }
+  const practiceReading = knowledgeBank.sourceReadings.find(
+    (item) => item.id === "READ-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026"
+  );
+  assert.equal(
+    practiceReading.propositions.find(
+      (item) => item.id === "PROP-JAMIE-FACEBOOK-HOSTED-EVENT-ATTRIBUTION"
+    ).relationToJamie,
+    "direct-role"
+  );
+  assert.equal(
+    practiceReading.propositions.find(
+      (item) => item.id === "PROP-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE"
+    ).relationToJamie,
+    "project-context"
+  );
+});
+
+test("public-safety scanners include CSV knowledge-bank artifacts", () => {
+  const publicSafetyScript = readFileSync("scripts/check-public-safety.mjs", "utf8");
+  const lifecycleScript = readFileSync("scripts/evals/lib/knowledge-lifecycle.mjs", "utf8");
+
+  assert.match(publicSafetyScript, /textExtensions[\s\S]*"\.csv"/);
+  assert.match(lifecycleScript, /repositoryBoundaryTextExtensions[\s\S]*"\.csv"/);
+});
+
+test("hosted-event throughline keeps Chad's lens, collective credit, and a defer decision", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+  );
+  const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claim.id);
+  const sourceIds = [
+    "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+    "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+    "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+    "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017"
+  ];
+
+  assert.equal(claim.maturity, "public-ready");
+  assert.match(claim.composition.action, /Hosted public events/i);
+  assert.match(claim.composition.intendedEnd, /Help people encounter one another/i);
+  assert.match(claim.composition.usableResult, /recurring event-making practice/i);
+  assert.match(claim.composition.collectiveCredit, /performers.*venues.*collaborators.*hosts.*participants/i);
+  assert.match(claim.composition.causalBoundary, /not sole production/i);
+  for (const sourceId of sourceIds) assert.ok(claim.evidence.some((item) => item.sourceId === sourceId));
+  assert.ok(claim.antiClaims.some((item) => /Jamie alone produced/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("WOW List Facebook non-recovery cannot become a nonexistence claim", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-WOWLIST-FACEBOOK-HISTORICAL-EVENT-RECOVERY"
+  );
+
+  assert.match(claim.internalClaim, /displayed zero event records/i);
+  assert.ok(claim.boundaries.some((item) => /Not recovered does not mean did not exist/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /never had a Facebook event/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.nextActions.some((item) => /native WOW List Page export/i.test(item)));
 });
 
 test("NYC Artist Coalition event census preserves rotating-meeting and stakeholder boundaries", () => {

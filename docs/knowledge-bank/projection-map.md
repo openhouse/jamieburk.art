@@ -54,3 +54,12 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Personal And WOW List Facebook Events
+
+Keep the personal association census, hosted-event throughline, and WOW List
+negative control in reserve. The public Sunday Dinner event pages strengthen
+the existing participation-infrastructure source basis, but the 502-record
+association graph is provenance rather than portfolio content. The 20 recovered
+hosted pages are available for future audience-specific compositions, and the
+WOW List zero display is a research control rather than an accomplishment.

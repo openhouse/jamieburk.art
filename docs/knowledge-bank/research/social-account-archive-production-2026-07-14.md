@@ -240,6 +240,25 @@ and explicit defer decisions.
 No personal-account finding is automatically projected onto the website. The
 raw personal timeline remains outside the public repository.
 
+## Personal And WOW List Facebook Events
+
+The [Facebook event follow-on](personal-wowlist-facebook-events-2026-07-14.md)
+uses a different denominator from the personal X census. Two authenticated
+terminal traversals returned the same 502 Facebook event associations: 20 cards
+displayed Jamie as host and 482 displayed another host. The public repository
+retains only aggregate accounting for this association graph.
+
+A separate 21-slot Jamie-hosted control is dispositioned as 20 recovered public
+event pages and one unresolved historical slot. The recovered 2006-2017 pages
+document recurring structures for cultural production, hospitality, place and
+water work, civic learning, and networked public culture. All 20 pages were
+close-read; posted links remain research routes, and unstable response displays
+remain data-quality evidence rather than traction or attendance claims.
+
+While acting as the WOW List Page, the current event surface displayed zero
+event records. Bounded historical recovery found none. This is a negative
+research control, not evidence that no WOW List Facebook event ever existed.
+
 ## Source Articles Surfaced
 
 The Talks Not Raids stream surfaced two later Hell Gate articles that have been
@@ -261,6 +280,9 @@ equivalent.
 
 - Mature social findings are public-safe and retained for future composition.
 - None of the new claims automatically changes the live website.
+- The personal Facebook association graph stays aggregate-only. The narrower
+  hosted-event practice is public-ready reserve depth with a defer decision,
+  and the WOW List zero display remains a non-recovery control.
 - The complete WOW List census strengthens the existing origin-and-support
   claim, while its population, network, scene-knowledge, care, and reaction
   findings remain reserve knowledge rather than automatic website copy.

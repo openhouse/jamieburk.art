@@ -32,6 +32,13 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - A complete current-profile accounting of `@urbanhermit` preserves 434
   dispositions and routes selected professional traces into research without
   publishing a personal-timeline dossier.
+- A 21-slot Facebook hosted-event control is dispositioned as 20 recovered
+  pages and one unresolved slot. The recovered 2006-2017 pages document a
+  recurring event-making practice across cultural production, hospitality,
+  place and water work, civic learning, and networked public culture.
+- The active WOW List Facebook event surface displayed zero records, and a
+  bounded historical search recovered none. This is a research control, not a
+  claim that no historical event existed or that WOW List lacked event use.
 
 Reserve proofs are defensible knowledge-bank material, not automatic website
 copy. Each has an explicit defer decision in the typed lifecycle.

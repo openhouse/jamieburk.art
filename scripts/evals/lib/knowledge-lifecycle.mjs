@@ -108,6 +108,7 @@ const repositoryBoundaryIgnoredDirs = new Set([
 ]);
 const repositoryBoundaryTextExtensions = new Set([
   ".css",
+  ".csv",
   ".example",
   ".html",
   ".js",

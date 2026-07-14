@@ -88,6 +88,33 @@ status, causality, or impact from an amplified resource to WOW List or Jamie.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+## Personal And WOW List Facebook Events
+
+Do not describe the current 502-record personal association surface as every
+event Jamie ever attended, hosted, produced, endorsed, authored, or cared
+about. Association does not establish attendance, endorsement, participation,
+production, authorship, or professional significance.
+
+Do not erase the unresolved slot from the separate 21-event hosted control,
+infer its title or date, or call the interface a native Meta export. Do not
+describe Jamie as sole producer of the 20 recovered events or erase
+collaborators, performers, venues, hosts, and participants.
+
+Do not sum or compare unstable response displays as unique people, attendance,
+reach, endorsement, causality, or impact. A URL posted in an event description
+is a source route, not automatic corroboration, authorship, endorsement,
+readership, conversion, or impact.
+
+Do not say WOW List never created or used a Facebook event. The current event
+surface displayed zero records and bounded historical recovery found none;
+not recovered does not mean did not exist. Do not use this negative control to
+characterize WOW List's own platform, organizer use, public posts, event
+sharing, or community activity.
+
+Do not publish the record-level personal association graph, guest identities,
+friend or invite context, exact private locations, raw descriptions, comments,
+account administration, or authentication material.
+
 ## NYC Artist Coalition Social Corpus
 
 Do not call the 5,124-row ledger a complete X export, deletion history, or 100
