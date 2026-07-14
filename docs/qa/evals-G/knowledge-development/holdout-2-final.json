@@ -1,0 +1,248 @@
+{
+  "suite_id": "knowledge-development-lifecycle",
+  "suite_version": 1,
+  "label": "holdout-2-final-unchanged",
+  "run_at": "2026-07-14T03:40:56.342Z",
+  "candidate_files": [
+    ".agents/evals/knowledge-development.json",
+    "apps/www/src/data/knowledge-bank/development-records.ts",
+    "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
+    "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
+    "docs/knowledge-bank/promotion-slate.md"
+  ],
+  "candidate_fingerprint": "2abeced36a55ee43a4f7985a0ab3f720acb1dcd07f8f710e7eff5209003e68d1",
+  "judgment_fingerprint": "2abeced36a55ee43a4f7985a0ab3f720acb1dcd07f8f710e7eff5209003e68d1",
+  "judgment_fingerprint_missing": false,
+  "judgment_fingerprint_mismatch": false,
+  "metrics": {
+    "captures": 12,
+    "routedCaptures": 12,
+    "sources": 12,
+    "developmentSources": 5,
+    "observations": 15,
+    "developmentClaims": 9,
+    "researchTasks": 8,
+    "validationErrors": 0
+  },
+  "weighted_score": 1,
+  "threshold": 0.85,
+  "criteria_met": true,
+  "blocking_failures": [],
+  "nonblocking_failures": [],
+  "missing_judgments": [],
+  "evals": [
+    {
+      "eval_id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "12/12 captures integrated, tasked, or closed"
+      ],
+      "findings": [],
+      "recommended_next_move": "Route every capture to a normalized source or bounded research task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "6/6 URL captures routed",
+        "5 normalized development sources"
+      ],
+      "findings": [],
+      "recommended_next_move": "Normalize retrieved sources and create retrieval tasks for inaccessible candidates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "5/5 development sources decomposed",
+        "15 atomic observations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Decompose each integrated source into located, limited observations.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "16 claims declare three independent states"
+      ],
+      "findings": [],
+      "recommended_next_move": "Hold any projection whose epistemic, publication, or selection state is not ready.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "9 development claims",
+        "0 promoted-lineage violations",
+        "0 projection violations"
+      ],
+      "findings": [],
+      "recommended_next_move": "Connect confirmed claims through observations and keep unearned projections held.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN names Jamie’s initiating and tending role while OBS-OPEN-HOUSE-COMMUNAL-GOVERNANCE, OBS-OPEN-HOUSE-TENDING-ROLE, its boundaries, and antiClaims preserve communal governance and participant agency.",
+        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM identifies Jamie’s spearheading and facilitation while explicitly crediting Suzanne Hogan’s outreach and refusing authorship of participant contributions.",
+        "CLM-NYCAC-CABARET-REPEAL-ADVOCACY separates documented organizing and rallying from legislative causality; CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE remains held pending RT-NYCAC-CABARET-CONTRIBUTION.",
+        "CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE distinguishes the supported post-creation town-hall intent from unsupported pre-creation influence; RT-NYCAC-OFFICE-CREATION-CONTRIBUTION requires coalition and government credit.",
+        "RT-TALKS-NOT-RAIDS-MARCH-OUTCOME explicitly holds “disbanded” until an authoritative source establishes that institutional outcome.",
+        "SRC-NYCAC-GREENE-HILL-QA-2017-12-19 records the Julie/Julia inconsistency and derived records consistently use only “Fredenberg” pending corroboration."
+      ],
+      "findings": [
+        "Direct action, collective contribution, public outcome, and causality remain unusually well separated at observation, claim, boundary, anti-claim, research-task, and promotion levels.",
+        "Jamie’s actions are stated confidently—conceived, spearheaded, facilitated, initiated, tended, organized, rallied—without converting participation into sole leadership or outcome ownership.",
+        "The Open House treatment is especially strong: it makes Jamie’s indispensable tending visible without contradicting his documented rejection of a leader role.",
+        "No reviewed claim absorbs collaborator, coalition, participant, legislative, or institutional credit."
+      ],
+      "recommended_next_move": "Preserve the current calibration. Before promoting any held NYC Artist Coalition outcome claim, complete its linked research task and retain the same action-versus-causality structure.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "8 research tasks",
+        "0 unresolved captures without tasks",
+        "0 inference claims without tasks"
+      ],
+      "findings": [],
+      "recommended_next_move": "Give every unresolved high-value lead and inference claim a prioritized task.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 unsafe active projections",
+        "0 prohibited public routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Keep developed claims dormant or held until a purpose-specific surface selects approved wording.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 broken references",
+        "0 integrated captures without paths"
+      ],
+      "findings": [],
+      "recommended_next_move": "Repair broken references and ensure each integrated capture has a traversable path.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "0 canonical validation errors",
+        "0 private-marker hits",
+        "0 prohibited routes"
+      ],
+      "findings": [],
+      "recommended_next_move": "Remove unsafe payloads and satisfy canonical citation validation.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "photo capture: CAP-PHOTO-ARCHIVE-FEEDBACK-LOOP-2026",
+        "photo task: RT-PHOTO-EVIDENCE-FEEDBACK-LOOP",
+        "workflow document: present"
+      ],
+      "findings": [],
+      "recommended_next_move": "Document the claim-to-brief and discovery-to-research loop with rights and corroboration gates.",
+      "confidence": "high"
+    },
+    {
+      "eval_id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "score": 4,
+      "pass": true,
+      "evidence": [
+        "docs/knowledge-bank/promotion-slate.md distinguishes Strong Future Feature Candidates, Strong Supporting Proof, and Research Before Promotion, giving a future editor concrete uses and explicit evidence gates.",
+        "CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM states Jamie’s action, the end of connecting river communities, and the usable program forms: outreach, interactive media, shared stories, and facilitation.",
+        "CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN states what Jamie did and what became operationally possible: a ten-day experiment sustained through tending while responsibility and decisions remained with the group.",
+        "CLM-NYCAC-FIRE-CODE-STUDY-GROUPS and CLM-NYCAC-CABARET-REPEAL-ADVOCACY provide specific hiring-legible actions and purposes while withholding unmeasured consequences and repeal causality.",
+        "CLM-NYCAC-COFOUNDER-ROLE-CANDIDATE, CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE, and CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE each link to prioritized research tasks with claim-specific success criteria.",
+        "docs/knowledge-bank/projects/nyc-artist-coalition-research.md keeps the NPR page as a retrieval candidate and states that no claim relies on unread content.",
+        "docs/knowledge-bank/promotion-slate.md correctly holds CLM-NYCAC-OFFICE-NIGHTLIFE-TOWN-HALL until occurrence, Jamie’s production role, participation, and consequences are established."
+      ],
+      "findings": [
+        "A future hiring-oriented editor can readily identify Jamie’s strongest defensible actions, their intended public or organizational ends, and the structures they made usable.",
+        "Promotion advice is exceptionally practical: it identifies likely case-study roles, distinguishes lead stories from supporting proof, and names the exact research needed before elevation.",
+        "Candidate claims and research tasks are tightly linked, so high-value unresolved material remains visible without being diluted into vague language or prematurely published.",
+        "Source discipline is strong across live sources, unread-source handling, claim-level evidence relationships, and explicit does-not-establish boundaries."
+      ],
+      "recommended_next_move": "Use CLM-WATERWAYS-GREAT-ACCOMMODATIONS-PROGRAM and CLM-OPEN-HOUSE-PARTICIPATORY-DESIGN as the next feature candidates after rights review; retain the NYC Artist Coalition items as supporting proof or research until their stated evidence gates are met.",
+      "confidence": "high"
+    }
+  ]
+}

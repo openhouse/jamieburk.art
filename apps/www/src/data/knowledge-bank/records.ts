@@ -1,7 +1,16 @@
 import { knowledgeBankSchema, type KnowledgeBank } from "./schema.ts";
+import {
+  developmentCaptures,
+  developmentClaims,
+  developmentObservations,
+  developmentResearchTasks,
+  developmentSources
+} from "./development-records.ts";
 
 const knowledgeBankInput = {
+  captures: developmentCaptures,
   sources: [
+    ...developmentSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -124,12 +133,19 @@ const knowledgeBankInput = {
       doesNotEstablish: ["that no event page ever existed"]
     }
   ],
+  observations: developmentObservations,
   claims: [
+    ...developmentClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "The New York City Council constituent-services hackathon took place at Civic Hall on January 30, 2016, from 1-3 p.m.",
+      epistemicState: "corroborated",
+      publicationState: "approved",
+      selectionState: "selected",
       status: "confirmed",
+      observationIds: [],
       projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["date", "time", "Council event", "constituent-services purpose"], confidence: "high", renderCitation: true },
@@ -141,8 +157,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "The New York City Council described the gathering as its first CouncilStat hackathon.",
+      epistemicState: "sourced",
+      publicationState: "approved",
+      selectionState: "selected",
       status: "confirmed-with-boundary",
+      observationIds: [],
       projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], confidence: "high", renderCitation: true }],
       boundaries: [],
@@ -152,8 +173,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-EVENT-BRANDING",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'",
+      epistemicState: "sourced",
+      publicationState: "approved",
+      selectionState: "selected",
       status: "confirmed-with-boundary",
+      observationIds: [],
       projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
@@ -162,8 +188,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
       project: "callnyc",
+      claimType: "action",
       internalClaim: "After the fuller CouncilStat dataset was released, Jamie independently built CallNYC as a public-facing interpretation of those constituent-services records.",
+      epistemicState: "corroborated",
+      publicationState: "approved",
+      selectionState: "selected",
       status: "confirmed-with-boundary",
+      observationIds: [],
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
@@ -180,8 +211,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "CallNYC is an archived independent civic-data prototype, not an official or current New York City Council service.",
+      epistemicState: "corroborated",
+      publicationState: "approved",
+      selectionState: "selected",
       status: "confirmed-with-boundary",
+      observationIds: [],
       projections: [{ key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving independent implementation"], confidence: "high", renderCitation: true },
@@ -193,8 +229,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-DIGITAL-DISTRICT",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "A participant photograph documents a breakout table labeled 'Digital District - Help improve City Council District office operations.'",
+      epistemicState: "sourced",
+      publicationState: "restricted",
+      selectionState: "dormant",
       status: "use-with-care",
+      observationIds: [],
       projections: [{ key: "photo-caption", text: "Participant photograph documenting the Digital District breakout table.", status: "hold", citationRequired: true, surfaces: [] }],
       evidence: [{ sourceId: "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO", relationship: "private-support", supports: ["placard wording", "breakout-table context"], confidence: "high", renderCitation: false }],
       boundaries: ["Do not describe Digital District as the official event title.", "Do not publish the photograph before rights, consent, and editorial review."],
@@ -203,8 +244,13 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED",
       project: "callnyc",
+      claimType: "context",
       internalClaim: "No Civic Hall calendar listing or dedicated event-detail page was recovered in the documented Wayback/CDX review.",
+      epistemicState: "sourced",
+      publicationState: "public-safe",
+      selectionState: "dormant",
       status: "not-recovered",
+      observationIds: [],
       projections: [{ key: "archive-note", text: "No Civic Hall calendar listing or dedicated event-detail page has been recovered in the documented Wayback/CDX review.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026", relationship: "direct-support", supports: ["bounded negative search finding"], confidence: "high", renderCitation: false }],
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
@@ -212,6 +258,7 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     }
   ],
+  researchTasks: developmentResearchTasks,
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",

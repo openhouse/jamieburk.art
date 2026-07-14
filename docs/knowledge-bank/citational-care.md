@@ -9,8 +9,9 @@ reasoning without exposing private evidence.
 ## Canonical flow
 
 ```text
-source -> evidence relationship -> claim -> approved projection
-       -> page occurrence -> page-local number -> public note
+capture -> source -> observation -> evidence relationship -> claim
+        -> approved projection -> page occurrence -> page-local number
+        -> public note
 ```
 
 Stable IDs belong to sources, claims, inquiries, corrections, pages, and

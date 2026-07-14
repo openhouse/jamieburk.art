@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "suite_id": "knowledge-development-lifecycle",
+  "title": "Public-safe knowledge development lifecycle",
+  "objective": "Capture potentially meaningful professional evidence without loss, mature it through source-specific research, and promote only bounded claims that are safe, useful, and defensible.",
+  "score_scale": {
+    "minimum": 0,
+    "maximum": 4,
+    "labels": {
+      "0": "absent, unsafe, or structurally invalid",
+      "1": "captured but materially unprocessed",
+      "2": "usable with substantial research or governance gaps",
+      "3": "strong, auditable, and ready for continued knowledge work",
+      "4": "exceptional, loss-aware, source-specific, and promotion-safe"
+    }
+  },
+  "development_thresholds": {
+    "weighted_score_minimum": 0.85,
+    "blocking_score_minimum": 3,
+    "nonblocking_score_minimum": 2,
+    "all_blocking_evals_must_pass": true,
+    "two_consecutive_passing_runs_required": true,
+    "holdout_judgments_required": true
+  },
+  "optimization": {
+    "maximum_iterations": 8,
+    "stop_after_no_improvement_iterations": 3,
+    "selection_order": [
+      "public-safety or provenance failures",
+      "unrouted captures and unsupported promoted claims",
+      "largest weighted score gap",
+      "lowest-risk coherent research or schema improvement"
+    ],
+    "rubric_is_frozen_during_run": true,
+    "optimizer_may_not_grade_own_patch": true,
+    "holdout_judge_is_blind_to_patch_intent": true,
+    "success_requires_two_consecutive_passing_runs": true
+  },
+  "hard_constraints": [
+    "Nothing lost applies to capture, not to public Git: raw private archives, local paths, credentials, private correspondence, unapproved images, and sensitive records stay outside the repository.",
+    "Memory is a research lead, not proof; no claim may be promoted from first-person memory alone.",
+    "A source must be decomposed into atomic observations before an agent uses it to strengthen a claim.",
+    "A source relationship must say what it supports and what it does not establish.",
+    "Collective work must preserve collaborator credit and calibrate individual causality.",
+    "A public-safe claim is not automatically approved or selected for a public surface.",
+    "A photograph or machine-generated visual inference may open a research task but may not become proof without provenance, rights review, and corroboration.",
+    "Corrections and retired wording remain auditable; agents do not erase inconvenient history.",
+    "The public website remains a purpose-built projection and there is no public proofs or knowledge-bank route."
+  ],
+  "evals": [
+    {
+      "id": "KD-001",
+      "title": "Low-friction capture with no silent loss",
+      "category": "intake",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "inputs": ["capture registry"],
+      "procedure": ["Inventory submitted URLs, memories, metrics, artifacts, corrections, and photo leads.", "Verify every capture has a public-safe summary, disposition, project family, and a source or research-task route."],
+      "pass_criteria": ["Every submitted item has a stable capture record.", "Every capture is integrated or routed to an open research task.", "No private payload or local archive path is copied into the public repository."],
+      "evidence_required": ["capture coverage report", "unrouted-capture list"],
+      "remediation_hint": "Create a minimal public-safe capture and route it; do not wait for a complete claim."
+    },
+    {
+      "id": "KD-002",
+      "title": "Source normalization and retrieval state",
+      "category": "sources",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "inputs": ["captures", "source registry"],
+      "procedure": ["Resolve source candidates to normalized records where retrieval succeeds.", "Keep inaccessible candidates in intake with an explicit retrieval task rather than inventing source content."],
+      "pass_criteria": ["Integrated URL captures resolve to stable source records.", "Source metadata identifies creator or publisher, date when known, access date, preservation state, and public citation.", "Unavailable pages remain explicitly pending and support no observations."],
+      "evidence_required": ["source coverage report", "retrieval exceptions"],
+      "remediation_hint": "Normalize retrieved sources and route inaccessible sources to a bounded recovery task."
+    },
+    {
+      "id": "KD-003",
+      "title": "Atomic observations preserve source affordances",
+      "category": "evidence",
+      "grader": "hybrid",
+      "blocking": true,
+      "weight": 10,
+      "inputs": ["source registry", "observation registry"],
+      "procedure": ["Decompose each newly reviewed source into atomic observations.", "Check each observation against its locator, attribution mode, confidence, and limitation."],
+      "pass_criteria": ["Every integrated source in the development corpus has at least one observation.", "Observations report what a source says or shows without silently converting it into a broader synthesis.", "Every observation includes a precise locator and at least one limitation."],
+      "evidence_required": ["source-to-observation report", "holdout spot check"],
+      "remediation_hint": "Split compound observations and name what the source does not establish."
+    },
+    {
+      "id": "KD-004",
+      "title": "Independent epistemic, publication, and selection states",
+      "category": "governance",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "inputs": ["claim registry", "schema"],
+      "procedure": ["Inspect every claim for separate evidence maturity, publication clearance, and editorial selection states.", "Verify state combinations obey promotion rules."],
+      "pass_criteria": ["Every claim declares all three states.", "Unreviewed, contested, disproven, private, or restricted claims cannot have active public-site projections.", "Public-safe does not imply approved, and approved does not imply selected."],
+      "evidence_required": ["state matrix", "invalid-transition list"],
+      "remediation_hint": "Represent epistemic maturity, publication clearance, and editorial selection separately."
+    },
+    {
+      "id": "KD-005",
+      "title": "Promotion requires an auditable evidence path",
+      "category": "promotion",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 12,
+      "inputs": ["captures", "sources", "observations", "claims", "projections"],
+      "procedure": ["Trace selected and approved claims backward through observations and sources.", "Verify held candidate claims cannot render publicly."],
+      "pass_criteria": ["Every newly developed confirmed claim cites at least one observation and source relationship.", "Every active public-site projection is approved and sourced or corroborated.", "Memory-only and causal candidate claims remain held until corroborated."],
+      "evidence_required": ["claim lineage report", "promotion violation list"],
+      "remediation_hint": "Hold the projection or strengthen the evidence path; never manufacture support."
+    },
+    {
+      "id": "KD-006",
+      "title": "Collective credit and calibrated causality",
+      "category": "ethics",
+      "grader": "llm_judge",
+      "blocking": true,
+      "weight": 8,
+      "inputs": ["new observations", "new claims", "boundaries", "anti-claims"],
+      "procedure": ["Give a blind reviewer the source observations and claim records.", "Ask whether direct action, collective contribution, public outcome, and causality remain distinct."],
+      "pass_criteria": ["Jamie's documented actions are not understated.", "Collaborator and coalition credit is not absorbed into individual authorship.", "Instrumental, created, caused, and disbanded are held unless the evidence specifically earns them."],
+      "evidence_required": ["blind judge scorecard", "claim-level findings"],
+      "remediation_hint": "Name the direct action courageously and bound the causal or collective inference."
+    },
+    {
+      "id": "KD-007",
+      "title": "Research queue covers unresolved value and public claim gaps",
+      "category": "research",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "inputs": ["captures", "candidate claims", "current public proof records", "research tasks"],
+      "procedure": ["Find valuable captures without sources, inference claims without corroboration, and strong public proof wording without a citation-registry path.", "Verify each gap has a prioritized task and success criterion."],
+      "pass_criteria": ["Every unresolved capture and candidate claim has a task.", "Tasks distinguish source discovery, collaborator confirmation, metric reconstruction, and public-record research.", "The queue includes current-site citation gaps, not only newly submitted material."],
+      "evidence_required": ["open task list", "gap-to-task map"],
+      "remediation_hint": "Turn each important uncertainty into a bounded, testable research task."
+    },
+    {
+      "id": "KD-008",
+      "title": "Projection is purposeful and reversible",
+      "category": "editorial",
+      "grader": "deterministic",
+      "blocking": false,
+      "weight": 8,
+      "inputs": ["claim projections", "page plans", "public site"],
+      "procedure": ["Compare bank depth with selected public projections.", "Verify held, dormant, and retired material remains available to future compositions without appearing on current pages."],
+      "pass_criteria": ["No new source automatically creates public-site copy.", "Every selected projection names a surface and purpose.", "Dormant knowledge and held wording remain in the bank without a public route."],
+      "evidence_required": ["projection matrix", "route inventory"],
+      "remediation_hint": "Keep the claim in the bank and select it only when the current audience and argument require it."
+    },
+    {
+      "id": "KD-009",
+      "title": "Provenance graph and correction history remain traversable",
+      "category": "provenance",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 8,
+      "inputs": ["all knowledge records", "corrections"],
+      "procedure": ["Traverse each integrated capture through source, observation, claim or research task.", "Check that corrections supersede wording without deleting prior decisions."],
+      "pass_criteria": ["Every integrated capture has a traversable disposition path.", "All referenced IDs resolve and no object becomes an unexplained orphan.", "Retired or corrected wording remains auditable and cannot render as active copy."],
+      "evidence_required": ["graph integrity report", "orphan list", "correction checks"],
+      "remediation_hint": "Repair the missing relationship instead of duplicating or deleting the record."
+    },
+    {
+      "id": "KD-010",
+      "title": "Public-repository safety and citational care",
+      "category": "safety",
+      "grader": "deterministic",
+      "blocking": true,
+      "weight": 10,
+      "inputs": ["repository", "canonical registry", "generated public registry", "routes"],
+      "procedure": ["Run citation, knowledge-bank, and public-safety validation.", "Scan new records for private paths, raw archives, sensitive people data, and unapproved media."],
+      "pass_criteria": ["All deterministic safety and citation checks pass.", "Protected locators cannot enter the generated public registry.", "No public proofs, knowledge-bank, or claims route exists."],
+      "evidence_required": ["command output", "redaction report", "route scan"],
+      "remediation_hint": "Replace private payloads with public-safe summaries or opaque protected pointers outside public projections."
+    },
+    {
+      "id": "KD-011",
+      "title": "Photo-editor feedback loop creates questions, not automatic proof",
+      "category": "visual-evidence",
+      "grader": "hybrid",
+      "blocking": false,
+      "weight": 3,
+      "inputs": ["photo workflow", "claim registry", "research tasks"],
+      "procedure": ["Trace a claim into a hypothetical editor brief and a visual discovery back into intake.", "Inspect rights, consent, identification, sensitivity, and corroboration gates."],
+      "pass_criteria": ["Photo briefs derive from approved claims and open research questions.", "Editor discoveries return as captures or tasks.", "Visual or model inference cannot become a claim without corroboration and rights review."],
+      "evidence_required": ["documented feedback loop", "photo task", "rights gate"],
+      "remediation_hint": "Route visual discoveries back to research and keep the private archive outside Git."
+    },
+    {
+      "id": "KD-012",
+      "title": "Source-backed strength through Chad's lens",
+      "category": "professional-legibility",
+      "grader": "llm_judge",
+      "blocking": false,
+      "weight": 3,
+      "inputs": ["developed claims", "research queue", "current public proof gaps"],
+      "procedure": ["Ask a blind hiring-oriented reviewer whether the bank names Jamie's strongest defensible actions without apology or inflation.", "Ask which matured claims are worth future projection and which need more research."],
+      "pass_criteria": ["Direct action is specific and courageous.", "The material states toward what end and what became possible or usable.", "Unresolved high-value claims remain visible as prioritized research rather than being weakened into vagueness or promoted prematurely."],
+      "evidence_required": ["blind judge scorecard", "promotion recommendations", "held-claim rationale"],
+      "remediation_hint": "Strengthen the direct action, end, and evidence relationship while holding unearned causality."
+    }
+  ],
+  "judge_output_schema": {
+    "required": ["candidate_fingerprint", "judgments"],
+    "judgment_required": ["eval_id", "score", "pass", "evidence", "findings", "recommended_next_move", "confidence"],
+    "score_range": [0, 4],
+    "missing_evidence_value": "not_observed",
+    "evidence_must_name_record_ids_or_files": true
+  },
+  "iteration_record_schema": {
+    "required": ["iteration", "candidate_sha_before", "selected_eval_id", "change_summary", "evidence_before", "candidate_sha_after", "evidence_after", "score_before", "score_after", "regressions", "decision"],
+    "allowed_decisions": ["accept", "revise", "reject", "stop_threshold_met", "stop_iteration_limit", "stop_no_improvement", "stop_human_blocked"]
+  }
+}

@@ -28,6 +28,10 @@ The knowledge bank exists to:
 
 ## Publication Model
 
+- **Capture ledger:** low-friction public-safe intake for URLs, memories,
+  artifacts, possible metrics, corrections, and photo leads.
+- **Research workbench:** normalized sources, atomic observations, bounded
+  research tasks, and explicit limitations.
 - **Knowledge bank:** public-safe repository layer for defensible claims,
   boundaries, and projection guidance.
 - **Citation registry:** canonical sources, evidence relationships, claims,
@@ -38,6 +42,10 @@ The knowledge bank exists to:
 - **Public website:** purpose-built projection that selects, sequences, and
   rewrites claims for readers.
 - **Private archive:** not in this repo.
+
+See [intake-and-promotion.md](intake-and-promotion.md) for the complete
+development lifecycle and [photo-evidence-loop.md](photo-evidence-loop.md) for
+the visual-research feedback process.
 
 ## Core Rule
 

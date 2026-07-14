@@ -7,14 +7,19 @@ bank.
 
 ## Flow
 
-1. Private material exists outside repo.
-2. Jamie or reviewer creates a public-safe summary.
-3. Summary is added to the knowledge bank with source-basis class and boundary.
-4. Status is set to Ready, Careful, Pending, or Private.
-5. Website projection uses only Ready or Careful claims.
-6. If a page needs stronger wording, update the bank first.
-7. Public-safety check fails production if pending/private/approval-marker
-   material is projected.
+1. Private material remains outside the repo.
+2. Jamie, a collaborator, or an agent creates the smallest public-safe capture.
+3. A retrieved source is normalized and decomposed into atomic observations.
+4. Unresolved value becomes a bounded research task rather than disappearing.
+5. Observations may mature into a claim with evidence relationships,
+   limitations, boundaries, anti-claims, and review history.
+6. Epistemic maturity, publication clearance, and editorial selection are set
+   independently.
+7. A purpose-specific projection may use only wording approved for its exact
+   surface.
+8. If a page needs stronger wording, strengthen the bank first.
+9. Public-safety and citation checks fail production when an unsafe state is
+   projected.
 
 ## Status Meanings
 
@@ -22,6 +27,14 @@ bank.
 - Careful: usable publicly only with the stated guardrail.
 - Pending: do not use publicly until missing approval/citation is resolved.
 - Private: source material exists, but the claim should not be published.
+
+`Ready`, `Careful`, `Pending`, and `Private` remain the compact proof-bank
+statuses used by `proofs.ts`. Canonical claim records use three independent
+axes:
+
+- evidence maturity: unreviewed, sourced, corroborated, contested, disproven;
+- publication clearance: private, restricted, public-safe, approved;
+- editorial selection: dormant, candidate, selected, retired.
 
 ## Chad-Lens Review
 

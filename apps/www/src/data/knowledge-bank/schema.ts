@@ -65,6 +65,23 @@ const mediaSchema = z.object({
   timestampConfidence: z.enum(["high", "moderate", "limited"]).optional()
 });
 
+export const captureRecordSchema = z.object({
+  id: stableIdSchema,
+  receivedAt: z.iso.date(),
+  submittedBy: z.string().min(1),
+  kind: z.enum(["url", "memory", "artifact", "metric", "photo-lead", "correction"]),
+  summary: z.string().min(1),
+  sourceUrl: publicUrlSchema.optional(),
+  status: z.enum(["untriaged", "triaged", "researching", "integrated", "closed"]),
+  publicSafety: z.enum(["public-safe", "protected-pointer"]),
+  potentialProjectIds: z.array(stableIdSchema).min(1),
+  potentialClaimFamilies: z.array(z.string().min(1)).min(1),
+  sourceIds: z.array(stableIdSchema).default([]),
+  observationIds: z.array(stableIdSchema).default([]),
+  researchTaskIds: z.array(stableIdSchema).default([]),
+  disposition: z.string().min(1)
+});
+
 export const sourceRecordSchema = z
   .object({
     id: stableIdSchema,
@@ -137,6 +154,19 @@ export const evidenceRelationshipSchema = z.object({
   renderCitation: z.boolean()
 });
 
+export const observationRecordSchema = z.object({
+  id: stableIdSchema,
+  sourceId: stableIdSchema,
+  project: stableIdSchema,
+  statement: z.string().min(1),
+  observationType: z.enum(["explicit", "attributed", "metadata", "visual"]),
+  locator: z.string().min(1),
+  confidence: z.enum(["high", "moderate", "limited"]),
+  limitations: z.array(z.string().min(1)).min(1),
+  supportsClaimIds: z.array(stableIdSchema).default([]),
+  reviewedAt: z.iso.date()
+});
+
 export const claimProjectionSchema = z.object({
   key: z.enum([
     "case-study",
@@ -156,7 +186,11 @@ export const claimProjectionSchema = z.object({
 export const claimRecordSchema = z.object({
   id: stableIdSchema,
   project: stableIdSchema,
+  claimType: z.enum(["action", "outcome", "role", "causal", "scale", "method", "context"]),
   internalClaim: z.string().min(1),
+  epistemicState: z.enum(["unreviewed", "sourced", "corroborated", "contested", "disproven"]),
+  publicationState: z.enum(["private", "restricted", "public-safe", "approved"]),
+  selectionState: z.enum(["dormant", "candidate", "selected", "retired"]),
   status: z.enum([
     "confirmed",
     "confirmed-with-boundary",
@@ -165,13 +199,32 @@ export const claimRecordSchema = z.object({
     "not-recovered",
     "disallowed"
   ]),
+  observationIds: z.array(stableIdSchema).default([]),
   projections: z.array(claimProjectionSchema),
   evidence: z.array(evidenceRelationshipSchema),
   boundaries: z.array(z.string().min(1)).default([]),
   antiClaims: z.array(z.string().min(1)).default([]),
+  researchTaskIds: z.array(stableIdSchema).optional(),
   researchInquiryIds: z.array(stableIdSchema).default([]),
   reviewedAt: z.iso.date(),
   reviewedBy: z.array(z.string().min(1)).default([])
+});
+
+export const researchTaskSchema = z.object({
+  id: stableIdSchema,
+  project: stableIdSchema,
+  question: z.string().min(1),
+  priority: z.enum(["critical", "high", "medium", "low"]),
+  status: z.enum(["open", "in-progress", "blocked", "complete"]),
+  captureIds: z.array(stableIdSchema).default([]),
+  sourceIds: z.array(stableIdSchema).default([]),
+  claimIds: z.array(stableIdSchema).default([]),
+  successCriteria: z.array(z.string().min(1)).min(1),
+  nextActions: z.array(z.string().min(1)).min(1),
+  publicNote: z.string().min(1),
+  owner: z.string().min(1),
+  blockedReason: z.string().min(1).optional(),
+  reviewedAt: z.iso.date()
 });
 
 export const researchInquirySchema = z.object({
@@ -219,17 +272,23 @@ export const citationPageSchema = z.object({
 });
 
 export const knowledgeBankSchema = z.object({
+  captures: z.array(captureRecordSchema),
   sources: z.array(sourceRecordSchema),
+  observations: z.array(observationRecordSchema),
   claims: z.array(claimRecordSchema),
+  researchTasks: z.array(researchTaskSchema),
   researchInquiries: z.array(researchInquirySchema),
   corrections: z.array(correctionRecordSchema),
   pages: z.array(citationPageSchema)
 });
 
+export type CaptureRecord = z.infer<typeof captureRecordSchema>;
 export type SourceRecord = z.infer<typeof sourceRecordSchema>;
 export type EvidenceRelationship = z.infer<typeof evidenceRelationshipSchema>;
+export type ObservationRecord = z.infer<typeof observationRecordSchema>;
 export type ClaimProjection = z.infer<typeof claimProjectionSchema>;
 export type ClaimRecord = z.infer<typeof claimRecordSchema>;
+export type ResearchTask = z.infer<typeof researchTaskSchema>;
 export type ResearchInquiry = z.infer<typeof researchInquirySchema>;
 export type CorrectionRecord = z.infer<typeof correctionRecordSchema>;
 export type CitationOccurrence = z.infer<typeof citationOccurrenceSchema>;
