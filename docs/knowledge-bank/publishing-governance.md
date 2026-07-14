@@ -16,6 +16,24 @@ bank.
 7. Public-safety check fails production if pending/private/approval-marker
    material is projected.
 
+## Visual Evidence Rule
+
+Photographs may corroborate a claim only after separating visible evidence from
+inference.
+
+- Visible evidence may include setting, objects, public text, material
+  conditions, and documented co-presence.
+- Role, authorship, authority, endorsement, causation, impact, and current
+  status require independent support.
+- Visual abundance or scarcity must not be used as an impact metric.
+- An editorial album label is a retrieval hypothesis, not a public claim.
+- Every projected image requires rights, consent, caption, crop, surrounding
+  context, and sensitive-detail review.
+- Redraw, crop, redact, or omit when the method is public-safe but the source
+  photograph is not.
+- Raw photographs, identifying metadata, and private archive paths stay outside
+  the repository.
+
 ## Status Meanings
 
 - Ready: strong enough for public site copy.

@@ -17,6 +17,16 @@ changes public claims.
   language.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
+- [ ] Photographs corroborate existing claims rather than silently creating
+  stronger claims.
+- [ ] Captions separate what is visible from inferred role, authorship,
+  authority, endorsement, causation, impact, or current status.
+- [ ] Visual abundance or scarcity is not presented as an accomplishment or
+  impact metric.
+- [ ] Every projected image has rights, people, sensitive-detail, caption, and
+  crop review.
+- [ ] Private photo filenames, asset identifiers, people associations, and
+  local archive paths remain outside the repo.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,

@@ -18,4 +18,8 @@
 - [ ] Jamie approves proof metrics.
 - [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
   that are not already public-safe.
+- [ ] Every projected photograph has image-level rights, people,
+  sensitive-detail, caption, and crop review.
+- [ ] Visual-archive synthesis is not promoted into stronger public copy until
+  its wording and project-specific proof links are approved.
 - [ ] Jamie approves final production deploy.
