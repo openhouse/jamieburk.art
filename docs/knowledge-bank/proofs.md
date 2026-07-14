@@ -21,3 +21,15 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.
+
+## Visual Corroboration
+
+The private visual archive supports one moderate, careful cross-project pattern:
+Jamie's practice is most legible when work is situated among people, artifacts,
+rooms, public places, and technical systems. The visual record repeatedly shows
+facilitation, preparation, arrangement, documentation, implementation, and care.
+
+This pattern is held under `visual-archive-material-operating-practice` for
+internal use. It is not projected publicly until specific photographs and
+captions pass the provenance, role, rights, consent, and public-safety gates in
+`visual-evidence.md`.

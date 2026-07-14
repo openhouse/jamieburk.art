@@ -54,3 +54,10 @@ imply production SaaS.
 
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
+
+## Visual Evidence
+
+`visual-archive-material-operating-practice` remains internal-only. A photograph
+may support an existing public claim only after the promotion gate in
+`visual-evidence.md` is complete. Do not use image counts, People associations,
+crowds, or visual similarity as proof of scale, role, consent, or attribution.

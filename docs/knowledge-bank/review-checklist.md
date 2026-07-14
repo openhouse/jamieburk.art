@@ -23,6 +23,11 @@ changes public claims.
   transcript, or company context.
 - [ ] Case studies use public-safe Known / Open / Protected boundaries where
   needed.
+- [ ] Every proposed photograph has independent project/date provenance, a
+  linked proof ID, bounded caption language, rights review, participant and
+  consent review, and a sensitive-content check.
+- [ ] Photo counts, People associations, crowds, and visual similarity are not
+  used as proof of project scale, professional role, consent, or attribution.
 - [ ] No raw transcripts, private notes, legal-review materials, stakeholder
   lists, private rows, private screenshots, private photos, private fonts,
   credentials, or private correspondence have been committed.

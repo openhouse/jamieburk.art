@@ -481,6 +481,59 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-07"
   },
   {
+    id: "visual-archive-material-operating-practice",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["public-safe-archive-summary", "ai-assisted-archive-review"],
+    publicWording:
+      "Jamie's visual archive documents a recurring practice of working through people, artifacts, rooms, public places, and technical systems to give emerging work usable form.",
+    shortWording: "Situated, material operating practice",
+    detailedPublicWording:
+      "Across civic, cultural, small-business, and technical contexts, the strongest photographs show work becoming usable through facilitation, preparation, arrangement, documentation, implementation, and care.",
+    sourceBasis:
+      "Public-safe aggregate from local whole-library photo curation, recursive visual evaluation, and Jamie's private visual archive.",
+    sourceNote:
+      "The raw photographs, identifiers, People labels, metadata, and curation manifests remain outside the repository.",
+    whyItMatters:
+      "Makes the operating-structure throughline concrete without converting private photographs into public proof by default.",
+    guardrail:
+      "Use as a qualitative corroborating pattern only. Confirm image provenance, Jamie's role, caption language, rights, consent expectations, and public safety separately before projection.",
+    doNotSay: [
+      "The photographs independently prove Jamie led every depicted project",
+      "A People association proves a professional relationship or role",
+      "Editor-field or project-view counts prove project scale",
+      "An identifiable person has consented to publication",
+      "Visual similarity proves project attribution"
+    ],
+    protectedBoundaries: [
+      "Unapproved photographs",
+      "Raw filenames and identifiers",
+      "People labels and private metadata",
+      "Minors and private relationships",
+      "Domestic or intimate settings",
+      "Private documents and screens",
+      "Sensitive property details"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: [
+      "harry-j-epstein",
+      "fair-rent-nyc",
+      "callnyc",
+      "wowlist",
+      "196-sunday-dinner",
+      "kc-town-hall",
+      "source-backed-team-memory"
+    ],
+    relatedCapabilities: [
+      "facilitation",
+      "implementation",
+      "documentation-architecture",
+      "participation-infrastructure",
+      "material-practice"
+    ],
+    lastReviewed: "2026-07-11"
+  },
+  {
     id: "technical-operations-operating-backbone",
     status: "ready",
     supportLevel: "strong",
