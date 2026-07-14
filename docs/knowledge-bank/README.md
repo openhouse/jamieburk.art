@@ -81,3 +81,5 @@ without automatic website projection. The [KC Town Hall CCED allocation
 note](research/2026-07-13-kc-town-hall-cced-allocation.md) demonstrates how to
 separate a recommendation, Council acceptance, appropriation, later withdrawal,
 and reappropriation without confusing allocation with receipt or expenditure.
+It also keeps Jamie's firsthand stewardship-transition account separate from
+what the government records establish.

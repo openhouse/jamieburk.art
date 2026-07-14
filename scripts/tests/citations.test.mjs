@@ -235,6 +235,37 @@ test("KC Town Hall intake separates recommendation, appropriation, and use", () 
   assert.doesNotMatch(JSON.stringify(publicCitationRegistry), /SRC-KCMO-CCED/);
 });
 
+test("KC Town Hall stewardship transition remains a bounded memory lead", () => {
+  const intake = knowledgeBank.intakeItems.find(
+    (item) =>
+      item.id === "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026-07-14"
+  );
+
+  assert.ok(intake);
+  assert.equal(intake.kind, "memory-fragment");
+  assert.equal(intake.status, "captured");
+  assert.equal(intake.projectionStatus, "no-public-projection");
+  assert.deepEqual(intake.sourceIds, []);
+  assert.deepEqual(intake.candidateClaims, []);
+  assert.equal(intake.propositions.length, 1);
+  assert.equal(intake.propositions[0].status, "memory-lead");
+  assert.deepEqual(intake.propositions[0].sourceIds, []);
+  assert.ok(
+    intake.propositions[0].boundaries.some((boundary) =>
+      /does not establish this stewardship transition/i.test(boundary)
+    )
+  );
+  assert.ok(
+    intake.boundaries.some((boundary) =>
+      /Do not infer abandonment, failure/i.test(boundary)
+    )
+  );
+  assert.doesNotMatch(
+    JSON.stringify(publicCitationRegistry),
+    /KC-TOWN-HALL-STEWARDSHIP-TRANSITION/
+  );
+});
+
 test("rendering primitives preserve no-JavaScript document semantics", () => {
   const cite = readFileSync("apps/www/src/components/citations/Cite.tsx", "utf8");
   const references = readFileSync("apps/www/src/components/citations/References.tsx", "utf8");

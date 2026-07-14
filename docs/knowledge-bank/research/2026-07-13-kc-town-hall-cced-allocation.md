@@ -27,6 +27,12 @@ This statement is knowledge-bank material, not approved website copy. The
 official records establish institutional actions and outcomes; they do not
 establish Jamie's individual role.
 
+Jamie's firsthand account adds a separate stewardship fact: when his
+involvement concluded, he transitioned project stewardship to a mission-aligned
+organization. That account remains a memory lead. The associated public records
+do not identify a receiving organization or establish the relationship between
+the handoff and the Council's later withdrawal record.
+
 ## Public Sources
 
 | Date | Record | What it establishes | What it does not establish |
@@ -75,9 +81,12 @@ documentation, and municipal-review process.
 1. Recover any public funding agreement to determine whether it was executed.
 2. Check public contract and finance records for any disbursement before the
    2024 reappropriation.
-3. Locate public documentation of the withdrawal that can be used without
-   exposing private legal, financial, property, or stakeholder information.
-4. Associate Jamie's role with public project records or collaborator accounts
+3. Locate a public-safe handoff artifact, receiving-organization confirmation,
+   or collaborator account that establishes what stewardship changed hands and
+   when.
+4. Determine whether any public administrative record relates the stewardship
+   transition to the later Council withdrawal record.
+5. Associate Jamie's role with public project records or collaborator accounts
    before strengthening actor-specific language.
 
 ## Guardrails
@@ -87,5 +96,9 @@ documentation, and municipal-review process.
 - Do not say the vote was unanimous without a roll call.
 - Do not imply Jamie caused the Council decision.
 - Do not omit the later withdrawal when describing the funding outcome.
+- Do not treat the Council withdrawal language as proof of abandonment,
+  failure, or the stewardship transition.
+- Keep the mission-aligned handoff as a separate memory lead until a public-safe
+  source or receiving-organization confirmation supports it.
 - Keep private legal, financial, property, banking, and stakeholder records out
   of the public repository.

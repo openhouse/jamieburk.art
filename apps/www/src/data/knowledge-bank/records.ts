@@ -1275,7 +1275,7 @@ const knowledgeBankInput = {
       researchQuestions: [
         "Does a public funding agreement establish whether an agreement with KC Town Hall was executed after Resolution 190649?",
         "Do public finance or contract records establish whether any portion of the allocation was ever disbursed before the 2024 reappropriation?",
-        "Do public minutes or project records explain the timing and reason for KC Town Hall's withdrawal without exposing private legal, financial, property, or stakeholder information?",
+        "What public administrative record dates KC Town Hall's withdrawal, and does any record relate it to a successor stewardship arrangement?",
         "Which public records or collaborator accounts establish Jamie's specific contribution to the proposal, planning, documentation, and municipal-review process?"
       ],
       boundaries: [
@@ -1289,6 +1289,50 @@ const knowledgeBankInput = {
       receivedAt: "2026-07-13",
       reviewedAt: "2026-07-13",
       reviewedBy: ["Jamie Burkart", "Codex public-record review"]
+    },
+    {
+      id: "INTAKE-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026-07-14",
+      title: "KC Town Hall stewardship transition",
+      project: "kc-town-hall",
+      kind: "memory-fragment",
+      summary: "Jamie reports that when his involvement in KC Town Hall concluded, he transitioned project stewardship to a mission-aligned organization.",
+      status: "captured",
+      sourceIds: [],
+      relatedClaimIds: [],
+      relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
+          text: "Jamie states that he transitioned stewardship of the KC Town Hall project to a mission-aligned organization when his involvement concluded.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: [
+            "This is Jamie's firsthand account and is not yet corroborated by an associated public record or receiving-organization confirmation.",
+            "Do not identify a receiving organization or state the transfer mechanism, timing, terms, continuity, or later project status without appropriate evidence and review.",
+            "The 2024 Council record's withdrawal language does not establish this stewardship transition and should not be treated as evidence of abandonment or failure."
+          ],
+          decisionUse: "Preserves a professionally material handoff and stewardship outcome without conflating Jamie's account with the later government record or advancing it into public copy.",
+          nextStep: "Associate a public-safe handoff artifact, receiving-organization confirmation, or collaborator account that identifies what stewardship changed hands and when."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which public-safe handoff artifact or receiving-organization confirmation establishes the stewardship transition?",
+        "What date or bounded period and which project responsibilities, records, or assets can a public-safe source establish as part of the transition?",
+        "What continuation or disposition, if any, did the receiving organization document publicly after the transition?"
+      ],
+      boundaries: [
+        "Treat the stewardship transition as Jamie's firsthand research lead until corroborated.",
+        "Keep the receiving organization's identity and the handoff's mechanics, timing, and later status out of public claims until evidence and publication review support them.",
+        "Do not infer abandonment, failure, ongoing ownership, or organizational continuity from the Council withdrawal record or Jamie's statement.",
+        "Do not project this intake item directly to the website; create and approve a sourced governed claim first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
     }
   ],
   pages: [{

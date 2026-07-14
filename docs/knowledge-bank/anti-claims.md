@@ -62,6 +62,12 @@ private Drive documents.
 Prefer "supported" or "co-founded and documented" unless Jamie approves
 stronger language.
 
+Do not treat the Council's withdrawal language as proof that Jamie abandoned or
+failed the project. Do not present Jamie's firsthand stewardship-transition
+account as government-record evidence, identify the receiving organization, or
+assert transfer mechanics, timing, continuity, or later status without
+appropriate corroboration and review.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript
