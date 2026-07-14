@@ -67,7 +67,10 @@ const workMetaSchema = z.object({
           height: z.number().int().positive(),
           alt: z.string().min(20),
           caption: z.string().min(20),
-          sourceUrl: z.string().url(),
+          sourceUrl: z.string().refine(
+            (value) => value.startsWith("/") || URL.canParse(value),
+            "Expected an absolute URL or a root-relative public asset path",
+          ),
           capturedAt: z.string(),
           evidenceScope: z.enum(["direct", "contextual", "representative"]),
           rightsStatus: z.enum(["public-web-capture", "approved"])
@@ -213,6 +216,7 @@ const workItemsInput = [
     proofBankIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "nyc-artist-coalition-public-web-infrastructure",
       "nyc-artist-coalition-civic-systems"
     ],
@@ -257,6 +261,24 @@ const workItemsInput = [
           evidenceScope: "direct",
           rightsStatus: "public-web-capture"
         }
+      },
+      {
+        title: "Privacy-preserving commercial-data pilot",
+        description:
+          "A two-page public handout turns a broad vacancy and lease-cost question into a bounded RPIE-derived data-product proposal with explicit privacy and publication safeguards.",
+        type: "public handout",
+        asset: {
+          src: "/artifacts/fair-rent-nyc/toward-a-fuller-public-baseline.png",
+          width: 1275,
+          height: 1650,
+          alt: "First page of Jamie Burkart's public handout proposing privacy-preserving commercial vacancy and lease-cost indicators derived from aggregated RPIE filings.",
+          caption:
+            "Jamie-authored School of Data handout, March 27, 2026. It directly documents a proposed indicator table, coverage and suppression table, methods note, and confidentiality boundary; it does not establish City adoption or a released dataset.",
+          sourceUrl: "/artifacts/fair-rent-nyc/toward-a-fuller-public-baseline.pdf",
+          capturedAt: "2026-03-27",
+          evidenceScope: "direct",
+          rightsStatus: "approved"
+        }
       }
     ],
     tags: [
@@ -297,15 +319,16 @@ const workItemsInput = [
       "Co-founder role in NYC Artist Coalition",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
-      "30+ pages of shared campaign-memory infrastructure",
-      "Running minutes, decision records, action trackers, and source maps",
+      "A shared running-memory system connecting recurring meetings to decisions, owners, open questions, consent boundaries, and reusable templates",
+      "A legislative provenance redline tracing public policy source layers through S8319",
+      "A public, privacy-preserving commercial-data pilot proposal",
       "Public campaign websites for NYC Artist Coalition advocacy",
       "Legal/policy questions organized for collaborators",
       "Public-data framing and stakeholder next steps"
     ],
     knownOpenProtected: {
       known:
-        "A dated FairRentNYC capture documents a public campaign surface, and an official 2018 Council transcript documents Jamie's testimony as a coalition member.",
+        "A dated FairRentNYC capture documents a public campaign surface, an official 2018 Council transcript documents Jamie's testimony as a coalition member, and a public two-page handout directly documents his privacy-preserving data-product proposal.",
       open:
         "Additional named collaborators, meeting materials, photographs, and internal campaign artifacts require separate approval.",
       protected:

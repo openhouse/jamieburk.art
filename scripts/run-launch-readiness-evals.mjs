@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { validateKnowledgeIntake } from "./lib/knowledge-intake-validation.mjs";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v8/evals.json"), "utf8"));
+const suite = JSON.parse(readFileSync(path.join(repoRoot, "evals/launch-readiness/v9/evals.json"), "utf8"));
 const args = process.argv.slice(2);
 const strict = args.includes("--strict");
 const observationIndex = args.indexOf("--observations");
@@ -74,6 +74,7 @@ const intakeValidation = validateKnowledgeIntake();
 for (const [criterionId, checkName] of [
   ["INTAKE-001", "coverage"],
   ["RESEARCH-001", "research"],
+  ["ARCHIVE-001", "archiveProduction"],
   ["KCTH-001", "kcTownHall"],
   ["PRESS-001", "press"],
   ["DISPOSITION-001", "disposition"],

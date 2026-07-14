@@ -88,7 +88,9 @@ export function ArtifactGallery({ item }: { item: WorkMeta }) {
                   {artifact.asset?.caption}
                 </p>
                 <p className="mt-3 text-xs leading-5 text-jb-ink/64">
-                  Captured {artifact.asset?.capturedAt} from a public web surface.
+                  {artifact.asset?.rightsStatus === "approved"
+                    ? `Public-safe source artifact dated ${artifact.asset.capturedAt}.`
+                    : `Captured ${artifact.asset?.capturedAt} from a public web surface.`}
                 </p>
               </figcaption>
             </figure>

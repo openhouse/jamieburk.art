@@ -160,19 +160,20 @@ export const proofClaims: ProofClaim[] = [
   },
   {
     id: "fair-rent-campaign-memory",
-    status: "careful",
-    supportLevel: "careful",
+    status: "ready",
+    supportLevel: "strong",
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.",
-    shortWording: "30+ pages of civic campaign-memory infrastructure",
+      "Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.",
+    shortWording: "Built a shared civic campaign-memory system in active use",
     detailedPublicWording:
       "Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.",
-    sourceBasis: "Approved resume language and public-safe collaboration summary.",
+    sourceBasis:
+      "Approved resume language plus close reading of the May 14, 2026, collaboration running-minutes system and April 2026 operating plan.",
     sourceNote: "Use collective-work language and omit private coalition context.",
     whyItMatters:
       "Shows documentation as operating infrastructure for sensitive, collective civic work.",
@@ -195,23 +196,24 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["meeting-synthesis", "decision-records", "source-mapping"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "fair-rent-source-map",
-    status: "careful",
-    supportLevel: "careful",
+    status: "ready",
+    supportLevel: "strong",
     evidenceClass: [
       "approved-resume",
       "public-safe-archive-summary",
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.",
+      "Prepared a legislative provenance redline tracing Commercial Rent Stabilization language from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany S8319 revisions.",
     shortWording: "Created a legislative source map and provenance redline",
     detailedPublicWording:
       "Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.",
-    sourceBasis: "Approved resume language and public-safe source-map summary.",
+    sourceBasis:
+      "Approved resume language and close reading of Jamie's May 17, 2026, tracked-changes provenance redline.",
     guardrail: "Do not imply legal authority or official bill ownership.",
     doNotSay: [
       "Jamie authored the legislation",
@@ -227,7 +229,40 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["resume", "technical-operations", "case-study"],
     relatedProjects: ["fair-rent-nyc"],
     relatedCapabilities: ["source-mapping", "public-data-framing", "policy-translation"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
+  },
+  {
+    id: "fair-rent-public-data-pilot",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "public-safe-archive-summary"],
+    publicWording:
+      "Prepared a privacy-preserving open-data pilot proposal for geography-aggregated commercial vacancy and lease-cost indicators, with coverage, suppression, and methods documentation.",
+    shortWording: "Scoped a privacy-preserving commercial-data pilot",
+    detailedPublicWording:
+      "For NYC School of Data 2026, Jamie translated a broad policy need into the smallest serious pilot: an RPIE-derived indicator table, coverage and suppression table, and plain-language methods note, explicitly excluding raw confidential filings and identifying information.",
+    sourceBasis:
+      "Jamie-authored two-page public handout dated March 27, 2026, published as a public-safe portfolio artifact.",
+    whyItMatters:
+      "Shows concrete data-product scoping, privacy safeguards, public-interest translation, and implementation thinking in one inspectable artifact.",
+    guardrail:
+      "Describe it as a proposal shared at School of Data, not an adopted City program or released dataset.",
+    doNotSay: [
+      "A city agency adopted the proposal",
+      "Jamie released an official RPIE dataset",
+      "Jamie represented NYC School of Data or the Department of Finance",
+      "The proposal replaces existing storefront data"
+    ],
+    protectedBoundaries: [
+      "Raw confidential filings",
+      "Tenant identities",
+      "Tax identifiers",
+      "Parcel- or unit-level lease records"
+    ],
+    surfaces: ["resume", "technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: ["open-data", "data-product-scoping", "privacy", "policy-translation"],
+    lastReviewed: "2026-07-14"
   },
   {
     id: "nyc-artist-coalition-public-web-infrastructure",
@@ -470,7 +505,8 @@ export const proofClaims: ProofClaim[] = [
     shortWording: "Bounded method for source-backed team memory",
     detailedPublicWording:
       "The method separates Known, Open, and Protected material so teams can preserve decision lineage, onboarding context, and reviewable source links without turning private archives into unsafe browsing surfaces.",
-    sourceBasis: "Public-safe lab materials and proposal-derived method summary.",
+    sourceBasis:
+      "Public-safe lab materials and close reading of Jamie's June 26, 2026, bounded pilot proposal; recipient context, commercial details, correspondence, and outcomes remain protected.",
     guardrail:
       "Not finished SaaS. Not a chatbot. Not a private archive browser. Not a replacement for human judgment.",
     doNotSay: [
@@ -487,7 +523,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "lab"],
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["source-backed-memory", "documentation-architecture", "human-review"],
-    lastReviewed: "2026-07-07"
+    lastReviewed: "2026-07-14"
   },
   {
     id: "technical-operations-operating-backbone",
@@ -588,6 +624,7 @@ export const resumeProofHighlights = [
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
   "fair-rent-source-map",
+  "fair-rent-public-data-pilot",
   "callnyc-civic-data-guidance",
   "nyc-artist-coalition-public-web-infrastructure",
   "nyc-artist-coalition-civic-systems",
@@ -613,6 +650,7 @@ export const technicalOperationsProofRows = [
     proofIds: [
       "fair-rent-campaign-memory",
       "fair-rent-source-map",
+      "fair-rent-public-data-pilot",
       "kc-town-hall-public-benefit-documentation"
     ]
   },

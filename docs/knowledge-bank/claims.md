@@ -65,10 +65,10 @@ claim beyond the wording and guardrails here.
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
-**Status:** Careful
-**Support level:** Careful
+**Status:** Ready
+**Support level:** Strong
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
-**Public wording:** Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
+**Public wording:** Built and maintained a shared Commercial Rent Stabilization running-memory system connecting recurring meetings to decisions, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.
 **Detailed public-safe wording:** Jamie synthesized meetings, decision records, action items, legal/policy questions, media assets, stakeholder next steps, and city/state strategy lanes into shared memory and actionable workstreams.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
@@ -76,14 +76,14 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work.
 **Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 
-**Status:** Careful
-**Support level:** Careful
+**Status:** Ready
+**Support level:** Strong
 **Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
-**Public wording:** Created a legislative source map and provenance redline tracing Commercial Rent Stabilization bill language across public policy lineages and revision paths.
+**Public wording:** Prepared a legislative provenance redline tracing Commercial Rent Stabilization language from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany S8319 revisions.
 **Detailed public-safe wording:** Jamie organized source lineage, public-data framing, policy questions, and review lanes so collaborators could see what was known, what needed review, and what remained protected.
 **Where to project:** Resume page, Technical Operations, Case study.
 **Why it matters:** Shows source-backed documentation, policy translation, and decision clarity without publishing private legal-review material.
@@ -91,7 +91,22 @@ claim beyond the wording and guardrails here.
 **Do not say:** Jamie authored the legislation; Jamie provided legal advice; the redline is official legal analysis.
 **Protected boundaries:** Legal-review context, private strategy, private correspondence, and unapproved collaborator notes stay offline.  
 **Review owner:** Jamie / Collaborator approval needed  
-**Last reviewed:** 2026-07-07
+**Last reviewed:** 2026-07-14
+
+## fair-rent-public-data-pilot - Privacy-preserving commercial-data pilot
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / public-safe archive summary
+**Public wording:** Prepared a privacy-preserving open-data pilot proposal for geography-aggregated commercial vacancy and lease-cost indicators, with coverage, suppression, and methods documentation.
+**Detailed public-safe wording:** For NYC School of Data 2026, Jamie translated a broad policy need into the smallest serious pilot: an RPIE-derived indicator table, coverage and suppression table, and plain-language methods note, explicitly excluding raw confidential filings and identifying information.
+**Where to project:** Resume page, Technical Operations, Case study.
+**Why it matters:** Shows concrete data-product scoping, privacy safeguards, public-interest translation, and implementation thinking in one inspectable artifact.
+**Guardrail:** Describe it as a proposal shared at School of Data, not an adopted City program or released dataset.
+**Do not say:** A city agency adopted the proposal; Jamie released an official RPIE dataset; Jamie represented NYC School of Data or the Department of Finance; the proposal replaces existing storefront data.
+**Protected boundaries:** Raw confidential filings, tenant identities, tax identifiers, and parcel- or unit-level lease records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
 
 ## nyc-artist-coalition-public-web-infrastructure - Campaign web infrastructure
 

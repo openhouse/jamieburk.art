@@ -18,12 +18,19 @@ import {
   campaignPressPlacementRecords,
   campaignPressResearchInquiries
 } from "./campaign-press-2026-07-14.ts";
+import {
+  archiveClaimRecords20260714,
+  archiveIntakeRecords20260714,
+  archiveResearchInquiries20260714,
+  archiveSourceRecords20260714
+} from "./archive-intake-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intakes: [
     ...intakeRecords,
     ...researchedIntakeRecords20260713,
-    ...campaignPressIntakeRecords
+    ...campaignPressIntakeRecords,
+    ...archiveIntakeRecords20260714
   ],
   sources: [
     {
@@ -150,7 +157,8 @@ const knowledgeBankInput = {
     ...intakeSourceRecords,
     ...researchedSourceRecords20260713,
     ...campaignPressIndexSourceRecords,
-    ...campaignPressArticleSourceRecords
+    ...campaignPressArticleSourceRecords,
+    ...archiveSourceRecords20260714
   ],
   claims: [
     {
@@ -241,7 +249,8 @@ const knowledgeBankInput = {
     },
     ...intakeClaimRecords,
     ...researchedClaimRecords20260713,
-    ...campaignPressClaimRecords
+    ...campaignPressClaimRecords,
+    ...archiveClaimRecords20260714
   ],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
@@ -255,7 +264,7 @@ const knowledgeBankInput = {
     sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries],
+  }, ...intakeResearchInquiries, ...campaignPressResearchInquiries, ...archiveResearchInquiries20260714],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -298,9 +307,13 @@ const knowledgeBankInput = {
     {
       id: "fair-rent-nyc",
       surface: "/work/fair-rent-nyc",
-      sourceOrder: ["SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"],
+      sourceOrder: [
+        "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27"
+      ],
       occurrences: [
-        { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study" }
+        { id: "sbjsa-testimony", claimId: "CLM-NYCAC-SBJSA-TESTIMONY-2018", projection: "case-study" },
+        { id: "public-baseline-pilot", claimId: "CLM-CRS-PUBLIC-BASELINE-PILOT-2026", projection: "case-study" }
       ]
     },
     {

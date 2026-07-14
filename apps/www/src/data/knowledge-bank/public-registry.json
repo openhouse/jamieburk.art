@@ -223,6 +223,26 @@
         "fault by any participant",
         "that no future project could occur at the property"
       ]
+    },
+    {
+      "id": "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+      "title": "Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC",
+      "author": "Jamie Burkart",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-03-27",
+      "accessedAt": "2026-07-14",
+      "assetUrl": "https://jamieburk.art/artifacts/fair-rent-nyc/toward-a-fuller-public-baseline.pdf",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Jamie Burkart, Toward a Fuller Public Baseline for Commercial Vacancy and Lease Cost in NYC, March 27, 2026.",
+      "publicNote": "The two-page handout proposes a privacy-preserving RPIE-derived pilot for discussion at NYC School of Data; it does not document agency adoption or a released dataset.",
+      "doesNotEstablish": [
+        "that a city agency adopted the proposal",
+        "that the proposed dataset was released",
+        "that Jamie represented NYC School of Data or a city agency",
+        "that the proposal replaces existing storefront data"
+      ]
     }
   ],
   "claims": [
@@ -733,6 +753,80 @@
         "Jamie's first-person confirmation supports the transition and broad recipient description, not the organization's identity, the transition's legal form or date, any transfer of public funds or property, the project's current status, or the circumstances that led to the transition.",
         "The municipal withdrawal and reappropriation records do not document this separate transition."
       ]
+    },
+    {
+      "id": "CLM-CRS-RUNNING-MEMORY-IN-USE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I built and maintained a shared running-minutes system that connected recurring meetings to decision records, action ownership, open questions, city and state workstreams, consent boundaries, and reusable templates.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Keep the work collective and describe Jamie's operating contribution rather than coalition ownership.",
+        "Do not expose participant details, private strategy, tenant stories, or raw notes."
+      ]
+    },
+    {
+      "id": "CLM-CRS-PROVENANCE-REDLINE-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "I prepared a legislative provenance redline that made the path from NYC Council Intro 93 through Fair Rent NYC recommendations, Small Business Survival Act lineage, and Albany S8319 revisions inspectable for collaborators.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Reviewer names in the document identify source layers, not individual drafting authorship.",
+        "The redline is unofficial and not legal advice."
+      ]
+    },
+    {
+      "id": "CLM-CRS-PUBLIC-BASELINE-PILOT-2026",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "For NYC School of Data 2026, I prepared a public handout proposing a privacy-preserving, geography-aggregated RPIE vacancy and lease-cost pilot, with an indicator table, coverage and suppression table, and plain-language methods note.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's authorship",
+            "School of Data context",
+            "privacy-preserving proposal",
+            "three-part minimum pilot"
+          ],
+          "publicNote": "Supports the authored proposal and its safeguards, not agency adoption or data release.",
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe this as a proposal shared at School of Data, not a City program or adopted release.",
+        "Preserve its complement-not-replacement relationship to existing storefront data."
+      ]
     }
   ],
   "pages": [
@@ -823,12 +917,18 @@
       "id": "fair-rent-nyc",
       "surface": "/work/fair-rent-nyc",
       "sourceOrder": [
-        "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018"
+        "SRC-NYCAC-NYC-COUNCIL-SBJSA-TRANSCRIPT-2018",
+        "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27"
       ],
       "occurrences": [
         {
           "id": "sbjsa-testimony",
           "claimId": "CLM-NYCAC-SBJSA-TESTIMONY-2018",
+          "projection": "case-study"
+        },
+        {
+          "id": "public-baseline-pilot",
+          "claimId": "CLM-CRS-PUBLIC-BASELINE-PILOT-2026",
           "projection": "case-study"
         }
       ]

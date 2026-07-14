@@ -47,6 +47,45 @@ export const requiredResearchSourceIds = [
   "SRC-CLAUDETTE-MICHAEL-REES-AR-COLLABORATION"
 ];
 
+export const requiredArchiveSourceIds = [
+  "SRC-CRS-RUNNING-MINUTES-2026-05-14",
+  "SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE-2026-05-17",
+  "SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27",
+  "SRC-CRS-90-DAY-ACTION-PLAN-2026-04-06",
+  "SRC-JPH-KANSAS-CITY-STAR-RAFT-2007-11-15",
+  "SRC-SUNDAY-DINNER-RSVP-LIVE",
+  "SRC-JOB-HUNT-SOURCE-BACKED-MEMORY-PROPOSAL-2026-06-26",
+  "SRC-JOB-HUNT-CONTEXT-OUTLINE-2026-07-03"
+];
+
+export const requiredArchiveClaimIds = [
+  "CLM-CRS-RUNNING-MEMORY-IN-USE-2026",
+  "CLM-CRS-PROVENANCE-REDLINE-2026",
+  "CLM-CRS-PUBLIC-BASELINE-PILOT-2026",
+  "CLM-CRS-OPERATING-PLAN-2026",
+  "CLM-WATERWAYS-KANSAS-CITY-STAR-FEATURE-2007",
+  "CLM-SUNDAY-DINNER-LIVE-RSVP",
+  "CLM-SOURCE-BACKED-MEMORY-PILOT-DESIGN-2026"
+];
+
+export const requiredArchiveIntakeIds = [
+  "INTAKE-CRS-RUNNING-MINUTES-2026",
+  "INTAKE-CRS-PROVENANCE-REDLINE-2026",
+  "INTAKE-CRS-PUBLIC-BASELINE-HANDOUT-2026",
+  "INTAKE-CRS-90-DAY-ACTION-PLAN-2026",
+  "INTAKE-JPH-KANSAS-CITY-STAR-RAFT-2026",
+  "INTAKE-SUNDAY-DINNER-LIVE-RSVP-2026",
+  "INTAKE-JOB-HUNT-SOURCE-BACKED-MEMORY-PROPOSAL-2026",
+  "INTAKE-JOB-HUNT-CONTEXT-OUTLINE-2026",
+  "INTAKE-ICLOUD-TEAMS-MATERIALIZATION-2026"
+];
+
+export const requiredArchiveInquiryIds = [
+  "INQ-JOB-HUNT-QUANTIFIED-CLAIMS-2026",
+  "INQ-JOB-HUNT-SOURCE-BACKED-MEMORY-OUTCOME-2026",
+  "INQ-ICLOUD-TEAMS-MATERIALIZATION-2026"
+];
+
 const blockedPublicRepoMarkers = [
   "/Users/",
   "/Volumes/",
@@ -79,6 +118,7 @@ export function validateKnowledgeIntake() {
   const projectionErrors = [];
   const pressErrors = [];
   const kcTownHallErrors = [];
+  const archiveProductionErrors = [];
   const intakeIds = knowledgeBank.intakes.map(({ id }) => id);
   const intakeIdSet = new Set(intakeIds);
   const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
@@ -93,6 +133,126 @@ export function validateKnowledgeIntake() {
 
   for (const id of requiredSeedIntakeIds) {
     if (!intakeIdSet.has(id)) coverageErrors.push(`Missing required intake: ${id}`);
+  }
+
+  for (const id of requiredArchiveIntakeIds) {
+    if (!intakeIdSet.has(id)) archiveProductionErrors.push(`Missing required archive intake: ${id}`);
+  }
+
+  for (const id of requiredArchiveSourceIds) {
+    const source = sourceById.get(id);
+    if (!source) {
+      archiveProductionErrors.push(`Missing required archive source: ${id}`);
+      continue;
+    }
+    if (!source.supportsGenerally.length || !source.doesNotEstablish.length) {
+      archiveProductionErrors.push(`${id} needs explicit support and does-not-establish boundaries`);
+    }
+    const linkedIntakes = knowledgeBank.intakes.filter((intake) => intake.sourceIds.includes(id));
+    const linkedClaims = knowledgeBank.claims.filter((claim) =>
+      claim.evidence.some((evidence) => evidence.sourceId === id)
+    );
+    const linkedInquiries = knowledgeBank.researchInquiries.filter((inquiry) =>
+      inquiry.sourceIds.includes(id)
+    );
+    if (!linkedIntakes.length || (!linkedClaims.length && !linkedInquiries.length)) {
+      archiveProductionErrors.push(`${id} needs an intake edge and a claim or inquiry edge`);
+    }
+  }
+
+  for (const id of requiredArchiveClaimIds) {
+    if (!claimById.has(id)) archiveProductionErrors.push(`Missing required archive claim: ${id}`);
+  }
+  for (const id of requiredArchiveInquiryIds) {
+    if (!inquiryById.has(id)) archiveProductionErrors.push(`Missing required archive inquiry: ${id}`);
+  }
+
+  const archiveRecordSet = [
+    ...requiredArchiveIntakeIds.map((id) => knowledgeBank.intakes.find((record) => record.id === id)),
+    ...requiredArchiveSourceIds.map((id) => sourceById.get(id)),
+    ...requiredArchiveClaimIds.map((id) => claimById.get(id)),
+    ...requiredArchiveInquiryIds.map((id) => inquiryById.get(id))
+  ].filter(Boolean);
+  const serializedArchiveRecords = JSON.stringify(archiveRecordSet);
+  for (const marker of blockedPublicRepoMarkers) {
+    if (serializedArchiveRecords.toLowerCase().includes(marker.toLowerCase())) {
+      archiveProductionErrors.push(`Archive production records contain blocked public-repo marker: ${marker}`);
+    }
+  }
+
+  const selectedArchiveClaimIds = new Set([
+    "CLM-CRS-RUNNING-MEMORY-IN-USE-2026",
+    "CLM-CRS-PROVENANCE-REDLINE-2026",
+    "CLM-CRS-PUBLIC-BASELINE-PILOT-2026"
+  ]);
+  for (const claimId of requiredArchiveClaimIds) {
+    const claim = claimById.get(claimId);
+    const activeProjections = claim?.projections.filter((projection) => projection.status === "active") ?? [];
+    if (selectedArchiveClaimIds.has(claimId) && activeProjections.length !== 1) {
+      archiveProductionErrors.push(`${claimId} must have exactly one selected active projection`);
+    }
+    if (!selectedArchiveClaimIds.has(claimId) && activeProjections.length) {
+      archiveProductionErrors.push(`${claimId} must remain unsurfaced or held in this archive pass`);
+    }
+  }
+
+  for (const claimId of [
+    "CLM-CRS-RUNNING-MEMORY-IN-USE-2026",
+    "CLM-CRS-PROVENANCE-REDLINE-2026"
+  ]) {
+    const claim = claimById.get(claimId);
+    const evidence = claim?.evidence[0];
+    const projection = claim?.projections.find((item) => item.status === "active");
+    if (
+      evidence?.relationship !== "private-support" ||
+      evidence.renderCitation ||
+      projection?.citationRequired
+    ) {
+      archiveProductionErrors.push(`${claimId} must project only a non-cited public-safe summary of private support`);
+    }
+  }
+
+  const publicBaselineSource = sourceById.get("SRC-CRS-PUBLIC-BASELINE-HANDOUT-2026-03-27");
+  const publicBaselineClaim = claimById.get("CLM-CRS-PUBLIC-BASELINE-PILOT-2026");
+  const publicBaselineProjection = publicBaselineClaim?.projections.find((item) => item.status === "active");
+  const publicBaselineEvidence = publicBaselineClaim?.evidence.find(
+    (item) => item.sourceId === publicBaselineSource?.id
+  );
+  if (
+    publicBaselineSource?.visibility !== "public" ||
+    !publicBaselineSource.assetUrl ||
+    !publicBaselineProjection?.citationRequired ||
+    !publicBaselineEvidence?.renderCitation
+  ) {
+    archiveProductionErrors.push("The selected public-baseline claim needs a public artifact and renderable citation relationship");
+  }
+  const publicBaselineBoundaryText = JSON.stringify([
+    publicBaselineSource?.doesNotEstablish,
+    publicBaselineClaim?.boundaries,
+    publicBaselineClaim?.antiClaims
+  ]).toLowerCase();
+  for (const boundary of ["adopt", "released", "dataset", "represent"]) {
+    if (!publicBaselineBoundaryText.includes(boundary)) {
+      archiveProductionErrors.push(`The public-baseline claim is missing the ${boundary} boundary`);
+    }
+  }
+
+  const operatingPlanClaim = claimById.get("CLM-CRS-OPERATING-PLAN-2026");
+  if (!JSON.stringify([operatingPlanClaim?.boundaries, operatingPlanClaim?.antiClaims]).toLowerCase().includes("completion")) {
+    archiveProductionErrors.push("The CRS operating plan must remain distinct from completed work");
+  }
+  const proposalOutcomeInquiry = inquiryById.get("INQ-JOB-HUNT-SOURCE-BACKED-MEMORY-OUTCOME-2026");
+  if (proposalOutcomeInquiry?.resultStatus !== "inconclusive") {
+    archiveProductionErrors.push("The Source-Backed Team Memory engagement outcome must remain inconclusive");
+  }
+  const materializationInquiry = inquiryById.get("INQ-ICLOUD-TEAMS-MATERIALIZATION-2026");
+  const materializationBoundaryText = JSON.stringify(materializationInquiry?.limitations ?? []).toLowerCase();
+  if (
+    materializationInquiry?.resultStatus !== "partially-recovered" ||
+    !materializationBoundaryText.includes("not materialized") ||
+    !materializationBoundaryText.includes("not evidence")
+  ) {
+    archiveProductionErrors.push("iCloud placeholders must remain partially recovered with an explicit not-materialized boundary");
   }
 
   const researchedUrls = new Set();
@@ -489,7 +649,8 @@ export function validateKnowledgeIntake() {
     ...dispositionErrors,
     ...projectionErrors,
     ...pressErrors,
-    ...kcTownHallErrors
+    ...kcTownHallErrors,
+    ...archiveProductionErrors
   );
   return {
     errors,
@@ -523,6 +684,11 @@ export function validateKnowledgeIntake() {
         passed: kcTownHallErrors.length === 0,
         errors: kcTownHallErrors,
         evidence: "KC Town Hall preserves the official proposal, recommendation, Council acceptance, $490,539 appropriation, May 2022 negotiation and no-reported-disbursement-amount status, withdrawal, and reappropriation sequence, then separately records Jamie's bounded transition to a mission-aligned organization without exposing private circumstances or treating the City record as proof of that transition."
+      },
+      archiveProduction: {
+        passed: archiveProductionErrors.length === 0,
+        errors: archiveProductionErrors,
+        evidence: `${requiredArchiveSourceIds.length} sources, ${requiredArchiveClaimIds.length} claims, ${requiredArchiveInquiryIds.length} inquiries, and ${requiredArchiveIntakeIds.length} intakes preserve close-read archival production across Jamie Projects History, CRS, and job-hunt with only three selected public projections.`
       }
     }
   };
