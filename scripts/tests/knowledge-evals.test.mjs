@@ -14,6 +14,11 @@ import {
   nycacFacebookEventKnowledge,
   nycacFacebookEventReviewSummary
 } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
+import {
+  personalWowListFacebookEventClaimIds,
+  personalWowListFacebookEventKnowledge,
+  personalWowListFacebookEventReviewSummary
+} from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
@@ -31,6 +36,10 @@ const kcTownHallLedgerPath = path.join(repoRoot, suite.pilot.kcTownHallFullPopul
 const nycacFacebookEventPopulationPath = path.join(
   repoRoot,
   suite.pilot.nycacFacebookEvents.manifestPath
+);
+const personalWowListFacebookEventPopulationPath = path.join(
+  repoRoot,
+  suite.pilot.personalWowListFacebookEvents.manifestPath
 );
 
 function loadCallNycPopulation() {
@@ -57,6 +66,10 @@ function loadNycacFacebookEventPopulation() {
   return JSON.parse(readFileSync(nycacFacebookEventPopulationPath, "utf8"));
 }
 
+function loadPersonalWowListFacebookEventPopulation() {
+  return JSON.parse(readFileSync(personalWowListFacebookEventPopulationPath, "utf8"));
+}
+
 function refreshFieldPracticeApproval(targetSuite) {
   targetSuite.pilot.kcTownHallFieldPractice.approvedContentSha256 = createHash("sha256")
     .update(JSON.stringify({
@@ -69,13 +82,13 @@ function refreshFieldPracticeApproval(targetSuite) {
     .digest("hex");
 }
 
-test("knowledge-bank gate records two fresh NYCAC Facebook event holdout passes", () => {
+test("knowledge-bank gate records two fresh personal and WOW List Facebook event holdout passes", () => {
   const result = evaluateKnowledgeBank(suite);
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e",
-    "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f"
+    "personal-wowlist-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-a",
+    "personal-wowlist-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-b"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -3019,4 +3032,186 @@ test("NYCAC Facebook participation claim preserves collective credit and attribu
   assert.ok(interpretation?.projections.every((projection) =>
     projection.status === "active" && projection.surfaces.every((surface) => surface.startsWith("docs/"))
   ));
+});
+
+test("personal and WOW List Facebook event production passes every named subcheck", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const criterion = result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  );
+
+  assert.equal(criterion?.score, 5);
+  assert.deepEqual(result.contentApprovals.personalWowListFacebookEvents.checks, {
+    populationSummary: true,
+    ledgerReconciliation: true,
+    selectedPublicRecords: true,
+    sourceRoutes: true,
+    governedKnowledge: true,
+    projections: true,
+    governanceBindings: true,
+    reportBoundaries: true,
+    publicSafety: true,
+    reviewLocks: true
+  });
+});
+
+test("personal Facebook event gate rejects missing and count-preserving ledger mutations", () => {
+  let population = loadPersonalWowListFacebookEventPopulation();
+  population.populationLedger.pop();
+  let result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+  assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
+
+  population = loadPersonalWowListFacebookEventPopulation();
+  [population.populationLedger[0].year, population.populationLedger[3].year] =
+    [population.populationLedger[3].year, population.populationLedger[0].year];
+  result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+  assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
+});
+
+test("personal Facebook anonymous ledger rejects identifying and private fields", () => {
+  const mutations = [
+    ["title", (row) => { row.title = "Private gathering"; }],
+    ["raw description", (row) => { row.rawDescription = "Private event body"; }],
+    ["address", (row) => { row.exactAddress = "123 Example Street, New York, NY"; }],
+    ["phone", (row) => { row.contactPhone = "+1 212 555 0199"; }],
+    ["email", (row) => { row.contactEmail = "private@example.org"; }],
+    ["attendees", (row) => { row.attendeeIdentities = ["Private Person"]; }],
+    ["session state", (row) => { row.authenticatedSessionState = { cookie: "secret" }; }],
+    ["role inference", (row) => { row.eventPageCredit = "Jamie Burkart"; }]
+  ];
+
+  for (const [name, mutate] of mutations) {
+    const population = loadPersonalWowListFacebookEventPopulation();
+    const heldRow = population.populationLedger.find(
+      (row) => row.disposition === "held-profile-association-only"
+    );
+    mutate(heldRow);
+    const result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+    assert.equal(
+      result.criteria.find((item) =>
+        item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+      )?.score,
+      1,
+      `expected anonymous-ledger rejection: ${name}`
+    );
+  }
+});
+
+test("personal Facebook selected records require explicit Jamie attribution and bounded responses", () => {
+  let population = loadPersonalWowListFacebookEventPopulation();
+  population.selectedPublicEvents[0].eventPageCredit = "Combustion Inc.";
+  let result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+
+  population = loadPersonalWowListFacebookEventPopulation();
+  population.selectedPublicEvents[0].responseInterpretation =
+    "Historical Facebook response count proving attendance and reach.";
+  result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+});
+
+test("WOW List zero and source-route gates reject historical nonexistence and role inflation", () => {
+  let population = loadPersonalWowListFacebookEventPopulation();
+  population.surfaces.wowlist.boundary =
+    "The zero current result proves WOW List never created Facebook events.";
+  let result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+
+  population = loadPersonalWowListFacebookEventPopulation();
+  const researchLead = population.missionRelevantSourceRoutes.find(
+    (route) => route.relationship === "profile-association-only-research-lead"
+  );
+  researchLead.relationship = "selected-public-organizer-record";
+  researchLead.interpretation = "This route establishes Jamie's role.";
+  result = evaluateKnowledgeBank(suite, { personalWowListFacebookEventPopulation: population });
+  assert.equal(result.criteria.find((item) =>
+    item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score, 1);
+});
+
+test("personal event projections reject sole credit, profile-wide role, and milestone inflation", () => {
+  const mutations = [
+    [personalWowListFacebookEventClaimIds.population, "Jamie organized all 511 events on his Facebook profile."],
+    [personalWowListFacebookEventClaimIds.conveningPractice, "Jamie alone produced all 21 selected events."],
+    [personalWowListFacebookEventClaimIds.sundayDinnerMilestones, "The 100th and 200th event pages prove 300+ Sunday Dinners."],
+    [personalWowListFacebookEventClaimIds.wowListInPractice, "The zero current page shows WOW List never had Facebook events."]
+  ];
+
+  for (const [claimId, text] of mutations) {
+    const claim = knowledgeBank.claims.find((item) => item.id === claimId);
+    const projection = claim?.projections[0];
+    assert.ok(projection);
+    const original = projection.text;
+    try {
+      projection.text = text;
+      const result = evaluateKnowledgeBank(suite);
+      assert.equal(
+        result.criteria.find((item) =>
+          item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+        )?.score,
+        1,
+        `expected projection rejection: ${text}`
+      );
+    } finally {
+      projection.text = original;
+    }
+  }
+});
+
+test("personal event review locks cover proof governance and page bindings", () => {
+  const proof = proofClaims.find((item) => item.id === "wowlist-community-platform");
+  const page = knowledgeBank.pages.find((item) => item.id === "wowlist");
+  const occurrence = page?.occurrences.find(
+    (item) => item.claimId === personalWowListFacebookEventClaimIds.wowListInPractice
+  );
+  assert.ok(proof && occurrence);
+  const originalProof = proof.guardrail;
+  const originalOccurrence = structuredClone(occurrence);
+
+  try {
+    proof.guardrail = "The link proves platform-wide adoption and conversion.";
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+    )?.score, 1);
+    assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
+
+    proof.guardrail = originalProof;
+    occurrence.sourceIds = ["SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"];
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+    )?.score, 1);
+    assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    proof.guardrail = originalProof;
+    for (const key of Object.keys(occurrence)) delete occurrence[key];
+    Object.assign(occurrence, originalOccurrence);
+  }
+});
+
+test("personal Facebook review configuration is structurally locked", () => {
+  const original = personalWowListFacebookEventReviewSummary.personalDisplayedInstances;
+  try {
+    personalWowListFacebookEventReviewSummary.personalDisplayedInstances = 510;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+    )?.score, 1);
+    assert.equal(result.contentApprovals.personalWowListFacebookEvents.reviewLocksMatch, false);
+  } finally {
+    personalWowListFacebookEventReviewSummary.personalDisplayedInstances = original;
+  }
 });

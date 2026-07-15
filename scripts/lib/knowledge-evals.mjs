@@ -15,6 +15,12 @@ import {
   nycacFacebookEventKnowledge,
   nycacFacebookEventReviewSummary
 } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events-2026-07.ts";
+import {
+  personalWowListFacebookEventClaimIds,
+  personalWowListFacebookEventKnowledge,
+  personalWowListFacebookEventReviewSummary,
+  personalWowListFacebookEventSourceIds
+} from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { urbanhermitSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/urbanhermit-social-population-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
@@ -62,6 +68,18 @@ const NYCAC_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   caseStudyMdxSha256: "bb027dc5fdd7a0ce2f2602287ad3a7953af98855316efe5986aeafdae387ccfb",
   proofSnippetSha256: "39b5ddec3ec83e6e552c33da836551f854a6dc809ea4beaa35e688036a982d9c",
   proofContentSha256: "d59ed44552e96a73477489cdd91363d9f1e764f39720dddafe21b01e10de79ca"
+});
+const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
+  manifestSha256: "23c7d57699dc30d84d6738f7ece4b47f3497550fa2dd8690ca7c4a86719d70ef",
+  manifestContentSha256: "62f09e7e53d5e28397ca25e948a77f7e1ec7e9e8a504b37c8e9343eae1faa090",
+  governedModuleSha256: "17756383e3e3fe07dd5691fe6866efe5d7292217a31fb5ab355cd71d8f64e940",
+  canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
+  reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
+  governanceBindingsSha256: "046ae94f6bb7300698deb933f959a6050353f1c32e18bb994c6743c966aaffb1",
+  publicReportSha256: "46f3020a8bdf63ea6f0d9f4bbcb2b9a99dd4f6fe33cce152490778cd48f15d2f",
+  wowListMdxSha256: "21106a4e2e5427f40eab679c5ae87838e29205e93e26e751960de588e5889429",
+  sundayDinnerMdxSha256: "b2889ec0ccaac06e4e7e86b14ee9643d0d7cd0e02b727928b7270a776e31fa10",
+  proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 
 export function loadKnowledgeEvalSuite() {
@@ -1120,12 +1138,16 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           inquiry.sourceIds.length === 1
       ) &&
       googleDrivePage?.surface === "/work/196-sunday-dinner" &&
-      googleDrivePage.sourceOrder.length === 0 &&
+      googleDrivePage.sourceOrder.every((sourceId) => !googleDrive.sourceIds.includes(sourceId)) &&
       sameOrderedValues(
-        googleDrivePage.occurrences.map((occurrence) => occurrence.claimId),
+        googleDrivePage.occurrences
+          .filter((occurrence) => googleDrive.claimIds.includes(occurrence.claimId))
+          .map((occurrence) => occurrence.claimId),
         googleDrive.claimIds
       ) &&
-      googleDrivePage.occurrences.every((occurrence) => !occurrence.sourceIds) &&
+      googleDrivePage.occurrences
+        .filter((occurrence) => googleDrive.claimIds.includes(occurrence.claimId))
+        .every((occurrence) => !occurrence.sourceIds) &&
       googleDrive.claimIds.every((claimId) => googleDriveMdx.includes(`claimId="${claimId}"`)) &&
       !/300\+|20\+/.test(googleDriveMdx) &&
       googleDriveProofCoverage?.status === "protected-support" &&
@@ -2824,9 +2846,440 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       nycacFacebookPrivateDataFree &&
       nycacFacebookReviewLocksMatch
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries];
+  const personalWowListFacebookEvents = suite.pilot.personalWowListFacebookEvents;
+  const personalWowListFacebookManifestPath = path.join(repoRoot, personalWowListFacebookEvents.manifestPath);
+  const personalWowListFacebookReportPath = path.join(repoRoot, personalWowListFacebookEvents.reportPath);
+  const personalWowListFacebookManifestText = readFileSync(personalWowListFacebookManifestPath, "utf8");
+  const personalWowListFacebookManifest = overrides.personalWowListFacebookEventPopulation ??
+    JSON.parse(personalWowListFacebookManifestText);
+  const personalWowListFacebookReport = overrides.personalWowListFacebookEventReport ??
+    readFileSync(personalWowListFacebookReportPath, "utf8");
+  const personalWowListFacebookWowListMdx = overrides.personalWowListFacebookWowListMdx ??
+    readFileSync(path.join(repoRoot, "apps/www/src/content/work/wowlist.mdx"), "utf8");
+  const personalWowListFacebookSundayDinnerMdx = overrides.personalWowListFacebookSundayDinnerMdx ??
+    readFileSync(path.join(repoRoot, "apps/www/src/content/work/196-sunday-dinner.mdx"), "utf8");
+  const personalFacebookLedgerRows = personalWowListFacebookManifest.populationLedger ?? [];
+  const personalFacebookSelectedEvents = personalWowListFacebookManifest.selectedPublicEvents ?? [];
+  const personalFacebookMissionRoutes = personalWowListFacebookManifest.missionRelevantSourceRoutes ?? [];
+  const personalFacebookLedgerOrdinals = new Set(personalFacebookLedgerRows.map((row) => row.ordinal));
+  const personalFacebookSelectedOrdinals = new Set(personalFacebookSelectedEvents.map((event) => event.ordinal));
+  const personalFacebookDispositionCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(personalFacebookLedgerRows, (row) => row.disposition))
+      .map(([disposition, rows]) => [disposition, rows.length])
+  );
+  const personalFacebookDetailCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(personalFacebookLedgerRows, (row) => row.detailAvailability))
+      .map(([detailAvailability, rows]) => [detailAvailability, rows.length])
+  );
+  const personalFacebookPrivacyCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(personalFacebookLedgerRows, (row) => row.privacyDisplay))
+      .map(([privacyDisplay, rows]) => [privacyDisplay, rows.length])
+  );
+  const personalFacebookYearCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(personalFacebookLedgerRows, (row) => row.year))
+      .map(([year, rows]) => [year, rows.length])
+  );
+  const personalFacebookRecurringInstances = personalFacebookLedgerRows.filter(
+    (row) => row.recurringInstance === true
+  );
+  const personalFacebookIntakes = personalWowListFacebookEventKnowledge.intakeItems.map(
+    (item) => intakeById.get(item.id)
+  );
+  const personalFacebookObservations = personalWowListFacebookEventKnowledge.observations.map(
+    (item) => observationById.get(item.id)
+  );
+  const personalFacebookSources = personalWowListFacebookEventKnowledge.sources.map(
+    (item) => sourceById.get(item.id)
+  );
+  const personalFacebookClaims = personalWowListFacebookEventKnowledge.claims.map(
+    (item) => claimById.get(item.id)
+  );
+  const personalFacebookInquiries = personalWowListFacebookEventKnowledge.researchInquiries.map(
+    (item) => inquiryById.get(item.id)
+  );
+  const personalFacebookPopulationClaim = claimById.get(personalWowListFacebookEvents.populationClaimId);
+  const personalFacebookConveningClaim = claimById.get(personalWowListFacebookEvents.conveningClaimId);
+  const personalFacebookSundayDinnerClaim = claimById.get(personalWowListFacebookEvents.sundayDinnerClaimId);
+  const personalFacebookWowListClaim = claimById.get(personalWowListFacebookEvents.wowListClaimId);
+  const personalFacebookEarlyPracticeClaim = claimById.get(personalWowListFacebookEvents.earlyPracticeClaimId);
+  const personalFacebookPersonalExportInquiry = inquiryById.get(personalWowListFacebookEvents.personalExportInquiryId);
+  const personalFacebookWowListExportInquiry = inquiryById.get(personalWowListFacebookEvents.wowListExportInquiryId);
+  const personalFacebookCorroborationInquiry = inquiryById.get(personalWowListFacebookEvents.corroborationInquiryId);
+  const personalFacebookSundayDinnerProof = proofClaims.find(
+    (proof) => proof.id === personalWowListFacebookEvents.sundayDinnerProofId
+  );
+  const personalFacebookWowListProof = proofClaims.find(
+    (proof) => proof.id === personalWowListFacebookEvents.wowListProofId
+  );
+  const personalFacebookSundayDinnerCoverage = knowledgeBank.proofCoverageTargets.find(
+    (coverage) => coverage.proofId === personalWowListFacebookEvents.sundayDinnerProofId
+  );
+  const personalFacebookWowListCoverage = knowledgeBank.proofCoverageTargets.find(
+    (coverage) => coverage.proofId === personalWowListFacebookEvents.wowListProofId
+  );
+  const personalFacebookWowListPage = knowledgeBank.pages.find((page) => page.id === "wowlist");
+  const personalFacebookSundayDinnerPage = knowledgeBank.pages.find((page) => page.id === "196-sunday-dinner");
+  const personalFacebookClaimIdSet = new Set(Object.values(personalWowListFacebookEventClaimIds));
+  const personalFacebookPageOccurrences = [
+    ...(personalFacebookWowListPage?.occurrences.filter((occurrence) =>
+      personalFacebookClaimIdSet.has(occurrence.claimId)
+    ) ?? []),
+    ...(personalFacebookSundayDinnerPage?.occurrences.filter((occurrence) =>
+      personalFacebookClaimIdSet.has(occurrence.claimId)
+    ) ?? [])
+  ];
+  const personalFacebookReviewConfiguration = {
+    reviewSummary: personalWowListFacebookEventReviewSummary,
+    sourceIds: personalWowListFacebookEventSourceIds,
+    claimIds: personalWowListFacebookEventClaimIds
+  };
+  const personalFacebookGovernanceBindings = {
+    proofCoverage: [personalFacebookSundayDinnerCoverage, personalFacebookWowListCoverage],
+    pages: [
+      {
+        id: personalFacebookSundayDinnerPage?.id,
+        sourceOrder: personalFacebookSundayDinnerPage?.sourceOrder,
+        occurrences: personalFacebookSundayDinnerPage?.occurrences
+      },
+      {
+        id: personalFacebookWowListPage?.id,
+        sourceOrder: personalFacebookWowListPage?.sourceOrder,
+        occurrences: personalFacebookWowListPage?.occurrences
+      }
+    ]
+  };
+  const personalFacebookEvidenceClosed = personalFacebookClaims.every((claim) =>
+    claim?.evidence.length > 0 && claim.evidence.every((evidence) =>
+      evidence.supports.length > 0 && evidence.supports.every((support) =>
+        sourceById.get(evidence.sourceId)?.supportsGenerally.includes(support)
+      )
+    )
+  );
+  const personalFacebookPublicProjectionText = [
+    ...personalFacebookClaims.flatMap((claim) =>
+      claim?.projections.filter((projection) => projection.status === "active")
+        .map((projection) => projection.text) ?? []
+    ),
+    personalFacebookSundayDinnerProof?.publicWording,
+    personalFacebookSundayDinnerProof?.shortWording,
+    personalFacebookSundayDinnerProof?.detailedPublicWording,
+    personalFacebookSundayDinnerProof?.sourceBasis,
+    personalFacebookSundayDinnerProof?.guardrail,
+    personalFacebookWowListProof?.publicWording,
+    personalFacebookWowListProof?.shortWording,
+    personalFacebookWowListProof?.detailedPublicWording,
+    personalFacebookWowListProof?.sourceBasis,
+    personalFacebookWowListProof?.guardrail,
+    personalWowListFacebookWowListMdx,
+    personalWowListFacebookSundayDinnerMdx,
+    personalWowListFacebookReport
+  ].filter(Boolean).join("\n");
+  const personalFacebookUnsafeAffirmativePatterns = [
+    /Jamie (?:organized|attended|authored|produced|ran) (?:all )?511 events?/i,
+    /Jamie[^.]{0,80}(?:organized|attended|authored|produced|ran) every event on (?:his|the) (?:personal )?(?:profile|Facebook)/i,
+    /WOW List (?:never had|never created|did not have|had no) (?:any )?(?:Facebook )?events?/i,
+    /(?:zero|no) current[^.]{0,100}(?:proves?|establishes?|shows?) (?:that )?WOW List never/i,
+    /(?:Facebook|historical|response|RSVP|these) (?:labels|counts|responses|figures)[^.]{0,100}(?:equal|measure|establish|prove|show|represent|quantify|demonstrate)[^.]{0,100}(?:attendance|turnout|audience|reach|unique people|endorsement|conversion|mandate|impact)/i,
+    /(?:21|twenty-one) (?:events?|pages?|records?)[^.]{0,100}(?:prove|establish|demonstrate)[^.]{0,80}(?:impact|attendance|outcomes?|sole authorship|sole production)/i,
+    /(?:100th|200th)[^.]{0,160}(?:prove|verify|audit|establish)[^.]{0,80}(?:300\+|300-plus|three hundred)/i,
+    /Jamie[^.]{0,120}(?:solely|single-handedly|alone)[^.]{0,100}(?:all 21|every selected|Sunday Dinner|WOW List)/i,
+    /(?:all 21|every selected)[^.]{0,100}(?:solely|single-handedly|alone)[^.]{0,100}Jamie/i
+  ];
+  const personalFacebookAffirmativeSafe = personalFacebookUnsafeAffirmativePatterns.every(
+    (pattern) => !pattern.test(personalFacebookPublicProjectionText)
+  );
+  const personalFacebookPublicArtifactText = JSON.stringify({
+    manifest: personalWowListFacebookManifest,
+    intakes: personalFacebookIntakes,
+    observations: personalFacebookObservations,
+    sources: personalFacebookSources,
+    claims: personalFacebookClaims,
+    inquiries: personalFacebookInquiries,
+    proofs: [personalFacebookSundayDinnerProof, personalFacebookWowListProof],
+    proofCoverage: [personalFacebookSundayDinnerCoverage, personalFacebookWowListCoverage],
+    pageOccurrences: personalFacebookPageOccurrences
+  }) + personalWowListFacebookReport;
+  const personalFacebookPrivateDataFree =
+    !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(personalFacebookPublicArtifactText) &&
+    !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(personalFacebookPublicArtifactText) &&
+    !/(?:^|[^\d])(?:\+?1[\s.-]*)?\(?\d{3}\)?[\s.-]*\d{3}[\s.-]*\d{4}(?=$|[^\d])/.test(personalFacebookPublicArtifactText) &&
+    !/"(?:exactAddress|streetAddress|rawDescription|rawBody|descriptionHtml|attendeeIdentities|attendees|invitees|guestList|contactPhone|phone|meetingCredentials|meetingId|passcode|privateWorkingDocument|authenticatedSessionState|cookie|sessionToken|capturePath)"\s*:/i.test(personalFacebookPublicArtifactText);
+  const personalFacebookManifestContentSha256 = createHash("sha256")
+    .update(JSON.stringify(personalWowListFacebookManifest))
+    .digest("hex");
+  const personalFacebookCanonicalKnowledgeSha256 = createHash("sha256")
+    .update(JSON.stringify({
+      intakeItems: personalFacebookIntakes,
+      observations: personalFacebookObservations,
+      sources: personalFacebookSources,
+      claims: personalFacebookClaims,
+      researchInquiries: personalFacebookInquiries
+    }))
+    .digest("hex");
+  const personalFacebookReviewConfigurationSha256 = createHash("sha256")
+    .update(JSON.stringify(personalFacebookReviewConfiguration))
+    .digest("hex");
+  const personalFacebookGovernanceBindingsSha256 = createHash("sha256")
+    .update(JSON.stringify(personalFacebookGovernanceBindings))
+    .digest("hex");
+  const personalFacebookProofContentSha256 = createHash("sha256")
+    .update(JSON.stringify([personalFacebookSundayDinnerProof, personalFacebookWowListProof]))
+    .digest("hex");
+  const personalFacebookReviewLocksMatch =
+    createHash("sha256").update(personalWowListFacebookManifestText).digest("hex") === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.manifestSha256 &&
+    personalFacebookManifestContentSha256 === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.manifestContentSha256 &&
+    createHash("sha256").update(readFileSync(
+      path.join(repoRoot, "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts"),
+      "utf8"
+    )).digest("hex") === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.governedModuleSha256 &&
+    personalFacebookCanonicalKnowledgeSha256 === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.canonicalKnowledgeSha256 &&
+    personalFacebookReviewConfigurationSha256 === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.reviewConfigurationSha256 &&
+    personalFacebookGovernanceBindingsSha256 === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.governanceBindingsSha256 &&
+    createHash("sha256").update(personalWowListFacebookReport).digest("hex") === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.publicReportSha256 &&
+    createHash("sha256").update(personalWowListFacebookWowListMdx).digest("hex") === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.wowListMdxSha256 &&
+    createHash("sha256").update(personalWowListFacebookSundayDinnerMdx).digest("hex") === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.sundayDinnerMdxSha256 &&
+    personalFacebookProofContentSha256 === PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS.proofContentSha256;
+  const expectedPersonalFacebookDispositionEntries = Object.entries(
+    personalWowListFacebookEvents.expectedDispositionCounts
+  );
+  const personalFacebookDiagnosticChecks = {
+    populationSummary: Boolean(
+      personalWowListFacebookManifest.surfaces?.personal?.displayedInstances === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalWowListFacebookManifest.surfaces.personal.uniqueParentEvents === personalWowListFacebookEvents.expectedUniqueParentEvents &&
+      personalWowListFacebookManifest.surfaces.personal.recurringParentEvents === personalWowListFacebookEvents.expectedRecurringParentEvents &&
+      personalWowListFacebookManifest.surfaces.personal.recurringInstances === personalWowListFacebookEvents.expectedRecurringInstances &&
+      personalWowListFacebookManifest.surfaces.wowlist?.currentOwnerVisibleEventCards === personalWowListFacebookEvents.expectedWowListCurrentEvents
+    ),
+    ledgerReconciliation: Boolean(
+      personalFacebookLedgerRows.length === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalFacebookLedgerOrdinals.size === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalFacebookRecurringInstances.length === personalWowListFacebookEvents.expectedRecurringInstances &&
+      personalFacebookDetailCounts["recovered-detail"] === personalWowListFacebookEvents.expectedRecoveredDetails &&
+      personalFacebookDetailCounts["no-detail-rendered"] === personalWowListFacebookEvents.expectedNoDetailRendered &&
+      personalFacebookDetailCounts.unavailable === personalWowListFacebookEvents.expectedUnavailableDetails &&
+      personalFacebookPrivacyCounts.public === personalWowListFacebookEvents.expectedPublicDisplays &&
+      personalFacebookPrivacyCounts.private === personalWowListFacebookEvents.expectedPrivateDisplays &&
+      personalFacebookPrivacyCounts["not-displayed"] === personalWowListFacebookEvents.expectedPrivacyNotDisplayed &&
+      expectedPersonalFacebookDispositionEntries.every(([disposition, count]) =>
+        personalFacebookDispositionCounts[disposition] === count
+      )
+    ),
+    selectedPublicRecords: Boolean(
+      personalFacebookSelectedEvents.length === personalWowListFacebookEvents.expectedSelectedJamieAttributedEvents &&
+      personalFacebookSelectedOrdinals.size === personalWowListFacebookEvents.expectedSelectedJamieAttributedEvents &&
+      personalFacebookSelectedEvents.every((event) =>
+        personalFacebookLedgerRows[event.ordinal - 1]?.disposition === "selected-public-organizer-record" &&
+          personalFacebookLedgerRows[event.ordinal - 1]?.privacyDisplay === "public" &&
+          /Jamie Burkart/.test(event.eventPageCredit) &&
+          event.responseInterpretation === "Historical Facebook interface label; not attendance, unique people, reach, endorsement, conversion, mandate, or impact."
+      )
+    ),
+    sourceRoutes: Boolean(
+      personalFacebookMissionRoutes.length === personalWowListFacebookEvents.expectedMissionRelevantSourceRoutes &&
+      personalFacebookMissionRoutes.every((route) =>
+        personalFacebookLedgerOrdinals.has(route.eventOrdinal) && /^https?:\/\//.test(route.url)
+      )
+    ),
+    governedKnowledge: Boolean(
+      personalFacebookIntakes.every(Boolean) &&
+      personalFacebookObservations.every(Boolean) &&
+      personalFacebookSources.every(Boolean) &&
+      personalFacebookClaims.every(Boolean) &&
+      personalFacebookInquiries.every(Boolean) &&
+      personalFacebookEvidenceClosed
+    ),
+    projections: Boolean(
+      personalFacebookSundayDinnerClaim?.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/196-sunday-dinner") && /not an independent audit/i.test(projection.text)
+      ) &&
+      personalFacebookWowListClaim?.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/wowlist") && /one concrete route/i.test(projection.text)
+      ) &&
+      personalWowListFacebookSundayDinnerMdx.includes(personalWowListFacebookEvents.sundayDinnerClaimId) &&
+      personalWowListFacebookWowListMdx.includes(personalWowListFacebookEvents.wowListClaimId)
+    ),
+    governanceBindings: Boolean(
+      personalFacebookSundayDinnerCoverage?.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner100) &&
+      personalFacebookSundayDinnerCoverage.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner200) &&
+      personalFacebookWowListCoverage?.sourceIds.includes(personalWowListFacebookEvents.manifestSourceId) &&
+      personalFacebookPageOccurrences.length === 2
+    ),
+    reportBoundaries: Boolean(
+      /One hundred percent means[\s\S]{0,240}does \*\*not\*\* mean[\s\S]{0,120}native Meta export/i.test(personalWowListFacebookReport) &&
+      /Facebook response count is \*\*not verified\s+attendance\*\*/i.test(personalWowListFacebookReport) &&
+      /zero current owner-visible\s+event\s+cards/i.test(personalWowListFacebookReport) &&
+      /not evidence that WOW List never/i.test(personalWowListFacebookReport) &&
+      /not an\s+independent audit of every Sunday Dinner/i.test(personalWowListFacebookReport)
+    ),
+    publicSafety: Boolean(
+      personalFacebookAffirmativeSafe &&
+      personalFacebookPrivateDataFree &&
+      publicRegistryText.includes(personalWowListFacebookEvents.manifestSourceId) &&
+      !publicRegistryText.includes("SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-PROTECTED-RUN-2026") &&
+      !publicRegistryText.includes("LOC-FACEBOOK-PERSONAL-WOWLIST-EVENT-RESEARCH-2026")
+    ),
+    reviewLocks: personalFacebookReviewLocksMatch
+  };
+  const personalFacebookEventsComplete = Boolean(
+    existsSync(personalWowListFacebookManifestPath) &&
+      existsSync(personalWowListFacebookReportPath) &&
+      personalWowListFacebookManifest.schemaVersion === 1 &&
+      personalWowListFacebookManifest.capturedAt === personalWowListFacebookEvents.reviewedAt &&
+      personalWowListFacebookManifest.reviewedAt === personalWowListFacebookEvents.reviewedAt &&
+      personalWowListFacebookManifest.surfaces?.personal?.displayedInstances === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalWowListFacebookManifest.surfaces.personal.uniqueParentEvents === personalWowListFacebookEvents.expectedUniqueParentEvents &&
+      personalWowListFacebookManifest.surfaces.personal.recurringParentEvents === personalWowListFacebookEvents.expectedRecurringParentEvents &&
+      personalWowListFacebookManifest.surfaces.personal.recurringInstances === personalWowListFacebookEvents.expectedRecurringInstances &&
+      sameOrderedValues(personalWowListFacebookManifest.surfaces.personal.stableTerminalCounts, [511, 511, 511]) &&
+      personalWowListFacebookManifest.surfaces.personal.detailRecovery?.["recovered-detail"] === personalWowListFacebookEvents.expectedRecoveredDetails &&
+      personalWowListFacebookManifest.surfaces.personal.detailRecovery["no-detail-rendered"] === personalWowListFacebookEvents.expectedNoDetailRendered &&
+      personalWowListFacebookManifest.surfaces.personal.detailRecovery.unavailable === personalWowListFacebookEvents.expectedUnavailableDetails &&
+      personalWowListFacebookManifest.surfaces.personal.privacyDisplays?.public === personalWowListFacebookEvents.expectedPublicDisplays &&
+      personalWowListFacebookManifest.surfaces.personal.privacyDisplays.private === personalWowListFacebookEvents.expectedPrivateDisplays &&
+      personalWowListFacebookManifest.surfaces.personal.privacyDisplays["not-displayed"] === personalWowListFacebookEvents.expectedPrivacyNotDisplayed &&
+      personalWowListFacebookManifest.surfaces.personal.selectedPublicJamieAttributedEvents === personalWowListFacebookEvents.expectedSelectedJamieAttributedEvents &&
+      personalWowListFacebookManifest.surfaces.personal.nycacCensusOverlap === personalWowListFacebookEvents.expectedNycacOverlap &&
+      personalWowListFacebookManifest.surfaces.personal.externalUrlOccurrences === personalWowListFacebookEvents.expectedExternalUrlOccurrences &&
+      personalWowListFacebookManifest.surfaces.personal.uniqueExternalUrls === personalWowListFacebookEvents.expectedUniqueExternalUrls &&
+      /does not by itself establish organization, authorship, attendance, endorsement, contribution, or impact/i.test(
+        personalWowListFacebookManifest.surfaces.personal.relationshipBoundary
+      ) &&
+      personalWowListFacebookManifest.surfaces.wowlist?.currentOwnerVisibleEventCards === personalWowListFacebookEvents.expectedWowListCurrentEvents &&
+      /does not establish that WOW List never/i.test(personalWowListFacebookManifest.surfaces.wowlist.boundary) &&
+      personalFacebookLedgerRows.length === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalFacebookLedgerOrdinals.size === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalFacebookLedgerRows.every((row, index) =>
+        row.ordinal === index + 1 &&
+          /^20(?:0[6-9]|1\d|2[0-3])$/.test(row.year) &&
+          ["recovered-detail", "no-detail-rendered", "unavailable"].includes(row.detailAvailability) &&
+          ["public", "private", "not-displayed"].includes(row.privacyDisplay) &&
+          typeof row.recurringInstance === "boolean" &&
+          Object.keys(row).every((key) =>
+            ["ordinal", "year", "detailAvailability", "privacyDisplay", "recurringInstance", "disposition"].includes(key)
+          )
+      ) &&
+      personalFacebookRecurringInstances.length === personalWowListFacebookEvents.expectedRecurringInstances &&
+      personalFacebookDetailCounts["recovered-detail"] === personalWowListFacebookEvents.expectedRecoveredDetails &&
+      personalFacebookDetailCounts["no-detail-rendered"] === personalWowListFacebookEvents.expectedNoDetailRendered &&
+      personalFacebookDetailCounts.unavailable === personalWowListFacebookEvents.expectedUnavailableDetails &&
+      personalFacebookPrivacyCounts.public === personalWowListFacebookEvents.expectedPublicDisplays &&
+      personalFacebookPrivacyCounts.private === personalWowListFacebookEvents.expectedPrivateDisplays &&
+      personalFacebookPrivacyCounts["not-displayed"] === personalWowListFacebookEvents.expectedPrivacyNotDisplayed &&
+      Object.entries(personalWowListFacebookEventReviewSummary.recoveredYears).every(
+        ([year, count]) => personalFacebookYearCounts[year] === count
+      ) &&
+      Object.values(personalFacebookYearCounts).reduce((total, count) => total + count, 0) === personalWowListFacebookEvents.expectedPersonalInstances &&
+      expectedPersonalFacebookDispositionEntries.every(([disposition, count]) =>
+        personalWowListFacebookManifest.dispositionCounts?.[disposition] === count &&
+          personalFacebookDispositionCounts[disposition] === count
+      ) &&
+      Object.values(personalWowListFacebookManifest.dispositionCounts ?? {}).reduce(
+        (total, count) => total + count,
+        0
+      ) === personalWowListFacebookEvents.expectedPersonalInstances &&
+      personalFacebookSelectedEvents.length === personalWowListFacebookEvents.expectedSelectedJamieAttributedEvents &&
+      personalFacebookSelectedOrdinals.size === personalWowListFacebookEvents.expectedSelectedJamieAttributedEvents &&
+      personalFacebookSelectedEvents.every((event) =>
+        personalFacebookLedgerRows[event.ordinal - 1]?.disposition === "selected-public-organizer-record" &&
+          personalFacebookLedgerRows[event.ordinal - 1]?.privacyDisplay === "public" &&
+          /^\d{4}-\d{2}-\d{2}$/.test(event.date) &&
+          event.url === `https://www.facebook.com/events/${new URL(event.url).pathname.split("/").filter(Boolean).at(-1)}/` &&
+          /Jamie Burkart/.test(event.eventPageCredit) &&
+          ["event-page-organizer-display", "event-page-co-organizer-display"].includes(event.attributionRelationship) &&
+          event.topics?.length > 0 &&
+          event.publicSummary &&
+          event.responseInterpretation === "Historical Facebook interface label; not attendance, unique people, reach, endorsement, conversion, mandate, or impact."
+      ) &&
+      personalFacebookMissionRoutes.length === personalWowListFacebookEvents.expectedMissionRelevantSourceRoutes &&
+      personalFacebookMissionRoutes.every((route) =>
+        personalFacebookLedgerOrdinals.has(route.eventOrdinal) &&
+          /^https?:\/\//.test(route.url) &&
+          ["project-route-in-nycac-overlap", "selected-public-organizer-record", "profile-association-only-research-lead"].includes(route.relationship) &&
+          (route.relationship !== "profile-association-only-research-lead" || /not evidence of Jamie's role/i.test(route.interpretation))
+      ) &&
+      personalWowListFacebookEventKnowledge.intakeItems.length === personalWowListFacebookEvents.expectedIntakeCount &&
+      personalWowListFacebookEventKnowledge.observations.length === personalWowListFacebookEvents.expectedObservationCount &&
+      personalWowListFacebookEventKnowledge.sources.length === personalWowListFacebookEvents.expectedSourceCount &&
+      personalWowListFacebookEventKnowledge.claims.length === personalWowListFacebookEvents.expectedClaimCount &&
+      personalWowListFacebookEventKnowledge.researchInquiries.length === personalWowListFacebookEvents.expectedInquiryCount &&
+      personalFacebookIntakes.every((intake) =>
+        intake?.disposition === "integrated" && intake.visibility === "public-safe" && intake.boundaries.length >= 5
+      ) &&
+      personalFacebookObservations.every((observation) =>
+        observation?.locator && observation.publicSafe === true && observation.limitations.length >= 2 && observation.claimIds.length > 0
+      ) &&
+      personalFacebookSources.every((source) =>
+        source?.supportsGenerally.length > 0 && source.doesNotEstablish.length >= 3
+      ) &&
+      personalFacebookSources.filter((source) => source?.visibility !== "public").every((source) =>
+        source?.preservationStatus === "private" && source.protectedLocatorId && !source.canonicalUrl && !source.archiveUrl && !source.assetUrl
+      ) &&
+      personalFacebookEvidenceClosed &&
+      personalFacebookClaims.every((claim) =>
+        claim?.status === "confirmed-with-boundary" && claim.boundaries.length >= 4 && claim.antiClaims.length >= 4
+      ) &&
+      personalFacebookPopulationClaim?.antiClaims.some((claim) => /Jamie organized 511 events/i.test(claim)) &&
+      personalFacebookPopulationClaim.boundaries.some((boundary) => /Profile association does not establish/i.test(boundary)) &&
+      personalFacebookConveningClaim?.projections.every((projection) =>
+        projection.status === "active" && projection.surfaces.every((surface) => surface.startsWith("docs/"))
+      ) &&
+      personalFacebookConveningClaim.boundaries.some((boundary) => /sole authorship or sole production/i.test(boundary)) &&
+      personalFacebookSundayDinnerClaim?.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/196-sunday-dinner") && /not an independent audit/i.test(projection.text)
+      ) &&
+      personalFacebookSundayDinnerClaim.boundaries.some((boundary) => /Julia Fredenburg/i.test(boundary)) &&
+      personalFacebookWowListClaim?.projections.some((projection) =>
+        projection.status === "active" && projection.surfaces.includes("/work/wowlist") && /one concrete route/i.test(projection.text)
+      ) &&
+      personalFacebookEarlyPracticeClaim?.projections.every((projection) =>
+        projection.status === "active" && projection.surfaces.every((surface) => surface.startsWith("docs/"))
+      ) &&
+      personalFacebookPersonalExportInquiry?.resultStatus === "partially-recovered" &&
+      personalFacebookPersonalExportInquiry.limitations.length >= 4 &&
+      personalFacebookWowListExportInquiry?.resultStatus === "inconclusive" &&
+      personalFacebookWowListExportInquiry.limitations.some((limitation) => /cannot establish historical nonexistence/i.test(limitation)) &&
+      personalFacebookCorroborationInquiry?.resultStatus === "partially-recovered" &&
+      personalFacebookCorroborationInquiry.limitations.length >= 4 &&
+      personalFacebookSundayDinnerCoverage?.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner100) &&
+      personalFacebookSundayDinnerCoverage.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner200) &&
+      personalFacebookSundayDinnerCoverage.researchInquiryIds.includes(personalWowListFacebookEvents.corroborationInquiryId) &&
+      personalFacebookWowListCoverage?.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner200) &&
+      personalFacebookWowListCoverage.sourceIds.includes(personalWowListFacebookEvents.manifestSourceId) &&
+      personalFacebookWowListCoverage.researchInquiryIds.includes(personalWowListFacebookEvents.wowListExportInquiryId) &&
+      personalWowListFacebookSundayDinnerMdx.includes(personalWowListFacebookEvents.sundayDinnerClaimId) &&
+      personalWowListFacebookWowListMdx.includes(personalWowListFacebookEvents.wowListClaimId) &&
+      personalFacebookSundayDinnerPage?.occurrences.some((occurrence) =>
+        occurrence.claimId === personalWowListFacebookEvents.sundayDinnerClaimId &&
+          occurrence.sourceIds?.includes(personalWowListFacebookEventSourceIds.sundayDinner100) &&
+          occurrence.sourceIds.includes(personalWowListFacebookEventSourceIds.sundayDinner200)
+      ) &&
+      personalFacebookWowListPage?.occurrences.some((occurrence) =>
+        occurrence.claimId === personalWowListFacebookEvents.wowListClaimId &&
+          occurrence.sourceIds?.includes(personalWowListFacebookEventSourceIds.sundayDinner200) &&
+          occurrence.sourceIds.includes(personalWowListFacebookEvents.manifestSourceId)
+      ) &&
+      /One hundred percent means[\s\S]{0,240}does \*\*not\*\* mean[\s\S]{0,120}native Meta export/i.test(personalWowListFacebookReport) &&
+      /Facebook response count is \*\*not verified\s+attendance\*\*/i.test(personalWowListFacebookReport) &&
+      /zero current owner-visible\s+event\s+cards/i.test(personalWowListFacebookReport) &&
+      /not evidence that WOW List never/i.test(personalWowListFacebookReport) &&
+      /not an\s+independent audit of every Sunday Dinner/i.test(personalWowListFacebookReport) &&
+      personalWowListFacebookManifest.publicSafety?.newspaperSafeReview === true &&
+      personalWowListFacebookManifest.publicSafety.rawDescriptionsPublished === false &&
+      personalWowListFacebookManifest.publicSafety.exactResidentialAddressesPublished === false &&
+      personalWowListFacebookManifest.publicSafety.contactDetailsPublished === false &&
+      personalWowListFacebookManifest.publicSafety.attendeeOrGuestIdentitiesPublished === false &&
+      personalWowListFacebookManifest.publicSafety.privateEventTitlesPublished === false &&
+      personalWowListFacebookManifest.publicSafety.authenticatedSessionDataPublished === false &&
+      publicRegistryText.includes(personalWowListFacebookEvents.manifestSourceId) &&
+      !publicRegistryText.includes("SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-PROTECTED-RUN-2026") &&
+      !publicRegistryText.includes("LOC-FACEBOOK-PERSONAL-WOWLIST-EVENT-RESEARCH-2026") &&
+      personalFacebookAffirmativeSafe &&
+      personalFacebookPrivateDataFree &&
+      personalFacebookReviewLocksMatch
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...nycacFullObservations, ...kcTownHallSocialCorpus.observations, ...fieldPracticeObservations, ...nycacFacebookObservations, ...personalFacebookObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...nycacFullClaims, ...kcthFullClaims, ...fieldPracticeClaims, ...nycacFacebookClaims, ...personalFacebookClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...nycacFullInquiries, ...kcthFullInquiries, ...fieldPracticeInquiries, ...nycacFacebookInquiries, ...personalFacebookInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -3229,6 +3682,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [nycacFacebookEventsComplete
         ? `All ${nycacFacebookEvents.expectedDisplayedControlSlots} displayed Facebook event slots have a disposition: ${nycacFacebookEventsRows.length} recovered event records and one unresolved slot; the census preserves ${nycacFacebookManifest.postedSourceArticles.length} posted source articles, ${nycacFacebookResponseEvents.length} bounded response displays, ${nycacFacebookWithheldLinkCount} protected-link exclusions, rotating cultural-space and government interfaces, Jamie's attributed role, collective credit, and the later ${nycacFacebookRecheck.recoveredDetailCount}/${nycacFacebookRecheck.temporarilyUnavailableDetailCount} detail-availability split`
         : "NYC Artist Coalition Facebook event production is missing a control-slot disposition, event record, source route, response-label boundary, stakeholder or venue interface, transient-availability record, collective-credit limit, protected-data exclusion, governed projection, proof-coverage link, or review lock"]
+    },
+    {
+      criterionId: "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      score: score(personalFacebookEventsComplete),
+      evidence: [personalFacebookEventsComplete
+        ? `All ${personalFacebookLedgerRows.length} personal-profile Facebook event-card instances have anonymous public-safe dispositions across ${personalWowListFacebookManifest.surfaces.personal.uniqueParentEvents} unique parent events; ${personalFacebookSelectedEvents.length} public organizer-attributed records and ${personalFacebookMissionRoutes.length} mission-relevant routes preserve a bounded 2006-2019 chronology, while the zero-card current WOW List owner surface, response semantics, NYCAC overlap, private-data exclusions, collective credit, and Sunday Dinner milestone limits remain explicit`
+        : "Personal and WOW List Facebook event production is missing a capture-date row disposition, count reconciliation, anonymous-ledger privacy boundary, selected public organizer attribution, source-route relationship, response-label limit, NYCAC overlap reference, WOW List historical-zero boundary, collective-credit rule, milestone limit, governed projection, proof-coverage link, or review lock"]
     }
   ];
 
@@ -3256,6 +3716,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         : []
     },
     contentApprovals: {
+      pipelineComponents: {
+        institutionalCapacityComplete,
+        kcTownHallComplete,
+        archiveProductionComplete,
+        googleDriveComplete,
+        socialMediaComplete,
+        nycacRetrievablePopulationComplete,
+        urbanhermitFullPopulationComplete,
+        fieldPracticeComplete,
+        nycacFacebookEventsComplete,
+        personalFacebookEventsComplete
+      },
       kcTownHall: {
         actualSha256: kcTownHallContentSha256,
         approvedSha256: kcTownHall.approvedContentSha256,
@@ -3309,6 +3781,23 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         proofSnippetSha256: createHash("sha256").update(nycacFacebookProofSnippet).digest("hex"),
         proofContentSha256: nycacFacebookProofContentSha256,
         reviewLocksMatch: nycacFacebookReviewLocksMatch
+      },
+      personalWowListFacebookEvents: {
+        manifestSha256: createHash("sha256").update(personalWowListFacebookManifestText).digest("hex"),
+        manifestContentSha256: personalFacebookManifestContentSha256,
+        governedModuleSha256: createHash("sha256").update(readFileSync(
+          path.join(repoRoot, "apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events-2026-07.ts"),
+          "utf8"
+        )).digest("hex"),
+        canonicalKnowledgeSha256: personalFacebookCanonicalKnowledgeSha256,
+        reviewConfigurationSha256: personalFacebookReviewConfigurationSha256,
+        governanceBindingsSha256: personalFacebookGovernanceBindingsSha256,
+        publicReportSha256: createHash("sha256").update(personalWowListFacebookReport).digest("hex"),
+        wowListMdxSha256: createHash("sha256").update(personalWowListFacebookWowListMdx).digest("hex"),
+        sundayDinnerMdxSha256: createHash("sha256").update(personalWowListFacebookSundayDinnerMdx).digest("hex"),
+        proofContentSha256: personalFacebookProofContentSha256,
+        reviewLocksMatch: personalFacebookReviewLocksMatch,
+        checks: personalFacebookDiagnosticChecks
       }
     },
     accepted: errors.length === 0 &&

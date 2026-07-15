@@ -384,6 +384,17 @@
       "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
       "accepted": true,
       "blockers": []
+    },
+    {
+      "judgeId": "material-change-reset-personal-wowlist-facebook-events-2026-07-15",
+      "completedAt": "2026-07-15T14:08:37Z",
+      "lens": "Protocol reset because the prior holdout state predates the 511-instance personal Facebook event census, zero-card current WOW List owner surface, anonymous public-safe ledger, selected public organizer records, source routes, milestone projections, and nineteenth adversarial criterion",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect population reconciliation, anonymous-ledger privacy, profile-association and organizer-attribution boundaries, source-route roles, response semantics, WOW List historical-zero framing, Sunday Dinner milestone limits, collective credit, selective projection, governance bindings, and count-preserving mutation resistance on a frozen revision."
+      ]
     }
   ]
 }
