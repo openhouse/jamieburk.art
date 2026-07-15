@@ -96,6 +96,15 @@ The personal-account population accounting, inbound-search floor, and thematic
 retrieval aids remain Knowledge Bank method records rather than website copy.
 The current portfolio argument does not need a public personal timeline.
 
+The personal and WOW List Facebook event pass also remains reserve depth. It
+strengthens the Sunday Dinner proof basis with public pages documenting the
+hundredth dinner, a rotating eight-week New York City format, and a civic
+sign-making potluck. It does not add visible site copy: the 505-record union of
+current personal event controls is provenance rather than a portfolio, the 20
+Past events cards displaying Jamie as host are available for audience-specific
+future composition, and the WOW List zero display is a negative archival
+control rather than an accomplishment.
+
 The Office of Nightlife claim now has a bounded active projection in the Fair
 Rent NYC case study: Jamie's documented public invitation and speaking role are
 stated directly, while creation of the office and the campaign's outcomes remain

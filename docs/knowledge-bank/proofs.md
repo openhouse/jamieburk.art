@@ -52,3 +52,13 @@ Public pages may simplify this language, but they must not strengthen ownership,
   authored-status floor spans `#FairRentNYC`, `#SaveNYCSpaces`, `#LetNYCDance`,
   and `#TalksNotRaids`; all counts describe the shared account, not Jamie's
   individual authorship.
+- Jamie's current personal Facebook event controls contain 502 Past events IDs
+  and 21 hosted-tab IDs, with 18 overlaps and 505 distinct current records.
+  Twenty Past events cards display Jamie as host and preserve a 2006-2017
+  event-making throughline across cultural production, hospitality, place and
+  water work, civic learning, and networked public culture. The larger union is
+  provenance, not a claim of attendance, authorship, production, or impact.
+- The current WOW List Facebook event surface displayed zero records and a
+  separate bounded historical search recovered none. The first is a current
+  control and the second is explicitly `not-recovered`; neither establishes
+  that no historical event existed or that WOW List lacked event use.

@@ -82,6 +82,19 @@ const nycartcFacebookEventCensusPath = path.join(
   docsRoot,
   "nycartc-facebook-event-census-2026-07-13.csv"
 );
+const personalWowlistFacebookEventReportPath = path.join(
+  docsRoot,
+  "personal-wowlist-facebook-events-2026-07-14.md"
+);
+const personalWowlistFacebookEventControlsPath = path.join(
+  docsRoot,
+  "data/personal-wowlist-facebook-event-controls.json"
+);
+const personalFacebookDisplayedHostCensusPath = path.join(
+  docsRoot,
+  "jamie-facebook-displayed-host-event-census-2026-07-14.csv"
+);
+let personalWowlistControls;
 const structuredClaimsById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
 const sourcesById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
 
@@ -111,6 +124,20 @@ function walk(dir) {
 
 function relative(file) {
   return path.relative(repoRoot, file);
+}
+
+function collectObjectKeys(value, keys = []) {
+  if (Array.isArray(value)) {
+    for (const item of value) collectObjectKeys(item, keys);
+    return keys;
+  }
+  if (!value || typeof value !== "object") return keys;
+
+  for (const [key, item] of Object.entries(value)) {
+    keys.push(key);
+    collectObjectKeys(item, keys);
+  }
+  return keys;
 }
 
 function extractStrings(block, field) {
@@ -362,6 +389,223 @@ if (!existsSync(nycartcFacebookEventReportPath)) {
   ]) {
     assertIncludes(report, phrase, "NYC Artist Coalition Facebook event report");
   }
+}
+
+if (!existsSync(personalWowlistFacebookEventControlsPath)) {
+  fail("Personal and WOW List Facebook event controls are missing");
+} else {
+  const controls = readJson(
+    personalWowlistFacebookEventControlsPath,
+    "Personal and WOW List Facebook event controls"
+  );
+  if (controls) {
+    personalWowlistControls = controls;
+    const association = controls.personalAssociationSurface ?? {};
+    const hostedTab = controls.personalHostedEventsTab ?? {};
+    const displayedJamie = controls.displayedJamieHostSubset ?? {};
+    const wowlist = controls.wowlist ?? {};
+
+    assertEqual(association.currentRecords, 502, "Personal Past events count");
+    assertEqual(association.secondPassExactIdMatch, true, "Personal second-pass exact match");
+    assertEqual(association.displayedHostAccounting?.jamie, 20, "Past events Jamie-host display count");
+    assertEqual(association.displayedHostAccounting?.anotherHost, 482, "Past events other-host display count");
+    assertEqual(
+      association.displayedHostAccounting?.distinctHostLabelsIncludingUnresolved,
+      295,
+      "Past events distinct displayed-host label count"
+    );
+    assertEqual(
+      Object.values(association.yearCounts ?? {}).reduce((sum, value) => sum + value, 0),
+      502,
+      "Personal Past events derived year total"
+    );
+
+    assertEqual(hostedTab.currentRecords, 21, "Personal hosted-tab record count");
+    assertEqual(hostedTab.recoveredRecords, 21, "Personal hosted-tab recovered count");
+    assertEqual(hostedTab.unresolvedRecords, 0, "Personal hosted-tab unresolved count");
+    assertEqual(hostedTab.overlapWithAssociationSurface, 18, "Personal event-control overlap count");
+    assertEqual(hostedTab.hostedTabOnlyRecords, 3, "Personal hosted-tab-only count");
+    assertEqual(hostedTab.distinctRecordsAcrossBothTabs, 505, "Personal event-control union count");
+    assertEqual(hostedTab.displayedHostAccounting?.jamie, 16, "Hosted-tab Jamie-host display count");
+    assertEqual(hostedTab.displayedHostAccounting?.anotherHost, 5, "Hosted-tab other-host display count");
+    assertEqual(
+      Object.values(hostedTab.yearCounts ?? {}).reduce((sum, value) => sum + value, 0),
+      21,
+      "Personal hosted-tab derived year total"
+    );
+
+    assertEqual(displayedJamie.pastEventsCards, 20, "Displayed Jamie-host subset count");
+    assertEqual(
+      Object.values(displayedJamie.primaryFormCounts ?? {}).reduce((sum, value) => sum + value, 0),
+      20,
+      "Displayed Jamie-host primary-form total"
+    );
+    assertEqual(
+      Object.values(displayedJamie.yearCounts ?? {}).reduce((sum, value) => sum + value, 0),
+      20,
+      "Displayed Jamie-host year total"
+    );
+    assertEqual(
+      displayedJamie.unlabeledNumericDisplayQuality?.pagesWithAValueAcrossEitherAuthenticatedRun,
+      8,
+      "Displayed-host mutable-response page count"
+    );
+    assertEqual(displayedJamie.unlabeledNumericDisplayQuality?.minimumObserved, 5, "Displayed-host numeric-display minimum");
+    assertEqual(displayedJamie.unlabeledNumericDisplayQuality?.maximumObserved, 128, "Displayed-host numeric-display maximum");
+
+    assertEqual(wowlist.currentDisplayedRecords, 0, "WOW List current Facebook event count");
+    assertEqual(wowlist.facebookSearchNumericRecords, 0, "WOW List Facebook search event count");
+    assertEqual(wowlist.pastEventsControlMatches, 0, "WOW List 502-record Past events match count");
+    assertEqual(wowlist.historicalDisposition, "not-recovered", "WOW List historical event disposition");
+
+    const rawControls = read(personalWowlistFacebookEventControlsPath);
+    if (/facebook\.com\/events\/\d+|\b\d{12,}\b/.test(rawControls)) {
+      fail("Personal event controls expose record-level event identifiers");
+    }
+    const prohibitedRecordKeys = collectObjectKeys(controls).filter((key) =>
+      /^(eventId|eventUrl|guests?|invitees?|comments?|addresses?|exactLocation|rawDescription)$/i.test(key)
+    );
+    if (prohibitedRecordKeys.length) {
+      fail(`Personal event controls expose prohibited record-level fields: ${prohibitedRecordKeys.join(", ")}`);
+    }
+  }
+}
+
+if (!existsSync(personalFacebookDisplayedHostCensusPath)) {
+  fail("Displayed Jamie-host Facebook event census is missing");
+} else {
+  const censusLines = read(personalFacebookDisplayedHostCensusPath).trimEnd().split("\n");
+  const censusRows = censusLines.slice(1).map((line) => line.split(","));
+  assertEqual(censusLines.length, 21, "Displayed Jamie-host census line count");
+  assertEqual(
+    censusLines[0],
+    "subset_slot,source_surface,displayed_host,recovery_status,year,primary_form",
+    "Displayed Jamie-host census header"
+  );
+  for (const [index, line] of censusLines.slice(1).entries()) {
+    const columns = line.split(",");
+    assertEqual(columns.length, 6, `Displayed Jamie-host census row ${index + 1} column count`);
+    assertEqual(columns[1], "past-events", `Displayed Jamie-host census row ${index + 1} surface`);
+    assertEqual(columns[2], "Jamie Burkart", `Displayed Jamie-host census row ${index + 1} host`);
+    assertEqual(columns[3], "recovered", `Displayed Jamie-host census row ${index + 1} recovery state`);
+    if (/https?:|facebook\.com|\b\d{12,}\b/.test(line)) {
+      fail(`Displayed Jamie-host census row ${index + 1} exposes a record-level locator`);
+    }
+  }
+  assertEqual(
+    new Set(censusRows.map((columns) => columns[0])).size,
+    censusRows.length,
+    "Displayed Jamie-host census unique slot count"
+  );
+  if (personalWowlistControls) {
+    const yearCounts = Object.fromEntries(
+      Object.keys(personalWowlistControls.displayedJamieHostSubset.yearCounts).map((year) => [
+        year,
+        censusRows.filter((columns) => columns[4] === year).length
+      ])
+    );
+    const primaryFormCounts = Object.fromEntries(
+      Object.keys(personalWowlistControls.displayedJamieHostSubset.primaryFormCounts).map((form) => [
+        form,
+        censusRows.filter((columns) => columns[5] === form).length
+      ])
+    );
+    assertEqual(
+      JSON.stringify(yearCounts),
+      JSON.stringify(personalWowlistControls.displayedJamieHostSubset.yearCounts),
+      "Displayed Jamie-host CSV-derived year counts"
+    );
+    assertEqual(
+      JSON.stringify(primaryFormCounts),
+      JSON.stringify(personalWowlistControls.displayedJamieHostSubset.primaryFormCounts),
+      "Displayed Jamie-host CSV-derived primary-form counts"
+    );
+  }
+}
+
+if (!existsSync(personalWowlistFacebookEventReportPath)) {
+  fail("Personal and WOW List Facebook event archival-production report is missing");
+} else {
+  const report = read(personalWowlistFacebookEventReportPath);
+  for (const phrase of [
+    "505 distinct current event IDs",
+    "Association does not establish attendance",
+    "platform classification, not a reliable",
+    "source route, not automatic corroboration",
+    "not recovered",
+    "Do not add a new visible portfolio claim"
+  ]) {
+    assertIncludes(report, phrase, "Personal and WOW List Facebook event report");
+  }
+}
+
+const selectedPersonalEventSourceIds = [
+  "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006",
+  "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+  "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007",
+  "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+  "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010",
+  "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+  "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014",
+  "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017",
+  "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017"
+];
+for (const sourceId of selectedPersonalEventSourceIds) {
+  const source = sourcesById.get(sourceId);
+  if (!source) {
+    fail(`Selected personal Facebook event source is missing: ${sourceId}`);
+    continue;
+  }
+  if (source.author) fail(`${sourceId} converts a displayed Facebook host label into author metadata`);
+  if (!source.publicCitation.includes("displaying 'Event by Jamie Burkart'")) {
+    fail(`${sourceId} must preserve the literal displayed-host label in its citation`);
+  }
+}
+
+const micropopRouteSourceIds = [
+  "SRC-MICROPOP-POSTED-IMAGINED-COMMUNITIES",
+  "SRC-MICROPOP-POSTED-LASTFM-FAN-GRAPH",
+  "SRC-MICROPOP-POSTED-KCDIY"
+];
+const micropopIntake = knowledgeBank.intakeRecords.find(
+  (record) => record.id === "INTAKE-2026-07-14-MICROPOP-POSTED-DESTINATIONS"
+);
+for (const sourceId of micropopRouteSourceIds) {
+  if (!sourcesById.has(sourceId)) fail(`Micropop posted destination is missing: ${sourceId}`);
+  if (!micropopIntake?.sourceIds.includes(sourceId)) {
+    fail(`Micropop posted destination lacks governed intake routing: ${sourceId}`);
+  }
+}
+
+const wowlistLiveClaim = structuredClaimsById.get("CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026");
+const wowlistHistoryClaim = structuredClaimsById.get(
+  "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026"
+);
+assertEqual(wowlistLiveClaim?.status, "confirmed-with-boundary", "WOW List live-control claim status");
+assertEqual(wowlistHistoryClaim?.status, "not-recovered", "WOW List historical-recovery claim status");
+
+const personalAssociationClaim = structuredClaimsById.get(
+  "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026"
+);
+if (
+  !personalAssociationClaim?.evidence.some(
+    (item) => item.sourceId === "SRC-JAMIE-FACEBOOK-HOSTED-EVENT-RUN-2026"
+  )
+) {
+  fail("Personal event-control union claim lacks its hosted-tab evidence edge");
+}
+
+const personalPracticeClaim = structuredClaimsById.get(
+  "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+);
+if (
+  !personalPracticeClaim?.evidence.some(
+    (item) =>
+      item.sourceId === "SRC-JAMIE-FACEBOOK-DISPLAYED-HOST-PRACTICE-RUN-2026" &&
+      item.supports.some((support) => /displayed-host population and five-form classification/i.test(support))
+  )
+) {
+  fail("Displayed-host practice claim lacks its population-and-classification evidence edge");
 }
 
 if (campaignPressDistinctSourceCount !== 45) {

@@ -11,6 +11,7 @@ import {
   urbanHermitSocialCorpusSources
 } from "./urbanhermitSocial.ts";
 import { nycartcFacebookEventsBatchRecords } from "./nycartc-facebook-events-batch-2026-07-13.ts";
+import { personalWowlistFacebookEventsBatch } from "./personal-wowlist-facebook-events-batch-2026-07-14.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -585,7 +586,8 @@ const knowledgeBankInput = {
     },
     ...campaignPressIntakeRecords,
     ...urbanHermitSocialCorpusIntake,
-    ...nycartcFacebookEventsBatchRecords.intakeRecords
+    ...nycartcFacebookEventsBatchRecords.intakeRecords,
+    ...personalWowlistFacebookEventsBatch.intakeRecords
   ],
   sources: [
     {
@@ -1660,7 +1662,8 @@ const knowledgeBankInput = {
     },
     ...campaignPressSources,
     ...urbanHermitSocialCorpusSources,
-    ...nycartcFacebookEventsBatchRecords.sources
+    ...nycartcFacebookEventsBatchRecords.sources,
+    ...personalWowlistFacebookEventsBatch.sources
   ],
   claims: [
     {
@@ -2146,14 +2149,17 @@ const knowledgeBankInput = {
         { key: "case-study", text: "A 2017 Greene Hill Food Co-op profile documented Jamie and Julia hosting weekly Sunday dinners open to the community and sharing community events through WOW List.", status: "active", citationRequired: false, surfaces: ["/work/196-sunday-dinner"] }
       ],
       evidence: [
-        { sourceId: "SRC-GREENE-HILL-QA-2017-12-19", relationship: "direct-support", supports: ["weekly Sunday dinners open to the community", "community-event publishing through WOW List"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-GREENE-HILL-QA-2017-12-19", relationship: "direct-support", supports: ["weekly Sunday dinners open to the community", "community-event publishing through WOW List"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014", relationship: "direct-support", supports: ["a public event page identifying the hundredth Sunday Dinner in March 2014"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014", relationship: "direct-support", supports: ["an eight-week New York City rotation and changing host place"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017", relationship: "direct-support", supports: ["a civic variation joining Sunday Dinner hospitality, discussion, costume work, and sign making"], confidence: "high", renderCitation: false }
       ],
-      boundaries: ["Credit Julia Fredenberg as co-host.", "Use the source for recurring format and public existence, not the 300-plus gathering count.", "Do not publish the apartment address, guest records, or unapproved photographs."],
+      boundaries: ["Credit Julia Fredenburg as co-host.", "Use these sources for recurring format, longevity, and program variation, not the 300-plus gathering count or physical attendance.", "Displayed Facebook host attribution does not establish sole production.", "Do not publish the apartment address, guest records, or unapproved photographs."],
       antiClaims: ["Jamie hosted every dinner alone", "The source proves 300-plus gatherings", "The source proves WOW List's user or city counts"],
       proofClaimIds: ["sunday-dinner-196-participation-infrastructure"],
       researchInquiryIds: [],
-      reviewedAt: "2026-07-13",
-      reviewedBy: ["Jamie Burkart", "Codex source review"]
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated-browser archival review"]
     },
     {
       id: "CLM-NYCA-COMMERCIAL-RENT-TESTIMONY-2018",
@@ -2255,11 +2261,13 @@ const knowledgeBankInput = {
     },
     ...campaignPressClaims,
     ...urbanHermitSocialCorpusClaims,
-    ...nycartcFacebookEventsBatchRecords.claims
+    ...nycartcFacebookEventsBatchRecords.claims,
+    ...personalWowlistFacebookEventsBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
     ...nycartcFacebookEventsBatchRecords.researchInquiries,
+    ...personalWowlistFacebookEventsBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",

@@ -85,6 +85,19 @@ event-level platform signals rather than attendance, unique-person, reach, or
 impact measures. Event pages establish collective public surfaces; they do not
 assign individual authorship or policy causality.
 
+The personal and WOW List Facebook event pass is documented in
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md).
+Two terminal traversals returned the same 502 IDs on Jamie's Past events
+surface. The separate hosted-events tab exposed 21 records, 18 of which
+overlapped, yielding 505 distinct current IDs across the two personal tabs.
+`data/personal-wowlist-facebook-event-controls.json` preserves aggregate
+reconciliation, and
+`jamie-facebook-displayed-host-event-census-2026-07-14.csv` classifies the 20
+Past events cards that display Jamie as host. The record-level association
+graph remains protected. The current WOW List Page event surface displayed
+zero records. A separate bounded historical search recovered none; that
+non-recovery is not proof of historical absence.
+
 The recovered KC Town Hall public-funding sequence is documented in
 [projects/kc-town-hall-council-allocation-2019.md](projects/kc-town-hall-council-allocation-2019.md).
 It keeps the Board recommendation, Council acceptance, appropriation, later

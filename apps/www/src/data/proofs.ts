@@ -587,7 +587,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate project history, and the 2017 Greene Hill profile. The aggregate counts rely on their separate support, not on a single participant workflow.",
+      "Approved resume language and public-safe aggregate project history support the scale claim; the 2017 Greene Hill profile documents weekly community dinners; and public Facebook event pages document the hundredth dinner, a rotating eight-week New York City format, and a civic sign-making potluck. The aggregate counts rely on their separate support, not on a single event page or participant workflow.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [

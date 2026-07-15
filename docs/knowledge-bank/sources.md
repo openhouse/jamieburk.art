@@ -80,6 +80,11 @@ Approved public artifact examples for this launch pass include:
 - Michael Rees's Claudette's Theatre on Wheels project page.
 - The complete 45-article NYC Artist Coalition campaign press corpus, preserving 46 placements across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.
 - NYC Artist Coalition's authenticated Facebook past-events surface, a public-safe 34-slot event disposition ledger, and a routed outbound-link ledger.
+- Jamie's authenticated personal Past events and hosted-events surfaces,
+  public-safe aggregate reconciliation, and selected displayed-host event
+  pages from 2006 through 2017.
+- WOW List's authenticated Page event surface and bounded historical recovery
+  run.
 - Melkorka Licea's April 2017 New York Post reporting on Cabaret Law repeal advocacy by Dance Liberation Network and NYC Artist Coalition.
 - Elizabeth Kim's November 2019 Gothamist reporting on the proposed Commercial Rent Stabilization bill and United for Small Business NYC input.
 
@@ -112,6 +117,24 @@ Complete current-profile disposition does not mean every post Jamie ever made
 was recovered. Reposts retain source-account authorship, current reactions are
 mutable floors rather than impact measures, and unresolved short URLs remain
 research debt rather than inferred nonexistence.
+
+The personal and WOW List Facebook event review is documented in
+`docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md`. Two
+terminal traversals returned the same 502 IDs on Jamie's Past events surface;
+the separate hosted-events tab exposed 21 records, 18 of which overlapped,
+producing 505 distinct current IDs across both tabs. Nine selected event pages
+preserve structures connecting networked music culture, public history, river
+travel, walking, Sunday Dinner, civic sign making, and public documentary
+discussion. The `Micropop: Nation-Scenes` page routes toward *Imagined
+Communities*, a Last.fm fan graph, and KCDIY.org; those destinations are source
+leads with separate governed source records, access states, and next actions,
+not automatic corroboration. Wikipedia remained live, the Last.fm route
+returned a current 404, and KCDIY.org did not resolve during the July 2026
+check. The wider personal association ledger,
+guest and relationship context, exact private locations, raw descriptions,
+mutable unlabeled numeric displays, and browser state remain protected. WOW
+List's current event surface displayed zero records; a separate bounded
+historical non-recovery is not proof of nonexistence.
 
 The KC Town Hall funding sequence is documented in
 `docs/knowledge-bank/projects/kc-town-hall-council-allocation-2019.md`. The

@@ -233,6 +233,66 @@ claim beyond the wording and guardrails here.
 
 **Last reviewed:** 2026-07-14
 
+## jamie-facebook-event-association-population - Personal event controls
+
+**Status:** Reserve
+**Support level:** Strong with semantic boundaries
+**Evidence class:** Authenticated public-interface census / protected research run
+**Public wording:** Two authenticated terminal traversals returned the same 502 current Past events IDs. The separate hosted-events tab exposed 21 records, 18 of which overlapped, producing 505 distinct current IDs across the two tabs.
+**Detailed public-safe wording:** Twenty Past events cards displayed Jamie as host and 482 displayed another host. The hosted-events tab contained 16 cards displaying Jamie as host and five displaying another host.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Gives the archival pass testable denominators while preventing Jamie's personal association graph from becoming a false portfolio or public dossier.
+**Guardrail:** These are current-interface controls, not an official Meta export or every event ever associated with Jamie. The hosted-events tab is a platform classification, not an authorship roster.
+**Do not say:** Jamie attended or produced 505 events; displayed host clusters measure stakeholder engagement with Jamie; every hosted-tab record was produced by Jamie.
+**Protected boundaries:** Record-level associations, other host names as a personal graph, guest identities, relationship context, exact private locations, comments, and browser state remain protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## jamie-facebook-hosted-event-practice - Displayed-host event-making throughline
+
+**Status:** Reserve
+**Support level:** Strong with collective-credit boundaries
+**Evidence class:** Twenty public event cards / selected close-read pages / protected population run / selected independent reporting
+**Public wording:** Twenty current Past events cards from 2006 through 2017 display `Event by Jamie Burkart`; their titles, descriptions, selected pages, and independent context sources document recurring structures for cultural production, hospitality and care, participatory place and water work, civic learning and making, and networked public culture.
+**Detailed public-safe wording:** The aggregate classification contains seven cultural performance and production events, four recurring hospitality and care events, four participatory place, travel, and water events, three networked culture and public history events, and two civic learning and making events.
+**Where to project:** Reserve depth for facilitation, cultural-program, participatory-design, public-history, hospitality-system, and photo-editor contexts.
+**Why it matters:** Makes a long event-making and participation practice legible without treating Jamie's wider personal event graph as professional proof.
+**Guardrail:** The Facebook label is a bounded platform attribution, not author metadata or sole-production credit. The primary forms are interpretive; preserve collaborators, performers, venues, and participants; do not convert page or mutable numeric-display counts into impact.
+**Do not say:** Jamie alone produced every event; all 502 associated events were Jamie's projects; Facebook event-card numeric displays measure attendance or impact.
+**Protected boundaries:** Personal associations, guest identities, private locations, raw descriptions, comments, and mutable numeric-display data remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-event-live-control - Current zero control
+
+**Status:** Reserve
+**Support level:** Strong current control
+**Evidence class:** Authenticated Page-management surface
+**Public wording:** The current WOW List Facebook event surface displayed zero event records in July 2026.
+**Detailed public-safe wording:** While acting as the WOW List Page, the authenticated event surface displayed `No events to show` and exposed no numeric event records.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Records the current platform state without treating it as a historical conclusion.
+**Guardrail:** A current zero display does not prove historical absence.
+**Do not say:** WOW List never used Facebook events; WOW List had no event community; this control characterizes WOW List's own platform.
+**Protected boundaries:** Raw authenticated state and internal Page-administration context remain protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## wowlist-facebook-event-history-not-recovered - Historical recovery control
+
+**Status:** Not recovered
+**Support level:** Strong bounded search
+**Evidence class:** Protected Facebook / personal-control / Wayback recovery run
+**Public wording:** No historical WOW List Facebook event record was recovered in the bounded July 2026 search.
+**Detailed public-safe wording:** Exact Facebook event search and Jamie's current 502-record Past events control produced zero WOW List event records; three bounded Wayback patterns returned no captures and one timed out.
+**Where to project:** Knowledge-bank archive note only.
+**Why it matters:** Prevents future agents from inventing a recovered corpus while preserving honest research debt.
+**Guardrail:** Not recovered does not mean did not exist.
+**Do not say:** WOW List never used Facebook events; WOW List had no event community; no historical record exists.
+**Protected boundaries:** Raw authenticated state and internal Page-administration context remain protected.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful

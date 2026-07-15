@@ -139,3 +139,25 @@ analytics or unique people.
 Do not say an unresolved short URL never existed. Do not erase M.C. Schmidt
 from the Horse Lords video credit or describe Jamie as WOW List's sole builder
 because Music Hackathon used singular wording in one post.
+
+## Personal And WOW List Facebook Events
+
+Do not describe the 505 distinct current IDs across Jamie's two personal event
+tabs as every event he attended, hosted, produced, endorsed, authored, or cared
+about. The Past events surface is an association graph. Facebook's hosted-events
+tab is a platform classification, not a reliable authorship or sole-host roster.
+
+Do not say WOW List never created or used a Facebook event. Its current Page
+surface displayed zero records and bounded historical recovery found none;
+not recovered does not mean did not exist. This negative control does not
+characterize WOW List's own platform, organizer use, event sharing, public
+posts, or community activity.
+
+Do not sum unstable, unlabeled event-card numeric displays or treat them as
+unique people, attendance, reach, endorsement, causality, or impact. A URL posted in an event
+description is a source route, not automatic corroboration, authorship,
+endorsement, readership, conversion, or impact.
+
+Do not publish the record-level personal association graph, guest identities,
+friend or invite context, exact private locations, raw descriptions, comments,
+account administration, or authentication material.

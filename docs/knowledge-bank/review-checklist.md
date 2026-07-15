@@ -22,8 +22,18 @@ changes public claims.
 - [ ] Existing consequential site claims have source-discovery inquiries when citation support is incomplete.
 - [ ] Photo discoveries return as leads and do not inherit identity, role, rights, consent, or publication approval.
 - [ ] Metrics are approved, softened, or explicitly bounded.
-- [ ] Facebook event responses remain event-level platform signals and are not summed or described as attendance, unique people, reach, endorsement, or impact.
+- [ ] Mutable Facebook event-card numeric displays retain their observed labels or are explicitly treated as unlabeled; they are not summed or described as attendance, unique people, reach, endorsement, or impact.
 - [ ] Complete event-control accounting is not described as complete content recovery, a native platform export, or a complete lifetime history.
+- [ ] Personal Facebook event counts keep the 502-record Past events surface,
+  21-record hosted-events tab, 18-record overlap, and 505-record union distinct.
+- [ ] Facebook hosted-events-tab membership and displayed host labels are not
+  treated as sole authorship, production responsibility, attendance, or impact.
+- [ ] WOW List's current zero-event display and bounded historical non-recovery
+  are not rewritten as proof that no event ever existed.
+- [ ] Personal association rows, host networks, guest context, exact private
+  locations, raw descriptions, comments, and account state remain outside the repo.
+- [ ] URLs found in event descriptions remain research routes until close reading
+  establishes what each destination supports and does not support.
 - [ ] Event pages are not used to assign individual authorship, sole organization, or policy causality without separate evidence.
 - [ ] Public event ledgers exclude guest and attendee identities, invite context, comments, working-document locators, meeting access, credentials, and private analytics.
 - [ ] Collaborator-sensitive claims are approved or omitted.
