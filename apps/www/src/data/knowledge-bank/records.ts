@@ -934,7 +934,7 @@ const knowledgeBankInput = {
         { sourceId: "SRC-KCMO-CCED-ORDINANCE-190642-2019-09-26", relationship: "direct-support", supports: ["Council appropriation", "$490,539 project-account amount"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-KCMO-CCED-ORDINANCE-240317-2024-03-28", relationship: "supports-boundary", supports: ["later project withdrawal", "unused allocation", "2024 reappropriation"], confidence: "high", renderCitation: true }
       ],
-      boundaries: ["Appropriation is not evidence of an executed funding agreement, receipt, disbursement, expenditure, construction, or completion.", "The official records do not establish Jamie's individual causality for the recommendation or Council action.", "The 2024 record does not explain why KC Town Hall withdrew and must not be connected to Jamie's family crisis or stewardship-transition account."],
+      boundaries: ["Appropriation is not evidence of an executed funding agreement, receipt, disbursement, expenditure, construction, or completion.", "The official records do not establish Jamie's individual causality for the recommendation or Council action.", "The 2024 record does not explain why KC Town Hall withdrew; do not speculate about or publish a reason for the withdrawal."],
       antiClaims: ["KC Town Hall received a $490,539 grant", "KC Town Hall spent the allocation", "the project completed the redevelopment", "Jamie alone secured the Council action", "the Council record proves the reason for withdrawal"],
       researchInquiryIds: [],
       reviewedAt: "2026-07-15",
@@ -2019,7 +2019,7 @@ const knowledgeBankInput = {
           sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", kcTownHallFullPopulationCensusSourceId, "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
           sourceSupport: ["profile chronology", "timeline end date", "post-2020 neighborhood-program documentation"],
           boundaries: ["The social record does not identify the successor steward, prove the legal transfer, or establish the author of each post.", "Do not attribute post-transition program claims or outcomes to Jamie."],
-          decisionUse: "Adds public continuity evidence beside Jamie's bounded transition memory without exposing the family crisis or inventing a transfer record."
+          decisionUse: "Adds public continuity evidence beside Jamie's bounded transition memory without inventing a transfer record or a reason for the transition."
         }
       ],
       tensions: [
@@ -2051,8 +2051,8 @@ const knowledgeBankInput = {
           ]
         }
       ],
-      researchQuestions: ["Which permissioned public artifact or collaborator account can clarify Jamie's operating responsibilities during the 2018-2020 period without assigning him the complete shared account?", "Which first-party program quantities can be independently corroborated through public agency or collaborator records?", "Which successor organization can confirm the stewardship handoff and ongoing use of the public identity system without exposing the family crisis?"],
-      boundaries: ["Do not encode the family crisis.", "Do not infer abandonment, failure, or project completion from a transition.", "Do not attribute every account post or post-transition program outcome to Jamie.", "Do not treat direct responses, reposts, mentions, or access-time interaction labels as formal endorsement, partnership, reach, or impact.", "Do not independently repeat first-party program quantities without corroboration.", "The governed public claim is projected separately; this intake record remains non-projecting provenance."],
+      researchQuestions: ["Which permissioned public artifact or collaborator account can clarify Jamie's operating responsibilities during the 2018-2020 period without assigning him the complete shared account?", "Which first-party program quantities can be independently corroborated through public agency or collaborator records?", "Which successor organization can confirm the stewardship handoff and ongoing use of the public identity system?"],
+      boundaries: ["Record the transition without speculating about its cause.", "Do not infer abandonment, failure, or project completion from a transition.", "Do not attribute every account post or post-transition program outcome to Jamie.", "Do not treat direct responses, reposts, mentions, or access-time interaction labels as formal endorsement, partnership, reach, or impact.", "Do not independently repeat first-party program quantities without corroboration.", "The governed public claim is projected separately; this intake record remains non-projecting provenance."],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-15",
@@ -2121,7 +2121,7 @@ const knowledgeBankInput = {
           ],
           sourceSupport: ["Board recommendation", "Council acceptance", "Council appropriation", "later withdrawal and reappropriation of unused funds"],
           boundaries: ["This institutional sequence does not establish Jamie's individual contribution or policy causality.", "Do not compress recommendation, appropriation, agreement, receipt, spending, and completion into a single funding claim."],
-          decisionUse: "Provides the strongest currently defensible outcome wording for a future governed-proof review without projecting it directly to the website."
+          decisionUse: "Provides the strongest currently defensible outcome wording while keeping the intake record distinct from its separately governed public projection."
         }
       ],
       tensions: [

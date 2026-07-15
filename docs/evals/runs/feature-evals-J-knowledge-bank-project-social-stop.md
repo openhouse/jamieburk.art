@@ -47,7 +47,7 @@ The developed knowledge includes:
 - eleven KC Spaces Fund public recipient highlights, two recipient
   acknowledgements, and one contemporaneous Do816 article; and
 - KC Town Hall launch and later continuity evidence kept separate from Jamie's
-  direct stewardship period and private family-crisis context.
+  direct stewardship period and any unstated cause for the transition.
 
 The bank now contains 135 source records and 18 intake threads. The 46
 project-social source records include 44 public records and two protected
@@ -69,7 +69,7 @@ research records.
 - KC Spaces Fund evidence does not assign Jamie public-organizer, fundraiser,
   fiscal-sponsor, post-author, or grant-decision credit.
 - Post-transition KC Town Hall activity and outcomes are not attributed to
-  Jamie, and the related family crisis is not encoded.
+  Jamie, and the reason for the transition is neither stated nor inferred.
 - No credentials, administrator records, private messages, exports, analytics,
   private paths, or protected source locations entered the repository.
 - Every new or updated social intake remains `no-public-projection`; no website

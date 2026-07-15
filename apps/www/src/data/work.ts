@@ -492,7 +492,7 @@ const workItemsInput = [
     summary:
       "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The work advanced to City Council acceptance and appropriation of $490,539; later records say the project withdrew and the unused funds were reappropriated.",
     role: "Project Planning & Documentation Support",
-    years: "2020s",
+    years: "2018-2024 public record",
     status: "Short proof page",
     featured: false,
     priority: 6,

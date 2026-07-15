@@ -625,7 +625,9 @@ test("project social intake protects shared authorship and transitions", () => {
     "CLM-KC-TOWN-HALL-PUBLIC-OPERATING-SURFACE"
   ]);
   assert.ok(
-    kcTownHall.boundaries.some((boundary) => /family crisis/i.test(boundary))
+    kcTownHall.boundaries.some((boundary) =>
+      /without speculating about its cause/i.test(boundary)
+    )
   );
   assert.ok(
     kcTownHall.boundaries.some((boundary) =>

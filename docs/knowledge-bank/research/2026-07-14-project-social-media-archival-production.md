@@ -244,8 +244,9 @@ describes as his direct stewardship.
 That chronology supports public-identity continuity, not the legal details of
 the handoff or the identity of each later author. It should sit beside Jamie's
 bounded statement that he transitioned the project to a mission-aligned
-organization. It should not encode the related family crisis or assign later
-program claims to Jamie.
+organization.
+That record should preserve the transition without speculating about its cause
+or assigning later program claims to Jamie.
 
 ## Source Articles And Existing Source Trails
 

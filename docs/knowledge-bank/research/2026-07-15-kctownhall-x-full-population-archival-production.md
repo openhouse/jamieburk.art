@@ -273,8 +273,8 @@ reuse, or personally produced each stakeholder response.
 - Do not treat first-party quantities in posts as independently audited.
 - Do not collapse recommendation, appropriation, receipt, expenditure, and
   completion into one funding claim.
-- Do not connect the 2024 Council withdrawal record to Jamie's family crisis or
-  stewardship-transition account.
+- The 2024 Council record does not establish a reason for the withdrawal; do
+  not speculate about or publish one.
 - Do not publish follower identities, private account data, private messages,
   post bodies, phone numbers, or deleted-post speculation.
 - Preserve the difference between a profile-counted full population and a
