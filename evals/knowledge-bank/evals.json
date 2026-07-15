@@ -414,7 +414,7 @@
       "expectedSourceCount": 6,
       "expectedClaimCount": 2,
       "expectedInquiryCount": 4,
-      "approvedContentSha256": "58a67b88ab8e30b09b77a38a83c456b38afceadeffb69ea45ea78a503c4d3872",
+      "approvedContentSha256": "c0f786efb1778b126226029acb18a4c84610ef3194448ad840e32b6de3d5738e",
       "intakeIds": [
         "INTAKE-196-RESIDENCY-ACCEPTANCE-WORKFLOW-2023",
         "INTAKE-SUNDAY-DINNER-OPERATIONS-SHEET-2025",

@@ -86,10 +86,10 @@ const PERSONAL_WOWLIST_FACEBOOK_EVENT_REVIEW_LOCKS = Object.freeze({
   governedModuleSha256: "17756383e3e3fe07dd5691fe6866efe5d7292217a31fb5ab355cd71d8f64e940",
   canonicalKnowledgeSha256: "575a9c54527e5c42e7b38a077ef2438fac2073ab5eafc24656c2c677d43afaac",
   reviewConfigurationSha256: "939b9ccc09b790520450a8c3295f1436193c9c2e9c6505350fc4c0bfb23c86b0",
-  governanceBindingsSha256: "046ae94f6bb7300698deb933f959a6050353f1c32e18bb994c6743c966aaffb1",
+  governanceBindingsSha256: "462c571728b828871229a018aaee8503d666943b0bce508eaa92231391baf1e8",
   publicReportSha256: "46f3020a8bdf63ea6f0d9f4bbcb2b9a99dd4f6fe33cce152490778cd48f15d2f",
-  wowListMdxSha256: "21106a4e2e5427f40eab679c5ae87838e29205e93e26e751960de588e5889429",
-  sundayDinnerMdxSha256: "b2889ec0ccaac06e4e7e86b14ee9643d0d7cd0e02b727928b7270a776e31fa10",
+  wowListMdxSha256: "920a67545ba6bbe346309c79247a12e1e0a3028c09cb5c36e1a85e35f8013df8",
+  sundayDinnerMdxSha256: "2c9e22237d23a1b99262634f75cb24f7eeca300c0ed59e0dec26b6c3a54dd6be",
   proofContentSha256: "04bda7a50e53a7c78d4f49b7f139a424514e03d83994c3fbb63cd6fbd25be685"
 });
 const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({

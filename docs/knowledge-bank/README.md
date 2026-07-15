@@ -206,6 +206,19 @@ for every distinct post exposed by the authenticated WOW List Facebook feed on
 the capture date, all 55 posted URLs, organizer-workflow and care-routing
 patterns, displayed-interaction boundaries, and the native-export and
 post-authorship gaps.
+
+See the
+[WOW List, Sunday Dinner, and Call Script continuity review](projects/wowlist-sunday-dinner-callscript-continuity.md)
+and its
+[public-safe aggregate controls](data/wowlist-sunday-dinner-callscript-controls.json)
+for a fresh reproduction of the July 2017 WOW List production counts, protected
+corroboration of Sunday Dinner's 300-plus gathering scale, and the bounded
+public-source sequence from popular.vote through Call Script's participatory
+coalition-name poll and the next NYC Artist Coalition meeting.
+The
+[recursive evaluation run](../../evals/knowledge-bank/runs/2026-07-15-wowlist-sunday-dinner-callscript-continuity.md)
+preserves the rejected candidates, narrow review-lock promotions, privacy
+controls, and final stopping criteria.
 The [NYC Artist Coalition Facebook post population](projects/nyc-artist-coalition-facebook-posts.md)
 records all 445 distinct posts exposed by the authenticated capture-date Page
 feed, 67 cleaned off-Facebook routes, issue and stakeholder classifications,

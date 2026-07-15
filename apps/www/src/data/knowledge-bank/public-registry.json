@@ -754,6 +754,89 @@
       ]
     },
     {
+      "id": "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+      "title": "WOW List, Sunday Dinner, and Call Script public-safe aggregate controls",
+      "organization": "Jamie Burkart portfolio research",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/data/wowlist-sunday-dinner-callscript-controls.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public-safe aggregate controls for the WOW List production snapshot, Sunday Dinner attendance matrix, and Call Script continuity review, July 2026.",
+      "publicNote": "The control file preserves reproducible aggregate facts and boundaries while excluding raw database rows, private workbook rows, identities, and authenticated-session data.",
+      "doesNotEstablish": [
+        "current product activity",
+        "unique Sunday Dinner participants or precise attendance",
+        "sole authorship or sole coalition founding",
+        "endorsement, mandate, conversion, causality, or policy impact"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+      "title": "Call Script public Facebook Page",
+      "organization": "Call Script",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/callscript",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call Script public Facebook Page, accessed July 15, 2026.",
+      "publicNote": "The current Page displays a representative-calling tagline, popular.vote as its project link, and a post promoting the March 2017 NYC Artist Coalition general meeting.",
+      "doesNotEstablish": [
+        "who authored every historical post",
+        "when the current profile link was added",
+        "sole ownership of Call Script or NYC Artist Coalition",
+        "attendance or outcome"
+      ]
+    },
+    {
+      "id": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+      "title": "NYC DIY Spaces post-Ghost-Ship DCLA meeting event discussion",
+      "organization": "NYC Artist Coalition, Call Script, and event cohosts",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/388137698233507/?active_tab=discussion",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public Facebook event and discussion for the January 27, 2017 post-Ghost-Ship DCLA meeting on DIY and alternative spaces.",
+      "publicNote": "The page preserves organizer displays, a Call Script coalition-name poll, a collaborative DCLA-letter action, and mutable response and self-reported reach signals.",
+      "doesNotEstablish": [
+        "complete vote count",
+        "attendance",
+        "unique people",
+        "sole founder or legal founding act",
+        "authorship of every task or letter line",
+        "endorsement, mandate, conversion, causality, or policy impact"
+      ]
+    },
+    {
+      "id": "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+      "title": "Jamie Burkart public post mobilizing for the DCLA DIY-spaces meeting",
+      "organization": "Jamie Burkart",
+      "author": "Jamie Burkart",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-01-25",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/jburkart/posts/pfbid02DvDYiJLK8ceJFAdhQYsYsyAVU3WWuZpbEASr8MFCKqBTJMhnNWrBjYHGQirZwa6al",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Jamie Burkart, public Facebook post mobilizing support for the January 27, 2017 DCLA DIY-spaces meeting.",
+      "publicNote": "Jamie invited New Yorkers to pack the meeting in support of DIY spaces and improve-dont-evict responses.",
+      "doesNotEstablish": [
+        "sole event production",
+        "attendance",
+        "agency endorsement",
+        "policy outcome",
+        "authorship of every Call Script or coalition post"
+      ]
+    },
+    {
       "id": "SRC-NYCAC-X-RETRIEVABLE-POPULATION-2026",
       "title": "NYC Artist Coalition X retrievable-population manifest",
       "organization": "Jamie Burkart portfolio knowledge bank",
@@ -2003,6 +2086,156 @@
       ]
     },
     {
+      "id": "CLM-WOWLIST-PRODUCTION-SCALE-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A July 2017 production snapshot records 1,846 users, 16,142 posts/events, 23,864 lists/tags, 28,837 list follows, 20,927 saved events, and 35 city-region keys with at least 50 posts. These are historical database counts, not current activity.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "public-safe selected counts",
+            "historical-use boundary",
+            "geography definition",
+            "privacy boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use historical language and preserve the exact snapshot date.",
+        "Keep credit shared with Richard Caceres, participating organizers, users, and other contributors.",
+        "Do not expose raw database rows or describe city keys as official chapters."
+      ]
+    },
+    {
+      "id": "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A protected working record independently corroborates the 300+ gathering scale while keeping every participant row private. It is evidence of recurring operational continuity, not a unique-person or precise attendance census.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/196-sunday-dinner"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "public-safe aggregate controls",
+            "numbering exceptions",
+            "privacy and interpretation boundaries"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
+          "relationship": "corroborating",
+          "supports": [
+            "contemporaneous 100th milestone"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "contemporaneous 200th milestone"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Do not publish participant rows, identities, contacts, invitation or attendance histories, or free text.",
+        "Do not convert affirmative marks into unique people, precise attendance, guest counts, endorsement, or consent.",
+        "Preserve duplicate and missing sequence numbers as data-quality limits."
+      ]
+    },
+    {
+      "id": "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The combined record supports Jamie's account that Call Script became one bridge from WOW List's popular.vote calendar into early NYC Artist Coalition organizing: Jamie publicly mobilized for the January 2017 DCLA meeting; its discussion ran a participatory naming poll in which ‘NYC Artist Coalition’ displayed 57%; and Call Script then promoted the coalition's next general meeting.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+          "relationship": "direct-support",
+          "supports": [
+            "Call Script public identity",
+            "popular.vote profile link",
+            "March 2017 NYC Artist Coalition meeting promotion"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+          "relationship": "direct-support",
+          "supports": [
+            "January 27 DCLA event",
+            "Call Script and NYC Artist Coalition organizer displays",
+            "57-percent naming-poll display",
+            "collaborative DCLA-letter action"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie's public mobilization for the DCLA meeting"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
+          "relationship": "corroborating",
+          "supports": [
+            "cross-source chronology",
+            "traction semantics",
+            "collective-credit boundary"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Describe Call Script as one bridge within collective coalition formation, not the sole cause or sole founder.",
+        "Attribute the direct role claim to the combined first-person and contemporaneous record.",
+        "Treat poll, response, reach, going, reaction, comment, and share displays as bounded platform signals rather than attendance or impact."
+      ]
+    },
+    {
       "id": "CLM-NYCAC-X-RETRIEVABLE-SOCIAL-INFRASTRUCTURE",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -2521,15 +2754,27 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
+        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-WOWLIST-X-POPULATION-MANIFEST",
         "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
         "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
         "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
         "SRC-WOWLIST-SBDIY-ADOPTION",
+        "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+        "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+        "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
         "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
         "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
       ],
       "occurrences": [
+        {
+          "id": "production-scale",
+          "claimId": "CLM-WOWLIST-PRODUCTION-SCALE-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"
+          ]
+        },
         {
           "id": "social-provenance-and-support",
           "claimId": "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
@@ -2540,6 +2785,17 @@
             "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
             "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
             "SRC-WOWLIST-SBDIY-ADOPTION"
+          ]
+        },
+        {
+          "id": "callscript-participation-continuity",
+          "claimId": "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+            "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+            "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
+            "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"
           ]
         },
         {
@@ -2557,10 +2813,19 @@
       "id": "196-sunday-dinner",
       "surface": "/work/196-sunday-dinner",
       "sourceOrder": [
+        "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
         "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
         "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
       ],
       "occurrences": [
+        {
+          "id": "protected-attendance-corroboration",
+          "claimId": "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"
+          ]
+        },
         {
           "id": "residency-onboarding-workflow",
           "claimId": "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023",

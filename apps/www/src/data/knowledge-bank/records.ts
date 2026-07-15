@@ -12,6 +12,7 @@ import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacFacebookEventKnowledge } from "./nycac-facebook-events-2026-07.ts";
 import { nycacFacebookPostKnowledge } from "./nycac-facebook-posts-2026-07.ts";
 import { personalWowListFacebookEventKnowledge } from "./personal-wowlist-facebook-events-2026-07.ts";
+import { participationContinuityKnowledge } from "./participation-continuity-2026-07.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
 import { nycacSocialPopulationJuly2026 } from "./nycac-social-population-2026-07.ts";
@@ -62,6 +63,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventKnowledge.intakeItems,
     ...nycacFacebookPostKnowledge.intakeItems,
     ...personalWowListFacebookEventKnowledge.intakeItems,
+    ...participationContinuityKnowledge.intakeItems,
     ...nycacSocialPopulationJuly2026.intakeItems,
     ...nycacSourceExpansion.intakeItems,
     ...nycacSourceExpansionII.intakeItems,
@@ -103,6 +105,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventKnowledge.observations,
     ...nycacFacebookPostKnowledge.observations,
     ...personalWowListFacebookEventKnowledge.observations,
+    ...participationContinuityKnowledge.observations,
     ...nycacSocialPopulationJuly2026.observations,
     ...nycacSourceExpansion.observations,
     ...nycacSourceExpansionII.observations,
@@ -247,6 +250,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventKnowledge.sources,
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,
+    ...participationContinuityKnowledge.sources,
     ...nycacSocialPopulationJuly2026.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
@@ -362,6 +366,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventKnowledge.claims,
     ...nycacFacebookPostKnowledge.claims,
     ...personalWowListFacebookEventKnowledge.claims,
+    ...participationContinuityKnowledge.claims,
     ...nycacSocialPopulationJuly2026.claims,
     ...nycacSourceExpansion.claims,
     ...nycacSourceExpansionII.claims,
@@ -422,6 +427,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventKnowledge.researchInquiries,
     ...nycacFacebookPostKnowledge.researchInquiries,
     ...personalWowListFacebookEventKnowledge.researchInquiries,
+    ...participationContinuityKnowledge.researchInquiries,
     ...nycacSocialPopulationJuly2026.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
@@ -548,26 +554,34 @@ const knowledgeBankInput = {
     id: "wowlist",
     surface: "/work/wowlist",
     sourceOrder: [
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-WOWLIST-X-POPULATION-MANIFEST",
       "SRC-WOWLIST-SUNDAY-DINNER-POST-2014",
       "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016",
       "SRC-WOWLIST-SHELBY-TUTORIAL-2015",
       "SRC-WOWLIST-SBDIY-ADOPTION",
+      "SRC-CALLSCRIPT-FACEBOOK-PAGE",
+      "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27",
+      "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25",
       "SRC-FACEBOOK-SUNDAY-DINNER-200-2016",
       "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"
     ],
     occurrences: [
+      { id: "production-scale", claimId: "CLM-WOWLIST-PRODUCTION-SCALE-2017", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "social-provenance-and-support", claimId: "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-WOWLIST-X-POPULATION-MANIFEST", "SRC-WOWLIST-SUNDAY-DINNER-POST-2014", "SRC-WOWLIST-PRODUCT-SUPPORT-POST-2016", "SRC-WOWLIST-SHELBY-TUTORIAL-2015", "SRC-WOWLIST-SBDIY-ADOPTION"] },
+      { id: "callscript-participation-continuity", claimId: "CLM-CALLSCRIPT-WOWLIST-NYCAC-CONTINUITY-2017", projection: "case-study", sourceIds: ["SRC-CALLSCRIPT-FACEBOOK-PAGE", "SRC-CALLSCRIPT-DCLA-EVENT-DISCUSSION-2017-01-27", "SRC-FB-JAMIE-DCLA-DIY-SPACES-EVENT-2017-01-25", "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "facebook-event-route", claimId: "CLM-FACEBOOK-WOWLIST-IN-PRACTICE", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-200-2016", "SRC-FACEBOOK-PERSONAL-WOWLIST-EVENT-CENSUS-2026"] }
     ]
   }, {
     id: "196-sunday-dinner",
     surface: "/work/196-sunday-dinner",
     sourceOrder: [
+      "SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026",
       "SRC-FACEBOOK-SUNDAY-DINNER-100-2014",
       "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"
     ],
     occurrences: [
+      { id: "protected-attendance-corroboration", claimId: "CLM-SUNDAY-DINNER-300-PLUS-CORROBORATION", projection: "case-study", sourceIds: ["SRC-PARTICIPATION-CONTINUITY-CONTROLS-2026"] },
       { id: "residency-onboarding-workflow", claimId: "CLM-196-RESIDENCY-ONBOARDING-WORKFLOW-2023", projection: "case-study" },
       { id: "sunday-dinner-invitation-operations", claimId: "CLM-SUNDAY-DINNER-INVITATION-OPERATIONS-2025", projection: "case-study" },
       { id: "facebook-milestones", claimId: "CLM-FACEBOOK-SUNDAY-DINNER-MILESTONES", projection: "case-study", sourceIds: ["SRC-FACEBOOK-SUNDAY-DINNER-100-2014", "SRC-FACEBOOK-SUNDAY-DINNER-200-2016"] }
