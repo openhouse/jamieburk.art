@@ -83,6 +83,11 @@ const kcTownHallCouncilSourceIds = [
   "SRC-KC-TOWN-HALL-ORDINANCE-240317"
 ];
 
+const kcTownHallPhaseOneSourceIds = [
+  "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+  "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"
+];
+
 check(
   "Source quality",
   "Every supplied and portfolio-expansion URL has a canonical source record",
@@ -150,6 +155,20 @@ check(
   ),
   true
 );
+check(
+  "Source quality",
+  "KC Town Hall protected records expose claims and boundaries without exposing source assets",
+  6,
+  kcTownHallPhaseOneSourceIds.every(
+    (id) =>
+      sourceById.get(id)?.visibility === "protected" &&
+      sourceById.get(id)?.preservationStatus === "private" &&
+      sourceById.get(id)?.protectedLocatorId &&
+      !sourceById.get(id)?.canonicalUrl &&
+      !sourceById.get(id)?.assetUrl
+  ),
+  true
+);
 
 check(
   "Atomic observations",
@@ -194,6 +213,30 @@ check(
   ].every((id) =>
     ["confirmed", "confirmed-with-boundary"].includes(claimById.get(id)?.status)
   )
+);
+check(
+  "Atomic observations",
+  "KC Town Hall decomposes document evidence from first-person memory",
+  6,
+  [
+    "OBS-KC-TOWN-HALL-PROPOSER-TEAM-2019",
+    "OBS-KC-TOWN-HALL-PHASE-ONE-COMPLETED-2019",
+    "OBS-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY-2019"
+  ].every((id) =>
+    observationById.get(id)?.sourceId === "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019" &&
+    observationById.get(id)?.status === "verified"
+  ) &&
+    [
+      "OBS-KC-TOWN-HALL-GENERAL-CONTRACTOR-ACCOUNT",
+      "OBS-KC-TOWN-HALL-SITE-LISTENING-ACCOUNT",
+      "OBS-KC-TIRED-OF-TIRES-ACCOUNT",
+      "OBS-KC-CLEVELAND-UNIFY-TO-BEAUTIFY-ACCOUNT"
+    ].every((id) =>
+      observationById.get(id)?.sourceId ===
+        "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15" &&
+      observationById.get(id)?.status === "provisional"
+    ),
+  true
 );
 check(
   "Claim maturity",
@@ -292,6 +335,32 @@ check(
       ?.antiClaims.some((value) => /received or spent/i.test(value)),
   true
 );
+check(
+  "Claim maturity",
+  "KC Town Hall Phase One is strong while first-person role claims remain bounded",
+  8,
+  claimById.get("CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION")
+      ?.boundaries.some((value) => /not an independent.*certification/i.test(value)) &&
+    claimById.get("CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE")?.status ===
+      "use-with-care" &&
+    claimById
+      .get("CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE")
+      ?.antiClaims.some((value) => /licensed general contractor/i.test(value)) &&
+    [
+      "CLM-KC-TIRED-OF-TIRES-OPERATIONS",
+      "CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY"
+    ].every(
+      (id) =>
+        claimById.get(id)?.status === "use-with-care" &&
+        claimById
+          .get(id)
+          ?.projections.every((projection) => projection.status !== "active")
+    ),
+  true
+);
 
 check(
   "Research recursion",
@@ -362,6 +431,9 @@ const nycaPressReceipt = read(
 const kcTownHallReceipt = read(
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md"
 );
+const kcTownHallPhaseOneReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md"
+);
 
 check(
   "Capture integrity",
@@ -382,6 +454,27 @@ check(
   ].every((sourceId) => kcTownHallReceipt.includes(sourceId)) &&
     ["recommendation", "appropriating", "no funds disbursed", "withdrawn"].every(
       (phrase) => kcTownHallReceipt.toLowerCase().includes(phrase.toLowerCase())
+    ),
+  true
+);
+check(
+  "Capture integrity",
+  "The KC Town Hall Phase One receipt preserves verified work, held memories, and research routes",
+  7,
+  kcTownHallPhaseOneSourceIds.every((sourceId) =>
+    kcTownHallPhaseOneReceipt.includes(sourceId)
+  ) &&
+    [
+      "Phase One cold-shell restoration",
+      "Completed in 2019",
+      "general contractor",
+      "TiredOfTires",
+      "Cleveland Avenue Unify to Beautify",
+      "Pastor Lee",
+      "INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026",
+      "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
+    ].every((phrase) =>
+      kcTownHallPhaseOneReceipt.toLowerCase().includes(phrase.toLowerCase())
     ),
   true
 );

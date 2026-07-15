@@ -427,17 +427,26 @@ export const proofClaims: ProofClaim[] = [
     id: "kc-town-hall-public-benefit-documentation",
     status: "careful",
     supportLevel: "careful",
-    evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
+    evidenceClass: [
+      "approved-resume",
+      "public-source",
+      "public-safe-archive-summary",
+      "jamie-review-confirmation"
+    ],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the $490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; developed a neighborhood-informed Phase Two proposal that advanced to City Council acceptance and appropriation.",
+    shortWording: "Co-founded and project-managed a multi-trade adaptive-reuse effort",
     detailedPublicWording:
-      "Jamie presented the KC Town Hall proposal and helped shape its planning, public-benefit documentation, stakeholder context, and municipal-review support. The CCED Board unanimously recommended $490,539, and the Kansas City Council later accepted the recommendation and appropriated that amount. The project ultimately withdrew, and the City reclaimed the full unused appropriation in 2024.",
+      "A 2019 CCED proposal identifies Jamie Burkart and Julia Fredenburg as KC Town Hall's founders and project managers and records Phase One cold-shell work as completed, including roof, historic masonry, structural framing, water, access, safety, and site operations. The proposal also documents a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church whose results directly shaped the next phase. The CCED Board unanimously recommended $490,539 for Phase Two, and the Kansas City Council later accepted the recommendation and appropriated that amount. The project ultimately withdrew, and the City reclaimed the full unused appropriation in 2024.",
     sourceBasis:
-      "Approved resume language; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
+      "Protected 2019 CCED proposal and first-person project account; official Kansas City CCED Board minutes; Council Resolution 190649; Ordinance 190642; the May 2022 project update; Ordinance 240317; and public-safe project context.",
     guardrail:
-      "Say the Council appropriated the amount, not that KC Town Hall received or spent it. Preserve the later non-disbursement, withdrawal, and clawback whenever the funding outcome is described.",
+      "Credit Julia Fredenburg, trade teams, neighborhood partners, and residents. Phase One completion is not complete redevelopment. Treat Jamie's exact general-contractor title as first-person evidence pending corroboration, and say the Council appropriated funds rather than implying receipt or expenditure.",
     doNotSay: [
+      "Jamie was KC Town Hall's sole founder or project manager",
+      "Jamie was independently verified as a licensed general contractor",
+      "Jamie personally performed every construction trade",
+      "Phase Two or the complete redevelopment was completed",
       "KC Town Hall received or spent $490,539",
       "Council appropriation means the project was completed",
       "Jamie personally secured or controlled the Council vote",
@@ -455,7 +464,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",

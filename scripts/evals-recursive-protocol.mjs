@@ -57,9 +57,11 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/README.md",
   "docs/knowledge-bank/intake/2026-07-12-waterways-nightlife.md",
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md",
+  "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
+  "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
@@ -146,6 +148,9 @@ const resumePage = read("apps/www/src/app/resume/page.tsx");
 const technicalOperationsPage = read("apps/www/src/app/work/technical-operations/page.tsx");
 const kcTownHallReceipt = read(
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md"
+);
+const kcTownHallPhaseOneReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md"
 );
 
 for (const doc of [
@@ -270,6 +275,20 @@ for (const expected of [
   "Appropriation is not receipt or expenditure"
 ]) {
   requireIncludes(kcTownHallReceipt, expected, "KC Town Hall funding receipt");
+}
+
+for (const expected of [
+  "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+  "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+  "Phase One cold-shell restoration",
+  "general contractor",
+  "TiredOfTires",
+  "Cleveland Avenue Unify to Beautify",
+  "Pastor Lee originated",
+  "INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026",
+  "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
+]) {
+  requireIncludes(kcTownHallPhaseOneReceipt, expected, "KC Town Hall Phase One receipt");
 }
 
 for (const forbidden of [

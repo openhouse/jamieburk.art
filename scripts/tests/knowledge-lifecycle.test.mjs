@@ -144,12 +144,53 @@ test("KC Town Hall funding lifecycle preserves appropriation and non-disbursemen
 test("KC Town Hall public proof advances beyond recommendation without claiming receipt", () => {
   const proof = readFileSync("apps/www/src/data/proofs.ts", "utf8");
   const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const caseStudy = readFileSync("apps/www/src/content/work/kc-town-hall.mdx", "utf8");
 
   assert.match(proof, /City Council acceptance and appropriation/);
   assert.match(proof, /project ultimately withdrew/);
   assert.match(proof, /KC Town Hall received or spent \$490,539/);
   assert.match(work, /City Council acceptance and appropriation/);
   assert.match(work, /full unused appropriation was reclaimed/);
+  assert.match(caseStudy, /Phase One cold-shell scope as completed/);
+  assert.match(caseStudy, /withdrew before disbursement/);
+  assert.doesNotMatch(caseStudy, /stay tied to a \$490,539 public funding recommendation/);
+});
+
+test("KC Town Hall Phase One separates protected document facts from first-person role claims", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const proposal = sourceById.get("SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019");
+  const account = sourceById.get("SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15");
+  const phaseOne = claimById.get("CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION");
+  const contractor = claimById.get("CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE");
+
+  assert.equal(proposal?.visibility, "protected");
+  assert.equal(proposal?.preservationStatus, "private");
+  assert.ok(proposal?.protectedLocatorId);
+  assert.equal(proposal?.canonicalUrl, undefined);
+  assert.equal(account?.visibility, "protected");
+  assert.equal(phaseOne?.status, "confirmed-with-boundary");
+  assert.ok(phaseOne?.boundaries.some((value) => /not an independent.*certification/i.test(value)));
+  assert.equal(contractor?.status, "use-with-care");
+  assert.ok(contractor?.antiClaims.some((value) => /licensed general contractor/i.test(value)));
+  assert.ok(contractor?.projections.every((projection) => projection.status !== "active"));
+});
+
+test("KC neighborhood memories remain specific, collective, and queued for corroboration", () => {
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const tired = claimById.get("CLM-KC-TIRED-OF-TIRES-OPERATIONS");
+  const cleveland = claimById.get("CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY");
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
+  );
+
+  assert.equal(tired?.status, "use-with-care");
+  assert.ok(tired?.boundaries.some((value) => /Oak Park Neighborhood Association/i.test(value)));
+  assert.equal(cleveland?.status, "use-with-care");
+  assert.ok(cleveland?.boundaries.some((value) => /Pastor Lee originated/i.test(value)));
+  assert.ok(cleveland?.antiClaims.some((value) => /alone founded|alone.*operated/i.test(value)));
+  assert.equal(inquiry?.resultStatus, "queued");
+  assert.deepEqual(inquiry?.findings, []);
 });
 
 test("claim maturity matches recovered evidence", () => {

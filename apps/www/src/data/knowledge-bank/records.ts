@@ -12,6 +12,45 @@ const knowledgeBankInput = {
   intakeItems: [
     ...nycaPressIntakeItems,
     {
+      id: "INTAKE-2026-07-15-KC-TOWN-HALL-PHASE-ONE-NEIGHBORHOOD-WORK",
+      receivedAt: "2026-07-15",
+      inputKind: "document",
+      summary: "A protected 2019 KC Town Hall CCED proposal and Jamie's first-person account documenting Phase One construction, the neighborhood survey, and related East Side neighborhood service and civic-design work.",
+      projectIds: ["kc-town-hall", "kansas-city-neighborhood-programs"],
+      researchStatus: "needs-more-research",
+      publicationStatus: "eligible",
+      sourceIds: [
+        "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+        "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"
+      ],
+      observationIds: [
+        "OBS-KC-TOWN-HALL-PROPOSER-TEAM-2019",
+        "OBS-KC-TOWN-HALL-PHASE-ONE-COMPLETED-2019",
+        "OBS-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY-2019",
+        "OBS-KC-TOWN-HALL-GENERAL-CONTRACTOR-ACCOUNT",
+        "OBS-KC-TOWN-HALL-SITE-LISTENING-ACCOUNT",
+        "OBS-KC-TIRED-OF-TIRES-ACCOUNT",
+        "OBS-KC-TIRED-OF-TIRES-EXPANSION-ACCOUNT",
+        "OBS-KC-CLEVELAND-UNIFY-TO-BEAUTIFY-ACCOUNT"
+      ],
+      claimIds: [
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE",
+        "CLM-KC-TOWN-HALL-PARTICIPATORY-SURVEY",
+        "CLM-KC-TIRED-OF-TIRES-OPERATIONS",
+        "CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY"
+      ],
+      researchInquiryIds: [
+        "INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026",
+        "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"
+      ],
+      nextActions: [
+        "Seek permits, contracts, invoices, schedules, photographs, correspondence, or collaborator confirmation for Jamie's day-to-day general-contractor role and survey-system authorship.",
+        "Recover Oak Park, Indian Mound, HENC, city, church, social-media, handbill, map, meeting, and funding records for TiredOfTires and Cleveland Avenue Unify to Beautify.",
+        "Keep Pastor Lee's authorship of the Cleveland Avenue corridor concept and the collective work of neighborhood organizations explicit."
+      ]
+    },
+    {
       id: "INTAKE-2026-07-14-KC-TOWN-HALL-COUNCIL-FUNDING",
       receivedAt: "2026-07-14",
       inputKind: "claim",
@@ -955,6 +994,62 @@ const knowledgeBankInput = {
       ]
     },
     {
+      id: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      title: "KC Town Hall Central City Economic Development grant proposal and support letters",
+      organization: "KC Town Hall",
+      author: "Jamie Burkart and Julia Fredenburg",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2019-03-25",
+      accessedAt: "2026-07-15",
+      publicCitation: "KC Town Hall, Central City Economic Development grant proposal and support letters, 2019 (protected project record).",
+      publicNote: "Contemporaneous proposal naming Jamie and Julia Fredenburg as founders and project managers, documenting the Phase One cold-shell scope as completed in 2019, identifying the project team, and describing a neighborhood survey that shaped the proposal.",
+      supportsGenerally: [
+        "Jamie Burkart and Julia Fredenburg were identified as KC Town Hall founders and project managers",
+        "the proposal identified historic masonry, architecture, roofing, concrete, electrical, and legal team members",
+        "the proposal marked Phase One cold-shell work as completed in 2019",
+        "Phase One included roof, masonry, floor-framing, water-service, access, safety, site, and materials work",
+        "KC Town Hall conducted a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
+        "the proposal stated that survey results directly shaped the proposal"
+      ],
+      doesNotEstablish: [
+        "that Jamie held a licensed general-contractor credential",
+        "that Jamie alone completed or managed every Phase One task",
+        "independent third-party certification of every completion or cost statement",
+        "that Phase Two was completed",
+        "permission to publish financial, contact, support-letter, or other protected details from the source"
+      ],
+      protectedLocatorId: "LOC-KC-TOWN-HALL-CCED-PROPOSAL-2019"
+    },
+    {
+      id: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      title: "Jamie Burkart first-person account of KC Town Hall and neighborhood work",
+      author: "Jamie Burkart",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      capturedAt: "2026-07-15",
+      accessedAt: "2026-07-15",
+      publicCitation: "Jamie Burkart, first-person account of KC Town Hall Phase One and related Kansas City neighborhood work, July 15, 2026 (protected source).",
+      publicNote: "First-person account preserving Jamie's day-to-day construction coordination, participatory survey, TiredOfTires, and Cleveland Avenue Unify to Beautify contributions for corroboration and bounded public use.",
+      supportsGenerally: [
+        "Jamie's reported day-to-day general-contractor role during Phase One",
+        "Jamie's reported coordination of multiple specialist trades and professional teams",
+        "Jamie's reported authorship of the neighborhood survey handbill and data-collection system",
+        "Jamie's reported design and monthly operations role in TiredOfTires",
+        "Jamie's reported co-founding and design role in Cleveland Avenue Unify to Beautify"
+      ],
+      doesNotEstablish: [
+        "independent corroboration of the general-contractor title, legal status, or licensing",
+        "independent verification of monthly tire totals, dates, or geographic expansion",
+        "independent verification of Jamie's exact Cleveland Avenue responsibilities or funding influence",
+        "sole authorship of collective neighborhood work",
+        "Pastor Lee's corridor concept as Jamie's idea"
+      ],
+      protectedLocatorId: "LOC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"
+    },
+    {
       id: "SRC-KC-TOWN-HALL-CCED-MINUTES-2019",
       title: "Central City Economic Development Sales Tax Board minutes",
       organization: "City of Kansas City, Missouri",
@@ -1522,6 +1617,113 @@ const knowledgeBankInput = {
       researchInquiryIds: [],
       reviewedAt: "2026-07-12",
       reviewedBy: ["Codex source review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-PROPOSER-TEAM-2019",
+      sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      project: "kc-town-hall",
+      text: "The 2019 proposal identifies Jamie Burkart and Julia Fredenburg as founders and project managers and presents named specialists for historic masonry restoration, architecture, roofing, concrete, electrical work, and legal counsel.",
+      locator: "PDF page 2, Project Narrative page 1, 'Proposer'",
+      status: "verified",
+      confidence: "high",
+      claimIds: [
+        "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+        "CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE"
+      ],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Codex visual PDF review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-PHASE-ONE-COMPLETED-2019",
+      sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      project: "kc-town-hall",
+      text: "The proposal labels Phase One's cold-shell work 'Completed 2019' and itemizes roof deck repair, insulation and TPO membrane, masonry repair, structural floor and ceiling framing, water service, construction storage, trash and tree removal, basement access, materials transport, site safety, air quality, tools, and materials.",
+      locator: "PDF pages 11-12, Finance pages 10-11, 'Summary of Budget and Financing' and 'Phase One: Cold Shell - Completed 2019'",
+      status: "verified",
+      confidence: "high",
+      claimIds: ["CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Codex visual PDF review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY-2019",
+      sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      project: "kc-town-hall",
+      text: "The proposal reproduces a KC Town Hall neighborhood survey handbill, identifies Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as survey partners, and states that residents' responses directly shaped the proposal.",
+      locator: "PDF page 4, Project Narrative page 3, 'Neighborhood Process'",
+      status: "verified",
+      confidence: "high",
+      claimIds: ["CLM-KC-TOWN-HALL-PARTICIPATORY-SURVEY"],
+      researchInquiryIds: [],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Codex visual PDF review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-GENERAL-CONTRACTOR-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      project: "kc-town-hall",
+      text: "Jamie reports serving as the day-to-day general contractor for Phase One, arriving first each morning with measured drawings and survey cards, hiring and coordinating historic brick masonry, roofing, carpentry, welding, engineering, architecture, and plumbing teams, and sequencing work from the basement through the roof deck, including placement of the TPO membrane with the restored parapet and ceramic caps.",
+      locator: "First-person account, Phase One construction paragraph",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "OBS-KC-TOWN-HALL-SITE-LISTENING-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      project: "kc-town-hall",
+      text: "Jamie reports that daily on-site presence allowed neighborhood histories, needs, and ideas for the long-abandoned building to accumulate over time, and that he created the 4-by-6-inch survey handbill and its backing contact and response system to turn those encounters into participatory planning.",
+      locator: "First-person account, site presence and survey-system paragraphs",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-TOWN-HALL-PARTICIPATORY-SURVEY"],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "OBS-KC-TIRED-OF-TIRES-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      project: "kansas-city-neighborhood-programs",
+      text: "Jamie reports that, as an Oak Park Neighborhood Association member, he designed TiredOfTires identity and neighborhood communications, coordinated with Kansas City, conducted free monthly tire pickup, logged each haul in a spreadsheet, and delivered and unloaded tires at the city's East Bottoms recycling center.",
+      locator: "First-person account, TiredOfTires paragraphs",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-TIRED-OF-TIRES-OPERATIONS"],
+      researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "OBS-KC-TIRED-OF-TIRES-EXPANSION-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      project: "kansas-city-neighborhood-programs",
+      text: "Jamie reports that TiredOfTires later expanded to include the Indian Mound neighborhood and connected its pickups with neighborhood-association and Chestnut Street Resource Center cleanup communications.",
+      locator: "First-person account, TiredOfTires expansion and monthly route paragraphs",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-TIRED-OF-TIRES-OPERATIONS"],
+      researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "OBS-KC-CLEVELAND-UNIFY-TO-BEAUTIFY-ACCOUNT",
+      sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+      project: "kansas-city-neighborhood-programs",
+      text: "Jamie reports co-founding Cleveland Avenue Unify to Beautify within the Historic East Neighborhoods Coalition around Pastor Lee's corridor concept, contributing identity design, logo, photography, social media, listening-session maps, resident-reporting tools, and print runs of hundreds of handbills used in meetings that included elected officials; he recalls the resulting corridor context contributing to discretionary capital-improvement discussions.",
+      locator: "First-person account, HENC and Cleveland Avenue paragraphs",
+      status: "provisional",
+      confidence: "moderate",
+      claimIds: ["CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY"],
+      researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
     },
     {
       id: "OBS-KC-TOWN-HALL-CCED-RECOMMENDATION",
@@ -2136,6 +2338,192 @@ const knowledgeBankInput = {
       reviewedBy: ["Jamie Burkart", "Codex source review"]
     },
     {
+      id: "CLM-KC-TOWN-HALL-PHASE-ONE-COMPLETION",
+      project: "kc-town-hall",
+      internalClaim: "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall and were named project managers in its 2019 CCED proposal, which records completion of a multi-trade Phase One cold-shell restoration including roof, masonry, structural framing, water, access, safety, and site work.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "archive-note",
+        text: "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall and served as project managers. The project's 2019 CCED proposal records completion of Phase One cold-shell work spanning the roof, historic masonry, structural framing, water service, access, safety, and site operations.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/kc-town-hall"]
+      }],
+      evidence: [{
+        sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+        relationship: "direct-support",
+        supports: ["Jamie and Julia's founder and project-manager attribution", "Phase One completion in 2019", "multi-trade cold-shell scope"],
+        locator: "PDF pages 2 and 11-12",
+        confidence: "high",
+        renderCitation: false
+      }],
+      boundaries: [
+        "The proposal is a contemporaneous applicant-produced project record, not an independent third-party completion certification.",
+        "Completion refers to the proposal's defined Phase One cold-shell scope, not Phase Two or the complete redevelopment.",
+        "Preserve Julia Fredenburg's co-founder and project-manager credit and the work of the named trade and professional teams."
+      ],
+      antiClaims: [
+        "Jamie alone restored KC Town Hall.",
+        "The complete redevelopment or Phase Two was completed in 2019.",
+        "Phase One completion means the later public appropriation was received or spent."
+      ],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex visual PDF review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-GENERAL-CONTRACTOR-ROLE",
+      project: "kc-town-hall",
+      internalClaim: "Jamie reports serving as KC Town Hall's day-to-day general contractor for Phase One, hiring and coordinating masonry, roofing, carpentry, welding, engineering, architecture, and plumbing work and sequencing construction across the building.",
+      status: "use-with-care",
+      projections: [{
+        key: "case-study",
+        text: "Jamie served as the day-to-day construction coordinator for Phase One, working across multiple specialist trades from the basement through the roof.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: ["/work/kc-town-hall"]
+      }],
+      evidence: [
+        {
+          sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+          relationship: "direct-support",
+          supports: ["first-person general-contractor role", "trade hiring and coordination", "daily site sequencing"],
+          confidence: "moderate",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+          relationship: "corroborating",
+          supports: ["Jamie project-manager attribution", "named multi-trade team", "completed Phase One scope"],
+          locator: "PDF pages 2 and 11-12",
+          confidence: "high",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The exact general-contractor title and day-to-day scope currently rest on Jamie's first-person account, with the proposal corroborating project management, team structure, and completed work.",
+        "Do not imply a contractor license, permit status, or legal designation that has not been recovered.",
+        "Do not erase Julia Fredenburg's co-founder and project-manager role or the specialist teams' execution credit."
+      ],
+      antiClaims: [
+        "Jamie was independently verified as a licensed general contractor.",
+        "Jamie personally performed every trade on Phase One.",
+        "Jamie alone managed or completed the restoration."
+      ],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "CLM-KC-TOWN-HALL-PARTICIPATORY-SURVEY",
+      project: "kc-town-hall",
+      internalClaim: "KC Town Hall conducted a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church whose results directly shaped the proposal; Jamie reports designing the handbill and backing contact and response system.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "archive-note",
+        text: "KC Town Hall conducted a neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church, and the project proposal states that residents' responses directly shaped its program.",
+        status: "active",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/kc-town-hall"]
+      }],
+      evidence: [
+        {
+          sourceId: "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+          relationship: "direct-support",
+          supports: ["survey handbill", "Oak Park and New Horizon partnership", "survey influence on the proposal"],
+          locator: "PDF page 4",
+          confidence: "high",
+          renderCitation: false
+        },
+        {
+          sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+          relationship: "private-support",
+          supports: ["Jamie's reported handbill design", "backing contact and response system", "daily site listening process"],
+          confidence: "moderate",
+          renderCitation: false
+        }
+      ],
+      boundaries: [
+        "The proposal confirms the survey and its influence but does not independently attribute the handbill or data system to Jamie.",
+        "Do not publish resident identities, contact details, individual responses, or private survey data.",
+        "Preserve Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as survey partners."
+      ],
+      antiClaims: [
+        "Jamie alone designed the neighborhood process.",
+        "The survey represented every neighborhood resident.",
+        "Private contact or response records are public evidence."
+      ],
+      researchInquiryIds: ["INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex visual PDF review"]
+    },
+    {
+      id: "CLM-KC-TIRED-OF-TIRES-OPERATIONS",
+      project: "kansas-city-neighborhood-programs",
+      internalClaim: "Jamie reports designing and operating Oak Park Neighborhood Association's free monthly TiredOfTires pickup with the City, logging and transporting neighborhood tires for recycling, and later extending service to Indian Mound.",
+      status: "use-with-care",
+      projections: [{
+        key: "archive-note",
+        text: "Jamie designed communications and helped operate a free monthly neighborhood tire-recycling pickup through Oak Park Neighborhood Association, later extending the route to Indian Mound.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/kansas-city-neighborhood-programs"]
+      }],
+      evidence: [{
+        sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+        relationship: "direct-support",
+        supports: ["program identity and communication design", "city coordination", "monthly pickup and recycling operations", "reported Indian Mound expansion"],
+        confidence: "moderate",
+        renderCitation: false
+      }],
+      boundaries: [
+        "This role and the Indian Mound expansion currently rest on Jamie's first-person account and remain queued for association, city, collaborator, or archival corroboration.",
+        "Do not publish participant addresses, contact lists, route details, or unsupported aggregate tire counts.",
+        "Preserve Oak Park Neighborhood Association, Indian Mound neighbors, the Chestnut Street Resource Center, city staff, and participating residents as collective actors."
+      ],
+      antiClaims: [
+        "Jamie created or operated TiredOfTires alone.",
+        "A lifetime tire total has been independently verified.",
+        "The current record establishes every program date or service boundary."
+      ],
+      researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
+      id: "CLM-KC-CLEVELAND-UNIFY-TO-BEAUTIFY",
+      project: "kansas-city-neighborhood-programs",
+      internalClaim: "Jamie reports co-founding Cleveland Avenue Unify to Beautify within the Historic East Neighborhoods Coalition and supporting Pastor Lee's corridor concept through identity, logo, photography, social media, listening-session maps, resident-reporting tools, large handbill runs, and public meetings that contributed corridor context to capital-improvement discussions.",
+      status: "use-with-care",
+      projections: [{
+        key: "archive-note",
+        text: "Within the Historic East Neighborhoods Coalition, Jamie helped launch Cleveland Avenue Unify to Beautify and built visual and participation tools around Pastor Lee's idea of the avenue as a shared East Side corridor.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: ["docs/knowledge-bank/projects/kansas-city-neighborhood-programs"]
+      }],
+      evidence: [{
+        sourceId: "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15",
+        relationship: "direct-support",
+        supports: ["reported co-founding role", "identity and logo design", "photography and social media", "listening-session maps and resident-reporting tools", "printed outreach production"],
+        confidence: "moderate",
+        renderCitation: false
+      }],
+      boundaries: [
+        "Pastor Lee originated the Cleveland Avenue corridor concept; do not transfer that authorship to Jamie.",
+        "Jamie's exact co-founding status, dates, meeting sequence, elected-official participation, and influence on discretionary capital funding remain queued for corroboration.",
+        "Preserve HENC, participating neighborhood associations, residents, clergy, elected officials, and other organizers as collective actors."
+      ],
+      antiClaims: [
+        "Jamie originated Pastor Lee's Cleveland Avenue corridor concept.",
+        "Jamie alone founded or operated Cleveland Avenue Unify to Beautify.",
+        "Jamie personally determined or secured corridor capital-improvement funding."
+      ],
+      researchInquiryIds: ["INQ-KC-NEIGHBORHOOD-PROGRAMS-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+    },
+    {
       id: "CLM-KC-TOWN-HALL-FUNDING-RECOMMENDATION",
       project: "kc-town-hall",
       internalClaim: "Jamie presented KC Town-Hall's adaptive-reuse proposal, and the Central City Economic Development Sales Tax Board unanimously recommended it to City Council for $490,539 in funding.",
@@ -2385,6 +2773,54 @@ const knowledgeBankInput = {
   researchInquiries: [
   ...nycaPressResearchInquiries,
   {
+    id: "INQ-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026",
+    project: "kc-town-hall",
+    question: "Which records independently establish Jamie's day-to-day general-contractor responsibilities, Phase One work sequence, and authorship of the survey handbill and data system?",
+    methods: [
+      "Visually review the protected CCED proposal for role labels, contractor structure, completed Phase One scope, and neighborhood-process documentation.",
+      "Seek permits, contracts, invoices, schedules, measured drawings, construction photographs, correspondence, and collaborator confirmation.",
+      "Separate project-manager attribution and project-level completion from an unrecovered licensed or legal general-contractor designation."
+    ],
+    runAt: "2026-07-15",
+    resultStatus: "partially-recovered",
+    findings: [
+      "The proposal identifies Jamie Burkart and Julia Fredenburg as founders and project managers.",
+      "The proposal names masonry, architecture, roofing, concrete, electrical, and legal team members and records Phase One cold-shell work as completed in 2019.",
+      "The proposal reproduces the neighborhood survey and says its results directly shaped the proposal.",
+      "Jamie's first-person account supplies the day-to-day general-contractor role, trade coordination, site listening, and handbill and data-system authorship."
+    ],
+    limitations: [
+      "The exact general-contractor title, license or permit status, day-to-day task division, and survey-system authorship are not independently recovered.",
+      "The proposal is a contemporaneous applicant-produced record rather than independent completion certification.",
+      "Protected financial, contact, support-letter, resident, and stakeholder details remain outside the public repository."
+    ],
+    sourceIds: [
+      "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+      "SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"
+    ],
+    publicSummary: "A contemporaneous proposal confirms Jamie's founder and project-manager attribution, a named multi-trade team, Phase One completion in 2019, and a neighborhood survey that shaped the proposal. Jamie's exact general-contractor and survey-system responsibilities remain queued for independent corroboration.",
+    protectedLocatorId: "RESEARCH-KC-TOWN-HALL-CONSTRUCTION-ROLE-2026"
+  },
+  {
+    id: "INQ-KC-NEIGHBORHOOD-PROGRAMS-2026",
+    project: "kansas-city-neighborhood-programs",
+    question: "Which public-safe records can corroborate Jamie's TiredOfTires and Cleveland Avenue Unify to Beautify roles, chronology, operating scope, collaborators, and civic outcomes?",
+    methods: [
+      "Recover Oak Park Neighborhood Association, Indian Mound, Historic East Neighborhoods Coalition, New Horizon, Chestnut Street Resource Center, and Kansas City records.",
+      "Search handbills, logos, maps, photographs, social posts, meeting materials, email, pickup logs, recycling receipts, and public funding or capital-improvement records.",
+      "Request collaborator confirmation while preserving Pastor Lee's authorship and collective neighborhood credit."
+    ],
+    resultStatus: "queued",
+    findings: [],
+    limitations: [
+      "The current record is Jamie's first-person account and does not independently establish dates, totals, expansion, co-founding status, elected-official participation, or funding influence.",
+      "Participant addresses, contact lists, private messages, and route-level data remain protected.",
+      "Pastor Lee's corridor concept and all collective neighborhood labor must retain their own attribution."
+    ],
+    sourceIds: ["SRC-KC-TOWN-HALL-JAMIE-ACCOUNT-2026-07-15"],
+    publicSummary: "Jamie's TiredOfTires and Cleveland Avenue contributions are preserved as first-person claims and queued for public-safe archival and collaborator corroboration."
+  },
+  {
     id: "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",
     project: "kc-town-hall",
     question: "Did the Kansas City Council act on the CCED Board's $490,539 KC Town Hall recommendation, and what was the later disposition of the appropriation?",
@@ -2399,7 +2835,7 @@ const knowledgeBankInput = {
       "On September 26, 2019, the Council adopted Resolution 190649 as substituted, accepting the CCED Board's recommendation and authorizing negotiation of a funding agreement for up to $490,539.",
       "On the same date, the Council passed Ordinance 190642 as substituted, appropriating $490,539 to KC Town Hall in the Central City Sales Tax-Projects account.",
       "A May 17, 2022 city status report listed no funds disbursed and described the funding agreement as under negotiation.",
-      "Ordinance 240317, passed March 28, 2024, states that KC Town Hall withdrew and reclaims the full $490,539 project appropriation."
+      "Ordinance 240317, passed March 28, 2024, states that KC Town Hall withdrew and reduces the full $490,539 project account so the unused appropriation can return to the Central City Sales Tax Fund."
     ],
     limitations: [
       "The legislative action record does not preserve an individual roll-call vote for Ordinance 190642.",

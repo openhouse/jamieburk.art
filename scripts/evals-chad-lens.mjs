@@ -20,6 +20,7 @@ const sources = {
     "apps/www/src/app/work/technical-operations/page.tsx"
   ),
   fairRent: read("apps/www/src/content/work/fair-rent-nyc.mdx"),
+  kcTownHall: read("apps/www/src/content/work/kc-town-hall.mdx"),
   proofs: read("apps/www/src/data/proofs.ts"),
   workData: read("apps/www/src/data/work.ts"),
   chadLens: read("docs/chad-lens.md"),
@@ -185,18 +186,33 @@ check(
 );
 check(
   "Defensible strength",
-  "KC Town Hall advances from recommendation to appropriation without implying receipt",
-  6,
+  "KC Town Hall shows completed operating work and later municipal advancement without overclaiming",
+  8,
   includesAll(sources.proofs, [
+    "Co-founded KC Town Hall and served as project manager",
+    "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
+    "neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
     "City Council acceptance and appropriation",
     "project ultimately withdrew",
+    "independently verified as a licensed general contractor",
     "KC Town Hall received or spent $490,539",
     "Jamie personally secured or controlled the Council vote"
   ]) &&
     includesAll(sources.workData, [
-      "$490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation",
+      "Co-Founder, Project Manager & Construction Coordinator",
+      "multi-trade Phase One cold-shell restoration recorded as completed in 2019",
+      "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
       "the full unused appropriation was reclaimed"
-    ]),
+    ]) &&
+    includesAll(sources.kcTownHall, [
+      "Jamie Burkart and Julia Fredenburg co-founded KC Town Hall",
+      "records the multi-trade Phase One cold-shell scope as completed",
+      "Council accepted the recommendation and appropriated the amount",
+      "withdrew before disbursement",
+      "exact role details remain held for additional corroboration"
+    ]) &&
+    !sources.kcTownHall.includes("stay tied to a $490,539 public funding recommendation") &&
+    !sources.workData.includes("licensed general contractor"),
   true
 );
 

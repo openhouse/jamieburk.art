@@ -76,3 +76,7 @@ selective public projection.
 The [KC Town Hall Council-funding receipt](intake/2026-07-14-kc-town-hall-council-funding.md)
 demonstrates longitudinal municipal research: recommendation, Council action,
 appropriation, implementation status, withdrawal, and final fund disposition.
+The [KC Town Hall Phase One and neighborhood-work receipt](intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md)
+shows how a protected proposal and first-person account can confirm completed
+work, preserve richer operating detail, and open bounded research queues without
+publishing private source material or promoting every memory directly to the site.

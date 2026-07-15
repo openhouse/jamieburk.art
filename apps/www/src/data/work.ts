@@ -492,31 +492,37 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Adaptive reuse, construction coordination, and neighborhood process",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building; the $490,539 proposal advanced from a unanimous board recommendation to City Council acceptance and appropriation.",
-    role: "Project Planning & Documentation Support",
-    years: "2020s",
+      "Co-founded KC Town Hall and served as project manager for a multi-trade Phase One cold-shell restoration recorded as completed in 2019; developed a neighborhood-informed Phase Two proposal that advanced to City Council acceptance and appropriation.",
+    role: "Co-Founder, Project Manager & Construction Coordinator",
+    years: "2018-2024",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building needed coordinated cold-shell restoration, a credible public-benefit program, neighborhood participation, and a path through municipal review.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
-    artifactTypes: ["guide", "source map", "template"],
+      "A completed Phase One scope, a neighborhood-informed next-phase proposal, durable public-benefit documentation, and an auditable municipal decision trail.",
+    artifactTypes: ["workflow", "public handout", "source map", "map"],
     artifacts: [
       {
-        title: "Public-benefit documentation set",
+        title: "Phase One coordination record",
         description:
-          "Representative materials for describing intended public value, funding context, and stakeholder needs.",
-        type: "guide"
+          "Public-safe summary of the multi-trade cold-shell scope recorded as completed in 2019.",
+        type: "workflow"
+      },
+      {
+        title: "Neighborhood survey system",
+        description:
+          "A handbill-led neighborhood process whose responses directly shaped the Phase Two proposal.",
+        type: "public handout"
       }
     ],
-    tags: ["Implementation", "Documentation", "Knowledge Systems", "Public-Facing Tools"],
-    capabilities: ["Stakeholder Documentation", "Funding Support", "Historic Preservation Context"],
+    tags: ["Project Management", "Implementation", "Participatory Research", "Built Environment"],
+    capabilities: ["Construction Coordination", "Stakeholder Documentation", "Participatory Planning", "Municipal Review"],
     links: [
       {
         label: "Official board minutes",
@@ -536,29 +542,33 @@ const workItemsInput = [
       }
     ],
     careNote:
-      "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
+      "Public-safe short proof page. The protected proposal supports founder, project-manager, Phase One, team, and survey facts. Jamie's exact general-contractor title remains held for independent corroboration.",
     sourceLayer:
-      "Official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records, public-safe summary, and protected project records.",
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
-    currentStatus: "Public-safe short proof page.",
+      "Protected 2019 CCED proposal and first-person account; official Kansas City board minutes, Council resolution and appropriation ordinance, later project-status and clawback records; and public-safe project summaries.",
+    credits: [
+      "Jamie Burkart",
+      "Julia Fredenburg",
+      "KC Town Hall trade, professional, neighborhood, and municipal partners"
+    ],
+    currentStatus: "Phase One recorded as completed in 2019; Phase Two later withdrew before public funds were disbursed.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Multi-trade project management, implementation sequencing, participatory discovery, public-benefit documentation, and municipal coordination.",
     evidence: [
+      "Jamie Burkart and Julia Fredenburg identified as founders and project managers in the 2019 proposal",
+      "Phase One cold-shell work recorded as completed in 2019 across roof, masonry, structural framing, water, access, safety, and site operations",
+      "Neighborhood survey with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church directly shaped the proposal",
       "Jamie identified as proposal presenter in official board minutes",
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
       "$490,539 board recommendation followed by City Council acceptance and appropriation",
       "Official record that the project later withdrew and the full unused appropriation was reclaimed"
     ],
     knownOpenProtected: {
       known:
-        "Jamie presented and supported planning and documentation for the adaptive-reuse proposal. The board unanimously recommended $490,539; the City Council accepted the recommendation and appropriated the amount. The project later withdrew, and the unused appropriation was reclaimed.",
+        "Jamie and Julia co-founded KC Town Hall and were named project managers. The proposal records Phase One cold-shell work as completed in 2019 and says a neighborhood survey shaped Phase Two. The board later recommended $490,539; the City Council accepted the recommendation and appropriated the amount. The project withdrew before disbursement, and the unused appropriation was reclaimed.",
       open:
-        "Jamie's exact responsibilities during the Council and funding-agreement phases are not established by the public legislative records.",
+        "Jamie's exact day-to-day general-contractor role, survey-system authorship, and responsibilities during the Council and funding-agreement phases remain queued for additional corroboration.",
       protected:
-        "Private financial, legal, property, banking, and stakeholder details are omitted."
+        "Private financial, legal, property, banking, contact, support-letter, resident, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];
