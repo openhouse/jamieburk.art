@@ -108,9 +108,12 @@ documents the wider America: Now and Here program and truck stop; the official
 America: Now and Here article establishes NTER CHNG's inclusion in the Kansas
 City program without specifying its exact venue or dates.
 
-Do not infer contribution split, technical architecture, participant count,
-message count, current operation, or permission to republish messages, video,
-thumbnails, or installation images.
+Do not convert the Leedy-Voulkos installation plan into proof that the completed
+presentation occurred there or that every planned component shipped exactly as
+written. Do not infer contribution split, final as-built technical architecture,
+participant count, message count, current operation, or permission to republish
+messages, phone numbers, direct quotations, video, thumbnails, installation
+images, or private logistics.
 
 ## Source-Backed Team Memory
 

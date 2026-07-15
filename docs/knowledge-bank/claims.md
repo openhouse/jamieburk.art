@@ -88,15 +88,21 @@ not the specific program, Jamie's role, or a funding outcome.
 
 - `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION` - archived project sources credit
   Jamie Burkart, Drew Bolton, and Garrett Fuselier as co-creators of an
-  interactive texting installation. *America: Now and Here*'s own archived
+  interactive texting installation. A protected contemporaneous exhibit text
+  recovers the January 8-29, 2010 window and describes the work as equal parts
+  software application and architectural installation, with real-time exchange
+  through both faces of a digital wall. *America: Now and Here*'s own archived
   Kansas City article documents visitors submitting text messages and seeing
   them become moving projected thought clouds. The archive note is active in
   the historical bank; About and media projections remain held.
 
 The fuller production record credits Mary Nichols with helping engineer and
-construct the wall and names Megan Mantia and Elisha Stetson as actors. Exact
-contribution split, technical architecture, exhibition placement, scale, and
-media rights remain under research.
+construct the wall and names Megan Mantia and Elisha Stetson as actors. A
+protected 2011 plan inventories intended wall, projection, computer, wiring,
+displayed-number, and server-side and wall-side software work and names
+Leedy-Voulkos as the intended site. Exact contribution split, final as-built
+architecture, completed 2011 venue and dates, scale, and media rights remain
+under research.
 
 # 2026-07-13 NYC Artist Coalition campaign press corpus
 

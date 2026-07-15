@@ -312,10 +312,10 @@ test("new KC fieldwork records do not silently project onto public hiring surfac
 });
 
 test("NTER CHNG is source-backed, collectively credited, and held from hiring surfaces", () => {
-  assert.equal(nterChngSources.length, 4);
+  assert.equal(nterChngSources.length, 6);
   assert.equal(nterChngClaims.length, 1);
   assert.equal(nterChngInquiries.length, 1);
-  assert.equal(nterChngIntake.length, 1);
+  assert.equal(nterChngIntake.length, 2);
 
   const claim = nterChngClaims[0];
   const archiveProjection = claim.projections.find(
@@ -341,6 +341,46 @@ test("NTER CHNG is source-backed, collectively credited, and held from hiring su
   assert.ok(claim.boundaries.some((item) => /Mary Nichols/i.test(item)));
   assert.ok(claim.boundaries.some((item) => /Megan Mantia and Elisha Stetson/i.test(item)));
   assert.ok(claim.antiClaims.some((item) => /created NTER CHNG alone/i.test(item)));
+
+  const protectedSources = nterChngSources.filter(
+    (source) => source.visibility === "protected"
+  );
+  assert.deepEqual(
+    new Set(protectedSources.map((source) => source.id)),
+    new Set([
+      "SRC-NTER-CHNG-INSTALLATION-PLAN-2011",
+      "SRC-NTER-CHNG-EXHIBITION-TEXT-2010-2011"
+    ])
+  );
+  assert.ok(
+    protectedSources.every(
+      (source) =>
+        source.protectedLocatorId &&
+        !source.canonicalUrl &&
+        !source.archiveUrl &&
+        !source.assetUrl
+    )
+  );
+  assert.ok(
+    claim.evidence
+      .filter((relationship) =>
+        protectedSources.some((source) => source.id === relationship.sourceId)
+      )
+      .every(
+        (relationship) =>
+          relationship.relationship === "private-support" &&
+          relationship.renderCitation === false
+      )
+  );
+  assert.ok(
+    nterChngIntake.some(
+      (record) =>
+        record.visibility === "protected-summary" &&
+        record.relatedIntakeIds.includes(
+          "INT-NTER-CHNG-WAYBACK-EXHIBITION-2026-07-15"
+        )
+    )
+  );
 });
 
 test("NTER CHNG evidence distinguishes exhibition inclusion from the Nerman stop", () => {
@@ -350,6 +390,9 @@ test("NTER CHNG evidence distinguishes exhibition inclusion from the Nerman stop
     "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"
   );
   const nermanSource = sourceById.get("SRC-NERMAN-AMERICA-NOW-HERE-2011");
+  const installationPlan = sourceById.get(
+    "SRC-NTER-CHNG-INSTALLATION-PLAN-2011"
+  );
   const inquiry = nterChngInquiries[0];
 
   assert.match(projectArchive.archiveUrl, /20110128193350/);
@@ -364,12 +407,27 @@ test("NTER CHNG evidence distinguishes exhibition inclusion from the Nerman stop
       "that NTER CHNG appeared at the Nerman Museum stop"
     )
   );
+  assert.ok(
+    installationPlan.supportsGenerally.includes(
+      "Leedy-Voulkos was the intended installation site in the contemporaneous plan"
+    )
+  );
+  assert.ok(
+    installationPlan.doesNotEstablish.includes(
+      "that Leedy-Voulkos was the completed presentation venue"
+    )
+  );
   assert.equal(inquiry.resultStatus, "partially-recovered");
   assert.ok(
     inquiry.limitations.some((item) => /press-release link was not captured/i.test(item))
   );
   assert.ok(
-    inquiry.limitations.some((item) => /exact America: Now and Here installation venue/i.test(item))
+    inquiry.limitations.some(
+      (item) =>
+        /not independently confirmed as the completed America: Now and Here venue/i.test(
+          item
+        )
+    )
   );
 });
 

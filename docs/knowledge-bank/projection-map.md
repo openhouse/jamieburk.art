@@ -80,7 +80,7 @@ as source discipline rather than dumping the bank onto the page.
 | `CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION` | Hold pending role attribution | The completed Phase One scope is strong implementation evidence; corroborate Jamie's general-contractor title before composing it into hiring surfaces. |
 | `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY` | Hold pending authorship and method review | The listening process demonstrably shaped the proposal; preserve partner credit and keep response/contact data private. |
 | `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` | Hold pending role and metric review | The program and project-published savings figure are documented; Jamie's operating role, Indian Mound expansion, and any tire count need corroboration. |
-| `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION` | Hold from site; retain in bank and photo research | Strong evidence of participatory technology, public interaction, and national-program inclusion; publish only when it can sharpen the present-day hiring argument and media rights are cleared. |
+| `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION` | Hold from site; retain in bank and photo research | Strong evidence of participatory technology spanning software, physical installation, public interaction, and national-program inclusion; publish only when it can sharpen the present-day hiring argument and media rights are cleared. |
 
 Cleveland Avenue Unify to Beautify is not yet a claim and has no projection.
 It remains a research inquiry with HENC context only.
