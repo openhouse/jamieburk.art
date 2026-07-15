@@ -118,6 +118,38 @@ test("Cleveland Avenue and pro bono neighborhood communications stay queued for 
   assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(cleveland.id) && !candidateClaimIds.includes(communications.id)));
 });
 
+test("NTER CHNG preserves collective creation and bounded America: Now and Here inclusion", () => {
+  const project = knowledgeLifecycle.projects.find(({ id }) => id === "PRJ-NTER-CHNG");
+  const candidate = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-NTER-CHNG-COLLABORATION-EXHIBITION");
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-NTER-CHNG-ARCHIVAL-RECOVERY");
+  const decision = knowledgeLifecycle.promotionDecisions.find(({ id }) => id === "DEC-NTER-CHNG-PROMOTE");
+  const canonical = knowledgeBank.claims.find(({ id }) => id === "CLM-NTER-CHNG-COLLABORATION-EXHIBITION-2010-2011");
+  const protectedPage = knowledgeBank.sources.find(({ id }) => id === "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011");
+  const nerman = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-NTER-CHNG-NERMAN-BOUNDARY");
+
+  assert.equal(project?.status, "historical");
+  assert.ok(project?.entityIds.includes("ENT-DREW-BOLTON"));
+  assert.ok(project?.entityIds.includes("ENT-GARRETT-FUSELIER"));
+  assert.equal(candidate?.maturity, "promoted");
+  assert.equal(candidate?.targetCanonicalClaimId, canonical?.id);
+  assert.ok(candidate?.antiClaims.some((item) => /solely created/i.test(item)));
+  assert.ok(candidate?.antiClaims.some((item) => /Nerman Museum/i.test(item)));
+  assert.equal(task?.status, "completed");
+  assert.equal(task?.sourceIds.length, 6);
+  assert.ok(task?.limitations.some((item) => /press release was not recovered/i.test(item)));
+  assert.equal(decision?.decision, "promote");
+  assert.deepEqual(decision?.allowedSurfaces, ["knowledge-bank", "future-cultural-technology-case-study"]);
+  assert.equal(canonical?.projections[0]?.status, "hold");
+  assert.deepEqual(canonical?.projections[0]?.surfaces, []);
+  assert.equal(protectedPage?.visibility, "public-metadata-only");
+  assert.equal(protectedPage?.protectedLocatorId, "WEB-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011-001");
+  assert.equal(protectedPage?.canonicalUrl, undefined);
+  assert.equal(protectedPage?.archiveUrl, undefined);
+  assert.equal(nerman?.evidenceRole, "context");
+  assert.ok(nerman?.doesNotEstablish.some((item) => /NTER CHNG at the Nerman Museum/i.test(item)));
+  assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(candidate.id)));
+});
+
 test("shared observations carry candidate-specific evidence roles and limits", () => {
   const broken = structuredClone(knowledgeLifecycle);
   const observation = broken.observations.find(({ id }) => id === "OBS-KC-TOWN-HALL-COUNCIL-APPROPRIATION");
