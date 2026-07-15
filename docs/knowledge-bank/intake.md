@@ -158,8 +158,9 @@ July 12-15, 2026:
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
   mission-aligned organization when his involvement concluded.
 - interactive media, sound, and public-memory practice across NTER CHNG,
-  including its America: Now and Here exhibition record, a Max/MSP audio
-  experiment, Matmos research, and Claudette's Theatre On Wheels;
+  including its America: Now and Here exhibition record, protected production
+  and interaction working records, a Max/MSP audio experiment, Matmos research,
+  and Claudette's Theatre On Wheels;
 - Commercial Rent Stabilization operating plans, shared minutes, and
   privacy-preserving public-data proposals; and
 - AI evals completion, bounded source-backed sprint design, and a context-only
@@ -201,7 +202,11 @@ reached `claim-candidate` for their supported propositions while retaining
 protected source locators and explicit non-claims. The interactive-media
 thread now links one governed reserve claim for NTER CHNG's 2011 America: Now
 and Here inclusion; that claim remains outside the current website and public
-citation registry. The Google Drive pass adds two more
+citation registry. Two protected NTER CHNG working records add bounded
+installation-operations and conceptual evidence without exposing Drive links,
+participant phone numbers, submitted messages, or private logistics. They do
+not change the governed public claim or current website. The Google Drive pass
+adds two more
 `claim-candidate` threads and one `researching` thread; all three remain outside
 the website and generated public registry. The personal-account pass is
 `integrated` into four governed reserve claims, but raw historical post text

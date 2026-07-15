@@ -41,6 +41,29 @@ claim. Observed use is not a quantified audience or impact claim. Archived
 phone numbers and participant-submitted messages are excluded, and archive
 access does not grant media republication rights.
 
+### Protected working records
+
+Two Jamie-supplied Google Docs add production and conceptual depth without
+becoming public source links. A May 2011 installation plan documents software
+queue review, server hosting, display computers, projectors, wall preparation
+and installation, a floor-based phone-number display, wiring, network work,
+gallery calibration, transport, and deinstallation. It places Jamie in the
+April-May preparation and installation window, but it does not identify the
+document's author, assign every task to Jamie, or prove that every planned
+configuration was completed.
+
+A second mixed working record combines dated prompt-response material with
+January 2010 exhibit information. It preserves the collaborators' shared
+credit and frames the work as transforming private one-to-one texting into a
+public many-to-many exchange. Because the raw document contains participant
+phone numbers and messages, neither its link nor those contents are published
+in this repository. It also does not establish whether the dated responses
+came from public visitors, collaborators, or testing.
+
+The exhibit-information text may be related to the press-release PDF linked by
+the archived project site, but the two artifacts have not been matched. The
+correct status remains: the exact linked PDF is not recovered.
+
 ## 2013: A Sorted Audio File
 
 [Monthly Music Hackathon](https://monthlymusichackathon.org/post/44177616179/sortedaudio)
@@ -79,7 +102,7 @@ need makes it more useful than the site's current composition.
 
 ## Open Research
 
-Recover NTER CHNG code, technical diagrams, the linked press release, cleared
-installation assets, collaborator confirmation, and project-level rights
-records. Resolve the Matmos surname conflict with an unambiguous source before
-forming any claim from that lead.
+Recover NTER CHNG code, technical diagrams, the exact linked press-release PDF,
+cleared installation assets, collaborator confirmation of the production task
+split, and project-level rights records. Resolve the Matmos surname conflict
+with an unambiguous source before forming any claim from that lead.

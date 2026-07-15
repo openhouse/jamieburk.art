@@ -406,6 +406,8 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
     "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
     "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
     "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+    "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+    "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
     "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
     "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
     "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29",
@@ -422,7 +424,7 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
   const protectedSources = selectedSourceIds
     .map((sourceId) => sourceById.get(sourceId))
     .filter((source) => source.visibility === "protected");
-  assert.equal(protectedSources.length, 7);
+  assert.equal(protectedSources.length, 9);
   assert.ok(protectedSources.every((source) => source.protectedLocatorId));
   assert.ok(
     protectedSources.every(
@@ -456,6 +458,16 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
   );
   assert.ok(
     sourceById
+      .get("SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011")
+      .doesNotEstablish.some((boundary) => /sole or exact responsibility/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011")
+      .doesNotEstablish.some((boundary) => /participant identity/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
       .get("SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26")
       .doesNotEstablish.some((boundary) => /Jamie Burkhardt is Jamie Burkart/i.test(boundary))
   );
@@ -478,13 +490,25 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   assert.equal(interactive.status, "claim-candidate");
   assert.equal(crs.status, "claim-candidate");
   assert.equal(evals.status, "claim-candidate");
-  assert.equal(interactive.candidateClaims.length, 4);
+  assert.equal(interactive.candidateClaims.length, 6);
   assert.equal(crs.candidateClaims.length, 4);
   assert.equal(evals.candidateClaims.length, 2);
   assert.ok([interactive, crs, evals].every((item) => item.projectionStatus === "no-public-projection"));
   assert.equal(
     interactive.propositions.find(
       (proposition) => proposition.id === "PROP-NTER-CHNG-AMERICA-NOW-HERE-2011"
+    ).status,
+    "supported-with-boundary"
+  );
+  assert.equal(
+    interactive.propositions.find(
+      (proposition) => proposition.id === "PROP-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+    ).status,
+    "supported-with-boundary"
+  );
+  assert.equal(
+    interactive.propositions.find(
+      (proposition) => proposition.id === "PROP-NTER-CHNG-CONCEPT-AND-PROMPT-RESPONSE-2010-2011"
     ).status,
     "supported-with-boundary"
   );
@@ -513,6 +537,8 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   assert.doesNotMatch(publicRegistryText, /INTAKE-INTERACTIVE-MEDIA-PRACTICE/);
   assert.doesNotMatch(publicRegistryText, /CLM-NTER-CHNG-AMERICA-NOW-HERE-2011/);
   assert.doesNotMatch(publicRegistryText, /SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011/);
+  assert.doesNotMatch(publicRegistryText, /SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011/);
+  assert.doesNotMatch(publicRegistryText, /SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011/);
   assert.doesNotMatch(publicRegistryText, /SRC-CRS-NINETY-DAY-OPERATING-PLAN/);
   assert.doesNotMatch(publicRegistryText, /SRC-SOURCE-BACKED-SPRINT-PREP/);
 });

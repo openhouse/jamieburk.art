@@ -36,6 +36,29 @@ The linked `press_release.pdf` from the project site was not recovered through
 the exact-URL or site-wide Internet Archive index review. This means "not
 recovered," not "did not exist."
 
+## Protected Working-Document Addendum
+
+Jamie subsequently supplied two Google Docs for protected review. Their URLs
+are not repeated in this public repository.
+
+1. A May 2011 America: Now and Here installation plan documents the practical
+   work of restaging NTER CHNG: software queue behavior, server hosting,
+   computers, projectors, wall preparation and installation, a floor-based
+   phone-number display, wiring, networking, gallery calibration, transport,
+   and deinstallation. It places Jamie in the preparation and installation
+   window but does not establish authorship of the plan or assign every task to
+   him.
+2. A mixed exhibit-information and prompt-response working record preserves
+   shared maker credit, the work's private-to-public and
+   one-to-one-to-many-to-many concept, and an attributed Jamie statement about
+   inviting visitors beyond existing contact lists. The source also contains
+   participant phone numbers and messages, so the raw document, identifiers,
+   and submissions remain protected.
+
+The second document's January 2010 exhibit-information section may be related
+to the missing linked press-release PDF, but no file-level match has been
+established. The exact PDF therefore remains not recovered.
+
 ## Matured Claim
 
 > America: Now and Here's official sites document NTER CHNG in its 2011 Kansas
@@ -59,6 +82,11 @@ website copy.
   adoption, reception, or impact.
 - Do not reproduce archived phone numbers, participant-submitted messages, or
   media without separate privacy and rights review.
+- Do not publish the protected Google Drive links or private installation
+  logistics.
+- Do not assign every installation-plan task to Jamie; the document records a
+  collaborative production scope and Jamie's presence in the work window, not
+  a complete actor-level task ledger.
 
 ## Next Research
 

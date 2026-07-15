@@ -568,6 +568,34 @@ const knowledgeBankInput = {
       doesNotEstablish: ["NTER CHNG inclusion in the exhibition", "the NTER CHNG maker credits or division of labor", "Jamie's attendance, institutional endorsement, audience reach, or impact"]
     },
     {
+      id: "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+      title: "NTER CHNG America: Now and Here installation plan",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected NTER CHNG installation-planning record for the May 2011 America: Now and Here presentation, reviewed July 15, 2026.",
+      publicNote: "The working plan documents the restaging's software, server, display, projection, wall-fabrication, wiring, gallery-calibration, transport, and deinstallation work. It places Jamie in the April-May preparation and installation window without assigning the full scope to him.",
+      supportsGenerally: ["May 2011 America: Now and Here restaging", "Jamie present in the documented preparation and installation window", "software queue review", "server hosting plan", "display-computer and projector work", "wall preparation and installation", "floor-based phone-number display", "wiring and network work", "gallery-experience calibration", "deinstallation planning"],
+      doesNotEstablish: ["authorship of the planning document", "Jamie's sole or exact responsibility for each task", "the final installed configuration", "completion of every planned task", "audience size, reception, adoption, or impact"],
+      protectedLocatorId: "GDRIVE-NTER-CHNG-ANH-INSTALL-PLAN-2011"
+    },
+    {
+      id: "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
+      title: "NTER CHNG exhibit-information and interaction working record",
+      organization: "NTER CHNG",
+      kind: "project-archive",
+      visibility: "protected",
+      preservationStatus: "private",
+      accessedAt: "2026-07-15",
+      publicCitation: "Protected NTER CHNG exhibit-information and interaction working record, reviewed July 15, 2026.",
+      publicNote: "The mixed working record preserves dated prompt-response material and January 2010 exhibit information. Participant phone numbers and submitted messages are excluded from the public repository.",
+      supportsGenerally: ["shared Drew Bolton, Jamie Burkart, and Garrett Fuselier credit", "software-and-architectural installation framing", "one-to-one texting transformed into a many-to-many public exchange", "prompt-and-response interaction model", "an attributed Jamie statement about inviting visitors beyond existing contact lists"],
+      doesNotEstablish: ["participant identity, consent, or public-gallery status", "permission to publish phone numbers or submitted messages", "that the exhibit-information text is identical to the unrecovered linked press-release PDF", "the detailed division of labor", "attendance, reach, reception, adoption, or impact"],
+      protectedLocatorId: "GDRIVE-NTER-CHNG-EXHIBIT-INTERACTION-2011"
+    },
+    {
       id: "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
       title: "A Sorted Audio File",
       organization: "Monthly Music Hackathon NYC",
@@ -1087,6 +1115,7 @@ const knowledgeBankInput = {
       methods: [
         "Recovered and closely read the archived project site, America: Now and Here's official Kansas City artist page, the exhibition's first-party visitor-use article, and the current Nerman Museum exhibition-context page.",
         "Queried the Internet Archive CDX index for NTER CHNG captures and the project site's linked press-release PDF.",
+        "Closely read two Jamie-supplied protected Google Docs: a May 2011 America: Now and Here installation plan and a mixed exhibit-information / prompt-response working record.",
         "Separated direct exhibition and collaborator evidence from institutional context and rights-sensitive participant material."
       ],
       runAt: "2026-07-15",
@@ -1094,15 +1123,19 @@ const knowledgeBankInput = {
       findings: [
         "Official archived exhibition pages establish NTER CHNG's inclusion, shared visual-artist credit, installation form, and observed visitor use.",
         "The archived project site preserves shared maker credit and the earlier Arts Incubator / Cocoon Gallery presentation.",
-        "The Nerman Museum page supplies Kansas City launch context but does not name NTER CHNG."
+        "The Nerman Museum page supplies Kansas City launch context but does not name NTER CHNG.",
+        "A protected 2011 installation plan documents material, software, server, display, projection, wiring, transport, calibration, and deinstallation work and places Jamie in the preparation and installation window without assigning the entire scope to him.",
+        "A protected mixed working record preserves shared maker credit, the prompt-response model, the private-to-public / one-to-one-to-many-to-many concept, and an attributed Jamie statement about reaching beyond existing contact lists."
       ],
       limitations: [
-        "The linked project-site press-release PDF was not recovered in the exact-URL or site-wide CDX review; this is not evidence that it never existed.",
+        "The linked project-site press-release PDF was not recovered in the exact-URL or site-wide CDX review. A protected working document contains January 2010 exhibit information, but it has not been matched to that exact PDF or an independently published release.",
+        "The protected installation plan does not establish its author, final completion of every task, or Jamie's exact responsibility for each task.",
+        "The protected prompt-response record contains participant phone numbers and messages and does not establish whether the responders were public visitors, collaborators, or testers; those contents and the source links remain withheld.",
         "Current public records do not decompose individual responsibilities or grant media and participant-text republication rights.",
         "Observed visitor use does not establish attendance, unique participants, reception, adoption, endorsement, or impact."
       ],
-      sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011"],
-      publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use; the Nerman Museum page supplies context rather than project-specific proof."
+      sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011", "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011", "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011", "SRC-NERMAN-AMERICA-NOW-HERE-2011", "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011", "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011"],
+      publicSummary: "America: Now and Here's archived official pages establish NTER CHNG's 2011 Kansas City exhibition inclusion, shared Drew Bolton / Jamie Burkart / Garrett Fuselier visual-artist credit, and observed visitor use. Protected working records add bounded production and conceptual evidence without changing the public claim or exposing participant data."
     },
     ...urbanhermitResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
@@ -2391,6 +2424,8 @@ const knowledgeBankInput = {
         "SRC-ANH-KC-NTER-CHNG-ARTIST-PAGE-2011",
         "SRC-ANH-NTER-CHNG-USE-ACCOUNT-2011",
         "SRC-NERMAN-AMERICA-NOW-HERE-2011",
+        "SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011",
+        "SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011",
         "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013-02-27",
         "SRC-MATMOS-VAGUE-TERRAIN-VIDEO-2016-11-26",
         "SRC-CLAUDETTES-THEATRE-XR-ENSEMBLE-2022-10-29"
@@ -2400,6 +2435,8 @@ const knowledgeBankInput = {
       candidateClaims: [
         "In 2010, Jamie co-designed NTER CHNG with Drew Bolton and Garrett Fuselier, an interactive installation that used a two-sided digital wall and visitor text messages to form an evolving gallery dialogue; Mary Nichols helped engineer and construct the wall.",
         "America: Now and Here's official sites document NTER CHNG in its 2011 Kansas City exhibition and credit Drew Bolton, Jamie Burkart, and Garrett Fuselier together as visual artists; a separate first-party article documents visitors using the text-message input and projected display.",
+        "A protected 2011 production plan documents NTER CHNG's America: Now and Here restaging as a combined software, server, display-computer, projection, wall-fabrication, wiring, gallery-calibration, transport, and deinstallation effort; it places Jamie in the preparation and installation window without assigning that full scope to him.",
+        "A protected working record preserves Jamie's shared NTER CHNG maker credit with Drew Bolton and Garrett Fuselier, the prompt-and-response model, and the work's intended transformation of private one-to-one texting into a public many-to-many exchange.",
         "At a February 2013 Monthly Music Hackathon NYC, Jamie built a Max/MSP program that segmented an audio file and reordered the clips by pitch.",
         "In 2022, Jamie Burkart and Michael Rees created Claudette's Theatre On Wheels, an interactive work honoring Claudette's women-centered theater through short app-accessed performance clips."
       ],
@@ -2426,6 +2463,24 @@ const knowledgeBankInput = {
           sourceSupport: ["official 2011 Kansas City visual-artist listing", "shared Drew Bolton, Jamie Burkart, and Garrett Fuselier credit", "NTER CHNG installation description", "first-party account of visitor text input and projected output", "institutional Kansas City launch context"],
           boundaries: ["Preserve all three visual-artist credits and do not infer a detailed task split.", "The Nerman Museum page supplies exhibition context but does not itself name NTER CHNG.", "Observed use is not attendance, reach, endorsement, adoption, or impact.", "Do not reproduce archived phone numbers, participant messages, or media without separate review."],
           decisionUse: "Adds direct first-party institutional evidence for exhibition inclusion and public operation while keeping the current hiring-site composition unchanged."
+        },
+        {
+          id: "PROP-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011",
+          text: "A protected 2011 production plan documents NTER CHNG's America: Now and Here restaging as a combined software, server, display-computer, projection, wall-fabrication, wiring, gallery-calibration, transport, and deinstallation effort; it places Jamie in the preparation and installation window without assigning that full scope to him.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-NTER-CHNG-ANH-INSTALL-PLAN-2011"],
+          sourceSupport: ["America: Now and Here restaging", "Jamie preparation and installation schedule", "software queue review", "server, display-computer, and projector planning", "wall fabrication and installation", "phone-number display", "wiring and network work", "gallery calibration", "deinstallation"],
+          boundaries: ["The plan does not identify its author or assign every task to Jamie.", "Planned tasks do not prove their final execution or configuration.", "Do not publish the underlying working-document link or private logistics."],
+          decisionUse: "Preserves the installation's implementation and production-management complexity for future role analysis without converting a collaborative plan into sole-credit language."
+        },
+        {
+          id: "PROP-NTER-CHNG-CONCEPT-AND-PROMPT-RESPONSE-2010-2011",
+          text: "A protected working record preserves Jamie's shared NTER CHNG maker credit with Drew Bolton and Garrett Fuselier, the prompt-and-response model, and the work's intended transformation of private one-to-one texting into a public many-to-many exchange.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-NTER-CHNG-EXHIBIT-INTERACTION-WORKING-RECORD-2011"],
+          sourceSupport: ["shared Drew Bolton, Jamie Burkart, and Garrett Fuselier credit", "software-and-architectural framing", "prompt-and-response interaction", "private-to-public and one-to-one-to-many-to-many concept", "Jamie-attributed invitation beyond existing contact lists"],
+          boundaries: ["Do not publish participant phone numbers or messages.", "The record does not establish whether the dated responses came from public gallery visitors, collaborators, or testing.", "Do not treat the exhibit-information section as the exact linked press-release PDF until the files are matched."],
+          decisionUse: "Adds first-party conceptual and interaction-design evidence while preserving participant privacy and document-version uncertainty."
         },
         {
           id: "PROP-SORTED-AUDIO-MAX-MSP-2013",
@@ -2459,8 +2514,9 @@ const knowledgeBankInput = {
       tensions: [],
       researchQuestions: [
         "Can an unambiguous source resolve the Burkhardt/Burkart Matmos credit and identify Jamie's exact contribution?",
-        "Which original project files or collaborator accounts identify Jamie's specific design decisions in NTER CHNG and Claudette's Theatre On Wheels?",
-        "Can the NTER CHNG press-release PDF linked by the archived project site be recovered from another archive or collaborator copy?",
+        "Which original code, diagrams, change history, or collaborator accounts identify Jamie's specific design and implementation decisions in NTER CHNG and Claudette's Theatre On Wheels?",
+        "Can the protected NTER CHNG exhibit-information copy be matched to the unrecovered press-release PDF linked by the archived project site or to another public release?",
+        "Which collaborators can assign the 2011 installation-plan tasks and confirm which planned configurations were completed?",
         "Do public-safe images or video stills survive with publication rights and collaborator consent?",
         "Which additional experimental media projects add a distinct action, output, or consequence rather than duplicating this thread?"
       ],
@@ -2469,13 +2525,14 @@ const knowledgeBankInput = {
         "Preserve collaborator, programmer, construction, platform, and source-composition credit.",
         "Treat the Matmos item as unresolved research until the surname conflict is corroborated.",
         "Do not publish archived phone numbers, participant-submitted messages, or media without privacy and rights review.",
+        "Do not publish the protected Google Drive links, raw interaction records, or private installation logistics.",
         "Not recovering the linked NTER CHNG press release is not evidence that it never existed.",
         "Do not project this intake item directly to the website; create and approve a governed claim first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-14",
       reviewedAt: "2026-07-15",
-      reviewedBy: ["Jamie Burkart", "Codex iCloud and Wayback archive review"]
+      reviewedBy: ["Jamie Burkart", "Codex iCloud, Wayback, and protected Google Drive review"]
     },
     {
       id: "INTAKE-CRS-OPERATING-AND-DATA-INFRASTRUCTURE-2026-07-14",
