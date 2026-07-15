@@ -20,6 +20,16 @@ posts and five reposts connect event discovery with civic mobilization, mutual
 aid, memorial, and support for DIY cultural spaces. All 35 shortened-link
 occurrences were dispositioned to 34 distinct destinations.
 
+## Facebook post archive
+
+The capture-date [Facebook post archive](wowlist-facebook-posts.md) accounts
+for all 57 posts exposed by the authenticated live feed from 2015 through 2018.
+It preserves 55 cleaned routes and bounded patterns in organizer onboarding,
+cross-city cultural distribution, participatory product practice, venue
+survival, mutual aid, and civic mobilization. These claims remain held in the
+knowledge bank because page identity and current administrative access do not
+identify the historical author of every shared-account post.
+
 ## Selected claim
 
 The public account Jamie reports establishing became a direct support surface

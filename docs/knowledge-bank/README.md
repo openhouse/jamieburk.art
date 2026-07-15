@@ -113,6 +113,13 @@ the surviving profile count, disposition every posted URL, preserve support,
 scene-knowledge, and civic-care findings, and select one bounded product-support
 claim for the public case study.
 
+The [WOW List Facebook-post receipt](intake/2026-07-15-wowlist-facebook-posts-full-population.md)
+and [project report](projects/wowlist-facebook-posts.md) account for all 57 posts
+exposed by the capture-date live feed, preserve a 55-route source inventory,
+document organizer workflows and care-oriented distribution, and hold all new
+claims in the bank where shared-account evidence cannot establish individual
+post authorship.
+
 The [NYC Artist Coalition X full-population receipt](intake/2026-07-15-nycartc-x-full-population.md)
 accounts for the complete 5,124-post profile control while keeping the 1,757
 unrecovered slots explicit. Its governed corpus separates authored posts from
