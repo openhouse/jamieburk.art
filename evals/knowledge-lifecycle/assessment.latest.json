@@ -2,7 +2,7 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "7fff7c32a9108d64cd2ed68ce953985474689398132f0e9363ea11e22ac22a4f",
+    "fingerprint": "1dccfd146219aed89f2a5afaaa97d8fb0fa969758dd377ef4512c4e419f8a544",
     "counts": {
       "entities": 38,
       "intake": 151,
@@ -24,20 +24,20 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "INTAKE-PITCH-NTER-CHNG-2010"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "CLM-NYCARTC-MARCH-TRANSPARENCY-SEED"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "INTAKE-CALLSCRIPT-PARTICIPATION-LINEAGE-MEMORY-2026"
+            "file": "docs/knowledge-bank/lifecycle.md",
+            "record": "Corrections, contradictions, rejected claims, and superseded wording remain in the system."
           }
         ]
       },
@@ -46,20 +46,20 @@
         "score": 4,
         "evidence": [
           {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "READ-PITCH-NTER-CHNG-2010"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "READ-VIMEO-NTER-CHNG-2011"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-RIVER-CHARLOTTE-STREET-2009"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "READ-JAMIE-CALLSCRIPT-PARTICIPATION-LINEAGE-ACCOUNT-2026"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "READ-HELLGATE-CURE-MARCH-2025"
           }
         ]
       },
@@ -68,12 +68,8 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "CLM-WOWLIST-DATABASE-SCALE-2017"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -86,6 +82,10 @@
           {
             "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
             "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
+          },
+          {
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "NTER CHNG preserves participatory behavior and every recovered collaborator credit"
           }
         ]
       },
@@ -106,12 +106,12 @@
             "record": "TASK-NYCARTC-MARCH-TRANSPARENCY-OUTCOME"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "TASK-CALLSCRIPT-NYCARTC-ROLE-AND-CHRONOLOGY-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
+            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
+            "record": "TASK-CALLSCRIPT-NYCARTC-ROLE-AND-CHRONOLOGY-CORROBORATION"
           }
         ]
       },
@@ -120,12 +120,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "DEC-PUBLISH-WOWLIST-DATABASE-SCALE-2017"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "DEC-PUBLISH-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "DEC-PUBLISH-SUNDAY-DINNER-RECORDED-GATHERING-SCALE"
+            "file": "apps/www/src/data/knowledge-bank/records.ts",
+            "record": "nter-chng-participatory-installation"
+          },
+          {
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "NTER CHNG / America: Now and Here"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
@@ -150,16 +154,16 @@
             "record": "if (source.visibility !== \"public\") return undefined;"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "SRC-PITCH-NTER-CHNG-2010"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "SRC-VIMEO-NTER-CHNG-2011"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
             "record": "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           }
         ]
       },
@@ -172,8 +176,12 @@
             "record": "Do not make the reader decode Jamie."
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/participation-lineage-2026-07-15.ts",
-            "record": "CLM-WOWLIST-DATABASE-SCALE-2017"
+            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
+            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+          },
+          {
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "Project `CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010` on `/about`"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -182,10 +190,6 @@
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
-            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           }
         ]
       }
@@ -208,5 +212,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh read-only review of committed state 6f62e95097cc79c3b990a38bbfd4ad743f39afaa found the lifecycle exceptionally explicit, traversable, defensible, and public-safe. Deterministic evaluation passed all 7 hard gates and 4 quality targets, and all 115 lifecycle tests passed. The July 15 participation-lineage records project bounded WOWList and Sunday Dinner aggregates through public-metadata-only citations while keeping the Call Script to NYC Artist Coalition role and chronology claim corroborated, unprojected, and research-routed. River, Open House, social-account, authorship, administration, engagement, and outcome distinctions retain collective credit and recovered-minimum limits. All human gates remain pending."
+  "summary": "Fresh read-only review of committed state 08c1ffec found the knowledge lifecycle exceptionally explicit, traversable, defensible, and public-safe. The supplied deterministic report records 0/7 hard-gate failures and 0/4 quality gaps. The bounded change promotes only CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010 from public-ready reserve to a cited /about projection: its two public source relations, atomic readings, complete recovered collaborative credits, anti-claims, explicit publish decision, page plan, generated registry entry, and privacy boundaries preserve loss resistance, decomposition, defensibility, publication independence, safety, and future composability. Related NTER CHNG claims and unresolved execution or exhibition questions remain independently bounded or deferred. All three human gates remain pending."
 }
