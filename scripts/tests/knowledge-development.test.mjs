@@ -11,6 +11,7 @@ import {
   validateCommittedCorpus as validateCallNycCorpus
 } from "../derive-callnyc-x-corpus.mjs";
 import {
+  buildCorpus as buildWowListCorpus,
   validateCommittedCorpus as validateWowListCorpus
 } from "../derive-wowlist-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -330,6 +331,23 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       corpusItems: 37
     })
   );
+  const rawCaptureWithoutRepostResolution = JSON.parse(rawCaptureText);
+  const repostOnlyShortUrl = rawCaptureWithoutRepostResolution.items
+    .find(
+      (item) =>
+        item.text.startsWith("WOW List! reposted\n") &&
+        item.links.some((link) => /^https?:\/\/t\.co\//.test(link.href))
+    )
+    .links.find((link) => /^https?:\/\/t\.co\//.test(link.href)).href;
+  rawCaptureWithoutRepostResolution.shortUrlResolutions =
+    rawCaptureWithoutRepostResolution.shortUrlResolutions.filter(
+      (item) => item.shortUrl !== repostOnlyShortUrl
+    );
+  assert.throws(() =>
+    buildWowListCorpus(
+      `${JSON.stringify(rawCaptureWithoutRepostResolution, null, 2)}\n`
+    )
+  );
   const canonicalUrls = new Set(corpus.items.map((item) => item.canonicalUrl));
   const authored = corpus.items.filter((item) => item.type === "authored");
   const reposted = corpus.items.filter((item) => item.type === "reposted");
@@ -426,6 +444,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   );
   assert.match(work, /location-scope, list-discovery, and event-entry workflow questions/);
   assert.match(work, /demonstrations, vigils, fundraisers, and mutual-aid circulation/);
+  assert.equal(
+    Number(priorObservation.publicNote.match(/profile reported (\d+) posts/)?.[1]),
+    corpus.population.profileReported
+  );
   assert.equal(
     Number(priorObservation.publicNote.match(/recovered (\d+) distinct/)?.[1]),
     corpus.population.renderedDistinct

@@ -171,6 +171,26 @@ export function deriveCorpusItems(rawCapture) {
       item.resolvedUrl
     ])
   );
+  const postedShortUrls = rawCapture.items.flatMap((item) =>
+    unique(
+      item.links
+        .map((link) => link.href)
+        .filter((href) => /^https?:\/\/t\.co\//.test(href))
+    )
+  );
+  const resolvedShortUrls = rawCapture.shortUrlResolutions.map(
+    (item) => item.shortUrl
+  );
+
+  assert.equal(new Set(postedShortUrls).size, postedShortUrls.length);
+  assert.equal(new Set(resolvedShortUrls).size, resolvedShortUrls.length);
+  assert.deepEqual(
+    new Set(resolvedShortUrls),
+    new Set(postedShortUrls)
+  );
+  for (const { resolvedUrl } of rawCapture.shortUrlResolutions) {
+    assert.match(resolvedUrl, /^https?:\/\//);
+  }
 
   return [...rawCapture.items]
     .sort((left, right) => left.datetime.localeCompare(right.datetime))
