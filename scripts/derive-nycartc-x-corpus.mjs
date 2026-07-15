@@ -10,11 +10,21 @@ const defaultCorpusPath =
 const defaultManifestPath =
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json";
 const expectedRawCaptureSha256 =
-  "f0fc03bbb761d078d07c0c8219deb5ab96a915e9afdc6cf3ddc4ed75bda4c616";
+  "2bf746950a65d12f7e3a8c701bb53f6e18cb17407638cbfc254f97b35c619fd3";
 
 const publicEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
 const publicPhonePattern =
   /(?:\+?1[ .-]+)?(?:\(\d{3}\)[ .-]*|\d{3}[ .-]+)\d{3}[ .-]+\d{4}/g;
+const trackingParameterName =
+  "utm_[a-z0-9_]+|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid|emci|emdi|ceid|can_id|email_referrer|email_subject|link_id";
+const trackingParameterPattern = new RegExp(
+  `([?&])(${trackingParameterName})=(?:\\[tracking value redacted\\]|[^&\\s]+)`,
+  "gi"
+);
+const unredactedTrackingParameterPattern = new RegExp(
+  `[?&](?:${trackingParameterName})=(?!\\[tracking value redacted\\])[^&\\s]+`,
+  "i"
+);
 const prohibitedFieldFragments = [
   "accountsettings",
   "authenticatedsession",
@@ -240,6 +250,17 @@ export function sha256(value) {
   return createHash("sha256").update(value).digest("hex");
 }
 
+export function assertValidIsoTimestamp(value, label = "timestamp") {
+  assert.match(
+    value,
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/,
+    `${label} must use canonical UTC ISO format`
+  );
+  const parsed = new Date(value);
+  assert.equal(Number.isNaN(parsed.getTime()), false, `${label} is not a real date`);
+  assert.equal(parsed.toISOString(), value, `${label} is not a real calendar date`);
+}
+
 function isProhibitedFieldName(value) {
   const normalized = value.toLowerCase().replace(/[^a-z0-9]/g, "");
   return (
@@ -344,6 +365,11 @@ function sanitizePublicString(value) {
   return value
     .replace(publicEmailPattern, "[public email redacted]")
     .replace(publicPhonePattern, "[public contact number redacted]")
+    .replace(
+      trackingParameterPattern,
+      (_match, separator, key) =>
+        `${separator}${key}=[tracking value redacted]`
+    )
     .replace(/https?:\/\/[^\s<>"']+/gi, sanitizeUrlToken);
 }
 
@@ -362,6 +388,11 @@ function assertPublicSafeValue(value, path = "$") {
   if (typeof value === "string") {
     assert.doesNotMatch(value, publicEmailPattern, `${path} retains an email address`);
     assert.doesNotMatch(value, publicPhonePattern, `${path} retains a phone number`);
+    assert.doesNotMatch(
+      value,
+      unredactedTrackingParameterPattern,
+      `${path} retains an unredacted tracking parameter value`
+    );
     assert.equal(
       hasUnapprovedQueryParameter(value),
       false,
@@ -435,6 +466,11 @@ export function buildNycArtCCorpus(rawCaptureText) {
   assertPublicSafeValue(raw);
   assert.equal(raw.account, "@NYCArtC");
   assert.equal(raw.profileReportedPosts, 5_124);
+  assertValidIsoTimestamp(raw.capturedAt, "capturedAt");
+  assertValidIsoTimestamp(
+    raw.captureAudit.profileTimelineOldestVisible,
+    "profileTimelineOldestVisible"
+  );
 
   const rawAccountItems = raw.items.filter((item) => item.kind !== "context");
   const rawAuthoredItems = rawAccountItems.filter(
@@ -504,6 +540,7 @@ export function buildNycArtCCorpus(rawCaptureText) {
   for (const item of raw.items) {
     assert.match(item.statusId, /^\d+$/);
     assert(["authored", "reposted", "context"].includes(item.kind));
+    assertValidIsoTimestamp(item.postedAt, `${item.statusId}.postedAt`);
     const statusUrl = new URL(item.statusUrl);
     const statusPath = statusUrl.pathname.split("/").filter(Boolean);
     assert.equal(statusPath[1], "status");

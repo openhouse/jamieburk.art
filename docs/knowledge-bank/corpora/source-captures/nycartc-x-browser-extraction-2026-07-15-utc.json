@@ -82167,7 +82167,7 @@
         {
           "shortUrl": "https://t.co/JD3rCTsYmB",
           "displayedText": [
-            "https:// zoom.us/webinar/regist er/WN_DwmEv7mMRFSgNWLocH9O7w?emci=2ad4cacb-7b70-ea11-a94c-00155d03b1e8&emdi=c3b62c28-ef70-ea11-a94c-00155d03b1e8&ceid=3806879&fbclid=[tracking value redacted] …"
+            "https:// zoom.us/webinar/regist er/WN_DwmEv7mMRFSgNWLocH9O7w?emci=[tracking value redacted]&emdi=[tracking value redacted]&ceid=[tracking value redacted]&fbclid=[tracking value redacted] …"
           ]
         }
       ],
@@ -82767,8 +82767,8 @@
       "kind": "authored",
       "sourceHandle": "NYCArtC",
       "postedAt": "2020-03-29T03:44:08.000Z",
-      "text": "NYC Artist Coalition\n@NYCArtC\n·\nMar 28, 2020\nCOVID-19 Relief for Artists, Freelancers, and Gig Workers: Wed Apr 1, 2020 07:00 PM\nQuote\nArtist Studio AP\n@ArtistStudioAP\n·\nMar 28, 2020\nJoin NY federal, state and local elected officials and freelancer advocates for a briefing on the impact of COVID-19 and advocacy for economic relief for artists, freelancers, and gig workers.\n\nhttps://\nzoom.us/webinar/regist\ner/WN_DwmEv7mMRFSgNWLocH9O7w?emci=2ad4cacb-7b70-ea11-a94c-00155d03b1e8&emdi=c3b62c28-ef70-ea11-a94c-00155d03b1e8&ceid=3806879&fbclid=[tracking value redacted]\n…\n1\n2",
-      "textSha256": "32501cecd5b1639a489f2bdbbe7ee913e883ca0c00c9350bab6e9609c231b8bf",
+      "text": "NYC Artist Coalition\n@NYCArtC\n·\nMar 28, 2020\nCOVID-19 Relief for Artists, Freelancers, and Gig Workers: Wed Apr 1, 2020 07:00 PM\nQuote\nArtist Studio AP\n@ArtistStudioAP\n·\nMar 28, 2020\nJoin NY federal, state and local elected officials and freelancer advocates for a briefing on the impact of COVID-19 and advocacy for economic relief for artists, freelancers, and gig workers.\n\nhttps://\nzoom.us/webinar/regist\ner/WN_DwmEv7mMRFSgNWLocH9O7w?emci=[tracking value redacted]&emdi=[tracking value redacted]&ceid=[tracking value redacted]&fbclid=[tracking value redacted]\n…\n1\n2",
+      "textSha256": "a7fa5ae631e7d6880d2ccd6ea7fd65b658e55b1a33d5d71458f02a0516610886",
       "publicTextOmitted": false,
       "hashtags": [],
       "mentions": [

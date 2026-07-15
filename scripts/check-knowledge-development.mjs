@@ -26,7 +26,10 @@ const projectionSurfaceBindings = JSON.parse(
   )
 );
 const collectiveProjects = new Set(collectiveCreditPolicy.collectiveProjects);
-const collectiveClaims = new Set(collectiveCreditPolicy.collectiveClaims);
+const individualProjects = new Set(collectiveCreditPolicy.individualProjects);
+const mixedProjects = new Map(
+  Object.entries(collectiveCreditPolicy.mixedProjects)
+);
 const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
@@ -113,14 +116,45 @@ function literalAttribute(tag, attribute) {
   return tag.match(new RegExp(`${attribute}=["']([^"']+)["']`))?.[1];
 }
 
-function routeRealizesProjection(content, claim, projection, surface) {
-  const claimTags = content.match(/<Claim\b[\s\S]*?\/>/g) ?? [];
+function executableSource(content) {
+  return content
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/^\s*\/\/.*$/gm, "");
+}
+
+function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
+  const pageId = literalAttribute(tag, "pageId");
+  const occurrenceId = literalAttribute(tag, "occurrenceId");
+  if (!pageId && !occurrenceId) return !projection.citationRequired;
+  if (!pageId || !occurrenceId) return false;
+  const page = bank.pages.find(
+    (item) => item.id === pageId && item.surface === surface
+  );
+  const occurrence = page?.occurrences.find(
+    (item) => item.id === occurrenceId
+  );
+  return (
+    occurrence?.claimId === claim.id && occurrence.projection === projection.key
+  );
+}
+
+export function routeRealizesProjection(
+  content,
+  claim,
+  projection,
+  surface,
+  bank = { pages: [] }
+) {
+  const executable = executableSource(content);
+  const claimTags = executable.match(/<Claim\b[\s\S]*?\/>/g) ?? [];
   if (
     claimTags.some(
       (tag) =>
         literalAttribute(tag, "claimId") === claim.id &&
         literalAttribute(tag, "projection") === projection.key &&
-        literalAttribute(tag, "surface") === surface
+        literalAttribute(tag, "surface") === surface &&
+        matchingCitationOccurrence(bank, tag, claim, projection, surface)
     )
   ) {
     return true;
@@ -129,10 +163,10 @@ function routeRealizesProjection(content, claim, projection, surface) {
   const resolverPattern = new RegExp(
     `getClaimProjection\\(\\s*["']${claim.id}["']\\s*,\\s*["']${projection.key}["']\\s*,\\s*["']${surface.replaceAll("/", "\\/")}["']\\s*\\)`
   );
-  return resolverPattern.test(content);
+  return !projection.citationRequired && resolverPattern.test(executable);
 }
 
-function projectionRealizationFindings(claim, projection) {
+function projectionRealizationFindings(bank, claim, projection) {
   const findings = [];
   if (projection.status !== "active") return findings;
   if (projection.surfaces.length === 0) {
@@ -149,10 +183,7 @@ function projectionRealizationFindings(claim, projection) {
         findings.push(`${claim.id}/${projection.key} targets missing ${path}`);
         continue;
       }
-      if (
-        projection.key === "archive-note" &&
-        !normalizedText(content).includes(normalizedText(projection.text))
-      ) {
+      if (!normalizedText(content).includes(normalizedText(projection.text))) {
         findings.push(
           `${claim.id}/${projection.key} is not realized on ${surface}`
         );
@@ -177,7 +208,7 @@ function projectionRealizationFindings(claim, projection) {
     if (
       routeContents.length === routeFiles.length &&
       !routeContents.some((content) =>
-        routeRealizesProjection(content, claim, projection, surface)
+        routeRealizesProjection(content, claim, projection, surface, bank)
       )
     ) {
       findings.push(`${claim.id}/${projection.key} is not realized on ${surface}`);
@@ -210,11 +241,27 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 1) {
-    findings["KB-007"].push("collective-credit policy version must be 1");
+  if (collectiveCreditPolicy.version !== 2) {
+    findings["KB-007"].push("collective-credit policy version must be 2");
   }
   if (projectionSurfaceBindings.version !== 1) {
     findings["KB-009"].push("projection-surface policy version must be 1");
+  }
+
+  const projectClassifications = [
+    ...collectiveProjects,
+    ...individualProjects,
+    ...mixedProjects.keys()
+  ];
+  if (
+    projectClassifications.some(
+      (project) => typeof project !== "string" || project.trim().length === 0
+    )
+  ) {
+    findings["KB-007"].push("collective-credit policy has a blank project ID");
+  }
+  if (new Set(projectClassifications).size !== projectClassifications.length) {
+    findings["KB-007"].push("collective-credit policy classifies a project more than once");
   }
 
   for (const item of bank.intake) {
@@ -249,11 +296,26 @@ export function evaluateKnowledgeBank(
     if (confirmed && !directSupport) findings["KB-004"].push(`${claim.id} is confirmed without direct support`);
     if (claim.projectionEligibility === "eligible" && !confirmed) findings["KB-004"].push(`${claim.id} is eligible before confirmation`);
     if (claim.maturity === "research-needed" && claim.projectionEligibility !== "hold") findings["KB-004"].push(`${claim.id} is research-needed but not held`);
-    const policyRequiresCollective =
-      collectiveProjects.has(claim.project) || collectiveClaims.has(claim.id);
-    if (policyRequiresCollective && !claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped collective work but is not classified as collective`);
-    if (claim.collectiveWork && !policyRequiresCollective) findings["KB-007"].push(`${claim.id} is collective work but is missing from the collective-credit policy`);
-    if (claim.collectiveWork && (claim.boundaries.length === 0 || claim.antiClaims.length === 0)) findings["KB-007"].push(`${claim.id} lacks a collective-credit boundary or anti-claim`);
+    const projectIsCollective = collectiveProjects.has(claim.project);
+    const projectIsIndividual = individualProjects.has(claim.project);
+    const mixedPolicy = mixedProjects.get(claim.project);
+    let policyRequiresCollective;
+    if (projectIsCollective) policyRequiresCollective = true;
+    else if (projectIsIndividual) policyRequiresCollective = false;
+    else if (mixedPolicy) {
+      const inCollective = mixedPolicy.collectiveClaims.includes(claim.id);
+      const inIndividual = mixedPolicy.individualClaims.includes(claim.id);
+      if (inCollective === inIndividual) {
+        findings["KB-007"].push(`${claim.id} is not uniquely classified inside mixed project ${claim.project}`);
+      } else {
+        policyRequiresCollective = inCollective;
+      }
+    } else {
+      findings["KB-007"].push(`${claim.id} belongs to unclassified project ${claim.project}`);
+    }
+    if (policyRequiresCollective === true && !claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped collective work but is not classified as collective`);
+    if (policyRequiresCollective === false && claim.collectiveWork) findings["KB-007"].push(`${claim.id} is policy-scoped individual work but is classified as collective`);
+    if (claim.collectiveWork && (claim.boundaries.some((item) => item.trim().length === 0) || claim.antiClaims.some((item) => item.trim().length === 0) || claim.boundaries.length === 0 || claim.antiClaims.length === 0)) findings["KB-007"].push(`${claim.id} lacks a substantive collective-credit boundary or anti-claim`);
     for (const evidence of claim.evidence) if (!sourceIds.has(evidence.sourceId)) findings["KB-005"].push(`${claim.id} references missing source ${evidence.sourceId}`);
     for (const id of claim.researchInquiryIds) if (!inquiryIds.has(id)) findings["KB-005"].push(`${claim.id} references missing inquiry ${id}`);
 
@@ -270,7 +332,7 @@ export function evaluateKnowledgeBank(
       }
       projectionKeys.add(projection.key);
       findings["KB-009"].push(
-        ...projectionRealizationFindings(claim, projection)
+        ...projectionRealizationFindings(bank, claim, projection)
       );
     }
 
@@ -281,9 +343,47 @@ export function evaluateKnowledgeBank(
     }
   }
 
-  for (const id of collectiveClaims) {
-    if (!claimIds.has(id)) {
-      findings["KB-007"].push(`collective-credit policy references missing claim ${id}`);
+  for (const [project, mixedPolicy] of mixedProjects) {
+    const classifiedClaims = [
+      ...mixedPolicy.collectiveClaims,
+      ...mixedPolicy.individualClaims
+    ];
+    if (
+      classifiedClaims.some(
+        (id) => typeof id !== "string" || id.trim().length === 0
+      )
+    ) {
+      findings["KB-007"].push(`${project} mixed-project policy has a blank claim ID`);
+    }
+    if (new Set(classifiedClaims).size !== classifiedClaims.length) {
+      findings["KB-007"].push(`${project} mixed-project policy classifies a claim more than once`);
+    }
+    for (const id of classifiedClaims) {
+      if (!claimIds.has(id)) {
+        findings["KB-007"].push(`collective-credit policy references missing claim ${id}`);
+      }
+    }
+  }
+
+  const pageIds = new Set();
+  for (const page of bank.pages) {
+    if (pageIds.has(page.id)) findings["KB-009"].push(`citation page ID ${page.id} is duplicated`);
+    pageIds.add(page.id);
+    const occurrenceIds = new Set();
+    for (const occurrence of page.occurrences) {
+      if (occurrenceIds.has(occurrence.id)) findings["KB-009"].push(`${page.id} duplicates occurrence ${occurrence.id}`);
+      occurrenceIds.add(occurrence.id);
+      const claim = bank.claims.find((item) => item.id === occurrence.claimId);
+      const projection = claim?.projections.find(
+        (item) => item.key === occurrence.projection
+      );
+      if (
+        !projection ||
+        projection.status !== "active" ||
+        !projection.surfaces.includes(page.surface)
+      ) {
+        findings["KB-009"].push(`${page.id}/${occurrence.id} is disconnected from an active projection on ${page.surface}`);
+      }
     }
   }
 

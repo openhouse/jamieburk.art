@@ -5,6 +5,7 @@ import test from "node:test";
 
 import {
   evaluateKnowledgeBank,
+  routeRealizesProjection,
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite
 } from "../check-knowledge-development.mjs";
@@ -22,6 +23,7 @@ import {
   validateKcTownHallCorpus
 } from "../derive-kctownhall-x-corpus.mjs";
 import {
+  assertValidIsoTimestamp,
   buildNycArtCCorpus,
   sanitizeNycArtCRawCapture,
   sha256,
@@ -1038,6 +1040,10 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   );
   assert.deepEqual(accountShortUrls, resolutions);
   assert.equal(unresolvedContextOnly.size, 4);
+  assert.doesNotMatch(
+    rawCaptureText,
+    /[?&](?:emci|emdi|ceid)=(?!\[tracking value redacted\])[^&\s]+/i
+  );
   assert.ok(
     raw.items
       .filter((item) => item.kind === "reposted")
@@ -1092,6 +1098,18 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.throws(() =>
     buildNycArtCCorpus(`${JSON.stringify(rawWithTrackingValue, null, 2)}\n`)
   );
+  const rawWithBrokenTrackingUrl = JSON.parse(rawCaptureText);
+  rawWithBrokenTrackingUrl.items[0].media.altText = [
+    "https://\nexample.org/action?emci=private-value&ceid=123"
+  ];
+  const sanitizedBrokenTrackingUrl = sanitizeNycArtCRawCapture(
+    `${JSON.stringify(rawWithBrokenTrackingUrl, null, 2)}\n`
+  );
+  assert.doesNotMatch(sanitizedBrokenTrackingUrl, /emci=private-value|ceid=123/);
+  assert.match(
+    sanitizedBrokenTrackingUrl,
+    /emci=\[tracking value redacted\]&ceid=\[tracking value redacted\]/
+  );
   for (const privateField of [
     "directMessages",
     "privateMessages",
@@ -1142,6 +1160,9 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
       (item) => item.statusId === historicalItem.statusId
     ).recoveryPartition,
     "historical-authored-search"
+  );
+  assert.throws(() =>
+    assertValidIsoTimestamp("2025-13-40T14:52:50.000Z", "mutated.postedAt")
   );
 
   const sharedLayer = knowledgeBank.claims.find(
@@ -1297,6 +1318,74 @@ test("policy-scoped collective claims cannot opt out of collective-credit evalua
   );
 });
 
+test("unknown projects and unclassified mixed-project claims fail closed", () => {
+  const unknownProjectCandidate = structuredClone(knowledgeBank);
+  const movedClaim = unknownProjectCandidate.claims.find(
+    (item) => item.id === "CLM-KCTH-X-PUBLIC-OPERATIONS"
+  );
+  movedClaim.project = "new-unclassified-project";
+  movedClaim.collectiveWork = false;
+  movedClaim.boundaries = [];
+  movedClaim.antiClaims = [];
+  const unknownProjectResult = evaluateKnowledgeBank(
+    suite,
+    unknownProjectCandidate,
+    2,
+    hybridPass
+  );
+  const unknownProjectCredit = unknownProjectResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(unknownProjectCredit.pass, false);
+  assert.match(
+    unknownProjectCredit.findings.join("\n"),
+    /belongs to unclassified project new-unclassified-project/
+  );
+
+  const mixedProjectCandidate = structuredClone(knowledgeBank);
+  const unclassifiedClaim = structuredClone(
+    mixedProjectCandidate.claims.find(
+      (item) => item.id === "CLM-WATER-GREAT-ACCOMMODATIONS"
+    )
+  );
+  unclassifiedClaim.id = "CLM-WATER-NEW-UNCLASSIFIED";
+  mixedProjectCandidate.claims.push(unclassifiedClaim);
+  const mixedProjectResult = evaluateKnowledgeBank(
+    suite,
+    mixedProjectCandidate,
+    2,
+    hybridPass
+  );
+  const mixedProjectCredit = mixedProjectResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(mixedProjectCredit.pass, false);
+  assert.match(
+    mixedProjectCredit.findings.join("\n"),
+    /is not uniquely classified inside mixed project waterway-participation/
+  );
+});
+
+test("collective-credit guardrails must contain substantive text", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-KCTH-X-PUBLIC-OPERATIONS"
+  );
+  claim.boundaries = ["   "];
+  claim.antiClaims = ["\t"];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const collectiveCredit = result.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(collectiveCredit.pass, false);
+  assert.match(
+    collectiveCredit.findings.join("\n"),
+    /lacks a substantive collective-credit boundary or anti-claim/
+  );
+  assert.throws(() => claimRecordSchema.parse(claim));
+});
+
 test("active projections require a known and realized surface", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
@@ -1354,6 +1443,68 @@ test("technical projections cannot move to an unrelated known route", () => {
   );
 });
 
+test("every active document projection requires exact realization", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const claim = candidate.claims.find(
+    (item) => item.id === "CLM-NAC-FIRE-CODE-STUDY-GROUPS"
+  );
+  claim.projections.find((item) => item.key === "case-study").surfaces = [
+    "docs/knowledge-bank/projects/callnyc"
+  ];
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const projectionCoverage = result.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(projectionCoverage.pass, false);
+  assert.match(
+    projectionCoverage.findings.join("\n"),
+    /is not realized on docs\/knowledge-bank\/projects\/callnyc/
+  );
+});
+
+test("citation-required route bindings stay connected to their page occurrence", () => {
+  const missingCandidate = structuredClone(knowledgeBank);
+  const page = missingCandidate.pages.find(
+    (item) => item.id === "fair-rent-nyc"
+  );
+  page.occurrences = page.occurrences.filter(
+    (item) => item.id !== "fire-code-study-groups"
+  );
+  const missingResult = evaluateKnowledgeBank(
+    suite,
+    missingCandidate,
+    2,
+    hybridPass
+  );
+  const missingCoverage = missingResult.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(missingCoverage.pass, false);
+  assert.match(
+    missingCoverage.findings.join("\n"),
+    /CLM-NAC-FIRE-CODE-STUDY-GROUPS\/case-study is not realized/
+  );
+
+  const reboundCandidate = structuredClone(knowledgeBank);
+  reboundCandidate.pages
+    .find((item) => item.id === "fair-rent-nyc")
+    .occurrences.find(
+      (item) => item.id === "fire-code-study-groups"
+    ).claimId = "CLM-NAC-REPEAL-MOBILIZATION";
+  const reboundResult = evaluateKnowledgeBank(
+    suite,
+    reboundCandidate,
+    2,
+    hybridPass
+  );
+  const reboundCoverage = reboundResult.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(reboundCoverage.pass, false);
+  assert.match(reboundCoverage.findings.join("\n"), /is not realized/);
+});
+
 test("duplicate projection keys fail public projection coverage", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
@@ -1371,6 +1522,44 @@ test("duplicate projection keys fail public projection coverage", () => {
     /duplicates projection key technical-operations/
   );
   assert.throws(() => claimRecordSchema.parse(claim));
+});
+
+test("commented claim bindings do not count as route realization", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CRS-SHARED-MEMORY-SYSTEM"
+  );
+  const projection = claim.projections.find(
+    (item) => item.key === "technical-operations"
+  );
+  const literal = `<Claim claimId="${claim.id}" projection="${projection.key}" surface="/work/technical-operations" />`;
+
+  assert.equal(
+    routeRealizesProjection(
+      `{/* ${literal} */}`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `/* ${literal} */`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      literal,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    true
+  );
 });
 
 test("a research-stage claim cannot become projection-eligible", () => {

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "collectiveProjects": [
     "196-sunday-dinner",
     "commercial-rent-data",
@@ -13,9 +13,20 @@
     "sunday-dinner",
     "wowlist"
   ],
-  "collectiveClaims": [
-    "CLM-WATER-RAFT-CONCEPT",
-    "CLM-WATER-GULF-ROUTE",
-    "CLM-WATER-PARTICIPATORY-THROUGHLINE"
-  ]
+  "individualProjects": [
+    "callnyc",
+    "source-backed-team-memory"
+  ],
+  "mixedProjects": {
+    "waterway-participation": {
+      "collectiveClaims": [
+        "CLM-WATER-RAFT-CONCEPT",
+        "CLM-WATER-GULF-ROUTE",
+        "CLM-WATER-PARTICIPATORY-THROUGHLINE"
+      ],
+      "individualClaims": [
+        "CLM-WATER-GREAT-ACCOMMODATIONS"
+      ]
+    }
+  }
 }

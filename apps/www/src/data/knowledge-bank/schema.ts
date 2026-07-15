@@ -252,8 +252,8 @@ export const claimRecordSchema = z.object({
     });
   }),
   evidence: z.array(evidenceRelationshipSchema),
-  boundaries: z.array(z.string().min(1)).default([]),
-  antiClaims: z.array(z.string().min(1)).default([]),
+  boundaries: z.array(z.string().trim().min(1)).default([]),
+  antiClaims: z.array(z.string().trim().min(1)).default([]),
   researchInquiryIds: z.array(stableIdSchema).default([]),
   reviewedAt: z.iso.date(),
   reviewedBy: z.array(z.string().min(1)).default([])
