@@ -1261,6 +1261,15 @@
           ]
         },
         {
+          "key": "case-study-evidence",
+          "text": "Politico New York covered CallNYC on March 14, 2016, connecting Jamie's independent project to the January gathering and the later fuller CouncilStat data release.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        },
+        {
           "key": "work-card",
           "text": "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.",
           "status": "active",
@@ -2830,7 +2839,7 @@
         {
           "id": "press-coverage",
           "claimId": "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON",
-          "projection": "case-study",
+          "projection": "case-study-evidence",
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14"
           ]

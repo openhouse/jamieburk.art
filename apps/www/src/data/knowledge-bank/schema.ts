@@ -204,6 +204,7 @@ export const sourceAssertionSchema = z.object({
 export const claimProjectionSchema = z.object({
   key: z.enum([
     "case-study",
+    "case-study-evidence",
     "work-card",
     "resume-html",
     "technical-operations",

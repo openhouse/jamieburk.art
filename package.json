@@ -21,6 +21,8 @@
     "check:kctownhall-corpus": "node scripts/derive-kctownhall-x-corpus.mjs > /dev/null",
     "check:nycartc-corpus": "node scripts/derive-nycartc-x-corpus.mjs > /dev/null",
     "generate:citations": "node scripts/generate-public-citations.mjs",
+    "generate:resume-pdf": "node scripts/generate-resume-pdf.mjs",
+    "report:knowledge-policy-fingerprints": "node scripts/report-knowledge-policy-fingerprints.mjs",
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",

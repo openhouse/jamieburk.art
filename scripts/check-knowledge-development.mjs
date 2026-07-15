@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
-import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const suitePath = ".agents/evals/knowledge-bank-development.json";
@@ -38,6 +40,25 @@ const unassertedIndividualClaims = new Map(
 const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
+const requiredPublicSurfaceRoots = new Map([
+  ["apps/www/src/app", [".tsx"]],
+  ["apps/www/src/components", [".tsx"]],
+  ["apps/www/src/content", [".mdx"]]
+]);
+const requiredPublicSurfaceFiles = new Set([
+  "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/site.ts",
+  "apps/www/src/data/work.ts",
+  "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
+  "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
+  "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+]);
+const requiredCaseStudySharedFiles = new Set([
+  "apps/www/src/app/work/[slug]/page.tsx",
+  "apps/www/src/components/CaseStudyBlocks.tsx",
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/data/work.ts"
+]);
 const hybridCandidatePaths = [
   ".agents/evals/knowledge-bank-development.json",
   "apps/www/src/content/work",
@@ -117,6 +138,79 @@ function normalizedText(value) {
   return value.replace(/\s+/g, " ").trim();
 }
 
+function sha256(value) {
+  return createHash("sha256").update(value).digest("hex");
+}
+
+function stableSha256(value) {
+  return sha256(JSON.stringify(value));
+}
+
+export function collectiveCreditFingerprint(bank) {
+  return stableSha256(
+    bank.claims
+      .filter((claim) => claim.collectiveWork)
+      .map((claim) => ({
+        id: claim.id,
+        project: claim.project,
+        internalClaim: claim.internalClaim,
+        boundaries: claim.boundaries,
+        antiClaims: claim.antiClaims,
+        collectiveWork: claim.collectiveWork
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id))
+  );
+}
+
+export function projectionDecisionFingerprint(bank) {
+  return stableSha256({
+    claims: bank.claims
+      .map((claim) => ({
+        id: claim.id,
+        projectionEligibility: claim.projectionEligibility,
+        projections: claim.projections
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id)),
+    pages: bank.pages
+      .map((page) => ({
+        id: page.id,
+        surface: page.surface,
+        occurrences: page.occurrences
+      }))
+      .sort((left, right) => left.id.localeCompare(right.id))
+  });
+}
+
+function filesBelow(root, extensions) {
+  const files = [];
+  for (const entry of readdirSync(root, { withFileTypes: true })) {
+    const path = join(root, entry.name);
+    if (entry.isDirectory()) files.push(...filesBelow(path, extensions));
+    else if (extensions.some((extension) => path.endsWith(extension))) files.push(path);
+  }
+  return files;
+}
+
+export function publicSurfaceFingerprint(
+  policy = projectionSurfaceBindings
+) {
+  const paths = new Set(policy.publicSurfaceFiles);
+  for (const root of policy.publicSurfaceRoots) {
+    for (const path of filesBelow(root.path, root.extensions)) paths.add(path);
+  }
+  return stableSha256(
+    [...paths]
+      .sort()
+      .map((path) => [path, sha256(readFileSync(path))])
+  );
+}
+
+function routeFilesForSurface(surface) {
+  const files = projectionSurfaceBindings.routes[surface] ?? [];
+  if (!projectionSurfaceBindings.caseStudyRoutes.includes(surface)) return files;
+  return [...new Set([...files, ...projectionSurfaceBindings.caseStudySharedFiles])];
+}
+
 function literalAttribute(tag, attribute) {
   return tag.match(new RegExp(`${attribute}=["']([^"']+)["']`))?.[1];
 }
@@ -126,7 +220,9 @@ function executableSource(content) {
     .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
     .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+    .replace(/(^|[^:])\/\/.*$/gm, "$1")
+    .replace(/\bfalse\s*&&\s*\([\s\S]*?\)\s*;?/g, "")
+    .replace(/\bif\s*\(\s*false\s*\)\s*\{[\s\S]*?\}/g, "");
 }
 
 export function documentRealizesProjection(content, projection) {
@@ -146,8 +242,23 @@ function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
   const occurrence = page?.occurrences.find(
     (item) => item.id === occurrenceId
   );
+  const renderableDirectSupport = new Set(
+    claim.evidence
+      .filter(
+        (evidence) =>
+          evidence.relationship === "direct-support" &&
+          evidence.renderCitation &&
+          bank.sources.some(
+            (source) =>
+              source.id === evidence.sourceId && source.visibility === "public"
+          )
+      )
+      .map((evidence) => evidence.sourceId)
+  );
   return (
-    occurrence?.claimId === claim.id && occurrence.projection === projection.key
+    occurrence?.claimId === claim.id &&
+    occurrence.projection === projection.key &&
+    occurrence.sourceIds.some((sourceId) => renderableDirectSupport.has(sourceId))
   );
 }
 
@@ -159,7 +270,10 @@ export function routeRealizesProjection(
   bank = { pages: [] }
 ) {
   const executable = executableSource(content);
-  const claimTags = executable.match(/<Claim\b[\s\S]*?\/>/g) ?? [];
+  const claimTags =
+    executable.match(
+      /^[ \t]*<Claim\b[\s\S]*?\/>(?:[ \t]*\{\s*["']\s*["']\s*\})?[ \t]*$/gm
+    ) ?? [];
   if (
     claimTags.some(
       (tag) =>
@@ -173,7 +287,8 @@ export function routeRealizesProjection(
   }
 
   const resolverPattern = new RegExp(
-    `getClaimProjection\\(\\s*["']${claim.id}["']\\s*,\\s*["']${projection.key}["']\\s*,\\s*["']${surface.replaceAll("/", "\\/")}["']\\s*\\)`
+    `^[ \\t]*(?:[A-Za-z_$][\\w$]*\\s*:\\s*|const\\s+[A-Za-z_$][\\w$]*\\s*=\\s*)getClaimProjection\\(\\s*["']${claim.id}["']\\s*,\\s*["']${projection.key}["']\\s*,\\s*["']${surface.replaceAll("/", "\\/")}["']\\s*\\)`,
+    "m"
   );
   return !projection.citationRequired && resolverPattern.test(executable);
 }
@@ -208,7 +323,7 @@ function projectionRealizationFindings(bank, claim, projection) {
       continue;
     }
 
-    const routeFiles = projectionSurfaceBindings.routes[surface];
+    const routeFiles = routeFilesForSurface(surface);
     const routeContents = [];
     for (const path of routeFiles) {
       try {
@@ -253,11 +368,104 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 4) {
-    findings["KB-007"].push("collective-credit policy version must be 4");
+  if (collectiveCreditPolicy.version !== 5) {
+    findings["KB-007"].push("collective-credit policy version must be 5");
   }
-  if (projectionSurfaceBindings.version !== 1) {
-    findings["KB-009"].push("projection-surface policy version must be 1");
+  if (projectionSurfaceBindings.version !== 2) {
+    findings["KB-009"].push("projection-surface policy version must be 2");
+  }
+  if (
+    collectiveCreditPolicy.collectiveClaimsSha256 !==
+    collectiveCreditFingerprint(bank)
+  ) {
+    findings["KB-007"].push(
+      "collective claim inventory, project ownership, or credit language changed without policy review"
+    );
+  }
+  if (
+    projectionSurfaceBindings.projectionDecisionSha256 !==
+    projectionDecisionFingerprint(bank)
+  ) {
+    findings["KB-009"].push(
+      "claim use-now/hold decisions or citation occurrences changed without policy review"
+    );
+  }
+
+  const configuredRoots = new Map(
+    projectionSurfaceBindings.publicSurfaceRoots.map((root) => [
+      root.path,
+      root.extensions
+    ])
+  );
+  for (const [path, extensions] of requiredPublicSurfaceRoots) {
+    const configuredExtensions = configuredRoots.get(path) ?? [];
+    if (extensions.some((extension) => !configuredExtensions.includes(extension))) {
+      findings["KB-009"].push(
+        `public-surface policy does not govern all ${path} ${extensions.join(", ")} files`
+      );
+    }
+  }
+  for (const path of requiredPublicSurfaceFiles) {
+    if (!projectionSurfaceBindings.publicSurfaceFiles.includes(path)) {
+      findings["KB-009"].push(
+        `public-surface policy omits consequential file ${path}`
+      );
+    }
+  }
+  for (const path of requiredCaseStudySharedFiles) {
+    if (!projectionSurfaceBindings.caseStudySharedFiles.includes(path)) {
+      findings["KB-009"].push(
+        `case-study policy omits shared claim renderer ${path}`
+      );
+    }
+  }
+  try {
+    if (
+      projectionSurfaceBindings.publicSurfaceSha256 !==
+      publicSurfaceFingerprint()
+    ) {
+      findings["KB-009"].push(
+        "a consequential public surface changed without reverse-coverage review"
+      );
+    }
+  } catch (error) {
+    findings["KB-009"].push(
+      `public-surface inventory cannot be read: ${error.message}`
+    );
+  }
+
+  const resumeArtifact = projectionSurfaceBindings.resumeArtifact;
+  try {
+    const source = readFileSync(resumeArtifact.sourcePath, "utf8");
+    const extractedText = readFileSync(resumeArtifact.extractedTextPath, "utf8");
+    const pdf = readFileSync(resumeArtifact.pdfPath);
+    if (sha256(source) !== resumeArtifact.sourceSha256) {
+      findings["KB-009"].push("resume HTML changed without artifact review");
+    }
+    if (sha256(extractedText) !== resumeArtifact.extractedTextSha256) {
+      findings["KB-009"].push("resume text extraction changed without artifact review");
+    }
+    if (sha256(pdf) !== resumeArtifact.pdfSha256) {
+      findings["KB-009"].push("downloadable resume PDF changed without artifact review");
+    }
+    for (const phrase of resumeArtifact.requiredText) {
+      if (!normalizedText(source).includes(normalizedText(phrase))) {
+        findings["KB-009"].push(`resume source omits required governed wording: ${phrase}`);
+      }
+      if (!normalizedText(extractedText).includes(normalizedText(phrase))) {
+        findings["KB-009"].push(`resume PDF text omits required governed wording: ${phrase}`);
+      }
+    }
+    for (const phrase of resumeArtifact.prohibitedText) {
+      if (normalizedText(source).includes(normalizedText(phrase))) {
+        findings["KB-009"].push(`resume source contains held wording: ${phrase}`);
+      }
+      if (normalizedText(extractedText).includes(normalizedText(phrase))) {
+        findings["KB-009"].push(`resume PDF text contains held wording: ${phrase}`);
+      }
+    }
+  } catch (error) {
+    findings["KB-009"].push(`resume artifact cannot be governed: ${error.message}`);
   }
 
   const projectClassifications = [
@@ -418,6 +626,30 @@ export function evaluateKnowledgeBank(
         !projection.surfaces.includes(page.surface)
       ) {
         findings["KB-009"].push(`${page.id}/${occurrence.id} is disconnected from an active projection on ${page.surface}`);
+      } else if (projection.citationRequired) {
+        const renderableDirectSupport = new Set(
+          claim.evidence
+            .filter(
+              (evidence) =>
+                evidence.relationship === "direct-support" &&
+                evidence.renderCitation &&
+                bank.sources.some(
+                  (source) =>
+                    source.id === evidence.sourceId &&
+                    source.visibility === "public"
+                )
+            )
+            .map((evidence) => evidence.sourceId)
+        );
+        if (
+          !occurrence.sourceIds.some((sourceId) =>
+            renderableDirectSupport.has(sourceId)
+          )
+        ) {
+          findings["KB-009"].push(
+            `${page.id}/${occurrence.id} lacks renderable direct support`
+          );
+        }
       }
     }
   }

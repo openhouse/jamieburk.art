@@ -722,6 +722,7 @@ const knowledgeBankInput = {
       collectiveWork: false,
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
+        { key: "case-study-evidence", text: "Politico New York covered CallNYC on March 14, 2016, connecting Jamie's independent project to the January gathering and the later fuller CouncilStat data release.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
         { key: "resume-html", text: "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.", status: "active", citationRequired: false, surfaces: ["/resume"] }
       ],
@@ -1227,7 +1228,7 @@ const knowledgeBankInput = {
         { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
         { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
         { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
-        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+        { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study-evidence", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
         { id: "product-iteration", claimId: "CLM-CALLNYC-PRODUCT-ITERATION-DECISIONS", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-API-2016"] },
         { id: "social-translation-system", claimId: "CLM-CALLNYC-SOCIAL-TRANSLATION-SYSTEM", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-CORPUS-2026-07-14"] },
         { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT", projection: "case-study", sourceIds: ["SRC-CALLNYC-COUNCIL-CHIN-2017", "SRC-CALLNYC-COUNCIL-WILLS-2016", "SRC-CALLNYC-COUNCIL-MATTEO-2016", "SRC-CALLNYC-COUNCIL-KOO-2016", "SRC-CALLNYC-COUNCIL-EUGENE-2016", "SRC-CALLNYC-COUNCIL-ROSENTHAL-2016", "SRC-CALLNYC-COUNCIL-MENDEZ-2016", "SRC-CALLNYC-COUNCIL-RODRIGUEZ-2016"] },

@@ -1,5 +1,6 @@
 {
-  "version": 4,
+  "version": 5,
+  "collectiveClaimsSha256": "8fe29f6faa095244264ff8bcbf5104f510674d5336e370259bc0fc1d423d4250",
   "collectiveProjects": [
     "196-sunday-dinner",
     "commercial-rent-data",

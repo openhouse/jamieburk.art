@@ -1,42 +1,70 @@
 {
-  "version": 1,
+  "version": 2,
+  "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
+  "publicSurfaceSha256": "58c1409008bf24faffe35d5a4e123e4b9351dad165f770ad3b0318199b40ec19",
   "routes": {
-    "/": [
-      "apps/www/src/app/page.tsx"
-    ],
-    "/about": [
-      "apps/www/src/app/about/page.tsx"
-    ],
-    "/lab/source-backed-team-memory": [
-      "apps/www/src/content/lab/source-backed-team-memory.mdx"
-    ],
-    "/resume": [
-      "apps/www/src/app/resume/page.tsx"
-    ],
+    "/": ["apps/www/src/app/page.tsx"],
+    "/about": ["apps/www/src/app/about/page.tsx"],
+    "/lab/source-backed-team-memory": ["apps/www/src/content/lab/source-backed-team-memory.mdx"],
+    "/resume": ["apps/www/src/app/resume/page.tsx"],
     "/work": [
       "apps/www/src/app/work/page.tsx",
       "apps/www/src/components/WorkCard.tsx",
       "apps/www/src/data/work.ts"
     ],
-    "/work/196-sunday-dinner": [
-      "apps/www/src/content/work/196-sunday-dinner.mdx"
+    "/work/196-sunday-dinner": ["apps/www/src/content/work/196-sunday-dinner.mdx"],
+    "/work/callnyc": ["apps/www/src/content/work/callnyc.mdx"],
+    "/work/fair-rent-nyc": ["apps/www/src/content/work/fair-rent-nyc.mdx"],
+    "/work/harry-j-epstein": ["apps/www/src/content/work/harry-j-epstein.mdx"],
+    "/work/kc-town-hall": ["apps/www/src/content/work/kc-town-hall.mdx"],
+    "/work/technical-operations": ["apps/www/src/app/work/technical-operations/page.tsx"],
+    "/work/wowlist": ["apps/www/src/content/work/wowlist.mdx"]
+  },
+  "caseStudyRoutes": [
+    "/work/196-sunday-dinner",
+    "/work/callnyc",
+    "/work/fair-rent-nyc",
+    "/work/harry-j-epstein",
+    "/work/kc-town-hall",
+    "/work/wowlist"
+  ],
+  "caseStudySharedFiles": [
+    "apps/www/src/app/work/[slug]/page.tsx",
+    "apps/www/src/components/CaseStudyBlocks.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/data/work.ts"
+  ],
+  "publicSurfaceRoots": [
+    { "path": "apps/www/src/app", "extensions": [".tsx"] },
+    { "path": "apps/www/src/components", "extensions": [".tsx"] },
+    { "path": "apps/www/src/content", "extensions": [".mdx"] }
+  ],
+  "publicSurfaceFiles": [
+    "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/site.ts",
+    "apps/www/src/data/work.ts",
+    "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
+    "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
+    "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
+  ],
+  "resumeArtifact": {
+    "sourcePath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
+    "sourceSha256": "469d89bd77e3a44fbe572bd96424fb6c91dc031bf9aa5449b9adb61c44d70aaa",
+    "extractedTextPath": "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
+    "extractedTextSha256": "680c6d7be7145f4c271824c04456adf6d59da3c6c6401e16092230d8673adb94",
+    "pdfPath": "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf",
+    "pdfSha256": "7e36d41f7b7f86d3c2302add19505895178afa1cec480d897e17c901579d9661",
+    "requiredText": [
+      "Brooklyn, NY | (816) 728-8685",
+      "Civic Systems, Coalition Operations",
+      "Communications Lead",
+      "The CCED Board recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized funding-agreement negotiations."
     ],
-    "/work/callnyc": [
-      "apps/www/src/components/CaseStudyLayout.tsx",
-      "apps/www/src/content/work/callnyc.mdx",
-      "apps/www/src/data/work.ts"
-    ],
-    "/work/fair-rent-nyc": [
-      "apps/www/src/content/work/fair-rent-nyc.mdx"
-    ],
-    "/work/kc-town-hall": [
-      "apps/www/src/content/work/kc-town-hall.mdx"
-    ],
-    "/work/technical-operations": [
-      "apps/www/src/app/work/technical-operations/page.tsx"
-    ],
-    "/work/wowlist": [
-      "apps/www/src/content/work/wowlist.mdx"
+    "prohibitedText": [
+      "NYC Artist Coalition / FairRentNYC - Co-Founder",
+      "NYC Artist Coalition / Fair Rent NYC - Co-Founder",
+      "secured a $490,539 public funding recommendation",
+      "Richard Caceres"
     ]
   }
 }

@@ -4,8 +4,11 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
+  collectiveCreditFingerprint,
   documentRealizesProjection,
   evaluateKnowledgeBank,
+  projectionDecisionFingerprint,
+  publicSurfaceFingerprint,
   routeRealizesProjection,
   validateHybridReportCandidate,
   validateKnowledgeDevelopmentSuite
@@ -44,6 +47,18 @@ const hybridReport = JSON.parse(
   )
 );
 const hybridPass = hybridReport.results;
+const collectiveCreditPolicy = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/policies/collective-credit-policy.json",
+    "utf8"
+  )
+);
+const projectionSurfaceBindings = JSON.parse(
+  readFileSync(
+    "docs/knowledge-bank/policies/projection-surface-bindings.json",
+    "utf8"
+  )
+);
 
 function normalizeCanonicalUrl(value) {
   const url = new URL(value);
@@ -68,6 +83,38 @@ test("current knowledge bank satisfies the frozen suite", () => {
   assert.equal(result.status, "threshold_met");
   assert.equal(result.weighted_score, 1);
   assert.ok(result.results.every((entry) => entry.pass));
+});
+
+test("reviewed credit, projection, and public-surface inventories are current", () => {
+  assert.equal(
+    collectiveCreditFingerprint(knowledgeBank),
+    collectiveCreditPolicy.collectiveClaimsSha256
+  );
+  assert.equal(
+    projectionDecisionFingerprint(knowledgeBank),
+    projectionSurfaceBindings.projectionDecisionSha256
+  );
+  assert.equal(
+    publicSurfaceFingerprint(projectionSurfaceBindings),
+    projectionSurfaceBindings.publicSurfaceSha256
+  );
+});
+
+test("the governed resume artifact preserves contact and collective-credit boundaries", () => {
+  const resumeText = readFileSync(
+    projectionSurfaceBindings.resumeArtifact.extractedTextPath,
+    "utf8"
+  ).replace(/\s+/g, " ");
+
+  for (const phrase of projectionSurfaceBindings.resumeArtifact.requiredText) {
+    assert.match(resumeText, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+  for (const phrase of projectionSurfaceBindings.resumeArtifact.prohibitedText) {
+    assert.doesNotMatch(
+      resumeText,
+      new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    );
+  }
 });
 
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
@@ -1444,6 +1491,75 @@ test("collective-credit guardrails must contain substantive text", () => {
   assert.throws(() => claimRecordSchema.parse(claim));
 });
 
+test("reviewed collective-credit contracts reject vague rewrites and coordinated project moves", () => {
+  const vagueCandidate = structuredClone(knowledgeBank);
+  const vagueClaim = vagueCandidate.claims.find(
+    (item) => item.id === "CLM-KCTH-X-PUBLIC-OPERATIONS"
+  );
+  vagueClaim.internalClaim = "The team did useful work.";
+  vagueClaim.boundaries = ["Give the team credit."];
+  vagueClaim.antiClaims = ["Do not overstate the work."];
+  const vagueResult = evaluateKnowledgeBank(suite, vagueCandidate, 2, hybridPass);
+  const vagueCredit = vagueResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(vagueCredit.pass, false);
+  assert.match(vagueCredit.findings.join("\n"), /credit language changed/);
+
+  const movedCandidate = structuredClone(knowledgeBank);
+  const movedClaim = movedCandidate.claims.find(
+    (item) => item.id === "CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE"
+  );
+  movedClaim.project = "wowlist";
+  for (const assertion of movedCandidate.sourceAssertions.filter((item) =>
+    item.candidateClaimIds.includes(movedClaim.id)
+  )) {
+    assertion.project = "wowlist";
+  }
+  const movedResult = evaluateKnowledgeBank(suite, movedCandidate, 2, hybridPass);
+  const movedCredit = movedResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(movedCredit.pass, false);
+  assert.match(
+    movedCredit.findings.join("\n"),
+    /project ownership.*changed without policy review/
+  );
+});
+
+test("silent removal of governed collective knowledge fails credit and projection inventories", () => {
+  const candidate = structuredClone(knowledgeBank);
+  const removedId = "CLM-KCTH-X-PUBLIC-SOURCE-CIRCULATION";
+  candidate.claims = candidate.claims.filter((claim) => claim.id !== removedId);
+  for (const intake of candidate.intake) {
+    intake.claimIds = intake.claimIds.filter((id) => id !== removedId);
+  }
+  for (const assertion of candidate.sourceAssertions) {
+    assertion.candidateClaimIds = assertion.candidateClaimIds.filter(
+      (id) => id !== removedId
+    );
+  }
+  for (const task of candidate.researchTasks) {
+    task.claimIds = task.claimIds.filter((id) => id !== removedId);
+  }
+  for (const page of candidate.pages) {
+    page.occurrences = page.occurrences.filter(
+      (occurrence) => occurrence.claimId !== removedId
+    );
+  }
+  candidate.corrections = candidate.corrections.filter(
+    (correction) => correction.claimId !== removedId
+  );
+
+  const result = evaluateKnowledgeBank(suite, candidate, 2, hybridPass);
+  const credit = result.results.find((entry) => entry.eval_id === "KB-007");
+  const projection = result.results.find((entry) => entry.eval_id === "KB-009");
+  assert.equal(credit.pass, false);
+  assert.equal(projection.pass, false);
+  assert.match(credit.findings.join("\n"), /claim inventory/);
+  assert.match(projection.findings.join("\n"), /use-now\/hold decisions/);
+});
+
 test("active projections require a known and realized surface", () => {
   const candidate = structuredClone(knowledgeBank);
   const claim = candidate.claims.find(
@@ -1580,6 +1696,27 @@ test("citation-required route bindings stay connected to their page occurrence",
   );
   assert.equal(reboundCoverage.pass, false);
   assert.match(reboundCoverage.findings.join("\n"), /is not realized/);
+
+  const contextOnlyCandidate = structuredClone(knowledgeBank);
+  contextOnlyCandidate.pages
+    .find((item) => item.id === "callnyc")
+    .occurrences.find(
+      (item) => item.id === "archived-status"
+    ).sourceIds = ["SRC-CALLNYC-POLITICO-2016-03-14"];
+  const contextOnlyResult = evaluateKnowledgeBank(
+    suite,
+    contextOnlyCandidate,
+    2,
+    hybridPass
+  );
+  const contextOnlyCoverage = contextOnlyResult.results.find(
+    (entry) => entry.eval_id === "KB-009"
+  );
+  assert.equal(contextOnlyCoverage.pass, false);
+  assert.match(
+    contextOnlyCoverage.findings.join("\n"),
+    /callnyc\/archived-status lacks renderable direct support/
+  );
 });
 
 test("duplicate projection keys fail public projection coverage", () => {
@@ -1654,6 +1791,15 @@ test("commented claim bindings do not count as route realization", () => {
       "/work/technical-operations"
     ),
     true
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `false && (\n  ${literal}\n)`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
   );
 });
 
