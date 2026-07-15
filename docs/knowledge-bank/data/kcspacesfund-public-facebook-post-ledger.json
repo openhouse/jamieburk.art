@@ -24,6 +24,8 @@
     ],
     "stableMediaIds": 21,
     "stableMediaSetMatchedAcrossAllTraversals": true,
+    "publicRecordIdSetSha256": "846f60f1a6dac18bf487652a5d89f9b4dbe979eff662156129b90f2645bac687",
+    "protectedMediaIdSetSha256": "029ffa8737c2e2058b1cc5b582e6cc741eb3242e5e7504a3d4833fa32e4fd1fb",
     "interpretation": "Two terminal traversals recovered 40 cards and a faster middle traversal recovered 38. The final slower traversal reproduced 40. The 21 stable media IDs matched across all three; non-media records retain positional identities because Facebook did not expose durable public permalinks.",
     "excludedHistory": "Deleted, private, unrendered, and owner-export-only history is not represented."
   },

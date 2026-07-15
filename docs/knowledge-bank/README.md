@@ -134,6 +134,14 @@ projection about resident input, recurring neighborhood service, civic-resource
 circulation, and three direct then-serving Council-member account responses;
 shared-account authorship and mutable engagement totals remain unprojected.
 
+The [KC Spaces Fund Facebook full-population note](projects/kc-spaces-fund-facebook-posts.md)
+demonstrates a 40-of-40 disposition of the currently surviving Page surface,
+preserves a collective relief-cycle and source trail, and keeps Jamie's
+documented website, theme, deployment, and fundraising-display work separate
+from organizer, grantmaking, Facebook-publishing, and naming credit. The
+Facebook layer remains knowledge-bank depth; it does not create a public
+archive route.
+
 The [NTER CHNG archive expansion](intake/2026-07-15-nter-chng-archive-expansion.md)
 demonstrates a related source-chain pattern: an archived project site, an
 official exhibition artist page, a first-party account of visitor use, and an

@@ -98,6 +98,20 @@ Do not publish applicant/grantee materials, donor/list exports, subscriber data,
 payment-request files, credentials, billing details, raw email/text archives, or
 private Drive documents.
 
+Do not say the 40-card public ledger is a native Meta export, a complete
+lifetime archive, or proof that no historical post is missing. Do not assign
+the Page, its posts, or its administration to Jamie; he states that he was not
+the stakeholder or owner posting on the account.
+
+Do not say Jamie alone named KC Spaces Fund. The public record establishes a
+uniform identity across the domain, Facebook, X, Instagram, and GoFundMe, but
+not who proposed, checked, approved, registered, or administered the name.
+
+Do not turn 119 visible reaction units into people reached or impact. Do not
+treat four comment relationships as endorsement or partnership. Do not call
+the ten surviving funded-space spotlights the complete grantee population or
+say Jamie raised the public fundraiser total.
+
 ## KC Town Hall
 
 Prefer "supported" or "co-founded and documented" unless Jamie approves

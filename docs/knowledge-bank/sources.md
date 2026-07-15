@@ -26,6 +26,27 @@ Approved public artifact examples for this launch pass include:
 - KC Spaces Fund public GoFundMe page.
 - KC Spaces Fund public campaign domain.
 
+### KC Spaces Fund Facebook Census
+
+The dedicated KC Spaces Fund Facebook pass uses four distinct evidence layers:
+
+- three protected terminal Page traversals establish a 40 / 38 / 40 recovery
+  pattern and a stable 21-media-identity set;
+- a public-safe 40-row ledger gives every card in the final surviving-public
+  denominator a form, recovery state, mission-mode, destination, and bounded
+  response disposition;
+- the campaign site, application guidance, GoFundMe, Kansas City Star listing,
+  and Oddities Prints page supply public purpose, routing, outcome, and
+  independent-source context; and
+- protected Git history and Jamie's first-person statement separately support
+  digital-infrastructure work and a naming-support research lead.
+
+The census is complete only for the currently materialized Page surface. It is
+not a native lifetime export or deletion history. It does not assign Facebook
+publishing, account ownership, organizer status, fundraising ownership, grant
+decisions, or fiscal sponsorship to Jamie. See
+[projects/kc-spaces-fund-facebook-posts.md](projects/kc-spaces-fund-facebook-posts.md).
+
 ### Campaign Press Corpus
 
 The four NYC Artist Coalition campaign press collections use two related but

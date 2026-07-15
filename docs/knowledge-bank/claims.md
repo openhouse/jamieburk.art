@@ -222,14 +222,15 @@ claim beyond the wording and guardrails here.
 **Support level:** Careful
 **Evidence class:** Public source / public-safe archive summary / AI-assisted archival review
 **Public wording:** Supported KC Spaces Fund, a 2020 Kansas City mutual-aid campaign for grassroots arts and culture spaces, as behind-the-scenes digital infrastructure.
-**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, and supported donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Detailed public-safe wording:** Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, supported deployment, and implemented donation, application, sign-up, and fundraising-display affordances while public organizer credit remains with the campaign's named organizers.
+**Source basis:** Public campaign site, application guidance, GoFundMe, a 40-of-40 public-safe census of the surviving Facebook Page surface, and protected AI-assisted review of Jamie-authored launch-period site, theme, deployment, and widget history.
 **Where to project:** Technical Operations. Future resume or case-study use requires Jamie review and, if public organizer framing changes, collaborator confirmation.
 **Why it matters:** Shows rapid public-facing implementation, technical operations, and campaign infrastructure support for a collective mutual-aid effort.
-**Guardrail:** Treat the source as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only.
-**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; a human collaborator provided this testimonial.
+**Guardrail:** Treat the repository evidence as AI-assisted archival review, not a human collaborator testimonial. Use behind-the-scenes technical and operational support language only. Jamie states that he was not the stakeholder or owner posting to Facebook. His recollection of supporting the search for a uniformly available project name remains a research lead pending corroboration.
+**Do not say:** Jamie organized KC Spaces Fund; Jamie ran the fundraiser; Jamie made grant decisions; Jamie was the fiscal sponsor; Jamie owned or published the Facebook account; Jamie alone named the project; a human collaborator provided this testimonial.
 **Protected boundaries:** Applicant or grantee materials, donor/list exports, subscriber data, payment-request files, credentials/login sheets, billing/payment details, raw email archives, raw text-message archives, private Drive documents, and sensitive strategy, legal, financial, or personal information stay offline.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
-**Last reviewed:** 2026-07-09
+**Last reviewed:** 2026-07-15
 
 ## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
 

@@ -145,8 +145,10 @@ July 12-15, 2026:
   engagement, and larger bounded stakeholder mention corpora;
 - WOW List's social record connecting the calendar to Sunday Dinner and one
   external event-sharing specimen;
-- KC Spaces Fund's campaign timeline, public grantee highlights, recipient
-  acknowledgements, and contemporaneous Do816 coverage;
+- KC Spaces Fund's 40-of-40 surviving Facebook Page disposition, collective
+  relief-cycle, public funded-space spotlights, fundraising and source trail,
+  uniform public identity, protected technical-role evidence, and bounded
+  naming-support research lead;
 - KC Town Hall's 183-of-183 public-account census, resident-input and recurring
   service operating patterns, source trail, three direct then-serving Council-
   member account responses, and post-transition identity continuity;
