@@ -369,7 +369,7 @@
       "preservationStatus": "live",
       "capturedAt": "2026-07-14",
       "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/ff2a8a555bc91c05b75551aa59bd488133af74e7/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Authenticated July 14, 2026 review of every @CallNYCApp record materialized by the Posts and Replies timelines, with public-safe metadata preserved in the repository.",
       "publicNote": "The profile reported 110 posts; 107 unique records materialized and were reviewed. Three remain unrecovered and are not treated as reviewed.",

@@ -453,6 +453,10 @@ test("social-media production preserves account, engagement, and timeline invent
   );
   assert.equal(callNycPopulationSource.visibility, "public");
   assert.equal(callNycPopulationSource.preservationStatus, "live");
+  assert.match(
+    callNycPopulationSource.canonicalUrl,
+    /github\.com\/openhouse\/jamieburk\.art\/blob\/[0-9a-f]{40}\/apps\/www\/src\/data\/knowledge-bank\/fixtures\/callnyc-full-population\.json$/,
+  );
   assert.equal(socialMediaReviewSummary.callNycCouncilMemberAccountCount, 8);
   assert.equal(socialMediaReviewSummary.callNycRecoveredTimelineRecordCount, 107);
   assert.equal(socialMediaReviewSummary.callNycUnmaterializedProfileRecordCount, 3);

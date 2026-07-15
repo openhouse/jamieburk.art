@@ -698,7 +698,7 @@ const callNycPopulationSource = {
   capturedAt: reviewedAt,
   accessedAt: reviewedAt,
   canonicalUrl:
-    "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
+    "https://github.com/openhouse/jamieburk.art/blob/ff2a8a555bc91c05b75551aa59bd488133af74e7/apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   preferredPublicUrl: "canonical",
   publicCitation:
     "Authenticated July 14, 2026 review of every @CallNYCApp record materialized by the Posts and Replies timelines, with public-safe metadata preserved in the repository.",
