@@ -355,15 +355,15 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "jamie-review-confirmation"],
     publicWording:
-      "Co-founded NYC Artist Coalition and built public campaign websites for cultural-space advocacy, including the coalition site, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance public web surfaces.",
-    shortWording: "Co-founded NYC Artist Coalition and built public campaign websites",
+      "Jamie describes his role as co-founder of NYC Artist Coalition and builder of its public campaign websites, including the coalition site, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance.",
+    shortWording: "Jamie reports co-founding NYC Artist Coalition and building campaign sites",
     detailedPublicWording:
-      "Jamie co-founded NYC Artist Coalition and built campaign websites for the coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance. The sites gave the public clear places to find resources, seek support, and participate. Campaign decisions and accomplishments remained collective.",
+      "Jamie describes his role as co-founder of NYC Artist Coalition and builder of campaign websites for the coalition, FairRentNYC, Talks Not Raids, Save NYC Spaces, and Let NYC Dance. The surviving sites corroborate the public infrastructure, while the complete founding and responsibility map remains under research. Campaign decisions and accomplishments remained collective.",
     sourceBasis: "Approved resume language, Jamie confirmation, and public campaign websites.",
     whyItMatters:
-      "Makes Jamie's co-founder, civic-systems, and direct web authorship visible without overstating collective campaign accomplishments.",
+      "Makes Jamie's first-person co-founder and web-builder account visible without presenting project custody as complete independent role corroboration or overstating collective campaign accomplishments.",
     guardrail:
-      "Co-founder and website authorship are Jamie's direct contributions; campaign accomplishments remain collective.",
+      "Attribute co-founder and website authorship to Jamie's account, note what the surviving sites corroborate, and keep the complete responsibility map open. Campaign accomplishments remain collective.",
     doNotSay: [
       "Jamie solely led NYC Artist Coalition",
       "Jamie owned every campaign",
@@ -390,10 +390,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source", "jamie-review-confirmation"],
     publicWording:
-      "Built press sections across four NYC Artist Coalition campaign sites, organizing 46 campaign-to-article placements representing 45 distinct articles into public source trails.",
-    shortWording: "Built public source trails across four campaign sites",
+      "Jamie reports building press sections across four NYC Artist Coalition campaign sites, organizing 46 campaign-to-article placements representing 45 distinct articles into public source trails.",
+    shortWording: "Jamie reports building public source trails across four campaign sites",
     detailedPublicWording:
-      "Jamie built press sections across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Surviving live and archived views contain 46 placements representing 45 distinct articles; one NPR article appears on two sites.",
+      "Jamie reports building press sections across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Surviving live and archived views corroborate the resulting architecture and contain 46 placements representing 45 distinct articles; one NPR article appears on two sites.",
     sourceBasis:
       "Jamie review confirmation; surviving live campaign sites; the December 1, 2021 FairRentNYC Wayback capture; and the current FairRentNYC reference library.",
     sourceNote:
@@ -477,10 +477,10 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Helped establish and produce NYC Artist Coalition's recurring participation system across public event pages, cultural-space meetings, practical safety and advocacy sessions, and paths into hearings and campaign action.",
-    shortWording: "Recurring participation system for NYC Artist Coalition",
+      "Jamie describes helping establish and produce NYC Artist Coalition's recurring participation system across public event pages, cultural-space meetings, practical safety and advocacy sessions, and paths into hearings and campaign action.",
+    shortWording: "Jamie describes helping establish NYC Artist Coalition's recurring participation system",
     detailedPublicWording:
-      "Jamie helped establish and produce a recurring participation system that made it easier for artists and organizers to gather, surface needs, find practical support, and move shared concerns into public hearings and campaign action. The events, pages, campaigns, and outcomes remained collective.",
+      "Jamie describes helping establish and produce a recurring participation system that made it easier for artists and organizers to gather, surface needs, find practical support, and move shared concerns into public hearings and campaign action. The recovered event record corroborates the operating pattern; the events, pages, campaigns, and outcomes remained collective.",
     sourceBasis:
       "Jamie's first-person account; a 34-slot authenticated Facebook event census with 33 recovered records and one unresolved slot; selected public event pages; a protected public-meeting workflow with Jamie-attributed revision history; and independent reporting on Jamie's coalition advocacy and a Market Hotel town hall.",
     sourceNote:
@@ -706,10 +706,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
-      "Established and connected public project identities across websites and social accounts for CallNYC, NYC Artist Coalition, WOWList, KC Spaces Fund, and KC Town Hall, creating durable publishing surfaces collaborators could use over time.",
-    shortWording: "Established durable public identities collaborators could use",
+      "Jamie reports establishing and connecting public project identities across websites and social accounts for CallNYC, NYC Artist Coalition, WOWList, KC Spaces Fund, and KC Town Hall, creating durable publishing surfaces collaborators could use over time.",
+    shortWording: "Jamie reports establishing durable public identities collaborators could use",
     detailedPublicWording:
-      "Jamie established project accounts and connected them to their public websites. The identities remained usable by collaborators across civic technology, coalition advocacy, community publishing, mutual aid, and neighborhood work; individual post authorship and later stewardship remained shared or project-specific.",
+      "Jamie reports establishing project accounts and connecting them to their public websites. Surviving profiles corroborate the account-to-project connections, not creation history. The identities remained usable by collaborators across civic technology, coalition advocacy, community publishing, mutual aid, and neighborhood work; individual post authorship and later stewardship remained shared or project-specific.",
     sourceBasis:
       "Jamie's first-person confirmation, public project-site links, authenticated public profiles, bounded 2026 timeline reviews, and the public-safe @NYCArtC population ledger.",
     sourceNote:
@@ -745,10 +745,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "strong",
     evidenceClass: ["public-source", "public-safe-archive-summary"],
     publicWording:
-      "By establishing @NYCArtC as a shared address, Jamie gave collaborators a durable public identity that Council-member accounts could recognize, reply to, invite, and amplify across campaigns; a bounded 2026 review recovered 20 in-term returned posts from seven Council-member accounts.",
-    shortWording: "Bounded account-level proof that @NYCArtC became a recognizable address for replies, invitations, and amplification",
+      "Jamie reports establishing @NYCArtC as a shared address that collaborators could use over time; a bounded 2026 review independently recovered 20 in-term returned posts from seven Council-member accounts recognizing, replying to, inviting, or amplifying that identity across campaigns.",
+    shortWording: "Jamie reports establishing a shared address later recognized by seven Council-member accounts",
     detailedPublicWording:
-      "The shared coalition identity remained usable across campaigns as a public address for recognition, replies, invitations, amplification, and policy discussion. Twenty in-term posts returned from seven Council-member accounts provide bounded evidence of that use.",
+      "Jamie reports establishing the shared coalition identity; the recovered public record corroborates that it remained usable across campaigns as an address for recognition, replies, invitations, amplification, and policy discussion. Twenty in-term posts returned from seven Council-member accounts provide bounded evidence of that use.",
     sourceBasis:
       "A public-safe authenticated X review of 485 unique returned statuses, with account identity and Council service dates reviewed before counting.",
     sourceNote:
@@ -783,10 +783,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["public-source", "public-safe-archive-summary", "ai-assisted-archive-review"],
     publicWording:
-      "Built KC Spaces Fund's campaign website and supported a project name that worked consistently across web and social channels for the collaborator-led 2020 mutual-aid campaign.",
-    shortWording: "Website and cross-channel identity support for KC Spaces Fund",
+      "Jamie reports building KC Spaces Fund's campaign website and supporting a project name that worked consistently across web and social channels for the collaborator-led 2020 mutual-aid campaign.",
+    shortWording: "Jamie reports providing website and cross-channel identity support for KC Spaces Fund",
     detailedPublicWording:
-      "Jamie built and maintained the campaign's Ghost-based web stack, customized a reusable campaign theme, supported donation, application, sign-up, and fundraising-display affordances, and helped select a project name available across web and social channels. The collaborator-led Facebook Page used that shared identity while public organizer credit remains with the campaign's named organizers.",
+      "Jamie reports building and maintaining the campaign's Ghost-based web stack, customizing a reusable campaign theme, supporting donation, application, sign-up, and fundraising-display affordances, and helping select a project name available across web and social channels. Code and archival traces corroborate the digital infrastructure; the collaborator-led Facebook Page used that shared identity while public organizer credit remains with the campaign's named organizers.",
     sourceBasis:
       "Jamie's first-person role clarification, public GoFundMe and campaign routes, the authenticated Facebook census, and AI-assisted archival review of Jamie-provided project records summarized without exposing private source material.",
     sourceNote:
@@ -873,10 +873,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "moderate",
     evidenceClass: ["public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
-      "Established KC Town Hall's public account as part of the project identity; its surviving timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups.",
-    shortWording: "Established a project identity that became a resident-facing operations channel",
+      "Jamie reports establishing KC Town Hall's public account as part of the project identity; its surviving timeline later functioned as a resident-facing channel for neighborhood information and recurring #TiredOfTires pickups.",
+    shortWording: "Jamie reports establishing a project identity that became a resident-facing operations channel",
     detailedPublicWording:
-      "Jamie confirms that he established @KCTownHall. A 2026 authenticated review recovered 170 of 183 profile entries, including 142 account-authored posts and 95 entries concerning #TiredOfTires, while preserving the distinction between account infrastructure, individual post authorship, program stewardship, and the separate CCED funding lifecycle.",
+      "Jamie reports establishing @KCTownHall. A 2026 authenticated review independently recovered 170 of 183 profile entries, including 142 account-authored posts and 95 entries concerning #TiredOfTires, while preserving the distinction between account infrastructure, individual post authorship, program stewardship, and the separate CCED funding lifecycle.",
     sourceBasis:
       "Jamie's first-person account, the public @KCTownHall profile, and an authenticated public-safe timeline review.",
     sourceNote:
@@ -911,7 +911,7 @@ export const proofClaims: ProofClaim[] = [
     evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
       "Project records describe KC Town Hall's Phase One cold-shell work as completed in 2019. Jamie states that he served as general contractor, coordinating multiple trades and daily field sequencing, and designed a neighborhood survey handbill and response workflow used with local partners to shape proposed uses.",
-    shortWording: "Coordinated Phase One restoration and a participatory neighborhood requirements process",
+    shortWording: "Jamie states that he coordinated Phase One restoration and a participatory neighborhood requirements process",
     detailedPublicWording:
       "A protected 2019 proposal packet records completed Phase One roof, masonry, framing, water, egress, safety, and related work. Jamie states that he served as Phase One's general contractor, coordinating historic masonry, roofing, carpentry, welding, engineering, architecture, plumbing, and related teams from daily work on site. He also states that he designed a four-by-six-inch neighborhood survey handbill and backing data system; the packet reproduces the survey, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as process partners, and says the results shaped the proposal.",
     sourceBasis:
@@ -962,10 +962,10 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary", "jamie-review-confirmation"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. The proposal earned a unanimous $490,539 CCED Board recommendation; Kansas City Council then accepted the recommendation and appropriated $490,539. After years of public review, Jamie transitioned stewardship to a mission-aligned organization. City records later closed the unused award as withdrawn.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Jamie describes co-leading redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. Public records show that the proposal earned a unanimous $490,539 CCED Board recommendation and that Kansas City Council then accepted the recommendation and appropriated $490,539. Jamie reports later transitioning stewardship to a mission-aligned organization; City records subsequently closed the unused award as withdrawn.",
+    shortWording: "Jamie describes supporting adaptive reuse planning and public-benefit documentation",
     detailedPublicWording:
-      "Jamie presented the mixed-use proposal and helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Independent reporting documents the prolonged City-contract process. Jamie confirms that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the later administrative withdrawal and reappropriation.",
+      "Jamie describes presenting the mixed-use proposal and helping shape planning, public-benefit documentation, stakeholder context, and municipal-review support. Independent reporting documents the prolonged City-contract process. Jamie reports that he later transitioned stewardship to a mission-aligned organization; City records separately preserve the later administrative withdrawal and reappropriation.",
     sourceBasis: "Kansas City CCED Board meeting records, Kansas City Resolution 190649, Ordinances 190642 and 240317, December 2021 Kansas City Star reporting, approved resume language, public-safe project context, and Jamie review confirmation.",
     sourceNote:
       "All four CCED Board members voted to recommend $490,539 on July 16, 2019. On September 26, the City Council accepted the recommendation and appropriated $490,539. The project still lacked a final City contract in December 2021. Jamie confirms a later stewardship transition; the public record independently establishes only the surrounding timeline and the City's 2024 withdrawal and reappropriation actions.",
@@ -1402,16 +1402,9 @@ export const homepageProofs = [
 
 export const resumeProofHighlights = [
   "career-operating-structure-14-years",
-  "hje-modernization-stewardship",
   "hje-revenue-growth-contribution",
   "fair-rent-campaign-memory",
-  "fair-rent-source-map",
-  "callnyc-civic-data-guidance",
-  "nyc-artist-coalition-public-web-infrastructure",
-  "nyc-artist-coalition-civic-systems",
-  "wowlist-community-platform",
-  "sunday-dinner-196-participation-infrastructure",
-  "ai-evals-professional-development"
+  "callnyc-civic-data-guidance"
 ].map(requireReadyOrCarefulProof);
 
 export const technicalOperationsProofRows = [

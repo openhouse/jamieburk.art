@@ -178,8 +178,8 @@ const workItemsInput = [
     series: "Civic Systems",
     subtitle: "Cultural-space advocacy, coalition memory, and Commercial Rent Stabilization",
     summary:
-      "Jamie co-founded NYC Artist Coalition, built campaign websites for the coalition and FairRentNYC, and established a shared public publishing identity collaborators used across campaigns. He helped establish and produce a recurring participation system spanning public event pages, meetings across cultural spaces, practical safety and advocacy sessions, and paths from artist concerns to public action. These pages and workflows gave artists and organizers places to gather, find resources, and participate. Campaign decisions and accomplishments remained collective.",
-    role: "Co-Founder, Civic Systems, Coalition Operations & Policy Communications Lead",
+      "Jamie describes his role as a NYC Artist Coalition co-founder, campaign-website builder, and civic-systems contributor. Public sources and protected revision records corroborate specific organizing, testimony, web, meeting-production, and documentation work, while the complete founding and responsibility map remains under research. Campaign decisions and accomplishments remained collective.",
+    role: "Civic Systems, Coalition Operations & Policy Communications",
     years: "2017-Present",
     status: "Full case study",
     featured: true,
@@ -303,7 +303,7 @@ const workItemsInput = [
     roleFit:
       "Civic delivery, coalition operations, product operations, documentation architecture, source-backed memory, public guidance, policy communications, and implementation support.",
     evidence: [
-      "Co-founder role in NYC Artist Coalition",
+      "Jamie's approved first-person account of a NYC Artist Coalition co-founder role",
       "Civic systems, coalition operations, and policy-communications infrastructure",
       "Campaign materials around Cabaret Law repeal, Office of Nightlife creation, nightlife enforcement reporting, Commercial Rent Stabilization, and storefront stability",
       "30+ pages of shared campaign-memory infrastructure",
@@ -323,7 +323,7 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-founded NYC Artist Coalition, built public campaign websites and their press-source architecture, and established @NYCArtC as a shared publishing identity across the coalition and four campaign surfaces. A bounded authenticated review recovered 20 in-term X posts returned from accounts of seven then-sitting Council members; authorship remains at account level and is not formal endorsement. Protected Shared Drive records with Jamie-attributed revision history document operating infrastructure from member onboarding and Let NYC Dance deployment through public-meeting production and machine-readable policy implementation. Current protected records also support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools and a 2026 commercial-vacancy open-data pilot brief; they do not establish adoption or completion. Public records separately document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
+        "Jamie describes his role as a NYC Artist Coalition co-founder, public campaign-website builder, and creator of shared publishing infrastructure. Surviving sites corroborate the public web system, while the complete founding and responsibility map remains under research. A bounded authenticated review recovered 20 in-term X posts returned from accounts of seven then-sitting Council members; authorship remains at account level and is not formal endorsement. Protected Shared Drive records with Jamie-attributed revision history document operating infrastructure from member onboarding and Let NYC Dance deployment through public-meeting production and machine-readable policy implementation. Current protected records also support his bounded design and initial build of shared Commercial Rent Stabilization coordination tools and a 2026 commercial-vacancy open-data pilot brief; they do not establish adoption or completion. Public records separately document his organizing, speaking, and testimony across Cabaret Law repeal, Office of Nightlife dialogue, and commercial-rent advocacy.",
       open:
         "Which specific public artifacts, collaborators, meeting materials, and screenshots may be named or shown requires approval.",
       protected:

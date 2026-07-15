@@ -1,0 +1,362 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "externalOutcomeStatus": "not-yet-measured",
+  "substantialPassDefinition": "A pass that changes public positioning, adds or activates consequential claims, or ingests ten or more sources.",
+  "polishingCap": "After a substantial pass, complete one outward field action before another discretionary archive pass unless new evidence would correct a consequential public claim or safety risk.",
+  "controls": [
+    {
+      "id": "external-reader-validation",
+      "signalSource": "A versioned aggregate reader-study receipt; none exists yet.",
+      "currentState": "not-yet-measured",
+      "controlArtifact": "readerStudyProtocol",
+      "trigger": "Before another discretionary archive pass after this substantial portfolio pass.",
+      "owner": "portfolio-owner",
+      "nextTest": "Run the bounded reader study against the frozen surfaces and retain only aggregate findings.",
+      "decisionRule": "Treat the first study as a baseline. Revise only repeated comprehension or trust failures; do not infer hiring effectiveness from the sample.",
+      "evidenceReturn": "A public-safe aggregate receipt with sample size, task conditions, dimension counts, decisions, and limitations.",
+      "externalOutcomeStatus": "not-yet-measured"
+    },
+    {
+      "id": "inquiry-closure",
+      "signalSource": "Live inquiry states plus priorityInquiryControls.",
+      "currentState": "25 of 31 inquiries are partially recovered; one is recovered.",
+      "controlArtifact": "priorityInquiryControls",
+      "trigger": "When a priority inquiry is selected for another research pass.",
+      "owner": "knowledge-bank-maintainer",
+      "nextTest": "Pursue only the named evidence target, then close, bound, or explicitly reschedule the inquiry.",
+      "decisionRule": "Continue research only when the named evidence could change a consequential public claim or active hiring decision.",
+      "evidenceReturn": "Updated inquiry state and a dated public-safe finding or bounded disposition.",
+      "externalOutcomeStatus": "not-applicable"
+    },
+    {
+      "id": "individual-role-corroboration",
+      "signalSource": "Claim evidence relationships, confidence, projection state, and roleEvidencePolicy.",
+      "currentState": "Role-specific public evidence is strong for some actions and incomplete for several broad authorship or founding memories.",
+      "controlArtifact": "roleEvidencePolicy",
+      "trigger": "Before activating or strengthening first-person authorship, founding, ownership, or causal wording.",
+      "owner": "claim-editor",
+      "nextTest": "Review active role wording against the evidence-class threshold and demote or explicitly attribute first-person-only claims.",
+      "decisionRule": "Project importance never substitutes for role evidence; collective and individual propositions remain separate.",
+      "evidenceReturn": "Claim relationship update, projection decision, guardrail, and reviewed date.",
+      "externalOutcomeStatus": "not-applicable"
+    },
+    {
+      "id": "countability-and-platform-bias",
+      "signalSource": "Live source-kind distribution plus per-project invisible-work review.",
+      "currentState": "The bank spans 12 source kinds, but recent full-population work favors enumerable platform traces.",
+      "controlArtifact": "sourceBalanceReview",
+      "trigger": "After a full-population platform pass or before choosing research only by source volume.",
+      "owner": "research-lead",
+      "nextTest": "Review the same project for maintenance, facilitation, coordination, repair, documentation, follow-through, and handoff evidence.",
+      "decisionRule": "Trace count, post count, and engagement count cannot rank professional importance or select public claims.",
+      "evidenceReturn": "A project-level lead, bounded non-recovery, or explicit no-change decision.",
+      "externalOutcomeStatus": "not-applicable"
+    },
+    {
+      "id": "composition-and-argument",
+      "signalSource": "composition-manifest.json and the live public routes.",
+      "currentState": "Mature claims are selected separately from public composition; the technical-operations page was reduced during this pass.",
+      "controlArtifact": "composition-manifest.json",
+      "trigger": "Before adding a public claim or when a page exceeds its claim budget.",
+      "owner": "portfolio-editor",
+      "nextTest": "Run a short subtraction review and the external reader protocol on the named primary surfaces.",
+      "decisionRule": "A claim enters a page only when it supports that page's audience decision and governing argument within budget.",
+      "evidenceReturn": "Manifest update with selected claims, omission rationale, and any subtraction decision.",
+      "externalOutcomeStatus": "not-yet-measured"
+    },
+    {
+      "id": "mosaic-privacy",
+      "signalSource": "mosaic-review-2026-07-15.json plus record-level public-safety checks.",
+      "currentState": "A dated combination-level review exists; it does not eliminate future aggregation risk.",
+      "controlArtifact": "mosaic-review-2026-07-15.json",
+      "trigger": "After a substantial ingestion, before activating a relationship-rich claim set, and before production release.",
+      "owner": "public-safety-reviewer",
+      "nextTest": "Repeat the review against the rendered public surface after the next substantial ingestion.",
+      "decisionRule": "Remove or generalize detail when professional value is weaker than the relationship, movement, affiliation, or inference risk it creates.",
+      "evidenceReturn": "A dated public-safe receipt recording scope, risks, minimizations, and limitations without the underlying relationship graph.",
+      "externalOutcomeStatus": "not-applicable"
+    },
+    {
+      "id": "evaluator-independence",
+      "signalSource": "Separate judge artifacts bound to the same bundle digest.",
+      "currentState": "The initial independent LLM round failed and supplied revisions; qualifying rounds must use separate immutable artifacts.",
+      "controlArtifact": "runs/current-run.json",
+      "trigger": "After material changes to this control bundle.",
+      "owner": "eval-orchestrator",
+      "nextTest": "Run both read-only judge roles twice against one unchanged bundle and retain their separate outputs and limitations.",
+      "decisionRule": "The generator cannot decide the result; deterministic checks recompute scores but cannot certify truth or external usefulness.",
+      "evidenceReturn": "Distinct judge artifacts, session provenance, bundle digest, score recomputation, and disclosed limitations.",
+      "externalOutcomeStatus": "not-yet-measured"
+    },
+    {
+      "id": "action-conversion",
+      "signalSource": "fieldActionProtocol and a privacy-safe external action receipt; no completion receipt exists yet.",
+      "currentState": "One hiring-reader solicitation is planned for July 18, 2026; it is not completed.",
+      "controlArtifact": "fieldActionProtocol",
+      "trigger": "This pass qualifies as substantial; the action is due before another discretionary archive pass.",
+      "owner": "portfolio-owner",
+      "nextTest": "Send a bounded hiring-reader solicitation, then complete one outward application, referral request, or comparable job-search action after reviewing aggregate findings.",
+      "decisionRule": "Repository work alone cannot satisfy this control. Completion requires a dated external attempt; outcome success remains unmeasured.",
+      "evidenceReturn": "Outside the repo, retain private details; in the repo retain only coarse status, date, action class, aggregate learning, and copy decision.",
+      "externalOutcomeStatus": "not-yet-measured"
+    }
+  ],
+  "readerStudyProtocol": {
+    "status": "planned",
+    "actionClass": "bounded-hiring-reader-study",
+    "deadline": "2026-07-18",
+    "frozenSurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc", "/resume", "/contact"],
+    "entrySurfaces": ["/", "/work/technical-operations", "/work/fair-rent-nyc"],
+    "destinationSurfaces": ["/resume", "/contact"],
+    "sample": "Five consented readers: at least two hiring-adjacent readers and one implementation, civic-tech, or product-operations peer. Assign two readers to the home page, two to technical operations, and one to Fair Rent NYC; all five must attempt the resume and contact destinations.",
+    "exposure": "Five minutes without coaching, followed by a structured recall task.",
+    "frozenSurfaceDigest": "b9e003586af27644c90b2916ca68821b1d431b6b6477e90a2df9ae0a0a091e04",
+    "taskOrder": [
+      "Open the assigned entry page without coaching.",
+      "Browse for no more than five minutes.",
+      "State Jamie's role in the reader's own words.",
+      "Name one remembered proof and likely team fit.",
+      "Name one trust or confusion concern and one concrete reason to contact Jamie.",
+      "Locate the resume and contact path while time is recorded."
+    ],
+    "baseline": "No prior comparable study; this run establishes the baseline.",
+    "dimensions": [
+      "entry page",
+      "exposure time",
+      "unprompted role description",
+      "remembered proof",
+      "role fit",
+      "trust or confusion concern",
+      "time to locate resume",
+      "time to locate contact path",
+      "concrete reason to contact Jamie"
+    ],
+    "clarityThreshold": "At least four of five identify the target role accurately, at least three recall one concrete proof, and all five locate both the resume and contact paths within 90 seconds.",
+    "integerThresholds": {
+      "5": {
+        "completedWithinFiveMinutes": 5,
+        "accurateRole": 4,
+        "proofRecall": 3,
+        "roleFitNamed": 4,
+        "trustOrConfusionRecorded": 5,
+        "resumeWithin90Seconds": 5,
+        "contactWithin90Seconds": 5,
+        "concreteContactReason": 3
+      }
+    },
+    "aggregateFieldMap": {
+      "entry page": "aggregateCounts.surfaceCoverage and entrySurfaceResults",
+      "exposure time": "aggregateCounts.completedWithinFiveMinutes",
+      "unprompted role description": "aggregateCounts.accurateRole",
+      "remembered proof": "aggregateCounts.proofRecall",
+      "role fit": "aggregateCounts.roleFitNamed",
+      "trust or confusion concern": "aggregateCounts.trustOrConfusionRecorded",
+      "time to locate resume": "aggregateCounts.resumeWithin90Seconds",
+      "time to locate contact path": "aggregateCounts.contactWithin90Seconds",
+      "concrete reason to contact Jamie": "aggregateCounts.concreteContactReason"
+    },
+    "entrySurfaceDecisionRule": "Use global thresholds for the baseline. Make a page-specific change only after the same failure appears for at least two assigned readers; the single Fair Rent observation is a directional lead that requires another reader or independent evidence before page-specific revision.",
+    "fairRentFollowUpTrigger": "If the assigned Fair Rent reader misses role, proof, or role fit, or records a trust or confusion concern, recruit one additional consented reader for that same entry page before making a page-specific revision.",
+    "fairRentFollowUpReceiptPath": "evals/portfolio-system-blind-spots/external-receipts/fair-rent-follow-up.json",
+    "decisionLink": "Repeated failures trigger subtraction or clarification on the affected page; passing the threshold does not establish interview or hiring impact.",
+    "privacyBoundary": "Keep names, employers, applications, verbatim private feedback, and individual response records outside the repository. Separate hiring-reader and collaborator aggregates.",
+    "receiptState": "not-yet-returned",
+    "receiptPath": "evals/portfolio-system-blind-spots/external-receipts/reader-study.json",
+    "receiptTransition": {
+      "plannedToAttempted": "Requires a dated external solicitation recorded outside the repository.",
+      "attemptedToReviewed": "Requires a public-safe aggregate receipt with sample size, conditions, dimension counts, decisions, and limitations.",
+      "forbiddenShortcut": "A repository edit, LLM judgment, or deterministic check cannot advance this state.",
+      "validStates": {
+        "planned": "not-yet-returned",
+        "attempted": "attempt-recorded",
+        "reviewed": "aggregate-reviewed"
+      }
+    }
+  },
+  "priorityInquiryControls": [
+    {
+      "inquiryId": "INQ-NYCA-JAMIE-INSTRUMENTAL-ROLE",
+      "priority": 1,
+      "evidenceTarget": "A contemporaneous founding or early operating artifact plus collaborator confirmation of Jamie's specific actions.",
+      "closureCondition": "Action-level founding, convening, web, or operations propositions have direct role evidence and explicit collective-work boundaries.",
+      "boundedDisposition": "Keep the broad instrumental-role projection on hold and publish only separately sourced actions.",
+      "owner": "research-lead",
+      "nextReview": "2026-08-15"
+    },
+    {
+      "inquiryId": "INQ-NYCA-JAMIE-OFFICE-NIGHTLIFE-ROLE",
+      "priority": 2,
+      "evidenceTarget": "Event production records or collaborator confirmation assigning concrete planning, logistics, facilitation, or follow-through actions.",
+      "closureCondition": "At least one production action is directly corroborated and distinguished from collective advocacy.",
+      "boundedDisposition": "Retain documented invitation and speaking participation; state that the complete production role remains under research.",
+      "owner": "research-lead",
+      "nextReview": "2026-08-15"
+    },
+    {
+      "inquiryId": "INQ-NYCA-JAMIE-TALKS-NOT-RAIDS-ROLE",
+      "priority": 3,
+      "evidenceTarget": "Campaign revision history, publishing records, testimony, or collaborator confirmation tied to Jamie's specific work.",
+      "closureCondition": "Individual actions and the policy chronology have separate support and no sole-causality implication.",
+      "boundedDisposition": "Keep the campaign chronology collective and Jamie's individual role under research.",
+      "owner": "research-lead",
+      "nextReview": "2026-08-15"
+    },
+    {
+      "inquiryId": "INQ-KCTOWNHALL-PHASE-ONE-ROLE-AND-COMPLETION-2019",
+      "priority": 4,
+      "evidenceTarget": "Public-safe contractor, grant, inspection, or collaborator records assigning Phase One coordination and completion facts.",
+      "closureCondition": "General-contractor and trade-coordination claims have direct role evidence and completion scope is bounded to Phase One.",
+      "boundedDisposition": "Retain the grant-supported work scope and Jamie's first-person role account without asserting complete independent corroboration.",
+      "owner": "research-lead",
+      "nextReview": "2026-09-01"
+    },
+    {
+      "inquiryId": "INQ-NTERCHNG-PRODUCTION-AND-EXHIBITION-2011",
+      "priority": 5,
+      "evidenceTarget": "Archived exhibition materials or collaborator records naming NTER CHNG and production roles.",
+      "closureCondition": "Exhibition inclusion and Jamie's production role are independently and separately supported.",
+      "boundedDisposition": "Describe the recovered project and institutional exhibition context without inferring the missing show's full record.",
+      "owner": "research-lead",
+      "nextReview": "2026-09-01"
+    },
+    {
+      "inquiryId": "INQ-PUBLIC-SITE-SOURCE-COVERAGE",
+      "priority": 6,
+      "evidenceTarget": "Canonical source relationships for consequential active portfolio claims that still rely on descriptive proof notes.",
+      "closureCondition": "Every consequential active claim is cited, explicitly bounded, or intentionally removed.",
+      "boundedDisposition": "Keep uncited consequential wording conservative and log the missing relationship.",
+      "owner": "claim-editor",
+      "nextReview": "2026-08-15"
+    }
+  ],
+  "roleEvidencePolicy": {
+    "strongIndividualWording": "Requires one high-confidence direct contemporaneous role source, or two independent corroborating sources including a collaborator or official attribution.",
+    "firstPersonOnlyWording": "May remain active only when explicitly attributed as Jamie's account, paired with independent project-context evidence, and bounded against sole authorship; otherwise hold.",
+    "collectiveOutcomeWording": "Requires separate evidence for Jamie's action and for the collective or institutional outcome; chronology alone is not causality.",
+    "structuredDerivation": "The exact-set role-evidence-classifications.json ledger must equal every active or held Knowledge Bank claim whose projection names Jamie. Each record cites only evidence already attached to that claim and classifies it as source-corroborated, first-person, mixed, or open."
+  },
+  "sourceBalanceReview": {
+    "snapshot": {
+      "sources": 220,
+      "sourceKinds": 12,
+      "socialPostSources": 28,
+      "projectArchiveSources": 40,
+      "publishedArticleSources": 67,
+      "researchRunSources": 26
+    },
+    "populationPassInquiryIds": [
+      "INQ-JAMIE-FACEBOOK-HOSTED-EVENTS-2026",
+      "INQ-KCSPACES-FACEBOOK-POSTS-2026",
+      "INQ-NYCAC-FACEBOOK-EVENTS-2026",
+      "INQ-NYCAC-FACEBOOK-POSTS-2026",
+      "INQ-NYCA-X-FULL-POPULATION-2026-07-14",
+      "INQ-URBANHERMIT-FULL-POPULATION-2026",
+      "INQ-WOWLIST-FACEBOOK-EVENTS-2026",
+      "INQ-WOWLIST-FACEBOOK-POST-POPULATION-2026"
+    ],
+    "requiredInvisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through", "handoff"],
+    "stopRule": "Do not open a broad archive pass solely because a platform population is countable. Open a targeted lead only when it could change a consequential role claim or active hiring decision.",
+    "projectReviews": [
+      {
+        "project": "nyc-artist-coalition",
+        "platformTraceRisk": "Large social and press populations can eclipse convening, meeting production, policy translation, maintenance, and handoff.",
+        "invisibleWorkDimensions": ["facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Protected revision records and public event records support targeted operating claims; broader founding responsibility remains an open inquiry.",
+        "nextDecision": "Pursue only role-specific founding or production evidence that could change active wording."
+      },
+      {
+        "project": "kc-town-hall",
+        "platformTraceRisk": "Public votes and posts can eclipse daily construction coordination, field listening, maintenance, and stewardship transition.",
+        "invisibleWorkDimensions": ["maintenance", "coordination", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Phase One role remains a priority inquiry; the stewardship transition stays bounded without a private reason.",
+        "nextDecision": "Seek a role-specific public-safe construction record before strengthening the general-contractor claim."
+      },
+      {
+        "project": "wowlist",
+        "platformTraceRisk": "Event and post counts can eclipse moderation, taxonomy work, partner support, maintenance, and community facilitation.",
+        "invisibleWorkDimensions": ["maintenance", "facilitation", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Platform populations remain scale context, not a ranking of effort or impact; social-management attribution remains inconclusive.",
+        "nextDecision": "Prefer product records or collaborator confirmation over another broad platform count."
+      },
+      {
+        "project": "callnyc",
+        "platformTraceRisk": "Council-member account engagement can overshadow product translation, data work, interface design, and archival maintenance.",
+        "invisibleWorkDimensions": ["maintenance", "coordination", "documentation", "handoff"],
+        "evidenceDisposition": "The public project, repository, reporting, and bounded engagement review support separate product and traction claims.",
+        "nextDecision": "Do not expand engagement research unless it changes a consequential stakeholder-use claim."
+      },
+      {
+        "project": "196-sunday-dinner",
+        "platformTraceRisk": "Event and participant counts can obscure hosting, space preparation, onboarding, continuity, care, and self-service access.",
+        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "repair", "documentation", "follow-through"],
+        "evidenceDisposition": "A protected workflow supports one concrete operating sequence; aggregate scale remains separately bounded.",
+        "nextDecision": "Seek participant-safe operating evidence only when it improves the active case-study argument."
+      },
+      {
+        "project": "harry-j-epstein",
+        "platformTraceRisk": "Revenue and analytics traces can crowd out legacy-system maintenance, operational translation, staff support, and durable handoff.",
+        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Keep private operational detail protected and use approved aggregate claims; primary source wiring remains a priority.",
+        "nextDecision": "Pursue a canonical role-and-outcome source relationship rather than additional surface metrics."
+      },
+      {
+        "project": "career-proof-system",
+        "platformTraceRisk": "A complete personal social timeline can overrepresent public posting while underrepresenting private coordination, maintenance, repair, and long-term handoff work across projects.",
+        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "The personal-account population is a bounded lead index, not a professional activity ledger; role claims still require project-level evidence.",
+        "nextDecision": "Use personal posts only to route targeted source recovery that could alter a consequential claim."
+      },
+      {
+        "project": "participatory-public-practice",
+        "platformTraceRisk": "Hosted-event associations can make visible event titles and dates while hiding facilitation, preparation, access work, care, follow-through, and collective authorship.",
+        "invisibleWorkDimensions": ["maintenance", "facilitation", "coordination", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "Facebook association is treated as a historical locator, not proof of attendance, production responsibility, or impact.",
+        "nextDecision": "Pursue event-specific production evidence only when it can resolve an active role question."
+      },
+      {
+        "project": "kc-spaces-fund",
+        "platformTraceRisk": "A collaborator-led post population can eclipse the behind-the-scenes web, naming, deployment, maintenance, and handoff work that made the campaign usable.",
+        "invisibleWorkDimensions": ["maintenance", "coordination", "repair", "documentation", "follow-through", "handoff"],
+        "evidenceDisposition": "The public Page supports campaign chronology and shared identity; Jamie's bounded technical role is separately attributed and code-corroborated.",
+        "nextDecision": "Seek collaborator confirmation only if it would materially refine the naming or responsibility boundary."
+      }
+    ]
+  },
+  "fieldActionProtocol": {
+    "status": "planned",
+    "actionClass": "hiring-reader-solicitation",
+    "owner": "portfolio-owner",
+    "deadline": "2026-07-18",
+    "timeBox": "30 minutes to recruit and send; five minutes of review time requested per reader.",
+    "completionEvidence": "A dated external attempt recorded outside the repository and a coarse public-safe receipt with no recipient identity.",
+    "requiredFollowThrough": "After reviewing aggregate findings, complete one dated application, referral request, or comparable outward job-search action before another discretionary archive pass.",
+    "safeStorage": "Private outreach and feedback remain outside the repository; only aggregate learning and resulting content decisions may be committed.",
+    "receiptState": "not-yet-returned",
+    "receiptPath": "evals/portfolio-system-blind-spots/external-receipts/field-action.json",
+    "receiptTransition": {
+      "plannedToAttempted": "Requires a dated external action outside the repository.",
+      "attemptedToLearned": "Requires a coarse public-safe receipt naming only action class, date, aggregate learning, and any content decision.",
+      "forbiddenShortcut": "Archive work, site edits, LLM scores, and internal checks do not count as an external attempt.",
+      "validStates": {
+        "planned": "not-yet-returned",
+        "attempted": "attempt-recorded",
+        "learned": "coarse-learning-reviewed"
+      }
+    },
+    "followThrough": {
+      "status": "planned",
+      "actionClass": "application-referral-or-equivalent-job-search-action",
+      "trigger": "After aggregate hiring-reader findings are reviewed and before another discretionary archive pass.",
+      "deadline": "2026-07-21",
+      "receiptState": "not-yet-returned",
+      "receiptPath": "evals/portfolio-system-blind-spots/external-receipts/job-search-follow-through.json",
+      "validStates": {
+        "planned": "not-yet-returned",
+        "attempted": "attempt-recorded",
+        "learned": "coarse-learning-reviewed"
+      },
+      "privacyBoundary": "Keep recipient, employer, role, application, referral, and message details outside the public repository."
+    }
+  }
+}

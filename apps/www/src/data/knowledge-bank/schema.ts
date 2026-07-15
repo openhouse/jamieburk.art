@@ -136,6 +136,7 @@ export const evidenceRelationshipSchema = z.object({
   internalExcerpt: z.string().min(1).optional(),
   publicNote: z.string().min(1).optional(),
   confidence: z.enum(["high", "moderate", "limited"]),
+  roleBasis: z.enum(["first-person", "independent", "mixed"]).optional(),
   renderCitation: z.boolean()
 });
 
@@ -263,6 +264,7 @@ export const correctionRecordSchema = z.object({
   previousText: z.string().min(1),
   replacementText: z.string().min(1),
   reason: z.string().min(1),
+  roleBasis: z.enum(["first-person", "independent", "mixed"]).optional(),
   decidedAt: z.iso.date(),
   affectedSurfaces: z.array(z.string().min(1)).min(1),
   status: z.enum(["active", "superseded"])

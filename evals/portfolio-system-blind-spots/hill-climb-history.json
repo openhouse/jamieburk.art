@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-07-15",
+  "scope": "Public-safe summary of independent LLM control judgments made during this pass. Scores evaluate the internal control bundle, not human comprehension, collaborator agreement, interviews, applications, or hiring outcomes.",
+  "iterationBudgetRevision": "Iteration 8 reproduced hard-gate failures in both fresh judge pairs. The budget was extended from 8 to 12 without changing any hard gate, score threshold, criterion minimum, calibration requirement, regression limit, or external-outcome boundary.",
+  "iterations": [
+    {
+      "iteration": 1,
+      "candidate": "baseline blind-spot model",
+      "evidenceAndGovernanceScore": 70,
+      "hiringAndFieldUseScore": 66,
+      "disposition": "revise",
+      "changePrompted": "Replace descriptive risks with owned controls, observable signals, decision rules, and evidence-return paths."
+    },
+    {
+      "iteration": 2,
+      "candidate": "initial structured controls",
+      "evidenceAndGovernanceScore": 78,
+      "hiringAndFieldUseScore": 94,
+      "disposition": "revise",
+      "changePrompted": "Bind live graph counts, inquiry closure targets, source-balance reviews, route composition, and external-action states."
+    },
+    {
+      "iteration": 3,
+      "candidate": "instrumented controls",
+      "evidenceAndGovernanceScore": 90,
+      "hiringAndFieldUseScore": 87,
+      "disposition": "revise",
+      "changePrompted": "Correct stale citation state, bind reader surfaces transitively, and replace generic route allowances with concrete route receipts."
+    },
+    {
+      "iteration": 4,
+      "candidate": "governed public surfaces",
+      "evidenceAndGovernanceScore": 92,
+      "hiringAndFieldUseScore": 90,
+      "disposition": "revise",
+      "changePrompted": "Add strict receipt transitions, mandatory post-reader job-search follow-through, concrete case counts, and complete run-artifact validation."
+    },
+    {
+      "iteration": 5,
+      "candidate": "strict receipt and provenance controls",
+      "evidenceAndGovernanceScore": 87,
+      "hiringAndFieldUseScore": null,
+      "disposition": "revise-after-first-disqualifying-judgment",
+      "changePrompted": "Make reader receipts reachable, bind coarse status to protocol state, require learned decisions, and enforce first-person role attribution across every active projection."
+    },
+    {
+      "iteration": 6,
+      "candidate": "render-bound role and composition controls",
+      "evidenceAndGovernanceScore": 92,
+      "hiringAndFieldUseScore": 95,
+      "disposition": "revise-despite-qualifying-scores",
+      "changePrompted": "Bind all live role projections, action deadlines and sequence, every reader-study dimension, homepage routing claims, composition currency, and mosaic-review currency before the final repeated pass."
+    },
+    {
+      "iteration": 7,
+      "candidate": "digest-bound field protocol and full-graph attribution",
+      "evidenceAndGovernanceScore": 90,
+      "hiringAndFieldUseScore": 92,
+      "disposition": "revise",
+      "changePrompted": "Create render-derived claim-key inventories, explicit per-surface reader results, strict calendar and chronological checks, contained artifact paths, and structured role-basis derivation."
+    },
+    {
+      "iteration": 8,
+      "candidate": "first render-derived inventory and structured role tags",
+      "evidenceAndGovernanceScore": 87,
+      "hiringAndFieldUseScore": 89,
+      "disposition": "revise-and-extend-budget-without-lowering-gates",
+      "changePrompted": "Both fresh judge pairs reproduced risk-control-traceability failures: make role evidence exhaustive across active and held claims, inventory every rendered route proposition, reconcile every reader dimension per entry surface, validate canonical transitions and chronology, and reject symlink escapes."
+    },
+    {
+      "iteration": 9,
+      "candidate": "semantic role and proof ledgers with compact homepage composition",
+      "evidenceAndGovernanceScore": 87,
+      "hiringAndFieldUseScore": null,
+      "disposition": "revise-after-first-disqualifying-judgment",
+      "changePrompted": "Count compact WorkCard propositions exactly; derive role claims from internal and projected text; govern the parallel proof layer; version tested and post-decision reader surfaces; add a machine-checkable Fair Rent follow-up; reject intermediate symlinks; and derive source-balance coverage from every full-population inquiry."
+    }
+  ],
+  "next": "Iteration 10 is the next candidate. Preserve external outcomes as not-yet-measured, run fresh independent judges, and stop only after two unchanged qualifying rounds or the revised iteration-12 limit."
+}

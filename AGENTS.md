@@ -26,6 +26,7 @@ workspaces, Dockerfile, Dokku.
 - `npm run check`
 - `npm run knowledge-bank`
 - `npm run evals:portfolio`
+- `npm run evals:blind-spots`
 - `npm run public-safety`
 - `npm run check:routes`
 - `npm run check:citations`
@@ -91,6 +92,13 @@ Use `evals/knowledge-bank-lifecycle/evals.json` when new sources, memories,
 artifacts, corrections, or photo leads arrive. Capture first, decompose sources,
 separate claim maturity from projection selection, open explicit research paths,
 and stop only at the suite's independent two-pass threshold.
+
+Use `evals/portfolio-system-blind-spots/evals.json` to test the portfolio process
+against external-validation gaps, inquiry accumulation, individual-role gaps,
+platform-shaped evidence, additive composition, mosaic privacy, evaluator
+self-certification, and indefinite polishing. A pass confirms the controls, not
+an external outcome. Keep hiring-reader, collaborator, and application results
+`not-yet-measured` until separately observed.
 
 ## Chad Lens
 

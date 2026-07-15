@@ -331,7 +331,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie also established @NYCArtC as a shared coalition publishing identity and connected it across the coalition, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Teammates also published through the account, so individual posts are not attributed to Jamie without separate evidence.",
+          "text": "Jamie reports establishing @NYCArtC as a shared coalition publishing identity and connecting it across the coalition, Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC. Public profiles corroborate those connections, not the account-creation history. Teammates also published through the account, so individual posts are not attributed to Jamie without separate evidence.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -348,6 +348,7 @@
             "shared-authorship boundary"
           ],
           "confidence": "moderate",
+          "roleBasis": "mixed",
           "renderCitation": true
         },
         {
@@ -374,7 +375,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "By establishing that shared address, Jamie gave collaborators a durable public identity that Council-member accounts could recognize, reply to, invite, and amplify across campaigns. A bounded 2026 review recovered 20 returned posts from accounts of seven then-sitting Council members. This is account-level evidence, not formal endorsement or proof of personal authorship.",
+          "text": "Jamie reports establishing that shared address, giving collaborators a durable public identity that Council-member accounts could recognize, reply to, invite, and amplify across campaigns. Public profiles corroborate the identity system, not its creation history. A bounded 2026 review recovered 20 returned posts from accounts of seven then-sitting Council members. This is account-level evidence, not formal endorsement or proof of personal authorship.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -391,6 +392,7 @@
             "shared-authorship boundary"
           ],
           "confidence": "moderate",
+          "roleBasis": "mixed",
           "renderCitation": true
         },
         {
@@ -429,7 +431,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie established KC Town Hall's public account as part of the project's identity system. Its surviving timeline later functioned as a resident-facing operations channel for neighborhood information and recurring #TiredOfTires pickups; account authorship and program stewardship are not assigned to Jamie post by post.",
+          "text": "Jamie reports establishing KC Town Hall's public account as part of the project's identity system; the surviving profile corroborates the account-to-project relationship, not its creation history. Its timeline later functioned as a resident-facing operations channel for neighborhood information and recurring #TiredOfTires pickups; account authorship and program stewardship are not assigned to Jamie post by post.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -445,6 +447,7 @@
             "Jamie's first-person establishment account"
           ],
           "confidence": "moderate",
+          "roleBasis": "first-person",
           "renderCitation": true
         },
         {
@@ -733,7 +736,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "Jamie helped establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+          "text": "Jamie describes his role as helping to establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action. Public event records corroborate the system and Jamie's documented participation, while the complete production-responsibility map remains under research.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [

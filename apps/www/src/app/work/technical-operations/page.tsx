@@ -8,53 +8,9 @@ import { createMetadata } from "@/lib/metadata";
 const operationsMap = [
   "Coordinate delivery across concurrent projects and keep work moving from concept through public launch.",
   "Track status, surface risks early, and name recurring blockers before they become patterns.",
-  "Build planning cycles, team rituals, decision frameworks, status reporting, and retrospectives.",
   "Coordinate dependencies across product, engineering, security, legal, communications, contracts, and external stakeholders.",
   "Onboard collaborators with handbooks, runbooks, operating documentation, source maps, and decision records.",
-  "Report team health, project status, and operational metrics with honesty about what is and is not working.",
-  "Improve working systems over time without overengineering."
-];
-
-const proofMap = [
-  {
-    project: "HJE",
-    proof:
-      "long-running e-commerce, analytics, marketing, content, and operations modernization in a legacy business."
-  },
-  {
-    project: "FairRentNYC / Commercial Rent Stabilization",
-    proof:
-      "shared campaign memory, decision records, source maps, action trackers, stakeholder follow-up, and public/private boundary management."
-  },
-  {
-    project: "CallNYC",
-    proof:
-      "open-data translation into resident-facing guidance after a New York City Council civic-data hackathon."
-  },
-  {
-    project: "WOWList",
-    proof:
-      "public-facing community event distribution system using Python / Django, PostgreSQL / PostGIS, and Ember.js."
-  },
-  {
-    project: "196 / Sunday Dinner",
-    proof:
-      "onboarding, facilitation, continuity, hosting rhythms, and documentation for recurring human systems."
-  },
-  {
-    project: "KC Spaces Fund",
-    proof:
-      "built the campaign website and supported a project name that worked consistently across web and social channels for a collaborator-led 2020 mutual-aid effort."
-  },
-  {
-    project: "KC Town Hall",
-    proof: "long-horizon project planning and public-benefit documentation."
-  },
-  {
-    project: "Source-Backed Team Memory",
-    proof:
-      "lab method for decision lineage, onboarding context, meeting synthesis, and human-reviewed AI workflows."
-  }
+  "Report project status and improve working systems without overengineering."
 ];
 
 export const metadata: Metadata = createMetadata({
@@ -79,7 +35,11 @@ export default function TechnicalOperationsPage() {
           handoffs.
         </p>
       </div>
-      <section className="mt-10 grid gap-5 lg:grid-cols-[0.42fr_0.58fr]">
+      <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <ResumeCTA />
+        <ContactCTA />
+      </div>
+      <section className="mt-10">
         <JBCard>
           <h2 className="text-2xl font-semibold text-jb-ink">
             How this maps to team operations
@@ -93,17 +53,6 @@ export default function TechnicalOperationsPage() {
             ))}
           </ul>
         </JBCard>
-        <JBCard>
-          <h2 className="text-2xl font-semibold text-jb-ink">Proof map</h2>
-          <dl className="mt-5 space-y-4">
-            {proofMap.map((item) => (
-              <div key={item.project}>
-                <dt className="font-semibold text-jb-ink">{item.project}</dt>
-                <dd className="mt-1 leading-7 text-jb-ink/72">{item.proof}</dd>
-              </div>
-            ))}
-          </dl>
-        </JBCard>
       </section>
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {technicalOperationsProofRows.map((row) => (
@@ -111,7 +60,7 @@ export default function TechnicalOperationsPage() {
             <h2 className="text-2xl font-semibold text-jb-ink">{row.capability}</h2>
             <p className="mt-3 text-sm leading-6 text-jb-ink/68">{row.toward}</p>
             <ul className="mt-5 space-y-3 text-jb-ink/76">
-              {row.proofs.map((proof) => (
+            {row.proofs.slice(0, 2).map((proof) => (
                 <li className="flex gap-3" key={proof.id}>
                   <span aria-hidden="true" className="mt-2 h-2 w-2 rounded-full bg-jb-ochre" />
                   <span>{proof.shortWording ?? proof.publicWording}</span>
@@ -120,10 +69,6 @@ export default function TechnicalOperationsPage() {
             </ul>
           </JBCard>
         ))}
-      </div>
-      <div className="mt-10 grid gap-5 lg:grid-cols-2">
-        <ResumeCTA />
-        <ContactCTA />
       </div>
     </div>
   );

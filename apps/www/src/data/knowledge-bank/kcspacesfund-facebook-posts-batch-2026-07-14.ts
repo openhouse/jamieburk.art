@@ -492,7 +492,7 @@ export const kcSpacesFundFacebookPostsBatch = {
         {
           key: "technical-operations",
           text:
-            "For KC Spaces Fund, Jamie built the campaign website and supported a project name that worked consistently across web and social channels. The collaborator-led Page used that shared identity to route people to applications, donations, and grantee updates.",
+            "For KC Spaces Fund, Jamie reports building the campaign website and supporting a project name that worked consistently across web and social channels. A 2026 code and archive review corroborates the digital-infrastructure work; the collaborator-led Page used that shared identity to route people to applications, donations, and grantee updates.",
           status: "active",
           citationRequired: false,
           surfaces: ["/work/technical-operations"]
@@ -511,6 +511,7 @@ export const kcSpacesFundFacebookPostsBatch = {
           relationship: "private-support",
           supports: ["cross-channel naming support and the non-posting boundary"],
           confidence: "high",
+          roleBasis: "first-person",
           renderCitation: false
         },
         {

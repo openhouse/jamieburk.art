@@ -773,6 +773,7 @@ export const nycartcFacebookPostClaims = [
         relationship: "private-support",
         supports: ["Jamie's first-person recollection and its shared-use boundary"],
         confidence: "limited",
+        roleBasis: "first-person",
         renderCitation: false
       },
       {

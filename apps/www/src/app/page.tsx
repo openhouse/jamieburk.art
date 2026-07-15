@@ -98,7 +98,7 @@ export default function HomePage() {
         </div>
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {featuredWork.map((item) => (
-            <WorkCard item={item} key={item.slug} />
+            <WorkCard compact item={item} key={item.slug} />
           ))}
         </div>
       </section>

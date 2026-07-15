@@ -577,6 +577,7 @@ export const wowlistFacebookPostClaims = [
         relationship: "direct-support",
         supports: ["Jamie's first-person recollection and its stated uncertainty"],
         confidence: "high",
+        roleBasis: "first-person",
         renderCitation: false
       },
       {

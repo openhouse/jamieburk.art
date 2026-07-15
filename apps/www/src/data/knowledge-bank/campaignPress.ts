@@ -433,6 +433,20 @@ const articleSources: KnowledgeBank["sources"] = articleSeeds.map((article) => {
 
 const campaignSurfaceSources: KnowledgeBank["sources"] = [
   {
+    id: "SRC-JAMIE-NYCA-PRESS-ARCHITECTURE-CONFIRMATION-2026",
+    title: "Jamie Burkart clarification on NYC Artist Coalition campaign-site press architecture",
+    organization: "Jamie Burkart",
+    kind: "project-archive",
+    visibility: "protected",
+    preservationStatus: "private",
+    capturedAt: "2026-07-15",
+    publicCitation: "Jamie Burkart, campaign-site press architecture clarification, July 2026.",
+    publicNote: "Jamie reports building the press and reference sections across four coalition campaign sites. The surviving sites corroborate the resulting architecture and counts, not the complete editorial responsibility map.",
+    protectedLocatorId: "LOC-NYCA-PRESS-ARCHITECTURE-CONFIRMATION-2026",
+    supportsGenerally: ["Jamie's first-person web-authorship account", "the boundary between site construction and collective campaign authorship"],
+    doesNotEstablish: ["sole article selection", "sole campaign authorship", "publisher endorsement", "sole causality for campaign outcomes"]
+  },
+  {
     id: "SRC-LET-NYC-DANCE-CAMPAIGN",
     title: "Let NYC Dance: Movement to Repeal the Cabaret Law",
     organization: "Let NYC Dance coalition",
@@ -679,12 +693,13 @@ export const campaignPressClaims: KnowledgeBank["claims"] = [
     status: "confirmed-with-boundary",
     projections: [{
       key: "case-study",
-      text: "Jamie built press sections across four NYC Artist Coalition campaign sites, organizing 46 placements for 45 distinct articles into public source trails. The count joins surviving live and archived views; article inclusion does not imply publisher endorsement or make collective campaign outcomes Jamie's alone.",
+      text: "Jamie reports building press sections across four NYC Artist Coalition campaign sites, organizing 46 placements for 45 distinct articles into public source trails. The surviving sites corroborate the architecture and counts, not individual authorship. Article inclusion does not imply publisher endorsement or make collective campaign outcomes Jamie's alone.",
       status: "active",
       citationRequired: false,
       surfaces: ["/work/fair-rent-nyc"]
     }],
     evidence: [
+      { sourceId: "SRC-JAMIE-NYCA-PRESS-ARCHITECTURE-CONFIRMATION-2026", relationship: "private-support", supports: ["Jamie's first-person account of building the four campaign-site press sections"], confidence: "high", roleBasis: "first-person", renderCitation: false },
       { sourceId: "SRC-LET-NYC-DANCE-CAMPAIGN", relationship: "direct-support", supports: ["Let NYC Dance press section", "21 placements"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-TALKS-NOT-RAIDS-PROJECT", relationship: "direct-support", supports: ["Talks Not Raids press section", "seven placements"], confidence: "high", renderCitation: false },
       { sourceId: "SRC-SAVE-NYC-SPACES-CAMPAIGN", relationship: "direct-support", supports: ["Save NYC Spaces press section", "eight placements"], confidence: "high", renderCitation: false },

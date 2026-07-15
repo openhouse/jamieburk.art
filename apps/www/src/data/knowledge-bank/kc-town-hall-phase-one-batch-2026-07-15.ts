@@ -208,6 +208,7 @@ const claims = [
           "the trade categories, daily site presence, measured-drawing practice, and roof-parapet sequencing account"
         ],
         confidence: "moderate",
+        roleBasis: "first-person",
         renderCitation: false
       },
       {
@@ -278,6 +279,7 @@ const claims = [
           "Jamie's authorship account for the handbill and backing data-collection system"
         ],
         confidence: "moderate",
+        roleBasis: "first-person",
         renderCitation: false
       },
       {
@@ -338,6 +340,7 @@ const claims = [
           "Jamie's situated account of daily neighborhood conversations and appreciation around the active restoration site"
         ],
         confidence: "moderate",
+        roleBasis: "first-person",
         renderCitation: false
       },
       {

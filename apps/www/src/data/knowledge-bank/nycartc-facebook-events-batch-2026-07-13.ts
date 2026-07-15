@@ -468,7 +468,7 @@ export const nycartcFacebookEventsBatchRecords: NycArtistCoalitionFacebookEvents
         {
           key: "case-study",
           text:
-            "Jamie helped establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action.",
+            "Jamie describes his role as helping to establish and produce the coalition's recurring participation system: public event pages, meetings rotated among cultural spaces, practical safety and advocacy sessions, and pathways from artist concerns to public hearings and campaign action. Public event records corroborate the system and Jamie's documented participation, while the complete production-responsibility map remains under research.",
           status: "active",
           citationRequired: true,
           surfaces: ["/work/fair-rent-nyc"]
@@ -488,6 +488,7 @@ export const nycartcFacebookEventsBatchRecords: NycArtistCoalitionFacebookEvents
           relationship: "direct-support",
           supports: ["Jamie's first-person account of his role in the event and participation system"],
           confidence: "moderate",
+          roleBasis: "first-person",
           renderCitation: false
         },
         {
@@ -679,6 +680,7 @@ export const nycartcFacebookEventsBatchRecords: NycArtistCoalitionFacebookEvents
           relationship: "direct-support",
           supports: ["Jamie's interpretation of the event practice and its lineage from WOWList"],
           confidence: "moderate",
+          roleBasis: "first-person",
           renderCitation: false
         },
         {
