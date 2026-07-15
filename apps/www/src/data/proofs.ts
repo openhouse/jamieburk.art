@@ -716,6 +716,40 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "knowledge-systems-documentation-practice",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Builds knowledge systems and documentation through source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems.",
+    shortWording: "Knowledge systems and reusable documentation",
+    sourceBasis:
+      "Approved public positioning and public-safe aggregate review of Jamie's source maps, campaign memory, guidance, resource, template, and handoff work.",
+    whyItMatters:
+      "Supports the portfolio's knowledge-systems capability as a complete proposition rather than through an incidental shared word.",
+    guardrail:
+      "Describe a cross-project working practice; do not imply every private source system or collaborator record is public.",
+    doNotSay: [
+      "All underlying source systems are public",
+      "Every collaborator approved publication of private records"
+    ],
+    protectedBoundaries: [
+      "Private source maps",
+      "Private meeting records",
+      "Credentials",
+      "Unapproved collaborator materials"
+    ],
+    surfaces: ["homepage", "resume", "technical-operations", "about"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "knowledge-systems",
+      "documentation",
+      "source-mapping",
+      "meeting-synthesis"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "professional-focus-current",
     status: "ready",
     supportLevel: "moderate",

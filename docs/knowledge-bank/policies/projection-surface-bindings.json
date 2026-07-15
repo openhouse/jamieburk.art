@@ -1,7 +1,7 @@
 {
   "version": 3,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "4714911631bbcbb2e0933fa90b5286add754e22f29d76e30854b3e2da588fcb3",
+  "publicSurfaceSha256": "ec3cec35d9f868def9dbfac7f757c95c2f3b9db09e4a57a38753353709db238b",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -458,7 +458,7 @@
         "surface": "/",
         "text": "Source maps, meeting synthesis, public guidance, resource libraries, templates, and reusable reference systems.",
         "claims": [],
-        "proofs": [{ "id": "career-operating-structure-14-years", "anchor": "systems" }]
+        "proofs": [{ "id": "knowledge-systems-documentation-practice", "anchor": "source maps" }]
       },
       {
         "id": "capability-civic-technology",
@@ -552,7 +552,7 @@
         "surface": "/about",
         "text": "I am Jamie Burkart, a technical project manager and implementation lead based in Brooklyn.",
         "claims": [],
-        "proofs": [{ "id": "professional-focus-current", "anchor": "technical project manager" }]
+        "proofs": [{ "id": "professional-focus-current", "anchor": "implementation" }]
       },
       {
         "id": "about-contexts",
