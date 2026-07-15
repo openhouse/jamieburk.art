@@ -100,6 +100,11 @@ public amplification, not formal endorsement, adoption, offline use,
 constituent outcome, or approval of every CallNYC ranking. Public X views also
 do not expose a complete liker or private-analytics roster.
 
+The original Council-account inquiry is now recovered at this bounded level:
+at least four named public amplifications. It does not claim a complete historic
+engagement roster, and the separate three-record CallNYC population gap remains
+open.
+
 KC Town Hall's April 2019 Leon's Thriftway alert received public responses from
 [Quinton Lucas](https://x.com/QuintonLucasKC/status/1122866432130334720) and
 [Jolie Justus](https://x.com/joliejustus/status/1122883010582466560). The

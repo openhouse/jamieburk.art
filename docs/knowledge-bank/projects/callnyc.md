@@ -1,6 +1,6 @@
 # CallNYC citational record
 
-**Reviewed:** 2026-07-11
+**Reviewed:** 2026-07-15
 
 **Public surface:** `/work/callnyc`
 
@@ -31,11 +31,26 @@ product, a documented formal submission, or a documented winner.
 - New York City Council Hackathon promotional graphic.
 - Politico New York coverage dated March 14, 2016.
 - Public CallNYC GitHub repository.
+- Four recovered 2016 posts in which then-serving Council member accounts
+  quote-posted a CallNYC result or directly shared CallNYC.org.
 - Participant photograph metadata held outside the public projection.
 - Documented Civic Hall Wayback/CDX research run held outside the app build.
 
 The Wayback capture preserves embedded social posts. It is not a recovered
 Civic Hall calendar listing or dedicated event-detail page.
+
+## Recovered Council-account amplification
+
+The current social archive recovered public amplification by at least four
+then-serving Council member accounts in 2016: Mathieu Eugene, Helen Rosenthal,
+Rosie Mendez, and Ydanis Rodriguez. Three quote-posted a CallNYC result and one
+directly shared CallNYC.org. Official Council person records support the
+officeholder context.
+
+This establishes bounded public amplification. It does not establish formal
+endorsement, Council adoption, offline use, constituent outcomes, approval of
+every ranking, likes hidden from the current interface, or a complete historic
+engagement roster. Three profile-counted CallNYC records remain unavailable.
 
 ## Bounded research finding
 

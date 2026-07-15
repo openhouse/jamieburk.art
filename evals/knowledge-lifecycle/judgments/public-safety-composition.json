@@ -1,7 +1,7 @@
 {
-  "judgeId": "public-administration-2026-07-15-b",
+  "judgeId": "public-administration-2026-07-15-d",
   "lens": "public-administration-democracy",
-  "candidate": "sha256:ac618735f8e0d6829fc42ab0d674f9c87ce9f8cdbc1c45c5f5a36f98e832dd84",
+  "candidate": "sha256:9cca2ed8c84ae35c7088b3d502dd57976de0e89a1a5b2541c27cd3358262d625",
   "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
   "passes": true,
   "scores": {
@@ -17,41 +17,41 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All four institutional-value inputs retain stable promoted intake records, public-safe dispositions, source links, entity context, and the partially recovered inquiry."
+      "observation": "The CallNYC population, Council-account amplification, and institutional-value inputs retain stable intake identities, explicit dispositions, linked sources, claims, and inquiries. The deterministic evaluation reports 123 intake records and no findings."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The Finkelpearl records preserve the documented public rationale of reciprocal engagement, direct feedback, common-cause convening, and the coalition example while explicitly refusing private motive, dependency, recommendation adoption, and individual-role inferences."
+      "observation": "Four individual CallNYC posts distinguish three quote-posts from Helen Rosenthal's direct share, while four official Council person records separately support then-serving officeholder context. DCLA and CreateNYC records separately state what they support and refuse private motive, individual-role, recommendation-adoption, dependency, and sole-causality claims."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Espinal's sponsorship and his single October 11, 2017 town-hall appearance are now separate confirmed-with-boundary claims with direct support; the relational interpretation is separately classified as inference and does not claim recurring engagement."
+      "observation": "The CallNYC finding states at least four then-serving Council-member accounts, names all four, and distinguishes three quote-posts from one direct project share. Espinal's formal sponsorship, single documented town-hall appearance, and limited relational interpretation remain three separate claims."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The sponsorship claim resolves only to the two official Council records, the town-hall claim resolves only to contemporaneous reporting, and the limited relational inference uses those records as context without upgrading participation into responsiveness, accountability, endorsement, or legitimacy."
+      "observation": "The CallNYC amplification claim resolves through four direct post sources, four corroborating officeholder sources, the bounded Council-account inquiry, and the separate population-gap inquiry. The inquiry situates the finding within 107 recovered records from 110 profile-counted records and preserves all three unavailable records."
     },
     {
       "rubric": "status_separation",
-      "observation": "All four institutional-value syntheses remain inference, internal-only, unused, and projection-free; the attributed Finkelpearl claim and two atomic Espinal claims remain separately qualified and editorially unused."
+      "observation": "The CallNYC amplification projection remains on hold with no surface. All four DCLA, Council, Espinal, and Jamie institutional-value syntheses remain inference, internal-only, unused, and projection-free; directly documented testimony, sponsorship, and participation remain separately qualified."
     },
     {
       "rubric": "project_context",
-      "observation": "DCLA's engagement capacity, the Council's legislative and oversight capacity, Espinal's sponsorship and one documented appearance, the coalition's convening and feedback capacity, and Jamie's individual contribution remain distinct across entities, claims, sources, inquiry findings, and project documentation."
+      "observation": "The CallNYC dossier preserves its independent and unofficial status, the 107-of-110 population context, officeholder verification, and historical-engagement limits. The coalition dossier keeps DCLA's agency role, the Council's legislative role, Espinal's sponsorship and one appearance, the coalition's convening role, and Jamie's component contributions institutionally distinct."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The repaired record expressly rejects a recurring Espinal-coalition relationship, responsiveness, an accountability arrangement, endorsement, cultural-sector legitimacy, universal representation, private motive, dependency, recommendation adoption, and causal allocation."
+      "observation": "The CallNYC records expressly refuse formal endorsement, Council adoption, offline use, constituent outcomes, approval of every ranking, hidden-like inference, and a complete historic engagement roster. The institutional inquiry remains partially recovered and refuses private motive, dependence, recurring Espinal responsiveness or accountability, universal representation, and sole coalition or individual causality."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "Jamie's bridge-value synthesis remains internal and preserves collective production, other participants' work, and policy-causality limits while naming the supported organizer, practical-safety, testimony, participation-system, and civic-systems contributions."
+      "observation": "The private CallNYC corpus remains behind an opaque locator, and Jamie's bounded first-person event-practice evidence remains private-support with citation rendering disabled. No institutional-value synthesis has an active projection, and active public coalition claims remain separately sourced rather than borrowing these internal inferences."
     },
     {
-      "rubric": "provenance_closure",
-      "observation": "The deterministic lifecycle evaluation reproduced the exact candidate and contract fingerprints, scored every rubric at 4 with zero findings, and all 84 knowledge-lifecycle tests passed; the only unsatisfied hard gate before this judgment was the absence of a current candidate-bound model judgment."
+      "rubric": "research_honesty",
+      "observation": "Fresh verification reproduced the exact candidate and contract fingerprints, scored every deterministic rubric at 4 with zero findings, and passed all 84 knowledge-lifecycle tests, including negative tests for incomplete populations, endorsement inflation, institutional necessity, public projection, Espinal overreach, private-evidence exposure, and loss of collective credit."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept the repaired candidate and preserve the atomic sponsorship, single-appearance, relational-inference, and collective-credit boundaries in future projections."
+  "nextAction": "Accept this candidate-bound judgment and preserve the 107-of-110 population qualifier, three-record gap, non-endorsement limits, private-evidence controls, and inactive institutional syntheses in future projections."
 }

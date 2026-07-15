@@ -10,7 +10,10 @@
     "start": "sh -c 'if [ -f .next/standalone/apps/www/server.js ]; then cd .next/standalone && node apps/www/server.js; elif [ -f .next/standalone/server.js ]; then cd .next/standalone && node server.js; else next start -p ${PORT:-3000}; fi'",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run lint && npm run build"
+    "test:blind-spots": "node --test ../../scripts/tests/blind-spot-evals.test.mjs",
+    "evals:blind-spots": "node ../../scripts/run-blind-spot-evals.mjs --profile diagnostic",
+    "evals:blind-spots:closure": "node ../../scripts/run-blind-spot-evals.mjs --profile closure",
+    "check": "npm run typecheck && npm run lint && npm run test:blind-spots && npm run evals:blind-spots && npm run build"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

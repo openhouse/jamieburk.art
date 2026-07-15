@@ -1,7 +1,7 @@
 {
-  "judgeId": "archival-editorial-2026-07-15-e",
+  "judgeId": "archival-editorial-2026-07-15-g",
   "lens": "archival-editorial",
-  "candidate": "sha256:ac618735f8e0d6829fc42ab0d674f9c87ce9f8cdbc1c45c5f5a36f98e832dd84",
+  "candidate": "sha256:9cca2ed8c84ae35c7088b3d502dd57976de0e89a1a5b2541c27cd3358262d625",
   "contract": "sha256:ae91dc206bdf80b22f8797acdfbc0db62b9b535995f14c9d6ba59a02d3ff9804",
   "passes": true,
   "scores": {
@@ -17,41 +17,41 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "All four institutional-source intakes retain stable identities, public-safe live dispositions, source relationships, and the partially recovered inquiry; the deterministic evaluation reports 123 intake records and no findings."
+      "observation": "The CallNYC population, four-post amplification set, and originating memory retain stable intake identities and explicit dispositions; the bank contains 123 intake records with no unfinished deterministic finding."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The Finkelpearl, Council, and CreateNYC sources preserve close-reading locators, support and non-support fields, and explicit boundaries against private motive, necessity, recommendation adoption, individual-role attribution, and sole causality."
+      "observation": "Four separately reviewed social-post sources establish three quote-posts and one direct share, four official Council person records establish contemporaneous officeholder context, and the private corpus explicitly does not establish the unavailable records, a complete engagement roster, or official Council ownership."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Espinal's two directly documented facts are now separate confirmed-with-boundary claims: official sponsorship is supported by two Council records, while one October 2017 town-hall appearance is supported by one contemporaneous report. The relational interpretation remains a distinct inference."
+      "observation": "The amplification claim is limited to at least four named Council-member accounts and remains distinct from the 107-of-110 population finding, the three-record gap, endorsement, adoption, offline use, constituent outcomes, and broader engagement."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The May testimony claim resolves only to the Council transcript as direct support; Espinal sponsorship and participation resolve to their respective records; institutional syntheses use context relationships without promoting contextual evidence into direct proof."
+      "observation": "Each named amplification resolves to its own direct-support post source and corroborating officeholder source; the recovered inquiry additionally resolves to the private corpus and preserves the separate population-gap inquiry."
     },
     {
       "rubric": "status_separation",
-      "observation": "All four institutional-value syntheses remain inference, internal-only, unused, and projection-free. The three direct claims are confirmed-with-boundary, qualified, editorially unused, and absent from active public composition."
+      "observation": "The amplification claim is confirmed-with-boundary, qualified, and editorially candidate with a held projection and no surface; the corpus remains private, while the incomplete population inquiry remains partially recovered."
     },
     {
       "rubric": "project_context",
-      "observation": "The project dossier and inquiry situate DCLA, Council, Espinal, coalition, and Jamie in distinct capacities while preserving chronology, methods, limitations, open corroboration needs, and future photo research."
+      "observation": "The CallNYC records preserve project identity, 2016 chronology, named actors, retrieval methods, interaction types, source roles, limitations, and the open three-record recovery path needed by a future researcher."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The repaired note discusses documented usefulness and complementary capacity while explicitly refusing institutional necessity and private motive. It limits Espinal to sponsorship and one appearance and rejects recurring relationship, responsiveness, accountability, endorsement, cultural-sector legitimacy, recommendation adoption, and causal allocation."
+      "observation": "The inquiry states at least four rather than a complete roster, records 107 recovered of 110 profile-counted records, identifies three unavailable records, and expressly refuses formal endorsement, Council adoption, constituent outcomes, offline use, approval of every ranking, and complete-roster inference."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "No institutional-value inference appears on a website surface, the attributed testimony projection remains on hold with no surfaces, and Jamie's bridge-value inference preserves protected first-person provenance, collective production, and explicit refusal of sole policy causality."
+      "observation": "The bounded amplification remains absent from active website composition and the public registry; its only projection is held, citation-required, and has no surfaces."
     },
     {
       "rubric": "research_honesty",
-      "observation": "All 84 knowledge-lifecycle tests pass, including new negative checks for necessity, Espinal overreach, endorsement, legitimacy, recurring relationship, public projection, and loss of collective credit; the candidate and contract fingerprints match the submitted values."
+      "observation": "The exact candidate and contract fingerprints reproduced successfully, deterministic validation scored 100 with zero findings, and all 84 knowledge-lifecycle tests passed, including the CallNYC amplification and incomplete-population safeguards."
     }
   ],
   "regressions": [],
-  "nextAction": "Accept the repaired candidate; no further archival-editorial correction is required by this review."
+  "nextAction": "Accept the candidate; preserve the at-least-four wording, the three-record gap, and the no-endorsement, no-adoption, no-outcome, and no-complete-roster boundaries in any future projection."
 }

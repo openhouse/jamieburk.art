@@ -1461,19 +1461,40 @@ export const lifecycleResearchInquiries = [
   {
     id: "INQ-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
     project: "callnyc",
-    intakeIds: ["INT-2026-07-13-MEMORY-CALLNYC-COUNCIL-ENGAGEMENT"],
+    intakeIds: [
+      "INT-2026-07-13-MEMORY-CALLNYC-COUNCIL-ENGAGEMENT",
+      "INT-2026-07-14-X-CALLNYC-POPULATION",
+      "INT-2026-07-14-X-CALLNYC-COUNCIL-AMPLIFICATION"
+    ],
     question: "What publicly recoverable engagement did New York City Council member accounts have with the CallNYC account and its posts?",
     methods: [
-      "Define a dated Council-member account roster, interaction types, time window, deduplication rules, and missing-post protocol before measurement."
+      "Reconciled 107 retrievable records against the 110 records displayed on the CallNYC profile and preserved the three-record gap.",
+      "Separated quote-posts and direct project shares from likes, private analytics, mentions, and offline use.",
+      "Verified the four account holders' contemporaneous Council-member status through official Council person records."
     ],
-    runAt: "2026-07-13",
-    resultStatus: "inconclusive",
-    findings: ["The metric is captured as a research lead; no publishable count has been accepted in this lifecycle run."],
+    runAt: "2026-07-15",
+    resultStatus: "recovered",
+    findings: [
+      "At least four then-serving Council member accounts publicly amplified CallNYC in 2016: Mathieu Eugene, Helen Rosenthal, Rosie Mendez, and Ydanis Rodriguez.",
+      "Three members quote-posted a CallNYC result and one directly shared CallNYC.org."
+    ],
     limitations: [
-      "Platform visibility, deleted posts, renamed accounts, quote-post behavior, and unauthenticated access can bias counts.",
-      "Engagement does not by itself establish adoption, endorsement, or policy impact."
+      "The count covers recovered public quote-posts and direct shares, not likes, private analytics, offline use, or a complete historic engagement roster.",
+      "Three profile-counted CallNYC records remain unavailable.",
+      "Public amplification does not establish formal endorsement, Council adoption, constituent outcomes, or approval of every CallNYC ranking."
     ],
-    sourceIds: []
+    sourceIds: [
+      "SRC-X-CALLNYC-CORPUS-2026",
+      "SRC-X-CALLNYC-CMMATHIEU-QUOTE-2016",
+      "SRC-X-CALLNYC-HELEN-ROSENTHAL-SHARE-2016",
+      "SRC-X-CALLNYC-ROSIE-MENDEZ-QUOTE-2016",
+      "SRC-X-CALLNYC-YDANIS-QUOTE-2016",
+      "SRC-NYC-COUNCIL-MATHIEU-EUGENE-PERSON",
+      "SRC-NYC-COUNCIL-HELEN-ROSENTHAL-PERSON",
+      "SRC-NYC-COUNCIL-ROSIE-MENDEZ-PERSON",
+      "SRC-NYC-COUNCIL-YDANIS-RODRIGUEZ-PERSON"
+    ],
+    publicSummary: "At least four then-serving Council member accounts publicly amplified CallNYC in 2016 through three quote-posts and one direct project share; the recovered record does not establish endorsement, adoption, offline use, or a complete engagement roster."
   },
   {
     id: "INQ-NYCARTC-OFFICE-NIGHTLIFE-ROLE",

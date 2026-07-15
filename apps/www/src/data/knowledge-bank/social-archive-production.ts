@@ -134,7 +134,7 @@ export const socialArchiveIntakes = [
       "SRC-NYC-COUNCIL-YDANIS-RODRIGUEZ-PERSON"
     ],
     claimIds: ["CLM-CALLNYC-COUNCIL-MEMBER-AMPLIFICATION"],
-    inquiryIds: []
+    inquiryIds: ["INQ-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT"]
   },
   {
     id: "INT-2026-07-14-X-KC-TOWN-HALL-POPULATION",
@@ -706,7 +706,10 @@ export const socialArchiveClaims = [
     ],
     boundaries: ["The count covers recovered public quote-posts and direct shares, not likes, private analytics, offline use, or a complete engagement roster."],
     antiClaims: ["Four Council members formally endorsed every CallNYC ranking or the Council adopted CallNYC as an official product."],
-    researchInquiryIds: ["INQ-X-CALLNYC-POPULATION-GAP"],
+    researchInquiryIds: [
+      "INQ-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT",
+      "INQ-X-CALLNYC-POPULATION-GAP"
+    ],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex authenticated archival review"]
   },
