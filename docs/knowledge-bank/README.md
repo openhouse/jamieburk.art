@@ -68,6 +68,21 @@ usable, what Jamie did, and what boundary remains protected.
 For homepage proof, prefer compact claims that a busy reader can understand in
 one pass.
 
+## Evaluation Trust Boundary
+
+Deterministic checks govern the collective-credit inventory, runtime renderers,
+projection routes, public surfaces, and every visible resume block. The frozen
+policy baseline is pinned to the annotated Git tag
+`knowledge-bank-policy-baseline-2026-07-15-v1`; ordinary branch commits cannot
+silently rewrite that tagged object.
+
+This is a drift detector, not a substitute for judgment. A candidate patch
+cannot grade its own semantics, so `KB-007` and `KB-009` also require two
+independent evaluator reviews of the exact candidate commit. The hybrid
+scorecard records those reviews and is accepted only when its candidate SHA
+matches the governed input tree. Moving the tag, changing the policy contract,
+or changing claim-support assignments requires explicit new human review.
+
 See [citational-care.md](citational-care.md) for the authoring and validation
 workflow, [development-loop.md](development-loop.md) for the recursive
 knowledge-development protocol, and [projects/callnyc.md](projects/callnyc.md)

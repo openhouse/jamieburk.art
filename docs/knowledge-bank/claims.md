@@ -305,6 +305,50 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## professional-focus-current - Current professional focus
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Currently focused on technical project management, product operations, implementation, business analysis, civic and government technology delivery, and source-backed knowledge systems.
+**Where to project:** Homepage, About, Resume.
+**Why it matters:** Distinguishes the roles Jamie is seeking now from historical project outcomes.
+**Guardrail:** Frame this as current professional direction and demonstrated practice, not a claim of formal certification or government employment.
+**Do not say:** Certified PMP; government employee; production AI platform vendor.
+**Protected boundaries:** Private job-search records, unannounced applications, and private employer conversations stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## professional-practice-values - Professional practice values
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Jamie review confirmation
+**Public wording:** Values public benefit, accessibility, source-backed memory, careful claims, collective credit, consent, privacy, repair, and documentation that helps future collaborators safely continue the work.
+**Detailed public-safe wording:** Jamie aims to clarify what is known, protect what should stay private, and leave behind documentation and handoffs that future collaborators can safely use.
+**Where to project:** Homepage, About.
+**Why it matters:** Makes the operating ethics behind the portfolio's evidence, credit, and handoff practices explicit.
+**Guardrail:** Treat as a statement of practice and intent, not proof that every past project perfectly realized every value.
+**Do not say:** Every collaborator endorsed this statement; every historical project fully achieved every listed value.
+**Protected boundaries:** Private collaborator feedback, private repair processes, and unpublished consent records stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## thick-arts-studio-services - THICK ARTS studio services
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / public-safe archive summary
+**Public wording:** Leads an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.
+**Detailed public-safe wording:** Through THICK ARTS, Jamie translates client and collaborator needs into maintainable public web systems, campaign and publishing surfaces, e-commerce workflows, documentation and resource infrastructure, and post-launch maintenance.
+**Where to project:** Resume page.
+**Why it matters:** Supports the service scope of Jamie's independent practice without borrowing a generic documentation phrase from an unrelated career summary.
+**Guardrail:** Present as Jamie's self-attested working history and service scope; do not imply a larger agency, unverified staff, or that every service was delivered to every client.
+**Do not say:** THICK ARTS has a larger agency staff; every client received every listed service; third-party employment or client verification is complete.
+**Protected boundaries:** Private client identities, contracts, credentials, unpublished client work, and confidential operating details stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## thick-arts-founder-role-history - THICK ARTS role history
 
 **Status:** Ready

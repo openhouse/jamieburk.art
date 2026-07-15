@@ -4,14 +4,14 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
-  FROZEN_COLLECTIVE_BASELINE_BLOB,
-  FROZEN_COLLECTIVE_BASELINE_COMMIT,
+  FROZEN_COLLECTIVE_BASELINE_TAG,
   collectiveCreditFingerprint,
   documentRealizesProjection,
   evaluateKnowledgeBank,
   fileInventoryFingerprint,
   projectionDecisionFingerprint,
   publicSurfaceFingerprint,
+  resumeVisibleBlocks,
   resumeSubstantiveStatements,
   routeRealizesProjection,
   validateHybridReportCandidate,
@@ -108,19 +108,29 @@ test("reviewed credit, projection, and public-surface inventories are current", 
   );
 });
 
-test("the frozen collective-credit baseline is content-addressed to an immutable commit", () => {
+test("the frozen collective-credit baseline is pinned by an external annotated tag", () => {
   const path = ".agents/evals/baselines/collective-credit-v1.json";
+  const tagType = execFileSync(
+    "git",
+    ["cat-file", "-t", FROZEN_COLLECTIVE_BASELINE_TAG],
+    { encoding: "utf8" }
+  ).trim();
+  const taggedCommit = execFileSync(
+    "git",
+    ["rev-parse", `${FROZEN_COLLECTIVE_BASELINE_TAG}^{commit}`],
+    { encoding: "utf8" }
+  ).trim();
   const anchoredBlob = execFileSync(
     "git",
-    ["rev-parse", `${FROZEN_COLLECTIVE_BASELINE_COMMIT}:${path}`],
+    ["rev-parse", `${taggedCommit}:${path}`],
     { encoding: "utf8" }
   ).trim();
   const currentBlob = execFileSync("git", ["hash-object", path], {
     encoding: "utf8"
   }).trim();
 
-  assert.equal(anchoredBlob, FROZEN_COLLECTIVE_BASELINE_BLOB);
-  assert.equal(currentBlob, FROZEN_COLLECTIVE_BASELINE_BLOB);
+  assert.equal(tagType, "tag");
+  assert.equal(currentBlob, anchoredBlob);
 });
 
 test("the governed resume artifact preserves contact and collective-credit boundaries", () => {
@@ -156,6 +166,26 @@ test("the resume manifest is derived from every substantive HTML block", () => {
   );
   assert.deepEqual(new Set(derived), new Set(manifested));
   assert.equal(new Set(derived).size, derived.length);
+
+  const visible = resumeVisibleBlocks(source).sort();
+  const manifestedVisible = [
+    ...manifested,
+    ...projectionSurfaceBindings.resumeArtifact.presentationText
+  ].sort();
+  assert.equal(
+    visible.length,
+    projectionSurfaceBindings.resumeArtifact.expectedVisibleBlockCount
+  );
+  assert.deepEqual(visible, manifestedVisible);
+
+  const injected = source.replace(
+    "</body>",
+    '<section><div>Unsupported profile claim.</div></section><footer><p>Unsupported footer claim.</p></footer></body>'
+  );
+  const injectedVisible = resumeVisibleBlocks(injected);
+  assert.ok(injectedVisible.includes("Unsupported profile claim."));
+  assert.ok(injectedVisible.includes("Unsupported footer claim."));
+  assert.equal(injectedVisible.length, visible.length + 2);
 });
 
 test("campaign press corpus preserves all memberships without duplicating articles", () => {
@@ -1962,6 +1992,28 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`export default function TestPage() { if (null) return (${literal}); return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(
+      `const showClaim = 0; export default function TestPage() { return showClaim ? (${literal}) : null; }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `const showClaim = false as const; export default function TestPage() { return showClaim && (${literal}); }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `export default function TestPage() { return Boolean(0) ? (${literal}) : null; }`
+    ),
+    false
+  );
+  assert.equal(
     realizes(`export default function TestPage() { return process.env.NEXT_PUBLIC_SHOW ? (${literal}) : null; }`),
     false
   );
@@ -1978,6 +2030,24 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
   assert.equal(
     realizes(
       `export default function TestPage() { return null; return (${literal}); }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `export default function TestPage() { if (true) return null; return (${literal}); }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `export default function TestPage() { const unused = { render() { return (${literal}); } }; return null; }`
+    ),
+    false
+  );
+  assert.equal(
+    realizes(
+      `export default function TestPage() { const unused = (${literal}); return null; }`
     ),
     false
   );
@@ -2004,6 +2074,8 @@ test("MDX route reachability rejects conditional and unused component bindings",
 
   assert.equal(realizes(literal), true);
   assert.equal(realizes(`{false ? (${literal}) : null}`), false);
+  assert.equal(realizes(`{0 ? (${literal}) : null}`), false);
+  assert.equal(realizes(`{null ? (${literal}) : null}`), false);
   assert.equal(
     realizes(`{process.env.NEXT_PUBLIC_SHOW && (${literal})}`),
     false
@@ -2012,6 +2084,11 @@ test("MDX route reachability rejects conditional and unused component bindings",
     realizes(`export function Hidden() { return (${literal}); }`),
     false
   );
+  assert.equal(
+    realizes(`export const Hidden = () => (${literal});`),
+    false
+  );
+  assert.equal(realizes(`const Hidden = () => (${literal});`), false);
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {

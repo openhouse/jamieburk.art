@@ -12,10 +12,8 @@ import { proofClaims } from "../apps/www/src/data/proofs.ts";
 const suitePath = ".agents/evals/knowledge-bank-development.json";
 const frozenCollectiveBaselinePath =
   ".agents/evals/baselines/collective-credit-v1.json";
-export const FROZEN_COLLECTIVE_BASELINE_COMMIT =
-  "7401353cdfd3f03cf386ae45f3dbd474ede20135";
-export const FROZEN_COLLECTIVE_BASELINE_BLOB =
-  "371b58b5063ae1c171e7a408814622320d9d9281";
+export const FROZEN_COLLECTIVE_BASELINE_TAG =
+  "refs/tags/knowledge-bank-policy-baseline-2026-07-15-v1";
 const privateMarker = /\/Users\/|\/Volumes\/|Mobile Documents|supporting-materials|raw[-_ ](?:transcript|export)|\.mbox|credential|password/i;
 const publicProjectionKeys = new Set([
   "case-study",
@@ -136,6 +134,30 @@ const requiredResumeStatementIds = new Set([
   "additional-work-authorization"
 ]);
 const requiredPublicStatementIds = new Set([
+  "hero-operating-structure",
+  "hero-stakeholder-handoffs",
+  "hero-artifact-summary",
+  "capability-technical-project-management",
+  "capability-product-operations",
+  "capability-knowledge-systems",
+  "capability-civic-technology",
+  "capability-web-systems",
+  "capability-community-systems",
+  "home-technical-operations-note",
+  "home-hje-note",
+  "home-fair-rent-note",
+  "home-callnyc-note",
+  "home-selected-systems-pattern",
+  "home-operating-motif",
+  "home-how-i-work",
+  "about-role",
+  "about-contexts",
+  "about-practice",
+  "about-focus",
+  "about-values",
+  "work-recurring-pattern",
+  "work-lab-method",
+  "work-lab-boundary",
   "resume-page-operating-structure",
   "technical-operations-intro",
   "technical-operations-requirements",
@@ -295,6 +317,108 @@ export function resumeSubstantiveStatements(source) {
   return statements;
 }
 
+const resumeAtomicBlockTags = new Set(["h1", "h2", "h3", "p", "li", "span"]);
+const resumeContainerBlockTags = new Set([
+  "address",
+  "article",
+  "aside",
+  "div",
+  "footer",
+  "header",
+  "main",
+  "nav",
+  "ol",
+  "section",
+  "table",
+  "tbody",
+  "td",
+  "th",
+  "thead",
+  "tr",
+  "ul"
+]);
+const htmlVoidTags = new Set([
+  "area",
+  "base",
+  "br",
+  "col",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr"
+]);
+
+function parsedHtmlTree(source) {
+  const root = { tag: "#root", children: [] };
+  const stack = [root];
+  const tokens = source.match(/<!--[\s\S]*?-->|<![^>]*>|<\/?[A-Za-z][^>]*>|[^<]+/g) ?? [];
+
+  for (const token of tokens) {
+    if (token.startsWith("<!--") || token.startsWith("<!")) continue;
+    if (token.startsWith("</")) {
+      const tag = token.match(/^<\/\s*([A-Za-z0-9-]+)/)?.[1]?.toLowerCase();
+      if (!tag) continue;
+      while (stack.length > 1) {
+        const node = stack.pop();
+        if (node.tag === tag) break;
+      }
+      continue;
+    }
+    if (token.startsWith("<")) {
+      const tag = token.match(/^<\s*([A-Za-z0-9-]+)/)?.[1]?.toLowerCase();
+      if (!tag) continue;
+      const node = { tag, children: [] };
+      stack.at(-1).children.push(node);
+      if (!token.endsWith("/>") && !htmlVoidTags.has(tag)) stack.push(node);
+      continue;
+    }
+    stack.at(-1).children.push({ tag: "#text", text: token, children: [] });
+  }
+  return root;
+}
+
+function htmlNodeText(node) {
+  if (node.tag === "#text") return node.text;
+  return node.children.map(htmlNodeText).join(" ");
+}
+
+export function resumeVisibleBlocks(source) {
+  const tree = parsedHtmlTree(source);
+  const blocks = [];
+
+  function visit(node, hidden = false) {
+    const isHidden = hidden || ["head", "script", "style", "template"].includes(node.tag);
+    if (isHidden) return;
+    if (resumeAtomicBlockTags.has(node.tag)) {
+      const text = decodedElementText(htmlNodeText(node));
+      if (text) blocks.push(text);
+      return;
+    }
+    if (node.tag === "div") {
+      const hasBlockChild = node.children.some(
+        (child) =>
+          resumeAtomicBlockTags.has(child.tag) ||
+          resumeContainerBlockTags.has(child.tag)
+      );
+      if (!hasBlockChild) {
+        const text = decodedElementText(htmlNodeText(node));
+        if (text) blocks.push(text);
+        return;
+      }
+    }
+    for (const child of node.children) visit(child, isHidden);
+  }
+
+  visit(tree);
+  return blocks;
+}
+
 function normalizedIncludes(haystack, needle) {
   return normalizedText(haystack)
     .toLowerCase()
@@ -430,6 +554,11 @@ export function projectionDecisionFingerprint(bank) {
 
 export function statementSupportFingerprint(policy = projectionSurfaceBindings) {
   return stableSha256({
+    resumePresentation: {
+      expectedVisibleBlockCount:
+        policy.resumeArtifact.expectedVisibleBlockCount,
+      presentationText: policy.resumeArtifact.presentationText
+    },
     resume: policy.resumeArtifact.statements
       .map((statement) => ({
         id: statement.id,
@@ -566,7 +695,7 @@ function identifierIsConstFalse(identifier, sourceFile) {
       ts.isVariableDeclaration(node) &&
       ts.isIdentifier(node.name) &&
       node.name.text === identifier &&
-      node.initializer?.kind === ts.SyntaxKind.FalseKeyword &&
+      expressionIsAlwaysFalse(node.initializer, sourceFile) &&
       ts.isVariableDeclarationList(node.parent) &&
       (node.parent.flags & ts.NodeFlags.Const) !== 0
     ) {
@@ -581,9 +710,27 @@ function identifierIsConstFalse(identifier, sourceFile) {
 
 function expressionIsAlwaysFalse(expression, sourceFile) {
   if (!expression) return false;
-  if (expression.kind === ts.SyntaxKind.FalseKeyword) return true;
+  if (
+    expression.kind === ts.SyntaxKind.FalseKeyword ||
+    expression.kind === ts.SyntaxKind.NullKeyword
+  ) {
+    return true;
+  }
   if (ts.isNumericLiteral(expression) && Number(expression.text) === 0) return true;
-  if (ts.isParenthesizedExpression(expression)) {
+  if (
+    ts.isCallExpression(expression) &&
+    ts.isIdentifier(expression.expression) &&
+    expression.expression.text === "Boolean" &&
+    expression.arguments.length === 1
+  ) {
+    return expressionIsAlwaysFalse(expression.arguments[0], sourceFile);
+  }
+  if (
+    ts.isParenthesizedExpression(expression) ||
+    ts.isAsExpression(expression) ||
+    ts.isTypeAssertionExpression(expression) ||
+    ts.isSatisfiesExpression(expression)
+  ) {
     return expressionIsAlwaysFalse(expression.expression, sourceFile);
   }
   return (
@@ -592,7 +739,37 @@ function expressionIsAlwaysFalse(expression, sourceFile) {
   );
 }
 
-function followsUnconditionalExit(node) {
+function expressionIsAlwaysTrue(expression) {
+  if (!expression) return false;
+  if (expression.kind === ts.SyntaxKind.TrueKeyword) return true;
+  if (ts.isNumericLiteral(expression) && Number(expression.text) !== 0) return true;
+  if (
+    ts.isParenthesizedExpression(expression) ||
+    ts.isAsExpression(expression) ||
+    ts.isTypeAssertionExpression(expression) ||
+    ts.isSatisfiesExpression(expression)
+  ) {
+    return expressionIsAlwaysTrue(expression.expression);
+  }
+  return false;
+}
+
+function statementAlwaysExits(statement, sourceFile) {
+  if (ts.isReturnStatement(statement) || ts.isThrowStatement(statement)) {
+    return true;
+  }
+  if (ts.isBlock(statement)) {
+    return statement.statements.length > 0 &&
+      statementAlwaysExits(statement.statements.at(-1), sourceFile);
+  }
+  return (
+    ts.isIfStatement(statement) &&
+    expressionIsAlwaysTrue(statement.expression) &&
+    statementAlwaysExits(statement.thenStatement, sourceFile)
+  );
+}
+
+function followsUnconditionalExit(node, sourceFile) {
   for (let current = node; current.parent; current = current.parent) {
     if (!ts.isBlock(current.parent)) continue;
     const statements = current.parent.statements;
@@ -601,10 +778,7 @@ function followsUnconditionalExit(node) {
       index > 0 &&
       statements
         .slice(0, index)
-        .some(
-          (statement) =>
-            ts.isReturnStatement(statement) || ts.isThrowStatement(statement)
-        )
+        .some((statement) => statementAlwaysExits(statement, sourceFile))
     ) {
       return true;
     }
@@ -613,7 +787,7 @@ function followsUnconditionalExit(node) {
 }
 
 function hasDisallowedRuntimeGate(node, sourceFile) {
-  if (followsUnconditionalExit(node)) return true;
+  if (followsUnconditionalExit(node, sourceFile)) return true;
   for (let current = node.parent; current; current = current.parent) {
     const condition = ts.isConditionalExpression(current)
       ? current.condition
@@ -649,6 +823,9 @@ function hasDisallowedRuntimeGate(node, sourceFile) {
 function isReachableModuleNode(node, sourcePath) {
   const expectedExportName = basename(sourcePath).replace(/\.[^.]+$/, "");
   for (let current = node.parent; current; current = current.parent) {
+    if (ts.isVariableDeclaration(current) && ts.isJsxSelfClosingElement(node)) {
+      return false;
+    }
     if (ts.isFunctionDeclaration(current)) {
       if (
         hasModifier(current, ts.SyntaxKind.DefaultKeyword) &&
@@ -676,6 +853,7 @@ function isReachableModuleNode(node, sourcePath) {
       }
       return false;
     }
+    if (ts.isMethodDeclaration(current)) return false;
     if (ts.isVariableStatement(current)) {
       const exported = hasModifier(current, ts.SyntaxKind.ExportKeyword);
       const names = current.declarationList.declarations
@@ -812,24 +990,41 @@ function mdxClaimIsReachable(content, index) {
   const before = content.slice(0, index);
   const nearby = before.slice(-1200);
   if (
-    /(?:\b[A-Za-z_$][\w$]*|\bfalse|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
+    /(?:\b[A-Za-z_$][\w$]*|\b(?:false|null)\b|(?:^|\W)0|process\.env[^\s]*)\s*(?:&&|\?)\s*\(?\s*$/.test(
       nearby
     )
   ) {
     return false;
   }
 
-  const componentStart = Math.max(
-    before.lastIndexOf("export function"),
-    before.lastIndexOf("export default function"),
-    before.lastIndexOf("export const")
-  );
-  if (componentStart >= 0) {
-    const componentPrefix = before.slice(componentStart);
+  const declarationPattern =
+    /(?:^|\n)[ \t]*(?:export\s+)?(?:default\s+)?function\s+[A-Za-z_$][\w$]*\s*\([^)]*\)\s*\{|(?:^|\n)[ \t]*(?:export\s+)?(?:const|let)\s+[A-Za-z_$][\w$]*\s*=\s*(?:async\s*)?\([^)]*\)\s*=>/gm;
+  const declarations = [...before.matchAll(declarationPattern)];
+  const declaration = declarations.at(-1);
+  if (declaration) {
+    const componentPrefix = before.slice(declaration.index);
     const braceBalance =
       (componentPrefix.match(/\{/g) ?? []).length -
       (componentPrefix.match(/\}/g) ?? []).length;
-    if (braceBalance > 0) return false;
+    const arrowIndex = componentPrefix.indexOf("=>");
+    if (arrowIndex >= 0) {
+      const expressionPrefix = componentPrefix.slice(arrowIndex + 2);
+      const parenthesisBalance =
+        (expressionPrefix.match(/\(/g) ?? []).length -
+        (expressionPrefix.match(/\)/g) ?? []).length;
+      const expressionLine = expressionPrefix.slice(
+        expressionPrefix.lastIndexOf("\n") + 1
+      );
+      if (
+        braceBalance > 0 ||
+        parenthesisBalance > 0 ||
+        (!expressionPrefix.includes("\n") && !/[;}]/.test(expressionLine))
+      ) {
+        return false;
+      }
+    } else if (braceBalance > 0) {
+      return false;
+    }
   }
   return true;
 }
@@ -974,12 +1169,19 @@ export function evaluateKnowledgeBank(
     findings["KB-007"].push("collective-credit baseline is not frozen for this run");
   }
   try {
+    const tagType = execFileSync(
+      "git",
+      ["cat-file", "-t", FROZEN_COLLECTIVE_BASELINE_TAG],
+      { encoding: "utf8" }
+    ).trim();
+    const taggedCommit = execFileSync(
+      "git",
+      ["rev-parse", `${FROZEN_COLLECTIVE_BASELINE_TAG}^{commit}`],
+      { encoding: "utf8" }
+    ).trim();
     const anchoredBlob = execFileSync(
       "git",
-      [
-        "rev-parse",
-        `${FROZEN_COLLECTIVE_BASELINE_COMMIT}:${frozenCollectiveBaselinePath}`
-      ],
+      ["rev-parse", `${taggedCommit}:${frozenCollectiveBaselinePath}`],
       { encoding: "utf8" }
     ).trim();
     const currentBlob = execFileSync(
@@ -987,12 +1189,9 @@ export function evaluateKnowledgeBank(
       ["hash-object", frozenCollectiveBaselinePath],
       { encoding: "utf8" }
     ).trim();
-    if (
-      anchoredBlob !== FROZEN_COLLECTIVE_BASELINE_BLOB ||
-      currentBlob !== FROZEN_COLLECTIVE_BASELINE_BLOB
-    ) {
+    if (tagType !== "tag" || anchoredBlob !== currentBlob) {
       findings["KB-007"].push(
-        "collective-credit baseline differs from its immutable Git anchor"
+        "collective-credit baseline differs from its externally tagged Git anchor"
       );
     }
   } catch (error) {
@@ -1216,9 +1415,14 @@ export function evaluateKnowledgeBank(
     }
     const visibleSource = decodedHtmlText(source);
     const derivedStatements = resumeSubstantiveStatements(source);
+    const visibleBlocks = resumeVisibleBlocks(source);
     const manifestedStatements = resumeArtifact.statements.map((statement) =>
       normalizedText(statement.text)
     );
+    const manifestedVisibleBlocks = [
+      ...manifestedStatements,
+      ...(resumeArtifact.presentationText ?? []).map(normalizedText)
+    ].sort();
     if (
       derivedStatements.length !==
       resumeArtifact.expectedSubstantiveStatementCount
@@ -1240,6 +1444,19 @@ export function evaluateKnowledgeBank(
           `resume manifest contains a statement not derived from source: ${statement}`
         );
       }
+    }
+    if (visibleBlocks.length !== resumeArtifact.expectedVisibleBlockCount) {
+      findings["KB-009"].push(
+        `resume source contains ${visibleBlocks.length} visible blocks; expected ${resumeArtifact.expectedVisibleBlockCount}`
+      );
+    }
+    if (
+      JSON.stringify([...visibleBlocks].sort()) !==
+      JSON.stringify(manifestedVisibleBlocks)
+    ) {
+      findings["KB-009"].push(
+        "resume visible-block inventory differs from the governed statement and presentation manifests"
+      );
     }
     const regeneratedPdfText = execFileSync(
       "pdftotext",

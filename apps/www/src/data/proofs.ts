@@ -716,6 +716,116 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "professional-focus-current",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Currently focused on technical project management, product operations, implementation, business analysis, civic and government technology delivery, and source-backed knowledge systems.",
+    shortWording: "Current technical operations and civic technology focus",
+    sourceBasis:
+      "Jamie's approved public positioning and reviewed current professional focus.",
+    whyItMatters:
+      "Distinguishes the roles Jamie is seeking now from historical project outcomes.",
+    guardrail:
+      "Frame this as current professional direction and demonstrated practice, not a claim of formal certification or government employment.",
+    doNotSay: [
+      "Certified PMP",
+      "Government employee",
+      "Production AI platform vendor"
+    ],
+    protectedBoundaries: [
+      "Private job-search records",
+      "Unannounced applications",
+      "Private employer conversations"
+    ],
+    surfaces: ["homepage", "about", "resume"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "technical-project-management",
+      "product-operations",
+      "implementation",
+      "business-analysis",
+      "civic-technology",
+      "source-backed-memory"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "professional-practice-values",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["jamie-review-confirmation"],
+    publicWording:
+      "Values public benefit, accessibility, source-backed memory, careful claims, collective credit, consent, privacy, repair, and documentation that helps future collaborators safely continue the work.",
+    shortWording: "Careful, source-backed, continuity-minded practice",
+    detailedPublicWording:
+      "Jamie aims to clarify what is known, protect what should stay private, and leave behind documentation and handoffs that future collaborators can safely use.",
+    sourceBasis: "Jamie's reviewed public statement of professional practice values.",
+    whyItMatters:
+      "Makes the operating ethics behind the portfolio's evidence, credit, and handoff practices explicit.",
+    guardrail:
+      "Treat as a statement of practice and intent, not proof that every past project perfectly realized every value.",
+    doNotSay: [
+      "Every collaborator endorsed this statement",
+      "Every historical project fully achieved every listed value"
+    ],
+    protectedBoundaries: [
+      "Private collaborator feedback",
+      "Private repair processes",
+      "Unpublished consent records"
+    ],
+    surfaces: ["homepage", "about"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "public-benefit",
+      "accessibility",
+      "collective-credit",
+      "privacy",
+      "handoffs"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "thick-arts-studio-services",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "public-safe-archive-summary"],
+    publicWording:
+      "Leads an independent web strategy, design, and engineering studio delivering maintainable publishing systems, campaign hubs, e-commerce workflows, documentation infrastructure, resource libraries, and post-launch maintenance.",
+    shortWording: "Independent web strategy, design, and engineering studio",
+    detailedPublicWording:
+      "Through THICK ARTS, Jamie translates client and collaborator needs into maintainable public web systems, campaign and publishing surfaces, e-commerce workflows, documentation and resource infrastructure, and post-launch maintenance.",
+    sourceBasis:
+      "Approved public resume and public-safe aggregate review of Jamie's long-running web, campaign, publishing, documentation, e-commerce, and maintenance work.",
+    whyItMatters:
+      "Supports the service scope of Jamie's independent practice without borrowing a generic documentation phrase from an unrelated career summary.",
+    guardrail:
+      "Present as Jamie's self-attested working history and service scope; do not imply a larger agency, unverified staff, or that every service was delivered to every client.",
+    doNotSay: [
+      "THICK ARTS has a larger agency staff",
+      "Every client received every listed service",
+      "Third-party employment or client verification is complete"
+    ],
+    protectedBoundaries: [
+      "Private client identities",
+      "Contracts",
+      "Credentials",
+      "Unpublished client work",
+      "Confidential operating details"
+    ],
+    surfaces: ["resume"],
+    relatedProjects: [],
+    relatedCapabilities: [
+      "web-strategy",
+      "design",
+      "engineering",
+      "documentation",
+      "maintenance"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "thick-arts-founder-role-history",
     status: "ready",
     supportLevel: "moderate",
