@@ -70,6 +70,54 @@ test("the KC Town Hall Council lifecycle rejects appropriation-as-receipt", () =
   assert.ok(receiptObservationRoles?.includes("contradicts"));
 });
 
+test("KC Town Hall Phase One and neighborhood stewardship remain source-positioned research", () => {
+  const source = knowledgeBank.sources.find(({ id }) => id === "SRC-KC-TOWN-HALL-PHASE-ONE-PROPOSAL-2019");
+  const construction = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-PHASE-ONE-CONSTRUCTION-LEADERSHIP");
+  const survey = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY-SYSTEM");
+  const constructionTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-KC-TOWN-HALL-PHASE-ONE-ROLE-COMPLETION");
+  const surveyTask = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-KC-TOWN-HALL-SURVEY-AUTHORSHIP");
+
+  assert.equal(source?.visibility, "protected");
+  assert.equal(source?.preservationStatus, "private");
+  assert.equal(source?.protectedLocatorId, "DOC-KC-TOWN-HALL-CCED-PROPOSAL-2019-001");
+  assert.equal(construction?.maturity, "researching");
+  assert.equal(survey?.maturity, "researching");
+  assert.ok(construction?.antiClaims.some((item) => /licensed general contractor/i.test(item)));
+  assert.ok(construction?.antiClaims.some((item) => /full KC Town Hall redevelopment/i.test(item)));
+  assert.equal(constructionTask?.status, "in-progress");
+  assert.ok(constructionTask?.limitations.some((item) => /March 2019 packet cannot independently establish/i.test(item)));
+  assert.equal(surveyTask?.status, "in-progress");
+  assert.ok(surveyTask?.limitations.some((item) => /Raw responses and contact information are protected/i.test(item)));
+});
+
+test("TiredOfTires keeps individual attribution and disputed metrics out of public composition", () => {
+  const operations = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-TIRED-OF-TIRES-OPERATIONS");
+  const metric = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-TIRED-OF-TIRES-LEDGER-METRIC");
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-TIRED-OF-TIRES-ROLE-METRICS");
+  const discrepancy = knowledgeLifecycle.observations.find(({ id }) => id === "OBS-TIRED-OF-TIRES-MAY-COUNT-DISCREPANCY");
+
+  assert.equal(operations?.maturity, "researching");
+  assert.equal(metric?.maturity, "researching");
+  assert.equal(task?.status, "in-progress");
+  assert.equal(relationshipRole(discrepancy, metric.id), "contradicts");
+  assert.ok(task?.limitations.some((item) => /discrepancy remains unresolved/i.test(item)));
+  assert.ok(metric?.antiClaims.some((item) => /independently verified/i.test(item)));
+  assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(operations.id) && !candidateClaimIds.includes(metric.id)));
+});
+
+test("Cleveland Avenue and pro bono neighborhood communications stay queued for corroboration", () => {
+  const cleveland = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-CLEVELAND-AVE-UNIFY-BEAUTIFY-ROLE");
+  const communications = knowledgeLifecycle.candidateClaims.find(({ id }) => id === "CND-EAST-KC-PRO-BONO-COMMUNICATIONS");
+  const task = knowledgeLifecycle.researchTasks.find(({ id }) => id === "TASK-CLEVELAND-AVE-ROLE-IMPACT");
+
+  assert.equal(cleveland?.maturity, "researching");
+  assert.equal(communications?.maturity, "researching");
+  assert.equal(task?.status, "open");
+  assert.ok(cleveland?.boundaries.some((item) => /Pastor Lee/i.test(item)));
+  assert.ok(task?.nextActions.some((item) => /official capital-improvement records/i.test(item)));
+  assert.ok(knowledgeLifecycle.editorialBriefs.every(({ candidateClaimIds }) => !candidateClaimIds.includes(cleveland.id) && !candidateClaimIds.includes(communications.id)));
+});
+
 test("shared observations carry candidate-specific evidence roles and limits", () => {
   const broken = structuredClone(knowledgeLifecycle);
   const observation = broken.observations.find(({ id }) => id === "OBS-KC-TOWN-HALL-COUNCIL-APPROPRIATION");
