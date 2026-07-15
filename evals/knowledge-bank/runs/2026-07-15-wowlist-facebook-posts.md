@@ -158,3 +158,29 @@ pending from:
 
 - `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e`
 - `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f`
+
+## Projection-semantic repair
+
+The third data-integrity reviewer accepted the governed-route repair after
+independently recomputing the corpus and rejecting 49 fresh mutations. The
+third hiring editor correctly rejected it after finding that ten adjacent
+portfolio overclaims could survive the substantive checks if an editor changed
+held projection wording and refreshed the ordinary approval hashes.
+
+The evaluator now contains a checksum-independent semantic contract for each
+of the three held projections. Claim identity, projection key, bounded text,
+hold status, citation requirement, and empty public surfaces must all remain
+exact. Permanent regressions cover passive sole credit, current access recast
+as historical authorship, organizer distribution recast as agreement, linked
+issue context recast as coverage, source relationships recast as formal
+partnership or adoption, routes and interactions recast as impact, an
+interaction maximum stripped of volatility, capture-date completeness recast
+as lifetime history, and the empty bounded Business Suite window recast as
+historical nonexistence. Every mutation must now fail the semantic check itself,
+independently of the review checksum.
+
+This material change resets acceptance once more. Fresh frozen-candidate review
+is pending from:
+
+- `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g`
+- `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h`

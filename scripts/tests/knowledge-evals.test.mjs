@@ -140,8 +140,8 @@ test("knowledge-bank gate records two fresh WOW List Facebook post holdout passe
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e",
-    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f"
+    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-g",
+    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-h"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -3721,9 +3721,16 @@ test("WOW List Facebook eval rejects interaction-count inflation and semantic re
 
 test("WOW List Facebook held projections reject sole credit and impact claims", () => {
   const mutations = [
-    [wowListFacebookPostClaimIds.operatingRecord, "Jamie authored every WOW List Facebook post."],
-    [wowListFacebookPostClaimIds.organizerWorkflows, "Jamie alone created and managed WOW List."],
-    [wowListFacebookPostClaimIds.careAndMobilization, "Facebook shares prove public impact and venue recovery."]
+    [wowListFacebookPostClaimIds.operatingRecord, "All 57 WOW List Facebook posts were authored by Jamie."],
+    [wowListFacebookPostClaimIds.operatingRecord, "Jamie's current page access confirms his historical authorship of the Facebook feed."],
+    [wowListFacebookPostClaimIds.organizerWorkflows, "The recovered Facebook record documents organizer agreement with WOW List's product direction."],
+    [wowListFacebookPostClaimIds.careAndMobilization, "The recovered account preserves press coverage of WOW List's venue-safety work."],
+    [wowListFacebookPostClaimIds.organizerWorkflows, "Shared source cards establish WOW List's formal partners, adopters, and stakeholders."],
+    [wowListFacebookPostClaimIds.operatingRecord, "The 55 posted URLs drove traffic, conversion, and public impact."],
+    [wowListFacebookPostClaimIds.operatingRecord, "Displayed likes, comments, and shares measure people reached and outcomes achieved."],
+    [wowListFacebookPostClaimIds.operatingRecord, "The October 2015 nine-city introduction earned 13 likes, three comments, and 29 shares."],
+    [wowListFacebookPostClaimIds.operatingRecord, "The 57 recovered posts are WOW List's complete lifetime Facebook history."],
+    [wowListFacebookPostClaimIds.operatingRecord, "The empty Business Suite window proves no other historical WOW List posts existed."]
   ];
 
   for (const [claimId, text] of mutations) {
@@ -3737,6 +3744,7 @@ test("WOW List Facebook held projections reject sole credit and impact claims", 
       assert.equal(result.criteria.find((item) =>
         item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
       )?.score, 1, text);
+      assert.equal(result.contentApprovals.wowListFacebookPosts.checks.projectionSemantics, false, text);
       assert.equal(result.contentApprovals.wowListFacebookPosts.reviewLocksMatch, false);
     } finally {
       projection.text = original;

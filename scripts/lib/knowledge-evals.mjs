@@ -152,6 +152,23 @@ const WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS = Object.freeze([
     sourceId: "SRC-WOWLIST-FACEBOOK-DODIY-RESOURCE"
   }
 ]);
+const WOWLIST_FACEBOOK_APPROVED_PROJECTION_SEMANTICS = Object.freeze([
+  {
+    claimId: "CLM-WOWLIST-FACEBOOK-PUBLIC-OPERATING-RECORD",
+    key: "archive-note",
+    text: "A complete capture-date pass of the recovered WOW List Facebook feed preserves 57 posts spanning 2015-2018, with public-safe source and URL inventories."
+  },
+  {
+    claimId: "CLM-WOWLIST-FACEBOOK-ORGANIZER-WORKFLOWS",
+    key: "archive-note",
+    text: "The recovered Facebook record documents organizer-facing onboarding, event-loading, tour-routing, and participatory product-governance workflows."
+  },
+  {
+    claimId: "CLM-WOWLIST-FACEBOOK-CARE-AND-MOBILIZATION",
+    key: "archive-note",
+    text: "The recovered account routed venue-safety, mutual-aid, and civic-mobilization information alongside cultural events."
+  }
+]);
 const NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS = Object.freeze({
   protectedIntakesSha256: "2479ac40c9228ec2b24fa7b1e9ce13c1cabcf0dead7e27878098ce4319d1a763",
   protectedSourcesSha256: "187dd3e085b0fddc64b2b7483ce31cd3a32ac82de1699d80435c9e3db9e8de5f",
@@ -3583,6 +3600,22 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const wowListFacebookProjectionText = wowListFacebookClaims.flatMap((claim) =>
     claim?.projections.map((projection) => projection.text) ?? []
   ).join("\n");
+  const wowListFacebookProjectionSemanticsMatch =
+    wowListFacebookClaims.length === WOWLIST_FACEBOOK_APPROVED_PROJECTION_SEMANTICS.length &&
+    WOWLIST_FACEBOOK_APPROVED_PROJECTION_SEMANTICS.every((expected) => {
+      const claim = wowListFacebookClaims.find((item) => item?.id === expected.claimId);
+      const projection = claim?.projections[0];
+      return claim?.projections.length === 1 &&
+        projection?.key === expected.key &&
+        projection.text === expected.text &&
+        projection.status === "hold" &&
+        projection.citationRequired === true &&
+        Array.isArray(projection.surfaces) &&
+        projection.surfaces.length === 0;
+    }) &&
+    wowListFacebookClaims.every((claim) =>
+      WOWLIST_FACEBOOK_APPROVED_PROJECTION_SEMANTICS.some((expected) => expected.claimId === claim?.id)
+    );
   const wowListFacebookPrivateDataFree =
     !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(wowListFacebookPublicText) &&
     !/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(wowListFacebookPublicText) &&
@@ -3791,6 +3824,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       wowListFacebookPageOccurrences.length === 0 &&
       /No website copy changes in this pass/i.test(wowListFacebookReport)
     ),
+    projectionSemantics: wowListFacebookProjectionSemanticsMatch,
     report: Boolean(
       /100 percent of the capture-date authenticated live-feed population/i.test(wowListFacebookReport) &&
       /not a native Meta export or proof of complete lifetime history/i.test(wowListFacebookReport) &&
