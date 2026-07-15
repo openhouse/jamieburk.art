@@ -448,7 +448,7 @@ const workItemsInput = [
     careNote:
       "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
     sourceLayer:
-      "Public-safe summary, historical project context, and screenshots pending Jamie approval.",
+      "Approved resume language and a public-safe aggregate historical summary support the scale wording; the authenticated July 15 X corpus supports the product-support and civic-curation claims. Screenshots remain pending Jamie approval.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -466,7 +466,7 @@ const workItemsInput = [
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Screenshots, archive links, and precise adoption wording need approval.",
+        "Screenshots and additional archive links need approval; the approximate aggregate adoption wording is approved through the public-safe proof record.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }

@@ -108,7 +108,7 @@ export const socialAccountProductionBatch20260714: {
         "Current profile counts are dated observation metadata, not durable accomplishment claims.",
         "No private messages, account settings, follower lists, or non-public account data were inspected or ingested."
       ],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -731,7 +731,7 @@ export const socialAccountProductionBatch20260714: {
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE"],
       publicSafe: true,
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -744,7 +744,7 @@ export const socialAccountProductionBatch20260714: {
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-SUNDAY-DINNER-SOCIAL-LINEAGE"],
       publicSafe: true,
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {

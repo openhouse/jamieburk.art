@@ -351,6 +351,14 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       `${JSON.stringify(rawCaptureWithoutRepostResolution, null, 2)}\n`
     )
   );
+  const rawCaptureWithDuplicateStatus = JSON.parse(rawCaptureText);
+  rawCaptureWithDuplicateStatus.items[0].statusUrl =
+    rawCaptureWithDuplicateStatus.items[1].statusUrl;
+  assert.throws(() =>
+    buildWowListCorpus(
+      `${JSON.stringify(rawCaptureWithDuplicateStatus, null, 2)}\n`
+    )
+  );
   const rawCaptureWithRepeatedOccurrence = JSON.parse(rawCaptureText);
   const sourceItemWithLink = rawCaptureWithRepeatedOccurrence.items.find(
     (item) => item.links.some((link) => /^https?:\/\/t\.co\//.test(link.href))
@@ -430,10 +438,12 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     {
       directCalendarStatusIds: 2,
       authoredExternalCurationStatusIds: 3,
-      repostedExternalAmplificationStatusIds: 3
+      repostedExternalAmplificationStatusIds: 3,
+      repostedCalendarAmplificationStatusIds: 1
     }
   );
-  assert.match(civicPattern.summary, /direct calendar links with authored curation/);
+  assert.equal(civicPattern.statusIds.length, 9);
+  assert.match(civicPattern.summary, /authored and reposted calendar links/);
   assert.equal(corpus.sourceLeads.length, 7);
   assert.ok(
     corpus.sourceLeads.some(
@@ -477,6 +487,15 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   const currentInquiry = knowledgeBank.researchInquiries.find(
     (item) => item.id === "INQ-WOWLIST-X-FULL-POPULATION-2026"
   );
+  const civicAssertion = knowledgeBank.sourceAssertions.find(
+    (item) => item.id === "AST-WOWLIST-X-CIVIC-CARE-PATTERN-2026"
+  );
+  const alliedMediaSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WOWLIST-X-ALLIED-MEDIA-2015"
+  );
+  const socialInventoryIntake = knowledgeBank.intake.find(
+    (item) => item.id === "INT-SOCIAL-PROJECT-ACCOUNT-INVENTORY-2026"
+  );
   const projectNote = readFileSync(
     "docs/knowledge-bank/projects/wowlist.md",
     "utf8"
@@ -508,6 +527,12 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     work,
     /combines direct calendar links with curation of demonstrations, vigils, fundraisers, and mutual-aid resources/
   );
+  assert.doesNotMatch(
+    work,
+    /Screenshots, archive links, and precise adoption wording need approval/
+  );
+  assert.match(work, /aggregate adoption wording is approved through the public-safe proof record/);
+  assert.match(work, /authenticated July 15 X corpus supports the product-support and civic-curation claims/);
   assert.equal(
     Number(priorObservation.publicNote.match(/profile reported (\d+) posts/)?.[1]),
     corpus.population.profileReported
@@ -544,6 +569,14 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     currentInquiry.findings[0],
     new RegExp(`exactly at ${corpus.population.profileReported} items`)
   );
+  assert.match(civicAssertion.assertion, /^Nine corpus items/);
+  assert.ok(currentInquiry.findings.some((finding) => /^Nine items document/.test(finding)));
+  assert.ok(
+    alliedMediaSource.supportsGenerally.includes("a public participation announcement")
+  );
+  assert.ok(alliedMediaSource.doesNotEstablish.includes("confirmed attendance"));
+  assert.equal(priorObservationAssertion.reviewedAt, "2026-07-15");
+  assert.equal(socialInventoryIntake.reviewedAt, "2026-07-15");
   assert.match(
     projectNote,
     new RegExp(
@@ -564,6 +597,7 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     socialInventory,
     /direct calendar links and project-account curation around demonstrations/
   );
+  assert.match(socialInventory, /Reviewed: July 15, 2026/);
   assert.doesNotMatch(socialInventory, /Good Times reporting on DIY documentation/);
   assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
   assert.match(

@@ -40,7 +40,7 @@ const missionPatterns = [
   {
     id: "civic-and-mutual-aid-use",
     summary:
-      "The project account combined direct calendar links with authored curation and reposted amplification of demonstrations, vigils, fundraisers, and mutual-aid resources.",
+      "The project account combined authored and reposted calendar links with authored external curation and reposted external amplification of demonstrations, vigils, fundraisers, and mutual-aid resources.",
     statusIds: [
       "592424659225845760",
       "751150062458269696",
@@ -48,6 +48,7 @@ const missionPatterns = [
       "798274424763981824",
       "801883926029447168",
       "805210387004223488",
+      "805949658405175296",
       "806517013472485376",
       "807395049814290433"
     ],
@@ -65,6 +66,9 @@ const missionPatterns = [
         "592424659225845760",
         "801883926029447168",
         "807395049814290433"
+      ],
+      repostedCalendarAmplificationStatusIds: [
+        "805949658405175296"
       ]
     }
   },
@@ -123,7 +127,7 @@ const sourceLeads = [
       "https://web.archive.org/web/20150619210442/https://www.alliedmedia.org/amc",
     disposition: "archived-context",
     note:
-      "The account announced that WOW List would be at the June 18-21, 2015 conference. The post supports public participation; it does not establish session title, presenter role, or attendance totals."
+      "The account announced that WOW List would be at the June 18-21, 2015 conference. The post supports an announced plan to participate; it does not establish attendance, session title, presenter role, or attendance totals."
   },
   {
     id: "popular-vote",
@@ -371,6 +375,7 @@ export function buildCorpus(rawCaptureText) {
   });
 
   const knownIds = new Set(items.map((item) => statusId(item.canonicalUrl)));
+  assert.equal(knownIds.size, items.length);
   for (const pattern of missionPatterns) {
     for (const id of pattern.statusIds) assert(knownIds.has(id));
   }
@@ -385,7 +390,8 @@ export function buildCorpus(rawCaptureText) {
     new Set([
       ...civicComposition.directCalendarStatusIds,
       ...civicComposition.authoredExternalCurationStatusIds,
-      ...civicComposition.repostedExternalAmplificationStatusIds
+      ...civicComposition.repostedExternalAmplificationStatusIds,
+      ...civicComposition.repostedCalendarAmplificationStatusIds
     ]),
     new Set(civicPattern.statusIds)
   );
@@ -408,6 +414,13 @@ export function buildCorpus(rawCaptureText) {
     assert.equal(item.type, "reposted");
     assert(item.outgoingLinks.every((link) =>
       !new URL(link.resolvedDestination).hostname.endsWith("wowlist.org")
+    ));
+  }
+  for (const id of civicComposition.repostedCalendarAmplificationStatusIds) {
+    const item = itemById.get(id);
+    assert.equal(item.type, "reposted");
+    assert(item.outgoingLinks.some((link) =>
+      new URL(link.resolvedDestination).hostname.endsWith("wowlist.org")
     ));
   }
   for (const lead of sourceLeads) assert(knownIds.has(lead.postedByStatusId));

@@ -1,6 +1,6 @@
 # Project social-account inventory
 
-Reviewed: July 14, 2026
+Reviewed: July 15, 2026
 
 This inventory treats project social accounts as public documentation and engagement surfaces. It records what an authenticated browser could observe, promotes only bounded findings, and keeps account authorship collective unless a post or administrative record identifies an author.
 

@@ -174,12 +174,12 @@ export const wowListXFullPopulationBatch20260715: {
     ),
     wowListPost(
       "SRC-WOWLIST-X-ALLIED-MEDIA-2015",
-      "WOW List announces Allied Media Conference participation",
+      "WOW List announces planned Allied Media Conference participation",
       "2015-04-22",
       "https://x.com/wowlist/status/590942060829663232",
       "WOW List announced that the project would be at Allied Media Conference, June 18-21, 2015, in Detroit.",
-      ["public field participation", "Allied Media Conference timing"],
-      ["a session title", "presenter identity", "attendance totals"]
+      ["a public participation announcement", "Allied Media Conference timing"],
+      ["confirmed attendance", "a session title", "presenter identity", "attendance totals"]
     ),
     {
       id: "SRC-WOWLIST-GRASSTRONAUT-MANUALFESTO-2015",
@@ -297,7 +297,7 @@ export const wowListXFullPopulationBatch20260715: {
       sourceId: "SRC-WOWLIST-X-CORPUS-2026-07-15",
       project: "wowlist",
       assertion:
-        "Eight corpus items linked or amplified demonstrations, vigils, fundraisers, and mutual-aid resources, including Black Lives Matter, post-election mobilization, Standing Rock, Akai Gurley family support, and Ghost Ship relief and mourning.",
+        "Nine corpus items linked or amplified demonstrations, vigils, fundraisers, and mutual-aid resources, including Black Lives Matter, post-election mobilization, Standing Rock, Akai Gurley family support, and Ghost Ship relief and mourning.",
       relationship: "supports",
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-CIVIC-CARE-USE-PATTERN"],
@@ -482,7 +482,7 @@ export const wowListXFullPopulationBatch20260715: {
           relationship: "direct-support",
           supports: [
             "complete account population",
-            "eight-item civic and mutual-aid pattern",
+            "nine-item civic and mutual-aid pattern",
             "linked demonstrations, vigils, fundraisers, and relief resources"
           ],
           confidence: "high",
@@ -680,7 +680,7 @@ export const wowListXFullPopulationBatch20260715: {
         "Nineteen authored posts contain 23 outgoing-link occurrences: twelve WOW List destinations, two NYCdiy destinations, and nine external destinations; the full population contains 35 short URLs.",
         "Three public support threads preserve user questions about location scope, finding personal lists, and excessive clicks in the add-event workflow, together with project-account responses.",
         "Organizer and collaborator posts include Punks & Criminals reporting that shows were being added, Richard tagging @wowlist with a San Francisco event, and COTFG linking a WOW List event page.",
-        "Eight items document a civic and care pattern spanning demonstrations, vigils, fundraisers, and mutual-aid circulation.",
+        "Nine items document a civic and care pattern spanning demonstrations, vigils, fundraisers, and mutual-aid circulation.",
         "The source ecosystem includes a member-made tutorial, a grassroots venue manual review, Allied Media Conference, peer DIY funding infrastructure, and an unrecovered article the account described as concerning DIY documentation.",
         "Twelve authored posts retained visible interaction on July 15, 2026; the dated totals are held from public accomplishment messaging."
       ],
