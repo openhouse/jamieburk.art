@@ -366,6 +366,24 @@
         "A reused article source could receive private contact, meeting, session, or local-path data while the event safety criterion remained 5.",
         "The participation proof-coverage record and Fair Rent NYC page bindings were outside the event dependency digest."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e",
+      "completedAt": "2026-07-15T11:44:34Z",
+      "lens": "Independent archival data-integrity, privacy, provenance, and mutation-resistance review",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
+    },
+    {
+      "judgeId": "nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f",
+      "completedAt": "2026-07-15T07:51:07-04:00",
+      "lens": "Independent skeptical hiring editor, public-interest portfolio editor, civic-policy researcher, and collective-credit reviewer",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": true,
+      "blockers": []
     }
   ]
 }

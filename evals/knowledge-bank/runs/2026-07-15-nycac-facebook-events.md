@@ -160,3 +160,28 @@ regressions. Two fresh reviewers are predeclared for the next frozen commit:
 
 - `nycac-facebook-events-holdout-data-integrity-privacy-2026-07-15-final-e`
 - `nycac-facebook-events-holdout-hiring-editor-credit-2026-07-15-final-f`
+
+## Final holdout result
+
+Both predeclared reviewers accepted frozen commit `476218ee` with 5 / 5 on all
+18 criteria and no blockers.
+
+The data-integrity reviewer independently recomputed the 34-slot reconciliation,
+all population counts, chronology, organizer relations, recurring-meeting
+pattern, route-availability split, response thresholds, article routes, and
+withheld-link count. Fresh mutations against the population, review summary,
+all seven routed article sources, proof coverage, page source order, both event
+occurrences, report, proof, MDX, and canonical records were rejected. The
+reviewer found no prohibited private data.
+
+The hiring and collective-credit reviewer found the selected projection clear,
+specific, and useful without assigning sole credit, converting interface
+signals into attendance, treating article routes as event coverage, or turning
+participation into policy causation. Venue hosts, co-organizers, artists,
+advocates, officials, agencies, and coalition collaborators remain visible as
+agents. Jamie's democracy-lab interpretation remains attributed and confined
+to deeper documentation.
+
+The two consecutive accepted records close the holdout gate for this material
+change. The prior rejections remain in the ledger as part of the recursive
+audit trail.
