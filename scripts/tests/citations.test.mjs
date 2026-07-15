@@ -77,7 +77,7 @@ test("rendering primitives preserve no-JavaScript document semantics", () => {
 });
 
 test("intake has no silent loss and memories are not auto-promoted", () => {
-  assert.equal(knowledgeBank.intake.length, 40 + campaignPressIntake.length);
+  assert.equal(knowledgeBank.intake.length, 43 + campaignPressIntake.length);
   assert.ok(knowledgeBank.intake.every((item) => item.status !== "received"));
   assert.ok(knowledgeBank.intake.every((item) =>
     item.sourceIds.length + item.claimIds.length + item.inquiryIds.length > 0
@@ -121,7 +121,10 @@ test("intake has no silent loss and memories are not auto-promoted", () => {
   for (const intakeId of [
     "LEAD-ICLOUD-JAMIE-PROJECTS-HISTORY-PASS-2026",
     "LEAD-ICLOUD-CRS-OPERATING-BACKBONE-PASS-2026",
-    "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026"
+    "LEAD-ICLOUD-JOB-HUNT-PROOF-AUDIT-2026",
+    "LEAD-ICLOUD-JPH-CREATIVE-TECHNOLOGY-EXPANSION-2026",
+    "LEAD-ICLOUD-CRS-THIRTY-FOUR-PAGE-VERIFICATION-2026",
+    "LEAD-ICLOUD-JOB-HUNT-JULY-RESUME-AUDIT-2026"
   ]) {
     assert.ok(knowledgeBank.intake.some((item) => item.id === intakeId));
   }

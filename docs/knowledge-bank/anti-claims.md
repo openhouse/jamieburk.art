@@ -51,6 +51,11 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not describe the 30-plus-page figure as a sum of drafts or all coalition
+work. It is supported by one preserved 34-page April-May running-minutes
+document. Keep the earlier 12-page April 29 snapshot distinct. Do not turn the
+page count into a quality, impact, adoption, or sole-authorship claim.
+
 Do not say Jamie authored every `@NYCArtC` post, that every official tagged by
 the coalition engaged, that seven is the complete historical Council-member
 count, or that individual-account interaction is an official Council
@@ -71,6 +76,16 @@ participant profiles, and private account context outside the repository.
 Do not describe Jamie's commercial-vacancy public-data brief as City-endorsed,
 adopted, implemented, published, or based on his access to confidential RPIE
 filings. It is an authored proposal unless external outcome evidence matures.
+
+## Creative Technology
+
+Do not describe the 2006-2016 source sequence as uninterrupted full-time
+practice. Do not collapse NTER CHNG into a solo Jamie project or erase Drew
+Bolton, Garrett Fuselier, and the other credited collaborators. Do not erase
+M.C. Schmidt's joint credit for the Horse Lords video.
+
+Do not infer complete technical ownership, audience reach, commercial impact,
+or media republication rights from project articles and public video pages.
 
 ## CallNYC
 

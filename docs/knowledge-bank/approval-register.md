@@ -15,6 +15,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
+- Commercial Rent Stabilization running minutes: the protected 34-page April-May record supports the public 30-plus-page aggregate. Keep the earlier 12-page April 29 snapshot distinct and do not publish raw coalition material.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.
@@ -24,6 +25,11 @@ The repo is public. Approval here means approved for public-safe repository and 
   bank. The raw population, full URL inventory, social context, and interaction
   data remain protected. No personal-timeline route or stakeholder-engagement
   claim is approved.
+- Creative technology: the source-backed 2006-2016 project record is approved
+  for the public knowledge bank as reserve depth. Preserve Drew Bolton, Garrett
+  Fuselier, M.C. Schmidt, and other source-specific collaborator credits; do
+  not project media without rights review or imply continuous full-time
+  practice, solo authorship, reach, or commercial impact.
 - KC Town Hall funding: the public record supports the board's unanimous recommendation, the Council's $490,539 allocation, and authorization of funding-agreement negotiations. Do not imply agreement execution, receipt, disbursement, project completion, later property or operating status, or Jamie's sole causality for the vote.
 - KC Town Hall lifecycle: treat Jamie's involvement as historical. Retain the mission-aligned stewardship transition as firsthand research context; do not publish personal circumstances or name the receiving organization without permission and corroboration.
 - Source-Backed Team Memory: lab / method / consulting practice only; not production SaaS.

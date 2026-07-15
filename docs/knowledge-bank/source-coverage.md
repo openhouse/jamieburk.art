@@ -73,8 +73,7 @@ and job-hunt working archives.
 
 - `fair-rent-campaign-memory` moves from research-needed to partially-backed.
   A protected review of an April operating plan and April-May running minutes
-  supports Jamie's design and maintenance of a lightweight operating backbone;
-  the 30-plus-page aggregate and additional public corroboration remain open.
+  supports Jamie's design and maintenance of a lightweight operating backbone.
 - Claudette's Theatre on Wheels enters the reserve bank through a live
   collaborator page and a recovered institutional project-page capture. The
   claim preserves shared credit and requires separate media-rights review.
@@ -83,6 +82,31 @@ and job-hunt working archives.
 
 Files that had not materialized or could not be durably read were recorded as
 not recovered in this pass. That is not evidence that they did not exist.
+
+## 2026-07-14 iCloud Teams Expansion
+
+Authenticated iCloud Drive controls and local materialization were used as
+complementary archive surfaces. At review time, Teams displayed 68 top-level
+items; Jamie Projects History contained 15 project packets; CRS displayed 175
+top-level items; and job-hunt displayed 58. These are mutable current controls,
+not lifetime totals. A file not materialized locally is not absent.
+
+- `fair-rent-campaign-memory` moves from partially-backed to source-backed. A
+  preserved 34-page April-May running-minutes document verifies the public
+  30-plus-page aggregate. An earlier 12-page April 29 snapshot remains
+  separately recorded so the two artifacts cannot be substituted.
+- `creative-technology-practice` enters as source-backed reserve depth through
+  five independent public records spanning 2006-2016. The claims preserve
+  collaborator credit and do not imply uninterrupted full-time practice,
+  complete role decomposition, audience reach, commercial impact, or media
+  rights.
+- The July 11 approved-resume close read removes the CRS page count from the
+  open proof queue. WOW List reach, Sunday Dinner and 196 aggregates, the HJE
+  growth-contribution relationship, exact NYC Artist Coalition co-founder
+  wording, and current-status language remain priority research.
+
+The resume and archive maps remain first-party research guides, not independent
+corroboration of their own claims.
 
 ## 2026-07-13 Google Drive Shared Drives Pass
 

@@ -7,6 +7,7 @@ import {
   evaluateCampaignPressCorpus,
   evaluateEvidenceExpansion,
   evaluateGoogleSharedDriveArchiveProduction,
+  evaluateICloudArchiveExpansion,
   evaluateICloudArchiveProduction,
   evaluateJamieFacebookPostArchive,
   evaluateKcSpacesFundFacebookPostArchive,
@@ -363,8 +364,8 @@ const iCloudArchiveFixture = {
     "CLM-CLAUDETTE-AR-COLLABORATION CLM-CRS-OPERATING-BACKBONE-2026",
     "INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT",
     "PUB-CLAUDETTE-AR-COLLABORATION PUB-CRS-OPERATING-BACKBONE-2026",
-    'coverage("fair-rent-campaign-memory", "partially-backed"',
-    "The plan establishes design intent; the running minutes establish subsequent use",
+    'coverage("fair-rent-campaign-memory", "source-backed"',
+    "The plan establishes design intent; the 34-page running minutes establish subsequent use",
     "private-support renderCitation: false"
   ].join(" "),
   proofs: [
@@ -397,6 +398,101 @@ test("iCloud archive production rejects local paths and missing archive lanes", 
 
   assert.ok(failures.some((failure) => failure.includes("job-hunt")));
   assert.ok(failures.some((failure) => failure.includes("local filesystem path")));
+});
+
+const iCloudArchiveExpansionFixture = {
+  framework: [
+    "iCloudTeamsExpansionIntake iCloudTeamsExpansionProjects iCloudTeamsExpansionSources",
+    "iCloudTeamsExpansionClaims iCloudTeamsExpansionInquiries",
+    "iCloudTeamsExpansionPublicationDecisions iCloudTeamsExpansionProofCoverage",
+    'coverage("fair-rent-campaign-memory", "source-backed"',
+    "34-page running-minutes record",
+    "An earlier April 29 snapshot is 12 pages",
+    "exact NYC Artist Coalition co-founder wording"
+  ].join(" "),
+  expansionBatch: [
+    "LEAD-ICLOUD-JPH-CREATIVE-TECHNOLOGY-EXPANSION-2026",
+    "LEAD-ICLOUD-CRS-THIRTY-FOUR-PAGE-VERIFICATION-2026",
+    "LEAD-ICLOUD-JOB-HUNT-JULY-RESUME-AUDIT-2026",
+    "creative-technology-practice",
+    "SRC-COOL-HUNTING-TIME-IS-LONG-2006 SRC-PITCH-NTER-CHNG-2010",
+    "SRC-VIMEO-NTER-CHNG-2011 SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+    "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+    "CLM-TIME-IS-LONG-DELAY-INSTALLATION-2006",
+    "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION-2010",
+    "CLM-SORTED-AUDIO-MAX-MSP-2013",
+    "CLM-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016",
+    "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY",
+    "PUB-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016",
+    'decision: "reserve"',
+    "Drew Bolton Garrett Fuselier M.C. Schmidt",
+    "not uninterrupted full-time practice"
+  ].join(" "),
+  archiveDoc: [
+    "68 top-level items in Teams 15 project packets 175 top-level items in CRS",
+    "58 top-level items in job-hunt authenticated iCloud Drive web session",
+    "locally materialized working folders not materialized locally is not absent",
+    "April 29 snapshot containing 12 pages",
+    "April-May running-minutes document containing 34 pages",
+    "first-party research maps do not independently corroborate",
+    "phone number remains excluded from website HTML",
+    "No new reserve claim is automatically projected"
+  ].join(" "),
+  creativeTechDoc: [
+    "Time Is Long NTER CHNG A Sorted Audio File Truthers",
+    "Drew Bolton Garrett Fuselier M.C. Schmidt",
+    "not proof of uninterrupted full-time practice media-rights"
+  ].join(" "),
+  sourceCoverage: [
+    "fair-rent-campaign-memory",
+    "34-page April-May running-minutes document verifies the public",
+    "earlier 12-page April 29 snapshot creative-technology-practice",
+    "first-party research guides, not independent corroboration"
+  ].join(" "),
+  publicSite: "Technical project management, product operations, and implementation"
+};
+
+test("iCloud archive expansion passes with dual-surface controls and bounded reserve depth", () => {
+  assert.deepEqual(evaluateICloudArchiveExpansion(iCloudArchiveExpansionFixture), []);
+});
+
+test("iCloud archive expansion rejects a missing lane and erased hydration boundary", () => {
+  const failures = evaluateICloudArchiveExpansion({
+    ...iCloudArchiveExpansionFixture,
+    archiveDoc: iCloudArchiveExpansionFixture.archiveDoc
+      .replace("58 top-level items in job-hunt", "")
+      .replace("not materialized locally is not absent", "")
+  });
+  assert.ok(failures.some((failure) => failure.includes("58 top-level items in job-hunt")));
+  assert.ok(failures.some((failure) => failure.includes("not materialized locally is not absent")));
+});
+
+test("iCloud archive expansion rejects sole credit and silent reserve projection", () => {
+  const failures = evaluateICloudArchiveExpansion({
+    ...iCloudArchiveExpansionFixture,
+    publicSite: "Jamie solely created NTER CHNG and made a Max/MSP program that segmented audio."
+  });
+  assert.ok(failures.some((failure) => failure.includes("sole credit")));
+  assert.ok(failures.some((failure) => failure.includes("silently projects reserve")));
+});
+
+test("iCloud archive expansion rejects private paths and phone numbers", () => {
+  const failures = evaluateICloudArchiveExpansion({
+    ...iCloudArchiveExpansionFixture,
+    archiveDoc: `${iCloudArchiveExpansionFixture.archiveDoc} /Users/example/private 212-555-0123`
+  });
+  assert.ok(failures.some((failure) => failure.includes("local filesystem path or phone number")));
+});
+
+test("iCloud archive expansion rejects collapsed CRS snapshots and self-corroboration", () => {
+  const failures = evaluateICloudArchiveExpansion({
+    ...iCloudArchiveExpansionFixture,
+    sourceCoverage: iCloudArchiveExpansionFixture.sourceCoverage
+      .replace("earlier 12-page April 29 snapshot", "")
+      .replace("first-party research guides, not independent corroboration", "")
+  });
+  assert.ok(failures.some((failure) => failure.includes("earlier 12-page April 29 snapshot")));
+  assert.ok(failures.some((failure) => failure.includes("first-party research guides")));
 });
 
 const googleSharedDriveArchiveFixture = {

@@ -7,6 +7,11 @@
 **Method:** Targeted close reading of anchor documents and selected hydrated
 artifacts, followed by claim, source, inquiry, and publication decisions.
 
+**Expansion:** The July 14 dual-surface follow-up is documented in
+[`2026-07-14-icloud-teams-expansion.md`](2026-07-14-icloud-teams-expansion.md).
+It expands Jamie Projects History, verifies the CRS page-count claim, and
+narrows the approved-resume proof queue.
+
 ## Archival posture
 
 The working folders are a private source environment, not a publication

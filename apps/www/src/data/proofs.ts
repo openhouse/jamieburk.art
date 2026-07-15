@@ -870,6 +870,39 @@ export const proofClaims: ProofClaim[] = [
     relatedProjects: ["source-backed-team-memory"],
     relatedCapabilities: ["ai-evals", "human-review", "evaluation"],
     lastReviewed: "2026-07-07"
+  },
+  {
+    id: "creative-technology-practice",
+    status: "careful",
+    supportLevel: "strong",
+    evidenceClass: ["public-source"],
+    publicWording:
+      "Independent public sources document a decade of Jamie's creative-technology work across time-delayed video, real-time text interaction, audio transformation, and collaborative music visuals.",
+    shortWording: "A source-backed decade of collaborative creative-technology work",
+    detailedPublicWording:
+      "Four dated project records and five public sources document Jamie's creative-technology work at intervals from 2006 through 2016 while preserving project-specific collaborators, contexts, and rights.",
+    sourceBasis:
+      "Independent public reporting and project pages from Cool Hunting, The Pitch, Vimeo, Monthly Music Hackathon, and NPR Music.",
+    whyItMatters:
+      "Gives future editors a defensible account of Jamie's technical and creative range without crowding the current hiring composition.",
+    guardrail:
+      "Keep this internal-only reserve depth until an audience need justifies publication; a dated sequence is not uninterrupted full-time practice.",
+    doNotSay: [
+      "Jamie worked continuously and full time in creative technology for ten years",
+      "Jamie solely authored every project",
+      "The source sequence proves audience or market impact"
+    ],
+    protectedBoundaries: [
+      "Complete role decomposition",
+      "Source assets and code",
+      "Collaborator confirmation",
+      "Audience evidence",
+      "Media republication rights"
+    ],
+    surfaces: ["internal-only"],
+    relatedProjects: ["creative-technology-practice"],
+    relatedCapabilities: ["creative-technology", "participatory-media", "prototyping"],
+    lastReviewed: "2026-07-14"
   }
 ];
 

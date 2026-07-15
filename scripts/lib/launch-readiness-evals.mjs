@@ -476,8 +476,8 @@ export function evaluateICloudArchiveProduction({
     "INQ-JOB-HUNT-QUANTIFIED-PROOF-DEBT",
     "PUB-CLAUDETTE-AR-COLLABORATION",
     "PUB-CRS-OPERATING-BACKBONE-2026",
-    'coverage("fair-rent-campaign-memory", "partially-backed"',
-    "The plan establishes design intent; the running minutes establish subsequent use",
+    'coverage("fair-rent-campaign-memory", "source-backed"',
+    "The plan establishes design intent; the 34-page running minutes establish subsequent use",
     "private-support",
     "renderCitation: false"
   ]);
@@ -513,6 +513,128 @@ export function evaluateICloudArchiveProduction({
   ];
   if (privatePathMarkers.some((pattern) => pattern.test(publicBundle))) {
     missing.push("Public archive production contains a local filesystem path marker.");
+  }
+
+  return missing;
+}
+
+export function evaluateICloudArchiveExpansion({
+  framework,
+  expansionBatch,
+  archiveDoc,
+  creativeTechDoc,
+  sourceCoverage,
+  publicSite
+}) {
+  const missing = [];
+  const requireFragments = (surface, content, fragments) => {
+    const normalizedContent = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalizedContent.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  requireFragments("Knowledge-bank framework", framework, [
+    "iCloudTeamsExpansionIntake",
+    "iCloudTeamsExpansionProjects",
+    "iCloudTeamsExpansionSources",
+    "iCloudTeamsExpansionClaims",
+    "iCloudTeamsExpansionInquiries",
+    "iCloudTeamsExpansionPublicationDecisions",
+    "iCloudTeamsExpansionProofCoverage",
+    'coverage("fair-rent-campaign-memory", "source-backed"',
+    "34-page running-minutes record",
+    "An earlier April 29 snapshot is 12 pages",
+    "exact NYC Artist Coalition co-founder wording"
+  ]);
+
+  requireFragments("iCloud expansion batch", expansionBatch, [
+    "LEAD-ICLOUD-JPH-CREATIVE-TECHNOLOGY-EXPANSION-2026",
+    "LEAD-ICLOUD-CRS-THIRTY-FOUR-PAGE-VERIFICATION-2026",
+    "LEAD-ICLOUD-JOB-HUNT-JULY-RESUME-AUDIT-2026",
+    "creative-technology-practice",
+    "SRC-COOL-HUNTING-TIME-IS-LONG-2006",
+    "SRC-PITCH-NTER-CHNG-2010",
+    "SRC-VIMEO-NTER-CHNG-2011",
+    "SRC-MUSIC-HACKATHON-SORTED-AUDIO-2013",
+    "SRC-NPR-HORSE-LORDS-TRUTHERS-2016",
+    "CLM-TIME-IS-LONG-DELAY-INSTALLATION-2006",
+    "CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION-2010",
+    "CLM-SORTED-AUDIO-MAX-MSP-2013",
+    "CLM-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016",
+    "INQ-CREATIVE-TECHNOLOGY-ROLE-ASSET-RECOVERY",
+    "PUB-CREATIVE-TECHNOLOGY-LONGITUDINAL-2006-2016",
+    'decision: "reserve"',
+    "Drew Bolton",
+    "Garrett Fuselier",
+    "M.C. Schmidt",
+    "not uninterrupted full-time practice"
+  ]);
+
+  requireFragments("iCloud expansion documentation", archiveDoc, [
+    "68 top-level items in Teams",
+    "15 project packets",
+    "175 top-level items in CRS",
+    "58 top-level items in job-hunt",
+    "authenticated iCloud Drive web session",
+    "locally materialized working folders",
+    "not materialized locally is not absent",
+    "April 29 snapshot containing 12 pages",
+    "April-May running-minutes document containing 34 pages",
+    "first-party research maps",
+    "do not independently corroborate",
+    "phone number remains excluded from website HTML",
+    "No new reserve claim is automatically projected"
+  ]);
+
+  requireFragments("Creative-technology project record", creativeTechDoc, [
+    "Time Is Long",
+    "NTER CHNG",
+    "A Sorted Audio File",
+    "Truthers",
+    "Drew Bolton",
+    "Garrett Fuselier",
+    "M.C. Schmidt",
+    "not proof of uninterrupted full-time practice",
+    "media-rights"
+  ]);
+
+  requireFragments("Source-coverage ledger", sourceCoverage, [
+    "fair-rent-campaign-memory",
+    "34-page April-May running-minutes document verifies the public",
+    "earlier 12-page April 29 snapshot",
+    "creative-technology-practice",
+    "first-party research guides, not independent corroboration"
+  ]);
+
+  const publicBundles = [framework, expansionBatch, archiveDoc, creativeTechDoc, sourceCoverage].join("\n");
+  const forbiddenPrivateMarkers = [
+    /\/Users\//,
+    /\/Volumes\//,
+    /Mobile Documents/,
+    /com~apple~CloudDocs/,
+    /Library\/CloudStorage/,
+    /(?:\+?1[\s.-]?)?\(?[2-9]\d{2}\)?[\s.-]\d{3}[\s.-]\d{4}/
+  ];
+  if (forbiddenPrivateMarkers.some((pattern) => pattern.test(publicBundles))) {
+    missing.push("Public iCloud expansion contains a local filesystem path or phone number.");
+  }
+
+  const reserveProjectionMarkers = [
+    "Jamie made Time is Long",
+    "created NTER CHNG",
+    "made a Max/MSP program that segmented audio",
+    "a decade of Jamie's creative-technology work"
+  ];
+  for (const marker of reserveProjectionMarkers) {
+    if (publicSite.includes(marker)) {
+      missing.push(`Public site silently projects reserve creative-technology copy: ${marker}`);
+    }
+  }
+  if (/Jamie (?:solely|alone) (?:created|made|built)/i.test(publicSite)) {
+    missing.push("Public site assigns sole credit where the expansion requires collective attribution.");
   }
 
   return missing;
@@ -3573,6 +3695,22 @@ export function runLaunchEvals(repoRoot) {
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-icloud-teams-archive-pass.md"
   );
+  const iCloudTeamsExpansionBatch = readOptional(
+    repoRoot,
+    "apps/www/src/data/knowledge-bank/icloud-teams-expansion-batch-2026-07-14.ts"
+  );
+  const iCloudTeamsExpansionDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/intake/2026-07-14-icloud-teams-expansion.md"
+  );
+  const creativeTechnologyDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projects/creative-technology-practice.md"
+  );
+  const sourceCoverage = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/source-coverage.md"
+  );
   const googleSharedDrivesArchiveDoc = readOptional(
     repoRoot,
     "docs/knowledge-bank/intake/2026-07-13-google-shared-drives-archive-pass.md"
@@ -3864,7 +4002,7 @@ export function runLaunchEvals(repoRoot) {
     records,
     framework,
     socialArchive: `${socialArchive}\n${callNycSocialCorpus}\n${wowlistSocialCorpus}`,
-    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}`,
+    coverageExtensions: `${kcTownHallSocialCorpus}\n${nycArtCSocialCorpus}\n${nycArtCFacebookEventCorpus}\n${nycArtCFacebookPostCorpus}\n${personalWowlistFacebookEventCorpus}\n${urbanHermitSocialCorpus}\n${iCloudTeamsExpansionBatch}`,
     knowledgeReadme,
     fairRentCase,
     proofs
@@ -3968,6 +4106,31 @@ export function runLaunchEvals(repoRoot) {
         "A public cultural collaboration remains reserve while a protected-source-backed operating claim reaches Technical Operations.",
         "First-party job-hunt material creates proof debt rather than self-corroboration.",
         "Hydration uncertainty and local-path privacy are enforced explicitly."
+      ]
+    })
+  );
+
+  const iCloudArchiveExpansionMissing = evaluateICloudArchiveExpansion({
+    framework,
+    expansionBatch: iCloudTeamsExpansionBatch,
+    archiveDoc: iCloudTeamsExpansionDoc,
+    creativeTechDoc: creativeTechnologyDoc,
+    sourceCoverage,
+    publicSite: [homePage, resumePage, siteData, workData, technicalOperations, fairRentCase].join("\n")
+  });
+  results.push(
+    result({
+      id: "icloud-teams-archive-expansion",
+      label: "iCloud Teams expansion deepens evidence while preserving credit, privacy, and editorial control",
+      weight: 20,
+      hardGate: true,
+      missing: iCloudArchiveExpansionMissing,
+      evidence: [
+        "Authenticated iCloud web controls and local materialization are documented as complementary archive surfaces.",
+        "Five public records support a bounded 2006-2016 creative-technology reserve layer with complete source-specific credit.",
+        "A 34-page preserved CRS record resolves the 30-plus-page aggregate while an earlier 12-page snapshot remains distinct.",
+        "The approved-resume audit narrows proof debt without using first-party job-hunt material as independent corroboration.",
+        "Local paths, phone numbers, private archive material, and silent reserve projection are hard-gated."
       ]
     })
   );

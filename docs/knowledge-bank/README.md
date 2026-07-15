@@ -116,6 +116,15 @@ discovery, and engagement-boundary findings;
 aggregate-only disposition. Raw posts, URLs, exact dates, identities, privacy
 context, interactions, and media remain protected.
 
+The July 14 iCloud Teams expansion uses authenticated web controls and local
+materialization as complementary archive surfaces. It adds a source-backed
+creative-technology reserve record, verifies the Commercial Rent Stabilization
+30-plus-page claim against one preserved 34-page document while retaining an
+earlier 12-page snapshot, and narrows the approved-resume proof queue. See
+`intake/2026-07-14-icloud-teams-expansion.md` and
+`projects/creative-technology-practice.md`. No private archive document,
+contact detail, local path, or browser-session material enters the repo.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

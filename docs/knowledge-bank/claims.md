@@ -125,18 +125,18 @@ claim beyond the wording and guardrails here.
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 
-**Status:** Careful
-**Support level:** Careful
-**Evidence class:** Approved resume / public-safe archive summary / firsthand-collaborator context
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Approved resume / protected archive review
 **Public wording:** Designed and maintained a lightweight operating backbone for a multi-organization Commercial Rent Stabilization collaboration.
-**Detailed public-safe wording:** Jamie turned meetings and source material into running minutes, decision records, action ownership, open questions, source boundaries, and coordinated city/state work that collaborators could use.
+**Detailed public-safe wording:** Jamie turned meetings and source material into a preserved 34-page running-minutes record, decision records, action ownership, open questions, source boundaries, and coordinated city/state work that collaborators could use.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.
 **Why it matters:** Shows documentation as operating infrastructure for sensitive, collective civic work.
 **Guardrail:** Use collective-work language and do not publish raw or private coalition context.
 **Do not say:** Jamie led the movement; Jamie owned the campaign; Jamie provided official legal analysis; Jamie single-handedly created the policy work; Jamie completed every proposed operating deliverable.
-**Protected boundaries:** Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
+**Protected boundaries:** The 34-page figure describes one preserved April-May document; an earlier April 29 snapshot is 12 pages. Private coalition notes, legal-review materials, stakeholder lists, private emails, raw strategy context, and unapproved quotes stay offline.
 **Review owner:** Jamie / Collaborator approval needed for named materials  
-**Last reviewed:** 2026-07-13
+**Last reviewed:** 2026-07-14
 
 ## fair-rent-source-map - Legislative source map and provenance redline
 
@@ -240,6 +240,66 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Describe individual-account interaction as a recovered minimum, never as official Council endorsement, policy causality, or proof of Jamie's post authorship.
 **Do not say:** Only seven Council members engaged; the NYC Council endorsed NYC Artist Coalition; social engagement caused policy outcomes; Jamie authored every @NYCArtC post.
 **Protected boundaries:** Authentication details, private analytics, private messages, and unrecoverable team-post authorship stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## creative-technology-time-is-long - Time-delayed video installation
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Independent public source
+**Public wording:** In 2006, Jamie made *Time is Long*, a participatory installation that returned viewers' recorded image approximately 20 minutes after capture.
+**Detailed public-safe wording:** Cool Hunting identifies Jamie with a viewer-responsive work built around time-delayed recording and playback through an extended VHS process.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Adds early evidence of Jamie designing a technical system around participant experience and time.
+**Guardrail:** The source documents the artwork and interaction, not complete engineering, fabrication, exhibition, audience, or rights history.
+**Do not say:** Jamie solely engineered every component; the installation reached a quantified audience; public source access grants media rights.
+**Protected boundaries:** Original assets, code, installation records, and media rights remain open research.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## creative-technology-nter-chng - Real-time text installation
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Independent public source / public project artifact
+**Public wording:** Jamie Burkart, Drew Bolton, and Garrett Fuselier created NTER CHNG, a software and architectural installation for real-time audience text interaction.
+**Detailed public-safe wording:** The Pitch describes the software-and-architecture form and real-time audience interaction; the project video preserves the three-person maker credit and additional collaborator credits.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Shows collaborative design of a public interaction spanning software, physical space, and participant input.
+**Guardrail:** Preserve all maker and collaborator credit. The exact division of software, design, construction, and production labor remains open.
+**Do not say:** Jamie solely created NTER CHNG; Jamie alone designed or built the wall; the sources establish audience reach or impact.
+**Protected boundaries:** Original code, working files, role decomposition, and media rights remain open research.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## creative-technology-sorted-audio - Max/MSP audio transformation
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Public project artifact
+**Public wording:** In 2013, Jamie made a Max/MSP program that segmented audio and sorted its fragments by a selected feature, demonstrated by pitch.
+**Detailed public-safe wording:** Monthly Music Hackathon documents the maker credit, Max/MSP environment, segment-and-sort behavior, and pitch-sorted musical example.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Adds a concrete technical artifact involving transformation, classification, and musical form.
+**Guardrail:** Describe it as a hack and demonstration, not a production product.
+**Do not say:** The program had commercial adoption; the source establishes its complete technical architecture; it was production software.
+**Protected boundaries:** Complete code, maintenance history, later use, and embedded-media rights remain open.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## creative-technology-practice - Dated creative-technology throughline
+
+**Status:** Reserve
+**Support level:** Strong
+**Evidence class:** Independent public sources
+**Public wording:** Independent public sources document a decade of Jamie's creative-technology work across time-delayed video, real-time text interaction, audio transformation, and collaborative music visuals.
+**Detailed public-safe wording:** Four dated project records and five public sources document work at intervals from 2006 through 2016 while preserving project-specific collaborators, contexts, and rights.
+**Where to project:** Knowledge-bank creative-technology project note only.
+**Why it matters:** Gives future editors a defensible account of Jamie's technical and creative range without crowding the current hiring composition.
+**Guardrail:** A dated sequence is not uninterrupted full-time practice. Preserve every project's collaborator and authorship boundary.
+**Do not say:** Jamie worked continuously and full time in creative technology for ten years; Jamie solely authored every project; the sequence proves audience or market impact.
+**Protected boundaries:** Source assets, code, collaborator confirmation, role decomposition, audience evidence, and republication rights remain open research.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 

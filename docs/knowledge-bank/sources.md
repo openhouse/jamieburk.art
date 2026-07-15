@@ -108,6 +108,17 @@ Approved public artifact examples for this launch pass include:
 - ARORA / Make Us Visible's recovered Munich city-project page, which lists
   Claudette's Theatre on Wheels and credits Michael Rees and Jamie Burkart. Its
   current client-rendered route remains unverified.
+- [Cool Hunting's 2006 BAP Lab article](https://coolhunting.com/culture/bap-lab-part-1/),
+  identifying Jamie's viewer-responsive, time-delayed video installation
+  *Time is Long*.
+- [The Pitch's 2010 NTR CHNG listing](https://www.thepitchkc.com/ntr-chng/),
+  describing the project as a software and architectural installation for
+  real-time text participation.
+- The [NTER CHNG project video](https://vimeo.com/21395655), crediting Drew
+  Bolton, Jamie Burkart, and Garrett Fuselier with the interactive texting
+  installation and separately preserving other collaborator credits.
+- [Monthly Music Hackathon's 2013 project note](https://monthlymusichackathon.org/post/44177616179/sortedaudio),
+  documenting Jamie's Max/MSP program for segmenting and sorting audio.
 
 The NYC Artist Coalition campaign-press corpus also preserves 45 unique article
 identities across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and Fair Rent
@@ -158,6 +169,19 @@ The complete Shared Drive inventory, private drive names, file IDs, access
 links, membership, private filenames, participant rows, and underlying records
 remain protected. File presence or Shared Drive custody does not establish
 authorship, distribution, adoption, public permission, or outcome.
+
+The July 14, 2026 iCloud Teams expansion adds two updated protected source
+records:
+
+- a CRS operating-document review that distinguishes an earlier 12-page April
+  29 snapshot from one preserved 34-page April-May running-minutes document;
+  and
+- a July 11 approved-resume proof audit that removes the verified CRS page
+  count from the open queue while retaining unresolved metrics, role language,
+  and causality as research debt.
+
+The protected records expose no raw archive material, local path, contact
+detail, phone number, correspondence, coalition note, or browser-session data.
 
 ### AI-Assisted Archival Review
 
