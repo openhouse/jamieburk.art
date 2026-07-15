@@ -35,6 +35,9 @@ npm run check:routes
 npm run check:citations
 npm run test:citations
 npm run report:citations
+npm run check:portfolio-evals
+npm run test:portfolio-evals
+npm run report:portfolio-evals
 npm run preflight:staging
 npm run preflight:production
 ```
@@ -151,3 +154,13 @@ The recursive agent evaluation suite lives in `evals/launch-readiness/`. Run
 `npm run report:launch-evals`. Hard gates remain authoritative; weighted judge
 scores may improve clarity but may not override safety, consent, accessibility,
 or exact-commit release requirements.
+
+The complementary portfolio-effectiveness suite lives in
+`evals/portfolio-effectiveness/`. It evaluates hiring-reader comprehension,
+collaborator-backed role attribution, complete operating narratives, recent
+practice, consent-cleared visual evidence, exact-SHA release proof, and the
+maintainability of this evaluation system. Run `npm run check:portfolio-evals`,
+`npm run test:portfolio-evals`, and `npm run report:portfolio-evals`. A locally
+passing score does not stand in for human reader sessions, collaborator proof
+notes, artifact rights clearance, externally verified outcomes, or production
+evidence from the exact deployed commit.

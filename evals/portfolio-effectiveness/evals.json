@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "id": "jamieburk-art-portfolio-effectiveness",
+  "objective": "Test whether the portfolio turns a deep, public-safe record into timely hiring understanding, corroborated role evidence, complete operating narratives, current proof, inspectable artifacts, exact-commit release discipline, and a maintainable evaluation practice.",
+  "evidencePath": "evals/portfolio-effectiveness/evidence.json",
+  "documentationPath": "docs/knowledge-bank/portfolio-effectiveness.md",
+  "targets": {
+    "allCriteriaMeetMinimum": true,
+    "weightedScoreAtLeast": 3.8,
+    "scoreScale": 5,
+    "consecutivePassingRuns": 2
+  },
+  "criteria": [
+    {
+      "id": "PE-EVAL-READER-VALIDATION",
+      "label": "Hiring-reader comprehension",
+      "weight": 0.18,
+      "minimumScore": 4,
+      "intent": "A time-limited hiring reader can identify Jamie's role, operating contribution, proof, resume, and contact path; automation may prepare the test but only real reader sessions can earn 5.",
+      "anchors": {
+        "1": "The audience and task are undefined or the role must be reconstructed.",
+        "3": "A repeatable protocol exists, but route evidence or task coverage is incomplete.",
+        "4": "Five bounded task cases and deterministic route evidence are ready; real hiring-reader sessions remain open.",
+        "5": "At least five privacy-safe real reader sessions meet the comprehension target and their aggregate findings inform the site."
+      }
+    },
+    {
+      "id": "PE-EVAL-COLLABORATOR-PROOF",
+      "label": "Collaborator corroboration",
+      "weight": 0.16,
+      "minimumScore": 3,
+      "intent": "The five highest-value role-attribution gaps have consent-aware proof requests and cannot be represented as corroborated until collaborators actually respond.",
+      "anchors": {
+        "1": "Role gaps are implicit or self-assertion is treated as collaborator proof.",
+        "3": "Five prioritized requests, questions, boundaries, and publication permissions are ready; no response is invented.",
+        "4": "At least three target projects have usable collaborator proof notes with explicit permission states.",
+        "5": "All five target projects have bounded corroboration integrated into the knowledge lifecycle."
+      }
+    },
+    {
+      "id": "PE-EVAL-OPERATING-SEQUENCES",
+      "label": "End-to-end operating narratives",
+      "weight": 0.18,
+      "minimumScore": 4,
+      "intent": "At least three flagship projects connect condition, diagnosis, intervention, coordination, changed behavior, outcome, evidence, and limits without inflating causality.",
+      "anchors": {
+        "1": "Projects list activity without explaining Jamie's operating contribution or what changed.",
+        "3": "Some causal steps are visible, but evidence, outcome, or collective boundaries are incomplete.",
+        "4": "Three complete evidence-linked sequences exist with bounded outcomes.",
+        "5": "The three sequences are complete, route-aligned, independently inspectable, and resistant to sole-causation drift."
+      }
+    },
+    {
+      "id": "PE-EVAL-RECENT-PRACTICE",
+      "label": "Current 2024-2026 evidence",
+      "weight": 0.14,
+      "minimumScore": 4,
+      "intent": "Current practice is visible through at least three bounded records, including source-backed work and repository-verifiable implementation, without relabeling a proposal as delivered client work.",
+      "anchors": {
+        "1": "The portfolio depends almost entirely on older projects or treats recent preparation as delivered impact.",
+        "3": "Recent work is named but scattered, weakly sourced, or absent from an intentional evidence layer.",
+        "4": "Three current-practice records are normalized with sources, public surfaces, and boundaries.",
+        "5": "Three or more recent records include externally corroborated outcomes and decisive public artifacts."
+      }
+    },
+    {
+      "id": "PE-EVAL-VISUAL-EVIDENCE",
+      "label": "Consent-cleared visual proof",
+      "weight": 0.12,
+      "minimumScore": 3,
+      "intent": "Real work becomes inspectable through cleared artifacts while unapproved photographs, participants, private records, and proprietary material remain excluded.",
+      "anchors": {
+        "1": "The site has no inspectable work or publishes material without clearance.",
+        "3": "One cleared artifact is live and a rights-aware multi-project selection queue exists.",
+        "4": "At least two flagship cases have cleared, source-backed visual evidence.",
+        "5": "At least three flagship cases have decisive, accessible, rights-cleared visual proof."
+      }
+    },
+    {
+      "id": "PE-EVAL-EXACT-SHA-RELEASE",
+      "label": "Exact-SHA production evidence",
+      "weight": 0.12,
+      "minimumScore": 3,
+      "intent": "Repository checks, staging review, accessibility, Docker, approval, deployment, and production smoke evidence stay attached to one exact SHA; a branch pass cannot impersonate a release.",
+      "anchors": {
+        "1": "Readiness is inferred from a nearby branch, stale report, or unrecorded deployment.",
+        "3": "The complete exact-SHA protocol and commands exist; no unperformed release action is marked complete.",
+        "4": "One exact candidate SHA has complete local, Docker, staging, and accessibility evidence plus Jamie's approval.",
+        "5": "That same SHA is promoted and passes documented production smoke verification."
+      }
+    },
+    {
+      "id": "PE-EVAL-MAINTAINABILITY",
+      "label": "Evaluation and source maintenance",
+      "weight": 0.1,
+      "minimumScore": 4,
+      "intent": "Named ownership, review cadence, source-health checks, complexity limits, retirement rules, and anti-self-certification keep the system useful beyond the agent that created it.",
+      "anchors": {
+        "1": "The system has no owner, cadence, freshness policy, or complexity limit.",
+        "3": "Maintenance is documented but lacks enforceable freshness or anti-gaming controls.",
+        "4": "Ownership, cadence, source health, complexity budget, and retirement rules are explicit and checked.",
+        "5": "The policy is current, deterministic, independently reviewable, and integrated into the root verification gate."
+      }
+    }
+  ],
+  "antiGaming": [
+    "An LLM, browser script, or repository source check is not a real hiring-reader session.",
+    "A Jamie-authored memory, AI archive review, press mention, or shared-account post is not a collaborator proof note.",
+    "Activity, outreach, response counts, appropriations, and proposals must not be converted into adoption, attendance, receipt, implementation, or impact.",
+    "A visual candidate cannot count as cleared until rights, people, crop, credit, source, and publication context are approved.",
+    "A passing branch, rebuilt image, or nearby commit cannot substitute for the exact staging-reviewed and approved production SHA.",
+    "Do not improve maintainability by deleting difficult criteria, guardrails, protected absences, or unresolved external gates."
+  ],
+  "hillClimb": {
+    "objectiveOrder": [
+      "make every blind spot measurable without overstating current evidence",
+      "raise every criterion to its local evidence floor",
+      "raise the weighted score without converting external work into self-certified completion",
+      "preserve explicit next evidence needed for every score below 5"
+    ],
+    "stopWhen": "Every criterion meets its minimum and the weighted target passes twice consecutively; scores below 5 remain explicit external work queues, not hidden failures."
+  }
+}
