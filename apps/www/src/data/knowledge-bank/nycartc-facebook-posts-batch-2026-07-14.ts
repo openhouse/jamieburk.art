@@ -348,7 +348,7 @@ export const nycartcFacebookPostSources = [
     publishedAt: "2026-07-14",
     accessedAt: "2026-07-14",
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
+      "https://github.com/openhouse/jamieburk.art/blob/13d9a7c75595f890bdc2e5346ff81ac681e5bbea/docs/knowledge-bank/data/nycartc-public-facebook-post-ledger.json",
     preferredPublicUrl: "canonical",
     publicCitation:
       "Public-safe disposition ledger for the currently recoverable NYC Artist Coalition Facebook Page timeline, July 14, 2026.",
@@ -375,7 +375,7 @@ export const nycartcFacebookPostSources = [
     publishedAt: "2026-07-14",
     accessedAt: "2026-07-14",
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
+      "https://github.com/openhouse/jamieburk.art/blob/13d9a7c75595f890bdc2e5346ff81ac681e5bbea/docs/knowledge-bank/data/nycartc-public-facebook-post-route-ledger.json",
     preferredPublicUrl: "canonical",
     publicCitation:
       "Public-safe route ledger for destinations exposed by the currently recoverable NYC Artist Coalition Facebook Page corpus, July 14, 2026.",
@@ -402,7 +402,7 @@ export const nycartcFacebookPostSources = [
     publishedAt: "2026-07-14",
     accessedAt: "2026-07-14",
     canonicalUrl:
-      "https://github.com/openhouse/jamieburk.art/blob/267f21b13f77f61b29ef75271659b7c0cc20d9ab/docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md",
+      "https://github.com/openhouse/jamieburk.art/blob/13d9a7c75595f890bdc2e5346ff81ac681e5bbea/docs/knowledge-bank/projects/nycartc-facebook-post-population-2026-07-14.md",
     preferredPublicUrl: "canonical",
     publicCitation:
       "Jamie Burkart portfolio research, NYC Artist Coalition Facebook post archival-production report, July 14, 2026.",
