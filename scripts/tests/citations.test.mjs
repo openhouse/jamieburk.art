@@ -42,6 +42,16 @@ test("KC Town Hall keeps contribution evidence separate from municipal lifecycle
     resolveCitationOccurrence("kc-town-hall", "jamie-planning-contribution").sources.map((item) => item.source.id),
     ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
   );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "public-service-interface").sources.map((item) => item.source.id),
+    [
+      "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+      "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+      "SRC-KCMO-COUNCIL-ROSTER-2018",
+      "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
+    ]
+  );
 });
 
 test("Claim resolver returns only active approved projections", () => {

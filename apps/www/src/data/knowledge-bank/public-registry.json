@@ -302,86 +302,6 @@
       ]
     },
     {
-      "id": "SRC-KCTH-PINNED-2018",
-      "title": "KC Town Hall pinned project-framing post",
-      "organization": "KC Town Hall",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2018-07-02",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/KCTownHall/status/1013796430103785472",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "KC Town Hall pinned project-framing post, July 2, 2018.",
-      "publicNote": "The post frames the project as participatory restoration of a neighborhood resource and cultural center.",
-      "doesNotEstablish": [
-        "project completion",
-        "funding receipt",
-        "individual authorship",
-        "sole credit"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-      "title": "Melissa Robinson public reply involving KC Town Hall",
-      "organization": "Public-official account",
-      "kind": "government-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2020-08-01",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Melissa Robinson, public reply involving KC Town Hall, 2020-08-01.",
-      "publicNote": "The post concerns neighborhood conditions.",
-      "doesNotEstablish": [
-        "individual authorship of KC Town Hall posts",
-        "project completion",
-        "receipt of appropriated funds",
-        "sole individual credit"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-      "title": "Bridging The Gap partner account public authored-mention involving KC Town Hall",
-      "organization": "Community partner public account",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-07-08",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/trutheresme/status/1148277187583389703",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Bridging The Gap partner account, public authored-mention involving KC Town Hall, 2019-07-08.",
-      "publicNote": "The post concerns tire collection and environmental stewardship.",
-      "doesNotEstablish": [
-        "individual authorship of KC Town Hall posts",
-        "project completion",
-        "receipt of appropriated funds",
-        "sole individual credit"
-      ]
-    },
-    {
-      "id": "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019",
-      "title": "Jolie Justus public reply involving KC Town Hall",
-      "organization": "Public-official account",
-      "kind": "government-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2019-04-29",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Jolie Justus, public reply involving KC Town Hall, 2019-04-29.",
-      "publicNote": "The post concerns redevelopment progress and community participation.",
-      "doesNotEstablish": [
-        "individual authorship of KC Town Hall posts",
-        "project completion",
-        "receipt of appropriated funds",
-        "sole individual credit"
-      ]
-    },
-    {
       "id": "SRC-NYCAC-DOCUMENT-JOURNAL-2018",
       "title": "Taking back New York City's nightlife",
       "organization": "Document Journal",
@@ -566,6 +486,105 @@
         "sole ownership of collective project work",
         "receipt or expenditure of the City appropriation",
         "construction or project completion"
+      ]
+    },
+    {
+      "id": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "title": "Authenticated @KCTownHall full-population recovery and public-post ledger",
+      "organization": "KC Town Hall",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-H/docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated read-only review of the public @KCTownHall Posts, Replies, and repost-list surfaces, with a 183-record public-safe ledger, July 14-15, 2026.",
+      "publicNote": "The profile displayed 183 posts. Cross-tab reconciliation recovered all 183 surviving items: 142 account posts, 13 account replies, and 28 reposts from 16 public accounts. A fresh July 15 traversal exactly matched all status IDs, and all 40 repost-bearing account statuses were audited. The ledger preserves posted destinations, bounded classifications, and mutable reaction snapshots without reproducing post text, phone numbers, or street addresses.",
+      "doesNotEstablish": [
+        "a platform export, deletion history, or proof that no earlier item was removed",
+        "the individual teammate who authored each shared-account record",
+        "private messages, historical analytics, unique people reached, clickthrough, adoption, or service outcomes",
+        "independent verification of project-reported tire or avoided-fee figures",
+        "partnership, endorsement, or sole credit from mentions, replies, reposts, or linked sources"
+      ]
+    },
+    {
+      "id": "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+      "title": "Quinton Lucas quote-post responding to KC Town Hall",
+      "author": "Quinton Lucas",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Councilmember Quinton Lucas quote-post responding to @KCTownHall about Leon's Thriftway, April 29, 2019.",
+      "publicNote": "Lucas said he had spoken with ownership and was exploring whether the store could remain open.",
+      "doesNotEstablish": [
+        "formal partnership",
+        "project adoption",
+        "the outcome of preservation efforts",
+        "endorsement of every KC Town Hall activity"
+      ]
+    },
+    {
+      "id": "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+      "title": "Jolie Justus reply to KC Town Hall",
+      "author": "Jolie Justus",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Then-Councilmember Jolie Justus reply to @KCTownHall about Leon's Thriftway, April 29, 2019.",
+      "publicNote": "Justus said work with the Economic Development Corporation and community was underway on possible solutions.",
+      "doesNotEstablish": [
+        "formal partnership",
+        "project adoption",
+        "the outcome of preservation efforts",
+        "endorsement of every KC Town Hall activity"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-COUNCIL-ROSTER-2018",
+      "title": "KCMOre Fall and Winter 2018 City Council roster",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/12/636943889997730000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, KCMOre Fall and Winter 2018 Council roster.",
+      "publicNote": "Official city publication identifying Quinton Lucas and Jolie Justus as members of the City Council during the 2015-2019 Council term.",
+      "doesNotEstablish": [
+        "control of a social account",
+        "authorship of a particular post",
+        "engagement with KC Town Hall",
+        "project adoption or endorsement"
+      ]
+    },
+    {
+      "id": "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS",
+      "title": "Kansas City Council Business Session membership terms",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://clerk.kcmo.gov/DepartmentDetail.aspx?GUID=A7D65019-C389-4A3D-BDBA-ED3307EC90CD&ID=45591&Search=",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Business Session membership record, accessed July 15, 2026.",
+      "publicNote": "The official membership record lists Melissa Robinson as a Councilmember from July 19, 2019, through July 31, 2023, and in the following term.",
+      "doesNotEstablish": [
+        "control of @Robinson4kc",
+        "authorship of a particular post",
+        "engagement with KC Town Hall",
+        "project adoption, partnership, or endorsement"
       ]
     },
     {
@@ -1343,64 +1362,6 @@
       ]
     },
     {
-      "id": "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
-      "status": "confirmed-with-boundary",
-      "projections": [
-        {
-          "key": "case-study",
-          "text": "The project's public account also documented a wider stewardship arc: participatory restoration communication alongside neighborhood tire-removal work that drew public acknowledgment from civic and environmental partners.",
-          "status": "active",
-          "citationRequired": true,
-          "surfaces": [
-            "/work/kc-town-hall"
-          ]
-        }
-      ],
-      "evidence": [
-        {
-          "sourceId": "SRC-KCTH-PINNED-2018",
-          "relationship": "direct-support",
-          "supports": [
-            "participatory restoration framing"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-          "relationship": "corroborating",
-          "supports": [
-            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-          "relationship": "corroborating",
-          "supports": [
-            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019",
-          "relationship": "corroborating",
-          "supports": [
-            "external public acknowledgment of neighborhood stewardship or redevelopment communication"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        }
-      ],
-      "boundaries": [
-        "Do not publish historical phone numbers or addresses.",
-        "Keep account authorship and operational credit collective unless separately established.",
-        "Do not confuse social acknowledgment with the municipal funding record."
-      ]
-    },
-    {
       "id": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -1502,6 +1463,78 @@
         "This is Jamie's approved first-party professional account, not an independent municipal or collaborator attribution.",
         "Co-leadership does not imply sole ownership of collective project work.",
         "This claim is separate from the municipal records and does not establish that Jamie caused the Board or Council actions."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "KC Town Hall used its shared public account as an operating surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022. Public repost lists show seven appearances by three then-sitting Council-member accounts, and two sitting members authored direct responses in a 2019 neighborhood-business exchange.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "100 records in the recurring tire-service workflow",
+            "seven public-reposter appearances from three then-sitting Council-member accounts",
+            "two direct responses authored by sitting Kansas City Council members"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
+          "supports": [
+            "direct quote-post response to @KCTownHall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+          "relationship": "direct-support",
+          "supports": [
+            "direct public reply to @KCTownHall"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-COUNCIL-ROSTER-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "Quinton Lucas as Third District At-Large Councilmember",
+            "Jolie Justus as Fourth District Councilmember"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS",
+          "relationship": "corroborating",
+          "supports": [
+            "Melissa Robinson's Council service from July 19, 2019, through July 31, 2023"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account is a shared project identity; it does not assign individual authorship or field work to Jamie.",
+        "One hundred records describe a recurring public workflow, not 100 completed pickups, households, or independently audited service units.",
+        "Public repost lists are a dated lower bound and leave 25 displayed repost identities unresolved.",
+        "Council-member repost-list appearance and direct response establish public interaction, not endorsement, partnership, adoption, policy action, or impact.",
+        "The social record is separate from the municipal funding lifecycle and does not establish receipt, expenditure, construction, or completion."
       ]
     },
     {
@@ -1920,10 +1953,11 @@
         "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
         "SRC-KC-TOWN-HALL-ORDINANCE-240317",
         "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
-        "SRC-KCTH-PINNED-2018",
-        "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-        "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-        "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+        "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+        "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+        "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+        "SRC-KCMO-COUNCIL-ROSTER-2018",
+        "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
       ],
       "occurrences": [
         {
@@ -1946,14 +1980,15 @@
           ]
         },
         {
-          "id": "social-neighborhood-stewardship",
-          "claimId": "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
+          "id": "public-service-interface",
+          "claimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-KCTH-PINNED-2018",
-            "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-            "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-            "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+            "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+            "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+            "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+            "SRC-KCMO-COUNCIL-ROSTER-2018",
+            "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
           ]
         }
       ]

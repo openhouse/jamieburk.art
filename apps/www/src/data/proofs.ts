@@ -468,6 +468,43 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "kc-town-hall-public-service-interface",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-source", "ai-assisted-archive-review"],
+    publicWording:
+      "KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022.",
+    shortWording: "Built a recurring public intake and follow-through surface",
+    detailedPublicWording:
+      "A complete 183-record public-account ledger documents a recurring operating interface and bounded civic traction: seven current public-repost-list appearances by three then-sitting Council-member accounts and two direct responses authored by sitting members.",
+    sourceBasis:
+      "Authenticated full-population review of the public KC Town Hall Posts, Replies, and repost-list surfaces; a 183-record public-safe ledger; two public official responses; and official Council-role records.",
+    sourceNote:
+      "The complete surviving profile population is not a platform export or proof that no earlier post was deleted.",
+    whyItMatters:
+      "Shows public communication functioning as operating infrastructure for resident intake, service coordination, accountable follow-through, and civic response.",
+    guardrail:
+      "Treat the account as collective, the 100 records as workflow evidence rather than completed-service units, and Council interaction as a dated lower bound rather than endorsement, partnership, or impact.",
+    doNotSay: [
+      "Jamie authored every KC Town Hall post",
+      "Jamie alone performed every pickup",
+      "One hundred records equal one hundred completed pickups or households",
+      "Three Council members endorsed KC Town Hall",
+      "The social record proves funding receipt, project completion, or causal impact"
+    ],
+    protectedBoundaries: [
+      "Resident addresses",
+      "Phone numbers",
+      "Direct messages",
+      "Private service records",
+      "Account credentials and analytics"
+    ],
+    surfaces: ["work-card", "case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["resident-intake", "service-coordination", "public-reporting", "implementation"],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "source-backed-team-memory-method",
     status: "careful",
     supportLevel: "moderate",

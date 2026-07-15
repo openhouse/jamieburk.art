@@ -122,6 +122,23 @@ Do not publish historical phone numbers or addresses from social posts. Do not
 use account activity or external replies as proof of funding receipt, project
 completion, individual post authorship, or every reported operating metric.
 
+Do not treat 183 surviving profile items as a platform export or proof against
+prior deletion. Do not turn 100 tire-workflow records into 100 completed
+pickups, 100 households, or an audited service ledger.
+
+Keep account outreach, project-selected reposts, current public repost-list
+appearances, and direct outside-authored responses as separate relationships.
+Do not turn seven public appearances from three then-sitting Council-member
+accounts into three endorsements, formal partnerships, adoption, or a complete
+lifetime engagement census. Twenty-five displayed repost identities remain
+unresolved. Metrics on the 28 reposted external statuses belong to their source
+posts, not KC Town Hall.
+
+The 2021 Kansas City Star investigation supports independent project framing
+and the contract status reported at publication. It does not establish the later
+withdrawal reason, funding receipt or expenditure, construction, completion, or
+Jamie's individual role.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

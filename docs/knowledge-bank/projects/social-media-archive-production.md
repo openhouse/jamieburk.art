@@ -173,22 +173,30 @@ anti-inflation boundaries are in the
 
 ## KC Town Hall
 
-The profile displayed 183 posts at review time. Its pinned 2018 framing
-described participatory restoration of a neighborhood resource and cultural
-center. Later account activity documented neighborhood tire-removal work.
+Authenticated Posts and Replies passes recovered all 183 items displayed by the
+profile: 142 account posts, 13 account replies, and 28 reposts. A second
+traversal exactly matched the complete status-ID set.
 
-Three external interactions add public context:
+One hundred records concern resident tire intake, pickup coordination, result
+reporting, or program continuity. This is a recurring operating pattern, not an
+audited count of pickups or households.
 
-- Council member Melissa Robinson [thanked the project](https://x.com/Robinson4kc/status/1289714535251742726)
-  for work improving community conditions;
-- an environmental partner [acknowledged a large tire delivery](https://x.com/trutheresme/status/1148277187583389703)
-  and connected it to greener communities;
-- mayoral candidate Jolie Justus [described EDC coordination and community participation](https://x.com/joliejustus/status/1122883010582466560).
+All 40 account-authored or reply statuses displaying reposts were audited. The
+70 displayed reposts yielded 45 currently public appearances from 33 distinct
+handles; 25 displayed identities remain unresolved. Seven appearances came from
+three then-sitting Council-member accounts. Separately, two sitting members
+authored direct responses in a 2019 neighborhood-business exchange.
 
-These sources document public engagement and a multi-year stewardship arc.
-They do not replace the municipal record for the funding lifecycle, establish
-project completion, or assign every account post to Jamie. Historical phone
-numbers and addresses were deliberately excluded.
+Those findings keep account outreach, project-selected amplification, public
+repost-list appearance, direct outside-authored response, and endorsement as
+different relationship types. They do not replace the municipal funding
+lifecycle, establish project completion, or assign every account post or field
+operation to Jamie. Historical phone numbers and addresses were deliberately
+excluded.
+
+The full method, URL inventory, source-role distinctions, public repost audit,
+and anti-inflation boundaries are in the
+[KC Town Hall full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
 
 ## KC Spaces Fund
 

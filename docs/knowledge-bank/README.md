@@ -97,6 +97,14 @@ for the official sequence from CCED Board recommendation through Council
 acceptance, negotiation authority, and appropriation, followed by
 non-disbursement, withdrawal, and return of the full unused amount.
 
+See the
+[KC Town Hall full social-population production note](intake/2026-07-14-kctownhall-full-population-social-corpus.md)
+and its
+[183-row public-safe ledger](data/kctownhall-public-post-ledger.json)
+for the complete surviving account census, all posted URLs, resident-service
+workflow, public repost-list audit, Council-role checks, and collective-credit
+boundaries.
+
 See
 [projects/archive-production-2026-07-14.md](projects/archive-production-2026-07-14.md)
 for the public-safe production record from the Jamie Projects History, CRS,

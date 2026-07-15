@@ -216,8 +216,8 @@
       "inquiryId": "INQ-KC-TOWN-HALL-COUNCIL-FUNDING-2026",
       "proofId": "kc-town-hall-public-benefit-documentation",
       "pageId": "kc-town-hall",
-      "approvedMdxSha256": "7e30fad345948a716c52a5032acfbbd2f2f83f590c7b75a5a71229f267b58f0a",
-      "approvedContentSha256": "ec8c67a2650e7719a09408dbc14652163dc20cce44d681fc37c668e08256d693",
+      "approvedMdxSha256": "859205fe5cd3d7aa538a4706d52ff2476657565336a8157b1bffc8a4fb502bce",
+      "approvedContentSha256": "bc3d31b930a1eeb46b487e1787313804ddda257483ec979d732bf9332cbbdee9",
       "contributionSourceId": "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
       "contributionObservationId": "OBS-KC-TOWN-HALL-JAMIE-PLANNING-RESUME",
       "transitionObservationId": "OBS-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-MEMORY",
@@ -455,7 +455,7 @@
         "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT",
         "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY",
         "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT",
-        "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP"
+        "CLM-KCTH-SOCIAL-SERVICE-REPORTING"
       ],
       "heldClaimId": "CLM-KCSF-SOCIAL-GRANTEE-HIGHLIGHTS",
       "requiredAccountHandles": [
@@ -469,7 +469,7 @@
         ["callnyc", "CLM-CALLNYC-COUNCIL-SOCIAL-ENGAGEMENT"],
         ["fair-rent-nyc", "CLM-NYCAC-SOCIAL-IDENTITY-CONTINUITY"],
         ["wowlist", "CLM-WOWLIST-SOCIAL-PROVENANCE-AND-SUPPORT"],
-        ["kc-town-hall", "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP"]
+        ["kc-town-hall", "CLM-KCTH-SOCIAL-SERVICE-REPORTING"]
       ]
     },
     "callNycFullPopulation": {
@@ -553,6 +553,72 @@
       ],
       "conveningContextSourceId": "SRC-WOWLIST-ALLIED-MEDIA-CONFERENCE-2015",
       "historicalProductScopeSourceId": "SRC-WOWLIST-TRADEMARK-RECORD"
+    },
+    "kcTownHallFullPopulation": {
+      "reviewedAt": "2026-07-15",
+      "ledgerPath": "docs/knowledge-bank/data/kctownhall-public-post-ledger.json",
+      "documentationPath": "docs/knowledge-bank/intake/2026-07-14-kctownhall-full-population-social-corpus.md",
+      "expectedProfileCount": 183,
+      "expectedPostsTabCount": 170,
+      "expectedRepliesRouteArticles": 188,
+      "expectedRepliesTabCount": 183,
+      "expectedUniqueItems": 183,
+      "expectedAccountPosts": 142,
+      "expectedAccountReplies": 13,
+      "expectedAuthoredStatuses": 155,
+      "expectedReposts": 28,
+      "expectedRepostSourceAccounts": 16,
+      "expectedExcludedContextItems": 5,
+      "expectedUnresolvedSlots": 0,
+      "expectedTireWorkflowRecords": 100,
+      "expectedTireWorkflowPosts": 96,
+      "expectedTireWorkflowReplies": 3,
+      "expectedTireWorkflowReposts": 1,
+      "expectedCivicInformationRecords": 26,
+      "expectedNeighborhoodCultureRecords": 27,
+      "expectedDevelopmentRecords": 16,
+      "expectedRacialJusticeRecords": 12,
+      "expectedPandemicResourceRecords": 2,
+      "expectedExternalHandles": 35,
+      "expectedQuintonLucasMentions": 26,
+      "expectedMelissaRobinsonMentions": 23,
+      "expectedCityPoliticalFigureReposts": 9,
+      "expectedDirectCouncilResponses": 2,
+      "expectedDirectCouncilAccounts": 2,
+      "expectedShortUrlOccurrences": 133,
+      "expectedUniqueShortUrls": 31,
+      "expectedResolvedDestinations": 20,
+      "expectedProjectOrLineageDestinations": 9,
+      "expectedExternalDestinations": 11,
+      "expectedAuthoredStatusesWithReaction": 77,
+      "expectedAuthoredVisibleReplies": 22,
+      "expectedAuthoredVisibleReposts": 70,
+      "expectedAuthoredVisibleLikes": 174,
+      "expectedRepostBearingStatuses": 40,
+      "expectedDisplayedReposts": 70,
+      "expectedPublicReposterAppearances": 45,
+      "expectedDistinctPublicReposters": 33,
+      "expectedUnassignedReposts": 25,
+      "expectedCouncilReposterAppearances": 7,
+      "expectedCouncilReposterAccounts": 3,
+      "expectedSourceCount": 12,
+      "expectedObservationCount": 10,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 3,
+      "activeClaimId": "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
+      "heldClaimIds": [
+        "CLM-KCTH-COMPLETE-SOCIAL-POPULATION",
+        "CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR",
+        "CLM-KCTH-PUBLIC-IDENTITY-MISSION-BREADTH",
+        "CLM-KCTH-VISIBLE-TRACTION-SNAPSHOT"
+      ],
+      "auditSourceId": "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "officialRoleSourceIds": [
+        "SRC-KCMO-COUNCIL-ROSTER-2018",
+        "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
+      ],
+      "independentCoverageSourceId": "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021",
+      "proofId": "kc-town-hall-public-service-interface"
     },
     "agencyGraph": {
       "expectedEntityCount": 31,
@@ -692,6 +758,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 38 profile-reported objects, 35 posted URLs, historical workflows, source roles, account-owned engagement, bounded external adoption, authorship limits, and selective projection remain complete, reproducible, and non-inflationary."
+    },
+    {
+      "id": "KB-EVAL-KCTH-FULL-POPULATION",
+      "label": "KC Town Hall full-population archival production",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All 183 surviving profile objects, every posted URL, all repost-bearing account statuses, stakeholder relationship types, service-workflow classifications, official-at-date checks, privacy boundaries, and selective projection remain complete, reproducible, and non-inflationary."
     }
   ],
   "hillClimb": {

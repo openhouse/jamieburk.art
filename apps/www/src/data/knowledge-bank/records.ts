@@ -4,6 +4,7 @@ import { callNycSocialPopulationJuly2026 } from "./callnyc-social-population-202
 import { googleDriveProductionJuly2026 } from "./google-drive-production-2026-07.ts";
 import { historicalKnowledge } from "./historical-knowledge.ts";
 import { kcTownHallCouncilFunding } from "./kc-town-hall-council-funding.ts";
+import { kcTownHallSocialCorpus } from "./kctownhall-social-corpus.ts";
 import { nycacPressArchive } from "./nycac-press-archive.ts";
 import { nycacImplementationEvidence } from "./nycac-implementation-evidence.ts";
 import { nycacInstitutionalCapacity } from "./nycac-institutional-capacity.ts";
@@ -41,6 +42,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.intakeItems,
     ...wowListSocialPopulationJuly2026.intakeItems,
     ...kcTownHallCouncilFunding.intakeItems,
+    ...kcTownHallSocialCorpus.intakeItems,
     ...nycacImplementationEvidence.intakeItems,
     ...nycacInstitutionalCapacity.intakeItems,
     ...nycacSourceExpansion.intakeItems,
@@ -72,6 +74,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.observations,
     ...wowListSocialPopulationJuly2026.observations,
     ...kcTownHallCouncilFunding.observations,
+    ...kcTownHallSocialCorpus.observations,
     ...nycacImplementationEvidence.observations,
     ...nycacInstitutionalCapacity.observations,
     ...nycacSourceExpansion.observations,
@@ -207,6 +210,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.sources,
     ...wowListSocialPopulationJuly2026.sources,
     ...kcTownHallCouncilFunding.sources,
+    ...kcTownHallSocialCorpus.sources,
     ...nycacImplementationEvidence.sources,
     ...nycacSourceExpansion.sources,
     ...nycacSourceExpansionII.sources,
@@ -311,6 +315,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.claims,
     ...wowListSocialPopulationJuly2026.claims,
     ...kcTownHallCouncilFunding.claims,
+    ...kcTownHallSocialCorpus.claims,
     ...nycacImplementationEvidence.claims,
     ...nycacInstitutionalCapacity.claims,
     ...nycacSourceExpansion.claims,
@@ -362,6 +367,7 @@ const knowledgeBankInput = {
     ...socialMediaProductionJuly2026.researchInquiries,
     ...wowListSocialPopulationJuly2026.researchInquiries,
     ...kcTownHallCouncilFunding.researchInquiries,
+    ...kcTownHallSocialCorpus.researchInquiries,
     ...nycacInstitutionalCapacity.researchInquiries,
     ...nycacSourceExpansion.researchInquiries,
     ...nycacSourceExpansionII.researchInquiries,
@@ -437,10 +443,11 @@ const knowledgeBankInput = {
       "SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17",
       "SRC-KC-TOWN-HALL-ORDINANCE-240317",
       "SRC-JAMIE-RESUME-KC-TOWN-HALL-2026",
-      "SRC-KCTH-PINNED-2018",
-      "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-      "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-      "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+      "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+      "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+      "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+      "SRC-KCMO-COUNCIL-ROSTER-2018",
+      "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
     ],
     occurrences: [
       {
@@ -461,10 +468,16 @@ const knowledgeBankInput = {
         sourceIds: ["SRC-JAMIE-RESUME-KC-TOWN-HALL-2026"]
       },
       {
-        id: "social-neighborhood-stewardship",
-        claimId: "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP",
+        id: "public-service-interface",
+        claimId: "CLM-KCTH-SOCIAL-SERVICE-REPORTING",
         projection: "case-study",
-        sourceIds: ["SRC-KCTH-PINNED-2018", "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020", "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019", "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"]
+        sourceIds: [
+          "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+          "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+          "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+          "SRC-KCMO-COUNCIL-ROSTER-2018",
+          "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
+        ]
       }
     ]
   }, {

@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { callNycSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/callnyc-social-population-2026-07.ts";
+import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents, socialMediaProductionJuly2026 } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { wowListSocialPopulationJuly2026 } from "../../apps/www/src/data/knowledge-bank/wowlist-social-population-2026-07.ts";
@@ -76,10 +77,11 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const kcTownHallPage = knowledgeBank.pages.find((page) => page.id === kcTownHall.pageId);
   const kcTownHallProofSourceIds = [...kcTownHall.sourceIds, kcTownHall.contributionSourceId];
   const kcTownHallSocialSourceIds = [
-    "SRC-KCTH-PINNED-2018",
-    "SRC-KCTH-SOCIAL-MELISSA-ROBINSON-2020",
-    "SRC-KCTH-SOCIAL-COMMUNITY-PARTNER-2019",
-    "SRC-KCTH-SOCIAL-JOLIE-JUSTUS-2019"
+    "SRC-X-KCTH-FULL-POPULATION-AUDIT-2026",
+    "SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29",
+    "SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29",
+    "SRC-KCMO-COUNCIL-ROSTER-2018",
+    "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"
   ];
   const kcTownHallPageSourceIds = [...kcTownHallProofSourceIds, ...kcTownHallSocialSourceIds];
   const kcTownHallMdx = overrides.kcTownHallMdx ?? readFileSync(
@@ -338,8 +340,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
           sameOrderedValues(occurrence.sourceIds, [kcTownHall.contributionSourceId])
       ) &&
       kcTownHallPage.occurrences.some((occurrence) =>
-        occurrence.id === "social-neighborhood-stewardship" &&
-          occurrence.claimId === "CLM-KCTH-SOCIAL-NEIGHBORHOOD-STEWARDSHIP" &&
+        occurrence.id === "public-service-interface" &&
+          occurrence.claimId === "CLM-KCTH-SOCIAL-SERVICE-REPORTING" &&
           occurrence.projection === "case-study" &&
           sameOrderedValues(occurrence.sourceIds, kcTownHallSocialSourceIds)
       ) &&
@@ -1396,9 +1398,331 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       wowListManifest.publicSafety.containsPrivateSessionData === false &&
       !/\/Users\/|\/Volumes\/|\/private\/tmp|cookie|auth token|session token/i.test(wowListFullArchiveText)
   );
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries];
+  const kcthFull = suite.pilot.kcTownHallFullPopulation;
+  const kcthLedgerPath = path.join(repoRoot, kcthFull.ledgerPath);
+  const kcthDocumentationPath = path.join(repoRoot, kcthFull.documentationPath);
+  const kcthDocumentation = existsSync(kcthDocumentationPath)
+    ? readFileSync(kcthDocumentationPath, "utf8")
+    : "";
+  const kcthLedger = overrides.kcTownHallLedger ?? (existsSync(kcthLedgerPath)
+    ? JSON.parse(readFileSync(kcthLedgerPath, "utf8"))
+    : null);
+  const kcthRecords = kcthLedger?.records ?? [];
+  const kcthRecordIds = kcthRecords.map((record) => record.statusId);
+  const kcthRecordUrls = kcthRecords.map((record) => record.statusUrl);
+  const kcthRelationshipCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRecords, (record) => record.relationship))
+      .map(([relationship, records]) => [relationship, records.length])
+  );
+  const kcthAuthoredRecords = kcthRecords.filter((record) => record.relationship !== "repost");
+  const kcthRepostRecords = kcthRecords.filter((record) => record.relationship === "repost");
+  const kcthRepostSourceHandles = new Set(kcthRepostRecords.map((record) => record.statusOwner.toLowerCase()));
+  const kcthExternalHandles = new Set(
+    kcthAuthoredRecords.flatMap((record) => record.publicMentions ?? [])
+      .filter((handle) => handle.toLowerCase() !== "@kctownhall")
+      .map((handle) => handle.toLowerCase())
+  );
+  const countKcthMention = (handle) => kcthAuthoredRecords.filter((record) =>
+    record.publicMentions.some((mention) => mention.toLowerCase() === handle.toLowerCase())
+  ).length;
+  const kcthLinks = kcthRecords.flatMap((record) => record.postedUrls ?? []);
+  const kcthUniqueShortUrls = new Set(kcthLinks.map((link) => link.shortUrl));
+  const kcthUniqueDestinations = new Set(kcthLinks.map((link) => link.resolvedUrl).filter(Boolean));
+  const isKcthProjectDestination = (url) =>
+    /kctownhall\.com|facebook\.com\/KCTownHall|youtube\.com\/watch\?v=(PmLjLyOpS9I|onCKU-TuPhc)/i.test(url);
+  const kcthProjectDestinations = new Set([...kcthUniqueDestinations].filter(isKcthProjectDestination));
+  const kcthExternalDestinations = new Set([...kcthUniqueDestinations].filter((url) => !isKcthProjectDestination(url)));
+  const kcthThemeCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRecords, (record) => record.primaryTheme))
+      .map(([theme, records]) => [theme, records.length])
+  );
+  const kcthTireRecords = kcthRecords.filter(
+    (record) => record.primaryTheme === "resident-tire-intake-and-operations"
+  );
+  const sumKcthMetrics = (records) => records.reduce(
+    (aggregate, record) => {
+      const metrics = record.currentVisibleMetrics;
+      aggregate.statuses += 1;
+      aggregate.statusesWithVisibleReaction += metrics.replies + metrics.reposts + metrics.likes > 0 ? 1 : 0;
+      aggregate.replies += metrics.replies;
+      aggregate.reposts += metrics.reposts;
+      aggregate.likes += metrics.likes;
+      return aggregate;
+    },
+    { statuses: 0, statusesWithVisibleReaction: 0, replies: 0, reposts: 0, likes: 0 }
+  );
+  const kcthAuthoredReactionSnapshot = sumKcthMetrics(kcthAuthoredRecords);
+  const kcthRepostReactionSnapshot = sumKcthMetrics(kcthRepostRecords);
+  const kcthDirectResponseRecords = kcthRecords.filter((record) =>
+    record.outsideAuthoredInteraction?.targetAccount?.toLowerCase() === "@kctownhall" &&
+      ["quote-post", "reply"].includes(record.outsideAuthoredInteraction?.interactionType) &&
+      record.outsideAuthoredInteraction?.stakeholderRole === "sitting-kansas-city-council-member" &&
+      record.outsideAuthoredInteraction?.roleSourceId === "SRC-KCMO-COUNCIL-ROSTER-2018"
+  );
+  const kcthCityPoliticalHandles = new Set(["@quintonlucaskc", "@robinson4kc", "@joliejustus"]);
+  const kcthCityPoliticalReposts = kcthRepostRecords.filter((record) =>
+    kcthCityPoliticalHandles.has(record.statusOwner.toLowerCase())
+  );
+  const kcthStoredThemeCounts = Object.fromEntries(
+    kcthLedger?.aggregateFindings?.primaryThemeCounts?.map(({ value, count }) => [value, count]) ?? []
+  );
+  const kcthStoredRepostSourceCounts = Object.fromEntries(
+    kcthLedger?.aggregateFindings?.repostNetwork?.sourceAccounts?.map(({ value, count }) => [value.toLowerCase(), count]) ?? []
+  );
+  const kcthRepostSourceCounts = Object.fromEntries(
+    Object.entries(Object.groupBy(kcthRepostRecords, (record) => record.statusOwner.toLowerCase()))
+      .map(([handle, records]) => [handle, records.length])
+  );
+  const equalCountMaps = (left, right) => {
+    const keys = new Set([...Object.keys(left), ...Object.keys(right)]);
+    return [...keys].every((key) => left[key] === right[key]);
+  };
+  const equalStringSets = (left, right) =>
+    left.size === right.size && [...left].every((value) => right.has(value));
+  const kcthTireHashtagOccurrences = kcthTireRecords.reduce(
+    (total, record) => total + record.hashtags.filter((hashtag) => hashtag.toLowerCase() === "#tiredoftires").length,
+    0
+  );
+  const kcthTireHashtagBearingRecords = kcthTireRecords.filter((record) =>
+    record.hashtags.some((hashtag) => hashtag.toLowerCase() === "#tiredoftires")
+  ).length;
+  const kcthReposterRows = kcthLedger?.publicReposterAudit ?? [];
+  const kcthPublicReposterHandles = kcthReposterRows.flatMap((item) => item.publicReposterHandles);
+  const kcthDistinctPublicReposters = new Set(kcthPublicReposterHandles.map((handle) => handle.toLowerCase()));
+  const kcthCouncilReposterAppearances = kcthLedger?.councilMemberPublicReposterAppearances ?? [];
+  const kcthDistinctCouncilReposters = new Set(kcthCouncilReposterAppearances.map((item) => item.handle.toLowerCase()));
+  const kcthCouncilRoleSourceByHandle = new Map([
+    ["@quintonlucaskc", "SRC-KCMO-COUNCIL-ROSTER-2018"],
+    ["@joliejustus", "SRC-KCMO-COUNCIL-ROSTER-2018"],
+    ["@robinson4kc", "SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS"]
+  ]);
+  const kcthAggregateFindingsRecompute = Boolean(
+    kcthLedger &&
+      equalCountMaps(kcthStoredThemeCounts, kcthThemeCounts) &&
+      kcthLedger.aggregateFindings.tireWorkflow.classifiedRecords === kcthTireRecords.length &&
+      kcthLedger.aggregateFindings.tireWorkflow.hashtagBearingRecords === kcthTireHashtagBearingRecords &&
+      kcthLedger.aggregateFindings.tireWorkflow.hashtagOccurrences === kcthTireHashtagOccurrences &&
+      kcthLedger.aggregateFindings.tireWorkflow.accountPosts === kcthTireRecords.filter((record) => record.relationship === "account-post").length &&
+      kcthLedger.aggregateFindings.tireWorkflow.accountReplies === kcthTireRecords.filter((record) => record.relationship === "account-reply").length &&
+      kcthLedger.aggregateFindings.tireWorkflow.reposts === kcthTireRecords.filter((record) => record.relationship === "repost").length &&
+      kcthLedger.aggregateFindings.repostNetwork.statuses === kcthRepostRecords.length &&
+      kcthLedger.aggregateFindings.repostNetwork.distinctSourceAccounts === kcthRepostSourceHandles.size &&
+      equalCountMaps(kcthStoredRepostSourceCounts, kcthRepostSourceCounts) &&
+      kcthLedger.aggregateFindings.repostNetwork.cityCouncilFigureSourceStatuses === kcthCityPoliticalReposts.length &&
+      equalStringSets(
+        new Set(kcthLedger.aggregateFindings.repostNetwork.cityCouncilFigureSourceAccounts.map((handle) => handle.toLowerCase())),
+        new Set(kcthCityPoliticalReposts.map((record) => record.statusOwner.toLowerCase()))
+      ) &&
+      kcthLedger.aggregateFindings.postedLinks.occurrences === kcthLinks.length &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueShortUrls === kcthUniqueShortUrls.size &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueResolvedDestinations === kcthUniqueDestinations.size &&
+      kcthLedger.aggregateFindings.postedLinks.uniqueProjectOrLineageDestinations === kcthProjectDestinations.size &&
+      equalStringSets(new Set(kcthLedger.aggregateFindings.postedLinks.resolvedDestinations), kcthUniqueDestinations) &&
+      JSON.stringify(kcthLedger.aggregateFindings.accountAuthoredVisibleReactionSnapshot) === JSON.stringify(kcthAuthoredReactionSnapshot) &&
+      JSON.stringify(kcthLedger.aggregateFindings.repostSourceVisibleReactionSnapshot) === JSON.stringify(kcthRepostReactionSnapshot) &&
+      /Metrics on reposted statuses belong to their source statuses/i.test(kcthLedger.aggregateFindings.metricBoundary)
+  );
+  const kcthFullSources = kcTownHallSocialCorpus.sources.map((source) => sourceById.get(source.id));
+  const kcthFullClaims = kcTownHallSocialCorpus.claims.map((claim) => claimById.get(claim.id));
+  const kcthFullInquiries = kcTownHallSocialCorpus.researchInquiries.map((inquiry) => inquiryById.get(inquiry.id));
+  const kcthActiveClaim = claimById.get(kcthFull.activeClaimId);
+  const kcthHeldClaims = kcthFull.heldClaimIds.map((id) => claimById.get(id));
+  const kcthAuditSource = sourceById.get(kcthFull.auditSourceId);
+  const kcthIndependentCoverageSource = sourceById.get(kcthFull.independentCoverageSourceId);
+  const kcthFullInquiry = inquiryById.get("INQ-KCTH-FULL-POPULATION-2026");
+  const kcthTractionInquiry = inquiryById.get("INQ-KCTH-HISTORICAL-TRACTION-AND-SERVICE-OUTCOMES");
+  const kcthAuthorshipInquiry = inquiryById.get("INQ-KCTH-SHARED-ACCOUNT-AUTHORSHIP");
+  const kcthCouncilResponseClaim = claimById.get("CLM-KCTH-COUNCIL-MEMBER-RESPONSE-FLOOR");
+  const kcthProof = knowledgeBank.proofCoverageTargets.find((target) => target.proofId === kcthFull.proofId);
+  const kcthPage = knowledgeBank.pages.find((page) => page.id === "kc-town-hall");
+  const kcthOccurrence = kcthPage?.occurrences.find((occurrence) => occurrence.id === "public-service-interface");
+  const kcthLedgerText = kcthLedger ? JSON.stringify(kcthLedger) : "";
+  const kcthFullPopulationComplete = Boolean(
+    kcthLedger &&
+      kcthLedger.schemaVersion === 2 &&
+      kcthLedger.account === "@KCTownHall" &&
+      kcthLedger.observedAt === "2026-07-14" &&
+      kcthLedger.population.displayedProfileCount === kcthFull.expectedProfileCount &&
+      kcthLedger.population.postsRouteUnique === kcthFull.expectedPostsTabCount &&
+      kcthLedger.population.repliesRouteArticles === kcthFull.expectedRepliesRouteArticles &&
+      kcthLedger.population.attributableRecords === kcthFull.expectedRepliesTabCount &&
+      kcthLedger.population.excludedConversationContextArticles === kcthFull.expectedExcludedContextItems &&
+      kcthLedger.population.unresolvedProfileCountSlots === kcthFull.expectedUnresolvedSlots &&
+      kcthLedger.population.relationshipCounts.accountPosts === kcthFull.expectedAccountPosts &&
+      kcthLedger.population.relationshipCounts.accountReplies === kcthFull.expectedAccountReplies &&
+      kcthLedger.population.relationshipCounts.reposts === kcthFull.expectedReposts &&
+      /complete recovery of the surviving/i.test(kcthLedger.population.completenessStatement) &&
+      /not a native X export/i.test(kcthLedger.population.completenessStatement) &&
+      /No credential, cookie, direct message, private analytics/i.test(kcthLedger.method.authenticationBoundary) &&
+      kcthLedger.method.freshVerification.verifiedAt === kcthFull.reviewedAt &&
+      kcthLedger.method.freshVerification.profileCountReconfirmed === kcthFull.expectedProfileCount &&
+      kcthLedger.method.freshVerification.postsRouteUnique === kcthFull.expectedPostsTabCount &&
+      kcthLedger.method.freshVerification.repliesRouteArticles === kcthFull.expectedRepliesRouteArticles &&
+      kcthLedger.method.freshVerification.attributableRecords === kcthFull.expectedUniqueItems &&
+      kcthLedger.method.freshVerification.replyOnlyAccountRecords === kcthFull.expectedAccountReplies &&
+      kcthLedger.method.freshVerification.excludedConversationContextArticles === kcthFull.expectedExcludedContextItems &&
+      kcthLedger.method.freshVerification.exactStatusIdMatchToJuly14Ledger === true &&
+      kcthLedger.method.freshVerification.missingStatusIds.length === 0 &&
+      kcthLedger.method.freshVerification.newStatusIds.length === 0 &&
+      kcthLedger.method.freshVerification.uniqueShortUrlSetMatch === true &&
+      kcthLedger.method.freshVerification.accountOwnedMetricSnapshotMatch === true &&
+      kcthRecords.length === kcthFull.expectedUniqueItems &&
+      new Set(kcthRecordIds).size === kcthFull.expectedUniqueItems &&
+      new Set(kcthRecordUrls).size === kcthFull.expectedUniqueItems &&
+      kcthRecords.every((record) =>
+        /^\d+$/.test(record.statusId) &&
+          record.statusUrl.endsWith(`/status/${record.statusId}`) &&
+          ["account-post", "account-reply", "repost"].includes(record.relationship) &&
+          Array.isArray(record.recoveredRoutes) && record.recoveredRoutes.length &&
+          typeof record.publicSummary === "string" && record.publicSummary.length &&
+          typeof record.contentDigestSha256 === "string" && /^[a-f0-9]{64}$/.test(record.contentDigestSha256) &&
+          !("text" in record) && !("phone" in record) && !("address" in record) &&
+          Array.isArray(record.publicMentions) &&
+          Array.isArray(record.hashtags) &&
+          Array.isArray(record.postedUrls) &&
+          record.postedUrls.every((link) =>
+            /^https?:\/\/t\.co\//.test(link.shortUrl) &&
+              (link.resolvedUrl === null || /^https?:\/\//.test(link.resolvedUrl))
+          ) &&
+          Number.isInteger(record.currentVisibleMetrics?.replies) &&
+          Number.isInteger(record.currentVisibleMetrics?.reposts) &&
+          Number.isInteger(record.currentVisibleMetrics?.likes) &&
+          record.metricOwner === (record.relationship === "repost"
+            ? "source-status-not-kctownhall-repost-action"
+            : "account-authored-status") &&
+          Number.isInteger(record.mediaSignals?.photoCount) &&
+          typeof record.mediaSignals?.hasVideoOrGif === "boolean" &&
+          (!record.outsideAuthoredInteraction || (
+            record.relationship === "repost" &&
+            record.outsideAuthoredInteraction.targetAccount === "@KCTownHall" &&
+            ["quote-post", "reply"].includes(record.outsideAuthoredInteraction.interactionType) &&
+            record.outsideAuthoredInteraction.stakeholderRole === "sitting-kansas-city-council-member" &&
+            record.outsideAuthoredInteraction.roleSourceId === "SRC-KCMO-COUNCIL-ROSTER-2018"
+          ))
+      ) &&
+      kcthAggregateFindingsRecompute &&
+      kcthRelationshipCounts["account-post"] === kcthFull.expectedAccountPosts &&
+      kcthRelationshipCounts["account-reply"] === kcthFull.expectedAccountReplies &&
+      kcthRelationshipCounts.repost === kcthFull.expectedReposts &&
+      kcthAuthoredRecords.length === kcthFull.expectedAuthoredStatuses &&
+      kcthRepostSourceHandles.size === kcthFull.expectedRepostSourceAccounts &&
+      kcthExternalHandles.size === kcthFull.expectedExternalHandles &&
+      countKcthMention("@QuintonLucasKC") === kcthFull.expectedQuintonLucasMentions &&
+      countKcthMention("@Robinson4kc") === kcthFull.expectedMelissaRobinsonMentions &&
+      kcthCityPoliticalReposts.length === kcthFull.expectedCityPoliticalFigureReposts &&
+      kcthDirectResponseRecords.length === kcthFull.expectedDirectCouncilResponses &&
+      new Set(kcthDirectResponseRecords.map((record) => record.statusOwner.toLowerCase())).size === kcthFull.expectedDirectCouncilAccounts &&
+      kcthDirectResponseRecords.every((record) => record.metricOwner === "source-status-not-kctownhall-repost-action") &&
+      kcthLinks.length === kcthFull.expectedShortUrlOccurrences &&
+      kcthUniqueShortUrls.size === kcthFull.expectedUniqueShortUrls &&
+      kcthUniqueDestinations.size === kcthFull.expectedResolvedDestinations &&
+      kcthProjectDestinations.size === kcthFull.expectedProjectOrLineageDestinations &&
+      kcthExternalDestinations.size === kcthFull.expectedExternalDestinations &&
+      kcthThemeCounts["resident-tire-intake-and-operations"] === kcthFull.expectedTireWorkflowRecords &&
+      kcthTireRecords.filter((record) => record.relationship === "account-post").length === kcthFull.expectedTireWorkflowPosts &&
+      kcthTireRecords.filter((record) => record.relationship === "account-reply").length === kcthFull.expectedTireWorkflowReplies &&
+      kcthTireRecords.filter((record) => record.relationship === "repost").length === kcthFull.expectedTireWorkflowReposts &&
+      kcthThemeCounts["civic-information-and-service-routing"] === kcthFull.expectedCivicInformationRecords &&
+      kcthThemeCounts["neighborhood-culture-and-community"] === kcthFull.expectedNeighborhoodCultureRecords &&
+      kcthThemeCounts["town-hall-development-and-participation"] === kcthFull.expectedDevelopmentRecords &&
+      kcthThemeCounts["racial-justice-documentation"] === kcthFull.expectedRacialJusticeRecords &&
+      kcthThemeCounts["pandemic-resource-routing"] === kcthFull.expectedPandemicResourceRecords &&
+      kcthAuthoredReactionSnapshot.statusesWithVisibleReaction === kcthFull.expectedAuthoredStatusesWithReaction &&
+      kcthAuthoredReactionSnapshot.replies === kcthFull.expectedAuthoredVisibleReplies &&
+      kcthAuthoredReactionSnapshot.reposts === kcthFull.expectedAuthoredVisibleReposts &&
+      kcthAuthoredReactionSnapshot.likes === kcthFull.expectedAuthoredVisibleLikes &&
+      kcthReposterRows.length === kcthFull.expectedRepostBearingStatuses &&
+      kcthReposterRows.every((item) =>
+        kcthAuthoredRecords.some((record) => record.statusId === item.statusId) &&
+          item.statusUrl.endsWith(`/status/${item.statusId}`) &&
+          item.displayedReposts === item.publicReposterHandles.length + item.unassignedDisplayedReposts
+      ) &&
+      kcthReposterRows.reduce((sum, item) => sum + item.displayedReposts, 0) === kcthFull.expectedDisplayedReposts &&
+      kcthPublicReposterHandles.length === kcthFull.expectedPublicReposterAppearances &&
+      kcthDistinctPublicReposters.size === kcthFull.expectedDistinctPublicReposters &&
+      kcthReposterRows.reduce((sum, item) => sum + item.unassignedDisplayedReposts, 0) === kcthFull.expectedUnassignedReposts &&
+      kcthCouncilReposterAppearances.length === kcthFull.expectedCouncilReposterAppearances &&
+      kcthDistinctCouncilReposters.size === kcthFull.expectedCouncilReposterAccounts &&
+      kcthCouncilReposterAppearances.every((item) =>
+        kcthReposterRows.some((row) => row.statusId === item.statusId && row.publicReposterHandles.includes(item.handle)) &&
+          item.statusUrl.endsWith(`/status/${item.statusId}`) &&
+          item.roleSourceId === kcthCouncilRoleSourceByHandle.get(item.handle.toLowerCase())
+      ) &&
+      kcthLedger.aggregateFindings.publicReposterAudit.auditedAccountAuthoredStatuses === kcthFull.expectedRepostBearingStatuses &&
+      kcthLedger.aggregateFindings.publicReposterAudit.displayedReposts === kcthFull.expectedDisplayedReposts &&
+      kcthLedger.aggregateFindings.publicReposterAudit.publicIdentityAppearances === kcthFull.expectedPublicReposterAppearances &&
+      kcthLedger.aggregateFindings.publicReposterAudit.distinctPublicHandles === kcthFull.expectedDistinctPublicReposters &&
+      kcthLedger.aggregateFindings.publicReposterAudit.unassignedDisplayedReposts === kcthFull.expectedUnassignedReposts &&
+      kcthLedger.aggregateFindings.publicReposterAudit.councilMemberPublicAppearances === kcthFull.expectedCouncilReposterAppearances &&
+      kcthLedger.aggregateFindings.publicReposterAudit.distinctCouncilMemberAccounts === kcthFull.expectedCouncilReposterAccounts &&
+      /dated lower-bound identity surface/i.test(kcthLedger.aggregateFindings.publicReposterAudit.boundary) &&
+      kcTownHallPopulationAudit.uniqueItemsRecovered === kcthFull.expectedUniqueItems &&
+      kcTownHallPopulationAudit.repliesTabArticlesRecovered === kcthFull.expectedRepliesRouteArticles &&
+      kcTownHallPopulationAudit.freshVerificationExactStatusIdMatch === true &&
+      kcTownHallCorpusFindings.tireWorkflowRecords === kcthFull.expectedTireWorkflowRecords &&
+      kcTownHallCorpusFindings.directCouncilMemberResponseStatuses === kcthFull.expectedDirectCouncilResponses &&
+      kcTownHallCorpusFindings.publicReposterAppearances === kcthFull.expectedPublicReposterAppearances &&
+      kcTownHallCorpusFindings.authoredVisibleLikes === kcthFull.expectedAuthoredVisibleLikes &&
+      kcTownHallSocialCorpus.sources.length === kcthFull.expectedSourceCount &&
+      kcTownHallSocialCorpus.observations.length === kcthFull.expectedObservationCount &&
+      kcTownHallSocialCorpus.claims.length === kcthFull.expectedClaimCount &&
+      kcTownHallSocialCorpus.researchInquiries.length === kcthFull.expectedInquiryCount &&
+      kcthFullSources.every((source) =>
+        source?.visibility === "public" && source.canonicalUrl?.startsWith("https://") && source.supportsGenerally.length && source.doesNotEstablish.length >= 4
+      ) &&
+      kcthFull.officialRoleSourceIds.every((sourceId) => sourceById.get(sourceId)?.kind === "government-record") &&
+      kcthIndependentCoverageSource?.kind === "published-article" &&
+      kcthIndependentCoverageSource.doesNotEstablish.some((boundary) => /withdrawal reason/i.test(boundary)) &&
+      kcthAuditSource?.kind === "research-run" &&
+      kcthAuditSource.canonicalUrl?.includes(kcthFull.ledgerPath) &&
+      kcthActiveClaim?.status === "confirmed-with-boundary" &&
+      kcthActiveClaim.projections.some((projection) =>
+        projection.status === "active" &&
+          projection.surfaces.includes("/work/kc-town-hall") &&
+          /shared public account as an operating surface/i.test(projection.text) &&
+          /100 of 183 surviving records/i.test(projection.text) &&
+          /seven appearances by three then-sitting Council-member accounts/i.test(projection.text) &&
+          /two sitting members authored direct responses/i.test(projection.text) &&
+          !/100 completed pickups|100 households served|endorsed KC Town Hall/i.test(projection.text)
+      ) &&
+      kcthActiveClaim.boundaries.some((boundary) => /shared project identity/i.test(boundary)) &&
+      kcthActiveClaim.antiClaims.some((antiClaim) => /One hundred records equal/i.test(antiClaim)) &&
+      kcthActiveClaim.antiClaims.some((antiClaim) => /endorsed KC Town Hall/i.test(antiClaim)) &&
+      kcthCouncilResponseClaim?.antiClaims.some((antiClaim) => /Nine Council members engaged/i.test(antiClaim)) &&
+      kcthHeldClaims.every((claim) =>
+        claim?.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+      ) &&
+      kcthFullInquiry?.resultStatus === "recovered" &&
+      kcthFullInquiry.limitations.some((limitation) => /does not prove that no record was deleted/i.test(limitation)) &&
+      kcthTractionInquiry?.resultStatus === "partially-recovered" &&
+      kcthTractionInquiry.findings.some((finding) => /only two records meet the direct-response definition/i.test(finding)) &&
+      kcthAuthorshipInquiry?.resultStatus === "inconclusive" &&
+      kcthAuthorshipInquiry.limitations.some((limitation) => /cannot identify an author/i.test(limitation)) &&
+      kcthProof?.status === "source-backed" &&
+      kcthProof.sourceIds.includes(kcthFull.auditSourceId) &&
+      kcthOccurrence?.claimId === kcthFull.activeClaimId &&
+      kcthOccurrence.sourceIds.length === 5 &&
+      kcthPage?.sourceOrder.includes(kcthFull.auditSourceId) &&
+      kcTownHallMdx.includes(kcthFull.activeClaimId) &&
+      kcTownHallMdx.includes("public-service-interface") &&
+      kcthDocumentation.includes("all 183 unique surviving items") &&
+      kcthDocumentation.includes("not a platform export") &&
+      kcthDocumentation.includes("outreach counts, not responses") &&
+      kcthDocumentation.includes("Metrics on the 28 reposted source statuses are excluded") &&
+      kcthDocumentation.includes("not necessarily coverage of KC Town Hall") &&
+      /all 40 repost-bearing/i.test(kcthDocumentation) &&
+      /seven public repost-list appearances/i.test(kcthDocumentation) &&
+      !/(?:\/Users\/|\/Volumes\/|\/private\/tmp\/|GoogleDrive-|Mobile Documents)/.test(kcthLedgerText) &&
+      kcthRecords.every((record) =>
+        !/(?:816[- .])\d{3}[- .]\d{4}/.test(record.publicSummary) &&
+        !/\b\d{3,5}\s+(?:N\.?|S\.?|E\.?|W\.?)?\s*[A-Z][A-Za-z]+(?:\s+(?:St|Street|Ave|Avenue|Rd|Road|Blvd|Boulevard))\b/i.test(record.publicSummary)
+      ) &&
+      publicRegistryText.includes(kcthFull.activeClaimId) &&
+      kcthFull.heldClaimIds.every((id) => !publicRegistryText.includes(id))
+  );
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...secondExpansionObservations, ...institutionalObservations, ...pressObservations, ...kcTownHallObservations, kcTownHallContributionObservation, kcTownHallTransitionObservation, ...archiveObservations, ...googleDriveObservations, ...socialObservations, ...callNycFullObservations, ...wowListFullObservations, ...kcTownHallSocialCorpus.observations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, ...secondExpansionClaims, institutionalClaim, pressClaim, kcTownHallClaim, kcTownHallContributionClaim, ...archiveClaims, ...googleDriveClaims, ...socialClaims, ...callNycFullClaims, ...wowListFullClaims, ...kcthFullClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, ...secondExpansionInquiries, institutionalInquiry, pressInquiry, kcTownHallInquiry, kcTownHallTransitionInquiry, ...archiveInquiries, ...googleDriveInquiries, ...socialInquiries, ...callNycFullInquiries, ...wowListFullInquiries, ...kcthFullInquiries];
   const allExpansionClaims = [...expansionClaims, ...secondExpansionClaims];
   const triangulatedExpansionClaims = allExpansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
@@ -1738,6 +2062,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       evidence: [wowListFullPopulationComplete
         ? `${wowListManifest.population.length} recovered profile objects, ${wowListManifest.postedUrlInventory.length} resolved posted URLs, ${wowListManifest.publicReposterAudit.length} account-owned repost audits, ${wowListDistinctPublicReposters.size} named public reposter accounts, and ${wowListExternalAdoptionIds.size} bounded external-use examples pass completeness, source-role, authorship, traction, and projection checks`
         : "WOW List full-population production is missing a profile object, resolved URL, workflow classification, source role, account-owned engagement boundary, external-use example, governed lifecycle record, or selective projection"]
+    },
+    {
+      criterionId: "KB-EVAL-KCTH-FULL-POPULATION",
+      score: score(kcthFullPopulationComplete),
+      evidence: [kcthFullPopulationComplete
+        ? `All ${kcthFull.expectedProfileCount} surviving profile-count items are recovered through ${kcthRecords.length} unique records; the ledger preserves ${kcthUniqueShortUrls.size} posted short URLs, ${kcthFull.expectedTireWorkflowRecords} tire-workflow records, all ${kcthReposterRows.length} repost-bearing account statuses, ${kcthFull.expectedCouncilReposterAppearances} public appearances by ${kcthDistinctCouncilReposters.size} then-sitting Council-member accounts, and a ${kcthFull.expectedDirectCouncilResponses}-member direct-response floor while keeping outreach, amplification, endorsement, mutable reactions, collective authorship, and private service data bounded`
+        : "KC Town Hall full-population production is missing a population object, fresh reconciliation, URL, source role, tire-workflow classification, complete repost audit, official-at-date check, direct-response derivation, metric-owner boundary, collective-authorship limit, private-data exclusion, held depth, or selective projection"]
     }
   ];
 

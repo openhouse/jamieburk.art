@@ -524,7 +524,10 @@ const workItemsInput = [
     featured: false,
     priority: 6,
     visibility: "public-safe",
-    proofBankIds: ["kc-town-hall-public-benefit-documentation"],
+    proofBankIds: [
+      "kc-town-hall-public-benefit-documentation",
+      "kc-town-hall-public-service-interface"
+    ],
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
@@ -543,7 +546,7 @@ const workItemsInput = [
     careNote:
       "Council appropriation did not become disbursement: the City reported no funds disbursed in 2022 and returned the full unused amount after project withdrawal in 2024. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Kansas City Resolution 190649, Ordinance 190642, the May 17, 2022 CCED project update, and Ordinance 240317.",
+      "Official Kansas City Council and CCED records, the complete public-safe account corpus, Council-role records, approved resume language, and bounded public project context.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "The project later withdrew; the full unused appropriation returned to the fund in 2024.",
     group: "Operating systems for teams",
@@ -552,13 +555,14 @@ const workItemsInput = [
     evidence: [
       "Redevelopment planning",
       "Public-benefit documentation",
+      "Recurring public intake, service coordination, and result reporting",
       "CCED Board recommendation",
       "$490,539 Council appropriation",
       "No reported disbursement; full unused amount returned"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and public-benefit documentation. Official records establish Board recommendation, Council acceptance and appropriation, and the appropriation's later unused return.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation. Official records establish the municipal funding lifecycle; the complete surviving public-account corpus separately documents a collective resident intake, service-coordination, and reporting workflow.",
       open:
         "The legislative records do not establish Jamie's individual causal role in the Board or Council actions or explain why the project withdrew.",
       protected:

@@ -56,6 +56,26 @@ The readings preserve what an article reports or argues; campaign selection
 alone does not establish article accuracy, Jamie's individual role, or policy
 causation.
 
+The KC Town Hall social-corpus audit reconciles all 183 items in the surviving
+profile control: 142 account posts, 13 account replies, and 28 reposts. Its
+public-safe ledger retains classifications, posted destinations, public account
+identities from repost lists, media signals, status identifiers, and mutable
+reaction snapshots without reproducing post text, phone numbers, street
+addresses, session material, messages, or private analytics. See the
+[full-population production note](intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
+KCUR election guidance, Northeast News affordable-housing reporting, Curbed
+housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
+are retained as sources routed by the account. Their appearance establishes
+public circulation and mission context, not coverage of KC Town Hall, project
+authorship, partnership, adoption, or impact.
+
+The separate
+[2021 Kansas City Star investigation](https://www.kansascity.com/news/politics-government/article256377677.html)
+is independent coverage of KC Town Hall's proposed form and the contract status
+reported at publication. It does not establish the later withdrawal reason,
+funding receipt, construction, completion, or Jamie's individual role.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

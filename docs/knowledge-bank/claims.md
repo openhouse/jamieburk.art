@@ -206,6 +206,24 @@ bundle.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-14
 
+## kc-town-hall-public-service-interface - Recurring public service interface
+
+**Status:** Ready
+**Support level:** Strong
+**Evidence class:** Public source / authenticated full-population audit / public-safe archive summary
+**Public wording:** KC Town Hall used its shared public account as a recurring resident-service surface: 100 of 183 surviving records concern resident tire reports, pickup coordination, result reporting, and program continuity from 2019 through 2022.
+
+**Detailed public-safe wording:** A complete 183-record public-account ledger documents a recurring operating interface. All 40 repost-bearing account statuses were audited; seven current public appearances came from three then-sitting Council-member accounts, and two sitting members authored direct responses.
+
+**Where to project:** KC Town Hall work card and case study.
+**Why it matters:** Shows public communication functioning as operating infrastructure for intake, service coordination, accountable follow-through, and civic response.
+**Guardrail:** Treat the account as collective, 100 records as workflow evidence rather than completed-service units, and Council interaction as a dated lower bound rather than endorsement, partnership, or impact.
+
+**Do not say:** Jamie authored every post; Jamie alone performed every pickup; 100 records equal 100 completed pickups or households; three Council members endorsed KC Town Hall; the social record proves funding receipt, project completion, or causal impact.
+**Protected boundaries:** Resident addresses, phone numbers, direct messages, private service records, account credentials, and private analytics stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  

@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import { kcTownHallSocialCorpus } from "../../apps/www/src/data/knowledge-bank/kctownhall-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
 import { nycacPressReadings } from "../../apps/www/src/data/knowledge-bank/nycac-press-readings.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
@@ -15,6 +16,7 @@ const suite = loadKnowledgeEvalSuite();
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const callNycPopulationPath = path.join(repoRoot, suite.pilot.callNycFullPopulation.manifestPath);
 const wowListPopulationPath = path.join(repoRoot, suite.pilot.wowListFullPopulation.manifestPath);
+const kcTownHallLedgerPath = path.join(repoRoot, suite.pilot.kcTownHallFullPopulation.ledgerPath);
 
 function loadCallNycPopulation() {
   return JSON.parse(readFileSync(callNycPopulationPath, "utf8"));
@@ -22,6 +24,10 @@ function loadCallNycPopulation() {
 
 function loadWowListPopulation() {
   return JSON.parse(readFileSync(wowListPopulationPath, "utf8"));
+}
+
+function loadKcTownHallLedger() {
+  return JSON.parse(readFileSync(kcTownHallLedgerPath, "utf8"));
 }
 
 test("knowledge-bank gate invalidates stale holdouts after the eval suite changes", () => {
@@ -1704,6 +1710,106 @@ test("WOW List public manifest rejects raw post-body leakage", () => {
   const result = evaluateKnowledgeBank(suite, { wowListPopulation: manifest });
   assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-WOWLIST-FULL-POPULATION")?.score, 1);
   assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall full-population production passes its deterministic criterion", () => {
+  const result = evaluateKnowledgeBank(suite);
+  const ledger = loadKcTownHallLedger();
+
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 5);
+  assert.equal(ledger.records.length, 183);
+  assert.equal(ledger.method.freshVerification.exactStatusIdMatchToJuly14Ledger, true);
+  assert.equal(ledger.publicReposterAudit.length, 40);
+  assert.equal(ledger.councilMemberPublicReposterAppearances.length, 7);
+});
+
+test("KC Town Hall full-population eval rejects a dropped profile object", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.records.pop();
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+  assert.equal(result.accepted, false);
+});
+
+test("KC Town Hall full-population eval rejects relationship inflation", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.records.find((row) => row.relationship === "repost").relationship = "account-post";
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall source-status metrics cannot become project-account traction", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.records.find((row) => row.relationship === "repost").metricOwner = "account-authored-status";
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall public ledger rejects raw post-body leakage", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.records[0].text = "raw body should not be public";
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall repost audit rejects duplicated public identities", () => {
+  const ledger = loadKcTownHallLedger();
+  const handles = ledger.publicReposterAudit.flatMap((item) => item.publicReposterHandles);
+  const row = ledger.publicReposterAudit.find((item) => item.publicReposterHandles.includes(handles.at(-1)));
+  row.publicReposterHandles[row.publicReposterHandles.indexOf(handles.at(-1))] = handles[0];
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall Council engagement requires official-at-date role evidence", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.councilMemberPublicReposterAppearances[0].roleSourceId = "SRC-KCSTAR-CCED-PROJECT-DELAYS-2021";
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall fresh verification cannot drift from the preserved census", () => {
+  const ledger = loadKcTownHallLedger();
+  ledger.method.freshVerification.exactStatusIdMatchToJuly14Ledger = false;
+  const result = evaluateKnowledgeBank(suite, { kcTownHallLedger: ledger });
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+});
+
+test("KC Town Hall service-workflow records cannot become completed-service units", () => {
+  const claim = knowledgeBank.claims.find((item) => item.id === "CLM-KCTH-SOCIAL-SERVICE-REPORTING");
+  assert.ok(claim?.projections[0]);
+  const originalText = claim.projections[0].text;
+
+  try {
+    claim.projections[0].text = `${originalText} This proves 100 completed pickups.`;
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+  } finally {
+    claim.projections[0].text = originalText;
+  }
+});
+
+test("KC Town Hall independent coverage cannot establish the later withdrawal reason", () => {
+  const source = knowledgeBank.sources.find((item) => item.id === suite.pilot.kcTownHallFullPopulation.independentCoverageSourceId);
+  assert.ok(source);
+  const originalBoundaries = source.doesNotEstablish;
+
+  try {
+    source.doesNotEstablish = source.doesNotEstablish.filter((item) => !/withdrawal reason/i.test(item));
+    const result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-KCTH-FULL-POPULATION")?.score, 1);
+  } finally {
+    source.doesNotEstablish = originalBoundaries;
+  }
+});
+
+test("KC Town Hall reserve claims remain off public surfaces", () => {
+  const heldIds = suite.pilot.kcTownHallFullPopulation.heldClaimIds;
+  const heldClaims = kcTownHallSocialCorpus.claims.filter((claim) => heldIds.includes(claim.id));
+  assert.equal(heldClaims.length, heldIds.length);
+  assert.ok(heldClaims.every((claim) =>
+    claim.projections.every((projection) => projection.status === "hold" && projection.surfaces.length === 0)
+  ));
 });
 
 test("shared-account authorship remains an open inquiry and KC Spaces stays held", () => {

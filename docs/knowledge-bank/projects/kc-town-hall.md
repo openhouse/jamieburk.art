@@ -41,6 +41,29 @@ Agency relations:
 - `REL-KC-TOWN-HALL-WITHDREW-CCED-PROJECT`
 - `REL-KC-COUNCIL-RECLAIMED-TOWN-HALL-APPROPRIATION`
 
+## Public Service Interface
+
+The complete surviving [@KCTownHall](https://x.com/KCTownHall) population
+contains 183 records: 142 account posts, 13 account replies, and 28 reposts.
+One hundred records concern resident tire reports, pickup coordination, result
+reporting, and program continuity. That is evidence of a recurring public
+operating interface, not 100 completed pickups, 100 households, or an audited
+service ledger.
+
+A fresh July 15 traversal exactly matched the 183 status IDs preserved on July
+14. All 40 account-authored or reply statuses displaying reposts were also
+audited. Their 70 displayed reposts yielded 45 currently public account
+appearances from 33 distinct handles; 25 identities remain unresolved.
+
+Seven appearances came from three then-sitting Council-member accounts. Two
+sitting Council members also authored direct responses in an April 2019
+neighborhood-business exchange. These are bounded public-interaction findings,
+not endorsement, partnership, adoption, or impact.
+
+The complete method, source inventory, item-level ledger, privacy boundary, and
+composition decision are in the
+[full-population production note](../intake/2026-07-14-kctownhall-full-population-social-corpus.md).
+
 ## Stewardship Transition Lead
 
 Jamie has supplied a first-party memory that he transitioned project
@@ -56,6 +79,12 @@ Private personal context is not recorded in this repository.
 - `SRC-KC-TOWN-HALL-ORDINANCE-190642`
 - `SRC-KC-TOWN-HALL-CCED-UPDATE-2022-05-17`
 - `SRC-KC-TOWN-HALL-ORDINANCE-240317`
+- `SRC-X-KCTH-FULL-POPULATION-AUDIT-2026`
+- `SRC-X-QUINTON-LUCAS-KCTH-RESPONSE-2019-04-29`
+- `SRC-X-JOLIE-JUSTUS-KCTH-RESPONSE-2019-04-29`
+- `SRC-KCMO-COUNCIL-ROSTER-2018`
+- `SRC-KCMO-COUNCIL-BUSINESS-SESSION-TERMS`
+- `SRC-KCSTAR-CCED-PROJECT-DELAYS-2021`
 
 ## Boundary
 
@@ -65,3 +94,6 @@ must retain the later non-disbursement, withdrawal, and return of the full
 unused amount. The records do not establish why the project withdrew or assign
 individual responsibility for that decision. Private property, financial,
 legal, banking, and stakeholder details remain outside the public repository.
+The social corpus separately does not establish individual post authorship,
+audited service units, Council endorsement, funding receipt, project
+completion, or causal impact.
