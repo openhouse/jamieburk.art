@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 
 import {
+  documentRealizesProjection,
   evaluateKnowledgeBank,
   routeRealizesProjection,
   validateHybridReportCandidate,
@@ -23,6 +24,7 @@ import {
   validateKcTownHallCorpus
 } from "../derive-kctownhall-x-corpus.mjs";
 import {
+  assertCanonicalXStatusUrl,
   assertValidIsoTimestamp,
   buildNycArtCCorpus,
   sanitizeNycArtCRawCapture,
@@ -1164,6 +1166,20 @@ test("NYC Artist Coalition corpus accounts for the full profile population and p
   assert.throws(() =>
     assertValidIsoTimestamp("2025-13-40T14:52:50.000Z", "mutated.postedAt")
   );
+  assert.throws(() =>
+    assertCanonicalXStatusUrl({
+      statusId: "123",
+      statusUrl: "https://example.org/NYCArtC/status/123",
+      sourceHandle: "NYCArtC"
+    })
+  );
+  assert.throws(() =>
+    assertCanonicalXStatusUrl({
+      statusId: "123",
+      statusUrl: "http://x.com/NYCArtC/status/123",
+      sourceHandle: "NYCArtC"
+    })
+  );
 
   const sharedLayer = knowledgeBank.claims.find(
     (item) => item.id === "CLM-NAC-X-SHARED-PUBLIC-OPERATING-LAYER"
@@ -1365,6 +1381,25 @@ test("unknown projects and unclassified mixed-project claims fail closed", () =>
     /project callnyc conflicts with its source assertions/
   );
 
+  const exceptionReassignmentCandidate = structuredClone(knowledgeBank);
+  exceptionReassignmentCandidate.claims.find(
+    (item) => item.id === "CLM-CALLNYC-HACKATHON-DATE-TIME"
+  ).project = "source-backed-team-memory";
+  const exceptionReassignmentResult = evaluateKnowledgeBank(
+    suite,
+    exceptionReassignmentCandidate,
+    2,
+    hybridPass
+  );
+  const exceptionReassignmentCredit = exceptionReassignmentResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(exceptionReassignmentCredit.pass, false);
+  assert.match(
+    exceptionReassignmentCredit.findings.join("\n"),
+    /exception is pinned to callnyc, not source-backed-team-memory/
+  );
+
   const mixedProjectCandidate = structuredClone(knowledgeBank);
   const unclassifiedClaim = structuredClone(
     mixedProjectCandidate.claims.find(
@@ -1486,6 +1521,25 @@ test("every active document projection requires exact realization", () => {
   );
 });
 
+test("document projections cannot be realized by commented-out text", () => {
+  const projection = { text: "A source-backed claim must remain visible." };
+
+  assert.equal(
+    documentRealizesProjection(
+      "<!-- A source-backed claim must remain visible. -->",
+      projection
+    ),
+    false
+  );
+  assert.equal(
+    documentRealizesProjection(
+      "A source-backed claim must remain visible.",
+      projection
+    ),
+    true
+  );
+});
+
 test("citation-required route bindings stay connected to their page occurrence", () => {
   const missingCandidate = structuredClone(knowledgeBank);
   const page = missingCandidate.pages.find(
@@ -1568,6 +1622,24 @@ test("commented claim bindings do not count as route realization", () => {
   assert.equal(
     routeRealizesProjection(
       `/* ${literal} */`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `const active = true; // ${literal}`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `<!-- ${literal} -->`,
       claim,
       projection,
       "/work/technical-operations"

@@ -25,13 +25,15 @@ const projectionSurfaceBindings = JSON.parse(
     "utf8"
   )
 );
-const collectiveProjects = new Set(collectiveCreditPolicy.collectiveProjects);
-const individualProjects = new Set(collectiveCreditPolicy.individualProjects);
+const collectiveProjectEntries = collectiveCreditPolicy.collectiveProjects;
+const individualProjectEntries = collectiveCreditPolicy.individualProjects;
+const collectiveProjects = new Set(collectiveProjectEntries);
+const individualProjects = new Set(individualProjectEntries);
 const mixedProjects = new Map(
   Object.entries(collectiveCreditPolicy.mixedProjects)
 );
-const unassertedIndividualClaims = new Set(
-  collectiveCreditPolicy.unassertedIndividualClaims
+const unassertedIndividualClaims = new Map(
+  Object.entries(collectiveCreditPolicy.unassertedIndividualClaims)
 );
 const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
@@ -121,9 +123,16 @@ function literalAttribute(tag, attribute) {
 
 function executableSource(content) {
   return content
+    .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
     .replace(/\/\*[\s\S]*?\*\//g, "")
-    .replace(/^\s*\/\/.*$/gm, "");
+    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+}
+
+export function documentRealizesProjection(content, projection) {
+  return normalizedText(executableSource(content)).includes(
+    normalizedText(projection.text)
+  );
 }
 
 function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
@@ -186,7 +195,7 @@ function projectionRealizationFindings(bank, claim, projection) {
         findings.push(`${claim.id}/${projection.key} targets missing ${path}`);
         continue;
       }
-      if (!normalizedText(content).includes(normalizedText(projection.text))) {
+      if (!documentRealizesProjection(content, projection)) {
         findings.push(
           `${claim.id}/${projection.key} is not realized on ${surface}`
         );
@@ -244,16 +253,16 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 3) {
-    findings["KB-007"].push("collective-credit policy version must be 3");
+  if (collectiveCreditPolicy.version !== 4) {
+    findings["KB-007"].push("collective-credit policy version must be 4");
   }
   if (projectionSurfaceBindings.version !== 1) {
     findings["KB-009"].push("projection-surface policy version must be 1");
   }
 
   const projectClassifications = [
-    ...collectiveProjects,
-    ...individualProjects,
+    ...collectiveProjectEntries,
+    ...individualProjectEntries,
     ...mixedProjects.keys()
   ];
   if (
@@ -326,7 +335,9 @@ export function evaluateKnowledgeBank(
       )
     ];
     if (assertionProjects.length === 0) {
-      if (!unassertedIndividualClaims.has(claim.id)) findings["KB-007"].push(`${claim.id} lacks a project-classification source assertion`);
+      const exceptionProject = unassertedIndividualClaims.get(claim.id);
+      if (!exceptionProject) findings["KB-007"].push(`${claim.id} lacks a project-classification source assertion`);
+      else if (exceptionProject !== claim.project) findings["KB-007"].push(`${claim.id} exception is pinned to ${exceptionProject}, not ${claim.project}`);
     } else {
       if (!assertionProjects.includes(claim.project)) findings["KB-007"].push(`${claim.id} project ${claim.project} conflicts with its source assertions`);
       if (unassertedIndividualClaims.has(claim.id)) findings["KB-007"].push(`${claim.id} has a stale unasserted-claim exception`);
@@ -380,23 +391,13 @@ export function evaluateKnowledgeBank(
     }
   }
 
-  if (
-    [...unassertedIndividualClaims].some(
-      (id) => typeof id !== "string" || id.trim().length === 0
-    )
-  ) {
+  if ([...unassertedIndividualClaims].some(([id, project]) => typeof id !== "string" || id.trim().length === 0 || typeof project !== "string" || project.trim().length === 0)) {
     findings["KB-007"].push("unasserted individual-claim policy has a blank claim ID");
   }
-  if (
-    unassertedIndividualClaims.size !==
-    collectiveCreditPolicy.unassertedIndividualClaims.length
-  ) {
-    findings["KB-007"].push("unasserted individual-claim policy has duplicate IDs");
-  }
-  for (const id of unassertedIndividualClaims) {
+  for (const [id, expectedProject] of unassertedIndividualClaims) {
     const claim = bank.claims.find((item) => item.id === id);
     if (!claim) findings["KB-007"].push(`unasserted individual-claim policy references missing claim ${id}`);
-    else if (claim.collectiveWork || !individualProjects.has(claim.project)) findings["KB-007"].push(`${id} is not an individual-project exception`);
+    else if (claim.project !== expectedProject || claim.collectiveWork || !individualProjects.has(claim.project)) findings["KB-007"].push(`${id} is not the expected individual-project exception`);
   }
 
   const pageIds = new Set();

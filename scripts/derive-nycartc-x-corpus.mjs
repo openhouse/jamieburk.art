@@ -10,15 +10,37 @@ const defaultCorpusPath =
 const defaultManifestPath =
   "docs/knowledge-bank/corpora/nycartc-x-full-population-2026-07-15.manifest.json";
 const expectedRawCaptureSha256 =
-  "2bf746950a65d12f7e3a8c701bb53f6e18cb17407638cbfc254f97b35c619fd3";
+  "3a7458edf231caf8e0ad0bae41a2e22bb9ea6e96ff923c7c9369698d2f935504";
 
 const publicEmailPattern = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi;
 const publicPhonePattern =
   /(?:\+?1[ .-]+)?(?:\(\d{3}\)[ .-]*|\d{3}[ .-]+)\d{3}[ .-]+\d{4}/g;
-const trackingParameterName =
-  "utm_[a-z0-9_]+|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid|emci|emdi|ceid|can_id|email_referrer|email_subject|link_id";
+function whitespaceTolerantIdentifier(value) {
+  return [...value].map((character) =>
+    /[a-z0-9]/i.test(character) ? `${character}\\s*` : `\\${character}\\s*`
+  ).join("");
+}
+
+const trackingParameterName = [
+  `${whitespaceTolerantIdentifier("utm_")}[a-z0-9](?:\\s*[a-z0-9_])*`,
+  ...[
+    "fbclid",
+    "gclid",
+    "dclid",
+    "msclkid",
+    "mc_cid",
+    "mc_eid",
+    "emci",
+    "emdi",
+    "ceid",
+    "can_id",
+    "email_referrer",
+    "email_subject",
+    "link_id"
+  ].map(whitespaceTolerantIdentifier)
+].join("|");
 const trackingParameterPattern = new RegExp(
-  `([?&])(${trackingParameterName})=(?:\\[tracking value redacted\\]|[^&\\s]+)`,
+  `([?&])\\s*(${trackingParameterName})=(?:\\[tracking value redacted\\]|[^&\\s]+)`,
   "gi"
 );
 const unredactedTrackingParameterPattern = new RegExp(
@@ -261,6 +283,23 @@ export function assertValidIsoTimestamp(value, label = "timestamp") {
   assert.equal(parsed.toISOString(), value, `${label} is not a real calendar date`);
 }
 
+export function assertCanonicalXStatusUrl(item) {
+  const statusUrl = new URL(item.statusUrl);
+  const hostname = statusUrl.hostname.toLowerCase().replace(/^www\./, "");
+  assert.equal(statusUrl.protocol, "https:", `${item.statusId} status URL must use HTTPS`);
+  assert(
+    ["x.com", "twitter.com"].includes(hostname),
+    `${item.statusId} status URL must use an X or Twitter hostname`
+  );
+  const statusPath = statusUrl.pathname.split("/").filter(Boolean);
+  assert.equal(statusPath[1], "status");
+  assert.equal(statusPath[2], item.statusId);
+  assert.equal(
+    statusPath[0].toLowerCase(),
+    item.sourceHandle.replace(/^@/, "").toLowerCase()
+  );
+}
+
 function isProhibitedFieldName(value) {
   const normalized = value.toLowerCase().replace(/[^a-z0-9]/g, "");
   return (
@@ -368,7 +407,7 @@ function sanitizePublicString(value) {
     .replace(
       trackingParameterPattern,
       (_match, separator, key) =>
-        `${separator}${key}=[tracking value redacted]`
+        `${separator}${key.replace(/\s+/g, "")}=[tracking value redacted]`
     )
     .replace(/https?:\/\/[^\s<>"']+/gi, sanitizeUrlToken);
 }
@@ -541,14 +580,7 @@ export function buildNycArtCCorpus(rawCaptureText) {
     assert.match(item.statusId, /^\d+$/);
     assert(["authored", "reposted", "context"].includes(item.kind));
     assertValidIsoTimestamp(item.postedAt, `${item.statusId}.postedAt`);
-    const statusUrl = new URL(item.statusUrl);
-    const statusPath = statusUrl.pathname.split("/").filter(Boolean);
-    assert.equal(statusPath[1], "status");
-    assert.equal(statusPath[2], item.statusId);
-    assert.equal(
-      statusPath[0].toLowerCase(),
-      item.sourceHandle.replace(/^@/, "").toLowerCase()
-    );
+    assertCanonicalXStatusUrl(item);
     if (item.kind === "authored") {
       assert.equal(item.sourceHandle.replace(/^@/, "").toLowerCase(), "nycartc");
     }

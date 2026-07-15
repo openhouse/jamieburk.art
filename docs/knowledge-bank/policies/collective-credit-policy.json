@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "collectiveProjects": [
     "196-sunday-dinner",
     "commercial-rent-data",
@@ -29,12 +29,12 @@
       ]
     }
   },
-  "unassertedIndividualClaims": [
-    "CLM-CALLNYC-HACKATHON-DATE-TIME",
-    "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON",
-    "CLM-CALLNYC-EVENT-BRANDING",
-    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
-    "CLM-CALLNYC-DIGITAL-DISTRICT",
-    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED"
-  ]
+  "unassertedIndividualClaims": {
+    "CLM-CALLNYC-HACKATHON-DATE-TIME": "callnyc",
+    "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON": "callnyc",
+    "CLM-CALLNYC-EVENT-BRANDING": "callnyc",
+    "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS": "callnyc",
+    "CLM-CALLNYC-DIGITAL-DISTRICT": "callnyc",
+    "CLM-CALLNYC-CIVIC-HALL-PAGE-NOT-RECOVERED": "callnyc"
+  }
 }

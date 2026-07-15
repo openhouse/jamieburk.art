@@ -3,7 +3,7 @@
   "account": "@NYCArtC",
   "capturedAt": "2026-07-15T08:42:42.047Z",
   "capturedThrough": "Authenticated replies-inclusive profile traversal, an overlapping sub-viewport verification pass, and monthly authored-search partitions from January 2017 through the profile timeline cutoff",
-  "rawCaptureSha256": "2bf746950a65d12f7e3a8c701bb53f6e18cb17407638cbfc254f97b35c619fd3",
+  "rawCaptureSha256": "3a7458edf231caf8e0ad0bae41a2e22bb9ea6e96ff923c7c9369698d2f935504",
   "rawCaptureArtifact": "source-captures/nycartc-x-browser-extraction-2026-07-15-utc.json",
   "derivationManifest": "nycartc-x-full-population-2026-07-15.manifest.json",
   "derivationScript": "scripts/derive-nycartc-x-corpus.mjs",
@@ -86033,7 +86033,7 @@
         {
           "shortUrl": "https://t.co/F7tVfdGDyE",
           "displayedText": [
-            "https:// special.usps.com/testkits?fbcli d=IwAR06zzpJZ8fx1-beHGnaPbZdMlM4VtbrLbZiAFFuHL4cXlXnt2NwylPByk8 …"
+            "https:// special.usps.com/testkits?fbclid=[tracking value redacted] …"
           ],
           "resolvedDestination": "https://www.aspr.gov/"
         }
@@ -136757,8 +136757,8 @@
       "recoveryPartition": "profile-timeline",
       "kind": "authored",
       "sourceHandle": "NYCArtC",
-      "visibleText": "NYC Artist Coalition\n@NYCArtC\n·\nFeb 10\nAre you a community-based organization in Brooklyn with budget under $100,000? \n\nYou can apply for a 10k micro grant here: \nhttps://\nbrooklyn.org/microgrants/?u\ntm_source=substack&utm_medium=[tracking value redacted]\n…\n\nSign up here if you need help to figure out how to apply: \nhttps://\nbrooklyn-org.zoom.us/webinar/regist\ner/WN_brmdKPWfQWegn0x4ecP9Pw#/registration\n…\nMicrogrants - Brooklyn Org\nFrom brooklyn.org\n46",
-      "textSha256": "c58e5e11a566f48d4ed8ca3ad03477cbd31f0590b3524566fe730e7e78169949",
+      "visibleText": "NYC Artist Coalition\n@NYCArtC\n·\nFeb 10\nAre you a community-based organization in Brooklyn with budget under $100,000? \n\nYou can apply for a 10k micro grant here: \nhttps://\nbrooklyn.org/microgrants/?utm_source=[tracking value redacted]&utm_medium=[tracking value redacted]\n…\n\nSign up here if you need help to figure out how to apply: \nhttps://\nbrooklyn-org.zoom.us/webinar/regist\ner/WN_brmdKPWfQWegn0x4ecP9Pw#/registration\n…\nMicrogrants - Brooklyn Org\nFrom brooklyn.org\n46",
+      "textSha256": "ef64d0947925a385d01c63e480b0495b1ff18c3d63c34cbb219c1c7988be03ec",
       "publicTextOmitted": false,
       "hashtags": [],
       "mentions": [
@@ -136772,7 +136772,7 @@
         {
           "shortUrl": "https://t.co/OCmPKtUmW1",
           "displayedText": [
-            "https:// brooklyn.org/microgrants/?u tm_source=substack&utm_medium=[tracking value redacted] …",
+            "https:// brooklyn.org/microgrants/?utm_source=[tracking value redacted]&utm_medium=[tracking value redacted] …",
             "Microgrants - Brooklyn Org",
             "From brooklyn.org"
           ],

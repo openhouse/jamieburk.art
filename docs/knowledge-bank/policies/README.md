@@ -8,7 +8,8 @@ and enforceable by agents.
   too. Unknown projects, unclassified mixed-project claims, and classification
   mismatches fail closed under `KB-007`. Claim project IDs are cross-checked
   against their atomic source assertions; a small named list preserves older
-  individual CallNYC facts that predate that assertion layer.
+  individual CallNYC facts that predate that assertion layer and pins each
+  exception to its original project.
 - `projection-surface-bindings.json` maps each approved public route to the
   source files that can render knowledge-bank projections there. An active
   route projection must use a literal `Claim` component or
