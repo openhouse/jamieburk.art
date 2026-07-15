@@ -176,10 +176,19 @@ import {
   jamieFacebookPostResearchTasks,
   jamieFacebookPostSources
 } from "./jamie-facebook-posts-2026-07-14.ts";
+import {
+  kcTownHallPhaseOneClaims,
+  kcTownHallPhaseOneDecisions,
+  kcTownHallPhaseOneEntities,
+  kcTownHallPhaseOneIntake,
+  kcTownHallPhaseOneReadings,
+  kcTownHallPhaseOneResearchTasks,
+  kcTownHallPhaseOneSources
+} from "./kctownhall-phase-one-neighborhood-practice-2026-07-15.ts";
 
 const knowledgeBankInput = {
-  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake],
+  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities, ...kcTownHallPhaseOneEntities],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -394,7 +403,8 @@ const knowledgeBankInput = {
     ...wowListFacebookPostSources,
     ...nycArtCFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
-    ...jamieFacebookPostSources
+    ...jamieFacebookPostSources,
+    ...kcTownHallPhaseOneSources
   ],
   claims: [
     {
@@ -580,10 +590,11 @@ const knowledgeBankInput = {
     ...wowListFacebookPostClaims,
     ...nycArtCFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
-    ...jamieFacebookPostClaims
+    ...jamieFacebookPostClaims,
+    ...kcTownHallPhaseOneClaims
   ],
-  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings],
-  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks],
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings],
+  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks, ...kcTownHallPhaseOneResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -597,7 +608,7 @@ const knowledgeBankInput = {
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }, ...nycArtCGovernmentInterfaceInquiries, ...urbanHermitSocialCensusInquiries, ...nycArtCFacebookEventInquiries, ...personalWowListFacebookEventInquiries, ...wowListFacebookPostInquiries, ...nycArtCFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...jamieFacebookPostInquiries],
-  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions],
+  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions, ...kcTownHallPhaseOneDecisions],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },

@@ -90,3 +90,23 @@ as explicitly labeled interpretations. A future projection should foreground
 Jamie's operating contribution, name the civic end and usable result, preserve
 collective and official credit, and avoid claims of exclusive dependency or
 policy causation.
+
+## KC Town Hall Phase One And Neighborhood Practice
+
+Keep `CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019`,
+`CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019`, and
+`CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021` as corroborated reserve
+depth. They materially strengthen Jamie's implementation record, but public
+composition should wait for after-the-fact completion, role, workflow-design,
+and Indian Mound corroboration.
+
+Keep `CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019` and
+`CLM-KCTOWNHALL-NEIGHBORHOOD-DESIGN-AND-PRINT-PRACTICE-2018-2021` in the
+research layer. A future projection must credit Pastor Lee's originating idea,
+the collective hosts and neighborhood partners, and distinguish public-priority
+routing from capital-allocation causation.
+
+No future KC Town Hall composition should conflate the Phase One restoration
+record with the later unused $490,539 City appropriation. The former has its
+own contemporaneous and first-party evidence; the latter did not fund the
+documented Phase One work.

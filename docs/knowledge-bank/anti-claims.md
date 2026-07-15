@@ -170,12 +170,36 @@ account-administration records.
 
 The official record supports a $490,539 City Council appropriation and
 authorization to negotiate a funding agreement. Do not call the allocation
-received, paid, or disbursed. Do not claim an executed agreement, construction,
-completion, or measured neighborhood outcome. The project later withdrew and
-the Council reclaimed the unused allocation in 2024; do not infer or assign an
-individual reason for the withdrawal, and do not attribute the withdrawal to
-Jamie. Jamie's first-party account of a prior stewardship transition remains a
-research lead until the professional handoff is corroborated.
+received, paid, or disbursed. Do not infer an executed agreement, construction,
+completion, or measured neighborhood outcome from that allocation. It remained
+unused and was reclaimed after the project withdrew in 2024. Do not infer or
+assign an individual reason for the withdrawal, and do not attribute the
+withdrawal to Jamie. Jamie's first-party account of a prior stewardship
+transition remains a research lead until the professional handoff is
+corroborated.
+
+Evaluate the separately accessioned Phase One implementation record on its own
+evidence. Do not call Jamie a licensed general contractor; turn his reported
+project function into sole construction or ownership credit; use the March 2019
+proposal as independent proof of later completion; or say the unused City
+allocation funded Phase One. Preserve Julia Fredenburg, the architect,
+engineer, specialty contractors, tradespeople, neighborhood partners, and
+residents as collective actors.
+
+For the neighborhood survey, do not expose raw responses or contact data, claim
+universal representation, or infer measured outcomes. For Tired of Tires, do
+not convert social workflow records or project self-reports into audited
+pickups, tires, savings, health, environmental, or neighborhood-impact totals.
+Treat Indian Mound expansion as first-party pending corroboration, and do not
+connect the separate Health Forward HENC grant to the program without evidence.
+
+For Cleveland Ave KC: Unify to Beautify, credit Pastor Lee with the originating
+corridor idea and preserve all collective hosts. The public event establishes
+the initiative and resident priority prompts, not Jamie's individual role,
+attendance, implementation of every proposed improvement, or causation for a
+particular capital allocation. The pro bono neighborhood design and print
+practice remains a first-party claim seed; exact quantities and audience impact
+are not verified.
 
 ## Source-Backed Team Memory
 

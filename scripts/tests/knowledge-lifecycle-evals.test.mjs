@@ -1156,6 +1156,92 @@ test("KC Town Hall stakeholder and traction findings retain attribution boundari
   assert.match(task.resolutionSummary, /all 183 items/i);
 });
 
+test("KC Town Hall Phase One records separate documented work from first-party completion", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"
+  );
+  const proposal = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
+  );
+  const account = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-JAMIE-KCTOWNHALL-PHASE-ONE-ROLE-ACCOUNT-2026"
+  );
+  const decision = knowledgeBank.projectionDecisions.find(
+    (item) => item.claimId === claim.id
+  );
+
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.equal(claim.maturity, "corroborated");
+  assert.equal(proposal.visibility, "protected");
+  assert.equal(proposal.canonicalUrl, undefined);
+  assert.equal(account.visibility, "protected");
+  assert.equal(account.canonicalUrl, undefined);
+  assert.ok(claim.boundaries.some((item) => /Attribute the 2019 completion date/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /licensed general contractor/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /proposal independently proves.*completion/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /appropriation funded Phase One/i.test(item)));
+  assert.equal(claim.projections.length, 0);
+  assert.equal(decision.decision, "defer");
+});
+
+test("KC Town Hall participatory and tire claims preserve data and outcome limits", () => {
+  const survey = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019"
+  );
+  const tires = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021"
+  );
+
+  assert.equal(survey.maturity, "corroborated");
+  assert.ok(survey.boundaries.some((item) => /responses.*contact data remain protected/i.test(item)));
+  assert.ok(survey.composition.collectiveCredit.includes("Oak Park Neighborhood Association"));
+  assert.equal(tires.maturity, "corroborated");
+  assert.ok(
+    tires.evidence.some(
+      (item) => item.sourceId === "SRC-X-JIMMY-FITZNER-KC-TOWN-HALL-TIRES-2022"
+    )
+  );
+  assert.ok(tires.boundaries.some((item) => /Indian Mound expansion.*research lead/i.test(item)));
+  assert.ok(tires.antiClaims.some((item) => /social workflow records equal.*completed pickups/i.test(item)));
+  assert.ok(tires.composition.collectiveCredit.includes("city staff"));
+});
+
+test("Cleveland Avenue accession credits Pastor Lee and blocks capital causation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019"
+  );
+  const event = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-FACEBOOK-CLEVELAND-AVE-UNIFY-EVENT-2019"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-CLEVELAND-AVE-ROLE-AND-CIVIC-ROUTING-CORROBORATION"
+  );
+
+  assert.equal(claim.status, "researching");
+  assert.match(claim.internalClaim, /credits Pastor Lee.*corridor idea/i);
+  assert.match(claim.composition.collectiveCredit, /Pastor Lee.*originating corridor vision/i);
+  assert.ok(claim.antiClaims.some((item) => /caused a particular.*capital-improvement allocation/i.test(item)));
+  assert.equal(event.visibility, "public");
+  assert.ok(event.doesNotEstablish.some((item) => /Jamie's individual role/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.nextActions.some((item) => /official capital-budget/i.test(item)));
+});
+
+test("KC Town Hall Phase One accession remains public-safe", () => {
+  const moduleText = readFileSync(
+    "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+    "utf8"
+  );
+  const memoText = readFileSync(
+    "docs/knowledge-bank/research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md",
+    "utf8"
+  );
+
+  assert.doesNotMatch(moduleText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+  assert.doesNotMatch(memoText, /\/private\/|\/tmp\/|\/Users\/|Mobile Documents/i);
+  assert.doesNotMatch(`${moduleText}\n${memoText}`, /family crisis/i);
+});
+
 test("NYC Artist Coalition census dispositions the full 5,124-slot profile control", () => {
   const ledger = JSON.parse(
     readFileSync("docs/knowledge-bank/data/nycartc-public-post-ledger.json", "utf8")

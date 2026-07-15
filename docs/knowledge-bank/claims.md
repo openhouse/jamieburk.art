@@ -271,15 +271,90 @@ stay outside the repo.
 **Support level:** Careful
 **Evidence class:** Approved resume / public source / public-safe archive summary
 **Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building, including a $490,539 public funding recommendation.
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.
+**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. Separately accessioned Phase One records document substantial building-stabilization work before the later public-funding process.
 **Where to project:** Technical Operations, Work card, Case study.
 **Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.
 **Source basis:** Approved resume language; the 2019 CCED Board packet; the September 26, 2019 Council record and Resolution 190649; Ordinance 240317; and public-safe project context.
-**Guardrail:** The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received or disbursed; it remained unused and was reclaimed after the project withdrew in 2024.
-**Do not say:** Funding received or disbursed; executed funding agreement; construction or completed development; known reason for the project's withdrawal; current property status; private financial details; official municipal endorsement beyond the public record.
+**Guardrail:** The public record supports a $490,539 Council appropriation and authorization to negotiate a funding agreement. Do not call the allocation received or disbursed; it remained unused and was reclaimed after the project withdrew in 2024. Do not infer construction from that allocation. Evaluate the separately sourced Phase One implementation record on its own evidence.
+**Do not say:** Funding received or disbursed; executed funding agreement; construction or completed development produced by the public allocation; known reason for the project's withdrawal; current property status; private financial details; official municipal endorsement beyond the public record.
 **Protected boundaries:** Private financial, legal, property, banking, and stakeholder details stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
+
+## kctownhall-phase-one-implementation - Phase One field coordination
+
+**Status:** Corroborated; completion research remains open
+**Support level:** Strong for work completed by 2018 and planned scope; first-party for Jamie's general-contractor function and 2019 completion
+**Evidence class:** Protected contemporaneous proposal / first-person account / archived project page
+**Public wording:** Jamie reports serving as general contractor and daily owner-side field coordinator for KC Town Hall Phase One, coordinating specialty teams from the basement through roof and parapet interfaces. A March 2019 packet documents substantial roof, structural masonry, debris-removal, and egress work already complete; Jamie reports the full phase was completed later in 2019.
+**Detailed public-safe wording:** Jamie coordinated masonry, roofing, carpentry, welding, engineering, architecture, and plumbing work toward a stabilized cold shell while a multi-party team restored a long-abandoned historic building.
+**Where to project:** Knowledge-bank reserve pending after-the-fact completion and role corroboration.
+**Why it matters:** Shows hands-on cross-disciplinary implementation, construction sequencing, risk management, and owner-side delivery in a physically complex setting.
+**Guardrail:** `General contractor` currently describes a reported project function, not a verified professional license. Keep the 2019 completion date attributed to Jamie and keep this work separate from the later unused City allocation.
+**Do not say:** Licensed general contractor; sole owner or constructor; March 2019 packet proves later completion; the $490,539 appropriation funded Phase One.
+**Protected boundaries:** Contracts, invoices, permits, banking, contact details, addresses, and other sensitive proposal material stay outside the repository.
+**Review owner:** Jamie / collaborator corroboration requested
+**Last reviewed:** 2026-07-15
+
+## kctownhall-participatory-site-practice - Construction site as listening surface
+
+**Status:** Corroborated; authorship research remains open
+**Support level:** Strong for the survey process and proposal-shaping function; first-party for Jamie's design and data workflow
+**Evidence class:** Protected contemporaneous proposal / first-person account
+**Public wording:** Jamie reports designing a four-by-six-inch neighborhood survey card and supporting contact workflow, then using daily site presence to gather histories, priorities, and ideas. The 2019 packet shows the survey, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as partners, and says results directly shaped the proposal.
+**Detailed public-safe wording:** The work joined field operations and participatory research so neighborhood knowledge could enter the building program over time.
+**Where to project:** Knowledge-bank reserve pending artifact and collaborator corroboration.
+**Why it matters:** Demonstrates service design, participatory research, field learning, and the ability to make implementation itself a source of usable knowledge.
+**Guardrail:** Preserve partner and resident credit; keep raw responses and contact data protected.
+**Do not say:** Every resident was reached or represented; Jamie alone determined the program; the survey produced measured neighborhood outcomes.
+**Protected boundaries:** Names, addresses, phone numbers, raw responses, and the underlying data set stay outside the repository.
+**Review owner:** Jamie / partner corroboration requested
+**Last reviewed:** 2026-07-15
+
+## tired-of-tires-design-and-operations - Recurring neighborhood service operations
+
+**Status:** Corroborated; design attribution and expansion research remain open
+**Support level:** Strong for recurring service and Jamie's hands-on participation; first-party for workflow design, coordination, and Indian Mound expansion
+**Evidence class:** Public project pages / public collaborator recollection / public partner acknowledgment / first-person account
+**Public wording:** Jamie performed hands-on tire collection with collaborators and reports designing and coordinating Tired of Tires with Oak Park Neighborhood Association as a recurring resident-intake, pickup, transport, disposal, communication, and tracking workflow.
+**Detailed public-safe wording:** Public records preserve the recurring service and partner disposal; Jimmy Fitzner independently recalls collecting tires with Jamie. Jamie reports that the service later expanded to Indian Mound.
+**Where to project:** Knowledge-bank reserve pending workflow-design and expansion corroboration.
+**Why it matters:** Shows service operations that connect resident intake, field logistics, communications, tracking, neighborhood partners, and city disposal infrastructure.
+**Guardrail:** Keep workflow records and project-reported counts distinct from audited service or impact totals.
+**Do not say:** Jamie alone operated the program; one hundred social records equal one hundred pickups; reported tire or savings totals are audited; the separate HENC grant funded this work; Indian Mound expansion is independently verified.
+**Protected boundaries:** Resident reports, contact data, raw intake records, and private city correspondence stay outside the repository.
+**Review owner:** Jamie / neighborhood and city-partner corroboration requested
+**Last reviewed:** 2026-07-15
+
+## cleveland-ave-unify-to-beautify-contribution - Corridor identity and civic routing
+
+**Status:** Researching
+**Support level:** Strong for the public initiative and collective event; first-party for Jamie's individual role
+**Evidence class:** Public event / institutional coalition plan / first-person account
+**Public wording:** Jamie credits Pastor Lee with the Cleveland Avenue corridor idea and reports helping establish Cleveland Ave KC: Unify to Beautify through identity, photography, social media, maps, listening materials, and print production.
+**Detailed public-safe wording:** A public September 2019 event confirms the corridor initiative, eight public-realm priority categories, and four collective hosts. It does not establish Jamie's division of labor or a causal link to public funding.
+**Where to project:** Knowledge-bank research layer only.
+**Why it matters:** Shows how place identity, participatory mapping, public meetings, and coalition communication can help residents and officials perceive a historically underserved corridor as a shared civic geography.
+**Guardrail:** Preserve Pastor Lee's originating credit and the event's collective hosts. Describe priority collection and civic routing, not capital-allocation causation.
+**Do not say:** Jamie alone created or led the initiative; the event proves his role or attendance; the work caused a particular capital allocation; all listed improvements were completed.
+**Protected boundaries:** Private meeting notes, resident reports, contact information, and unapproved photographs stay outside the repository.
+**Review owner:** Jamie / Pastor Lee and collaborator confirmation requested
+**Last reviewed:** 2026-07-15
+
+## kctownhall-neighborhood-design-print-practice - Pro bono communications operations
+
+**Status:** Captured; researching
+**Support level:** First-party
+**Evidence class:** First-person account
+**Public wording:** Jamie reports functioning as a pro bono design studio and print shop for historic east Kansas City neighborhood groups, producing and distributing handbill packets across tire-pickup, survey, cleanup, and listening-session workflows.
+**Detailed public-safe wording:** The reported practice integrated design, print production, bundling, and field distribution so one route could connect residents to several related neighborhood processes.
+**Where to project:** Knowledge-bank research layer only.
+**Why it matters:** Preserves a recurring implementation pattern that conventional project summaries often omit.
+**Guardrail:** Recover artifacts and collaborator confirmation before promoting the claim or using exact quantities.
+**Do not say:** Jamie was the exclusive designer for every group; hundreds of handbills were independently counted; distribution proves readership, participation, or impact.
+**Protected boundaries:** Private group materials, resident details, and unapproved images stay outside the repository.
+**Review owner:** Jamie / collaborator confirmation requested
+**Last reviewed:** 2026-07-15
 
 ## source-backed-team-memory-method - Source-backed team memory
 

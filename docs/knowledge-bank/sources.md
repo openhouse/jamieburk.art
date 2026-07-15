@@ -298,6 +298,32 @@ contact details, nor raw message text is stored in the repository.
 See
 `docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md`.
 
+## KC Town Hall Phase One And Neighborhood Practice
+
+The July 15 accession adds one protected contemporaneous proposal, three
+protected first-person source records, and four public records. The proposal is
+closely read at proposition level without retaining financial, contact,
+address, resident, or support-letter details. It directly supports substantial
+work complete by 2018, the remaining Phase One cold-shell scope, a neighborhood
+survey process, and local contractor-development context. Because it was
+created in March 2019, it does not prove completion later that year.
+
+Jamie's protected records preserve his reported general-contractor and daily
+field-coordination function, survey and data-workflow authorship, Tired of Tires
+design and operations, Cleveland Avenue implementation, and pro bono design and
+print practice. These are first-party records and remain labeled accordingly.
+
+The public layer consists of the Cleveland Ave KC: Unify to Beautify event, a
+Cleveland Ave KC tire-pickup post, the HENC Strategic Plan, and a Health Forward
+announcement concerning a separate HENC anti-dumping partnership. Existing
+archived KC Town Hall pages, Jimmy Fitzner's collaborator recollection, and a
+Bridging The Gap acknowledgment are reused rather than duplicated. Public
+program evidence does not automatically establish Jamie's individual role,
+audited impact, Indian Mound expansion, or causal influence on capital funding.
+
+See
+`docs/knowledge-bank/research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md`.
+
 ## Prohibited Source Material In This Repo
 
 - raw transcripts;

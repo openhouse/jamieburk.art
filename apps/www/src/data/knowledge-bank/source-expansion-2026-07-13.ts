@@ -23,10 +23,14 @@ export const sourceExpansionEntities = [
     id: "ENT-KC-TOWN-HALL",
     kind: "project",
     label: "KC Town-Hall",
-    publicSafeSummary: "A Kansas City mixed-use building proposal that advanced from a unanimous Central City Economic Development board recommendation to a $490,539 City Council appropriation and funding-agreement negotiations; the unused allocation was later reclaimed after the project withdrew.",
+    publicSafeSummary: "A neighborhood-led Kansas City restoration, mixed-use development, and civic-operations project that combined historic-building stabilization, resident listening, recurring service workflows, and a later public-benefit proposal. The proposal advanced from a unanimous Central City Economic Development board recommendation to a $490,539 City Council appropriation and funding-agreement negotiations; that allocation remained unused and was later reclaimed after the project withdrew.",
     aliases: ["KC Town Hall"],
     projectKey: "kc-town-hall",
-    relatedEntityIds: [],
+    relatedEntityIds: [
+      "ENT-OAK-PARK-NEIGHBORHOOD-ASSOCIATION",
+      "ENT-TIRED-OF-TIRES",
+      "ENT-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY"
+    ],
     status: "historical"
   },
   {

@@ -149,6 +149,15 @@ and stakeholder-response evidence without treating self-reports or reactions
 as audited impact.
 
 The
+[KC Town Hall Phase One and neighborhood-practice accession](research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md)
+adds the previously underdescribed implementation layer: historic-building
+stabilization, owner-side field coordination, a participatory survey workflow,
+Tired of Tires operations, Cleveland Avenue civic routing, and neighborhood
+design and print support. It keeps 2018 work distinct from the first-party 2019
+completion account and keeps both distinct from the later unused City
+appropriation.
+
+The
 [personal and WOW List Facebook event pass](research/personal-wowlist-facebook-events-2026-07-14.md)
 uses deliberately asymmetric controls: the 502-record personal association
 surface remains aggregate-only, the narrower 21-slot Jamie-hosted control is

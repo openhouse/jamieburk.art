@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "35e942e0ddbc875168daccc00e9b021d2cf4d8bcbb53dbc7fa4e3eb4318d744c",
+    "fingerprint": "a133dfc773cd4002859093572f86f1f58ddeefa74ff68708842942ae5a5b5728",
     "counts": {
-      "entities": 32,
-      "intake": 137,
-      "sources": 260,
-      "sourceReadings": 260,
-      "claims": 113,
-      "researchTasks": 49,
-      "projectionDecisions": 90
+      "entities": 37,
+      "intake": 145,
+      "sources": 268,
+      "sourceReadings": 268,
+      "claims": 118,
+      "researchTasks": 53,
+      "projectionDecisions": 95
     }
   },
   "judge": {
@@ -24,16 +24,16 @@
             "record": "intakeRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "INTAKE-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/urbanhermit-social-census-2026-07-14.ts",
-            "record": "CLM-URBANHERMIT-UNREVIEWED-MEDIA-LEAD"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "INTAKE-KCTOWNHALL-PHASE-ONE-ROLE-MEMORY-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "INTAKE-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "CLM-KCTOWNHALL-NEIGHBORHOOD-DESIGN-AND-PRINT-PRACTICE-2018-2021"
           }
         ]
       },
@@ -46,16 +46,16 @@
             "record": "atomicPropositionSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "READ-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "READ-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "READ-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "READ-JAMIE-KCTOWNHALL-PHASE-ONE-ROLE-ACCOUNT-2026"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
-            "record": "READ-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "READ-FACEBOOK-CLEVELAND-AVE-UNIFY-EVENT-2019"
           }
         ]
       },
@@ -64,24 +64,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-RIVER-GREAT-ACCOMMODATIONS"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
-          },
-          {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "NTER CHNG separates Jamie's public connection purpose from planned installation execution"
+            "file": "apps/www/src/data/knowledge-bank/source-expansion-2026-07-13.ts",
+            "record": "CLM-KC-TOWN-HALL-COUNCIL-APPROPRIATION-2019-2024"
           }
         ]
       },
@@ -90,20 +86,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "TASK-KCTOWNHALL-PHASE-ONE-COMPLETION-CORROBORATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-NYCARTC-CREATION-ROLE"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "TASK-KCTOWNHALL-SURVEY-ARTIFACT-RECOVERY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "TASK-TIRED-OF-TIRES-ROLE-AND-EXPANSION-CORROBORATION"
           },
           {
-            "file": "docs/knowledge-bank/research/nter-chng-america-now-and-here-2026-07-15.md",
-            "record": "The technical-credit follow-up"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "TASK-CLEVELAND-AVE-ROLE-AND-CIVIC-ROUTING-CORROBORATION"
           }
         ]
       },
@@ -112,20 +108,20 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "DEC-NTER-CHNG-JAMIE-CONNECTION-DESIGN-DEFER"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "DEC-DEFER-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-ANH-INSTALLATION-OPERATIONS-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "DEC-DEFER-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "DEC-OPEN-HOUSE-DEFER"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "DEC-DEFER-CLEVELAND-AVE-CONTRIBUTION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/public.ts",
-            "record": "getClaimProjection"
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "KC Town Hall Phase One And Neighborhood Practice"
           }
         ]
       },
@@ -138,20 +134,16 @@
             "record": "sourceRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "SRC-NTER-CHNG-ANH-INSTALLATION-PLAN-2011"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "SRC-KCTOWNHALL-PHASE-ONE-PROPOSAL-2019"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "SRC-NTER-CHNG-WORKING-ARTIST-MATERIALS-2011"
+            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
+            "record": "KC Town Hall Phase One accession remains public-safe"
           },
           {
-            "file": "scripts/tests/citations.test.mjs",
-            "record": "private and metadata-only evidence is absent from the public registry"
-          },
-          {
-            "file": "docs/knowledge-bank/anti-claims.md",
-            "record": "NTER CHNG Working Artifacts"
+            "file": "docs/knowledge-bank/approval-register.md",
+            "record": "KC Town Hall Phase One and neighborhood practice"
           }
         ]
       },
@@ -164,20 +156,16 @@
             "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "TASK-NTER-CHNG-ANH-INSTALLATION-EXECUTION-CREDIT"
+            "file": "apps/www/src/data/knowledge-bank/kctownhall-phase-one-neighborhood-practice-2026-07-15.ts",
+            "record": "CLM-KCTOWNHALL-PARTICIPATORY-SITE-PRACTICE-2018-2019"
           },
           {
             "file": "docs/knowledge-bank/projection-map.md",
-            "record": "CLM-NTER-CHNG-JAMIE-CONNECTION-DESIGN-2011"
+            "record": "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019"
           },
           {
-            "file": "docs/knowledge-bank/proofs.md",
-            "record": "contemporaneous collaborative plan"
+            "file": "docs/knowledge-bank/research/kc-town-hall-phase-one-and-neighborhood-practice-2026-07-15.md",
+            "record": "## Research queue"
           }
         ]
       }
@@ -200,5 +188,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent assessment of the current diff and canonical graph found all seven deterministic hard gates and all four quality targets passing at fingerprint 35e942e0ddbc875168daccc00e9b021d2cf4d8bcbb53dbc7fa4e3eb4318d744c. The lifecycle contract, 108 lifecycle tests, knowledge-bank check, public-safety check, citation consistency check, and 10 citation tests passed under Node 26.4.0 and npm 11.17.0; the knowledge-bank and public-safety commands retained nine pre-existing careful-wording warnings and reported no failures. Inspection included captured, researching, corroborated, public-ready, projected, rejected, and superseded claims. The two NTER CHNG artifacts are represented as protected/private sources with opaque protected locator IDs and no canonical, archive, asset, Google document, or sharing URLs; the current diff contains no raw phone number or email pattern, and the records retain no raw messages or private preparation locations. The installation plan is explicitly forward-looking, not a completion report: it supports planned multi-layer implementation scope and Jamie's scheduled participation while preserving Drew Bolton, Jamie Burkart, and Garrett Fuselier's shared credit, leaving completed work and individual responsibility to an open corroboration task. A fresh retrieval of the [official archived America: Now and Here artist page](https://web.archive.org/web/20110518071626/http://kansascity.americanowandhere.org/the-visual-artists/drew-bolton-jamie-burkart-and-garrett-fuselier/) confirmed that the program names all three as visual artists, describes NTER CHNG as their interactive text-messaging experience, and directly attributes to Burkart the purpose of helping gallery visitors make connections beyond existing contact lists. The public-ready purpose claim accurately treats this as design intent rather than measured connection, adoption, behavior change, audience scale, or impact and remains deferred. The installation-operations claim remains corroborated, has no projection, and combines protected plan support with the official program's inclusion evidence without converting planning into execution. All human gates remain pending."
+  "summary": "Independent review of the full canonical graph found no criterion defect below 4. Under Node 26.4.0, all seven deterministic hard gates and four quality targets passed, all 112 knowledge-lifecycle tests and 10 citation tests passed, and the knowledge-bank, public-safety, and citation checks passed; the knowledge-bank and public-safety checks retained nine careful-wording warnings and no failures. The March 2019 proposal supports work reported complete by 2018 and a forward plan, while later 2019 completion and Jamie's general-contractor function remain explicitly first-person and do not establish licensure. The unused City appropriation remains separate from Phase One funding. Claims and anti-claims preserve credit for Julia Fredenburg, Pastor Lee, contractors, tradespeople, neighborhood associations, residents, city staff, disposal partners, and other collaborators. Protected sources expose only opaque locators; raw financial, contact, resident, family, private material and local paths are absent. Cleveland Avenue records preserve priority routing without capital-allocation causation, and all four new open tasks identify concrete artifacts, collaborators, privacy boundaries, and promotion conditions. All five new claims remain deferred, and all human gates remain pending."
 }
