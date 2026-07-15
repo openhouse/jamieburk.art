@@ -100,6 +100,16 @@ fundraising routes, funded-space spotlights, bounded interaction signals,
 collective credit, and Jamie's documented digital-infrastructure boundary.
 
 See
+[projects/jamie-personal-facebook-posts.md](projects/jamie-personal-facebook-posts.md)
+and its
+[public-safe aggregate controls](data/jamie-personal-facebook-post-controls.json)
+for the complete population returned by Facebook's authenticated
+`Manage Posts > Posted by: You` surface: 1,243 unique records across 621 cursor
+pages, mission and source-routing leads, six individually governed public
+specimens, and strict privacy, stakeholder, attribution, and engagement
+boundaries. The record-level corpus remains protected.
+
+See
 [projects/kc-town-hall.md](projects/kc-town-hall.md)
 for the official sequence from CCED Board recommendation through Council
 acceptance, negotiation authority, and appropriation, followed by
