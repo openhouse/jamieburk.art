@@ -76,6 +76,16 @@ credentials, and working-document locators. Facebook responses remain mutable
 event-level signals, never attendance or unique reach. See
 [intake/2026-07-14-nycartc-facebook-event-population.md](intake/2026-07-14-nycartc-facebook-event-population.md).
 
+The personal and WOW List Facebook event review is documented in
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md).
+Three terminal traversals returned the same 502 IDs on Jamie's profile event
+surface; the separate hosted-events tab exposed 21 records, 18 overlapping,
+for 505 distinct current IDs. Nine selected public event pages and KCUR's
+independent 8th Street Tunnel reporting preserve mission-relevant plot points.
+The wider association graph remains protected. WOW List's current Page surface
+displayed zero events; its bounded historical non-recovery is not proof of
+nonexistence.
+
 KCUR election guidance, Northeast News affordable-housing reporting, Curbed
 housing-policy reporting, and Kansas City Star reporting about Leon's Thriftway
 are retained as sources routed by the account. Their appearance establishes

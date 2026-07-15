@@ -9,6 +9,7 @@ import { kcTownHallCorpusFindings, kcTownHallPopulationAudit, kcTownHallSocialCo
 import { nycacFacebookEventFindings, nycacFacebookEventPopulationAudit, nycacFacebookEvents } from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { nycacCorpusFindings, nycacPopulationAudit, nycacSocialCorpus } from "../../apps/www/src/data/knowledge-bank/nycac-social-corpus.ts";
 import { campaignPressInventory, nycacPressArchive } from "../../apps/www/src/data/knowledge-bank/nycac-press-archive.ts";
+import { personalWowlistFacebookEvents } from "../../apps/www/src/data/knowledge-bank/personal-wowlist-facebook-events.ts";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { socialMediaArchiveProduction } from "../../apps/www/src/data/knowledge-bank/social-media-archive-production.ts";
 import { teamsArchiveProduction } from "../../apps/www/src/data/knowledge-bank/teams-archive-production.ts";
@@ -23,7 +24,7 @@ const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank
 const nycacEventLedgerPublicContractSha256 = "79b8cb8b652b01a6e96d46aa51dd47b519efc03ac3bf8514eb6cbb5141ef09d7";
 const nycacLinkLedgerPublicContractSha256 = "d6d07b83b23fc23879aeaaf335900472adf14c370dd1a44ee35cdcf6159d4b02";
 const nycacCanonicalGraphPublicContractSha256 = "c942679699704f89955c15c8d878bb3e9e1ff14db8abce0a68db2e3d4c51f06f";
-const nycacNarrativePublicContractSha256 = "2957de5d218fc7b91ee7566415ae952c467af1cce2629c6fe33c4c49fabbf81a";
+const nycacNarrativePublicContractSha256 = "e1ba48379ffd63f54c8aefac5611aea845d10e2e98d6259c5cf297538a1c029c";
 
 export function loadKnowledgeEvalSuite() {
   return JSON.parse(readFileSync(suitePath, "utf8"));
@@ -2864,9 +2865,177 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
     documentation: nycacEventDocumentation.includes("33 recovered event records") && nycacEventDocumentation.includes("one unresolved historical slot") && nycacEventDocumentation.includes("22 full bodies and 11 header-only bodies") && nycacEventReport.includes("Being there changes everything") && nycacEventReport.includes("describes his contribution as helping establish and produce") && nycacEventReport.includes("not unique-person or attendance counts") && !nycacAttendanceConversionViolation,
     safety: !/(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(nycacEventPublicText) && !/(?:[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\b(?:\+?1[-. ]?)?\(?\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b)/i.test(nycacEventPublicText) && !nycacCanonicalPersonalMetadataViolation && !nycacCanonicalProtectedLocatorViolation && !nycacCanonicalCredentialViolation
   };
-  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations];
-  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims];
-  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries];
+  const personalEvents = suite.pilot.personalWowlistFacebookEvents;
+  const personalEventControlsPath = path.join(repoRoot, personalEvents.controlsPath);
+  const personalEventCensusPath = path.join(repoRoot, personalEvents.censusPath);
+  const personalEventReportPath = path.join(repoRoot, personalEvents.reportPath);
+  const personalEventControlsText = fixtures.personalWowlistFacebookEventControlsText ??
+    (existsSync(personalEventControlsPath) ? readFileSync(personalEventControlsPath, "utf8") : "{}");
+  const personalEventControls = fixtures.personalWowlistFacebookEventControls ??
+    JSON.parse(personalEventControlsText);
+  const personalEventCensus = fixtures.personalWowlistFacebookEventCensus ??
+    (existsSync(personalEventCensusPath) ? readFileSync(personalEventCensusPath, "utf8") : "");
+  const personalEventReport = fixtures.personalWowlistFacebookEventReport ??
+    (existsSync(personalEventReportPath) ? readFileSync(personalEventReportPath, "utf8") : "");
+  const personalEventIntakes = personalWowlistFacebookEvents.intakeItems.map(
+    (item) => intakeById.get(item.id)
+  );
+  const personalEventSources = personalWowlistFacebookEvents.sources.map(
+    (source) => sourceById.get(source.id)
+  );
+  const personalEventObservations = personalWowlistFacebookEvents.observations.map(
+    (observation) => observationById.get(observation.id)
+  );
+  const personalEventClaims = personalEvents.claimIds.map((id) => claimById.get(id));
+  const personalEventInquiries = personalEvents.inquiryIds.map((id) => inquiryById.get(id));
+  const personalEventSelectedSources = personalEvents.selectedEventSourceIds.map(
+    (id) => sourceById.get(id)
+  );
+  const personalEventRouteSources = personalEvents.routeSourceIds.map(
+    (id) => sourceById.get(id)
+  );
+  const personalAssociationClaim = claimById.get(
+    "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026"
+  );
+  const personalPracticeClaim = claimById.get(
+    "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+  );
+  const wowlistLiveEventClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026"
+  );
+  const wowlistHistoricalEventClaim = claimById.get(
+    "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026"
+  );
+  const personalEventRows = personalEventCensus.trimEnd().split("\n");
+  const personalEventControl = personalEventControls.personalAssociationSurface ?? {};
+  const hostedEventControl = personalEventControls.personalHostedEventsTab ?? {};
+  const displayedHostControl = personalEventControls.displayedJamieHostSubset ?? {};
+  const wowlistEventControl = personalEventControls.wowlist ?? {};
+  const liveEventVerification = personalEventControls.liveReverification ?? {};
+  const personalEventPublicText = [
+    personalEventControlsText,
+    personalEventCensus,
+    personalEventReport,
+    JSON.stringify(personalWowlistFacebookEvents)
+  ].join("\n");
+  const personalEventPrivatePathViolation =
+    /(?:\/(?:Users|Volumes|private\/tmp)\/|GoogleDrive-|Mobile Documents)/.test(personalEventPublicText);
+  const personalEventControlsExposeRowIds =
+    /facebook\.com\/events\/\d+|\b\d{12,}\b/.test(personalEventControlsText) ||
+    /https?:|facebook\.com|\b\d{12,}\b/.test(personalEventCensus);
+  const personalEventClaimsStayBankOnly = personalEventClaims.every((claim) =>
+    claim?.projections.every((projection) =>
+      projection.key === "archive-note" &&
+      projection.status === "active" &&
+      projection.surfaces.length === 1 &&
+      projection.surfaces[0] === personalEvents.reportPath
+    )
+  );
+  const sundayDinnerProof = proofClaims.find((proof) => proof.id === personalEvents.proofId);
+  const personalWowlistEventDiagnostics = {
+    controlArithmetic: Boolean(
+      personalEventControl.currentRecords === personalEvents.expectedProfileIds &&
+      personalEventControl.secondPassExactIdMatch === true &&
+      personalEventControl.thirdPassExactIdMatch === true &&
+      personalEventControl.displayedHostAccounting?.jamie ===
+        personalEvents.expectedDisplayedJamieHostCards &&
+      personalEventControl.displayedHostAccounting?.anotherHost ===
+        personalEvents.expectedDisplayedOtherHostCards &&
+      hostedEventControl.currentRecords === personalEvents.expectedHostedIds &&
+      hostedEventControl.recoveredRecords === personalEvents.expectedHostedIds &&
+      hostedEventControl.unresolvedRecords === 0 &&
+      hostedEventControl.overlapWithAssociationSurface === personalEvents.expectedOverlap &&
+      hostedEventControl.distinctRecordsAcrossBothTabs === personalEvents.expectedUnion &&
+      displayedHostControl.pastEventsCards === personalEvents.expectedDisplayedJamieHostCards &&
+      Object.values(displayedHostControl.primaryFormCounts ?? {})
+        .reduce((sum, value) => sum + value, 0) === personalEvents.expectedDisplayedJamieHostCards &&
+      wowlistEventControl.currentDisplayedRecords === personalEvents.expectedWowlistCurrentEvents &&
+      wowlistEventControl.historicalDisposition === "not-recovered"
+    ),
+    liveReverification: Boolean(
+      liveEventVerification.personalPastTraversalCount === personalEvents.expectedProfileIds &&
+      liveEventVerification.personalPastExactIdMatchAgainstPriorControl === true &&
+      liveEventVerification.hostedTabRecordsRecovered === personalEvents.expectedHostedIds &&
+      liveEventVerification.wowlistDisplayedRecordsWhileActingAsPage ===
+        personalEvents.expectedWowlistCurrentEvents
+    ),
+    moduleShape: Boolean(
+      personalWowlistFacebookEvents.intakeItems.length === personalEvents.expectedIntakeCount &&
+      personalWowlistFacebookEvents.sources.length === personalEvents.expectedSourceCount &&
+      personalWowlistFacebookEvents.observations.length === personalEvents.expectedObservationCount &&
+      personalWowlistFacebookEvents.claims.length === personalEvents.expectedClaimCount &&
+      personalWowlistFacebookEvents.researchInquiries.length === personalEvents.expectedInquiryCount
+    ),
+    intakeLinks: personalEventIntakes.every((item) =>
+      item?.disposition === "integrated" && item.boundaries.length >= 2 &&
+      item.sourceIds.every((id) => sourceById.has(id)) &&
+      item.observationIds.every((id) => observationById.has(id))
+    ),
+    sourceScope: personalEventSources.every((source) =>
+      source?.supportsGenerally.length && source.doesNotEstablish.length
+    ),
+    selectedEventSources: personalEventSelectedSources.every((source) =>
+      source?.visibility === "public" &&
+      source.canonicalUrl?.includes("facebook.com/events/") &&
+      !source.author &&
+      source.publicCitation.includes("displaying the label 'Event by Jamie Burkart'") &&
+      source.doesNotEstablish.some((boundary) =>
+        /sole authorship|sole-production|sole production/i.test(boundary)
+      )
+    ),
+    postedRouteGovernance: personalEventRouteSources.every((source) =>
+      source?.supportsGenerally.some((support) => /route|destination/i.test(support)) &&
+      source.doesNotEstablish.some((boundary) => /readership|participant/i.test(boundary))
+    ),
+    atomicObservations: personalEventObservations.every((observation) =>
+      observation?.locator && observation.limitations.length &&
+      observation.sourceId && (observation.claimIds.length || observation.researchInquiryIds.length)
+    ),
+    claimMaturation: personalEventClaims.every((claim) =>
+      claim?.boundaries.length >= 2 && claim.antiClaims.length >= 3 &&
+      claim.evidence.length && claim.reviewedBy.length >= 2
+    ),
+    inquiryMaturation: personalEventInquiries.every((inquiry) =>
+      inquiry?.findings.length >= 3 && inquiry.limitations.length >= 3 &&
+      inquiry.sourceIds.every((id) => sourceById.has(id))
+    ),
+    claimSemantics: Boolean(
+      personalAssociationClaim?.antiClaims.some((claim) => /all 505 events/i.test(claim)) &&
+      personalPracticeClaim?.boundaries.some((boundary) => /not sole-production credit/i.test(boundary)) &&
+      personalPracticeClaim.evidence.some(
+        (evidence) => evidence.sourceId === "SRC-KCUR-EIGHTH-STREET-TUNNEL-2016-09-15"
+      ) &&
+      wowlistLiveEventClaim?.status === "confirmed-with-boundary" &&
+      wowlistHistoricalEventClaim?.status === "not-recovered" &&
+      wowlistHistoricalEventClaim.boundaries.some(
+        (boundary) => /does not establish that no event ever existed/i.test(boundary)
+      )
+    ),
+    bankOnlyComposition: personalEventClaimsStayBankOnly,
+    aggregateCensus: Boolean(
+      personalEventRows.length === 21 &&
+      personalEventRows[0] ===
+        "subset_slot,source_surface,displayed_host,recovery_status,year,primary_form" &&
+      personalEventRows.slice(1).every((row) => row.split(",").length === 6)
+    ),
+    reportContract: Boolean(
+      personalEventReport.includes("505 distinct current event IDs") &&
+      personalEventReport.includes("Association does not establish attendance") &&
+      personalEventReport.includes("source route, not automatic corroboration") &&
+      personalEventReport.includes("not recovered") &&
+      personalEventReport.includes("Do not add a new visible portfolio claim")
+    ),
+    sundayDinnerProjection: Boolean(
+      sundayDinnerProof?.sourceBasis.includes("public event pages documenting the 100th dinner")
+    ),
+    publicSafety: !personalEventControlsExposeRowIds && !personalEventPrivatePathViolation
+  };
+  const personalWowlistEventPopulationComplete = Object.values(
+    personalWowlistEventDiagnostics
+  ).every(Boolean);
+  const allEvaluatedObservations = [...pilotObservations, ...expansionObservations, ...pressObservations, ...kcFundingObservations, kcTransitionObservation, ...teamsObservations, ...sharedDriveObservations, ...socialMediaArchiveProduction.observations, ...callNycSocialCorpus.observations, ...wowlistSocialCorpus.observations, ...kcTownHallSocialCorpus.observations, ...nycacSocialCorpus.observations, ...urbanhermitSocialCorpus.observations, ...nycacEventObservations, ...personalEventObservations];
+  const allEvaluatedClaims = [...pilotClaims, ...expansionClaims, pressClaim, ...kcFundingClaims, kcTransitionClaim, ...teamsClaims, ...sharedDriveClaims, ...socialClaims, ...callFullClaims, ...wowFullClaims, ...kcthFullClaims, ...nycacFullClaims, ...urbanFullClaims, ...nycacEventClaims, ...personalEventClaims];
+  const allEvaluatedInquiries = [...pilotInquiries, ...expansionInquiries, pressInquiry, kcFundingInquiry, kcTransitionInquiry, ...teamsInquiries, ...sharedDriveInquiries, ...socialInquiries, ...callFullInquiries, ...wowFullInquiries, ...kcthFullInquiries, ...nycacFullInquiries, ...urbanFullInquiries, ...nycacEventInquiries, ...personalEventInquiries];
   const triangulatedExpansionClaims = expansionClaims.filter(
     (claim) => claim && new Set(claim.evidence.map((evidence) => evidence.sourceId)).size >= 2
   );
@@ -3088,6 +3257,13 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), fixtures
       evidence: [nycacEventPopulationComplete
         ? `All ${nycacEvents.expectedControlSlots} displayed Facebook event slots are dispositioned through ${nycacRecoveredEventRows.length} recovered public event records and one unresolved historical slot; ${nycacRecurringRows.length} recurring meetings span ${nycacPhysicalMeetingVenues.size} physical cultural spaces and ${nycacVirtualMeetingRows.length} virtual meetings; ${nycacLinkRows.length} source-route rows remain bounded; responses are not attendance; and only the collective-credit participation-system claim is composed into the site`
         : `Facebook event criterion failed: ${Object.entries(nycacEventDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
+    },
+    {
+      criterionId: "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      score: score(personalWowlistEventPopulationComplete),
+      evidence: [personalWowlistEventPopulationComplete
+        ? `Three exact 502-ID profile traversals, all ${personalEvents.expectedHostedIds} hosted-tab records, the ${personalEvents.expectedUnion}-ID union, ${personalEvents.expectedDisplayedJamieHostCards} displayed-Jamie plot points, nine selected event sources, three posted routes, one independent article, and WOW List's bounded zero/non-recovery controls all reconcile without exposing the personal association graph or projecting a new site claim`
+        : `Personal/WOW List Facebook event criterion failed: ${Object.entries(personalWowlistEventDiagnostics).filter(([, passed]) => !passed).map(([name]) => name).join(", ") || "an ungrouped invariant"}`]
     }
   ];
 

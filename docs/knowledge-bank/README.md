@@ -111,3 +111,11 @@ It accounts for all 34 displayed control slots through 33 recovered public
 event records and one unresolved slot, preserving the event chronology,
 rotating-venue practice, public source routes, platform drift, and a bounded
 claim about Jamie's role in the recurring participation system.
+
+See
+[personal-wowlist-facebook-events-2026-07-14.md](personal-wowlist-facebook-events-2026-07-14.md)
+for the 100-percent current-control pass across Jamie's personal Facebook event
+surfaces and WOW List's Page event surface. It reconciles 502 profile IDs and
+21 hosted-tab IDs with 18 overlaps, preserves an anonymous 20-card
+displayed-host census and selected public event plot points, and keeps the
+wider personal association graph outside the repository.

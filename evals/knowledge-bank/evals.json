@@ -583,7 +583,7 @@
       "expectedLedgerSha256": "c90245a454e7fdf1cf48f499a2abad7c717762da1e3b6135b8dc18c0062911fa",
       "expectedLedgerMetadataSha256": "22fc6d051dd57a476015117ca5aa9e91d27db861faf4d57df86a9451edc1124d",
       "expectedKnowledgeGraphSha256": "67de57f549c5145936116c50b3579a2c94d87e7cd41f28873154036818a4e4f0",
-      "expectedPublicSurfaceSha256": "66eae4b26a26c316ea82a66eb8578b5caff3a8194ad75710a284f0d5fa62f5d4",
+      "expectedPublicSurfaceSha256": "c84a1c690b5e5c771c8e7b34f7241a8957329e43a16fae6279a687d343800134",
       "expectedCrossLedgerSha256": "44929bacce524518dbe8951f51318b35adfa1ce0861d7ab95584c16339d3c401",
       "expectedSemanticContractSha256": "5e735233a76fe98098c09bc9f6e8f4c170bd1bbfbd7e2e84104ba8ac0a8d34dd",
       "methodContract": {
@@ -764,6 +764,51 @@
         "CLM-NYCAC-FACEBOOK-EVENT-LINK-NETWORK": ["38 research routes", "not automatic corroboration"],
         "CLM-NYCAC-DEMOCRATIC-LISTENING-PRACTICE": ["Jamie interprets", "not neutral platform metadata"]
       }
+    },
+    "personalWowlistFacebookEvents": {
+      "controlsPath": "docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json",
+      "censusPath": "docs/knowledge-bank/jamie-facebook-displayed-host-event-census-2026-07-14.csv",
+      "reportPath": "docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md",
+      "expectedIntakeCount": 2,
+      "expectedSourceCount": 19,
+      "expectedObservationCount": 17,
+      "expectedClaimCount": 5,
+      "expectedInquiryCount": 2,
+      "expectedProfileIds": 502,
+      "expectedHostedIds": 21,
+      "expectedOverlap": 18,
+      "expectedUnion": 505,
+      "expectedDisplayedJamieHostCards": 20,
+      "expectedDisplayedOtherHostCards": 482,
+      "expectedWowlistCurrentEvents": 0,
+      "selectedEventSourceIds": [
+        "SRC-JAMIE-FACEBOOK-EVENT-SEMANTIC-WEB-2006",
+        "SRC-JAMIE-FACEBOOK-EVENT-PIRATE-TROLLEY-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-MICROPOP-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-RIVER-RAFT-2007",
+        "SRC-JAMIE-FACEBOOK-EVENT-NIGHT-WALK-2010",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-100-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-SUNDAY-DINNER-NYC-2014",
+        "SRC-JAMIE-FACEBOOK-EVENT-WHY-I-MARCH-2017",
+        "SRC-JAMIE-FACEBOOK-EVENT-HYPERNORMALISATION-2017"
+      ],
+      "routeSourceIds": [
+        "SRC-MICROPOP-POSTED-IMAGINED-COMMUNITIES",
+        "SRC-MICROPOP-POSTED-LASTFM-FAN-GRAPH",
+        "SRC-MICROPOP-POSTED-KCDIY"
+      ],
+      "claimIds": [
+        "CLM-JAMIE-FACEBOOK-EVENT-ASSOCIATION-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-POPULATION-2026",
+        "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017",
+        "CLM-WOWLIST-FACEBOOK-EVENT-LIVE-CONTROL-2026",
+        "CLM-WOWLIST-FACEBOOK-EVENT-HISTORY-NOT-RECOVERED-2026"
+      ],
+      "inquiryIds": [
+        "INQ-JAMIE-FACEBOOK-EVENT-PRACTICE-2026",
+        "INQ-WOWLIST-FACEBOOK-EVENTS-2026"
+      ],
+      "proofId": "sunday-dinner-196-participation-infrastructure"
     }
   },
   "criteria": [
@@ -899,6 +944,13 @@
       "weight": 0,
       "minimumScore": 5,
       "intent": "All 34 displayed Facebook event slots are honestly dispositioned; 33 recovered events remain useful historical plot points; rotating venues, event formats, source routes, and retrieval drift are reproducible; responses never become attendance; private people and access data remain absent; collective authorship is preserved; and only Jamie's bounded participation-system contribution is composed into the public site."
+    },
+    {
+      "id": "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS",
+      "label": "Personal and WOW List Facebook event population integrity",
+      "weight": 0,
+      "minimumScore": 5,
+      "intent": "All current personal event controls are population-reconciled; the complete displayed-Jamie subset becomes bounded historical plot points; source routes and independent reporting are retained; personal relationship data stays protected; mutable platform displays never become attendance or impact; and WOW List's current zero and historical non-recovery remain distinct."
     }
   ],
   "hillClimb": {

@@ -54,6 +54,21 @@ analytics or adoption measures.
 Do not publish private guest lists, resident records, personal histories, or
 photos without approval.
 
+## Personal and WOW List Facebook Events
+
+Do not treat the 502 profile-event associations, the 21 hosted-tab records, or
+their 505-ID union as events Jamie attended, endorsed, authored, or produced.
+Facebook's hosted tab and `Event by Jamie Burkart` labels are platform
+classifications, not sole-production credit. Do not publish the personal
+association ledger, other host names as a relationship graph, guest context,
+exact private locations, raw descriptions, comments, account state, or
+authentication material.
+
+Do not sum mutable event-page values or describe them as attendance, unique
+people, reach, endorsement, causality, or impact. Do not rewrite WOW List's
+current zero-event display or bounded historical non-recovery as proof that no
+Facebook event ever existed.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

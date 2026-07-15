@@ -172,17 +172,47 @@ claim beyond the wording and guardrails here.
 
 **Status:** Careful  
 **Support level:** Careful  
-**Evidence class:** Approved resume / public community context / protected operations ledger / Jamie-authored residency workflow / Jamie review confirmation
+**Evidence class:** Approved resume / public community context / selected public event pages / protected operations ledger / Jamie-authored residency workflow / Jamie review confirmation
 **Public wording:** Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.  
 **Detailed public-safe wording:** Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.  
-**New protected support:** A private operating ledger records 345 numbered gatherings and 2,783 meals served through March 2021. A separate 2023 workflow documents Jamie-authored acceptance, space-configuration, arrival, and collaborator-access planning for one residency. These sources do not establish the 20+ resident aggregate.
+**New support:** Public event pages document the 100th Sunday Dinner, an eight-week New York City rotation with changing host places, and a 2017 dinner joining hospitality with civic discussion and sign making. A private operating ledger records 345 numbered gatherings and 2,783 meals served through March 2021. A separate 2023 workflow documents Jamie-authored acceptance, space-configuration, arrival, and collaborator-access planning for one residency. These sources do not establish the 20+ resident aggregate or convert Facebook host labels into sole-production credit.
 **Where to project:** Homepage, Resume page, Technical Operations, Work card, Case study.  
 **Why it matters:** Shows operations, trust-building, and handoff design in a complex human environment.  
 **Guardrail:** Keep the page summary-only and avoid turning community trust work into spectacle.  
 **Do not say:** Institutional ownership of participants' work; comprehensive public archive; attendance database.  
 **Protected boundaries:** Guest lists, attendance records, addresses, private messages, raw community records, and unapproved photos stay offline.  
 **Review owner:** Jamie  
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
+
+## personal-facebook-event-practice - Bank-only event-making depth
+
+**Status:** Confirmed with boundary
+**Support level:** Strong current-control accounting; selected public-event support
+**Evidence class:** Authenticated population controls / public Facebook event pages / independent reporting / public-safe aggregate census
+**Public wording:** Twenty current event cards from 2006 through 2017 display Jamie as host and preserve a recurring practice across cultural production, hospitality, place-based participation, civic learning, and networked public culture.
+**Detailed public-safe wording:** Three terminal traversals returned the same 502 profile-event IDs; a separate hosted-events tab contained 21 records, 18 overlapping, for 505 distinct current IDs. Only the 20 cards displaying Jamie as host were interpreted as a professional practice, and nine selected public pages were close-read into bounded historical plot points.
+**Where to project:** Bank only. Use selectively in future role-specific compositions where facilitation, cultural production, hospitality systems, participatory design, or place-based work is material.
+**Why it matters:** Preserves a long public event-making throughline without forcing the hiring portfolio to display every meaningful project at once.
+**Guardrail:** Facebook association is not attendance or professional credit. Displayed host labels are bounded platform attribution, not sole authorship or sole production.
+**Do not say:** Jamie attended or produced all 505 events; Jamie alone produced every selected event; platform values measure attendance, unique reach, endorsement, causality, or impact.
+**Protected boundaries:** The 502-row personal association graph, other host names, guest or invite context, exact private locations, raw descriptions, comments, account state, and authentication material remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-event-recovery - Current zero and historical non-recovery
+
+**Status:** Confirmed current control / historical record not recovered
+**Support level:** Strong for current display; bounded negative search for history
+**Evidence class:** Authenticated Page-context control / bounded Facebook and Wayback research run
+**Public wording:** The current WOW List Facebook event surface displayed zero records; a bounded historical search recovered none.
+**Detailed public-safe wording:** While acting as WOW List on July 15, 2026, Facebook displayed `No events to show` and exposed zero event IDs. Separate Facebook, personal-control, and Wayback searches recovered no historical event record.
+**Where to project:** Bank only.
+**Why it matters:** Preserves an honest negative control while keeping open the possibility that deleted, hidden, renamed, co-hosted, or other-account records existed.
+**Guardrail:** Not recovered does not mean did not exist and says nothing about WOW List's own platform event activity.
+**Do not say:** WOW List never had a Facebook event; WOW List had no event community; the bounded search is a native platform export.
+**Protected boundaries:** Authentication material, account administration, private analytics, and raw browser recovery files remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
 
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 

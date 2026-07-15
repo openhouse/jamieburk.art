@@ -421,7 +421,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public community context, a protected event ledger recording 345 numbered gatherings and 2,783 meals served, and a Jamie-authored residency onboarding workflow.",
+      "Approved resume language, public community context, public event pages documenting the 100th dinner, an eight-week New York City rotation, and a civic sign-making potluck, a protected event ledger recording 345 numbered gatherings and 2,783 meals served, and a Jamie-authored residency onboarding workflow.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [
@@ -440,7 +440,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["homepage", "resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["196-sunday-dinner"],
     relatedCapabilities: ["onboarding", "facilitation", "documentation", "handoffs"],
-    lastReviewed: "2026-07-14"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "kc-spaces-fund-digital-infrastructure",

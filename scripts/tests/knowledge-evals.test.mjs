@@ -51,6 +51,15 @@ const nycacFacebookEventReport = readFileSync(
   new URL("../../docs/knowledge-bank/projects/nycartc-facebook-events-2026-07-14.md", import.meta.url),
   "utf8"
 );
+const personalWowlistFacebookEventControlsText = readFileSync(
+  new URL("../../docs/knowledge-bank/data/personal-wowlist-facebook-event-controls.json", import.meta.url),
+  "utf8"
+);
+const personalWowlistFacebookEventControls = JSON.parse(personalWowlistFacebookEventControlsText);
+const personalWowlistFacebookEventReport = readFileSync(
+  new URL("../../docs/knowledge-bank/personal-wowlist-facebook-events-2026-07-14.md", import.meta.url),
+  "utf8"
+);
 const fairRentMdx = readFileSync(
   new URL("../../apps/www/src/content/work/fair-rent-nyc.mdx", import.meta.url),
   "utf8"
@@ -62,6 +71,10 @@ const publicRegistryText = readFileSync(
 
 const knowledgeCriterionScore = (result) =>
   result.criteria.find((item) => item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-EVENTS")?.score;
+const personalWowlistEventCriterionScore = (result) =>
+  result.criteria.find(
+    (item) => item.criterionId === "KB-EVAL-PERSONAL-WOWLIST-FACEBOOK-EVENTS"
+  )?.score;
 
 function evaluateEventLedgerWithReboundDigest(altered) {
   const alteredSuite = structuredClone(suite);
@@ -2990,6 +3003,77 @@ test("NYC Artist Coalition event eval binds the complete generated public regist
       1
     );
   }
+});
+
+test("personal and WOW List Facebook event population meets its full control", () => {
+  assert.equal(personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite)), 5);
+});
+
+test("personal event eval rejects population arithmetic drift", () => {
+  const altered = structuredClone(personalWowlistFacebookEventControls);
+  altered.personalAssociationSurface.currentRecords = 501;
+  assert.equal(
+    personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite, {
+      personalWowlistFacebookEventControls: altered
+    })),
+    1
+  );
+});
+
+test("personal event eval rejects row-level identifiers in aggregate controls", () => {
+  const unsafeText = JSON.stringify({
+    ...personalWowlistFacebookEventControls,
+    eventId: "10153308288768593"
+  });
+  assert.equal(
+    personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite, {
+      personalWowlistFacebookEventControls,
+      personalWowlistFacebookEventControlsText: unsafeText
+    })),
+    1
+  );
+});
+
+test("personal event eval rejects sole-author metadata on selected event sources", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === suite.pilot.personalWowlistFacebookEvents.selectedEventSourceIds[0]
+  );
+  assert.ok(source);
+  const originalAuthor = source.author;
+  try {
+    source.author = "Jamie Burkart";
+    assert.equal(personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    if (originalAuthor === undefined) delete source.author;
+    else source.author = originalAuthor;
+  }
+});
+
+test("personal event eval keeps reserve-depth claims off hiring pages", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-JAMIE-FACEBOOK-HOSTED-EVENT-PRACTICE-2006-2017"
+  );
+  assert.ok(claim);
+  const originalSurfaces = claim.projections[0].surfaces;
+  try {
+    claim.projections[0].surfaces = ["/work/technical-operations"];
+    assert.equal(personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite)), 1);
+  } finally {
+    claim.projections[0].surfaces = originalSurfaces;
+  }
+});
+
+test("personal event eval preserves non-recovery language", () => {
+  const alteredReport = personalWowlistFacebookEventReport.replace(
+    "not recovered",
+    "proved never to have existed"
+  );
+  assert.equal(
+    personalWowlistEventCriterionScore(evaluateKnowledgeBank(suite, {
+      personalWowlistFacebookEventReport: alteredReport
+    })),
+    1
+  );
 });
 
 test("complete maturation pilot meets every floor", () => {
