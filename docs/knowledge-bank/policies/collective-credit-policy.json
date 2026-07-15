@@ -1,6 +1,16 @@
 {
-  "version": 5,
-  "collectiveClaimsSha256": "8fe29f6faa095244264ff8bcbf5104f510674d5336e370259bc0fc1d423d4250",
+  "version": 6,
+  "collectiveClaimsSha256": "d941af8a2c8b309e020cc07b86512748897486985a238cbfe5092ff48242c556",
+  "collectiveRuntimeSha256": "d6fd53584bde6cf0357cb8ab57853a99061cb657ca98623be367cb93e5400d67",
+  "collectiveRuntimeFiles": [
+    "apps/www/mdx-components.tsx",
+    "apps/www/src/app/work/[slug]/page.tsx",
+    "apps/www/src/components/CaseStudyLayout.tsx",
+    "apps/www/src/components/citations/Claim.tsx",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/knowledge-bank/public.ts",
+    "apps/www/src/lib/work.ts"
+  ],
   "collectiveProjects": [
     "196-sunday-dinner",
     "commercial-rent-data",

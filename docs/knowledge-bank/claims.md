@@ -305,6 +305,96 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## thick-arts-founder-role-history - THICK ARTS role history
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Founder, Technical Project Manager, and Web Systems Lead at THICK ARTS, Jamie's independent practice, from 2012 to the present.
+**Detailed public-safe wording:** Jamie has operated THICK ARTS as an independent web, implementation, and technical-project practice since 2012.
+**Where to project:** Resume page.
+**Why it matters:** Makes the continuity and operating context of Jamie's independent practice explicit.
+**Guardrail:** Present as Jamie's self-attested independent-practice history; do not imply a larger employer or unverified staff structure.
+**Do not say:** Third-party employment verification; a larger agency staff unless separately sourced.
+**Protected boundaries:** Private clients, contracts, tax records, and unpublished client work stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-cofounder-role-history - WOWList role history
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Co-Founder, Product and Community Systems for WOWList.org from 2015 to 2020.
+**Detailed public-safe wording:** Jamie's reviewed professional-history attestation identifies his WOWList role as co-founder with product and community-systems responsibilities.
+**Where to project:** Resume page.
+**Why it matters:** Names Jamie's role while retaining the collective character of the platform's creation and use.
+**Guardrail:** Keep co-founder and co-built language collective; do not infer sole authorship, ownership, or responsibility for adoption.
+**Do not say:** Jamie solely founded WOWList; Jamie alone built every system; Jamie alone secured adoption.
+**Protected boundaries:** Unapproved collaborator names, private ownership records, and private user data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## sunday-dinner-founder-role-history - Sunday Dinner / 196 role history
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Founder and Systems Steward for Sunday Dinner and 196 Artists Residency from 2012 to the present.
+**Detailed public-safe wording:** Jamie's reviewed project history identifies him as founder and systems steward for the recurring gathering and residency work.
+**Where to project:** Resume page.
+**Why it matters:** Connects long-running community practice to Jamie's hosting, onboarding, and continuity work.
+**Guardrail:** The title does not transfer ownership of participant work or make private community records public.
+**Do not say:** Jamie owns resident work; the complete participant archive is public.
+**Protected boundaries:** Participant identities, private messages, guest lists, and unapproved media stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-cofounder-role-history - KC Town Hall role history
+
+**Status:** Careful
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Co-Founder and Project Manager for KC Town Hall LLC's historic-restoration and mixed-use-development work from 2015 to 2024.
+**Detailed public-safe wording:** Jamie's reviewed professional history identifies his role in the adaptive-reuse project while keeping institutional funding decisions separate.
+**Where to project:** Resume page.
+**Why it matters:** Names Jamie's project role without converting municipal decisions into personal outcomes.
+**Guardrail:** Keep the title separate from executed-agreement claims, receipt of funds, completion, and current property status.
+**Do not say:** Jamie alone secured public funding; funding was received; the project was completed as proposed.
+**Protected boundaries:** Private ownership records, financial details, legal details, and current property status stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## ucsc-degree-honors - UCSC education
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** B.A. in Film and Digital Media, with Honors, from the University of California, Santa Cruz.
+**Detailed public-safe wording:** Jamie's approved resume and reviewed education attestation identify the degree, field, institution, and honors.
+**Where to project:** Resume page.
+**Why it matters:** Provides the education record used in job applications.
+**Guardrail:** Treat as a self-attested education record unless formal verification is separately requested.
+**Do not say:** Graduate degree; a different major; third-party verification already completed.
+**Protected boundaries:** Student ID, transcript, and dates not approved for publication stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## work-authorization-driver-license - Work eligibility and license
+
+**Status:** Ready
+**Support level:** Moderate
+**Evidence class:** Approved resume / Jamie review confirmation
+**Public wording:** Valid New York State driver's license; authorized to work in the United States with no U.S. sponsorship required.
+**Detailed public-safe wording:** Jamie's approved resume carries this general, self-attested eligibility statement without exposing identity-document details.
+**Where to project:** Resume page.
+**Why it matters:** Answers routine application eligibility questions directly.
+**Guardrail:** Publish only the general eligibility statement; never publish license, identity-document, or immigration-record numbers or scans.
+**Do not say:** Government verification completed; any license or identity-document number.
+**Protected boundaries:** License number, identity documents, immigration records, and scans stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## technical-operations-operating-backbone - Operating backbone
 
 **Status:** Ready  

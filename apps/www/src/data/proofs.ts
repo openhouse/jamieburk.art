@@ -716,6 +716,113 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-14"
   },
   {
+    id: "thick-arts-founder-role-history",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Founder, Technical Project Manager, and Web Systems Lead at THICK ARTS, Jamie's independent practice, from 2012 to the present.",
+    shortWording: "THICK ARTS founder and technical project lead since 2012",
+    sourceBasis: "Approved public resume and Jamie's reviewed professional-history attestation.",
+    guardrail:
+      "Present as Jamie's independent practice and self-attested role history; do not imply a larger employer or unverified staff structure.",
+    doNotSay: ["Third-party employment verification", "A larger agency staff unless separately sourced"],
+    protectedBoundaries: ["Private clients", "Contracts", "Tax records", "Unpublished client work"],
+    surfaces: ["resume"],
+    relatedProjects: [],
+    relatedCapabilities: ["technical-project-management", "web-systems", "implementation"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "wowlist-cofounder-role-history",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Co-Founder, Product and Community Systems for WOWList.org from 2015 to 2020.",
+    shortWording: "WOWList co-founder and product/community systems lead",
+    sourceBasis: "Approved public resume and Jamie's reviewed professional-history attestation.",
+    guardrail:
+      "Keep co-founder and co-built language collective; do not infer sole authorship, sole ownership, or sole responsibility for adoption.",
+    doNotSay: ["Jamie solely founded WOWList", "Jamie alone built every system", "Jamie alone secured adoption"],
+    protectedBoundaries: ["Unapproved collaborator names", "Private ownership records", "Private user data"],
+    surfaces: ["resume"],
+    relatedProjects: ["wowlist"],
+    relatedCapabilities: ["product-systems", "community-platforms"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "sunday-dinner-founder-role-history",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Founder and Systems Steward for Sunday Dinner and 196 Artists Residency from 2012 to the present.",
+    shortWording: "Sunday Dinner / 196 founder and systems steward",
+    sourceBasis: "Approved public resume and Jamie's reviewed project-history attestation.",
+    guardrail:
+      "The role title does not transfer ownership of participant work or make private community records public.",
+    doNotSay: ["Jamie owns resident work", "The complete participant archive is public"],
+    protectedBoundaries: ["Participant identities", "Private messages", "Guest lists", "Unapproved media"],
+    surfaces: ["resume"],
+    relatedProjects: ["196-sunday-dinner"],
+    relatedCapabilities: ["hosting", "onboarding", "continuity-systems"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "kc-town-hall-cofounder-role-history",
+    status: "careful",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Co-Founder and Project Manager for KC Town Hall LLC's historic-restoration and mixed-use-development work from 2015 to 2024.",
+    shortWording: "KC Town Hall co-founder and project manager",
+    sourceBasis: "Approved public resume and Jamie's reviewed professional-history attestation.",
+    guardrail:
+      "Keep the title separate from institutional funding decisions, executed-agreement claims, receipt of funds, completion, and current property status.",
+    doNotSay: ["Jamie alone secured public funding", "Funding was received", "The project was completed as proposed"],
+    protectedBoundaries: ["Private ownership records", "Financial details", "Legal details", "Current property status"],
+    surfaces: ["resume"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: ["project-management", "public-benefit-documentation"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "ucsc-degree-honors",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "B.A. in Film and Digital Media, with Honors, from the University of California, Santa Cruz.",
+    shortWording: "UCSC B.A., Film and Digital Media, Honors",
+    sourceBasis: "Approved public resume and Jamie's reviewed education attestation.",
+    guardrail: "Treat as a self-attested education record unless formal verification is separately requested.",
+    doNotSay: ["Graduate degree", "A different major", "Third-party verification already completed"],
+    protectedBoundaries: ["Student ID", "Transcript", "Dates not approved for publication"],
+    surfaces: ["resume"],
+    relatedProjects: [],
+    relatedCapabilities: [],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "work-authorization-driver-license",
+    status: "ready",
+    supportLevel: "moderate",
+    evidenceClass: ["approved-resume", "jamie-review-confirmation"],
+    publicWording:
+      "Valid New York State driver's license; authorized to work in the United States with no U.S. sponsorship required.",
+    shortWording: "NYS driver's license and U.S. work authorization",
+    sourceBasis: "Approved public resume and Jamie's reviewed eligibility attestation.",
+    guardrail:
+      "Publish only the general eligibility statement; never publish license, identity-document, or immigration-record numbers or scans.",
+    doNotSay: ["Government verification completed", "Any license or identity-document number"],
+    protectedBoundaries: ["License number", "Identity documents", "Immigration records", "Scans"],
+    surfaces: ["resume"],
+    relatedProjects: [],
+    relatedCapabilities: [],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "technical-operations-operating-backbone",
     status: "ready",
     supportLevel: "strong",

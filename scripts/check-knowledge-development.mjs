@@ -41,14 +41,21 @@ const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
 const requiredPublicSurfaceRoots = new Map([
-  ["apps/www/src/app", [".tsx"]],
-  ["apps/www/src/components", [".tsx"]],
-  ["apps/www/src/content", [".mdx"]]
+  ["apps/www/src/app", [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]],
+  ["apps/www/src/components", [".js", ".jsx", ".ts", ".tsx"]],
+  ["apps/www/src/content", [".md", ".mdx"]],
+  ["apps/www/public", [".html", ".htm", ".md", ".mdx", ".pdf", ".txt"]]
 ]);
 const requiredPublicSurfaceFiles = new Set([
+  "apps/www/mdx-components.tsx",
+  "apps/www/next.config.ts",
   "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/knowledge-bank/public-registry.json",
+  "apps/www/src/data/knowledge-bank/public.ts",
+  "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/site.ts",
   "apps/www/src/data/work.ts",
+  "apps/www/src/lib/work.ts",
   "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
   "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
   "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
@@ -59,12 +66,43 @@ const requiredCaseStudySharedFiles = new Set([
   "apps/www/src/components/CaseStudyLayout.tsx",
   "apps/www/src/data/work.ts"
 ]);
+const requiredCollectiveRuntimeFiles = new Set([
+  "apps/www/mdx-components.tsx",
+  "apps/www/src/app/work/[slug]/page.tsx",
+  "apps/www/src/components/CaseStudyLayout.tsx",
+  "apps/www/src/components/citations/Claim.tsx",
+  "apps/www/src/data/knowledge-bank/public-registry.json",
+  "apps/www/src/data/knowledge-bank/public.ts",
+  "apps/www/src/lib/work.ts"
+]);
+const requiredResumeStatementIds = new Set([
+  "profile-operating-structure",
+  "hje-growth",
+  "callnyc-guidance",
+  "crs-memory",
+  "nycac-public-systems",
+  "wowlist-platform",
+  "sunday-dinner-participation",
+  "thick-arts-role",
+  "nycac-role",
+  "wowlist-role",
+  "sunday-dinner-role",
+  "kc-town-hall-role",
+  "kc-town-hall-council-sequence",
+  "ai-evals-course",
+  "ucsc-degree",
+  "work-authorization"
+]);
 const hybridCandidatePaths = [
   ".agents/evals/knowledge-bank-development.json",
   "apps/www/src/content/work",
   "apps/www/src/data/knowledge-bank",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/work.ts",
+  "apps/www/src/lib",
+  "apps/www/mdx-components.tsx",
+  "apps/www/next.config.ts",
+  "apps/www/public/resume",
   "docs/knowledge-bank",
   "scripts/check-knowledge-development.mjs",
   "scripts/lib/citation-validation.mjs",
@@ -156,9 +194,18 @@ export function collectiveCreditFingerprint(bank) {
         internalClaim: claim.internalClaim,
         boundaries: claim.boundaries,
         antiClaims: claim.antiClaims,
+        projections: claim.projections,
         collectiveWork: claim.collectiveWork
       }))
       .sort((left, right) => left.id.localeCompare(right.id))
+  );
+}
+
+export function fileInventoryFingerprint(paths) {
+  return stableSha256(
+    [...paths]
+      .sort()
+      .map((path) => [path, sha256(readFileSync(path))])
   );
 }
 
@@ -199,9 +246,7 @@ export function publicSurfaceFingerprint(
     for (const path of filesBelow(root.path, root.extensions)) paths.add(path);
   }
   return stableSha256(
-    [...paths]
-      .sort()
-      .map((path) => [path, sha256(readFileSync(path))])
+    [...paths].sort().map((path) => [path, sha256(readFileSync(path))])
   );
 }
 
@@ -217,10 +262,28 @@ function literalAttribute(tag, attribute) {
 
 function executableSource(content) {
   return content
+    .replace(/^```[^\n]*\n[\s\S]*?^```[ \t]*$/gm, "")
+    .replace(/`(?:\\[\s\S]|[^`])*`/g, "")
     .replace(/<!--[\s\S]*?-->/g, "")
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, "")
     .replace(/\/\*[\s\S]*?\*\//g, "")
     .replace(/(^|[^:])\/\/.*$/gm, "$1")
+    .replace(
+      /(^|\n)[ \t]*(?!export\b)(?:async\s+)?function\s+[A-Za-z_$][\w$]*\s*\([^)]*\)\s*\{[\s\S]*?^[ \t]*\}/gm,
+      "$1"
+    )
+    .replace(
+      /(^|\n)[ \t]*(?!export\b)(?:const|let)\s+[A-Za-z_$][\w$]*\s*=\s*(?:async\s*)?\([^)]*\)\s*=>\s*\([\s\S]*?^[ \t]*\);?/gm,
+      "$1"
+    )
+    .replace(
+      /\bprocess\.env(?:\.[A-Za-z0-9_]+|\[[^\]]+\])\s*&&\s*\([\s\S]*?\)\s*;?/g,
+      ""
+    )
+    .replace(
+      /\bif\s*\(\s*process\.env(?:\.[A-Za-z0-9_]+|\[[^\]]+\])\s*\)\s*\{[\s\S]*?\}/g,
+      ""
+    )
     .replace(/\bfalse\s*&&\s*\([\s\S]*?\)\s*;?/g, "")
     .replace(/\bif\s*\(\s*false\s*\)\s*\{[\s\S]*?\}/g, "");
 }
@@ -368,11 +431,11 @@ export function evaluateKnowledgeBank(
   const assertionSourceIds = new Set(bank.sourceAssertions.map((item) => item.sourceId));
   const findings = Object.fromEntries(suite.evals.map((entry) => [entry.id, []]));
 
-  if (collectiveCreditPolicy.version !== 5) {
-    findings["KB-007"].push("collective-credit policy version must be 5");
+  if (collectiveCreditPolicy.version !== 6) {
+    findings["KB-007"].push("collective-credit policy version must be 6");
   }
-  if (projectionSurfaceBindings.version !== 2) {
-    findings["KB-009"].push("projection-surface policy version must be 2");
+  if (projectionSurfaceBindings.version !== 3) {
+    findings["KB-009"].push("projection-surface policy version must be 3");
   }
   if (
     collectiveCreditPolicy.collectiveClaimsSha256 !==
@@ -380,6 +443,27 @@ export function evaluateKnowledgeBank(
   ) {
     findings["KB-007"].push(
       "collective claim inventory, project ownership, or credit language changed without policy review"
+    );
+  }
+  for (const path of requiredCollectiveRuntimeFiles) {
+    if (!collectiveCreditPolicy.collectiveRuntimeFiles.includes(path)) {
+      findings["KB-007"].push(
+        `collective-credit policy omits runtime renderer ${path}`
+      );
+    }
+  }
+  try {
+    if (
+      collectiveCreditPolicy.collectiveRuntimeSha256 !==
+      fileInventoryFingerprint(collectiveCreditPolicy.collectiveRuntimeFiles)
+    ) {
+      findings["KB-007"].push(
+        "collective-claim runtime rendering changed without credit review"
+      );
+    }
+  } catch (error) {
+    findings["KB-007"].push(
+      `collective-claim runtime inventory cannot be read: ${error.message}`
     );
   }
   if (
@@ -462,6 +546,40 @@ export function evaluateKnowledgeBank(
       }
       if (normalizedText(extractedText).includes(normalizedText(phrase))) {
         findings["KB-009"].push(`resume PDF text contains held wording: ${phrase}`);
+      }
+    }
+    const proofSource = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+    const proofIds = new Set(
+      [...proofSource.matchAll(/\bid:\s*"([^"]+)"/g)].map((match) => match[1])
+    );
+    const resumeStatementIds = new Set();
+    for (const statement of resumeArtifact.statements) {
+      if (resumeStatementIds.has(statement.id)) {
+        findings["KB-009"].push(`resume manifest duplicates statement ${statement.id}`);
+      }
+      resumeStatementIds.add(statement.id);
+      if (!normalizedText(source).includes(normalizedText(statement.text))) {
+        findings["KB-009"].push(`resume source omits manifested statement ${statement.id}`);
+      }
+      if (!normalizedText(extractedText).includes(normalizedText(statement.text))) {
+        findings["KB-009"].push(`resume PDF text omits manifested statement ${statement.id}`);
+      }
+      const linkedIds = [...statement.claimIds, ...statement.proofIds];
+      if (linkedIds.length === 0) {
+        findings["KB-009"].push(`resume statement ${statement.id} has no claim or proof identity`);
+      }
+      for (const id of statement.claimIds) {
+        const claim = bank.claims.find((item) => item.id === id);
+        if (!claim) findings["KB-009"].push(`resume statement ${statement.id} references missing claim ${id}`);
+        else if (claim.projectionEligibility !== "eligible") findings["KB-009"].push(`resume statement ${statement.id} references held claim ${id}`);
+      }
+      for (const id of statement.proofIds) {
+        if (!proofIds.has(id)) findings["KB-009"].push(`resume statement ${statement.id} references missing proof ${id}`);
+      }
+    }
+    for (const id of requiredResumeStatementIds) {
+      if (!resumeStatementIds.has(id)) {
+        findings["KB-009"].push(`resume manifest omits consequential statement ${id}`);
       }
     }
   } catch (error) {

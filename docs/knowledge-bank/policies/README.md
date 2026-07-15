@@ -11,14 +11,18 @@ and enforceable by agents.
   individual CallNYC facts that predate that assertion layer and pins each
   exception to its original project. A reviewed collective-claim fingerprint
   also fails on silent deletion, project reassignment, or changes to actor,
-  boundary, and anti-claim language.
+  boundary, anti-claim, and live projection language. A second fingerprint
+  covers the runtime files that resolve and render collective claims.
 - `projection-surface-bindings.json` maps each approved public route to the
   source files that can render knowledge-bank projections there. An active
   route projection must use a literal `Claim` component or
   `getClaimProjection` call with the same claim ID, projection key, and surface
   in one of those files before it can pass `KB-009`. It inventories shared
-  case-study renderers, the full public source surface, and the downloadable
-  resume plus its reviewable HTML source and extracted text. Reviewed
+  case-study renderers, every supported route-source extension, generated
+  runtime registry prose, and public static text and PDF surfaces. The
+  downloadable resume has reviewable HTML source, extracted text, and a
+  statement-level manifest linking consequential wording to claim or proof
+  IDs. Reviewed
   fingerprints fail on silent claim deletion, use-now/hold drift, ungoverned
   public-copy changes, or resume-artifact replacement.
 

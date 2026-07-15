@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "projectionDecisionSha256": "9b53ad04b8ef2d8d5b9918423c802bc38ca2b9cd1f66dafde7185910d3796cff",
-  "publicSurfaceSha256": "58c1409008bf24faffe35d5a4e123e4b9351dad165f770ad3b0318199b40ec19",
+  "publicSurfaceSha256": "2df5499fd525e34deac94c641f9b9d86175fef54a41c4d019ebf87a676b386f5",
   "routes": {
     "/": ["apps/www/src/app/page.tsx"],
     "/about": ["apps/www/src/app/about/page.tsx"],
@@ -35,14 +35,21 @@
     "apps/www/src/data/work.ts"
   ],
   "publicSurfaceRoots": [
-    { "path": "apps/www/src/app", "extensions": [".tsx"] },
-    { "path": "apps/www/src/components", "extensions": [".tsx"] },
-    { "path": "apps/www/src/content", "extensions": [".mdx"] }
+    { "path": "apps/www/src/app", "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"] },
+    { "path": "apps/www/src/components", "extensions": [".js", ".jsx", ".ts", ".tsx"] },
+    { "path": "apps/www/src/content", "extensions": [".md", ".mdx"] },
+    { "path": "apps/www/public", "extensions": [".html", ".htm", ".md", ".mdx", ".pdf", ".txt"] }
   ],
   "publicSurfaceFiles": [
+    "apps/www/mdx-components.tsx",
+    "apps/www/next.config.ts",
     "apps/www/src/data/proofs.ts",
+    "apps/www/src/data/knowledge-bank/public-registry.json",
+    "apps/www/src/data/knowledge-bank/public.ts",
+    "apps/www/src/data/knowledge-bank/schema.ts",
     "apps/www/src/data/site.ts",
     "apps/www/src/data/work.ts",
+    "apps/www/src/lib/work.ts",
     "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.html",
     "docs/knowledge-bank/public-artifacts/resume-technical-project-manager-2026-07-15.txt",
     "apps/www/public/resume/Jamie-Burkart-Resume-Technical-Project-Manager.pdf"
@@ -65,6 +72,104 @@
       "NYC Artist Coalition / Fair Rent NYC - Co-Founder",
       "secured a $490,539 public funding recommendation",
       "Richard Caceres"
+    ],
+    "statements": [
+      {
+        "id": "profile-operating-structure",
+        "text": "Implementation lead who builds operating structure for emerging public-facing technical work.",
+        "claimIds": [],
+        "proofIds": ["career-operating-structure-14-years"]
+      },
+      {
+        "id": "hje-growth",
+        "text": "contributing to 2x revenue growth",
+        "claimIds": [],
+        "proofIds": ["hje-revenue-growth-contribution"]
+      },
+      {
+        "id": "callnyc-guidance",
+        "text": "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon",
+        "claimIds": ["CLM-CALLNYC-INDEPENDENT-FOLLOW-ON"],
+        "proofIds": ["callnyc-civic-data-guidance"]
+      },
+      {
+        "id": "crs-memory",
+        "text": "Built and stewarded 30-plus pages of shared campaign memory and coordination infrastructure",
+        "claimIds": [],
+        "proofIds": ["fair-rent-campaign-memory"]
+      },
+      {
+        "id": "nycac-public-systems",
+        "text": "Built and maintained public web and knowledge infrastructure across NYC Artist Coalition campaigns",
+        "claimIds": ["CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE"],
+        "proofIds": ["nyc-artist-coalition-public-web-infrastructure"]
+      },
+      {
+        "id": "wowlist-platform",
+        "text": "Co-built WOWList.org, a Python / Django and Ember.js community-calendar platform",
+        "claimIds": [],
+        "proofIds": ["wowlist-community-platform"]
+      },
+      {
+        "id": "sunday-dinner-participation",
+        "text": "Created Sunday Dinner / 196 Artists Residency as a repeatable trust-building and participation structure",
+        "claimIds": [],
+        "proofIds": ["sunday-dinner-196-participation-infrastructure"]
+      },
+      {
+        "id": "thick-arts-role",
+        "text": "THICK ARTS - Founder, Technical Project Manager",
+        "claimIds": [],
+        "proofIds": ["thick-arts-founder-role-history"]
+      },
+      {
+        "id": "nycac-role",
+        "text": "NYC Artist Coalition / Fair Rent NYC - Civic Systems, Coalition Operations",
+        "claimIds": [],
+        "proofIds": ["nyc-artist-coalition-civic-systems"]
+      },
+      {
+        "id": "wowlist-role",
+        "text": "WOWList.org - Co-Founder, Product",
+        "claimIds": [],
+        "proofIds": ["wowlist-cofounder-role-history"]
+      },
+      {
+        "id": "sunday-dinner-role",
+        "text": "196 Artists Residency / Sunday Dinner - Founder",
+        "claimIds": [],
+        "proofIds": ["sunday-dinner-founder-role-history"]
+      },
+      {
+        "id": "kc-town-hall-role",
+        "text": "KC Town Hall LLC - Co-Founder",
+        "claimIds": [],
+        "proofIds": ["kc-town-hall-cofounder-role-history"]
+      },
+      {
+        "id": "kc-town-hall-council-sequence",
+        "text": "The CCED Board recommended up to $490,539 for eligible project costs; the Kansas City Council later accepted that recommendation and authorized funding-agreement negotiations.",
+        "claimIds": ["CLM-KCTH-COUNCIL-APPROVAL-190649"],
+        "proofIds": ["kc-town-hall-public-benefit-documentation"]
+      },
+      {
+        "id": "ai-evals-course",
+        "text": "AI Evals for Engineers",
+        "claimIds": [],
+        "proofIds": ["ai-evals-professional-development"]
+      },
+      {
+        "id": "ucsc-degree",
+        "text": "University of California, Santa Cruz",
+        "claimIds": [],
+        "proofIds": ["ucsc-degree-honors"]
+      },
+      {
+        "id": "work-authorization",
+        "text": "Authorized to work in the U.S.; no U.S. sponsorship required.",
+        "claimIds": [],
+        "proofIds": ["work-authorization-driver-license"]
+      }
     ]
   }
 }

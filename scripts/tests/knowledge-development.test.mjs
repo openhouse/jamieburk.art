@@ -7,6 +7,7 @@ import {
   collectiveCreditFingerprint,
   documentRealizesProjection,
   evaluateKnowledgeBank,
+  fileInventoryFingerprint,
   projectionDecisionFingerprint,
   publicSurfaceFingerprint,
   routeRealizesProjection,
@@ -89,6 +90,10 @@ test("reviewed credit, projection, and public-surface inventories are current", 
   assert.equal(
     collectiveCreditFingerprint(knowledgeBank),
     collectiveCreditPolicy.collectiveClaimsSha256
+  );
+  assert.equal(
+    fileInventoryFingerprint(collectiveCreditPolicy.collectiveRuntimeFiles),
+    collectiveCreditPolicy.collectiveRuntimeSha256
   );
   assert.equal(
     projectionDecisionFingerprint(knowledgeBank),
@@ -1525,6 +1530,23 @@ test("reviewed collective-credit contracts reject vague rewrites and coordinated
     movedCredit.findings.join("\n"),
     /project ownership.*changed without policy review/
   );
+
+  const soloProjectionCandidate = structuredClone(knowledgeBank);
+  soloProjectionCandidate.claims
+    .find((item) => item.id === "CLM-NAC-PUBLIC-WEB-INFRASTRUCTURE")
+    .projections.find((item) => item.status === "active").text =
+    "Jamie alone created and led every coalition campaign.";
+  const soloProjectionResult = evaluateKnowledgeBank(
+    suite,
+    soloProjectionCandidate,
+    2,
+    hybridPass
+  );
+  const soloProjectionCredit = soloProjectionResult.results.find(
+    (entry) => entry.eval_id === "KB-007"
+  );
+  assert.equal(soloProjectionCredit.pass, false);
+  assert.match(soloProjectionCredit.findings.join("\n"), /credit language changed/);
 });
 
 test("silent removal of governed collective knowledge fails credit and projection inventories", () => {
@@ -1795,6 +1817,42 @@ test("commented claim bindings do not count as route realization", () => {
   assert.equal(
     routeRealizesProjection(
       `false && (\n  ${literal}\n)`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `\`\n${literal}\n\``,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `\`\`\`mdx\n${literal}\n\`\`\``,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `function NeverRendered() {\n  return (\n    ${literal}\n  );\n}`,
+      claim,
+      projection,
+      "/work/technical-operations"
+    ),
+    false
+  );
+  assert.equal(
+    routeRealizesProjection(
+      `process.env.NEXT_PUBLIC_HIDDEN && (\n  ${literal}\n)`,
       claim,
       projection,
       "/work/technical-operations"
