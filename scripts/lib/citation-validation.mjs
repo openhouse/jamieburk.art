@@ -7,6 +7,7 @@ const publicSurfaceFiles = [
   "apps/www/src/content/work/harry-j-epstein.mdx",
   "apps/www/src/content/work/fair-rent-nyc.mdx",
   "apps/www/src/content/work/wowlist.mdx",
+  "apps/www/src/content/work/196-sunday-dinner.mdx",
   "apps/www/src/data/work.ts",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/app/resume/page.tsx"
@@ -133,7 +134,10 @@ export function validateKnowledgeBank({ includePublicFiles = true } = {}) {
   for (const source of knowledgeBank.sources) {
     if (source.protectedLocatorId && publicJson.includes(source.protectedLocatorId)) errors.push(`Protected locator ${source.protectedLocatorId} leaked into public registry`);
   }
-  if (publicRegistry.sources.some((source) => source.visibility !== "public")) errors.push("Public registry contains a non-public source");
+  if (publicRegistry.sources.some((source) => !["public", "public-metadata-only"].includes(source.visibility))) errors.push("Public registry contains a private or protected source");
+  for (const source of publicRegistry.sources.filter((item) => item.visibility === "public-metadata-only")) {
+    if (source.canonicalUrl || source.archiveUrl || source.assetUrl) errors.push(`Metadata-only source ${source.id} exposes an underlying URL`);
+  }
 
   if (includePublicFiles) {
     const publicText = publicSurfaceFiles.map((path) => readFileSync(path, "utf8")).join("\n");

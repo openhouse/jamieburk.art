@@ -2568,6 +2568,62 @@ test("institutional-need interpretation rejects dependency and sole-causation cl
   assert.ok(task.nextActions.some((item) => /Tom Finkelpearl.*Rafael Espinal/i.test(item)));
 });
 
+test("WOWList database scale is exact, bounded, and publicly metadata-only", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-WOWLIST-DATABASE-SCALE-2017"
+  );
+
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.equal(source.preservationStatus, "private");
+  assert.equal(source.canonicalUrl, undefined);
+  assert.match(source.publicNote, /1,846 users.*16,142 posts\/events.*23,864 lists\/tags.*28,837 list follows/i);
+  assert.match(source.publicNote, /35 city\/region groups with at least 50/i);
+  assert.equal(claim.maturity, "projected");
+  assert.ok(claim.antiClaims.some((item) => /official chapters/i.test(item)));
+  assert.ok(claim.boundaries.some((item) => /point-in-time/i.test(item)));
+});
+
+test("Sunday Dinner scale preserves participant privacy and counting limits", () => {
+  const source = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"
+  );
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE"
+  );
+
+  assert.equal(source.visibility, "public-metadata-only");
+  assert.match(source.publicNote, /345 numbered event columns/i);
+  assert.match(source.publicNote, /four event numbers are duplicated/i);
+  assert.equal(claim.maturity, "projected");
+  assert.match(claim.projections[0].text, /more than 300 numbered gathering records/i);
+  assert.ok(claim.boundaries.some((item) => /participant rows.*not published/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /unique attendee/i.test(item)));
+});
+
+test("Call Script participation lineage stays corroborated and research-routed", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-CALLSCRIPT-NYCARTC-ROLE-AND-CHRONOLOGY-CORROBORATION"
+  );
+  const event = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-FACEBOOK-CALLSCRIPT-NYCARTC-DCLA-EVENT-2017"
+  );
+
+  assert.equal(claim.maturity, "corroborated");
+  assert.equal(claim.projections.length, 0);
+  assert.ok(claim.evidence.some((item) => item.sourceId === "SRC-FACEBOOK-CALLSCRIPT-PUBLIC-PAGE-2026"));
+  assert.ok(claim.antiClaims.some((item) => /alone created NYC Artist Coalition/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /responses equal physical attendance/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.nextActions.some((item) => /proof notes.*collaborator/i.test(item)));
+  assert.ok(event.doesNotEstablish.some((item) => /445 physical attendees/i.test(item)));
+});
+
 test("judge evidence and floors are enforced", () => {
   const assessment = {
     suiteId: suite.id,

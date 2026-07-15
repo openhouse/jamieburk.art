@@ -185,10 +185,19 @@ import {
   kcTownHallPhaseOneResearchTasks,
   kcTownHallPhaseOneSources
 } from "./kctownhall-phase-one-neighborhood-practice-2026-07-15.ts";
+import {
+  participationLineageClaims,
+  participationLineageDecisions,
+  participationLineageEntities,
+  participationLineageIntake,
+  participationLineageReadings,
+  participationLineageResearchTasks,
+  participationLineageSources
+} from "./participation-lineage-2026-07-15.ts";
 
 const knowledgeBankInput = {
-  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities, ...kcTownHallPhaseOneEntities],
-  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake],
+  entities: [...lifecycleEntities, ...sourceExpansionEntities, ...teamsArchiveEntities, ...teamsArchiveDeepeningEntities, ...nterChngAmericaNowHereEntities, ...nycArtCGovernmentInterfaceEntities, ...googleDriveArchiveEntities, ...socialArchiveEntities, ...urbanHermitSocialCensusEntities, ...jamieFacebookPostEntities, ...kcTownHallPhaseOneEntities, ...participationLineageEntities],
+  intake: [...lifecycleIntake, ...sourceExpansionIntake, ...campaignPressIntake, ...teamsArchiveIntake, ...teamsArchiveDeepeningIntake, ...nterChngAmericaNowHereIntake, ...nycArtCGovernmentInterfaceIntake, ...googleDriveArchiveIntake, ...socialArchiveIntake, ...callNycSocialCensusIntake, ...wowListSocialCensusIntake, ...kcTownHallSocialCensusIntake, ...nycArtCSocialCensusIntake, ...urbanHermitSocialCensusIntake, ...nycArtCFacebookEventIntake, ...personalWowListFacebookEventIntake, ...wowListFacebookPostIntake, ...nycArtCFacebookPostIntake, ...kcSpacesFundFacebookPostIntake, ...jamieFacebookPostIntake, ...kcTownHallPhaseOneIntake, ...participationLineageIntake],
   sources: [
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
@@ -404,7 +413,8 @@ const knowledgeBankInput = {
     ...nycArtCFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
     ...jamieFacebookPostSources,
-    ...kcTownHallPhaseOneSources
+    ...kcTownHallPhaseOneSources,
+    ...participationLineageSources
   ],
   claims: [
     {
@@ -663,10 +673,11 @@ const knowledgeBankInput = {
     ...nycArtCFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
     ...jamieFacebookPostClaims,
-    ...kcTownHallPhaseOneClaims
+    ...kcTownHallPhaseOneClaims,
+    ...participationLineageClaims
   ],
-  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings],
-  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks, ...kcTownHallPhaseOneResearchTasks],
+  sourceReadings: [...lifecycleSourceReadings, ...sourceExpansionReadings, ...campaignPressReadings, ...teamsArchiveReadings, ...teamsArchiveDeepeningReadings, ...nterChngAmericaNowHereReadings, ...nycArtCGovernmentInterfaceReadings, ...googleDriveArchiveReadings, ...legacyProjectionReadings, ...socialArchiveReadings, ...callNycSocialCensusReadings, ...wowListSocialCensusReadings, ...kcTownHallSocialCensusReadings, ...nycArtCSocialCensusReadings, ...urbanHermitSocialCensusReadings, ...nycArtCFacebookEventReadings, ...personalWowListFacebookEventReadings, ...wowListFacebookPostReadings, ...nycArtCFacebookPostReadings, ...kcSpacesFundFacebookPostReadings, ...jamieFacebookPostReadings, ...kcTownHallPhaseOneReadings, ...participationLineageReadings],
+  researchTasks: [...lifecycleResearchTasks, ...sourceExpansionResearchTasks, ...campaignPressResearchTasks, ...teamsArchiveDeepeningResearchTasks, ...nterChngAmericaNowHereResearchTasks, ...nycArtCGovernmentInterfaceResearchTasks, ...googleDriveArchiveResearchTasks, ...socialArchiveResearchTasks, ...callNycSocialCensusResearchTasks, ...wowListSocialCensusResearchTasks, ...kcTownHallSocialCensusResearchTasks, ...nycArtCSocialCensusResearchTasks, ...urbanHermitSocialCensusResearchTasks, ...nycArtCFacebookEventResearchTasks, ...personalWowListFacebookEventResearchTasks, ...wowListFacebookPostResearchTasks, ...nycArtCFacebookPostResearchTasks, ...kcSpacesFundFacebookPostResearchTasks, ...jamieFacebookPostResearchTasks, ...kcTownHallPhaseOneResearchTasks, ...participationLineageResearchTasks],
   researchInquiries: [{
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",
@@ -680,7 +691,7 @@ const knowledgeBankInput = {
     publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
     protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
   }, ...nycArtCGovernmentInterfaceInquiries, ...urbanHermitSocialCensusInquiries, ...nycArtCFacebookEventInquiries, ...personalWowListFacebookEventInquiries, ...wowListFacebookPostInquiries, ...nycArtCFacebookPostInquiries, ...kcSpacesFundFacebookPostInquiries, ...jamieFacebookPostInquiries],
-  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions, ...kcTownHallPhaseOneDecisions],
+  projectionDecisions: [...lifecycleProjectionDecisions, ...sourceExpansionDecisions, ...teamsArchiveDecisions, ...teamsArchiveDeepeningDecisions, ...nterChngAmericaNowHereDecisions, ...nycArtCGovernmentInterfaceDecisions, ...googleDriveArchiveDecisions, ...socialArchiveDecisions, ...callNycSocialCensusDecisions, ...wowListSocialCensusDecisions, ...kcTownHallSocialCensusDecisions, ...nycArtCSocialCensusDecisions, ...urbanHermitSocialCensusDecisions, ...nycArtCFacebookEventDecisions, ...personalWowListFacebookEventDecisions, ...wowListFacebookPostDecisions, ...nycArtCFacebookPostDecisions, ...kcSpacesFundFacebookPostDecisions, ...jamieFacebookPostDecisions, ...kcTownHallPhaseOneDecisions, ...participationLineageDecisions],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },
@@ -725,10 +736,19 @@ const knowledgeBankInput = {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-WOWLIST-WAYBACK-2016-02-12", "SRC-X-WOWLIST-ORIGIN-2014", "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", "SRC-X-WOWLIST-SUPPORT-2015", "SRC-X-WOWLIST-NYCDIY-2016"],
+      sourceOrder: ["SRC-WOWLIST-WAYBACK-2016-02-12", "SRC-X-WOWLIST-ORIGIN-2014", "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22", "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", "SRC-X-WOWLIST-SUPPORT-2015", "SRC-X-WOWLIST-NYCDIY-2016"],
       occurrences: [
         { id: "archived-public-surface", claimId: "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE", projection: "case-study", sourceIds: ["SRC-WOWLIST-WAYBACK-2016-02-12"] },
+        { id: "database-scale", claimId: "CLM-WOWLIST-DATABASE-SCALE-2017", projection: "case-study", sourceIds: ["SRC-X-WOWLIST-ORIGIN-2014", "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"] },
         { id: "social-origin-and-support", claimId: "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-X-WOWLIST-ORIGIN-2014", "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", "SRC-X-WOWLIST-SUPPORT-2015", "SRC-X-WOWLIST-NYCDIY-2016"] }
+      ]
+    },
+    {
+      id: "196-sunday-dinner",
+      surface: "/work/196-sunday-dinner",
+      sourceOrder: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"],
+      occurrences: [
+        { id: "recorded-gathering-scale", claimId: "CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE", projection: "case-study", sourceIds: ["SRC-GREENE-HILL-COOP-QA-2017", "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021"] }
       ]
     }
   ]

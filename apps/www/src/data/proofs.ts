@@ -317,13 +317,13 @@ export const proofClaims: ProofClaim[] = [
       "firsthand-collaborator-context"
     ],
     publicWording:
-      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform adopted by DIY arts and music organizers across roughly 35 city ecosystems.",
-    shortWording: "WOWList reached roughly 35 city ecosystems",
+      "Co-built WOWList.org, a Django, PostgreSQL/PostGIS, and Ember community-calendar platform with recorded activity across at least 35 city/region groups by July 2017.",
+    shortWording: "WOWList recorded activity across 35+ city/region groups",
     detailedPublicWording:
-      "Jamie co-built WOWList's event workflows and public web system so local calendar organizers could publish, follow, and distribute events through community language; public-safe records support 1,800+ users, 16,000+ posts/events, and use across roughly 35 city ecosystems.",
-    sourceBasis: "Approved resume language and public-safe aggregate historical summary.",
+      "Jamie co-built WOWList's event workflows and public web system so local calendar organizers could publish, follow, and distribute events through community language; a July 2017 snapshot records 1,846 users, 16,142 posts/events, and 35 city/region groups with at least 50 geocoded posts/events.",
+    sourceBasis: "Public origin evidence and a metadata-only aggregate review of a protected July 2017 production snapshot.",
     guardrail:
-      "Use approximate adoption language and do not describe city activity as official chapters.",
+      "Describe point-in-time database activity, not unique active users, adoption, official chapters, satisfaction, or impact.",
     doNotSay: [
       "Official chapters in 35 cities",
       "Full ownership of all organizer adoption",
@@ -356,7 +356,7 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "Jamie made recurring cultural work easier to continue through practical invitation, hosting, onboarding, facilitation, documentation, and follow-through systems.",
     sourceBasis:
-      "Approved resume language, public-safe aggregate project history, and public Facebook event pages documenting the hundredth Sunday Dinner, a rotating eight-week New York City format, and a civic sign-making potluck.",
+      "Approved resume language, an independent 2017 description of weekly community dinners, a metadata-only aggregate workbook review supporting more than 300 numbered gathering records, and public Facebook event pages documenting selected gatherings.",
     guardrail:
       "Keep the page summary-only and avoid turning community trust work into spectacle.",
     doNotSay: [

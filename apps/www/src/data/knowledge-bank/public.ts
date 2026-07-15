@@ -24,7 +24,7 @@ const publicSourceSchema = z.object({
   organization: z.string().min(1).optional(),
   author: z.string().min(1).optional(),
   kind: sourceKindSchema,
-  visibility: z.literal("public"),
+  visibility: z.enum(["public", "public-metadata-only"]),
   preservationStatus: preservationStatusSchema,
   publishedAt: z.string().optional(),
   capturedAt: z.string().optional(),
@@ -36,6 +36,16 @@ const publicSourceSchema = z.object({
   publicCitation: z.string().min(1),
   publicNote: z.string().min(1).optional(),
   doesNotEstablish: z.array(z.string().min(1))
+}).superRefine((source, context) => {
+  if (
+    source.visibility === "public-metadata-only" &&
+    (source.canonicalUrl || source.archiveUrl || source.assetUrl)
+  ) {
+    context.addIssue({
+      code: "custom",
+      message: "Metadata-only citation sources cannot expose an underlying URL"
+    });
+  }
 });
 
 export type PublicSourceRecord = z.infer<typeof publicSourceSchema>;

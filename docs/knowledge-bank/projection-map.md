@@ -57,6 +57,23 @@ The WOWList case study also projects
 Jamie's collective role and a bounded support/onboarding pattern; they do not
 support the separate aggregate user, post/event, or geographic-adoption claims.
 
+The case study now projects `CLM-WOWLIST-DATABASE-SCALE-2017` separately. Its
+metadata-only source note supports a July 2017 point-in-time scale and a
+50-post city/region activity threshold. Do not rewrite those rows as unique
+active users, official chapters, adoption, satisfaction, or impact.
+
+The Sunday Dinner case study projects
+`CLM-SUNDAY-DINNER-RECORDED-GATHERING-SCALE`. The independent source supports
+Jamie's collective weekly hosting role; the metadata-only workbook note
+supports more than 300 numbered gathering records across 2012-2021. It does
+not support unique attendance or the separate resident-artist figure.
+
+Keep `CLM-CALLSCRIPT-NYCARTC-PARTICIPATION-LINEAGE` deferred while Jamie's
+specific facilitation and creation chronology remains materially first-person.
+The public records establish a Call Script, popular.vote, and NYC Artist
+Coalition identity and participation intersection, not sole authorship,
+founding credit, user transfer, attendance, or policy causation.
+
 ## Personal And WOW List Facebook Events
 
 Keep the personal association census, hosted-event throughline, and WOW List

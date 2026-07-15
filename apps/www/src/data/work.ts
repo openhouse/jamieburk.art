@@ -434,9 +434,9 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. The adoption estimate is approximate and bounded to public-safe aggregate records.",
+      "Historical proof page. Scale is bounded to a July 2017 aggregate snapshot and a conservative city-activity threshold.",
     sourceLayer:
-      "Public-safe summary and historical project context; private user and organizer records remain offline.",
+      "Public social and archived application sources plus a metadata-only aggregate database note; participant-level records remain offline.",
     credits: ["Jamie Burkart", "WOWList collaborators"],
     currentStatus: "Historical short proof page.",
     group: "Community and cultural infrastructure",
@@ -446,14 +446,14 @@ const workItemsInput = [
       "Django / PostgreSQL / PostGIS and Ember platform",
       "Followable keyword communities",
       "Organizer-facing distribution workflows",
-      "Public-safe aggregate records support 1,800+ users and 16,000+ posts/events",
-      "Roughly 35 city ecosystems reached"
+      "A July 2017 snapshot records 1,846 users and 16,142 posts/events",
+      "35 city/region groups contained at least 50 geocoded posts/events"
     ],
     knownOpenProtected: {
       known:
         "WOWList was a co-built community-calendar platform organized around followable keyword communities.",
       open:
-        "Historical archive coverage is incomplete; adoption remains approximate and bounded to public-safe aggregate records.",
+        "Historical archive coverage is incomplete; row counts and city activity do not establish unique active people, satisfaction, adoption, or impact.",
       protected:
         "Private user data, organizer contact lists, and unapproved community records are not published."
     }
@@ -490,7 +490,7 @@ const workItemsInput = [
     careNote:
       "Summary-only page. Raw guest data, attendance records, private community records, and unapproved photos stay offline.",
     sourceLayer:
-      "Public-safe summary with private community records and unapproved imagery intentionally omitted.",
+      "A 2017 community interview and a metadata-only aggregate workbook note; participant records and unapproved imagery are intentionally omitted.",
     credits: ["Jamie Burkart", "196 / Sunday Dinner community"],
     currentStatus: "Public-safe summary only.",
     group: "Community and cultural infrastructure",

@@ -28,12 +28,13 @@ test("multi-source occurrences preserve editorial order", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.source.id), ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"]);
 });
 
-test("structured citations extend across four public case studies", () => {
-  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist"]);
+test("structured citations extend across five public case studies", () => {
+  assert.deepEqual(knowledgeBank.pages.map((page) => page.id), ["callnyc", "harry-j-epstein", "fair-rent-nyc", "wowlist", "196-sunday-dinner"]);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "public-storefront").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("harry-j-epstein", "online-sales-share-2016").sources[0].number, 2);
   assert.equal(resolveCitationOccurrence("fair-rent-nyc", "public-campaign-surface").sources[0].number, 1);
   assert.equal(resolveCitationOccurrence("wowlist", "archived-public-surface").sources[0].number, 1);
+  assert.deepEqual(resolveCitationOccurrence("196-sunday-dinner", "recorded-gathering-scale").sources.map((item) => item.number), [1, 2]);
 });
 
 test("Claim resolver returns only active approved projections", () => {
@@ -55,11 +56,22 @@ test("negative research preserves scope and limitations", () => {
   assert.doesNotMatch(inquiry.publicSummary, /did not exist/i);
 });
 
-test("private and metadata-only evidence is absent from the public registry", () => {
+test("private evidence stays absent while metadata-only notes expose no archive", () => {
   const serialized = JSON.stringify(publicCitationRegistry);
   assert.doesNotMatch(serialized, /PHOTO-CALLNYC-DIGITAL-DISTRICT-2016-001/);
   assert.doesNotMatch(serialized, /RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001/);
-  assert.ok(publicCitationRegistry.sources.every((source) => source.visibility === "public"));
+  assert.ok(publicCitationRegistry.sources.every((source) => ["public", "public-metadata-only"].includes(source.visibility)));
+  const metadataOnly = publicCitationRegistry.sources.filter((source) => source.visibility === "public-metadata-only");
+  assert.deepEqual(metadataOnly.map((source) => source.id).sort(), [
+    "SRC-SUNDAY-DINNER-OPERATIONS-WORKBOOK-2012-2021",
+    "SRC-WOWLIST-DATABASE-SNAPSHOT-2017-07-22"
+  ]);
+  for (const source of metadataOnly) {
+    assert.equal(source.canonicalUrl, undefined);
+    assert.equal(source.archiveUrl, undefined);
+    assert.equal(source.assetUrl, undefined);
+  }
+  assert.doesNotMatch(serialized, /ARCHIVE-WOWLIST-DATABASE-2017|ARCHIVE-SUNDAY-DINNER-OPERATIONS-2012-2021/);
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

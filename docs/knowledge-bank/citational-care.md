@@ -91,6 +91,13 @@ unavailable for display. Record media kind, rights status, consent status,
 display status, safe visible-text description, limitations, and an opaque
 locator when necessary.
 
+A protected source may receive a `public-metadata-only` citation when its
+aggregate or descriptive evidence is selected for a public claim. That public
+note may state what was reviewed, the safe aggregate it supports, and its
+limits. It must expose no URL, protected locator, filename, private path,
+participant row, contact detail, or raw excerpt. `SourceNote` renders the note
+as unlinked text, while the generator strips every protected locator.
+
 Never commit local paths, private cloud URLs, signed URLs, raw photos, private
 emails, transcripts, CDX dumps, credentials, or coalition-private materials.
 Opaque protected locators may exist only in canonical records used by offline
