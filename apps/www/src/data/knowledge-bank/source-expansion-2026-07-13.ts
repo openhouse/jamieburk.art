@@ -80,7 +80,7 @@ export const sourceExpansionIntake = [
     entityIds: ["ENT-NYC-ARTIST-COALITION", "ENT-OFFICE-OF-NIGHTLIFE"],
     disposition: "source-created",
     sourceIds: ["SRC-BEDFORD-NIGHT-MAYOR-TOWN-HALL-2017"],
-    claimIds: ["CLM-NYCARTC-OFFICE-NIGHTLIFE-TOWN-HALL"],
+    claimIds: ["CLM-NYCARTC-OFFICE-NIGHTLIFE-TOWN-HALL", "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"],
     researchTaskIds: [],
     rawMaterialPolicy: "public-source-only"
   },

@@ -253,6 +253,16 @@ or policy causation. Do not publish guest identities, friend or invite context,
 comments, profiles, contact details, meeting credentials, working documents,
 private administration, or raw authenticated captures.
 
+## NYC Artist Coalition Government Interface
+
+Do not say DCLA, the Council, Tom Finkelpearl, or Rafael Espinal could not act
+without NYC Artist Coalition. Do not treat government attendance, testimony,
+recognition, or advisory representation as endorsement of every coalition
+position, adoption of every recommendation, or proof of policy causation. Do
+not say Jamie authored Espinal's legislation, every coalition proposal, every
+event, or every communication. Credit Olympia Kazi's testimony and Nightlife
+Advisory Board appointment to her.
+
 ## Personal Social Archive
 
 Do not publish or reconstruct Jamie's full `@urbanhermit` timeline in this

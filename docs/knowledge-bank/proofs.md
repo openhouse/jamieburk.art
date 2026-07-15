@@ -60,6 +60,11 @@ copy. Each has an explicit defer decision in the typed lifecycle.
   public hearings, campaign action, and relief coordination. A 34-slot Facebook
   census recovers 33 event records and preserves one unresolved slot without
   inference; the website projection remains deferred.
+- Helped build and operate NYC Artist Coalition's civic-cultural interface:
+  recurring meetings, public event and campaign systems, practical support,
+  policy translation, testimony pathways, and town halls. Official CreateNYC
+  and Council records show why this intermediary capacity was useful to DCLA
+  and legislators while preserving collective credit and causal limits.
 
 ## Projection Rule
 

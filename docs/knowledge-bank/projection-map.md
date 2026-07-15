@@ -69,3 +69,13 @@ compositions. Do not automatically add it to a current page. If projected,
 credit all three makers, preserve the linked supporting credits, and do not
 place NTER CHNG at the Nerman Museum without a separate installation-specific
 source.
+
+## NYC Artist Coalition Government Interface
+
+Keep `CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017` and
+`CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018` as public-ready
+reserve claims. Keep the Finkelpearl-significance and institutional-need claims
+as explicitly labeled interpretations. A future projection should foreground
+Jamie's operating contribution, name the civic end and usable result, preserve
+collective and official credit, and avoid claims of exclusive dependency or
+policy causation.

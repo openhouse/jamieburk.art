@@ -145,11 +145,17 @@ const sourceIds = [
   ...selectedEventSourceIds
 ];
 
-const claimIds = [
+const facebookEventClaimIds = [
   "CLM-NYCARTC-FACEBOOK-EVENT-POPULATION",
   "CLM-NYCARTC-PARTICIPATION-SYSTEM",
   "CLM-NYCARTC-FACEBOOK-RESPONSE-SIGNALS",
   "CLM-NYCARTC-FACEBOOK-EVENT-LINK-ROUTING"
+];
+
+const claimIds = [
+  ...facebookEventClaimIds,
+  "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017",
+  "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
 ];
 
 export const nycArtCFacebookEventIntake = [
@@ -497,7 +503,7 @@ export const nycArtCFacebookEventInquiries = [
   }
 ] satisfies ResearchInquiry[];
 
-export const nycArtCFacebookEventDecisions = claimIds.map((claimId, index) => ({
+export const nycArtCFacebookEventDecisions = facebookEventClaimIds.map((claimId, index) => ({
   id: `DEC-DEFER-NYCARTC-FACEBOOK-EVENT-${index + 1}`,
   claimId,
   surface: "future-portfolio-composition",

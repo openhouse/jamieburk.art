@@ -2354,6 +2354,73 @@ test("KC Spaces Fund uniform identity is mature while Jamie's naming memory rema
   assert.ok(namingTask.nextActions.some((item) => /named organizers/i.test(item)));
 });
 
+test("Finkelpearl testimony significance remains a bounded governance interpretation", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-FINKELPEARL-TESTIMONY-SIGNIFICANCE-2017"
+  );
+  const transcript = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
+  );
+  const reading = knowledgeBank.sourceReadings.find(
+    (item) => item.sourceId === transcript.id
+  );
+
+  assert.equal(claim.status, "inference");
+  assert.equal(claim.maturity, "corroborated");
+  assert.equal(claim.projections.length, 0);
+  assert.match(claim.internalClaim, /concrete example.*public value/i);
+  assert.ok(claim.boundaries.some((item) => /interpretation.*not.*private motive/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /could not function without/i.test(item)));
+  assert.ok(reading.propositions.some((item) => /reciprocal relationship.*direct feedback/i.test(item.text)));
+  assert.ok(reading.propositions.some((item) => /common cause.*NYC Artist Coalition/i.test(item.text)));
+});
+
+test("NYC Artist Coalition government-interface claims preserve Chad-lens agency and collective credit", () => {
+  const dclaClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
+  );
+  const councilClaim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
+  );
+
+  for (const claim of [dclaClaim, councilClaim]) {
+    const decision = knowledgeBank.projectionDecisions.find((item) => item.claimId === claim.id);
+    assert.equal(claim.maturity, "public-ready");
+    assert.equal(claim.projections.length, 0);
+    assert.equal(decision.decision, "defer");
+    assert.match(claim.composition.action, /helped|operate/i);
+    assert.match(claim.composition.usableResult, /repeatable|documented pathway/i);
+    assert.match(claim.composition.collectiveCredit, /coalition|Espinal|Olympia/i);
+    assert.match(claim.composition.causalBoundary, /not|does not/i);
+  }
+
+  assert.ok(dclaClaim.evidence.some((item) => item.sourceId === "SRC-CREATENYC-NYC-ARTISTS-2017"));
+  assert.ok(councilClaim.evidence.some((item) => item.sourceId === "SRC-NYC-COUNCIL-NIGHTLIFE-ADVISORY-BOARD-2018"));
+  assert.ok(councilClaim.antiClaims.some((item) => /Jamie authored Espinal/i.test(item)));
+});
+
+test("institutional-need interpretation rejects dependency and sole-causation claims", () => {
+  const claim = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-NYCARTC-INSTITUTIONAL-NEED-INTERPRETATION-2026"
+  );
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === "INQ-NYCARTC-DCLA-COUNCIL-INTERFACE-2026"
+  );
+  const task = knowledgeBank.researchTasks.find(
+    (item) => item.id === "TASK-NYCARTC-INSTITUTIONAL-INTERFACE-CORROBORATION"
+  );
+
+  assert.equal(claim.status, "inference");
+  assert.equal(claim.maturity, "corroborated");
+  assert.match(claim.internalClaim, /nonexclusive civic intermediary/i);
+  assert.ok(claim.boundaries.some((item) => /useful.*valuable.*served as/i.test(item)));
+  assert.ok(claim.antiClaims.some((item) => /could not act without/i.test(item)));
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.ok(inquiry.limitations.some((item) => /complete personal motive/i.test(item)));
+  assert.equal(task.status, "open");
+  assert.ok(task.nextActions.some((item) => /Tom Finkelpearl.*Rafael Espinal/i.test(item)));
+});
+
 test("judge evidence and floors are enforced", () => {
   const assessment = {
     suiteId: suite.id,

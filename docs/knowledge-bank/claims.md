@@ -490,3 +490,63 @@ stay outside the repo.
 **Protected boundaries:** Do not publish private coursework, private cohort materials, or unapproved evaluations.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-07
+
+## nycartc-dcla-reciprocal-public-interface - DCLA public interface
+
+**Status:** Ready but deferred
+**Support level:** Strong with collective-credit boundary
+**Evidence class:** Official CreateNYC and Council records / public coalition record / bounded first-person role evidence
+**Public wording:** Jamie helped build and operate NYC Artist Coalition's recurring civic-cultural interface, translating small-space experience into practical support, recommendations, public meetings, and continuing dialogue with DCLA.
+**Detailed public-safe wording:** CreateNYC officially credited the coalition with organizing, providing recommendations, and driving dialogue about preserving safe, sustainable artist-led spaces; Jamie's documented contribution sits in the participation and public-communications system that made this work usable.
+**Where to project:** Knowledge-bank reserve; future NYC Artist Coalition, About, or Technical Operations composition after placement review.
+**Why it matters:** Shows Jamie building the operating layer through which a dispersed cultural field could enter an institutional planning process.
+**Guardrail:** Keep Jamie's role distinct from collective authorship, DCLA recognition distinct from policy adoption, and participation distinct from causal impact.
+**Do not say:** Jamie alone created or led the coalition; DCLA adopted every proposal; the coalition represented every artist or venue.
+**Protected boundaries:** Private correspondence, meeting notes, participant data, and unapproved contribution details remain outside the public repository.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-15
+
+## nycartc-finkelpearl-testimony-significance - Why Finkelpearl cited the coalition
+
+**Status:** Corroborated interpretation
+**Support level:** Strong contextual inference
+**Evidence class:** Official Council transcript / official CreateNYC record
+**Public wording:** Finkelpearl's May 2017 testimony used NYC Artist Coalition as a concrete example of CreateNYC's public-engagement value: convening around a common cause had generated organized participation, direct feedback, recommendations, and continuing dialogue.
+**Detailed public-safe wording:** The transcript places the coalition example immediately after Finkelpearl described a close reciprocal public relationship, DCLA's desire for direct feedback, and the power of bringing people together; CreateNYC separately records what the coalition subsequently made usable.
+**Where to project:** Knowledge-bank interpretation only unless a future composition needs institutional context.
+**Why it matters:** Explains the coalition's institutional significance without inventing a private motive.
+**Guardrail:** Attribute the sequence directly and label the explanation as interpretation.
+**Do not say:** Finkelpearl said DCLA could not function without the coalition; the mention was funding, endorsement, formal partnership, or delegation.
+**Protected boundaries:** Private motives and unrecorded conversations remain unknown unless participants choose to document them.
+**Review owner:** Codex governance interpretation
+**Last reviewed:** 2026-07-15
+
+## nycartc-council-espinal-policy-interface - Council and Espinal interface
+
+**Status:** Ready but deferred
+**Support level:** Strong with complementary-role boundary
+**Evidence class:** Coalition campaign and testimony records / independent reporting / official Council record / bounded first-person role evidence
+**Public wording:** Jamie helped operate a coalition participation system that connected Espinal-sponsored policy with district information, recommendation letters, hearings, testimony, and cultural-space town halls.
+**Detailed public-safe wording:** Espinal supplied legislative sponsorship and formal authority; the coalition supplied organized participation, policy translation, situated knowledge, and implementation feedback. The Council later formalized stakeholder advice through a board that included coalition member Olympia Kazi.
+**Where to project:** Knowledge-bank reserve; future NYC Artist Coalition or Technical Operations composition.
+**Why it matters:** Makes the complementary relationship between public-interest operations and legislative authority legible.
+**Guardrail:** Credit Olympia's testimony and board appointment to her and preserve the roles of coalition partners, officials, and participants.
+**Do not say:** Jamie authored Espinal's bills; the coalition determined Council votes; a single event or campaign caused enactment.
+**Protected boundaries:** Private strategy, correspondence, participant information, and unapproved divisions of labor remain outside the repo.
+**Review owner:** Jamie / Codex
+**Last reviewed:** 2026-07-15
+
+## nycartc-institutional-need-interpretation - Institutional need
+
+**Status:** Corroborated interpretation
+**Support level:** Strong functional inference
+**Evidence class:** Official DCLA, CreateNYC, and Council records / coalition public records
+**Public wording:** NYC Artist Coalition served as a nonexclusive civic intermediary: it gathered situated knowledge, translated it into proposals and public action, convened affected people with officials, and sustained feedback across planning, legislation, and implementation.
+**Detailed public-safe wording:** This explains why the coalition was useful to Finkelpearl, DCLA, Espinal, and the Council while avoiding the stronger claim that an official or institution literally depended on it.
+**Where to project:** Knowledge-bank interpretation; future strategy and editorial composition.
+**Why it matters:** Names the governance function beneath the event, campaign, and testimony record.
+**Guardrail:** Prefer “useful,” “valuable,” or “served as” over literal claims of need or dependency.
+**Do not say:** Government could not act without the coalition; the coalition held public authority; engagement meant complete endorsement; Jamie individually supplied every function.
+**Protected boundaries:** Private motivations and unapproved collaborator recollections remain outside the public repository.
+**Review owner:** Codex governance interpretation
+**Last reviewed:** 2026-07-15

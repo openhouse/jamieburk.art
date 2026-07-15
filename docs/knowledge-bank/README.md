@@ -102,6 +102,13 @@ and the Nerman Museum record is retained as program context rather than proof
 that NTER CHNG was installed at the museum.
 
 The
+[NYC Artist Coalition government-interface memo](research/nycartc-dcla-council-interface-2026-07-15.md)
+connects Jamie's documented participation-system work with official DCLA,
+CreateNYC, and Council records. It distinguishes institutional recognition,
+complementary civic function, source-backed interpretation, private motive, and
+policy causation.
+
+The
 [Google Drive Shared Drives production record](research/google-drive-shared-drives-production-2026-07-13.md)
 extends that method to collaborative cloud workspaces: central project records
 can strengthen authored and collective-role claims, while unread recordings and

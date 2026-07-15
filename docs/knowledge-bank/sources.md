@@ -87,6 +87,22 @@ first-person role account is protected and bounded by collective credit.
 See
 `docs/knowledge-bank/research/nycartc-facebook-events-2026-07-14.md`.
 
+## NYC Artist Coalition Government Interface
+
+The July 15 pass adds six closely read public sources: the official May 2017
+Council transcript of Tom Finkelpearl's DCLA budget testimony, CreateNYC's
+official NYC Artists record, the coalition recommendations preserved in the
+official CreateNYC appendix, the coalition's Council-action and testimony
+pages, and the Council's 2018 Nightlife Advisory Board announcement.
+
+Together they support a bounded account of NYC Artist Coalition as a
+civic-cultural intermediary. They do not establish private motives, exclusive
+institutional dependence, adoption of every recommendation, individual
+authorship of collective work, or causal responsibility for legislation.
+
+See
+`docs/knowledge-bank/research/nycartc-dcla-council-interface-2026-07-15.md`.
+
 ## Personal And WOW List Facebook Events
 
 The July 14 authenticated pass preserves three separate controls rather than

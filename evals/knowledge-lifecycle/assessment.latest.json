@@ -2,15 +2,15 @@
   "suiteId": "knowledge-lifecycle",
   "suiteVersion": "1.0.0",
   "repositorySnapshot": {
-    "fingerprint": "f890d819cde20876112e59f6107b5a2dd42425eb9ac4d525b44689b49f224866",
+    "fingerprint": "8ac278552b9ed2e3b7c5b07d1df886abf57c4beb4a527f60fa497c4b0b16a1d4",
     "counts": {
-      "entities": 28,
-      "intake": 129,
-      "sources": 252,
-      "sourceReadings": 252,
-      "claims": 107,
-      "researchTasks": 47,
-      "projectionDecisions": 87
+      "entities": 32,
+      "intake": 135,
+      "sources": 258,
+      "sourceReadings": 258,
+      "claims": 111,
+      "researchTasks": 48,
+      "projectionDecisions": 89
     }
   },
   "judge": {
@@ -28,8 +28,8 @@
             "record": "INTAKE-NYCARTC-CREATION-ROLE-MEMORY"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
-            "record": "INTAKE-CALLNYC-DIGITAL-DISTRICT-PHOTO"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "INTAKE-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/records.ts",
@@ -50,16 +50,16 @@
             "record": "atomicPropositionSchema"
           },
           {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "READ-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "READ-NYCARTC-CABARET-TESTIMONY-2017"
+          },
+          {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "READ-OPEN-HOUSE-GOOD-TIMES-2006"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "READ-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
-          },
-          {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "READ-NERMAN-AMERICA-NOW-HERE-2011"
           }
         ]
       },
@@ -68,12 +68,16 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "CLM-NTER-CHNG-PARTICIPATORY-INSTALLATION-2010"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "CLM-NYCARTC-FINKELPEARL-TESTIMONY-SIGNIFICANCE-2017"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -84,8 +88,8 @@
             "record": "CLM-OPEN-HOUSE-INSTIGATION-AND-CARE"
           },
           {
-            "file": "scripts/tests/knowledge-lifecycle-evals.test.mjs",
-            "record": "NTER CHNG exhibition inclusion uses the official program record without overstating venue"
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
           }
         ]
       },
@@ -94,12 +98,12 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "TASK-NTER-CHNG-ANH-CHECKLIST-RECOVERY"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "TASK-NYCARTC-INSTITUTIONAL-INTERFACE-CORROBORATION"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "TASK-HJE-REVENUE-INDEPENDENT-CORROBORATION"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "TASK-NYCARTC-CREATION-ROLE"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
@@ -108,6 +112,10 @@
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "TASK-SOCIAL-ACCOUNT-ESTABLISHMENT-AND-AUTHORSHIP"
           }
         ]
       },
@@ -116,20 +124,24 @@
         "score": 4,
         "evidence": [
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "DEC-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-DEFER"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "nycArtCGovernmentInterfaceDecisions"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/records.ts",
-            "record": "COR-HJE-REVENUE-CORROBORATION-HOLD-2026"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-PUBLISH-CALLNYC-DATE"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/teams-archive-deepening-2026-07-14.ts",
-            "record": "DEC-PUBLISH-HJE-ONLINE-SALES-SHARE-2016"
+            "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
+            "record": "DEC-OPEN-HOUSE-DEFER"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/public.ts",
             "record": "getClaimProjection"
+          },
+          {
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
           }
         ]
       },
@@ -142,16 +154,20 @@
             "record": "publicSourceSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "SRC-ANH-KC-NTER-CHNG-ARTIST-WAYBACK-2011"
-          },
-          {
             "file": "apps/www/src/data/knowledge-bank/records.ts",
             "record": "SRC-CALLNYC-DIGITAL-DISTRICT-PHOTO"
           },
           {
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "SRC-NYC-COUNCIL-DCLA-BUDGET-TRANSCRIPT-2017"
+          },
+          {
             "file": "docs/knowledge-bank/public-safety.md",
             "record": "Prohibited Materials"
+          },
+          {
+            "file": "scripts/tests/citations.test.mjs",
+            "record": "private and metadata-only evidence is absent from the public registry"
           }
         ]
       },
@@ -164,16 +180,24 @@
             "record": "claimRecordSchema"
           },
           {
-            "file": "apps/www/src/data/knowledge-bank/nter-chng-america-now-and-here-2026-07-15.ts",
-            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "CLM-NYCARTC-DCLA-RECIPROCAL-PUBLIC-INTERFACE-2017"
           },
           {
-            "file": "docs/knowledge-bank/projection-map.md",
-            "record": "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION-2011"
+            "file": "apps/www/src/data/knowledge-bank/nycartc-government-interface-2026-07-15.ts",
+            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
+          },
+          {
+            "file": "apps/www/src/data/knowledge-bank/social-account-archive-production-2026-07-14.ts",
+            "record": "CLM-NYCARTC-SOCIAL-IDENTITY-CONTINUITY"
           },
           {
             "file": "apps/www/src/data/knowledge-bank/lifecycle-records.ts",
             "record": "TASK-CALLNYC-DIGITAL-DISTRICT-CONTEXT"
+          },
+          {
+            "file": "docs/knowledge-bank/projection-map.md",
+            "record": "CLM-NYCARTC-COUNCIL-ESPINAL-POLICY-INTERFACE-2017-2018"
           }
         ]
       }
@@ -196,5 +220,5 @@
       "confirmedBy": null
     }
   ],
-  "summary": "Fresh independent review of the specified snapshot found all seven deterministic hard gates and all four quality targets passing, with all 103 lifecycle tests passing. Representative captured, researching, corroborated, public-ready, projected, rejected, and superseded claims were inspected. The NTER CHNG / America: Now and Here inclusion claim is directly supported by the official archived visual-artist page, keeps Drew Bolton, Jamie Burkart, and Garrett Fuselier in collective credit, preserves Mary Nichols, Megan Mantia, and Elisha Stetson through the linked project claim, excludes historical phone numbers and visitor responses, and uses the Nerman Museum record only as program and venue-boundary context. Its exact venue and dates remain an executable research task, while the public-ready claim remains explicitly deferred. No human approval, collaborator-permission, or media-rights gate is treated as confirmed."
+  "summary": "Fresh independent inspection found all seven deterministic hard gates and all four quality targets passing. The 106 knowledge-lifecycle tests, public-safety gate, citation consistency check, and 10 citation tests also passed. Captured, researching, corroborated, public-ready, projected, rejected, and superseded records were inspected. The NYC Artist Coalition answer correctly separates direct public evidence from governance interpretation: the Council transcript, CreateNYC records, coalition tools and testimony, and Council advisory-board record establish reciprocal feedback, organized recommendations, constituent-facing policy translation, repeat testimony, stakeholder expertise, and coalition representation. The civic-cultural-intermediary explanation is explicitly labeled an inference; Finkelpearl's complete private motive remains unknown. Espinal retains credit for legislative authority, Olympia Kazi for testimony and her board appointment, and other participants for collective work. Jamie's event and participation-system role is separately linked to direct-role evidence and bounded against sole authorship. Government recognition, interaction, advisory representation, and campaign activity are not converted into policy adoption or causation. The two accomplishment claims remain public-ready but deferred, while the two governance explanations remain corroborated and unprojected. External spot checks of the [Council transcript](https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F), [CreateNYC record](https://createnyc.cityofnewyork.us/the-cultural-plan/issue-areas/nyc-artsts/), [Council advisory-board announcement](https://council.nyc.gov/press/2018/07/12/1624/), and [coalition testimony](https://nycartc.com/nyc-artist-coalition-repeal-the-cabaret-law-bill-1652-testimony/) matched the canonical propositions. All human gates remain pending."
 }
