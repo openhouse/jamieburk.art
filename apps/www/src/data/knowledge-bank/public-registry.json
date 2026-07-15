@@ -513,64 +513,6 @@
       ]
     },
     {
-      "id": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-      "title": "WOW List public Sunday Dinner origin post",
-      "organization": "WOW List",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2014-02-12",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "WOW List, public post naming Richard and Jamie and describing the project as based on calendars made at Sunday Dinner, February 12, 2014.",
-      "publicNote": "The account's contemporaneous description connects Jamie, a collaborator named Richard, WOW List, and Sunday Dinner.",
-      "doesNotEstablish": [
-        "complete product authorship",
-        "the collaborator's full identity",
-        "later adoption scale"
-      ]
-    },
-    {
-      "id": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-      "title": "WOW List community-created tutorial post",
-      "organization": "WOW List",
-      "kind": "institutional-social-post",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "publishedAt": "2015-08-14",
-      "accessedAt": "2026-07-14",
-      "canonicalUrl": "https://x.com/wowlist/status/632168285291835392",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "WOW List, public post thanking a community member for creating a tutorial about using the platform, August 14, 2015.",
-      "publicNote": "The post directly documents someone outside the account team creating an instructional artifact for other users.",
-      "doesNotEstablish": [
-        "broad adoption",
-        "the tutorial's current availability",
-        "representative user sentiment"
-      ]
-    },
-    {
-      "id": "SRC-X-WOWLIST-FULL-POPULATION-2026",
-      "title": "Authenticated @wowlist full-population archival review",
-      "organization": "Jamie Burkart portfolio knowledge bank",
-      "author": "Codex authenticated archival review",
-      "kind": "research-run",
-      "visibility": "public",
-      "preservationStatus": "live",
-      "capturedAt": "2026-07-15",
-      "accessedAt": "2026-07-15",
-      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
-      "preferredPublicUrl": "canonical",
-      "publicCitation": "Authenticated July 15, 2026 review of all 38 @wowlist records reported by the profile counter, with posted-link and bounded stakeholder metadata preserved in the repository.",
-      "publicNote": "Posts yielded 37 records and Replies yielded 38; their union reconciles exactly to the 38-post profile counter. The public fixture excludes raw post text and authenticated-session material.",
-      "doesNotEstablish": [
-        "every deleted, private, withheld, or unindexed historical interaction",
-        "authorship of every institutional post",
-        "reach, conversion, endorsement, attendance, or platform-wide adoption"
-      ]
-    },
-    {
       "id": "SRC-X-WOWLIST-PUNKS-USE-2015",
       "title": "Punks & Criminals public WOW List use",
       "organization": "Punks & Criminals",
@@ -1520,12 +1462,12 @@
       ]
     },
     {
-      "id": "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+      "id": "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
       "status": "confirmed-with-boundary",
       "projections": [
         {
           "key": "case-study",
-          "text": "A full pass over all 38 profile-counted records shows the account operating as part of WOW List's product and community practice: direct support, community-created onboarding, event distribution, source curation, Sunday Dinner lineage, and rapid civic coordination. A separate bounded search recovered 10 mission-relevant third-party accounts across DIY arts and music, calendar, neighborhood-civic, and creative-technology communities; nine independently posted a WOW List URL. These are public-use and distribution signals, not a measure of total adoption or impact.",
+          "text": "Public records show the system in use: in 2015, Punks & Criminals said it was adding shows to WOW List.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1535,58 +1477,46 @@
       ],
       "evidence": [
         {
-          "sourceId": "SRC-X-WOWLIST-FULL-POPULATION-2026",
-          "relationship": "direct-support",
-          "supports": [
-            "observable product, community, distribution, or stakeholder pattern"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-          "relationship": "direct-support",
-          "supports": [
-            "observable product, community, distribution, or stakeholder pattern"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-          "relationship": "direct-support",
-          "supports": [
-            "observable product, community, distribution, or stakeholder pattern"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
           "sourceId": "SRC-X-WOWLIST-PUNKS-USE-2015",
           "relationship": "direct-support",
           "supports": [
-            "observable product, community, distribution, or stakeholder pattern"
-          ],
-          "confidence": "high",
-          "renderCitation": true
-        },
-        {
-          "sourceId": "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
-          "relationship": "direct-support",
-          "supports": [
-            "observable product, community, distribution, or stakeholder pattern"
+            "one DIY music organizer's stated use of WOW List to add shows"
           ],
           "confidence": "high",
           "renderCitation": true
         }
       ],
       "boundaries": [
-        "All 38 records reported by the profile counter materialized across Posts and Replies; this is a complete displayed account population, not a complete history of deleted, private, withheld, or unindexed activity.",
-        "The incoming 16-record search inventory is bounded; 10 mission-relevant third-party accounts are not represented as every historical user or stakeholder.",
-        "The account's follower and post counts are not used as WOW List adoption measures.",
-        "Event distribution does not establish attendance, event ownership, endorsement, or causal movement impact.",
-        "Displayed interaction totals are volatile context and are not used as reach, conversion, endorsement, or impact metrics.",
-        "Institutional-account records are not attributed post by post to Jamie without authorship evidence."
+        "One organizer's stated use does not establish platform-wide adoption, attendance, or ongoing use."
+      ]
+    },
+    {
+      "id": "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Music Hackathon described WOW List that year as an event-sharing service made by its co-organizer Jamie Burkart.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "a creative-technology peer's public attribution of Jamie's maker role"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The attribution supports Jamie's maker role while leaving the complete WOW List team open."
       ]
     }
   ],
@@ -1682,9 +1612,6 @@
       "surface": "/work/wowlist",
       "sourceOrder": [
         "SRC-COMMUNITY-GREENE-HILL-QA-2017",
-        "SRC-X-WOWLIST-FULL-POPULATION-2026",
-        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-        "SRC-X-WOWLIST-USER-TUTORIAL-2015",
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
       ],
@@ -1695,14 +1622,18 @@
           "projection": "case-study"
         },
         {
-          "id": "full-population-practice",
-          "claimId": "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+          "id": "organizer-product-use",
+          "claimId": "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-X-WOWLIST-FULL-POPULATION-2026",
-            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-            "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-            "SRC-X-WOWLIST-PUNKS-USE-2015",
+            "SRC-X-WOWLIST-PUNKS-USE-2015"
+          ]
+        },
+        {
+          "id": "jamie-peer-attribution",
+          "claimId": "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+          "projection": "case-study",
+          "sourceIds": [
             "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
           ]
         }

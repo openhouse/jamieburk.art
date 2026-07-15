@@ -30,12 +30,23 @@ Jamie Burkart. These are public-use and distribution signals, not a complete
 reception census or a measure of adoption, reach, attendance, endorsement, or
 impact.
 
-Representative contemporaneous records support the selected public claim:
+The knowledge bank now decomposes the population into separately reviewable
+claims for:
 
-- A February 2014 post names Jamie and a collaborator and describes WOW List
-  as based on calendars made at Sunday Dinner.
-- An August 2015 post thanks a community member for creating a tutorial for
-  other people using the platform.
+- displayed-population reconciliation;
+- public product support;
+- Sunday Dinner lineage;
+- rapid civic-distribution adaptation;
+- independent organizer use;
+- peer attribution of Jamie's maker role; and
+- mission-relevant source curation.
+
+Only the organizer-use and peer-attribution claims are selected for the public
+case study. They strengthen the product story directly: Punks & Criminals
+described adding shows to WOW List, and Music Hackathon described the service
+as made by its co-organizer Jamie Burkart. Population accounting, engagement
+totals, and broader source curation remain in the knowledge bank rather than
+competing with Jamie's role on the public page.
 
 The complete population also surfaced nine representative mission-relevant
 destinations, including DIY cultural reporting, an all-ages organizing manual,

@@ -353,25 +353,22 @@ const knowledgeBankInput = {
       surface: "/work/wowlist",
       sourceOrder: [
         "SRC-COMMUNITY-GREENE-HILL-QA-2017",
-        "SRC-X-WOWLIST-FULL-POPULATION-2026",
-        "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-        "SRC-X-WOWLIST-USER-TUTORIAL-2015",
         "SRC-X-WOWLIST-PUNKS-USE-2015",
         "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
       ],
       occurrences: [
         { id: "community-event-sharing", claimId: "CLM-WOWLIST-COMMUNITY-EVENTS-2017", projection: "case-study" },
         {
-          id: "full-population-practice",
-          claimId: "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+          id: "organizer-product-use",
+          claimId: "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
           projection: "case-study",
-          sourceIds: [
-            "SRC-X-WOWLIST-FULL-POPULATION-2026",
-            "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-            "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-            "SRC-X-WOWLIST-PUNKS-USE-2015",
-            "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"
-          ]
+          sourceIds: ["SRC-X-WOWLIST-PUNKS-USE-2015"]
+        },
+        {
+          id: "jamie-peer-attribution",
+          claimId: "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+          projection: "case-study",
+          sourceIds: ["SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015"]
         }
       ]
     },

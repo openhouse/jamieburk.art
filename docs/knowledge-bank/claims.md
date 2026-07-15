@@ -168,18 +168,108 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
-## wowlist-full-population-practice - Social account as product and community infrastructure
+## wowlist-full-population-practice - Displayed-population reconciliation
 
 **Status:** Ready with boundaries
 **Support level:** Strong
-**Evidence class:** Complete displayed account population / public status records / bounded stakeholder search
-**Public wording:** A full pass over all 38 profile-counted records shows the account operating as part of WOW List's product and community practice: direct support, community-created onboarding, event distribution, source curation, Sunday Dinner lineage, and rapid civic coordination. A bounded incoming search recovered 10 mission-relevant third-party accounts across four stakeholder groups; nine independently posted a WOW List URL.
+**Evidence class:** Complete displayed account population
+**Public wording:** An authenticated archival review recovered all 38 records displayed by the @wowlist profile counter on July 15, 2026.
 **Detailed public-safe wording:** The authenticated Posts and Replies union reconciles exactly to the 38-record profile control: 16 originals, 6 replies, and 16 reposts. Thirty-one records contain 35 distinct short-URL occurrences. A separate 16-record incoming search yielded 10 mission-relevant third-party accounts, of which nine independently posted a WOW List URL. These are dated publishing, use, and distribution signals, not measures of total adoption, reach, attendance, endorsement, or impact.
-**Where to project:** WOW List case study.
-**Why it matters:** Shows that the communications surface was part of the operating system, not merely promotion, and supplies bounded public evidence of use and distribution.
+**Where to project:** Knowledge bank and research documentation only.
+**Why it matters:** Establishes the reviewed population and preserves the denominator for downstream atomic claims.
 **Guardrail:** The 38-record reconciliation is complete only for the displayed profile control. The 16-record incoming search is bounded. Interaction counts and posted URLs are not adoption, reach, attendance, endorsement, or impact.
 **Do not say:** The account represents WOW List's total history or adoption; WOW List organized every distributed event; Jamie authored every post; social activity caused civic outcomes.
 **Protected boundaries:** Raw post text, authenticated-session state, cookies, private messages, credentials, private analytics, and unreviewed collaborator material stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-social-product-support - Public product-support surface
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Two public status records
+**Public wording:** The project account served as a public support surface for event publishing and list selection.
+**Detailed public-safe wording:** A 2015 reply explained how to add an event to one or more lists, while a separately preserved community-created tutorial documents onboarding around the same publishing workflow.
+**Where to project:** Knowledge bank; hold from the case study unless the operating-support story needs expansion.
+**Why it matters:** Separates observable product support from general social-media activity.
+**Guardrail:** These are examples, not a measure of support volume or resolution rate; do not assign every institutional-account reply to Jamie.
+**Do not say:** Jamie wrote every support reply; the records measure product-support performance.
+**Protected boundaries:** Raw authenticated-session material and private support exchanges stay outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-sunday-dinner-lineage - Community-calendar lineage
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Two public status records
+**Public wording:** Public records connect WOW List's community-calendar model to Sunday Dinner.
+**Detailed public-safe wording:** A 2014 origin post and a 2016 explanation of the NYC DIY workflow each connect WOW List's event-sharing practice to calendars made through Sunday Dinner.
+**Where to project:** Knowledge bank; hold from the case study pending editorial need.
+**Why it matters:** Preserves the participatory lineage behind the product model.
+**Guardrail:** The records establish stated lineage, not exclusive authorship or complete project history.
+**Do not say:** Sunday Dinner alone accounts for every WOW List product decision.
+**Protected boundaries:** Private Sunday Dinner records and participant information stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-civic-distribution-adaptation - Rapid civic coordination
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Two public status records / one archived project surface
+**Public wording:** The event-distribution model was later adapted for rapid civic coordination.
+**Detailed public-safe wording:** In November 2016, @wowlist distributed a multi-city march calendar and directed people to a popular.vote surface for contributing events and receiving local updates.
+**Where to project:** Knowledge bank; hold from the case study pending editorial need.
+**Why it matters:** Shows a concrete adaptation of event-distribution infrastructure to a time-sensitive civic context.
+**Guardrail:** Distribution does not establish event ownership, participation totals, attendance, or causal civic impact.
+**Do not say:** WOW List organized every listed event; the posts prove civic impact.
+**Protected boundaries:** Private participant and organizer data stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-organizer-product-use - Public organizer use
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Independent public status record
+**Public wording:** Public records show the system in use: in 2015, Punks & Criminals said it was adding shows to WOW List.
+**Detailed public-safe wording:** Punks & Criminals publicly described adding shows to WOW List and shared its project list in May 2015.
+**Where to project:** WOW List case study.
+**Why it matters:** Supplies direct third-party evidence that an organizer used the event-publishing workflow.
+**Guardrail:** One organizer's statement is not a platform-wide adoption or attendance measure.
+**Do not say:** Every DIY organizer used WOW List; the post measures adoption or event attendance.
+**Protected boundaries:** No private organizer records are needed for this claim.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-jamie-peer-attribution - Public attribution of Jamie's maker role
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Independent public status record
+**Public wording:** Music Hackathon described WOW List in 2015 as an event-sharing service made by its co-organizer Jamie Burkart.
+**Detailed public-safe wording:** A creative-technology peer publicly attributed the event-sharing service to co-organizer Jamie Burkart while leaving the complete WOW List team open.
+**Where to project:** WOW List case study.
+**Why it matters:** Strengthens Jamie's role with contemporaneous third-party attribution while retaining collective credit.
+**Guardrail:** The source supports Jamie's maker role, not sole authorship or a complete team roster.
+**Do not say:** Jamie was the sole creator of WOW List; the post identifies the complete project team.
+**Protected boundaries:** No private collaborator records are needed for this claim.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## wowlist-source-curation-practice - Mission-relevant source circulation
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Complete displayed account population / nine close-read public destinations
+**Public wording:** The account circulated sources relevant to grassroots cultural infrastructure.
+**Detailed public-safe wording:** The reviewed population includes sources about DIY cultural documentation, all-ages organizing, cultural-space support and safety, mutual aid, and participatory media.
+**Where to project:** Knowledge bank and research documentation only.
+**Why it matters:** Preserves the account's curatorial practice without mistaking circulated work for WOW List's own output.
+**Guardrail:** Circulation does not establish authorship, formal partnership, publisher endorsement, or causal impact.
+**Do not say:** WOW List authored the circulated articles; every publisher was a formal partner.
+**Protected boundaries:** Raw timeline captures and authenticated-session material stay outside the repo.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 

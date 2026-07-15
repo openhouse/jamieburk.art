@@ -259,19 +259,6 @@ export const wowListFullPopulationSourceRecords20260715 = [
   }
 ] satisfies SourceRecord[];
 
-const publicClaimSourceIds = [
-  "SRC-X-WOWLIST-FULL-POPULATION-2026",
-  "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
-  "SRC-X-WOWLIST-USER-TUTORIAL-2015",
-  "SRC-X-WOWLIST-NYCDIY-2016",
-  "SRC-X-WOWLIST-PRODUCT-SUPPORT-2015",
-  "SRC-X-WOWLIST-NATIONAL-MARCHES-2016",
-  "SRC-X-WOWLIST-POPULAR-VOTE-2016",
-  "SRC-X-WOWLIST-PUNKS-USE-2015",
-  "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
-  "SRC-X-WOWLIST-ALL-AGES-RESPONSE-2015"
-] as const;
-
 const contextualSourceIds = [
   "SRC-WOWLIST-GOOD-TIMES-ZINES-2015",
   "SRC-WOWLIST-GRASSTRONAUT-HOMEWORK-2015",
@@ -286,32 +273,25 @@ export const wowListFullPopulationClaimRecords20260715 = [
   {
     id: "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
     project: "wowlist",
-    internalClaim: "Across its complete 38-record displayed population, @wowlist functioned as an extension of the product and community practice for onboarding, support, event distribution, source curation, community lineage, and rapid civic coordination; a separate bounded search found public third-party use and distribution signals.",
+    internalClaim: "The Posts and Replies union recovered on July 15, 2026 contains 38 unique @wowlist records, exactly matching the profile counter displayed during the review.",
     status: "confirmed-with-boundary",
     projections: [
       {
         key: "case-study",
-        text: "A full pass over all 38 profile-counted records shows the account operating as part of WOW List's product and community practice: direct support, community-created onboarding, event distribution, source curation, Sunday Dinner lineage, and rapid civic coordination. A separate bounded search recovered 10 mission-relevant third-party accounts across DIY arts and music, calendar, neighborhood-civic, and creative-technology communities; nine independently posted a WOW List URL. These are public-use and distribution signals, not a measure of total adoption or impact.",
-        status: "active",
-        citationRequired: true,
-        surfaces: ["/work/wowlist"]
+        text: "An authenticated archival review recovered all 38 records displayed by the @wowlist profile counter on July 15, 2026.",
+        status: "hold",
+        citationRequired: false,
+        surfaces: []
       }
     ],
     evidence: [
-      ...publicClaimSourceIds.map((sourceId) => ({
-        sourceId,
-        relationship: "direct-support" as const,
-        supports: ["observable product, community, distribution, or stakeholder pattern"],
-        confidence: "high" as const,
-        renderCitation: true
-      })),
-      ...contextualSourceIds.map((sourceId) => ({
-        sourceId,
-        relationship: "context" as const,
-        supports: ["mission-relevant content of a source circulated by the account"],
-        confidence: "high" as const,
+      {
+        sourceId: "SRC-X-WOWLIST-FULL-POPULATION-2026",
+        relationship: "direct-support",
+        supports: ["38 unique recovered records", "exact reconciliation with the displayed profile counter"],
+        confidence: "high",
         renderCitation: false
-      }))
+      }
     ],
     boundaries: [
       "All 38 records reported by the profile counter materialized across Posts and Replies; this is a complete displayed account population, not a complete history of deleted, private, withheld, or unindexed activity.",
@@ -323,11 +303,219 @@ export const wowListFullPopulationClaimRecords20260715 = [
     ],
     antiClaims: [
       "Only 37 of the 38 profile-counted records were recovered",
-      "The X account measures WOW List's total adoption",
-      "WOW List organized every event it distributed",
-      "The social posts establish attendance, endorsement, or causal civic impact",
-      "Jamie personally authored every @wowlist post"
+      "The 38-record fixture contains every record ever published by @wowlist",
+      "The displayed profile population includes deleted, private, withheld, or unindexed activity"
     ],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT",
+    project: "wowlist",
+    internalClaim: "The @wowlist account publicly explained event-publishing workflows and answered an inline question about adding an event to one or more lists.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "The project account served as a public support surface for event publishing and list selection.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-X-WOWLIST-PRODUCT-SUPPORT-2015",
+        relationship: "direct-support",
+        supports: ["an inline reply explaining how to add an event to one or more lists"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+        relationship: "corroborating",
+        supports: ["community-created onboarding for the event-publishing workflow"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The records establish examples of public support, not support volume or resolution rate.",
+      "Institutional-account records are not attributed post by post to Jamie without separate authorship evidence."
+    ],
+    antiClaims: ["Jamie personally authored every @wowlist support reply", "The records measure product-support performance"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-SUNDAY-DINNER-LINEAGE",
+    project: "wowlist",
+    internalClaim: "Public @wowlist records connect the platform's origin and the NYC DIY calendar workflow to Sunday Dinner's community-calendar practice.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "Public records connect WOW List's community-calendar model to Sunday Dinner.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        relationship: "direct-support",
+        supports: ["the stated Sunday Dinner origin of the event-sharing approach"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-WOWLIST-NYCDIY-2016",
+        relationship: "corroborating",
+        supports: ["the later connection between NYC DIY's workflow and Sunday Dinner"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["The records establish stated lineage, not exclusive authorship or complete project history."],
+    antiClaims: ["Sunday Dinner alone accounts for every WOW List product decision"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-CIVIC-DISTRIBUTION-ADAPTATION",
+    project: "wowlist",
+    internalClaim: "In November 2016, @wowlist used the event-distribution model for a multi-city march calendar and a popular.vote surface for contributing events and receiving updates.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "The event-distribution model was later adapted for rapid civic coordination.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-X-WOWLIST-NATIONAL-MARCHES-2016",
+        relationship: "direct-support",
+        supports: ["same-day distribution of a multi-city march calendar"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-WOWLIST-POPULAR-VOTE-2016",
+        relationship: "direct-support",
+        supports: ["a themed surface for contributing events and receiving updates"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-WOWLIST-POPULAR-VOTE-ARCHIVE-2016",
+        relationship: "corroborating",
+        supports: ["preservation of the themed event-sharing surface"],
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: ["Distribution records do not establish attendance, ownership of the listed events, participation totals, or causal civic impact."],
+    antiClaims: ["WOW List organized every listed event", "The posts establish civic impact"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
+    project: "wowlist",
+    internalClaim: "Punks & Criminals publicly said it was adding shows to WOW List and linked to its project list in May 2015.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "Public records show the system in use: in 2015, Punks & Criminals said it was adding shows to WOW List.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/wowlist"]
+    }],
+    evidence: [{
+      sourceId: "SRC-X-WOWLIST-PUNKS-USE-2015",
+      relationship: "direct-support",
+      supports: ["one DIY music organizer's stated use of WOW List to add shows"],
+      confidence: "high",
+      renderCitation: true
+    }],
+    boundaries: ["One organizer's stated use does not establish platform-wide adoption, attendance, or ongoing use."],
+    antiClaims: ["Every DIY organizer used WOW List", "The post measures adoption or attendance"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+    project: "wowlist",
+    internalClaim: "Music Hackathon publicly described WOW List as an event-sharing service made by its co-organizer Jamie Burkart in March 2015.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "Music Hackathon described WOW List that year as an event-sharing service made by its co-organizer Jamie Burkart.",
+      status: "active",
+      citationRequired: true,
+      surfaces: ["/work/wowlist"]
+    }],
+    evidence: [{
+      sourceId: "SRC-X-WOWLIST-MUSIC-HACKATHON-ATTRIBUTION-2015",
+      relationship: "direct-support",
+      supports: ["a creative-technology peer's public attribution of Jamie's maker role"],
+      confidence: "high",
+      renderCitation: true
+    }],
+    boundaries: ["The attribution supports Jamie's maker role while leaving the complete WOW List team open."],
+    antiClaims: ["Jamie was the sole creator of WOW List", "The post identifies the complete project team"],
+    researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
+    reviewedAt,
+    reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
+  },
+  {
+    id: "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",
+    project: "wowlist",
+    internalClaim: "The complete displayed population includes mission-relevant sources about DIY cultural documentation, all-ages organizing, cultural-space support and safety, mutual aid, and participatory media.",
+    status: "confirmed-with-boundary",
+    projections: [{
+      key: "case-study",
+      text: "The account also circulated sources relevant to grassroots cultural infrastructure.",
+      status: "hold",
+      citationRequired: false,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-X-WOWLIST-FULL-POPULATION-2026",
+        relationship: "direct-support",
+        supports: ["the account records containing the posted source destinations"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-WOWLIST-USER-TUTORIAL-2015",
+        relationship: "context",
+        supports: ["the mission-relevant content of a circulated community-created tutorial"],
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
+        relationship: "context",
+        supports: ["the mission-relevant content of the circulated project-origin archive"],
+        confidence: "high",
+        renderCitation: false
+      },
+      ...contextualSourceIds.map((sourceId) => ({
+        sourceId,
+        relationship: "context" as const,
+        supports: ["the mission-relevant content of one circulated source"],
+        confidence: "high" as const,
+        renderCitation: false
+      }))
+    ],
+    boundaries: ["Circulating a source does not establish authorship, formal partnership, endorsement by the publisher, or causal impact."],
+    antiClaims: ["WOW List authored the circulated articles", "Every publisher was a formal WOW List partner"],
     researchInquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
     reviewedAt,
     reviewedBy: ["Jamie Burkart", "Codex authenticated archival review"]
@@ -396,7 +584,15 @@ export const wowListFullPopulationIntakeRecords20260715 = [
       "SRC-X-WOWLIST-SUNDAY-DINNER-ORIGIN-2014",
       "SRC-X-WOWLIST-USER-TUTORIAL-2015"
     ],
-    claimIds: ["CLM-WOWLIST-FULL-POPULATION-PRACTICE"],
+    claimIds: [
+      "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+      "CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT",
+      "CLM-WOWLIST-SUNDAY-DINNER-LINEAGE",
+      "CLM-WOWLIST-CIVIC-DISTRIBUTION-ADAPTATION",
+      "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
+      "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+      "CLM-WOWLIST-SOURCE-CURATION-PRACTICE"
+    ],
     inquiryIds: ["INQ-WOWLIST-FULL-POPULATION-2026"],
     limitations: [
       "The complete displayed population cannot recover deleted, private, withheld, or unindexed activity outside the profile control.",

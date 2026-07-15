@@ -165,6 +165,12 @@ export const requiredSocialClaimIds = [
   "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
   "CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE",
   "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+  "CLM-WOWLIST-SOCIAL-PRODUCT-SUPPORT",
+  "CLM-WOWLIST-SUNDAY-DINNER-LINEAGE",
+  "CLM-WOWLIST-CIVIC-DISTRIBUTION-ADAPTATION",
+  "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
+  "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
+  "CLM-WOWLIST-SOURCE-CURATION-PRACTICE",
   "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
 ];
 
@@ -1348,7 +1354,8 @@ export function validateKnowledgeIntake() {
     "CLM-CALLNYC-COUNCIL-ACCOUNT-ENGAGEMENT-2016",
     "CLM-NYCARTC-SHARED-CAMPAIGN-IDENTITY",
     "CLM-NYCARTC-COUNCIL-ACCOUNT-ENGAGEMENT",
-    "CLM-WOWLIST-FULL-POPULATION-PRACTICE",
+    "CLM-WOWLIST-ORGANIZER-PRODUCT-USE",
+    "CLM-WOWLIST-JAMIE-PEER-ATTRIBUTION",
     "CLM-KCTOWNHALL-DURABLE-PUBLIC-IDENTITY"
   ]);
   for (const claimId of expectedActiveSocialClaims) {
@@ -1360,7 +1367,14 @@ export function validateKnowledgeIntake() {
       .get("CLM-WOWLIST-PUBLIC-ORIGIN-AND-USE")
       ?.projections.some((projection) => projection.status === "active")
   ) {
-    socialMediaProductionErrors.push("The narrower WOW List origin-and-use projection must remain held after the full-population claim superseded it");
+    socialMediaProductionErrors.push("The narrower WOW List origin-and-use projection must remain held in favor of atomic organizer-use and peer-attribution claims");
+  }
+  if (
+    claimById
+      .get("CLM-WOWLIST-FULL-POPULATION-PRACTICE")
+      ?.projections.some((projection) => projection.status === "active")
+  ) {
+    socialMediaProductionErrors.push("The WOW List population-reconciliation claim must remain internal rather than replacing the public product story");
   }
 
   const serializedSocialRecords = JSON.stringify([
