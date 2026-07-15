@@ -182,6 +182,24 @@ Knowledge-bank status: confirmed with boundaries. The evidence does not establis
 
 Profile snapshot: joined April 2020; 35 posts reported; 34 unique status URLs rendered.
 
+An authenticated [full surviving Facebook Page pass](../runs/2026-07-15-kcspacesfund-facebook-posts-full-population.md)
+accounts for all 38 records exposed by the Page's 2020 filter, spanning April 7
+through July 9. The [public-safe ledger](../corpora/kcspacesfund-facebook-posts-full-population.json)
+preserves 33 recovered-body states, two unavailable embedded-source states,
+three unrecovered-body states, nine distinct external routes, and overlapping
+application, fundraising, volunteer, grantee, and media classifications.
+
+The KC Spaces Fund public accounts documented applications, fundraising,
+volunteer participation, recipient acknowledgments, and eleven visible named
+grantee or funded-space highlights. A full surviving Facebook Page pass
+accounts for 38 records from April 7 through July 9, 2020.
+
+Twenty-eight Facebook records displayed 119 reactions on July 15, 2026. That
+is a sum of capture-date post-level interface values, not unique people,
+historical reach, stakeholder-group engagement, attendance, conversion, or
+impact. The Page's current 108-follower display is likewise not evidence of its
+2020 audience size.
+
 The account promoted rolling emergency-relief applications for grants up to $500, preserved public recipient acknowledgments, and contains at least eleven visible project-authored posts naming grantee or funded-space highlights:
 
 - [Latino Arts Foundation, April 18, 2020](https://x.com/KCSpacesFund/status/1251553551454797830)
@@ -196,7 +214,17 @@ The account promoted rolling emergency-relief applications for grants up to $500
 - [SWAN, June 30, 2020](https://x.com/KCSpacesFund/status/1278061185871552512)
 - [Vulpes Bastille, July 9, 2020](https://x.com/KCSpacesFund/status/1281300779266125826)
 
-Knowledge-bank status: confirmed with boundaries. Eleven is a visible lower bound, not a complete grant ledger. The evidence does not establish that Jamie selected grantees, administered funds, or authored campaign posts. Named public organizers retain organizing credit; Jamie's separately documented contribution is behind-the-scenes digital infrastructure.
+Knowledge-bank status: confirmed with boundaries. The eleven highlights are
+corroborated across the public-account evidence but do not constitute a complete
+grant ledger. Page-authored references are outgoing routing, not incoming
+stakeholder engagement. The Facebook Page does not identify its historical
+human publishers, and Jamie states that he was not the stakeholder or owner
+posting to it. The evidence does not establish that Jamie selected grantees,
+administered funds, owned the Page, or authored campaign posts. Caitlin Horsmon,
+Jordan Carr, Kendell Harbin, and Megan Pobywajlo retain named public organizer
+credit; Jamie's separately documented contribution is behind-the-scenes digital
+infrastructure. His remembered support for choosing a name available across
+domains and social platforms remains a research lead pending corroboration.
 
 ## Personal public record: @urbanhermit
 

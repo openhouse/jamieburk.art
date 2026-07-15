@@ -991,7 +991,7 @@ export const socialAccountProductionBatch20260714: {
       id: "CLM-KCSPACES-SOCIAL-GRANTEE-DOCUMENTATION",
       project: "kc-spaces-fund",
       internalClaim:
-        "The visible KC Spaces Fund timeline contains at least eleven project-authored posts naming grantee or funded-space highlights and public recipient acknowledgments.",
+        "The complete surviving KC Spaces Fund Facebook Page surface contains 38 records routing applications, fundraising, volunteer participation, recipient context, and local media, including eleven visible named grantee or funded-space highlights corroborated by the project-account timeline.",
       status: "confirmed-with-boundary",
       maturity: "confirmed-with-boundary",
       projectionEligibility: "eligible",
@@ -1000,13 +1000,16 @@ export const socialAccountProductionBatch20260714: {
         {
           key: "archive-note",
           text:
-            "The KC Spaces Fund account publicly documented applications, recipient acknowledgments, and at least eleven visible named grantee or funded-space highlights.",
+            "The KC Spaces Fund public accounts documented applications, fundraising, volunteer participation, recipient acknowledgments, and eleven visible named grantee or funded-space highlights. A full surviving Facebook Page pass accounts for 38 records from April 7 through July 9, 2020.",
           status: "active",
           citationRequired: true,
           surfaces: ["docs/knowledge-bank/projects/social-account-inventory"]
         }
       ],
       evidence: [
+        { sourceId: "SRC-KCSPACES-FACEBOOK-POST-CORPUS-2026-07-15", relationship: "direct-support", supports: ["38-record surviving Facebook Page population", "application, fundraising, volunteer, grantee, and media routing", "eleven visible named highlights"], locator: "populationReconciliation; missionSummary; postedUrlInventory", confidence: "high", renderCitation: true },
+        { sourceId: "SRC-KCSPACES-FACEBOOK-POST-RESEARCH-2026-07-15", relationship: "supports-boundary", supports: ["terminal traversal", "human-publisher and stakeholder-identity limits"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCSPACES-CAMPAIGN-SITE-2020", relationship: "supports-boundary", supports: ["named public organizers", "application and eligibility context"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-SOCIAL-KCSPACES-AUTH-OBSERVATION-2026", relationship: "direct-support", supports: ["eleven visible highlights", "observation limits"], confidence: "high", renderCitation: true },
         ...[
           ["VULPES-BASTILLE", "Vulpes Bastille"],
@@ -1031,12 +1034,14 @@ export const socialAccountProductionBatch20260714: {
         { sourceId: "SRC-KCSPACES-RECIPIENT-THANKS-2020", relationship: "corroborating", supports: ["public recipient acknowledgment"], confidence: "high", renderCitation: true }
       ],
       boundaries: [
-        "This is a lower bound over visible posts, not a grant ledger.",
-        "The evidence does not establish that Jamie selected grantees, administered funds, or authored campaign posts; public organizer credit remains with the campaign's named organizers."
+        "The 38-row Facebook denominator covers every record exposed by the authenticated 2020 filter on July 15, 2026; it is not a Meta owner export, every-post-ever claim, deleted-post recovery, or grant ledger.",
+        "Page-authored references and posted routes are outgoing public routing, not incoming stakeholder engagement, endorsement, partnership, donation, application, attendance, conversion, or impact.",
+        "The 119 displayed reactions are capture-date post-level values, not unique people or historical reach; the current 108-follower display is not evidence of 2020 audience size.",
+        "The evidence does not establish that Jamie selected grantees, administered funds, owned or published the Page, or authored campaign posts; public organizer credit remains with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo."
       ],
-      antiClaims: ["Jamie selected the grantees", "Eleven was the complete grantee count", "Jamie authored every post"],
-      researchInquiryIds: ["INQ-SOCIAL-PROJECT-ACCOUNT-PRODUCTION-2026"],
-      reviewedAt: "2026-07-14",
+      antiClaims: ["Jamie selected the grantees", "Eleven was the complete grantee count", "Jamie owned or published the Facebook Page", "Thirty-eight is every Facebook post ever created", "One hundred nineteen reactions means 119 people or proves impact", "The Page's outgoing references prove stakeholder engagement"],
+      researchInquiryIds: ["INQ-SOCIAL-PROJECT-ACCOUNT-PRODUCTION-2026", "INQ-KCSPACES-FACEBOOK-POST-POPULATION-2026"],
+      reviewedAt: "2026-07-15",
       reviewedBy
     }
   ],

@@ -72,7 +72,7 @@ Contemporaneous posts explicitly connect WOW List to Sunday Dinner calendars, id
 
 ### KC Town Hall and KC Spaces Fund
 
-KC Town Hall's later [full population-accounted pass](2026-07-15-kctownhall-x-full-population.md) preserved 181 account items, an explicit two-item gap, sustained public operations, mission-relevant source circulation, and a strict lower bound of visible civic dialogue. Its project-level operations and dialogue claims are now projected to the case study; volatile engagement and uncorroborated outcome figures remain held. KC Spaces Fund's account preserved applications, recipient acknowledgments, and at least eleven visible named grantee or funded-space highlights.
+KC Town Hall's later [full population-accounted pass](2026-07-15-kctownhall-x-full-population.md) preserved 181 account items, an explicit two-item gap, sustained public operations, mission-relevant source circulation, and a strict lower bound of visible civic dialogue. Its project-level operations and dialogue claims are now projected to the case study; volatile engagement and uncorroborated outcome figures remain held. KC Spaces Fund's X account preserved applications, recipient acknowledgments, and at least eleven visible named grantee or funded-space highlights. A later [full surviving Facebook Page pass](2026-07-15-kcspacesfund-facebook-posts-full-population.md) accounted for 38 records, corroborated the eleven highlights, and preserved application, fundraising, volunteer, grantee, and media-routing patterns without assigning Page ownership or publishing to Jamie.
 
 ## Held claim
 

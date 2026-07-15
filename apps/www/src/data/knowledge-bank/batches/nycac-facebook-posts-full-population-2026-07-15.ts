@@ -82,7 +82,7 @@ export const nycacFacebookPostsFullPopulationBatch20260715: {
         "One hundred percent means every row Meta returned through those annual Published exports, not every post ever created or deleted-post recovery.",
         "The terminal feed traversal independently reconciled to 444 posts after 154 duplicate or embedded render variants were excluded from 598 encountered rows.",
         "The shared Page does not identify the historical human publisher of each row; Jamie's predominant-use memory remains a research lead, not settled attribution.",
-        "Raw exports, post bodies, post IDs, comments, social-graph identities, authenticated routes, and sensitive exact routes remain outside the public repository."
+        "Native export files, post bodies, post IDs, comments, social-graph identities, authenticated routes, and sensitive exact routes remain outside the public repository."
       ],
       reviewedAt,
       reviewedBy
@@ -423,6 +423,19 @@ export const nycacFacebookPostsFullPopulationBatch20260715: {
       publicSafe: true,
       reviewedAt,
       reviewedBy
+    },
+    {
+      id: "AST-NYCAC-FACEBOOK-PAGE-IDENTITY-2026",
+      sourceId: ids.page,
+      project: "nyc-artist-coalition",
+      assertion:
+        "The authenticated Page view confirms the NYC Artist Coalition public identity and capture-date management surface, but it does not establish historical post-level human authorship or deleted-post completeness.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: [ids.operatingRecord, ids.civicRelay],
+      publicSafe: true,
+      reviewedAt,
+      reviewedBy
     }
   ],
   claims: [
@@ -692,7 +705,7 @@ export const nycacFacebookPostsFullPopulationBatch20260715: {
       ],
       successCriteria: [
         "Detect denominator or metric drift without silently overwriting the July 2026 snapshot",
-        "Keep raw exports protected",
+        "Keep native source files protected",
         "Document corrections through the knowledge-bank lifecycle"
       ],
       sourceIds: [ids.corpus, ids.protectedRun],
@@ -713,7 +726,7 @@ export const nycacFacebookPostsFullPopulationBatch20260715: {
         "Generated annual Meta Business Suite Published exports for every year in the surviving chronology using Lifetime data view, Post content level, and Creation date filter.",
         "Confirmed 444 exported rows and 444 unique post IDs across 2017-2021.",
         "Repeatedly traversed the public Page feed to a stable terminal endpoint and reconciled duplicate or embedded render variants.",
-        "Published a metadata-only corpus with one-way hashes, bounded classifications, public routes, and aggregate metrics while withholding raw exports and social-graph data.",
+        "Published a metadata-only corpus with one-way hashes, bounded classifications, public routes, and aggregate metrics while withholding native source files and social-graph data.",
         "Separated stakeholder references from incoming engagement and shared-account custody from human authorship.",
         "Close-read three newly governed articles and retained 56 posted routes as an explicit research queue."
       ],
