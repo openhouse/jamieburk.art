@@ -130,16 +130,57 @@ export const knowledgeDevelopmentRecords: KnowledgeDevelopmentRecords = {
     {
       id: "READ-OPEN-HOUSE-GOOD-TIMES-2006",
       sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
-      readAt: "2026-07-12",
-      reader: "Codex public-source review",
+      readAt: "2026-07-15",
+      reader: "Codex public-source and source-bounded professor-lens review",
       assertions: [
         { id: "AST-OPEN-HOUSE-COMMUNAL", statement: "Jamie organized a ten-day public experiment in communal living inside a UCSC gallery.", locator: "Headline and opening sections", confidence: "high", publicSafe: true },
         { id: "AST-OPEN-HOUSE-GOVERNANCE", statement: "Responsibility and decision-making were described as communal rather than leader-controlled.", locator: "Staff investigation section", confidence: "high", publicSafe: true },
-        { id: "AST-OPEN-HOUSE-DOCUMENTATION", statement: "Participants created a distributed visual and written documentation practice.", locator: "Tradition of Experiment section", confidence: "high", publicSafe: true }
+        { id: "AST-OPEN-HOUSE-DOCUMENTATION", statement: "Participants created a distributed visual and written documentation practice.", locator: "Tradition of Experiment section", confidence: "high", publicSafe: true },
+        {
+          id: "AST-OPEN-HOUSE-TENDING",
+          statement:
+            "The public profile describes Jamie's continuous presence and tending as part of what made the open, potentially chaotic experiment workable, while recording communal responsibility and decision-making.",
+          locator: "Staff investigation and Tradition of Experiment sections",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "AST-OPEN-HOUSE-ART-LIFE",
+          statement:
+            "The profile documents a process-centered art/life experiment organized through attention, public participation, shared responsibility, and distributed documentation.",
+          locator: "Tradition of Experiment and Power of Performance sections",
+          confidence: "high",
+          publicSafe: true
+        },
+        {
+          id: "AST-OPEN-HOUSE-SOCIAL-SOFTWARE",
+          statement:
+            "The profile records Jamie connecting the gallery's visible social relations and self-representation to social-software concepts.",
+          locator: "Community on Display section",
+          confidence: "high",
+          publicSafe: true
+        }
       ],
-      limitations: ["The profile is journalistic interpretation and does not establish current consent to publish participant images."],
-      entityIds: ["Jamie-Burkart", "Open-House", "Shop-Shows"],
-      themeIds: ["participatory-systems", "shared-governance", "documentation"],
+      limitations: [
+        "The profile is journalistic interpretation.",
+        "The article establishes a 2006 practice lineage, not current technical proficiency by itself.",
+        "Protected academic evaluations informed the evaluator questions but are not public evidence and are not reproduced.",
+        "The source does not establish sole authorship or current consent to republish participant images."
+      ],
+      entityIds: [
+        "Jamie-Burkart",
+        "Open-House",
+        "Shop-Shows",
+        "Margaret-Morse",
+        "Warren-Sack"
+      ],
+      themeIds: [
+        "participatory-systems",
+        "art-life",
+        "social-software",
+        "documentation",
+        "inhabited-interfaces"
+      ],
       candidateClaimIds: ["CND-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE"]
     },
     {

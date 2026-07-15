@@ -114,11 +114,12 @@
       "canonicalUrl": "https://www.goodtimes.sc/archives/metro-santa-cruz/06.28.06/open-house-0626.html",
       "preferredPublicUrl": "canonical",
       "publicCitation": "Laura Mattingly, 'Open House,' Good Times, June 28, 2006.",
-      "publicNote": "The profile documents Open House, earlier Shop Shows, communal responsibility, public participation, facilitation, and collective documentation practices.",
+      "publicNote": "The profile documents Open House, earlier Shop Shows, communal responsibility, public participation, facilitation, collective documentation, and an explicit connection to social software.",
       "doesNotEstablish": [
         "formal employment",
         "sole authorship of every activity",
-        "the identity or consent status of every participant"
+        "the identity or consent status of every participant",
+        "current technical expertise solely from a 2006 project"
       ]
     },
     {
@@ -1271,7 +1272,7 @@
       "projections": [
         {
           "key": "about",
-          "text": "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
+          "text": "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives. That early work connected artistic, civic, technical, and social practice through participation, shared responsibility, documentation, and care for how people inhabit a place.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1286,7 +1287,9 @@
           "supports": [
             "communal gallery-house",
             "participatory governance",
-            "collective documentation"
+            "collective documentation",
+            "tending and attention",
+            "social-software analogy"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -1328,7 +1331,8 @@
       "boundaries": [
         "Use this as a professional throughline, not as formal employment history.",
         "Preserve collaborator and participant credit.",
-        "Do not state the final Gulf landing point until route evidence is completed."
+        "Do not state the final Gulf landing point until route evidence is completed.",
+        "Do not use protected academic records or private correspondence as public citation surfaces."
       ]
     },
     {

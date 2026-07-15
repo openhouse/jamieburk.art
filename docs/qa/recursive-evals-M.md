@@ -38,12 +38,16 @@ public-safe, and ready to act from.
    scale, currentness, audience conversion, collective accountability, release
    enforcement, and the application-ready stopping rule are truthfully
    controlled. An open human review or rights review must stay open.
-8. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
+8. **Professor-lenses pass:** run `npm run check:professor-lenses`. Confirm the
+   portfolio preserves Jamie's artistic, embodied, and social-technical
+   imagination without weakening hiring clarity or presenting Codex-authored
+   criteria as fresh testimony from either professor.
+9. **Web pass:** check routes, redirects, metadata, sitemap, robots, mobile
    layout, keyboard navigation, focus states, and key links.
-9. **Automation pass:** run `npm run check`, `npm run check:evals`,
+10. **Automation pass:** run `npm run check`, `npm run check:evals`,
    `npm run preflight:staging`, and `npm run preflight:production` when the
    environment is available.
-10. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
+11. **Decision pass:** record remaining blockers as P0, P1, or P2. Repeat the loop
    only for unresolved P0/P1 blockers.
 
 ## Chad-Lens Criterion
@@ -95,7 +99,8 @@ open and the bounded protocol is present.
   screenshots, private fonts, or unapproved personal/community records appear in
   the repo or public surface.
 - `npm run check`, `npm run check:chad-lens`,
-  `npm run check:portfolio-readiness`, or `npm run public-safety` fails.
+  `npm run check:portfolio-readiness`, `npm run check:professor-lenses`, or
+  `npm run public-safety` fails.
 
 ## P1: Blocks Production Cutover
 
@@ -132,3 +137,11 @@ open and the bounded protocol is present.
 - **Stephen Coles:** Is the type and interface legible enough to trust?
 - **Shannon Mattern:** Does the site show infrastructure as care, not clutter?
 - **Darius Kazemi:** Is the system simple enough to maintain?
+- **Prof. Margaret Morse:** Does the portfolio preserve the artistic, embodied,
+  participatory inquiry that distinguishes Jamie's operating practice?
+- **Prof. Warren Sack:** Does the portfolio show original social-technical
+  pattern finding and prototyping, not only implementation competence?
+
+The professor lenses are Codex-authored criteria informed by supplied records;
+they do not represent fresh testimony, endorsement, or approval by either
+professor.

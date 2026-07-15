@@ -23,16 +23,18 @@ export const evidenceBatchRecords: EvidenceBatch = {
       publicCitation:
         "Laura Mattingly, 'Open House,' Good Times, June 28, 2006.",
       publicNote:
-        "The profile documents Open House, earlier Shop Shows, communal responsibility, public participation, facilitation, and collective documentation practices.",
+        "The profile documents Open House, earlier Shop Shows, communal responsibility, public participation, facilitation, collective documentation, and an explicit connection to social software.",
       supportsGenerally: [
         "Jamie organized Open House as a public communal-living experiment",
         "Jamie and collaborators created participatory art environments",
-        "participants shared responsibility and documentation"
+        "participants shared responsibility and documentation",
+        "Jamie connected the inhabited gallery's social relations to social-software representation"
       ],
       doesNotEstablish: [
         "formal employment",
         "sole authorship of every activity",
-        "the identity or consent status of every participant"
+        "the identity or consent status of every participant",
+        "current technical expertise solely from a 2006 project"
       ]
     },
     {
@@ -339,13 +341,13 @@ export const evidenceBatchRecords: EvidenceBatch = {
       id: "CLM-PARTICIPATORY-PUBLIC-SYSTEMS-THROUGHLINE",
       project: "participatory-public-systems",
       internalClaim:
-        "Jamie's early participatory cultural work created shared structures through which people could inhabit, document, and shape public experiences together.",
+        "Jamie's early participatory cultural work created shared structures people could inhabit, document, and shape together, linking artistic inquiry, social-technical systems, public participation, and operational care.",
       status: "confirmed-with-boundary",
       projections: [
         {
           key: "about",
           text:
-            "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives.",
+            "Before I used the language of technical project management, I was organizing participatory public systems: a communal gallery-house in Santa Cruz, a collaborative human-powered raft expedition that traveled more than 1,000 miles from Kansas City down the Missouri and Mississippi Rivers, and a Kansas City exhibition inviting river communities to contribute their own stories and perspectives. That early work connected artistic, civic, technical, and social practice through participation, shared responsibility, documentation, and care for how people inhabit a place.",
           status: "active",
           citationRequired: true,
           surfaces: ["/about"]
@@ -355,8 +357,14 @@ export const evidenceBatchRecords: EvidenceBatch = {
         {
           sourceId: "SRC-OPEN-HOUSE-GOOD-TIMES-2006",
           relationship: "direct-support",
-          supports: ["communal gallery-house", "participatory governance", "collective documentation"],
-          locator: "Open House profile and Shop Shows sections",
+          supports: [
+            "communal gallery-house",
+            "participatory governance",
+            "collective documentation",
+            "tending and attention",
+            "social-software analogy"
+          ],
+          locator: "Open House profile, Tradition of Experiment, and Community on Display sections",
           confidence: "high",
           renderCitation: true
         },
@@ -393,7 +401,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
       boundaries: [
         "Use this as a professional throughline, not as formal employment history.",
         "Preserve collaborator and participant credit.",
-        "Do not state the final Gulf landing point until route evidence is completed."
+        "Do not state the final Gulf landing point until route evidence is completed.",
+        "Do not use protected academic records or private correspondence as public citation surfaces."
       ],
       antiClaims: [
         "Jamie alone created every part of the projects",

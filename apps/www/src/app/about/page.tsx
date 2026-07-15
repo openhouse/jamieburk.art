@@ -42,6 +42,12 @@ export default function AboutPage() {
             surface="/about"
           />
           <p>
+            That lineage still shapes how I work. I look for patterns connecting
+            people, information, and place; test them through interfaces,
+            workflows, and prototypes; and preserve room for participation,
+            hospitality, memory, and attention while making the work usable.
+          </p>
+          <p>
             I am currently focused on technical project management, product
             operations, implementation, business analysis, civic/govtech
             delivery, and source-backed knowledge systems.
