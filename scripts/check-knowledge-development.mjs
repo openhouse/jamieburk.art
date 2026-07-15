@@ -55,7 +55,24 @@ const knownRouteProjectionSurfaces = new Set(
   Object.keys(projectionSurfaceBindings.routes)
 );
 const requiredPublicSurfaceRoots = new Map([
-  ["apps/www/src/app", [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]],
+  [
+    "apps/www/src/app",
+    [
+      ".avif",
+      ".ico",
+      ".jpeg",
+      ".jpg",
+      ".js",
+      ".jsx",
+      ".md",
+      ".mdx",
+      ".png",
+      ".svg",
+      ".ts",
+      ".tsx",
+      ".webp"
+    ]
+  ],
   ["apps/www/src/components", [".js", ".jsx", ".ts", ".tsx"]],
   ["apps/www/src/content", [".md", ".mdx"]],
   [
@@ -464,7 +481,7 @@ export function resumeVisibleAttributeText(source) {
   const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
   return [...body.matchAll(/<(?!style\b|script\b)[A-Za-z][^>]*>/g)]
     .flatMap((tag) =>
-      [...tag[0].matchAll(/\b(?:alt|aria-label|title|placeholder|value)\s*=\s*(["'])(.*?)\1/gi)]
+      [...tag[0].matchAll(/\b(?:alt|aria-description|aria-label|aria-roledescription|aria-valuetext|data|srcdoc|title|placeholder|value)\s*=\s*(["'])(.*?)\1/gi)]
         .map((match) => decodedElementText(match[2]))
         .filter(Boolean)
     );
@@ -481,7 +498,34 @@ export function resumeCssPublicTextRisks(source) {
     }
   }
   if (/\burl\s*\(/i.test(css)) risks.push("CSS url() content");
+  if (/\bimage-set\s*\(/i.test(css)) risks.push("CSS image-set() content");
+  if (/\\[0-9a-f]{1,6}\s?/i.test(css)) risks.push("CSS escaped declaration");
+  if (
+    /(?:^|[;{])\s*(?:list-style(?:-type)?|symbols|prefix|suffix)\s*:\s*[^;}]*["'][^"']+["']/gim.test(
+      css
+    )
+  ) {
+    risks.push("CSS list or counter text");
+  }
   return risks;
+}
+
+export function resumeEmbeddedContentRisks(source) {
+  const body = source.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? source;
+  const risks = [];
+  for (const tag of body.matchAll(/<(iframe|object|embed)\b[^>]*>/gi)) {
+    risks.push(`${tag[1].toLowerCase()} embedded content`);
+  }
+  for (const tag of body.matchAll(/<[A-Za-z][^>]*>/g)) {
+    if (
+      /\b(?:src|srcset|data|style)\s*=\s*(["'])[^"']*(?:data:|image-set\s*\()[^"']*\1/i.test(
+        tag[0]
+      )
+    ) {
+      risks.push("inline embedded data content");
+    }
+  }
+  return [...new Set(risks)];
 }
 
 function normalizedIncludes(haystack, needle) {
@@ -527,10 +571,9 @@ function proofSemanticBasis(proof) {
   });
 }
 
-export function statementProofSemanticCoverage(statement, proofInput) {
+function statementSemanticCoverage(statement, basis) {
   const statementTokens = [...semanticTokens(statement)];
-  const proofs = Array.isArray(proofInput) ? proofInput : [proofInput];
-  const proofTokens = semanticTokens(proofs.map(proofSemanticBasis).join(" "));
+  const proofTokens = semanticTokens(basis);
   const matched = statementTokens.filter((token) => proofTokens.has(token));
   return {
     score: statementTokens.length === 0 ? 1 : matched.length / statementTokens.length,
@@ -539,13 +582,71 @@ export function statementProofSemanticCoverage(statement, proofInput) {
   };
 }
 
+export function statementProofSemanticCoverage(statement, proofInput) {
+  const proofs = Array.isArray(proofInput) ? proofInput : [proofInput];
+  return statementSemanticCoverage(
+    statement,
+    proofs.map(proofSemanticBasis).join(" ")
+  );
+}
+
+function claimSemanticBasis(claim) {
+  return JSON.stringify({
+    internalClaim: claim.internalClaim,
+    projections: claim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+    evidence: claim.evidence.map((item) => ({
+      supports: item.supports,
+      publicNote: item.publicNote
+    }))
+  });
+}
+
+export function governedStatementSemanticCoverage(statement, bank) {
+  const claims = (statement.claims ?? [])
+    .map((support) => bank.claims.find((claim) => claim.id === support.id))
+    .filter(Boolean);
+  const proofs = (statement.proofs ?? [])
+    .map((support) => proofById.get(support.id))
+    .filter(Boolean);
+  return statementSemanticCoverage(statement.text, [
+    ...claims.map(claimSemanticBasis),
+    ...proofs.map(proofSemanticBasis)
+  ].join(" "));
+}
+
+export function governedStatementUnsupportedClauses(statement, bank) {
+  const claims = (statement.claims ?? [])
+    .map((support) => bank.claims.find((claim) => claim.id === support.id))
+    .filter(Boolean);
+  const proofs = (statement.proofs ?? [])
+    .map((support) => proofById.get(support.id))
+    .filter(Boolean);
+  const basis = [
+    ...claims.map(claimSemanticBasis),
+    ...proofs.map(proofSemanticBasis)
+  ].join(" ");
+  return statement.text
+    .split(/[.;]|,\s+(?=(?:and|but)\b)/i)
+    .map((clause) => ({
+      clause: normalizedText(clause),
+      coverage: statementSemanticCoverage(clause, basis)
+    }))
+    .filter(
+      ({ coverage }) =>
+        coverage.statementTokens.length >= 3 &&
+        (coverage.matched.length === 0 || coverage.score < 0.2)
+    );
+}
+
 const semanticRiskFamilies = new Map([
-  ["sole-credit", /\b(?:alone|sole|solely|single[ -]?handedly|exclusively|entirely)\b/i],
-  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control)\b/i],
-  ["causal-certainty", /\b(?:caused|guaranteed|ensured|drove|single[ -]?handedly delivered)\b/i],
+  ["sole-credit", /\b(?:alone|sole|solely|single[ -]?handedly|exclusively|independently|by (?:himself|herself|themselves)|on (?:his|her|their) own)\b/i],
+  ["total-ownership", /\b(?:owned|ownership|fully owned|complete control|end[ -]?to[ -]?end responsibility)\b/i],
+  ["causal-certainty", /\b(?:caused|guaranteed|ensured|drove|made [^.?!;]{0,80} happen|single[ -]?handedly delivered)\b/i],
   ["official-status", /\b(?:official|officially|certified|endorsed)\b/i],
-  ["current-status", /\b(?:current|currently|live|ongoing)\b/i],
-  ["completeness", /\b(?:all|every|complete|completely|100\s*%)\b/i]
+  ["current-status", /\b(?:current|currently|live|ongoing|remains? operational|still operating|operational today)\b/i],
+  ["completeness", /\b(?:all|every|entire|complete|completely|full corpus|100\s*%)\b/i]
 ]);
 
 function riskFamilies(value) {
@@ -577,7 +678,7 @@ export function proofSemanticBoundaryFindings(statement, proof) {
     if (sharedRisk.length === 0) continue;
     const prohibitedTokens = [...semanticTokens(prohibited)];
     const matched = prohibitedTokens.filter((token) => statementTokens.has(token));
-    if (matched.length >= 2 || matched.length / Math.max(prohibitedTokens.length, 1) >= 0.5) {
+    if (matched.length >= 1) {
       findings.push(
         `semantic boundary ${sharedRisk.join("/")} overlaps prohibited wording: ${prohibited}`
       );
@@ -614,6 +715,18 @@ function governedStatementFindings(statement, bank, source, label) {
   }
   if (claims.length + proofs.length === 0) {
     findings.push(`${label} has no claim or proof identity`);
+  } else {
+    const coverage = governedStatementSemanticCoverage(statement, bank);
+    if (coverage.statementTokens.length > 0 && coverage.score < 0.3) {
+      findings.push(
+        `${label} has insufficient proposition-level support (${coverage.matched.length}/${coverage.statementTokens.length} substantive tokens)`
+      );
+    }
+    for (const unsupported of governedStatementUnsupportedClauses(statement, bank)) {
+      findings.push(
+        `${label} contains an unsupported clause (${unsupported.coverage.matched.length}/${unsupported.coverage.statementTokens.length} substantive tokens): ${unsupported.clause}`
+      );
+    }
   }
 
   for (const support of claims) {
@@ -741,7 +854,9 @@ export function statementSupportFingerprint(policy = projectionSurfaceBindings) 
       presentationText: policy.resumeArtifact.presentationText,
       expectedVisibleAttributeCount:
         policy.resumeArtifact.expectedVisibleAttributeCount,
-      visibleAttributeText: policy.resumeArtifact.visibleAttributeText
+      visibleAttributeText: policy.resumeArtifact.visibleAttributeText,
+      expectedEmbeddedContentRiskCount:
+        policy.resumeArtifact.expectedEmbeddedContentRiskCount
     },
     resume: policy.resumeArtifact.statements
       .map((statement) => ({
@@ -919,6 +1034,27 @@ export function workStatementSupportRecords(
         false
       );
     }
+    add(
+      "group",
+      objectProperty(item, "group", sourceFile),
+      proofIds("group"),
+      ["/work"],
+      false
+    );
+    add(
+      "featured",
+      objectProperty(item, "featured", sourceFile),
+      proofIds("featured"),
+      ["/"],
+      false
+    );
+    add(
+      "priority",
+      objectProperty(item, "priority", sourceFile),
+      proofIds("priority"),
+      ["/", "/work"],
+      false
+    );
 
     for (const key of [
       "role",
@@ -1015,7 +1151,8 @@ export function workStatementSupportRecords(
         key,
         objectProperty(item, key, sourceFile),
         proofIds(key),
-        [caseStudySurface]
+        [caseStudySurface],
+        key !== "currentStatus"
       );
     }
     const publicSafetyNode = objectProperty(item, "publicSafety", sourceFile);
@@ -1076,7 +1213,7 @@ export function workStatementSemanticFindings(
         statement.text,
         statementProofs
       );
-      if (coverage.statementTokens.length > 0 && coverage.score < 0.2) {
+      if (coverage.statementTokens.length > 0 && coverage.score < 0.3) {
         findings.push(
           `work statement ${statement.id} has insufficient semantic support from ${statement.proofs.join(", ")} (${coverage.matched.length}/${coverage.statementTokens.length} substantive tokens)`
         );
@@ -1259,6 +1396,35 @@ function expressionIsAlwaysFalse(expression, sourceFile) {
   if (ts.isStringLiteral(expression) && expression.text.length === 0) return true;
   if (ts.isIdentifier(expression) && expression.text === "undefined") return true;
   if (
+    ts.isPropertyAccessExpression(expression) &&
+    expression.name.text === "length" &&
+    expressionIsStaticallyEmptyArray(expression.expression, sourceFile)
+  ) {
+    return true;
+  }
+  if (ts.isBinaryExpression(expression)) {
+    const left = staticPrimitiveValue(expression.left, sourceFile);
+    const right = staticPrimitiveValue(expression.right, sourceFile);
+    if (left.known && right.known) {
+      switch (expression.operatorToken.kind) {
+        case ts.SyntaxKind.EqualsEqualsEqualsToken:
+        case ts.SyntaxKind.EqualsEqualsToken:
+          return left.value !== right.value;
+        case ts.SyntaxKind.ExclamationEqualsEqualsToken:
+        case ts.SyntaxKind.ExclamationEqualsToken:
+          return left.value === right.value;
+        case ts.SyntaxKind.LessThanToken:
+          return !(left.value < right.value);
+        case ts.SyntaxKind.LessThanEqualsToken:
+          return !(left.value <= right.value);
+        case ts.SyntaxKind.GreaterThanToken:
+          return !(left.value > right.value);
+        case ts.SyntaxKind.GreaterThanEqualsToken:
+          return !(left.value >= right.value);
+      }
+    }
+  }
+  if (
     ts.isPrefixUnaryExpression(expression) &&
     expression.operator === ts.SyntaxKind.ExclamationToken
   ) {
@@ -1284,6 +1450,23 @@ function expressionIsAlwaysFalse(expression, sourceFile) {
     ts.isIdentifier(expression) &&
     identifierIsConstFalse(expression.text, sourceFile)
   );
+}
+
+function staticPrimitiveValue(expression, sourceFile) {
+  const value = unwrappedTsExpression(expression);
+  if (value.kind === ts.SyntaxKind.TrueKeyword) return { known: true, value: true };
+  if (value.kind === ts.SyntaxKind.FalseKeyword) return { known: true, value: false };
+  if (value.kind === ts.SyntaxKind.NullKeyword) return { known: true, value: null };
+  if (ts.isNumericLiteral(value)) return { known: true, value: Number(value.text) };
+  if (ts.isStringLiteral(value)) return { known: true, value: value.text };
+  if (
+    ts.isPropertyAccessExpression(value) &&
+    value.name.text === "length" &&
+    expressionIsStaticallyEmptyArray(value.expression, sourceFile)
+  ) {
+    return { known: true, value: 0 };
+  }
+  return { known: false, value: undefined };
 }
 
 function expressionIsAlwaysTrue(expression, sourceFile) {
@@ -1426,6 +1609,49 @@ function expressionIsStaticallyEmptyArray(node, sourceFile, seen = new Set()) {
   if (ts.isArrayLiteralExpression(expression)) {
     return expression.elements.length === 0;
   }
+  if (
+    ts.isNewExpression(expression) &&
+    ts.isIdentifier(expression.expression) &&
+    expression.expression.text === "Array" &&
+    expression.arguments?.length === 1 &&
+    expressionIsAlwaysFalse(expression.arguments[0], sourceFile)
+  ) {
+    return true;
+  }
+  if (ts.isCallExpression(expression)) {
+    if (
+      ts.isPropertyAccessExpression(expression.expression) &&
+      ((expression.expression.expression.getText(sourceFile) === "Object" &&
+        expression.expression.name.text === "freeze") ||
+        (expression.expression.expression.getText(sourceFile) === "Array" &&
+          expression.expression.name.text === "from")) &&
+      expression.arguments.length > 0
+    ) {
+      return expressionIsStaticallyEmptyArray(
+        expression.arguments[0],
+        sourceFile,
+        seen
+      );
+    }
+    if (
+      ts.isPropertyAccessExpression(expression.expression) &&
+      expression.expression.name.text === "filter" &&
+      expression.arguments.length > 0
+    ) {
+      const callback = unwrappedTsExpression(expression.arguments[0]);
+      if (
+        (ts.isArrowFunction(callback) || ts.isFunctionExpression(callback)) &&
+        ((ts.isBlock(callback.body) &&
+          callback.body.statements.length === 1 &&
+          ts.isReturnStatement(callback.body.statements[0]) &&
+          expressionIsAlwaysFalse(callback.body.statements[0].expression, sourceFile)) ||
+          (!ts.isBlock(callback.body) &&
+            expressionIsAlwaysFalse(callback.body, sourceFile)))
+      ) {
+        return true;
+      }
+    }
+  }
   if (!ts.isIdentifier(expression) || seen.has(expression.text)) return false;
   seen.add(expression.text);
   let initializer = null;
@@ -1446,6 +1672,25 @@ function expressionIsStaticallyEmptyArray(node, sourceFile, seen = new Set()) {
   return initializer
     ? expressionIsStaticallyEmptyArray(initializer, sourceFile, seen)
     : false;
+}
+
+function jsxAncestorIsHidden(node, sourceFile) {
+  for (let current = node.parent; current; current = current.parent) {
+    if (ts.isJsxAttribute(current)) return true;
+    if (!ts.isJsxElement(current)) continue;
+    const opening = current.openingElement;
+    const tagName = opening.tagName.getText(sourceFile).toLowerCase();
+    const tag = opening.getText(sourceFile);
+    if (tagName === "template") return true;
+    if (/\s(?:hidden|inert)(?:\s|=|>)/i.test(tag)) return true;
+    if (/aria-hidden\s*=\s*(?:\{\s*true\s*\}|["']true["'])/i.test(tag)) {
+      return true;
+    }
+    if (/\b(?:display\s*:\s*["']none["']|visibility\s*:\s*["']hidden["'])/i.test(tag)) {
+      return true;
+    }
+  }
+  return false;
 }
 
 function exportedComponentHasRenderer(sourcePath, exportName, surface) {
@@ -1616,6 +1861,7 @@ function tsxRouteRealizesProjection(
       ts.isJsxSelfClosingElement(node) &&
       node.tagName.getText(sourceFile) === "Claim" &&
       !hasDisallowedRuntimeGate(node, sourceFile) &&
+      !jsxAncestorIsHidden(node, sourceFile) &&
       jsxHasRenderableReturnPath(node, sourceFile) &&
       isReachableModuleNode(node, sourcePath, surface)
     ) {
@@ -1634,6 +1880,7 @@ function tsxRouteRealizesProjection(
       ts.isCallExpression(node) &&
       node.expression.getText(sourceFile) === "getClaimProjection" &&
       !hasDisallowedRuntimeGate(node, sourceFile) &&
+      !jsxAncestorIsHidden(node, sourceFile) &&
       (!sourcePath.endsWith("/data/work.ts") || isDirectWorkSummaryResolver(node)) &&
       isReachableModuleNode(node, sourcePath, surface)
     ) {
@@ -1694,9 +1941,34 @@ function matchingCitationOccurrence(bank, tag, claim, projection, surface) {
   );
 }
 
+function mdxHasHiddenAncestor(content) {
+  const stack = [];
+  for (const match of content.matchAll(/<(\/)?([A-Za-z][\w.-]*)([^<>]*)>/g)) {
+    const closing = Boolean(match[1]);
+    const name = match[2].toLowerCase();
+    if (closing) {
+      const index = stack.map((entry) => entry.name).lastIndexOf(name);
+      if (index >= 0) stack.splice(index);
+      continue;
+    }
+    if (/\/\s*>$/.test(match[0])) continue;
+    const tag = match[0];
+    const hidden =
+      name === "template" ||
+      /\s(?:hidden|inert)(?:\s|=|>)/i.test(tag) ||
+      /aria-hidden\s*=\s*(?:\{\s*true\s*\}|["']true["'])/i.test(tag) ||
+      /\b(?:display\s*:\s*["']none["']|visibility\s*:\s*["']hidden["'])/i.test(
+        tag
+      );
+    stack.push({ name, hidden });
+  }
+  return stack.some((entry) => entry.hidden);
+}
+
 function mdxClaimIsReachable(content, index) {
   const before = content.slice(0, index);
   const nearby = before.slice(-1200);
+  if (mdxHasHiddenAncestor(before)) return false;
   const braceBalance =
     (before.match(/\{/g) ?? []).length - (before.match(/\}/g) ?? []).length;
   const parenthesisBalance =
@@ -2212,6 +2484,7 @@ export function evaluateKnowledgeBank(
     const generatedCssText = resumeCssGeneratedText(source);
     const visibleAttributeText = resumeVisibleAttributeText(source);
     const cssPublicTextRisks = resumeCssPublicTextRisks(source);
+    const embeddedContentRisks = resumeEmbeddedContentRisks(source);
     const manifestedStatements = resumeArtifact.statements.map((statement) =>
       normalizedText(statement.text)
     );
@@ -2274,6 +2547,14 @@ export function evaluateKnowledgeBank(
     if (cssPublicTextRisks.length > 0) {
       findings["KB-009"].push(
         `resume CSS contains public-text bypass channels: ${cssPublicTextRisks.join(", ")}`
+      );
+    }
+    if (
+      embeddedContentRisks.length !==
+      resumeArtifact.expectedEmbeddedContentRiskCount
+    ) {
+      findings["KB-009"].push(
+        `resume contains embedded public-content bypass channels: ${embeddedContentRisks.join(", ")}`
       );
     }
     const regeneratedPdfText = execFileSync(

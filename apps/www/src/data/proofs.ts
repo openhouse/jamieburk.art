@@ -78,7 +78,7 @@ export const proofClaims: ProofClaim[] = [
       "Helped an 80+ year-old industrial supply business adapt to e-commerce through web, analytics, marketing, content, and operational workflow improvements.",
     shortWording: "Modernized legacy e-commerce and operations workflows",
     detailedPublicWording:
-      "Jamie helped translate legacy operating knowledge across technical and nontechnical stakeholder contexts into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice.",
+      "Jamie helped translate legacy operating knowledge across technical and nontechnical stakeholder contexts into searchable e-commerce, content, analytics, marketing, and operational workflows while preserving the company's public voice. The resulting product-discovery and ordering paths were clearer for customers, while internal digital workflows became more repeatable.",
     sourceBasis: "Approved resume language, public website context, and public-safe business summary.",
     guardrail: "Use stewardship and contribution language.",
     doNotSay: [
@@ -140,11 +140,11 @@ export const proofClaims: ProofClaim[] = [
       "Built CallNYC.org as an independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.",
     shortWording: "Built an independent CouncilStat follow-on translating civic data into resident-facing guidance",
     detailedPublicWording:
-      "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance. Its complete recoverable project-account corpus documents a repeatable recognition and issue-linking system across 26 Council members and 61 normalized CallNYC issue pages; Politico New York covered the project in 2016.",
+      "As civic-tech builder and product translator, Jamie turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance. Its complete recoverable project-account corpus documents a repeatable recognition and issue-linking system across 26 Council members and 61 normalized CallNYC issue pages; Politico New York covered the project in 2016.",
     sourceBasis:
       "Approved resume language, archived prototype context, complete recoverable 107-item project-account corpus, public open-data context, public GitHub repository, and verified Politico New York coverage.",
     guardrail:
-      "Always describe it as archived and unofficial; keep 26 members named by project output separate from the lower bound of eight members whose accounts visibly engaged back.",
+      "Always describe it as archived and unofficial; keep 26 members named by project output separate from the lower bound of eight members whose accounts visibly engaged back. Public-safe screenshots and additional archive links require Jamie's approval before publication.",
     doNotSay: [
       "Broader historical hackathon superlatives",
       "Official hackathon submission or winner",
@@ -976,7 +976,7 @@ export const proofClaims: ProofClaim[] = [
       "Currently focused on technical project management, product operations, implementation, business analysis, civic and government technology delivery, and source-backed knowledge systems.",
     shortWording: "Current technical operations and civic technology focus",
     detailedPublicWording:
-      "Jamie's current public positioning brings demonstrated implementation and documentation practice toward technical project management, product operations, business analysis, civic technology delivery, and bounded source-backed knowledge systems.",
+      "Jamie Burkart is based in Brooklyn and currently presents his demonstrated implementation and documentation practice toward technical project management, implementation lead, product operations, business analysis, civic technology delivery, and bounded source-backed knowledge systems roles.",
     sourceBasis:
       "Jamie's approved public positioning and reviewed current professional focus.",
     whyItMatters:
@@ -1225,7 +1225,7 @@ export const proofClaims: ProofClaim[] = [
       "Jamie builds the operating backbone teams need to move public-facing technical work from ambiguity to launch.",
     shortWording: "Operating backbone for public-facing technical work",
     detailedPublicWording:
-      "Jamie clarifies requirements, maps workflows, coordinates delivery, surfaces risk, maintains decision records, prepares onboarding and handoff materials, and improves working systems over time.",
+      "Jamie usually enters when important public-facing work is still loosely defined, listens across stakeholders, maps what is known and unknown, clarifies requirements, turns them into bounded plans with visible owners, milestones, releases, and handoffs, coordinates delivery, surfaces risk, maintains decision records, creates runbooks and source maps, prepares onboarding materials, supports launch and adoption, and leaves maintainable workflows and documentation that people can use without replaying every meeting.",
     sourceBasis: "Approved resume language and public-safe portfolio briefs.",
     whyItMatters:
       "Names the role fit across product operations, implementation, technical project management, and public-facing delivery.",

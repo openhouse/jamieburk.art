@@ -53,6 +53,9 @@ export type WorkStatementProofs = {
   series: string[];
   status: string[];
   visibility: string[];
+  group: string[];
+  featured: string[];
+  priority: string[];
   whatWasUnclear: string[];
   whatBecameUsable: string[];
   roleFit: string[];

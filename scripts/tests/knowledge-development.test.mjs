@@ -10,11 +10,14 @@ import {
   documentRealizesProjection,
   evaluateKnowledgeBank,
   fileInventoryFingerprint,
+  governedStatementSemanticCoverage,
+  governedStatementUnsupportedClauses,
   projectionDecisionFingerprint,
   proofSemanticBoundaryFindings,
   publicSurfaceFingerprint,
   resumeCssGeneratedText,
   resumeCssPublicTextRisks,
+  resumeEmbeddedContentRisks,
   resumeVisibleAttributeText,
   resumeVisibleBlocks,
   resumeSubstantiveStatements,
@@ -215,6 +218,23 @@ test("the resume manifest is derived from every substantive HTML block", () => {
     resumeCssPublicTextRisks('<style>.x::after { content: attr(data-claim); } .y { background: url("data:image/svg+xml,text"); }</style>'),
     ["content: attr(data-claim)", "CSS url() content"]
   );
+  assert.deepEqual(
+    resumeVisibleAttributeText('<body><div aria-description="Unsupported description" aria-valuetext="Unsupported value"></div><iframe srcdoc="&lt;p&gt;Unsupported frame&lt;/p&gt;"></iframe><object data="claim.html"></object></body>'),
+    [
+      "Unsupported description",
+      "Unsupported value",
+      "<p>Unsupported frame</p>",
+      "claim.html"
+    ]
+  );
+  assert.deepEqual(
+    resumeEmbeddedContentRisks('<body><iframe srcdoc="claim"></iframe><img src="data:image/svg+xml,text"><div style="background: image-set(data:image/png,x)"></div></body>'),
+    ["iframe embedded content", "inline embedded data content"]
+  );
+  assert.deepEqual(
+    resumeCssPublicTextRisks('<style>.x { l\\69st-style-type: "Claim"; } @counter-style x { symbols: "Claim"; } .y { background: image-set("data:image/png,x"); }</style>'),
+    ["CSS image-set() content", "CSS escaped declaration", "CSS list or counter text"]
+  );
 });
 
 test("every consequential work-data statement has field-level proof identity", () => {
@@ -242,6 +262,9 @@ test("every consequential work-data statement has field-level proof identity", (
       "series",
       "status",
       "visibility",
+      "group",
+      "featured",
+      "priority",
       "roleFit",
       "known",
       "open",
@@ -305,6 +328,15 @@ test("every consequential work-data statement has field-level proof identity", (
     workStatementSemanticFindings(unrelatedProposition).join("\n"),
     /wowlist\.role has insufficient semantic support/
   );
+
+  const unsupportedClause = source.replace(
+    'role: "Technical Project Manager & Web Systems Lead",',
+    'role: "Technical Project Manager & Web Systems Lead and Nuclear Reactor Designer",'
+  );
+  assert.match(
+    workStatementSemanticFindings(unsupportedClause).join("\n"),
+    /harry-j-epstein\.role has insufficient semantic support/
+  );
 });
 
 test("semantic proof checks reject paraphrased anti-claims", () => {
@@ -341,6 +373,69 @@ test("semantic proof checks reject paraphrased anti-claims", () => {
       { ...proof, doNotSay: ["Current active platform unless confirmed"] }
     ),
     []
+  );
+  for (const [statement, prohibited] of [
+    [
+      "Jamie made the Cabaret Law repeal happen by himself.",
+      "Jamie solely caused the Cabaret Law repeal"
+    ],
+    [
+      "Jamie had end-to-end responsibility for organizer adoption.",
+      "Full ownership of all organizer adoption"
+    ],
+    [
+      "The platform remains operational today.",
+      "Current active platform unless confirmed"
+    ],
+    [
+      "The entire profile-reported corpus was recovered.",
+      "All profile-reported posts were recovered"
+    ],
+    [
+      "Jamie independently founded and directed NYC Artist Coalition without co-creators.",
+      "Jamie solely founded or led NYC Artist Coalition"
+    ]
+  ]) {
+    assert.match(
+      proofSemanticBoundaryFindings(statement, {
+        ...proof,
+        doNotSay: [prohibited]
+      }).join("\n"),
+      /semantic boundary/
+    );
+  }
+});
+
+test("public and resume statements require proposition-level semantic support", () => {
+  const statements = [
+    ...projectionSurfaceBindings.publicStatementManifest,
+    ...projectionSurfaceBindings.resumeArtifact.statements.map((statement) => ({
+      ...statement,
+      surface: "/resume"
+    }))
+  ];
+  for (const statement of statements) {
+    const coverage = governedStatementSemanticCoverage(statement, knowledgeBank);
+    assert.ok(
+      coverage.score >= 0.3,
+      `${statement.id} has only ${coverage.matched.length}/${coverage.statementTokens.length} supported substantive tokens`
+    );
+  }
+
+  const statement = projectionSurfaceBindings.publicStatementManifest.find(
+    (item) => item.id === "technical-operations-requirements"
+  );
+  const unsupportedStatement =
+    {
+      ...statement,
+      text: `${statement.text} Jamie also designed nuclear reactors and spacecraft propulsion systems.`
+    };
+  assert.match(
+    governedStatementUnsupportedClauses(
+      unsupportedStatement,
+      knowledgeBank
+    ).map((item) => item.clause).join("\n"),
+    /nuclear reactors/
   );
 });
 
@@ -2194,7 +2289,51 @@ test("TypeScript route reachability rejects unused exports and runtime gates", (
     false
   );
   assert.equal(
+    realizes(`export default function TestPage() { return Object.freeze([]).map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return Array.from([]).map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return new Array(0).map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return [1].filter(() => false).map(() => (${literal})); }`),
+    false
+  );
+  assert.equal(
     realizes(`export default function TestPage() { for (const item of []) { return (${literal}); } return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { for (const item of Object.freeze([])) { return (${literal}); } return null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return 1 === 2 ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return [].length ? (${literal}) : null; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <div claimSlot={${literal}} />; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <div hidden>${literal}</div>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <div style={{ display: "none" }}>${literal}</div>; }`),
+    false
+  );
+  assert.equal(
+    realizes(`export default function TestPage() { return <template>${literal}</template>; }`),
     false
   );
   assert.equal(
@@ -2325,6 +2464,12 @@ test("MDX route reachability rejects conditional and unused component bindings",
     realizes(`{(() => { while (false) { return (${literal}); } return null; })()}`),
     false
   );
+  assert.equal(realizes(`<div hidden>${literal}</div>`), false);
+  assert.equal(
+    realizes(`<div style={{ display: "none" }}>${literal}</div>`),
+    false
+  );
+  assert.equal(realizes(`<template>${literal}</template>`), false);
 });
 
 test("unused TypeScript projection resolvers do not satisfy route coverage", () => {
