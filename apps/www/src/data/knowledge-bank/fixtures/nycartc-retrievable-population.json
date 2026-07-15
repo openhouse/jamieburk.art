@@ -14568,13 +14568,13 @@
   },
   "visibleEngagementSnapshot": {
     "observedAt": "2026-07-14",
-    "originalAndReplyRecordsWithAnyDisplayedInteraction": 618,
+    "originalAndReplyRecordsWithDisplayedReplyRepostOrLike": 618,
     "originalAndReplyDisplayedReplies": 118,
     "originalAndReplyDisplayedReposts": 1490,
     "originalAndReplyDisplayedLikes": 2698,
     "originalAndReplyDisplayedBookmarks": 65,
     "originalAndReplyDisplayedInteractionUnits": 4306,
-    "boundary": "Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Views and bookmarks are excluded from the interaction-unit total; only account-authored source statuses are included, even when one also appeared as a native self-repost card."
+    "boundary": "The 618-record count includes account-authored source statuses with at least one displayed reply, repost, or like. Displayed counts are volatile interface observations, not unique people, reach, conversion, endorsement, participation, or impact. Views and bookmarks are excluded from both that record count and the interaction-unit total; only account-authored source statuses are included, even when one also appeared as a native self-repost card."
   },
   "records": [
     {
