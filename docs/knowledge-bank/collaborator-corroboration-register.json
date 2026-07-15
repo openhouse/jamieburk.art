@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "publicSafeProtocol": [
+    "Share the public claim and ask for correction before asking for praise.",
+    "Invite a source, artifact, dated memory, or bounded proof note.",
+    "Ask what must remain private and whether names or quotations may be public.",
+    "Record disagreement and uncertainty; do not average them away.",
+    "Never publish private contact details, correspondence, or raw testimony without permission."
+  ],
+  "roleClaims": [
+    {
+      "claimId": "nycac-cofounder-exact-role",
+      "project": "fair-rent-nyc",
+      "publicClaim": "Co-founded NYC Artist Coalition and built civic, event, campaign-web, and documentation systems.",
+      "status": "partial",
+      "independentSources": ["Contemporaneous organizer reporting", "Official Council testimony", "Public campaign records"],
+      "collaboratorCorroboration": "not-requested",
+      "boundaries": ["Collective work", "Exact division of labor remains open"],
+      "nextAction": "Invite coalition collaborators to correct and enrich the role record."
+    },
+    {
+      "claimId": "kc-town-hall-general-contractor",
+      "project": "kc-town-hall",
+      "publicClaim": "Served as project manager and construction coordinator for Phase One.",
+      "status": "open",
+      "independentSources": ["Protected proposal names Jamie as co-founder and project manager", "Official board minutes identify Jamie as presenter"],
+      "collaboratorCorroboration": "not-requested",
+      "boundaries": ["Exact general-contractor title remains first-person", "Stewardship transition remains first-person"],
+      "nextAction": "Seek bounded confirmation from project, trade, or professional collaborators."
+    },
+    {
+      "claimId": "wowlist-social-operations",
+      "project": "wowlist",
+      "publicClaim": "Co-built and operated WOWList; social-account authorship is not assigned post by post.",
+      "status": "open",
+      "independentSources": ["Public platform and social archives", "Local code and database records"],
+      "collaboratorCorroboration": "not-requested",
+      "boundaries": ["Co-built project", "Account ownership does not prove authorship of each post"],
+      "nextAction": "Ask the co-builder to confirm role boundaries and social-operations history."
+    },
+    {
+      "claimId": "sunday-dinner-scale-and-role",
+      "project": "196-sunday-dinner",
+      "publicClaim": "Co-hosted a weekly open dinner and stewarded participation infrastructure.",
+      "status": "partial",
+      "independentSources": ["2017 Greene Hill Food Co-op profile", "Protected 2023 onboarding record"],
+      "collaboratorCorroboration": "not-requested",
+      "boundaries": ["Private participation records stay private", "Aggregate counts remain first-party"],
+      "nextAction": "Invite co-host and participants to confirm only what they are comfortable making public."
+    },
+    {
+      "claimId": "kc-spaces-fund-digital-operations",
+      "project": "kc-spaces-fund",
+      "publicClaim": "Supported the fund with behind-the-scenes digital infrastructure rather than claiming public organizer credit.",
+      "status": "partial",
+      "independentSources": ["Public campaign page", "Local code history", "Launch checklist"],
+      "collaboratorCorroboration": "not-requested",
+      "boundaries": ["Public organizer credit remains with the named organizers", "Naming contribution needs collaborator confirmation before stronger projection"],
+      "nextAction": "Invite named organizers to correct the technical-support summary."
+    }
+  ]
+}

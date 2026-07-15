@@ -38,6 +38,18 @@ export default function AboutPage() {
             delivery, and source-backed knowledge systems.
           </p>
         </div>
+        <section className="mt-12 border-t border-jb-ink/15 pt-8" aria-labelledby="looking-for-now">
+          <h2 className="text-3xl font-semibold text-jb-ink" id="looking-for-now">
+            What I am looking for now
+          </h2>
+          <p className="mt-5 text-xl leading-9 text-jb-ink/78">
+            I am looking for a Technical Project Manager, Product Operations,
+            or Implementation role on a public-interest or mission-driven team.
+            I do my best work where technical and nontechnical people need a
+            shared operating picture: clear requirements, coordinated delivery,
+            usable workflows, decision records, and durable handoffs.
+          </p>
+        </section>
         <div className="mt-10 rounded-lg border border-jb-blue/25 bg-jb-sky/15 p-5">
           <p className="leading-8 text-jb-ink/78">
             I value public benefit, accessibility, source-backed memory, careful

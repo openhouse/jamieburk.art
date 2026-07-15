@@ -1,31 +1,54 @@
 # Launch Blockers
 
-- [ ] Every homepage proof claim exists in the knowledge bank.
-- [ ] Every resume-page proof claim exists in the knowledge bank.
-- [ ] Every Technical Operations proof row exists in the knowledge bank.
-- [ ] Work items with strong claims have proofBankIds.
-- [ ] Pending/private claims are not projected onto public pages.
-- [ ] Careful claims include their guardrails.
-- [ ] Metrics are approved or softened.
-- [ ] Collaborator-sensitive claims are approved or omitted.
-- [ ] Source-Backed Team Memory does not expose private collaborator/client
-  context.
-- [ ] Case studies use Known / Open / Protected where needed.
-- [ ] Public-safety scanner passes.
-- [ ] Knowledge-lifecycle criterion passes with
-  `npm run evals:knowledge-lifecycle`.
-- [ ] Recursive eval protocol passes with `npm run evals:recursive`.
-- [ ] Chad-lens criterion passes with `npm run evals:chad`.
-- [ ] CallNYC X corpus criterion passes with `npm run evals:callnyc-x`.
-- [ ] WOW List X corpus criterion passes with `npm run evals:wowlist-x`.
-- [ ] NYC Artist Coalition corpus hashes reproduce with `npm run check:nycartc-corpus`.
-- [ ] NYC Artist Coalition X corpus criterion passes with `npm run evals:nycartc-x`.
-- [ ] Urbanhermit X corpus criterion passes with `npm run evals:urbanhermit-x`.
-- [ ] NYC Artist Coalition Facebook event population criterion passes with `npm run evals:nycac-facebook-events`.
-- [ ] Chad-lens review passes.
-- [ ] Jamie approves public email/contact path.
-- [ ] Jamie approves resume PDF and phone-in-PDF behavior.
-- [ ] Jamie approves proof metrics.
-- [ ] Collaborators approve any names, credits, screenshots, quotes, or photos
-  that are not already public-safe.
-- [ ] Jamie approves final production deploy.
+Automated checks, human review, external research, and release authorization are
+different states. Automated success can establish repository consistency; it
+cannot provide consent, count as an external participant, settle a disputed
+role, or authorize production. The machine-readable companion is
+`docs/qa/release-status.json`.
+
+## Automated regression gates
+
+These checks are rerun for the exact candidate. Their results do not authorize
+production.
+
+- [x] `npm run check`
+- [x] `npm run preflight:staging`
+- [x] `npm run preflight:production`
+- [x] `npm run evals:knowledge-lifecycle`
+- [x] `npm run evals:chad`
+- [x] `npm run evals:callnyc-x`
+- [x] `npm run evals:wowlist-x`
+- [x] `npm run check:nycartc-corpus`
+- [x] `npm run evals:nycartc-x`
+- [x] `npm run evals:urbanhermit-x`
+- [x] `npm run evals:nycac-facebook-events`
+- [x] `npm run evals:nycac-institutional-interface`
+- [x] `npm run evals:blind-spots`
+- [x] `npm run evals:recursive`
+
+The aggregate blind-spot command independently hard-gates:
+
+- [x] verified outcomes and sustained adoption;
+- [x] exact-role corroboration posture;
+- [x] external hiring-comprehension posture;
+- [x] present-tense offer clarity;
+- [x] visual and artifact proof posture;
+- [x] archival survivorship posture;
+- [x] release-governance and eval-overfitting controls.
+
+## Human and external gates
+
+- [ ] Five real no-coaching hiring-comprehension sessions meet the external
+  criterion.
+- [ ] Human Chad-lens editorial review passes.
+- [ ] Jamie approves public email/contact and phone-in-PDF behavior.
+- [ ] Jamie approves metric wording and the resume PDF.
+- [ ] Collaborators approve any names, credits, screenshots, quotes, photos, or
+  exact-role details that are not already public-safe.
+- [ ] Jamie approves the exact final commit for production deployment.
+
+## Current decision
+
+Production remains blocked pending human approval. The website may still be
+reviewed as a staging or job-application candidate when the relevant public
+safety, resume, contact, and claim-projection checks pass.

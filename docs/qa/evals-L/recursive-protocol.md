@@ -19,6 +19,7 @@ npm run evals:nycartc-x
 npm run evals:urbanhermit-x
 npm run evals:nycac-facebook-events
 npm run evals:nycac-institutional-interface
+npm run evals:blind-spots
 npm run evals:recursive
 ```
 
@@ -76,6 +77,18 @@ hard failure.
 relationship and theme counts, all posted URLs, account-authored public
 counters, lifecycle wiring, source positioning, and projection boundaries.
 Passing requires 100/100 and no hard failure.
+
+### Seven Blind-Spot Criteria
+
+`npm run evals:blind-spots` runs seven independent 100/100 gates: outcomes and
+adoption, exact-role corroboration, external hiring comprehension, the
+present-tense offer, visual and artifact proof, archival survivorship, and
+release governance. Each also has its own npm command.
+
+For criteria requiring evidence from people, a green deterministic gate means
+`governed-open`: the absence, boundary, protocol, and next action are truthful.
+It does not mean a collaborator has corroborated a role, an external hiring
+reader has completed a session, or a visual has been approved.
 
 ### NYC Artist Coalition X Corpus Criterion
 
@@ -165,6 +178,8 @@ The site is ready to share with job applications when:
 - the five-minute reviewer path is clear;
 - the resume PDF, contact path, and selected proof points are coherent;
 - no unresolved public-safety blockers apply to the pages being shared.
+- external hiring comprehension is either completed or clearly disclosed as an
+  open validation task for the intended sharing context.
 
 The site is ready for production only when:
 

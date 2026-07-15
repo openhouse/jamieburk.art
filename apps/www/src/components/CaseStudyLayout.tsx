@@ -7,6 +7,7 @@ import {
   CreditsList,
   KnownOpenProtected,
   LinksList,
+  OutcomeStatus,
   PublicSafetyNote,
   SourceLayer,
   VisibilityNote
@@ -51,6 +52,7 @@ export function CaseStudyLayout({ item, children }: CaseStudyLayoutProps) {
         </aside>
       </div>
       <div className="mt-14 space-y-12">
+        <OutcomeStatus item={item} />
         <ArtifactList item={item} />
         <ArtifactGallery item={item} />
         <KnownOpenProtected item={item} />

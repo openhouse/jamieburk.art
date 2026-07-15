@@ -15,6 +15,9 @@ It includes:
   the absence of a public proofs route.
 - Launch blockers for contact, resume, metrics, collaborator consent,
   screenshots, and production deploy.
+- Seven blind-spot registers and independently runnable evals covering outcomes
+  and adoption, role corroboration, hiring comprehension, the present-tense
+  offer, visual proof, archival survivorship, and release governance.
 
 Do not merge donor branches wholesale. This branch hand-composes the strongest
 ideas from the production-readiness-composite family.
@@ -37,6 +40,7 @@ ideas from the production-readiness-composite family.
 - [ ] `npm run evals:nycartc-x`
 - [ ] `npm run evals:urbanhermit-x`
 - [ ] `npm run evals:nycac-facebook-events`
+- [ ] `npm run evals:blind-spots`
 - [ ] `npm run evals:recursive`
 - [ ] `npm run preflight:staging`
 - [ ] `npm run preflight:production`
@@ -70,6 +74,13 @@ ideas from the production-readiness-composite family.
 - [ ] Chad-lens eval scores at least 90/100 with no hard failures.
 - [ ] Human Chad-lens review passes; the automated score is a regression gate,
   not a substitute for editorial judgment.
+- [ ] External hiring-comprehension sessions meet their human criterion; the
+  governed-open automated check is not a substitute for participants.
+- [ ] Outcome and adoption labels have been reviewed against the evidence.
+- [ ] Exact-role corroboration and visual permissions are either complete or
+  deliberately withheld from public projection.
 
-Production deploy remains blocked until Jamie explicitly approves the reviewed
-content and release.
+Automated evals are regression gates, not substitutes for external readers,
+collaborator consent, editorial judgment, or release authority. Production
+deploy remains blocked until Jamie explicitly approves the exact production
+candidate.

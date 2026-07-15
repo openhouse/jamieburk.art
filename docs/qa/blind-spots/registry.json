@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "passContract": "Passing means the repository truthfully governs the blind spot; it does not imply missing external or human evidence has been obtained.",
+  "blindSpots": [
+    {
+      "id": "outcomes-adoption",
+      "label": "Verified outcomes and sustained adoption",
+      "status": "partially-resolved",
+      "humanEvidenceRequired": true,
+      "passMeaning": "Every public case study separates delivered outputs, adoption evidence, outcome status, and causal boundaries.",
+      "nextActions": ["Seek outcome and continuity evidence from organizations and collaborators", "Promote only claims supported by recovered evidence"]
+    },
+    {
+      "id": "role-corroboration",
+      "label": "Independent confirmation of Jamie's exact role",
+      "status": "governed-open",
+      "humanEvidenceRequired": true,
+      "passMeaning": "High-value role claims have source posture, corroboration status, boundaries, and a public-safe outreach protocol.",
+      "nextActions": ["Invite project collaborators to contribute source-backed corrections or proof notes", "Preserve collective credit and consent"]
+    },
+    {
+      "id": "hiring-comprehension",
+      "label": "External hiring comprehension",
+      "status": "governed-open",
+      "humanEvidenceRequired": true,
+      "passMeaning": "A no-coaching five-minute protocol and honest session ledger exist; automated checks do not masquerade as external validation.",
+      "nextActions": ["Run five unprompted sessions across hiring-reader roles", "Record comprehension failures before revising the site"]
+    },
+    {
+      "id": "present-tense-offer",
+      "label": "Sharper present-tense offer",
+      "status": "strengthened",
+      "humanEvidenceRequired": false,
+      "passMeaning": "The site clearly states Jamie's target role families, team context, responsibilities, resume path, and contact path.",
+      "nextActions": ["Test the wording with external hiring readers", "Adapt emphasis for specific applications without changing the proof base"]
+    },
+    {
+      "id": "visual-artifact-proof",
+      "label": "Visual and artifact proof",
+      "status": "governed-open",
+      "humanEvidenceRequired": true,
+      "passMeaning": "Every case study has a visual-proof disposition, rights state, candidate sources, and next action; descriptions are not presented as approved images.",
+      "nextActions": ["Curate candidate images and screenshots", "Obtain permissions and contextual captions before projection"]
+    },
+    {
+      "id": "archival-survivorship",
+      "label": "Archival survivorship bias",
+      "status": "governed-open",
+      "humanEvidenceRequired": true,
+      "passMeaning": "The archive records source-surface gaps, offline work, failures, maintenance, and collaborator memory without treating non-recovery as nonexistence.",
+      "nextActions": ["Prioritize underrepresented offline and maintenance work", "Record negative and abandoned outcomes alongside public successes"]
+    },
+    {
+      "id": "release-governance",
+      "label": "Governance-state drift and eval overfitting",
+      "status": "partially-resolved",
+      "humanEvidenceRequired": true,
+      "passMeaning": "Automated checks, human approvals, and the production decision are distinct; green evals cannot authorize release.",
+      "nextActions": ["Keep the release ledger synchronized with verification runs", "Require Jamie's approval of the exact production candidate"]
+    }
+  ]
+}

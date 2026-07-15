@@ -47,6 +47,11 @@ function sectionForHeading(source, heading) {
 
 const requiredFiles = [
   "docs/qa/evals-L/recursive-protocol.md",
+  "docs/qa/blind-spots/README.md",
+  "docs/qa/blind-spots/registry.json",
+  "docs/qa/hiring-review/README.md",
+  "docs/qa/hiring-review/sessions.json",
+  "docs/qa/release-status.json",
   "docs/production-readiness.md",
   "docs/knowledge-bank/review-checklist.md",
   "docs/knowledge-bank/launch-blockers.md",
@@ -54,6 +59,12 @@ const requiredFiles = [
   "docs/knowledge-bank/projection-map.md",
   "docs/knowledge-bank/claims.md",
   "docs/knowledge-bank/framework.md",
+  "docs/knowledge-bank/outcome-adoption-register.json",
+  "docs/knowledge-bank/collaborator-corroboration-register.json",
+  "docs/knowledge-bank/visual-proof-register.json",
+  "docs/knowledge-bank/visual-proof-plan.md",
+  "docs/knowledge-bank/archival-survivorship-register.json",
+  "docs/knowledge-bank/opportunities/present-tense-offer.md",
   "docs/knowledge-bank/intake/README.md",
   "docs/knowledge-bank/intake/2026-07-12-waterways-nightlife.md",
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md",
@@ -103,6 +114,7 @@ const requiredFiles = [
   "evals/knowledge-bank/runs/2026-07-15-jamie-personal-facebook-posts.md",
   "evals/knowledge-bank/runs/2026-07-15-icloud-teams-expansion.md",
   "evals/knowledge-bank/runs/2026-07-15-nycac-institutional-interface.md",
+  "evals/knowledge-bank/runs/2026-07-15-blind-spots.md",
   "apps/www/src/data/proofs.ts",
   "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/knowledge-bank/callnyc-x-corpus.ts",
@@ -144,6 +156,15 @@ const requiredFiles = [
   "scripts/evals-jamie-personal-facebook-posts.mjs",
   "scripts/evals-icloud-teams-expansion.mjs",
   "scripts/evals-nycac-institutional-interface.mjs",
+  "scripts/lib/blind-spot-evals.mjs",
+  "scripts/evals-outcomes-adoption.mjs",
+  "scripts/evals-role-corroboration.mjs",
+  "scripts/evals-hiring-comprehension.mjs",
+  "scripts/evals-present-tense-offer.mjs",
+  "scripts/evals-visual-artifact-proof.mjs",
+  "scripts/evals-archival-survivorship.mjs",
+  "scripts/evals-release-governance.mjs",
+  "scripts/evals-blind-spots.mjs",
   "scripts/lib/personal-facebook-posts-guard.mjs",
   "scripts/tests/personal-facebook-posts-guard.test.mjs",
   "scripts/lib/urbanhermit-mission-classifier.mjs",
@@ -178,6 +199,14 @@ for (const script of [
   "evals:jamie-personal-facebook-posts",
   "evals:icloud-teams-expansion",
   "evals:nycac-institutional-interface",
+  "evals:outcomes-adoption",
+  "evals:role-corroboration",
+  "evals:hiring-comprehension",
+  "evals:present-tense-offer",
+  "evals:visual-artifact-proof",
+  "evals:archival-survivorship",
+  "evals:release-governance",
+  "evals:blind-spots",
   "test:personal-facebook-posts-guard",
   "evals:recursive",
   "preflight:staging",
@@ -188,6 +217,27 @@ for (const script of [
 
 if (scripts.check && !scripts.check.includes("npm run evals:recursive")) {
   fail("package.json check script must include npm run evals:recursive");
+}
+
+if (scripts.check && !scripts.check.includes("npm run evals:blind-spots")) {
+  fail("package.json check script must include npm run evals:blind-spots");
+}
+
+const blindSpotScripts = {
+  "evals:outcomes-adoption": "node scripts/evals-outcomes-adoption.mjs",
+  "evals:role-corroboration": "node scripts/evals-role-corroboration.mjs",
+  "evals:hiring-comprehension": "node scripts/evals-hiring-comprehension.mjs",
+  "evals:present-tense-offer": "node scripts/evals-present-tense-offer.mjs",
+  "evals:visual-artifact-proof": "node scripts/evals-visual-artifact-proof.mjs",
+  "evals:archival-survivorship": "node scripts/evals-archival-survivorship.mjs",
+  "evals:release-governance": "node scripts/evals-release-governance.mjs",
+  "evals:blind-spots": "node scripts/evals-blind-spots.mjs"
+};
+
+for (const [name, command] of Object.entries(blindSpotScripts)) {
+  if (scripts[name] !== command) {
+    fail(`package.json ${name} must run ${command}`);
+  }
 }
 
 if (scripts.check && !scripts.check.includes("npm run evals:chad")) {

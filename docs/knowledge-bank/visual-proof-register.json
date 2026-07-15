@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "rule": "Textual artifact descriptions are not approved visual proof. Images, screenshots, and documents require provenance, context, rights, and projection approval.",
+  "projects": [
+    {"slug": "harry-j-epstein", "approvedVisualCount": 0, "target": 3, "status": "open", "candidateSources": ["Public website", "Private work archive"], "rightsConsent": "required", "publicProjection": "none-approved", "nextAction": "Select public-safe before-and-after workflow and interface evidence with company approval."},
+    {"slug": "fair-rent-nyc", "approvedVisualCount": 0, "target": 4, "status": "open", "candidateSources": ["Public campaign sites", "Public event and press archives"], "rightsConsent": "mixed-review-required", "publicProjection": "none-approved", "nextAction": "Prioritize Jamie-built sites, public handouts, and event-scale images with collective credit."},
+    {"slug": "callnyc", "approvedVisualCount": 0, "target": 3, "status": "open", "candidateSources": ["Archived public site", "Public repository", "Press PDF"], "rightsConsent": "review-required", "publicProjection": "none-approved", "nextAction": "Recover legible interface and data-pathway screenshots with archived-status captions."},
+    {"slug": "wowlist", "approvedVisualCount": 0, "target": 3, "status": "open", "candidateSources": ["Local code archive", "Wayback captures", "Social archive"], "rightsConsent": "review-required", "publicProjection": "none-approved", "nextAction": "Select interface, keyword-community, and organizer-workflow evidence without exposing user data."},
+    {"slug": "196-sunday-dinner", "approvedVisualCount": 0, "target": 3, "status": "open", "candidateSources": ["Jamie's photo archive", "Public profile"], "rightsConsent": "participant-consent-required", "publicProjection": "none-approved", "nextAction": "Photo-edit for hospitality and participation infrastructure, then obtain consent for identifiable people."},
+    {"slug": "kc-town-hall", "approvedVisualCount": 0, "target": 4, "status": "open", "candidateSources": ["Jamie's photo archive", "Project proposal", "Public municipal records"], "rightsConsent": "review-required", "publicProjection": "none-approved", "nextAction": "Select site, trade-coordination, survey, and completed-scope evidence with dates and boundaries."}
+  ]
+}

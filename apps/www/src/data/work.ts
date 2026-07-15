@@ -54,6 +54,15 @@ const workMetaSchema = z.object({
   proofBankIds: z.array(z.string()),
   whatWasUnclear: z.string(),
   whatBecameUsable: z.string(),
+  outcomeStatus: z.enum([
+    "verified-outcome",
+    "partial-outcome",
+    "verified-output",
+    "open"
+  ]),
+  outcomeSummary: z.string(),
+  outcomeBoundary: z.string(),
+  adoptionEvidence: z.array(z.string()),
   artifactTypes: z.array(artifactTypeSchema),
   artifacts: z.array(
     z.object({
@@ -108,6 +117,16 @@ const workItemsInput = [
       "A legacy business had public voice, customer trust, inventory knowledge, and operating habits that did not automatically translate into modern e-commerce workflows.",
     whatBecameUsable:
       "Improved web, e-commerce, analytics, marketing, content, and operational systems that supported online growth while preserving the company's distinctive institutional voice.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The modernized systems remain part of a long-running e-commerce operation. Jamie's resume supports contribution language around online growth, while the private metric and causal breakdown remain outside the public record.",
+    outcomeBoundary:
+      "Do not attribute company growth solely to Jamie or publish private revenue, customer, vendor, or analytics detail.",
+    adoptionEvidence: [
+      "Long-running stewardship from 2012 to the present",
+      "The public e-commerce site remains live",
+      "Resume-backed contribution to growth, with detailed metric verification protected"
+    ],
     artifactTypes: ["website", "workflow", "analytics summary", "public-safe screenshot"],
     artifacts: [
       {
@@ -196,6 +215,16 @@ const workItemsInput = [
       "The work involved many stakeholders, public/private source materials, legal and policy questions, city/state strategy lanes, shifting meetings, and sensitive coalition context that could easily become fragmented or overexposed.",
     whatBecameUsable:
       "A shared campaign-memory system for decisions, owners, action items, open questions, city/state lanes, consent levels, source lineage, public-data framing, public campaign websites, and public-safe continuity.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The coalition's public systems supported recurring participation, policy testimony, campaign continuity, and live web infrastructure. Independent and official records confirm institutional use and recognition, while legislative causality and adoption of every recommendation remain collective and bounded.",
+    outcomeBoundary:
+      "Do not claim that Jamie alone caused policy change, that agencies adopted every coalition position, or that current Commercial Rent Stabilization proposals have been implemented.",
+    adoptionEvidence: [
+      "Independent reporting identifies Jamie as a founding member and organizer",
+      "Official Council testimony records DCLA Commissioner Tom Finkelpearl naming NYC Artist Coalition",
+      "A 2023 working record documents a live FairRentNYC site, administrative handoff, and restored campaign email service"
+    ],
     artifactTypes: ["website", "source map", "meeting memory", "decision record", "public handout"],
     artifacts: [
       {
@@ -307,6 +336,16 @@ const workItemsInput = [
       "Constituent-services data existed, but residents needed a clearer public-facing pathway from issue to relevant civic office or next step.",
     whatBecameUsable:
       "An archived civic-tech prototype that organized open data into issue pathways, district context, and resident-facing guidance.",
+    outcomeStatus: "verified-output",
+    outcomeSummary:
+      "The prototype, public repository, press coverage, and bounded Council-account engagement are recoverable. No evidence currently supports official adoption or continued service delivery.",
+    outcomeBoundary:
+      "Treat CallNYC as an archived, independent prototype, not an official City Council service, current guidance source, or adopted government product.",
+    adoptionEvidence: [
+      "Politico New York covered the project in 2016",
+      "At least six then-Council-member accounts publicly replied to, amplified, or promoted it in a bounded review",
+      "The public GitHub repository preserves the implementation"
+    ],
     artifactTypes: ["prototype", "guide", "map", "press"],
     artifacts: [
       {
@@ -396,6 +435,16 @@ const workItemsInput = [
       "DIY organizers needed lightweight ways to distribute events and maintain community visibility across scenes without relying on one centralized editorial calendar.",
     whatBecameUsable:
       "A followable keyword-community platform with event distribution workflows and organizer-facing publishing patterns.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "Public-safe aggregate records support meaningful historical use across many local scenes. Exact retention, current activity, and the causal contribution of particular product choices remain open.",
+    outcomeBoundary:
+      "Use approximate historical adoption language and do not imply current platform activity or sole authorship of a co-built system.",
+    adoptionEvidence: [
+      "Public-safe aggregate records support 1,800+ users",
+      "Public-safe aggregate records support 16,000+ posts and events",
+      "Historical records indicate roughly 35 city ecosystems reached"
+    ],
     artifactTypes: ["website", "workflow", "prototype"],
     artifacts: [
       {
@@ -456,6 +505,16 @@ const workItemsInput = [
       "A recurring cultural space needed trust-building routines, invitations, hospitality, artist support, and continuity without turning private community records into public spectacle.",
     whatBecameUsable:
       "Repeatable participation infrastructure for gatherings, resident artists, onboarding, facilitation, and handoffs.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "Independent reporting confirms the weekly open-dinner practice, and a protected onboarding record confirms one later residency workflow. Aggregate gathering and residency counts remain first-party, public-safe summaries rather than an independently audited census.",
+    outcomeBoundary:
+      "Do not expose participant records or imply that every gathering, attendee, or residency outcome has been independently verified.",
+    adoptionEvidence: [
+      "A 2017 Greene Hill Food Co-op profile independently documents the weekly community-open dinner",
+      "A protected 2023 record documents an artist invitation, space planning, access, and handoff workflow",
+      "Public-safe first-party records support 300+ gatherings and 20+ resident artists"
+    ],
     artifactTypes: ["photo sequence", "workflow", "template"],
     artifacts: [
       {
@@ -523,6 +582,16 @@ const workItemsInput = [
       "A long-vacant historic building needed coordinated cold-shell restoration, a credible public-benefit program, neighborhood participation, and a path through municipal review.",
     whatBecameUsable:
       "A completed Phase One scope, a neighborhood-informed next-phase proposal, durable public-benefit documentation, and an auditable municipal decision trail.",
+    outcomeStatus: "partial-outcome",
+    outcomeSummary:
+      "The source record supports Phase One completion, a neighborhood-informed proposal, board recommendation, and Council appropriation. The separate funded phase later withdrew before disbursement, so the appropriation is evidence of municipal approval, not completed grant-funded construction.",
+    outcomeBoundary:
+      "Do not describe the appropriated amount as money received or spent. Jamie's exact general-contractor title and the stewardship transition remain first-person claims pending corroboration.",
+    adoptionEvidence: [
+      "The 2019 proposal records the Phase One cold-shell scope as completed",
+      "Official board minutes and Council records document recommendation, acceptance, and appropriation",
+      "Later official records document withdrawal before disbursement and reclamation of the unused appropriation"
+    ],
     artifactTypes: ["workflow", "public handout", "source map", "map"],
     artifacts: [
       {
