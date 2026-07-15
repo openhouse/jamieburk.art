@@ -165,6 +165,12 @@ as blanket endorsement, adoption, reach, conversion, or causal government
 impact. A source circulated by the account remains the work of its named author
 and publisher; circulation is not coverage of or partnership with KC Town Hall.
 
+Do not describe every posted URL as a recovered or claim-ready source. The
+complete disposition ledger contains 10 promoted-source link records, 15
+operational-link-family records, and six recovery inquiries. The latter remain
+leads until destination recovery, close reading, attribution, and public-safety
+review are complete.
+
 ## Kansas City Neighborhood Operations
 
 Do not convert the Tired of Tires page's project-published $17,768 estimate into

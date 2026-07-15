@@ -44,6 +44,56 @@ export const kcTownHallFullPopulationSources: SourceRecord[] = [
     ]
   },
   {
+    id: "SRC-KCTH-X-ACQUISITION-LEDGER-2026-07-15",
+    title: "KC Town Hall redacted authenticated-route acquisition ledger",
+    author: "Codex authenticated browser review",
+    kind: "research-run",
+    visibility: "public",
+    preservationStatus: "live",
+    capturedAt: "2026-07-15",
+    accessedAt: reviewedAt,
+    publicCitation:
+      "Redacted acquisition ledger for the authenticated @KCTownHall Posts and Replies routes, July 2026.",
+    publicNote:
+      "Generated from a protected authenticated capture whose SHA-256 digest is retained in the ledger. It preserves 170 Posts-route primary IDs, 183 Replies-route primary IDs, five excluded conversation-context IDs, and the 183-post profile observation without retaining post text, phone numbers, precise addresses, link labels, authentication identity, cookies, or session state.",
+    supportsGenerally: [
+      "independent route-membership input for the curated corpus",
+      "183-post profile observation",
+      "170 Posts records, 188 Replies cards, and five context exclusions",
+      "public-safe acquisition provenance"
+    ],
+    doesNotEstablish: [
+      "deleted, private, liked, or platform-suppressed activity",
+      "replay of the authenticated browser session from the public repository",
+      "post meaning, individual authorship, or program outcomes"
+    ]
+  },
+  {
+    id: "SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15",
+    title: "KC Town Hall complete posted-URL disposition ledger",
+    author: "Codex archival review",
+    kind: "research-run",
+    visibility: "public",
+    preservationStatus: "live",
+    capturedAt: "2026-07-15",
+    accessedAt: reviewedAt,
+    publicCitation:
+      "Disposition ledger for all 31 distinct short URLs in the complete @KCTownHall corpus, July 2026.",
+    publicNote:
+      "Every observed short URL is assigned to a promoted public source, an operational link family, or a named research inquiry. This preserves unpromoted leads without treating every historical destination as accomplishment evidence.",
+    supportsGenerally: [
+      "complete 31-link triage",
+      "ten promoted-source link records",
+      "15 operational-link-family records",
+      "six explicit research leads"
+    ],
+    doesNotEstablish: [
+      "current availability of historical destinations",
+      "project coverage, partnership, endorsement, use, or impact",
+      "claim readiness for research-inquiry destinations"
+    ]
+  },
+  {
     id: "SRC-KCTH-KANSAS-CITY-STAR-LEONS",
     title:
       "Leon's Thriftway may be the oldest black-owned grocery store in the country",
@@ -359,6 +409,13 @@ export const kcTownHallFullPopulationClaims: ClaimRecord[] = [
         confidence: "high",
         renderCitation: false
       },
+      {
+        sourceId: "SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15",
+        relationship: "direct-support",
+        supports: ["complete disposition of all 31 distinct short URLs"],
+        confidence: "high",
+        renderCitation: false
+      },
       ...[
         "SRC-KCTH-KANSAS-CITY-STAR-LEONS",
         "SRC-KCTH-NORTHEAST-NEWS-HOUSING-2018",
@@ -494,6 +551,34 @@ export const kcTownHallFullPopulationInquiries: ResearchInquiry[] = [
     ],
     publicSummary:
       "The account preserves a recurring resident-input invitation and the municipal packet says input shaped the proposal; response volume and a complete decision trail remain open."
+  },
+  {
+    id: "INQ-KCTH-X-POSTED-URL-TRIAGE",
+    project: "kc-town-hall",
+    question:
+      "What additional public-safe claims or source records emerge from the six posted destinations not yet close-read or recovered?",
+    methods: [
+      "Dispositioned every one of the 31 distinct short URLs.",
+      "Separated promoted sources and repeated operational routes from destinations that still require recovery and close reading.",
+      "Retained six concrete leads: two project videos, a community fundraiser, the project COVID-19 page, a project event, and a temporary-electricity implementation page."
+    ],
+    runAt: reviewedAt,
+    resultStatus: "partially-recovered",
+    findings: [
+      "Ten short-URL records map to promoted public sources and 15 map to governed operational link families.",
+      "Six destinations remain explicit research leads rather than being silently omitted.",
+      "No untriaged short URL remains in the complete corpus."
+    ],
+    limitations: [
+      "Several displayed destinations are truncated historical interface labels.",
+      "Recovery, authorship, relationship context, archival status, and public-safety review must precede claim promotion."
+    ],
+    sourceIds: [
+      "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15"
+    ],
+    publicSummary:
+      "All 31 posted short URLs are dispositioned; six concrete destinations remain in a named recovery and close-reading queue."
   }
 ];
 
@@ -505,7 +590,7 @@ export const kcTownHallFullPopulationIntake = [
     visibility: "public-safe",
     title: "KC Town Hall complete X population and source inventory",
     description:
-      "A public-safe fixture preserves all 183 profile-reported records, posted-link metadata, operating-pattern classifications, bounded stakeholder responses, and dated visible-interaction observations.",
+      "A redacted acquisition ledger, public-safe 183-record fixture, and complete 31-link triage preserve route provenance, posted-link metadata, operating-pattern classifications, bounded stakeholder responses, and dated visible-interaction observations.",
     whyItMatters:
       "It turns a preliminary social-media finding into reproducible evidence of a resident-input, recurring-service, civic-information, and stakeholder-dialogue surface.",
     projectIds: ["kc-town-hall"],
@@ -515,6 +600,8 @@ export const kcTownHallFullPopulationIntake = [
       "Promoted through the existing KC Town Hall public-operations claim; source-circulation and volatile-engagement claims remain held in the bank.",
     sourceIds: [
       "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-X-ACQUISITION-LEDGER-2026-07-15",
+      "SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15",
       "SRC-KCTH-KANSAS-CITY-STAR-LEONS",
       "SRC-KCTH-NORTHEAST-NEWS-HOUSING-2018",
       "SRC-KCTH-CURBED-RENTER-CREDIT-2018",
@@ -536,7 +623,8 @@ export const kcTownHallFullPopulationIntake = [
     inquiryIds: [
       "INQ-KCTH-SOCIAL-ARCHIVE",
       "INQ-KCTH-X-TIRE-TOTALS-CORROBORATION",
-      "INQ-KCTH-X-SURVEY-DECISION-TRAIL"
+      "INQ-KCTH-X-SURVEY-DECISION-TRAIL",
+      "INQ-KCTH-X-POSTED-URL-TRIAGE"
     ],
     boundaries: [
       "Do not publish post text, historical phone numbers, or precise pickup addresses.",

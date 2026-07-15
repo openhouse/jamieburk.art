@@ -776,7 +776,12 @@ export const sourceExpansionPages = [
       "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
       "SRC-KC-TOWN-HALL-ORDINANCE-240317",
       "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
-      "SRC-KCTH-X-CORPUS-2026-07-15"
+      "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-ROBINSON-REPLY-2020",
+      "SRC-KCTH-JUSTUS-REPLY-2019",
+      "SRC-KCTH-LUCAS-QUOTE-2019",
+      "SRC-KCTH-KCMO311-REPLY-2018",
+      "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
     ],
     occurrences: [
       {
@@ -794,7 +799,14 @@ export const sourceExpansionPages = [
         id: "social-public-operations",
         claimId: "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
         projection: "case-study",
-        sourceIds: ["SRC-KCTH-X-CORPUS-2026-07-15"]
+        sourceIds: [
+          "SRC-KCTH-X-CORPUS-2026-07-15",
+          "SRC-KCTH-ROBINSON-REPLY-2020",
+          "SRC-KCTH-JUSTUS-REPLY-2019",
+          "SRC-KCTH-LUCAS-QUOTE-2019",
+          "SRC-KCTH-KCMO311-REPLY-2018",
+          "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
+        ]
       }
     ]
   }

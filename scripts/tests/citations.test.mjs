@@ -43,12 +43,19 @@ test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 14);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 8);
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 5);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 10);
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "social-public-operations").sources.map(
       (item) => item.source.id
     ),
-    ["SRC-KCTH-X-CORPUS-2026-07-15"]
+    [
+      "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-ROBINSON-REPLY-2020",
+      "SRC-KCTH-JUSTUS-REPLY-2019",
+      "SRC-KCTH-LUCAS-QUOTE-2019",
+      "SRC-KCTH-KCMO311-REPLY-2018",
+      "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
+    ]
   );
   assert.deepEqual(
     resolveCitationOccurrence("wowlist", "archive-scale").sources.map(

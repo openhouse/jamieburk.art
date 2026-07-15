@@ -505,6 +505,90 @@
       ]
     },
     {
+      "id": "SRC-KCTH-ROBINSON-REPLY-2020",
+      "title": "Melissa Robinson replies to KC Town Hall",
+      "organization": "Public official account",
+      "author": "Melissa Robinson (@Robinson4kc)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Melissa Robinson public reply to KC Town Hall, August 1, 2020.",
+      "publicNote": "Counted as a dated public interaction by the historically attributable account, not as present-day office status or universal endorsement.",
+      "doesNotEstablish": [
+        "formal adoption or endorsement",
+        "a complete interaction history",
+        "current officeholder status",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-JUSTUS-REPLY-2019",
+      "title": "Jolie Justus replies in a KC Town Hall grocery-access thread",
+      "organization": "Public official account",
+      "author": "Jolie Justus (@joliejustus)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Jolie Justus public reply in a KC Town Hall thread, April 29, 2019.",
+      "publicNote": "Counted as a dated public interaction by the historically attributable account, not as present-day office status or universal endorsement.",
+      "doesNotEstablish": [
+        "formal adoption or endorsement",
+        "a complete interaction history",
+        "current officeholder status",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-LUCAS-QUOTE-2019",
+      "title": "Quinton Lucas quote-posts KC Town Hall grocery-access context",
+      "organization": "Public official account",
+      "author": "Quinton Lucas (@QuintonLucasKC)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Quinton Lucas public quote post involving KC Town Hall, April 29, 2019.",
+      "publicNote": "Counted as a dated public interaction by the historically attributable account, not as present-day office status or universal endorsement.",
+      "doesNotEstablish": [
+        "formal adoption or endorsement",
+        "a complete interaction history",
+        "current officeholder status",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO311-REPLY-2018",
+      "title": "KCMO 311 replies in a KC Town Hall service thread",
+      "organization": "Public official account",
+      "author": "KCMO 311 (@KCMO311)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-08-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCMO311/status/1034093516073459712",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KCMO 311 public reply in a KC Town Hall service thread, August 27, 2018.",
+      "publicNote": "Counted as a dated public interaction by the historically attributable account, not as present-day office status or universal endorsement.",
+      "doesNotEstablish": [
+        "formal adoption or endorsement",
+        "a complete interaction history",
+        "current officeholder status",
+        "Jamie's authorship of the project account"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-X-CORPUS-2026-07-14",
       "title": "Authenticated CallNYC full recoverable timeline corpus",
       "author": "Codex authenticated browser review",
@@ -678,6 +762,25 @@
         "reach, adoption, conversion, endorsement, or causal impact",
         "project completion or current property status",
         "deleted, private, liked, or platform-suppressed activity"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019",
+      "title": "Bridging the Gap collaborator reports a KC Town Hall tire drop-off",
+      "author": "Public collaborator account (@trutheresme)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-07-08",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public collaborator account, report of a KC Town Hall tire drop-off received by Bridging the Gap, July 8, 2019.",
+      "publicNote": "This independently corroborates one substantial tire drop-off. It does not independently audit the account's aggregate tire, participation, savings, or health-impact totals.",
+      "doesNotEstablish": [
+        "exact tire count",
+        "complete program scale",
+        "causal health impact"
       ]
     }
   ],
@@ -1553,6 +1656,51 @@
           ],
           "confidence": "high",
           "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-ROBINSON-REPLY-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "one visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-JUSTUS-REPLY-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "one visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-LUCAS-QUOTE-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "one visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO311-REPLY-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "one visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "one externally reported tire drop-off"
+          ],
+          "confidence": "high",
+          "renderCitation": true
         }
       ],
       "boundaries": [
@@ -2028,7 +2176,12 @@
         "SRC-KC-TOWN-HALL-COUNCIL-RESOLUTION-190649",
         "SRC-KC-TOWN-HALL-ORDINANCE-240317",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
-        "SRC-KCTH-X-CORPUS-2026-07-15"
+        "SRC-KCTH-X-CORPUS-2026-07-15",
+        "SRC-KCTH-ROBINSON-REPLY-2020",
+        "SRC-KCTH-JUSTUS-REPLY-2019",
+        "SRC-KCTH-LUCAS-QUOTE-2019",
+        "SRC-KCTH-KCMO311-REPLY-2018",
+        "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
       ],
       "occurrences": [
         {
@@ -2047,7 +2200,12 @@
           "claimId": "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
           "projection": "case-study",
           "sourceIds": [
-            "SRC-KCTH-X-CORPUS-2026-07-15"
+            "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-ROBINSON-REPLY-2020",
+            "SRC-KCTH-JUSTUS-REPLY-2019",
+            "SRC-KCTH-LUCAS-QUOTE-2019",
+            "SRC-KCTH-KCMO311-REPLY-2018",
+            "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
           ]
         }
       ]

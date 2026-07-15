@@ -441,9 +441,9 @@ test("KC Town Hall full-population corpus is complete, reproducible, and safely 
     }
   });
 
-  assert.equal(kcTownHallFullPopulationSources.length, 13);
+  assert.equal(kcTownHallFullPopulationSources.length, 15);
   assert.equal(kcTownHallFullPopulationClaims.length, 2);
-  assert.equal(kcTownHallFullPopulationInquiries.length, 2);
+  assert.equal(kcTownHallFullPopulationInquiries.length, 3);
   assert.equal(kcTownHallFullPopulationIntake.length, 1);
   assert.ok(
     kcTownHallFullPopulationClaims.every((claim) =>
@@ -466,7 +466,14 @@ test("KC Town Hall full-population corpus is complete, reproducible, and safely 
   );
   assert.deepEqual(
     operatingClaim.evidence.filter((item) => item.renderCitation).map((item) => item.sourceId),
-    ["SRC-KCTH-X-CORPUS-2026-07-15"]
+    [
+      "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-ROBINSON-REPLY-2020",
+      "SRC-KCTH-JUSTUS-REPLY-2019",
+      "SRC-KCTH-LUCAS-QUOTE-2019",
+      "SRC-KCTH-KCMO311-REPLY-2018",
+      "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019"
+    ]
   );
   assert.ok(operatingClaim.boundaries.some((boundary) => /publishing and operating continuity/.test(boundary)));
   assert.ok(operatingClaim.antiClaims.some((antiClaim) => /267 people engaged/.test(antiClaim)));

@@ -51,11 +51,14 @@ project-account population.
 
 The public-safe fixture keeps status URLs, dates, handles, record types,
 timeline membership, posted-link metadata, classifications, and dated visible
-interaction counts. It excludes post text, historical phone numbers, pickup
-addresses, authentication identity, cookies, private-account state, and session
-data. The manifest and derivation check reproduce the 183-of-183 population,
-record types, year counts, source inventory, operating patterns, and stakeholder
-ledger.
+interaction counts. A separate redacted acquisition ledger retains the profile
+observation, authenticated route membership, five context exclusions, and a
+SHA-256 digest of the protected capture. It supplies an acquisition input that
+is distinct from the curated fixture without publishing post text, historical
+phone numbers, pickup addresses, authentication identity, cookies,
+private-account state, or session data. The manifest and derivation check
+reconcile these layers and reproduce the 183-of-183 population, record types,
+year counts, source inventory, operating patterns, and stakeholder ledger.
 
 The complete population contains 100 tire-related records and 12 survey-linked
 records. It documents a recurring household-service workflow and resident-input
@@ -74,9 +77,12 @@ government impact.
 
 The account also circulated sources on neighborhood food access, affordable
 housing, renter policy, elections, transit, voter information, public health,
-emergency resources, and practical cleanup work. Those sources remain the work
-of their named authors and institutions; circulation is not coverage of or
-partnership with KC Town Hall.
+emergency resources, and practical cleanup work. All 31 distinct posted short
+URLs have an explicit disposition: 10 link records map to promoted sources, 15
+belong to governed operational-link families, and six remain named recovery and
+close-reading inquiries. Those sources remain the work of their named authors
+and institutions; circulation is not coverage of or partnership with KC Town
+Hall.
 
 ## Stewardship research lead
 
@@ -100,8 +106,11 @@ evidence threads.
 - Survey claim: `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY`
 - Survey authorship inquiry: `INQ-KC-TOWN-HALL-SURVEY-AUTHORSHIP`
 - Complete social corpus: `SRC-KCTH-X-CORPUS-2026-07-15`
+- Redacted acquisition ledger: `SRC-KCTH-X-ACQUISITION-LEDGER-2026-07-15`
+- Posted-URL disposition ledger: `SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15`
 - Public-operations claim: `CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS`
 - Source-circulation claim: `CLM-KCTH-X-CIVIC-SOURCE-CIRCULATION`
 - Dated engagement claim: `CLM-KCTH-X-DATED-VISIBLE-ENGAGEMENT`
 - Tire-total inquiry: `INQ-KCTH-X-TIRE-TOTALS-CORROBORATION`
 - Survey decision-trail inquiry: `INQ-KCTH-X-SURVEY-DECISION-TRAIL`
+- Posted-URL recovery inquiry: `INQ-KCTH-X-POSTED-URL-TRIAGE`

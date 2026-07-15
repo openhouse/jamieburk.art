@@ -1,0 +1,2462 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-07-15",
+  "sourceCaptureSha256": "c3edcb727b55c852de5bcc941bf09f0e87dc341a56190367420e927cc687daf2",
+  "captureSurfaces": [
+    "https://x.com/KCTownHall",
+    "https://x.com/KCTownHall/with_replies"
+  ],
+  "profileObservation": {
+    "reportedPosts": 183,
+    "observedAt": "2026-07-15"
+  },
+  "routeObservations": {
+    "posts": {
+      "renderedPrimaryRecords": 170,
+      "repeatedNoGrowthPasses": 12,
+      "primaryStatusIds": [
+        "1013893135695601665",
+        "1013894923031113728",
+        "1013895905932726273",
+        "1013897573856370688",
+        "1013902884285681665",
+        "1013903134551347200",
+        "1013903289392517120",
+        "1014742105145692161",
+        "1016684231433564160",
+        "1020798115367047171",
+        "1022510145014824962",
+        "1023249193878597632",
+        "1024739337282441218",
+        "1026922856091987968",
+        "1029067847740391426",
+        "1033485724899794944",
+        "1035215055024009216",
+        "1037785619706068995",
+        "1038153710864670721",
+        "1043539982676369408",
+        "1043549999550877697",
+        "1044677436204560384",
+        "1059533163519770624",
+        "1060936086648733702",
+        "1061347310758699008",
+        "1062375399429169152",
+        "1062377455338618880",
+        "1087695661020205056",
+        "1102627427992375296",
+        "1122854798884257797",
+        "1122859036163170304",
+        "1122866432130334720",
+        "1122881981484797954",
+        "1122883010582466560",
+        "1122905778464153602",
+        "1123264511698456577",
+        "1124416898064580608",
+        "1124418375181058048",
+        "1124448415293874176",
+        "1124481129057333250",
+        "1124717766756503552",
+        "1124760081596391424",
+        "1124789562293870592",
+        "1124791429790879745",
+        "1124792146064748550",
+        "1124793002843615233",
+        "1124795681389076481",
+        "1124810411302359040",
+        "1126284471894933504",
+        "1134594449256984576",
+        "1134608391614160896",
+        "1135225497384890368",
+        "1135246124883861504",
+        "1147586873423998976",
+        "1147589894660907009",
+        "1147602234127130624",
+        "1147679988600254465",
+        "1148277187583389703",
+        "1154729332755050496",
+        "1157464628324110336",
+        "1157482636463476736",
+        "1157483198781087744",
+        "1157483542529617926",
+        "1157861700944703488",
+        "1159153322236026881",
+        "1170072880090165249",
+        "1170387602329034754",
+        "1170387688496799744",
+        "1170387736492224512",
+        "1173037571162738689",
+        "1180176299471638528",
+        "1180178311848366083",
+        "1180550513819095042",
+        "1180551346090577920",
+        "1180552140005298176",
+        "1180552910071095301",
+        "1180553578689236992",
+        "1180556215870541824",
+        "1180557262823264256",
+        "1180568634260897794",
+        "1180569203717353472",
+        "1180569809475588096",
+        "1180570492530577410",
+        "1180639237781250049",
+        "1182329689689473029",
+        "1182349413722836992",
+        "1182369340034707457",
+        "1183035237233823745",
+        "1184421200400801792",
+        "1185289925748580352",
+        "1187199836682117126",
+        "1190017854248239115",
+        "1190367471129300992",
+        "1190393136054521856",
+        "1190674584502177797",
+        "1190688421276246016",
+        "1190703057161601024",
+        "1190704251263160322",
+        "1190705445008216064",
+        "1190707863292956672",
+        "1190708575510958080",
+        "1190709291289890823",
+        "1190710238212694016",
+        "1190995865814667266",
+        "1191405830693904385",
+        "1209146067817762816",
+        "1209146457590247424",
+        "1236102068680695808",
+        "1236385304245927936",
+        "1236689218174357504",
+        "1252344939867824132",
+        "1252345034038407168",
+        "1269121890733473795",
+        "1269122302970662912",
+        "1269122489461997568",
+        "1269122641086033920",
+        "1269122793544855552",
+        "1269122955965009921",
+        "1269123177885679618",
+        "1269123270391091200",
+        "1269123426414985216",
+        "1269123738911625217",
+        "1269123813171757059",
+        "1269123902070042624",
+        "1288612274228396032",
+        "1288952731982598144",
+        "1289313255966617602",
+        "1289350670730948608",
+        "1289350962709065729",
+        "1289634461638778880",
+        "1289713591843565569",
+        "1301921883831570434",
+        "1301997561356652546",
+        "1302004390585421825",
+        "1302281027960926210",
+        "1302311398999982081",
+        "1302391602812518401",
+        "1311091878306213889",
+        "1312091287273824265",
+        "1312167901252608001",
+        "1312482560316895232",
+        "1312530339051393024",
+        "1312649591469342722",
+        "1324836875568320512",
+        "1325099960933748744",
+        "1367257547724509189",
+        "1367878555556777989",
+        "1368272511490744325",
+        "1368365228765945858",
+        "1423734504691314698",
+        "1424055770472198146",
+        "1424106887482683397",
+        "1424143001505386498",
+        "1433862792990400527",
+        "1434323234346967046",
+        "1444329446287290382",
+        "1444466053665509377",
+        "1457012244588412935",
+        "1457046287753285637",
+        "1457371688300056580",
+        "1500289857750401026",
+        "1510295173548367877",
+        "1511091801087692813",
+        "1525157225542651910",
+        "1532864718490292226",
+        "1542991559674716165",
+        "1543272488318242817",
+        "1555940701338206208",
+        "1566197849297195009",
+        "1573651421681139714"
+      ]
+    },
+    "replies": {
+      "renderedCards": 188,
+      "renderedPrimaryRecords": 183,
+      "renderedConversationContextCards": 5,
+      "repeatedNoGrowthPasses": 14,
+      "primaryStatusIds": [
+        "1013893135695601665",
+        "1013894923031113728",
+        "1013895905932726273",
+        "1013897573856370688",
+        "1013902884285681665",
+        "1013903134551347200",
+        "1013903289392517120",
+        "1014742105145692161",
+        "1016684231433564160",
+        "1020798115367047171",
+        "1022510145014824962",
+        "1023249193878597632",
+        "1024739337282441218",
+        "1026922856091987968",
+        "1029067847740391426",
+        "1033485724899794944",
+        "1033500102801993729",
+        "1033505948533448705",
+        "1034145416663769088",
+        "1035215055024009216",
+        "1037785619706068995",
+        "1038153710864670721",
+        "1043539982676369408",
+        "1043549999550877697",
+        "1044677436204560384",
+        "1059533163519770624",
+        "1060936086648733702",
+        "1061347310758699008",
+        "1062375399429169152",
+        "1062377455338618880",
+        "1087695661020205056",
+        "1102627427992375296",
+        "1122854798884257797",
+        "1122859036163170304",
+        "1122866432130334720",
+        "1122867070729949184",
+        "1122881981484797954",
+        "1122883010582466560",
+        "1122884316093210627",
+        "1122905778464153602",
+        "1122977313468157953",
+        "1123264511698456577",
+        "1124416898064580608",
+        "1124418375181058048",
+        "1124448415293874176",
+        "1124481129057333250",
+        "1124717766756503552",
+        "1124760081596391424",
+        "1124779534795071489",
+        "1124789562293870592",
+        "1124791429790879745",
+        "1124792146064748550",
+        "1124793002843615233",
+        "1124795681389076481",
+        "1124810411302359040",
+        "1126284471894933504",
+        "1134594449256984576",
+        "1134608391614160896",
+        "1135225497384890368",
+        "1135246124883861504",
+        "1147586873423998976",
+        "1147589894660907009",
+        "1147602234127130624",
+        "1147679988600254465",
+        "1148277187583389703",
+        "1154729332755050496",
+        "1154888028889976834",
+        "1157464628324110336",
+        "1157482636463476736",
+        "1157483198781087744",
+        "1157483542529617926",
+        "1157861700944703488",
+        "1159153322236026881",
+        "1170072880090165249",
+        "1170387602329034754",
+        "1170387688496799744",
+        "1170387736492224512",
+        "1173037571162738689",
+        "1180176299471638528",
+        "1180178311848366083",
+        "1180550513819095042",
+        "1180551346090577920",
+        "1180552140005298176",
+        "1180552910071095301",
+        "1180553578689236992",
+        "1180556215870541824",
+        "1180557262823264256",
+        "1180568634260897794",
+        "1180569203717353472",
+        "1180569809475588096",
+        "1180570492530577410",
+        "1180639237781250049",
+        "1182329689689473029",
+        "1182349413722836992",
+        "1182369340034707457",
+        "1183035237233823745",
+        "1184421200400801792",
+        "1185289925748580352",
+        "1187199836682117126",
+        "1190017854248239115",
+        "1190367471129300992",
+        "1190393136054521856",
+        "1190674584502177797",
+        "1190688421276246016",
+        "1190703057161601024",
+        "1190704251263160322",
+        "1190705445008216064",
+        "1190707863292956672",
+        "1190708575510958080",
+        "1190709291289890823",
+        "1190710238212694016",
+        "1190995865814667266",
+        "1191405830693904385",
+        "1209146067817762816",
+        "1209146457590247424",
+        "1236102068680695808",
+        "1236385304245927936",
+        "1236689218174357504",
+        "1252344939867824132",
+        "1252345034038407168",
+        "1269121890733473795",
+        "1269122302970662912",
+        "1269122489461997568",
+        "1269122641086033920",
+        "1269122793544855552",
+        "1269122955965009921",
+        "1269123177885679618",
+        "1269123270391091200",
+        "1269123426414985216",
+        "1269123738911625217",
+        "1269123813171757059",
+        "1269123902070042624",
+        "1288612274228396032",
+        "1288952731982598144",
+        "1289313255966617602",
+        "1289350670730948608",
+        "1289350962709065729",
+        "1289634461638778880",
+        "1289713591843565569",
+        "1289714654579580928",
+        "1301921883831570434",
+        "1301997561356652546",
+        "1302003448833953792",
+        "1302003767831912448",
+        "1302004390585421825",
+        "1302281027960926210",
+        "1302311398999982081",
+        "1302391602812518401",
+        "1311091878306213889",
+        "1312091287273824265",
+        "1312167901252608001",
+        "1312482560316895232",
+        "1312530339051393024",
+        "1312649591469342722",
+        "1324836875568320512",
+        "1325099960933748744",
+        "1367257547724509189",
+        "1367878555556777989",
+        "1368272511490744325",
+        "1368365228765945858",
+        "1423734504691314698",
+        "1423795274879836160",
+        "1424055770472198146",
+        "1424106887482683397",
+        "1424143001505386498",
+        "1433862792990400527",
+        "1434323234346967046",
+        "1444329446287290382",
+        "1444466053665509377",
+        "1457012244588412935",
+        "1457031966444896259",
+        "1457046287753285637",
+        "1457371688300056580",
+        "1500289857750401026",
+        "1510295173548367877",
+        "1511091801087692813",
+        "1525157225542651910",
+        "1532864718490292226",
+        "1542991559674716165",
+        "1543272488318242817",
+        "1555940701338206208",
+        "1566197849297195009",
+        "1573651421681139714"
+      ],
+      "conversationContextStatusIds": [
+        "1033499895670431744",
+        "1033501260362772480",
+        "1034093516073459712",
+        "1154749460422938624",
+        "1289714535251742726"
+      ]
+    }
+  },
+  "primaryRecords": [
+    {
+      "statusId": "1013893135695601665",
+      "statusUrl": "https://x.com/KCTownHall/status/1013893135695601665",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:12:15.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013894923031113728",
+      "statusUrl": "https://x.com/KCTownHall/status/1013894923031113728",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:19:21.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013895905932726273",
+      "statusUrl": "https://x.com/KCTownHall/status/1013895905932726273",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:23:15.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013897573856370688",
+      "statusUrl": "https://x.com/KCTownHall/status/1013897573856370688",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:29:53.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013902884285681665",
+      "statusUrl": "https://x.com/KCTownHall/status/1013902884285681665",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:50:59.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013903134551347200",
+      "statusUrl": "https://x.com/KCTownHall/status/1013903134551347200",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:51:59.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1013903289392517120",
+      "statusUrl": "https://x.com/KCTownHall/status/1013903289392517120",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-02T21:52:36.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1014742105145692161",
+      "statusUrl": "https://x.com/KCTownHall/status/1014742105145692161",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-05T05:25:45.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1016684231433564160",
+      "statusUrl": "https://x.com/KCTownHall/status/1016684231433564160",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-10T14:03:04.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1020798115367047171",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1020798115367047171",
+      "authorHandle": "@QuintonLucasKC",
+      "publishedAt": "2018-07-21T22:30:10.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1022510145014824962",
+      "statusUrl": "https://x.com/GCI1919/status/1022510145014824962",
+      "authorHandle": "@GCI1919",
+      "publishedAt": "2018-07-26T15:53:10.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1023249193878597632",
+      "statusUrl": "https://x.com/KCTownHall/status/1023249193878597632",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-07-28T16:49:53.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1024739337282441218",
+      "statusUrl": "https://x.com/KCTownHall/status/1024739337282441218",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-01T19:31:11.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1026922856091987968",
+      "statusUrl": "https://x.com/KCTownHall/status/1026922856091987968",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-07T20:07:42.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1029067847740391426",
+      "statusUrl": "https://x.com/CentralHS_KCPS/status/1029067847740391426",
+      "authorHandle": "@CentralHS_KCPS",
+      "publishedAt": "2018-08-13T18:11:08.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1033485724899794944",
+      "statusUrl": "https://x.com/KCTownHall/status/1033485724899794944",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-25T22:46:12.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1033500102801993729",
+      "statusUrl": "https://x.com/KCTownHall/status/1033500102801993729",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-25T23:43:20.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1033505948533448705",
+      "statusUrl": "https://x.com/KCTownHall/status/1033505948533448705",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-26T00:06:34.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1034145416663769088",
+      "statusUrl": "https://x.com/KCTownHall/status/1034145416663769088",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-27T18:27:35.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1035215055024009216",
+      "statusUrl": "https://x.com/KCTownHall/status/1035215055024009216",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-08-30T17:17:57.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1037785619706068995",
+      "statusUrl": "https://x.com/KCTownHall/status/1037785619706068995",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-09-06T19:32:27.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1038153710864670721",
+      "statusUrl": "https://x.com/KCTownHall/status/1038153710864670721",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-09-07T19:55:07.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1043539982676369408",
+      "statusUrl": "https://x.com/INCThrives/status/1043539982676369408",
+      "authorHandle": "@INCThrives",
+      "publishedAt": "2018-09-22T16:38:14.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1043549999550877697",
+      "statusUrl": "https://x.com/KCTownHall/status/1043549999550877697",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-09-22T17:18:02.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1044677436204560384",
+      "statusUrl": "https://x.com/GCI1919/status/1044677436204560384",
+      "authorHandle": "@GCI1919",
+      "publishedAt": "2018-09-25T19:58:04.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1059533163519770624",
+      "statusUrl": "https://x.com/kholmesKARES/status/1059533163519770624",
+      "authorHandle": "@kholmesKARES",
+      "publishedAt": "2018-11-05T19:49:26.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1060936086648733702",
+      "statusUrl": "https://x.com/KCTownHall/status/1060936086648733702",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-11-09T16:44:08.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1061347310758699008",
+      "statusUrl": "https://x.com/KCTownHall/status/1061347310758699008",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-11-10T19:58:12.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1062375399429169152",
+      "statusUrl": "https://x.com/KCTownHall/status/1062375399429169152",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-11-13T16:03:27.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1062377455338618880",
+      "statusUrl": "https://x.com/KCTownHall/status/1062377455338618880",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2018-11-13T16:11:38.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1087695661020205056",
+      "statusUrl": "https://x.com/KCTownHall/status/1087695661020205056",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-01-22T12:57:08.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1102627427992375296",
+      "statusUrl": "https://x.com/KCTownHall/status/1102627427992375296",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-03-04T17:50:39.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122854798884257797",
+      "statusUrl": "https://x.com/KCTownHall/status/1122854798884257797",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-04-29T13:27:00.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122859036163170304",
+      "statusUrl": "https://x.com/KCTownHall/status/1122859036163170304",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-04-29T13:43:50.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122866432130334720",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "authorHandle": "@QuintonLucasKC",
+      "publishedAt": "2019-04-29T14:13:13.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122867070729949184",
+      "statusUrl": "https://x.com/KCTownHall/status/1122867070729949184",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-04-29T14:15:46.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122881981484797954",
+      "statusUrl": "https://x.com/joliejustus/status/1122881981484797954",
+      "authorHandle": "@joliejustus",
+      "publishedAt": "2019-04-29T15:15:01.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122883010582466560",
+      "statusUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "authorHandle": "@joliejustus",
+      "publishedAt": "2019-04-29T15:19:06.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122884316093210627",
+      "statusUrl": "https://x.com/KCTownHall/status/1122884316093210627",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-04-29T15:24:17.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122905778464153602",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1122905778464153602",
+      "authorHandle": "@QuintonLucasKC",
+      "publishedAt": "2019-04-29T16:49:34.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1122977313468157953",
+      "statusUrl": "https://x.com/KCTownHall/status/1122977313468157953",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-04-29T21:33:50.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1123264511698456577",
+      "statusUrl": "https://x.com/KansasCity/status/1123264511698456577",
+      "authorHandle": "@KansasCity",
+      "publishedAt": "2019-04-30T16:35:03.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124416898064580608",
+      "statusUrl": "https://x.com/KCTownHall/status/1124416898064580608",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-03T20:54:13.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124418375181058048",
+      "statusUrl": "https://x.com/KCTownHall/status/1124418375181058048",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-03T21:00:05.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124448415293874176",
+      "statusUrl": "https://x.com/KCTownHall/status/1124448415293874176",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-03T22:59:28.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124481129057333250",
+      "statusUrl": "https://x.com/KCTownHall/status/1124481129057333250",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T01:09:27.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124717766756503552",
+      "statusUrl": "https://x.com/KCTownHall/status/1124717766756503552",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T16:49:46.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124760081596391424",
+      "statusUrl": "https://x.com/_Titi81/status/1124760081596391424",
+      "authorHandle": "@_Titi81",
+      "publishedAt": "2019-05-04T19:37:55.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124779534795071489",
+      "statusUrl": "https://x.com/KCTownHall/status/1124779534795071489",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T20:55:13.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124789562293870592",
+      "statusUrl": "https://x.com/KCTownHall/status/1124789562293870592",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T21:35:03.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124791429790879745",
+      "statusUrl": "https://x.com/KCTownHall/status/1124791429790879745",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T21:42:29.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124792146064748550",
+      "statusUrl": "https://x.com/NickStarlingPIO/status/1124792146064748550",
+      "authorHandle": "@NickStarlingPIO",
+      "publishedAt": "2019-05-04T21:45:19.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124793002843615233",
+      "statusUrl": "https://x.com/KCTownHall/status/1124793002843615233",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T21:48:44.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124795681389076481",
+      "statusUrl": "https://x.com/KCTownHall/status/1124795681389076481",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T21:59:22.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1124810411302359040",
+      "statusUrl": "https://x.com/KCTownHall/status/1124810411302359040",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-04T22:57:54.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1126284471894933504",
+      "statusUrl": "https://x.com/KCTownHall/status/1126284471894933504",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-09T00:35:18.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1134594449256984576",
+      "statusUrl": "https://x.com/KCTownHall/status/1134594449256984576",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-31T22:56:11.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1134608391614160896",
+      "statusUrl": "https://x.com/KCTownHall/status/1134608391614160896",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-05-31T23:51:35.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1135225497384890368",
+      "statusUrl": "https://x.com/KCTownHall/status/1135225497384890368",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-06-02T16:43:44.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1135246124883861504",
+      "statusUrl": "https://x.com/KCTownHall/status/1135246124883861504",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-06-02T18:05:42.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1147586873423998976",
+      "statusUrl": "https://x.com/KCTownHall/status/1147586873423998976",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-07-06T19:23:26.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1147589894660907009",
+      "statusUrl": "https://x.com/KCTownHall/status/1147589894660907009",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-07-06T19:35:26.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1147602234127130624",
+      "statusUrl": "https://x.com/KCTownHall/status/1147602234127130624",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-07-06T20:24:28.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1147679988600254465",
+      "statusUrl": "https://x.com/KCTownHall/status/1147679988600254465",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-07-07T01:33:26.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1148277187583389703",
+      "statusUrl": "https://x.com/trutheresme/status/1148277187583389703",
+      "authorHandle": "@trutheresme",
+      "publishedAt": "2019-07-08T17:06:30.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1154729332755050496",
+      "statusUrl": "https://x.com/RideKCTransit/status/1154729332755050496",
+      "authorHandle": "@RideKCTransit",
+      "publishedAt": "2019-07-26T12:25:01.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1154888028889976834",
+      "statusUrl": "https://x.com/KCTownHall/status/1154888028889976834",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-07-26T22:55:37.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1157464628324110336",
+      "statusUrl": "https://x.com/KCTownHall/status/1157464628324110336",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-03T01:34:06.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1157482636463476736",
+      "statusUrl": "https://x.com/KCTownHall/status/1157482636463476736",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-03T02:45:40.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1157483198781087744",
+      "statusUrl": "https://x.com/KCTownHall/status/1157483198781087744",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-03T02:47:54.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1157483542529617926",
+      "statusUrl": "https://x.com/KCTownHall/status/1157483542529617926",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-03T02:49:16.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1157861700944703488",
+      "statusUrl": "https://x.com/KCTownHall/status/1157861700944703488",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-04T03:51:56.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1159153322236026881",
+      "statusUrl": "https://x.com/KCTownHall/status/1159153322236026881",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-08-07T17:24:22.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1170072880090165249",
+      "statusUrl": "https://x.com/KCTownHall/status/1170072880090165249",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-09-06T20:34:48.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1170387602329034754",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387602329034754",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-09-07T17:25:23.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1170387688496799744",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387688496799744",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-09-07T17:25:44.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1170387736492224512",
+      "statusUrl": "https://x.com/KCTownHall/status/1170387736492224512",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-09-07T17:25:55.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1173037571162738689",
+      "statusUrl": "https://x.com/trutheresme/status/1173037571162738689",
+      "authorHandle": "@trutheresme",
+      "publishedAt": "2019-09-15T00:55:25.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180176299471638528",
+      "statusUrl": "https://x.com/laurazig/status/1180176299471638528",
+      "authorHandle": "@laurazig",
+      "publishedAt": "2019-10-04T17:42:11.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180178311848366083",
+      "statusUrl": "https://x.com/KCTownHall/status/1180178311848366083",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-04T17:50:10.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180550513819095042",
+      "statusUrl": "https://x.com/KCTownHall/status/1180550513819095042",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:29:10.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180551346090577920",
+      "statusUrl": "https://x.com/KCTownHall/status/1180551346090577920",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:32:29.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180552140005298176",
+      "statusUrl": "https://x.com/KCTownHall/status/1180552140005298176",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:35:38.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180552910071095301",
+      "statusUrl": "https://x.com/KCTownHall/status/1180552910071095301",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:38:42.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180553578689236992",
+      "statusUrl": "https://x.com/KCTownHall/status/1180553578689236992",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:41:21.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180556215870541824",
+      "statusUrl": "https://x.com/KCTownHall/status/1180556215870541824",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:51:50.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180557262823264256",
+      "statusUrl": "https://x.com/KCTownHall/status/1180557262823264256",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T18:55:59.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180568634260897794",
+      "statusUrl": "https://x.com/KCTownHall/status/1180568634260897794",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T19:41:10.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180569203717353472",
+      "statusUrl": "https://x.com/KCTownHall/status/1180569203717353472",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T19:43:26.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180569809475588096",
+      "statusUrl": "https://x.com/KCTownHall/status/1180569809475588096",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T19:45:51.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180570492530577410",
+      "statusUrl": "https://x.com/KCTownHall/status/1180570492530577410",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-05T19:48:34.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1180639237781250049",
+      "statusUrl": "https://x.com/KCTownHall/status/1180639237781250049",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-06T00:21:44.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1182329689689473029",
+      "statusUrl": "https://x.com/KCTownHall/status/1182329689689473029",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-10T16:18:59.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1182349413722836992",
+      "statusUrl": "https://x.com/trutheresme/status/1182349413722836992",
+      "authorHandle": "@trutheresme",
+      "publishedAt": "2019-10-10T17:37:21.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1182369340034707457",
+      "statusUrl": "https://x.com/JJones816/status/1182369340034707457",
+      "authorHandle": "@JJones816",
+      "publishedAt": "2019-10-10T18:56:32.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1183035237233823745",
+      "statusUrl": "https://x.com/KCTownHall/status/1183035237233823745",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-12T15:02:34.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1184421200400801792",
+      "statusUrl": "https://x.com/DjPittel/status/1184421200400801792",
+      "authorHandle": "@DjPittel",
+      "publishedAt": "2019-10-16T10:49:54.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1185289925748580352",
+      "statusUrl": "https://x.com/QuintonLucasKC/status/1185289925748580352",
+      "authorHandle": "@QuintonLucasKC",
+      "publishedAt": "2019-10-18T20:21:54.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1187199836682117126",
+      "statusUrl": "https://x.com/Robinson4kc/status/1187199836682117126",
+      "authorHandle": "@Robinson4kc",
+      "publishedAt": "2019-10-24T02:51:12.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190017854248239115",
+      "statusUrl": "https://x.com/KCTownHall/status/1190017854248239115",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-10-31T21:29:00.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190367471129300992",
+      "statusUrl": "https://x.com/KCTownHall/status/1190367471129300992",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-01T20:38:15.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190393136054521856",
+      "statusUrl": "https://x.com/KCTownHall/status/1190393136054521856",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-01T22:20:14.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190674584502177797",
+      "statusUrl": "https://x.com/NortheastNewsKC/status/1190674584502177797",
+      "authorHandle": "@NortheastNewsKC",
+      "publishedAt": "2019-11-02T16:58:37.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190688421276246016",
+      "statusUrl": "https://x.com/Robinson4kc/status/1190688421276246016",
+      "authorHandle": "@Robinson4kc",
+      "publishedAt": "2019-11-02T17:53:36.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190703057161601024",
+      "statusUrl": "https://x.com/KCTownHall/status/1190703057161601024",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T18:51:45.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190704251263160322",
+      "statusUrl": "https://x.com/KCTownHall/status/1190704251263160322",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T18:56:30.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190705445008216064",
+      "statusUrl": "https://x.com/KCTownHall/status/1190705445008216064",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T19:01:14.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190707863292956672",
+      "statusUrl": "https://x.com/KCTownHall/status/1190707863292956672",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T19:10:51.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190708575510958080",
+      "statusUrl": "https://x.com/KCTownHall/status/1190708575510958080",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T19:13:41.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190709291289890823",
+      "statusUrl": "https://x.com/KCTownHall/status/1190709291289890823",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T19:16:32.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190710238212694016",
+      "statusUrl": "https://x.com/KCTownHall/status/1190710238212694016",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-02T19:20:17.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1190995865814667266",
+      "statusUrl": "https://x.com/KCTownHall/status/1190995865814667266",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2019-11-03T14:15:16.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1191405830693904385",
+      "statusUrl": "https://x.com/trutheresme/status/1191405830693904385",
+      "authorHandle": "@trutheresme",
+      "publishedAt": "2019-11-04T17:24:19.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1209146067817762816",
+      "statusUrl": "https://x.com/KansasCity/status/1209146067817762816",
+      "authorHandle": "@KansasCity",
+      "publishedAt": "2019-12-23T16:17:42.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1209146457590247424",
+      "statusUrl": "https://x.com/KansasCity/status/1209146457590247424",
+      "authorHandle": "@KansasCity",
+      "publishedAt": "2019-12-23T16:19:15.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1236102068680695808",
+      "statusUrl": "https://x.com/KCTownHall/status/1236102068680695808",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-03-07T01:31:13.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1236385304245927936",
+      "statusUrl": "https://x.com/KCTownHall/status/1236385304245927936",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-03-07T20:16:42.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1236689218174357504",
+      "statusUrl": "https://x.com/KCTownHall/status/1236689218174357504",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-03-08T16:24:20.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1252344939867824132",
+      "statusUrl": "https://x.com/KCTownHall/status/1252344939867824132",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-04-20T21:14:35.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1252345034038407168",
+      "statusUrl": "https://x.com/KCTownHall/status/1252345034038407168",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-04-20T21:14:58.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269121890733473795",
+      "statusUrl": "https://x.com/KCTownHall/status/1269121890733473795",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:20:12.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269122302970662912",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122302970662912",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:21:50.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269122489461997568",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122489461997568",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:22:35.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269122641086033920",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122641086033920",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:23:11.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269122793544855552",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122793544855552",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:23:47.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269122955965009921",
+      "statusUrl": "https://x.com/KCTownHall/status/1269122955965009921",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:24:26.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123177885679618",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123177885679618",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:25:19.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123270391091200",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123270391091200",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:25:41.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123426414985216",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123426414985216",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:26:18.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123738911625217",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123738911625217",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:27:33.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123813171757059",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123813171757059",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:27:50.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1269123902070042624",
+      "statusUrl": "https://x.com/KCTownHall/status/1269123902070042624",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-06-06T04:28:12.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1288612274228396032",
+      "statusUrl": "https://x.com/KCTownHall/status/1288612274228396032",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-07-29T23:08:02.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1288952731982598144",
+      "statusUrl": "https://x.com/KCTownHall/status/1288952731982598144",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-07-30T21:40:53.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289313255966617602",
+      "statusUrl": "https://x.com/KCTownHall/status/1289313255966617602",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-07-31T21:33:29.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289350670730948608",
+      "statusUrl": "https://x.com/KCTownHall/status/1289350670730948608",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-08-01T00:02:09.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289350962709065729",
+      "statusUrl": "https://x.com/KCTownHall/status/1289350962709065729",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-08-01T00:03:19.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289634461638778880",
+      "statusUrl": "https://x.com/KCTownHall/status/1289634461638778880",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-08-01T18:49:50.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289713591843565569",
+      "statusUrl": "https://x.com/KCTownHall/status/1289713591843565569",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-08-02T00:04:16.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289714654579580928",
+      "statusUrl": "https://x.com/KCTownHall/status/1289714654579580928",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-08-02T00:08:30.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1301921883831570434",
+      "statusUrl": "https://x.com/KCTownHall/status/1301921883831570434",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-04T16:35:40.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1301997561356652546",
+      "statusUrl": "https://x.com/KCTownHall/status/1301997561356652546",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-04T21:36:23.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302003448833953792",
+      "statusUrl": "https://x.com/KCTownHall/status/1302003448833953792",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-04T21:59:46.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302003767831912448",
+      "statusUrl": "https://x.com/KCTownHall/status/1302003767831912448",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-04T22:01:02.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302004390585421825",
+      "statusUrl": "https://x.com/KCTownHall/status/1302004390585421825",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-04T22:03:31.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302281027960926210",
+      "statusUrl": "https://x.com/KCTownHall/status/1302281027960926210",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-05T16:22:46.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302311398999982081",
+      "statusUrl": "https://x.com/KCTownHall/status/1302311398999982081",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-05T18:23:27.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1302391602812518401",
+      "statusUrl": "https://x.com/KCTownHall/status/1302391602812518401",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-05T23:42:10.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1311091878306213889",
+      "statusUrl": "https://x.com/KCTownHall/status/1311091878306213889",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-09-29T23:53:57.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1312091287273824265",
+      "statusUrl": "https://x.com/KCTownHall/status/1312091287273824265",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-10-02T18:05:15.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1312167901252608001",
+      "statusUrl": "https://x.com/KCTownHall/status/1312167901252608001",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-10-02T23:09:41.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1312482560316895232",
+      "statusUrl": "https://x.com/KCTownHall/status/1312482560316895232",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-10-03T20:00:01.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1312530339051393024",
+      "statusUrl": "https://x.com/KCTownHall/status/1312530339051393024",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-10-03T23:09:53.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1312649591469342722",
+      "statusUrl": "https://x.com/KCTownHall/status/1312649591469342722",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-10-04T07:03:45.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1324836875568320512",
+      "statusUrl": "https://x.com/KCTownHall/status/1324836875568320512",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-11-06T22:11:40.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1325099960933748744",
+      "statusUrl": "https://x.com/KCTownHall/status/1325099960933748744",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2020-11-07T15:37:04.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1367257547724509189",
+      "statusUrl": "https://x.com/KCTownHall/status/1367257547724509189",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-03-03T23:36:16.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1367878555556777989",
+      "statusUrl": "https://x.com/KCTownHall/status/1367878555556777989",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-03-05T16:43:56.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1368272511490744325",
+      "statusUrl": "https://x.com/KCTownHall/status/1368272511490744325",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-03-06T18:49:22.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1368365228765945858",
+      "statusUrl": "https://x.com/KCTownHall/status/1368365228765945858",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-03-07T00:57:48.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1423734504691314698",
+      "statusUrl": "https://x.com/KCTownHall/status/1423734504691314698",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-08-06T19:55:32.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1423795274879836160",
+      "statusUrl": "https://x.com/KCTownHall/status/1423795274879836160",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-08-06T23:57:01.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1424055770472198146",
+      "statusUrl": "https://x.com/KCTownHall/status/1424055770472198146",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-08-07T17:12:08.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1424106887482683397",
+      "statusUrl": "https://x.com/KCTownHall/status/1424106887482683397",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-08-07T20:35:15.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1424143001505386498",
+      "statusUrl": "https://x.com/KCTownHall/status/1424143001505386498",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-08-07T22:58:45.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1433862792990400527",
+      "statusUrl": "https://x.com/KCTownHall/status/1433862792990400527",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-09-03T18:41:44.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1434323234346967046",
+      "statusUrl": "https://x.com/KCTownHall/status/1434323234346967046",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-09-05T01:11:22.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1444329446287290382",
+      "statusUrl": "https://x.com/KCTownHall/status/1444329446287290382",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-10-02T15:52:28.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1444466053665509377",
+      "statusUrl": "https://x.com/KCTownHall/status/1444466053665509377",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-10-03T00:55:18.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1457012244588412935",
+      "statusUrl": "https://x.com/KCTownHall/status/1457012244588412935",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-11-06T15:49:23.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1457031966444896259",
+      "statusUrl": "https://x.com/KCTownHall/status/1457031966444896259",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-11-06T17:07:45.000Z",
+      "recordType": "reply",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1457046287753285637",
+      "statusUrl": "https://x.com/KCTownHall/status/1457046287753285637",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-11-06T18:04:40.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1457371688300056580",
+      "statusUrl": "https://x.com/KCTownHall/status/1457371688300056580",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2021-11-07T15:37:41.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1500289857750401026",
+      "statusUrl": "https://x.com/KCTownHall/status/1500289857750401026",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-03-06T01:59:10.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1510295173548367877",
+      "statusUrl": "https://x.com/KCTownHall/status/1510295173548367877",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-04-02T16:36:43.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1511091801087692813",
+      "statusUrl": "https://x.com/KCTownHall/status/1511091801087692813",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-04-04T21:22:14.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1525157225542651910",
+      "statusUrl": "https://x.com/KCTownHall/status/1525157225542651910",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-05-13T16:53:13.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1532864718490292226",
+      "statusUrl": "https://x.com/KCTownHall/status/1532864718490292226",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-06-03T23:20:02.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1542991559674716165",
+      "statusUrl": "https://x.com/KCTownHall/status/1542991559674716165",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-07-01T22:00:29.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1543272488318242817",
+      "statusUrl": "https://x.com/KCTownHall/status/1543272488318242817",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-07-02T16:36:48.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1555940701338206208",
+      "statusUrl": "https://x.com/KCTownHall/status/1555940701338206208",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-08-06T15:35:45.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1566197849297195009",
+      "statusUrl": "https://x.com/KCTownHall/status/1566197849297195009",
+      "authorHandle": "@KCTownHall",
+      "publishedAt": "2022-09-03T22:54:00.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1573651421681139714",
+      "statusUrl": "https://x.com/Robinson4kc/status/1573651421681139714",
+      "authorHandle": "@Robinson4kc",
+      "publishedAt": "2022-09-24T12:31:50.000Z",
+      "recordType": "repost",
+      "recoveredRoutes": [
+        "posts",
+        "replies"
+      ]
+    }
+  ],
+  "conversationContextRecords": [
+    {
+      "statusId": "1033499895670431744",
+      "statusUrl": "https://x.com/joliejustus/status/1033499895670431744",
+      "authorHandle": "@joliejustus",
+      "publishedAt": "2018-08-25T23:42:31.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1033501260362772480",
+      "statusUrl": "https://x.com/bballkansas/status/1033501260362772480",
+      "authorHandle": "@bballkansas",
+      "publishedAt": "2018-08-25T23:47:56.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1034093516073459712",
+      "statusUrl": "https://x.com/KCMO311/status/1034093516073459712",
+      "authorHandle": "@KCMO311",
+      "publishedAt": "2018-08-27T15:01:21.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1154749460422938624",
+      "statusUrl": "https://x.com/KCMOHealthDept/status/1154749460422938624",
+      "authorHandle": "@KCMOHealthDept",
+      "publishedAt": "2019-07-26T13:45:00.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    },
+    {
+      "statusId": "1289714535251742726",
+      "statusUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "authorHandle": "@Robinson4kc",
+      "publishedAt": "2020-08-02T00:08:01.000Z",
+      "recordType": "original",
+      "recoveredRoutes": [
+        "replies"
+      ]
+    }
+  ],
+  "publicSafety": {
+    "retained": [
+      "status identifiers and URLs",
+      "public author handles",
+      "publication timestamps",
+      "record types",
+      "route membership"
+    ],
+    "excluded": [
+      "post text",
+      "historical phone numbers",
+      "precise addresses",
+      "link labels",
+      "authentication identity",
+      "cookies and session state",
+      "private-account material"
+    ]
+  },
+  "limitation": "This public ledger preserves the redacted acquisition result and a digest of the private capture. It does not recreate deleted, private, liked, or platform-suppressed activity and cannot replay the authenticated browser session without the protected source capture."
+}

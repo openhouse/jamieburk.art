@@ -349,10 +349,10 @@ bibliography claim:
 **Support level:** Strong for circulation; not evidence of outcome
 **Evidence class:** Complete public social-account corpus / linked public sources
 **Public wording:** The account circulated resident-facing sources on food access, housing, elections, transit, public health, emergency resources, and practical cleanup work.
-**Detailed public-safe wording:** The complete archive links nine curated mission-relevant public sources spanning neighborhood food access, housing and renter policy, elections, transit planning, ozone information, COVID-19 relief, and practical cleanup documentation.
+**Detailed public-safe wording:** All 31 distinct posted short URLs are dispositioned. Ten link records map to nine curated mission-relevant public sources spanning neighborhood food access, housing and renter policy, elections, transit planning, ozone information, COVID-19 relief, and practical cleanup documentation; 15 belong to operational-link families and six remain named research leads.
 **Where to project:** Knowledge bank only.
 **Why it matters:** Preserves the account's civic-information role and the source trail future research can close-read without crowding the current case study.
-**Guardrail:** A circulated source remains the work of its named author and publisher. Circulation is not coverage, partnership, endorsement, use, or impact.
+**Guardrail:** A circulated source remains the work of its named author and publisher. Circulation is not coverage, partnership, endorsement, use, or impact. Disposition as a research lead is not claim readiness.
 **Do not say:** These sources covered KC Town Hall; the named publishers or institutions partnered with or endorsed the project; circulation proves resident or policy impact.
 **Protected boundaries:** Preserve only public source metadata and bounded notes; do not publish private analytics, authentication state, or historical contact details from surrounding posts.
 **Review owner:** Jamie

@@ -140,5 +140,8 @@ neighborhood-listening, and stewardship records. The population separates 142
 originals, 13 replies, 28 reposts, and five conversation-context cards; retains
 posted-source and stakeholder-response inventories; and keeps historical
 contact details, raw post text, individual authorship, self-published program
-totals, endorsement, and causal impact behind explicit boundaries. See the
+totals, endorsement, and causal impact behind explicit boundaries. A separate
+redacted acquisition ledger preserves the authenticated route inventory, and a
+31-item URL disposition ledger routes every posted short URL to a promoted
+source, an operational link family, or a named research inquiry. See the
 [full-population research run](runs/2026-07-15-kctownhall-x-full-population.md).

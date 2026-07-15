@@ -197,8 +197,11 @@ drop-off; two community accounts amplified an Oak Park cleanup notice.
 
 Across 118 records, 133 external-link occurrences circulated resident-facing
 sources on food access, housing, elections, transit, voter information, public
-health, emergency resources, and cleanup practice. Circulation is not press
-coverage, partnership, endorsement, current guidance, or causal impact.
+health, emergency resources, and cleanup practice. All 31 distinct short URLs
+are dispositioned: 10 link records map to promoted public sources, 15 to
+governed operational-link families, and six to a named recovery and close-reading
+inquiry. Circulation is not press coverage, partnership, endorsement, current
+guidance, or causal impact.
 
 This supports a public-operations claim: the institutional account carried
 neighborhood listening, project purpose, recurring service intake, civic
@@ -235,6 +238,9 @@ named organizers.
   City, recycler, route, receipt, or partner records.
 - Recover a public-safe KC Town Hall survey response count, synthesis, and
   decision trail without publishing respondent or contact data.
+- Recover and close-read the six unresolved KC Town Hall destinations: two
+  project videos, a community fundraiser, the project COVID-19 page, a project
+  event, and a temporary-electricity implementation page.
 - Recover any public migration record connecting `@wowlistnyc` and `@wowlist`.
 - Continue account discovery for projects currently marked "not recovered";
   that label means the bounded search did not recover an account, not that none

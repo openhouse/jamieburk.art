@@ -23,11 +23,22 @@ endorsement, completion, or government causality?
    patterns, stakeholder response, and dated visible interaction.
 7. Removed post text, phone numbers, pickup addresses, authentication identity,
    cookies, and private-account state from the public fixture.
+8. Generated a separate redacted acquisition ledger from the protected capture,
+   preserving its digest and route membership without retaining post text or
+   authenticated state.
+9. Dispositioned all 31 distinct posted short URLs as promoted sources,
+   operational-link families, or named research inquiries.
 
 The Posts route yielded 170 primary records. Replies rendered 188 cards: 183
 primary records and five other-account conversation-context cards. The primary
 union contains 183 unique canonical status IDs, so no profile-counted item
 remains unmaterialized.
+
+The redacted acquisition ledger preserves 170 Posts-route primary IDs, all 183
+Replies-route primary IDs, 188 rendered Replies cards, and the five excluded
+context IDs. The public manifest hashes that ledger separately from the curated
+fixture, so acquisition evidence and interpretive classification do not depend
+on the same file.
 
 ## Population
 
@@ -62,7 +73,11 @@ Across the population, 118 records contain external links, producing 133
 occurrences and 31 distinct short URLs. Account-authored records account for
 130 occurrences across 115 records and 28 distinct short URLs.
 
-Close-read mission-relevant sources include:
+Every distinct short URL has a recorded disposition: 10 link records map to
+promoted sources, 15 belong to operational-link families, and six remain
+research inquiries. The ten promoted link records resolve to nine distinct
+source records because two historical voter links share one official-source
+record. Close-read mission-relevant sources include:
 
 - Kansas City Star reporting on Leon's Thriftway and neighborhood food access;
 - Northeast News coverage of local affordable-housing policy;
@@ -77,6 +92,11 @@ Close-read mission-relevant sources include:
 The project account circulated these sources. Unless separately established,
 they are not coverage of KC Town Hall, endorsements, partnerships, current
 guidance, or evidence that KC Town Hall caused an outcome.
+
+The six held destinations are two project videos, a community fundraiser, the
+project COVID-19 page, a project event, and a temporary-electricity
+implementation page. They remain recover-and-close-read work, not silently
+dropped links or accomplishment evidence.
 
 ## Stakeholder response
 
@@ -98,6 +118,11 @@ Direct replies, quote responses, and explicit collaborator reports count as
 observable response. Tags and mentions alone do not. These records do not
 establish blanket endorsement, formal adoption, project completion, or causal
 government impact.
+
+The public case-study claim cites the aggregate corpus plus the five item-level
+records for the three Council-member responses, the KCMO 311 response, and the
+Bridging the Gap collaborator report. The acquisition ledger remains
+corroborating provenance rather than a reader-facing citation.
 
 ## Dated visible interaction
 
@@ -127,6 +152,10 @@ totals.
 
 - Fixture:
   `apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json`
+- Redacted acquisition ledger:
+  `docs/knowledge-bank/corpora/kctownhall-x-acquisition-ledger-2026-07-15.json`
+- Posted-URL disposition ledger:
+  `docs/knowledge-bank/corpora/kctownhall-x-posted-url-triage-2026-07-15.json`
 - Manifest:
   `docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.manifest.json`
 - Validator: `scripts/derive-kctownhall-x-corpus.mjs --check`

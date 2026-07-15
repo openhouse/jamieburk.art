@@ -151,6 +151,13 @@ numbers, pickup addresses, authentication identity, cookies, private-account
 state, and session data. A SHA-256 manifest and deterministic validation script
 make the population and aggregate findings reproducible.
 
+A separate redacted acquisition ledger is generated from the protected browser
+capture and preserves the capture digest, 183-post profile observation, 170
+Posts-route IDs, 183 Replies-route primary IDs, five excluded context IDs, and
+public-safe per-record route metadata. This makes acquisition provenance
+independently inspectable from the curated fixture without committing raw post
+text or authenticated state.
+
 The corpus distinguishes 142 original posts, 13 replies, 28 reposts, and five
 other-account conversation-context cards. It records 100 tire-related records,
 12 survey-linked records, and 133 external-link occurrences across 118 records.
@@ -164,6 +171,11 @@ does not mean a source covered, partnered with, or endorsed KC Town Hall.
 Direct replies and quote responses from three sitting Council-member accounts,
 one KCMO 311 service response, community amplification, and one external
 tire-dropoff report remain distinct stakeholder-response types.
+
+The companion posted-URL disposition ledger accounts for all 31 distinct short
+URLs: 10 records map to promoted sources, 15 to governed operational-link
+families, and six to a named recovery inquiry. A disposition records what may be
+done with a link; it does not make every destination claim-ready.
 
 ### Public-Safe Archive Summary
 
