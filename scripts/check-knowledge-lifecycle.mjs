@@ -105,6 +105,20 @@ const eastKcNeighborhoodPracticeSourceIds = [
   "SRC-KCTH-CHESTNUT-TIRE-COLLECTION-2021"
 ];
 
+const teamsArchivalDeepeningSourceIds = [
+  "SRC-CLAUDETTE-MICHAEL-REES-2022",
+  "SRC-CLAUDETTE-MAKE-US-VISIBLE-MUNICH-2022",
+  "SRC-CLAUDETTE-IMPLEMENTATION-HANDOFF-2022",
+  "SRC-CRS-90-DAY-OPERATING-PLAN-2026",
+  "SRC-JOB-HUNT-RESUME-PARITY-2026"
+];
+
+const teamsArchivalDeepeningIntakeIds = [
+  "INT-2026-07-15-TEAMS-JAMIE-PROJECTS-HISTORY-DEEPENING",
+  "INT-2026-07-15-TEAMS-CRS-DEEPENING",
+  "INT-2026-07-15-TEAMS-JOB-HUNT-PARITY"
+];
+
 const archivalProductionSourceIds = [
   "SRC-RAFT-SOUNDINGS-2007",
   "SRC-MONTHLY-MUSIC-HACKATHON-SORTED-AUDIO-2013",
@@ -2837,6 +2851,170 @@ const criteria = [
         !publicRegistryText.includes("RESEARCH-EAST-KC-NEIGHBORHOOD-PRACTICE-2026-001") &&
         !publicRegistryText.includes("CND-EAST-KC-INDIAN-MOUND-EXPANSION") &&
         !publicRegistryText.includes("CND-EAST-KC-CLEVELAND-AVE-CAPITAL-INFLUENCE")
+      );
+    })()
+  },
+  {
+    id: "teams-archival-deepening-lineage",
+    label: "All three Teams collections have bounded intake, source readings, promotions, and explicit holds",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-TEAMS-ARCHIVAL-DEEPENING-2026"
+      );
+      const promotedPairs = [
+        [
+          "CND-CRS-90-DAY-OPERATING-PLAN",
+          "CLM-CRS-90-DAY-OPERATING-PLAN"
+        ],
+        [
+          "CND-CLAUDETTE-AR-COLLABORATION-2022",
+          "CLM-CLAUDETTE-AR-COLLABORATION-2022"
+        ]
+      ];
+      const heldCandidates = [
+        "CND-CRS-90-DAY-PLAN-COMPLETION",
+        "CND-CLAUDETTE-SOLO-TECHNICAL-AUTHORSHIP"
+      ];
+      return Boolean(
+        teamsArchivalDeepeningIntakeIds.every((id) => {
+          const item = intakeItems.find((candidate) => candidate.id === id);
+          return (
+            item?.visibility === "protected" &&
+            item.status === "processed" &&
+            item.protectedLocatorId &&
+            item.linkedRecordIds.includes("INQ-TEAMS-ARCHIVAL-DEEPENING-2026")
+          );
+        }) &&
+        teamsArchivalDeepeningSourceIds.every((id) => {
+          const reading = readingBySourceId.get(id);
+          return sourceIds.has(id) && reading?.assertions.length >= 2 && reading.limitations.length;
+        }) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        promotedPairs.every(([candidateId, claimId]) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "promoted" &&
+            candidate.promotedClaimId === claimId &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.claimId === claimId &&
+                promotion.decision === "promoted"
+            )
+          );
+        }) &&
+        heldCandidates.every((candidateId) => {
+          const candidate = candidateById.get(candidateId);
+          return (
+            candidate?.status === "research-needed" &&
+            !candidate.promotedClaimId &&
+            promotions.some(
+              (promotion) =>
+                promotion.candidateClaimId === candidateId &&
+                promotion.decision === "held"
+            )
+          );
+        })
+      );
+    })()
+  },
+  {
+    id: "crs-90-day-plan-hiring-projection",
+    label: "The Fair Rent operating plan projects specific hiring proof without becoming a completion claim",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CRS-90-DAY-OPERATING-PLAN"
+      );
+      const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+      const occurrence = page?.occurrences.find(
+        (item) => item.id === "crs-90-day-operating-plan"
+      );
+      const proofData = readFileSync("apps/www/src/data/proofs.ts", "utf8");
+      return Boolean(
+        claim?.status === "confirmed-with-boundary" &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-CRS-90-DAY-OPERATING-PLAN-2026" &&
+            item.relationship === "private-support" &&
+            item.renderCitation === false
+        ) &&
+        claim.projections.some(
+          (item) =>
+            item.key === "case-study" &&
+            item.surfaces.includes("/work/fair-rent-nyc") &&
+            /sequenced 90-day.*operating plan/i.test(item.text)
+        ) &&
+        claim.projections.some(
+          (item) =>
+            item.key === "technical-operations" &&
+            item.surfaces.includes("/work/technical-operations")
+        ) &&
+        claim.boundaries.some((item) => /completion|completed/i.test(item)) &&
+        claim.boundaries.some((item) => /collective|movement|coalition/i.test(item)) &&
+        occurrence?.claimId === claim.id &&
+        !occurrence.sourceIds &&
+        renderedProjectionSources.includes(claim.id) &&
+        /fair-rent-90-day-operating-plan/.test(proofData) &&
+        /concrete deliverables, success conditions, consent boundaries, and decision infrastructure/.test(
+          proofData
+        )
+      );
+    })()
+  },
+  {
+    id: "claudette-collective-credit-and-reserve",
+    label: "Claudette preserves collective technical credit as bank depth while solo authorship remains held",
+    pass: (() => {
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-CLAUDETTE-AR-COLLABORATION-2022"
+      );
+      const soloCandidate = candidateById.get(
+        "CND-CLAUDETTE-SOLO-TECHNICAL-AUTHORSHIP"
+      );
+      return Boolean(
+        claim?.status === "confirmed-with-boundary" &&
+        claim.projections.every((projection) =>
+          projection.surfaces.every((surface) => !surface.startsWith("/"))
+        ) &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-CLAUDETTE-MICHAEL-REES-2022" &&
+            item.relationship === "direct-support"
+        ) &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-CLAUDETTE-IMPLEMENTATION-HANDOFF-2022" &&
+            item.relationship === "private-support" &&
+            item.renderCitation === false
+        ) &&
+        claim.boundaries.some((item) => /Michael Rees/i.test(item)) &&
+        claim.boundaries.some((item) => /sole authorship|Do not assign Jamie sole/i.test(item)) &&
+        soloCandidate?.status === "research-needed" &&
+        !soloCandidate.promotedClaimId &&
+        !renderedProjectionSources.includes(claim.id)
+      );
+    })()
+  },
+  {
+    id: "teams-archival-deepening-public-safety",
+    label: "The bounded pass records incomplete access, protected exclusions, and resume-parity limits",
+    pass: (() => {
+      const report = readFileSync(
+        "docs/knowledge-bank/teams-archival-deepening-2026-07-15.md",
+        "utf8"
+      );
+      const resumeSource = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-JOB-HUNT-RESUME-PARITY-2026"
+      );
+      return Boolean(
+        /signed[- ]out/i.test(report) &&
+        /not an exhaustive semantic review|not.*every\s+file/is.test(report) &&
+        /private correspondence|stakeholder names|outreach lists/i.test(report) &&
+        resumeSource?.doesNotEstablish.some((item) => /truth|verification.*claim/i.test(item)) &&
+        resumeSource?.doesNotEstablish.some((item) => /future|replacement|point-in-time/i.test(item)) &&
+        !publicRegistryText.includes("ARCHIVE-CLAUDETTE-IMPLEMENTATION-HANDOFF-2022-001") &&
+        !publicRegistryText.includes("ARCHIVE-CRS-90-DAY-OPERATING-PLAN-2026-001") &&
+        !publicRegistryText.includes("d1e45343efd1e4125fb258514c70ce8101505b8400de3ccb1d30a8389d58fd8c")
       );
     })()
   },

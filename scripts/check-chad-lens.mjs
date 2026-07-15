@@ -17,6 +17,7 @@ const sources = {
   workPage: read("apps/www/src/app/work/page.tsx"),
   workCard: read("apps/www/src/components/WorkCard.tsx"),
   workData: read("apps/www/src/data/work.ts"),
+  proofData: read("apps/www/src/data/proofs.ts"),
   fairRent: read("apps/www/src/content/work/fair-rent-nyc.mdx")
 };
 
@@ -110,6 +111,17 @@ const criteria = [
       /collective-work language|collective campaign|work remains collective/i.test(
         collectiveSources
       ) && /helped|contributed|steward/i.test(collectiveSources)
+  },
+  {
+    id: "crs-operating-plan-specificity",
+    label: "Fair Rent makes Jamie's planning action and the usable operating outputs concrete",
+    pass:
+      /CLM-CRS-90-DAY-OPERATING-PLAN/.test(sources.fairRent) &&
+      /fair-rent-90-day-operating-plan/.test(sources.proofData) &&
+      /sequenced 90-day coalition operating plan/.test(sources.proofData) &&
+      /concrete deliverables, success conditions, consent boundaries, and decision infrastructure/.test(
+        sources.proofData
+      )
   }
 ];
 

@@ -273,6 +273,46 @@ export const proofClaims: ProofClaim[] = [
     lastReviewed: "2026-07-12"
   },
   {
+    id: "fair-rent-90-day-operating-plan",
+    status: "ready",
+    supportLevel: "strong",
+    evidenceClass: ["public-safe-archive-summary", "firsthand-collaborator-context"],
+    publicWording:
+      "Authored a sequenced 90-day coalition operating plan with concrete deliverables, success conditions, consent boundaries, and decision infrastructure.",
+    shortWording: "Authored a sequenced 90-day coalition operating plan",
+    detailedPublicWording:
+      "Jamie translated an emerging coalition's needs into a clear join path, recurring meeting cadence, reusable message kit, consent-aware story bank, implementation-readiness packet, process norms, action tracking, and durable campaign memory.",
+    sourceBasis:
+      "Jamie's protected April 2026 90-day operating plan, reviewed through public-safe metadata and the surrounding shared-memory record.",
+    sourceNote:
+      "The artifact proves authorship and planning, not completion or coalition adoption of every proposal.",
+    whyItMatters:
+      "Shows requirements definition, prioritization, success criteria, consent-aware workflow design, and implementation planning.",
+    guardrail:
+      "Describe it as an authored operating plan. Preserve collective ownership and do not imply every deliverable was completed or adopted.",
+    doNotSay: [
+      "Jamie completed every item in the plan",
+      "The coalition adopted every recommendation",
+      "Jamie owned or led the entire movement"
+    ],
+    protectedBoundaries: [
+      "Stakeholder names",
+      "Outreach lists",
+      "Consent records",
+      "Private strategy",
+      "Working links"
+    ],
+    surfaces: ["technical-operations", "case-study"],
+    relatedProjects: ["fair-rent-nyc"],
+    relatedCapabilities: [
+      "requirements-definition",
+      "implementation-planning",
+      "decision-clarity",
+      "consent-aware-workflows"
+    ],
+    lastReviewed: "2026-07-15"
+  },
+  {
     id: "nyc-artist-coalition-public-web-infrastructure",
     status: "careful",
     supportLevel: "careful",
@@ -810,6 +850,7 @@ export const technicalOperationsProofRows = [
     toward: "Turning unclear public-facing work into launchable plans, releases, and handoffs.",
     proofIds: [
       "technical-operations-operating-backbone",
+      "fair-rent-90-day-operating-plan",
       "hje-modernization-stewardship",
       "callnyc-civic-data-guidance",
       "kc-town-hall-phase-one-delivery",

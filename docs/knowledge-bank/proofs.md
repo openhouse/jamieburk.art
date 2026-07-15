@@ -13,6 +13,7 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 - Built and stewarded 30+ pages of shared Commercial Rent Stabilization campaign-memory and coordination infrastructure.
 - Created a legislative source map and provenance redline for Commercial Rent Stabilization public policy lineages and revision paths.
 - Specified a smallest-serious, privacy-preserving pilot for geography-aggregated commercial vacancy and lease-cost indicators, including coverage and suppression reporting, a methods note, and explicit confidential-data exclusions.
+- Authored a sequenced 90-day coalition operating plan with concrete deliverables, success conditions, consent boundaries, and decision infrastructure.
 - Co-built WOWList.org, a Django, PostgreSQL / PostGIS, and Ember community-calendar platform adopted across roughly 35 city ecosystems.
 - The surviving WOW List Facebook record documents the operating model in use: members introduced calendars in nine cities, a contributor loaded 41 Los Angeles events, and a Phoenix organizer later shared continued use.
 - Created repeatable hosting, onboarding, facilitation, documentation, and continuity systems across 300+ gatherings and 20+ resident artists.
@@ -29,3 +30,27 @@ This file summarizes public-safe proof posture. The canonical machine-readable c
 ## Projection Rule
 
 Public pages may simplify this language, but they must not strengthen ownership, causality, authority, or current-status claims beyond the guardrails in `claims.md`.
+## Teams Archival Deepening, July 15, 2026
+
+## Fair Rent NYC 90-Day Operating Plan
+
+- **Strong claim:** Jamie authored a sequenced 90-day coalition operating plan
+  with concrete deliverables, success conditions, consent boundaries, and
+  decision infrastructure.
+- **What the artifact shows:** a join path, recurring meeting cadence, reusable
+  message kit, consent-aware story bank, implementation-readiness packet,
+  process norms, action tracking, and durable campaign memory.
+- **What it does not show:** completion or coalition adoption of every proposal.
+- **Current use:** Fair Rent NYC case study and Technical Operations proof row.
+
+## Claudette's Theatre on Wheels
+
+- **Strong claim:** Jamie Burkart and Michael Rees collaborated on an
+  augmented-reality experience for Make Us Visible Munich; Jamie shares public
+  video-production credit with Anne Dufy Burkart and Julia Fredenburg.
+- **What the record shows:** a public collaborator page and exhibition listing
+  establish the project and credits; a protected handoff corroborates an
+  integrated 3D, video, code, and mobile AR implementation.
+- **What it does not show:** that Jamie alone wrote the code, produced every
+  asset, or built the complete application.
+- **Current use:** knowledge-bank reserve only.

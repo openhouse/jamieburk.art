@@ -9,6 +9,7 @@ The repo is public. Approval here means approved for public-safe repository and 
 - LinkedIn: `https://linkedin.com/in/jamie-burkart` is approved for display.
 - GitHub: `https://github.com/openhouse` is approved for display.
 - Phone: do not display in website HTML. Phone may remain in the approved resume PDF.
+- Resume parity: on July 15, 2026, the approved July 11 job-hunt PDF and the website resume PDF were byte-identical. This is a release-control check, not independent verification of every resume claim.
 
 ## Approved With Guardrails
 
@@ -17,6 +18,8 @@ The repo is public. Approval here means approved for public-safe repository and 
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - Commercial vacancy and lease-cost pilot brief: approved as a public artifact and citation. Describe it as Jamie's privacy-preserving proposal and implementation specification, not an adopted City program or implemented dataset.
 - Commercial Rent Stabilization provenance redline: public-safe claim metadata is approved; the underlying working document remains protected and is not approved for public distribution.
+- Fair Rent NYC 90-day operating plan: the bounded public-safe claim is approved for the Fair Rent case study and Technical Operations. Describe it as an authored, sequenced operating plan; do not imply completion, coalition adoption of every proposal, or sole ownership of collective work. Do not publish the source plan, stakeholder names, outreach lists, consent records, private strategy, or working links.
+- Claudette's Theatre on Wheels: the collective augmented-reality collaboration and public video-production credits are approved for knowledge-bank reserve. Preserve Michael Rees's collaborator credit and the listed production team; do not claim sole code, 3D, application, or exhibition authorship or publish protected implementation materials.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.
 - Sunday Dinner / 196 scale: use aggregate 300+ gatherings and 20+ resident artists wording.

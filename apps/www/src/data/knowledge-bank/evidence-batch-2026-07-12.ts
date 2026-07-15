@@ -688,6 +688,11 @@ export const evidenceBatchRecords: EvidenceBatch = {
           projection: "case-study"
         },
         {
+          id: "crs-90-day-operating-plan",
+          claimId: "CLM-CRS-90-DAY-OPERATING-PLAN",
+          projection: "case-study"
+        },
+        {
           id: "nycac-public-testimony-2017-2019",
           claimId: "CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019",
           projection: "case-study",

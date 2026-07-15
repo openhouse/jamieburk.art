@@ -228,6 +228,22 @@ limits, privacy boundaries, and professionally relevant patterns. Raw text,
 identifiers, URLs, exact dates, names, locations, privacy labels, interactions,
 and media remain in protected research storage outside the repository.
 
+## Teams Archival Deepening, July 15, 2026
+
+The bounded Teams pass adds five canonical source records:
+
+- Michael Rees's public project page for Claudette's Theatre on Wheels;
+- the public Make Us Visible Munich project listing;
+- a protected implementation handoff used only for bounded technical context;
+- Jamie's protected April 2026 Fair Rent NYC 90-day operating plan; and
+- a public-safe checksum comparison between the approved job-hunt resume and
+  the PDF served by the website.
+
+The first two sources may support collective public project credit. The two
+protected working sources may support only the public-safe abstractions encoded
+in their claim guardrails. The checksum comparison establishes release parity,
+not the truth of every resume claim.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

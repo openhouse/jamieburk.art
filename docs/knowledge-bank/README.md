@@ -67,6 +67,14 @@ communications and Cleveland Avenue civic-design work as reserve depth while
 holding Indian Mound expansion and capital-allocation influence for further
 research.
 
+The [Teams archival-deepening report](teams-archival-deepening-2026-07-15.md)
+records a bounded close reading across Jamie Projects History, CRS, and
+job-hunt. It promotes a 90-day coalition operating-plan claim into the Fair
+Rent and Technical Operations surfaces, preserves the collaborative
+Claudette's Theatre on Wheels augmented-reality project as reserve depth, and
+verifies that the approved July 11 resume in the job-hunt archive is
+byte-identical to the PDF served by the site.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

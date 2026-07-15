@@ -2201,6 +2201,36 @@
         "City coordination does not establish municipal ownership, funding, endorsement, or independent validation.",
         "Project-reported tire and avoided-fee totals remain unaudited and outside the active projection."
       ]
+    },
+    {
+      "id": "CLM-CRS-90-DAY-OPERATING-PLAN",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie authored a sequenced 90-day operating plan that translated an emerging coalition's needs into concrete shared infrastructure: a clear join path, recurring meeting cadence, reusable message kit, consent-aware story bank, implementation-readiness packet, decision norms, action tracking, and durable campaign memory. The plan defines priorities and success conditions; it is not a claim that every proposed deliverable was completed or adopted.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "technical-operations",
+          "text": "Authored a sequenced 90-day coalition operating plan with concrete deliverables, success conditions, consent boundaries, and decision infrastructure.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/technical-operations"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Describe the record as an authored operating plan, not proof that every recommendation was completed or adopted.",
+        "The movement and campaign remained collective; the plan explicitly bounded Jamie's infrastructure role.",
+        "Do not publish stakeholder names, outreach lists, private strategy, consent records, or working links from the underlying artifact."
+      ]
     }
   ],
   "pages": [
@@ -2320,6 +2350,11 @@
         {
           "id": "crs-shared-memory-operations",
           "claimId": "CLM-CRS-SHARED-MEMORY-OPERATIONS",
+          "projection": "case-study"
+        },
+        {
+          "id": "crs-90-day-operating-plan",
+          "claimId": "CLM-CRS-90-DAY-OPERATING-PLAN",
           "projection": "case-study"
         },
         {

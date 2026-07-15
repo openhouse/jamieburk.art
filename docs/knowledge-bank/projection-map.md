@@ -35,6 +35,7 @@ Use claims that directly support operating-backbone fit:
 - `technical-operations-operating-backbone`
 - `fair-rent-campaign-memory`
 - `fair-rent-source-map`
+- `fair-rent-90-day-operating-plan`
 - `nyc-artist-coalition-public-web-infrastructure`
 - `hje-modernization-stewardship`
 - `hje-revenue-growth-contribution`
@@ -64,6 +65,7 @@ as source discipline rather than dumping the bank onto the page.
 
 The NYC Artist Coalition / FairRentNYC case study may project:
 
+- `CLM-CRS-90-DAY-OPERATING-PLAN`
 - `CLM-NYCAC-CIVIC-ADVOCACY-2017`
 - `CLM-TALKS-NOT-RAIDS-TRANSPARENCY`
 - `CLM-CRS-PRIVACY-PRESERVING-DATA-PILOT`
@@ -90,6 +92,11 @@ throughline concrete at more than 1,000 miles. It must continue to hold the exac
 Gulf landing candidate until a final landing record is recovered.
 
 ## Knowledge-Bank Depth, Not Current Projection
+
+`CLM-CLAUDETTE-AR-COLLABORATION-2022` preserves a strong public collaboration
+and exhibition record for future creative-technology or implementation
+compositions. Keep it off the current hiring site until it helps a specific
+audience argument; preserve collective project and video-production credits.
 
 `CLM-HORSE-LORDS-TRUTHERS-VIDEO-2016` is strong, independently corroborated,
 and available for a future creative-technology or biographical composition. Do

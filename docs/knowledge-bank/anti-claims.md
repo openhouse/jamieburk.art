@@ -301,6 +301,25 @@ establishes an integrated software, hardware, fabrication, and gallery-
 production system, but it does not identify which collaborator completed each
 task or prove that every plan item was executed exactly as written.
 
+## Teams Archival Deepening
+
+Do not convert Jamie's April 2026 Fair Rent NYC 90-day operating plan into a
+completion or adoption claim. It establishes authored requirements,
+prioritization, success conditions, consent boundaries, and implementation
+planning. It does not establish that every deliverable was completed, every
+recommendation was adopted, or Jamie owned the collective movement.
+
+Do not say Jamie independently built the complete Claudette's Theatre on Wheels
+AR application, wrote all code, created every 3D asset or video, or solely
+produced the exhibition work. Preserve Michael Rees's collaborator credit and
+the listed collective video-production credits. Do not publish the protected
+handoff, private email, phone numbers, implementation URLs, accounts, source
+files, or uncleared media.
+
+The July 15 checksum comparison establishes only that the approved job-hunt PDF
+and the website resume PDF were byte-identical at review time. It does not
+independently verify every claim inside the resume.
+
 ## Source-Backed Team Memory
 
 Do not name Jonathan Marmor, publish pricing, publish private transcript

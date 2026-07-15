@@ -528,6 +528,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 
+## fair-rent-90-day-operating-plan - Sequenced coalition operating plan
+
+**Status:** Ready with boundaries
+**Support level:** Strong
+**Evidence class:** Protected authored plan / public-safe archive summary
+**Public wording:** Authored a sequenced 90-day coalition operating plan with concrete deliverables, success conditions, consent boundaries, and decision infrastructure.
+**Detailed public-safe wording:** Jamie translated an emerging coalition's needs into a clear join path, recurring meeting cadence, reusable message kit, consent-aware story bank, implementation-readiness packet, process norms, action tracking, and durable campaign memory.
+**Where to project:** Fair Rent NYC case study and Technical Operations.
+**Why it matters:** Shows requirements definition, prioritization, success criteria, consent-aware workflow design, and implementation planning.
+**Guardrail:** The artifact establishes Jamie's authorship and planning judgment. It does not establish completion or coalition adoption of every proposal, and it does not turn a collective movement into Jamie's sole work.
+**Do not say:** Jamie completed every item; the coalition adopted every recommendation; Jamie owned or led the entire movement.
+**Protected boundaries:** Stakeholder names, outreach lists, consent records, private strategy, and working links remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## claudette-ar-collaboration-2022 - Collaborative augmented-reality installation
+
+**Status:** Ready in bank / Held from current site
+**Support level:** Strong
+**Evidence class:** Public collaborator page / public exhibition listing / protected implementation handoff
+**Public wording:** Jamie Burkart and Michael Rees collaborated on Claudette's Theatre on Wheels, an augmented-reality experience for Make Us Visible Munich; public credits also identify Jamie as part of the video's production team with Anne Dufy Burkart and Julia Fredenburg.
+**Detailed public-safe wording:** Public project and exhibition records establish the collaboration, augmented-reality format, exhibition context, and collective production credits. A protected handoff corroborates an integrated 3D, video, code, and mobile AR implementation without assigning every technical task to Jamie.
+**Where to project:** Knowledge-bank reserve; future creative-technology or implementation composition when it serves the audience argument.
+**Why it matters:** Extends Jamie's record of collaborative public-facing systems work across video, three-dimensional assets, code, and spatial computing.
+**Guardrail:** Preserve Michael Rees's collaborator credit and all listed video-production credits. Do not infer sole code, model, application, or exhibition authorship.
+**Do not say:** Jamie independently built the complete AR application; Jamie created every 3D asset or video; Jamie solely produced the exhibition work.
+**Protected boundaries:** Private email, phone numbers, implementation URLs, account information, source files, and uncleared media remain outside the repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
 ## source-backed-team-memory-method - Source-backed team memory
 
 **Status:** Careful  
