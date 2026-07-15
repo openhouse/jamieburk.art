@@ -44,6 +44,13 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../
 const suitePath = path.join(repoRoot, "evals/knowledge-bank/evals.json");
 const holdoutRunsPath = path.join(repoRoot, "evals/knowledge-bank/holdout-runs.json");
 const publicRegistryPath = path.join(repoRoot, "apps/www/src/data/knowledge-bank/public-registry.json");
+const nycacCouncilTranscriptReviewPath = path.join(
+  repoRoot,
+  "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json"
+);
+export const nycacCouncilTranscriptReview = JSON.parse(
+  readFileSync(nycacCouncilTranscriptReviewPath, "utf8")
+);
 const KCTH_FIELD_PRACTICE_REVIEW_LOCKS = Object.freeze({
   corpusSha256: "7344b91556feaffebbcf4394b0b6cca9ac005c8d94d3b325dce97c557fc1cdc1",
   canonicalRecordsSha256: "00d2c80af90f0584311a5557e2ad02a8b67d63e7b1c5719a2418d82f692d4865",
@@ -977,6 +984,43 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   )).digest("hex");
   const institutionalRelatedClaimsApproved =
     institutionalRelatedClaimsSha256 === institutional.approvedRelatedClaimsSha256;
+  const institutionalTranscriptAuditSha256 = createHash("sha256")
+    .update(JSON.stringify(nycacCouncilTranscriptReview))
+    .digest("hex");
+  const institutionalTranscriptAuditApproved =
+    institutionalTranscriptAuditSha256 === institutional.approvedTranscriptAuditSha256;
+  const transcriptNegativeControl = nycacCouncilTranscriptReview.negativeControls?.[0];
+  const transcriptAuditComplete = Boolean(
+    institutional.transcriptAuditPath ===
+      "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json" &&
+      nycacCouncilTranscriptReview.reviewedAt === "2026-07-15" &&
+      nycacCouncilTranscriptReview.scope?.completeness === "bounded" &&
+      nycacCouncilTranscriptReview.summary?.committeeMeetingPagesAttempted === 74 &&
+      nycacCouncilTranscriptReview.summary?.committeeMeetingPagesRecovered === 74 &&
+      nycacCouncilTranscriptReview.summary?.linkedMatterPages === 77 &&
+      nycacCouncilTranscriptReview.summary?.searchableTranscriptAttachments === 132 &&
+      nycacCouncilTranscriptReview.summary?.uniquePdfHashes === 91 &&
+      nycacCouncilTranscriptReview.summary?.attachmentsMentioningFinkelpearl === 46 &&
+      nycacCouncilTranscriptReview.summary?.artistCoalitionCandidateAttachments === 2 &&
+      nycacCouncilTranscriptReview.summary?.commissionerAttributedOccurrences === 1 &&
+      nycacCouncilTranscriptReview.summary?.nonCommissionerCandidateAttachments === 1 &&
+      nycacCouncilTranscriptReview.commissionerOccurrence?.date === "2017-05-19" &&
+      nycacCouncilTranscriptReview.commissionerOccurrence?.speaker === "DCLA Commissioner Tom Finkelpearl" &&
+      nycacCouncilTranscriptReview.commissionerOccurrence?.sha256 ===
+        "754bccbcb460d13a2b801900c61742a111da62fc00f966008c3137c0c821f975" &&
+      nycacCouncilTranscriptReview.nonCommissionerCandidate?.date === "2018-03-16" &&
+      nycacCouncilTranscriptReview.nonCommissionerCandidate?.speaker === "Jamie Burkart" &&
+      /not another Finkelpearl reference/i.test(
+        nycacCouncilTranscriptReview.nonCommissionerCandidate?.classification ?? ""
+      ) &&
+      nycacCouncilTranscriptReview.duplicateOfficialRoute?.sha256 ===
+        nycacCouncilTranscriptReview.commissionerOccurrence?.sha256 &&
+      transcriptNegativeControl?.attribution === "Disability Arts NYC task force" &&
+      transcriptNegativeControl?.notAttribution === "NYC Artist Coalition" &&
+      nycacCouncilTranscriptReview.limitations?.some((limitation) => /not exhaustive/i.test(limitation)) &&
+      nycacCouncilTranscriptReview.limitations?.some((limitation) => /speaker attribution/i.test(limitation)) &&
+      institutionalTranscriptAuditApproved
+  );
   const institutionalContentSha256 = createHash("sha256").update(JSON.stringify({
     claim: institutionalClaim && {
       internalClaim: institutionalClaim.internalClaim,
@@ -1022,7 +1066,8 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
     /\b(?:Finkelpearl|DCLA)\b[^.]{0,100}\bused\b[^.]{0,100}\b(?:rescue|legitimacy)\b/i,
     /\b(?:Council|Espinal)\b[^.]{0,100}\b(?:followed|adopted)\b[^.]{0,80}\b(?:coalition|NYC Artist Coalition)\b[^.]{0,40}\b(?:blueprint|agenda)\b/i,
     /\b(?:NYC Artist Coalition|coalition) testimony\b[^.]{0,80}\bmoved\b[^.]{0,40}\bEspinal\b/i,
-    /\bpolicy alignment proves\b/i
+    /\bpolicy alignment proves\b/i,
+    /\b(?:NYC Artist Coalition|the coalition)\b[^.]{0,120}\bhuge influence\b|\bhuge influence\b[^.]{0,120}\b(?:NYC Artist Coalition|the coalition)\b/i
   ];
   const institutionalOverclaimFree = institutionalOverclaimPatterns.every(
     (pattern) => !pattern.test(institutionalAffirmativeText) &&
@@ -1092,6 +1137,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       institutionalClaim.antiClaims.some((antiClaim) => /depended|could not act/i.test(antiClaim)) &&
       institutionalClaim.antiClaims.some((antiClaim) => /private motive/i.test(antiClaim)) &&
       institutionalClaim.antiClaims.some((antiClaim) => /authored or enacted|caused/i.test(antiClaim)) &&
+      institutionalClaim.antiClaims.some((antiClaim) => /huge influence/i.test(antiClaim)) &&
       institutionalInquiry?.resultStatus === "partially-recovered" &&
       institutionalInquiry.sourceIds.length >= 7 &&
       institutionalInquiry.limitations.some((limitation) => /private communications|personal motive/i.test(limitation)) &&
@@ -1105,6 +1151,15 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       sourceById.get("SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19")?.doesNotEstablish.some(
         (boundary) => /dependency/i.test(boundary)
       ) &&
+      sourceById.get("SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19")?.doesNotEstablish.some(
+        (boundary) => /huge-influence statement/i.test(boundary)
+      ) &&
+      sourceById.get("SRC-NYCAC-COUNCIL-PRELIM-BUDGET-HEARING-2018-03-16")?.supportsGenerally.includes(
+        "Jamie's public account of reciprocal CreateNYC office hours"
+      ) &&
+      sourceById.get("SRC-NYCAC-COUNCIL-TRANSCRIPT-REVIEW-2026-07-15")?.doesNotEstablish.some(
+        (boundary) => /exhaustive search/i.test(boundary)
+      ) &&
       institutionalCorrection?.status === "active" &&
       institutionalCorrection.claimId === "CLM-NYCAC-CABARET-TESTIMONY-2017" &&
       institutionalCorrection.previousText === "June 19, 2017" &&
@@ -1117,6 +1172,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       institutionalCorrection.affectedSurfaces.length === 3 &&
       institutionalContentApproved &&
       institutionalRelatedClaimsApproved &&
+      transcriptAuditComplete &&
       institutionalOverclaimFree &&
       staleCabaretHearingDateFree &&
       institutionalEvidenceClosed &&
@@ -5239,6 +5295,18 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
         nycacFacebookEventsComplete,
         personalFacebookEventsComplete,
         nycacFacebookPostsComplete
+      },
+      institutionalCapacity: {
+        actualContentSha256: institutionalContentSha256,
+        approvedContentSha256: institutional.approvedContentSha256,
+        actualRelatedClaimsSha256: institutionalRelatedClaimsSha256,
+        approvedRelatedClaimsSha256: institutional.approvedRelatedClaimsSha256,
+        actualTranscriptAuditSha256: institutionalTranscriptAuditSha256,
+        approvedTranscriptAuditSha256: institutional.approvedTranscriptAuditSha256,
+        transcriptAuditComplete,
+        institutionalEvidenceClosed,
+        institutionalOverclaimFree,
+        staleCabaretHearingDateFree
       },
       kcTownHall: {
         actualSha256: kcTownHallContentSha256,

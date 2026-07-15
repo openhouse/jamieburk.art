@@ -31,7 +31,11 @@ import {
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 import { projectSocialAccounts, socialEngagementEvents } from "../../apps/www/src/data/knowledge-bank/social-media-production-2026-07.ts";
 import { proofClaims } from "../../apps/www/src/data/proofs.ts";
-import { evaluateKnowledgeBank, loadKnowledgeEvalSuite } from "../lib/knowledge-evals.mjs";
+import {
+  evaluateKnowledgeBank,
+  loadKnowledgeEvalSuite,
+  nycacCouncilTranscriptReview
+} from "../lib/knowledge-evals.mjs";
 import { nycacMissionSignalRules } from "../lib/nycac-mission-classifier.mjs";
 import { urbanhermitMissionSignalRules } from "../lib/urbanhermit-mission-classifier.mjs";
 
@@ -530,6 +534,43 @@ test("institutional-capacity analysis preserves public function without inventin
   assert.ok(claim?.antiClaims.some((antiClaim) => /depended|could not act/i.test(antiClaim)));
 });
 
+test("Council transcript review preserves corpus, speaker, duplicate, and referent controls", () => {
+  const result = evaluateKnowledgeBank(suite);
+  assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 5);
+  assert.equal(nycacCouncilTranscriptReview.summary.searchableTranscriptAttachments, 132);
+  assert.equal(nycacCouncilTranscriptReview.summary.uniquePdfHashes, 91);
+  assert.equal(nycacCouncilTranscriptReview.summary.commissionerAttributedOccurrences, 1);
+  assert.equal(nycacCouncilTranscriptReview.commissionerOccurrence.speaker, "DCLA Commissioner Tom Finkelpearl");
+  assert.equal(nycacCouncilTranscriptReview.nonCommissionerCandidate.speaker, "Jamie Burkart");
+  assert.equal(
+    nycacCouncilTranscriptReview.duplicateOfficialRoute.sha256,
+    nycacCouncilTranscriptReview.commissionerOccurrence.sha256
+  );
+  assert.equal(nycacCouncilTranscriptReview.negativeControls[0].attribution, "Disability Arts NYC task force");
+  assert.equal(nycacCouncilTranscriptReview.negativeControls[0].notAttribution, "NYC Artist Coalition");
+});
+
+test("Council transcript review rejects count drift and a false huge-influence attribution", () => {
+  const originalCount = nycacCouncilTranscriptReview.summary.commissionerAttributedOccurrences;
+  const originalAttribution = nycacCouncilTranscriptReview.negativeControls[0].attribution;
+
+  try {
+    nycacCouncilTranscriptReview.summary.commissionerAttributedOccurrences = 2;
+    let result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+
+    nycacCouncilTranscriptReview.summary.commissionerAttributedOccurrences = originalCount;
+    nycacCouncilTranscriptReview.negativeControls[0].attribution = "NYC Artist Coalition";
+    result = evaluateKnowledgeBank(suite);
+    assert.equal(result.criteria.find((item) => item.criterionId === "KB-EVAL-AGENCY")?.score, 1);
+    assert.equal(result.accepted, false);
+  } finally {
+    nycacCouncilTranscriptReview.summary.commissionerAttributedOccurrences = originalCount;
+    nycacCouncilTranscriptReview.negativeControls[0].attribution = originalAttribution;
+  }
+});
+
 test("institutional-capacity analysis rejects a missing motive boundary", () => {
   const claim = knowledgeBank.claims.find(
     (item) => item.id === suite.pilot.institutionalCapacity.claimId
@@ -573,7 +614,8 @@ test("institutional-capacity analysis rejects blind-holdout motive, dependence, 
     "The Council would have been unable to legislate without NYC Artist Coalition.",
     "Espinal privately sought NYC Artist Coalition as validation for his agenda.",
     "The coalition guaranteed passage of the Cabaret repeal.",
-    "DCLA owed the success of CreateNYC to NYC Artist Coalition."
+    "DCLA owed the success of CreateNYC to NYC Artist Coalition.",
+    "Finkelpearl testified that NYC Artist Coalition had a huge influence on CreateNYC."
   ];
 
   try {

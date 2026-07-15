@@ -333,7 +333,7 @@ export const agencyGraph = {
       status: "confirmed-with-boundary",
       claimIds: ["CLM-NYCAC-INSTITUTIONAL-CAPACITY-2017"],
       sourceIds: ["SRC-NYCAC-DCLA-BUDGET-HEARING-2017-05-19"],
-      sourceSupportKeys: ["Finkelpearl cited coalition formation as a public-process outcome"],
+      sourceSupportKeys: ["Finkelpearl cited coalition formation as a public-process outcome", "placement within reciprocal public-engagement explanation"],
       boundaries: ["This records Finkelpearl's public testimony as commissioner, not his private motive, personal dependency, or sole City creation of the coalition."],
       reviewedAt,
       reviewedBy

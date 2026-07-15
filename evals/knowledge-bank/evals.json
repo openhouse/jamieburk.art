@@ -151,10 +151,15 @@
       "inquiryId": "INQ-NYCAC-INSTITUTIONAL-NEED",
       "correctedSourceId": "SRC-NYCAC-COUNCIL-CABARET-HEARING-2017-09-14",
       "correctionId": "COR-NYCAC-CABARET-HEARING-DATE-2026",
-      "approvedContentSha256": "06f499a9c10eee7afe2ee47227919a4994b868690093743a63113d3d161111f2",
-      "approvedRelatedClaimsSha256": "0c5e0f7926ddcf0913674dc672f9100bfe25f1ea7ce921b762399356e5a31186",
+      "transcriptAuditPath": "docs/knowledge-bank/data/nycac-finkelpearl-council-transcript-review-2026-07.json",
+      "approvedTranscriptAuditSha256": "364a0f7380d9d011a00c5bb0c0ceb9775186e14981379358198c082a9c7d2fee",
+      "approvedContentSha256": "810e0b33f01626bca191b83f9d67baf7bd82832eba803d5dff1bc831ad5cbc2a",
+      "approvedRelatedClaimsSha256": "7a0aeb2c1f4645bb914d28e974cd789f3d023141135dab35d11153c0a41d9977",
       "observationIds": [
         "OBS-NYCAC-DCLA-INSTITUTIONAL-USE",
+        "OBS-NYCAC-FINKELPEARL-HEARING-CONTEXT",
+        "OBS-NYCAC-FINKELPEARL-TRANSCRIPT-AUDIT",
+        "OBS-NYCAC-JAMIE-DCLA-RECIPROCITY-2018",
         "OBS-NYCAC-COUNCIL-EVIDENTIARY-USE",
         "OBS-NYCAC-ESPINAL-REFORM-FRAME",
         "OBS-NYCAC-ESPINAL-PUBLIC-CONSTITUENCY",
@@ -1025,7 +1030,7 @@
     "agencyGraph": {
       "expectedEntityCount": 31,
       "expectedRelationCount": 31,
-      "approvedGraphSha256": "f53d1e0589f0c0eb6a8eb705d792cf7492bb993e53386544b2134deed3259e49",
+      "approvedGraphSha256": "ee05326db54ab02a5a22b1d36b09308159aa6482c790eef78e64bed1b8b48f86",
       "relationIds": [
         "REL-WATERWAYS-RAFT-ORIGIN",
         "REL-GREAT-ACCOMMODATIONS-SPEARHEADED",

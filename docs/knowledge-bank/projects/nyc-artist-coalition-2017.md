@@ -1,6 +1,6 @@
 # NYC Artist Coalition: 2017-2018 public record
 
-**Reviewed:** 2026-07-14
+**Reviewed:** 2026-07-15
 
 **Public projection:** Six bounded claims selected for
 `/work/fair-rent-nyc`; additional mature claims remain held for future
@@ -126,6 +126,14 @@ to DCLA, the City Council, and Rafael Espinal:
   public feedback and the power of convening. That supports treating the
   coalition as a durable outcome of DCLA's public process and an organized
   civic counterpart, not as proof of his private motive or dependence.
+- A bounded search of 132 official transcript attachments recovered through
+  the 2014-2019 Cultural Affairs committee route found one
+  commissioner-attributed coalition occurrence: that May 19, 2017 passage. A
+  March 2018 keyword candidate was Jamie's testimony, not a second Finkelpearl
+  reference.
+- Jamie's March 2018 budget testimony described the reciprocal value directly:
+  CreateNYC office hours helped underground artists reach safety services while
+  helping the City understand artists' lives.
 - Espinal opened the September 14 Cabaret Law hearing by seeking evidence from
   advocates, agencies, industry, and other interested parties. Jamie's
   testimony supplied situated evidence linking licensing fear, voluntary
@@ -141,7 +149,11 @@ to DCLA, the City Council, and Rafael Espinal:
 This synthesis is encoded as
 `CLM-NYCAC-INSTITUTIONAL-CAPACITY-2017`, an inference held off public surfaces
 until a future composition has a clear audience need and editorial reason to
-use it.
+use it. See the
+[Council transcript review](nycac-finkelpearl-council-hearing-review.md) for
+the corpus method, candidate disposition, duplicate control, and the important
+boundary that Finkelpearl's "huge influence" statement referred to the
+Disability Arts NYC task force, not NYC Artist Coalition.
 
 ## Boundaries
 

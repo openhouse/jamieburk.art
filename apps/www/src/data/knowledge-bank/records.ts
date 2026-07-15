@@ -247,6 +247,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostKnowledge.sources,
     ...jamiePersonalFacebookPostKnowledge.sources,
     ...nycacImplementationEvidence.sources,
+    ...nycacInstitutionalCapacity.sources,
     ...nycacFacebookEventKnowledge.sources,
     ...nycacFacebookPostKnowledge.sources,
     ...personalWowListFacebookEventKnowledge.sources,

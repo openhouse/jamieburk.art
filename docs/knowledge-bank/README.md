@@ -81,6 +81,12 @@ for the rule that separates individual contribution, shared production,
 coalition action, and institutional enactment.
 
 See
+[projects/nycac-finkelpearl-council-hearing-review.md](projects/nycac-finkelpearl-council-hearing-review.md)
+for the bounded 2014-2019 Council transcript search, its one
+commissioner-attributed NYC Artist Coalition occurrence, the rejected 2018
+speaker-co-occurrence, and the institutional-capacity interpretation.
+
+See
 [projects/nycac-campaign-press-archive.md](projects/nycac-campaign-press-archive.md)
 for the complete, deduplicated press indexes from Let NYC Dance, Talks Not
 Raids, Save NYC Spaces, and the supplied Fair Rent NYC Wayback capture.
