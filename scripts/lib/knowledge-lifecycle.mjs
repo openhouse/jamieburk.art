@@ -1398,6 +1398,191 @@ export function validateKnowledgeLifecycle(bank, suite) {
     }
   }
 
+  if (suite.requiredNycArtcFacebookPosts) {
+    const required = suite.requiredNycArtcFacebookPosts;
+    for (const id of required.intakeIds) {
+      if (!intakeIds.has(id)) add("capture_integrity", "missing-nycartc-facebook-post-intake", `Missing ${id}`);
+    }
+    for (const id of required.sourceIds) {
+      if (!sourceIds.has(id)) add("source_decomposition", "missing-nycartc-facebook-post-source", `Missing ${id}`);
+    }
+    for (const id of required.claimIds) {
+      if (!claimIds.has(id)) add("provenance_closure", "missing-nycartc-facebook-post-claim", `Missing ${id}`);
+    }
+    for (const id of required.inquiryIds) {
+      if (!inquiryIds.has(id)) add("research_honesty", "missing-nycartc-facebook-post-inquiry", `Missing ${id}`);
+    }
+
+    const corpusIntake = bank.intakeItems.find((item) => item.id === required.corpusIntakeId);
+    const memoryIntake = bank.intakeItems.find((item) => item.id === required.memoryIntakeId);
+    if (
+      !corpusIntake ||
+      corpusIntake.sensitivity === "public-safe" ||
+      corpusIntake.availability !== "local-private" ||
+      !corpusIntake.protectedLocatorId ||
+      corpusIntake.submittedUrl
+    ) {
+      add("projection_restraint", "nycartc-facebook-post-intake-boundary", `${required.corpusIntakeId} exposes the record-level post census`);
+    }
+    if (
+      !memoryIntake ||
+      !memoryIntake.sourceIds.includes(required.memorySourceId) ||
+      !memoryIntake.sourceIds.includes(required.managementControlSourceId) ||
+      !memoryIntake.claimIds.includes(required.roleClaimId) ||
+      !memoryIntake.inquiryIds.includes(required.roleInquiryId)
+    ) {
+      add("provenance_closure", "nycartc-facebook-role-memory-intake", `${required.memoryIntakeId} is not linked to distinct memory, management, role, and inquiry records`);
+    }
+
+    const corpusSource = sourceById.get(required.corpusSourceId);
+    const contentControl = sourceById.get(required.contentControlSourceId);
+    const managementControl = sourceById.get(required.managementControlSourceId);
+    const urlInventory = sourceById.get(required.urlInventorySourceId);
+    const memorySource = sourceById.get(required.memorySourceId);
+    const corpusText = JSON.stringify(corpusSource ?? {});
+    if (
+      !corpusSource ||
+      corpusSource.visibility !== "private" ||
+      !corpusSource.protectedLocatorId ||
+      !corpusText.includes(String(required.currentPostCount)) ||
+      !corpusSource.locator?.includes("matching non-identifying SHA-256 fingerprints") ||
+      !corpusSource.locator?.includes("exact UTF-8 keys sorted under LC_ALL=C with LF delimiters and a final LF") ||
+      !corpusSource.locator?.match(/two exact 444-ID traversals/i) ||
+      !corpusSource.doesNotEstablish.some((item) => /deleted before capture.*lifetime historical population/i.test(item)) ||
+      !corpusSource.doesNotEstablish.some((item) => /human publisher or author/i.test(item))
+    ) {
+      add("capture_integrity", "nycartc-facebook-post-population-source", `${required.corpusSourceId} loses its rerun, current-population, or authorship boundary`);
+    }
+    if (
+      !contentControl ||
+      contentControl.visibility !== "protected" ||
+      !contentControl.protectedLocatorId ||
+      !contentControl.doesNotEstablish.some((item) => /2017-2021 post denominator/i.test(item)) ||
+      !contentControl.doesNotEstablish.some((item) => /individual authorship/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-content-control-boundary", "The modern Meta content control is being used as historical population or authorship evidence");
+    }
+    if (
+      !managementControl ||
+      managementControl.visibility !== "protected" ||
+      !managementControl.protectedLocatorId ||
+      !managementControl.supportsGenerally.some((item) => /current Page-management relationship/i.test(item)) ||
+      !managementControl.doesNotEstablish.some((item) => /historic exclusive administration/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-management-control-boundary", "Current task access is being converted into historical exclusivity");
+    }
+    if (
+      !memorySource ||
+      memorySource.visibility !== "private" ||
+      !memorySource.publicNote?.match(/remembers.*predominantly.*other coalition participants/i) ||
+      !memorySource.doesNotEstablish.some((item) => /quantitative share/i.test(item)) ||
+      !memorySource.doesNotEstablish.some((item) => /sole administration/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-role-memory-boundary", "The first-person role memory loses attribution or shared-use limits");
+    }
+    if (
+      !urlInventory ||
+      urlInventory.visibility !== "private" ||
+      ![required.outboundLinkOccurrences, required.uniqueOutboundUrls].every((count) => JSON.stringify(urlInventory).includes(String(count))) ||
+      !urlInventory.doesNotEstablish.some((item) => /truth of linked content/i.test(item)) ||
+      !urlInventory.doesNotEstablish.some((item) => /endorsement, clicks, conversion/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-posted-url-source", "The posted URL inventory loses exact counts or routing limits");
+    }
+
+    const population = bank.claims.find((item) => item.id === required.populationClaimId);
+    const practice = bank.claims.find((item) => item.id === required.practiceClaimId);
+    const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+    const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+    const urlClaim = bank.claims.find((item) => item.id === required.urlClaimId);
+    const role = bank.claims.find((item) => item.id === required.roleClaimId);
+    const allClaims = [population, practice, stakeholder, engagement, urlClaim, role];
+    if (allClaims.some((claim) => !claim || claim.publicationStatus !== "internal-only" || claim.projections.some((projection) => projection.status === "active"))) {
+      add("projection_restraint", "nycartc-facebook-post-projection-boundary", "NYC Artist Coalition Facebook post research is projected publicly instead of retained as reserve depth");
+    }
+    if (
+      !population ||
+      !population.internalClaim.includes(String(required.currentPostCount)) ||
+      !population.internalClaim.match(/Two independent terminal traversals/i) ||
+      !population.boundaries.some((item) => /Deleted, unpublished, pre-migration-omitted/i.test(item)) ||
+      !population.antiClaims.some((item) => /exactly 444.*history/i.test(item))
+    ) {
+      add("capture_integrity", "nycartc-facebook-post-population-claim", `${required.populationClaimId} overstates the currently observable population`);
+    }
+    if (
+      !practice ||
+      !practice.internalClaim.match(/sustained collective publishing and participation system/i) ||
+      !practice.boundaries.some((item) => /not an assignment of every post.*to Jamie/i.test(item)) ||
+      !practice.boundaries.some((item) => /not readership, conversion, adoption, or impact/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-practice-boundary", `${required.practiceClaimId} loses collective credit or routing limits`);
+    }
+    if (
+      !stakeholder ||
+      !stakeholder.internalClaim.includes(String(required.councilRouteOccurrences)) ||
+      !stakeholder.boundaries.some((item) => /not unique people/i.test(item)) ||
+      !stakeholder.boundaries.some((item) => /not verified engagement/i.test(item)) ||
+      !stakeholder.antiClaims.some((item) => /Eighty-eight NYC Council members engaged/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-stakeholder-boundary", `${required.stakeholderClaimId} converts outgoing routing into stakeholder engagement`);
+    }
+    if (
+      !engagement ||
+      ![required.postsWithVisibleSignals, required.visibleReactions, required.visibleComments, required.visibleShares].every((count) => engagement.internalClaim.replaceAll(",", "").includes(String(count))) ||
+      !engagement.boundaries.some((item) => /not unique people.*historical reach.*attendance.*endorsement.*impact/i.test(item))
+    ) {
+      add("projection_restraint", "nycartc-facebook-engagement-boundary", `${required.engagementClaimId} converts mutable counters into reach or impact`);
+    }
+    if (
+      !urlClaim ||
+      ![required.outboundLinkOccurrences, required.uniqueOutboundUrls].every((count) => urlClaim.internalClaim.includes(String(count))) ||
+      !urlClaim.boundaries.some((item) => /source-discovery and action-routing leads/i.test(item)) ||
+      !urlClaim.antiClaims.some((item) => /Every linked organization endorsed/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-posted-url-boundary", `${required.urlClaimId} converts routes into proof, endorsement, or outcomes`);
+    }
+    if (
+      !role ||
+      role.status !== "use-with-care" ||
+      !role.internalClaim.match(/recalls.*predominantly.*other coalition participants/i) ||
+      !role.evidence.some((item) => item.sourceId === required.memorySourceId) ||
+      !role.evidence.some((item) => item.sourceId === required.managementControlSourceId) ||
+      !role.evidence.some((item) => item.sourceId === required.contentControlSourceId) ||
+      !role.boundaries.some((item) => /first-person attribution/i.test(item)) ||
+      !role.boundaries.some((item) => /Do not assign any specific post/i.test(item)) ||
+      !role.antiClaims.some((item) => /sole Page administrator/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-role-boundary", `${required.roleClaimId} loses attribution, evidence separation, or shared credit`);
+    }
+
+    const populationInquiry = bank.researchInquiries.find((item) => item.id === required.populationInquiryId);
+    const roleInquiry = bank.researchInquiries.find((item) => item.id === required.roleInquiryId);
+    const sourceInquiry = bank.researchInquiries.find((item) => item.id === required.sourceInquiryId);
+    if (
+      !populationInquiry ||
+      populationInquiry.resultStatus !== "partially-recovered" ||
+      !populationInquiry.findings.some((item) => /Both independent traversals.*444/i.test(item)) ||
+      !populationInquiry.limitations.some((item) => /100 percent coverage.*not a native export/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-population-inquiry", `${required.populationInquiryId} loses rerun or current-surface boundaries`);
+    }
+    if (
+      !roleInquiry ||
+      roleInquiry.resultStatus !== "partially-recovered" ||
+      !roleInquiry.findings.some((item) => /predominant Page use.*others/i.test(item)) ||
+      !roleInquiry.limitations.some((item) => /Current task access does not establish historical exclusivity/i.test(item))
+    ) {
+      add("research_honesty", "nycartc-facebook-role-inquiry", `${required.roleInquiryId} loses its partial result or shared-use boundary`);
+    }
+    if (
+      !sourceInquiry ||
+      !sourceInquiry.limitations.some((item) => /not automatic corroboration/i.test(item)) ||
+      !sourceInquiry.findings.some((item) => /metadata-only comparative-relief lead/i.test(item))
+    ) {
+      add("source_decomposition", "nycartc-facebook-source-inquiry", `${required.sourceInquiryId} promotes routes without source review`);
+    }
+  }
+
   if (suite.requiredGoogleDriveArchiveProduction) {
     const required = suite.requiredGoogleDriveArchiveProduction;
     for (const intakeId of required.intakeIds) {

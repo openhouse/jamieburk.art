@@ -31,6 +31,10 @@ individual and collective causal claims separate.
 - Twelve recovered records document a recurring coalition-meeting practice across ten named physical cultural spaces and two later virtual meetings. This is a recurring, rotating-venue pattern, not proof of an uninterrupted monthly schedule.
 - Independent Village Voice reporting described about one hundred people physically gathered at the October 2017 Market Hotel town hall. Facebook response displays are separate platform signals and are not attendance counts.
 - Jamie describes helping establish and produce this public-event and meeting practice, connecting lessons from WOW List with legislative advocacy. That role wording remains explicitly first-person; the event corpus documents the collective practice but does not independently allocate every production task.
+- Two independent authenticated traversals recovered the same 444 currently visible Facebook post identities spanning January 29, 2017, through September 15, 2021. Every record received a form, primary-theme, route, and visible-counter disposition.
+- The Page corpus documents a sustained collective publishing and participation system across coalition events, campaign sites, hearings, public information, press, cultural partners, and practical resources. It does not assign every post, event, quotation, or design decision to Jamie.
+- Rule-matched stakeholder references include 88 Council-related record occurrences. These are outgoing addressing or routing traces, not 88 Council members, inbound engagement, endorsement, or policy response.
+- Facebook currently documents Jamie's Page-management relationship and task access. Jamie remembers predominant but shared historic Page use. The human publisher of individual historic posts remains unresolved.
 
 ## Open Research
 
@@ -41,6 +45,8 @@ individual and collective causal claims separate.
 - A complete enacted-law record and fuller collective-credit history for Cabaret Law repeal.
 - The relationship, if any, between the September 28 invitation in Greene Hill Food Co-op and the separately documented October 11 Market Hotel event.
 - Article-level close reading for the 41 newly catalogued press sources, with claim promotion only where the article body and locator support it.
+- A native Meta Page export, administrator chronology, and collaborator proof notes for the historical division of Facebook publishing labor.
+- Continued close reading of the 39 unique posted URL leads, with no promotion from route to source support until destination contents are verified.
 
 ## Projection Decision
 

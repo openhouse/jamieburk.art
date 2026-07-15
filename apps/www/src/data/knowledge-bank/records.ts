@@ -44,6 +44,12 @@ import {
   wowlistFacebookPostSources
 } from "./wowlist-facebook-posts-archive-production.ts";
 import {
+  nycArtcFacebookPostClaims,
+  nycArtcFacebookPostIntakes,
+  nycArtcFacebookPostResearchInquiries,
+  nycArtcFacebookPostSources
+} from "./nycartc-facebook-posts-archive-production.ts";
+import {
   campaignPressCollections,
   campaignPressIntakes,
   campaignPressSources
@@ -61,6 +67,7 @@ import {
 
 const knowledgeBankInput = {
   intakeItems: [
+    ...nycArtcFacebookPostIntakes,
     ...wowlistFacebookPostIntakes,
     ...googleDriveArchiveIntakes,
     ...socialArchiveIntakes,
@@ -661,6 +668,7 @@ const knowledgeBankInput = {
     }
   ],
   sources: [
+    ...nycArtcFacebookPostSources,
     ...wowlistFacebookPostSources,
     ...googleDriveArchiveSources,
     ...socialArchiveSources,
@@ -835,6 +843,7 @@ const knowledgeBankInput = {
     ...campaignPressSources
   ],
   claims: [
+    ...nycArtcFacebookPostClaims,
     ...wowlistFacebookPostClaims,
     ...nycArtcFacebookEventClaims,
     ...googleDriveArchiveClaims,
@@ -952,6 +961,7 @@ const knowledgeBankInput = {
     ...lifecycleClaims
   ],
   researchInquiries: [
+    ...nycArtcFacebookPostResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     ...googleDriveArchiveResearchInquiries,
     ...socialArchiveResearchInquiries,

@@ -947,6 +947,112 @@ test("WOW List Facebook eval keeps engagement and posted URLs out of impact clai
   );
 });
 
+test("NYC Artist Coalition Facebook post production reconciles the full current surface", () => {
+  const required = suite.requiredNycArtcFacebookPosts;
+  const controls = JSON.parse(readFileSync(required.controlPath, "utf8"));
+  assert.equal(controls.publicTimeline.terminalTraversalPasses, 2);
+  assert.equal(controls.publicTimeline.exactIdentitySetMatchAcrossPasses, true);
+  assert.equal(controls.publicTimeline.retainedUniquePosts, required.currentPostCount);
+  assert.equal(controls.publicTimeline.firstPassSortedIdSetSha256, required.sortedIdSetSha256);
+  assert.equal(controls.publicTimeline.secondPassSortedIdSetSha256, required.sortedIdSetSha256);
+  assert.deepEqual(controls.publicTimeline.fingerprintPreimage, {
+    input: "each retained records[].key exactly as captured",
+    encoding: "UTF-8",
+    normalization: "none",
+    ordering: "ascending bytewise order under LC_ALL=C",
+    delimiter: "LF",
+    trailingDelimiter: true,
+    duplicatePolicy: "one line for each of 444 unique retained keys",
+    algorithm: "SHA-256"
+  });
+  assert.equal(controls.forms.eventRoute, required.eventRouteCount);
+  assert.equal(controls.forms.standalonePost, required.standalonePostCount);
+  assert.equal(controls.forms.originalMediaPost, required.originalMediaPostCount);
+  assert.equal(controls.forms.resharedStory, required.resharedStoryCount);
+  assert.equal(controls.forms.sourceOrResourceRoute, required.sourceRouteCount);
+  assert.equal(controls.forms.total, required.currentPostCount);
+  assert.equal(
+    controls.currentVisibleInteractionSnapshot.recordsWithAtLeastOneSignal,
+    required.postsWithVisibleSignals
+  );
+  assert.equal(controls.currentVisibleInteractionSnapshot.reactions, required.visibleReactions);
+  assert.equal(controls.currentVisibleInteractionSnapshot.comments, required.visibleComments);
+  assert.equal(controls.currentVisibleInteractionSnapshot.shares, required.visibleShares);
+  assert.equal(controls.postedUrlInventory.outboundLinkOccurrences, required.outboundLinkOccurrences);
+  assert.equal(controls.postedUrlInventory.uniqueUrls, required.uniqueOutboundUrls);
+  assert.equal(controls.stakeholderRouteOccurrences.nycCouncilMembersAndCouncil, required.councilRouteOccurrences);
+  assert.equal(controls.privateArtifactId, "nycartc-facebook-public-post-census-2026-07-14");
+});
+
+test("NYC Artist Coalition Facebook records preserve collective credit and role evidence separation", () => {
+  const required = suite.requiredNycArtcFacebookPosts;
+  for (const id of required.sourceIds) {
+    assert.ok(knowledgeBank.sources.find((item) => item.id === id), id);
+  }
+  for (const id of required.claimIds) {
+    const claim = knowledgeBank.claims.find((item) => item.id === id);
+    assert.ok(claim, id);
+    assert.equal(claim.publicationStatus, "internal-only");
+    assert.equal(claim.projections.some((projection) => projection.status === "active"), false);
+  }
+  const role = knowledgeBank.claims.find((item) => item.id === required.roleClaimId);
+  assert.equal(role.status, "use-with-care");
+  assert.match(role.internalClaim, /recalls.*predominantly.*other coalition participants/i);
+  assert.deepEqual(role.evidence.map((item) => item.sourceId), [
+    required.memorySourceId,
+    required.managementControlSourceId,
+    required.contentControlSourceId
+  ]);
+  assert.match(role.boundaries.join(" "), /Do not assign any specific post/i);
+});
+
+test("NYC Artist Coalition Facebook eval rejects population, stakeholder, and role inflation", () => {
+  const required = suite.requiredNycArtcFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const population = bank.claims.find((item) => item.id === required.populationClaimId);
+  const stakeholder = bank.claims.find((item) => item.id === required.stakeholderClaimId);
+  const role = bank.claims.find((item) => item.id === required.roleClaimId);
+  population.internalClaim = "NYC Artist Coalition published exactly 444 Facebook posts in its history.";
+  population.boundaries = [];
+  population.antiClaims = [];
+  stakeholder.internalClaim = "Eighty-eight NYC Council members engaged with and endorsed the Page.";
+  stakeholder.boundaries = [];
+  stakeholder.antiClaims = [];
+  role.internalClaim = "Jamie was the sole historical administrator and author of all 444 posts.";
+  role.status = "confirmed";
+  role.boundaries = [];
+  role.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-post-population-claim"), true);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-stakeholder-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-role-boundary"), true);
+});
+
+test("NYC Artist Coalition Facebook eval keeps counters and posted URLs out of impact claims", () => {
+  const required = suite.requiredNycArtcFacebookPosts;
+  const bank = structuredClone(knowledgeBank);
+  const engagement = bank.claims.find((item) => item.id === required.engagementClaimId);
+  const routing = bank.claims.find((item) => item.id === required.urlClaimId);
+  engagement.publicationStatus = "public";
+  engagement.editorialStatus = "active";
+  engagement.projections = [{
+    key: "case-study",
+    text: "The Page reached 2,374 people and proved coalition impact.",
+    status: "active",
+    citationRequired: true,
+    surfaces: ["/work/fair-rent-nyc"]
+  }];
+  engagement.boundaries = [];
+  engagement.antiClaims = [];
+  routing.internalClaim = "Every linked source was true and every linked organization endorsed the coalition.";
+  routing.boundaries = [];
+  routing.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-post-projection-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-engagement-boundary"), true);
+  assert.equal(result.findings.some((item) => item.code === "nycartc-facebook-posted-url-boundary"), true);
+});
+
 test("Google Drive archival production keeps private sources, media holds, and asset counts bounded", () => {
   const required = suite.requiredGoogleDriveArchiveProduction;
   for (const sourceId of required.sourceIds) {

@@ -49,6 +49,12 @@ metadata, and develops source-routing and mission-pattern depth without turning
 mutable engagement displays into impact or publisher metadata into sole
 administration.
 
+The [NYC Artist Coalition Facebook post pass](research/nycartc-facebook-posts-archival-production-2026-07.md)
+reconciles the same 444 post identities across two independent authenticated
+traversals, classifies every currently recoverable record, and preserves
+collective participation, source-routing, stakeholder-addressing, and role
+boundaries without converting Page identity into individual authorship.
+
 ## Purpose
 
 The knowledge bank exists to:

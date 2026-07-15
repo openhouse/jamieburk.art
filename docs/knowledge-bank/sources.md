@@ -173,6 +173,20 @@ record-level corpus and URL inventory stay private; selected public posts and
 close-read destination articles are source nodes. See the [research
 note](research/wowlist-facebook-posts-archival-production-2026-07.md).
 
+## NYC Artist Coalition Facebook Posts
+
+The July 14, 2026 authenticated pass reconciled the same 444 public post
+identities across two independent terminal traversals of the NYC Artist
+Coalition Page. The record-level corpus remains private. Public-safe aggregate
+controls, selected public posts, a close-read policy article, and a
+metadata-only source lead are retained in the repository.
+
+Facebook currently lists NYC Artist Coalition among Pages Jamie manages and
+shows current task access. Jamie separately remembers predominant but shared
+historic Page use. Neither source identifies the human publisher of individual
+historic posts or supports sole administration. See the [research
+note](research/nycartc-facebook-posts-archival-production-2026-07.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

@@ -132,6 +132,28 @@ every scheduled official attended, Jamie authored every event page, Jamie alone
 organized the events, or the event practice by itself caused legislation or
 agency change.
 
+## NYC Artist Coalition Facebook Posts
+
+Do not describe the 444 currently recoverable records as the Page's lifetime
+post total, a native Meta export, or proof that no historical record is missing.
+Deleted, unpublished, migration-omitted, and otherwise unavailable records are
+outside the observable population.
+
+Do not convert the institutional Page identity, current Page-management access,
+or Page-level controls into individual historic authorship, a quantified share
+of publishing labor, sole administration, or sole strategy. Jamie's memory is
+predominant but explicitly shared use and remains attributed.
+
+Do not convert tags, mentions, quotations, links, or reshares into inbound
+stakeholder engagement. The 88 Council-related records are outgoing reference
+occurrences, not 88 Council members. Do not convert mutable reactions, comments,
+shares, or rounded follower displays into exact analytics, unique people,
+attendance, endorsement, causality, or impact.
+
+Do not treat posted URLs as automatic corroboration or as proof of readership,
+clicks, conversion, partnership, or outcomes. Preserve the original authorship
+of Olympia Kazi's words and other quoted or shared material.
+
 ## KC Spaces Fund
 
 Do not say Jamie organized KC Spaces Fund, ran the fundraiser, made grant

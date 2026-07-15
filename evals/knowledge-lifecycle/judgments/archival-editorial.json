@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-wowlist-fb-20260714",
+  "judgeId": "archival-editorial-nycartc-facebook",
   "lens": "archival-editorial",
-  "candidate": "sha256:0f43ed820d703d5c6dccb0dd8dadda2b34b9bb87d4c0f0bc3ade39fcbd012c10",
-  "contract": "sha256:3dcf5f4a99ed9b5377b5d4f246a9e5212a809c8b661843c35cb2b2c727dff5a7",
+  "candidate": "sha256:4eb42a1218455d63327fe7a63bc42dd25a41e256b3c51f198fe77783e3820178",
+  "contract": "sha256:ac0e0ed8780b46455b8a42f1dffea3376f04544eb69d373824bfdb5052e21715",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -17,37 +17,37 @@
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "Two exact terminal-scroll traversals reconcile 56 post-like render variants through two documented artifact exclusions to 54 unique currently recoverable public-timeline posts; all five Content Library rows occur within those 54, while the aggregate control and opaque private artifact ID keep the record-level census outside the repository."
+      "observation": "Two authenticated terminal traversals with distinct scroll cadences recovered the same 444 stable post identities, with 42 and 41 no-addition terminal controls. Both sets retain the matching SHA-256 digest f1f00d902415ebad0aa37043d7f64070d754c17449c396ac61aa34dec7733955. The documented preimage now specifies exact unnormalized UTF-8 records[].key values, LC_ALL=C bytewise sorting, LF delimiters, a final LF, and one line per 444 unique key, making the non-identifying control reproducible."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The timeline corpus, five-row Content Library, posted-URL inventory, first-person management memory, selected public posts, and destination sources each have explicit review depth, support, non-support, preservation, and locator fields; metadata-only destination material is not treated as close-read evidence."
+      "observation": "The Page timeline, private census, Meta content control, management control, first-person memory, URL inventory, selected posts, and destination articles remain distinct source records with explicit review depth, support, non-support, preservation, and visibility."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Current-population reconciliation, 54-of-54 publisher metadata, attributed social-management memory, community routing, cultural and civic routing, mutable engagement, and posted-URL routing are seven separate claims with independently testable evidence and anti-claims."
+      "observation": "Population, collective participation routing, stakeholder routing, mutable counters, posted URLs, and Jamie's publishing-role recollection remain six independently evaluable claims rather than a combined authorship, engagement, or impact narrative."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "Every new claim resolves to named source records and the WOW List project; the broader management claim specifically separates Jamie's first-person source as direct support from the 54-post corpus as corroboration and remains linked to a partially recovered inquiry."
+      "observation": "Every NYC Artist Coalition Facebook claim resolves to declared intakes, sources, inquiries, and project context. Jamie's role claim separately relates attributed memory, current management evidence, and the absence of historic human-level publisher attribution."
     },
     {
       "rubric": "status_separation",
-      "observation": "All seven claims remain internal-only with no active projection: population, engagement, and URL totals are editorially unused, while publisher, management, and routing findings remain candidates or held reserve depth rather than public portfolio copy."
+      "observation": "All six claims remain internal-only candidates without active projections. Confirmed current-surface findings, mutable observations, use-with-care memory, and partially recovered inquiries retain separate knowledge, publication, and editorial statuses."
     },
     {
       "rubric": "project_context",
-      "observation": "The WOW List dossier situates the pass within the 2014-2017 project, records the approximately April 2015 through March 2018 Facebook span, identifies local-organizer, cultural-space, mutual-aid, movement, and civic-routing patterns, and retains a photo-research prompt centered on member meetings, interfaces, workflows, and community authorship."
+      "observation": "The project dossier situates the corpus within coalition events, campaigns, hearings, cultural-space advocacy, public information, legislative research, and future collaborator, source, native-export, and photo-research work."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The records repeatedly define 54 as the complete currently recoverable public-timeline population rather than lifetime history, identify the five-row Content Library as incomplete, retain Jamie's broader management account as attributed memory, and preserve Richard Album's joint project credit while rejecting sole administration and shared-source authorship."
+      "observation": "The candidate limits 444 to complete disposition of the currently recoverable July 2026 Page surface, not lifetime history or a native export. Stakeholder references remain outgoing routes, mutable counters remain interface observations, Olympia Kazi's authorship is preserved, and Jamie's predominant-use memory remains attributed and explicitly shared."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "Posted URLs remain research routes rather than corroboration or endorsement, and followers, reactions, comments, views, and event-interest displays remain dated mutable observations rather than reach, attendance, or impact; the deterministic evaluator reports zero findings, all 54 lifecycle tests pass, and public-safety, citation, lint, typecheck, and knowledge-bank checks pass."
+      "observation": "Record-level data, comments, per-post metrics, management controls, and authentication state remain outside the public repository. No social metric or posted URL is converted into reach, endorsement, attendance, conversion, causality, or impact. The deterministic evaluator reports zero findings and all 58 lifecycle tests pass."
     }
   ],
   "regressions": [],
-  "nextAction": "Retain this pass as internal reserve depth and require an account-administration record or Richard Album collaborator confirmation before strengthening Jamie's attributed broader social-management claim."
+  "nextAction": "Stop this lifecycle cycle and retain the mature findings as internal reserve depth until native account records or collaborator proof notes can strengthen the unresolved historical publishing-role inquiry."
 }

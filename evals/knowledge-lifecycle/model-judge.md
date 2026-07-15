@@ -85,6 +85,25 @@ Ask:
 30. Does the full-corpus close reading preserve useful community-calendar,
     cultural-space, mutual-aid, movement, and civic-routing patterns as internal
     reserve depth while selected destination sources receive their own review?
+31. Do two independent terminal traversals reconcile the same 444 currently
+    recoverable NYC Artist Coalition Facebook post identities, with 100 percent
+    disposition coverage limited to the July 2026 surface rather than a lifetime
+    total, deletion history, or native Meta export?
+32. Are the 444 records classified into forms, themes, routes, sources, and
+    mutable counter aggregates without exposing the record-level corpus or
+    assigning institutional Page identity to a human author?
+33. Are 88 Council-related and other stakeholder-route occurrences treated as
+    outgoing addressing or routing, not unique stakeholders, inbound engagement,
+    endorsement, partnership, action, policy influence, or impact?
+34. Does the role record keep Jamie's attributed memory of predominant but
+    shared Page use separate from Facebook's evidence of current management and
+    task access, while individual historic post authorship remains unresolved?
+35. Are 2,374 reactions, 212 comments, 611 shares, and rounded follower displays
+    dated as mutable interface observations rather than unique people, historical
+    analytics, reach, attendance, endorsement, conversion, causality, or impact?
+36. Are 64 outbound-link occurrences and 39 unique URLs treated as source and
+    action-routing leads, with destination claims promoted only after close
+    reading and original authorship, including Olympia Kazi's words, preserved?
 
 Return JSON with:
 

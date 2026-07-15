@@ -198,6 +198,36 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-14
 
+## nycartc-facebook-participation-routing - Collective civic publishing system
+
+**Status:** Internal only
+**Support level:** Confirmed with boundary
+**Evidence class:** Authenticated current-surface census / selected public posts
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** Two independent traversals recovered the same 444 currently visible NYC Artist Coalition Facebook post identities. The full-population close reading documents a sustained collective practice connecting events, campaign sites, hearings, public information, press, cultural partners, and practical resources.
+**Where to project:** Bank only. Consider later role-specific composition when public participation infrastructure, campaign operations, source routing, or civic translation is material.
+**Why it matters:** Preserves evidence that the coalition Page operated as participation infrastructure rather than only a broadcast channel.
+**Guardrail:** The 444 records are the complete currently recoverable July 2026 surface, not a lifetime total. Page identity is not individual authorship. Routing is not readership, conversion, endorsement, or impact.
+**Do not say:** NYC Artist Coalition published only 444 posts; Jamie wrote every post; every referenced stakeholder engaged; social counters prove reach or policy impact.
+**Protected boundaries:** The record-level corpus, comments, per-record metrics, account state, authentication material, and relationship data remain outside the repo.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-14
+
+## nycartc-facebook-publishing-role - Predominant but shared Page use
+
+**Status:** Use with care
+**Support level:** First-person memory plus current management control
+**Evidence class:** Attributed memory / protected authenticated control
+**Public wording:** No active public projection in this pass.
+**Detailed public-safe wording:** Jamie remembers being predominantly the person using NYC Artist Coalition's Facebook Page while other coalition participants also used it. Facebook currently documents Jamie's Page-management relationship and task access, not the historic division of publishing labor.
+**Where to project:** Internal research reserve pending native records or collaborator proof notes.
+**Why it matters:** Preserves substantial identity-stewardship and publishing labor without erasing collective participation.
+**Guardrail:** Keep Jamie's historic role attributed. Do not assign any post to a human publisher without record-level evidence.
+**Do not say:** Jamie published all 444 posts; Jamie was sole administrator; Jamie alone authored the coalition voice; current access proves historic exclusivity.
+**Protected boundaries:** Do not expose Page-management screenshots, authentication state, administrator details, or collaborator identities from private controls.
+**Review owner:** Jamie / collaborator confirmation
+**Last reviewed:** 2026-07-14
+
 ## kc-spaces-fund-digital-infrastructure - KC Spaces Fund digital infrastructure
 
 **Status:** Careful

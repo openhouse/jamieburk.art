@@ -35,3 +35,9 @@ Public pages may simplify this language, but they must not strengthen ownership,
   Page-manager publisher field. This is strong bank-only evidence of sustained
   publishing and identity stewardship, not sole administration or sole project
   ownership. Jamie's broader management recollection remains attributed.
+- Two independent traversals of NYC Artist Coalition's current public Facebook
+  timeline recovered the same 444 post identities. Full-population close reading
+  preserves bank-only evidence of collective event, campaign, government,
+  press, partner, and practical-resource routing. Jamie's predominant Page-use
+  memory remains attributed and explicitly shared; current management access
+  does not establish historic exclusivity or record-level authorship.
