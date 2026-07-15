@@ -10,7 +10,7 @@
   "minimumCollectiveClaimCount": 69,
   "collectiveClaimsSha256": "70e87187dfb0a0406e947c9228cee35a0ec35ad39a5ae3750310744e0fd5f88c",
   "collectiveRuntimeSha256": "4d2925ca61cc15eafbb838e80ed9c39215ea4aee855ca5e98c333756deaa2f55",
-  "statementSupportSha256": "b1c69147b6a9cd836aea27b80ef48c51673ca6a70dbdb35ab0b7be9e31452e31",
+  "statementSupportSha256": "43adadb28594b9a4e1e170e9b3d45abba9a649d0731e149406b5711cbb53686c",
   "projectionRouteBindingsSha256": "66fb867401e7d1e631b5ffb58197a1a6bc9523a5b9926471f7a0d56d40fd4283",
   "publicSurfaceSha256": "5453dd6fbe681bc9a2ab3a54353865bfa639386af7fd84bdbfec5e089c1a737f",
   "requiredClaimProjects": {
