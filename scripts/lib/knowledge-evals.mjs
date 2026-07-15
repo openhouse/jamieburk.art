@@ -94,6 +94,64 @@ const WOWLIST_FACEBOOK_POST_REVIEW_LOCKS = Object.freeze({
   reviewConfigurationSha256: "e5bfdb3bdd758be944abdafa8b737ae1b181dda92386805d481250332ac0351c",
   publicReportSha256: "5258d6c934cfdfacafa93cdda1513d067963922aa6d7fd457e3fd745a5088ea6"
 });
+const WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS = Object.freeze([
+  {
+    url: "http://www.westword.com/arts/city-partners-with-meow-wolf-on-20-000-denver-diy-spaces-fund-8782025",
+    firstSeenOrdinal: 6,
+    firstSeenAt: "2017-03-09",
+    missionContext: "venue-safety-and-survival",
+    evidenceRole: "issue-context",
+    sourceId: "SRC-WOWLIST-FACEBOOK-WESTWORD-DIY-FUND-2017"
+  },
+  {
+    url: "https://meowwolf.com/2016/12/meow-wolfs-diy-fund",
+    firstSeenOrdinal: 10,
+    firstSeenAt: "2016-12-15",
+    missionContext: "venue-safety-and-survival",
+    evidenceRole: "fundraising",
+    sourceId: "SRC-WOWLIST-FACEBOOK-MEOW-WOLF-DIY-FUND-2016"
+  },
+  {
+    url: "http://m.eastbayexpress.com/SevenDays/archives/2016/12/03/artists-at-last-nights-oakland-warehouse-fire-discuss-the-tragedy-those-missing-need-for-safe-underground-spaces",
+    firstSeenOrdinal: 15,
+    firstSeenAt: "2016-12-04",
+    missionContext: "venue-safety-and-survival",
+    evidenceRole: "issue-context",
+    sourceId: "SRC-WOWLIST-FACEBOOK-EAST-BAY-SAFE-SPACES-2016"
+  },
+  {
+    url: "http://www.wweek.com/bars/2016/07/01/the-know-is-closing",
+    firstSeenOrdinal: 27,
+    firstSeenAt: "2016-07-03",
+    missionContext: "venue-safety-and-survival",
+    evidenceRole: "issue-context",
+    sourceId: "SRC-WOWLIST-FACEBOOK-KNOW-CLOSING-2016"
+  },
+  {
+    url: "http://www.sbdiy.org",
+    firstSeenOrdinal: 30,
+    firstSeenAt: "2016-06-28",
+    missionContext: "organizer-infrastructure",
+    evidenceRole: "organizer-resource",
+    sourceId: "SRC-WOWLIST-SBDIY-ADOPTION"
+  },
+  {
+    url: "https://youtu.be/nQg47LtixPI",
+    firstSeenOrdinal: 49,
+    firstSeenAt: "2015-08-14",
+    missionContext: "organizer-infrastructure",
+    evidenceRole: "independent-product-use",
+    sourceId: "SRC-WOWLIST-SHELBY-TUTORIAL-2015"
+  },
+  {
+    url: "http://dodiy.org",
+    firstSeenOrdinal: 54,
+    firstSeenAt: "2015-05-29",
+    missionContext: "organizer-infrastructure",
+    evidenceRole: "organizer-resource",
+    sourceId: "SRC-WOWLIST-FACEBOOK-DODIY-RESOURCE"
+  }
+]);
 const NTER_CHNG_PROTECTED_ARTIFACT_REVIEW_LOCKS = Object.freeze({
   protectedIntakesSha256: "2479ac40c9228ec2b24fa7b1e9ce13c1cabcf0dead7e27878098ce4319d1a763",
   protectedSourcesSha256: "187dd3e085b0fddc64b2b7483ce31cd3a32ac82de1699d80435c9e3db9e8de5f",
@@ -3474,6 +3532,21 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
   const wowListFacebookShelbyTutorialRoute = wowListFacebookUrlRows.find(
     (row) => row.url === wowListFacebookPosts.shelbyTutorialUrl
   );
+  const wowListFacebookGovernedRouteRows = wowListFacebookUrlRows.filter(
+    (row) => row.preservationDisposition === "governed-source-record"
+  );
+  const wowListFacebookGovernedRouteSemanticsMatch =
+    wowListFacebookGovernedRouteRows.length === WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS.length &&
+    WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS.every((expected) => {
+      const row = wowListFacebookUrlRows.find((item) => item.url === expected.url);
+      return row &&
+        Object.entries(expected).every(([key, value]) => row[key] === value) &&
+        row.accessDisposition === "canonical-source-recovered" &&
+        row.preservationDisposition === "governed-source-record";
+    }) &&
+    wowListFacebookGovernedRouteRows.every((row) =>
+      WOWLIST_FACEBOOK_GOVERNED_ROUTE_SEMANTICS.some((expected) => expected.url === row.url)
+    );
   const countWowListFacebookTag = (key, tag) => wowListFacebookRows.filter(
     (row) => row[key]?.includes(tag)
   ).length;
@@ -3641,6 +3714,7 @@ export function evaluateKnowledgeBank(suite = loadKnowledgeEvalSuite(), override
       })
     ),
     urlEvidenceRoles: Boolean(
+      wowListFacebookGovernedRouteSemanticsMatch &&
       wowListFacebookShelbyTutorialRoute?.missionContext === "organizer-infrastructure" &&
       wowListFacebookShelbyTutorialRoute.evidenceRole === "independent-product-use" &&
       wowListFacebookShelbyTutorialRoute.accessDisposition === "canonical-source-recovered" &&

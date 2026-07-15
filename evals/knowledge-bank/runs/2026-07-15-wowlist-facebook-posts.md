@@ -135,3 +135,26 @@ from:
 
 - `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c`
 - `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d`
+
+## Governed-route semantic repair
+
+The second data-integrity reviewer accepted the repaired route inventory after
+recomputing the population and rejecting 44 fresh mutations. The second hiring
+editor correctly rejected it after finding a checksum-refresh weakness: the
+Westword issue-context role and Meow Wolf fundraising role could be swapped
+while preserving every aggregate, and the governed Westword lifecycle could be
+transferred to an unrechecked Phoenix route. Both mutations failed only the
+ordinary review checksum.
+
+The evaluator now contains exact checksum-independent semantic assertions for
+all seven governed routes. Each must retain its URL, first-seen ordinal and
+date, mission context, evidence role, canonical-source-recovered access state,
+governed-source-record preservation state, and source ID. Permanent regression
+tests reproduce both count-preserving attacks and require the semantic check,
+not merely the checksum, to reject them.
+
+This material change resets acceptance again. Fresh frozen-candidate review is
+pending from:
+
+- `wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e`
+- `wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f`

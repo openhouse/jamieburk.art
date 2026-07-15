@@ -140,8 +140,8 @@ test("knowledge-bank gate records two fresh WOW List Facebook post holdout passe
   assert.equal(result.holdout.complete, true);
   assert.equal(result.holdout.consecutivePassingRuns, 2);
   assert.deepEqual(result.holdout.judgeIds, [
-    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-c",
-    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-d"
+    "wowlist-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-e",
+    "wowlist-facebook-posts-holdout-hiring-editor-credit-2026-07-15-final-f"
   ]);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.matches, true);
   assert.equal(result.contentApprovals.kcTownHallFieldPractice.reviewLocksMatch, true);
@@ -3651,6 +3651,44 @@ test("WOW List Facebook URL inventory preserves source-specific evidence and rec
       item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
     )?.score, 1);
     assert.equal(result.accepted, false);
+  }
+});
+
+test("WOW List Facebook governed routes reject count-preserving semantic swaps", () => {
+  const mutations = [
+    (copy) => {
+      const westword = copy.postedUrlInventory.find((row) =>
+        row.sourceId === "SRC-WOWLIST-FACEBOOK-WESTWORD-DIY-FUND-2017"
+      );
+      const meowWolf = copy.postedUrlInventory.find((row) =>
+        row.sourceId === "SRC-WOWLIST-FACEBOOK-MEOW-WOLF-DIY-FUND-2016"
+      );
+      [westword.evidenceRole, meowWolf.evidenceRole] =
+        [meowWolf.evidenceRole, westword.evidenceRole];
+    },
+    (copy) => {
+      const phoenix = copy.postedUrlInventory.find((row) => row.url === "http://phxdiy.com");
+      const westword = copy.postedUrlInventory.find((row) =>
+        row.sourceId === "SRC-WOWLIST-FACEBOOK-WESTWORD-DIY-FUND-2017"
+      );
+      phoenix.accessDisposition = "canonical-source-recovered";
+      phoenix.preservationDisposition = "governed-source-record";
+      phoenix.sourceId = westword.sourceId;
+      westword.accessDisposition = "not-rechecked-in-this-pass";
+      westword.preservationDisposition = "route-inventory-only";
+      westword.sourceId = null;
+    }
+  ];
+
+  for (const mutate of mutations) {
+    const copy = loadWowListFacebookPostPopulation();
+    mutate(copy);
+    const result = evaluateKnowledgeBank(suite, { wowListFacebookPostPopulation: copy });
+    assert.equal(result.contentApprovals.wowListFacebookPosts.checks.urls, true);
+    assert.equal(result.contentApprovals.wowListFacebookPosts.checks.urlEvidenceRoles, false);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-WOWLIST-FACEBOOK-POSTS"
+    )?.score, 1);
   }
 });
 
