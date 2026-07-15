@@ -348,6 +348,32 @@ export const wowListXFullPopulationBatch20260715: {
       reviewedBy
     },
     {
+      id: "AST-WOWLIST-X-MEMBER-TUTORIAL-2015",
+      sourceId: "SRC-WOWLIST-X-TUTORIAL-2015",
+      project: "wowlist",
+      assertion:
+        "The project account thanked Shelby for a public WOW List tutorial and paired it with the product's join destination.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: ["CLM-WOWLIST-FIELD-LEARNING-PRACTICE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-WOWLIST-X-ALLIED-MEDIA-2015",
+      sourceId: "SRC-WOWLIST-X-ALLIED-MEDIA-2015",
+      project: "wowlist",
+      assertion:
+        "The project account announced that WOW List would be at Allied Media Conference in Detroit, June 18-21, 2015, without naming a session or presenter.",
+      relationship: "contextualizes",
+      confidence: "high",
+      candidateClaimIds: ["CLM-WOWLIST-FIELD-LEARNING-PRACTICE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
       id: "AST-WOWLIST-GRASSTRONAUT-FIELD-CONTEXT-2015",
       sourceId: "SRC-WOWLIST-GRASSTRONAUT-MANUALFESTO-2015",
       project: "wowlist",
@@ -356,6 +382,19 @@ export const wowListXFullPopulationBatch20260715: {
       relationship: "contextualizes",
       confidence: "high",
       candidateClaimIds: ["CLM-WOWLIST-FIELD-LEARNING-PRACTICE"],
+      publicSafe: true,
+      reviewedAt: "2026-07-15",
+      reviewedBy
+    },
+    {
+      id: "AST-WOWLIST-GOOD-TIMES-RECOVERY-BOUNDARY-2015",
+      sourceId: "SRC-WOWLIST-GOOD-TIMES-ZINES-2-2015",
+      project: "wowlist",
+      assertion:
+        "The posted URL, title, and author form a source lead, but the unrecovered article body cannot independently support the project account's description of its subject.",
+      relationship: "bounds",
+      confidence: "high",
+      candidateClaimIds: [],
       publicSafe: true,
       reviewedAt: "2026-07-15",
       reviewedBy

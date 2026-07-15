@@ -398,6 +398,18 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "apps/www/src/data/knowledge-bank/batches/social-account-production-2026-07-14.ts",
     "utf8"
   );
+  const priorObservation = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-SOCIAL-WOWLIST-AUTH-OBSERVATION-2026"
+  );
+  const priorObservationAssertion = knowledgeBank.sourceAssertions.find(
+    (item) => item.id === "AST-WOWLIST-ACCOUNT-OBSERVATION"
+  );
+  const intakeSourceIds = knowledgeBank.intake.find(
+    (item) => item.id === "INT-WOWLIST-X-FULL-POPULATION-2026"
+  ).sourceIds;
+  const decomposedSourceIds = new Set(
+    knowledgeBank.sourceAssertions.map((assertion) => assertion.sourceId)
+  );
 
   assert.equal(supportClaim.projectionEligibility, "eligible");
   assert.equal(civicClaim.projectionEligibility, "eligible");
@@ -414,7 +426,19 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   );
   assert.match(work, /location-scope, list-discovery, and event-entry workflow questions/);
   assert.match(work, /demonstrations, vigils, fundraisers, and mutual-aid circulation/);
-  assert.doesNotMatch(socialBatch, /recovered 37 of 38 profile-reported posts/);
+  assert.equal(
+    Number(priorObservation.publicNote.match(/recovered (\d+) distinct/)?.[1]),
+    corpus.population.renderedDistinct
+  );
+  assert.equal(
+    Number(priorObservationAssertion.assertion.match(/recovered all (\d+)/)?.[1]),
+    corpus.population.profileReported
+  );
+  assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
+  assert.match(
+    socialBatch,
+    /complete replies-inclusive pass recovered 38 distinct canonical status IDs/
+  );
 });
 
 test("an intake-linked source without decomposition fails KB-003", () => {
