@@ -59,11 +59,13 @@ const requiredFiles = [
   "docs/knowledge-bank/intake/2026-07-14-kc-town-hall-council-funding.md",
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-phase-one-and-neighborhood-work.md",
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md",
+  "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition.md",
   "docs/knowledge-bank/projects/kc-town-hall.md",
   "docs/knowledge-bank/projects/kansas-city-neighborhood-programs.md",
   "apps/www/src/data/proofs.ts",
+  "apps/www/src/data/knowledge-bank/social-account-archive.ts",
   "apps/www/src/data/work.ts",
   "apps/www/src/app/resume/page.tsx",
   "apps/www/src/app/work/technical-operations/page.tsx",
@@ -155,6 +157,9 @@ const kcTownHallPhaseOneReceipt = read(
 );
 const kcTownHallTransitionReceipt = read(
   "docs/knowledge-bank/intake/2026-07-15-kc-town-hall-stewardship-transition.md"
+);
+const socialAccountReceipt = read(
+  "docs/knowledge-bank/intake/2026-07-15-project-social-account-archive.md"
 );
 
 for (const doc of [
@@ -304,6 +309,31 @@ for (const expected of [
   "distinct from the later municipal funding withdrawal"
 ]) {
   requireIncludes(kcTownHallTransitionReceipt, expected, "KC Town Hall transition receipt");
+}
+
+const normalizedSocialAccountReceipt = socialAccountReceipt
+  .replaceAll("**", "")
+  .replace(/\s+/g, " ")
+  .toLowerCase();
+
+for (const expected of [
+  "@CallNYCapp",
+  "@NYCArtC",
+  "@wowlist",
+  "@KCTownHall",
+  "@KCSpacesFund",
+  "at least six distinct then-Council-member accounts",
+  "21 posts from at least seven distinct Council-member accounts",
+  "Olympia Kazi authored 89 recovered posts",
+  "13-post CreateNYC exchange",
+  "not a complete account export",
+  "Jamie did not necessarily author every post"
+]) {
+  requireIncludes(
+    normalizedSocialAccountReceipt,
+    expected.toLowerCase(),
+    "project social account receipt"
+  );
 }
 
 for (const forbidden of [

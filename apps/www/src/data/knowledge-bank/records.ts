@@ -28,6 +28,13 @@ import {
   nterChngArchiveResearchInquiries,
   nterChngArchiveSources
 } from "./nter-chng-archive.ts";
+import {
+  socialAccountArchiveClaims,
+  socialAccountArchiveIntakeItems,
+  socialAccountArchiveObservations,
+  socialAccountArchiveResearchInquiries,
+  socialAccountArchiveSources
+} from "./social-account-archive.ts";
 
 const knowledgeBankInput = {
   intakeItems: [
@@ -35,6 +42,7 @@ const knowledgeBankInput = {
     ...icloudTeamsIntakeItems,
     ...googleDriveIntakeItems,
     ...nterChngArchiveIntakeItems,
+    ...socialAccountArchiveIntakeItems,
     {
       id: "INTAKE-2026-07-15-KC-TOWN-HALL-STEWARDSHIP-TRANSITION",
       receivedAt: "2026-07-15",
@@ -290,21 +298,31 @@ const knowledgeBankInput = {
       inputKind: "metric",
       summary: "Candidate evidence concerning engagement with the CallNYC social account by New York City Council member accounts.",
       projectIds: ["callnyc"],
-      researchStatus: "needs-more-research",
-      publicationStatus: "knowledge-bank-only",
+      researchStatus: "researched",
+      publicationStatus: "projected",
       sourceIds: [
         "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
-        "SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04"
+        "SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04",
+        "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+        "SRC-CALLNYC-X-MARGARET-CHIN-2017-07-11",
+        "SRC-CALLNYC-X-RUBEN-WILLS-2016-05-17",
+        "SRC-CALLNYC-X-STEVEN-MATTEO-2016-05-03",
+        "SRC-CALLNYC-X-PETER-KOO-2016-04-27",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
       ],
       observationIds: [
         "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
-        "OBS-CALLNYC-HELEN-ROSENTHAL-PROMOTION"
+        "OBS-CALLNYC-HELEN-ROSENTHAL-PROMOTION",
+        "OBS-CALLNYC-X-MARGARET-CHIN",
+        "OBS-CALLNYC-X-RUBEN-WILLS",
+        "OBS-CALLNYC-X-STEVEN-MATTEO",
+        "OBS-CALLNYC-X-PETER-KOO"
       ],
       claimIds: ["CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS"],
       researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT-2026"],
       nextActions: [
-        "Recover a bounded interaction corpus from authenticated exports, archived pages, supplied PDFs, or API data.",
-        "Define Council-member account inclusion, interaction types, date range, deduplication, and inaccessible-content limitations before calculating metrics."
+        "Seek a complete account export or additional archive captures if an exact platform-wide count becomes necessary.",
+        "Keep replies, reposts, quote posts, direct promotions, likes, and inaccessible content as separate interaction classes."
       ]
     }
   ],
@@ -313,6 +331,7 @@ const knowledgeBankInput = {
     ...icloudTeamsSources,
     ...googleDriveSources,
     ...nterChngArchiveSources,
+    ...socialAccountArchiveSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1332,6 +1351,7 @@ const knowledgeBankInput = {
     ...icloudTeamsObservations,
     ...googleDriveObservations,
     ...nterChngArchiveObservations,
+    ...socialAccountArchiveObservations,
     {
       id: "OBS-CALLNYC-MATHIEU-EUGENE-AMPLIFICATION",
       sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
@@ -1919,6 +1939,7 @@ const knowledgeBankInput = {
     ...icloudTeamsClaims,
     ...googleDriveClaims,
     ...nterChngArchiveClaims,
+    ...socialAccountArchiveClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -2859,22 +2880,66 @@ const knowledgeBankInput = {
     {
       id: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS",
       project: "callnyc",
-      internalClaim: "A preserved CallNYC timeline slice shows at least two distinct then-Council-member accounts publicly amplifying CallNYC in September-October 2016: Mathieu Eugene quote-posted a CallNYC award post, and Helen Rosenthal directed readers to callnyc.org.",
-      status: "use-with-care",
-      projections: [{
-        key: "archive-note",
-        text: "A preserved timeline slice shows at least two distinct then-Council-member accounts publicly amplifying CallNYC in 2016: Mathieu Eugene quote-posted a CallNYC award post, and Helen Rosenthal directed readers to callnyc.org. This is a documented lower bound, not a comprehensive engagement count.",
-        status: "active",
-        citationRequired: false,
-        surfaces: ["docs/knowledge-bank/projects/callnyc"]
-      }],
+      internalClaim: "A bounded authenticated search and preserved timeline capture recover at least six distinct then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017: Peter Koo, Steven Matteo, Ruben Wills, Helen Rosenthal, Mathieu Eugene, and Margaret Chin.",
+      status: "confirmed-with-boundary",
+      projections: [
+        {
+          key: "archive-note",
+          text: "A bounded review recovers at least six distinct then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017. This is a documented lower bound, not a comprehensive engagement count.",
+          status: "active",
+          citationRequired: false,
+          surfaces: ["docs/knowledge-bank/projects/callnyc"]
+        },
+        {
+          key: "case-study",
+          text: "A bounded review recovered at least six then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017.",
+          status: "active",
+          citationRequired: true,
+          surfaces: ["/work/callnyc"]
+        }
+      ],
       evidence: [
         {
           sourceId: "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
           relationship: "private-support",
-          supports: ["Mathieu Eugene quote-post", "Helen Rosenthal callnyc.org promotion", "captured dates", "minimum of two distinct accounts"],
+          supports: ["Mathieu Eugene quote-post", "Helen Rosenthal callnyc.org promotion", "captured dates", "two additional distinct Council-member accounts"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+          relationship: "direct-support",
+          supports: ["11-post direct-mention corpus", "four additional Council-member accounts", "dates and interaction text"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-CALLNYC-X-MARGARET-CHIN-2017-07-11",
+          relationship: "direct-support",
+          supports: ["Margaret Chin direct mention and response"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-CALLNYC-X-RUBEN-WILLS-2016-05-17",
+          relationship: "direct-support",
+          supports: ["Ruben Wills direct reply"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-CALLNYC-X-STEVEN-MATTEO-2016-05-03",
+          relationship: "direct-support",
+          supports: ["Steven Matteo direct reply"],
+          confidence: "high",
+          renderCitation: true
+        },
+        {
+          sourceId: "SRC-CALLNYC-X-PETER-KOO-2016-04-27",
+          relationship: "direct-support",
+          supports: ["Peter Koo public amplification"],
+          confidence: "high",
+          renderCitation: true
         },
         {
           sourceId: "SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04",
@@ -2882,23 +2947,31 @@ const knowledgeBankInput = {
           supports: ["contemporaneous Council-member status for Helen Rosenthal and Mathieu Eugene"],
           confidence: "high",
           renderCitation: false
+        },
+        {
+          sourceId: "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+          relationship: "supports-boundary",
+          supports: ["official Council-member status for all six recovered officeholders during the relevant Council term"],
+          confidence: "high",
+          renderCitation: true
         }
       ],
       boundaries: [
-        "Use at least two and name the captured examples; do not describe the result as comprehensive.",
+        "Use at least six and the April 2016-July 2017 date range; do not describe the result as comprehensive.",
+        "The four direct-mention search results and two preserved-timeline results come from complementary recovery methods.",
         "Do not aggregate visible repost and like counts without identifying which accounts performed them.",
         "Engagement does not establish endorsement, adoption, commissioning, or official status."
       ],
       antiClaims: [
         "The Council endorsed CallNYC.",
         "Council members adopted CallNYC.",
-        "Only two Council members engaged with CallNYC.",
+        "Only six Council members engaged with CallNYC.",
         "The preserved timeline is a complete export.",
         "Social engagement proves official project status."
       ],
       researchInquiryIds: ["INQ-CALLNYC-COUNCIL-ENGAGEMENT-2026"],
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated research review"]
     }
   ],
   researchInquiries: [
@@ -2906,6 +2979,7 @@ const knowledgeBankInput = {
     ...icloudTeamsResearchInquiries,
     ...googleDriveResearchInquiries,
     ...nterChngArchiveResearchInquiries,
+    ...socialAccountArchiveResearchInquiries,
   {
     id: "INQ-KC-TOWN-HALL-STEWARDSHIP-TRANSITION-2026",
     project: "kc-town-hall",
@@ -3054,7 +3128,7 @@ const knowledgeBankInput = {
       "Review public-safe founding documents and request collaborator confirmation where appropriate.",
       "Separate formal title, practical founding labor, website authorship, and collective governance."
     ],
-    runAt: "2026-07-12",
+    runAt: "2026-07-15",
     resultStatus: "partially-recovered",
     findings: [
       "NPR contemporaneously identified Jamie as a founding member of NYC Artist Coalition.",
@@ -3160,20 +3234,28 @@ const knowledgeBankInput = {
       "A seven-page PDF capture was inspected through text extraction and rendered visual review.",
       "The captured timeline visibly preserves Mathieu Eugene quote-posting a CallNYC award post on October 4, 2016.",
       "The captured timeline visibly preserves Helen Rosenthal directing readers to callnyc.org on September 27, 2016.",
-      "A contemporaneous Council page confirms both people served as Council members during the relevant period.",
-      "The defensible current metric is a lower bound of at least two distinct Council-member accounts visibly amplifying CallNYC in the captured slice."
+      "Authenticated Latest search recovered 11 direct-mention posts, including posts by Margaret Chin, Ruben Wills, Steven Matteo, and Peter Koo.",
+      "Official Council records confirm the six recovered officeholders served during the relevant Council term.",
+      "The defensible current metric is a lower bound of at least six distinct then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017."
     ],
     limitations: [
-      "The PDF is a bounded timeline capture, not a complete account export.",
+      "The PDF and authenticated search are bounded recovery surfaces, not a complete account export.",
+      "Direct-mention search can omit quote posts and URL-only promotions, while the timeline capture covers only a visible slice.",
       "Platform blocking, deleted posts, account renames, and incomplete archives may limit recall.",
       "Aggregate repost and like counts do not identify every acting account.",
       "Engagement cannot be interpreted as endorsement, adoption, commissioning, or official status without additional evidence."
     ],
     sourceIds: [
       "SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11",
-      "SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04"
+      "SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04",
+      "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+      "SRC-CALLNYC-X-MARGARET-CHIN-2017-07-11",
+      "SRC-CALLNYC-X-RUBEN-WILLS-2016-05-17",
+      "SRC-CALLNYC-X-STEVEN-MATTEO-2016-05-03",
+      "SRC-CALLNYC-X-PETER-KOO-2016-04-27",
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
     ],
-    publicSummary: "A preserved timeline slice documents at least two then-Council-member accounts amplifying CallNYC in 2016; comprehensive engagement measurement remains open."
+    publicSummary: "Complementary authenticated search and preserved-timeline evidence document at least six then-Council-member accounts replying to, amplifying, or promoting CallNYC in 2016-2017; comprehensive platform-wide measurement remains open."
   }],
   corrections: [
     { id: "COR-FAIR-RENT-MEMORY-PAGE-COUNT-2026", claimId: "CLM-CRS-SHARED-MEMORY-SYSTEM", previousText: "30+ pages of shared campaign-memory infrastructure", replacementText: "a shared campaign-memory system organizing decisions, owners, open questions, city/state lanes, consent levels, and next steps", reason: "The recovered records support the system's structure and Jamie's stewardship more directly than an unnecessary page-count shorthand.", decidedAt: "2026-07-15", affectedSurfaces: ["/work", "/work/fair-rent-nyc", "knowledge-bank"], status: "active" },
@@ -3189,7 +3271,9 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+      "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
@@ -3197,6 +3281,7 @@ const knowledgeBankInput = {
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
+      { id: "council-engagement", claimId: "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS", projection: "case-study", sourceIds: ["SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15", "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]
   }]

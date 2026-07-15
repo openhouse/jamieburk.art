@@ -351,7 +351,7 @@ const workItemsInput = [
     careNote:
       "Archived civic-data prototype. Not an official or current City Council service, legal service, emergency service, or comprehensive civic guidance source.",
     sourceLayer:
-      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and public-safe screenshots pending.",
+      "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, a bounded six-Council-account engagement finding, public GitHub repository, and public-safe screenshots pending.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
       note: "This page must make the archived and unofficial status visible wherever the project is summarized."
@@ -364,11 +364,12 @@ const workItemsInput = [
       "Independent follow-on to the New York City Council's first CouncilStat hackathon",
       "Translated CouncilStat / constituent-services open data",
       "Organized public issue pages and resident-facing guidance",
-      "Covered by Politico New York in 2016"
+      "Covered by Politico New York in 2016",
+      "At least six then-Council-member accounts publicly replied to, amplified, or promoted the project in a bounded 2016-2017 review"
     ],
     knownOpenProtected: {
       known:
-        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage.",
+        "CallNYC independently translated CouncilStat constituent-services records into issue pathways and resident-facing guidance as an archived prototype with 2016 Politico New York coverage; a bounded review recovered at least six then-Council-member accounts publicly replying to, amplifying, or promoting it in 2016-2017.",
       open:
         "Public-safe screenshots and additional archive links need Jamie approval before publication.",
       protected:

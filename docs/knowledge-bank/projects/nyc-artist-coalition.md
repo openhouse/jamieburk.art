@@ -83,6 +83,38 @@ The corpus adds useful depth to the campaign record:
 See the complete public-safe
 [campaign press receipt](../intake/2026-07-13-nyca-campaign-press-corpus.md).
 
+## Public Identity and Social Archive
+
+An authenticated July 2026 review verified `@NYCArtC` as the coalition's
+durable public account and confirmed that its biography explicitly carries
+`#SaveNYCSpaces`, `#LetNYCDance`, `#TalksNotRaids`, and `#FairRentNYC`.
+
+The bounded mention corpus contains 527 posts from 180 author identities
+between February 2017 and March 2025. Of those, 504 posts came from 179
+identities other than `@NYCArtC`. Olympia Kazi authored 89 recovered mentions,
+the largest author count in the corpus. This demonstrates substantial
+collaborator use of the public identity; it does not imply that Olympia posted
+from the coalition account or held its credentials.
+
+At least seven Council-member accounts authored 21 recovered posts mentioning
+`@NYCArtC` while their officeholders served on the Council. The interactions
+include legislative credit, public-meeting coordination, replies,
+amplification, and policy discussion rather than one generic endorsement
+category.
+
+City-agency participation is also directly preserved. NYC Cultural Affairs
+held a 13-post CreateNYC exchange with the coalition, later described a large
+DIY-spaces crowd gathered by `@NYCArtC`, and the Mayor's Office of Media and
+Entertainment documented the first Nightlife Town Hall. These sources establish
+public institutional engagement, not adoption of every coalition recommendation
+or Jamie's complete individual role.
+
+Jamie reports that he established the account and identity system while
+multiple collaborators contributed public communication over time. That role
+is retained as a use-with-care first-person claim pending independent
+account-creation or administrator evidence. See the complete
+[project social account archive](../intake/2026-07-15-project-social-account-archive.md).
+
 ## Office of Nightlife and Market Hotel Town Hall
 
 Independent coverage says NYC Artist Coalition spearheaded and organized the

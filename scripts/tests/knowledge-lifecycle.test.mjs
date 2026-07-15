@@ -256,7 +256,40 @@ test("claim maturity matches recovered evidence", () => {
   );
   assert.equal(
     claimById.get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")?.status,
-    "use-with-care"
+    "confirmed-with-boundary"
+  );
+});
+
+test("social account archive preserves collective credit and bounded engagement", () => {
+  const sourceById = new Map(knowledgeBank.sources.map((source) => [source.id, source]));
+  const claimById = new Map(knowledgeBank.claims.map((claim) => [claim.id, claim]));
+  const inquiryById = new Map(
+    knowledgeBank.researchInquiries.map((inquiry) => [inquiry.id, inquiry])
+  );
+
+  const identity = claimById.get("CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS");
+  const continuity = claimById.get("CLM-NYCA-X-PUBLIC-IDENTITY-CONTINUITY");
+  const council = claimById.get("CLM-NYCA-X-COUNCIL-ENGAGEMENT");
+  const callnyc = claimById.get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS");
+
+  assert.equal(identity?.status, "use-with-care");
+  assert.ok(identity?.antiClaims.some((value) => /authored every project post/i.test(value)));
+  assert.equal(continuity?.status, "confirmed-with-boundary");
+  assert.match(continuity?.internalClaim ?? "", /504 posts by 179 identities/i);
+  assert.ok(continuity?.boundaries.some((value) => /not a complete platform export/i.test(value)));
+  assert.equal(council?.status, "confirmed-with-boundary");
+  assert.match(council?.internalClaim ?? "", /seven distinct Council-member accounts.*21 recovered posts/i);
+  assert.ok(council?.antiClaims.some((value) => /Only seven/i.test(value)));
+  assert.match(callnyc?.internalClaim ?? "", /at least six distinct then-Council-member accounts/i);
+  assert.ok(callnyc?.projections.some(
+    (projection) => projection.status === "active" && projection.surfaces.includes("/work/callnyc")
+  ));
+  assert.ok(sourceById
+    .get("SRC-PROJECT-X-AUTHENTICATED-PROFILE-INVENTORY-2026-07-15")
+    ?.doesNotEstablish.some((value) => /authored every post/i.test(value)));
+  assert.equal(
+    inquiryById.get("INQ-NYCA-X-ENGAGEMENT-COMPLETENESS-2026")?.resultStatus,
+    "partially-recovered"
   );
 });
 

@@ -1,6 +1,45 @@
 {
   "sources": [
     {
+      "id": "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+      "title": "Authenticated X Latest search for @CallNYCapp",
+      "organization": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "Authenticated search completed July 15, 2026",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/search?q=%40CallNYCapp&src=typed_query&f=live",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated X Latest search for posts mentioning @CallNYCapp, reviewed July 15, 2026.",
+      "publicNote": "The search returned 11 distinct visible posts. Four were authored by then-Council-member accounts; a separate preserved timeline capture supplies two additional Council-member examples omitted by direct mention search.",
+      "doesNotEstablish": [
+        "a complete account export",
+        "quote posts or URL-only references omitted by direct mention search",
+        "likes, deleted posts, inaccessible repost history, or renamed accounts",
+        "Council endorsement, adoption, commissioning, or official project status"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+      "title": "Minutes of the Stated Meeting, November 16, 2016",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-11-16",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=bf984b80-ed07-45ba-8f66-feb05ab509a3&ID=39395&M=AO&N=TWludXRlcyBvZiB0aGUgU3RhdGVkIE1lZXRpbmc%3D",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, minutes of the Stated Meeting, November 16, 2016.",
+      "publicNote": "The official membership list includes Margaret Chin, Mathieu Eugene, Peter Koo, Steven Matteo, Helen Rosenthal, and Ruben Wills.",
+      "doesNotEstablish": [
+        "social-account control",
+        "CallNYC engagement",
+        "project endorsement"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -299,6 +338,58 @@
       "boundaries": [
         "Historical officeholders, statistics, categories, and contact information are not current guidance."
       ]
+    },
+    {
+      "id": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "archive-note",
+          "text": "A bounded review recovers at least six distinct then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017. This is a documented lower bound, not a comprehensive engagement count.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/callnyc"
+          ]
+        },
+        {
+          "key": "case-study",
+          "text": "A bounded review recovered at least six then-Council-member accounts publicly replying to, amplifying, or promoting CallNYC between April 2016 and July 2017.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "11-post direct-mention corpus",
+            "four additional Council-member accounts",
+            "dates and interaction text"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16",
+          "relationship": "supports-boundary",
+          "supports": [
+            "official Council-member status for all six recovered officeholders during the relevant Council term"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Use at least six and the April 2016-July 2017 date range; do not describe the result as comprehensive.",
+        "The four direct-mention search results and two preserved-timeline results come from complementary recovery methods.",
+        "Do not aggregate visible repost and like counts without identifying which accounts performed them.",
+        "Engagement does not establish endorsement, adoption, commissioning, or official status."
+      ]
     }
   ],
   "pages": [
@@ -310,7 +401,9 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+        "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
       ],
       "occurrences": [
         {
@@ -353,6 +446,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-POLITICO-2016-03-14"
+          ]
+        },
+        {
+          "id": "council-engagement",
+          "claimId": "CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15",
+            "SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16"
           ]
         },
         {

@@ -380,7 +380,7 @@ check(
 );
 check(
   "Claim maturity",
-  "Recovered co-founder and bounded CallNYC engagement claims retain distinct states",
+  "Recovered co-founder and bounded CallNYC engagement claims are strong without claiming completeness",
   4,
   claimById.get("CLM-NYCA-COFOUNDER-ROLE")?.status ===
       "confirmed-with-boundary" &&
@@ -388,14 +388,42 @@ check(
       .get("CLM-NYCA-COFOUNDER-ROLE")
       ?.boundaries.some((boundary) => /division of labor|chronology/i.test(boundary)) &&
     claimById.get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")?.status ===
-      "use-with-care" &&
+      "confirmed-with-boundary" &&
     claimById
       .get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")
-      ?.projections.every(
+      ?.projections.some(
         (projection) =>
-          projection.status !== "active" ||
-          projection.surfaces.every((surface) => !surface.startsWith("/"))
-      ),
+          projection.status === "active" &&
+          projection.surfaces.includes("/work/callnyc") &&
+          /at least six/i.test(projection.text)
+      ) &&
+    claimById
+      .get("CLM-CALLNYC-COUNCIL-ENGAGEMENT-METRICS")
+      ?.boundaries.some((boundary) => /do not describe.*comprehensive/i.test(boundary)),
+  true
+);
+check(
+  "Claim maturity",
+  "Social identity claims separate establishment, authorship, participation, and engagement",
+  7,
+  claimById.get("CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS")?.status ===
+      "use-with-care" &&
+    claimById
+      .get("CLM-PROJECT-SOCIAL-IDENTITY-SYSTEMS")
+      ?.antiClaims.some((value) => /authored every project post/i.test(value)) &&
+    claimById.get("CLM-NYCA-X-PUBLIC-IDENTITY-CONTINUITY")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NYCA-X-PUBLIC-IDENTITY-CONTINUITY")
+      ?.boundaries.some((value) => /not a complete platform export/i.test(value)) &&
+    claimById.get("CLM-NYCA-X-COUNCIL-ENGAGEMENT")?.status ===
+      "confirmed-with-boundary" &&
+    claimById
+      .get("CLM-NYCA-X-COUNCIL-ENGAGEMENT")
+      ?.antiClaims.some((value) => /Only seven Council members/i.test(value)) &&
+    sourceById
+      .get("SRC-PROJECT-X-AUTHENTICATED-PROFILE-INVENTORY-2026-07-15")
+      ?.doesNotEstablish.some((value) => /authored every post/i.test(value)),
   true
 );
 check(
@@ -596,7 +624,13 @@ check(
   "Projection discipline",
   "Unselected sources stay out of the retinal citation layer",
   6,
-  publicRegistry.sources.every((source) => !newSourceIds.has(source.id)),
+  publicRegistry.sources.every((source) =>
+    knowledgeBank.pages.some(
+      (page) =>
+        page.sourceOrder.includes(source.id) ||
+        page.occurrences.some((occurrence) => occurrence.sourceIds?.includes(source.id))
+    )
+  ),
   true
 );
 check(

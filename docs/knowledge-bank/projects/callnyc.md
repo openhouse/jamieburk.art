@@ -55,26 +55,39 @@ registration contents, and a complete participant list were not recovered.
 
 ## Council-member account engagement
 
-A supplied seven-page timeline capture preserves a documented lower bound for
-Council-member engagement with CallNYC in 2016:
+A supplied seven-page timeline capture and an authenticated X Latest search
+now preserve a documented lower bound for Council-member engagement with
+CallNYC in 2016-2017:
 
 - Dr. Mathieu Eugene quote-posted CallNYC's October 3 HPD Housing Lottery award
   post on October 4, 2016.
 - Helen Rosenthal directed readers to `callnyc.org` on September 27, 2016;
   CallNYC reposted her post.
+- Peter Koo amplified CallNYC's Lifeline recognition on April 27, 2016.
+- Steven Matteo replied to CallNYC about potholes on May 3, 2016.
+- Ruben Wills replied to CallNYC and the Council and copied the Queens
+  Chronicle on May 17, 2016.
+- Margaret Chin thanked CallNYC for recognizing her office's issue counts on
+  July 11, 2017.
 
-An official August 2016 New York City Council roster confirms that both were
-Council members in the relevant period. The canonical source records are
-`SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11` and
-`SRC-CALLNYC-COUNCIL-PB-ROSTER-2016-08-04`.
+Official New York City Council records confirm that all six served during the
+relevant Council term. The canonical source records include
+`SRC-CALLNYC-X-TIMELINE-PDF-2026-07-11`,
+`SRC-CALLNYC-X-AUTHENTICATED-MENTION-SEARCH-2026-07-15`, and
+`SRC-NYC-COUNCIL-STATED-MEETING-2016-11-16`.
 
-This evidence supports **at least two distinct then-Council-member accounts
-publicly amplifying CallNYC in the captured timeline slice**. It does not
-establish a comprehensive account count, interaction total, endorsement,
-adoption, commissioning, or official project status. Platform blocking,
-deleted posts, account renames, and incomplete archives keep the comprehensive
-measurement inquiry open. The PDF itself remains outside the public repo; only
-public-safe metadata and bounded observations are committed.
+This evidence supports **at least six distinct then-Council-member accounts
+publicly replying to, amplifying, or promoting CallNYC between April 2016 and
+July 2017**. It does not establish a comprehensive account count, interaction
+total, endorsement, adoption, commissioning, or official project status.
+Direct-mention search can omit quote posts and URL-only promotions; timeline
+captures can omit other dates; deleted posts, account renames, and incomplete
+archives keep the comprehensive measurement inquiry open. The PDF itself
+remains outside the public repo; only public-safe metadata and bounded
+observations are committed.
+
+See the [project social account archive](../intake/2026-07-15-project-social-account-archive.md)
+for the complete method, post list, and cross-project account registry.
 
 ## Corrections
 

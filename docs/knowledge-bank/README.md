@@ -96,3 +96,8 @@ The [NTER CHNG archive and exhibition receipt](intake/2026-07-15-nter-chng-archi
 shows how a recovered first-party project surface can strengthen a collective
 credit while a remembered exhibition connection remains a bounded inquiry after
 an official-site search returns no project-specific record.
+The [project social account archive](intake/2026-07-15-project-social-account-archive.md)
+shows how authenticated public-profile and mention research can preserve project
+identity systems, collaborator use, Council and agency engagement, mission
+patterns, and explicit authorship boundaries without collecting credentials or
+private account data.
