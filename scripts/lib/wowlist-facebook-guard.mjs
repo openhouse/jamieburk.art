@@ -11,7 +11,7 @@ export const directRiskPatterns = [
   {
     label: "embedded member product-influence claim",
     pattern:
-      /\b(?:member|community) (?:input|feedback|suggestions?|comments?|ideas?)\b.{0,120}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|implemented|incorporated|changed?|guided?|determined)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b/is
+      /\b(?:member|community) (?:input|feedback|suggestions?|comments?|ideas?)\b.{0,120}\b(?:shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|implemented|incorporated|improv(?:ed|ing)|adopt(?:ed|ing)|changed?|guided?|determined)\b.{0,120}\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b/is
   },
   {
     label: "embedded member product-influence claim",
@@ -32,6 +32,10 @@ export const directRiskPatterns = [
     label: "embedded member product-influence claim",
     pattern:
       /\b(?:product|design|platform|service|roadmap|features?|site|decisions?|changes?)\b.{0,120}\b(?:incorporat(?:ed|ing)|implement(?:ed|ing)|based\b.{0,40}\bon|changed\b.{0,40}\bafter|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|drove|reflected)\b.{0,140}\b(?:members?|community|suggestions?|comments?|feedback|input|ideas?)\b/is
+  },
+  {
+    label: "embedded member product-influence claim",
+    pattern: /\bteam\b.{0,100}\b(?:adopt(?:ed|ing)|implement(?:ed|ing)|used)\b.{0,100}\bmember suggestions?\b/is
   },
   {
     label: "signed-in account-control disclosure",
@@ -60,15 +64,19 @@ const communitySignal =
 const productSignal =
   /\b(?:product|design|platform|service|roadmap|features?|site|decisions?|product changes?)\b/i;
 const influenceSignal =
-  /\b(?:provided?|gave|contributed|offered|submitted|shared|supplied|sent)\b.{0,50}\b(?:input|feedback|suggestions?|comments?|ideas?)\b|\b(?:help(?:ed)? shap(?:e|ed|ing)|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|changed?|guided?|drove|determined|co[- ]design(?:ed|ing)?|incorporat(?:ed|ing)|integrat(?:ed|ing)|implement(?:ed|ing)|reflected|based\b.{0,40}\bon)\b/i;
+  /\b(?:provided?|gave|contributed|offered|submitted|shared|supplied|sent)\b.{0,50}\b(?:input|feedback|suggestions?|comments?|ideas?)\b|\b(?:help(?:ed)? shap(?:e|ed|ing)|shap(?:ed|ing)|influenc(?:ed|ing)|inform(?:ed|ing)|improv(?:ed|ing)|adopt(?:ed|ing)|changed?|guided?|drove|determined|co[- ]design(?:ed|ing)?|incorporat(?:ed|ing)|integrat(?:ed|ing)|implement(?:ed|ing)|reflected|based\b.{0,40}\bon)\b/i;
 const invitationSignal =
   /\b(?:invite(?:d|s|ing)?|invitation|asked|welcomed|encouraged)\b.{0,180}\b(?:community )?members?\b|\b(?:community )?members?\b.{0,100}\bwere invited\b/i;
 const accountDenialSignal =
-  /\b(?:does not|did not|cannot|could not|not recovered|no evidence)\b.{0,140}\b(?:establish|show|prove|confirm|expose|identify|indicate|support)\b/i;
+  /\b(?:does not|did not|cannot|could not|not recovered|no evidence|has not been|have not been)\b.{0,180}\b(?:establish|established|show|prove|confirm|expose|identify|indicate|support)\b|\bJamie\b.{0,80}\b(?:is not|was not|has not|had not|does not|did not)\b.{0,120}\b(?:administrator|admin|editor|manager|control|ownership|rights?|access|Page)\b/i;
+const influenceDenialSignal =
+  /\b(?:does not|did not|cannot|could not|no evidence|has not been|have not been)\b.{0,200}\b(?:establish(?:es|ed)?|shows?|proves?|confirms?|supports?|indicates?|demonstrates?|shapes?|influences?|informs?|improves?|adopts?|implements?)\b|\b(?:member|community) (?:input|feedback|suggestions?|comments?|ideas?)\b.{0,100}\b(?:does not|did not|was not|were not|has not|had not)\b.{0,100}\b(?:shape|influence|inform|improve|change|guide|drive|determine|implement)\b/i;
 const positiveJamieAccountSignal =
-  /\bJamie\b.{0,100}\b(?:is|was|has|had|owns?|remained?|still controls?|was listed as|could|retained?|held|kept|maintained?|managed?|edited?|published?)\b.{0,140}\b(?:Page administrator|administrator|admin|Page editor|editor|Page manager|manager|control|ownership|admin rights?|administrator access|management access|Page settings|publish(?:ing)?|post(?:ing)? as|WOW List Page)\b/i;
+  /\bJamie\b.{0,100}\b(?:is|was|has|had|owns?|remained?|still controls?|was listed as|served as|could|retained?|held|kept|maintained?|administers?|managed?|edited?|published?)\b.{0,140}\b(?:Page administrator|administrator|admin|Page editor|editor|Page manager|manager|control|ownership|admin rights?|administrator access|management access|Page settings|publish(?:ing)?|post(?:ing)? as|WOW List Page)\b/i;
 const reverseJamieAccountSignal =
-  /\b(?:Page settings|administrator access|admin rights?|owner controls?|Page editor|Page manager)\b.{0,100}\b(?:available to|visible to|assigned to|held by|listed for)\b.{0,80}\bJamie\b/i;
+  /\b(?:Page settings|administrator access|admin rights?|owner controls?|Page editor|Page manager|Page administration)\b.{0,100}\b(?:available to|visible to|assigned to|held by|listed for|administered by|managed by|owned by)\b.{0,80}\bJamie\b/i;
+const passiveJamieAccountSignal =
+  /\b(?:WOW List )?Page\b.{0,60}\b(?:was|is)\b.{0,40}\b(?:administered|managed|owned|edited)\b.{0,40}\bby Jamie\b/i;
 
 function fragments(text) {
   return text
@@ -78,13 +86,17 @@ function fragments(text) {
 }
 
 export function findWowlistFacebookPublicArtifactRisk(text) {
-  for (const item of directRiskPatterns) {
-    if (item.pattern.test(text)) return item.label;
-  }
-
   for (const fragment of fragments(text)) {
+    for (const item of directRiskPatterns) {
+      if (!item.pattern.test(fragment)) continue;
+      if (item.label.includes("product-influence") && influenceDenialSignal.test(fragment)) continue;
+      if (item.label.includes("account-control") && accountDenialSignal.test(fragment)) continue;
+      return item.label;
+    }
     if (
-      (positiveJamieAccountSignal.test(fragment) || reverseJamieAccountSignal.test(fragment)) &&
+      (positiveJamieAccountSignal.test(fragment) ||
+        reverseJamieAccountSignal.test(fragment) ||
+        passiveJamieAccountSignal.test(fragment)) &&
       !accountDenialSignal.test(fragment)
     ) {
       return "positive Jamie account-control claim";
@@ -93,7 +105,8 @@ export function findWowlistFacebookPublicArtifactRisk(text) {
       communitySignal.test(fragment) &&
       productSignal.test(fragment) &&
       influenceSignal.test(fragment) &&
-      !invitationSignal.test(fragment)
+      !invitationSignal.test(fragment) &&
+      !influenceDenialSignal.test(fragment)
     ) {
       return "demonstrated member product influence";
     }
