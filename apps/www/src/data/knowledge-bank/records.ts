@@ -45,6 +45,12 @@ import {
   kcSpacesFundFacebookPostSources
 } from "./kcSpacesFundFacebookPosts.ts";
 import {
+  jamiePersonalFacebookPostClaims,
+  jamiePersonalFacebookPostIntakeItems,
+  jamiePersonalFacebookPostResearchInquiries,
+  jamiePersonalFacebookPostSources
+} from "./jamiePersonalFacebookPosts.ts";
+import {
   jamieWowlistFacebookEventClaims,
   jamieWowlistFacebookEventIntakeItems,
   jamieWowlistFacebookEventResearchInquiries,
@@ -827,6 +833,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventSources,
     ...nycacFacebookPostSources,
     ...kcSpacesFundFacebookPostSources,
+    ...jamiePersonalFacebookPostSources,
     ...jamieWowlistFacebookEventSources,
     ...wowlistFacebookPostSources,
     ...kcTownHallPhaseOneSources
@@ -1070,6 +1077,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventClaims,
     ...nycacFacebookPostClaims,
     ...kcSpacesFundFacebookPostClaims,
+    ...jamiePersonalFacebookPostClaims,
     ...jamieWowlistFacebookEventClaims,
     ...wowlistFacebookPostClaims,
     ...kcTownHallPhaseOneClaims
@@ -1157,6 +1165,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventResearchInquiries,
     ...nycacFacebookPostResearchInquiries,
     ...kcSpacesFundFacebookPostResearchInquiries,
+    ...jamiePersonalFacebookPostResearchInquiries,
     ...jamieWowlistFacebookEventResearchInquiries,
     ...wowlistFacebookPostResearchInquiries,
     ...kcTownHallPhaseOneResearchInquiries
@@ -2917,6 +2926,7 @@ const knowledgeBankInput = {
     ...nycacFacebookEventIntakeItems,
     ...nycacFacebookPostIntakeItems,
     ...kcSpacesFundFacebookPostIntakeItems,
+    ...jamiePersonalFacebookPostIntakeItems,
     ...jamieWowlistFacebookEventIntakeItems,
     ...wowlistFacebookPostIntakeItems,
     ...kcTownHallPhaseOneIntakeItems

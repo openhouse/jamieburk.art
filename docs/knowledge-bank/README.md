@@ -142,6 +142,16 @@ from organizer, grantmaking, Facebook-publishing, and naming credit. The
 Facebook layer remains knowledge-bank depth; it does not create a public
 archive route.
 
+The [Jamie personal Facebook full-population
+note](projects/jamie-personal-facebook-posts.md) accounts for every one of the
+1,243 records returned by the authenticated **Manage Posts > Posted by: You**
+surface across 621 cursor pages. A public-safe aggregate control preserves
+mission and source routing while raw records, unknown-audience material,
+ordinary-life content, comments, identities, media, and authenticated state
+remain protected. Six individually public project posts become bounded source
+specimens. Outbound stakeholder references remain distinct from inbound
+engagement, and no personal-timeline or engagement-dashboard route is created.
+
 The [NTER CHNG archive expansion](intake/2026-07-15-nter-chng-archive-expansion.md)
 demonstrates a related source-chain pattern: an archived project site, an
 official exhibition artist page, a first-party account of visitor use, and an
