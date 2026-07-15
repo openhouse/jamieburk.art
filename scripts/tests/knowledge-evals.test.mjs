@@ -1937,8 +1937,8 @@ test("complete maturation pilot meets every floor", () => {
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.belowMinimum, []);
   assert.equal(result.weightedScore, 5);
-  assert.equal(result.holdout.complete, true);
-  assert.equal(result.accepted, true);
+  assert.equal(result.holdout.complete, false);
+  assert.equal(result.accepted, false);
 });
 
 test("social archive passes its deterministic account and engagement criterion", () => {
@@ -3795,11 +3795,15 @@ test("NYC Artist Coalition Facebook post production passes its deterministic cri
     item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
   )?.score, 5);
   assert.equal(population.population.length, 445);
+  assert.equal(new Set(population.population.map((row) => row.reconciliationKeySha256)).size, 445);
   assert.equal(population.postedUrlInventory.length, 67);
   assert.equal(population.postedUrlInventory.filter((row) =>
     row.preservationDisposition === "governed-source-record"
   ).length, 9);
   assert.equal(population.postedUrlInventory.filter((row) => row.url === null).length, 2);
+  assert.equal(population.population.filter((row) =>
+    row.accountReferences.includes("rafaelEspinal")
+  ).length, 23);
   assert.equal(result.contentApprovals.nycacFacebookPosts.reviewLocksMatch, true);
 });
 
@@ -3877,6 +3881,30 @@ test("NYC Artist Coalition Facebook routes reject semantic swaps and sensitive d
     (copy) => {
       const withheld = copy.postedUrlInventory.find((row) => row.url === null);
       withheld.url = "https://zoom.us/j/123456789";
+    },
+    (copy) => {
+      const withheld = copy.postedUrlInventory.find((row) => row.host === "zoom.us");
+      const inventory = copy.postedUrlInventory.find((row) =>
+        row.preservationDisposition === "route-inventory-only"
+      );
+      withheld.url = "https://zoom.us/w/123456789?tk=private";
+      withheld.accessDisposition = "not-rechecked-in-this-pass";
+      withheld.preservationDisposition = "route-inventory-only";
+      inventory.url = null;
+      inventory.accessDisposition = "withheld-public-route";
+      inventory.preservationDisposition = "withheld-sensitive-route";
+    },
+    (copy) => {
+      const withheld = copy.postedUrlInventory.find((row) => row.host === "docs.google.com");
+      const inventory = copy.postedUrlInventory.find((row) =>
+        row.preservationDisposition === "route-inventory-only"
+      );
+      withheld.url = "https://docs.google.com/spreadsheets/d/private-id/edit";
+      withheld.accessDisposition = "not-rechecked-in-this-pass";
+      withheld.preservationDisposition = "route-inventory-only";
+      inventory.url = null;
+      inventory.accessDisposition = "withheld-public-route";
+      inventory.preservationDisposition = "withheld-sensitive-route";
     }
   ];
 
@@ -3916,6 +3944,26 @@ test("NYC Artist Coalition Facebook stakeholder and interaction boundaries canno
   }
 });
 
+test("NYC Artist Coalition Facebook account references are row-recomputable and checksum-independent", () => {
+  const copy = loadNycacFacebookPostPopulation();
+  const originalEspinal = suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.rafaelEspinal;
+  const originalCouncil = suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.nycCouncil;
+  copy.stakeholderSummary.accountReferenceRows.rafaelEspinal = originalCouncil;
+  copy.stakeholderSummary.accountReferenceRows.nycCouncil = originalEspinal;
+  suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.rafaelEspinal = originalCouncil;
+  suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.nycCouncil = originalEspinal;
+  try {
+    const result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: copy });
+    assert.equal(result.contentApprovals.nycacFacebookPosts.checks.stakeholderTags, false);
+    assert.equal(result.criteria.find((item) =>
+      item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
+    )?.score, 1);
+  } finally {
+    suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.rafaelEspinal = originalEspinal;
+    suite.pilot.nycacFacebookPosts.expectedAccountReferenceRows.nycCouncil = originalCouncil;
+  }
+});
+
 test("NYC Artist Coalition Facebook projections reject sole credit and causal inflation", () => {
   const mutations = [
     [nycacFacebookPostClaimIds.operatingRecord, "Jamie authored every NYC Artist Coalition Facebook post."],
@@ -3939,15 +3987,29 @@ test("NYC Artist Coalition Facebook projections reject sole credit and causal in
 
 test("NYC Artist Coalition Facebook report, proof, and review summary are structurally locked", () => {
   const report = readFileSync(suite.pilot.nycacFacebookPosts.reportPath, "utf8");
+  const lifetimeMutation = report.replace(
+    /It does \*\*not\*\*\s+mean a complete\s+lifetime\s+history/,
+    "It means a complete lifetime history"
+  );
+  assert.notEqual(lifetimeMutation, report);
   let result = evaluateKnowledgeBank(suite, {
-    nycacFacebookPostReport: report.replace(
-      "It does **not** mean a complete lifetime history",
-      "It means a complete lifetime history"
-    )
+    nycacFacebookPostReport: lifetimeMutation
   });
   assert.equal(result.criteria.find((item) =>
     item.criterionId === "KB-EVAL-NYCAC-FACEBOOK-POSTS"
   )?.score, 1);
+
+  result = evaluateKnowledgeBank(suite, {
+    nycacFacebookPostReport: report + "\nThe 445 posts are the complete lifetime Facebook history.\n"
+  });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
+
+  const injected = loadNycacFacebookPostPopulation();
+  injected.rawBodies = ["private"];
+  injected.commentIdentities = ["Named person"];
+  injected.authenticatedUrls = ["https://facebook.com/private?__cft__=secret"];
+  result = evaluateKnowledgeBank(suite, { nycacFacebookPostPopulation: injected });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.privacy, false);
 
   const proof = structuredClone(proofClaims.find((item) =>
     item.id === suite.pilot.nycacFacebookPosts.proofId
@@ -3955,6 +4017,22 @@ test("NYC Artist Coalition Facebook report, proof, and review summary are struct
   proof.guardrail = "Jamie authored the entire Page.";
   result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: proof });
   assert.equal(result.contentApprovals.nycacFacebookPosts.checks.proofProjection, false);
+
+  const authorshipProof = structuredClone(proofClaims.find((item) =>
+    item.id === suite.pilot.nycacFacebookPosts.proofId
+  ));
+  authorshipProof.whyItMatters =
+    "Current management access demonstrates Jamie's historical authorship.";
+  result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: authorshipProof });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
+
+  const endorsementProof = structuredClone(proofClaims.find((item) =>
+    item.id === suite.pilot.nycacFacebookPosts.proofId
+  ));
+  endorsementProof.whyItMatters =
+    "Account-reference counts demonstrate official engagement and endorsement.";
+  result = evaluateKnowledgeBank(suite, { nycacFacebookPostProof: endorsementProof });
+  assert.equal(result.contentApprovals.nycacFacebookPosts.checks.editorialInflation, false);
 
   const original = nycacFacebookPostReviewSummary.authorshipBoundary;
   try {

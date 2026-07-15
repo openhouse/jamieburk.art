@@ -616,6 +616,33 @@
       "blockers": [
         "Two fresh independent judges must inspect the frozen 445-row capture-date population, 598-to-445 render reconciliation, 67-route inventory, nine governed-source semantics, two withheld sensitive routes, mission and stakeholder reference boundaries, displayed interactions, shared-account authorship, raw-data exclusions, selective website projection, and count-preserving mutation resistance."
       ]
+    },
+    {
+      "judgeId": "nycac-facebook-posts-holdout-data-integrity-privacy-2026-07-15-final-a",
+      "completedAt": "2026-07-15T15:10:16-04:00",
+      "lens": "Fresh independent archival data-integrity, privacy, provenance, source-closure, public-projection, and checksum-refresh-resistant mutation review of frozen commit 450830995e9c526af878af2b4353718758a079e1",
+      "weightedScore": 2.8,
+      "criterionScores": [5, 1, 1, 5, 5, 1, 1, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 1],
+      "accepted": false,
+      "blockers": [
+        "Two committed tests failed: the aggregate test expected acceptance during the deliberate reset, and the report mutation did not cross a Markdown line break.",
+        "Count-preserving attacks could expose withheld Zoom or Google routes while moving the null disposition to another route.",
+        "Top-level and adjacent private-field injections relied on review locks instead of structural allowlists.",
+        "Several capture, authorship, stakeholder, and impact overclaims relied on editable locks instead of checksum-independent semantics.",
+        "Account-reference totals were aggregate-only rather than recomputable from rows.",
+        "Repeated content fingerprints prevented independent row-identity confirmation from the public-safe ledger."
+      ]
+    },
+    {
+      "judgeId": "material-change-reset-nycac-facebook-posts-holdout-repair-2026-07-15",
+      "completedAt": "2026-07-15T15:35:00-04:00",
+      "lens": "Protocol reset after the rejected holdout prompted unique one-way row reconciliation hashes, row-level account-reference classifications, exact withheld-route semantics, complete object allowlists, hard-coded aggregate meanings, editorial inflation guards, and repaired mutation tests",
+      "weightedScore": 5,
+      "criterionScores": [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+      "accepted": false,
+      "blockers": [
+        "Two fresh independent judges must inspect the repaired frozen candidate and verify that row identity, withheld-route privacy, object structure, account-reference semantics, editorial boundaries, and mutation tests now resist count-preserving and checksum-refresh attacks."
+      ]
     }
   ]
 }

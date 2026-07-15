@@ -123,7 +123,7 @@ export const nycacFacebookPostKnowledge = {
       comparisonSourceIds: [sourceIds.page, sourceIds.report],
       project: "nyc-artist-coalition",
       kind: "source-fact",
-      text: "Repeated authenticated lazy scrolling reached a stable terminal feed. Private per-post reconciliation paired 153 transient duplicate render variants among 598 encountered rows, producing 445 distinct dated posts and a 445-row public-safe ledger.",
+      text: "Repeated authenticated lazy scrolling reached a stable terminal feed. Private per-post reconciliation paired 153 transient duplicate render variants among 598 encountered rows, producing 445 distinct dated posts and a 445-row public-safe ledger with 445 unique one-way reconciliation hashes.",
       locator: "populationReconciliation, method.terminalControl, and population",
       status: "verified",
       publicSafe: true,
@@ -295,11 +295,12 @@ export const nycacFacebookPostKnowledge = {
       canonicalUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-posts-full-population.json",
       preferredPublicUrl: "canonical",
       publicCitation: "NYC Artist Coalition Facebook post full-population public-safe census, July 15, 2026.",
-      publicNote: "A 445-row ledger of dates, source-route keys, bounded mission and stakeholder tags, content hashes, and displayed interaction counts. Raw bodies, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
+      publicNote: "A 445-row ledger of dates, unique one-way reconciliation hashes, source-route keys, bounded mission, stakeholder, and account-reference tags, content hashes, and displayed interaction counts. Raw bodies, underlying reconciliation identities, social-graph identities, authenticated URLs, and sensitive exact routes are excluded.",
       supportsGenerally: [
         "598 encountered render rows",
         "153 deduplicated render variants",
         "445 distinct dated posts",
+        "445 unique one-way reconciliation hashes",
         "2017-2021 date and year reconciliation",
         "67 distinct off-Facebook routes",
         "65 published exact routes and two withheld sensitive routes",
@@ -412,7 +413,7 @@ export const nycacFacebookPostKnowledge = {
         { key: "archive-note", text: "The public-safe census reconciles 598 encountered render rows into 445 distinct dated posts spanning 2017-2021.", status: "active", citationRequired: true, surfaces: ["docs/knowledge-bank/projects/nyc-artist-coalition-facebook-posts"] }
       ],
       evidence: [
-        { sourceId: sourceIds.census, relationship: "direct-support", supports: ["598 encountered render rows", "153 deduplicated render variants", "445 distinct dated posts", "2017-2021 date and year reconciliation", "67 distinct off-Facebook routes"], confidence: "high", renderCitation: true },
+        { sourceId: sourceIds.census, relationship: "direct-support", supports: ["598 encountered render rows", "153 deduplicated render variants", "445 distinct dated posts", "445 unique one-way reconciliation hashes", "2017-2021 date and year reconciliation", "67 distinct off-Facebook routes"], confidence: "high", renderCitation: true },
         { sourceId: sourceIds.report, relationship: "corroborating", supports: ["capture method", "population boundary", "privacy controls", "shared-account authorship boundary"], confidence: "high", renderCitation: true },
         { sourceId: sourceIds.page, relationship: "context", supports: ["public Page identity", "capture-date feed surface"], confidence: "high", renderCitation: false }
       ],

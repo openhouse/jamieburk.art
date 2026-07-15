@@ -946,6 +946,7 @@
       "expectedEncounteredRenderRows": 598,
       "expectedDuplicateRenderVariants": 153,
       "expectedPostCount": 445,
+      "expectedUniqueReconciliationKeys": 445,
       "expectedYearCounts": {
         "2017": 186,
         "2018": 74,

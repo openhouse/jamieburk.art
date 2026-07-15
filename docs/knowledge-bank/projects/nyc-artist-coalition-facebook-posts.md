@@ -24,13 +24,18 @@ Seven consecutive terminal checks produced no new records or document-height
 growth. Private platform-generated post identities reconciled 153 duplicate
 render variants among 598 encountered rows, producing 445 distinct posts. Those
 private identities, authenticated URLs, and raw bodies are excluded from the
-public repository.
+public repository. Each public row instead carries a unique one-way
+reconciliation hash derived from its private platform identity. All 445 hashes
+are unique. They make row distinction auditable without disclosing the
+underlying identity; content hashes may repeat when captured bodies or source
+cards repeat and are not used as the row identity.
 
 | Measure | Result |
 | --- | ---: |
 | Distinct posts exposed by the live feed | 445 |
 | Encountered render rows | 598 |
 | Duplicate render variants reconciled | 153 |
+| Unique one-way reconciliation hashes | 445 |
 | Posts with recovered dates | 445 |
 | Date range | Jan. 29, 2017–Sept. 15, 2021 |
 | 2017 / 2018 / 2019 / 2020 / 2021 | 186 / 74 / 111 / 69 / 5 |
