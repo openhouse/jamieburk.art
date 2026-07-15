@@ -436,6 +436,74 @@ const knowledgeBankInput = {
       doesNotEstablish: ["Jamie's individual role", "that DCLA or Commissioner Finkelpearl personally needed Jamie", "individual authorship of coalition recommendations", "adoption of every coalition proposal", "sole coalition causality for any strategy, law, office, or budget"]
     },
     {
+      id: "SRC-NYC-COUNCIL-CULTURAL-PLAN-FINKELPEARL-TESTIMONY-2017-02-27",
+      title: "Oversight - Cultural Plan - Next Steps: prepared testimony of Commissioner Tom Finkelpearl",
+      organization: "New York City Department of Cultural Affairs / New York City Council",
+      author: "Tom Finkelpearl",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-02-27",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect6_Commissioner-Tom-Finkelpearl_Testimony.pdf",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Department of Cultural Affairs Commissioner Tom Finkelpearl, prepared testimony for the City Council Committee on Cultural Affairs, 'Oversight - Cultural Plan - Next Steps,' February 27, 2017.",
+      publicNote: "The five-page prepared statement describes Council collaboration and broad CreateNYC public engagement. A close text search found no NYC Artist Coalition, New York City Artist Coalition, or DIY reference in this prepared document; that bounded negative result does not establish what may have been said orally or elsewhere in the hearing record.",
+      supportsGenerally: ["February 27, 2017 Cultural Plan oversight context", "DCLA and Council collaboration", "CreateNYC public-engagement rationale", "bounded absence of an NYC Artist Coalition reference from the prepared statement"],
+      doesNotEstablish: ["the complete oral hearing record", "that Commissioner Finkelpearl never mentioned NYC Artist Coalition in that hearing", "Jamie's role", "coalition influence", "policy causality"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+      title: "FY2018 Executive Budget hearing transcript: Commissioner Tom Finkelpearl testimony",
+      organization: "New York City Council",
+      author: "New York City Council transcript",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-05-19",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council, Committee on Finance jointly with the Committee on Cultural Affairs and Subcommittee on Libraries, FY2018 Executive Budget hearing transcript, May 19, 2017, pp. 89-93.",
+      publicNote: "Finkelpearl framed CreateNYC as a reciprocal public relationship, said DCLA wanted more direct public feedback, and used NYC Artist Coalition's formation after DCLA's January DIY-arts meeting as an example of the power of bringing people together around a common cause. His immediately following 'huge influence' statement grammatically refers to the Disability Arts NYC taskforce, not NYC Artist Coalition.",
+      supportsGenerally: ["May 19, 2017 Council budget-hearing context", "Finkelpearl's reciprocal-public-engagement rationale", "DCLA interest in direct public feedback beyond its funded-organization network", "Finkelpearl's explicit NYC Artist Coalition formation reference", "coalition formation as an example of public-engagement value"],
+      doesNotEstablish: ["Jamie's individual role", "that Finkelpearl or DCLA personally needed Jamie", "that the 'huge influence' statement referred to NYC Artist Coalition", "coalition authorship of DCLA policy", "adoption of every coalition proposal", "sole causality for any law, office, budget, or agency action"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+      title: "Cabaret Law enforcement hearing transcript: Jamie Burkart testimony",
+      organization: "New York City Council",
+      author: "New York City Council transcript",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2017-06-19",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=41F1062B-FC32-4A12-846E-65CEB3BB052C&ID=5316935&M=F",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council Committee on Consumer Affairs, Cabaret Law enforcement hearing transcript, testimony of Jamie Burkart, June 19, 2017, pp. 200-202.",
+      publicNote: "The transcript misspells Jamie's surname as Burkhart. Jamie testified as a NYC Artist Coalition member, connected direct safety work with cultural spaces to a trust-and-repeal argument, requested full Cabaret Law repeal, and asked for low-income community spaces to have seats in nightlife governance. Chair Rafael Espinal thanked the panel and Jamie for sharing the personal story.",
+      supportsGenerally: ["Jamie's NYC Artist Coalition affiliation", "Jamie's formal Council testimony", "full-repeal request", "fire-safety walkthrough and study-group context", "direct work with cultural spaces", "trust-and-safety analysis", "request for low-income community-space representation", "Espinal's acknowledgment of Jamie's personal testimony"],
+      doesNotEstablish: ["the transcript's spelling of Jamie's surname", "independent verification of the transcript's 100 percent exam-pass statement", "Jamie's sole authorship of coalition safety work", "that Jamie created the Office of Nightlife", "that Espinal depended on Jamie alone", "sole or direct causality for Cabaret Law repeal"]
+    },
+    {
+      id: "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11",
+      title: "MARCH operations and Intro 1156 hearing transcript",
+      organization: "New York City Council",
+      author: "New York City Council transcript",
+      kind: "government-record",
+      visibility: "public",
+      preservationStatus: "live",
+      publishedAt: "2019-02-11",
+      accessedAt: "2026-07-15",
+      canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
+      preferredPublicUrl: "canonical",
+      publicCitation: "New York City Council Committee on the Justice System, MARCH operations and Intro 1156 hearing transcript, February 11, 2019.",
+      publicNote: "Chair Rory Lancman used NYC Artist Coalition's FOIL-based analysis to question NYPD about MARCH outcomes. NYPD disputed the coalition's first finding and raised classification concerns. The same transcript records coalition testimony from Olympia Kazi and Jamie Burkart, whose surname is misspelled as Burkhart.",
+      supportsGenerally: ["Council use of NYC Artist Coalition research in agency oversight", "FOIL-based MARCH analysis", "public dispute by NYPD", "classification and methodology concerns", "Olympia Kazi testimony", "Jamie Burkart testimony", "Talks Not Raids and Intro 1156 context"],
+      doesNotEstablish: ["Jamie's authorship of the FOIL analysis", "independent accuracy of every coalition statistic", "that the Council adopted every coalition finding", "that Jamie or NYC Artist Coalition alone caused Intro 1156", "that MARCH was disbanded", "the transcript's spelling of Jamie's surname"]
+    },
+    {
       id: "SRC-NYCA-SAFETY-RESOURCES-2017-02-09",
       title: "Venue Safety Resources",
       organization: "NYC Artist Coalition",
@@ -1335,6 +1403,39 @@ const knowledgeBankInput = {
       publicSummary: "A 5,124-slot profile-population disposition recovered 3,123 public-interface records and keeps 2,001 platform-limited slots explicitly unresolved. The recovered corpus documents four named campaign identities, 1,161 distinct posted short URLs, and a strict minimum of 15 direct Council-member-account interactions from five then-serving members."
     },
     {
+      id: "INQ-NYCA-FINKELPEARL-COUNCIL-TRANSCRIPTS-2026-07-15",
+      project: "nyc-artist-coalition",
+      question: "Where in the recoverable New York City Council record did Commissioner Tom Finkelpearl refer to NYC Artist Coalition, and what institutional use did the surrounding record establish?",
+      methods: [
+        "Ran exact and variant phrase searches across official Legistar-indexed Council transcript results for Finkelpearl with NYC Artist Coalition, New York City Artist Coalition, Artist Coalition, and the recovered formation sentence.",
+        "Closely read the May 19, 2017 joint Finance, Cultural Affairs, and Libraries hearing transcript around Finkelpearl's CreateNYC testimony.",
+        "Closely read Finkelpearl's February 27, 2017 prepared Cultural Plan oversight testimony and searched it for NYC Artist Coalition, New York City Artist Coalition, DIY, and Ghost Ship references.",
+        "Compared the Finkelpearl record with the June 19, 2017 Cabaret Law hearing and February 11, 2019 MARCH hearing to distinguish agency recognition, Jamie-specific testimony, and Council use of coalition research."
+      ],
+      runAt: "2026-07-15",
+      resultStatus: "partially-recovered",
+      findings: [
+        "The bounded indexed search recovered one exact Finkelpearl-to-NYC-Artist-Coalition instance: his May 19, 2017 FY2018 Executive Budget testimony.",
+        "Finkelpearl used the coalition's formation after DCLA's January DIY-arts meeting as an example supporting his argument for reciprocal public relationships, direct feedback, and bringing people together around a common cause.",
+        "The 'huge influence' sentence immediately after the coalition reference grammatically refers to the Disability Arts NYC taskforce, not NYC Artist Coalition.",
+        "The February 27 prepared Cultural Plan testimony does not contain the searched coalition or DIY terms, but it is a prepared statement rather than a complete oral-hearing finding.",
+        "Separate Council transcripts show Jamie giving Cabaret Law testimony before Rafael Espinal and Chair Rory Lancman using coalition research to question NYPD."
+      ],
+      limitations: [
+        "Search-engine and Legistar indexing can omit scanned, unindexed, inconsistently transcribed, or differently phrased records.",
+        "One recovered exact instance does not establish that no other Finkelpearl reference exists anywhere in the Council archive.",
+        "The Finkelpearl passage does not identify Jamie individually or state any official's private motive or dependence.",
+        "The June 2017 and February 2019 transcripts establish institutional use and public testimony, not sole causality for legislation or agency action."
+      ],
+      sourceIds: [
+        "SRC-NYC-COUNCIL-CULTURAL-PLAN-FINKELPEARL-TESTIMONY-2017-02-27",
+        "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+        "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
+      ],
+      publicSummary: "A bounded official-record search recovered one exact Finkelpearl reference to NYC Artist Coalition: in May 2017 budget testimony he used the coalition's formation after DCLA's DIY-arts meeting as evidence for the value of reciprocal public engagement. Separate hearings show Jamie translating coalition safety work into Council testimony and the Council using coalition research in agency oversight."
+    },
+    {
       id: "INQ-NTER-CHNG-ORIGINAL-ASSET-ROLE-RECOVERY",
       project: "creative-technology-practice",
       question: "What original code, diagrams, cleared installation media, collaborator accounts, and press materials would clarify the NTER CHNG division of labor and support a future visual projection?",
@@ -1555,7 +1656,7 @@ const knowledgeBankInput = {
       title: "NYC Artist Coalition formation and cultural-space policy campaigns",
       project: "nyc-artist-coalition",
       kind: "memory-fragment",
-      summary: "Jamie identifies an instrumental role in creating NYC Artist Coalition and contributing to linked campaigns around Cabaret Law repeal, Office of Nightlife creation and accountability, large public town halls, Talks Not Raids, MARCH raid transparency and disbandment, nightlife enforcement reporting, and protection of small diverse cultural spaces.",
+      summary: "Jamie identifies an instrumental role in creating NYC Artist Coalition and contributing to linked campaigns around Cabaret Law repeal, Office of Nightlife creation and accountability, large public town halls, Talks Not Raids, MARCH raid transparency and disbandment, nightlife enforcement reporting, and protection of small diverse cultural spaces. Official Council transcripts now establish that Commissioner Tom Finkelpearl used the coalition's formation as an example of direct-public-engagement value, Jamie translated coalition safety work into formal Cabaret Law testimony before Rafael Espinal, and Chair Rory Lancman used coalition research to question NYPD.",
       status: "researching",
       sourceIds: [
         "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
@@ -1569,6 +1670,10 @@ const knowledgeBankInput = {
         "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
         "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
         "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+        "SRC-NYC-COUNCIL-CULTURAL-PLAN-FINKELPEARL-TESTIMONY-2017-02-27",
+        "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+        "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+        "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11",
         "SRC-CALLSCRIPT-FACEBOOK-PAGE-2017-2026",
         "SRC-CALLSCRIPT-NYCA-DCLA-EVENT-DISCUSSION-2017",
         "SRC-JAMIE-CALLSCRIPT-NYCA-BRIDGE-MEMORY-2026-07-15",
@@ -1588,7 +1693,9 @@ const knowledgeBankInput = {
         "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis.",
         "In a December 2017 Greene Hill Food Co-op interview, Jamie and Julia were described as working as part of NYC Artist Coalition; Jamie connected Cabaret Law enforcement to barriers faced by community cultural spaces.",
         "Within Jamie's remembered early coalition-facilitation context, surviving public records place Call Script, linked to popular.vote, in the participation sequence around DCLA's January 27, 2017 DIY-spaces meeting: Call Script appeared as a public event identity, extended the meeting into a nearby social gathering, and the same discussion later routed people to NYC Artist Coalition's February 6 general meeting.",
-        "Jamie remembers designing Call Script as a bridge from WOW List's cultural-discovery network and popular.vote to coalition participation; surviving records corroborate the public handoff sequence but not his sole authorship or the claim that Call Script alone caused NYC Artist Coalition's formation."
+        "Jamie remembers designing Call Script as a bridge from WOW List's cultural-discovery network and popular.vote to coalition participation; surviving records corroborate the public handoff sequence but not his sole authorship or the claim that Call Script alone caused NYC Artist Coalition's formation.",
+        "At the June 19, 2017 Cabaret Law hearing chaired by Rafael Espinal, Jamie testified as a NYC Artist Coalition member, translated coalition safety work and direct venue experience into a trust-and-repeal argument, and asked that low-income community spaces have seats in nightlife governance.",
+        "Jamie's work mattered to DCLA and the Council because he helped turn cultural-space experience into public-safety practice, formal testimony, concrete governance requests, and durable public records officials could reference, while collective and institutional actors retained ownership of policy decisions."
       ],
       propositions: [
         {
@@ -1604,8 +1711,11 @@ const knowledgeBankInput = {
           id: "PROP-NYCA-CABARET-SAFETY-ANALYSIS-2017",
           text: "Speaking publicly as a member of NYC Artist Coalition, Jamie argued that Cabaret Law licensing barriers discouraged otherwise code-compliant spaces from approaching the Fire Department, creating a safety crisis.",
           status: "direct-support",
-          sourceIds: ["SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19"],
-          sourceSupport: ["Jamie's NYC Artist Coalition affiliation", "Jamie's public analysis", "licensing barrier", "Fire Department access", "safety-crisis framing"],
+          sourceIds: [
+            "SRC-NYCA-GOTHAMIST-CABARET-REPEAL-2017-06-19",
+            "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19"
+          ],
+          sourceSupport: ["Jamie's NYC Artist Coalition affiliation", "Jamie's public analysis", "licensing barrier", "Fire Department access", "safety-crisis framing", "formal Council testimony", "request for low-income community-space representation"],
           boundaries: ["Attribute the analysis to Jamie rather than presenting it as an adjudicated legal finding.", "Do not imply that this statement alone caused legislation or agency change."],
           decisionUse: "Supports a claim about translating venue experience and regulation into a clear public-safety argument."
         },
@@ -1685,8 +1795,11 @@ const knowledgeBankInput = {
           id: "PROP-NYCA-CREATENYC-OFFICIAL-INSTITUTIONAL-RECORD-2017",
           text: "New York City's final CreateNYC plan says DCLA's January 2017 DIY-spaces meeting spurred NYC Artist Coalition's establishment and credits the coalition with organizing, providing recommendations, and driving thoughtful dialogue about preserving artist-led spaces.",
           status: "direct-support",
-          sourceIds: ["SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"],
-          sourceSupport: ["official DCLA plan", "formation context", "coalition organizing", "recommendation contribution", "dialogue on safe and sustainable artist-led spaces"],
+          sourceIds: [
+            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+            "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19"
+          ],
+          sourceSupport: ["official DCLA plan", "formation context", "coalition organizing", "recommendation contribution", "dialogue on safe and sustainable artist-led spaces", "Finkelpearl's Council testimony", "direct-public-feedback rationale"],
           boundaries: ["The official plan does not identify Jamie individually.", "Institutional recognition of the coalition does not prove that any one person caused its formation or that every recommendation was adopted."],
           decisionUse: "Supplies institutional corroboration that the coalition's listening, synthesis, and public-policy translation mattered to the City's cultural-planning process."
         },
@@ -1696,11 +1809,54 @@ const knowledgeBankInput = {
           status: "synthesis-with-boundary",
           sourceIds: [
             "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
-            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"
+            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+            "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
           ],
-          sourceSupport: ["official preservation of the full coalition submission", "official recognition of coalition dialogue", "artist-participation rationale", "cross-agency DIY-space strategy context"],
+          sourceSupport: ["official preservation of the full coalition submission", "official recognition of coalition dialogue", "artist-participation rationale", "cross-agency DIY-space strategy context", "Finkelpearl's direct-public-feedback framing", "Council use of coalition research in agency oversight"],
           boundaries: ["This is an evidence-based institutional interpretation, not a quotation or proof that Commissioner Finkelpearl, Council Member Espinal, or the Council personally 'needed Jamie.'", "Do not assign Jamie's individual role without role-specific records.", "Do not claim coalition causality for the Office of Nightlife, Cabaret Law repeal, or any later budget or implementation action from these sources alone."],
           decisionUse: "Answers the institutional-value question without heroizing: DCLA and Council needed legible constituent knowledge from communities that ordinary cultural-policy channels did not reliably represent; the coalition supplied a structured way to hear, prioritize, and retain it."
+        },
+        {
+          id: "PROP-NYCA-FINKELPEARL-COUNCIL-USE-2017",
+          text: "In May 2017 budget testimony, DCLA Commissioner Tom Finkelpearl used NYC Artist Coalition's formation after DCLA's DIY-arts meeting as an example of the power of direct public feedback and bringing people together around a common cause.",
+          status: "direct-support",
+          sourceIds: ["SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19"],
+          sourceSupport: ["May 19, 2017 budget-hearing context", "Finkelpearl as speaker", "reciprocal public relationship", "expanded direct feedback", "NYC Artist Coalition formation after DCLA's DIY-arts meeting", "common-cause example"],
+          boundaries: ["Finkelpearl did not name Jamie in this passage.", "The immediately following 'huge influence' statement refers to the Disability Arts NYC taskforce, not NYC Artist Coalition.", "Do not treat an illustrative example as proof that DCLA adopted every coalition recommendation or depended on the coalition alone."],
+          decisionUse: "Directly establishes why Finkelpearl chose to include NYC Artist Coalition in Council testimony: it made his case that public engagement could create continuing civic capacity beyond a single meeting."
+        },
+        {
+          id: "PROP-NYCA-JAMIE-ESPINAL-CABARET-TESTIMONY-2017",
+          text: "At the June 19, 2017 Cabaret Law hearing chaired by Rafael Espinal, Jamie testified as a NYC Artist Coalition member, translated coalition safety work and direct venue experience into a trust-and-repeal argument, and asked that low-income community spaces have seats in nightlife governance.",
+          status: "direct-support",
+          sourceIds: ["SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19"],
+          sourceSupport: ["June 19, 2017 hearing", "Espinal chair role", "Jamie testimony", "NYC Artist Coalition affiliation", "safety walkthrough and study-group context", "direct venue experience", "trust-and-repeal analysis", "governance representation request"],
+          boundaries: ["The official transcript misspells Jamie's surname as Burkhart.", "Do not repeat the 100 percent exam-pass statement as an independently verified metric without source reconciliation.", "Espinal's thanks and the later legislative outcome do not establish dependence on Jamie alone or sole policy causality."],
+          decisionUse: "Shows the specific value Jamie supplied to Espinal's hearing: affected-community experience translated into a concrete safety mechanism, legislative request, and governance design ask."
+        },
+        {
+          id: "PROP-NYCA-COUNCIL-USES-COALITION-RESEARCH-2019",
+          text: "At a February 2019 Justice System hearing, Chair Rory Lancman used NYC Artist Coalition's FOIL-based MARCH analysis to question NYPD; NYPD disputed the coalition's first finding and raised classification concerns.",
+          status: "direct-support",
+          sourceIds: ["SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"],
+          sourceSupport: ["February 11, 2019 hearing", "Chair Lancman's question", "NYC Artist Coalition FOIL analysis", "Council agency-oversight use", "NYPD disagreement", "classification concern"],
+          boundaries: ["The transcript does not identify Jamie as author of the analysis.", "Institutional use is not endorsement of every finding.", "Retain NYPD's disagreement and do not use the coalition's percentage as an independently verified statistic."],
+          decisionUse: "Provides direct evidence that the Council used coalition-produced knowledge to conduct public agency oversight, while preserving contestability and methodological limits."
+        },
+        {
+          id: "PROP-NYCA-INSTITUTIONAL-USE-JAMIE-INTERPRETATION-2026",
+          text: "Jamie's work mattered to DCLA and the Council because he helped turn cultural-space experience into public-safety practice, formal testimony, concrete governance requests, and durable public records officials could reference, while collective and institutional actors retained ownership of policy decisions.",
+          status: "synthesis-with-boundary",
+          sourceIds: [
+            "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+            "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+            "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
+          ],
+          sourceSupport: ["DCLA recognition of the coalition's recommendation and dialogue role", "Finkelpearl's direct-public-feedback rationale", "Jamie's formal safety and governance testimony", "Council use of coalition research in oversight"],
+          boundaries: ["This is an evidence-based institutional interpretation, not a statement of any official's private motives.", "Only the June 2017 transcript in this source set identifies Jamie individually.", "Do not claim that Finkelpearl, Espinal, DCLA, or the Council depended on Jamie alone.", "Do not convert usefulness into sole causality for CreateNYC, the Office of Nightlife, Cabaret Law repeal, Intro 1156, or any later implementation."],
+          decisionUse: "Answers why Jamie's work was important in professional terms: listening, synthesis, safety operations, public testimony, policy translation, and durable documentation made underrepresented cultural-space knowledge usable within government."
         },
         {
           id: "PROP-NYCA-SAFETY-RESOURCE-SURFACE-2017",
@@ -1736,8 +1892,11 @@ const knowledgeBankInput = {
           id: "PROP-NYCA-MARCH-REPORTING-INSTITUTIONAL-OUTCOME-2019",
           text: "New York City enacted Int 1156-2018 as Local Law 220 on December 15, 2019, adding reporting, advance-notice, response, machine-readable publication, and privacy requirements for MARCH operations.",
           status: "context-only",
-          sourceIds: ["SRC-NYC-COUNCIL-INT-1156-2018"],
-          sourceSupport: ["official bill identity", "Council chronology", "enactment date", "law number", "MARCH reporting", "advance-notice and response requirements", "machine-readable publication", "privacy requirements"],
+          sourceIds: [
+            "SRC-NYC-COUNCIL-INT-1156-2018",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
+          ],
+          sourceSupport: ["official bill identity", "Council chronology", "enactment date", "law number", "MARCH reporting", "advance-notice and response requirements", "machine-readable publication", "privacy requirements", "committee oversight context", "Council use of coalition research", "public agency disagreement"],
           boundaries: ["The legislative record does not establish Jamie's or NYC Artist Coalition's role.", "The law regulated and documented MARCH operations; it does not establish that the program was disbanded."],
           decisionUse: "Establishes a concrete institutional result adjacent to Talks Not Raids while preventing the result from being compressed into an unsupported end-of-MARCH claim.",
           nextStep: "Review committee testimony, sponsor statements, agency reports, implementation records, and later operational directives for campaign contribution and MARCH status."
@@ -1898,6 +2057,7 @@ const knowledgeBankInput = {
         "Which event-production, drafting, CMS, or collaborator records identify Jamie's contribution to the DCLA listening-to-vote-to-recommendation workflow now established at the collective level?",
         "Which public repository commits, CMS records, deployment history, or collaborator accounts associate Jamie with implementation or stewardship of the Cabaret, town-hall, safety, CreateNYC, or Talks Not Raids web surfaces?",
         "Which hearing testimony, sponsor statements, committee reports, and collaborator accounts connect Jamie's documented advocacy actions to a specific institutional decision without overstating causality?",
+        "Which additional indexed, scanned, or unindexed Council hearing records contain Finkelpearl references to NYC Artist Coalition that the bounded July 2026 search did not recover?",
         "Which agency reports, operational directives, or official statements establish whether MARCH continued, changed form, or ended after Local Law 220?",
         "Which event programs, production records, recordings, venue records, and named participant accounts establish Jamie's role, audience scale, and practical outcomes for each town hall?"
       ],
@@ -1907,6 +2067,8 @@ const knowledgeBankInput = {
         "The Gothamist source directly supports fire-code study groups, City Hall advocacy, coalition affiliation, and Jamie's safety analysis; it does not establish the full campaign history.",
         "The NPR source is context only until it is closely read for person- and organization-specific evidence.",
         "DCLA's final plan and appendix establish institutional recognition and preservation of the coalition's contribution, not Jamie's individual role or sole causality for later policy outcomes.",
+        "Finkelpearl's May 2017 Council testimony uses NYC Artist Coalition as an example of direct-public-engagement value; its 'huge influence' phrase refers to the Disability Arts NYC taskforce, not NYC Artist Coalition.",
+        "The June 2017 Council transcript establishes Jamie's testimony before Espinal and the February 2019 transcript establishes Council use of coalition research; neither proves that an official depended on Jamie alone or that the coalition solely caused legislation.",
         "Call Script's public Page and event discussion establish a participation relay, not physical attendance, sole account authorship, or coalition-formation causality.",
         "Treat the WOW List-to-Call Script-to-coalition bridge as Jamie's bounded interpretation until contemporaneous project and collaborator records corroborate the transfer of method.",
         "Coalition campaign pages establish public artifacts and collective positions, not individual authorship or causality unless Jamie is named.",

@@ -425,7 +425,11 @@ test("iCloud Teams sources preserve public and protected evidence boundaries", (
     "SRC-NYCA-DCLA-MEETING-RECORD-2017-02-03",
     "SRC-NYCA-DCLA-PRIORITY-VOTE-2017-02-07",
     "SRC-CREATENYC-NYCAC-APPENDIX-2017-07-19",
-    "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19"
+    "SRC-CREATENYC-FINAL-PLAN-NYCAC-2017-07-19",
+    "SRC-NYC-COUNCIL-CULTURAL-PLAN-FINKELPEARL-TESTIMONY-2017-02-27",
+    "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19",
+    "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19",
+    "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
   ];
 
   assert.ok(selectedSourceIds.every((sourceId) => sourceById.has(sourceId)));
@@ -595,6 +599,101 @@ test("iCloud Teams intake keeps claims bounded and non-projectable", () => {
   assert.doesNotMatch(publicRegistryText, /SRC-CRS-LEGISLATIVE-PROVENANCE-REDLINE/);
   assert.doesNotMatch(publicRegistryText, /SRC-CREATENYC-FINAL-PLAN-NYCAC/);
   assert.doesNotMatch(publicRegistryText, /SRC-SOURCE-BACKED-SPRINT-PREP/);
+});
+
+test("Council hearing records preserve institutional use and causal boundaries", () => {
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const inquiryById = new Map(
+    knowledgeBank.researchInquiries.map((item) => [item.id, item])
+  );
+  const nyca = intakeById.get(
+    "INTAKE-NYCA-CULTURAL-SPACE-POLICY-2026-07-12"
+  );
+  const propositionById = new Map(
+    nyca.propositions.map((proposition) => [proposition.id, proposition])
+  );
+  const finkelpearl = sourceById.get(
+    "SRC-NYC-COUNCIL-FY2018-EXECUTIVE-BUDGET-FINKELPEARL-2017-05-19"
+  );
+  const cabaret = sourceById.get(
+    "SRC-NYC-COUNCIL-CABARET-HEARING-JAMIE-2017-06-19"
+  );
+  const march = sourceById.get(
+    "SRC-NYC-COUNCIL-MARCH-HEARING-NYCAC-2019-02-11"
+  );
+  const inquiry = inquiryById.get(
+    "INQ-NYCA-FINKELPEARL-COUNCIL-TRANSCRIPTS-2026-07-15"
+  );
+
+  assert.match(finkelpearl.publicNote, /direct public feedback/i);
+  assert.ok(
+    finkelpearl.doesNotEstablish.some((boundary) =>
+      /huge influence.*NYC Artist Coalition/i.test(boundary)
+    )
+  );
+  assert.ok(
+    cabaret.supportsGenerally.some((support) =>
+      /formal Council testimony/i.test(support)
+    )
+  );
+  assert.ok(
+    cabaret.doesNotEstablish.some((boundary) =>
+      /100 percent exam-pass/i.test(boundary)
+    )
+  );
+  assert.match(march.publicNote, /NYPD disputed/i);
+  assert.ok(
+    march.doesNotEstablish.some((boundary) =>
+      /Jamie's authorship/i.test(boundary)
+    )
+  );
+  assert.equal(inquiry.resultStatus, "partially-recovered");
+  assert.match(inquiry.findings[0], /one exact/i);
+  assert.ok(
+    inquiry.limitations.some((limitation) =>
+      /does not establish.*no other/i.test(limitation)
+    )
+  );
+  assert.equal(
+    propositionById.get("PROP-NYCA-FINKELPEARL-COUNCIL-USE-2017").status,
+    "direct-support"
+  );
+  assert.equal(
+    propositionById.get("PROP-NYCA-JAMIE-ESPINAL-CABARET-TESTIMONY-2017").status,
+    "direct-support"
+  );
+  assert.equal(
+    propositionById.get("PROP-NYCA-COUNCIL-USES-COALITION-RESEARCH-2019").status,
+    "direct-support"
+  );
+  assert.equal(
+    propositionById.get("PROP-NYCA-INSTITUTIONAL-USE-JAMIE-INTERPRETATION-2026").status,
+    "synthesis-with-boundary"
+  );
+  assert.ok(
+    nyca.candidateClaims.includes(
+      propositionById.get("PROP-NYCA-INSTITUTIONAL-USE-JAMIE-INTERPRETATION-2026").text
+    )
+  );
+
+  const note = readFileSync(
+    "docs/knowledge-bank/research/2026-07-15-finkelpearl-council-hearing-institutional-use.md",
+    "utf8"
+  );
+  assert.match(note, /one exact instance[\s\S]*recovered/i);
+  assert.match(note, /not \*\*only one instance ever existed\*\*/i);
+  assert.match(note, /publicly contestable/i);
+  assert.match(note, /no `\/proofs` or archive route/i);
+
+  const publicRegistryText = JSON.stringify(publicCitationRegistry);
+  assert.doesNotMatch(publicRegistryText, /FINKELPEARL-2017-05-19/);
+  assert.doesNotMatch(publicRegistryText, /CABARET-HEARING-JAMIE/);
+  assert.doesNotMatch(publicRegistryText, /MARCH-HEARING-NYCAC/);
 });
 
 test("Google Drive intake preserves attribution, data gaps, and projection boundaries", () => {

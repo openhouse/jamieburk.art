@@ -100,6 +100,16 @@ redline as policy requirements-traceability evidence; and preserves a 2006
 BAPLab credit while holding an unresolved surname conflict. None of these
 reserve records creates a public knowledge-bank route.
 
+The [Finkelpearl, NYC Artist Coalition, and Council institutional-use
+note](research/2026-07-15-finkelpearl-council-hearing-institutional-use.md)
+records a bounded official-transcript search, one recovered Finkelpearl
+reference, Jamie's Cabaret Law testimony before Rafael Espinal, and the
+Council's later use of coalition research in MARCH oversight. It separates
+direct record from institutional interpretation, preserves agency disagreement,
+and prevents Finkelpearl's disability-arts praise from being misattributed to
+NYC Artist Coalition. The note remains reserve knowledge with no automatic
+website projection.
+
 The [Google Drive Shared Drives archival-production
 note](research/2026-07-14-google-drive-shared-drives-archival-production.md)
 demonstrates account-wide triage, bounded close reading, revision-level
