@@ -1,8 +1,8 @@
 {
-  "judgeId": "archival-editorial-kcspaces-facebook",
+  "judgeId": "archival-editorial-nter-chng-v3",
   "lens": "archival-editorial",
-  "candidate": "sha256:ca1aa2dabcd4105242d82d63e47a04655204fbc7c7404626312b3eae1045dc43",
-  "contract": "sha256:ec04b9aae2b34ba6cbbb4f9c8de937b4e70bd8ec19c86b834f01075f38b81b52",
+  "candidate": "sha256:b563d342fb181ddb3cce2ef4c9319a7da969b799ab04cdf839fe42d32e70f651",
+  "contract": "sha256:0b86c4518c6856fb5d9b14f59c72f1278bd90a4ad6199380a29c9c3b67483f79",
   "passes": true,
   "scores": {
     "capture_integrity": 4,
@@ -10,44 +10,44 @@
     "claim_atomicity": 4,
     "provenance_closure": 4,
     "status_separation": 4,
-    "project_context": 4,
+    "project_context": 3,
     "research_honesty": 4,
     "projection_restraint": 4
   },
   "evidence": [
     {
       "rubric": "capture_integrity",
-      "observation": "The candidate gives every submitted KC Spaces Fund fragment a durable disposition, including a dedicated private intake and first-party source for Jamie's non-poster and non-owner statement. Two differently paced traversals still reconcile the same 37 currently recoverable Page-level records."
+      "observation": "All recovered NTER CHNG and America: Now and Here fragments retain durable intake identities, explicit dispositions, and closed links to sources, claims, project context, and inquiry."
     },
     {
       "rubric": "source_decomposition",
-      "observation": "The Facebook corpus, posted-URL inventory, implementation archive, naming recollection, non-poster statement, campaign pages, fundraiser, press listing, print artifact, and bounded stakeholder specimen remain separate sources with explicit support and non-support fields."
+      "observation": "Creator and venue evidence, exhibition inclusion and participant use, May 5-30 chronology, and Nerman contextual evidence remain assigned to distinct sources with accurate relationship types."
     },
     {
       "rubric": "claim_atomicity",
-      "observation": "Population, campaign practice, announcement count, mutable engagement, bounded stakeholder response, routing, fundraising outcome, digital operations, and naming support remain atomic claims with targeted boundaries and anti-claims."
+      "observation": "The inclusion claim remains bounded to a single exhibition episode and chronology without assigning individual causality or collapsing collaborator credits."
     },
     {
       "rubric": "provenance_closure",
-      "observation": "The new first-party source resolves through its intake, digital-role claim, role inquiry, control record, suite contract, validator, and tests. All 62 lifecycle tests pass, and deterministic evaluation reports zero findings."
+      "observation": "Each new source has intake provenance, close-reading metadata, point locators, support and non-support scope, and a defined role in the recovered Wayback inquiry."
     },
     {
       "rubric": "status_separation",
-      "observation": "The revised ProjectRecord now distinguishes implementation evidence from Jamie's attributed naming recollection. The non-poster statement is also identified as limited first-party role evidence rather than a native publisher ledger."
+      "observation": "Recovered evidence, inquiry findings, qualified claim maturity, and editorial selection remain separate; the projection is held and has no public surfaces."
     },
     {
       "rubric": "project_context",
-      "observation": "The project summary and dossier consistently preserve organizer and fiscal-sponsor credit, describe Jamie's substantial technical contribution, qualify both first-party memories, and give future researchers a concrete continuation queue."
+      "observation": "The inquiry and research note provide strong chronology, collaborator, venue, source-role, and future-research orientation, while the top-level creative-technical dossier remains comparatively broad."
     },
     {
       "rubric": "research_honesty",
-      "observation": "The candidate continues to reject lifetime-population, authorship, grant-ledger, reach, endorsement, conversion, partnership, causality, and sole-naming inferences. The prior two editorial regressions are fully addressed."
+      "observation": "The records explicitly reject commission, acquisition, Nerman Museum presentation, sole authorship, inferred labor allocation, visitor counts, and measured audience impact."
     },
     {
       "rubric": "projection_restraint",
-      "observation": "All new claims remain internal-only with no active projection. Private evidence uses opaque locators, mutable Facebook observations remain reserve depth, and unresolved or protected material is not exposed."
+      "observation": "The contract now independently removes only the audience-impact anti-claim and confirms lifecycle failure, demonstrating that this boundary is specifically enforced rather than passing incidentally through removal of unrelated protections; all 63 lifecycle tests pass."
     }
   ],
   "regressions": [],
-  "nextAction": "Proceed to the independent public-safety and composition judgment; collaborator corroboration for naming and publisher chronology remains useful future research but is not required for this internal reserve."
+  "nextAction": "Create durable archived captures for the currently live Vimeo and Nerman sources while preserving their existing source roles and collaborator-credit boundaries."
 }

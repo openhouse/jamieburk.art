@@ -41,6 +41,11 @@ Garrett Fuselier, and Mary Nichols's documented contributions. Do not convert a
 Monthly Music Hackathon prototype into a production release, award, or adoption
 claim.
 
+Do not convert NTER CHNG's documented inclusion in the May 2011 Kansas City
+launch of America: Now and Here into a commission, acquisition, visitor-impact
+claim, or presentation at the Nerman Museum. The Nerman page supplies wider
+exhibition context but does not name NTER CHNG.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

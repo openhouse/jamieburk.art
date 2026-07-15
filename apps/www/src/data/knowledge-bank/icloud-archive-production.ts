@@ -115,6 +115,74 @@ export const icloudArchiveIntakes = [
     inquiryIds: []
   },
   {
+    id: "INT-2026-07-14-NTER-CHNG-ARCHIVED-SITE",
+    kind: "url",
+    capturedAt: "2026-07-14",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "The January 2011 Wayback capture of NTER CHNG's own project site, preserving the installation format, creator credit, and original Kansas City venue.",
+    submittedUrl: "https://web.archive.org/web/20110128193350/http://nterchng.com/",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2011-01-28"],
+    sensitivity: "public-safe",
+    availability: "archived",
+    status: "promoted",
+    sourceIds: ["SRC-NTER-CHNG-PROJECT-SITE-2011"],
+    claimIds: ["CLM-NTER-CHNG-COLLABORATIVE-INSTALLATION"],
+    inquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK"]
+  },
+  {
+    id: "INT-2026-07-14-AMERICA-NOW-HERE-NTER-CHNG",
+    kind: "url",
+    capturedAt: "2026-07-14",
+    submittedBy: "Codex source discovery",
+    publicSafeDescription: "America: Now and Here's archived June 2011 Kansas City post documenting NTER CHNG as an installation used by exhibition participants.",
+    submittedUrl: "https://web.archive.org/web/20121017090512/http://americanowandhere.org/2011/06/i-text-therefore-i-am/",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2011-06-22"],
+    sensitivity: "public-safe",
+    availability: "archived",
+    status: "promoted",
+    sourceIds: ["SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"],
+    claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"],
+    inquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK"]
+  },
+  {
+    id: "INT-2026-07-14-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH",
+    kind: "url",
+    capturedAt: "2026-07-14",
+    submittedBy: "Codex source discovery",
+    publicSafeDescription: "America: Now and Here's archived launch summary dating its Kansas City installation to May 5-30, 2011.",
+    submittedUrl: "https://web.archive.org/web/20121017085303/http://americanowandhere.org/2011/06/america-now-and-here-launch-installations-and-next-steps/",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2011-05-05", "2011-05-30", "2011-06-21"],
+    sensitivity: "public-safe",
+    availability: "archived",
+    status: "promoted",
+    sourceIds: ["SRC-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH-2011"],
+    claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"],
+    inquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK"]
+  },
+  {
+    id: "INT-2026-07-14-NERMAN-AMERICA-NOW-HERE",
+    kind: "url",
+    capturedAt: "2026-07-14",
+    submittedBy: "Jamie Burkart",
+    publicSafeDescription: "Nerman Museum's publication of Alice Thorson's Kansas City Star preview of the 2011 America: Now and Here Kansas City launch.",
+    submittedUrl: "https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html",
+    projectIds: ["creative-technical-systems"],
+    entityIds: [],
+    dateHints: ["2011-04-30", "2011-05-11", "2011-05-12"],
+    sensitivity: "public-safe",
+    availability: "live",
+    status: "promoted",
+    sourceIds: ["SRC-NERMAN-AMERICA-NOW-HERE-KC-2011"],
+    claimIds: ["CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION"],
+    inquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK"]
+  },
+  {
     id: "INT-2026-07-14-ICLOUD-CREATENYC-APPENDIX",
     kind: "url",
     capturedAt: "2026-07-14",
@@ -363,6 +431,140 @@ export const icloudArchiveSources = [
       "the allocation of each collaborator's technical responsibilities",
       "visitor counts",
       "institutional adoption"
+    ]
+  },
+  {
+    id: "SRC-NTER-CHNG-PROJECT-SITE-2011",
+    title: "NTER CHNG",
+    organization: "NTER CHNG",
+    kind: "archived-web-capture",
+    visibility: "public",
+    preservationStatus: "archived",
+    capturedAt: "2011-01-28T19:33:50Z",
+    accessedAt: "2026-07-14",
+    archiveUrl: "https://web.archive.org/web/20110128193350/http://nterchng.com/",
+    preferredPublicUrl: "archive",
+    publicCitation: "NTER CHNG project site, archived January 28, 2011.",
+    publicNote: "The project's own archived homepage calls NTER CHNG an interactive texting installation and credits Drew Bolton, Jamie Burkart, and Garrett Fuselier.",
+    locator: "Page title, description metadata, and the installation, creator, and Arts Incubator Cocoon Gallery lines.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-14-NTER-CHNG-ARCHIVED-SITE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex Wayback close reading"],
+    supportsGenerally: [
+      "NTER CHNG as an interactive texting installation",
+      "joint creator credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier",
+      "presentation at the Arts Incubator Cocoon Gallery in Kansas City"
+    ],
+    doesNotEstablish: [
+      "the division of technical labor among the creators",
+      "Mary Nichols's separately documented wall contribution",
+      "inclusion in America: Now and Here",
+      "commissioning or acquisition by an institution"
+    ]
+  },
+  {
+    id: "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+    title: "I Text, Therefore I Am",
+    organization: "America: Now and Here",
+    author: "BProffer",
+    kind: "archived-web-capture",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2011-06-22",
+    capturedAt: "2012-10-17T09:05:12Z",
+    accessedAt: "2026-07-14",
+    archiveUrl: "https://web.archive.org/web/20121017090512/http://americanowandhere.org/2011/06/i-text-therefore-i-am/",
+    preferredPublicUrl: "archive",
+    publicCitation: "America: Now and Here, 'I Text, Therefore I Am,' June 22, 2011, archived October 17, 2012.",
+    publicNote: "The exhibition's own Kansas City blog documents NTER CHNG in use by participants and describes text messages projected onto its floor-to-ceiling gauze display.",
+    locator: "Post body paragraphs describing the America: Now and Here display, the named NTER CHNG installation, participant texting, and an opening-gala interaction.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-14-AMERICA-NOW-HERE-NTER-CHNG"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex Wayback close reading"],
+    supportsGenerally: [
+      "NTER CHNG's inclusion in America: Now and Here's Kansas City exhibition",
+      "participant use of the installation",
+      "text-message projection onto a floor-to-ceiling white gauze display",
+      "the installation's presence at the exhibition opening gala"
+    ],
+    doesNotEstablish: [
+      "the installation's creator credits",
+      "a commission by America: Now and Here",
+      "ownership or acquisition by the exhibition",
+      "visitor counts or measured audience outcomes"
+    ]
+  },
+  {
+    id: "SRC-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH-2011",
+    title: "America: Now and Here Launch Installations and Next Steps",
+    organization: "America: Now and Here",
+    author: "DDunn",
+    kind: "archived-web-capture",
+    visibility: "public",
+    preservationStatus: "archived",
+    publishedAt: "2011-06-21",
+    capturedAt: "2012-10-17T08:53:03Z",
+    accessedAt: "2026-07-14",
+    archiveUrl: "https://web.archive.org/web/20121017085303/http://americanowandhere.org/2011/06/america-now-and-here-launch-installations-and-next-steps/",
+    preferredPublicUrl: "archive",
+    publicCitation: "America: Now and Here, 'Launch Installations and Next Steps,' June 21, 2011, archived October 17, 2012.",
+    publicNote: "The organizer's own summary dates the Kansas City installation to May 5-30, 2011 and describes the city as the project's launch.",
+    locator: "Opening paragraph naming the Kansas City installation and its May 5-30 date range.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-14-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex Wayback close reading"],
+    supportsGenerally: [
+      "America: Now and Here's Kansas City installation dates of May 5-30, 2011",
+      "Kansas City as the project's launch",
+      "collaboration with the Kansas City creative community"
+    ],
+    doesNotEstablish: [
+      "NTER CHNG by name",
+      "the installation's creator credits",
+      "a complete exhibition roster",
+      "specific attendance or participation totals"
+    ]
+  },
+  {
+    id: "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011",
+    title: "America: Now and Here - Barbara Kruger",
+    organization: "Nerman Museum of Contemporary Art / The Kansas City Star",
+    author: "Alice Thorson",
+    kind: "published-article",
+    visibility: "public",
+    preservationStatus: "live",
+    publishedAt: "2011-04-30",
+    accessedAt: "2026-07-14",
+    canonicalUrl: "https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html",
+    preferredPublicUrl: "canonical",
+    publicCitation: "Alice Thorson, 'America: Now and Here - Barbara Kruger,' The Kansas City Star, April 30, 2011, republished by the Nerman Museum of Contemporary Art.",
+    publicNote: "The preview describes America: Now and Here launching in Kansas City's Crossroads Arts District and situates the multidisciplinary national project alongside Kansas City artists.",
+    locator: "Article opening and paragraphs describing the Kansas City launch, multidisciplinary program, visual-arts counts, and the Nerman stop for Barbara Kruger's truck.",
+    projectIds: ["creative-technical-systems"],
+    intakeIds: ["INT-2026-07-14-NERMAN-AMERICA-NOW-HERE"],
+    reviewStatus: "reviewed",
+    reviewDepth: "close-reading",
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex public-source close reading"],
+    supportsGenerally: [
+      "America: Now and Here's 2011 launch in Kansas City",
+      "the project's multidisciplinary national and Kansas City context",
+      "the May 11-12 Nerman Museum stop for Barbara Kruger's truck"
+    ],
+    doesNotEstablish: [
+      "NTER CHNG by name",
+      "that NTER CHNG was exhibited at the Nerman Museum",
+      "NTER CHNG creator credits",
+      "a complete roster across every program discipline"
     ]
   },
   {
@@ -675,6 +877,14 @@ export const icloudArchiveClaims = [
         locator: "Public video description and credits.",
         confidence: "high",
         renderCitation: false
+      },
+      {
+        sourceId: "SRC-NTER-CHNG-PROJECT-SITE-2011",
+        relationship: "direct-support",
+        supports: ["creator credits", "installation format", "original Kansas City venue"],
+        locator: "Archived homepage description, creator line, and Cocoon Gallery line.",
+        confidence: "high",
+        renderCitation: false
       }
     ],
     boundaries: ["Preserve the full collaborator credit and do not infer the division of technical labor."],
@@ -682,6 +892,61 @@ export const icloudArchiveClaims = [
     researchInquiryIds: [],
     reviewedAt: "2026-07-14",
     reviewedBy: ["Codex archival close reading"]
+  },
+  {
+    id: "CLM-NTER-CHNG-AMERICA-NOW-HERE-INCLUSION",
+    project: "creative-technical-systems",
+    claimType: "chronology",
+    internalClaim: "America: Now and Here's archived Kansas City blog documents NTER CHNG as an installation used by participants during the project's May 5-30, 2011 Kansas City launch.",
+    status: "confirmed-with-boundary",
+    publicationStatus: "qualified",
+    editorialStatus: "unused",
+    projections: [{
+      key: "archive-note",
+      text: "NTER CHNG was included in the May 2011 Kansas City launch of America: Now and Here, whose own archived blog documents visitors using the installation.",
+      status: "hold",
+      citationRequired: true,
+      surfaces: []
+    }],
+    evidence: [
+      {
+        sourceId: "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+        relationship: "direct-support",
+        supports: ["exhibition inclusion", "participant use", "installation behavior", "opening-gala presence"],
+        locator: "Post body naming NTER CHNG as an installation at America: Now and Here and describing participant interaction.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH-2011",
+        relationship: "corroborating",
+        supports: ["May 5-30, 2011 date range", "Kansas City launch context"],
+        locator: "Opening paragraph of the organizer's launch summary.",
+        confidence: "high",
+        renderCitation: false
+      },
+      {
+        sourceId: "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011",
+        relationship: "context",
+        supports: ["Kansas City launch context", "multidisciplinary exhibition context"],
+        locator: "Kansas City Star preview republished by the Nerman Museum.",
+        confidence: "high",
+        renderCitation: false
+      }
+    ],
+    boundaries: [
+      "The America: Now and Here post directly establishes inclusion and interaction, while the separate NTER CHNG site and Vimeo record establish creator credits.",
+      "The Nerman Museum page supplies exhibition context but does not name NTER CHNG or place it at the Nerman stop."
+    ],
+    antiClaims: [
+      "America: Now and Here commissioned or acquired NTER CHNG.",
+      "NTER CHNG was exhibited at the Nerman Museum.",
+      "The Nerman article independently identifies NTER CHNG or its creators.",
+      "Exhibition inclusion establishes visitor counts or measured audience impact."
+    ],
+    researchInquiryIds: ["INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK"],
+    reviewedAt: "2026-07-14",
+    reviewedBy: ["Codex Wayback close reading"]
   },
   {
     id: "CLM-NYCARTC-CREATENYC-COLLECTIVE-RECOMMENDATIONS",
@@ -860,6 +1125,43 @@ export const icloudArchiveClaims = [
 ] satisfies ClaimRecord[];
 
 export const icloudArchiveResearchInquiries = [
+  {
+    id: "INQ-NTER-CHNG-AMERICA-NOW-HERE-WAYBACK",
+    project: "creative-technical-systems",
+    intakeIds: [
+      "INT-2026-07-14-NTER-CHNG-ARCHIVED-SITE",
+      "INT-2026-07-14-AMERICA-NOW-HERE-NTER-CHNG",
+      "INT-2026-07-14-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH",
+      "INT-2026-07-14-NERMAN-AMERICA-NOW-HERE"
+    ],
+    question: "Can NTER CHNG's inclusion in the 2011 Kansas City launch of America: Now and Here be verified from the project's own archived web presence?",
+    methods: [
+      "Reviewed the January 28, 2011 capture of nterchng.com and its five-record CDX inventory.",
+      "Queried 4,645 CDX records for americanowandhere.org from 2009-2013, representing 2,935 unique captured URLs and 933 unique HTML URLs after URL normalization.",
+      "Searched organizer-site URLs and recovered pages for NTER CHNG, creator names, Kansas City, exhibition, installation, and texting terms.",
+      "Closely read the recovered June 2011 NTER CHNG post, the organizer's Kansas City launch summary, and the Nerman Museum publication supplied by Jamie."
+    ],
+    runAt: "2026-07-14",
+    resultStatus: "recovered",
+    findings: [
+      "The archived NTER CHNG homepage directly credits Drew Bolton, Jamie Burkart, and Garrett Fuselier and identifies the work as an interactive texting installation.",
+      "America: Now and Here's own archived June 22, 2011 post names NTER CHNG as an installation used by exhibition participants and describes its projected-message interaction.",
+      "The organizer's June 21 launch summary dates the Kansas City installation to May 5-30, 2011.",
+      "The Nerman Museum page independently supplies the wider Kansas City launch and multidisciplinary exhibition context but does not name NTER CHNG."
+    ],
+    limitations: [
+      "The recovered organizer post does not provide NTER CHNG's creator credits; those come from the project's own site and Vimeo record.",
+      "No recovered source establishes that America: Now and Here commissioned or acquired NTER CHNG.",
+      "The Nerman Museum page concerns the wider launch and Barbara Kruger truck stop; it does not establish that NTER CHNG appeared at the museum."
+    ],
+    sourceIds: [
+      "SRC-NTER-CHNG-PROJECT-SITE-2011",
+      "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011",
+      "SRC-AMERICA-NOW-HERE-KANSAS-CITY-LAUNCH-2011",
+      "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011"
+    ],
+    publicSummary: "NTER CHNG's inclusion in America: Now and Here's May 2011 Kansas City launch is directly documented by the exhibition's own archived blog; separate project records preserve creator credit."
+  },
   {
     id: "INQ-JOB-HUNT-OUTLINE-CLAIM-VERIFICATION",
     project: "source-backed-team-memory",

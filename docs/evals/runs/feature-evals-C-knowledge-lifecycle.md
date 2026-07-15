@@ -220,6 +220,37 @@ reported no regressions. The application-ready profile passed twice at 86.5.
 - Application candidate: `sha256:00b0de13f096462a711a933272af0f114c66cb3b5afc35dac03183396d32e5bb`
 - Application contract: `sha256:c7314b99972d5351a39864f4a56f45c632b4ee2376cc240c8b63da0e5c337eab`
 
+## NTER CHNG / America: Now and Here Recovery
+
+A July 14 lead supplied the archived NTER CHNG site and the Nerman Museum's
+America: Now and Here page. The recursive research pass then queried 4,645
+Wayback CDX records for `americanowandhere.org`, representing 2,935 unique
+captured URLs and 933 normalized HTML URLs, and recovered the exhibition's own
+June 22, 2011 post about NTER CHNG.
+
+The lifecycle now keeps four source roles distinct:
+
+- NTER CHNG's archived homepage directly preserves the installation format,
+  Drew Bolton, Jamie Burkart, and Garrett Fuselier's creator credit, and the
+  Arts Incubator Cocoon Gallery venue;
+- America: Now and Here's archived "I Text, Therefore I Am" post directly
+  documents NTER CHNG as an installation used by exhibition participants;
+- the organizer's launch summary corroborates the May 5-30, 2011 Kansas City
+  chronology; and
+- Alice Thorson's Kansas City Star preview, republished by the Nerman Museum,
+  supplies wider multidisciplinary launch context without naming NTER CHNG.
+
+The new exhibition-inclusion claim is mature but editorially unused. It does
+not imply commission, acquisition, audience impact, presentation at the Nerman
+Museum, or sole authorship. A mutation test fails if the Nerman context source
+is promoted into direct NTER CHNG evidence or those anti-claims disappear.
+
+- Candidate: `sha256:b563d342fb181ddb3cce2ef4c9319a7da969b799ab04cdf839fe42d32e70f651`
+- Contract: `sha256:0b86c4518c6856fb5d9b14f59c72f1278bd90a4ad6199380a29c9c3b67483f79`
+- Deterministic score: `100`
+- Lifecycle regression tests: `63/63`
+- Independent lenses: archival editorial and public-safety composition
+
 ## Next Cycle
 
 Add durable archived captures for live sources, migrate the remaining high-value

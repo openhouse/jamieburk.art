@@ -120,6 +120,14 @@ Ask:
     theme, widget, deployment, and launch records, while his naming support
     remains an attributed memory and uniform identifiers remain evidence of the
     outcome rather than the sole decision-maker?
+41. Does the NTER CHNG record preserve the project's own archived creator
+    credit, America: Now and Here's direct documentation of exhibition use, the
+    organizer's May 5-30 Kansas City chronology, and the Nerman article's wider
+    context as distinct source relationships?
+42. Does the exhibition-inclusion claim avoid converting inclusion into a
+    commission, acquisition, visitor-impact claim, or assertion that NTER CHNG
+    was shown at the Nerman Museum, while preserving every collaborator's
+    documented credit?
 
 Return JSON with:
 

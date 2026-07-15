@@ -395,9 +395,9 @@ test("KC Town Hall transition memory remains deferred and outside public composi
 test("iCloud Teams archival production covers all required archives and records", () => {
   const required = suite.requiredIcloudArchiveProduction;
   assert.deepEqual(required.archiveNames, ["Jamie Projects History", "CRS", "job-hunt"]);
-  assert.equal(required.intakeIds.length, 11);
-  assert.equal(required.sourceIds.length, 11);
-  assert.equal(required.claimIds.length, 9);
+  assert.equal(required.intakeIds.length, 15);
+  assert.equal(required.sourceIds.length, 15);
+  assert.equal(required.claimIds.length, 10);
   for (const id of required.projectIds) {
     assert.equal(knowledgeBank.projects.some((item) => item.id === id), true, id);
   }
@@ -452,8 +452,27 @@ test("iCloud archive claims preserve collective credit and proposal boundaries",
   assert.match(nterChng?.internalClaim ?? "", /Mary Nichols/);
   assert.deepEqual(
     nterChng?.evidence.map((item) => item.sourceId),
-    ["SRC-NTER-CHNG-PITCH-2010", "SRC-NTER-CHNG-VIMEO-2011"]
+    [
+      "SRC-NTER-CHNG-PITCH-2010",
+      "SRC-NTER-CHNG-VIMEO-2011",
+      "SRC-NTER-CHNG-PROJECT-SITE-2011"
+    ]
   );
+
+  const exhibition = knowledgeBank.claims.find(
+    (item) => item.id === required.nterChngExhibitionClaimId
+  );
+  assert.equal(
+    exhibition?.evidence.find((item) => item.sourceId === "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011")?.relationship,
+    "direct-support"
+  );
+  assert.equal(
+    exhibition?.evidence.find((item) => item.sourceId === "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011")?.relationship,
+    "context"
+  );
+  assert.equal(exhibition?.antiClaims.some((item) => /commissioned or acquired/i.test(item)), true);
+  assert.equal(exhibition?.antiClaims.some((item) => /Nerman Museum/i.test(item)), true);
+  assert.equal(exhibition?.antiClaims.some((item) => /visitor counts|audience impact/i.test(item)), true);
 
   const createNyc = knowledgeBank.claims.find((item) => item.id === required.collectivePolicyClaimId);
   assert.match(createNyc?.internalClaim ?? "", /collective/i);
@@ -463,6 +482,38 @@ test("iCloud archive claims preserve collective credit and proposal boundaries",
   assert.equal(proposal?.projections.every((item) => item.status !== "active"), true);
   assert.equal(proposal?.boundaries.some((item) => /not completion/i.test(item)), true);
   assert.equal(proposal?.antiClaims.some((item) => /production AI memory platform/i.test(item)), true);
+});
+
+test("NTER CHNG Wayback inquiry preserves the recovered organizer record and source roles", () => {
+  const required = suite.requiredIcloudArchiveProduction;
+  const inquiry = knowledgeBank.researchInquiries.find(
+    (item) => item.id === required.nterChngWaybackInquiryId
+  );
+  assert.equal(inquiry?.resultStatus, "recovered");
+  assert.equal(inquiry?.methods.some((item) => /4,645 CDX records/.test(item)), true);
+  assert.equal(inquiry?.sourceIds.includes("SRC-NTER-CHNG-PROJECT-SITE-2011"), true);
+  assert.equal(inquiry?.sourceIds.includes("SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"), true);
+  assert.equal(inquiry?.limitations.some((item) => /commissioned or acquired/i.test(item)), true);
+
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === required.nterChngExhibitionClaimId);
+  claim.evidence.find((item) => item.sourceId === "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011").relationship = "direct-support";
+  claim.antiClaims = [];
+  const result = validateKnowledgeLifecycle(bank, suite);
+  assert.equal(result.findings.some((item) => item.code === "nter-chng-exhibition-boundary"), true);
+
+  const audienceBank = structuredClone(knowledgeBank);
+  const audienceClaim = audienceBank.claims.find(
+    (item) => item.id === required.nterChngExhibitionClaimId
+  );
+  audienceClaim.antiClaims = audienceClaim.antiClaims.filter(
+    (item) => !/visitor counts|audience impact/i.test(item)
+  );
+  const audienceResult = validateKnowledgeLifecycle(audienceBank, suite);
+  assert.equal(
+    audienceResult.findings.some((item) => item.code === "nter-chng-exhibition-boundary"),
+    true
+  );
 });
 
 test("iCloud archive eval rejects private leaks and premature projection", () => {

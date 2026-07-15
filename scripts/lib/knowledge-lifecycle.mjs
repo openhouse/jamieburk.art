@@ -478,9 +478,44 @@ export function validateKnowledgeLifecycle(bank, suite) {
         !/Garrett Fuselier/.test(collectiveCreditClaim.internalClaim) ||
         !/Mary Nichols/.test(collectiveCreditClaim.internalClaim) ||
         !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-PITCH-2010") ||
-        !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-VIMEO-2011"))
+        !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-VIMEO-2011") ||
+        !collectiveCreditClaim.evidence.some((item) => item.sourceId === "SRC-NTER-CHNG-PROJECT-SITE-2011"))
     ) {
       add("research_honesty", "icloud-collective-credit", `${required.collectiveCreditClaimId} loses collaborator credit or source triangulation`);
+    }
+
+    const nterChngExhibitionClaim = bank.claims.find(
+      (item) => item.id === required.nterChngExhibitionClaimId
+    );
+    const nterChngDirectEvidence = nterChngExhibitionClaim?.evidence.find(
+      (item) => item.sourceId === "SRC-AMERICA-NOW-HERE-NTER-CHNG-2011"
+    );
+    const nermanContext = nterChngExhibitionClaim?.evidence.find(
+      (item) => item.sourceId === "SRC-NERMAN-AMERICA-NOW-HERE-KC-2011"
+    );
+    if (
+      !nterChngExhibitionClaim ||
+      nterChngDirectEvidence?.relationship !== "direct-support" ||
+      nermanContext?.relationship !== "context" ||
+      !nterChngExhibitionClaim.boundaries.some((item) => /does not name NTER CHNG|does not name.*NTER/i.test(item)) ||
+      !nterChngExhibitionClaim.antiClaims.some((item) => /commissioned or acquired/i.test(item)) ||
+      !nterChngExhibitionClaim.antiClaims.some((item) => /Nerman Museum/i.test(item)) ||
+      !nterChngExhibitionClaim.antiClaims.some((item) => /visitor counts|audience impact/i.test(item))
+    ) {
+      add("research_honesty", "nter-chng-exhibition-boundary", `${required.nterChngExhibitionClaimId} does not distinguish direct inclusion evidence from exhibition context`);
+    }
+
+    const nterChngWaybackInquiry = bank.researchInquiries.find(
+      (item) => item.id === required.nterChngWaybackInquiryId
+    );
+    if (
+      !nterChngWaybackInquiry ||
+      nterChngWaybackInquiry.resultStatus !== "recovered" ||
+      !nterChngWaybackInquiry.methods.some((item) => /4,645 CDX records/.test(item)) ||
+      !nterChngWaybackInquiry.sourceIds.includes("SRC-AMERICA-NOW-HERE-NTER-CHNG-2011") ||
+      !nterChngWaybackInquiry.limitations.some((item) => /commissioned or acquired/i.test(item))
+    ) {
+      add("research_honesty", "nter-chng-wayback-inquiry", `${required.nterChngWaybackInquiryId} does not preserve the recovered organizer-site chain and its limits`);
     }
 
     const collectivePolicyClaim = bank.claims.find(

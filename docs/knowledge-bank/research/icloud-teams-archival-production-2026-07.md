@@ -36,13 +36,13 @@ The typed lifecycle record is
 
 ## Result
 
-The pass added:
+The pass now contains:
 
-- 11 dispositioned intake records;
-- 11 close-read source records;
-- 9 atomic claim records;
+- 15 dispositioned intake records;
+- 15 close-read source records;
+- 10 atomic claim records;
 - 3 project dossiers;
-- 1 verification inquiry.
+- 2 verification inquiries.
 
 ### Public sources
 
@@ -50,7 +50,31 @@ The pass added:
 - [NPR Illinois: Horse Lords' Truthers](https://www.nprillinois.org/the-x/2016-04-29/video-horse-lords-hypnotic-truthers-will-blast-your-noodle) preserves joint video credit for M.C. Schmidt and Jamie Burkart.
 - [The Pitch: NTER CHNG](https://www.thepitchkc.com/ntr-chng/) documents the interactive texting installation's function.
 - [NTER CHNG on Vimeo](https://vimeo.com/21395655) preserves creator credit for Drew Bolton, Jamie Burkart, and Garrett Fuselier, plus Mary Nichols's wall-engineering and construction help.
+- [NTER CHNG's archived project site](https://web.archive.org/web/20110128193350/http://nterchng.com/) independently preserves its interactive-texting description, creator line, and Arts Incubator Cocoon Gallery venue.
+- [America: Now and Here: "I Text, Therefore I Am"](https://web.archive.org/web/20121017090512/http://americanowandhere.org/2011/06/i-text-therefore-i-am/) directly documents NTER CHNG as an installation used by participants during the Kansas City exhibition.
+- [America: Now and Here: launch summary](https://web.archive.org/web/20121017085303/http://americanowandhere.org/2011/06/america-now-and-here-launch-installations-and-next-steps/) dates the Kansas City installation to May 5-30, 2011.
+- [Nerman Museum: America: Now and Here](https://www.nermanmuseum.org/exhibitions/2011-05-11-kruger-barbara-america-now-here.html) republishes Alice Thorson's Kansas City Star preview and supplies wider launch context; it does not name NTER CHNG.
 - [CreateNYC appendix: NYC Artist Coalition](https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf) preserves collective 2017 recommendations for community-driven spaces and does not allocate individual authorship.
+
+### NTER CHNG / America: Now and Here recovery
+
+The exhibition connection entered the lifecycle as Jamie's remembered lead and
+was verified against the organizer's own archived site. The Wayback inquiry
+reviewed the five-record `nterchng.com` CDX inventory and queried 4,645
+`americanowandhere.org` CDX records from 2009-2013, representing 2,935 unique
+captured URLs and 933 unique normalized HTML URLs.
+
+The decisive recovery was the exhibition's June 22, 2011 Kansas City post, "I
+Text, Therefore I Am." It names NTER CHNG as an installation at America: Now
+and Here and describes participants texting a displayed number so their
+messages appeared on a floor-to-ceiling gauze display. A separate organizer
+post supplies the May 5-30 Kansas City date range. The NTER CHNG project site
+and Vimeo record, rather than the exhibition post, preserve creator credit.
+
+This source decomposition permits the bounded claim that NTER CHNG was included
+in the May 2011 Kansas City launch. It does not establish that America: Now and
+Here commissioned or acquired the work, that the work was shown at the Nerman
+Museum's Barbara Kruger truck stop, or that the Nerman article names the work.
 
 ### Private artifacts represented by metadata only
 
@@ -75,6 +99,8 @@ Mature but editorially unused:
 - Jamie and M.C. Schmidt co-created the 2016 Horse Lords "Truthers" video.
 - Jamie co-created NTER CHNG with Drew Bolton and Garrett Fuselier; Mary
   Nichols helped engineer and construct its wall.
+- NTER CHNG was included in the May 2011 Kansas City launch of America: Now and
+  Here, whose archived blog documents visitors using the installation.
 - NYC Artist Coalition collectively submitted CreateNYC recommendations on
   criminalization, support, and affordability for community-driven spaces.
 
@@ -98,6 +124,8 @@ Internal-only pending stronger role verification:
 - A proposal proves engagement design, not delivery or client outcome.
 - A collective artifact does not allocate individual authorship.
 - A project video credit does not reveal the division of technical labor.
+- Exhibition inclusion does not establish a commission, acquisition, audience
+  outcome, or presentation at every venue associated with the wider program.
 - A private synthesis document is a research map, not independent proof.
 - A file that has not materialized locally is unresolved, not absent.
 - Mature knowledge does not require immediate public-site projection.
