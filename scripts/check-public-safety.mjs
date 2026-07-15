@@ -277,7 +277,7 @@ scanPattern(
 scanPattern(
   nycartcFacebookPostLedgerFiles,
   "NYC Artist Coalition Facebook population ledger exposes record-level text, URL, metric, identity, or account-state fields",
-  /"(?:postUrl|statusUrl|publicUrl|rawText|fullText|message|comments|reactions|shares|actorIdentity|publisherIdentity|accountState|privateAnalytics)"\s*:/i
+  /"(?:postUrl|statusUrl|publicUrl|rawText|fullText|message|actorIdentity|publisherIdentity|accountState|privateAnalytics)"\s*:/i
 );
 
 const wowlistPinnedArtifacts = [

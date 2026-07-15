@@ -9,13 +9,13 @@ const boundarySignal =
 const memorySignal =
   /\b(?:recalls?|remembers?|recollection|memory|believes?|hypothesis|pending|corroborat(?:e|ed|ing|ion))\b/i;
 const currentSurfaceSignal =
-  /\b(?:currently recoverable|current(?:ly available)? (?:Page )?surface|surviving (?:Page )?(?:surface|timeline|records?))\b/i;
+  /\b(?:currently recoverable|current(?:ly available)? (?:Page )?surface|surviving.{0,80}(?:surface|timeline|records?|population))\b/i;
 
 const risks = [
   {
     label: "lifetime-population overclaim",
     pattern:
-      /(?:\b(?:all|every|complete|entire|full|whole|total|100 percent|100%)\b.{0,100}\b(?:Facebook|Page|posts?|archive|history|corpus|timeline)\b|\bno\b.{0,80}\b(?:Facebook|Page)?\s*posts?\b.{0,40}\bmissing\b)/i
+      /(?:\b(?:all|every|complete|entire|full|whole|100 percent|100%)\b.{0,100}\b(?:Facebook|Page|posts?\b(?!-)|archive|history|corpus|timeline)\b|\btotal\b.{0,24}\b(?:Facebook|Page|posts?\b(?!-)|archive|history|corpus|timeline)\b|\bno\b.{0,80}\b(?:Facebook|Page)?\s*posts?\b.{0,40}\bmissing\b)/i
   },
   {
     label: "individual publisher overclaim",

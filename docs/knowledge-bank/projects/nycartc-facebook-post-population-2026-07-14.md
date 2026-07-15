@@ -34,11 +34,8 @@ historical record is missing.
 
 A separately recovered content-control comparison did not expose a historic
 human-level publisher field and was not used as the denominator for the
-2017-2021 public chronology.
-
-All 444 timeline records displayed a Page-level action control for NYC Artist
-Coalition. That identifies the publishing identity, not the human who created,
-published, or wrote a particular post.
+2017-2021 public chronology. The Page identity does not identify the human who
+created, published, or wrote a particular post.
 
 ## Post Forms
 
