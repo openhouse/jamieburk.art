@@ -662,6 +662,8 @@ export const evidenceBatchRecords: EvidenceBatch = {
       sourceOrder: [
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+        "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+        "SRC-CREATENYC-NYCAC-APPENDIX-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
@@ -699,6 +701,16 @@ export const evidenceBatchRecords: EvidenceBatch = {
           sourceIds: [
             "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
             "SRC-NYC-COUNCIL-MARCH-HEARING-2019"
+          ]
+        },
+        {
+          id: "nycac-government-interface-2017-2019",
+          claimId: "CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+            "SRC-CREATENYC-NYCAC-APPENDIX-2017"
           ]
         },
         {

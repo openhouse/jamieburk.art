@@ -306,7 +306,7 @@
       "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
       "preferredPublicUrl": "canonical",
       "publicCitation": "New York City Council, Committee on the Justice System hearing transcript, February 11, 2019.",
-      "publicNote": "The official transcript records Jamie's testimony for Talks Not Raids, transparency, cooperative compliance, and coalition fire-safety work.",
+      "publicNote": "The official transcript records Jamie's testimony for Talks Not Raids, transparency, cooperative compliance, and coalition fire-safety work. Earlier in the hearing, Council Chair Rory Lancman repeatedly used NYC Artist Coalition's FOIL-derived analysis to question NYPD and proposed a follow-up meeting with the coalition.",
       "doesNotEstablish": [
         "independent verification of the study-group pass-rate statement",
         "Jamie as author of Introduction 1156",
@@ -331,6 +331,25 @@
         "Jamie's individual production responsibilities",
         "the coalition as sole cause of Cabaret Law repeal",
         "the exact attendance count as audited registration data"
+      ]
+    },
+    {
+      "id": "SRC-CREATENYC-NYCAC-APPENDIX-2017",
+      "title": "CreateNYC appendix: Preserve Community-Driven Spaces",
+      "organization": "NYC Department of Cultural Affairs / NYC Artist Coalition",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-07-01",
+      "accessedAt": "2026-07-12",
+      "canonicalUrl": "https://createnyc.cityofnewyork.us/wp-content/uploads/2017/07/CreateNYC_Appendix-Sect5_NYC-Artist-Coalition-DIY-Community.pdf",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "NYC Department of Cultural Affairs, CreateNYC appendix preserving NYC Artist Coalition recommendations, July 2017.",
+      "publicNote": "The City-hosted appendix preserves coalition recommendations, public-program listings, and WOWList event links submitted during CreateNYC planning.",
+      "doesNotEstablish": [
+        "Jamie's authorship of the submitted letter",
+        "City adoption of every recommendation",
+        "the complete ownership or production history of the linked websites"
       ]
     },
     {
@@ -1024,6 +1043,27 @@
         "independently audited tire or savings totals",
         "the complete service timeline or operator roster",
         "the Indian Mound expansion"
+      ]
+    },
+    {
+      "id": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+      "title": "Joint Finance and Cultural Affairs hearing transcript: Fiscal Year 2018 Executive Budget",
+      "organization": "New York City Council",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-05-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://legistar.council.nyc.gov/View.ashx?GUID=68A2E207-53EA-43CA-A03E-F879A113464E&ID=5271559&M=F",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "New York City Council, joint Finance and Cultural Affairs Fiscal Year 2018 Executive Budget hearing transcript, May 19, 2017.",
+      "publicNote": "In his formal Council testimony, DCLA Commissioner Tom Finkelpearl cited NYC Artist Coalition's formation after a DCLA-hosted DIY arts-community meeting while describing expanded direct public feedback and the power of convening around a common cause.",
+      "doesNotEstablish": [
+        "that Finkelpearl said he personally needed Jamie or NYC Artist Coalition",
+        "Finkelpearl's private motives",
+        "Jamie's individual authorship of the coalition's formation",
+        "that DCLA adopted every coalition recommendation",
+        "a complete census of every Finkelpearl reference in every Council record"
       ]
     }
   ],
@@ -2276,6 +2316,60 @@
         "The workbook does not establish the 20-plus resident-artist total.",
         "Do not publish names, contact details, relationship notes, invitations, responses, attendance indicators, formulas, or source locators."
       ]
+    },
+    {
+      "id": "CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition became a durable interface between cultural spaces and city government. In 2017, DCLA Commissioner Tom Finkelpearl cited its formation in Council testimony while explaining the value of expanded public feedback. In 2019, Council Chair Rory Lancman used the coalition's FOIL-derived MARCH analysis to question NYPD and proposed a follow-up meeting with the coalition.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+          "relationship": "direct-support",
+          "supports": [
+            "Finkelpearl's Council reference to NYC Artist Coalition",
+            "the direct-public-feedback context",
+            "the coalition's formation after a DCLA-hosted DIY meeting"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Council use of coalition FOIL analysis",
+            "questions to NYPD about non-enforcement outcomes and racial disparities",
+            "proposed follow-up meeting with the coalition"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CREATENYC-NYCAC-APPENDIX-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "coalition recommendations entered the CreateNYC public record",
+            "the recommendations addressed community-driven cultural spaces"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The records establish demonstrated institutional use, not officials' private motives or institutional dependence on one coalition.",
+        "Credit NYC Artist Coalition collectively; do not assign Jamie sole authorship of every recommendation, FOIL analysis, testimony, or policy outcome.",
+        "Connect Jamie to the identity, web, participation, and documentation systems he helped build through separately supported claims."
+      ]
     }
   ],
   "pages": [
@@ -2372,6 +2466,8 @@
       "sourceOrder": [
         "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
         "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+        "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+        "SRC-CREATENYC-NYCAC-APPENDIX-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-MARCH-MEETING-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-CABARET-PANEL-2017",
         "SRC-NYCAC-FACEBOOK-EVENT-NIGHTLIFE-TOWN-HALL-2017",
@@ -2409,6 +2505,16 @@
           "sourceIds": [
             "SRC-NYC-COUNCIL-CABARET-HEARING-2017",
             "SRC-NYC-COUNCIL-MARCH-HEARING-2019"
+          ]
+        },
+        {
+          "id": "nycac-government-interface-2017-2019",
+          "claimId": "CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017",
+            "SRC-NYC-COUNCIL-MARCH-HEARING-2019",
+            "SRC-CREATENYC-NYCAC-APPENDIX-2017"
           ]
         },
         {

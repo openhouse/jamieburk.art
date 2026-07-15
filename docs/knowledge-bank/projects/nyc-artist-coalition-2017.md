@@ -34,6 +34,50 @@ The official 2023 CURE announcement acknowledges NYC Artist Coalition among the
 advocates connected to the issue and establishes the later policy outcome. It
 strengthens the chronology while leaving the causal claim held.
 
+## Government Interface
+
+The official Council record now supplies a direct answer to whether DCLA
+Commissioner Tom Finkelpearl referred to NYC Artist Coalition in Council
+testimony. On May 19, 2017, while presenting DCLA's Fiscal Year 2018 Executive
+Budget, Finkelpearl described CreateNYC as an opportunity to build a close,
+reciprocal relationship with the public and expand direct feedback beyond the
+agency's established grantee constituency. He then cited NYC Artist Coalition's
+formation after a DCLA-hosted DIY arts-community meeting as an example of the
+power of bringing people together around a common cause.
+
+The institutional value became more concrete in the February 11, 2019 MARCH
+hearing. Council Chair Rory Lancman repeatedly used NYC Artist Coalition's
+FOIL-derived analysis to question NYPD about raids that produced no enforcement
+action, differences between agency and coalition data, selection criteria, and
+racial disparities. He proposed a follow-up meeting involving NYPD, the
+coalition, interested Council members, and Council staff.
+
+Together, the records support a strong but bounded interpretation: NYC Artist
+Coalition became a durable civic interface. It gathered knowledge from cultural
+spaces, gave that knowledge public form, and made it available for agency
+planning and legislative oversight. Jamie helped build the identity, websites,
+participation routes, and documentation systems that gave the coalition public
+continuity. This does not mean he authored every recommendation, dataset, or
+piece of testimony.
+
+The records do not say that Finkelpearl, DCLA, the Council, or Rafael Espinal
+"needed" Jamie or the coalition. That language would turn demonstrated use into
+an unsupported claim about motive or dependency. The defensible answer is more
+specific:
+
+- DCLA benefited from a trusted channel to an emergent DIY and community-space
+  constituency that was not reducible to its established funded institutions.
+- The Council benefited from organized testimony, independent public-records
+  research, and an interlocutor able to carry follow-up beyond a single hearing.
+- Espinal's nightlife-governance and Cabaret Law work benefited from a durable
+  constituency interface through which cultural-space operators could assemble,
+  make recommendations, testify, and evaluate implementation.
+
+The first two points are directly demonstrated in official transcripts. The
+Espinal point is a bounded institutional interpretation of the documented
+campaign, town-hall, legislative, and Office of Nightlife record, not a claim
+about his private motives.
+
 ## Campaign Press Collections
 
 The four campaign sites Jamie identified preserve a repeatable public
@@ -87,6 +131,10 @@ platform signals rather than attendance counts. See
   causality for legislative and agency outcomes.
 - The Facebook event census does not establish physical attendance, unique
   participation, individual event authorship, or policy causality.
+- No recovered source says that Finkelpearl, DCLA, the Council, or Espinal
+  depended on Jamie or NYC Artist Coalition. Use specific verbs such as
+  `cited`, `solicited`, `used`, `relied on in the hearing`, and `benefited from`
+  only where the linked record supports them.
 
 These claims remain in the bank with explicit research questions. They are not
 weakened into disappearance or strengthened beyond the evidence.

@@ -166,12 +166,14 @@ export const strengtheningDevelopmentRecords: StrengtheningDevelopment = {
       assertions: [
         { id: "ASSERT-MARCH-HEARING-IDENTITY", statement: "Jamie testified as an NYC Artist Coalition member on Introduction 1156 and MARCH.", locator: "Pages 90-93", confidence: "high", publicSafe: true },
         { id: "ASSERT-MARCH-HEARING-ACTION", statement: "He called for transparency, talks rather than raids, and city-coalition liaison work.", locator: "Pages 90-93", confidence: "high", publicSafe: true },
-        { id: "ASSERT-MARCH-HEARING-SAFETY", statement: "He described fire-safety walk-throughs, workshops, and Fireguard study groups as coalition responses.", locator: "Page 90", confidence: "high", publicSafe: true }
+        { id: "ASSERT-MARCH-HEARING-SAFETY", statement: "He described fire-safety walk-throughs, workshops, and Fireguard study groups as coalition responses.", locator: "Page 90", confidence: "high", publicSafe: true },
+        { id: "ASSERT-MARCH-HEARING-COUNCIL-USE", statement: "Council Chair Rory Lancman repeatedly used NYC Artist Coalition's FOIL-derived analysis to question NYPD about non-enforcement outcomes, data differences, selection, and racial disparities.", locator: "Pages 15-28", confidence: "high", publicSafe: true },
+        { id: "ASSERT-MARCH-HEARING-FOLLOW-UP", statement: "Lancman proposed a follow-up meeting involving NYPD, the coalition, interested Council members, and Council staff.", locator: "Pages 27-28", confidence: "high", publicSafe: true }
       ],
       limitations: ["The 100 percent pass-rate statement remains testimony unless corroborated by records."],
       entityIds: ["Jamie-Burkart", "NYC-Artist-Coalition", "NYC-Council"],
       themeIds: ["public-testimony", "march", "transparency", "safety"],
-      candidateClaimIds: ["CND-NYCAC-PUBLIC-TESTIMONY", "CND-NYCAC-SOLE-POLICY-CAUSALITY"]
+      candidateClaimIds: ["CND-NYCAC-PUBLIC-TESTIMONY", "CND-NYCAC-SOLE-POLICY-CAUSALITY", "CND-NYCAC-GOVERNMENT-INTERFACE-2017-2019", "CND-NYCAC-OFFICIALS-NEEDED-COALITION"]
     },
     {
       id: "READ-VICE-NYCAC-DIY-SAFETY-2017",

@@ -122,6 +122,16 @@ const criteria = [
       /concrete deliverables, success conditions, consent boundaries, and decision infrastructure/.test(
         sources.proofData
       )
+  },
+  {
+    id: "nycac-government-interface-result",
+    label: "Fair Rent explains what coalition infrastructure made usable to government",
+    pass:
+      /CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019/.test(sources.fairRent) &&
+      /CLM-NYCAC-PUBLIC-TESTIMONY-2017-2019/.test(sources.fairRent) &&
+      /co-founding NYC Artist Coalition, creating its logo and shared public identity, building campaign websites/.test(
+        sources.fairRent
+      )
   }
 ];
 

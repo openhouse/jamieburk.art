@@ -43,11 +43,13 @@ export const strengtheningBatchRecords: StrengtheningBatch = {
       canonicalUrl: "https://legistar.council.nyc.gov/View.ashx?GUID=2582E680-452D-46B1-8DE1-C5C5168F5D63&ID=7080592&M=F",
       preferredPublicUrl: "canonical",
       publicCitation: "New York City Council, Committee on the Justice System hearing transcript, February 11, 2019.",
-      publicNote: "The official transcript records Jamie's testimony for Talks Not Raids, transparency, cooperative compliance, and coalition fire-safety work.",
+      publicNote: "The official transcript records Jamie's testimony for Talks Not Raids, transparency, cooperative compliance, and coalition fire-safety work. Earlier in the hearing, Council Chair Rory Lancman repeatedly used NYC Artist Coalition's FOIL-derived analysis to question NYPD and proposed a follow-up meeting with the coalition.",
       supportsGenerally: [
         "Jamie testified publicly as an NYC Artist Coalition member",
         "Jamie called for transparency and talks rather than MARCH raids",
-        "Jamie described coalition fire-safety walk-throughs, workshops, and study groups"
+        "Jamie described coalition fire-safety walk-throughs, workshops, and study groups",
+        "Council Chair Rory Lancman used coalition FOIL analysis to question NYPD about non-enforcement outcomes and racial disparities",
+        "Lancman proposed a follow-up meeting involving NYPD, the coalition, Council members, and Council staff"
       ],
       doesNotEstablish: [
         "independent verification of the study-group pass-rate statement",

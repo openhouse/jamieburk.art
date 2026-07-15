@@ -52,6 +52,13 @@ Do not convert 17 recovered NYC Cultural Affairs and NYC311 posts into a claim
 that the City adopted every coalition recommendation. Dialogue, service routing,
 and public recognition are not policy causality.
 
+Do not say Finkelpearl, DCLA, the City Council, or Rafael Espinal personally
+"needed" Jamie or depended solely on NYC Artist Coalition. Official records
+show demonstrated use: Finkelpearl cited the coalition while explaining public
+engagement, and Council Chair Rory Lancman used coalition FOIL analysis in MARCH
+oversight. They do not establish private motive, personal dependency, adoption
+of every recommendation, or sole policy causality.
+
 Do not say all 34 Facebook events were recovered. The event ledger accounts
 for a 34-event host-card control with 33 recovered page-listed records and one
 unresolved historical slot.

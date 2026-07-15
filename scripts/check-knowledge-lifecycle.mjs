@@ -3199,6 +3199,113 @@ const criteria = [
     })()
   },
   {
+    id: "nycac-finkelpearl-direct-council-record",
+    label: "Finkelpearl's NYC Artist Coalition reference is captured as direct official testimony",
+    pass: (() => {
+      const source = knowledgeBank.sources.find(
+        (item) => item.id === "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017"
+      );
+      const reading = readingBySourceId.get(source?.id);
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NYCAC-FINKELPEARL-COUNCIL-REFERENCE-2026"
+      );
+      return Boolean(
+        source?.kind === "government-record" &&
+        source.canonicalUrl?.includes("legistar.council.nyc.gov") &&
+        reading?.assertions.some((item) => /formal testimony/i.test(item.statement)) &&
+        reading?.assertions.some((item) => /DCLA hosted.*DIY arts community/i.test(item.statement)) &&
+        reading?.assertions.some((item) => /expanded direct feedback/i.test(item.statement)) &&
+        inquiry?.resultStatus === "partially-recovered" &&
+        inquiry.findings.some((item) => /One direct Finkelpearl reference was recovered/i.test(item))
+      );
+    })()
+  },
+  {
+    id: "nycac-government-interface-promotion",
+    label: "Official institutional use is promoted from source to public projection",
+    pass: (() => {
+      const candidate = candidateById.get(
+        "CND-NYCAC-GOVERNMENT-INTERFACE-2017-2019"
+      );
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019"
+      );
+      const occurrence = knowledgeBank.pages
+        .find((page) => page.id === "fair-rent-nyc")
+        ?.occurrences.find((item) => item.id === "nycac-government-interface-2017-2019");
+      return Boolean(
+        candidate?.status === "promoted" &&
+        candidate.promotedClaimId === claim?.id &&
+        claim?.status === "confirmed-with-boundary" &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-NYC-COUNCIL-DCLA-BUDGET-HEARING-2017" &&
+            item.relationship === "direct-support"
+        ) &&
+        claim.evidence.some(
+          (item) =>
+            item.sourceId === "SRC-NYC-COUNCIL-MARCH-HEARING-2019" &&
+            item.relationship === "direct-support" &&
+            item.locator === "Transcript pages 15-28"
+        ) &&
+        claim.projections.some(
+          (item) =>
+            item.surfaces.includes("/work/fair-rent-nyc") &&
+            /durable interface/i.test(item.text) &&
+            /FOIL-derived MARCH analysis/i.test(item.text)
+        ) &&
+        occurrence?.claimId === claim.id &&
+        renderedProjectionSources.includes(claim.id)
+      );
+    })()
+  },
+  {
+    id: "nycac-official-need-motive-boundary",
+    label: "Institutional usefulness stays distinct from private motive and dependency",
+    pass: (() => {
+      const held = candidateById.get("CND-NYCAC-OFFICIALS-NEEDED-COALITION");
+      const claim = knowledgeBank.claims.find(
+        (item) => item.id === "CLM-NYCAC-GOVERNMENT-INTERFACE-2017-2019"
+      );
+      const antiClaims = readFileSync("docs/knowledge-bank/anti-claims.md", "utf8");
+      const report = readFileSync(
+        "docs/knowledge-bank/nycac-government-interface-2026-07-15.md",
+        "utf8"
+      );
+      return Boolean(
+        held?.status === "hold" &&
+        !held.promotedClaimId &&
+        promotions.some(
+          (item) => item.candidateClaimId === held.id && item.decision === "held"
+        ) &&
+        claim?.antiClaims.some((item) => /needed Jamie personally/i.test(item)) &&
+        claim.boundaries.some((item) => /private motives|institutional dependence/i.test(item)) &&
+        /Do not say Finkelpearl, DCLA, the City Council, or Rafael Espinal/i.test(antiClaims) &&
+        /observed institutional use.*unsupported motive and dependency/is.test(report)
+      );
+    })()
+  },
+  {
+    id: "nycac-hearing-search-boundary",
+    label: "The hearing pass distinguishes recovered evidence from corpus completeness",
+    pass: (() => {
+      const inquiry = knowledgeBank.researchInquiries.find(
+        (item) => item.id === "INQ-NYCAC-FINKELPEARL-COUNCIL-REFERENCE-2026"
+      );
+      const report = readFileSync(
+        "docs/knowledge-bank/nycac-government-interface-2026-07-15.md",
+        "utf8"
+      );
+      return Boolean(
+        inquiry?.limitations.some((item) => /not a guaranteed census/i.test(item)) &&
+        inquiry.findings.some((item) => /does not contain Finkelpearl's name/i.test(item)) &&
+        /`Not recovered` is not the same as `did not exist`/i.test(report) &&
+        /three full transcripts/i.test(report) &&
+        !/\/Volumes\/|\/Users\//.test(report)
+      );
+    })()
+  },
+  {
     id: "social-identity-collective-authorship",
     label: "Identity-system authorship is visible while post authorship remains collective",
     pass: (() => {
