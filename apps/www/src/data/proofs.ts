@@ -578,21 +578,26 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation",
     ],
     publicWording:
-      "The City lists Jamie as KC Town Hall's developer/presenter for an adaptive-reuse proposal. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded KC Town Hall's withdrawal and reappropriated the unused funds in 2024.",
+      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The 2019 packet identifies Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator. He designed a resident survey system and coordinated recurring neighborhood service operations. For a later, separate Phase Two proposal, the CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record says KC Town Hall withdrew and the unused appropriation was reappropriated.",
     shortWording:
-      "Presented an adaptive-reuse proposal that advanced through CCED and Council review",
+      "Coordinated a completed $189,629 historic-building cold-shell phase and participatory neighborhood systems",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support. He states that he transitioned the project to a mission-aligned organization. Official KCMO records separately name him as developer/presenter and document the Board recommendation, Council acceptance and appropriation, and later reappropriation of the unused amount after withdrawal.",
+      "Jamie states that he served as Phase One general contractor and daily site coordinator, coordinating architecture, preservation, roofing, masonry, framing, water, safety, access, and site workflows. The packet independently identifies him as founder/project manager, names the team, and documents the completed scope. He designed a 4-by-6-inch resident survey handbill and backing data system; the packet says input directly shaped the proposal. Public records corroborate his direct operations in Oak Park Neighborhood Association's recurring TiredOfTires workflow. The later Phase Two municipal funding chronology remains separate.",
     sourceBasis:
-      "Approved resume language, the official CCED Round Two proposal list, authenticated Resolution 190649, authenticated Ordinance 190642, Ordinance 240317, Jamie's public-safe first-hand transition clarification, and public-safe project context.",
+      "Public-safe archival review of the 2019 CCED packet, official CCED and Council records, public project/participant/collaborator social records, a protected multi-year tire-pickup calculator, approved resume context, and Jamie's bounded first-hand role and transition clarifications.",
     guardrail:
-      "Distinguish Board recommendation, Council acceptance, appropriation, agreement execution, receipt, and expenditure. State the later withdrawal and reappropriation whenever describing the 2019 appropriation. Treat the mission-aligned transition as Jamie's first-hand account, separate from the official City record.",
+      "Separate completed Phase One from the uncompleted Phase Two proposal and unused City appropriation. Attribute the general-contractor title, TiredOfTires design/coordination, and transition to Jamie pending independent role-bearing records. Credit Julia Fredenburg and the architecture, preservation, trade, neighborhood, and City collaborators. Keep exact tire/savings and survey-response totals held.",
     doNotSay: [
       "KC Town Hall received or spent $490,539",
       "A final funding agreement was executed",
       "Jamie caused or secured the government decisions",
       "Jamie solely authored or owned the proposal",
       "The project was completed with City funds",
+      "The completed Phase One was paid for by the later $490,539 City appropriation",
+      "The CCED packet formally titles Jamie general contractor",
+      "Jamie personally performed licensed trade work",
+      "Jamie alone ran TiredOfTires or the neighborhood process",
+      "Exact tire, resident-savings, or survey-response totals are independently verified",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the cited public record",
@@ -607,6 +612,9 @@ export const proofClaims: ProofClaim[] = [
       "Property details",
       "Banking details",
       "Stakeholder details",
+      "Raw survey responses and contact fields",
+      "Household pickup routes and intake records",
+      "Private contracts, invoices, and permits pending review",
     ],
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
@@ -615,7 +623,7 @@ export const proofClaims: ProofClaim[] = [
       "public-benefit-documentation",
       "stakeholder-context",
     ],
-    lastReviewed: "2026-07-14",
+    lastReviewed: "2026-07-15",
   },
   {
     id: "source-backed-team-memory-method",

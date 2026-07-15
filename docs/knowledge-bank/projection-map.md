@@ -68,7 +68,11 @@ as source discipline rather than dumping the bank onto the page.
 The Fair Rent NYC case study additionally selects
 `CLM-CRS-COALITION-OPERATING-SYSTEM` and
 `CLM-CRS-OPEN-DATA-IMPLEMENTATION-DESIGN`, plus
-`CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`. The 196 / Sunday Dinner case study
+`CLM-NYCAC-MULTI-ACTION-GUIDANCE-DRAFT`,
+`CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`, and
+`CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`. The Facebook response projection
+must say RSVP actions rather than attendance. The individual Jamie event-system
+role and democracy-lab interpretation remain held knowledge depth. The 196 / Sunday Dinner case study
 selects `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`. Their protected source records
 must not render as public citations.
 

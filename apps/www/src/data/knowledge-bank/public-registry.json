@@ -1105,6 +1105,84 @@
       ]
     },
     {
+      "id": "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+      "title": "NYC Artist Coalition Facebook Past Events full-population inventory",
+      "organization": "Jamie Burkart portfolio knowledge bank",
+      "author": "Codex authenticated archival review",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://github.com/openhouse/jamieburk.art/blob/500fec4753e2540c6c0ad964f23ce3838a26a0cb/apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Public-safe inventory of every event card exposed by the NYC Artist Coalition Facebook page's Past Events surface on July 15, 2026.",
+      "publicNote": "Facebook displayed 34 past events but materialized 33 unique cards. All 33 exposed detail pages were recovered. The fixture publishes metadata and selected mission links, not raw event descriptions, contacts, meeting credentials, or attendee identities.",
+      "doesNotEstablish": [
+        "the identity of the one event included in Facebook's displayed count but not materialized",
+        "attendance, unique people, reach, impressions, conversion, or policy impact",
+        "Jamie's authorship or production of every event",
+        "a complete owner export or a record of deleted events"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+      "title": "Market Hotel - Show NYC We Support Spaces",
+      "organization": "Commend and NYC Artist Coalition",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-03-30",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/1907948219437421/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Commend and NYC Artist Coalition, 'Market Hotel - Show NYC We Support Spaces,' Facebook event, 2017-03-30.",
+      "publicNote": "Historical public event page captured in the full-population pass. Displayed response counts are RSVP actions, not attendance or unique people.",
+      "doesNotEstablish": [
+        "verified attendance or unique participants",
+        "Jamie's authorship or production role",
+        "sole coalition ownership or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+      "title": "Tell NYC's Night Mayor: Save NYC Spaces",
+      "organization": "House of YES, Dance Liberation Network, and cohosts",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2017-10-11",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/120802405289008/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "House of YES, Dance Liberation Network, and cohosts, 'Tell NYC's Night Mayor: Save NYC Spaces,' Facebook event, 2017-10-11.",
+      "publicNote": "Historical public event page captured in the full-population pass. Displayed response counts are RSVP actions, not attendance or unique people.",
+      "doesNotEstablish": [
+        "verified attendance or unique participants",
+        "Jamie's authorship or production role",
+        "sole coalition ownership or policy causality"
+      ]
+    },
+    {
+      "id": "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01",
+      "title": "MARCH Raids & Fair Rent: NYC Artist Coalition Meeting",
+      "organization": "League of Independent Theater, Educated Little Monsters, and cohosts",
+      "kind": "institutional-web-page",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-11-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.facebook.com/events/468698540318956/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "League of Independent Theater, Educated Little Monsters, and cohosts, 'MARCH Raids & Fair Rent: NYC Artist Coalition Meeting,' Facebook event, 2018-11-01.",
+      "publicNote": "Historical public event page captured in the full-population pass. Displayed response counts are RSVP actions, not attendance or unique people.",
+      "doesNotEstablish": [
+        "verified attendance or unique participants",
+        "Jamie's authorship or production role",
+        "sole coalition ownership or policy causality"
+      ]
+    },
+    {
       "id": "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       "title": "Civic Hall announcement of New York City Council hackathon",
       "organization": "Civic Hall",
@@ -1679,6 +1757,134 @@
         "Do not identify the receiving organization or imply a particular legal transfer, ownership change, funding transfer, or assumption of obligations without additional public evidence and approval.",
         "Keep the transition separate from the City's later withdrawal and reappropriation record; the current sources do not establish that they were the same event or that one caused the other.",
         "Keep private reasons and personal circumstances outside the public repository and site."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Phase One was completed in 2019: a $189,629 cold-shell restoration spanning roof-deck repair, insulation and TPO membrane, historic masonry, floor framing, water connection, egress, safety, cleanup, access, and related site work.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        },
+        {
+          "key": "work-card",
+          "text": "Completed a $189,629 Phase One cold-shell restoration in 2019, separate from the later uncompleted Phase Two proposal.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work",
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Phase One completion refers to the cold-shell scope, not a completed mixed-use buildout or permanent public opening.",
+        "The packet's March 2019 narrative says Phase One was 66 percent complete and slated for completion that year; its cost table labels the phase completed in 2019, and Jamie later confirms the year-end outcome.",
+        "Do not attach the later $490,539 City appropriation to Phase One; official records say that separate amount remained unused.",
+        "Treat construction as collective work by Jamie, Julia Fredenburg, and the named professional and trade team."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie states that he served as Phase One general contractor and daily site coordinator. The project packet independently identifies him as founder/project manager, names the architecture and trade team, and documents the completed cold-shell scope.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Attribute the general-contractor title to Jamie until a contract, permit, invoice set, or collaborator statement independently confirms it.",
+        "The packet's own role label is founder/project manager, not general contractor.",
+        "Credit Julia Fredenburg and the named professional and trade team; do not imply that Jamie performed licensed trade work himself.",
+        "Do not publish private contracts, permits, invoices, contact details, or financing records without a separate public-safety review."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie designed a 4-by-6-inch resident survey handbill and backing data-collection system. The 2019 packet reproduces the card, names Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as process partners, says resident input directly shaped the proposal, and preserves support letters describing the process as listening-driven.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+          "relationship": "context",
+          "supports": [
+            "the public resident-input invitation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Jamie's authorship of the handbill and data system is first-hand; the packet independently preserves the artifact and its documented use.",
+        "Do not publish raw survey names, emails, phone numbers, responses, or an unsupported response count.",
+        "Say that input shaped the proposal and influenced proposed uses, not that every suggestion was adopted or the final program was completed.",
+        "Credit Oak Park Neighborhood Association and New Horizon Missionary Baptist Church as process partners."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Jamie states that he designed and coordinated Oak Park Neighborhood Association's recurring TiredOfTires pickup with the City and performed monthly field operations. Public project, participant, and environmental-collaborator records corroborate his direct pickup and drop-off work; a protected log preserves activity from May 2019 through September 2022.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+          "relationship": "corroborating",
+          "supports": [
+            "the recurring public intake and pickup workflow"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+          "relationship": "corroborating",
+          "supports": [
+            "an external collaborator's public report of a KC Town Hall tire drop-off"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Attribute the program-design and City-coordination role to Jamie pending a collaborator or public operating record that independently assigns it.",
+        "Treat TiredOfTires as Oak Park Neighborhood Association and collective neighborhood work, not a solo Jamie program.",
+        "The reported Indian Mound expansion remains first-hand pending a dated public or collaborator record.",
+        "Keep exact aggregate tire and savings totals held until the calculator, public posts, receipts, and City or disposal-center records reconcile.",
+        "Do not publish household addresses, contact details, routes, or raw intake records."
       ]
     },
     {
@@ -2390,6 +2596,134 @@
       ]
     },
     {
+      "id": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "NYC Artist Coalition used recurring events as participatory advocacy infrastructure: meetings rotated through small cultural spaces, connected artist and venue concerns to public agencies and City Hall, and sustained work from safety and Cabaret Law repeal through nightlife accountability, commercial rent, and relief.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The current Facebook archive exposes 33 coalition-listed past events from 2017-2021, documenting a recurring practice across cultural venues, government hearings, public panels, rallies, and virtual relief meetings.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "the 33-event exposed population and chronology",
+            "rotating cultural-space and government venues",
+            "organizer-relation and topic patterns",
+            "event-posted mission resources and source articles"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+          "relationship": "corroborating",
+          "supports": [
+            "a March 2017 Market Hotel town hall",
+            "named city and Council participants",
+            "the coalition's multi-issue cultural-space agenda"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+          "relationship": "corroborating",
+          "supports": [
+            "the March 2017 Market Hotel event identity and response snapshot",
+            "a cultural-space meeting connected to city and Council participants"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+          "relationship": "corroborating",
+          "supports": [
+            "a high-response town hall at Market Hotel",
+            "the interface between small cultural spaces and nightlife governance"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01",
+          "relationship": "corroborating",
+          "supports": [
+            "continuity from MARCH enforcement concerns into commercial-rent advocacy"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "This is a collective NYC Artist Coalition method claim; it does not assign every event to Jamie or erase cohosts, venue operators, artists, officials, and participants.",
+        "The archive is complete for the 33 events exposed by the live Past Events surface; Facebook displayed 34, leaving one unmaterialized event unresolved.",
+        "The venues rotated but were not always different; Market Hotel and other locations recur.",
+        "Event sequence and public response do not establish sole policy causality."
+      ]
+    },
+    {
+      "id": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "Facebook's current archive exposes 33 coalition-listed past events. Thirty-two retain response totals; 19 show at least 100 responses, seven at least 500, and three at least 1,000. These are historical RSVP actions, not unique people or verified attendance.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/fair-rent-nyc"
+          ]
+        },
+        {
+          "key": "archive-note",
+          "text": "The 32 displayed event-response totals yield a point estimate of 9,989 RSVP actions; three source values are rounded in thousands, and none should be treated as attendance or unique people.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "32 events with displayed response totals",
+            "the 19, seven, and three response-threshold counts",
+            "the approximate 9,989 response-action point estimate",
+            "the three rounded K-formatted source values"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Facebook response totals are RSVP actions, not unique people, attendance, reach, impressions, conversion, or impact.",
+        "The 9,989 total is an approximate point estimate because three displayed values are rounded in thousands.",
+        "Counts are point-in-time values observed on July 15, 2026 and may change or disappear.",
+        "One of the 33 exposed events did not display a response total."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-HACKATHON-DATE-TIME",
       "status": "confirmed",
       "projections": [
@@ -2717,7 +3051,11 @@
         "SRC-NYCAC-LEVIN-HEARING-2019-02-06",
         "SRC-NYCAC-LEVIN-TESTIMONY-2019-02-11",
         "SRC-NYCAC-RIVERA-COSPONSOR-2018-10-20",
-        "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26"
+        "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26",
+        "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+        "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+        "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01"
       ],
       "occurrences": [
         {
@@ -2827,6 +3165,26 @@
             "SRC-NYCAC-RIVERA-COSPONSOR-2018-10-20",
             "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26"
           ]
+        },
+        {
+          "id": "recurring-event-infrastructure",
+          "claimId": "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+            "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+            "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+            "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01"
+          ]
+        },
+        {
+          "id": "facebook-event-response-snapshot",
+          "claimId": "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15"
+          ]
         }
       ]
     },
@@ -2901,15 +3259,15 @@
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
         "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
         "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
         "SRC-KCTH-LAUNCH-2018-07-02",
-        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
-        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
         "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
         "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
         "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
-        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
         "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
         "SRC-KCTH-KCMO-ORDINANCE-240317-2024"
@@ -2921,6 +3279,30 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019"
+          ]
+        },
+        {
+          "id": "phase-one-cold-shell-completion",
+          "claimId": "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+          "projection": "case-study"
+        },
+        {
+          "id": "phase-one-general-contractor-role",
+          "claimId": "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+          "projection": "case-study"
+        },
+        {
+          "id": "survey-design-and-decision-input",
+          "claimId": "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+          "projection": "case-study"
+        },
+        {
+          "id": "tired-of-tires-design-and-operations",
+          "claimId": "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+            "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08"
           ]
         },
         {

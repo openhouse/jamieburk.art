@@ -23,6 +23,14 @@ import {
   kcTownHallFundingSources,
 } from "../../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import {
+  kcTownHallPhaseOneCaptures,
+  kcTownHallPhaseOneClaims,
+  kcTownHallPhaseOneInquiries,
+  kcTownHallPhaseOneObservations,
+  kcTownHallPhaseOneResearchTasks,
+  kcTownHallPhaseOneSources,
+} from "../../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts";
+import {
   teamsArchiveCaptures,
   teamsArchiveClaims,
   teamsArchiveInquiries,
@@ -58,6 +66,23 @@ import {
   nterchngSources,
 } from "../../apps/www/src/data/knowledge-bank/nterchng-production.ts";
 import {
+  urbanhermitCaptures,
+  urbanhermitClaims,
+  urbanhermitInquiries,
+  urbanhermitObservations,
+  urbanhermitResearchTasks,
+  urbanhermitReviewSummary,
+  urbanhermitSources,
+} from "../../apps/www/src/data/knowledge-bank/urbanhermit-production.ts";
+import {
+  nycacFacebookEventCaptures,
+  nycacFacebookEventClaims,
+  nycacFacebookEventInquiries,
+  nycacFacebookEventObservations,
+  nycacFacebookEventResearchTasks,
+  nycacFacebookEventSources,
+} from "../../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
+import {
   classifyNycacMissionSignals,
   extractNycacSourcePostBody,
   normalizeNycacSourceRecordType,
@@ -65,6 +90,7 @@ import {
   nycacClassificationInputs,
   nycacMissionSignalRules,
 } from "../lib/nycac-mission-classifier.mjs";
+import { urbanhermitMissionSignalRules } from "../lib/urbanhermit-mission-classifier.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
@@ -103,6 +129,18 @@ const kcTownHallPopulationInventory = JSON.parse(
 const nycacPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
+    "utf8",
+  ),
+);
+const urbanhermitPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+    "utf8",
+  ),
+);
+const nycacFacebookEventInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
     "utf8",
   ),
 );
@@ -1237,6 +1275,259 @@ test("KC Town Hall population source pins the exact classified fixture commit", 
   );
 });
 
+test("Urbanhermit live-profile population reconciles all 434 counted records", () => {
+  const records = urbanhermitPopulationInventory.records;
+  const contextRecords =
+    urbanhermitPopulationInventory.conversationContextRecords;
+  const reconciliation = urbanhermitPopulationInventory.populationReconciliation;
+
+  assert.equal(records.length, 434);
+  assert.equal(new Set(records.map((record) => record.url)).size, 434);
+  assert.equal(reconciliation.profileReportedPostCount, 434);
+  assert.equal(reconciliation.postsTimelineUniqueCount, 421);
+  assert.equal(reconciliation.repliesTimelineRenderedArticleCount, 436);
+  assert.equal(reconciliation.repliesTimelineConversationContextCount, 2);
+  assert.equal(reconciliation.repliesTimelinePrimaryRecordCount, 434);
+  assert.equal(reconciliation.recoveredUnionRecordCount, 434);
+  assert.equal(reconciliation.recoveredPopulationReviewedPercent, 100);
+  assert.equal(reconciliation.profileCountNotMaterialized, 0);
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("posts")).length,
+    421,
+  );
+  assert.equal(
+    records.filter((record) => record.recoveredFrom.includes("replies")).length,
+    434,
+  );
+  assert.equal(contextRecords.length, 2);
+  assert.ok(
+    contextRecords.every(
+      (context) => !records.some((record) => record.url === context.url),
+    ),
+  );
+  assert.match(reconciliation.boundary, /no older post was deleted/i);
+});
+
+test("Urbanhermit fixture preserves source authorship, posted links, and safe metadata", () => {
+  const records = urbanhermitPopulationInventory.records;
+  const authored = records.filter(
+    (record) => record.sourceAuthorship === "account-authored",
+  );
+  const reposts = records.filter((record) => record.recordType === "repost");
+  const links = records.flatMap((record) => record.externalLinks);
+  const authoredLinks = authored.flatMap((record) => record.externalLinks);
+
+  assert.deepEqual(urbanhermitPopulationInventory.recordTypeCounts, {
+    original: 340,
+    reply: 13,
+    repost: 81,
+  });
+  assert.equal(authored.length, 353);
+  assert.ok(
+    authored.every(
+      (record) =>
+        record.authorHandle.toLowerCase() === "@urbanhermit" &&
+        ["original", "reply"].includes(record.recordType),
+    ),
+  );
+  assert.equal(reposts.length, 81);
+  assert.ok(
+    reposts.every(
+      (record) =>
+        record.sourceAuthorship === "external-source-native-repost" &&
+        record.authorHandle.toLowerCase() !== "@urbanhermit",
+    ),
+  );
+  assert.equal(links.length, 349);
+  assert.equal(new Set(links.map((link) => link.shortUrl)).size, 321);
+  assert.equal(authoredLinks.length, 292);
+  assert.equal(
+    new Set(authoredLinks.map((link) => link.shortUrl)).size,
+    277,
+  );
+  assert.doesNotMatch(
+    JSON.stringify(urbanhermitPopulationInventory),
+    /"(?:text|cookie|cookies|session|sessionToken|profileBiography)"\s*:|\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i,
+  );
+  assert.match(
+    urbanhermitPopulationInventory.publicSafety.excluded,
+    /Raw post text/i,
+  );
+});
+
+test("Urbanhermit mission classifications are manifest-bound and auditable", () => {
+  const classification =
+    urbanhermitPopulationInventory.missionSignalClassification;
+  const rules = new Map(
+    classification.rules.map((rule) => [rule.signalId, rule]),
+  );
+
+  assert.deepEqual(
+    classification.rules,
+    urbanhermitMissionSignalRules.map((rule) => ({
+      signalId: rule.id,
+      pattern: rule.pattern.source,
+      flags: rule.pattern.flags,
+    })),
+  );
+  assert.deepEqual(classification.inputFields, [
+    "source-post-body",
+    "hashtag",
+    "displayed-link-destination",
+  ]);
+  assert.ok(
+    urbanhermitPopulationInventory.records.every((record) => {
+      if (!/^[a-f0-9]{64}$/.test(record.classificationInputDigest)) return false;
+      if (
+        record.missionSignals.join("|") !==
+        record.missionSignalEvidence
+          .map((evidence) => evidence.signalId)
+          .join("|")
+      ) {
+        return false;
+      }
+      return record.missionSignalEvidence.every((evidence) => {
+        const rule = rules.get(evidence.signalId);
+        return (
+          rule &&
+          classification.inputFields.includes(evidence.inputField) &&
+          new RegExp(rule.pattern, rule.flags).test(evidence.matchedValue)
+        );
+      });
+    }),
+  );
+  assert.deepEqual(
+    urbanhermitPopulationInventory.publishingPattern.missionSignalRecordCounts,
+    {
+      "community-platforms-and-gatherings": 35,
+      "civic-participation-and-service": 8,
+      "cultural-space-advocacy": 45,
+      "public-history-place-and-waterways": 2,
+      "creative-technology-and-media": 4,
+      "neighborhood-mutual-aid": 1,
+    },
+  );
+});
+
+test("Urbanhermit bounded incoming inventory preserves stakeholder and context limits", () => {
+  const inventory = urbanhermitPopulationInventory.stakeholderInventory;
+  const missionRelevant = inventory.records.filter(
+    (record) => record.classification === "mission-relevant-third-party",
+  );
+  const missionContext = inventory.records.filter(
+    (record) =>
+      record.classification === "mission-relevant-conversation-context",
+  );
+  const contextLimited = inventory.records.filter(
+    (record) =>
+      record.classification === "context-limited-personal-or-network",
+  );
+
+  assert.equal(inventory.records.length, 26);
+  assert.equal(new Set(inventory.records.map((record) => record.url)).size, 26);
+  assert.equal(missionRelevant.length, 15);
+  assert.equal(
+    new Set(missionRelevant.map((record) => record.authorHandle)).size,
+    9,
+  );
+  assert.equal(missionContext.length, 2);
+  assert.equal(contextLimited.length, 9);
+  assert.equal(
+    Object.values(inventory.stakeholderGroupCounts).reduce(
+      (sum, count) => sum + count,
+      0,
+    ),
+    15,
+  );
+  assert.match(inventory.boundary, /not a complete historical engagement archive/i);
+});
+
+test("Urbanhermit population source pins the exact classified fixture commit", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json";
+  const source = urbanhermitSources.find(
+    (record) => record.id === "SRC-URBANHERM-FULL-POPULATION-2026-07-15",
+  );
+  const match = source.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/urbanhermit-full-population\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`], {
+      maxBuffer: 4 * 1024 * 1024,
+    }),
+    readFileSync(fixturePath),
+  );
+});
+
+test("Urbanhermit archival production promotes strong claims without adding a route", () => {
+  assert.equal(urbanhermitCaptures.length, 1);
+  assert.equal(urbanhermitSources.length, 10);
+  assert.equal(urbanhermitObservations.length, 12);
+  assert.equal(urbanhermitClaims.length, 4);
+  assert.equal(urbanhermitResearchTasks.length, 3);
+  assert.equal(urbanhermitInquiries.length, 1);
+  assert.deepEqual(urbanhermitReviewSummary, {
+    profileReportedPostCount: 434,
+    recoveredPopulationCount: 434,
+    profileCountNotMaterialized: 0,
+    postsTimelineUniqueCount: 421,
+    repliesTimelineRenderedArticleCount: 436,
+    conversationContextCount: 2,
+    accountAuthoredRecordCount: 353,
+    externalSourceNativeRepostRecordCount: 81,
+    externalLinkOccurrences: 349,
+    distinctExternalShortUrlCount: 321,
+    incomingSearchRecordCount: 26,
+    missionRelevantIncomingRecordCount: 15,
+    missionRelevantIncomingAccountCount: 9,
+  });
+
+  const archiveClaim = urbanhermitClaims.find(
+    (claim) =>
+      claim.id === "CLM-URBANHERM-PERSONAL-PUBLIC-WORKING-SURFACE",
+  );
+  const horseClaim = urbanhermitClaims.find(
+    (claim) => claim.id === "CLM-URBANHERM-HORSE-LORDS-VIDEO",
+  );
+  const tunnelClaim = urbanhermitClaims.find(
+    (claim) =>
+      claim.id === "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING",
+  );
+  const tireClaim = urbanhermitClaims.find(
+    (claim) =>
+      claim.id === "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION",
+  );
+
+  assert.equal(archiveClaim.selectionState, "dormant");
+  assert.equal(horseClaim.selectionState, "candidate");
+  assert.equal(tunnelClaim.selectionState, "candidate");
+  assert.equal(tireClaim.selectionState, "dormant");
+  assert.ok(urbanhermitClaims.every((claim) => claim.evidence.length));
+  assert.ok(urbanhermitClaims.every((claim) => claim.boundaries.length));
+  assert.ok(urbanhermitClaims.every((claim) => claim.antiClaims.length));
+  assert.ok(
+    urbanhermitClaims.every((claim) =>
+      claim.projections.every((projection) =>
+        projection.surfaces.every((surface) => !surface.startsWith("/")),
+      ),
+    ),
+  );
+  assert.match(
+    horseClaim.internalClaim,
+    /co-created.*M\.C\. Schmidt.*NPR/i,
+  );
+  assert.match(
+    tunnelClaim.internalClaim,
+    /2006.*scavenger hunt.*8th Street Tunnel/i,
+  );
+  assert.match(
+    tireClaim.internalClaim,
+    /directly participated.*dump truck.*Northeast Kansas City/i,
+  );
+});
+
 test("NYC Artist Coalition population source pins the exact classified fixture commit", () => {
   const fixturePath =
     "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json";
@@ -1652,6 +1943,85 @@ test("KC Town Hall funding chain preserves proposal role, recommendation, approp
   );
 });
 
+test("KC Town Hall Phase One preserves completed delivery, attributed roles, and protected research", () => {
+  assert.equal(kcTownHallPhaseOneCaptures.length, 2);
+  assert.equal(kcTownHallPhaseOneSources.length, 3);
+  assert.equal(kcTownHallPhaseOneObservations.length, 7);
+  assert.equal(kcTownHallPhaseOneClaims.length, 5);
+  assert.equal(kcTownHallPhaseOneResearchTasks.length, 2);
+  assert.equal(kcTownHallPhaseOneInquiries.length, 1);
+
+  assert.ok(
+    kcTownHallPhaseOneSources.every(
+      (source) =>
+        source.visibility !== "public" &&
+        !source.canonicalUrl &&
+        !source.archiveUrl &&
+        !source.assetUrl,
+    ),
+  );
+  assert.ok(
+    kcTownHallPhaseOneClaims.every((claim) =>
+      claim.evidence
+        .filter((evidence) =>
+          kcTownHallPhaseOneSources.some(
+            (source) => source.id === evidence.sourceId,
+          ),
+        )
+        .every((evidence) => !evidence.renderCitation),
+    ),
+  );
+
+  const completionClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+  );
+  const contractorClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+  );
+  const surveyClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+  );
+  const tireClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+  );
+  const clevelandClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-CLEVELAND-UNIFY-DESIGN-STUDIO-SEED",
+  );
+
+  for (const claim of [completionClaim, contractorClaim, surveyClaim, tireClaim]) {
+    assert.equal(claim.publicationState, "approved");
+    assert.equal(claim.selectionState, "selected");
+    assert.ok(claim.boundaries.length);
+    assert.ok(claim.antiClaims.length);
+  }
+  assert.match(completionClaim.internalClaim, /\$189,629/);
+  assert.ok(
+    completionClaim.antiClaims.some((item) =>
+      /City appropriation paid for Phase One/i.test(item),
+    ),
+  );
+  assert.ok(
+    contractorClaim.boundaries.some((item) =>
+      /packet.*founder\/project manager, not general contractor/i.test(item),
+    ),
+  );
+  assert.ok(
+    surveyClaim.boundaries.some((item) => /raw survey.*phone numbers/i.test(item)),
+  );
+  assert.ok(
+    tireClaim.boundaries.some((item) =>
+      /exact aggregate tire and savings totals.*held/i.test(item),
+    ),
+  );
+  assert.equal(clevelandClaim.selectionState, "dormant");
+  assert.equal(
+    kcTownHallPhaseOneResearchTasks.find(
+      (task) => task.id === "RT-KCTH-CLEVELAND-UNIFY-ARCHIVE-RECOVERY",
+    ).status,
+    "open",
+  );
+});
+
 test("KC Town Hall public projection states authorization and the unused-funds ending together", () => {
   const standaloneDataSurfaces = [
     "apps/www/src/data/work.ts",
@@ -1694,7 +2064,10 @@ test("KC Town Hall public projection states authorization and the unused-funds e
   const workData = standaloneDataSurfaces.find(
     ({ path }) => path === "apps/www/src/data/work.ts",
   ).text;
-  assert.match(workData, /years: "2019 proposal; 2024 disposition"/i);
+  assert.match(
+    workData,
+    /years: "2018-2022; 2019 funding decision; 2024 disposition"/i,
+  );
   assert.match(
     workData,
     /in Jamie's first-hand account, continuity through a mission-aligned transition/i,
@@ -1712,5 +2085,232 @@ test("KC Town Hall public projection states authorization and the unused-funds e
   assert.match(
     caseStudy,
     /recommendation, Council acceptance, appropriation,[\s\S]*receipt or expenditure/i,
+  );
+});
+
+test("NYC Artist Coalition Facebook event population preserves the 34-to-33 reconciliation", () => {
+  assert.equal(nycacFacebookEventCaptures.length, 1);
+  assert.equal(nycacFacebookEventSources.length, 13);
+  assert.equal(nycacFacebookEventObservations.length, 19);
+  assert.equal(nycacFacebookEventClaims.length, 4);
+  assert.equal(nycacFacebookEventResearchTasks.length, 4);
+  assert.equal(nycacFacebookEventInquiries.length, 1);
+
+  const reconciliation = nycacFacebookEventInventory.populationReconciliation;
+  const events = nycacFacebookEventInventory.events;
+  assert.equal(reconciliation.pageDisplayedPastEventCount, 34);
+  assert.equal(reconciliation.recoveredIndexEventCount, 33);
+  assert.equal(reconciliation.recoveredDetailEventCount, 33);
+  assert.equal(reconciliation.detailRetrievalFailureCount, 0);
+  assert.equal(reconciliation.unmaterializedCount, 1);
+  assert.equal(reconciliation.terminalState.scrollRounds, 9);
+  assert.equal(reconciliation.terminalState.stableRounds, 4);
+  assert.match(reconciliation.reconciliationNote, /unmaterialized, not as nonexistent/i);
+  assert.equal(events.length, 33);
+  assert.equal(new Set(events.map((event) => event.id)).size, 33);
+  assert.equal(new Set(events.map((event) => event.url)).size, 33);
+  assert.equal(events[0].date, "2017-01-27");
+  assert.equal(events.at(-1).date, "2021-01-29");
+  assert.ok(
+    events.every(
+      (event) =>
+        event.url === `https://www.facebook.com/events/${event.id}/` &&
+        event.retrievalState === "retrieved" &&
+        event.topics.length,
+    ),
+  );
+});
+
+test("NYC Artist Coalition Facebook organizer and response findings reproduce from event rows", () => {
+  const events = nycacFacebookEventInventory.events;
+  const snapshot = nycacFacebookEventInventory.aggregateSnapshot;
+  const nycacOrganizerEvents = events.filter(
+    (event) => event.relationToPage === "index-displayed-nycac-organizer",
+  );
+  const alliedEvents = events.filter(
+    (event) => event.relationToPage === "allied-or-cohosted-listing",
+  );
+  const responseEvents = events.filter(
+    (event) => event.responseSnapshot.pointEstimate !== null,
+  );
+  const responsePointEstimate = responseEvents.reduce(
+    (sum, event) => sum + event.responseSnapshot.pointEstimate,
+    0,
+  );
+
+  assert.equal(nycacOrganizerEvents.length, 24);
+  assert.equal(alliedEvents.length, 9);
+  assert.equal(responseEvents.length, 32);
+  assert.equal(responsePointEstimate, 9989);
+  assert.equal(responseEvents.filter((event) => event.responseSnapshot.rounded).length, 3);
+  assert.equal(
+    responseEvents.filter((event) => event.responseSnapshot.pointEstimate >= 100).length,
+    19,
+  );
+  assert.equal(
+    responseEvents.filter((event) => event.responseSnapshot.pointEstimate >= 500).length,
+    7,
+  );
+  assert.equal(
+    responseEvents.filter((event) => event.responseSnapshot.pointEstimate >= 1000).length,
+    3,
+  );
+  assert.equal(snapshot.indexDisplayedNycacOrganizerEvents, 24);
+  assert.equal(snapshot.alliedOrCohostedListings, 9);
+  assert.equal(snapshot.eventsWithDisplayedResponseCount, 32);
+  assert.equal(snapshot.responseActionPointEstimate, 9989);
+  assert.match(snapshot.interpretation, /not unique people.*do not establish attendance/i);
+});
+
+test("NYC Artist Coalition Facebook event fixture publishes sanitized metadata only", () => {
+  const fixturePayload = JSON.stringify(nycacFacebookEventInventory);
+  assert.equal(nycacFacebookEventInventory.publicSafety.rawDescriptionsPublished, false);
+  assert.equal(nycacFacebookEventInventory.publicSafety.attendeeIdentitiesPublished, false);
+  assert.equal(nycacFacebookEventInventory.publicSafety.contactDetailsPublished, false);
+  assert.equal(nycacFacebookEventInventory.publicSafety.accessCredentialsPublished, false);
+  assert.doesNotMatch(fixturePayload, /"(?:detailsText|description|cookie|cookies|session|sessionToken)"\s*:/i);
+  assert.doesNotMatch(fixturePayload, /\/Users\/|\/Volumes\//);
+  assert.doesNotMatch(fixturePayload, /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/);
+  assert.doesNotMatch(fixturePayload, /\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/);
+  assert.doesNotMatch(fixturePayload, /zoom\.us|docs\.google\.com|fbclid=/i);
+  assert.ok(
+    nycacFacebookEventInventory.events.every((event) =>
+      event.outboundResources.every(
+        (resource) => !/zoom\.us|docs\.google\.com|fbclid=/i.test(resource.url),
+      ),
+    ),
+  );
+});
+
+test("NYC Artist Coalition Facebook event-posted source articles remain associated and bounded", () => {
+  const articles = nycacFacebookEventInventory.postedSourceArticles;
+  assert.equal(articles.length, 7);
+  assert.deepEqual(
+    [...new Set(articles.map((article) => article.publisher))].sort(),
+    [
+      "Curbed",
+      "Gothamist",
+      "Metro",
+      "New York Post",
+      "The Baffler",
+      "The New Yorker",
+      "WNYC",
+    ],
+  );
+  assert.ok(
+    articles.some(
+      (article) =>
+        article.eventId === "1014934072187610" &&
+        article.publisher === "Gothamist" &&
+        /commercial-rent-stabilization/.test(article.url),
+    ),
+  );
+  const gothamistSource = nycacFacebookEventSources.find(
+    (source) =>
+      source.id === "SRC-NYCAC-EVENT-LINK-GOTHAMIST-FAIR-RENT-2019-11-06",
+  );
+  assert.equal(gothamistSource.preservationStatus, "live-and-archived");
+  assert.match(gothamistSource.archiveUrl, /web\/20191107031823/);
+  assert.ok(
+    gothamistSource.doesNotEstablish.some((boundary) =>
+      /individual event-production role/i.test(boundary),
+    ),
+  );
+});
+
+test("NYC Artist Coalition Facebook claims separate collective method, RSVP scale, role, and interpretation", () => {
+  const infrastructureClaim = nycacFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+  );
+  const responseClaim = nycacFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+  );
+  const roleClaim = nycacFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+  );
+  const interpretationClaim = nycacFacebookEventClaims.find(
+    (claim) => claim.id === "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+  );
+
+  assert.equal(infrastructureClaim.publicationState, "approved");
+  assert.equal(infrastructureClaim.selectionState, "selected");
+  assert.ok(
+    infrastructureClaim.boundaries.some((boundary) => /34.*33|33.*34/i.test(boundary)),
+  );
+  assert.ok(
+    infrastructureClaim.antiClaims.some((antiClaim) =>
+      /Jamie alone created or produced every/i.test(antiClaim),
+    ),
+  );
+
+  assert.equal(responseClaim.publicationState, "approved");
+  assert.equal(responseClaim.selectionState, "selected");
+  assert.ok(
+    responseClaim.boundaries.some((boundary) =>
+      /RSVP actions.*not unique people.*attendance/i.test(boundary),
+    ),
+  );
+  assert.ok(
+    responseClaim.antiClaims.some((antiClaim) => /9,989 people attended/i.test(antiClaim)),
+  );
+
+  assert.equal(roleClaim.selectionState, "candidate");
+  assert.ok(
+    roleClaim.projections
+      .filter((projection) => projection.surfaces.some((surface) => surface.startsWith("/")))
+      .every((projection) => projection.status === "hold"),
+  );
+  assert.ok(
+    roleClaim.boundaries.some((boundary) =>
+      /first-hand.*not yet independently corroborated/i.test(boundary),
+    ),
+  );
+
+  assert.equal(interpretationClaim.selectionState, "dormant");
+  assert.equal(interpretationClaim.status, "inference");
+  assert.ok(
+    interpretationClaim.boundaries.some((boundary) =>
+      /Jamie's interpretation.*not a neutral empirical outcome/i.test(boundary),
+    ),
+  );
+});
+
+test("NYC Artist Coalition Facebook selected claims project through the Fair Rent page plan", () => {
+  const page = knowledgeBank.pages.find((item) => item.id === "fair-rent-nyc");
+  const mdx = readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8");
+  assert.ok(
+    page.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "recurring-event-infrastructure" &&
+        occurrence.claimId === "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+    ),
+  );
+  assert.ok(
+    page.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-event-response-snapshot" &&
+        occurrence.claimId === "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+    ),
+  );
+  assert.match(mdx, /CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE/);
+  assert.match(mdx, /CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT/);
+  assert.doesNotMatch(mdx, /CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE/);
+});
+
+test("NYC Artist Coalition Facebook population source pins the committed public fixture", () => {
+  const fixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json";
+  const fixtureSource = nycacFacebookEventSources.find(
+    (source) =>
+      source.id === "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+  );
+  const match = fixtureSource.canonicalUrl.match(
+    /\/blob\/([0-9a-f]{40})\/(apps\/www\/src\/data\/knowledge-bank\/fixtures\/[a-z0-9-]+\.json)$/,
+  );
+  assert.ok(match);
+  assert.equal(match[2], fixturePath);
+  assert.deepEqual(
+    execFileSync("git", ["show", `${match[1]}:${fixturePath}`]),
+    readFileSync(fixturePath),
   );
 });

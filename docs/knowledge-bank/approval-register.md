@@ -16,6 +16,12 @@ The repo is public. Approval here means approved for public-safe repository and 
 
 - HJE 2x claim: contribution wording only.
 - NYC Artist Coalition role: co-founder, civic systems, coalition operations, policy communications, and public web infrastructure are approved; policy outcomes remain collective.
+- NYC Artist Coalition recurring events: the collective cultural-space
+  convening method and bounded 33-event Facebook snapshot are approved for the
+  Fair Rent NYC case study. Keep Facebook's displayed count of 34, one
+  unmaterialized event, cohost credit, and RSVP-not-attendance language
+  attached. Jamie's individual event-system role remains held for collaborator
+  or task-level artifact corroboration.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - CallNYC Council-branded event graphic: may appear as a source artifact when
@@ -64,6 +70,8 @@ The repo is public. Approval here means approved for public-safe repository and 
 - Stakeholder lists.
 - Guest lists.
 - Attendance records.
+- Raw Facebook event descriptions, historical meeting credentials, and private
+  event-planning links.
 - Unapproved names, photos, quotes, screenshots, or internal dashboards.
 - Applicant/grantee packets, donor/list exports, subscriber data, payment-request files, credentials, billing records, raw email archives, or raw text-message archives.
 - Private pricing or collaborator-specific proposal context.

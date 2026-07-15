@@ -81,3 +81,21 @@ See [projects/nterchng.md](projects/nterchng.md) for a recovered early
 participatory-system project whose collaborative installation form and 2011
 America: Now and Here inclusion are source-backed but not selected for the
 current website.
+
+See [projects/urbanhermit.md](projects/urbanhermit.md) for the public-safe
+full-population review of Jamie's personal `@urbanhermit` account, its bounded
+stakeholder-response inventory, and the source-backed Horse Lords, 8th Street
+Tunnel, and KC Town Hall participation claims developed from that record.
+
+See
+[projects/nyc-artist-coalition-facebook-events.md](projects/nyc-artist-coalition-facebook-events.md)
+for the full-population review of the coalition's live Facebook Past Events
+surface, the recurring cultural-space convening method, the bounded response
+snapshot, event-posted source articles, and the open individual-role and
+attendance research.
+
+See
+[projects/kc-town-hall-phase-one.md](projects/kc-town-hall-phase-one.md) for the
+completed 2019 cold-shell scope, Jamie's bounded general-contractor role,
+survey-to-proposal input system, neighborhood-service operations, and the
+research-held Cleveland Avenue corridor-program seed.

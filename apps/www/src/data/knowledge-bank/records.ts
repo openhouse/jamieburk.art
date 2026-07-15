@@ -30,6 +30,14 @@ import {
   kcTownHallFundingSources,
 } from "./kc-town-hall-funding.ts";
 import {
+  kcTownHallPhaseOneCaptures,
+  kcTownHallPhaseOneClaims,
+  kcTownHallPhaseOneInquiries,
+  kcTownHallPhaseOneObservations,
+  kcTownHallPhaseOneResearchTasks,
+  kcTownHallPhaseOneSources,
+} from "./kc-town-hall-phase-one.ts";
+import {
   teamsArchiveCaptures,
   teamsArchiveClaims,
   teamsArchiveInquiries,
@@ -61,6 +69,22 @@ import {
   nterchngResearchTasks,
   nterchngSources,
 } from "./nterchng-production.ts";
+import {
+  urbanhermitCaptures,
+  urbanhermitClaims,
+  urbanhermitInquiries,
+  urbanhermitObservations,
+  urbanhermitResearchTasks,
+  urbanhermitSources,
+} from "./urbanhermit-production.ts";
+import {
+  nycacFacebookEventCaptures,
+  nycacFacebookEventClaims,
+  nycacFacebookEventInquiries,
+  nycacFacebookEventObservations,
+  nycacFacebookEventResearchTasks,
+  nycacFacebookEventSources,
+} from "./nycac-facebook-events.ts";
 
 const knowledgeBankInput = {
   captures: [
@@ -68,20 +92,26 @@ const knowledgeBankInput = {
     ...nycacResearchCaptures,
     ...campaignPressCaptures,
     ...kcTownHallFundingCaptures,
+    ...kcTownHallPhaseOneCaptures,
     ...teamsArchiveCaptures,
     ...googleSharedDriveCaptures,
     ...socialMediaCaptures,
     ...nterchngCaptures,
+    ...urbanhermitCaptures,
+    ...nycacFacebookEventCaptures,
   ],
   sources: [
     ...developmentSources,
     ...nycacResearchSources,
     ...campaignPressSources,
     ...kcTownHallFundingSources,
+    ...kcTownHallPhaseOneSources,
     ...teamsArchiveSources,
     ...googleSharedDriveSources,
     ...socialMediaSources,
     ...nterchngSources,
+    ...urbanhermitSources,
+    ...nycacFacebookEventSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -283,20 +313,26 @@ const knowledgeBankInput = {
     ...nycacResearchObservations,
     ...campaignPressObservations,
     ...kcTownHallFundingObservations,
+    ...kcTownHallPhaseOneObservations,
     ...teamsArchiveObservations,
     ...googleSharedDriveObservations,
     ...socialMediaObservations,
     ...nterchngObservations,
+    ...urbanhermitObservations,
+    ...nycacFacebookEventObservations,
   ],
   claims: [
     ...developmentClaims,
     ...nycacResearchClaims,
     ...campaignPressClaims,
     ...kcTownHallFundingClaims,
+    ...kcTownHallPhaseOneClaims,
     ...teamsArchiveClaims,
     ...googleSharedDriveClaims,
     ...socialMediaClaims,
     ...nterchngClaims,
+    ...urbanhermitClaims,
+    ...nycacFacebookEventClaims,
     {
       id: "CLM-CALLNYC-HACKATHON-DATE-TIME",
       project: "callnyc",
@@ -613,10 +649,13 @@ const knowledgeBankInput = {
     ...developmentResearchTasks,
     ...nycacResearchTasks,
     ...campaignPressResearchTasks,
+    ...kcTownHallPhaseOneResearchTasks,
     ...teamsArchiveResearchTasks,
     ...googleSharedDriveResearchTasks,
     ...socialMediaResearchTasks,
     ...nterchngResearchTasks,
+    ...urbanhermitResearchTasks,
+    ...nycacFacebookEventResearchTasks,
   ],
   researchInquiries: [
     {
@@ -652,10 +691,13 @@ const knowledgeBankInput = {
     },
     ...campaignPressInquiries,
     ...kcTownHallFundingInquiries,
+    ...kcTownHallPhaseOneInquiries,
     ...teamsArchiveInquiries,
     ...googleSharedDriveInquiries,
     ...socialMediaInquiries,
     ...nterchngInquiries,
+    ...urbanhermitInquiries,
+    ...nycacFacebookEventInquiries,
   ],
   corrections: [
     ...kcTownHallFundingCorrections,
@@ -818,6 +860,10 @@ const knowledgeBankInput = {
         "SRC-NYCAC-LEVIN-TESTIMONY-2019-02-11",
         "SRC-NYCAC-RIVERA-COSPONSOR-2018-10-20",
         "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26",
+        "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+        "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+        "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+        "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01",
       ],
       occurrences: [
         {
@@ -924,6 +970,26 @@ const knowledgeBankInput = {
             "SRC-NYCAC-VANBRAMER-ARTS-2020-10-26",
           ],
         },
+        {
+          id: "recurring-event-infrastructure",
+          claimId: "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+            "SRC-NYCAC-CREATENYC-APPENDIX-2017",
+            "SRC-NYCAC-FB-EVENT-MARKET-HOTEL-TOWN-HALL-2017-03-30",
+            "SRC-NYCAC-FB-EVENT-NIGHT-MAYOR-TOWN-HALL-2017-10-11",
+            "SRC-NYCAC-FB-EVENT-MARCH-FAIR-RENT-2018-11-01",
+          ],
+        },
+        {
+          id: "facebook-event-response-snapshot",
+          claimId: "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+          ],
+        },
       ],
     },
     {
@@ -997,15 +1063,15 @@ const knowledgeBankInput = {
       surface: "/work/kc-town-hall",
       sourceOrder: [
         "SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019",
+        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-SOCIAL-KCTH-PROFILE-2026-07-14",
         "SRC-SOCIAL-KCTH-FULL-POPULATION-2026-07-14",
         "SRC-KCTH-LAUNCH-2018-07-02",
-        "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
-        "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
         "SRC-KCTH-LUCAS-LEONS-RESPONSE-2019-04-29",
         "SRC-KCTH-JUSTUS-LEONS-RESPONSE-2019-04-29",
         "SRC-KCTH-ROBINSON-COMMUNITY-CONDITIONS-2020-08-01",
-        "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
         "SRC-KCTH-KCMO-RESOLUTION-190649-2019",
         "SRC-KCTH-KCMO-ORDINANCE-190642-2019",
         "SRC-KCTH-KCMO-ORDINANCE-240317-2024",
@@ -1016,6 +1082,30 @@ const knowledgeBankInput = {
           claimId: "CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE",
           projection: "case-study",
           sourceIds: ["SRC-KCTH-CCED-ROUND-TWO-PROPOSALS-2019"],
+        },
+        {
+          id: "phase-one-cold-shell-completion",
+          claimId: "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+          projection: "case-study",
+        },
+        {
+          id: "phase-one-general-contractor-role",
+          claimId: "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+          projection: "case-study",
+        },
+        {
+          id: "survey-design-and-decision-input",
+          claimId: "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+          projection: "case-study",
+        },
+        {
+          id: "tired-of-tires-design-and-operations",
+          claimId: "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
+            "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+          ],
         },
         {
           id: "social-operating-surface",

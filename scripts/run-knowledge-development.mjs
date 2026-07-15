@@ -17,6 +17,14 @@ import {
   kcTownHallFundingSources,
 } from "../apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts";
 import {
+  kcTownHallPhaseOneCaptures,
+  kcTownHallPhaseOneClaims,
+  kcTownHallPhaseOneInquiries,
+  kcTownHallPhaseOneObservations,
+  kcTownHallPhaseOneResearchTasks,
+  kcTownHallPhaseOneSources,
+} from "../apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts";
+import {
   teamsArchiveCaptures,
   teamsArchiveClaims,
   teamsArchiveInquiries,
@@ -43,29 +51,53 @@ import {
   socialMediaReviewSummary,
   socialMediaSources,
 } from "../apps/www/src/data/knowledge-bank/social-media-production.ts";
+import {
+  urbanhermitCaptures,
+  urbanhermitClaims,
+  urbanhermitInquiries,
+  urbanhermitObservations,
+  urbanhermitResearchTasks,
+  urbanhermitReviewSummary,
+  urbanhermitSources,
+} from "../apps/www/src/data/knowledge-bank/urbanhermit-production.ts";
+import {
+  nycacFacebookEventCaptures,
+  nycacFacebookEventClaims,
+  nycacFacebookEventInquiries,
+  nycacFacebookEventObservations,
+  nycacFacebookEventResearchTasks,
+  nycacFacebookEventSources,
+} from "../apps/www/src/data/knowledge-bank/nycac-facebook-events.ts";
 import { validateKnowledgeBank } from "./lib/citation-validation.mjs";
 import { nycacMissionSignalRules } from "./lib/nycac-mission-classifier.mjs";
+import { urbanhermitMissionSignalRules } from "./lib/urbanhermit-mission-classifier.mjs";
 
 const suite = JSON.parse(
   readFileSync(".agents/evals/knowledge-development.json", "utf8"),
 );
 const candidateFiles = [
   ".agents/evals/knowledge-development.json",
+  "package.json",
   "scripts/run-knowledge-development.mjs",
   "apps/www/src/data/knowledge-bank/development-records.ts",
   "apps/www/src/data/knowledge-bank/nycac-research-2026-07-14.ts",
   "apps/www/src/data/knowledge-bank/campaign-press.ts",
   "apps/www/src/data/knowledge-bank/fixtures/campaign-press-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/kc-town-hall-funding.ts",
+  "apps/www/src/data/knowledge-bank/kc-town-hall-phase-one.ts",
   "apps/www/src/data/knowledge-bank/teams-archive.ts",
   "apps/www/src/data/knowledge-bank/google-shared-drives.ts",
   "apps/www/src/data/knowledge-bank/social-media-production.ts",
   "apps/www/src/data/knowledge-bank/nterchng-production.ts",
+  "apps/www/src/data/knowledge-bank/urbanhermit-production.ts",
+  "apps/www/src/data/knowledge-bank/nycac-facebook-events.ts",
   "apps/www/src/data/knowledge-bank/fixtures/social-media-capture-inventory.json",
   "apps/www/src/data/knowledge-bank/fixtures/callnyc-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/nycartc-retrievable-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/wowlist-full-population.json",
   "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+  "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
   "apps/www/src/data/knowledge-bank/schema.ts",
   "apps/www/src/data/knowledge-bank/records.ts",
   "apps/www/src/data/knowledge-bank/public-registry.json",
@@ -78,6 +110,7 @@ const candidateFiles = [
   "apps/www/src/app/work/technical-operations/page.tsx",
   "apps/www/src/content/work/kc-town-hall.mdx",
   "docs/knowledge-bank/claims.md",
+  "docs/knowledge-bank/README.md",
   "docs/knowledge-bank/proofs.md",
   "docs/knowledge-bank/sources.md",
   "docs/knowledge-bank/anti-claims.md",
@@ -85,14 +118,18 @@ const candidateFiles = [
   "docs/knowledge-bank/projection-map.md",
   "docs/knowledge-bank/projects/waterways-and-participatory-art.md",
   "docs/knowledge-bank/projects/nterchng.md",
+  "docs/knowledge-bank/projects/urbanhermit.md",
+  "docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-research.md",
   "docs/knowledge-bank/projects/nyc-artist-coalition-press.md",
   "docs/knowledge-bank/projects/kc-town-hall-funding.md",
+  "docs/knowledge-bank/projects/kc-town-hall-phase-one.md",
   "docs/knowledge-bank/projects/teams-archive-production.md",
   "docs/knowledge-bank/projects/google-shared-drives-production.md",
   "docs/knowledge-bank/projects/social-media-production.md",
   "scripts/lib/citation-validation.mjs",
   "scripts/lib/nycac-mission-classifier.mjs",
+  "scripts/lib/urbanhermit-mission-classifier.mjs",
   "scripts/tests/citations.test.mjs",
   "scripts/tests/knowledge-development-evals.test.mjs",
   "docs/knowledge-bank/promotion-slate.md",
@@ -131,6 +168,18 @@ const wowListPopulationInventory = JSON.parse(
 const kcTownHallPopulationInventory = JSON.parse(
   readFileSync(
     "apps/www/src/data/knowledge-bank/fixtures/kctownhall-full-population.json",
+    "utf8",
+  ),
+);
+const urbanhermitPopulationInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json",
+    "utf8",
+  ),
+);
+const nycacFacebookEventInventory = JSON.parse(
+  readFileSync(
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json",
     "utf8",
   ),
 );
@@ -518,6 +567,102 @@ function deterministicResults(judgments) {
         ]
       : []),
   ];
+
+  const kcTownHallPhaseOneIntegrityViolations = [];
+  const kcTownHallPhaseOneSafetyViolations = [];
+  const phaseOneCompletionClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION",
+  );
+  const phaseOneContractorClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE",
+  );
+  const phaseOneSurveyClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+  );
+  const phaseOneTireClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+  );
+  const clevelandSeedClaim = kcTownHallPhaseOneClaims.find(
+    (claim) => claim.id === "CLM-KCTH-CLEVELAND-UNIFY-DESIGN-STUDIO-SEED",
+  );
+  const clevelandTask = kcTownHallPhaseOneResearchTasks.find(
+    (task) => task.id === "RT-KCTH-CLEVELAND-UNIFY-ARCHIVE-RECOVERY",
+  );
+  if (
+    kcTownHallPhaseOneCaptures.length !== 2 ||
+    kcTownHallPhaseOneSources.length !== 3 ||
+    kcTownHallPhaseOneObservations.length !== 7 ||
+    kcTownHallPhaseOneClaims.length !== 5 ||
+    kcTownHallPhaseOneResearchTasks.length !== 2 ||
+    kcTownHallPhaseOneInquiries.length !== 1
+  ) {
+    kcTownHallPhaseOneIntegrityViolations.push(
+      "KC Town Hall Phase One graph has an unexpected record count",
+    );
+  }
+  if (
+    kcTownHallPhaseOneSources.some(
+      (source) =>
+        !sourceById.has(source.id) ||
+        source.visibility === "public" ||
+        source.canonicalUrl ||
+        source.archiveUrl ||
+        source.assetUrl,
+    ) ||
+    kcTownHallPhaseOneClaims.some((claim) =>
+      claim.evidence
+        .filter((evidence) =>
+          kcTownHallPhaseOneSources.some(
+            (source) => source.id === evidence.sourceId,
+          ),
+        )
+        .some((evidence) => evidence.renderCitation),
+    )
+  ) {
+    kcTownHallPhaseOneSafetyViolations.push(
+      "KC Town Hall Phase One protected evidence is exposed or cited",
+    );
+  }
+  if (
+    phaseOneCompletionClaim?.selectionState !== "selected" ||
+    phaseOneCompletionClaim.publicationState !== "approved" ||
+    !phaseOneCompletionClaim.antiClaims.some((item) =>
+      /City appropriation paid for Phase One/i.test(item),
+    ) ||
+    phaseOneContractorClaim?.selectionState !== "selected" ||
+    !phaseOneContractorClaim.boundaries.some((item) =>
+      /packet.*founder\/project manager, not general contractor/i.test(item),
+    ) ||
+    phaseOneSurveyClaim?.selectionState !== "selected" ||
+    !phaseOneSurveyClaim.boundaries.some((item) =>
+      /raw survey.*phone numbers/i.test(item),
+    ) ||
+    phaseOneTireClaim?.selectionState !== "selected" ||
+    !phaseOneTireClaim.boundaries.some((item) =>
+      /exact aggregate tire and savings totals.*held/i.test(item),
+    ) ||
+    clevelandSeedClaim?.selectionState !== "dormant" ||
+    clevelandTask?.status !== "open"
+  ) {
+    kcTownHallPhaseOneIntegrityViolations.push(
+      "KC Town Hall Phase One claims do not preserve selection, attribution, or research boundaries",
+    );
+  }
+  if (
+    !/completed (?:a )?\$189,629 Phase One[^.]*in 2019|Phase One[^.]*completed in 2019/i.test(
+      kcTownHallPublicText,
+    ) ||
+    !/\$189,629/i.test(kcTownHallPublicText) ||
+    !/Jamie states that he served as Phase One general contractor/i.test(
+      kcTownHallPublicText,
+    ) ||
+    !/resident survey handbill/i.test(kcTownHallPublicText) ||
+    !/Phase Two proposal/i.test(kcTownHallPublicText)
+  ) {
+    kcTownHallPhaseOneSafetyViolations.push(
+      "KC Town Hall public projection omits the completed Phase One, attribution, survey, or Phase Two boundary",
+    );
+  }
 
   const teamsArchiveIntegrityViolations = [];
   const teamsArchiveSafetyViolations = [];
@@ -1396,6 +1541,625 @@ function deterministicResults(judgments) {
     );
   }
 
+  const urbanhermitIntegrityViolations = [];
+  const urbanhermitSafetyViolations = [];
+  const urbanhermitRecords = urbanhermitPopulationInventory.records;
+  const urbanhermitContextRecords =
+    urbanhermitPopulationInventory.conversationContextRecords;
+  const urbanhermitIncomingRecords =
+    urbanhermitPopulationInventory.stakeholderInventory.records;
+  const urbanhermitMissionRelevantIncoming = urbanhermitIncomingRecords.filter(
+    (record) => record.classification === "mission-relevant-third-party",
+  );
+  const urbanhermitMissionContextIncoming = urbanhermitIncomingRecords.filter(
+    (record) =>
+      record.classification === "mission-relevant-conversation-context",
+  );
+  const urbanhermitContextLimitedIncoming = urbanhermitIncomingRecords.filter(
+    (record) =>
+      record.classification === "context-limited-personal-or-network",
+  );
+  const urbanhermitPostsRecords = urbanhermitRecords.filter((record) =>
+    record.recoveredFrom.includes("posts"),
+  );
+  const urbanhermitRepliesRecords = urbanhermitRecords.filter((record) =>
+    record.recoveredFrom.includes("replies"),
+  );
+  const urbanhermitExternalLinks = urbanhermitRecords.flatMap(
+    (record) => record.externalLinks,
+  );
+  const urbanhermitAuthoredRecords = urbanhermitRecords.filter(
+    (record) => record.sourceAuthorship === "account-authored",
+  );
+  const urbanhermitAuthoredExternalLinks = urbanhermitAuthoredRecords.flatMap(
+    (record) => record.externalLinks,
+  );
+  const urbanhermitRecordTypeTotal = Object.values(
+    urbanhermitPopulationInventory.recordTypeCounts,
+  ).reduce((sum, count) => sum + count, 0);
+  const urbanhermitFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json";
+  const urbanhermitFixtureSource = sourceById.get(
+    "SRC-URBANHERM-FULL-POPULATION-2026-07-15",
+  );
+  const urbanhermitArchiveClaim = claimById.get(
+    "CLM-URBANHERM-PERSONAL-PUBLIC-WORKING-SURFACE",
+  );
+  const urbanhermitHorseLordsClaim = claimById.get(
+    "CLM-URBANHERM-HORSE-LORDS-VIDEO",
+  );
+  const urbanhermitTunnelClaim = claimById.get(
+    "CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING",
+  );
+  const urbanhermitTireClaim = claimById.get(
+    "CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION",
+  );
+  const urbanhermitRules = new Map(
+    urbanhermitPopulationInventory.missionSignalClassification.rules.map(
+      (rule) => [rule.signalId, rule],
+    ),
+  );
+  const urbanhermitMissionManifestValid =
+    urbanhermitRules.size === 6 &&
+    JSON.stringify(
+      urbanhermitPopulationInventory.missionSignalClassification.rules,
+    ) ===
+      JSON.stringify(
+        urbanhermitMissionSignalRules.map((rule) => ({
+          signalId: rule.id,
+          pattern: rule.pattern.source,
+          flags: rule.pattern.flags,
+        })),
+      ) &&
+    JSON.stringify(
+      urbanhermitPopulationInventory.missionSignalClassification.inputFields,
+    ) ===
+      JSON.stringify([
+        "source-post-body",
+        "hashtag",
+        "displayed-link-destination",
+      ]) &&
+    urbanhermitRecords.every((record) => {
+      if (!/^[a-f0-9]{64}$/.test(record.classificationInputDigest ?? "")) {
+        return false;
+      }
+      if (
+        record.missionSignals.join("|") !==
+        record.missionSignalEvidence
+          .map((evidence) => evidence.signalId)
+          .join("|")
+      ) {
+        return false;
+      }
+      return record.missionSignalEvidence.every((evidence) => {
+        const rule = urbanhermitRules.get(evidence.signalId);
+        return (
+          rule &&
+          urbanhermitPopulationInventory.missionSignalClassification.inputFields.includes(
+            evidence.inputField,
+          ) &&
+          new RegExp(rule.pattern, rule.flags).test(evidence.matchedValue)
+        );
+      });
+    });
+  const urbanhermitExpectedSignalCounts = {
+    "community-platforms-and-gatherings": 35,
+    "civic-participation-and-service": 8,
+    "cultural-space-advocacy": 45,
+    "public-history-place-and-waterways": 2,
+    "creative-technology-and-media": 4,
+    "neighborhood-mutual-aid": 1,
+  };
+
+  if (
+    urbanhermitCaptures.length !== 1 ||
+    urbanhermitSources.length !== 10 ||
+    urbanhermitObservations.length !== 12 ||
+    urbanhermitClaims.length !== 4 ||
+    urbanhermitResearchTasks.length !== 3 ||
+    urbanhermitInquiries.length !== 1
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit archival-production graph has an unexpected record count",
+    );
+  }
+  if (
+    urbanhermitRecords.length !== 434 ||
+    new Set(urbanhermitRecords.map((record) => record.url)).size !== 434 ||
+    urbanhermitRecordTypeTotal !== 434 ||
+    urbanhermitPostsRecords.length !== 421 ||
+    urbanhermitRepliesRecords.length !== 434 ||
+    urbanhermitContextRecords.length !== 2 ||
+    new Set(urbanhermitContextRecords.map((record) => record.url)).size !== 2 ||
+    urbanhermitContextRecords.some((context) =>
+      urbanhermitRecords.some((record) => record.url === context.url),
+    ) ||
+    urbanhermitRecords.some(
+      (record) =>
+        !Array.isArray(record.recoveredFrom) ||
+        !record.recoveredFrom.length ||
+        record.recoveredFrom.some(
+          (surface) => !["posts", "replies"].includes(surface),
+        ),
+    )
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit live-profile population is incomplete, duplicated, or does not reconcile by tab and conversation context",
+    );
+  }
+  if (
+    urbanhermitPopulationInventory.populationReconciliation
+      .profileReportedPostCount !== 434 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .postsTimelineUniqueCount !== 421 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .repliesTimelineRenderedArticleCount !== 436 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .repliesTimelineConversationContextCount !== 2 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .repliesTimelinePrimaryRecordCount !== 434 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .recoveredUnionRecordCount !== 434 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .recoveredPopulationReviewedPercent !== 100 ||
+    urbanhermitPopulationInventory.populationReconciliation
+      .profileCountNotMaterialized !== 0 ||
+    !/does not establish that no older post was deleted/i.test(
+      urbanhermitPopulationInventory.populationReconciliation.boundary,
+    )
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit 434-profile / 421-Posts / 436-Replies-cards / 2-context reconciliation boundary is incomplete",
+    );
+  }
+  if (
+    urbanhermitPopulationInventory.recordTypeCounts.original !== 340 ||
+    urbanhermitPopulationInventory.recordTypeCounts.reply !== 13 ||
+    urbanhermitPopulationInventory.recordTypeCounts.repost !== 81 ||
+    urbanhermitAuthoredRecords.length !== 353 ||
+    urbanhermitAuthoredRecords.some(
+      (record) =>
+        record.authorHandle.toLowerCase() !== "@urbanhermit" ||
+        !["original", "reply"].includes(record.recordType),
+    ) ||
+    urbanhermitRecords
+      .filter((record) => record.recordType === "repost")
+      .some(
+        (record) =>
+          record.sourceAuthorship !== "external-source-native-repost" ||
+          record.authorHandle.toLowerCase() === "@urbanhermit",
+      )
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit source-authorship or record-type separation drifted",
+    );
+  }
+  if (
+    urbanhermitExternalLinks.length !== 349 ||
+    new Set(urbanhermitExternalLinks.map((link) => link.shortUrl)).size !== 321 ||
+    urbanhermitAuthoredExternalLinks.length !== 292 ||
+    new Set(urbanhermitAuthoredExternalLinks.map((link) => link.shortUrl)).size !==
+      277 ||
+    !urbanhermitMissionManifestValid ||
+    JSON.stringify(
+      urbanhermitPopulationInventory.publishingPattern
+        .missionSignalRecordCounts,
+    ) !== JSON.stringify(urbanhermitExpectedSignalCounts)
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit posted-link or mission-signal findings do not reproduce from the public fixture",
+    );
+  }
+  if (
+    urbanhermitIncomingRecords.length !== 26 ||
+    new Set(urbanhermitIncomingRecords.map((record) => record.url)).size !== 26 ||
+    urbanhermitMissionRelevantIncoming.length !== 15 ||
+    new Set(
+      urbanhermitMissionRelevantIncoming.map((record) => record.authorHandle),
+    ).size !== 9 ||
+    urbanhermitMissionContextIncoming.length !== 2 ||
+    urbanhermitContextLimitedIncoming.length !== 9 ||
+    Object.values(
+      urbanhermitPopulationInventory.stakeholderInventory
+        .stakeholderGroupCounts,
+    ).reduce((sum, count) => sum + count, 0) !== 15
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit bounded incoming-stakeholder classifications drifted",
+    );
+  }
+  if (
+    urbanhermitReviewSummary.profileReportedPostCount !== 434 ||
+    urbanhermitReviewSummary.recoveredPopulationCount !== 434 ||
+    urbanhermitReviewSummary.profileCountNotMaterialized !== 0 ||
+    urbanhermitReviewSummary.postsTimelineUniqueCount !== 421 ||
+    urbanhermitReviewSummary.repliesTimelineRenderedArticleCount !== 436 ||
+    urbanhermitReviewSummary.conversationContextCount !== 2 ||
+    urbanhermitReviewSummary.accountAuthoredRecordCount !== 353 ||
+    urbanhermitReviewSummary.externalSourceNativeRepostRecordCount !== 81 ||
+    urbanhermitReviewSummary.externalLinkOccurrences !== 349 ||
+    urbanhermitReviewSummary.distinctExternalShortUrlCount !== 321 ||
+    urbanhermitReviewSummary.incomingSearchRecordCount !== 26 ||
+    urbanhermitReviewSummary.missionRelevantIncomingRecordCount !== 15 ||
+    urbanhermitReviewSummary.missionRelevantIncomingAccountCount !== 9
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit review summary no longer matches the authenticated research record",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      urbanhermitFixtureSource,
+      urbanhermitFixturePath,
+    )
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit population source does not pin a byte-identical committed fixture",
+    );
+  }
+  const urbanhermitSourcePathIds = new Set([
+    ...urbanhermitObservations.map((observation) => observation.sourceId),
+    ...urbanhermitClaims.flatMap((claim) =>
+      claim.evidence.map((evidence) => evidence.sourceId),
+    ),
+    ...urbanhermitInquiries.flatMap((inquiry) => inquiry.sourceIds),
+  ]);
+  for (const source of urbanhermitSources) {
+    if (!sourceById.has(source.id) || !urbanhermitSourcePathIds.has(source.id)) {
+      urbanhermitIntegrityViolations.push(
+        `Urbanhermit source lacks a normalized evidence path: ${source.id}`,
+      );
+    }
+  }
+  if (
+    urbanhermitArchiveClaim?.selectionState !== "dormant" ||
+    urbanhermitHorseLordsClaim?.selectionState !== "candidate" ||
+    urbanhermitTunnelClaim?.selectionState !== "candidate" ||
+    urbanhermitTireClaim?.selectionState !== "dormant" ||
+    urbanhermitClaims.some(
+      (claim) =>
+        claim.publicationState !== "public-safe" ||
+        !claim.evidence.length ||
+        !claim.boundaries.length ||
+        !claim.antiClaims.length,
+    ) ||
+    urbanhermitResearchTasks.find(
+      (task) => task.id === "RT-URBANHERM-POSTED-SOURCE-CLOSE-READ",
+    )?.status !== "in-progress" ||
+    urbanhermitResearchTasks
+      .filter(
+        (task) => task.id !== "RT-URBANHERM-POSTED-SOURCE-CLOSE-READ",
+      )
+      .some((task) => task.status !== "open")
+  ) {
+    urbanhermitIntegrityViolations.push(
+      "Urbanhermit claim selection, evidence boundary, or open-research state is incomplete",
+    );
+  }
+  const urbanhermitPayload = JSON.stringify({
+    captures: urbanhermitCaptures,
+    sources: urbanhermitSources,
+    observations: urbanhermitObservations,
+    claims: urbanhermitClaims,
+    tasks: urbanhermitResearchTasks,
+    inquiries: urbanhermitInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      urbanhermitPayload,
+    )
+  ) {
+    urbanhermitSafetyViolations.push(
+      "Urbanhermit knowledge graph exposes a local path, email address, or phone number",
+    );
+  }
+  if (
+    /"(?:text|cookie|cookies|session|sessionToken|profileBiography)"\s*:|\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      JSON.stringify(urbanhermitPopulationInventory),
+    ) ||
+    !/Raw post text/i.test(
+      urbanhermitPopulationInventory.publicSafety.excluded,
+    ) ||
+    !urbanhermitArchiveClaim?.boundaries.some((boundary) =>
+      /353 Jamie-authored.*81 external-source/i.test(boundary),
+    ) ||
+    !urbanhermitArchiveClaim?.antiClaims.some((antiClaim) =>
+      /authored all 434/i.test(antiClaim),
+    ) ||
+    !urbanhermitArchiveClaim?.antiClaims.some((antiClaim) =>
+      /complete owner archive/i.test(antiClaim),
+    )
+  ) {
+    urbanhermitSafetyViolations.push(
+      "Urbanhermit fixture or claim obscures raw-data, authorship, live-profile, or privacy boundaries",
+    );
+  }
+  const urbanhermitPublicRouteHits = [
+    ...urbanhermitClaims.flatMap((claim) =>
+      claim.projections.flatMap((projection) =>
+        projection.surfaces.filter((surface) => surface.startsWith("/")),
+      ),
+    ),
+    ...candidateFiles.filter((path) => /urbanhermit.*page\.tsx$/i.test(path)),
+  ];
+  if (urbanhermitPublicRouteHits.length) {
+    urbanhermitSafetyViolations.push(
+      "Urbanhermit archival depth was projected to a public route without editorial selection",
+    );
+  }
+
+  const nycacFacebookEventIntegrityViolations = [];
+  const nycacFacebookEventSafetyViolations = [];
+  const nycacFacebookEvents = nycacFacebookEventInventory.events ?? [];
+  const nycacFacebookResponseEvents = nycacFacebookEvents.filter(
+    (event) => event.responseSnapshot?.pointEstimate !== null,
+  );
+  const nycacFacebookResponsePointEstimate = nycacFacebookResponseEvents.reduce(
+    (sum, event) => sum + event.responseSnapshot.pointEstimate,
+    0,
+  );
+  const nycacFacebookFixturePath =
+    "apps/www/src/data/knowledge-bank/fixtures/nycartc-facebook-events-full-population.json";
+  const nycacFacebookFixtureSource = sourceById.get(
+    "SRC-NYCAC-FACEBOOK-EVENTS-FULL-POPULATION-2026-07-15",
+  );
+  const nycacFacebookInfrastructureClaim = claimById.get(
+    "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+  );
+  const nycacFacebookResponseClaim = claimById.get(
+    "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+  );
+  const nycacFacebookJamieRoleClaim = claimById.get(
+    "CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE",
+  );
+  const nycacFacebookDemocracyLabClaim = claimById.get(
+    "CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION",
+  );
+  const nycacFacebookPage = knowledgeBank.pages.find(
+    (page) => page.id === "fair-rent-nyc",
+  );
+
+  if (
+    nycacFacebookEventCaptures.length !== 1 ||
+    nycacFacebookEventSources.length !== 13 ||
+    nycacFacebookEventObservations.length !== 19 ||
+    nycacFacebookEventClaims.length !== 4 ||
+    nycacFacebookEventResearchTasks.length !== 4 ||
+    nycacFacebookEventInquiries.length !== 1
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook event graph has an unexpected record count",
+    );
+  }
+  if (
+    nycacFacebookEventInventory.populationReconciliation
+      ?.pageDisplayedPastEventCount !== 34 ||
+    nycacFacebookEventInventory.populationReconciliation
+      ?.recoveredIndexEventCount !== 33 ||
+    nycacFacebookEventInventory.populationReconciliation
+      ?.recoveredDetailEventCount !== 33 ||
+    nycacFacebookEventInventory.populationReconciliation
+      ?.detailRetrievalFailureCount !== 0 ||
+    nycacFacebookEventInventory.populationReconciliation
+      ?.unmaterializedCount !== 1 ||
+    nycacFacebookEventInventory.populationReconciliation?.terminalState
+      ?.scrollRounds !== 9 ||
+    nycacFacebookEventInventory.populationReconciliation?.terminalState
+      ?.stableRounds !== 4 ||
+    !/unmaterialized, not as nonexistent/i.test(
+      nycacFacebookEventInventory.populationReconciliation
+        ?.reconciliationNote ?? "",
+    )
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook 34-displayed / 33-exposed event reconciliation drifted",
+    );
+  }
+  if (
+    nycacFacebookEvents.length !== 33 ||
+    new Set(nycacFacebookEvents.map((event) => event.id)).size !== 33 ||
+    new Set(nycacFacebookEvents.map((event) => event.url)).size !== 33 ||
+    nycacFacebookEvents.some(
+      (event) =>
+        event.url !== `https://www.facebook.com/events/${event.id}/` ||
+        event.retrievalState !== "retrieved" ||
+        !Array.isArray(event.topics) ||
+        !event.topics.length,
+    ) ||
+    nycacFacebookEvents[0]?.date !== "2017-01-27" ||
+    nycacFacebookEvents.at(-1)?.date !== "2021-01-29"
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook event identities, retrieval states, topics, or chronology drifted",
+    );
+  }
+  if (
+    nycacFacebookEventInventory.aggregateSnapshot?.exposedEvents !== 33 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.indexDisplayedNycacOrganizerEvents !== 24 ||
+    nycacFacebookEventInventory.aggregateSnapshot?.alliedOrCohostedListings !==
+      9 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.eventsWithDisplayedResponseCount !== 32 ||
+    nycacFacebookResponseEvents.length !== 32 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.responseActionPointEstimate !== 9989 ||
+    nycacFacebookResponsePointEstimate !== 9989 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.roundedResponseCountEvents !== 3 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.eventsAtOrAbove100Responses !== 19 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.eventsAtOrAbove500Responses !== 7 ||
+    nycacFacebookEventInventory.aggregateSnapshot
+      ?.eventsAtOrAbove1000Responses !== 3
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook organizer or response snapshot no longer reproduces from event rows",
+    );
+  }
+  if (
+    nycacFacebookEventInventory.postedSourceArticles?.length !== 7 ||
+    !nycacFacebookEventInventory.postedSourceArticles.some(
+      (article) =>
+        article.publisher === "Gothamist" &&
+        article.eventId === "1014934072187610",
+    ) ||
+    nycacFacebookEvents
+      .flatMap((event) => event.outboundResources ?? [])
+      .some((resource) => /fbclid=|zoom\.us|docs\.google\.com/i.test(resource.url))
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook posted-source manifest is incomplete or unsanitized",
+    );
+  }
+  if (
+    !immutableGitHubFixtureMatches(
+      nycacFacebookFixtureSource,
+      nycacFacebookFixturePath,
+    )
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook population source does not pin a byte-identical committed fixture",
+    );
+  }
+  const nycacFacebookSourcePathIds = new Set([
+    ...nycacFacebookEventObservations.map((observation) => observation.sourceId),
+    ...nycacFacebookEventClaims.flatMap((claim) =>
+      claim.evidence.map((evidence) => evidence.sourceId),
+    ),
+    ...nycacFacebookEventInquiries.flatMap((inquiry) => inquiry.sourceIds),
+  ]);
+  for (const source of nycacFacebookEventSources) {
+    if (!sourceById.has(source.id) || !nycacFacebookSourcePathIds.has(source.id)) {
+      nycacFacebookEventIntegrityViolations.push(
+        `NYC Artist Coalition Facebook source lacks a normalized evidence path: ${source.id}`,
+      );
+    }
+  }
+  if (
+    nycacFacebookInfrastructureClaim?.selectionState !== "selected" ||
+    nycacFacebookInfrastructureClaim.publicationState !== "approved" ||
+    nycacFacebookResponseClaim?.selectionState !== "selected" ||
+    nycacFacebookResponseClaim.publicationState !== "approved" ||
+    nycacFacebookJamieRoleClaim?.selectionState !== "candidate" ||
+    nycacFacebookJamieRoleClaim.projections.some(
+      (projection) =>
+        projection.surfaces.some((surface) => surface.startsWith("/")) &&
+        projection.status !== "hold",
+    ) ||
+    nycacFacebookDemocracyLabClaim?.selectionState !== "dormant" ||
+    nycacFacebookDemocracyLabClaim.status !== "inference" ||
+    nycacFacebookEventResearchTasks.find(
+      (task) => task.id === "RT-NYCAC-FB-JAMIE-EVENT-ROLE-CORROBORATION",
+    )?.status !== "in-progress" ||
+    nycacFacebookEventResearchTasks.find(
+      (task) => task.id === "RT-NYCAC-FB-OUT-OF-INDEX-EVENT-CROSSWALK",
+    )?.status !== "in-progress"
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook claim selection or open-research state is incomplete",
+    );
+  }
+  if (
+    !nycacFacebookPage?.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "recurring-event-infrastructure" &&
+        occurrence.claimId === "CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE",
+    ) ||
+    !nycacFacebookPage?.occurrences.some(
+      (occurrence) =>
+        occurrence.id === "facebook-event-response-snapshot" &&
+        occurrence.claimId === "CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT",
+    ) ||
+    !/CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE/.test(
+      readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
+    ) ||
+    !/CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT/.test(
+      readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
+    )
+  ) {
+    nycacFacebookEventIntegrityViolations.push(
+      "NYC Artist Coalition Facebook selected claims are missing from the Fair Rent page plan or MDX",
+    );
+  }
+
+  const nycacFacebookPayload = JSON.stringify({
+    captures: nycacFacebookEventCaptures,
+    sources: nycacFacebookEventSources,
+    observations: nycacFacebookEventObservations,
+    claims: nycacFacebookEventClaims,
+    tasks: nycacFacebookEventResearchTasks,
+    inquiries: nycacFacebookEventInquiries,
+  });
+  if (
+    /\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b/i.test(
+      nycacFacebookPayload,
+    )
+  ) {
+    nycacFacebookEventSafetyViolations.push(
+      "NYC Artist Coalition Facebook knowledge graph exposes a local path, email address, or phone number",
+    );
+  }
+  if (
+    /"(?:detailsText|description|cookie|cookies|session|sessionToken)"\s*:|\/Users\/|\/Volumes\/|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|\b\d{3}[-.) ]\d{3}[-. ]\d{4}\b|zoom\.us|docs\.google\.com|fbclid=/i.test(
+      JSON.stringify(nycacFacebookEventInventory),
+    ) ||
+    nycacFacebookEventInventory.publicSafety?.rawDescriptionsPublished !==
+      false ||
+    nycacFacebookEventInventory.publicSafety?.attendeeIdentitiesPublished !==
+      false ||
+    nycacFacebookEventInventory.publicSafety?.contactDetailsPublished !== false ||
+    nycacFacebookEventInventory.publicSafety?.accessCredentialsPublished !==
+      false
+  ) {
+    nycacFacebookEventSafetyViolations.push(
+      "NYC Artist Coalition Facebook public fixture exposes raw text, contact data, meeting access, or authenticated state",
+    );
+  }
+  if (
+    !nycacFacebookInfrastructureClaim?.antiClaims.some((antiClaim) =>
+      /Jamie alone created or produced every/i.test(antiClaim),
+    ) ||
+    !nycacFacebookInfrastructureClaim?.boundaries.some((boundary) =>
+      /34.*33|33.*34/i.test(boundary),
+    ) ||
+    !nycacFacebookResponseClaim?.antiClaims.some((antiClaim) =>
+      /9,989 people attended/i.test(antiClaim),
+    ) ||
+    !nycacFacebookResponseClaim?.boundaries.some((boundary) =>
+      /RSVP actions.*not unique people.*attendance/i.test(boundary),
+    ) ||
+    !nycacFacebookJamieRoleClaim?.boundaries.some((boundary) =>
+      /first-hand.*not yet independently corroborated/i.test(boundary),
+    )
+  ) {
+    nycacFacebookEventSafetyViolations.push(
+      "NYC Artist Coalition Facebook claims obscure collective credit, denominator, RSVP, or individual-role boundaries",
+    );
+  }
+  const nycacFacebookPublicText = [
+    readFileSync("apps/www/src/content/work/fair-rent-nyc.mdx", "utf8"),
+    ...nycacFacebookInfrastructureClaim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+    ...nycacFacebookResponseClaim.projections
+      .filter((projection) => projection.status === "active")
+      .map((projection) => projection.text),
+  ].join("\n");
+  if (
+    /9,989 (?:people|attendees)|as verified attendance|always at a different/i.test(
+      nycacFacebookPublicText,
+    ) ||
+    !/RSVP actions, not unique people or verified attendance/i.test(
+      nycacFacebookPublicText,
+    )
+  ) {
+    nycacFacebookEventSafetyViolations.push(
+      "NYC Artist Coalition Facebook public projection overstates response, attendance, or venue rotation",
+    );
+  }
+
   const invalidClaimStates = knowledgeBank.claims.filter((claim) => {
     const activePublic = claim.projections.some(
       (projection) =>
@@ -1642,9 +2406,12 @@ function deterministicResults(judgments) {
         integratedWithoutPath.length ||
         campaignPressIntegrityViolations.length ||
         kcTownHallIntegrityViolations.length ||
+        kcTownHallPhaseOneIntegrityViolations.length ||
         teamsArchiveIntegrityViolations.length ||
         googleSharedDriveIntegrityViolations.length ||
-        socialMediaIntegrityViolations.length
+        socialMediaIntegrityViolations.length ||
+        urbanhermitIntegrityViolations.length ||
+        nycacFacebookEventIntegrityViolations.length
         ? 0
         : routedCaptures.length === knowledgeBank.captures.length
           ? 4
@@ -1655,9 +2422,12 @@ function deterministicResults(judgments) {
         `${inventoryPlacements.length} campaign press placements / ${uniqueCampaignPressArticleIds.size} unique articles`,
         `${campaignPressIntegrityViolations.length} campaign press integrity violations`,
         `${kcTownHallIntegrityViolations.length} KC Town Hall funding-chain integrity violations`,
+        `${kcTownHallPhaseOneIntegrityViolations.length} KC Town Hall Phase One integrity violations`,
         `${teamsArchiveIntegrityViolations.length} Teams archive integrity violations`,
         `${googleSharedDriveIntegrityViolations.length} Google Shared Drive integrity violations`,
         `${socialMediaIntegrityViolations.length} social-media archive integrity violations`,
+        `${urbanhermitIntegrityViolations.length} Urbanhermit archive integrity violations`,
+        `${nycacFacebookEventIntegrityViolations.length} NYC Artist Coalition Facebook event integrity violations`,
       ],
       [
         ...brokenCaptureRefs,
@@ -1665,9 +2435,12 @@ function deterministicResults(judgments) {
         ...integratedWithoutPath.map((item) => item.id),
         ...campaignPressIntegrityViolations,
         ...kcTownHallIntegrityViolations,
+        ...kcTownHallPhaseOneIntegrityViolations,
         ...teamsArchiveIntegrityViolations,
         ...googleSharedDriveIntegrityViolations,
         ...socialMediaIntegrityViolations,
+        ...urbanhermitIntegrityViolations,
+        ...nycacFacebookEventIntegrityViolations,
       ],
       "Repair broken references and ensure each integrated capture has a traversable path.",
     ),
@@ -1680,9 +2453,12 @@ function deterministicResults(judgments) {
         routeViolations.length ||
         campaignPressSafetyViolations.length ||
         kcTownHallSafetyViolations.length ||
+        kcTownHallPhaseOneSafetyViolations.length ||
         teamsArchiveSafetyViolations.length ||
         googleSharedDriveSafetyViolations.length ||
-        socialMediaSafetyViolations.length
+        socialMediaSafetyViolations.length ||
+        urbanhermitSafetyViolations.length ||
+        nycacFacebookEventSafetyViolations.length
         ? 0
         : 4,
       [
@@ -1691,9 +2467,12 @@ function deterministicResults(judgments) {
         `${routeViolations.length} prohibited routes`,
         `${campaignPressSafetyViolations.length} campaign press promotion violations`,
         `${kcTownHallSafetyViolations.length} KC Town Hall projection-safety violations`,
+        `${kcTownHallPhaseOneSafetyViolations.length} KC Town Hall Phase One projection-safety violations`,
         `${teamsArchiveSafetyViolations.length} Teams archive projection-safety violations`,
         `${googleSharedDriveSafetyViolations.length} Google Shared Drive safety violations`,
         `${socialMediaSafetyViolations.length} social-media projection-safety violations`,
+        `${urbanhermitSafetyViolations.length} Urbanhermit projection-safety violations`,
+        `${nycacFacebookEventSafetyViolations.length} NYC Artist Coalition Facebook event safety violations`,
       ],
       [
         ...validationErrors,
@@ -1701,9 +2480,12 @@ function deterministicResults(judgments) {
         ...routeViolations,
         ...campaignPressSafetyViolations,
         ...kcTownHallSafetyViolations,
+        ...kcTownHallPhaseOneSafetyViolations,
         ...teamsArchiveSafetyViolations,
         ...googleSharedDriveSafetyViolations,
         ...socialMediaSafetyViolations,
+        ...urbanhermitSafetyViolations,
+        ...nycacFacebookEventSafetyViolations,
       ],
       "Remove unsafe payloads and satisfy canonical citation validation.",
     ),
@@ -2177,6 +2959,10 @@ function deterministicResults(judgments) {
     ...nycacPopulationViolations,
     ...wowListPopulationViolations,
     ...kcTownHallPopulationViolations,
+    ...urbanhermitIntegrityViolations,
+    ...urbanhermitSafetyViolations,
+    ...nycacFacebookEventIntegrityViolations,
+    ...nycacFacebookEventSafetyViolations,
   ];
   results.set(
     "KD-013",
@@ -2193,6 +2979,11 @@ function deterministicResults(judgments) {
         `KC Town Hall: ${kcTownHallPopulationRecords.length}/183 profile-counted records recovered; 0 unmaterialized`,
         `KC Town Hall: ${kcTownHallPostsTimelineRecords.length} Posts-tab / ${kcTownHallRepliesTimelineRecords.length} Replies-primary records; ${kcTownHallContextRecords.length} conversation-context cards excluded`,
         `KC Town Hall: ${kcTownHallExternalLinks.length} posted-link occurrences / ${new Set(kcTownHallExternalLinks.map((link) => link.shortUrl)).size} distinct short URLs; ${kcTownHallPopulationInventory.stakeholderResponseInventory.directCouncilMemberAccountCount} direct Council Member account responses`,
+        `Urbanhermit: ${urbanhermitRecords.length}/434 live profile-counted records recovered; 0 unmaterialized`,
+        `Urbanhermit: ${urbanhermitPostsRecords.length} Posts-tab / ${urbanhermitRepliesRecords.length} Replies-primary records; ${urbanhermitContextRecords.length} conversation-parent cards excluded`,
+        `Urbanhermit: ${urbanhermitExternalLinks.length} posted-link occurrences / ${new Set(urbanhermitExternalLinks.map((link) => link.shortUrl)).size} distinct short URLs; ${urbanhermitMissionRelevantIncoming.length}/26 bounded incoming records mission-relevant across ${new Set(urbanhermitMissionRelevantIncoming.map((record) => record.authorHandle)).size} accounts`,
+        `NYC Artist Coalition Facebook events: ${nycacFacebookEvents.length}/33 exposed event cards and details reviewed; 1 of the page's displayed 34 remains unmaterialized`,
+        `NYC Artist Coalition Facebook events: ${nycacFacebookResponseEvents.length} response-counted records; 19 at or above 100, 7 at or above 500, 3 at or above 1,000; ${nycacFacebookEventInventory.postedSourceArticles.length} posted source articles`,
       ],
       fullPopulationViolations,
       "Repair the denominator or classification before strengthening the public interpretation.",
@@ -2213,6 +3004,8 @@ function deterministicResults(judgments) {
       campaignPressUniqueArticles: uniqueCampaignPressArticleIds.size,
       kcTownHallFundingSources: kcTownHallFundingSources.length,
       kcTownHallFundingClaims: kcTownHallFundingClaims.length,
+      kcTownHallPhaseOneSources: kcTownHallPhaseOneSources.length,
+      kcTownHallPhaseOneClaims: kcTownHallPhaseOneClaims.length,
       teamsArchiveCaptures: teamsArchiveCaptures.length,
       teamsArchiveSources: teamsArchiveSources.length,
       teamsArchiveObservations: teamsArchiveObservations.length,
@@ -2255,6 +3048,18 @@ function deterministicResults(judgments) {
         socialMediaReviewSummary.kcTownHallDistinctExternalShortUrlCount,
       kcTownHallDirectCouncilMemberAccounts:
         socialMediaReviewSummary.kcTownHallDirectCouncilMemberAccountCount,
+      urbanhermitRecoveredTimelineRecords:
+        urbanhermitReviewSummary.recoveredPopulationCount,
+      urbanhermitDistinctPostedUrls:
+        urbanhermitReviewSummary.distinctExternalShortUrlCount,
+      urbanhermitMissionRelevantIncomingAccounts:
+        urbanhermitReviewSummary.missionRelevantIncomingAccountCount,
+      nycacFacebookEventsRecovered: nycacFacebookEvents.length,
+      nycacFacebookEventsUnmaterialized:
+        nycacFacebookEventInventory.populationReconciliation.unmaterializedCount,
+      nycacFacebookEventsWithResponseCount: nycacFacebookResponseEvents.length,
+      nycacFacebookEventPostedSourceArticles:
+        nycacFacebookEventInventory.postedSourceArticles.length,
       validationErrors: validationErrors.length,
     },
   };

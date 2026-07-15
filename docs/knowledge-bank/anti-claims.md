@@ -28,6 +28,15 @@ stability advocacy outcomes.
 Do not publish private coalition notes, legal-review materials, stakeholder
 lists, or source documents that were not approved for public use.
 
+Do not say Jamie produced every NYC Artist Coalition event, that every meeting
+was at a different venue, or that the 33 exposed Facebook events are a complete
+owner export. Do not convert approximately 9,989 displayed response actions
+into people, attendance, reach, conversion, or impact. Facebook displayed 34
+past events but materialized 33; retain the unresolved remainder.
+
+Do not publish raw historical event descriptions, attendee identities,
+contacts, dial-ins, meeting IDs, passcodes, or private planning-document links.
+
 ## CallNYC
 
 Do not imply CallNYC is an official or current City service.

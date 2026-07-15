@@ -126,6 +126,18 @@ test("social-media case-study claims resolve through the generated registry", ()
 
 test("KC Town Hall numbering follows first visible claim appearance", () => {
   assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "survey-design-and-decision-input").sources.map(
+      (item) => item.number,
+    ),
+    [2],
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "tired-of-tires-design-and-operations").sources.map(
+      (item) => item.number,
+    ),
+    [3, 4],
+  );
+  assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "developer-presenter-role").sources.map(
       (item) => item.number,
     ),
@@ -135,7 +147,7 @@ test("KC Town Hall numbering follows first visible claim appearance", () => {
     resolveCitationOccurrence("kc-town-hall", "social-operating-surface").sources.map(
       (item) => item.number,
     ),
-    [2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [5, 6, 7, 2, 3, 8, 9, 10, 4],
   );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "funding-decision-chain").sources.map(

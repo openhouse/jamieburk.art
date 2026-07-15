@@ -70,6 +70,24 @@ records every placement's source-page order, exact listed URL, normalized
 source ID, dated capture, and duplicate disposition. The knowledge-development suite uses
 it to reproduce the four manifests offline.
 
+### NYC Artist Coalition Facebook events
+
+The July 15 authenticated event pass reviewed every card materialized by the
+coalition page's live Past Events surface. Facebook displayed 34 past events;
+33 unique cards and all 33 corresponding detail pages were recovered. The
+remaining event is recorded as unmaterialized rather than absent.
+
+The public fixture preserves event metadata, displayed organizer relations,
+topics, bounded response snapshots, selected mission resources, and seven
+event-posted source articles. It excludes raw descriptions, attendee
+identities, historical contacts, meeting credentials, private working-document
+links, and authenticated-session state.
+
+Facebook response totals are RSVP actions, not unique people or attendance.
+The event pages establish a collective recurring-convening method; they do not
+identify Jamie as producer of every event. See
+`docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md`.
+
 ### KC Town Hall public record and first-hand clarification
 
 The July 14 funding-status pass recovered four official KCMO sources:

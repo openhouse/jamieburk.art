@@ -570,22 +570,34 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Adaptive reuse planning and public-benefit documentation",
+    subtitle: "Historic restoration, participatory development, and neighborhood operations",
     summary:
-      "The City lists Jamie as KC Town Hall's developer/presenter for adaptive reuse of a long-vacant building. The CCED Board recommended $490,539 and the Council accepted and appropriated the amount in 2019. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record says KC Town Hall withdrew and the unused funds were reappropriated.",
-    role: "Developer/Presenter; Project Planning & Documentation Support",
-    years: "2019 proposal; 2024 disposition",
+      "KC Town Hall completed a $189,629 Phase One cold-shell restoration in 2019. The packet names Jamie and Julia Fredenburg as founders/project managers; Jamie states that he also served as Phase One general contractor and daily site coordinator. He designed a resident survey system and coordinated recurring neighborhood service operations alongside the later, separately documented municipal funding process.",
+    role: "Founder & Project Manager; Phase One General Contractor (first-hand account)",
+    years: "2018-2022; 2019 funding decision; 2024 disposition",
     status: "Short proof page",
     featured: false,
     priority: 6,
     visibility: "public-safe",
     proofBankIds: ["kc-town-hall-public-benefit-documentation"],
     whatWasUnclear:
-      "A long-vacant building involved public benefit, preservation, funding, stakeholder, and redevelopment questions, including distinctions among recommendation, Council authorization, appropriation, contract execution, and payment.",
+      "A long-vacant building required historic restoration, trade sequencing, resident input, public-benefit design, recurring neighborhood operations, and careful distinctions among recommendation, Council authorization, appropriation, contract execution, and payment.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, a resident-input and recurring service-intake surface, municipal-review support, a source-backed chronology of the public funding decision, and, in Jamie's first-hand account, continuity through a mission-aligned transition.",
+      "A completed cold shell, coordinated restoration workflows, a survey-to-proposal input loop, recurring tire-pickup operations, public-benefit documentation, municipal-review support, a source-backed funding chronology, and, in Jamie's first-hand account, continuity through a mission-aligned transition.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
+      {
+        title: "Phase One cold-shell scope",
+        description:
+          "A $189,629 completed-2019 scope covering roof deck, insulation and TPO membrane, historic masonry, framing, water connection, egress, safety, access, cleanup, and related site work.",
+        type: "source map",
+      },
+      {
+        title: "Resident survey and backing data system",
+        description:
+          "A low-friction 4-by-6-inch handbill and data workflow that allowed neighborhood input to enter proposal and use decisions.",
+        type: "template",
+      },
       {
         title: "Public-benefit documentation set",
         description:
@@ -607,6 +619,7 @@ const workItemsInput = [
     ],
     tags: [
       "Implementation",
+      "Project Delivery",
       "Documentation",
       "Knowledge Systems",
       "Public-Facing Tools",
@@ -614,22 +627,34 @@ const workItemsInput = [
     ],
     capabilities: [
       "Stakeholder Documentation",
+      "Construction Coordination",
+      "Participatory Research",
+      "Service Operations",
       "Funding Support",
       "Historic Preservation Context",
       "Public Information Systems",
     ],
     careNote:
-      "Official public records and Jamie's public-safe first-hand clarification are distinguished. Private reasons and financial, legal, property, and stakeholder details remain omitted.",
+      "The packet's documented Phase One scope, public social records, and Jamie's first-hand role clarification are distinguished. Collective credit remains visible; private contacts, survey responses, routes, reasons, and financial, legal, property, or stakeholder details remain omitted.",
     sourceLayer:
-      "Official KCMO CCED proposal and Council records, a complete public-safe 183-record @KCTownHall corpus with posted-source and stakeholder-response metadata, Jamie's public-safe first-hand transition clarification, and a public-safe project summary.",
+      "A public-safe archival review of the 2019 CCED packet, official KCMO proposal and Council records, a complete public-safe 183-record @KCTownHall corpus, public participant and environmental-collaborator posts, a protected multi-year operating log, and Jamie's bounded first-hand clarifications.",
     links: [{ label: "KC Town Hall on X", url: "https://x.com/KCTownHall" }],
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+    credits: [
+      "Jamie Burkart",
+      "Julia Fredenburg",
+      "KC Town Hall architecture, preservation, trade, neighborhood, and project collaborators",
+    ],
     currentStatus:
       "Historical project. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City's 2024 record states that KC Town Hall withdrew and the full 2019 appropriation remained unused and was reappropriated.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Construction and implementation coordination, participatory research, recurring service operations, public-benefit documentation, stakeholder coordination, and long-horizon handoff.",
     evidence: [
+      "$189,629 Phase One cold-shell restoration completed in 2019",
+      "Founder/project-manager designation; Phase One general-contractor role in Jamie's first-hand account",
+      "4-by-6-inch resident survey handbill and backing data system",
+      "Survey input documented as directly shaping the proposal and influencing proposed retail uses",
+      "Recurring TiredOfTires field operations from 2019 through 2022, with exact totals held for reconciliation",
       "Redevelopment planning",
       "Public-benefit documentation",
       "City-listed developer/presenter role",
@@ -640,10 +665,10 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "The City listed Jamie as KC Town Hall's developer/presenter. The CCED Board recommended $490,539; the Council accepted and appropriated the amount in 2019. A complete review of all 183 profile-counted @KCTownHall records documents resident-input, recurring service-intake, civic-information, and direct stakeholder-response patterns. Jamie states that he transitioned the project to a mission-aligned organization. Separately, the City recorded withdrawal and reappropriated the unused amount in 2024.",
-      open: "The official records do not establish sole authorship, individual causality for government decisions, an executed funding agreement, receipt, expenditure, completion, the receiving organization's identity, or the transition terms. Exact tire and resident-savings totals published by the project account remain unverified, and the institutional feed is not assigned post by post to Jamie.",
+        "The 2019 packet identifies Jamie and Julia Fredenburg as founders/project managers, documents a $189,629 Phase One cold-shell scope and a survey-to-proposal input loop, and supports 2019 completion alongside Jamie's first-hand confirmation. Public records corroborate Jamie's direct TiredOfTires operations. The City separately listed him as developer/presenter for Phase Two, then documented the Board recommendation, Council appropriation, later withdrawal, and reappropriation of the unused amount.",
+      open: "Jamie's general-contractor title, TiredOfTires design and City-coordination role, Indian Mound expansion, and Cleveland Avenue Unify to Beautify role need independent role-bearing records. Exact tire and resident-savings totals, survey response volume, an executed funding agreement, receipt, expenditure, receiving-organization identity, and transition terms remain unverified or protected.",
       protected:
-        "Private reasons and financial, legal, property, banking, and stakeholder details are omitted.",
+        "Private reasons, contacts, raw survey responses, household routes, contracts, invoices, and financial, legal, property, banking, or stakeholder details are omitted.",
     },
   },
 ] satisfies WorkMeta[];

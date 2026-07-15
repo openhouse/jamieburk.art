@@ -10,6 +10,7 @@ Reviewed: 2026-07-14
 | NYC Artist Coalition, SaveNYCSpaces, LetNYCDance, TalksNotRaids, FairRentNYC | [@NYCArtC](https://x.com/NYCArtC) | Shared coalition and campaign account |
 | WOW List | [@wowlist](https://x.com/wowlist) | Historical project account |
 | KC Town Hall | [@KCTownHall](https://x.com/KCTownHall) | Historical project account |
+| Jamie's cross-project public record | [@urbanhermit](https://x.com/urbanhermit) | Personal historical account; not a single-project or institutionally authored feed |
 
 Project templates and an external 2015 mention also use `@WOWListNYC`. The
 exact account-rename history was not recovered, so the knowledge bank treats it
@@ -71,6 +72,17 @@ reconciles to the profile counter. The dedicated public-safe fixture at
 preserves record provenance, all posted-link metadata, bounded incoming-search
 classifications, and dated aggregate interaction context without post text or
 authenticated-session state.
+
+For Jamie's personal `@urbanhermit` account, Posts and Replies were traversed
+to the October 2008 beginning and through repeated no-growth passes. Posts
+yielded 421 primary records. Replies rendered 436 article cards: 434 primary
+profile records plus two conversation-parent cards authored by another account.
+Excluding those two contexts produces a 434-record union that reconciles
+exactly to the live profile counter. The dedicated public-safe fixture at
+`apps/www/src/data/knowledge-bank/fixtures/urbanhermit-full-population.json`
+preserves metadata for all 434 records, source-body link inventory, strict
+mission signals, and a bounded year-by-year incoming-mention review without raw
+post text or authenticated-session state.
 
 ## Findings
 
@@ -200,6 +212,15 @@ claim is preserved but held for collaborator or dated account-record
 corroboration. The visible feed is shared work and must not be attributed to
 Jamie post by post without evidence.
 
+The separate Facebook event census adds the coalition's IRL and virtual
+convening layer. The live Past Events surface exposed 33 records against a
+displayed count of 34; all 33 exposed details were reviewed. Its rotating
+cultural-space meetings, hearings, panels, rallies, and relief events are
+documented in
+`docs/knowledge-bank/projects/nyc-artist-coalition-facebook-events.md`.
+Facebook RSVP actions remain distinct from attendance, and the individual
+event-system role remains held for collaborator or task-level corroboration.
+
 ### WOW List
 
 All 38 profile-counted records materialized and were reviewed: 16 originals,
@@ -296,6 +317,58 @@ not assigned post by post to Jamie. The social archive does not establish the
 separate municipal funding chain, contract execution, funding receipt,
 expenditure, or completion of the building project.
 
+A separate Phase One archival pass now strengthens the operating-role record.
+Jamie states that he designed and coordinated Oak Park Neighborhood
+Association's TiredOfTires workflow with the City and performed monthly field
+operations. Public project, participant, and environmental-collaborator posts
+corroborate his direct pickup and drop-off work, while a protected calculator
+preserves 26 monthly columns from May 2019 through September 2022. The design
+and City-coordination role remains attributed; the Indian Mound expansion and
+exact aggregate totals remain open for independent corroboration.
+
+The same pass recovered the 4-by-6-inch resident survey card and the packet's
+statement that input directly shaped the proposal. Response volume, the backing
+data corpus, and a complete decision trail remain protected or unrecovered.
+
+### Jamie's personal public record
+
+All 434 records counted by the live `@urbanhermit` profile materialized and
+were reviewed: 340 originals, 13 replies, and 81 external-source native
+reposts. The 353 Jamie-authored originals or replies and the 81 redistributed
+source records remain separate throughout the fixture.
+
+Source bodies contain 349 external-link occurrences representing 321 distinct
+short URLs. Strict signals surface recurring public functions across community
+platforms, civic participation, cultural-space advocacy, public history and
+place, creative technology, and neighborhood mutual aid. These categories are
+research routes, not measures of labor, professional priority, reach,
+endorsement, or impact.
+
+A year-by-year public-index search from 2008 through 2026 recovered 26 incoming
+records. Fifteen records from nine accounts were classified as mission-relevant
+third-party responses. They include creative-technology and media peers, NYC
+Artist Coalition campaign records, a civic-design peer, public-history and
+neighborhood collaborators, KC Town Hall, and creative-community context. Two
+additional records are retained as mission-relevant conversation context and
+nine as personal or network context rather than traction.
+
+Close reading promoted three public-source claim families into the bank:
+
+- NPR directly credits Jamie and M.C. Schmidt as co-creators of Horse Lords'
+  "Truthers" video and preserves an attributed account from the band of how the
+  visual method mirrored the music.
+- KCUR documents Jamie's 2006 downtown scavenger hunt and film screening inside
+  Kansas City's historic 8th Street Tunnel.
+- A participant and KC Town Hall separately corroborate Jamie's direct
+  participation in a recurring Northeast Kansas City tire-pickup workflow.
+
+The live population reconciliation does not establish that no older post was
+deleted or absent before capture. The incoming search excludes likes, private
+activity, deleted or unindexed records, and responses that omit the handle.
+Visible interaction counts remain dated interface context rather than reach or
+impact. The full findings and source boundaries are in
+`docs/knowledge-bank/projects/urbanhermit.md`.
+
 ## Lifecycle state
 
 The CallNYC public-guidance and Council-engagement claims, the mission-relevant
@@ -307,3 +380,10 @@ held. Open tasks cover the three unmaterialized CallNYC records, the 2,001-recor
 NYC Artist Coalition owner-archive gap, collaborator corroboration, WOW List
 handle lineage, independent TiredOfTires outcome corroboration, and recovery of
 KC Town Hall site and survey decision records.
+
+The personal-account corpus is knowledge depth rather than a website
+projection. Its Horse Lords and 8th Street Tunnel claims are strong future
+feature candidates; the complete account pattern and tire-pickup role remain
+dormant. Open tasks cover the owner-archive reconciliation, complete posted-URL
+resolution, collaborator role detail, media rights, tunnel artifacts, and
+independent tire-outcome corroboration.

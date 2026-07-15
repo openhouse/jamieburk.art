@@ -22,6 +22,13 @@ website selection. It is a recommendation, not publication approval.
 - `CLM-NYCAC-POLICY-DATA-COMMUNICATIONS`: selected as collective context for
   the town halls, mapped explanations, recommendations, public-record research,
   and calls to action that formed the coalition's civic-systems layer.
+- `CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`: selected as collective method
+  evidence. Present cultural-space meetings, public-agency interfaces,
+  hearings, and relief events as a recurring advocacy system; keep the
+  34-displayed/33-recovered denominator and cohost boundaries attached.
+- `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`: selected as a bounded traction
+  snapshot. State the 19/7/3 response thresholds and immediately identify them
+  as historical Facebook RSVP actions, not unique people or attendance.
 - `CLM-NYCAC-CABARET-REPEAL-CONTRIBUTION-CANDIDATE`: selected as a bounded
   claim that Jamie started organizing fire-code study groups and rallied at
   City Hall within a multi-group campaign, not a claim of individual
@@ -38,6 +45,18 @@ website selection. It is a recommendation, not publication approval.
 
 ## Selected in the KC Town Hall Case Study
 
+- `CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION`: selected as the completed
+  delivery outcome that the earlier site omitted. Name the $189,629 cold-shell
+  scope and keep it separate from the later, unused Phase Two appropriation.
+- `CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE`: selected with attribution to
+  Jamie. The packet corroborates founder/project-manager status, team, scope,
+  and delivery; it does not itself apply the general-contractor title.
+- `CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT`: selected as participatory-
+  systems proof. Jamie's handbill/data-system authorship is first-hand; the
+  artifact, partners, and proposal influence are preserved in the packet.
+- `CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS`: selected with attribution
+  for design and City coordination and public corroboration of direct field
+  operations. Keep exact aggregate totals and the Indian Mound expansion held.
 - `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE`: selected as direct official-record
   evidence of Jamie's proposal role, bounded against sole authorship,
   ownership, or causality.
@@ -123,6 +142,14 @@ website selection. It is a recommendation, not publication approval.
   site lists Jamie, Drew Bolton, and Garrett Fuselier as visual artists and
   presents NTER CHNG on their shared page. Preserve the group-exhibition and
   equal-collaborator boundaries; do not place the work at the Nerman Museum.
+- `CLM-URBANHERM-HORSE-LORDS-VIDEO`: NPR directly credits Jamie and M.C.
+  Schmidt as the co-creators of Horse Lords' "Truthers" video and preserves the
+  band's attributed account of how the visual method mirrored the music. Best
+  use: a future creative-technology lineage after role and media-rights review.
+- `CLM-URBANHERM-EIGHTH-STREET-TUNNEL-SCREENING`: KCUR directly documents
+  Jamie's 2006 scavenger-hunt and tunnel-screening program. Best use: a future
+  participatory-public-history or waterways/place feature with access, safety,
+  and visual-rights context attached.
 
 ## Strong Supporting Proof
 
@@ -142,10 +169,19 @@ website selection. It is a recommendation, not publication approval.
   lineage, but keep it anonymous and held until the June 2026 job-hunt packet
   materializes and can be compared without inference.
 
+- `CLM-KCTH-CLEVELAND-UNIFY-DESIGN-STUDIO-SEED`: preserve Jamie's first-hand
+  co-founding and pro bono design/print account, credit Pastor Lee's corridor
+  vision, and recover dated HENC, neighborhood, artifact, meeting, and City
+  decision records before site use.
+
 - `CLM-NYCAC-OFFICE-CREATION-CONTRIBUTION-CANDIDATE`: recover pre-creation
   advocacy separately from post-creation accountability work.
 - `CLM-NYCAC-FIREGUARD-PASS-RATE-ATTESTED`: recover a denominator, date range,
   exam type, and bounded result records before promoting the exact metric.
+- `CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE`: Jamie's first-hand account identifies
+  recurring events as a major contribution and a bridge from WOW List into
+  advocacy. Recover collaborator or task-level artifact corroboration before
+  activating individual event-system credit on the site.
 - `CLM-SBU-STYLE-GUIDE-HANDOFF-SEED`: recover a completed guide, implementation
   record, or collaborator confirmation before promotion.
 - `CLM-196-RESIDENCY-ONBOARDING-HANDOFF`: recover a second dated use or
@@ -164,6 +200,18 @@ website selection. It is a recommendation, not publication approval.
   44-article bibliography in the bank. Promote only article-level propositions
   that survive close reading, collaborator-credit review, and claim-specific
   corroboration; do not add the full press list to the current hiring site.
+- `CLM-URBANHERM-PERSONAL-PUBLIC-WORKING-SURFACE`: retain the complete,
+  metadata-only 434-record live-profile inventory as a cross-project research
+  surface. Its 321 distinct posted short URLs and bounded incoming-response
+  inventory should generate source and claim work, not become a social-volume
+  headline.
+- `CLM-URBANHERM-KCTH-TIRE-PICKUP-PARTICIPATION`: retain the participant- and
+  project-corroborated direct-role claim as supporting KC Town Hall depth.
+  Keep exact tire and savings figures attributed and held for independent
+  corroboration.
+- `CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION`: retain Jamie's interpretation
+  of the event practice as a democracy lab. It is useful compositional depth,
+  not a measured outcome or a statement attributed to every coalition member.
 
 No item in this slate creates a public route or changes the current site's
 composition by itself.

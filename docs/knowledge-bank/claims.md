@@ -203,6 +203,34 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / article-level close reading before promotion
 **Last reviewed:** 2026-07-14
 
+## nyc-artist-coalition-recurring-event-infrastructure - Recurring events as advocacy infrastructure
+
+**Status:** Approved and selected with boundary
+**Support level:** Strong for the collective method and bounded Facebook snapshot
+**Evidence class:** Full-population authenticated event review / public event records / government-hosted appendix
+**Public wording:** NYC Artist Coalition used recurring events as participatory advocacy infrastructure: meetings rotated through small cultural spaces, connected artist and venue concerns to public agencies and City Hall, and sustained work from safety and Cabaret Law repeal through nightlife accountability, commercial rent, and relief.
+**Detailed public-safe wording:** Facebook's current archive exposes 33 coalition-listed past events from 2017-2021. Twenty-four index cards display NYC Artist Coalition as an organizer and nine are allied or cohosted listings. Thirty-two events retain response totals; 19 show at least 100 responses, seven at least 500, and three at least 1,000.
+**Where to project:** Fair Rent NYC case study and knowledge bank.
+**Why it matters:** Shows a repeatable civic operating method that connects situated listening, cultural-space relationships, public communication, agency interface, hearings, and follow-through.
+**Guardrail:** The page displays 34 past events but materialized 33; keep one event unresolved. Facebook responses are RSVP actions, not unique people, attendance, reach, conversion, or impact. Preserve collective and cohost credit.
+**Do not say:** Jamie produced every event; meetings were always at a different venue; 9,989 people attended; the events alone caused policy outcomes; the 33 rows are a complete owner export.
+**Protected boundaries:** Raw descriptions, historical contact details, meeting IDs and passcodes, private working-document links, attendee identities, and authenticated-session state stay outside the public repo.
+**Review owner:** Jamie / collaborator corroboration needed for individual event-system role
+**Last reviewed:** 2026-07-15
+
+### Canonical event claims
+
+- `CLM-NYCAC-RECURRING-EVENT-INFRASTRUCTURE`: corroborated, approved, and
+  selected for the Fair Rent NYC case study as a collective method claim.
+- `CLM-NYCAC-FACEBOOK-EVENT-RESPONSE-SNAPSHOT`: corroborated, approved, and
+  selected with an explicit RSVP-not-attendance boundary and rounded-count
+  caveat.
+- `CLM-NYCAC-JAMIE-EVENT-SYSTEM-ROLE`: sourced from Jamie's first-hand
+  account and held pending collaborator or task-level artifact corroboration.
+- `CLM-NYCAC-EVENTS-DEMOCRACY-LAB-INTERPRETATION`: attributed inference kept
+  as archive depth, not an empirical outcome or a claim assigned to every
+  coalition member.
+
 ## wowlist-community-platform - Followable community platform
 
 **Status:** Careful
@@ -265,6 +293,21 @@ claim beyond the wording and guardrails here.
 
 ### Canonical claim records
 
+- `CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION`: corroborated and selected. The
+  packet documents a $189,629 cold-shell scope and completed-2019 labeling;
+  Jamie confirms completion. Keep it separate from Phase Two and City funds.
+- `CLM-KCTH-PHASE-ONE-GENERAL-CONTRACTOR-ROLE`: sourced and selected with
+  attribution. The packet calls Jamie founder/project manager and corroborates
+  the team, scope, and outcome, but not the general-contractor title itself.
+- `CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT`: corroborated and selected.
+  Jamie's handbill/data-system authorship is first-hand; the packet preserves
+  the artifact, partners, and documented proposal influence.
+- `CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS`: corroborated and selected
+  with attributed design/coordination wording and public evidence of direct
+  operations. Exact totals and the Indian Mound expansion remain held.
+- `CLM-KCTH-CLEVELAND-UNIFY-DESIGN-STUDIO-SEED`: sourced and dormant. Preserve
+  Pastor Lee's originating corridor vision and recover program, artifact, and
+  City records before promotion.
 - `CLM-KCTH-CCED-DEVELOPER-PRESENTER-ROLE`: sourced and selected. The City's
   Round Two list names Jamie as developer/presenter; this does not establish
   sole authorship, ownership, or causality for later government decisions.

@@ -23,6 +23,12 @@ Jamie's separate first-hand clarification adds that he transitioned the project
 to a mission-aligned organization. This is public-safe professional context,
 not a fact established by the municipal records.
 
+The separately documented $189,629 Phase One cold-shell restoration was
+completed in 2019 before this funding chain reached its Council decision. The
+$490,539 recommendation and appropriation concerned the proposed Phase Two and
+remained unused. See [kc-town-hall-phase-one.md](kc-town-hall-phase-one.md) for
+the construction, resident-input, and neighborhood-operations record.
+
 ## Source table
 
 | Source                            | Affordance                                                               | Boundary                                                   |
@@ -70,6 +76,7 @@ mention of the 2019 appropriation should retain that ending.
 - Funding claim: `CLM-KCTH-CCED-COUNCIL-FUNDING-CHAIN`
 - Transition capture: `CAP-KCTH-MISSION-ALIGNED-TRANSITION-2026`
 - Transition claim: `CLM-KCTH-MISSION-ALIGNED-TRANSITION`
+- Phase One completion: `CLM-KCTH-PHASE-ONE-COLD-SHELL-COMPLETION`
 - Inquiry: `INQ-KCTH-COUNCIL-FUNDING-CHAIN-2026`
 - Corrections: `COR-KCTH-FUNDING-STATUS-2026` and
   `COR-KCTH-PROJECT-TRANSITION-CONTEXT-2026`

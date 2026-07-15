@@ -2790,16 +2790,22 @@ export const socialMediaResearchTasks = [
       kcTownHallPopulationSource.id,
       "SRC-KCTH-TIRED-OF-TIRES-WORKFLOW-2021-11-06",
       "SRC-KCTH-BTG-TIRE-DROPOFF-2019-07-08",
+      "SRC-KCTH-JAMIE-PHASE-ONE-CLARIFICATION-2026",
+      "SRC-KCTH-TIRE-PICKUP-CALCULATOR-2019-2022",
     ],
-    claimIds: [kcTownHallSocialClaimId],
+    claimIds: [
+      kcTownHallSocialClaimId,
+      "CLM-KCTH-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS",
+    ],
     successCriteria: [
       "Recover public or permission-cleared drop-off receipts, collaborator records, disposal schedules, or program logs with dates and quantities.",
-      "Reconcile each promoted total to a documented time window and calculation method.",
+      "Reconcile the 26 monthly calculator columns and each promoted total to receipts, public posts, a documented time window, and calculation method.",
       "Keep account-published quantities attributed and non-headline until independent evidence supports them.",
     ],
     nextActions: [
       "Ask Bridging the Gap and neighborhood collaborators for a bounded proof note or public-safe operating record.",
-      "Review project archives for public-safe receipts, dated route logs, and calculation worksheets without exposing household addresses or contact details.",
+      "Reconcile the protected May 2019-September 2022 calculator against public posts, disposal receipts, and City or collaborator records without exposing household addresses or contact details.",
+      "Recover a dated record for the reported Indian Mound expansion and an independent role-bearing record for Jamie's program-design and City-coordination work.",
     ],
     publicNote:
       "The recurring pickup workflow and an external tire drop-off are documented; exact aggregate quantities and savings remain explicitly unverified.",
@@ -2817,19 +2823,24 @@ export const socialMediaResearchTasks = [
     sourceIds: [
       kcTownHallPopulationSource.id,
       "SRC-KCTH-NEIGHBORHOOD-PROCESS-2018-07-02",
+      "SRC-KCTH-CCED-PHASE-ONE-PACKET-2019",
+      "SRC-KCTH-JAMIE-PHASE-ONE-CLARIFICATION-2026",
     ],
-    claimIds: [kcTownHallSocialClaimId],
+    claimIds: [
+      kcTownHallSocialClaimId,
+      "CLM-KCTH-SURVEY-DESIGN-AND-DECISION-INPUT",
+    ],
     successCriteria: [
       "Recover archived public pages for the project root, join, survey, tires, and COVID resource routes where available.",
-      "Locate a public-safe survey synthesis, decision record, or collaborator account linking resident input to project choices.",
+      "Reconcile the recovered survey card and proposal-shaping statements with a public-safe response count, synthesis, or decision record.",
       "Do not publish raw responses, addresses, contact details, or sensitive stakeholder records.",
     ],
     nextActions: [
-      "Query Wayback and local project archives for dated public captures and survey summaries.",
+      "Query Wayback and local project archives for dated public captures, the backing data system, survey summaries, and a bounded response count.",
       "Treat an unrecovered response set as missing evidence, not as proof that no input was received.",
     ],
     publicNote:
-      "The account documents an input invitation and 12 survey-linked records; response volume and decision uptake remain open.",
+      "The public account documents an input invitation and 12 survey-linked records; the 2019 packet now recovers the survey card and says input directly shaped the proposal, while response volume and a complete decision trail remain open.",
     owner: "Portfolio research",
     reviewedAt,
   },
