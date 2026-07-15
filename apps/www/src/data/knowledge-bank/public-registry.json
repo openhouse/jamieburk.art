@@ -180,6 +180,87 @@
         "the revenue comparison period or basis",
         "causation between Jamie's work and business outcomes"
       ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-ORIGIN-2014",
+      "title": "WOW List account origin post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2014-02-12",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/433671630837919744",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List account origin post, 2014-02-12.",
+      "publicNote": "The account publicly identified Richard and Jamie as working on a project based on WOW List calendars made at Sunday Dinner.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-SUPPORT-2015",
+      "title": "WOW List product-support thread",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2015-04-24",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/591664757473673216",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List product-support thread, 2015-04-24.",
+      "publicNote": "The account answered a prospective user's questions about local calendars, profiles, and contributing events and lists.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-NYCDIY-2016",
+      "title": "WOW List NYC DIY calendar post",
+      "organization": "WOW List",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2016-09-01",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist/status/771457416298921985",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "WOW List NYC DIY calendar post, 2016-09-01.",
+      "publicNote": "The account described NYC DIY as running on WOW List and connected the community calendar to Sunday Dinner.",
+      "doesNotEstablish": [
+        "authorship by Jamie",
+        "sole credit",
+        "institutional adoption",
+        "causal impact beyond the described post"
+      ]
+    },
+    {
+      "id": "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+      "title": "Authenticated WOW List full-population social census",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-14",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/wowlist",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Authenticated, read-only census of the @wowlist Posts and Replies routes, with a redacted 38-item ledger, July 14, 2026.",
+      "publicNote": "The Posts route yielded 37 records; the Replies route supplied the missing authored status and closed the 38-item observed profile control. The recovered union contains 16 account posts, six account replies, and 16 reposts from 13 public accounts.",
+      "doesNotEstablish": [
+        "a native X export or deletion history",
+        "that no older status was deleted before capture",
+        "Jamie's authorship of every shared-account post",
+        "the platform's complete support workload, user population, adoption, audience, or impact",
+        "historical analytics, unique people, partnerships, endorsements, or outcomes"
+      ]
     }
   ],
   "claims": [
@@ -508,6 +589,62 @@
         "Use this as company outcome context, not proof of Jamie's role or individual causation.",
         "Do not convert online-sales share into a two-times total-revenue claim."
       ]
+    },
+    {
+      "id": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A surviving 2014 post names Richard and Jamie as working on WOW List, while the recovered account record preserves six public replies explaining product use, onboarding, and local-calendar adaptations.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/wowlist"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-X-WOWLIST-ORIGIN-2014",
+          "relationship": "direct-support",
+          "supports": [
+            "Jamie and Richard's project connection to Sunday Dinner calendars"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+          "relationship": "direct-support",
+          "supports": [
+            "the complete six-reply public support and onboarding pattern"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-SUPPORT-2015",
+          "relationship": "direct-support",
+          "supports": [
+            "public product-support workflow"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-X-WOWLIST-NYCDIY-2016",
+          "relationship": "corroborating",
+          "supports": [
+            "community-calendar adaptation"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The account record does not identify the author of every post or quantify adoption, satisfaction, audience, or the complete support workload."
+      ]
     }
   ],
   "pages": [
@@ -622,7 +759,11 @@
       "id": "wowlist",
       "surface": "/work/wowlist",
       "sourceOrder": [
-        "SRC-WOWLIST-WAYBACK-2016-02-12"
+        "SRC-WOWLIST-WAYBACK-2016-02-12",
+        "SRC-X-WOWLIST-ORIGIN-2014",
+        "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+        "SRC-X-WOWLIST-SUPPORT-2015",
+        "SRC-X-WOWLIST-NYCDIY-2016"
       ],
       "occurrences": [
         {
@@ -631,6 +772,17 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-WOWLIST-WAYBACK-2016-02-12"
+          ]
+        },
+        {
+          "id": "social-origin-and-support",
+          "claimId": "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-X-WOWLIST-ORIGIN-2014",
+            "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026",
+            "SRC-X-WOWLIST-SUPPORT-2015",
+            "SRC-X-WOWLIST-NYCDIY-2016"
           ]
         }
       ]

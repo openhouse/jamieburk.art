@@ -1000,18 +1000,27 @@ test("WOW List support claim uses the complete six-reply record without assignin
     (item) => item.claimId === claim.id
   );
 
-  assert.equal(claim.maturity, "public-ready");
+  assert.equal(claim.maturity, "projected");
   assert.match(claim.internalClaim, /six account replies/i);
   assert.match(claim.composition.action, /worked with Richard/i);
   assert.match(claim.composition.usableResult, /multi-list event submission/i);
   assert.match(claim.composition.collectiveCredit, /shared account/i);
+  assert.ok(
+    claim.projections.some(
+      (item) =>
+        item.status === "active" &&
+        item.surfaces.includes("/work/wowlist") &&
+        item.citationRequired
+    )
+  );
+  assert.ok(claim.evidence.every((item) => item.renderCitation));
   assert.ok(claim.antiClaims.some((item) => /personally wrote all six/i.test(item)));
   assert.ok(
     censusReading.propositions.some(
       (item) => item.id === "PROP-X-WOWLIST-SIX-PUBLIC-SUPPORT-REPLIES"
     )
   );
-  assert.equal(decision.decision, "defer");
+  assert.equal(decision.decision, "publish");
 });
 
 test("WOW List network, source, and traction findings retain their boundaries", () => {

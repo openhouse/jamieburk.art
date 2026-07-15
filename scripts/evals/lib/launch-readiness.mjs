@@ -1,6 +1,13 @@
 import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { knowledgeBank } from "../../../apps/www/src/data/knowledge-bank/records.ts";
+import {
+  homepageProofs,
+  proofClaims,
+  resumeProofHighlights,
+  technicalOperationsProofRows
+} from "../../../apps/www/src/data/proofs.ts";
 
 export const defaultRepoRoot = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
@@ -86,6 +93,32 @@ export function validateSuite(suite) {
     }
   }
 
+  const blindSpots = suite?.blindSpotCoverage;
+  if (!Array.isArray(blindSpots) || blindSpots.length !== 8) {
+    failures.push("blindSpotCoverage must contain exactly eight blind spots");
+  } else {
+    const repeated = duplicates(blindSpots.map((item) => item.id));
+    if (repeated.length) failures.push(`blindSpotCoverage has duplicate IDs: ${repeated.join(", ")}`);
+    const evaluationIds = new Set([
+      ...(suite.sourceChecks ?? []).map((item) => item.id),
+      ...(suite.browserChecks ?? []).map((item) => item.id),
+      ...(suite.judgeCriteria ?? []).map((item) => item.id)
+    ]);
+    const humanGateIds = new Set((suite.humanGates ?? []).map((item) => item.id));
+    for (const blindSpot of blindSpots) {
+      if (!blindSpot.description) failures.push(`${blindSpot.id} needs a description`);
+      if (!Array.isArray(blindSpot.evaluationIds) || blindSpot.evaluationIds.length === 0) {
+        failures.push(`${blindSpot.id} needs at least one evaluation ID`);
+      }
+      for (const id of blindSpot.evaluationIds ?? []) {
+        if (!evaluationIds.has(id)) failures.push(`${blindSpot.id} references unknown evaluation ${id}`);
+      }
+      for (const id of blindSpot.humanGateIds ?? []) {
+        if (!humanGateIds.has(id)) failures.push(`${blindSpot.id} references unknown human gate ${id}`);
+      }
+    }
+  }
+
   return failures;
 }
 
@@ -132,6 +165,127 @@ function result(check, passed, observed, evidence = []) {
   };
 }
 
+const publicProofStatuses = new Set(["ready", "careful"]);
+
+function publicProofSelections() {
+  return [
+    ...homepageProofs.map((proof) => ({ surface: "homepage", proof })),
+    ...resumeProofHighlights.map((proof) => ({ surface: "resume", proof })),
+    ...technicalOperationsProofRows.flatMap((row) =>
+      row.proofs.map((proof) => ({ surface: "technical-operations", proof }))
+    )
+  ];
+}
+
+export function findProofProjectionSyncFailures({
+  bank = knowledgeBank,
+  proofs = proofClaims,
+  selections = publicProofSelections()
+} = {}) {
+  const failures = [];
+  const proofsById = new Map(proofs.map((proof) => [proof.id, proof]));
+  const claimsById = new Map(bank.claims.map((claim) => [claim.id, claim]));
+  const selectedIds = new Set(selections.map((item) => item.proof.id));
+
+  for (const { surface, proof } of selections) {
+    if (!publicProofStatuses.has(proof.status)) {
+      failures.push({ proofId: proof.id, surface, reason: `${proof.status} proof selected publicly` });
+    }
+    if (!proof.surfaces.includes(surface)) {
+      failures.push({ proofId: proof.id, surface, reason: "selector surface is not declared by proof" });
+    }
+  }
+
+  for (const correction of bank.corrections.filter((item) => item.status === "active")) {
+    const claim = claimsById.get(correction.claimId);
+    const hasActiveProjection = Boolean(
+      claim?.projections.some((projection) => projection.status === "active")
+    );
+    for (const proofId of correction.legacyProofIds ?? []) {
+      const proof = proofsById.get(proofId);
+      if (!proof) {
+        failures.push({ correctionId: correction.id, proofId, reason: "linked legacy proof is missing" });
+        continue;
+      }
+      if (!hasActiveProjection && publicProofStatuses.has(proof.status)) {
+        failures.push({ correctionId: correction.id, proofId, reason: "held canonical claim has public proof status" });
+      }
+      if (!hasActiveProjection && selectedIds.has(proofId)) {
+        failures.push({ correctionId: correction.id, proofId, reason: "held canonical claim is selected on a public surface" });
+      }
+    }
+  }
+
+  return failures;
+}
+
+export function findOutcomeChainFailures(bank = knowledgeBank) {
+  const requiredFields = [
+    "action",
+    "intendedEnd",
+    "usableResult",
+    "audience",
+    "collectiveCredit",
+    "causalBoundary"
+  ];
+  return bank.claims
+    .filter((claim) => claim.projections.some((projection) => projection.status === "active"))
+    .flatMap((claim) => {
+      if (!claim.composition) return [{ claimId: claim.id, reason: "active projection lacks composition" }];
+      return requiredFields
+        .filter((field) => !claim.composition[field]?.trim())
+        .map((field) => ({ claimId: claim.id, reason: `composition is missing ${field}` }));
+    });
+}
+
+export function findEditorialDecisionFailures(bank = knowledgeBank) {
+  const failures = [];
+  for (const claim of bank.claims) {
+    const activeSurfaces = new Set(
+      claim.projections
+        .filter((projection) => projection.status === "active")
+        .flatMap((projection) => projection.surfaces)
+    );
+    const decisions = bank.projectionDecisions.filter((decision) => decision.claimId === claim.id);
+    if (claim.maturity === "public-ready" && activeSurfaces.size === 0 && decisions.length === 0) {
+      failures.push({ claimId: claim.id, reason: "public-ready claim lacks an editorial decision" });
+    }
+    for (const surface of activeSurfaces) {
+      if (!decisions.some((decision) => decision.surface === surface && decision.decision === "publish")) {
+        failures.push({ claimId: claim.id, surface, reason: "active projection lacks publish decision" });
+      }
+    }
+  }
+  return failures;
+}
+
+export function findPopulationScopeFailures(bank = knowledgeBank) {
+  const populationClaims = bank.claims.filter((claim) => /POPULATION|CENSUS/.test(claim.id));
+  return populationClaims.flatMap((claim) => {
+    const boundaryText = [...claim.boundaries, ...claim.antiClaims].join(" ");
+    const failures = [];
+    if (!/(surviving|current|recoverable|recovered|rendered|displayed|association|control slot)/i.test(boundaryText)) {
+      failures.push({ claimId: claim.id, reason: "population scope is not tied to a recovered surface" });
+    }
+    if (!/(export|lifetime|deletion history|deleted|hidden|every historical|every .*ever)/i.test(boundaryText)) {
+      failures.push({ claimId: claim.id, reason: "population scope lacks a historical-completeness boundary" });
+    }
+    return failures;
+  });
+}
+
+function readJsonIfPresent(file) {
+  return existsSync(file) ? readJson(file) : null;
+}
+
+function isHttpUrl(value) {
+  try {
+    return /^https?:$/.test(new URL(value).protocol);
+  } catch {
+    return false;
+  }
+}
+
 export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadSuite() } = {}) {
   const checks = new Map(suite.sourceChecks.map((check) => [check.id, check]));
   const results = [];
@@ -142,11 +296,17 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
   const launchFile = path.join(repoRoot, "docs/knowledge-bank/launch-blockers.md");
   const recordsFile = path.join(repoRoot, "apps/www/src/data/knowledge-bank/records.ts");
   const publicDir = path.join(repoRoot, "apps/www/public");
+  const corroborationFile = path.join(repoRoot, "docs/knowledge-bank/corroboration-register.json");
+  const blindReaderFile = path.join(repoRoot, "evals/launch-readiness/blind-reader-protocol.md");
+  const blindScenariosFile = path.join(repoRoot, "evals/launch-readiness/blind-reader-scenarios.json");
+  const publishingFile = path.join(repoRoot, "docs/knowledge-bank/publishing-governance.md");
+  const mediaManifestFile = path.join(repoRoot, "docs/knowledge-bank/media-provenance.json");
+  const productionRunbookFile = path.join(repoRoot, "docs/production-cutover.md");
 
   const workflowEvidence = matchEvidence(
     repoRoot,
     [workFile],
-    /(?:screenshots?|materials?|approvals?|review)[^\n".]{0,36}\bpending\b|\bpending\s+(?:approval|approvals|review)\b|\b(?:needs?|requires?)\s+(?:Jamie\s+)?approval\b|\bbefore\s+(?:launch|publication)\b/gi
+    /(?:screenshots?|materials?|approvals?|review)[^\n".]{0,36}\bpending\b|\bpending\s+(?:approval|approvals|review)\b|\b(?:needs?|requires?)\s+(?:Jamie\s+)?approval\b|\bbefore\s+(?:launch|publication)\b|\buse only\b|\bcollective-work language is required\b|\bthis page must\b|\bclaims? should\b|\bpublic wording should\b/gi
   );
   results.push(
     result(
@@ -154,6 +314,183 @@ export function evaluateSourceChecks({ repoRoot = defaultRepoRoot, suite = loadS
       workflowEvidence.length === 0,
       `${workflowEvidence.length} public workflow-status phrase(s)`,
       workflowEvidence
+    )
+  );
+
+  const proofSyncFailures = findProofProjectionSyncFailures();
+  results.push(
+    result(
+      checks.get("public-proof-projection-is-synchronized"),
+      proofSyncFailures.length === 0,
+      `${proofSyncFailures.length} proof-projection synchronization defect(s)`,
+      proofSyncFailures
+    )
+  );
+
+  const corroboration = readJsonIfPresent(corroborationFile);
+  const corroborationItems = corroboration?.items ?? [];
+  const requiredCorroborationClaims = [
+    "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
+    "CLM-NYCARTC-CREATION-ROLE-SEED",
+    "CLM-SOCIAL-ACCOUNT-ESTABLISHMENT-SEED",
+    "CLM-KCTOWNHALL-PHASE-ONE-IMPLEMENTATION-2018-2019",
+    "CLM-TIRED-OF-TIRES-DESIGN-AND-OPERATIONS-2019-2021",
+    "CLM-CLEVELAND-AVE-UNIFY-TO-BEAUTIFY-CONTRIBUTION-2019"
+  ];
+  const corroborationFailures = [];
+  for (const claimId of requiredCorroborationClaims) {
+    const item = corroborationItems.find((entry) => entry.claimId === claimId);
+    if (!item) {
+      corroborationFailures.push({ claimId, reason: "missing from corroboration register" });
+      continue;
+    }
+    for (const field of ["priority", "status", "ownerClass", "question", "acceptedEvidence", "stopCondition", "projectionRule"]) {
+      if (!item[field] || (Array.isArray(item[field]) && item[field].length === 0)) {
+        corroborationFailures.push({ claimId, reason: `missing ${field}` });
+      }
+    }
+  }
+  results.push(
+    result(
+      checks.get("corroboration-queue-is-actionable"),
+      corroborationFailures.length === 0,
+      `${corroborationFailures.length} corroboration-routing defect(s) across ${requiredCorroborationClaims.length} priority claims`,
+      corroborationFailures
+    )
+  );
+
+  const outcomeFailures = findOutcomeChainFailures();
+  results.push(
+    result(
+      checks.get("projected-claims-have-complete-outcome-chains"),
+      outcomeFailures.length === 0,
+      `${outcomeFailures.length} projected outcome-chain defect(s)`,
+      outcomeFailures
+    )
+  );
+
+  const blindReader = existsSync(blindReaderFile) ? readFileSync(blindReaderFile, "utf8") : "";
+  const blindScenarios = readJsonIfPresent(blindScenariosFile)?.scenarios ?? [];
+  const blindRequirements = [
+    /no-context/i,
+    /task/i,
+    /pass criteria/i,
+    /privacy/i,
+    /named human/i,
+    /do not share/i
+  ];
+  const blindFailures = blindRequirements
+    .filter((pattern) => !pattern.test(blindReader))
+    .map((pattern) => ({ file: path.relative(repoRoot, blindReaderFile), reason: `missing ${pattern}` }));
+  if (blindScenarios.length < 4) blindFailures.push({ reason: "fewer than four blind-reader scenarios" });
+  for (const scenario of blindScenarios) {
+    for (const field of ["id", "readerRole", "timeboxMinutes", "task", "questions", "passCriteria"]) {
+      if (!scenario[field] || (Array.isArray(scenario[field]) && scenario[field].length === 0)) {
+        blindFailures.push({ scenarioId: scenario.id ?? "unknown", reason: `missing ${field}` });
+      }
+    }
+  }
+  results.push(
+    result(
+      checks.get("blind-reader-protocol-is-operational"),
+      blindFailures.length === 0,
+      `${blindFailures.length} blind-reader protocol defect(s); ${blindScenarios.length} scenario(s)`,
+      blindFailures
+    )
+  );
+
+  const publishingSource = existsSync(publishingFile) ? readFileSync(publishingFile, "utf8") : "";
+  const editorialFailures = findEditorialDecisionFailures();
+  if (!/Selection test/i.test(publishingSource)) editorialFailures.push({ reason: "publishing governance lacks Selection test" });
+  if (!/Review cadence/i.test(publishingSource)) editorialFailures.push({ reason: "publishing governance lacks Review cadence" });
+  results.push(
+    result(
+      checks.get("editorial-decisions-cover-public-ready-claims"),
+      editorialFailures.length === 0,
+      `${editorialFailures.length} editorial decision defect(s)`,
+      editorialFailures.slice(0, 20)
+    )
+  );
+
+  const populationFailures = findPopulationScopeFailures();
+  const renderedSurfaceFiles = [
+    ...walk(path.join(repoRoot, "apps/www/src/app")),
+    ...walk(path.join(repoRoot, "apps/www/src/components")),
+    ...walk(path.join(repoRoot, "apps/www/src/content")),
+    workFile,
+    path.join(repoRoot, "apps/www/src/data/proofs.ts")
+  ].filter((file) => existsSync(file) && /\.(?:ts|tsx|mdx)$/.test(file));
+  const unqualifiedPopulationCopy = matchEvidence(
+    repoRoot,
+    renderedSurfaceFiles,
+    /\b(?:100%|full[- ]population|complete lifetime|every (?:tweet|post|event) ever)\b/gi
+  );
+  populationFailures.push(...unqualifiedPopulationCopy.map((item) => ({ ...item, reason: "unqualified public completeness language" })));
+  results.push(
+    result(
+      checks.get("population-claims-preserve-recovery-scope"),
+      populationFailures.length === 0,
+      `${populationFailures.length} archival-population scope defect(s)`,
+      populationFailures.slice(0, 20)
+    )
+  );
+
+  const mediaManifest = readJsonIfPresent(mediaManifestFile);
+  const mediaEntries = mediaManifest?.assets ?? [];
+  const artifactMedia = walk(path.join(publicDir, "images/work")).filter((file) =>
+    [".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"].includes(path.extname(file).toLowerCase())
+  );
+  const mediaFailures = [];
+  for (const file of artifactMedia) {
+    const publicPath = `/${path.relative(publicDir, file).split(path.sep).join("/")}`;
+    const entry = mediaEntries.find((item) => item.path === publicPath);
+    if (!entry) {
+      mediaFailures.push({ file: path.relative(repoRoot, file), reason: "missing provenance entry" });
+      continue;
+    }
+    for (const field of ["sourceUrl", "capturedAt", "caption", "rightsBasis", "rightsReviewStatus", "consentStatus"]) {
+      if (!entry[field]) mediaFailures.push({ path: publicPath, reason: `missing ${field}` });
+    }
+    if (entry.sourceUrl && !isHttpUrl(entry.sourceUrl)) mediaFailures.push({ path: publicPath, reason: "invalid source URL" });
+    if (entry.rightsReviewStatus === "unknown") mediaFailures.push({ path: publicPath, reason: "unknown rights review status" });
+  }
+  for (const entry of mediaEntries) {
+    if (!existsSync(path.join(publicDir, entry.path.replace(/^\//, "")))) {
+      mediaFailures.push({ path: entry.path, reason: "manifest asset is missing" });
+    }
+  }
+  results.push(
+    result(
+      checks.get("displayed-media-has-provenance"),
+      mediaFailures.length === 0 && artifactMedia.length > 0,
+      `${artifactMedia.length} displayed artifact(s); ${mediaFailures.length} provenance defect(s)`,
+      mediaFailures.length ? mediaFailures : mediaEntries.map((item) => ({ path: item.path, sourceUrl: item.sourceUrl }))
+    )
+  );
+
+  const productionRunbook = existsSync(productionRunbookFile)
+    ? readFileSync(productionRunbookFile, "utf8")
+    : "";
+  const cutoverRequirements = [
+    /## Preconditions/i,
+    /## Cutover/i,
+    /## Verification/i,
+    /## Rollback/i,
+    /human authorization/i,
+    /preflight:production/i,
+    /primary-domain-serves-current-portfolio/i,
+    /X-Robots-Tag/i,
+    /canonical/i
+  ];
+  const cutoverFailures = cutoverRequirements
+    .filter((pattern) => !pattern.test(productionRunbook))
+    .map((pattern) => ({ file: path.relative(repoRoot, productionRunbookFile), reason: `missing ${pattern}` }));
+  results.push(
+    result(
+      checks.get("production-cutover-is-operationalized"),
+      cutoverFailures.length === 0,
+      `${cutoverFailures.length} production-cutover contract defect(s)`,
+      cutoverFailures
     )
   );
 

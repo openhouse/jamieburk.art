@@ -39,6 +39,11 @@ The knowledge bank exists to:
   rewrites claims for readers.
 - **Private archive:** not in this repo.
 
+Operational review records include `corroboration-register.json` for bounded
+human claim checks and `media-provenance.json` for every displayed bitmap.
+Neither file substitutes for the named human gates in the launch-readiness
+suite.
+
 ## Core Rule
 
 If a private archive supports a public claim, describe the aggregate result or

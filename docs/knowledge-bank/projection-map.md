@@ -52,6 +52,11 @@ imply production SaaS.
 Each case study should include proof IDs in work metadata, then use those claims
 as source discipline rather than dumping the bank onto the page.
 
+The WOWList case study also projects
+`CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT`. Its public social sources support
+Jamie's collective role and a bounded support/onboarding pattern; they do not
+support the separate aggregate user, post/event, or geographic-adoption claims.
+
 ## Personal And WOW List Facebook Events
 
 Keep the personal association census, hosted-event throughline, and WOW List

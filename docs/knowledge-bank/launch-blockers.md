@@ -26,6 +26,8 @@ condition remain explicit.
 | Chad-lens and independent judge review | Evaluated per release candidate | Independent judge reaches the launch-readiness threshold |
 | Media rights and consent | Human gate | Jamie or the documented rights holder confirms each displayed asset |
 | Collaborator-sensitive names, quotes, or credits | Human gate when applicable | Jamie and affected collaborator confirm before publication |
+| Priority claim corroboration | Human gate | Jamie and an authorized collaborator or records holder complete the applicable item in `corroboration-register.json` |
+| Blind hiring-reader validation | Human gate | A named no-context human reader completes the task protocol and no critical defect remains open |
 | Production deployment | Deferred until PR review and merge | Jamie explicitly approves the reviewed commit |
 
 No LLM agent may change a human-gate status to confirmed on its own.

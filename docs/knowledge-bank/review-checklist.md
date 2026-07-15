@@ -17,6 +17,12 @@ changes public claims.
   language.
 - [ ] Metrics are approved, softened, or explicitly bounded.
 - [ ] Collaborator-sensitive claims are approved or omitted.
+- [ ] Priority first-party role claims follow `corroboration-register.json` and no pending item is presented as confirmation.
+- [ ] Every active knowledge-bank projection contains action, intended end, usable result, audience, collective credit, and causal boundary.
+- [ ] Public proof selectors agree with canonical correction and projection state.
+- [ ] Platform population claims identify the recovered surface and reject lifetime-export or deletion-history interpretations.
+- [ ] Every displayed bitmap appears in `media-provenance.json`.
+- [ ] A named no-context human has completed the blind-reader protocol for the release candidate.
 - [ ] NYC Artist Coalition website authorship is visible without overstating
   collective campaign leadership.
 - [ ] Source-Backed Team Memory does not expose private collaborator, pricing,
@@ -34,3 +40,4 @@ changes public claims.
 - [ ] `npm run preflight:production` passes only with explicit production
   indexing environment variables.
 - [ ] Jamie has approved production launch content.
+- [ ] The primary domain passes `primary-domain-serves-current-portfolio` after the authorized cutover.

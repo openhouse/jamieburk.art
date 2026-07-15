@@ -415,6 +415,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-CALLNYC-PUBLIC-CORPUS"],
       requiredSupportTags: ["callnyc-event-date-time", "callnyc-event-venue", "callnyc-constituent-services-purpose"],
+      composition: {
+        action: "Civic Hall announced, and the New York City Council documented, a January 30 constituent-services hackathon at Civic Hall from 1-3 p.m.",
+        intendedEnd: "Establish the institutional and temporal context from which the later independent CallNYC work emerged.",
+        usableResult: "A dated, source-backed event record that readers can distinguish from the later prototype.",
+        audience: "Hiring readers, civic-technology peers, and researchers reviewing the CallNYC case study.",
+        collectiveCredit: "The event and its public documentation belong to Civic Hall and the New York City Council; this record does not assign Jamie an organizer role.",
+        causalBoundary: "The event record does not establish a recovered calendar listing, a complete agenda, a participant roster, or that the hackathon caused CallNYC."
+      },
       projections: [{ key: "case-study", text: "On January 30, 2016, the New York City Council held a 1-3 p.m. hackathon at Civic Hall focused on constituent services.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", relationship: "direct-support", supports: ["date", "time", "Council event", "constituent-services purpose"], propositionIds: ["PROP-CALLNYC-CIVIC-HALL-DATE-TIME", "PROP-CALLNYC-CIVIC-HALL-PURPOSE"], confidence: "high", renderCitation: true },
@@ -431,6 +439,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"],
       requiredSupportTags: ["first-councilstat-wording"],
+      composition: {
+        action: "The New York City Council publicly described the gathering as its first CouncilStat hackathon.",
+        intendedEnd: "Place the event inside the Council's constituent-services data initiative without expanding the historical claim.",
+        usableResult: "A precise institutional description that replaces the unsupported phrase 'first civic-data hackathon.'",
+        audience: "Readers evaluating the institutional context of CallNYC.",
+        collectiveCredit: "The wording is attributed to the New York City Council and does not confer event ownership or leadership on Jamie.",
+        causalBoundary: "The source supports only the narrower first-CouncilStat wording, not the Council's first hackathon of any kind."
+      },
       projections: [{ key: "case-study", text: "The Council described the gathering as its first CouncilStat hackathon.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", relationship: "direct-support", supports: ["the Council's own first-CouncilStat description"], propositionIds: ["PROP-CALLNYC-FIRST-COUNCILSTAT"], confidence: "high", renderCitation: true }],
       boundaries: ["Use the Council's narrower first-CouncilStat wording rather than a broader historical superlative."],
@@ -446,6 +462,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-CALLNYC-PUBLIC-CORPUS"],
       requiredSupportTags: ["callnyc-event-branding"],
+      composition: {
+        action: "A surviving Council-branded promotional graphic names the gathering 'New York City Council Hackathon.'",
+        intendedEnd: "Preserve the event's recovered public branding without converting it into a longer formal title.",
+        usableResult: "An inspectable visual source for the wording used to promote the gathering.",
+        audience: "Readers checking the event record and its limits.",
+        collectiveCredit: "The graphic is credited to the institutional event record rather than to Jamie or CallNYC.",
+        causalBoundary: "Visible branding does not establish registration copy, agenda, breakout structure, or participant roles."
+      },
       projections: [{ key: "case-study", text: "The surviving promotional graphic uses the branding 'New York City Council Hackathon.'", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC", relationship: "direct-support", supports: ["graphic wording", "event branding"], propositionIds: ["PROP-CALLNYC-GRAPHIC-BRANDING"], confidence: "high", renderCitation: true }],
       boundaries: ["Treat the wording as visible branding, not proof of a longer formal registration title."],
@@ -459,6 +483,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-CALLNYC-PUBLIC-CORPUS"],
       requiredSupportTags: ["callnyc-independent-follow-on", "callnyc-after-data-release", "callnyc-surviving-implementation"],
+      composition: {
+        action: "After the fuller CouncilStat dataset was released, Jamie independently built and iterated CallNYC as a resident-facing interpretation layer.",
+        intendedEnd: "Help residents move from administrative constituent-services records toward understandable issue pathways, district context, and possible next steps.",
+        usableResult: "A working public prototype, surviving source repository, searchable and shareable issue pages, and a documented iteration trail covered by Politico New York.",
+        audience: "New York City residents at the time, civic-technology practitioners, and current hiring readers evaluating product translation and implementation work.",
+        collectiveCredit: "The Council produced the underlying public data, event participants supplied wider context, and Politico independently reported the project; Jamie's documented role is the independent follow-on build and iteration.",
+        causalBoundary: "Jamie did not cause the dataset release, and CallNYC was not commissioned, owned, endorsed, or selected as a winner by the Council."
+      },
       projections: [
         { key: "case-study", text: "After the fuller CouncilStat dataset was released, Jamie developed CallNYC.org as an independent public-facing interpretation of those constituent-services records.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] },
         { key: "work-card", text: "Built an independent civic-data follow-on translating CouncilStat constituent-services records into resident-facing issue pathways and next-step guidance.", status: "active", citationRequired: false, surfaces: ["/work", "/work/callnyc"] },
@@ -480,6 +512,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-CALLNYC-PUBLIC-CORPUS"],
       requiredSupportTags: ["callnyc-independent-status", "callnyc-archived-prototype-status"],
+      composition: {
+        action: "Jamie preserves CallNYC as an archived independent prototype with its unofficial status visible.",
+        intendedEnd: "Let readers inspect the historical product work without mistaking old officeholders, categories, statistics, or contact details for current guidance.",
+        usableResult: "A bounded archive record and surviving source repository that can be studied without presenting the prototype as a live city service.",
+        audience: "Portfolio readers, civic-data researchers, and people encountering the archived application.",
+        collectiveCredit: "The archive distinguishes Jamie's independent implementation from New York City Council data and institutional context.",
+        causalBoundary: "The archived prototype is not official, current, emergency, legal, or constituent-service guidance."
+      },
       projections: [{ key: "case-study", text: "CallNYC is an archived independent prototype, not an official or current New York City Council service.", status: "active", citationRequired: true, surfaces: ["/work/callnyc"] }],
       evidence: [
         { sourceId: "SRC-CALLNYC-GITHUB-REPOSITORY", relationship: "direct-support", supports: ["surviving independent implementation"], propositionIds: ["PROP-CALLNYC-GITHUB-ARCHIVED-PROTOTYPE"], confidence: "high", renderCitation: true },
@@ -509,6 +549,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-CALLNYC-RESEARCH"],
       requiredSupportTags: ["callnyc-no-calendar-page-recovered", "callnyc-embedded-social-only"],
+      composition: {
+        action: "A bounded Wayback and CDX review searched for a Civic Hall calendar listing or dedicated event page and did not recover one.",
+        intendedEnd: "Prevent embedded social-feed evidence from being mislabeled as a recovered event listing.",
+        usableResult: "A stable negative-search note that future editors can preserve or revise if stronger evidence appears.",
+        audience: "Knowledge-bank editors and readers auditing the CallNYC citation trail.",
+        collectiveCredit: "The search finding is attributed to the documented archival review and leaves Civic Hall's historical record open to correction.",
+        causalBoundary: "Not recovered does not mean no calendar or event page ever existed."
+      },
       projections: [{ key: "archive-note", text: "No Civic Hall calendar listing or dedicated event-detail page has been recovered in the documented Wayback/CDX review.", status: "active", citationRequired: false, surfaces: ["docs/knowledge-bank/projects/callnyc"] }],
       evidence: [{ sourceId: "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026", relationship: "direct-support", supports: ["bounded negative search finding"], propositionIds: ["PROP-CALLNYC-RESEARCH-NO-CALENDAR-RECOVERED", "PROP-CALLNYC-RESEARCH-EMBEDDED-SOCIAL-ONLY"], confidence: "high", renderCitation: false }],
       boundaries: ["Negative search is not proof of nonexistence.", "The archived Civic Hall page preserves embedded social-feed evidence, not a recovered event listing."],
@@ -523,6 +571,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-HJE-PUBLIC-CLAIMS"],
       requiredSupportTags: ["hje-public-ecommerce-surface", "hje-public-editorial-voice"],
+      composition: {
+        action: "Harry J. Epstein Company's public storefront combines product navigation, search, product content, checkout access, and a distinctive editorial voice.",
+        intendedEnd: "Give customers usable paths through a specialized industrial-supply catalog while preserving the company's recognizable public character.",
+        usableResult: "An inspectable customer-facing e-commerce surface that provides context for Jamie's separately documented modernization work.",
+        audience: "Industrial-supply customers and portfolio readers examining the public system.",
+        collectiveCredit: "The storefront is a company and team surface; this source record does not assign its full implementation or business performance to Jamie.",
+        causalBoundary: "The public storefront alone does not establish Jamie's role, internal workflows, financial results, or causal business outcomes."
+      },
       projections: [{ key: "case-study", text: "The current public storefront combines tool-type and brand navigation, search, product content, checkout access, and the company's distinctive public voice.", status: "active", citationRequired: true, surfaces: ["/work/harry-j-epstein"] }],
       evidence: [{ sourceId: "SRC-HJE-PUBLIC-STOREFRONT-2026", relationship: "direct-support", supports: ["public storefront features", "customer-facing e-commerce surface", "company voice"], propositionIds: ["PROP-HJE-STOREFRONT-ECOMMERCE-SURFACE", "PROP-HJE-STOREFRONT-EDITORIAL-VOICE"], confidence: "high", renderCitation: true }],
       boundaries: ["The public storefront documents the customer-facing surface, not Jamie's role, internal systems, revenue growth, or causal business outcomes."],
@@ -551,6 +607,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-FAIRRENT-PUBLIC-CLAIM"],
       requiredSupportTags: ["fairrent-crs-call-to-action", "fairrent-reference-library-pathway"],
+      composition: {
+        action: "NYC Artist Coalition collaborators built a FairRentNYC public surface joining a Commercial Rent Stabilization call to action with a reference-library pathway.",
+        intendedEnd: "Help cultural-space advocates move between campaign participation and inspectable policy context.",
+        usableResult: "A public campaign website that routes readers to both an action path and supporting source material.",
+        audience: "Artists, cultural-space operators, advocates, policymakers, and public readers.",
+        collectiveCredit: "The site is coalition work; Jamie's individual role is documented in separate claim records rather than inferred from this public surface alone.",
+        causalBoundary: "The website does not by itself prove individual authorship, private documentation volume, policy adoption, or policy causation."
+      },
       projections: [{ key: "case-study", text: "FairRentNYC's public site connects a Commercial Rent Stabilization call to action with a public reference-library pathway.", status: "active", citationRequired: true, surfaces: ["/work/fair-rent-nyc"] }],
       evidence: [{ sourceId: "SRC-FAIRRENTNYC-PUBLIC-SITE-2026", relationship: "direct-support", supports: ["campaign identity", "Commercial Rent Stabilization call to action", "public reference-library pathway"], propositionIds: ["PROP-FAIRRENT-SITE-CRS-CALL-TO-ACTION", "PROP-FAIRRENT-SITE-REFERENCE-LIBRARY"], confidence: "high", renderCitation: true }],
       boundaries: ["The public site documents the campaign surface, not individual authorship, coalition roles, private documentation volume, or policy outcomes."],
@@ -565,6 +629,14 @@ const knowledgeBankInput = {
       maturity: "projected",
       intakeIds: ["INTAKE-MIGRATION-WOWLIST-PUBLIC-CLAIM"],
       requiredSupportTags: ["wowlist-event-sharing-purpose", "wowlist-community-building-purpose", "wowlist-ember-application", "wowlist-api-endpoint"],
+      composition: {
+        action: "WOWList collaborators created a public event-sharing application organized around community-building and a connected Ember/API implementation.",
+        intendedEnd: "Give arts and music communities a lightweight way to publish, follow, and distribute event knowledge.",
+        usableResult: "An archived application shell preserving the public purpose, client framework, and configured service endpoint.",
+        audience: "DIY organizers, event participants, product readers, and researchers examining the surviving application.",
+        collectiveCredit: "The record preserves the shared WOWList project and does not infer Jamie's individual contribution from the application shell alone.",
+        causalBoundary: "The capture does not establish user totals, event totals, geographic adoption, individual authorship, or current availability."
+      },
       projections: [{ key: "case-study", text: "A February 2016 capture preserves WOWList as a public event-sharing and community-building application, with Ember application metadata and a configured API endpoint.", status: "active", citationRequired: true, surfaces: ["/work/wowlist"] }],
       evidence: [{ sourceId: "SRC-WOWLIST-WAYBACK-2016-02-12", relationship: "direct-support", supports: ["event-sharing purpose", "community-building purpose", "Ember application surface", "configured API endpoint"], propositionIds: ["PROP-WOWLIST-WAYBACK-EVENT-SHARING", "PROP-WOWLIST-WAYBACK-EMBER-API"], confidence: "high", renderCitation: true }],
       boundaries: ["The archived application shell does not establish user totals, event totals, geographic adoption, Jamie's role, or current availability."],
@@ -613,7 +685,7 @@ const knowledgeBankInput = {
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active", intakeIds: ["INTAKE-CALLNYC-SUPERLATIVE-CORRECTION"] },
     { id: "COR-CALLNYC-EVENT-TIME-2026", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", previousText: "approximately 2:10 p.m. photograph timestamp as event time", replacementText: "1-3 p.m. from the Civic Hall announcement", reason: "Direct event-announcement evidence is stronger than participant photograph metadata for public event hours.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank"], status: "active" },
-    { id: "COR-HJE-REVENUE-CORROBORATION-HOLD-2026", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", previousText: "Active website projection of Jamie's contribution to 2x revenue growth", replacementText: "Numerical contribution claim retained on corroboration hold; independently reported 2016 online-sales context projected instead", reason: "The available public resume is a first-party assertion and the archive pass did not recover the comparison period, same-basis financial record, or authorized contribution confirmation required for an independently defensible numerical projection.", decidedAt: "2026-07-14", affectedSurfaces: ["/", "/resume", "/work/technical-operations", "/work/harry-j-epstein", "knowledge-bank"], status: "active" }
+    { id: "COR-HJE-REVENUE-CORROBORATION-HOLD-2026", claimId: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION", previousText: "Active website projection of Jamie's contribution to 2x revenue growth", replacementText: "Numerical contribution claim retained on corroboration hold; independently reported 2016 online-sales context projected instead", reason: "The available public resume is a first-party assertion and the archive pass did not recover the comparison period, same-basis financial record, or authorized contribution confirmation required for an independently defensible numerical projection.", decidedAt: "2026-07-14", affectedSurfaces: ["/", "/resume", "/work/technical-operations", "/work/harry-j-epstein", "knowledge-bank"], status: "active", legacyProofIds: ["hje-revenue-growth-contribution"] }
   ],
   pages: [
     {
@@ -653,8 +725,11 @@ const knowledgeBankInput = {
     {
       id: "wowlist",
       surface: "/work/wowlist",
-      sourceOrder: ["SRC-WOWLIST-WAYBACK-2016-02-12"],
-      occurrences: [{ id: "archived-public-surface", claimId: "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE", projection: "case-study", sourceIds: ["SRC-WOWLIST-WAYBACK-2016-02-12"] }]
+      sourceOrder: ["SRC-WOWLIST-WAYBACK-2016-02-12", "SRC-X-WOWLIST-ORIGIN-2014", "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", "SRC-X-WOWLIST-SUPPORT-2015", "SRC-X-WOWLIST-NYCDIY-2016"],
+      occurrences: [
+        { id: "archived-public-surface", claimId: "CLM-WOWLIST-ARCHIVED-PUBLIC-SURFACE", projection: "case-study", sourceIds: ["SRC-WOWLIST-WAYBACK-2016-02-12"] },
+        { id: "social-origin-and-support", claimId: "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT", projection: "case-study", sourceIds: ["SRC-X-WOWLIST-ORIGIN-2014", "SRC-X-WOWLIST-FULL-POPULATION-CENSUS-2026", "SRC-X-WOWLIST-SUPPORT-2015", "SRC-X-WOWLIST-NYCDIY-2016"] }
+      ]
     }
   ]
 } satisfies KnowledgeBankInput;

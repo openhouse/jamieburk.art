@@ -350,7 +350,8 @@ export const correctionRecordSchema = z.object({
   decidedAt: z.iso.date(),
   affectedSurfaces: z.array(z.string().min(1)).min(1),
   status: z.enum(["active", "superseded"]),
-  intakeIds: z.array(stableIdSchema).default([])
+  intakeIds: z.array(stableIdSchema).default([]),
+  legacyProofIds: z.array(stableIdSchema).default([])
 });
 
 export const citationOccurrenceSchema = z.object({

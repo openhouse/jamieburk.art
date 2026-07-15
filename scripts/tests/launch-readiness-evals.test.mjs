@@ -4,10 +4,15 @@ import test from "node:test";
 import {
   compareObjective,
   evaluateSourceChecks,
+  findOutcomeChainFailures,
+  findPopulationScopeFailures,
+  findProofProjectionSyncFailures,
   loadSuite,
   scoreAssessment,
   validateSuite
 } from "../evals/lib/launch-readiness.mjs";
+import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
+import { proofClaims } from "../../apps/www/src/data/proofs.ts";
 
 const suite = loadSuite();
 
@@ -21,6 +26,11 @@ test("launch-readiness contract is internally consistent", () => {
   const chadLens = suite.judgeCriteria.find((criterion) => criterion.id === "chad-lens");
   assert.equal(chadLens.floor, 4);
   assert.equal(chadLens.minimumEvidence, 4);
+  assert.equal(suite.blindSpotCoverage.length, 8);
+  assert.equal(
+    new Set(suite.blindSpotCoverage.map((item) => item.id)).size,
+    suite.blindSpotCoverage.length
+  );
 });
 
 test("source evaluator covers every declared source criterion", () => {
@@ -41,6 +51,38 @@ test("public Open fields describe uncertainty rather than approval workflow", ()
     work,
     /\b(?:needs?|requires?)\s+(?:Jamie\s+)?approval\b|\bbefore\s+(?:launch|publication)\b/i
   );
+});
+
+test("a held canonical claim cannot return through a legacy proof selector", () => {
+  const proofs = structuredClone(proofClaims);
+  const proof = proofs.find((item) => item.id === "hje-revenue-growth-contribution");
+  proof.status = "ready";
+  proof.surfaces = ["homepage"];
+  const failures = findProofProjectionSyncFailures({
+    bank: knowledgeBank,
+    proofs,
+    selections: [{ surface: "homepage", proof }]
+  });
+  assert.ok(failures.some((item) => item.reason === "held canonical claim has public proof status"));
+  assert.ok(failures.some((item) => item.reason === "held canonical claim is selected on a public surface"));
+});
+
+test("every active projection requires the full outcome chain", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON");
+  delete claim.composition;
+  assert.deepEqual(findOutcomeChainFailures(bank), [
+    { claimId: claim.id, reason: "active projection lacks composition" }
+  ]);
+});
+
+test("population claims must preserve recovered-surface and history boundaries", () => {
+  const bank = structuredClone(knowledgeBank);
+  const claim = bank.claims.find((item) => item.id === "CLM-WOWLIST-FULL-SOCIAL-POPULATION");
+  claim.boundaries = ["The count is useful."];
+  claim.antiClaims = ["Do not overstate the count."];
+  const failures = findPopulationScopeFailures(bank).filter((item) => item.claimId === claim.id);
+  assert.equal(failures.length, 2);
 });
 
 function completeAssessment({ verifier = "Jamie Burkart", score = 4 } = {}) {

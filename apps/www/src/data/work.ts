@@ -165,7 +165,8 @@ const workItemsInput = [
       "Public website, independent reporting, approved resume role summary, and private materials intentionally omitted.",
     credits: ["Jamie Burkart", "Harry J. Epstein Company team"],
     publicSafety: {
-      note: "Use only public-safe claims and approved screenshots. Keep precise revenue metrics off the site until independent corroboration is complete."
+      note:
+        "Precise revenue metrics remain outside this public case study because the comparison and Jamie's contribution have not been independently corroborated."
     },
     currentStatus: "Public-safe full case study with private operational material intentionally omitted.",
     group: "Operating systems for teams",
@@ -272,7 +273,8 @@ const workItemsInput = [
       "Public sources, public campaign materials, meeting-memory summaries, private/redacted coalition context, and collective-credit boundaries.",
     credits: ["Jamie Burkart", "NYC Artist Coalition collaborators", "Commercial Rent Stabilization advocates"],
     publicSafety: {
-      note: "Collective-work language is required: contributed to, helped structure, stewarded, supported, and translated."
+      note:
+        "This is collective civic work. Jamie's direct contributions are identified; campaign and policy outcomes remain shared, and private coalition and legal-review materials remain offline."
     },
     currentStatus: "Active public-safe summary with private coalition material intentionally omitted.",
     group: "Civic and public-facing systems",
@@ -374,7 +376,8 @@ const workItemsInput = [
       "CouncilStat / constituent-services open data, archived project context, verified Politico New York coverage, public GitHub repository, and rights-conscious public artifacts.",
     credits: ["Jamie Burkart", "Civic-data collaborators"],
     publicSafety: {
-      note: "This page must make the archived and unofficial status visible wherever the project is summarized."
+      note:
+        "CallNYC is an archived independent prototype, not an official or current City Council service; historical officeholders, categories, statistics, and contact information are not present-day guidance."
     },
     currentStatus: "Archived prototype with public sources and citations; private participant imagery remains offline.",
     group: "Civic and public-facing systems",
@@ -431,7 +434,7 @@ const workItemsInput = [
       "Event Workflows"
     ],
     careNote:
-      "Historical proof page. Claims should avoid overreading adoption beyond public-safe estimates.",
+      "Historical proof page. The adoption estimate is approximate and bounded to public-safe aggregate records.",
     sourceLayer:
       "Public-safe summary and historical project context; private user and organizer records remain offline.",
     credits: ["Jamie Burkart", "WOWList collaborators"],

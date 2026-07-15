@@ -886,6 +886,20 @@ export const teamsArchiveDeepeningClaims = [
       "hje-online-sales-half-2016",
       "hje-global-customer-reach-2016"
     ],
+    composition: {
+      action:
+        "KCUR independently reported how Harry J. Epstein Company used internet-enabled inventory and niche-item sales to reach customers beyond Kansas City.",
+      intendedEnd:
+        "Provide independently inspectable company context while Jamie's separate numerical contribution claim remains on corroboration hold.",
+      usableResult:
+        "A dated public benchmark: online sales accounted for half of the business in 2016, with customers extending to several countries.",
+      audience:
+        "Portfolio readers evaluating the business context surrounding the company's e-commerce modernization.",
+      collectiveCredit:
+        "The result belongs to Harry J. Epstein Company and is attributed to KCUR's reporting and Jori Sackin's account, not to Jamie alone.",
+      causalBoundary:
+        "The source does not establish Jamie's role, total-revenue growth, or individual causation; a 50-percent online-sales share is not a two-times revenue result."
+    },
     projections: [
       {
         key: "case-study",

@@ -74,6 +74,13 @@ release decision also needs an independent assessment based on
 human gate. `npm run preflight:production` intentionally enforces the
 source-level launch gate.
 
+The suite maps eight recurring blind spots to deterministic, browser, judge,
+and human evaluations. See
+`evals/launch-readiness/blind-reader-protocol.md`,
+`docs/knowledge-bank/corroboration-register.json`, and
+`docs/production-cutover.md` for human handoff paths that agents may prepare but
+may not self-certify.
+
 ## Knowledge Bank
 
 This repo includes a public-safe knowledge bank for professional claims:

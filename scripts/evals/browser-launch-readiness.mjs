@@ -79,6 +79,8 @@ for (const viewport of suite.viewports) {
         overflow: root.scrollWidth > clientWidth + 1,
         offenders,
         imageCount: document.querySelectorAll("img, picture, video").length,
+        h1Text: document.querySelector("h1")?.textContent?.replace(/\s+/g, " ").trim() ?? null,
+        portfolioMarker: document.body.dataset.portfolio ?? null,
         canonical: document.querySelector('link[rel="canonical"]')?.getAttribute("href") ?? null,
         robots: document.querySelector('meta[name="robots"]')?.getAttribute("content") ?? null
       };
@@ -133,6 +135,19 @@ if (profile === "production") {
   if (!canonical?.startsWith(baseUrl)) {
     failures.push(`indexing-matches-environment: production canonical is ${canonical ?? "missing"}`);
   }
+}
+
+const homeObservation = observations.find(
+  (item) => item.route === "/" && item.viewport === suite.viewports[0].name
+);
+if (
+  homeObservation?.portfolioMarker !== "jamieburk-art-next" ||
+  !/Jamie Burkart/i.test(homeObservation?.h1Text ?? "") ||
+  !/Technical Project Manager/i.test(homeObservation?.title ?? "")
+) {
+  failures.push(
+    "primary-domain-serves-current-portfolio: expected the reviewed Jamie Burkart portfolio fingerprint"
+  );
 }
 
 try {

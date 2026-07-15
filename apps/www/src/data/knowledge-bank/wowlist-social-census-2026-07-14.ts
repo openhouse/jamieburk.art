@@ -655,13 +655,13 @@ export const wowListSocialCensusResearchTasks = [
 
 export const wowListSocialCensusDecisions = [
   {
-    id: "DEC-DEFER-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
+    id: "DEC-PUBLISH-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
     claimId: "CLM-WOWLIST-SOCIAL-ORIGIN-AND-SUPPORT",
     surface: "/work/wowlist",
-    decision: "defer",
+    decision: "publish",
     rationale:
-      "Keep the newly complete support and onboarding evidence available for composition while the current case study remains focused on the product, implementation, and independently supported archive counts.",
-    decidedAt: "2026-07-14",
+      "The public origin post and bounded support corpus make Jamie's collective role and the product's onboarding behavior inspectable without implying individual post authorship, platform scale, adoption, or sole product ownership.",
+    decidedAt: "2026-07-15",
     reviewedBy: ["Codex Chad-lens composition review"]
   }
 ] satisfies ProjectionDecision[];

@@ -7,16 +7,22 @@ human reviewers.
 ## Layers
 
 1. **Source checks** detect public workflow language, employer-specific copy,
-   missing application paths, unresolved launch state, media depth, and
-   structured citation breadth.
+   missing application paths, unresolved launch state, media depth, structured
+   citation breadth, proof/projection drift, missing outcome chains, unbounded
+   platform-population language, and incomplete review or cutover protocols.
 2. **Browser checks** visit every canonical route at 320, 375, 768, and 1440
    pixels and verify status, headings, overflow, browser errors, the resume PDF,
    and environment-specific indexing behavior.
 3. **Judge criteria** score hiring-reader clarity, agency, role fit, evidence,
    Chad's lens, collective credit, public safety, visual proof, and completion
    confidence.
-4. **Human gates** reserve production approval, media rights/consent, and
-   collaborator-sensitive credit for named people.
+4. **Human gates** reserve production approval, media rights/consent,
+   collaborator-sensitive credit, claim corroboration, and blind-reader
+   validation for named people.
+
+`blindSpotCoverage` in `suite.json` binds the eight current audit findings to
+specific source, browser, judge, and human evaluations. Every ID must resolve;
+the contract check rejects an omitted or invented criterion.
 
 `chad-lens.md` defines the first-pass editorial criterion. It has a required
 score of 4 and must cite evidence across the homepage, resume, role-fit page, and

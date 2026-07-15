@@ -1,6 +1,6 @@
 {
   "suiteId": "portfolio-launch-readiness",
-  "suiteVersion": "1.1.0",
+  "suiteVersion": "1.2.0",
   "commit": "REPLACE_WITH_COMMIT_SHA",
   "judge": {
     "model": "REPLACE_WITH_MODEL_AND_VERSION",
@@ -20,6 +20,8 @@
   "humanGates": [
     { "gateId": "jamie-production-approval", "status": "pending", "verifiedBy": null },
     { "gateId": "media-rights-and-consent", "status": "pending", "verifiedBy": null },
-    { "gateId": "collaborator-sensitive-credit", "status": "pending", "verifiedBy": null }
+    { "gateId": "collaborator-sensitive-credit", "status": "pending", "verifiedBy": null },
+    { "gateId": "collaborator-claim-corroboration", "status": "pending", "verifiedBy": null },
+    { "gateId": "blind-hiring-reader-validation", "status": "pending", "verifiedBy": null }
   ]
 }

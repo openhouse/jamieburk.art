@@ -39,6 +39,7 @@ Stop successfully when all of these are true:
 - every judge criterion is at least 3;
 - `public-safety-and-boundaries` is 4;
 - every required human gate is confirmed by its named owner;
+- the primary production domain passes the current-portfolio fingerprint check;
 - `npm run check` and `npm run preflight:production` pass;
 - the last independent judge pass identifies no new release blocker.
 
@@ -46,6 +47,8 @@ Stop and request human input when:
 
 - the next improvement requires rights, consent, collaborator approval, or a
   factual decision not present in public-safe records;
+- the remaining gap is a named blind-reader or corroboration session that has
+  not yet occurred;
 - two consecutive iterations do not improve the objective vector;
 - eight iterations have run without reaching the threshold;
 - candidate improvements conflict on public safety, factual scope, or collective

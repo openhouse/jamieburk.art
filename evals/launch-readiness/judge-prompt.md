@@ -21,6 +21,20 @@ least four evidence entries spanning those surface types. Award 4 only when the
 reader does not have to assemble Jamie's action, purpose, usable result, and
 credit boundary from separate sections or specialist noun lists.
 
+Also inspect every entry in `blindSpotCoverage`:
+
+- confirm that held or corrected claims cannot return through public proof
+  selectors;
+- inspect the complete composition fields for active projections;
+- distinguish an actionable corroboration queue from completed corroboration;
+- distinguish an operational blind-reader protocol from a completed named-human
+  session;
+- assess whether publication decisions are selective and audience-specific;
+- preserve the surviving/recovered-surface boundary on platform censuses;
+- inspect media provenance while leaving rights and consent to the human gate;
+- distinguish a tested cutover runbook and portfolio fingerprint from an actual
+  authorized primary-domain deployment.
+
 Scoring rules:
 
 - Judge rendered meaning, not authorial intention.
@@ -36,6 +50,8 @@ Scoring rules:
 - A hard-gate failure cannot be offset by a high prose score.
 - Do not reward Chad's-lens keyword presence without a complete, readable
   action-to-purpose-to-usable-result argument.
+- Do not award completion credit to a pending corroboration, blind-reader,
+  media-rights, collaborator-credit, or production-approval gate.
 
 Return only JSON shaped like the `judge` object in
 `assessment.template.json`. Do not certify human gates.
