@@ -8,6 +8,8 @@ import {
 } from "./campaignPress.ts";
 import {
   callNycCouncilSocialSourceIds,
+  callNycFullPopulationCensusSourceId,
+  callNycProjectSocialSourceIds,
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
@@ -734,6 +736,30 @@ const knowledgeBankInput = {
       researchInquiryIds: [], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     },
     {
+      id: "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS",
+      project: "callnyc",
+      internalClaim: "Jamie's CallNYC project used issue-specific public pathways at scale: the recoverable @CallNYCapp corpus contains 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts.",
+      status: "confirmed-with-boundary",
+      projections: [{
+        key: "case-study",
+        text: "The recovered social record shows Jamie's CallNYC information architecture operating in public: 71 issue-recognition posts linked 61 distinct resident issue pages to 26 Council-member accounts.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/callnyc"]
+      }],
+      evidence: [
+        { sourceId: callNycFullPopulationCensusSourceId, relationship: "direct-support", supports: ["71 recovered issue-recognition posts", "61 distinct CallNYC issue-page URLs", "26 named Council-member accounts", "complete 110-slot population disposition"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-X-PROFILE-2026-07-14", relationship: "context", supports: ["110-post profile count", "account identity", "constituent-services mission framing"], confidence: "high", renderCitation: true },
+        { sourceId: "SRC-CALLNYC-POLITICO-2016-03-14", relationship: "context", supports: ["Jamie's independent creation and iteration of CallNYC"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-CALLNYC-X-JAMIE-MAKER-710150246781882369", relationship: "corroborating", supports: ["Jamie's contemporaneous first-person relationship to CallNYC"], confidence: "moderate", renderCitation: false }
+      ],
+      boundaries: ["The authenticated review recovered 107 of 110 profile-counted objects; three objects remain unrecovered.", "The counts describe the historical account corpus, not current Council performance or service guidance.", "Naming a Council-member account in a project post is distinct from engagement by that office."],
+      antiClaims: ["all 110 post bodies were recovered", "26 Council-member offices endorsed or adopted CallNYC", "the recognitions measure complete office performance", "the posts establish constituent outcomes"],
+      researchInquiryIds: ["INQ-CALLNYC-X-FULL-POPULATION-2026"],
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
+    },
+    {
       id: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       project: "callnyc",
       internalClaim: "CallNYC is an archived independent civic-data prototype, not an official or current New York City Council service.",
@@ -768,19 +794,33 @@ const knowledgeBankInput = {
       researchInquiryIds: ["INQ-CALLNYC-CIVIC-HALL-PAGE-2026"], reviewedAt: "2026-07-11", reviewedBy: ["Jamie Burkart", "Codex archival review"]
     }
   ],
-  researchInquiries: [{
-    id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
-    project: "callnyc",
-    question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
-    methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
-    runAt: "2026-07-11",
-    resultStatus: "not-recovered",
-    findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
-    limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
-    sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
-    publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
-    protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
-  }],
+  researchInquiries: [
+    {
+      id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
+      project: "callnyc",
+      question: "Can a dedicated Civic Hall calendar listing or event-detail page for the January 30, 2016, CouncilStat hackathon be recovered from the searched Wayback/CDX corpus?",
+      methods: ["Reviewed 4,630 deduplicated HTML captures and 1,240 original URLs.", "Grouped 296 distinct event-prefix URL keys and inspected 215 successful event pages, 74 redirects, and 7 captured 404s.", "Searched event-like captures for CouncilStat, constituent services, and New York City Council references."],
+      runAt: "2026-07-11",
+      resultStatus: "not-recovered",
+      findings: ["No CouncilStat, constituent-services, or NYC Council event slug was recovered.", "No dedicated Civic Hall event page or calendar listing was recovered.", "The archived Civic Hall page preserves embedded social-feed evidence supporting date, time, venue, branding, CouncilStat context, and constituent-services purpose."],
+      limitations: ["Negative search is not proof of nonexistence.", "Google Form contents were not recovered.", "The agenda, breakout roster, and registration contents were not recovered."],
+      sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368", "SRC-CALLNYC-CIVIC-HALL-RESEARCH-2026"],
+      publicSummary: "A review of 4,630 deduplicated HTML captures, 1,240 original URLs, and 296 distinct event-prefix keys recovered embedded social-feed evidence but no dedicated Civic Hall listing or event-detail page.",
+      protectedLocatorId: "RESEARCH-CALLNYC-CIVIC-HALL-CDX-2026-001"
+    },
+    {
+      id: "INQ-CALLNYC-X-FULL-POPULATION-2026",
+      project: "callnyc",
+      question: "What does a full-population archival review of every object counted by the @CallNYCapp profile establish about the product's public use, source trail, and stakeholder engagement?",
+      methods: ["Crawled the authenticated Posts timeline to exhaustion and deduplicated status URLs.", "Crawled the authenticated Replies timeline and recovered one additional CallNYC reply.", "Ran an authenticated chronological search bounded to March through November 2016 and reconciled it against the profile corpus.", "Queried the Internet Archive CDX index for preserved CallNYC status URLs.", "Assigned all 110 profile-counted slots a recovered or not-recovered disposition and classified every recovered object by relationship, URL, issue family, stakeholder group, and access-time interaction labels."],
+      runAt: "2026-07-15",
+      resultStatus: "partially-recovered",
+      findings: ["The profile displayed 110 posts; 107 unique timeline objects were recovered and three profile-counted objects were not recovered.", "The recovered set contains 86 CallNYC posts, six CallNYC replies, and 15 reposted external statuses.", "Seventy-one recovered issue-recognition posts link to 61 distinct CallNYC issue pages and name 26 Council-member accounts.", "A separate authenticated mention and conversation review recovered public interactions from at least eight then-serving Council-member accounts.", "The account posted or carried mission-relevant links to Politico coverage, the Council Labs and BetaNYC civic-technology ecosystem, a 311 data project, city anti-eviction and rent-freeze resources, a Council digital-roadmap video, and adjacent civic reporting."],
+      limitations: ["Three profile-counted objects remain unavailable after authenticated Posts, Replies, chronological search, and Internet Archive status-URL checks.", "The census is not a platform account-data export and cannot recover deleted, restricted, deindexed, or otherwise unavailable content.", "Access-time likes, reposts, and replies are mutable and do not expose complete historical actor identity.", "A named Council account in a project post is not the same as engagement by that office; interaction claims use separately inspected member-authored statuses.", "The account corpus does not identify a different human author for every post, although a contemporaneous first-person reply identifies Jamie's relationship to the project."],
+      sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", callNycFullPopulationCensusSourceId, ...callNycProjectSocialSourceIds, ...callNycCouncilSocialSourceIds],
+      publicSummary: "A 110-slot full-population census recovered 107 timeline objects. The recovered record includes 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts, while preserving a three-item recovery remainder and separating account mentions from verified office-account interactions."
+    }
+  ],
   corrections: [
     { id: "COR-CALLNYC-CHRONOLOGY-2026", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", previousText: "2014-2015", replacementText: "2016", reason: "Recovered event, data-release, and press chronology places the project in 2016.", decidedAt: "2026-07-11", affectedSurfaces: ["/work", "/work/callnyc", "knowledge-bank", "resume"], status: "active" },
     { id: "COR-CALLNYC-SUPERLATIVE-2026", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", previousText: "first civic-data hackathon", replacementText: "first CouncilStat hackathon", reason: "The event-day Council post supports only the narrower phrase.", decidedAt: "2026-07-11", affectedSurfaces: ["/work/callnyc", "knowledge-bank", "resume"], status: "active" },
@@ -1378,21 +1418,33 @@ const knowledgeBankInput = {
     },
     {
       id: "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12",
-      title: "NYC Council member engagement with CallNYC on Twitter",
+      title: "CallNYC full social corpus and NYC Council engagement",
       project: "callnyc",
-      kind: "metric-lead",
-      summary: "An authenticated review recovered public interactions with @CallNYCapp from eight then-serving New York City Council member accounts: Margaret Chin, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, Ydanis Rodriguez, Peter Koo, Ruben Wills, and Steven Matteo. The result is a defensible recovery floor, not a complete lifetime engagement total.",
-      status: "researching",
+      kind: "claim-candidate",
+      summary: "A full-population archival review gave all 110 profile-counted @CallNYCapp objects a disposition, recovering 107 and preserving three as not recovered. The recovered corpus contains 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts. A separate authenticated interaction review recovered public responses or amplification from at least eight then-serving Council-member accounts.",
+      status: "integrated",
       sourceIds: [
         "SRC-CALLNYC-X-PROFILE-2026-07-14",
+        "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14",
+        callNycFullPopulationCensusSourceId,
+        ...callNycProjectSocialSourceIds,
         "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS",
         ...callNycCouncilSocialSourceIds
       ],
-      relatedClaimIds: [],
+      relatedClaimIds: ["CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS"],
       relatedProofIds: ["callnyc-civic-data-guidance"],
-      candidateClaims: [],
+      candidateClaims: ["Jamie's CallNYC project used issue-specific public pathways at scale: the recoverable @CallNYCapp corpus contains 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts."],
       propositions: [
+        {
+          id: "PROP-CALLNYC-ISSUE-PATHWAY-CENSUS",
+          text: "Jamie's CallNYC project used issue-specific public pathways at scale: the recoverable @CallNYCapp corpus contains 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts.",
+          status: "supported-with-boundary",
+          sourceIds: [callNycFullPopulationCensusSourceId, "SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-X-JAMIE-MAKER-710150246781882369"],
+          sourceSupport: ["110-slot population disposition", "per-status URL and relationship inventory", "deduplicated CallNYC issue-page URLs", "recognition-target handle classification", "independent reporting on Jamie's creation and iteration of CallNYC", "contemporaneous first-person project relationship"],
+          boundaries: ["The profile displayed 110 posts, while 107 unique timeline objects were recovered and three remained unavailable.", "The 26 accounts are named targets in project-authored recognition posts; this is distinct from engagement by those offices.", "The historical recognitions do not establish current Council performance or current resident guidance."],
+          decisionUse: "Shows the product's issue-pathway information architecture operating in public with a bounded, source-level metric suitable for the CallNYC case study."
+        },
         {
           id: "PROP-CALLNYC-EIGHT-COUNCIL-ACCOUNTS-RECOVERED",
           text: "Authenticated X profile and mention review recovered public interactions with @CallNYCapp from eight then-serving New York City Council member accounts.",
@@ -1417,21 +1469,20 @@ const knowledgeBankInput = {
         },
         {
           id: "PROP-CALLNYC-X-CORPUS-RECOVERY-BOUNDARY",
-          text: "The authenticated review recovered 106 unique status URLs from a profile displaying 110 posts, plus 11 public live-search results mentioning @CallNYCapp.",
+          text: "The authenticated review recovered 107 unique timeline objects from a profile displaying 110 posts, plus 11 public live-search results mentioning @CallNYCapp.",
           status: "supported-with-boundary",
-          sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
-          sourceSupport: ["profile post count", "deduplicated visible status URL count", "exhausted live-search result set at access time"],
-          boundaries: ["Four profile-counted items were not recovered as unique status URLs.", "X search and profile virtualization may omit deleted, unavailable, deindexed, or otherwise inaccessible material."],
+          sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", callNycFullPopulationCensusSourceId],
+          sourceSupport: ["profile post count", "deduplicated Posts and Replies timeline objects", "date-bounded search reconciliation", "Internet Archive CDX status-URL check", "exhausted mention-search result set at access time"],
+          boundaries: ["Three profile-counted items were not recovered as unique timeline objects.", "X search and profile virtualization may omit deleted, unavailable, deindexed, or otherwise inaccessible material."],
           decisionUse: "Makes the denominator and residual gap visible so the eight-account result is not mistaken for a complete export."
         }
       ],
       tensions: [],
       researchQuestions: [
-        "Should the recoverable denominator remain 106 unique profile-timeline statuses plus 11 mention-search results, and should the public time window be stated as March 2016 through July 2017 for the eight strict interactions?",
-        "Can Jamie's account-data export recover the four profile-counted items not visible in the authenticated timeline census?",
+        "Can an account-data export recover the three profile-counted items not visible in the authenticated timeline census?",
         "Can follower, liker, and reposter identities be recovered without relying on unstable interface state?",
         "Do archived captures preserve additional Council-member interactions that X live search no longer indexes?",
-        "Should the eight-account recovery floor remain knowledge-bank depth or become a carefully worded case-study proof after editorial review?"
+        "Should the at-least-eight Council-account interaction floor remain knowledge-bank depth or become a separate carefully worded case-study proof after editorial review?"
       ],
       boundaries: [
         "Use 'at least eight then-serving Council member accounts recovered' if this finding is ever projected; do not call it a complete total.",
@@ -1439,12 +1490,12 @@ const knowledgeBankInput = {
         "Preserve historical officeholder and account-status context.",
         "Do not count the institutional @NYCCouncil account as a Council member.",
         "Do not treat Council-member interaction as formal endorsement, product adoption, constituent outcome, or policy causality.",
-        "Do not project this intake item directly to the website; create and approve a sourced metric claim first."
+        "The approved website projection is limited to the 71-post, 61-page, 26-account issue-pathway census; do not project raw access-time engagement totals or the at-least-eight interaction floor without separate claim review."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-12",
-      reviewedAt: "2026-07-14",
-      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+      reviewedAt: "2026-07-15",
+      reviewedBy: ["Jamie Burkart", "Codex full-population social-media review"]
     },
     {
       id: "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14",
@@ -2344,13 +2395,16 @@ const knowledgeBankInput = {
       "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
       "SRC-CALLNYC-POLITICO-2016-03-14",
       "SRC-CALLNYC-GITHUB-REPOSITORY",
-      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+      "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+      callNycFullPopulationCensusSourceId,
+      "SRC-CALLNYC-X-PROFILE-2026-07-14"
     ],
     occurrences: [
       { id: "event-date-time", claimId: "CLM-CALLNYC-HACKATHON-DATE-TIME", projection: "case-study", sourceIds: ["SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433", "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "first-councilstat-hackathon", claimId: "CLM-CALLNYC-FIRST-COUNCILSTAT-HACKATHON", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368"] },
       { id: "independent-follow-on", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14", "SRC-CALLNYC-GITHUB-REPOSITORY"] },
       { id: "event-branding", claimId: "CLM-CALLNYC-EVENT-BRANDING", projection: "case-study", sourceIds: ["SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"] },
+      { id: "public-issue-pathway-census", claimId: "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS", projection: "case-study", sourceIds: [callNycFullPopulationCensusSourceId, "SRC-CALLNYC-X-PROFILE-2026-07-14"] },
       { id: "press-coverage", claimId: "CLM-CALLNYC-INDEPENDENT-FOLLOW-ON", projection: "case-study", sourceIds: ["SRC-CALLNYC-POLITICO-2016-03-14"] },
       { id: "archived-status", claimId: "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS", projection: "case-study", sourceIds: ["SRC-CALLNYC-GITHUB-REPOSITORY", "SRC-CALLNYC-POLITICO-2016-03-14"] }
     ]

@@ -12,7 +12,7 @@ The recovered project-account map is:
 
 | Project or campaign | X identity | Public state at review |
 | --- | --- | --- |
-| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110-post profile; 106 unique timeline status URLs recovered |
+| CallNYC | [@CallNYCapp](https://x.com/CallNYCapp) | 110-post profile; 107 unique timeline objects recovered; three slots not recovered |
 | NYC Artist Coalition | [@NYCArtC](https://x.com/NYCArtC) | 5,124-post shared coalition profile |
 | Let NYC Dance | [@NYCArtC](https://x.com/NYCArtC) | Campaign identity carried by the coalition account and #LetNYCDance |
 | Talks Not Raids | [@NYCArtC](https://x.com/NYCArtC) | Campaign identity carried by the coalition account and #TalksNotRaids |
@@ -81,10 +81,18 @@ should not be summed into one undifferentiated engagement score. They show
 public-sector resonance, not formal endorsement, adoption, constituent
 outcomes, or Council ownership of the product.
 
-The authenticated account census recovered 106 unique status URLs from a
-profile displaying 110 posts. The profile corpus included 91 CallNYC-authored
-statuses and 15 reposted statuses. A separate live search recovered 11 public
+The completed full-population pass gives all 110 profile-counted slots a
+disposition. It recovered 107 unique timeline objects: 92 CallNYC-authored
+posts or replies and 15 reposted statuses. Three profile-counted objects were
+not recovered after authenticated Posts, Replies, chronological search, and
+Internet Archive status-URL checks. A separate live search recovered 11 public
 results mentioning `@CallNYCapp`.
+
+The recovered account record also contains 71 issue-recognition posts linking
+61 distinct CallNYC issue pages to 26 Council-member accounts. That metric
+documents the product's information architecture operating in public; it is
+not an office-engagement count. See the dedicated
+[CallNYC full-population archival production note](2026-07-15-callnyc-x-full-population-archival-production.md).
 
 ## NYC Artist Coalition And Council Members
 

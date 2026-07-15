@@ -56,12 +56,12 @@ claim beyond the wording and guardrails here.
 **Public wording:** Jamie built CallNYC.org as an archived, unofficial, independent follow-on to the New York City Council's first CouncilStat hackathon, translating constituent-services data into resident-facing issue pages and next-step guidance; covered in Politico New York.
 **Detailed public-safe wording:** CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.
 **Where to project:** Technical Operations, Work card, Case study.
-**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype.
-**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation.
+**Why it matters:** Shows civic-data translation, information architecture, public interface delivery, and public coverage of the prototype. The 110-slot social census also shows that architecture operating publicly through 71 issue-recognition posts linking 61 distinct issue pages to 26 Council-member accounts.
+**Guardrail:** Always describe it as independent, archived, and unofficial. The narrower first-CouncilStat wording requires citation. The social census recovered 107 objects and preserves three profile-counted objects as not recovered; naming 26 accounts is not the same as engagement by 26 offices.
 **Do not say:** Broader historical hackathon superlatives; official submission or winner; current city service; official city guidance; emergency guidance; legal guidance.
 **Protected boundaries:** No current-service claims, private user data, or unverified guidance.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-12
+**Last reviewed:** 2026-07-15
 
 ## fair-rent-campaign-memory - Campaign-memory infrastructure
 

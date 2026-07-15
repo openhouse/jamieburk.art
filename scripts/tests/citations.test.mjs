@@ -12,6 +12,8 @@ import {
 } from "../../apps/www/src/data/knowledge-bank/campaignPress.ts";
 import {
   callNycCouncilSocialSourceIds,
+  callNycFullPopulationCensusSourceId,
+  callNycProjectSocialSourceIds,
   kcSpacesRecipientSocialSourceIds,
   nycaCouncilSocialSourceIds,
   nycaOlympiaSocialSourceId,
@@ -29,6 +31,7 @@ test("page-local numbering follows first source appearance", () => {
   assert.deepEqual(resolveCitationOccurrence("callnyc", "first-councilstat-hackathon").sources.map((item) => item.number), [2]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "independent-follow-on").sources.map((item) => item.number), [3, 4]);
   assert.deepEqual(resolveCitationOccurrence("callnyc", "event-branding").sources.map((item) => item.number), [5]);
+  assert.deepEqual(resolveCitationOccurrence("callnyc", "public-issue-pathway-census").sources.map((item) => item.number), [6, 7]);
 });
 
 test("repeated sources retain one note and unique backlinks", () => {
@@ -419,9 +422,10 @@ test("Google Drive intake preserves attribution, data gaps, and projection bound
 });
 
 test("project social census preserves strict counts and source identity", () => {
-  assert.equal(projectSocialSources.length, 46);
-  assert.equal(new Set(projectSocialSourceIds).size, 46);
+  assert.equal(projectSocialSources.length, 51);
+  assert.equal(new Set(projectSocialSourceIds).size, 51);
   assert.equal(callNycCouncilSocialSourceIds.length, 8);
+  assert.equal(callNycProjectSocialSourceIds.length, 4);
   assert.equal(nycaCouncilSocialSourceIds.length, 11);
   assert.equal(kcSpacesRecipientSocialSourceIds.length, 11);
   assert.ok(
@@ -440,6 +444,15 @@ test("project social census preserves strict counts and source identity", () => 
   assert.equal(
     sourceById.get("SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS").visibility,
     "protected"
+  );
+  const callNycCensus = sourceById.get(callNycFullPopulationCensusSourceId);
+  assert.equal(callNycCensus.visibility, "public");
+  assert.match(callNycCensus.publicNote, /107 recoverable.*three unrecovered/i);
+  assert.ok(
+    callNycCensus.supportsGenerally.includes("71 issue-recognition posts")
+  );
+  assert.ok(
+    callNycCensus.doesNotEstablish.some((boundary) => /platform account-data export/i.test(boundary))
   );
   assert.ok(
     sourceById
@@ -476,8 +489,16 @@ test("Council social intake uses recovery floors and excludes noisy matches", ()
       proposition.id === "PROP-NYCA-OLYMPIA-KAZI-MENTION-CORPUS-2026"
   );
 
-  assert.equal(callNyc.status, "researching");
+  assert.equal(callNyc.status, "integrated");
   assert.equal(nyca.status, "researching");
+  assert.ok(
+    callNyc.relatedClaimIds.includes("CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS")
+  );
+  const callNycPathwayCensus = callNyc.propositions.find(
+    (proposition) => proposition.id === "PROP-CALLNYC-ISSUE-PATHWAY-CENSUS"
+  );
+  assert.match(callNycPathwayCensus.text, /71 issue-recognition.*61 distinct.*26 Council-member/i);
+  assert.ok(callNycPathwayCensus.sourceIds.includes(callNycFullPopulationCensusSourceId));
   assert.match(callNycFloor.text, /eight then-serving/);
   assert.equal(
     callNycFloor.sourceIds.filter((sourceId) =>

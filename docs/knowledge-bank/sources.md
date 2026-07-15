@@ -82,6 +82,12 @@ and keeps account-establishment memory separate from independently sourced
 account existence and use. See [the dated research
 note](research/2026-07-14-project-social-media-archival-production.md).
 
+The dedicated [CallNYC full-population
+note](research/2026-07-15-callnyc-x-full-population-archival-production.md)
+and its public CSV ledger add an explicit population-disposition pattern: a
+profile-counted object may be `recovered` or `not-recovered`, and the total can
+still reconcile without inventing the unavailable content.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

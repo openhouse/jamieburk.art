@@ -100,6 +100,50 @@
         "formal hackathon submission status",
         "current resident-service guidance"
       ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-PROFILE-2026-07-14",
+      "title": "Call NYC X profile",
+      "organization": "Call NYC",
+      "kind": "project-archive",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-14",
+      "canonicalUrl": "https://x.com/CallNYCapp",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Call NYC (@CallNYCapp), authenticated X profile reviewed July 14, 2026.",
+      "publicNote": "The profile showed 110 posts, a March 2016 join date, and a bio describing resident-facing use of New York City Council constituent-services data.",
+      "doesNotEstablish": [
+        "a complete recoverable timeline",
+        "the identity of every post author",
+        "current service guidance",
+        "Council ownership or endorsement",
+        "lifetime reach from access-time follower counts"
+      ]
+    },
+    {
+      "id": "SRC-CALLNYC-X-FULL-POPULATION-CENSUS-2026-07-15",
+      "title": "CallNYC X full-population census",
+      "organization": "Call NYC",
+      "author": "Codex archival review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/callnyc-x-full-population-census-2026-07-15.csv",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Full-population archival census of the 110 objects counted by the @CallNYCapp profile, reviewed July 15, 2026.",
+      "publicNote": "The census gives all 110 profile-counted slots a disposition: 107 recoverable timeline objects and three unrecovered remainders. The recovered set contains 92 CallNYC-authored posts or replies and 15 reposts; 71 issue-recognition posts link to 61 distinct CallNYC issue pages and name 26 Council-member accounts.",
+      "doesNotEstablish": [
+        "a platform account-data export",
+        "the contents of the three unrecovered objects",
+        "a complete deleted-post history",
+        "the historical identity of every liker or reposter",
+        "formal endorsement",
+        "product adoption",
+        "constituent outcomes",
+        "current Council performance"
+      ]
     }
   ],
   "claims": [
@@ -263,6 +307,51 @@
       ]
     },
     {
+      "id": "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The recovered social record shows Jamie's CallNYC information architecture operating in public: 71 issue-recognition posts linked 61 distinct resident issue pages to 26 Council-member accounts.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/callnyc"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-CALLNYC-X-FULL-POPULATION-CENSUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "71 recovered issue-recognition posts",
+            "61 distinct CallNYC issue-page URLs",
+            "26 named Council-member accounts",
+            "complete 110-slot population disposition"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-CALLNYC-X-PROFILE-2026-07-14",
+          "relationship": "context",
+          "supports": [
+            "110-post profile count",
+            "account identity",
+            "constituent-services mission framing"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The authenticated review recovered 107 of 110 profile-counted objects; three objects remain unrecovered.",
+        "The counts describe the historical account corpus, not current Council performance or service guidance.",
+        "Naming a Council-member account in a project post is distinct from engagement by that office."
+      ]
+    },
+    {
       "id": "CLM-CALLNYC-ARCHIVED-UNOFFICIAL-STATUS",
       "status": "confirmed-with-boundary",
       "projections": [
@@ -310,7 +399,9 @@
         "SRC-CALLNYC-NYC-COUNCIL-POST-693509031768506368",
         "SRC-CALLNYC-POLITICO-2016-03-14",
         "SRC-CALLNYC-GITHUB-REPOSITORY",
-        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+        "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC",
+        "SRC-CALLNYC-X-FULL-POPULATION-CENSUS-2026-07-15",
+        "SRC-CALLNYC-X-PROFILE-2026-07-14"
       ],
       "occurrences": [
         {
@@ -345,6 +436,15 @@
           "projection": "case-study",
           "sourceIds": [
             "SRC-CALLNYC-NYC-COUNCIL-HACKATHON-GRAPHIC"
+          ]
+        },
+        {
+          "id": "public-issue-pathway-census",
+          "claimId": "CLM-CALLNYC-PUBLIC-ISSUE-PATHWAY-CENSUS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-CALLNYC-X-FULL-POPULATION-CENSUS-2026-07-15",
+            "SRC-CALLNYC-X-PROFILE-2026-07-14"
           ]
         },
         {

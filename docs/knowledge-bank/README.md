@@ -107,3 +107,12 @@ public identity-system research across CallNYC, NYC Artist Coalition, WOW List,
 Sunday Dinner, KC Town Hall, and KC Spaces Fund. It preserves engagement as
 typed evidence rather than collapsing replies, mentions, reposts, link shares,
 and conversation matches into one promotional score.
+
+The [CallNYC full-population archival-production
+note](research/2026-07-15-callnyc-x-full-population-archival-production.md)
+demonstrates 100-percent population disposition without pretending that every
+platform object remains recoverable. Its public 110-slot ledger separates 107
+recovered timeline objects from three unresolved slots, inventories posted
+URLs and stakeholder patterns, and supports one bounded website projection:
+71 issue-recognition posts linked 61 distinct CallNYC issue pages to 26
+Council-member accounts.

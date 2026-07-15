@@ -142,7 +142,11 @@ export const proofClaims: ProofClaim[] = [
     detailedPublicWording:
       "CallNYC turned open constituent-services data into issue pathways, district context, and archived resident-facing guidance while making its unofficial status clear; Politico New York covered the project in 2016.",
     sourceBasis:
-      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, and verified Politico New York coverage.",
+      "Approved resume language, archived prototype context, public open-data context, public GitHub repository, verified Politico New York coverage, and the 110-slot @CallNYCapp archival census.",
+    sourceNote:
+      "The social census recovered 107 of 110 profile-counted objects. Its approved case-study metric is 71 issue-recognition posts linking 61 distinct CallNYC issue pages to 26 Council-member accounts; three profile-counted objects remain not recovered.",
+    whyItMatters:
+      "Shows both the product design and its public operation: source data became resident issue pathways, technical endpoints, and a bounded public-information surface that Council-member offices engaged in several distinct ways.",
     guardrail: "Always describe it as archived and unofficial.",
     doNotSay: [
       "Broader historical hackathon superlatives",
@@ -156,7 +160,7 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["technical-operations", "work-card", "case-study"],
     relatedProjects: ["callnyc"],
     relatedCapabilities: ["open-data", "resident-guidance", "information-architecture"],
-    lastReviewed: "2026-07-12"
+    lastReviewed: "2026-07-15"
   },
   {
     id: "fair-rent-campaign-memory",

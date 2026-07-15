@@ -48,6 +48,12 @@ first hackathon, first civic-data hackathon, or first civic-technology
 hackathon. Do not describe CallNYC as commissioned, officially submitted,
 selected, or a winner without new evidence and review.
 
+Do not say all 110 profile-counted social objects were recovered; 107 are
+recovered and three remain not recovered. Do not turn 26 Council-member
+accounts named by CallNYC's issue-recognition posts into 26 offices that
+engaged with, endorsed, or adopted the product. Do not treat access-time likes
+or reposts as stable reach, adoption, or outcome metrics.
+
 ## WOWList
 
 Do not name collaborators unless approved.

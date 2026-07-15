@@ -135,7 +135,8 @@ July 12-14, 2026:
 - NYC Artist Coalition formation and cultural-space policy campaigns;
 - the press and reference architecture across four NYC Artist Coalition
   campaign sites;
-- NYC Council member engagement with CallNYC on Twitter;
+- the full @CallNYCapp population, its issue-pathway publishing record, and
+  typed NYC Council member engagement;
 - the cross-project social identity system and Jamie's bounded account-
   establishment memory lead;
 - strict direct Council-member engagement with NYC Artist Coalition and the
@@ -163,21 +164,24 @@ July 12-14, 2026:
   handoff and collaborator evidence.
 
 The waterways and Sunday Dinner threads have reached `claim-candidate`. The NYC
-Artist Coalition, campaign-press, and social-evidence threads remain
+Artist Coalition, campaign-press, and most social-evidence threads remain
 `researching`; the press indexes are fully accessioned, while their 45 distinct
 article bodies remain a bounded close-reading queue. The authenticated CallNYC
-engagement pass now supports an eight-account recovery floor while preserving
-the four-item profile-corpus gap and prohibiting direct website projection. The
+thread is now `integrated`: a 110-slot population census recovered 107 timeline
+objects, preserves three not-recovered slots, and supports the approved
+71-post / 61-page / 26-account issue-pathway projection. Its separate
+eight-account interaction recovery floor remains knowledge-bank depth. The
 strict NYC Artist Coalition result supports five then-serving Council-member
 accounts across 15 direct mention or reply interactions; wider thread matches
-remain excluded from that count. The KC Town Hall thread is `researching`:
+remain excluded from that count. Raw access-time engagement totals remain
+outside website projection. The KC Town Hall thread is `researching`:
 public records
 establish recommendation, Council acceptance, appropriation, later withdrawal,
 and reappropriation, while agreement execution, any disbursement, and Jamie's
 specific contribution remain separate questions. The stewardship transition is
 `captured` as a distinct memory lead pending a public-safe handoff record or
-receiving-organization confirmation. None is approved for direct website
-projection. The three July 14 archive-production threads have reached
+receiving-organization confirmation. None of those items is approved for
+direct website projection. The three July 14 archive-production threads have reached
 `claim-candidate` for their supported propositions while retaining protected
 source locators and explicit non-claims. The Google Drive pass adds two more
 `claim-candidate` threads and one `researching` thread; all three remain outside

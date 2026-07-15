@@ -119,7 +119,7 @@ const researchSources: KnowledgeBank["sources"] = [
     preservationStatus: "private",
     accessedAt: "2026-07-14",
     publicCitation: "Authenticated X project-account archival census conducted July 14, 2026.",
-    publicNote: "The bounded review recovered 106 of 110 CallNYC profile-timeline statuses, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Exact campaign-handle checks and thread-level false-positive review were recorded separately.",
+    publicNote: "The bounded review recovered 107 of 110 CallNYC profile-counted objects, 526 live-search results for @NYCArtC, 170 of 183 KC Town Hall statuses, 34 of 35 KC Spaces Fund statuses, and 37 of 38 WOW List statuses. Exact campaign-handle checks and thread-level false-positive review were recorded separately.",
     protectedLocatorId: "RESEARCH-PROJECT-SOCIAL-X-CENSUS-2026-07-14",
     supportsGenerally: ["bounded profile and search counts", "status-author classification", "Council-handle matching", "direct-mention versus thread-match separation", "current exact-handle lookup results"],
     doesNotEstablish: ["a platform export", "a complete deleted-post corpus", "the identity of every shared-account author", "follower identity or lifetime reach", "policy causality", "endorsement from a like, repost, or mention"]
@@ -137,6 +137,78 @@ const researchSources: KnowledgeBank["sources"] = [
     protectedLocatorId: "LOC-NYCA-COUNCIL-HANDLE-ROSTERS",
     supportsGenerally: ["historical Council name-to-handle matching", "2017-era and 2019 roster snapshots"],
     doesNotEstablish: ["an official authoritative roster", "account control for every date", "complete term dates", "the meaning of every social interaction"]
+  }
+];
+
+const callNycFullPopulationCensusSource: SourceRecord = {
+  id: "SRC-CALLNYC-X-FULL-POPULATION-CENSUS-2026-07-15",
+  title: "CallNYC X full-population census",
+  author: "Codex archival review",
+  organization: "Call NYC",
+  kind: "research-run",
+  visibility: "public",
+  preservationStatus: "live",
+  accessedAt: "2026-07-15",
+  assetUrl: "https://github.com/openhouse/jamieburk.art/blob/develop/docs/knowledge-bank/research/data/callnyc-x-full-population-census-2026-07-15.csv",
+  preferredPublicUrl: "asset",
+  publicCitation: "Full-population archival census of the 110 objects counted by the @CallNYCapp profile, reviewed July 15, 2026.",
+  publicNote: "The census gives all 110 profile-counted slots a disposition: 107 recoverable timeline objects and three unrecovered remainders. The recovered set contains 92 CallNYC-authored posts or replies and 15 reposts; 71 issue-recognition posts link to 61 distinct CallNYC issue pages and name 26 Council-member accounts.",
+  supportsGenerally: ["110-slot population disposition", "107 recovered timeline objects", "three unrecovered profile-counted objects", "92 CallNYC-authored posts or replies", "15 reposts", "71 issue-recognition posts", "61 distinct CallNYC issue pages", "26 named Council-member accounts", "posted-URL inventory", "access-time interaction labels"],
+  doesNotEstablish: ["a platform account-data export", "the contents of the three unrecovered objects", "a complete deleted-post history", "the historical identity of every liker or reposter", "formal endorsement", "product adoption", "constituent outcomes", "current Council performance"]
+};
+
+const callNycProjectPostSeeds: SocialPostSeed[] = [
+  {
+    id: "SRC-CALLNYC-X-LAUNCH-706208629360304128",
+    title: "CallNYC public launch post",
+    organization: "Call NYC",
+    kind: "institutional-social-post",
+    handle: "CallNYCapp",
+    statusId: "706208629360304128",
+    publishedAt: "2016-03-05",
+    publicCitation: "CallNYC public launch post, March 5, 2016.",
+    publicNote: "The pinned account post announced CallNYC.org and connected it to New York City Council constituent-services data during Open Data Day.",
+    supportsGenerally: ["public launch date", "project URL", "Council constituent-services data context", "Open Data Day context"],
+    doesNotEstablish: ["the post's self-described first-project superlative", "official Council ownership", "formal hackathon submission", "current service status"]
+  },
+  {
+    id: "SRC-CALLNYC-X-JAMIE-MAKER-710150246781882369",
+    title: "Jamie Burkart identifies CallNYC as his civic-technology project",
+    organization: "Call NYC",
+    kind: "institutional-social-post",
+    handle: "CallNYCapp",
+    statusId: "710150246781882369",
+    publishedAt: "2016-03-16",
+    publicCitation: "CallNYC account reply identifying Jamie Burkart and his relationship to the project, March 16, 2016.",
+    publicNote: "The first-person reply identifies Jamie by name and describes CallNYC as his first civic-technology project while also naming WOW List.",
+    supportsGenerally: ["Jamie's public first-person relationship to CallNYC", "Jamie's self-description of CallNYC as his first civic-technology project", "contemporaneous CallNYC and WOW List connection"],
+    doesNotEstablish: ["independent third-party verification", "sole authorship of every artifact", "official Council ownership", "formal endorsement"]
+  },
+  {
+    id: "SRC-CALLNYC-X-DISTRICT-PROFILE-API-713537148000018432",
+    title: "CallNYC district-profile API announcement",
+    organization: "Call NYC",
+    kind: "institutional-social-post",
+    handle: "CallNYCapp",
+    statusId: "713537148000018432",
+    publishedAt: "2016-03-25",
+    publicCitation: "CallNYC district-profile API announcement, March 25, 2016.",
+    publicNote: "The post announced an API exposing Council district profile fields including name, phone, email, Twitter, and services.",
+    supportsGenerally: ["public API announcement", "district-profile field scope", "open-data implementation context"],
+    doesNotEstablish: ["current endpoint availability", "current contact accuracy", "external adoption", "official Council ownership"]
+  },
+  {
+    id: "SRC-CALLNYC-X-COUNCIL-HANDLE-JSON-API-722837286476390401",
+    title: "CallNYC Council-handle JSON API reply",
+    organization: "Call NYC",
+    kind: "institutional-social-post",
+    handle: "CallNYCapp",
+    statusId: "722837286476390401",
+    publishedAt: "2016-04-20",
+    publicCitation: "CallNYC reply documenting a JSON API for Council-member Twitter usernames, April 20, 2016.",
+    publicNote: "The reply says Jamie made a JSON API so civic-technology collaborators could retrieve Council-member Twitter usernames.",
+    supportsGenerally: ["Jamie-attributed JSON API work", "Council-member handle endpoint purpose", "civic-technology collaborator context"],
+    doesNotEstablish: ["current endpoint availability", "current handle accuracy", "external production adoption", "official Council ownership"]
   }
 ];
 
@@ -554,6 +626,13 @@ export const callNycCouncilSocialSourceIds = callNycCouncilPostSeeds.map(
   (seed) => seed.id
 );
 
+export const callNycFullPopulationCensusSourceId =
+  callNycFullPopulationCensusSource.id;
+
+export const callNycProjectSocialSourceIds = callNycProjectPostSeeds.map(
+  (seed) => seed.id
+);
+
 export const nycaCouncilSocialSourceIds = nycaCouncilPostSeeds
   .filter((seed) => seed.kind === "government-social-post")
   .map((seed) => seed.id);
@@ -568,6 +647,8 @@ export const kcSpacesRecipientSocialSourceIds = kcSpacesRecipientSeeds.map(
 export const projectSocialSources: KnowledgeBank["sources"] = [
   ...socialProfileSources,
   ...researchSources,
+  callNycFullPopulationCensusSource,
+  ...callNycProjectPostSeeds.map(toSource),
   ...callNycCouncilPostSeeds.map(toSource),
   ...nycaCouncilPostSeeds.map(toSource),
   ...otherProjectPostSeeds.map(toSource),
