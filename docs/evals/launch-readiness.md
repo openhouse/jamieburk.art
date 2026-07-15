@@ -39,6 +39,17 @@ The canonical positioning sentence is:
 | Release gate wiring | 12 | Yes | Citation, knowledge-bank, public-safety, route, eval-test, and prelaunch commands exist. |
 | Chad-lens legibility | 16 | Yes | Jamie is the actor; entry condition, purpose, usable outputs, bounded proof, and next actions are explicit. |
 | Knowledge-bank lifecycle | 18 | Yes | Intake has no silent loss; evidence maturity, safety, and editorial selection remain separate; every public proof has source-coverage status. |
+| Target-role specificity | 16 | Yes | The system requires five dated real job descriptions, rejects archetypes as market evidence, and keeps the unrun market test explicit. |
+| Independent comprehension holdout | 16 | Yes | The protocol requires three unfamiliar, unbriefed reviewers and prohibits authoring agents from counting as independent evidence. |
+| Individual contribution provenance | 18 | Yes | Five priority projects separately track project evidence, Jamie-role evidence, external corroboration, permissions, and next proof. |
+| Outcome-chain evidence | 18 | Yes | Five leading projects keep output, observed outcome, attribution boundary, and open outcome distinct. |
+| Technical implementation depth | 18 | Yes | Five systems track architecture-level artifact and decision evidence without treating source lists or counts as implementation accounts. |
+| Collaboration role mapping | 18 | Yes | Five collective projects track shared credit, Jamie's role, collaborator confirmation, and publication permission without assuming consent. |
+| Visual proof readiness | 16 | Yes | Five leading case studies track candidate, evidence value, rights, consent, and caption status without inventing a cleared package. |
+| Longitudinal thesis boundary | 16 | Yes | The cross-project thesis remains on hold pending audience need, corroboration, and independent anti-flattening review. |
+| Application execution cadence | 16 | Yes | A 90-minute opportunity timebox returns noncritical proof debt to the inquiry queue and effort to applications, outreach, or conversations. |
+| Agency without inflation | 16 | Yes | Direct contribution verbs remain visible while collective-credit, authority, title, and causality boundaries stay intact. |
+| Integration governance | 16 | Yes | Branch-local scores remain distinct from PR ownership, supersession, exact-SHA approval, deployment, and postdeploy verification. |
 | NYC Artist Coalition government value | 20 | Yes | DCLA testimony, later named recognition, coalition recommendations, Council testimony, Espinal's policy sequence, and enacted-law functions remain linked while institutional interpretation stays distinct from motive, authorship, and causality. |
 | Portfolio evidence expansion | 18 | Yes | Ten new, non-orphan public sources mature bounded claims, reduce proof debt, and selectively strengthen cited portfolio surfaces. |
 | KC Town Hall Council allocation and lifecycle | 18 | Yes | Board recommendation, Council appropriation, and resolution are primary-sourced; Jamie's involvement is historical; allocation remains distinct from agreement execution, receipt, and disbursement; private transition context stays omitted. |
@@ -67,6 +78,20 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
 - **Postdeploy verification:** production health, indexing, sitemap,
   canonical-host behavior, key routes, and resume delivery pass after the
   explicitly approved deploy.
+- **Five-real-role fit review:** five dated real job descriptions receive blind
+  scorecards; archetypes do not count.
+- **Independent hiring holdout:** three unfamiliar, unbriefed reviewers recover
+  Jamie's role, differentiated value, three proofs, and next action.
+- **Contribution, outcome, technical, and collaboration reviews:** project
+  existence, Jamie's role, observed outcomes, implementation evidence,
+  collaborator confirmation, and permissions are reviewed separately.
+- **Visual and longitudinal editorial reviews:** rights and consent are cleared
+  before visual use, and the cross-project thesis is tested against flattening.
+- **Application cadence and agency-language reviews:** archival work returns to
+  outward action, and direct agency remains bounded by evidence and collective
+  credit.
+- **Branch/PR/production integration review:** owners, supersession, exact SHA,
+  deployment approval, and postdeploy results are recorded.
 
 ## Anti-gaming rules
 
@@ -84,6 +109,14 @@ Generated reports are written to `reports/generated/` and are ignored by Git.
   corroboration, or moving every mature reserve claim onto the current site.
 - Do not satisfy evidence expansion with duplicate, orphaned,
   self-authored-only, or boundary-free source records.
+- Do not use fictional role archetypes as real market evidence or let an
+  authoring agent count as an independent reviewer.
+- Do not inherit individual contribution from collective project evidence,
+  convert sequence or outputs into causality, or treat source lists and counts
+  as technical implementation depth.
+- Do not erase collaborators, assume quotation or image permission, invent
+  rights or consent clearance, flatten distinct projects, count archive volume
+  as a job-search outcome, or call a branch-local score production approval.
 - Do not say Finkelpearl's February testimony named NYC Artist Coalition,
   convert institutional value into an official's private motive, infer bill
   authorship from functional alignment, or turn participation and public credit

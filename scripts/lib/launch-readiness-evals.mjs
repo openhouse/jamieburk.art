@@ -4328,6 +4328,292 @@ export function evaluateCallscriptNycArtCFormation({
   return missing;
 }
 
+export const PORTFOLIO_BLIND_SPOT_SPECS = [
+  {
+    id: "target-role-specificity",
+    label: "Target-role specificity is tested against real opportunities",
+    weight: 16,
+    manualGateId: "five-real-role-fit-review",
+    protocolFragments: [
+      "five dated, real job descriptions",
+      "Archetypes do not count as market evidence",
+      "role vocabulary, must-have responsibilities, proof match, proof gap, and next action"
+    ]
+  },
+  {
+    id: "independent-comprehension-holdout",
+    label: "Independent holdouts test comprehension without author briefing",
+    weight: 16,
+    manualGateId: "independent-hiring-holdout",
+    protocolFragments: [
+      "at least three unfamiliar reviewers",
+      "only the public site",
+      "Agents or people who authored the evaluated material are not independent holdouts"
+    ]
+  },
+  {
+    id: "individual-contribution-provenance",
+    label: "Individual contribution provenance remains distinct from project existence",
+    weight: 18,
+    manualGateId: "collaborator-contribution-confirmation",
+    protocolFragments: [
+      "project existed",
+      "Jamie did",
+      "collaborator confirmation",
+      "Do not inherit individual credit from a collective project's success"
+    ]
+  },
+  {
+    id: "outcome-chain-evidence",
+    label: "Outputs, observed outcomes, and causality boundaries remain separate",
+    weight: 18,
+    manualGateId: "outcome-chain-review",
+    protocolFragments: [
+      "output, observed outcome, attribution boundary, and open outcome question",
+      "Sequence is not causality",
+      "Do not convert use, response, allocation, or enactment into Jamie's sole impact"
+    ]
+  },
+  {
+    id: "technical-implementation-depth",
+    label: "Technical claims point to inspectable implementation evidence",
+    weight: 18,
+    manualGateId: "technical-evidence-review",
+    protocolFragments: [
+      "architecture, implementation decision, operating constraint, failure recovery, and inspectable artifact",
+      "A source list is not an implementation account",
+      "current tools and methods"
+    ]
+  },
+  {
+    id: "collaboration-role-mapping",
+    label: "Collaboration maps preserve shared credit and Jamie's bounded role",
+    weight: 18,
+    manualGateId: "collaborator-role-map-review",
+    protocolFragments: [
+      "who contributed what",
+      "what Jamie was trusted to carry",
+      "permission to publish names or quotations",
+      "Do not make Jamie legible by making collaborators disappear"
+    ]
+  },
+  {
+    id: "visual-proof-readiness",
+    label: "Visual proof requires evidence, rights, consent, and caption readiness",
+    weight: 16,
+    manualGateId: "visual-proof-rights-review",
+    protocolFragments: [
+      "candidate, evidence value, rights, consent, and caption status",
+      "No image becomes ready merely because it is visually strong",
+      "one unmistakable visual proof package"
+    ]
+  },
+  {
+    id: "longitudinal-thesis-boundary",
+    label: "The longitudinal practice thesis remains useful without flattening projects",
+    weight: 16,
+    manualGateId: "longitudinal-thesis-editorial-review",
+    protocolFragments: [
+      "remains on hold",
+      "audience need",
+      "cross-project corroboration",
+      "Do not flatten distinct projects, collaborators, places, or communities"
+    ]
+  },
+  {
+    id: "application-execution-cadence",
+    label: "Archive work has a stopping rule that returns effort to applications",
+    weight: 16,
+    manualGateId: "application-cadence-review",
+    protocolFragments: [
+      "90-minute research and composition timebox",
+      "application, outreach, or conversation",
+      "Archive volume is not a job-search outcome"
+    ]
+  },
+  {
+    id: "agency-without-inflation",
+    label: "Agency language is direct without erasing collective boundaries",
+    weight: 16,
+    manualGateId: "agency-language-review",
+    protocolFragments: [
+      "initiated, designed, built, coordinated, maintained, produced, and made possible",
+      "direct verb",
+      "Do not repair understatement by weakening collective-credit or causality boundaries"
+    ]
+  },
+  {
+    id: "integration-governance",
+    label: "Branch-local readiness remains distinct from merged and deployed reality",
+    weight: 16,
+    manualGateId: "branch-pr-production-integration-review",
+    protocolFragments: [
+      "branch-local 100/100",
+      "pull-request owner and supersession decision",
+      "exact candidate SHA",
+      "Do not call an unmerged branch production-ready"
+    ]
+  }
+];
+
+export function evaluatePortfolioBlindSpot({
+  id,
+  register,
+  protocol,
+  registerDoc,
+  launchBlockers,
+  sourceCoverage,
+  projectionMap,
+  technicalOperations
+}) {
+  const missing = [];
+  const spec = PORTFOLIO_BLIND_SPOT_SPECS.find((item) => item.id === id);
+  if (!spec) return [`Unknown portfolio blind-spot eval: ${id}`];
+  const expect = (condition, message) => {
+    if (!condition) missing.push(message);
+  };
+  const requireFragments = (surface, content, fragments) => {
+    const normalized = content.replace(/\s+/g, " ");
+    for (const fragment of fragments) {
+      if (!normalized.includes(fragment.replace(/\s+/g, " "))) {
+        missing.push(`${surface} is missing: ${fragment}`);
+      }
+    }
+  };
+
+  let parsed;
+  try {
+    parsed = JSON.parse(register);
+  } catch {
+    return [`Portfolio blind-spot register is not valid JSON for ${id}.`];
+  }
+
+  const entries = parsed.blindSpots ?? [];
+  const entry = entries.find((item) => item.id === id);
+  expect(parsed.schemaVersion === 1, "Portfolio blind-spot register schemaVersion must remain one.");
+  expect(parsed.scope?.blindSpotCount === PORTFOLIO_BLIND_SPOT_SPECS.length, "Portfolio blind-spot register count must match every eval.");
+  expect(entries.length === PORTFOLIO_BLIND_SPOT_SPECS.length, "Portfolio blind-spot register must retain all eleven entries.");
+  expect(new Set(entries.map((item) => item.id)).size === entries.length, "Portfolio blind-spot register IDs must remain unique.");
+  if (!entry) return [...missing, `Portfolio blind-spot register is missing ${id}.`];
+
+  expect(entry.label === spec.label, `${id} label must match the executable criterion.`);
+  expect(entry.weight === spec.weight, `${id} weight must match the executable criterion.`);
+  expect(entry.hardGate === true, `${id} must remain a hard gate.`);
+  expect(entry.automatedStatus === "protocol-ready", `${id} automated status must remain protocol-ready.`);
+  expect(entry.humanStatus === "required-not-run", `${id} must not claim an unperformed human pass.`);
+  expect(entry.manualGateId === spec.manualGateId, `${id} manual gate ID must remain linked.`);
+  expect(typeof entry.owner === "string" && entry.owner.length > 0, `${id} requires an owner.`);
+  expect(typeof entry.risk === "string" && entry.risk.length > 0, `${id} requires a risk statement.`);
+  expect(typeof entry.stopRule === "string" && entry.stopRule.length > 0, `${id} requires a stop rule.`);
+  expect(typeof entry.nextAction === "string" && entry.nextAction.length > 0, `${id} requires a next action.`);
+  expect((entry.requiredEvidence ?? []).length >= 3, `${id} requires at least three evidence requirements.`);
+  expect((entry.antiGaming ?? []).length >= 1, `${id} requires an anti-gaming rule.`);
+  expect((entry.completionEvidence ?? []).length === 0, `${id} must not contain completion evidence before the human gate is run.`);
+
+  requireFragments("Portfolio blind-spot protocol", protocol, [
+    `## ${spec.label}`,
+    `Manual gate: \`${spec.manualGateId}\``,
+    "Automated protocol readiness is not a human outcome",
+    ...spec.protocolFragments
+  ]);
+  requireFragments("Portfolio blind-spot register documentation", registerDoc, [
+    `\`${id}\``,
+    "protocol-ready",
+    "required-not-run",
+    "No human result is inferred from the automated score"
+  ]);
+
+  const controls = parsed.controls ?? {};
+  const rowsHave = (rows, keys) =>
+    Array.isArray(rows) && rows.every((row) => keys.every((key) => {
+      const value = row[key];
+      return Array.isArray(value) ? value.length > 0 : typeof value === "string" ? value.length > 0 : value !== undefined;
+    }));
+
+  if (id === "target-role-specificity") {
+    const control = controls.targetRoleSpecificity ?? {};
+    expect(control.requiredRealJobDescriptions === 5, "Target-role control must require five real job descriptions.");
+    expect(control.receivedRealJobDescriptions === 0, "Target-role control must remain zero until real job descriptions are supplied.");
+    expect(control.archetypesCountAsEvidence === false, "Target-role control must reject archetypes as market evidence.");
+  }
+  if (id === "independent-comprehension-holdout") {
+    const control = controls.independentHoldout ?? {};
+    expect(control.minimumUnfamiliarReviewers === 3, "Independent holdout must require at least three unfamiliar reviewers.");
+    expect(control.completedReviewers === 0, "Independent holdout must remain unrun until reviewer evidence exists.");
+    expect(control.authoringAgentsEligible === false, "Authoring agents must not count as independent holdouts.");
+    expect(control.briefingAllowed === false, "Independent holdouts must receive no author briefing.");
+    expect((control.questions ?? []).length >= 4, "Independent holdout requires role, value, proof, and next-action questions.");
+  }
+  if (id === "individual-contribution-provenance") {
+    const rows = controls.contributionProvenance ?? [];
+    expect(rows.length >= 5, "Contribution provenance must track at least five priority projects.");
+    expect(rowsHave(rows, ["projectId", "projectEvidence", "jamieRoleEvidence", "externalCorroboration", "nextEvidence"]), "Every contribution row must separate project, role, corroboration, and next evidence.");
+    expect(rows.some((row) => row.externalCorroboration !== "complete"), "Contribution provenance must preserve unresolved corroboration debt.");
+    requireFragments("Source coverage", sourceCoverage, ["individual web authorship", "complete founding group", "20-plus resident-artist aggregate remains open"]);
+  }
+  if (id === "outcome-chain-evidence") {
+    const rows = controls.outcomeChains ?? [];
+    expect(rows.length >= 5, "Outcome-chain control must track at least five priority projects.");
+    expect(rowsHave(rows, ["projectId", "output", "observedOutcome", "attributionBoundary", "openOutcome"]), "Every outcome row must separate output, observed outcome, attribution, and open outcome.");
+    expect(rows.every((row) => !/Jamie (?:alone )?caused|solely caused|Jamie's sole causality/i.test(row.observedOutcome)), "Outcome chains must not encode sole causality.");
+  }
+  if (id === "technical-implementation-depth") {
+    const rows = controls.technicalEvidence ?? [];
+    expect(rows.length >= 5, "Technical-evidence control must track at least five systems.");
+    expect(rowsHave(rows, ["projectId", "system", "artifactStatus", "decisionEvidenceStatus", "nextArtifact"]), "Every technical row must track system, artifact, decision evidence, and next artifact.");
+    expect(rows.some((row) => row.artifactStatus !== "source-backed"), "Technical-evidence control must preserve remaining implementation debt.");
+    requireFragments("Source coverage", sourceCoverage, ["technical-operations-operating-backbone", "Treat this as a synthesis"]);
+  }
+  if (id === "collaboration-role-mapping") {
+    const rows = controls.collaborationRoleMaps ?? [];
+    expect(rows.length >= 5, "Collaboration control must track at least five collective projects.");
+    expect(rowsHave(rows, ["projectId", "collectiveCredit", "jamieRoleStatus", "collaboratorConfirmationStatus", "publicationPermissionStatus"]), "Every collaboration row must track collective credit, Jamie's role, confirmation, and permission.");
+    expect(rows.every((row) => row.publicationPermissionStatus !== "assumed"), "Collaborator publication permission must never be assumed.");
+  }
+  if (id === "visual-proof-readiness") {
+    const rows = controls.visualProofs ?? [];
+    expect(rows.length >= 5, "Visual-proof control must track at least five leading case studies.");
+    expect(rowsHave(rows, ["projectId", "candidateStatus", "evidenceValueStatus", "rightsStatus", "consentStatus", "captionStatus"]), "Every visual row must track candidate, evidence, rights, consent, and caption status.");
+    expect(rows.every((row) => !(row.rightsStatus === "cleared" && row.consentStatus === "cleared" && row.captionStatus === "ready")), "Visual control must not invent a fully cleared package.");
+  }
+  if (id === "longitudinal-thesis-boundary") {
+    const control = controls.longitudinalSynthesis ?? {};
+    expect(control.editorialStatus === "hold", "Longitudinal synthesis must remain on hold.");
+    expect((control.projectIds ?? []).length >= 5, "Longitudinal synthesis must span at least five distinct projects.");
+    expect((control.promotionRequires ?? []).length >= 3, "Longitudinal synthesis requires audience need, corroboration, and anti-flattening review.");
+    requireFragments("Projection map", projectionMap, ["participatory-systems longitudinal frame remains on hold", "cross-project corroboration"]);
+  }
+  if (id === "application-execution-cadence") {
+    const control = controls.applicationCadence ?? {};
+    expect(control.researchAndCompositionTimeboxMinutes === 90, "Application cadence must retain the 90-minute timebox.");
+    expect(control.archiveItemsCountAsJobSearchOutcome === false, "Archive volume must not count as a job-search outcome.");
+    expect((control.outwardActions ?? []).includes("tailored application") && (control.outwardActions ?? []).includes("direct outreach") && (control.outwardActions ?? []).includes("professional conversation"), "Application cadence must return effort to application, outreach, or conversation.");
+    expect((control.successMeasures ?? []).length >= 3, "Application cadence requires outward-facing success measures.");
+  }
+  if (id === "agency-without-inflation") {
+    const control = controls.agencyCalibration ?? {};
+    expect((control.requiredDirectVerbs ?? []).length >= 7, "Agency calibration must retain at least seven direct verbs.");
+    expect(control.collectiveBoundaryRequired === true, "Agency calibration must preserve collective boundaries.");
+    requireFragments("Technical Operations", technicalOperations, ["I helped", "I designed", "I built", "I established", "I created"]);
+  }
+  if (id === "integration-governance") {
+    const control = controls.integrationGovernance ?? {};
+    expect(control.baseBranch === "develop", "Integration governance base must remain develop.");
+    expect(control.exactCandidateSha === null, "No exact production candidate SHA may be implied before approval.");
+    expect(control.deploymentApproved === false, "Integration governance must not imply deployment approval.");
+    expect(control.branchLocalScoreIsProductionApproval === false, "Branch-local scores must not authorize production.");
+    expect(control.requiresPrOwnershipAndSupersession === true, "Integration governance must require PR ownership and supersession review.");
+    requireFragments("Launch blockers", launchBlockers, ["Every open pull request targeting `develop`", "exact production candidate SHA", "Postdeploy health"]);
+  }
+
+  const publicBundle = [register, protocol, registerDoc].join("\n");
+  if ([/\/Users\//, /\/Volumes\//, /auth_token\s*[:=]/i, /cookie\s*:\s*[^\s]/i].some((pattern) => pattern.test(publicBundle))) {
+    missing.push(`${id} public control bundle contains private paths or authentication material.`);
+  }
+
+  return missing;
+}
+
 export function runLaunchEvals(repoRoot) {
   const hero = read(repoRoot, "apps/www/src/components/Hero.tsx");
   const homePage = read(repoRoot, "apps/www/src/app/page.tsx");
@@ -4639,6 +4925,26 @@ export function runLaunchEvals(repoRoot) {
   const deployment = read(repoRoot, "docs/deployment.md");
   const chadGuide = read(repoRoot, "docs/knowledge-bank/chad-lens.md");
   const antiClaims = read(repoRoot, "docs/knowledge-bank/anti-claims.md");
+  const blindSpotRegister = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/data/portfolio-blind-spot-register.json"
+  );
+  const blindSpotProtocol = readOptional(
+    repoRoot,
+    "docs/evals/portfolio-blind-spots.md"
+  );
+  const blindSpotRegisterDoc = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/blind-spot-register.md"
+  );
+  const launchBlockers = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/launch-blockers.md"
+  );
+  const projectionMap = readOptional(
+    repoRoot,
+    "docs/knowledge-bank/projection-map.md"
+  );
   const packageJson = JSON.parse(read(repoRoot, "package.json"));
   const resumePath = path.join(
     repoRoot,
@@ -5518,6 +5824,33 @@ export function runLaunchEvals(repoRoot) {
     })
   );
 
+  for (const spec of PORTFOLIO_BLIND_SPOT_SPECS) {
+    const blindSpotMissing = evaluatePortfolioBlindSpot({
+      id: spec.id,
+      register: blindSpotRegister,
+      protocol: blindSpotProtocol,
+      registerDoc: blindSpotRegisterDoc,
+      launchBlockers,
+      sourceCoverage,
+      projectionMap,
+      technicalOperations
+    });
+    results.push(
+      result({
+        id: `blind-spot-${spec.id}`,
+        label: spec.label,
+        weight: spec.weight,
+        hardGate: true,
+        missing: blindSpotMissing,
+        evidence: [
+          "The structured register names an owner, risk, evidence requirements, stop rule, anti-gaming rule, next action, and linked manual gate.",
+          "Automated protocol readiness remains distinct from a human result.",
+          "The criterion preserves known evidence debt instead of manufacturing completion."
+        ]
+      })
+    );
+  }
+
   const summary = summarizeLaunchEvals(results);
   const manualEvals = [
     {
@@ -5539,7 +5872,12 @@ export function runLaunchEvals(repoRoot) {
       id: "repository-hygiene",
       status: "manual-required",
       pass: "Every open PR targeting develop is active and owned; superseded branch-family PRs are closed or labeled."
-    }
+    },
+    ...PORTFOLIO_BLIND_SPOT_SPECS.map((spec) => ({
+      id: spec.manualGateId,
+      status: "manual-required",
+      pass: `Complete and record the independent human evidence required by ${spec.label.toLowerCase()}; automated protocol readiness does not count as completion.`
+    }))
   ];
 
   return {
@@ -5565,6 +5903,10 @@ export function runLaunchEvals(repoRoot) {
       "Do not treat Shared Drive custody, a private draft, or one dated workflow record as proof of authorship, distribution, institutional adoption, implementation, or aggregate scale.",
       "Do not treat an authenticated visible social timeline as a complete platform export, count one-way tags as reciprocal engagement, assign every team post to Jamie, expose authentication material, or convert individual-account interactions into official endorsement or policy causality.",
       "Do not turn personal Facebook event association into attendance, endorsement, authorship, production, or professional proof; erase an unresolved hosted-event slot; sum unstable response displays; infer WOW List historical nonexistence from a current zero display; or silently promote reserve event claims onto the site.",
+      "Do not count fictional role archetypes as real market evidence or allow an authoring agent to serve as an independent hiring holdout.",
+      "Do not inherit Jamie's individual contribution from collective project evidence, convert outputs or sequence into sole causality, or treat a source list as technical implementation depth.",
+      "Do not erase collaborators to make Jamie legible, publish uncleared visual material, flatten distinct projects into one thesis, count archive volume as job-search progress, or weaken boundaries to make agency sound stronger.",
+      "Do not call a branch-local score merged, deployed, or production-approved.",
       "Production deployment always requires explicit human approval."
     ]
   };

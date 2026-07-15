@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
+  PORTFOLIO_BLIND_SPOT_SPECS,
   evaluateCallNycFullPopulationArchive,
   evaluateCallscriptNycArtCFormation,
   evaluateChadLens,
@@ -22,6 +23,7 @@ import {
   evaluateNycArtCFacebookEventArchive,
   evaluateNycArtCFacebookPostArchive,
   evaluatePersonalWowlistFacebookEventArchive,
+  evaluatePortfolioBlindSpot,
   evaluateProjectSocialArchiveProduction,
   evaluateSundayDinnerAttendanceArchive,
   evaluateUrbanHermitFullPopulationArchive,
@@ -2159,4 +2161,125 @@ test("Call Script formation eval rejects participant leakage and silent reserve 
 
   assert.ok(failures.some((failure) => failure.includes("top-level comments")));
   assert.ok(failures.some((failure) => failure.includes("must not silently appear")));
+});
+
+const portfolioBlindSpotFixture = {
+  register: readRepoFile("docs/knowledge-bank/data/portfolio-blind-spot-register.json"),
+  protocol: readRepoFile("docs/evals/portfolio-blind-spots.md"),
+  registerDoc: readRepoFile("docs/knowledge-bank/blind-spot-register.md"),
+  launchBlockers: readRepoFile("docs/knowledge-bank/launch-blockers.md"),
+  sourceCoverage: readRepoFile("docs/knowledge-bank/source-coverage.md"),
+  projectionMap: readRepoFile("docs/knowledge-bank/projection-map.md"),
+  technicalOperations: readRepoFile("apps/www/src/app/work/technical-operations/page.tsx")
+};
+
+const evaluateBlindSpotWithRegister = (id, update) => {
+  const register = JSON.parse(portfolioBlindSpotFixture.register);
+  update(register);
+  return evaluatePortfolioBlindSpot({
+    ...portfolioBlindSpotFixture,
+    id,
+    register: JSON.stringify(register)
+  });
+};
+
+test("all eleven portfolio blind-spot evals pass protocol readiness without claiming human completion", () => {
+  for (const spec of PORTFOLIO_BLIND_SPOT_SPECS) {
+    assert.deepEqual(
+      evaluatePortfolioBlindSpot({ ...portfolioBlindSpotFixture, id: spec.id }),
+      [],
+      spec.id
+    );
+  }
+});
+
+test("target-role eval rejects archetypes as market evidence", () => {
+  const failures = evaluateBlindSpotWithRegister("target-role-specificity", (register) => {
+    register.controls.targetRoleSpecificity.archetypesCountAsEvidence = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("reject archetypes")));
+});
+
+test("independent-holdout eval rejects authoring agents and briefing", () => {
+  const failures = evaluateBlindSpotWithRegister("independent-comprehension-holdout", (register) => {
+    register.controls.independentHoldout.authoringAgentsEligible = true;
+    register.controls.independentHoldout.briefingAllowed = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("Authoring agents")));
+  assert.ok(failures.some((failure) => failure.includes("no author briefing")));
+});
+
+test("individual-contribution eval rejects silently completed corroboration", () => {
+  const failures = evaluateBlindSpotWithRegister("individual-contribution-provenance", (register) => {
+    for (const row of register.controls.contributionProvenance) {
+      row.externalCorroboration = "complete";
+    }
+  });
+  assert.ok(failures.some((failure) => failure.includes("unresolved corroboration debt")));
+});
+
+test("outcome-chain eval rejects sole-causality language", () => {
+  const failures = evaluateBlindSpotWithRegister("outcome-chain-evidence", (register) => {
+    register.controls.outcomeChains[0].observedOutcome = "Jamie caused the business outcome.";
+  });
+  assert.ok(failures.some((failure) => failure.includes("sole causality")));
+});
+
+test("technical-depth eval rejects a falsely complete artifact inventory", () => {
+  const failures = evaluateBlindSpotWithRegister("technical-implementation-depth", (register) => {
+    for (const row of register.controls.technicalEvidence) row.artifactStatus = "source-backed";
+  });
+  assert.ok(failures.some((failure) => failure.includes("implementation debt")));
+});
+
+test("collaboration eval rejects assumed publication permission", () => {
+  const failures = evaluateBlindSpotWithRegister("collaboration-role-mapping", (register) => {
+    register.controls.collaborationRoleMaps[0].publicationPermissionStatus = "assumed";
+  });
+  assert.ok(failures.some((failure) => failure.includes("must never be assumed")));
+});
+
+test("visual-proof eval rejects invented clearance", () => {
+  const failures = evaluateBlindSpotWithRegister("visual-proof-readiness", (register) => {
+    const row = register.controls.visualProofs[0];
+    row.rightsStatus = "cleared";
+    row.consentStatus = "cleared";
+    row.captionStatus = "ready";
+  });
+  assert.ok(failures.some((failure) => failure.includes("fully cleared package")));
+});
+
+test("longitudinal-thesis eval rejects silent promotion", () => {
+  const failures = evaluateBlindSpotWithRegister("longitudinal-thesis-boundary", (register) => {
+    register.controls.longitudinalSynthesis.editorialStatus = "selected";
+  });
+  assert.ok(failures.some((failure) => failure.includes("remain on hold")));
+});
+
+test("application-cadence eval rejects archive volume as an outcome", () => {
+  const failures = evaluateBlindSpotWithRegister("application-execution-cadence", (register) => {
+    register.controls.applicationCadence.archiveItemsCountAsJobSearchOutcome = true;
+    register.controls.applicationCadence.researchAndCompositionTimeboxMinutes = 180;
+  });
+  assert.ok(failures.some((failure) => failure.includes("90-minute")));
+  assert.ok(failures.some((failure) => failure.includes("must not count")));
+});
+
+test("agency eval rejects removal of collective boundaries", () => {
+  const failures = evaluateBlindSpotWithRegister("agency-without-inflation", (register) => {
+    register.controls.agencyCalibration.collectiveBoundaryRequired = false;
+  });
+  assert.ok(failures.some((failure) => failure.includes("collective boundaries")));
+});
+
+test("integration eval rejects branch-to-production conflation", () => {
+  const failures = evaluateBlindSpotWithRegister("integration-governance", (register) => {
+    const control = register.controls.integrationGovernance;
+    control.exactCandidateSha = "unapproved";
+    control.deploymentApproved = true;
+    control.branchLocalScoreIsProductionApproval = true;
+  });
+  assert.ok(failures.some((failure) => failure.includes("candidate SHA")));
+  assert.ok(failures.some((failure) => failure.includes("deployment approval")));
+  assert.ok(failures.some((failure) => failure.includes("authorize production")));
 });

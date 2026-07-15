@@ -471,3 +471,52 @@ The complete `npm run check` gate also passes: citation registry validation,
 19 citation tests, 114 deterministic eval tests, TypeScript, lint, the
 production build and standalone asset copy, knowledge-bank integrity,
 public-safety scanning, route validation, and launch readiness.
+
+## Portfolio Blind-Spot Recursive Pass
+
+The July 15 follow-up converted ten interpretive blind spots plus integration
+governance into eleven independent hard gates. They cover target-role
+specificity, independent comprehension, individual contribution provenance,
+outcome chains, technical depth, collaboration maps, visual proof,
+longitudinal synthesis, application cadence, agency language, and the boundary
+between branch-local evidence and merged or deployed reality.
+
+The first run after adding the executable gates scored **76/100**. Every prior
+gate passed; all eleven new gates failed because no structured register or
+operating protocol existed. This established a real baseline rather than
+backfilling a success narrative.
+
+The hill climb added a public-safe JSON control with eleven owned risks, five-
+project contribution, outcome, collaboration, and visual matrices, a five-
+system technical queue, a market-test control, an independent-holdout control,
+a bounded longitudinal hypothesis, a 90-minute application timebox, an agency-
+language contract, and integration governance. Each entry has at least three
+evidence requirements, an anti-gaming rule, a stop rule, a next action, a
+linked manual gate, `required-not-run` human status, and empty completion
+evidence.
+
+The second run reached **93/100**. It exposed two missing source-coverage
+statements and one evaluator false positive that treated the explicit boundary
+`not sole causality` as a causal assertion. The source-coverage narrative was
+strengthened, and the detector was narrowed to asserted causal language without
+weakening the prohibition.
+
+The final automated run returned to **100/100** with all eleven new and all
+prior hard gates passing. Twelve adversarial tests ensure that the system fails
+on fictional role evidence, coached or authoring-agent holdouts, silently
+completed contribution corroboration, causal inflation, falsely complete
+technical evidence, assumed collaborator permission, invented visual
+clearance, silent longitudinal promotion, archive volume as job-search outcome,
+erased collective boundaries, and branch-to-production conflation. The focused
+deterministic suite now passes **126 tests**.
+
+No human result was invented to achieve the score. Fifteen manual gates remain
+explicit, including five real-job scorecards, three unfamiliar reviewer
+holdouts, collaborator and technical review, visual rights and consent,
+application-cadence evidence, branch-family ownership, exact-SHA approval, and
+postdeploy verification. No new public-site copy was selected in this pass.
+
+The complete `npm run check` gate passes with 19 citation tests, 126
+deterministic eval tests, TypeScript, lint, the production build, standalone
+assets, knowledge-bank integrity, public safety, route validation, and launch
+readiness.

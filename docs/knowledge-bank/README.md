@@ -13,6 +13,21 @@ non-public boundaries.
 
 The website should use the clearest subset for a specific audience and purpose.
 
+## Portfolio Blind-Spot Controls
+
+The knowledge bank also tracks the distance between evidence depth and external
+success. `data/portfolio-blind-spot-register.json` records eleven bounded risks:
+target-role specificity, independent comprehension, individual contribution,
+outcome chains, technical depth, collaboration maps, visual proof, longitudinal
+synthesis, application cadence, agency language, and integration governance.
+
+`blind-spot-register.md` summarizes current status, and
+`../evals/portfolio-blind-spots.md` defines the executable and human protocols.
+Automated protocol readiness is not a human result. Real job descriptions,
+unfamiliar reviewers, collaborator corrections, rights decisions, applications,
+merge ownership, deployment approval, and postdeploy verification must remain
+`required-not-run` until they actually occur.
+
 ## No silent loss
 
 Every submitted memory, URL, article, website, photograph, document, claim, or

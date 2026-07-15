@@ -25,6 +25,9 @@ public portfolio surface.
   gate: all 38 items in the current live-profile control reconcile at item
   level, posted URLs resolve, and authorship, adoption, and impact boundaries
   remain explicit.
+- [x] Eleven portfolio blind-spot controls pass as automated hard gates: each
+  has an owner, evidence requirements, anti-gaming rule, stop rule, next action,
+  and linked manual gate while preserving `required-not-run` human status.
 
 ## Human gates
 
@@ -38,6 +41,17 @@ public portfolio surface.
 - [ ] Jamie explicitly approves the exact production candidate SHA and deploy.
 - [ ] Postdeploy health, robots, sitemap, canonical-host, key-route, and resume
   checks pass.
+- [ ] Five dated real job descriptions receive frozen-site role-fit scorecards.
+- [ ] Three unfamiliar, unbriefed reviewers pass the public-site comprehension
+  holdout.
+- [ ] Priority contribution, outcome, technical, and collaboration matrices
+  receive independent or collaborator review with publication permissions.
+- [ ] Five leading visual packages receive evidence, rights, consent, alt-text,
+  and caption review.
+- [ ] The longitudinal thesis, application cadence, and agency language receive
+  independent editorial review.
+- [ ] Branch-family PR ownership and supersession are resolved before Jamie
+  approves an exact production candidate SHA.
 
 Names, credits, screenshots, quotes, photos, and collaborator-sensitive claims
 remain omitted unless already public-safe or specifically approved.

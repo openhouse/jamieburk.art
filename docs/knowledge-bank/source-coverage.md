@@ -255,3 +255,22 @@ sequence from WOW List's `popular.vote` route through Call Script and the
 January DCLA discussion into the February 6 coalition meeting. This supports
 Jamie's facilitation and systems lineage while leaving the complete founding
 group and independent corroboration of exact co-founder wording open.
+
+## 2026-07-15 Portfolio Blind-Spot Controls
+
+The blind-spot register preserves high-value source debt instead of allowing a
+protocol-ready score to imply that the underlying claims are complete.
+
+- NYC Artist Coalition campaign artifacts establish public systems, while
+  individual web authorship remains only partly corroborated.
+- The Sunday Dinner workbook supports the 300-plus gathering floor; the
+  20-plus resident-artist aggregate remains open.
+- `technical-operations-operating-backbone` remains a cross-project synthesis.
+  Treat this as a synthesis until each capability is mapped to dated system,
+  decision, constraint, artifact, and role evidence.
+- HJE modernization and growth contribution, career duration, the Fair Rent
+  source map, and the AI-evals credential retain their current coverage debt.
+
+These gaps are not instructions to delete accurate bounded copy. They are the
+priority queue for collaborator confirmation, inspectable technical evidence,
+and audience-specific composition.
