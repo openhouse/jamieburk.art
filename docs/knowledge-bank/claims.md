@@ -33,6 +33,66 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie  
 **Last reviewed:** 2026-07-07
 
+## wowlist-facebook-post-population - Recovered Facebook post population
+
+**Status:** Confirmed with boundary  
+**Support level:** Strong  
+**Evidence class:** Protected terminal capture / public-safe 57-row census / authenticated live review  
+**Public wording:** A terminal 19-page capture recovered 57 unique WOW List Facebook posts from April 2015 through March 2018, and every recovered record received a public-safe content and live-review disposition.  
+**Detailed public-safe wording:** Fifty-four post identities remain available and three wrappers are unavailable; the public fixture preserves all 57 dispositions without reproducing raw post bodies. A fresh authenticated page control recovered the same 53 message-bearing records in forward and reverse traversals.  
+**Where to project:** Knowledge-bank project note only.  
+**Why it matters:** Establishes a complete recovered-population denominator without turning platform migration, no-message records, or unavailable wrappers into false absence.  
+**Guardrail:** This is 57-of-57 recovered-population disposition, not a native owner export or proof that no older post was deleted, withheld, or omitted.  
+**Do not say:** WOW List made exactly 57 Facebook posts; every post remains live; the capture proves no post was deleted.  
+**Protected boundaries:** Raw bodies, comments, contacts, ordinary individual source accounts, administration state, and local paths stay protected.  
+**Review owner:** Jamie  
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-publishing-management - Jamie's Facebook publishing role
+
+**Status:** Confirmed with boundary  
+**Support level:** Strong for the recovered Facebook corpus  
+**Evidence class:** Authenticated manager-only 57-record publisher audit / Jamie first-person recollection  
+**Public wording:** A record-by-record manager audit attributes 51 of 57 recovered WOW List Facebook posts to Jamie, attributes none to another publisher, and leaves six unresolved. This supports Jamie's account that he managed the project's Facebook publishing while preserving Richard Caceres's shared project credit.  
+**Detailed public-safe wording:** The unresolved set consists of three unavailable post wrappers and three video redirects that did not yield a publisher label; attached source material retains its original authorship.  
+**Where to project:** Knowledge-bank project note only; future role sentence only after a separate audience decision.  
+**Why it matters:** Replaces generic social-media language with specific, source-backed operating responsibility.  
+**Guardrail:** Say managed Facebook publishing across the recovered corpus. Preserve three unavailable wrappers, three attribution-less video redirects, attached-source authorship, Richard's shared credit, and the distinction between Facebook and all social platforms.  
+**Do not say:** Jamie authored all 57 post texts; Jamie was WOW List's sole creator; the six unresolved posts were his; Jamie managed every platform.  
+**Protected boundaries:** Manager-only administration details and authenticated session state stay outside the repo.  
+**Review owner:** Jamie / Richard welcome for shared-project context  
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-operating-practice - Facebook as an operating surface
+
+**Status:** Confirmed with boundary  
+**Support level:** Strong  
+**Evidence class:** Public-safe full-population fixture / participant-created tutorial  
+**Public wording:** WOW List's Facebook account functioned as an operating layer for a participatory event system: it onboarded contributors, circulated event and organizer routes, connected scenes to peer knowledge, and made community support actionable.  
+**Detailed public-safe wording:** Forty-four of 57 records include page-authored commentary, 21 carry attached shared sources, and the public link trail contains 65 distinct normalized URLs, including 36 WOW List routes.  
+**Where to project:** Knowledge-bank project note only.  
+**Why it matters:** Makes the product-operations, implementation, and contributor-support work visible without relying on inflated reach language.  
+**Guardrail:** URL publication and source association are not readership, adoption, endorsement, attendance, or impact.  
+**Do not say:** 65 organizations adopted WOW List; 36 communities used it; every linked event belonged to WOW List; every source endorsed the project.  
+**Protected boundaries:** One Google document route remains withheld pending separate review.  
+**Review owner:** Jamie  
+**Last reviewed:** 2026-07-15
+
+## wowlist-facebook-care-advocacy-arc - Cultural infrastructure and care
+
+**Status:** Confirmed with boundary  
+**Support level:** Strong source-backed synthesis  
+**Evidence class:** Full-population theme chronology / selected linked-source close reads  
+**Public wording:** The Facebook record shows the same infrastructure widening its field of care: event discovery and contributor onboarding sit beside venue continuity, Ghost Ship relief and safety, DIY-space funding, and Cabaret Law advocacy.  
+**Detailed public-safe wording:** The overlapping classifier identifies 19 cultural-space-sustainability records, 17 mutual-aid-and-solidarity records, and nine civic-and-cultural-advocacy records across the 57-post corpus.  
+**Where to project:** Knowledge-bank project note only.  
+**Why it matters:** Preserves the continuity between product operations, mutual aid, cultural-space infrastructure, and civic advocacy.  
+**Guardrail:** This is evidence of account curation and operating concern, not sole organization or causality for linked campaigns and outcomes.  
+**Do not say:** WOW List created every campaign; its posts caused fundraisers to succeed; Jamie alone repealed the Cabaret Law; every linked organization endorsed WOW List.  
+**Protected boundaries:** Do not republish raw crisis posts, comments, contacts, or individual source-account data.  
+**Review owner:** Jamie / collaborator context welcome  
+**Last reviewed:** 2026-07-15
+
 ## hje-revenue-growth-contribution - Revenue growth contribution
 
 **Status:** Careful  

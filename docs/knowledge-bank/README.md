@@ -115,3 +115,16 @@ treated as automatic claim support. The generated
 all 45 listings across Let NYC Dance, Talks Not Raids, Save NYC Spaces, and the
 December 2021 Fair Rent NYC capture, with 44 unique canonical article records.
 The frozen extraction fixture makes collection membership reproducible.
+
+The [WOW List Facebook post archival-production report](projects/wowlist-facebook-posts.md)
+accounts for all 57 records in a terminal 19-page protected capture and gives
+each a public-safe content, live, and publisher-attribution disposition. The
+manager-only audit attributes 51 records to Jamie, attributes none to another
+publisher, and leaves six unresolved. Its public fixture inventories operating
+patterns and 65 distinct public posted URLs without republishing raw messages,
+contacts, ordinary individual source accounts, comments, or account
+administration. A fresh authenticated bidirectional page reconciliation on July
+15 recovered the same 53 message-bearing live records in both directions; four
+no-message records remain represented through the protected population rather
+than silently falling out. The resulting claims remain reserve knowledge rather
+than automatic website copy.

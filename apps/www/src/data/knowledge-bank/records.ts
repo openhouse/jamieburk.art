@@ -30,6 +30,11 @@ import {
   personalWowListFacebookEventResearchInquiries,
   personalWowListFacebookEventSources
 } from "./personal-wowlist-facebook-events-2026-07.ts";
+import {
+  wowlistFacebookPostClaims,
+  wowlistFacebookPostResearchInquiries,
+  wowlistFacebookPostSources
+} from "./wowlistFacebookPosts.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -41,6 +46,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusSources,
     ...nycacFacebookEventSources,
     ...personalWowListFacebookEventSources,
+    ...wowlistFacebookPostSources,
     {
       id: "SRC-CALLNYC-CIVIC-HALL-POST-693124020917522433",
       title: "Civic Hall announcement of New York City Council hackathon",
@@ -1170,6 +1176,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusClaims,
     ...nycacFacebookEventClaims,
     ...personalWowListFacebookEventClaims,
+    ...wowlistFacebookPostClaims,
     {
       id: "CLM-HJE-REVENUE-GROWTH-CONTRIBUTION",
       project: "harry-j-epstein",
@@ -1546,6 +1553,7 @@ const knowledgeBankInput = {
     ...urbanhermitXCorpusResearchInquiries,
     ...nycacFacebookEventResearchInquiries,
     ...personalWowListFacebookEventResearchInquiries,
+    ...wowlistFacebookPostResearchInquiries,
     {
     id: "INQ-CALLNYC-CIVIC-HALL-PAGE-2026",
     project: "callnyc",

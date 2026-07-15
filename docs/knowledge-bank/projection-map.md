@@ -483,3 +483,14 @@ composed public surface, not a claim database.
 ### Guardrails
 
 - Keep operational details public-safe
+
+## WOW List Facebook Post Reserve
+
+The WOW List Facebook post ledger is reserve material. Its active projections
+resolve only to `docs/knowledge-bank/projects/wowlist-facebook-posts.md`. The
+51-of-57 Jamie publisher-attribution result may support a future role sentence
+only after a specific audience-and-purpose decision. Any projection must
+preserve six unresolved records, attached-source authorship, Richard Caceres's
+shared project credit, the Facebook-only scope, and the absence of a stable
+full-population engagement dataset. No `/proofs`, `/knowledge-bank`, Facebook
+archive, or post-browser route is authorized.
