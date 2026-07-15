@@ -96,11 +96,15 @@ Open question: resolve the relationship between historical `@wowlistnyc` usage a
 
 ## KC Town Hall: @KCTownHall
 
-Profile snapshot: joined March 2018; 183 posts reported; 170 unique status URLs rendered.
+Profile snapshot: joined March 2018; 183 posts reported. A later [full population-accounted pass](../runs/2026-07-15-kctownhall-x-full-population.md) recovered 181 distinct account items and retained the two-item gap explicitly; seven public conversation records are classified separately.
 
-The account documented a stated purpose of restoring a permanent neighborhood resource and cultural center, invited participation through a neighborhood survey, and preserved visible dialogue with Kansas City civic leaders. The account therefore functioned as a public mission, listening, and process-documentation surface.
+The [item-level corpus](../corpora/kctownhall-x-full-population-2026-07-15.json) contains 155 authored posts and 26 reposts from July 2018 through September 2022. It documents a stated purpose of restoring a permanent neighborhood resource and cultural center, invitations to neighborhood listening, and sustained public operations. Ninety-nine authored posts document or coordinate Tired of Tires activity.
 
-Knowledge-bank status: confirmed with boundaries. The evidence does not establish survey response totals, representativeness, policy causation, project completion, or current property status. The finding remains in the deeper bank rather than adding more weight to the short public case study.
+Under a strict incoming-interaction rule, the preserved conversation contexts show at least three then-sitting Kansas City Council-member accounts visibly replying to or quote-posting KC Town Hall, plus one KCMO 311 reply. Outbound tags are excluded. These project-level public-operations and civic-dialogue claims are now projected to the short case study with citations and collective-credit boundaries.
+
+The corpus also inventories 130 authored outgoing-link occurrences, including mission-relevant voting, housing, transit, grocery-access, neighborhood-condition, mutual-aid, and COVID-19 sources. Source circulation does not establish authorship, agreement, reach, or caused outcomes.
+
+Knowledge-bank status: confirmed with boundaries. The evidence does not establish Jamie as author of every post or operator of later work; nor does it establish survey response totals, representativeness, policy causation, independently verified tire outcomes, project completion, or current property status. Two profile-reported items remain unrecovered.
 
 ## KC Spaces Fund: @KCSpacesFund
 

@@ -29,7 +29,7 @@ The browser session displayed Jamie's signed-in `@urbanhermit` identity before r
 | @CallNYCapp | 110 | 107 | Later replies-inclusive full-population sweep plus direct-mention search; three-count gap retained |
 | @NYCArtC | 5,124 | Not treated as a full sweep | 260 external mentions rendered for March 2020-March 2025 before search cap; earlier roster searches run separately |
 | @wowlist | 38 | 37 | Historical handle question retained |
-| @KCTownHall | 183 | 170 | Mission, survey, public dialogue, and neighborhood documentation appraised |
+| @KCTownHall | 183 | 181 | Later full population-accounted pass; two-item gap retained and seven conversation contexts separated |
 | @KCSpacesFund | 35 | 34 | Application, recipient, and named highlight posts appraised |
 
 These are observation counts, not claims of corpus completeness.
@@ -65,7 +65,7 @@ Contemporaneous posts explicitly connect WOW List to Sunday Dinner calendars, id
 
 ### KC Town Hall and KC Spaces Fund
 
-KC Town Hall's account preserved mission and listening infrastructure. KC Spaces Fund's account preserved applications, recipient acknowledgments, and at least eleven visible named grantee or funded-space highlights. Both findings are confirmed with boundaries and retained in the knowledge bank without crowding the current public case studies.
+KC Town Hall's later [full population-accounted pass](2026-07-15-kctownhall-x-full-population.md) preserved 181 account items, an explicit two-item gap, sustained public operations, mission-relevant source circulation, and a strict lower bound of visible civic dialogue. Its project-level operations and dialogue claims are now projected to the case study; volatile engagement and uncorroborated outcome figures remain held. KC Spaces Fund's account preserved applications, recipient acknowledgments, and at least eleven visible named grantee or funded-space highlights.
 
 ## Held claim
 

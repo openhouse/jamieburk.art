@@ -15,6 +15,11 @@ import {
   deriveCorpusItems as deriveWowListCorpusItems,
   validateCommittedCorpus as validateWowListCorpus
 } from "../derive-wowlist-x-corpus.mjs";
+import {
+  buildKcTownHallCorpus,
+  deriveKcTownHallCorpusItems,
+  validateKcTownHallCorpus
+} from "../derive-kctownhall-x-corpus.mjs";
 import { knowledgeBank } from "../../apps/www/src/data/knowledge-bank/records.ts";
 
 const suite = JSON.parse(
@@ -679,6 +684,241 @@ test("WOW List corpus accounts for the full profile-reported population and pres
   assert.match(
     socialBatch,
     /complete replies-inclusive pass recovered 38 distinct canonical status IDs/
+  );
+});
+
+test("KC Town Hall corpus accounts for the full reported population and separates civic context", () => {
+  const corpusText = readFileSync(
+    "docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.json",
+    "utf8"
+  );
+  const corpus = JSON.parse(corpusText);
+  const rawCaptureText = readFileSync(
+    "docs/knowledge-bank/corpora/source-captures/kctownhall-x-browser-extraction-2026-07-15-utc.json",
+    "utf8"
+  );
+  const rawCapture = JSON.parse(rawCaptureText);
+  const manifest = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.manifest.json",
+      "utf8"
+    )
+  );
+  const metrics = validateKcTownHallCorpus(
+    rawCaptureText,
+    corpusText,
+    manifest
+  );
+
+  assert.throws(() =>
+    validateKcTownHallCorpus(rawCaptureText, corpusText, {
+      ...manifest,
+      corpusItems: 180
+    })
+  );
+  assert.throws(() =>
+    validateKcTownHallCorpus(rawCaptureText, ` ${corpusText}`, manifest)
+  );
+
+  const missingResolution = structuredClone(rawCapture);
+  missingResolution.shortUrlResolutions.pop();
+  assert.throws(() =>
+    buildKcTownHallCorpus(`${JSON.stringify(missingResolution, null, 2)}\n`)
+  );
+
+  const duplicateStatus = structuredClone(rawCapture);
+  duplicateStatus.items[0].statusUrl = duplicateStatus.items[1].statusUrl;
+  assert.throws(() =>
+    buildKcTownHallCorpus(`${JSON.stringify(duplicateStatus, null, 2)}\n`)
+  );
+
+  const changedMissionText = structuredClone(rawCapture);
+  const tirePost = changedMissionText.items.find((item) =>
+    /#TiredOfTires/i.test(item.text)
+  );
+  tirePost.text =
+    "KC Town Hall\n@KCTownHall\n·\nMay 3, 2019\nChanged non-mission text";
+  assert.throws(() =>
+    buildKcTownHallCorpus(`${JSON.stringify(changedMissionText, null, 2)}\n`)
+  );
+
+  const repeatedOccurrence = structuredClone(rawCapture);
+  const sourceItem = repeatedOccurrence.items.find((item) =>
+    item.links.some((link) => /^https?:\/\/t\.co\//.test(link.href))
+  );
+  const repeatedLink = sourceItem.links.find((link) =>
+    /^https?:\/\/t\.co\//.test(link.href)
+  );
+  const originalOccurrenceCount = deriveKcTownHallCorpusItems(
+    repeatedOccurrence
+  )
+    .flatMap((item) => item.outgoingLinks)
+    .filter((item) => item.shortUrl === repeatedLink.href).length;
+  repeatedOccurrence.items
+    .find((item) => item.statusUrl !== sourceItem.statusUrl)
+    .links.push(repeatedLink);
+  assert.equal(
+    deriveKcTownHallCorpusItems(repeatedOccurrence)
+      .flatMap((item) => item.outgoingLinks)
+      .filter((item) => item.shortUrl === repeatedLink.href).length,
+    originalOccurrenceCount + 1
+  );
+
+  assert.deepEqual(metrics, {
+    profileReported: 183,
+    renderedDistinct: 181,
+    authored: 155,
+    reposted: 26,
+    authoredReplies: 2,
+    unresolvedCountDifference: 2,
+    supplementalPublicContexts: 7,
+    councilMemberAccountsWithVisibleIncomingEngagement: 3,
+    cityServiceAccountReplies: 1,
+    authoredPostsWithOutgoingLinks: 115,
+    allOutgoingLinkOccurrences: 133,
+    authoredOutgoingLinkOccurrences: 130,
+    authoredKcTownHallLinkOccurrences: 119,
+    authoredExternalLinkOccurrences: 11,
+    authoredPostsWithVisibleMedia: 126,
+    authoredPostsWithVisibleEngagement: 77,
+    authoredEngagementTotals: {
+      replies: 22,
+      reposts: 70,
+      likes: 174,
+      bookmarks: 1
+    },
+    missionPatternCounts: {
+      "tired-of-tires-public-operations": 99,
+      "survey-and-listening": 12,
+      "building-history-and-reuse": 11,
+      "leons-grocery-access": 2,
+      "covid-relief": 1,
+      "voting-and-elections": 2,
+      "affordable-housing-policy": 2,
+      "neighborhood-service-response": 5,
+      "black-lives-matter-city-hall-documentation": 12
+    }
+  });
+  assert.equal(corpus.population.profileReported, 183);
+  assert.equal(corpus.population.renderedDistinct, 181);
+  assert.equal(corpus.population.unresolvedCountDifference, 2);
+  assert.equal(corpus.items.length, 181);
+  assert.equal(
+    new Set(corpus.items.map((item) => item.canonicalUrl)).size,
+    181
+  );
+  assert.deepEqual(
+    corpus.items.map((item) => item.index),
+    Array.from({ length: 181 }, (_, index) => index + 1)
+  );
+  assert.equal(corpus.supplementalContexts.length, 7);
+  assert.equal(
+    corpus.supplementalContexts.filter((item) =>
+      item.relationship.includes("council-member")
+    ).length,
+    4
+  );
+  assert.equal(corpus.sourceLeads.length, 11);
+  assert.equal(corpus.archivedSitePages.length, 4);
+  assert.ok(
+    corpus.archivedSitePages.some(
+      (item) => item.id === "tires-2020" && /Julia and Jamie/.test(item.note)
+    )
+  );
+  assert.equal(manifest.status, "profile-population-accounted-for-with-two-item-gap");
+  assert.match(rawCaptureText, /\[public contact number redacted\]/);
+  assert.doesNotMatch(
+    rawCapture.items
+      .map((item) => item.text)
+      .concat(rawCapture.supplementalThreads.map((item) => item.text))
+      .join("\n"),
+    /(?:\([2-9][0-9]{2}\)|[2-9][0-9]{2}[ .-])[0-9]{3}[ .-][0-9]{4}/
+  );
+  for (const privateField of [
+    "directMessages",
+    "sessionIdentifier",
+    "browserStorage",
+    "privateAnalytics",
+    "cookies",
+    "tokens",
+    "credentials"
+  ]) {
+    assert.equal(Object.hasOwn(rawCapture, privateField), false);
+  }
+
+  const publicOperations = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-X-PUBLIC-OPERATIONS"
+  );
+  const civicEngagement = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-X-CIVIC-ENGAGEMENT"
+  );
+  const traction = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-X-SOCIAL-TRACTION-OBSERVATION"
+  );
+  const selfReportedOutcomes = knowledgeBank.claims.find(
+    (item) => item.id === "CLM-KCTH-X-SELF-REPORTED-TIRE-OUTCOMES"
+  );
+  const page = knowledgeBank.pages.find((item) => item.id === "kc-town-hall");
+  const intake = knowledgeBank.intake.find(
+    (item) => item.id === "INT-KCTH-X-FULL-POPULATION-2026"
+  );
+  const decomposedSourceIds = new Set(
+    knowledgeBank.sourceAssertions.map((item) => item.sourceId)
+  );
+  const projectNote = readFileSync(
+    "docs/knowledge-bank/projects/kc-town-hall.md",
+    "utf8"
+  );
+  const runNote = readFileSync(
+    "docs/knowledge-bank/runs/2026-07-15-kctownhall-x-full-population.md",
+    "utf8"
+  );
+  const work = readFileSync("apps/www/src/data/work.ts", "utf8");
+  const mdx = readFileSync(
+    "apps/www/src/content/work/kc-town-hall.mdx",
+    "utf8"
+  );
+  const corpusSource = knowledgeBank.sources.find(
+    (item) => item.id === "SRC-KCTH-X-CORPUS-2026-07-15"
+  );
+
+  assert.equal(publicOperations.projectionEligibility, "eligible");
+  assert.equal(civicEngagement.projectionEligibility, "eligible");
+  assert.equal(traction.projectionEligibility, "hold");
+  assert.equal(selfReportedOutcomes.projectionEligibility, "hold");
+  assert.ok(publicOperations.boundaries.some((item) => /byline supports Jamie's public documentation role/i.test(item)));
+  assert.ok(
+    publicOperations.evidence.some(
+      (item) =>
+        item.sourceId === "SRC-KCTH-WAYBACK-TIRES-2020" &&
+        item.renderCitation
+    )
+  );
+  assert.ok(civicEngagement.boundaries.some((item) => /Outbound tags and mentions are excluded/i.test(item)));
+  assert.ok(selfReportedOutcomes.antiClaims.some((item) => /independently verifies/i.test(item)));
+  assert.equal(
+    page.occurrences.find((item) => item.id === "public-operations").claimId,
+    publicOperations.id
+  );
+  assert.equal(
+    page.occurrences.find((item) => item.id === "civic-engagement").claimId,
+    civicEngagement.id
+  );
+  assert.ok(intake.sourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
+  assert.equal(corpusSource.preferredPublicUrl, "asset");
+  assert.match(
+    corpusSource.assetUrl,
+    /^https:\/\/github\.com\/openhouse\/jamieburk\.art\/blob\/(?:[0-9a-f]{40}|feature\/evals-I)\//
+  );
+  assert.match(projectNote, /181 distinct account items recovered/);
+  assert.match(projectNote, /three then-sitting Kansas City Council-member accounts/);
+  assert.match(runNote, /Population: 181 of 183 profile-reported account items recovered/);
+  assert.match(runNote, /Outbound mentions, tags, and general posts by a stakeholder do not count/);
+  assert.match(work, /99 authored posts documenting or coordinating Tired of Tires work/);
+  assert.match(mdx, /archived byline supports Jamie's public documentation role/);
+  assert.doesNotMatch(
+    [work, mdx].join("\n"),
+    /142 tires|\$17,768|zero tires left|zero tires on the curb/i
   );
 });
 

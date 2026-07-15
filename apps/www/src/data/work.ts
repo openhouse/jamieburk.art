@@ -540,8 +540,8 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Historic adaptive reuse planning in Kansas City",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
-    role: "Project Planning & Documentation Support",
+      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. An archived program page names Jamie and Julia as authors; in 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
+    role: "Project Planning & Public Documentation",
     years: "Beginning in 2017",
     status: "Short proof page",
     featured: false,
@@ -567,7 +567,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary, official Kansas City legislative record, authenticated Resolution 190649, and Jamie's public-safe handoff confirmation.",
+      "Public-safe summary, official Kansas City legislative record, authenticated Resolution 190649, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
@@ -577,13 +577,16 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
-      "Council-adopted $490,539 CCED funding path"
+      "Council-adopted $490,539 CCED funding path",
+      "Archived Tired of Tires page naming Julia and Jamie as authors",
+      "99 authored posts documenting or coordinating Tired of Tires work",
+      "Visible incoming dialogue from at least three sitting Council-member accounts"
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building; in 2019, the Council accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
+        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. In 2019, the Council accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539. The shared project account also preserves sustained public operations and visible civic dialogue.",
       open:
-        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status. The recipient organization's identity, handoff timing and terms, and present status are not established for publication.",
+        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status. The account corpus does not assign every post or later operation to Jamie, independently verify its outcome figures, or recover two profile-reported items. The recipient organization's identity, handoff timing and terms, and present status are not established for publication.",
       protected:
         "Private transition context and private financial, legal, property, banking, and stakeholder details are omitted."
     }

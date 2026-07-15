@@ -927,6 +927,200 @@
         "the identity of the person who wrote the reply",
         "a representative usability study"
       ]
+    },
+    {
+      "id": "SRC-KCTH-X-CORPUS-2026-07-15",
+      "title": "Authenticated KC Town Hall full population-accounted corpus",
+      "author": "Codex authenticated browser review",
+      "kind": "research-run",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "capturedAt": "2026-07-15",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCTownHall/with_replies",
+      "assetUrl": "https://github.com/openhouse/jamieburk.art/blob/feature/evals-I/docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.json",
+      "preferredPublicUrl": "asset",
+      "publicCitation": "Committed item-level corpus from the authenticated replies-inclusive @KCTownHall review, July 15, 2026.",
+      "publicNote": "The profile reported 183 posts. The governed corpus preserves 181 distinct account items, an explicit two-item recovery gap, 31 resolved short URLs, and seven separately classified public conversation contexts.",
+      "doesNotEstablish": [
+        "the contents of the two unrecovered items",
+        "the individual author of every project-account post",
+        "Jamie's authorship or operational role after his project transition",
+        "private or historically hidden engagement",
+        "survey representativeness, policy causation, project completion, or current property status"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-WAYBACK-TIRES-2020",
+      "title": "Tired of Tires? Free Tire Pickup",
+      "organization": "KC Town Hall",
+      "author": "Julia and Jamie",
+      "kind": "archived-web-capture",
+      "visibility": "public",
+      "preservationStatus": "archived",
+      "publishedAt": "2019-05-02",
+      "capturedAt": "2020-10-30",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "http://kctownhall.com/tires/",
+      "archiveUrl": "https://web.archive.org/web/20201030223311/http://kctownhall.com/tires/",
+      "preferredPublicUrl": "archive",
+      "publicCitation": "Julia and Jamie, 'Tired of Tires? Free Tire Pickup,' KC Town Hall, published May 2, 2019; archived October 30, 2020.",
+      "publicNote": "The archived article metadata and byline identify Julia and Jamie as authors and name KC Town Hall with Oak Park Neighborhood Association as program partners. The page's savings figure is project-authored documentation, not independent corroboration.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship or sole operation of the program",
+        "Jamie's authorship of every project-account post",
+        "independent verification of the page's savings figure",
+        "program causation or complete outcomes"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
+      "title": "KC Town Hall announces Tired of Tires pickup",
+      "author": "KC Town Hall (@KCTownHall)",
+      "kind": "institutional-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-05-03",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCTownHall/status/1124416898064580608",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KC Town Hall publicly announced free neighborhood tire pickup with Oak Park on May 3, 2019.",
+      "publicNote": "A public project-account post establishes what the account published, not the individual author of every post.",
+      "doesNotEstablish": [
+        "Jamie's sole authorship",
+        "a verified tire total",
+        "program causation or completion"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-ROBINSON-REPLY-2020",
+      "title": "Melissa Robinson replies to KC Town Hall",
+      "author": "Melissa Robinson (@Robinson4kc)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2020-08-01",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Melissa Robinson publicly thanked KC Town Hall for work to improve community conditions on August 1, 2020.",
+      "publicNote": "This public interaction is counted only because its visible reply or quote-post relationship to KC Town Hall is preserved in the corpus.",
+      "doesNotEstablish": [
+        "independent verification of the linked tire figures",
+        "formal endorsement of every project claim",
+        "policy causation"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-JUSTUS-REPLY-2019",
+      "title": "Jolie Justus replies in KC Town Hall grocery-access thread",
+      "author": "Jolie Justus (@joliejustus)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/joliejustus/status/1122883010582466560",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Jolie Justus replied in the KC Town Hall Leon's Thriftway thread on April 29, 2019.",
+      "publicNote": "This public interaction is counted only because its visible reply or quote-post relationship to KC Town Hall is preserved in the corpus.",
+      "doesNotEstablish": [
+        "a completed grocery-access intervention",
+        "KC Town Hall causation",
+        "Jamie's authorship of the account post"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-LUCAS-QUOTE-2019",
+      "title": "Quinton Lucas quote-posts KC Town Hall grocery-access message",
+      "author": "Quinton Lucas (@QuintonLucasKC)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-04-29",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/QuintonLucasKC/status/1122866432130334720",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Councilmember Quinton Lucas quote-posted KC Town Hall's Leon's Thriftway message on April 29, 2019.",
+      "publicNote": "This public interaction is counted only because its visible reply or quote-post relationship to KC Town Hall is preserved in the corpus.",
+      "doesNotEstablish": [
+        "a completed grocery-access intervention",
+        "KC Town Hall causation",
+        "Jamie's authorship of the account post"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-X-KCMO311-REPLY-2018",
+      "title": "KCMO 311 replies in KC Town Hall service thread",
+      "author": "KCMO 311 (@KCMO311)",
+      "kind": "government-social-post",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-08-27",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://x.com/KCMO311/status/1034093516073459712",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "KCMO 311 publicly replied in a KC Town Hall neighborhood service thread on August 27, 2018.",
+      "publicNote": "This public interaction is counted only because its visible reply or quote-post relationship to KC Town Hall is preserved in the corpus.",
+      "doesNotEstablish": [
+        "confirmed resolution of the reported condition",
+        "service outcome causation"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-NORTHEAST-HOUSING-2018",
+      "title": "Affordable housing policy hits docket at KCMO",
+      "organization": "Northeast News",
+      "author": "Paul Thompson",
+      "kind": "published-article",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2018-09-19",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://northeastnews.net/pages/affordable-housing-policy-hits-docket-kcmo/",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "Paul Thompson, 'Affordable housing policy hits docket at KCMO,' Northeast News, September 19, 2018.",
+      "publicNote": "KC Town Hall linked this article. It describes seven housing proposals before the Council Housing Committee and identifies Quinton Lucas as committee chair.",
+      "doesNotEstablish": [
+        "KC Town Hall authorship of the policies",
+        "policy causation",
+        "adoption of all seven proposals"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+      "title": "Melissa Robinson person detail",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://kansascity.legistar.com/PersonDetail.aspx?From=RSS&G=d2e89a09-8736-4efb-b4ae-572e0903bd5a&GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, Legistar person detail for Councilmember Melissa Robinson.",
+      "publicNote": "The official record lists Robinson's Councilmember service beginning July 19, 2019, encompassing the August 2020 reply date.",
+      "doesNotEstablish": [
+        "endorsement of every KC Town Hall claim",
+        "policy causation"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+      "title": "City Council Finance and Governance Committee agenda",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "publishedAt": "2019-03-06",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://kansascity.legistar.com/View.ashx?G=D2E89A09-8736-4EFB-B4AE-572E0903BD5A&GUID=442065A0-011D-439A-AEC5-C47DAA9C03AA&ID=949675&M=M",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, City Council Finance and Governance Committee agenda, March 6, 2019.",
+      "publicNote": "The official Council agenda identifies Jolie Justus as vice chair during the same Council term as the April 2019 interactions.",
+      "doesNotEstablish": [
+        "endorsement of every KC Town Hall claim",
+        "policy causation"
+      ]
     }
   ],
   "claims": [
@@ -2326,6 +2520,156 @@
         "Some pattern items are reposts and are attributed to their original authors.",
         "The corpus establishes public communication and curation, not attendance, funds raised, policy outcomes, or Jamie's authorship of each post."
       ]
+    },
+    {
+      "id": "CLM-KCTH-X-PUBLIC-OPERATIONS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. The shared account became an operating surface, not only an announcement channel: 99 of 155 recovered authored posts document or coordinate tire-program work.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-WAYBACK-TIRES-2020",
+          "relationship": "direct-support",
+          "supports": [
+            "Julia and Jamie author byline",
+            "KC Town Hall and Oak Park partnership",
+            "monthly free tire-pickup workflow"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "181-item corpus",
+            "99-post Tired of Tires pattern",
+            "survey/listening and adaptive-reuse patterns"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "public launch communication",
+            "collective neighborhood coordination"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The archived byline supports Jamie's public documentation role for the Tired of Tires page; it does not prove he authored every account post or personally performed all later program work.",
+        "The pattern count describes public documentation and coordination; it does not independently verify pickup totals, cost savings, survey reach, program causation, or project completion.",
+        "Two of 183 profile-reported items remain unrecovered."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-X-CIVIC-ENGAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The public record also preserves two-way civic dialogue: at least three then-sitting Kansas City Council-member accounts visibly replied to or quote-posted KC Town Hall, and KCMO 311 replied in a neighborhood-service thread.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KCTH-X-CORPUS-2026-07-15",
+          "relationship": "direct-support",
+          "supports": [
+            "seven classified public conversation contexts",
+            "three-account Council-member lower bound",
+            "one KCMO 311 reply"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-ROBINSON-REPLY-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "a visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-JUSTUS-REPLY-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "a visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-LUCAS-QUOTE-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "a visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-X-KCMO311-REPLY-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "a visible incoming public interaction"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+          "relationship": "corroborating",
+          "supports": [
+            "Robinson's Council service on the reply date"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+          "relationship": "corroborating",
+          "supports": [
+            "Justus's Council role during the interaction period"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-NORTHEAST-HOUSING-2018",
+          "relationship": "corroborating",
+          "supports": [
+            "Lucas's Council committee-chair role during the period"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The count is a lower bound from seven preserved public conversation records, not a complete stakeholder census.",
+        "Outbound tags and mentions are excluded; only visible replies or quote-posts count as incoming engagement.",
+        "Engagement documents public dialogue, not endorsement, policy causation, completed service resolution, or Jamie's authorship of each project-account post."
+      ]
     }
   ],
   "pages": [
@@ -2440,7 +2784,17 @@
       "surface": "/work/kc-town-hall",
       "sourceOrder": [
         "SRC-KCTH-KCMO-AUTHENTICATED-190649",
-        "SRC-KCTH-KCMO-LEGISTAR-190649"
+        "SRC-KCTH-KCMO-LEGISTAR-190649",
+        "SRC-KCTH-WAYBACK-TIRES-2020",
+        "SRC-KCTH-X-CORPUS-2026-07-15",
+        "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
+        "SRC-KCTH-X-ROBINSON-REPLY-2020",
+        "SRC-KCTH-X-JUSTUS-REPLY-2019",
+        "SRC-KCTH-X-LUCAS-QUOTE-2019",
+        "SRC-KCTH-X-KCMO311-REPLY-2018",
+        "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+        "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+        "SRC-KCTH-NORTHEAST-HOUSING-2018"
       ],
       "occurrences": [
         {
@@ -2450,6 +2804,31 @@
           "sourceIds": [
             "SRC-KCTH-KCMO-AUTHENTICATED-190649",
             "SRC-KCTH-KCMO-LEGISTAR-190649"
+          ]
+        },
+        {
+          "id": "public-operations",
+          "claimId": "CLM-KCTH-X-PUBLIC-OPERATIONS",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-WAYBACK-TIRES-2020",
+            "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019"
+          ]
+        },
+        {
+          "id": "civic-engagement",
+          "claimId": "CLM-KCTH-X-CIVIC-ENGAGEMENT",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-X-ROBINSON-REPLY-2020",
+            "SRC-KCTH-X-JUSTUS-REPLY-2019",
+            "SRC-KCTH-X-LUCAS-QUOTE-2019",
+            "SRC-KCTH-X-KCMO311-REPLY-2018",
+            "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+            "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+            "SRC-KCTH-NORTHEAST-HOUSING-2018"
           ]
         }
       ]

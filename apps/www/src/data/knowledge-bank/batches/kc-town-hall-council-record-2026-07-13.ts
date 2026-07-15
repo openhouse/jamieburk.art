@@ -346,7 +346,17 @@ export const kcTownHallCouncilRecordBatch20260713: {
       surface: "/work/kc-town-hall",
       sourceOrder: [
         "SRC-KCTH-KCMO-AUTHENTICATED-190649",
-        "SRC-KCTH-KCMO-LEGISTAR-190649"
+        "SRC-KCTH-KCMO-LEGISTAR-190649",
+        "SRC-KCTH-WAYBACK-TIRES-2020",
+        "SRC-KCTH-X-CORPUS-2026-07-15",
+        "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019",
+        "SRC-KCTH-X-ROBINSON-REPLY-2020",
+        "SRC-KCTH-X-JUSTUS-REPLY-2019",
+        "SRC-KCTH-X-LUCAS-QUOTE-2019",
+        "SRC-KCTH-X-KCMO311-REPLY-2018",
+        "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+        "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+        "SRC-KCTH-NORTHEAST-HOUSING-2018"
       ],
       occurrences: [
         {
@@ -356,6 +366,31 @@ export const kcTownHallCouncilRecordBatch20260713: {
           sourceIds: [
             "SRC-KCTH-KCMO-AUTHENTICATED-190649",
             "SRC-KCTH-KCMO-LEGISTAR-190649"
+          ]
+        },
+        {
+          id: "public-operations",
+          claimId: "CLM-KCTH-X-PUBLIC-OPERATIONS",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-KCTH-WAYBACK-TIRES-2020",
+            "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-X-TIRED-OF-TIRES-LAUNCH-2019"
+          ]
+        },
+        {
+          id: "civic-engagement",
+          claimId: "CLM-KCTH-X-CIVIC-ENGAGEMENT",
+          projection: "case-study",
+          sourceIds: [
+            "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-X-ROBINSON-REPLY-2020",
+            "SRC-KCTH-X-JUSTUS-REPLY-2019",
+            "SRC-KCTH-X-LUCAS-QUOTE-2019",
+            "SRC-KCTH-X-KCMO311-REPLY-2018",
+            "SRC-KCTH-ROBINSON-OFFICIAL-ROLE",
+            "SRC-KCTH-JUSTUS-OFFICIAL-ROLE",
+            "SRC-KCTH-NORTHEAST-HOUSING-2018"
           ]
         }
       ]

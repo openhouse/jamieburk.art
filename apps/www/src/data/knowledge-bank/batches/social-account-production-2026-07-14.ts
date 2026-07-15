@@ -140,7 +140,7 @@ export const socialAccountProductionBatch20260714: {
       visibility: "public",
       preservationStatus: "live",
       capturedAt: "2026-07-14",
-      accessedAt: "2026-07-14",
+      accessedAt: "2026-07-15",
       canonicalUrl: "https://x.com/CallNYCapp",
       preferredPublicUrl: "canonical",
       publicCitation:
@@ -225,9 +225,9 @@ export const socialAccountProductionBatch20260714: {
       canonicalUrl: "https://x.com/KCTownHall",
       preferredPublicUrl: "canonical",
       publicCitation:
-        "Authenticated review of the public @KCTownHall profile and rendered timeline on July 14, 2026.",
+        "Authenticated review of the public @KCTownHall profile and rendered timeline, expanded through a full population-accounted pass on July 15, 2026.",
       publicNote:
-        "The profile reported 183 posts; 170 unique status URLs rendered. Findings describe visible public documentation and dialogue, not a complete record of the project or its outcomes.",
+        "The profile reported 183 posts; 181 distinct account items were recovered and two remain unrecovered. Seven public conversation records are preserved separately. Findings describe visible public documentation and dialogue, not a complete record of the project or its outcomes.",
       supportsGenerally: [
         "a stated neighborhood resource and cultural-center purpose",
         "public survey and neighborhood-listening invitations",
@@ -765,12 +765,12 @@ export const socialAccountProductionBatch20260714: {
       sourceId: "SRC-SOCIAL-KCTOWNHALL-AUTH-OBSERVATION-2026",
       project: "kc-town-hall",
       assertion:
-        "The authenticated account observation recovered 170 of 183 profile-reported posts and bounds the inventory as incomplete public documentation rather than a complete project record.",
+        "The authenticated full-population pass recovered 181 of 183 profile-reported account items, retained an explicit two-item gap, and separated seven public conversation records from the account-post denominator.",
       relationship: "bounds",
       confidence: "high",
       candidateClaimIds: ["CLM-KCTOWNHALL-SOCIAL-DOCUMENTATION"],
       publicSafe: true,
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {
@@ -976,12 +976,13 @@ export const socialAccountProductionBatch20260714: {
       evidence: [
         { sourceId: "SRC-KCTOWNHALL-MISSION-2018", relationship: "direct-support", supports: ["public project purpose"], confidence: "high", renderCitation: true },
         { sourceId: "SRC-KCTOWNHALL-SURVEY-2018", relationship: "direct-support", supports: ["public participation invitation"], confidence: "high", renderCitation: true },
-        { sourceId: "SRC-SOCIAL-KCTOWNHALL-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["observation scope and missingness"], confidence: "high", renderCitation: false }
+        { sourceId: "SRC-SOCIAL-KCTOWNHALL-AUTH-OBSERVATION-2026", relationship: "supports-boundary", supports: ["observation scope and missingness"], confidence: "high", renderCitation: false },
+        { sourceId: "SRC-KCTH-X-CORPUS-2026-07-15", relationship: "corroborating", supports: ["complete population accounting", "item-level survey and listening evidence"], confidence: "high", renderCitation: true }
       ],
       boundaries: ["Do not infer survey participation totals, representativeness, policy causation, project completion, or current property status."],
       antiClaims: ["Every stakeholder participated", "The account proves a completed redevelopment"],
       researchInquiryIds: ["INQ-SOCIAL-PROJECT-ACCOUNT-PRODUCTION-2026"],
-      reviewedAt: "2026-07-14",
+      reviewedAt: "2026-07-15",
       reviewedBy
     },
     {

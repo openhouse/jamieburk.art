@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-15T07:20:55.093Z",
+  "generator": "scripts/derive-kctownhall-x-corpus.mjs --write",
+  "sourceCapture": "docs/knowledge-bank/corpora/source-captures/kctownhall-x-browser-extraction-2026-07-15-utc.json",
+  "sourceCaptureSha256": "366202efa66c749924a653ac79d6af746f2fbe208ba04f7529f1e8d18fd170d9",
+  "corpus": "docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.json",
+  "corpusSha256": "8d9988cfd77f9b3e1af1e5e57b5be11edaedcd76d1d1823dace6c061d00c0227",
+  "profileReportedPosts": 183,
+  "corpusItems": 181,
+  "unrecoveredItems": 2,
+  "supplementalPublicContexts": 7,
+  "status": "profile-population-accounted-for-with-two-item-gap"
+}
