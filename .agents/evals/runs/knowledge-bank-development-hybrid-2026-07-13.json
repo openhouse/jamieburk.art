@@ -1,16 +1,16 @@
 {
-  "candidate_sha": "8d1d80b8b61b9ff46bd11274bb5b3866d998b8a2",
+  "candidate_sha": "3f2646e9a249e807c6bf4d2ad731d587d539f862",
   "results": [
     {
       "eval_id": "KB-007",
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 8d1d80b8b61b9ff46bd11274bb5b3866d998b8a2 and scored collective-credit integrity at 4/4 with no actionable findings.",
-        "Jamie is identified as one of multiple WOW List builders with a specific co-builder and product-operator contribution; account activity and support replies remain attributed to WOW List or the project team.",
-        "Collective claims contain explicit boundaries and anti-claims covering sole authorship, causation, adoption, reply authorship, repost ownership, curation, and shipped-product assumptions.",
-        "Unapproved personal names are withheld from active portfolio projection while factual public-source text remains intact in the governed raw capture.",
-        "The nine civic and care items preserve a precise authored-calendar, authored-curation, reposted-amplification, and reposted-calendar partition."
+        "Two fresh independent graders audited exact candidate 3f2646e9a249e807c6bf4d2ad731d587d539f862 and scored collective-credit integrity at 4/4 with high confidence and no findings.",
+        "CLM-KCTH-X-PUBLIC-OPERATIONS names Julia, Jamie, KC Town Hall, and Oak Park Neighborhood Association while prohibiting sole authorship, sole operation, outcome attribution, and attribution of all 155 authored account posts to Jamie.",
+        "CLM-KCTH-X-CIVIC-ENGAGEMENT counts only visible incoming interactions and rejects endorsement, policy causation, complete participation, service resolution, and individual post authorship.",
+        "The social-traction and self-reported tire-outcome claims remain held with explicit shared-account, volatility, attribution, and independent-corroboration boundaries.",
+        "System-wide inspection found 43 collective-work claims, all with nonempty boundaries and anti-claims; the website preserves the archived-byline, partner, shared-account, outcome, endorsement, and causation boundaries."
       ],
       "findings": [],
       "confidence": 0.99
@@ -20,17 +20,16 @@
       "score": 4,
       "pass": true,
       "evidence": [
-        "Two fresh independent graders audited exact candidate 8d1d80b8b61b9ff46bd11274bb5b3866d998b8a2 and scored public-claim coverage and recursive maintainability at 4/4 with no actionable findings.",
-        "Independent recomputation confirms all 38 profile-reported items: 22 authored posts, 16 reposts, five true top-level authored replies, 35 short-URL occurrences, and 23 authored occurrences across 19 posts.",
-        "The nine civic and care items reconcile exactly as two authored calendar links, three authored external-curation items, three reposted external amplifications, and one reposted calendar amplification.",
-        "Raw-capture and corpus SHA-256 values match the manifest; the commit-pinned GitHub corpus is byte-identical, and byte, hash, count, structural, URL-occurrence, and semantic mutations are rejected.",
-        "The product-support claim and page occurrence retain three primary live X records and render the immutable corpus as corroboration; the civic and care claim also renders the durable corpus.",
-        "The run note enumerates every committed raw-capture field and explicitly excludes private messages, account settings, analytics, cookies, tokens, session identifiers, browser storage, credentials, and other private material.",
-        "The website selectively projects lineage, product-support, civic-use, and field-learning claims while holding volatile engagement, unrecovered-source claims, unsupported authorship, and excess adoption or impact claims."
+        "Two fresh independent graders audited exact candidate 3f2646e9a249e807c6bf4d2ad731d587d539f862 and scored public-claim coverage and underclaiming at 4/4 with high confidence and no findings.",
+        "The manifest and deterministic deriver reproduce 181 recovered account items, the explicit two-item profile-count gap, and seven separately classified public conversation records.",
+        "CLM-KCTH-X-PUBLIC-OPERATIONS and CLM-KCTH-X-CIVIC-ENGAGEMENT have active citation-required case-study projections and governed page occurrences; the public-source-circulation claim has an explicit deeper knowledge-bank use decision.",
+        "The social-traction and self-reported tire-outcome claims have explicit hold dispositions rather than being discarded or promoted.",
+        "Across 64 claims, all 53 eligible claims have explicit projection dispositions; the KC Town Hall project note separately records Use now, Hold, and open-research decisions.",
+        "The checked-in corpus, immutable public asset, transformation manifest, deterministic derivation, citation registry, and mutation tests preserve an inspectable path from capture through selective website projection."
       ],
       "findings": [],
       "confidence": 0.99
     }
   ],
-  "overall_finding": "Exact content commit 8d1d80b8b61b9ff46bd11274bb5b3866d998b8a2 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with no actionable deficiencies. The full-population corpus, durable claim-specific citations, field-complete public-safety disclosure, collective credit, selective website projection, and explicit missingness and volatility boundaries meet the frozen criteria."
+  "overall_finding": "Exact content commit 3f2646e9a249e807c6bf4d2ad731d587d539f862 passes two fresh independent reviews for KB-007 and KB-009 at 4/4 with high confidence and no findings. The full-population-accounted corpus, explicit two-item gap, immutable provenance, collective credit, selective projection, held observations, and recursive tests meet the frozen criteria without material overclaiming or underclaiming."
 }
