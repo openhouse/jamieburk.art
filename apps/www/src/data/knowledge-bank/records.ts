@@ -17,6 +17,7 @@ import { nycartcFacebookPostsBatch } from "./nycartc-facebook-posts-batch-2026-0
 import { kcSpacesFundFacebookPostsBatch } from "./kcspacesfund-facebook-posts-batch-2026-07-14.ts";
 import { nterchngBatchRecords } from "./nterchng-batch-2026-07-15.ts";
 import { kcTownHallPhaseOneBatchRecords } from "./kc-town-hall-phase-one-batch-2026-07-15.ts";
+import { jamiePersonalFacebookPostsBatch } from "./jamie-personal-facebook-posts-batch-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intakeRecords: [
@@ -597,7 +598,8 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostsBatch.intakeRecords,
     ...kcSpacesFundFacebookPostsBatch.intakeRecords,
     ...nterchngBatchRecords.intakeRecords,
-    ...kcTownHallPhaseOneBatchRecords.intakeRecords
+    ...kcTownHallPhaseOneBatchRecords.intakeRecords,
+    ...jamiePersonalFacebookPostsBatch.intakeRecords
   ],
   sources: [
     {
@@ -1678,7 +1680,8 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostsBatch.sources,
     ...kcSpacesFundFacebookPostsBatch.sources,
     ...nterchngBatchRecords.sources,
-    ...kcTownHallPhaseOneBatchRecords.sources
+    ...kcTownHallPhaseOneBatchRecords.sources,
+    ...jamiePersonalFacebookPostsBatch.sources
   ],
   claims: [
     {
@@ -2282,7 +2285,8 @@ const knowledgeBankInput = {
     ...nycartcFacebookPostsBatch.claims,
     ...kcSpacesFundFacebookPostsBatch.claims,
     ...nterchngBatchRecords.claims,
-    ...kcTownHallPhaseOneBatchRecords.claims
+    ...kcTownHallPhaseOneBatchRecords.claims,
+    ...jamiePersonalFacebookPostsBatch.claims
   ],
   researchInquiries: [
     ...urbanHermitSocialCorpusInquiries,
@@ -2293,6 +2297,7 @@ const knowledgeBankInput = {
     ...kcSpacesFundFacebookPostsBatch.researchInquiries,
     ...nterchngBatchRecords.researchInquiries,
     ...kcTownHallPhaseOneBatchRecords.researchInquiries,
+    ...jamiePersonalFacebookPostsBatch.researchInquiries,
     {
       id: "INQ-PROJECT-SOCIAL-ACCOUNTS-2026-07-14",
       project: "project-social-identity-systems",

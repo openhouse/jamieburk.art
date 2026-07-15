@@ -164,6 +164,33 @@ Do not say an unresolved short URL never existed. Do not erase M.C. Schmidt
 from the Horse Lords video credit or describe Jamie as WOW List's sole builder
 because Music Hackathon used singular wording in one post.
 
+## Personal Facebook Posts
+
+Do not describe the 1,243 owner-filtered records as every Facebook post Jamie
+ever published, a native Meta export, a deletion history, or a lifetime total.
+The closed control applies only to records returned by the July 13, 2026
+`Posted by You` surface. Audience labels were not exposed for 973 records; do
+not say the full population was public or publish the raw personal corpus.
+
+Do not treat the 181 mission-routed records or their overlapping category
+counts as Jamie's professional priorities, effort, importance, authorship, or
+impact. Do not treat the 549 normalized external destinations as corroboration
+until each source is recovered, close-read, and decomposed.
+
+Do not convert stakeholder mentions, tags, quotations, or links into inbound
+engagement, endorsement, attendance, partnership, response, or policy
+influence. Do not sum current reactions and comments or turn them into unique
+people, reach, conversion, causality, or impact.
+
+Jamie's May 2016 CouncilStat job-route wording does not establish employment,
+title, contract, formal team membership, authorship of the job posting, or
+hiring authority. His KC Town Hall announcement credits Julia Fredenburg and
+does not establish sole founding or the project's later outcome.
+
+Do not publish audience-unknown text, personal-life material, identities,
+comments, media, exact record-level dates, metrics, authentication state, or
+private archive locators.
+
 ## Personal And WOW List Facebook Events
 
 Do not describe the 505 distinct current IDs across Jamie's two personal event

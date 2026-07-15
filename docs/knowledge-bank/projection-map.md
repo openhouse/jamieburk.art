@@ -97,10 +97,25 @@ current site:
 - `horse-lords-truthers-video`
 - `music-hackathon-wowlist-role`
 - `kc-town-hall-phase-one-restoration-operations`
+- `CLM-FB-JAMIE-POST-POPULATION-2026`
+- `CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE`
+- `CLM-FB-JAMIE-POSTED-URL-ROUTING-2026`
+- `CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026`
+- `CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026`
+- `CLM-FB-JAMIE-PROJECT-ACTION-ROUTING`
+- `CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE`
+- `CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE`
 
 The personal-account population accounting, inbound-search floor, and thematic
 retrieval aids remain Knowledge Bank method records rather than website copy.
 The current portfolio argument does not need a public personal timeline.
+
+The personal Facebook owner-post production follows the same compositional
+decision. Its closed returned-population control, mission and URL research
+queues, selected action-routing sources, current counter observations, and open
+CouncilStat role question strengthen the bank without adding visible site copy.
+These records are provenance and future editorial depth, not a public personal
+timeline or an engagement dashboard.
 
 The personal and WOW List Facebook event pass also remains reserve depth. It
 strengthens the Sunday Dinner proof basis with public pages documenting the

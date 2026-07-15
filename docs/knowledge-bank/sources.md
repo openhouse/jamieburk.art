@@ -170,6 +170,20 @@ completion statement and survey process; Jamie's general-contractor title,
 daily field method, and handbill/data-system authorship remain first-person
 claims pending independent role corroboration.
 
+Jamie's governed personal Facebook post review is documented in
+`docs/knowledge-bank/research/jamie-personal-facebook-posts-2026-07-15.md`,
+with public-safe aggregates in
+`docs/knowledge-bank/data/jamie-personal-facebook-post-controls.json`. The
+protected owner-filtered source returned 1,243 unique records across 621 cursor
+pages and supplied a source-discovery queue, not a public personal archive.
+Six posts were individually reopened and confirmed public before becoming
+source records. Their dated statements can support bounded first-person traces;
+current reactions and comments remain mutable observations, and outgoing
+stakeholder references remain routing rather than inbound engagement. A
+recovered Gothamist article now supplies independent Cabaret Law campaign
+context; the previously governed NPR Cabaret Law and Pitch waterways sources
+were reused rather than duplicated.
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

@@ -133,3 +133,16 @@ denominator. Raw text, identities, per-record mutable metrics, authentication,
 administrator context, and private campaign records remain outside the repo.
 The campaign-level record stays separate from Jamie's bounded website,
 digital-operations, and cross-channel naming support.
+
+Jamie's personal Facebook post production is documented in
+[research/jamie-personal-facebook-posts-2026-07-15.md](research/jamie-personal-facebook-posts-2026-07-15.md).
+The protected owner-filtered crawl ended after 621 cursor pages and returned
+1,243 unique records; every returned record received a research disposition.
+The public-safe aggregate control lives at
+[`data/jamie-personal-facebook-post-controls.json`](data/jamie-personal-facebook-post-controls.json).
+This is complete accounting of the July 13, 2026 `Posted by You` surface, not a
+native Meta export, deletion history, lifetime population, or universal-public
+corpus. Selected posts become public sources only after individual audience and
+content review. Posted URLs remain source leads, stakeholder strings remain
+outgoing routing occurrences, and mutable counters remain observations rather
+than reach or impact.

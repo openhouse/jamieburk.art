@@ -29,6 +29,16 @@ The repo is public. Approval here means approved for public-safe repository and 
   and mutable-interaction boundaries attached. Jamie's recollection of
   predominant but shared Page use remains research-stage and is not approved
   as a public role claim.
+- Personal Facebook owner-post review: approved as bank-only research depth.
+  Say that all 1,243 records returned by the July 13, 2026 owner-filtered
+  `Posted by You` surface received a disposition across 621 cursor pages. Do
+  not call it a lifetime archive, deletion history, native export, or
+  universal-public corpus. The 181 mission-routed records and 549 external
+  destinations are research queues, not importance, authorship, readership,
+  engagement, or impact measures. Selected individually public posts may
+  support bounded first-person project and action-routing claims; preserve
+  collective credit, treat current counters as mutable observations, and keep
+  the CouncilStat role question open.
 - FairRentNYC / Commercial Rent Stabilization: use collective-work language and omit private coalition context.
 - CallNYC: archived, unofficial civic-data prototype; Politico New York coverage is verified.
 - WOWList reach: use approximate public-safe adoption wording.

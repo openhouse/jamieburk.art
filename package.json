@@ -19,7 +19,7 @@
     "generate:citations": "node scripts/generate-public-citations.mjs",
     "check:citations": "node scripts/check-citations.mjs",
     "test:citations": "node --test scripts/tests/citations.test.mjs",
-    "test:knowledge-bank": "node --test scripts/tests/wowlist-facebook-guard.test.mjs scripts/tests/nycartc-facebook-guard.test.mjs scripts/tests/kcspacesfund-facebook-guard.test.mjs",
+    "test:knowledge-bank": "node --test scripts/tests/wowlist-facebook-guard.test.mjs scripts/tests/nycartc-facebook-guard.test.mjs scripts/tests/kcspacesfund-facebook-guard.test.mjs scripts/tests/personal-facebook-posts-guard.test.mjs",
     "report:citations": "node scripts/report-citations.mjs",
     "knowledge-bank": "node scripts/check-knowledge-bank.mjs",
     "check:knowledge-bank": "npm run knowledge-bank",

@@ -53,7 +53,8 @@ for (const required of [
   "existing-site-claim-needs-sources",
   "photo-discovers-research-lead",
   "chronology-without-causality",
-  "shared-account-population-and-role-memory"
+  "shared-account-population-and-role-memory",
+  "private-owner-post-population-and-public-source-selection"
 ]) {
   if (!fixtureIds.has(required)) fail(`Lifecycle eval is missing fixture ${required}`);
 }

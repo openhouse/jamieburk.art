@@ -16,8 +16,13 @@ import {
   findKcSpacesFundFacebookPublicArtifactRisk,
   hasKcSpacesFundFacebookPublicArtifactRisk
 } from "./lib/kcspacesfund-facebook-guard.mjs";
+import {
+  findPersonalFacebookPostsPublicArtifactRisk,
+  hasPersonalFacebookPostsPublicArtifactRisk
+} from "./lib/personal-facebook-posts-guard.mjs";
 import { nycartcFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/nycartc-facebook-posts-batch-2026-07-14.ts";
 import { kcSpacesFundFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts";
+import { jamiePersonalFacebookPostsBatch } from "../apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -203,6 +208,11 @@ const kcSpacesFundFacebookLedgerFiles = textFiles.filter((file) =>
     relative(file)
   )
 );
+const personalFacebookPostsArtifactFiles = textFiles.filter((file) =>
+  /(?:apps\/www\/src\/data\/knowledge-bank\/jamie-personal-facebook-posts-batch-2026-07-15\.ts|docs\/knowledge-bank\/(?:data\/jamie-personal-facebook-post-controls\.json|research\/jamie-personal-facebook-posts-2026-07-15\.md))$/i.test(
+    relative(file)
+  )
+);
 
 for (const file of allFiles) {
   const rel = relative(file);
@@ -289,6 +299,11 @@ for (const file of kcSpacesFundFacebookArtifactFiles) {
   if (risk) addFailure(file, `KC Spaces Fund Facebook public artifact contains ${risk}`);
 }
 
+for (const file of personalFacebookPostsArtifactFiles) {
+  const risk = findPersonalFacebookPostsPublicArtifactRisk(readText(file));
+  if (risk) addFailure(file, `Personal Facebook posts public artifact contains ${risk}`);
+}
+
 scanPattern(
   kcSpacesFundFacebookLedgerFiles,
   "KC Spaces Fund Facebook ledger exposes raw text, identity, URL, per-record metric, or account-state fields",
@@ -362,6 +377,43 @@ for (const statement of kcSpacesFundFacebookTypedSemanticStatements) {
         "apps/www/src/data/knowledge-bank/kcspacesfund-facebook-posts-batch-2026-07-14.ts"
       ),
       `KC Spaces Fund Facebook typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
+    );
+  }
+}
+
+const personalFacebookPostsTypedSemanticStatements = [
+  ...jamiePersonalFacebookPostsBatch.intakeRecords.flatMap((record) => [
+    record.publicSummary,
+    ...record.nextActions
+  ]),
+  ...jamiePersonalFacebookPostsBatch.sources.flatMap((source) => [
+    source.publicCitation,
+    source.publicNote,
+    ...source.supportsGenerally,
+    ...source.doesNotEstablish
+  ]),
+  ...jamiePersonalFacebookPostsBatch.claims.flatMap((claim) => [
+    claim.internalClaim,
+    ...claim.projections.map((projection) => projection.text),
+    ...claim.evidence.flatMap((evidence) => evidence.supports),
+    ...claim.boundaries
+  ]),
+  ...jamiePersonalFacebookPostsBatch.researchInquiries.flatMap((inquiry) => [
+    inquiry.publicSummary,
+    ...inquiry.findings,
+    ...inquiry.limitations
+  ])
+].filter(Boolean);
+
+for (const statement of personalFacebookPostsTypedSemanticStatements) {
+  const risk = findPersonalFacebookPostsPublicArtifactRisk(statement);
+  if (risk) {
+    addFailure(
+      path.join(
+        repoRoot,
+        "apps/www/src/data/knowledge-bank/jamie-personal-facebook-posts-batch-2026-07-15.ts"
+      ),
+      `Personal Facebook posts typed knowledge-bank record contains ${risk}: ${statement.slice(0, 120)}`
     );
   }
 }

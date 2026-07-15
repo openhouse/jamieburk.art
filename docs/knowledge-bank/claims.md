@@ -734,3 +734,51 @@ claim beyond the wording and guardrails here.
 **Protected boundaries:** Private CMS records, private campaign strategy, unapproved editorial correspondence, private analytics, and unreviewed article-body claims stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-13
+
+## jamie-facebook-owner-post-population - Closed returned-population control
+
+**Status:** Ready as research method
+**Support level:** Strong
+**Evidence class:** Protected authenticated surface review / public-safe aggregate control
+**Structured claim IDs:** `CLM-FB-JAMIE-POST-POPULATION-2026`, `CLM-FB-JAMIE-MISSION-ROUTING-PRACTICE`, `CLM-FB-JAMIE-POSTED-URL-ROUTING-2026`
+**Public wording:** A July 2026 owner-filtered Facebook review dispositioned all 1,243 records returned across 621 cursor pages and identified 549 normalized external source leads.
+**Detailed public-safe wording:** The protected traversal ended with no next page and returned records dated from December 2006 through June 2022. Deterministic, overlapping rules routed 181 records toward professional research and found 430 URL-bearing records with 549 normalized external destinations.
+**Where to project:** Knowledge Bank method record only.
+**Why it matters:** Converts a large personal-social archive into an auditable research queue without publishing a personal timeline or losing potentially valuable project evidence.
+**Guardrail:** Completeness applies only to the July 13 `Posted by You` surface. Audience labels were not exposed for 973 records. Categories and link counts are retrieval aids, not measures of importance, authorship, readership, engagement, endorsement, or impact.
+**Do not say:** Every Facebook post Jamie ever published was recovered; all 1,243 records were public; every routed record is an accomplishment; every posted URL corroborates a claim.
+**Protected boundaries:** Raw records, audience-unknown content, exact dates, identities, comments, media, per-record metrics, private life, and authentication state stay outside the public repository.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## jamie-facebook-project-action-routing - Public participation routing practice
+
+**Status:** Ready, held for composition
+**Support level:** Strong
+**Evidence class:** Individually rechecked public first-person posts
+**Structured claim IDs:** `CLM-FB-JAMIE-PROJECT-ACTION-ROUTING`, `CLM-FB-JAMIE-KCTOWNHALL-COINITIATION-TRACE`
+**Public wording:** Selected public posts show Jamie connecting project explanation to practical participation routes across WOW List, Let NYC Dance, KC Town Hall, and Talks Not Raids.
+**Detailed public-safe wording:** Dated public posts route readers from project or press context toward joining community calendars, contacting Council members, taking part in a neighborhood process, and attending or amplifying a public hearing. A 2018 post also preserves Jamie's contemporaneous co-initiation statement with Julia Fredenburg for KC Town Hall.
+**Where to project:** Knowledge Bank now; available for future Technical Operations or project-specific composition.
+**Why it matters:** Shows a recurring operating practice: translating a public issue or cultural project into a legible next action and maintaining the connective infrastructure around collective work.
+**Guardrail:** This is a selected-source practice claim. Routing does not establish clicks, attendance, calls, conversion, endorsement, causality, or impact; preserve collaborator and source authorship.
+**Do not say:** Jamie's posts caused participation or policy change; Jamie solely authored the campaigns; Jamie solely founded KC Town Hall.
+**Protected boundaries:** Audience-unknown posts, private interactions, responder identities, and unrecovered destination contents stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## jamie-facebook-stakeholder-and-counter-boundary - Routing, not inbound engagement
+
+**Status:** Careful
+**Support level:** Strong for observed routing; insufficient for inbound-engagement claims
+**Evidence class:** Protected aggregate classification / selected public interface observations
+**Structured claim IDs:** `CLM-FB-JAMIE-STAKEHOLDER-MENTION-PATTERN-2026`, `CLM-FB-JAMIE-SELECTED-PUBLIC-INTERACTION-FLOOR-2026`, `CLM-FB-JAMIE-CALLNYC-COUNCILSTAT-JOB-LANGUAGE`
+**Public wording:** Keep in the Knowledge Bank as an evidence boundary, not a portfolio metric.
+**Detailed public-safe wording:** Stakeholder counts are overlapping mentions, tags, quotations, and routes in Jamie's posts. Selected reactions and comments are mutable interface observations. A CouncilStat job-route post preserves Jamie's attributed invitation language while his exact institutional relationship remains unresolved.
+**Where to project:** Knowledge Bank only.
+**Why it matters:** Prevents outbound association and current counters from being mistaken for endorsement, institutional action, reach, impact, employment, or hiring authority.
+**Guardrail:** Require an inbound responder-identity record or independent source before making a stakeholder-engagement claim; require corroborating records before interpreting the CouncilStat relationship.
+**Do not say:** Twenty Council stakeholders engaged with Jamie; reactions measure reach; comments prove endorsement; Jamie was employed by or hired for CouncilStat based on this post.
+**Protected boundaries:** Raw interaction records, responder identities, private analytics, and authentication state stay offline.
+**Review owner:** Jamie / research open
+**Last reviewed:** 2026-07-15
