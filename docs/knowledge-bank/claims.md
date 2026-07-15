@@ -228,22 +228,22 @@ claim beyond the wording and guardrails here.
 **Review owner:** Jamie / collaborator confirmation needed for broader public-organizer framing
 **Last reviewed:** 2026-07-09
 
-## kc-town-hall-public-benefit-documentation - Adaptive reuse documentation
+## kc-town-hall-public-benefit-documentation - Historic adaptive reuse delivery
 
 **Status:** Careful  
 **Support level:** Careful  
 **Evidence class:** Approved resume / public source / public-safe archive summary / Jamie review confirmation
-**Public wording:** Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.
+**Public wording:** Co-founded and project-managed Phase One cold-shell restoration of a long-vacant historic building while building a neighborhood-survey and public-benefit documentation process. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.
 
-**Detailed public-safe wording:** Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.
+**Detailed public-safe wording:** A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.
 **Where to project:** Technical Operations, Work card, Case study.  
-**Why it matters:** Shows long-horizon project management, public/private boundary judgment, and documentation for complex built-environment work.  
-**Guardrail:** Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion. Present the handoff as Jamie's first-person account without identifying the recipient or publishing private transition context.
+**Why it matters:** Shows long-horizon project management, phased construction delivery, neighborhood listening, public/private boundary judgment, and documentation for complex built-environment work.
+**Guardrail:** Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from an executed agreement, disbursement, or receipt.
 
-**Do not say:** $490,539 received or disbursed; funding agreement executed; Jamie alone secured the Council action; project completed as proposed; current property status; recipient identity; handoff date or terms; private financial details.
-**Protected boundaries:** Private transition, financial, legal, property, banking, and stakeholder details stay offline.
+**Do not say:** $490,539 received or disbursed; funding agreement executed; Jamie alone secured the Council action; Jamie alone founded, managed, or completed the restoration; Jamie personally performed every construction trade; general-contractor title independently confirmed; Phase Two or full redevelopment completed as proposed; current property status; recipient identity; handoff date or terms; private financial details.
+**Protected boundaries:** The source packet, banking appendices, resident responses, contact records, and private transition, financial, legal, property, contractor, and stakeholder details stay offline.
 **Review owner:** Jamie
-**Last reviewed:** 2026-07-14
+**Last reviewed:** 2026-07-15
 
 ## source-backed-team-memory-method - Source-backed team memory
 
@@ -452,6 +452,21 @@ claim beyond the wording and guardrails here.
 **Guardrail:** Do not assign every post or later operation to Jamie, convert visible dialogue into endorsement, or present self-reported tire outcomes as independently verified.
 **Do not say:** Jamie alone ran Tired of Tires; Council engagement proves endorsement; every project-account post was Jamie's.
 **Protected boundaries:** Private neighborhood records, private messages, and unapproved resident identities stay offline.
+**Review owner:** Jamie
+**Last reviewed:** 2026-07-15
+
+## kc-town-hall-held-role-research - Held KC Town Hall role research
+
+**Status:** Careful
+**Support level:** Careful
+**Evidence class:** Public-safe archive summary / Jamie review confirmation
+**Public wording:** Research is preserving and testing Jamie's recollections of a Phase One general-contractor role, survey-system authorship, detailed Tired of Tires field operations and later service geography, and Cleveland Avenue Unify to Beautify design support.
+**Detailed public-safe wording:** The knowledge bank retains these first-person memories as attributed leads, with contracts, permits, invoices, schedules, drawings, disposal records, neighborhood materials, public artifacts, photographs, and bounded collaborator confirmation identified as potential corroboration paths.
+**Where to project:** KC Town Hall case study, as open research only.
+**Why it matters:** Preserves potentially important implementation work without converting first-person recollection into independent confirmation.
+**Guardrail:** These are research leads, not independently confirmed accomplishments. Use project manager for the proposal-backed construction role; do not claim sole authorship, sole operation, verified tire outcomes, Indian Mound expansion, Cleveland Avenue co-founding, or causal influence on capital funding without further evidence.
+**Do not say:** General-contractor title independently confirmed; Jamie alone designed or operated Tired of Tires; Indian Mound expansion independently confirmed; Cleveland Avenue co-founding independently confirmed; Cleveland Avenue work caused a City capital allocation.
+**Protected boundaries:** Contracts, invoices, permits, schedules, resident responses, contact records, private neighborhood-association records, and unapproved collaborator correspondence stay offline.
 **Review owner:** Jamie
 **Last reviewed:** 2026-07-15
 

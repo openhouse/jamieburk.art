@@ -6,7 +6,33 @@ Last reviewed: 2026-07-15
 
 KC Town Hall combined adaptive-reuse planning for a long-vacant historic building with public-benefit documentation, neighborhood listening, and later project-account communication about neighborhood conditions and practical civic resources.
 
-Jamie's established portfolio role is planning and public documentation. The archived 2020 Tired of Tires page identifies Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. This supports Jamie's bounded public documentation role; the shared account record remains collective project evidence and does not assign every post or later operation to Jamie.
+The 2019 CCED proposal names Jamie and Julia as founders and project managers.
+Its completed-work budget records Phase One cold-shell restoration across roof,
+structural-masonry, and floor-framing work in 2018 and 2019. This strengthens
+Jamie's established portfolio role from planning support to bounded project
+delivery while preserving Julia's co-leadership and the distinct work of the
+project's professional and trade teams.
+
+The archived 2020 Tired of Tires page identifies Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. This supports Jamie's bounded public documentation role; the shared account record remains collective project evidence and does not assign every post or later operation to Jamie.
+
+## Phase One and neighborhood process
+
+The [public-safe proposal appraisal](../sources/kc-town-hall-phase-one-cced-proposal.md)
+records what the private packet establishes without publishing its financial or
+contact appendices.
+
+- The proposal identifies Jamie and Julia as founders and project managers.
+- Phase One is a cold-shell scope spanning roof, structural masonry, and floor
+  framing; its budget detail records work completed across 2018 and 2019.
+- The proposal documents a neighborhood survey conducted with Oak Park
+  Neighborhood Association and New Horizon Missionary Baptist Church and says
+  ongoing results directly shaped the proposal.
+- A support letter corroborates a listening-driven process intended to inform
+  renovations and center surrounding-neighborhood assets and needs.
+
+The packet does not call Jamie the general contractor, assign every trade action
+to him, identify the survey-card designer, or establish completion of Phase Two
+or the full redevelopment.
 
 ## Full population accounting
 
@@ -72,12 +98,18 @@ Linking a source documents circulation, not authorship, agreement, reach, uptake
 
 ## Use now
 
-The public case study may use two bounded claims:
+The public case study may use four bounded claims:
 
-1. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners; the shared account then demonstrates a durable public operating surface through the 99-post tire-program pattern.
-2. At least three then-sitting Council-member accounts visibly replied to or quote-posted KC Town Hall, and KCMO 311 visibly replied in a service thread.
+1. The 2019 CCED proposal names Jamie and Julia as founders and project managers
+   and records Phase One cold-shell restoration completed across 2018 and 2019.
+2. The proposal documents a partner-based neighborhood survey and states that
+   ongoing survey results directly shaped the proposal.
+3. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners; the shared account then demonstrates a durable public operating surface through the 99-post tire-program pattern.
+4. At least three then-sitting Council-member accounts visibly replied to or quote-posted KC Town Hall, and KCMO 311 visibly replied in a service thread.
 
-Both claims require citations and collective-credit boundaries.
+The proposal-backed claims use protected source support without exposing the
+packet. The public-source claims require citations. All four require
+collective-credit boundaries.
 
 ## Hold
 
@@ -87,6 +119,12 @@ Keep these out of accomplishment messaging until stronger evidence arrives:
 - the account's self-reported 142-tire, zero-curb, and $17,768 avoided-cost figures
 - claims that Jamie authored every post, established the account, or personally operated later Tired of Tires work
 - survey response counts, representativeness, policy causation, funding receipt, project completion, and current property status
+- Jamie's recalled general-contractor title and detailed trade-sequencing role
+- Jamie-specific authorship of the survey handbill and backing data workflow
+- Jamie's recalled monthly tire-pickup and disposal role and Indian Mound expansion
+- Jamie's recalled Cleveland Avenue Unify to Beautify co-founding, design, and
+  print-production role
+- any claim that Cleveland Avenue work caused a particular capital allocation
 
 ## Open research
 
@@ -94,6 +132,15 @@ Keep these out of accomplishment messaging until stronger evidence arrives:
 2. Corroborate the tire-program outcome figures through public program, disposal, or fiscal records and bounded collaborator testimony.
 3. Establish Jamie's account-establishment and operating role through dated public-safe evidence while preserving the transition boundary.
 4. Continue public-archive recovery for the KC Star, GoFundMe, Facebook, and expired KC Town Hall site destinations.
+5. Corroborate the Phase One general-contractor title through contracts, permits,
+   invoices, schedules, drawings, photographs, or bounded collaborator notes.
+6. Recover dated survey design and data-workflow artifacts without publishing
+   resident responses or contact information.
+7. Establish the Tired of Tires field workflow and Indian Mound expansion through
+   disposal, neighborhood, print, photographic, and collaborator records.
+8. Recover HENC and Cleveland Avenue Unify to Beautify artifacts, credit Pastor
+   Lee's originating corridor vision, and separate public participation from
+   causal claims about City funding.
 
 ## Active Claim Projection
 

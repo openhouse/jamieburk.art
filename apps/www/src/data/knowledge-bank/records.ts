@@ -10,6 +10,7 @@ import { nterChngArchiveBatch20260715 } from "./batches/nter-chng-archive-2026-0
 import { wowListXFullPopulationBatch20260715 } from "./batches/wowlist-x-full-population-2026-07-15.ts";
 import { kcTownHallXFullPopulationBatch20260715 } from "./batches/kctownhall-x-full-population-2026-07-15.ts";
 import { nycArtCXFullPopulationBatch20260715 } from "./batches/nycartc-x-full-population-2026-07-15.ts";
+import { kcTownHallPhaseOneBatch20260715 } from "./batches/kc-town-hall-phase-one-2026-07-15.ts";
 
 const knowledgeBankInput = {
   intake: [
@@ -228,6 +229,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.intake,
     ...kcTownHallXFullPopulationBatch20260715.intake,
     ...nycArtCXFullPopulationBatch20260715.intake,
+    ...kcTownHallPhaseOneBatch20260715.intake,
     ...nterChngArchiveBatch20260715.intake
   ],
   sources: [
@@ -473,6 +475,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.sources,
     ...kcTownHallXFullPopulationBatch20260715.sources,
     ...nycArtCXFullPopulationBatch20260715.sources,
+    ...kcTownHallPhaseOneBatch20260715.sources,
     ...nterChngArchiveBatch20260715.sources
   ],
   sourceAssertions: [
@@ -666,6 +669,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.sourceAssertions,
     ...kcTownHallXFullPopulationBatch20260715.sourceAssertions,
     ...nycArtCXFullPopulationBatch20260715.sourceAssertions,
+    ...kcTownHallPhaseOneBatch20260715.sourceAssertions,
     ...nterChngArchiveBatch20260715.sourceAssertions
   ],
   claims: [
@@ -1044,6 +1048,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.claims,
     ...kcTownHallXFullPopulationBatch20260715.claims,
     ...nycArtCXFullPopulationBatch20260715.claims,
+    ...kcTownHallPhaseOneBatch20260715.claims,
     ...nterChngArchiveBatch20260715.claims
   ],
   researchTasks: [
@@ -1170,6 +1175,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.researchTasks,
     ...kcTownHallXFullPopulationBatch20260715.researchTasks,
     ...nycArtCXFullPopulationBatch20260715.researchTasks,
+    ...kcTownHallPhaseOneBatch20260715.researchTasks,
     ...nterChngArchiveBatch20260715.researchTasks
   ],
   researchInquiries: [
@@ -1195,6 +1201,7 @@ const knowledgeBankInput = {
     ...wowListXFullPopulationBatch20260715.researchInquiries,
     ...kcTownHallXFullPopulationBatch20260715.researchInquiries,
     ...nycArtCXFullPopulationBatch20260715.researchInquiries,
+    ...kcTownHallPhaseOneBatch20260715.researchInquiries,
     ...nterChngArchiveBatch20260715.researchInquiries
   ],
   corrections: [

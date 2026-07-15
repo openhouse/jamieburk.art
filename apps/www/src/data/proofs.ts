@@ -655,19 +655,22 @@ export const proofClaims: ProofClaim[] = [
       "jamie-review-confirmation"
     ],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.",
-    shortWording: "Supported adaptive reuse planning and public-benefit documentation",
+      "Co-founded and project-managed Phase One cold-shell restoration of a long-vacant historic building while building a neighborhood-survey and public-benefit documentation process. In 2019, the Kansas City Council adopted Resolution 190649, accepting a $490,539 CCED funding recommendation and authorizing funding-agreement negotiations.",
+    shortWording: "Co-founded and project-managed historic adaptive reuse",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.",
+      "A 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. The proposal also documents a partner-based neighborhood survey whose ongoing results shaped its plans. After the CCED Board's recommendation, the Council accepted an amount not to exceed $490,539 and authorized the City Manager to negotiate a funding agreement. When Jamie's stewardship concluded, he transitioned the project to a mission-aligned organization.",
     sourceBasis:
-      "Approved resume language, public-safe project context, Kansas City Legistar history, authenticated Resolution 190649, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures; recipient identity, handoff terms, and current project status remain unestablished for public use.",
+      "Public-safe page-level appraisal of the private 2019 CCED proposal and support-letter packet, approved resume language, Kansas City Legistar history, authenticated Resolution 190649, the governed project-account corpus, and Jamie's July 14, 2026 handoff confirmation. The underlying packet remains private because appended materials contain financial and contact information. The account corpus preserves a two-item recovery gap, does not assign every post or later operation to Jamie, and does not independently verify self-reported outcome figures.",
     guardrail:
-      "Distinguish the CCED Board recommendation, Council acceptance, and negotiation authority from an executed agreement, disbursement, receipt, or project completion. Present the handoff as Jamie's first-person account without identifying the recipient or publishing private transition context.",
+      "Credit Julia's co-leadership, each professional and trade team, survey partners, residents, the CCED Board, and the Council. Phase One completion is not completion of Phase Two or the full redevelopment. Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title. Distinguish negotiation authority from an executed agreement, disbursement, or receipt.",
     doNotSay: [
       "$490,539 received or disbursed",
       "Funding agreement executed",
       "Jamie alone secured the Council action",
-      "Project completed as proposed",
+      "Jamie alone founded, managed, or completed the restoration",
+      "Jamie personally performed every construction trade",
+      "General-contractor title independently confirmed",
+      "Phase Two or full redevelopment completed as proposed",
       "Current property status",
       "Recipient organization identity",
       "Handoff date or terms",
@@ -683,8 +686,14 @@ export const proofClaims: ProofClaim[] = [
     ],
     surfaces: ["resume", "technical-operations", "work-card", "case-study"],
     relatedProjects: ["kc-town-hall"],
-    relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
-    lastReviewed: "2026-07-14"
+    relatedCapabilities: [
+      "project-management",
+      "historic-restoration",
+      "public-benefit-documentation",
+      "neighborhood-listening",
+      "stakeholder-context"
+    ],
+    lastReviewed: "2026-07-15"
   },
   {
     id: "source-backed-team-memory-method",
@@ -930,6 +939,44 @@ export const proofClaims: ProofClaim[] = [
     surfaces: ["work-card", "case-study", "technical-operations"],
     relatedProjects: ["kc-town-hall"],
     relatedCapabilities: ["neighborhood-operations", "public-documentation", "stakeholder-communication"],
+    lastReviewed: "2026-07-15"
+  },
+  {
+    id: "kc-town-hall-held-role-research",
+    status: "careful",
+    supportLevel: "careful",
+    evidenceClass: ["public-safe-archive-summary", "jamie-review-confirmation"],
+    publicWording:
+      "Research is preserving and testing Jamie's recollections of a Phase One general-contractor role, survey-system authorship, detailed Tired of Tires field operations and later service geography, and Cleveland Avenue Unify to Beautify design support.",
+    shortWording: "Held KC Town Hall role research",
+    detailedPublicWording:
+      "The knowledge bank retains these first-person memories as attributed leads, with contracts, permits, invoices, schedules, drawings, disposal records, neighborhood materials, public artifacts, photographs, and bounded collaborator confirmation identified as potential corroboration paths.",
+    sourceBasis:
+      "Jamie's July 15, 2026 first-person account, public-safe appraisal of the private 2019 CCED proposal packet, archived Tired of Tires page, and governed KC Town Hall account corpus.",
+    guardrail:
+      "These are research leads, not independently confirmed accomplishments. Use project manager for the proposal-backed construction role; do not claim sole authorship, sole operation, verified tire outcomes, Indian Mound expansion, Cleveland Avenue co-founding, or causal influence on capital funding without further evidence.",
+    doNotSay: [
+      "General-contractor title independently confirmed",
+      "Jamie alone designed or operated Tired of Tires",
+      "Indian Mound expansion independently confirmed",
+      "Cleveland Avenue co-founding independently confirmed",
+      "Cleveland Avenue work caused a City capital allocation"
+    ],
+    protectedBoundaries: [
+      "Contracts and invoices",
+      "Permits and schedules",
+      "Resident responses and contact records",
+      "Private neighborhood-association records",
+      "Unapproved collaborator correspondence"
+    ],
+    surfaces: ["case-study"],
+    relatedProjects: ["kc-town-hall"],
+    relatedCapabilities: [
+      "construction-coordination",
+      "participatory-research",
+      "field-operations",
+      "civic-design"
+    ],
     lastReviewed: "2026-07-15"
   },
   {

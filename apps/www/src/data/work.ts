@@ -823,10 +823,10 @@ const workItemsInput = [
     title: "KC Town Hall LLC",
     slug: "kc-town-hall",
     series: "Built Environment",
-    subtitle: "Historic adaptive reuse planning in Kansas City",
+    subtitle: "Historic restoration, neighborhood listening, and public benefit",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for adaptive reuse of a long-vacant historic building. An archived program page names Jamie and Julia as authors; in 2019, the Kansas City Council accepted a $490,539 CCED funding recommendation and authorized funding-agreement negotiations.",
-    role: "Project Planning & Public Documentation",
+      "Co-founded and project-managed Phase One cold-shell restoration of a long-vacant historic building. A 2019 proposal records completed roof, structural-masonry, and floor-framing work and a neighborhood survey that shaped project plans; the Council later accepted a $490,539 CCED funding recommendation and authorized negotiations.",
+    role: "Co-Founder & Project Manager",
     years: "Beginning in 2017",
     status: "Short proof page",
     featured: false,
@@ -834,7 +834,8 @@ const workItemsInput = [
     visibility: "public-safe",
     proofBankIds: [
       "kc-town-hall-public-benefit-documentation",
-      "kc-town-hall-neighborhood-operations"
+      "kc-town-hall-neighborhood-operations",
+      "kc-town-hall-held-role-research"
     ],
     statementProofs: {
       title: ["kc-town-hall-public-benefit-documentation"],
@@ -870,7 +871,10 @@ const workItemsInput = [
         "kc-town-hall-public-benefit-documentation",
         "kc-town-hall-neighborhood-operations"
       ],
-      open: ["kc-town-hall-public-benefit-documentation"],
+      open: [
+        "kc-town-hall-public-benefit-documentation",
+        "kc-town-hall-held-role-research"
+      ],
       protected: ["kc-town-hall-public-benefit-documentation"],
       careNote: ["kc-town-hall-public-benefit-documentation"],
       currentStatus: ["kc-town-hall-public-benefit-documentation"],
@@ -883,9 +887,9 @@ const workItemsInput = [
       links: ["kc-town-hall-neighborhood-operations"]
     },
     whatWasUnclear:
-      "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
+      "A long-vacant historic building required coordinated restoration work, preservation judgment, neighborhood listening, public-benefit framing, funding navigation, and careful separation of public from private records.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "A completed Phase One cold shell, a neighborhood-informed project proposal, public-benefit documentation, stakeholder context, and municipal-review support for continued adaptive reuse.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -901,16 +905,20 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Public-safe summary, official Kansas City legislative record, authenticated Resolution 190649, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
-    credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
+      "Public-safe appraisal of the private 2019 CCED proposal and support-letter packet, official Kansas City legislative record, authenticated Resolution 190649, archived KC Town Hall program pages, Jamie's public-safe handoff confirmation, and a governed 181-item public account corpus with an explicit two-item recovery gap.",
+    credits: [
+      "Jamie Burkart",
+      "Julia Fredenburg",
+      "KC Town Hall professional, trade, neighborhood, and civic collaborators"
+    ],
     currentStatus: "Public-safe short proof page.",
     group: "Operating systems for teams",
     roleFit:
-      "Long-horizon project management, public-benefit documentation, stakeholder coordination, and implementation support.",
+      "Long-horizon project management, multi-trade coordination, neighborhood listening, public-benefit documentation, stakeholder coordination, and implementation support.",
     evidence: [
-      "Redevelopment planning",
-      "Public-benefit documentation",
-      "Historic preservation context",
+      "2019 proposal naming Jamie and Julia as founders and project managers",
+      "Phase One cold-shell completion across roof, structural masonry, and floor framing",
+      "Partner-based neighborhood survey that shaped the proposal",
       "Council-adopted $490,539 CCED funding path",
       "Archived Tired of Tires page naming Julia and Jamie as authors",
       "99 authored posts documenting or coordinating Tired of Tires work",
@@ -918,11 +926,11 @@ const workItemsInput = [
     ],
     knownOpenProtected: {
       known:
-        "Jamie supported adaptive reuse planning and documentation for a long-vacant historic building. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. In 2019, the Council accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539. The shared project account also preserves sustained public operations and visible civic dialogue.",
+        "The 2019 proposal names Jamie and Julia as founders and project managers and records Phase One cold-shell restoration completed across roof, structural-masonry, and floor-framing work. It documents a partner-based neighborhood survey that shaped project plans. An archived Tired of Tires page names Julia and Jamie as authors and KC Town Hall with Oak Park Neighborhood Association as program partners. The Council later accepted the CCED Board's recommendation and authorized funding-agreement negotiations for up to $490,539.",
       open:
-        "The reviewed resolution does not establish an executed funding agreement, disbursement, receipt, project completion, or current property status. The account corpus does not assign every post or later operation to Jamie, independently verify its outcome figures, or recover two profile-reported items. The recipient organization's identity, handoff timing and terms, and present status are not established for publication.",
+        "Contracts, permits, dated artifacts, or collaborator records have not yet corroborated Jamie's recalled general-contractor title, survey-system authorship, detailed Tired of Tires field role or later service geography, or Cleveland Avenue design role. The reviewed resolution does not establish an executed funding agreement, disbursement, or receipt. Phase One completion does not establish Phase Two or full redevelopment completion. Two project-account items, recipient identity, and handoff terms remain unrecovered or unestablished for publication.",
       protected:
-        "Private transition context and private financial, legal, property, banking, and stakeholder details are omitted."
+        "The source packet, banking appendices, resident responses, contact records, private transition context, and private financial, legal, property, contractor, and stakeholder details are omitted."
     }
   }
 ] satisfies WorkMeta[];

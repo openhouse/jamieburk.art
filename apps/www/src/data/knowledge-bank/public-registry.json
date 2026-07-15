@@ -2778,6 +2778,47 @@
         "Four unresolved links appeared only in supplemental contexts and are excluded from the 1,235-account-item count.",
         "Every article-level claim still requires close reading before it can support a separate accomplishment claim."
       ]
+    },
+    {
+      "id": "CLM-KCTH-PHASE-ONE-PROJECT-MANAGEMENT",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "A 2019 CCED proposal names Jamie and Julia as KC Town Hall's founders and project managers and records Phase One cold-shell restoration as completed in 2019, including roof, structural-masonry, and floor-framing work.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit Julia Fredenburg as co-founder and project manager and preserve the distinct work of the masonry, architecture, roofing, concrete, electrical, legal, and other project contributors.",
+        "The proposal confirms Phase One cold-shell work, not completion of Phase Two or the entire redevelopment.",
+        "Use project manager unless separate evidence corroborates Jamie's recalled general-contractor title."
+      ]
+    },
+    {
+      "id": "CLM-KCTH-NEIGHBORHOOD-SURVEY-PROCESS",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The project paired physical restoration with a neighborhood survey conducted with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church; the proposal states that ongoing survey results directly shaped its plans.",
+          "status": "active",
+          "citationRequired": false,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ]
+        }
+      ],
+      "evidence": [],
+      "boundaries": [
+        "Credit the neighborhood association, church, residents, Jamie, Julia, and other participants as a collective process.",
+        "The proposal does not establish the survey response count, representativeness, individual authorship of the card or database, or completion of every proposed use."
+      ]
     }
   ],
   "pages": [
