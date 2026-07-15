@@ -481,6 +481,10 @@ test("WOW List corpus accounts for the full profile-reported population and pres
     "docs/knowledge-bank/projects/wowlist.md",
     "utf8"
   );
+  const socialInventory = readFileSync(
+    "docs/knowledge-bank/projects/social-account-inventory.md",
+    "utf8"
+  );
   const runNote = readFileSync(
     "docs/knowledge-bank/runs/2026-07-15-wowlist-x-full-population.md",
     "utf8"
@@ -552,6 +556,15 @@ test("WOW List corpus accounts for the full profile-reported population and pres
       `Population: ${corpus.population.renderedDistinct} of ${corpus.population.profileReported} profile-reported items recovered`
     )
   );
+  assert.match(
+    socialInventory,
+    /posted but unrecovered Good Times article the account described as concerning DIY documentation/
+  );
+  assert.match(
+    socialInventory,
+    /direct calendar links and project-account curation around demonstrations/
+  );
+  assert.doesNotMatch(socialInventory, /Good Times reporting on DIY documentation/);
   assert.ok(intakeSourceIds.every((sourceId) => decomposedSourceIds.has(sourceId)));
   assert.match(
     socialBatch,
