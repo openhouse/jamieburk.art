@@ -10,6 +10,14 @@ import {
   campaignPressSources,
   campaignPressSourceIds
 } from "../../apps/www/src/data/knowledge-bank/campaignPress.ts";
+import {
+  callNycCouncilSocialSourceIds,
+  kcSpacesRecipientSocialSourceIds,
+  nycaCouncilSocialSourceIds,
+  nycaOlympiaSocialSourceId,
+  projectSocialSourceIds,
+  projectSocialSources
+} from "../../apps/www/src/data/knowledge-bank/projectSocial.ts";
 import { citationNoteId, getClaimProjection, publicCitationRegistry, resolveCitationOccurrence, resolveCitationReferences } from "../../apps/www/src/data/knowledge-bank/public.ts";
 import { intakeItemSchema } from "../../apps/www/src/data/knowledge-bank/schema.ts";
 import { validateKnowledgeBank } from "../lib/citation-validation.mjs";
@@ -408,6 +416,172 @@ test("Google Drive intake preserves attribution, data gaps, and projection bound
   assert.doesNotMatch(publicRegistryText, /INTAKE-GDRIVE/);
   assert.doesNotMatch(publicRegistryText, /SRC-GDRIVE/);
   assert.doesNotMatch(publicRegistryText, /LOC-GDRIVE/);
+});
+
+test("project social census preserves strict counts and source identity", () => {
+  assert.equal(projectSocialSources.length, 46);
+  assert.equal(new Set(projectSocialSourceIds).size, 46);
+  assert.equal(callNycCouncilSocialSourceIds.length, 8);
+  assert.equal(nycaCouncilSocialSourceIds.length, 11);
+  assert.equal(kcSpacesRecipientSocialSourceIds.length, 11);
+  assert.ok(
+    projectSocialSourceIds.every((sourceId) =>
+      knowledgeBank.sources.some((source) => source.id === sourceId)
+    )
+  );
+
+  const sourceById = new Map(
+    knowledgeBank.sources.map((source) => [source.id, source])
+  );
+  assert.equal(
+    sourceById.get("SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14").visibility,
+    "protected"
+  );
+  assert.equal(
+    sourceById.get("SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS").visibility,
+    "protected"
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-NYCA-X-PROFILE-2026-07-14")
+      .doesNotEstablish.some((boundary) => /every post/i.test(boundary))
+  );
+  assert.ok(
+    sourceById
+      .get("SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14")
+      .doesNotEstablish.some((boundary) => /grant/i.test(boundary))
+  );
+});
+
+test("Council social intake uses recovery floors and excludes noisy matches", () => {
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const callNyc = intakeById.get(
+    "INTAKE-CALLNYC-COUNCIL-ENGAGEMENT-2026-07-12"
+  );
+  const nyca = intakeById.get(
+    "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14"
+  );
+  const callNycFloor = callNyc.propositions.find(
+    (proposition) =>
+      proposition.id === "PROP-CALLNYC-EIGHT-COUNCIL-ACCOUNTS-RECOVERED"
+  );
+  const nycaFloor = nyca.propositions.find(
+    (proposition) =>
+      proposition.id === "PROP-NYCA-FIVE-DIRECT-COUNCIL-ACCOUNTS-2026"
+  );
+  const olympia = nyca.propositions.find(
+    (proposition) =>
+      proposition.id === "PROP-NYCA-OLYMPIA-KAZI-MENTION-CORPUS-2026"
+  );
+
+  assert.equal(callNyc.status, "researching");
+  assert.equal(nyca.status, "researching");
+  assert.match(callNycFloor.text, /eight then-serving/);
+  assert.equal(
+    callNycFloor.sourceIds.filter((sourceId) =>
+      callNycCouncilSocialSourceIds.includes(sourceId)
+    ).length,
+    8
+  );
+  assert.ok(
+    callNycFloor.boundaries.some((boundary) =>
+      /institutional @NYCCouncil account/i.test(boundary)
+    )
+  );
+  assert.match(nycaFloor.text, /five then-serving.*15 recoverable/i);
+  assert.equal(
+    nycaFloor.sourceIds.filter((sourceId) =>
+      nycaCouncilSocialSourceIds.includes(sourceId)
+    ).length,
+    11
+  );
+  assert.ok(
+    nycaFloor.boundaries.some((boundary) =>
+      /Brad Lander and Carlina Rivera/i.test(boundary)
+    )
+  );
+  assert.match(olympia.text, /89 of the 526/);
+  assert.ok(olympia.sourceIds.includes(nycaOlympiaSocialSourceId));
+  assert.ok(
+    [callNyc, nyca].every(
+      (item) => item.projectionStatus === "no-public-projection"
+    )
+  );
+});
+
+test("project social intake protects shared authorship and transitions", () => {
+  const intakeById = new Map(
+    knowledgeBank.intakeItems.map((item) => [item.id, item])
+  );
+  const socialIdentity = intakeById.get(
+    "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14"
+  );
+  const wowList = intakeById.get(
+    "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14"
+  );
+  const kcSpaces = intakeById.get(
+    "INTAKE-KC-SPACES-FUND-SOCIAL-RECORD-2026-07-14"
+  );
+  const kcTownHall = intakeById.get(
+    "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14"
+  );
+
+  assert.ok(
+    [socialIdentity, wowList, kcSpaces, kcTownHall].every(
+      (item) =>
+        item.status === "researching" &&
+        item.projectionStatus === "no-public-projection" &&
+        item.candidateClaims.length === 0
+    )
+  );
+  assert.equal(
+    socialIdentity.propositions.find(
+      (proposition) =>
+        proposition.id === "PROP-PROJECT-SOCIAL-ACCOUNTS-ESTABLISHED-BY-JAMIE"
+    ).status,
+    "memory-lead"
+  );
+  assert.ok(
+    socialIdentity.boundaries.some((boundary) =>
+      /individual authorship/i.test(boundary)
+    )
+  );
+  assert.equal(
+    kcSpaces.propositions.find(
+      (proposition) =>
+        proposition.id === "PROP-KC-SPACES-FUND-ELEVEN-PUBLIC-HIGHLIGHTS-2026"
+    ).sourceIds.length,
+    11
+  );
+  assert.ok(
+    kcSpaces.boundaries.some((boundary) => /grant decisions/i.test(boundary))
+  );
+  assert.ok(
+    kcTownHall.boundaries.some((boundary) => /family crisis/i.test(boundary))
+  );
+  assert.ok(
+    kcTownHall.boundaries.some((boundary) =>
+      /post-transition posts or program outcomes/i.test(boundary)
+    )
+  );
+});
+
+test("social research locators stay private and research notes stay public-safe", () => {
+  const publicRegistryText = JSON.stringify(publicCitationRegistry);
+  assert.doesNotMatch(publicRegistryText, /RESEARCH-PROJECT-SOCIAL-X-CENSUS/);
+  assert.doesNotMatch(publicRegistryText, /LOC-NYCA-COUNCIL-HANDLE-ROSTERS/);
+  assert.doesNotMatch(publicRegistryText, /INTAKE-PROJECT-SOCIAL/);
+  assert.doesNotMatch(publicRegistryText, /INTAKE-NYCA-COUNCIL-SOCIAL/);
+
+  const researchNote = readFileSync(
+    "docs/knowledge-bank/research/2026-07-14-project-social-media-archival-production.md",
+    "utf8"
+  );
+  assert.doesNotMatch(researchNote, /\/Users\//);
+  assert.doesNotMatch(researchNote, /\/Volumes\//);
+  assert.doesNotMatch(researchNote, /\b\d{3}[-.)]\s?\d{3}[- ]\d{4}\b/);
 });
 
 test("rendering primitives preserve no-JavaScript document semantics", () => {

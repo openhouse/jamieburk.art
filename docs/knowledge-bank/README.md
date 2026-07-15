@@ -98,3 +98,12 @@ attribution, duplicate-source reconciliation, and consent-aware handling of
 collaborative workspaces. It develops residency-operations, longitudinal data
 stewardship, and archive-automation knowledge without exposing Drive IDs,
 participant logistics, private media, or sensitive project folders.
+
+The [project social-media archival-production
+note](research/2026-07-14-project-social-media-archival-production.md)
+demonstrates authenticated account census, historical officeholder matching,
+thread-level false-positive review, shared-account authorship boundaries, and
+public identity-system research across CallNYC, NYC Artist Coalition, WOW List,
+Sunday Dinner, KC Town Hall, and KC Spaces Fund. It preserves engagement as
+typed evidence rather than collapsing replies, mentions, reposts, link shares,
+and conversation matches into one promotional score.

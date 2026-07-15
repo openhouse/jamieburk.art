@@ -62,6 +62,26 @@ funds. Together they support a Council-approved allocation sequence, not a
 claim that KC Town Hall received or spent the money. See
 [the dated research note](research/2026-07-13-kc-town-hall-cced-allocation.md).
 
+### Authenticated Social Records
+
+Public project profiles, public status URLs, authenticated conversation views,
+and bounded live-search censuses can establish account identity, dated public
+statements, visible interaction forms, and a recovery floor. Keep the evidence
+types separate:
+
+- a direct mention is not the same as a reply;
+- a reply is not the same as a repost or quote post;
+- a conversation-level search match is not automatically a direct interaction;
+- a follower, like, repost, or mention is not endorsement or adoption;
+- a shared project account does not reveal the human author of each post;
+- a profile post count is not the same as recoverable status URLs;
+- a current missing handle does not prove the handle never existed.
+
+The project social-media census uses minimum language, records missing items,
+and keeps account-establishment memory separate from independently sourced
+account existence and use. See [the dated research
+note](research/2026-07-14-project-social-media-archival-production.md).
+
 ### Public-Safe Archive Summary
 
 Aggregate or summarized knowledge derived from private records without exposing

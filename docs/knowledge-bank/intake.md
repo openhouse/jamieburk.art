@@ -127,7 +127,7 @@ any governed claim or public surface changed.
 
 ## Current Intake Threads
 
-The structured intake records currently preserve thirteen threads surfaced on
+The structured intake records currently preserve eighteen threads surfaced on
 July 12-14, 2026:
 
 - waterways, communal space, and participatory cultural practice;
@@ -136,6 +136,15 @@ July 12-14, 2026:
 - the press and reference architecture across four NYC Artist Coalition
   campaign sites;
 - NYC Council member engagement with CallNYC on Twitter;
+- the cross-project social identity system and Jamie's bounded account-
+  establishment memory lead;
+- strict direct Council-member engagement with NYC Artist Coalition and the
+  larger shared-stewardship mention corpus;
+- WOW List's social record connecting the calendar to Sunday Dinner and one
+  external event-sharing specimen;
+- KC Spaces Fund's campaign timeline, public grantee highlights, recipient
+  acknowledgements, and contemporaneous Do816 coverage;
+- KC Town Hall's public launch framing and post-transition identity continuity;
 - the KC Town Hall CCED recommendation, 2019 Council acceptance and
   appropriation, and 2024 reappropriation of the unused allocation.
 - Jamie's firsthand account of transitioning KC Town Hall stewardship to a
@@ -154,11 +163,15 @@ July 12-14, 2026:
   handoff and collaborator evidence.
 
 The waterways and Sunday Dinner threads have reached `claim-candidate`. The NYC
-Artist Coalition and campaign-press threads remain `researching`; the press
-indexes are fully accessioned, while their 45 distinct article bodies remain a
-bounded close-reading queue. The CallNYC engagement thread remains `captured`
-until a complete, authenticated or archived engagement corpus can support
-defensible metrics. The KC Town Hall thread is `researching`: public records
+Artist Coalition, campaign-press, and social-evidence threads remain
+`researching`; the press indexes are fully accessioned, while their 45 distinct
+article bodies remain a bounded close-reading queue. The authenticated CallNYC
+engagement pass now supports an eight-account recovery floor while preserving
+the four-item profile-corpus gap and prohibiting direct website projection. The
+strict NYC Artist Coalition result supports five then-serving Council-member
+accounts across 15 direct mention or reply interactions; wider thread matches
+remain excluded from that count. The KC Town Hall thread is `researching`:
+public records
 establish recommendation, Council acceptance, appropriation, later withdrawal,
 and reappropriation, while agreement execution, any disbursement, and Jamie's
 specific contribution remain separate questions. The stewardship transition is

@@ -6,6 +6,13 @@ import {
   campaignPressSources,
   campaignPressSourceIds
 } from "./campaignPress.ts";
+import {
+  callNycCouncilSocialSourceIds,
+  kcSpacesRecipientSocialSourceIds,
+  nycaCouncilSocialSourceIds,
+  nycaOlympiaSocialSourceId,
+  projectSocialSources
+} from "./projectSocial.ts";
 
 const knowledgeBankInput = {
   sources: [
@@ -670,7 +677,8 @@ const knowledgeBankInput = {
       doesNotEstablish: ["safe publication of generated overviews without review", "use across every project", "perfect extraction of every file format", "production deployment", "cross-platform behavior in every environment", "independent security review"],
       protectedLocatorId: "LOC-GDRIVE-PROJECT-OVERVIEW-SCRIPT-2026"
     },
-    ...campaignPressSources
+    ...campaignPressSources,
+    ...projectSocialSources
   ],
   claims: [
     {
@@ -1373,51 +1381,356 @@ const knowledgeBankInput = {
       title: "NYC Council member engagement with CallNYC on Twitter",
       project: "callnyc",
       kind: "metric-lead",
-      summary: "Jamie remembers meaningful engagement with the @CallNYCapp account by New York City Council member accounts. The possible evidence includes follows, replies, mentions, retweets, quote posts, likes, and link sharing, but no complete defensible metric has yet been established.",
-      status: "captured",
-      sourceIds: [],
+      summary: "An authenticated review recovered public interactions with @CallNYCapp from eight then-serving New York City Council member accounts: Margaret Chin, Mathieu Eugene, Helen Rosenthal, Rosie Mendez, Ydanis Rodriguez, Peter Koo, Ruben Wills, and Steven Matteo. The result is a defensible recovery floor, not a complete lifetime engagement total.",
+      status: "researching",
+      sourceIds: [
+        "SRC-CALLNYC-X-PROFILE-2026-07-14",
+        "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14",
+        "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS",
+        ...callNycCouncilSocialSourceIds
+      ],
       relatedClaimIds: [],
-      relatedProofIds: [],
+      relatedProofIds: ["callnyc-civic-data-guidance"],
       candidateClaims: [],
       propositions: [
         {
-          id: "PROP-CALLNYC-COUNCIL-ENGAGEMENT-MEMORY",
-          text: "Jamie remembers meaningful engagement with @CallNYCapp by New York City Council member and institutional accounts.",
-          status: "memory-lead",
-          sourceIds: [],
-          sourceSupport: [],
-          boundaries: ["Meaningful engagement is not yet defined or counted.", "Historical account ownership, officeholder status, and interaction type require verification."],
-          decisionUse: "Preserves a potentially useful adoption and public-sector resonance signal without publishing an unsupported metric.",
-          nextStep: "Recover an authenticated export, API corpus, archive, or account-data download and classify every interaction by type, date, and account status."
+          id: "PROP-CALLNYC-EIGHT-COUNCIL-ACCOUNTS-RECOVERED",
+          text: "Authenticated X profile and mention review recovered public interactions with @CallNYCapp from eight then-serving New York City Council member accounts.",
+          status: "supported-with-boundary",
+          sourceIds: [
+            "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14",
+            "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS",
+            ...callNycCouncilSocialSourceIds
+          ],
+          sourceSupport: ["eight status-level member-account sources", "historical name-to-handle roster matching", "authenticated profile and live-search census"],
+          boundaries: ["Eight is a recoverable minimum, not a complete historical total.", "The count excludes the institutional @NYCCouncil account and excludes Carlina Rivera's 2016 post because she had not yet taken Council office.", "Interaction does not mean endorsement, adoption, or policy impact."],
+          decisionUse: "Supplies a bounded public-sector resonance signal for future editorial consideration without converting unlike interactions into one promotional engagement score."
         },
         {
-          id: "PROP-CALLNYC-ENGAGEMENT-METRIC-DEFINITION",
-          text: "Any future CallNYC Council-engagement metric must separate follows, replies, mentions, reposts, quote posts, likes, and link shares within a stated historical time window and denominator.",
-          status: "research-only",
-          sourceIds: [],
-          sourceSupport: [],
-          boundaries: ["Do not combine unlike interaction types into one promotional total.", "Do not treat a partial visible timeline as a complete corpus."],
-          decisionUse: "Defines the minimum evidence contract for promoting the memory into a defensible metric claim.",
-          nextStep: "Choose the recoverable corpus first, then document inclusion rules, exclusions, account classification, denominator, and time window before counting."
+          id: "PROP-CALLNYC-COUNCIL-INTERACTION-TYPES",
+          text: "The eight recovered Council-member interactions include direct replies, repost or quote-post amplification, a direct recognition response, and independent sharing of CallNYC.org.",
+          status: "synthesis-with-boundary",
+          sourceIds: [...callNycCouncilSocialSourceIds],
+          sourceSupport: ["status-level conversation views", "status author handles", "visible repost, reply, recognition-response, and link-sharing forms"],
+          boundaries: ["Do not sum likes, reposts, replies, and link shares into one engagement total.", "Access-time interface labels do not expose every historical liker, reposter, or follower identity."],
+          decisionUse: "Shows several kinds of mission-relevant engagement while preserving the differences between them."
+        },
+        {
+          id: "PROP-CALLNYC-X-CORPUS-RECOVERY-BOUNDARY",
+          text: "The authenticated review recovered 106 unique status URLs from a profile displaying 110 posts, plus 11 public live-search results mentioning @CallNYCapp.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
+          sourceSupport: ["profile post count", "deduplicated visible status URL count", "exhausted live-search result set at access time"],
+          boundaries: ["Four profile-counted items were not recovered as unique status URLs.", "X search and profile virtualization may omit deleted, unavailable, deindexed, or otherwise inaccessible material."],
+          decisionUse: "Makes the denominator and residual gap visible so the eight-account result is not mistaken for a complete export."
         }
       ],
       tensions: [],
       researchQuestions: [
-        "Which Council member and institutional Council accounts engaged with @CallNYCapp, in what ways, and on what dates?",
-        "Can the complete account timeline and engagement graph be recovered from an authenticated export, API, archive, or Jamie's account data?",
-        "Which interactions are attributable to officeholders, staff-managed accounts, institutional accounts, or later handle changes?",
-        "What denominator and time window would make any engagement statistic intelligible rather than promotional?"
+        "Should the recoverable denominator remain 106 unique profile-timeline statuses plus 11 mention-search results, and should the public time window be stated as March 2016 through July 2017 for the eight strict interactions?",
+        "Can Jamie's account-data export recover the four profile-counted items not visible in the authenticated timeline census?",
+        "Can follower, liker, and reposter identities be recovered without relying on unstable interface state?",
+        "Do archived captures preserve additional Council-member interactions that X live search no longer indexes?",
+        "Should the eight-account recovery floor remain knowledge-bank depth or become a carefully worded case-study proof after editorial review?"
       ],
       boundaries: [
-        "Do not publish counts derived from an incomplete or blocked timeline.",
-        "Separate follows, likes, replies, mentions, reposts, and link shares rather than collapsing them into one engagement number.",
+        "Use 'at least eight then-serving Council member accounts recovered' if this finding is ever projected; do not call it a complete total.",
+        "Separate replies, reposts, quote posts, recognition responses, link shares, likes, and follows rather than collapsing them into one engagement number.",
         "Preserve historical officeholder and account-status context.",
+        "Do not count the institutional @NYCCouncil account as a Council member.",
+        "Do not treat Council-member interaction as formal endorsement, product adoption, constituent outcome, or policy causality.",
         "Do not project this intake item directly to the website; create and approve a sourced metric claim first."
       ],
       projectionStatus: "no-public-projection",
       receivedAt: "2026-07-12",
-      reviewedAt: "2026-07-12",
-      reviewedBy: ["Jamie Burkart", "Codex intake review"]
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+    },
+    {
+      id: "INTAKE-PROJECT-SOCIAL-IDENTITY-SYSTEM-2026-07-14",
+      title: "Project social-media identity system",
+      kind: "project-lead",
+      summary: "Authenticated X review recovered five active project documentation accounts, one dormant Sunday Dinner account shell, and an umbrella campaign structure in which @NYCArtC carries Let NYC Dance, Talks Not Raids, Save NYC Spaces, and FairRentNYC.",
+      status: "researching",
+      sourceIds: [
+        "SRC-CALLNYC-X-PROFILE-2026-07-14",
+        "SRC-NYCA-X-PROFILE-2026-07-14",
+        "SRC-WOWLIST-X-PROFILE-2026-07-14",
+        "SRC-SUNDAY-DINNER-X-PROFILE-2026-07-14",
+        "SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14",
+        "SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14",
+        "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14",
+        nycaOlympiaSocialSourceId
+      ],
+      relatedClaimIds: [],
+      relatedProofIds: ["nyc-artist-coalition-public-web-infrastructure", "wowlist-community-platform", "sunday-dinner-196-participation-infrastructure", "kc-spaces-fund-digital-infrastructure", "kc-town-hall-public-benefit-documentation"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-PROJECT-SOCIAL-ACCOUNT-MAP-2026",
+          text: "The recoverable project-account map is CallNYC @CallNYCapp, NYC Artist Coalition and its four campaigns @NYCArtC, WOW List @wowlist, KC Town Hall @KCTownHall, and KC Spaces Fund @KCSpacesFund; @sundaydinnernyc is a dormant zero-post shell.",
+          status: "direct-support",
+          sourceIds: ["SRC-CALLNYC-X-PROFILE-2026-07-14", "SRC-NYCA-X-PROFILE-2026-07-14", "SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-SUNDAY-DINNER-X-PROFILE-2026-07-14", "SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14"],
+          sourceSupport: ["authenticated live profile identity", "profile chronology and project description", "NYC Artist Coalition campaign hashtags"],
+          boundaries: ["The Sunday Dinner account shell does not establish active use or Jamie's control.", "No live account was recovered at the exact @letnycdance, @talksnotraids, or @savenycspaces handles; an empty @fairrentnyc account joined in 2023 and is not attributed to Jamie or the coalition.", "Current nonexistence does not prove an exact campaign handle never existed."],
+          decisionUse: "Gives future researchers a verified account routing map without mistaking campaign hashtags or unrelated exact-handle accounts for owned project identities."
+        },
+        {
+          id: "PROP-PROJECT-SOCIAL-ACCOUNTS-ESTABLISHED-BY-JAMIE",
+          text: "Jamie confirms that he established the project social accounts and public-facing identity systems under review.",
+          status: "memory-lead",
+          sourceIds: [],
+          sourceSupport: [],
+          boundaries: ["The present profile and status evidence confirms the accounts and their public use but does not independently prove account creation or initial administrator identity.", "Account establishment does not make Jamie the author of every post published by a shared team."],
+          decisionUse: "Preserves Jamie's account-establishment contribution as a researchable actor-action claim without laundering a first-person confirmation into independent proof.",
+          nextStep: "Recover account-creation emails, administrator records, early deployment notes, or collaborator confirmation suitable for public-safe authorship evidence."
+        },
+        {
+          id: "PROP-NYCA-SHARED-IDENTITY-STEWARDSHIP-2026",
+          text: "The @NYCArtC identity functioned as durable shared campaign infrastructure that collaborators could use across multiple policy and cultural-space efforts.",
+          status: "synthesis-with-boundary",
+          sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", nycaOlympiaSocialSourceId],
+          sourceSupport: ["four campaign identities in the profile bio", "multi-year mention corpus", "89 recovered Olympia Kazi posts mentioning @NYCArtC", "status-level FairRentNYC specimen"],
+          boundaries: ["The account does not identify the human author of each shared-account post.", "Olympia Kazi's public use of @NYCArtC does not by itself prove that she authored posts from the coalition account.", "Durability and repeated use do not establish sole ownership or policy causality."],
+          decisionUse: "Makes Jamie's identity-system contribution legible while crediting later collaborator stewardship and preserving collective authorship."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Which account-establishment records can independently corroborate Jamie's first-person confirmation?",
+        "Which collaborators can describe how the shared identity system supported their work without exposing private administrator details?",
+        "Which account snapshots should be preserved outside X to reduce platform-loss risk?"
+      ],
+      boundaries: [
+        "Do not publish administrator credentials, account-recovery details, private messages, follower exports, or private analytics.",
+        "Do not assign individual authorship to shared-account posts without post-level evidence.",
+        "Do not treat account activity, follower counts, mentions, or reposts as policy causality or endorsement.",
+        "Do not project this intake item directly to the website; approve a bounded account-establishment or identity-system claim first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+    },
+    {
+      id: "INTAKE-NYCA-COUNCIL-SOCIAL-ENGAGEMENT-2026-07-14",
+      title: "NYC Council engagement with NYC Artist Coalition on X",
+      project: "nyc-artist-coalition",
+      kind: "metric-lead",
+      summary: "A bounded authenticated search recovered 526 live-search results for @NYCArtC. After historical-roster matching and thread inspection, five then-serving Council member accounts produced at least 15 direct mention or reply interactions; two additional roster-matched accounts appeared only in broader thread-level results and are excluded from the direct count.",
+      status: "researching",
+      sourceIds: ["SRC-NYCA-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaCouncilSocialSourceIds, nycaOlympiaSocialSourceId],
+      relatedClaimIds: [],
+      relatedProofIds: ["nyc-artist-coalition-civic-systems", "nyc-artist-coalition-public-web-infrastructure"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-NYCA-FIVE-DIRECT-COUNCIL-ACCOUNTS-2026",
+          text: "At least five then-serving New York City Council member accounts directly mentioned or replied to @NYCArtC in 15 recoverable interactions: Rafael Espinal, Stephen Levin, Jimmy Van Bramer, Mark Levine, and Justin Brannan.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-NYCA-HISTORICAL-COUNCIL-HANDLE-ROSTERS", ...nycaCouncilSocialSourceIds],
+          sourceSupport: ["13 authored posts explicitly naming @NYCArtC", "two authenticated conversation views showing direct replies to @NYCArtC", "historical name-to-handle roster matching"],
+          boundaries: ["Five accounts and 15 interactions are recoverable minimums, not complete historical totals.", "Brad Lander and Carlina Rivera surfaced in broader thread-level search results but did not satisfy the strict direct-mention or direct-reply rule for those statuses.", "Interaction does not equal endorsement, adoption, or policy causality."],
+          decisionUse: "Provides a strict public-sector-engagement floor while documenting false-positive handling."
+        },
+        {
+          id: "PROP-NYCA-SOCIAL-MISSION-PATTERNS-2026",
+          text: "Recovered Council-member posts place NYC Artist Coalition in public work around Cabaret Law repeal, Office of Nightlife creation and listening, MARCH transparency hearings, cultural-space preservation, arts support, accessible public information, and Commercial Rent Stabilization.",
+          status: "synthesis-with-boundary",
+          sourceIds: [...nycaCouncilSocialSourceIds],
+          sourceSupport: ["status-level Council-member descriptions", "campaign hashtags and linked public surfaces", "authenticated reply contexts"],
+          boundaries: ["The posts show public association and interaction, not sole coalition responsibility or causal ownership of outcomes.", "Accessible-information and Commercial Rent Stabilization thread matches require conversation context; do not present every result as an explicit coalition endorsement."],
+          decisionUse: "Connects the social record to mission-relevant project mechanisms rather than treating raw interaction volume as the accomplishment."
+        },
+        {
+          id: "PROP-NYCA-OLYMPIA-KAZI-MENTION-CORPUS-2026",
+          text: "Olympia Kazi authored 89 of the 526 recovered live-search results mentioning @NYCArtC, the largest external-author count in the bounded corpus.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", nycaOlympiaSocialSourceId],
+          sourceSupport: ["deduplicated status-author count", "multi-year public specimen using @NYCArtC in FairRentNYC advocacy"],
+          boundaries: ["The count is limited to X live-search results visible on July 14, 2026.", "Mention authorship does not establish authorship of shared @NYCArtC account posts.", "The count measures recovered public documentation, not total labor, influence, or campaign outcome."],
+          decisionUse: "Credits sustained collaborator use of the public identity system and supports a shared-stewardship interpretation."
+        },
+        {
+          id: "PROP-NYCA-X-SEARCH-RESULT-BOUNDARY-2026",
+          text: "The authenticated live search for @NYCArtC returned 526 unique visible status URLs from February 2017 through March 2025, but some results matched the wider conversation rather than the authored post text.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
+          sourceSupport: ["exhausted chronological live-search scroll", "deduplicated status URLs", "thread-level verification samples"],
+          boundaries: ["X search is not a platform export and may omit deleted, unavailable, deindexed, or restricted posts.", "A search result is not automatically a direct mention, reply, endorsement, or substantive interaction."],
+          decisionUse: "Prevents search-result volume from becoming noisy compliance theater or an inflated engagement metric."
+        }
+      ],
+      tensions: [],
+      researchQuestions: [
+        "Should the recoverable denominator remain 526 live-search results and the time window remain February 2017 through March 2025 when this research is refreshed?",
+        "Can an account-data export recover follower, liker, and reposter identities without relying on unstable interface state?",
+        "Which Council-member interactions should be preserved through stable web archives?",
+        "Which collaborator accounts can establish shared authorship and stewardship at post or campaign level?"
+      ],
+      boundaries: [
+        "Use 'at least five then-serving Council member accounts in 15 direct interactions recovered' if the strict result is ever projected.",
+        "Do not substitute the wider seven-account, 21-result roster match for the strict direct-interaction count.",
+        "Do not treat social interaction as endorsement, adoption, legislative authorship, or causal credit for policy outcomes.",
+        "Do not project this intake item directly to the website; create and approve a sourced claim first."
+      ],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+    },
+    {
+      id: "INTAKE-WOWLIST-SOCIAL-RECORD-2026-07-14",
+      title: "WOW List social documentation record",
+      project: "wowlist",
+      kind: "source-link",
+      summary: "The authenticated @wowlist profile and timeline preserve a small public record connecting WOW List to Sunday Dinner and showing an external organizer using a WOW List event page to circulate a benefit event.",
+      status: "researching",
+      sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-WOWLIST-X-SUNDAY-DINNER-771457416298921985", "SRC-WOWLIST-X-EVENT-SHARE-845116237591920640"],
+      relatedClaimIds: [],
+      relatedProofIds: ["wowlist-community-platform", "sunday-dinner-196-participation-infrastructure"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-WOWLIST-SUNDAY-DINNER-ORIGIN-SOCIAL-2026",
+          text: "A 2016 WOW List post described the platform as a DIY community calendar project originating from the Sunday Dinner potluck.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-X-SUNDAY-DINNER-771457416298921985"],
+          sourceSupport: ["project-account statement", "linked Sunday Dinner event page"],
+          boundaries: ["The post does not establish sole authorship, full platform adoption, or the aggregate number of gatherings."],
+          decisionUse: "Adds public source association for the relationship between recurring hosting and the community-calendar product."
+        },
+        {
+          id: "PROP-WOWLIST-EXTERNAL-EVENT-SHARE-2026",
+          text: "A 2017 public post used a WOW List event URL to circulate a benefit event at Silent Barn.",
+          status: "direct-support",
+          sourceIds: ["SRC-WOWLIST-X-EVENT-SHARE-845116237591920640"],
+          sourceSupport: ["external authored post", "public WOW List event URL"],
+          boundaries: ["One external share is a usage specimen, not a broad adoption metric or attendance outcome."],
+          decisionUse: "Supplies a concrete material scene of the product functioning as public event infrastructure."
+        },
+        {
+          id: "PROP-WOWLIST-X-CORPUS-RECOVERY-2026",
+          text: "The authenticated review recovered 37 unique status URLs from a @wowlist profile displaying 38 posts, including 21 project-authored statuses and 16 reposted statuses.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-WOWLIST-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
+          sourceSupport: ["profile post count", "status-author classification", "deduplicated timeline URLs"],
+          boundaries: ["One profile-counted item was not recovered.", "Shared-account authorship remains unknown."],
+          decisionUse: "Defines the surviving social corpus without overstating reach."
+        }
+      ],
+      tensions: [],
+      researchQuestions: ["Can the missing profile-counted item be recovered from an account export or archive?", "Which linked event pages have stable Wayback captures suitable for a public material-scene projection?", "Can collaborators identify additional public organizer uses of WOW List without turning isolated specimens into an adoption metric?"],
+      boundaries: ["Do not publish private user, event-organizer, or follower data.", "Do not treat reposts or follower counts as adoption totals.", "Do not project this intake item directly to the website without editorial approval."],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+    },
+    {
+      id: "INTAKE-KC-SPACES-FUND-SOCIAL-RECORD-2026-07-14",
+      title: "KC Spaces Fund social campaign record",
+      project: "kc-spaces-fund",
+      kind: "source-link",
+      summary: "The authenticated @KCSpacesFund timeline preserves the campaign's April-July 2020 public arc, eleven named grantee highlights, two recipient acknowledgements, and contemporaneous Do816 coverage.",
+      status: "researching",
+      sourceIds: ["SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-KC-SPACES-FUND-DO816-DAILY-DOGOOD-2020-04-21", ...kcSpacesRecipientSocialSourceIds, "SRC-KC-SPACES-FUND-X-LATINO-ARTS-THANKS-1251584787267178499", "SRC-KC-SPACES-FUND-X-BATTERY-TOUR-THANKS-1252310163119276033"],
+      relatedClaimIds: [],
+      relatedProofIds: ["kc-spaces-fund-digital-infrastructure"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-KC-SPACES-FUND-ELEVEN-PUBLIC-HIGHLIGHTS-2026",
+          text: "The official KC Spaces Fund timeline publicly highlighted eleven funded recipients between April 18 and July 9, 2020.",
+          status: "direct-support",
+          sourceIds: [...kcSpacesRecipientSocialSourceIds],
+          sourceSupport: ["eleven dated campaign-account status records", "named recipient descriptions", "rolling emergency-relief chronology"],
+          boundaries: ["Eleven is the number of recovered public highlights, not necessarily the complete recipient count.", "The posts do not establish Jamie's participation in grant decisions, the exact amount each recipient received, or final expenditure."],
+          decisionUse: "Adds outcome context to the campaign while keeping Jamie's public claim limited to behind-the-scenes digital infrastructure."
+        },
+        {
+          id: "PROP-KC-SPACES-FUND-RECIPIENT-ACKNOWLEDGEMENTS-2026",
+          text: "Two recovered recipient posts thanked KC Spaces Fund and described intended or immediate support for creative work during the pandemic.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-KC-SPACES-FUND-X-LATINO-ARTS-THANKS-1251584787267178499", "SRC-KC-SPACES-FUND-X-BATTERY-TOUR-THANKS-1252310163119276033"],
+          sourceSupport: ["recipient-authored acknowledgements", "pandemic-support descriptions"],
+          boundaries: ["Recipient acknowledgement does not establish exact transfer amounts, expenditure records, long-term outcomes, or Jamie's role in grant decisions."],
+          decisionUse: "Corroborates that the public campaign surface connected to material support without shifting organizer or decision-maker credit to Jamie."
+        },
+        {
+          id: "PROP-KC-SPACES-FUND-DO816-COVERAGE-2026",
+          text: "Do816's April 21, 2020 Daily DoGood entry described KC Spaces Fund as collecting donations and giving grants to local art spaces and music venues affected by shutdowns.",
+          status: "direct-support",
+          sourceIds: ["SRC-KC-SPACES-FUND-DO816-DAILY-DOGOOD-2020-04-21"],
+          sourceSupport: ["contemporaneous local-culture coverage", "campaign purpose and beneficiary description"],
+          boundaries: ["The article does not identify Jamie's role, a complete organizer roster, total distribution, or recipient count."],
+          decisionUse: "Adds independent contemporaneous context for the public campaign purpose."
+        },
+        {
+          id: "PROP-KC-SPACES-FUND-X-CORPUS-RECOVERY-2026",
+          text: "The authenticated review recovered 34 unique status URLs from a @KCSpacesFund profile displaying 35 posts, including 27 project-account statuses and seven reposted external statuses.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-KC-SPACES-FUND-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
+          sourceSupport: ["profile post count", "status-author classification", "deduplicated timeline URLs"],
+          boundaries: ["One profile-counted item was not recovered.", "The shared account does not identify the author of each project-account post."],
+          decisionUse: "Defines the surviving public campaign corpus and its residual gap."
+        }
+      ],
+      tensions: [],
+      researchQuestions: ["Can the missing profile-counted item and a complete recipient list be recovered from a public-safe export?", "Which named organizers can confirm Jamie's technical role and the account's shared authorship model?", "Can a fiscal-sponsor or campaign record establish the final aggregate distribution without exposing recipient, donor, or applicant data?"],
+      boundaries: ["Keep public organizer credit with Caitlin Horsmon, Jordan Carr, Kendell Harbin, and Megan Pobywajlo unless collaborators approve a broader framing.", "Do not attribute grant decisions, fundraising ownership, fiscal sponsorship, or every social post to Jamie.", "Do not publish applicant, donor, subscriber, payment, credential, or private communication records.", "Do not project this intake item directly to the website without a governed claim update."],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
+    },
+    {
+      id: "INTAKE-KC-TOWN-HALL-SOCIAL-CONTINUITY-2026-07-14",
+      title: "KC Town Hall public identity and post-transition continuity",
+      project: "kc-town-hall",
+      kind: "source-link",
+      summary: "The authenticated @KCTownHall profile preserves a public identity launched around a neighborhood resource and cultural center and remaining active through 2022, including visible neighborhood-program continuity after Jamie's stated transition to a mission-aligned organization.",
+      status: "researching",
+      sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665", "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
+      relatedClaimIds: [],
+      relatedProofIds: ["kc-town-hall-public-benefit-documentation"],
+      candidateClaims: [],
+      propositions: [
+        {
+          id: "PROP-KC-TOWN-HALL-SOCIAL-LAUNCH-2018",
+          text: "KC Town Hall's pinned July 2018 post invited public participation in building a permanent neighborhood resource and cultural center on Indiana Avenue.",
+          status: "direct-support",
+          sourceIds: ["SRC-KC-TOWN-HALL-X-LAUNCH-1013893135695601665"],
+          sourceSupport: ["project-account launch statement", "participation invitation", "public-purpose framing"],
+          boundaries: ["The post does not establish project completion, current property status, funding receipt, or Jamie's sole authorship."],
+          decisionUse: "Preserves the project's original public-facing purpose and invitation design."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-SOCIAL-CONTINUITY-2022",
+          text: "The @KCTownHall public identity remained active through September 2022 and carried neighborhood-program documentation beyond the period Jamie describes as his direct project stewardship.",
+          status: "synthesis-with-boundary",
+          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14", "SRC-KC-TOWN-HALL-X-CONTINUITY-1457371688300056580"],
+          sourceSupport: ["profile chronology", "timeline end date", "post-2020 neighborhood-program documentation"],
+          boundaries: ["The social record does not identify the successor steward, prove the legal transfer, or establish the author of each post.", "Do not attribute post-transition program claims or outcomes to Jamie."],
+          decisionUse: "Adds public continuity evidence beside Jamie's bounded transition memory without exposing the family crisis or inventing a transfer record."
+        },
+        {
+          id: "PROP-KC-TOWN-HALL-X-CORPUS-RECOVERY-2026",
+          text: "The authenticated review recovered 170 unique status URLs from a @KCTownHall profile displaying 183 posts, including 110 project-account statuses and 60 reposted external statuses.",
+          status: "supported-with-boundary",
+          sourceIds: ["SRC-KC-TOWN-HALL-X-PROFILE-2026-07-14", "SRC-PROJECT-SOCIAL-X-AUTHENTICATED-CENSUS-2026-07-14"],
+          sourceSupport: ["profile post count", "status-author classification", "deduplicated timeline URLs"],
+          boundaries: ["Thirteen profile-counted items were not recovered.", "The count does not identify individual human authors or independently verify every program metric stated in posts."],
+          decisionUse: "Defines the surviving public corpus and makes the recovery gap visible."
+        }
+      ],
+      tensions: [],
+      researchQuestions: ["Can the missing profile-counted items and formal stewardship-transfer evidence be recovered without publishing private crisis context?", "Which successor organization can confirm the handoff and ongoing use of the public identity system?", "Which later public posts can be independently corroborated before any post-transition program outcome is associated with the project record?"],
+      boundaries: ["Do not encode the family crisis.", "Do not infer abandonment, failure, or project completion from a transition.", "Do not attribute post-transition posts or program outcomes to Jamie.", "Do not project this intake item directly to the website until handoff evidence and public wording are approved."],
+      projectionStatus: "no-public-projection",
+      receivedAt: "2026-07-14",
+      reviewedAt: "2026-07-14",
+      reviewedBy: ["Jamie Burkart", "Codex authenticated social-media review"]
     },
     {
       id: "INTAKE-KC-TOWN-HALL-CCED-ALLOCATION-2026-07-13",
