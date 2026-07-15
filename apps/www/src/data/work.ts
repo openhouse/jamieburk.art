@@ -511,7 +511,7 @@ const workItemsInput = [
     series: "Built Environment",
     subtitle: "Adaptive reuse, neighborhood operations, and public-benefit documentation",
     summary:
-      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building. A complete public-account archive also documents resident-input, recurring neighborhood-service, and civic-information operations. The project advanced from a unanimous $490,539 CCED Board recommendation to City Council approval and appropriation, then later withdrew before disbursement.",
+      "Co-led redevelopment planning and public-benefit documentation for a long-vacant historic building. The team completed a $189,629 Phase One cold-shell scope, and a collaborative neighborhood survey directly shaped the proposal. The project later advanced from a unanimous $490,539 CCED Board recommendation to City Council approval and appropriation, then withdrew before disbursement.",
     role: "Co-Lead, Redevelopment Planning & Public-Benefit Documentation",
     years: "2020s",
     status: "Short proof page",
@@ -522,7 +522,7 @@ const workItemsInput = [
     whatWasUnclear:
       "A long-vacant historic building involved public benefit, preservation, funding, stakeholder, and redevelopment questions that needed durable documentation.",
     whatBecameUsable:
-      "Planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
+      "Completed Phase One stabilization, a documented neighborhood-listening process, and planning materials, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort.",
     artifactTypes: ["guide", "source map", "template"],
     artifacts: [
       {
@@ -537,7 +537,7 @@ const workItemsInput = [
     careNote:
       "Public-safe short proof page. Private financial, legal, property, and stakeholder details are omitted.",
     sourceLayer:
-      "Official KCMO proposal, Council, appropriation, and project-status records; approved resume language; and a public-safe 183-record project-account corpus.",
+      "Official KCMO proposal, Phase One, survey, Council, appropriation, and project-status records; approved resume language; and a public-safe 183-record project-account corpus.",
     credits: ["Jamie Burkart", "KC Town Hall LLC collaborators"],
     currentStatus:
       "Historical project for Jamie; current property or redevelopment status is not asserted.",
@@ -548,12 +548,14 @@ const workItemsInput = [
       "Redevelopment planning",
       "Public-benefit documentation",
       "Historic preservation context",
+      "$189,629 Phase One cold-shell scope completed in 2019",
+      "Collaborative neighborhood survey documented as directly shaping the proposal",
       "Complete 183-record public-operations archive",
       "$490,539 City Council-approved appropriation (not disbursed)"
     ],
     knownOpenProtected: {
       known:
-        "Jamie co-led adaptive reuse planning and public-benefit documentation for a long-vacant historic building; official records trace the project from Board recommendation through Council approval and appropriation to later withdrawal before disbursement.",
+        "Jamie co-led adaptive reuse planning and public-benefit documentation for a long-vacant historic building. Official records identify him as presenter, document completed Phase One cold-shell work and a collaborative survey that shaped the proposal, and trace the later municipal process through withdrawal before disbursement.",
       open:
         "Named partner detail and current property or redevelopment status remain outside this public-safe account.",
       protected:

@@ -87,6 +87,7 @@ import {
   validateCommittedCorpus as validateCommittedWowListCorpus
 } from "../derive-wowlist-x-corpus.mjs";
 import {
+  buildPublicAcquisitionLedger,
   validateCommittedFixture as validateCommittedKcTownHallFixture
 } from "../derive-kctownhall-x-corpus.mjs";
 import {
@@ -441,7 +442,7 @@ test("KC Town Hall full-population corpus is complete, reproducible, and safely 
     }
   });
 
-  assert.equal(kcTownHallFullPopulationSources.length, 15);
+  assert.equal(kcTownHallFullPopulationSources.length, 17);
   assert.equal(kcTownHallFullPopulationClaims.length, 2);
   assert.equal(kcTownHallFullPopulationInquiries.length, 3);
   assert.equal(kcTownHallFullPopulationIntake.length, 1);
@@ -468,6 +469,8 @@ test("KC Town Hall full-population corpus is complete, reproducible, and safely 
     operatingClaim.evidence.filter((item) => item.renderCitation).map((item) => item.sourceId),
     [
       "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+      "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
       "SRC-KCTH-ROBINSON-REPLY-2020",
       "SRC-KCTH-JUSTUS-REPLY-2019",
       "SRC-KCTH-LUCAS-QUOTE-2019",
@@ -485,6 +488,57 @@ test("KC Town Hall full-population corpus is complete, reproducible, and safely 
   assert.match(run, /183 unique canonical status IDs/);
   assert.match(run, /do not\s+independently verify tire quantities/i);
   assert.match(run, /Tags and mentions alone do not/);
+});
+
+test("KC Town Hall acquisition rejects Replies-route corruption", () => {
+  const ledger = JSON.parse(
+    readFileSync(
+      "docs/knowledge-bank/corpora/kctownhall-x-acquisition-ledger-2026-07-15.json",
+      "utf8"
+    )
+  );
+  const toCaptureRecord = (record, recoveredRoutes) => ({
+    statusId: record.statusId,
+    statusPath: new URL(record.statusUrl).pathname,
+    statusOwner: record.authorHandle,
+    datetime: record.publishedAt,
+    isReply: record.recordType === "reply",
+    isRepost: record.recordType === "repost",
+    recoveredRoutes
+  });
+  const capture = {
+    profileReportedCount: 183,
+    reviewedAt: "2026-07-15",
+    postsRoute: ledger.primaryRecords
+      .filter((record) => record.recoveredRoutes.includes("posts"))
+      .map((record) => toCaptureRecord(record, ["posts"])),
+    repliesRoute: [
+      ...ledger.primaryRecords.map((record) =>
+        toCaptureRecord(record, ["replies"])
+      ),
+      ...ledger.conversationContextRecords.map((record) =>
+        toCaptureRecord(record, ["replies"])
+      )
+    ],
+    attributablePopulation: ledger.primaryRecords.map((record) =>
+      toCaptureRecord(record, record.recoveredRoutes)
+    ),
+    excludedConversationContext: ledger.conversationContextRecords.map(
+      (record) => toCaptureRecord(record, ["replies"])
+    )
+  };
+
+  assert.doesNotThrow(() =>
+    buildPublicAcquisitionLedger(`${JSON.stringify(capture)}\n`)
+  );
+
+  const corrupted = structuredClone(capture);
+  corrupted.repliesRoute[0].statusId = "9999999999999999999";
+  corrupted.repliesRoute[0].statusPath =
+    "/KCTownHall/status/9999999999999999999";
+  assert.throws(() =>
+    buildPublicAcquisitionLedger(`${JSON.stringify(corrupted)}\n`)
+  );
 });
 
 test("NYC Artist Coalition count separates direct, mission-relevant, and thread-context records", () => {
@@ -541,7 +595,7 @@ test("other project social archives retain population and role boundaries", () =
   );
   assert.match(wowClaim.internalClaim, /complete recovered @wowlist profile population/);
   assert.match(kcTownHallClaim.internalClaim, /complete 183-record/);
-  assert.match(kcTownHallClaim.internalClaim, /three sitting Council-member accounts/);
+  assert.match(kcTownHallClaim.internalClaim, /three then-serving Council-member accounts/);
   assert.match(kcTownHallClaim.internalClaim, /Bridging the Gap collaborator/);
   assert.equal(kcSpacesFundHighlights.length, 11);
   assert.equal(kcSpacesClaim.projections[0].status, "hold");
@@ -627,6 +681,8 @@ test("KC Town Hall Council action is exact, complete, and dispositioned", () => 
   );
   assert.deepEqual(proof.canonicalClaimIds, [
     claim.id,
+    "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
+    "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
     "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
   ]);
 
@@ -726,14 +782,23 @@ test("KC Town Hall Phase One preserves completed scope without overpromoting Jam
   const inquiry = kcTownHallPhaseOneNeighborhoodInquiries.find(
     (item) => item.id === "INQ-KC-TOWN-HALL-PHASE-ONE-ROLE"
   );
-  const projection = claim.projections[0];
+  const archiveProjection = claim.projections.find(
+    (item) => item.key === "archive-note"
+  );
+  const caseStudyProjection = claim.projections.find(
+    (item) => item.key === "case-study"
+  );
   const source = knowledgeBank.sources.find(
     (item) => item.id === "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"
   );
 
-  assert.equal(claim.status, "use-with-care");
-  assert.equal(projection.status, "hold");
-  assert.deepEqual(projection.surfaces, []);
+  assert.equal(claim.status, "confirmed-with-boundary");
+  assert.equal(archiveProjection.status, "hold");
+  assert.deepEqual(archiveProjection.surfaces, []);
+  assert.equal(caseStudyProjection.status, "active");
+  assert.deepEqual(caseStudyProjection.surfaces, ["/work/kc-town-hall"]);
+  assert.match(caseStudyProjection.text, /\$189,629 Phase One/);
+  assert.doesNotMatch(caseStudyProjection.text, /general contractor/i);
   assert.equal(inquiry.resultStatus, "partially-recovered");
   assert.ok(source.supportsGenerally.includes("Phase One cold-shell work was labeled completed in 2019"));
   assert.ok(source.supportsGenerally.includes("the Phase One value was listed as $189,629"));
@@ -759,7 +824,17 @@ test("KC Town Hall survey records listening evidence while protecting people and
       "SRC-KC-TOWN-HALL-PUBLIC-SITE-ARCHIVE-2020"
     ])
   );
-  assert.equal(claim.projections[0].status, "hold");
+  assert.equal(
+    claim.projections.find((item) => item.key === "archive-note").status,
+    "hold"
+  );
+  assert.equal(claim.status, "confirmed-with-boundary");
+  const caseStudyProjection = claim.projections.find(
+    (item) => item.key === "case-study"
+  );
+  assert.equal(caseStudyProjection.status, "active");
+  assert.match(caseStudyProjection.text, /directly shaped the plan/);
+  assert.doesNotMatch(caseStudyProjection.text, /Jamie reports|Jamie designed/i);
   assert.ok(claim.boundaries.some((item) => /response count/i.test(item)));
   assert.ok(claim.boundaries.some((item) => /phone numbers/i.test(item)));
   assert.ok(intake.boundaries.some((item) => /New Horizon Missionary Baptist Church/i.test(item)));
@@ -808,7 +883,7 @@ test("Cleveland Avenue remains an inquiry, not an accomplishment claim", () => {
   );
 });
 
-test("new KC fieldwork records do not silently project onto public hiring surfaces", () => {
+test("KC fieldwork projects documented outcomes while holding personal role details", () => {
   assert.equal(kcTownHallPhaseOneNeighborhoodSources.length, 3);
   assert.equal(kcTownHallPhaseOneNeighborhoodClaims.length, 3);
   assert.equal(kcTownHallPhaseOneNeighborhoodInquiries.length, 4);
@@ -824,7 +899,8 @@ test("new KC fieldwork records do not silently project onto public hiring surfac
   assert.doesNotMatch(publicSurfaces, /general contractor/i);
   assert.doesNotMatch(publicSurfaces, /Tired of Tires/i);
   assert.doesNotMatch(publicSurfaces, /Unify to Beautify/i);
-  assert.doesNotMatch(publicSurfaces, /\$189,629/);
+  assert.match(publicSurfaces, /\$189,629/);
+  assert.match(publicSurfaces, /directly shaped the (?:plan|proposal)/i);
   assert.doesNotMatch(
     JSON.stringify(kcTownHallPhaseOneNeighborhoodIntake),
     /\/Users\/|\/Volumes\/|supporting-materials|\.docx|\.xlsx/i

@@ -178,7 +178,8 @@ historical service remains available.
 
 ## KC Town Hall
 
-A Posts-and-Replies reconciliation recovered all 183 profile-reported records:
+A Posts-and-Replies reconciliation recovered all 183 records reported by the
+profile on the capture date:
 142 original posts, 13 replies, and 28 reposts. The Replies route also rendered
 five other-account conversation cards, which remain context rather than KC Town
 Hall population records. The account documented the project's
@@ -192,7 +193,7 @@ direct public dialogue with three then-serving Council-member accounts:
 [Jolie Justus](https://x.com/joliejustus/status/1122883010582466560), and
 [Quinton Lucas](https://x.com/QuintonLucasKC/status/1122866432130334720), plus
 [KCMO 311](https://x.com/KCMO311/status/1034093516073459712). A Bridging the Gap
-collaborator separately reported receiving a substantial KC Town Hall tire
+collaborator separately reported receiving a KC Town Hall tire
 drop-off; two community accounts amplified an Oak Park cleanup notice.
 
 Across 118 records, 133 external-link occurrences circulated resident-facing

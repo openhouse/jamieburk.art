@@ -55,38 +55,133 @@ function inspectKeys(value, path = "root") {
   }
 }
 
-function captureRecord(record) {
+function captureRecord(record, recoveredRoutes, recordType) {
   return {
     statusId: record.statusId,
     statusUrl: `https://x.com${record.statusPath}`,
     authorHandle: record.statusOwner,
     publishedAt: record.datetime,
-    recordType: record.isRepost
-      ? "repost"
-      : record.isReply
-        ? "reply"
-        : "original",
-    recoveredRoutes: [...record.recoveredRoutes].sort()
+    recordType:
+      recordType ??
+      (record.isRepost
+        ? "repost"
+        : record.isReply
+          ? "reply"
+          : "original"),
+    recoveredRoutes: [...recoveredRoutes].sort()
   };
 }
 
-export function buildPublicAcquisitionLedger(captureText) {
-  const capture = JSON.parse(captureText);
+function uniqueStatusIds(records, label) {
+  const ids = records.map((record) => record.statusId);
+  assert(ids.every((id) => /^\d+$/.test(id)), `${label} has an invalid status ID`);
+  assert.equal(new Set(ids).size, ids.length, `${label} has duplicate status IDs`);
+  return ids.sort();
+}
+
+function acquisitionFields(record) {
+  return {
+    statusId: record.statusId,
+    statusPath: record.statusPath,
+    statusOwner: record.statusOwner,
+    datetime: record.datetime
+  };
+}
+
+export function reconcileCaptureRoutes(capture) {
   assert.equal(capture.profileReportedCount, 183);
   assert.equal(capture.postsRoute.length, 170);
   assert.equal(capture.repliesRoute.length, 188);
   assert.equal(capture.attributablePopulation.length, 183);
   assert.equal(capture.excludedConversationContext.length, 5);
 
-  const primaryRecords = capture.attributablePopulation
-    .map(captureRecord)
+  const postsIds = uniqueStatusIds(capture.postsRoute, "Posts route");
+  const repliesIds = uniqueStatusIds(capture.repliesRoute, "Replies route");
+  const attributableIds = uniqueStatusIds(
+    capture.attributablePopulation,
+    "attributable population"
+  );
+  const excludedIds = uniqueStatusIds(
+    capture.excludedConversationContext,
+    "excluded conversation context"
+  );
+  const excludedSet = new Set(excludedIds);
+  const repliesSet = new Set(repliesIds);
+  const repliesPrimary = capture.repliesRoute.filter(
+    (record) => !excludedSet.has(record.statusId)
+  );
+  const repliesContext = capture.repliesRoute.filter((record) =>
+    excludedSet.has(record.statusId)
+  );
+  const repliesPrimaryIds = uniqueStatusIds(
+    repliesPrimary,
+    "Replies primary records"
+  );
+  const repliesContextIds = uniqueStatusIds(
+    repliesContext,
+    "Replies context records"
+  );
+
+  assert(excludedIds.every((id) => repliesSet.has(id)));
+  assert.deepEqual(repliesContextIds, excludedIds);
+  assert.deepEqual(repliesPrimaryIds, attributableIds);
+  assert(postsIds.every((id) => repliesPrimaryIds.includes(id)));
+  assert.equal(repliesPrimaryIds.length, capture.profileReportedCount);
+
+  const attributableById = new Map(
+    capture.attributablePopulation.map((record) => [record.statusId, record])
+  );
+  const excludedById = new Map(
+    capture.excludedConversationContext.map((record) => [record.statusId, record])
+  );
+  for (const record of repliesPrimary) {
+    assert.deepEqual(
+      acquisitionFields(record),
+      acquisitionFields(attributableById.get(record.statusId)),
+      `Replies record ${record.statusId} differs from attributable population`
+    );
+  }
+  for (const record of repliesContext) {
+    assert.deepEqual(
+      acquisitionFields(record),
+      acquisitionFields(excludedById.get(record.statusId)),
+      `Replies context ${record.statusId} differs from excluded context`
+    );
+  }
+
+  return {
+    postsIds,
+    repliesPrimary,
+    repliesPrimaryIds,
+    repliesContext,
+    repliesContextIds
+  };
+}
+
+export function buildPublicAcquisitionLedger(captureText) {
+  const capture = JSON.parse(captureText);
+  const reconciled = reconcileCaptureRoutes(capture);
+  const postsSet = new Set(reconciled.postsIds);
+  const attributableById = new Map(
+    capture.attributablePopulation.map((record) => [record.statusId, record])
+  );
+
+  const primaryRecords = reconciled.repliesPrimary
+    .map((record) =>
+      captureRecord(
+        attributableById.get(record.statusId),
+        postsSet.has(record.statusId) ? ["posts", "replies"] : ["replies"]
+      )
+    )
     .sort((a, b) => a.statusId.localeCompare(b.statusId));
-  const contextRecords = capture.excludedConversationContext
-    .map(captureRecord)
+  const contextRecords = reconciled.repliesContext
+    .map((record) =>
+      captureRecord(record, ["replies-context"], "conversation-context")
+    )
     .sort((a, b) => a.statusId.localeCompare(b.statusId));
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     capturedAt: "2026-07-15",
     sourceCaptureSha256: sha256(captureText),
     captureSurfaces: [
@@ -100,23 +195,14 @@ export function buildPublicAcquisitionLedger(captureText) {
     routeObservations: {
       posts: {
         renderedPrimaryRecords: capture.postsRoute.length,
-        repeatedNoGrowthPasses: 12,
-        primaryStatusIds: capture.postsRoute
-          .map((record) => record.statusId)
-          .sort()
+        primaryStatusIds: reconciled.postsIds
       },
       replies: {
         renderedCards: capture.repliesRoute.length,
-        renderedPrimaryRecords: capture.attributablePopulation.length,
-        renderedConversationContextCards:
-          capture.excludedConversationContext.length,
-        repeatedNoGrowthPasses: 14,
-        primaryStatusIds: capture.attributablePopulation
-          .map((record) => record.statusId)
-          .sort(),
-        conversationContextStatusIds: contextRecords.map(
-          (record) => record.statusId
-        )
+        renderedPrimaryRecords: reconciled.repliesPrimary.length,
+        renderedConversationContextCards: reconciled.repliesContext.length,
+        primaryStatusIds: reconciled.repliesPrimaryIds,
+        conversationContextStatusIds: reconciled.repliesContextIds
       }
     },
     primaryRecords,
@@ -179,6 +265,43 @@ export function validateAcquisitionLedger(ledgerText, fixture) {
       .map((record) => statusId(record.url))
       .sort()
   );
+  assert.deepEqual(
+    ledger.routeObservations.replies.conversationContextStatusIds,
+    fixture.conversationContextRecords
+      .map((record) => statusId(record.url))
+      .sort()
+  );
+  const fixtureById = new Map(
+    fixture.records.map((record) => [statusId(record.url), record])
+  );
+  for (const record of ledger.primaryRecords) {
+    const fixtureRecord = fixtureById.get(record.statusId);
+    assert.deepEqual(record, {
+      statusId: record.statusId,
+      statusUrl: fixtureRecord.url,
+      authorHandle: fixtureRecord.authorHandle,
+      publishedAt: fixtureRecord.publishedAt,
+      recordType: fixtureRecord.recordType,
+      recoveredRoutes: [...fixtureRecord.recoveredFrom].sort()
+    });
+  }
+  const contextById = new Map(
+    fixture.conversationContextRecords.map((record) => [
+      statusId(record.url),
+      record
+    ])
+  );
+  for (const record of ledger.conversationContextRecords) {
+    const fixtureRecord = contextById.get(record.statusId);
+    assert.deepEqual(record, {
+      statusId: record.statusId,
+      statusUrl: fixtureRecord.url,
+      authorHandle: fixtureRecord.authorHandle,
+      publishedAt: fixtureRecord.publishedAt,
+      recordType: fixtureRecord.recordType,
+      recoveredRoutes: [...fixtureRecord.recoveredFrom].sort()
+    });
+  }
   assert(
     ledger.publicSafety.excluded.includes("post text") &&
       ledger.publicSafety.excluded.includes("historical phone numbers")

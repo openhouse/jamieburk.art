@@ -24,9 +24,10 @@ Jamie reports serving as general contractor for this phase: hiring and
 coordinating specialized teams, managing sequencing from basement to roof, and
 maintaining a daily site presence. The packet identifies Jamie as founder and
 project presenter but does not independently assign the general-contractor
-title, so the role remains a bounded claim held from the website and resume
-while contracts, permits, schedules, invoices, or collaborator confirmation
-are reviewed.
+title. The completed project-level scope now appears on the case study, while
+Jamie's title and individual coordination detail remain held from the website
+and resume as contracts, permits, schedules, invoices, or collaborator
+confirmation are reviewed.
 
 ## Neighborhood listening
 
@@ -37,9 +38,10 @@ preserves the published survey page and backing Google Form reference.
 
 Jamie reports designing the 4-by-6 handbill and data-collection system and
 using daily site presence to gather neighborhood histories, ideas, and contact
-offers over time. Individual design authorship remains a research question.
-Raw responses, names, phone numbers, email addresses, and contact records stay
-private.
+offers over time. The documented collaborative survey and its stated influence
+on the proposal now appear on the case study; individual design authorship
+remains a research question. Raw responses, names, phone numbers, email
+addresses, and contact records stay private.
 
 ## Complete public-account archive
 

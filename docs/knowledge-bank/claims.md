@@ -64,17 +64,21 @@ limits.
 
 # 2026-07-15 KC Town Hall Phase One and neighborhood operations
 
-Three bounded claims preserve newly surfaced implementation depth without
-promoting it to the website or resume before role attribution is corroborated:
+Three bounded claims preserve newly surfaced implementation depth. The
+independently documented project-level Phase One and survey facts now project
+to the case study; Jamie's individual role details remain held pending
+corroboration:
 
 - `CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION` - the municipal packet labels the
   $189,629 Phase One cold-shell work completed in 2019 and itemizes roof/TPO,
   masonry, floor framing, water, access, safety, transport, and cleanup. Jamie
-  reports serving as general contractor; that title remains a firsthand lead.
+  reports serving as general contractor; that title remains a firsthand lead
+  and is not part of the active projection.
 - `CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY` - the packet reproduces the survey,
   credits a process with Oak Park Neighborhood Association and New Horizon
   Missionary Baptist Church, and says results directly shaped the proposal.
-  Jamie's handbill and data-system authorship remains under research.
+  Jamie's handbill and data-system authorship remains under research and is not
+  part of the active projection.
 - `CLM-TIRED-OF-TIRES-NEIGHBORHOOD-OPERATIONS` - a protected public-site
   archive documents monthly free tire pickup with Oak Park and a
   project-reported $17,768 in avoided fees by 2020. Jamie's individual operating
@@ -332,8 +336,8 @@ bibliography claim:
 **Status:** Ready with boundary
 **Support level:** Strong
 **Evidence class:** Complete public social-account corpus / public stakeholder records
-**Public wording:** A complete 183-record archive shows KC Town Hall's public account operating as project infrastructure for resident input, recurring household tire-pickup work, civic information, and stakeholder dialogue.
-**Detailed public-safe wording:** The complete profile-reported population contains 100 tire-related records and 12 survey-linked records. Direct responses came from three sitting Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving one substantial KC Town Hall tire drop-off, and two community accounts amplified an Oak Park cleanup notice.
+**Public wording:** A complete review of all 183 records reported by the profile on the capture date shows KC Town Hall's public account operating as project infrastructure for resident input, recurring household tire-pickup work, civic information, and stakeholder dialogue.
+**Detailed public-safe wording:** The complete profile-reported population contains 100 tire-related records and 12 survey-linked records. Direct responses came from three then-serving Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving one KC Town Hall tire drop-off, and two community accounts amplified an Oak Park cleanup notice.
 **Where to project:** KC Town Hall case study and Work card.
 **Why it matters:** Shows sustained public operations and service coordination rather than treating social media as promotional output.
 **Guardrail:** The corpus measures publishing and observable public interaction. It does not independently audit tires collected, households served, savings, participation, reach, endorsement, causality, individual authorship, project completion, or current property status.

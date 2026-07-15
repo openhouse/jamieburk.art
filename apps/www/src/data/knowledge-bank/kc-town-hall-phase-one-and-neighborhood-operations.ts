@@ -96,18 +96,28 @@ export const kcTownHallPhaseOneNeighborhoodClaims = [
     id: "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
     project: "kc-town-hall",
     internalClaim:
-      "Jamie reports serving as general contractor for KC Town Hall Phase One; the 2019 municipal packet independently labels the $189,629 cold-shell phase completed in 2019 and itemizes roof and TPO membrane work, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup.",
-    status: "use-with-care",
+      "The 2019 municipal packet labels KC Town Hall's $189,629 cold-shell phase completed in 2019 and itemizes roof and TPO membrane work, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup.",
+    status: "confirmed-with-boundary",
     projections: [
       {
         key: "archive-note",
         text:
-          "The 2019 municipal packet labels KC Town Hall's $189,629 Phase One cold-shell work completed and itemizes roof and TPO membrane work, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup. Jamie reports serving as general contractor for this phase.",
+          "The 2019 municipal packet labels KC Town Hall's $189,629 Phase One cold-shell work completed and itemizes roof and TPO membrane work, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup.",
         status: "hold",
         citationRequired: true,
         surfaces: [],
         rationale:
           "Retain the substantial completed construction record in the bank while holding Jamie's general-contractor title from publication until an independent role-attribution source is recovered."
+      },
+      {
+        key: "case-study",
+        text:
+          "The 2019 municipal packet labels KC Town Hall's $189,629 Phase One cold-shell work completed that year. The documented scope included roof-deck repair, insulation and TPO membrane, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/kc-town-hall"],
+        rationale:
+          "Lead with independently documented completed implementation while keeping Jamie's general-contractor title and individual trade responsibility behind the role-attribution inquiry."
       }
     ],
     evidence: [
@@ -144,18 +154,28 @@ export const kcTownHallPhaseOneNeighborhoodClaims = [
     id: "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
     project: "kc-town-hall",
     internalClaim:
-      "Jamie reports designing the 4-by-6 neighborhood survey handbill and backing data-collection system; the 2019 municipal packet reproduces the survey, says it was conducted with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church, and says its results directly shaped the proposal, while the project archive preserves the backing Google Form.",
-    status: "use-with-care",
+      "The 2019 municipal packet reproduces the neighborhood survey, says it was conducted with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church, and says its results directly shaped the proposal, while the project archive preserves the backing Google Form.",
+    status: "confirmed-with-boundary",
     projections: [
       {
         key: "archive-note",
         text:
-          "KC Town Hall used a neighborhood survey developed with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church; the 2019 proposal says the results directly shaped the plan. Jamie reports designing the handbill and backing data-collection system.",
+          "KC Town Hall used a neighborhood survey developed with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church; the 2019 proposal says the results directly shaped the plan.",
         status: "hold",
         citationRequired: true,
         surfaces: [],
         rationale:
           "Preserve the documented listening method and Jamie's authorship lead while keeping response data private and awaiting corroboration of individual design credit."
+      },
+      {
+        key: "case-study",
+        text:
+          "The proposal documents a neighborhood survey developed with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church and says the results directly shaped the plan.",
+        status: "active",
+        citationRequired: true,
+        surfaces: ["/work/kc-town-hall"],
+        rationale:
+          "Show the documented collaborative listening method and its decision relevance without publishing responses or assigning Jamie sole design authorship."
       }
     ],
     evidence: [

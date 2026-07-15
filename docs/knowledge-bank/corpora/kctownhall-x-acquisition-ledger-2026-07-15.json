@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "capturedAt": "2026-07-15",
   "sourceCaptureSha256": "c3edcb727b55c852de5bcc941bf09f0e87dc341a56190367420e927cc687daf2",
   "captureSurfaces": [
@@ -13,7 +13,6 @@
   "routeObservations": {
     "posts": {
       "renderedPrimaryRecords": 170,
-      "repeatedNoGrowthPasses": 12,
       "primaryStatusIds": [
         "1013893135695601665",
         "1013894923031113728",
@@ -191,7 +190,6 @@
       "renderedCards": 188,
       "renderedPrimaryRecords": 183,
       "renderedConversationContextCards": 5,
-      "repeatedNoGrowthPasses": 14,
       "primaryStatusIds": [
         "1013893135695601665",
         "1013894923031113728",
@@ -2394,9 +2392,9 @@
       "statusUrl": "https://x.com/joliejustus/status/1033499895670431744",
       "authorHandle": "@joliejustus",
       "publishedAt": "2018-08-25T23:42:31.000Z",
-      "recordType": "original",
+      "recordType": "conversation-context",
       "recoveredRoutes": [
-        "replies"
+        "replies-context"
       ]
     },
     {
@@ -2404,9 +2402,9 @@
       "statusUrl": "https://x.com/bballkansas/status/1033501260362772480",
       "authorHandle": "@bballkansas",
       "publishedAt": "2018-08-25T23:47:56.000Z",
-      "recordType": "original",
+      "recordType": "conversation-context",
       "recoveredRoutes": [
-        "replies"
+        "replies-context"
       ]
     },
     {
@@ -2414,9 +2412,9 @@
       "statusUrl": "https://x.com/KCMO311/status/1034093516073459712",
       "authorHandle": "@KCMO311",
       "publishedAt": "2018-08-27T15:01:21.000Z",
-      "recordType": "original",
+      "recordType": "conversation-context",
       "recoveredRoutes": [
-        "replies"
+        "replies-context"
       ]
     },
     {
@@ -2424,9 +2422,9 @@
       "statusUrl": "https://x.com/KCMOHealthDept/status/1154749460422938624",
       "authorHandle": "@KCMOHealthDept",
       "publishedAt": "2019-07-26T13:45:00.000Z",
-      "recordType": "original",
+      "recordType": "conversation-context",
       "recoveredRoutes": [
-        "replies"
+        "replies-context"
       ]
     },
     {
@@ -2434,9 +2432,9 @@
       "statusUrl": "https://x.com/Robinson4kc/status/1289714535251742726",
       "authorHandle": "@Robinson4kc",
       "publishedAt": "2020-08-02T00:08:01.000Z",
-      "recordType": "original",
+      "recordType": "conversation-context",
       "recoveredRoutes": [
-        "replies"
+        "replies-context"
       ]
     }
   ],

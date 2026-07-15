@@ -765,6 +765,42 @@
       ]
     },
     {
+      "id": "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+      "title": "Kansas City Council district roster, 2019",
+      "organization": "City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://www.kcmo.gov/home/showpublisheddocument/6992/637684219737100000",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City of Kansas City, Missouri, City Council district roster, 2019.",
+      "publicNote": "The official roster corroborates Quinton Lucas's and Jolie Justus's Council service on the April 29, 2019 interaction date. It does not establish social-account control or endorsement.",
+      "doesNotEstablish": [
+        "control of either social account",
+        "formal endorsement of KC Town Hall",
+        "current officeholder status"
+      ]
+    },
+    {
+      "id": "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
+      "title": "Melissa Robinson Kansas City Council service record",
+      "organization": "City Clerk, City of Kansas City, Missouri",
+      "kind": "government-record",
+      "visibility": "public",
+      "preservationStatus": "live",
+      "accessedAt": "2026-07-15",
+      "canonicalUrl": "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
+      "preferredPublicUrl": "canonical",
+      "publicCitation": "City Clerk, City of Kansas City, Missouri, Melissa Robinson Council service record.",
+      "publicNote": "The official record corroborates Melissa Robinson's Council service on the August 1, 2020 interaction date. It does not establish social-account control or endorsement.",
+      "doesNotEstablish": [
+        "control of the social account",
+        "formal endorsement of KC Town Hall",
+        "current officeholder status"
+      ]
+    },
+    {
       "id": "SRC-KCTH-BRIDGING-GAP-DROPOFF-2019",
       "title": "Bridging the Gap collaborator reports a KC Town Hall tire drop-off",
       "author": "Public collaborator account (@trutheresme)",
@@ -1194,6 +1230,76 @@
         "Council adoption and appropriation are not proof of an executed funding agreement, receipt, or disbursement.",
         "Later municipal records show that the project withdrew and the unused amount was reappropriated in 2024.",
         "Presenter identification and meeting attendance do not establish sole ownership, authorship, withdrawal responsibility, or current property status."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The 2019 municipal packet labels KC Town Hall's $189,629 Phase One cold-shell work completed that year. The documented scope included roof-deck repair, insulation and TPO membrane, masonry restoration, floor framing, water connection, access, safety, transport, and cleanup.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ],
+          "rationale": "Lead with independently documented completed implementation while keeping Jamie's general-contractor title and individual trade responsibility behind the role-attribution inquiry."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "Phase One cold-shell work was labeled completed in 2019",
+            "the Phase One value was listed as $189,629",
+            "Phase One included roof and TPO membrane work, masonry, floor framing, water connection, access, safety, transport, and cleanup"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "The general-contractor title is Jamie's firsthand account; the reviewed municipal packet documents his founder and presenter role but does not assign that title.",
+        "Phase One completion is not completion of the later funded redevelopment or Phase Two.",
+        "Do not imply Jamie personally performed every trade or worked without contractors, architects, engineers, and neighborhood collaborators.",
+        "Do not publish private banking, contact, or legal details contained in the application packet."
+      ]
+    },
+    {
+      "id": "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+      "status": "confirmed-with-boundary",
+      "projections": [
+        {
+          "key": "case-study",
+          "text": "The proposal documents a neighborhood survey developed with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church and says the results directly shaped the plan.",
+          "status": "active",
+          "citationRequired": true,
+          "surfaces": [
+            "/work/kc-town-hall"
+          ],
+          "rationale": "Show the documented collaborative listening method and its decision relevance without publishing responses or assigning Jamie sole design authorship."
+        }
+      ],
+      "evidence": [
+        {
+          "sourceId": "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019",
+          "relationship": "direct-support",
+          "supports": [
+            "the proposal reproduced the neighborhood survey handbill",
+            "the survey was conducted with Oak Park Neighborhood Association and New Horizon Missionary Baptist Church",
+            "the proposal states that survey results directly shaped the proposal"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        }
+      ],
+      "boundaries": [
+        "Jamie's individual authorship of the handbill and data system is a firsthand account pending corroboration.",
+        "The sources do not establish a response count, demographic representativeness, or complete decision trail.",
+        "Survey responses, names, phone numbers, email addresses, and contact records remain private.",
+        "Credit Oak Park Neighborhood Association and New Horizon Missionary Baptist Church in any future public projection."
       ]
     },
     {
@@ -1634,7 +1740,7 @@
       "projections": [
         {
           "key": "case-study",
-          "text": "A complete 183-record archive shows the public account operating as project infrastructure: 100 records documented recurring household tire-pickup work and 12 linked the neighborhood survey. Direct responses came from three sitting Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving a substantial KC Town Hall tire drop-off.",
+          "text": "A complete review of all 183 records reported by the profile on the capture date shows the public account operating as project infrastructure: 100 records documented recurring household tire-pickup work and 12 linked the neighborhood survey. Direct responses came from three then-serving Council-member accounts and KCMO 311; a Bridging the Gap collaborator independently reported receiving a KC Town Hall tire drop-off.",
           "status": "active",
           "citationRequired": true,
           "surfaces": [
@@ -1653,6 +1759,24 @@
             "12 survey-linked records",
             "strict stakeholder-response inventory",
             "public-safety method"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+          "relationship": "corroborating",
+          "supports": [
+            "Quinton Lucas and Jolie Justus were serving on the Council on the interaction date"
+          ],
+          "confidence": "high",
+          "renderCitation": true
+        },
+        {
+          "sourceId": "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
+          "relationship": "corroborating",
+          "supports": [
+            "Melissa Robinson was serving on the Council on the interaction date"
           ],
           "confidence": "high",
           "renderCitation": true
@@ -2177,6 +2301,8 @@
         "SRC-KC-TOWN-HALL-ORDINANCE-240317",
         "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
         "SRC-KCTH-X-CORPUS-2026-07-15",
+        "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+        "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
         "SRC-KCTH-ROBINSON-REPLY-2020",
         "SRC-KCTH-JUSTUS-REPLY-2019",
         "SRC-KCTH-LUCAS-QUOTE-2019",
@@ -2196,11 +2322,29 @@
           ]
         },
         {
+          "id": "phase-one-completion",
+          "claimId": "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"
+          ]
+        },
+        {
+          "id": "neighborhood-survey",
+          "claimId": "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+          "projection": "case-study",
+          "sourceIds": [
+            "SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"
+          ]
+        },
+        {
           "id": "social-public-operations",
           "claimId": "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
           "projection": "case-study",
           "sourceIds": [
             "SRC-KCTH-X-CORPUS-2026-07-15",
+            "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+            "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
             "SRC-KCTH-ROBINSON-REPLY-2020",
             "SRC-KCTH-JUSTUS-REPLY-2019",
             "SRC-KCTH-LUCAS-QUOTE-2019",

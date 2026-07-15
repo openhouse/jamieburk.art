@@ -457,19 +457,20 @@ export const proofClaims: ProofClaim[] = [
     supportLevel: "careful",
     evidenceClass: ["approved-resume", "public-source", "public-safe-archive-summary"],
     publicWording:
-      "Co-led redevelopment planning and public-benefit documentation for a project that advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539. The project later withdrew before disbursement.",
+      "Co-led redevelopment planning and public-benefit documentation for a project whose team completed a $189,629 Phase One cold-shell scope and used a collaborative neighborhood survey to shape the proposal. The project later advanced from a unanimous CCED Board recommendation to City Council approval and appropriation of $490,539, then withdrew before disbursement.",
     shortWording:
-      "Jamie co-led adaptive reuse planning for a project approved for a $490,539 city appropriation; it later withdrew before disbursement",
+      "Co-led planning for a project with completed Phase One work and a later $490,539 city appropriation that was not disbursed",
     detailedPublicWording:
-      "Jamie helped shape planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter and trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement. A complete 183-record public-account archive separately documents recurring resident-input, household tire-pickup, civic-information, and stakeholder-dialogue operations.",
+      "Jamie co-led planning, public-benefit documentation, stakeholder context, and municipal-review support for an adaptive reuse effort. KCMO records identify him as the presenter, label a $189,629 Phase One cold-shell scope completed in 2019, and document a collaborative neighborhood survey whose results directly shaped the proposal. They also trace a unanimous Board recommendation, Council adoption and appropriation, and later withdrawal without disbursement. A complete profile-reported 183-record public-account archive separately documents recurring resident-input, household tire-pickup, civic-information, and stakeholder-dialogue operations.",
     sourceBasis:
-      "Approved resume language; official KCMO proposal, Council, appropriation, and project-status records; and the public-safe 183-record KC Town Hall account corpus.",
+      "Approved resume language; official KCMO Phase One, survey, proposal, Council, appropriation, and project-status records; and the public-safe 183-record KC Town Hall account corpus.",
     guardrail:
       "Distinguish the unanimous CCED Board recommendation, Council adoption and appropriation, and the later withdrawal. Treat the institutional account as project context rather than proof Jamie authored every post. Never imply a unanimous Council vote, an executed funding agreement, receipt, disbursement, independently audited service totals, endorsement, causal government impact, or completed redevelopment.",
     doNotSay: [
       "The City Council vote was unanimous",
       "KC Town Hall received or spent $490,539",
       "The funded redevelopment was completed",
+      "Phase One completion means the full redevelopment was completed",
       "Current property status",
       "Private financial details",
       "Official municipal endorsement beyond the public record",
@@ -488,6 +489,8 @@ export const proofClaims: ProofClaim[] = [
     relatedCapabilities: ["project-planning", "public-benefit-documentation", "stakeholder-context"],
     canonicalClaimIds: [
       "CLM-KC-TOWN-HALL-MUNICIPAL-PROCESS",
+      "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
+      "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
       "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS"
     ],
     lastReviewed: "2026-07-15"

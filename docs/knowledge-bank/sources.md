@@ -156,7 +156,9 @@ capture and preserves the capture digest, 183-post profile observation, 170
 Posts-route IDs, 183 Replies-route primary IDs, five excluded context IDs, and
 public-safe per-record route metadata. This makes acquisition provenance
 independently inspectable from the curated fixture without committing raw post
-text or authenticated state.
+text or authenticated state. The builder partitions the actual 188 Replies
+cards into the 183 primary and five context IDs, cross-checks that primary set
+against the normalized population, and rejects route-ID corruption.
 
 The corpus distinguishes 142 original posts, 13 replies, 28 reposts, and five
 other-account conversation-context cards. It records 100 tire-related records,
@@ -168,9 +170,13 @@ Close-read posted sources cover neighborhood food access, affordable housing,
 renter policy, elections, transit planning, official voter information, public
 health, emergency resources, and practical cleanup documentation. Circulation
 does not mean a source covered, partnered with, or endorsed KC Town Hall.
-Direct replies and quote responses from three sitting Council-member accounts,
+Direct replies and quote responses from three then-serving Council-member accounts,
 one KCMO 311 service response, community amplification, and one external
 tire-dropoff report remain distinct stakeholder-response types.
+
+Two official KCMO records separately corroborate Council service on the three
+interaction dates. They support the historical office-status qualifier, not
+social-account control, endorsement, or current officeholder status.
 
 The companion posted-URL disposition ledger accounts for all 31 distinct short
 URLs: 10 records map to promoted sources, 15 to governed operational-link

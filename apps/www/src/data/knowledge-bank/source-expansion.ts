@@ -777,6 +777,8 @@ export const sourceExpansionPages = [
       "SRC-KC-TOWN-HALL-ORDINANCE-240317",
       "SRC-KC-TOWN-HALL-CCED-PROJECT-STATUS-2024-04-12",
       "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+      "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
       "SRC-KCTH-ROBINSON-REPLY-2020",
       "SRC-KCTH-JUSTUS-REPLY-2019",
       "SRC-KCTH-LUCAS-QUOTE-2019",
@@ -796,11 +798,25 @@ export const sourceExpansionPages = [
         ]
       },
       {
+        id: "phase-one-completion",
+        claimId: "CLM-KC-TOWN-HALL-PHASE-ONE-RESTORATION",
+        projection: "case-study",
+        sourceIds: ["SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"]
+      },
+      {
+        id: "neighborhood-survey",
+        claimId: "CLM-KC-TOWN-HALL-NEIGHBORHOOD-SURVEY",
+        projection: "case-study",
+        sourceIds: ["SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"]
+      },
+      {
         id: "social-public-operations",
         claimId: "CLM-KCTH-SOCIAL-PUBLIC-OPERATIONS",
         projection: "case-study",
         sourceIds: [
           "SRC-KCTH-X-CORPUS-2026-07-15",
+          "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+          "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
           "SRC-KCTH-ROBINSON-REPLY-2020",
           "SRC-KCTH-JUSTUS-REPLY-2019",
           "SRC-KCTH-LUCAS-QUOTE-2019",

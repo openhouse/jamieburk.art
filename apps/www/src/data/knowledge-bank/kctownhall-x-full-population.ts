@@ -94,6 +94,55 @@ export const kcTownHallFullPopulationSources: SourceRecord[] = [
     ]
   },
   {
+    id: "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+    title: "Kansas City Council district roster, 2019",
+    organization: "City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://www.kcmo.gov/home/showpublisheddocument/6992/637684219737100000",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "City of Kansas City, Missouri, City Council district roster, 2019.",
+    publicNote:
+      "The official roster corroborates Quinton Lucas's and Jolie Justus's Council service on the April 29, 2019 interaction date. It does not establish social-account control or endorsement.",
+    supportsGenerally: [
+      "Quinton Lucas was serving on the Kansas City Council on April 29, 2019",
+      "Jolie Justus was serving on the Kansas City Council on April 29, 2019"
+    ],
+    doesNotEstablish: [
+      "control of either social account",
+      "formal endorsement of KC Town Hall",
+      "current officeholder status"
+    ]
+  },
+  {
+    id: "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
+    title: "Melissa Robinson Kansas City Council service record",
+    organization: "City Clerk, City of Kansas City, Missouri",
+    kind: "government-record",
+    visibility: "public",
+    preservationStatus: "live",
+    accessedAt: reviewedAt,
+    canonicalUrl:
+      "https://clerk.kcmo.gov/PersonDetail.aspx?GUID=1696D403-A114-4AB0-B632-A303AF8E3B3C&ID=240616",
+    preferredPublicUrl: "canonical",
+    publicCitation:
+      "City Clerk, City of Kansas City, Missouri, Melissa Robinson Council service record.",
+    publicNote:
+      "The official record corroborates Melissa Robinson's Council service on the August 1, 2020 interaction date. It does not establish social-account control or endorsement.",
+    supportsGenerally: [
+      "Melissa Robinson was serving on the Kansas City Council on August 1, 2020"
+    ],
+    doesNotEstablish: [
+      "control of the social account",
+      "formal endorsement of KC Town Hall",
+      "current officeholder status"
+    ]
+  },
+  {
     id: "SRC-KCTH-KANSAS-CITY-STAR-LEONS",
     title:
       "Leon's Thriftway may be the oldest black-owned grocery store in the country",
@@ -602,6 +651,8 @@ export const kcTownHallFullPopulationIntake = [
       "SRC-KCTH-X-CORPUS-2026-07-15",
       "SRC-KCTH-X-ACQUISITION-LEDGER-2026-07-15",
       "SRC-KCTH-X-POSTED-URL-TRIAGE-2026-07-15",
+      "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+      "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
       "SRC-KCTH-KANSAS-CITY-STAR-LEONS",
       "SRC-KCTH-NORTHEAST-NEWS-HOUSING-2018",
       "SRC-KCTH-CURBED-RENTER-CREDIT-2018",

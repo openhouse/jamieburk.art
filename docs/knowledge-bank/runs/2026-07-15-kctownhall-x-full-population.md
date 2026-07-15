@@ -34,11 +34,13 @@ primary records and five other-account conversation-context cards. The primary
 union contains 183 unique canonical status IDs, so no profile-counted item
 remains unmaterialized.
 
-The redacted acquisition ledger preserves 170 Posts-route primary IDs, all 183
-Replies-route primary IDs, 188 rendered Replies cards, and the five excluded
-context IDs. The public manifest hashes that ledger separately from the curated
-fixture, so acquisition evidence and interpretive classification do not depend
-on the same file.
+The redacted acquisition ledger derives 170 Posts-route primary IDs, all 183
+Replies-route primary IDs, and the five excluded context IDs from the actual
+route-card arrays. It asserts that the 188 Replies cards partition exactly into
+those 183 primary and five context records and that the route-derived primary
+set equals the independently normalized attributable population. The public
+manifest hashes that ledger separately from the curated fixture, so acquisition
+evidence and interpretive classification do not depend on the same file.
 
 ## Population
 
@@ -119,7 +121,8 @@ observable response. Tags and mentions alone do not. These records do not
 establish blanket endorsement, formal adoption, project completion, or causal
 government impact.
 
-The public case-study claim cites the aggregate corpus plus the five item-level
+The public case-study claim cites the aggregate corpus, two official records
+corroborating Council service on the interaction dates, and the five item-level
 records for the three Council-member responses, the KCMO 311 response, and the
 Bridging the Gap collaborator report. The acquisition ledger remains
 corroborating provenance rather than a reader-facing citation.
@@ -159,3 +162,7 @@ totals.
 - Manifest:
   `docs/knowledge-bank/corpora/kctownhall-x-full-population-2026-07-15.manifest.json`
 - Validator: `scripts/derive-kctownhall-x-corpus.mjs --check`
+
+The lifecycle regression suite also constructs a synthetic valid capture and
+then corrupts one Replies-route status ID. The builder must reject that capture,
+preventing a length-only route check from passing as population reconciliation.

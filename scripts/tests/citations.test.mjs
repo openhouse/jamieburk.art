@@ -43,13 +43,27 @@ test("new case-study citations expose only selected public sources", () => {
   assert.equal(resolveCitationReferences("wowlist").length, 14);
   assert.equal(resolveCitationReferences("196-sunday-dinner").length, 1);
   assert.equal(resolveCitationReferences("fair-rent-nyc").length, 8);
-  assert.equal(resolveCitationReferences("kc-town-hall").length, 10);
+  assert.equal(resolveCitationReferences("kc-town-hall").length, 12);
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "phase-one-completion").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"]
+  );
+  assert.deepEqual(
+    resolveCitationOccurrence("kc-town-hall", "neighborhood-survey").sources.map(
+      (item) => item.source.id
+    ),
+    ["SRC-KC-TOWN-HALL-CCED-PROPOSAL-2019"]
+  );
   assert.deepEqual(
     resolveCitationOccurrence("kc-town-hall", "social-public-operations").sources.map(
       (item) => item.source.id
     ),
     [
       "SRC-KCTH-X-CORPUS-2026-07-15",
+      "SRC-KCTH-KCMO-COUNCIL-ROSTER-2019",
+      "SRC-KCTH-KCMO-ROBINSON-SERVICE-2020",
       "SRC-KCTH-ROBINSON-REPLY-2020",
       "SRC-KCTH-JUSTUS-REPLY-2019",
       "SRC-KCTH-LUCAS-QUOTE-2019",
